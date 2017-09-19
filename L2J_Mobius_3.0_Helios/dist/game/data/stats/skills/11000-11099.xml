@@ -3665,32 +3665,35 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11046" toLevel="2" name="Wizard Spirit">
-		<!-- Updated to IO -->
+	<skill id="11046" toLevel="3" name="Wizard Spirit">
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- For 30 sec., M. Atk. + 20%, M. Critical Rate + 50%, P. Def. and M. Def. + 20%, Evasion + 2, and MP Consumption for magic skills - 50%. When attacked, has a chance of inflicting magic damage on the attacking target. -->
 		<icon>icon.skill11046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="2">30</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="3">30</value>
+			<value fromLevel="2" toLevel="3" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="2" toLevel="3" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">95</value>
+			<value level="3">101</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">70</value>
 			<value level="2">85</value>
+			<value level="3">100</value>
 		</mpConsume>
 		<hitTime>200</hitTime>
 		<reuseDelay>180000</reuseDelay>
 		<effectPoint>
 			<value level="1">696</value>
 			<value level="2">705</value>
+			<value level="3">714</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
@@ -3713,6 +3716,7 @@
 				<amount>
 					<value level="1">30</value>
 					<value level="2">40</value>
+					<value level="3">50</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3720,6 +3724,7 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">30</value>
+					<value level="3">40</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3727,6 +3732,7 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">30</value>
+					<value level="3">40</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3739,9 +3745,9 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="3" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="1" toLevel="3" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4228,14 +4234,14 @@
 	</skill>
 	<skill id="11052" toLevel="7" name="Mass Hell Binding">
 		<!-- Glory Days confirmed -->
-		<!-- Immobilizes target and nearby enemies midair for 9 seconds and inflicts 100 damage per second. -->
+		<!-- Immobilizes target and nearby enemies midair for 5 seconds. -->
 		<icon>icon.skill11052</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="7">100</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
@@ -4284,10 +4290,6 @@
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 			<effect name="BlockControl" />
-			<effect name="DamOverTime">
-				<power>100</power>
-				<ticks>1</ticks>
-			</effect>
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<DERANGEMENT>100</DERANGEMENT>
@@ -5076,12 +5078,12 @@
 		</effects>
 	</skill>
 	<skill id="11066" toLevel="4" name="Unleash Hell">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts magical damage on target with 620 Power. Casts Fear and Burn and decreases target's Speed by 40%. Over-hit. -->
 		<icon>icon.skill11066</icon>
 		<abnormalLvl>7</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>
@@ -5150,13 +5152,12 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockControl" />
-			<effect name="Fear" />
 			<effect name="DamOverTime">
 				<power>200</power>
 				<ticks>1</ticks>
 			</effect>
 			<effect name="Speed">
-				<amount>-40</amount>
+				<amount>-80</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
@@ -5172,7 +5173,7 @@
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts magical damage on target and nearby enemies with 620 Power. Casts Fear and Burn and decreases target's Speed by 20%. Over-hit. -->
 		<abnormalLvl>7</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>
@@ -5244,13 +5245,12 @@
 				</power>
 			</effect>
 			<effect name="BlockControl" />
-			<effect name="Fear" />
 			<effect name="DamOverTime">
 				<power>160</power>
 				<ticks>1</ticks>
 			</effect>
 			<effect name="Speed">
-				<amount>-20</amount>
+				<amount>-60</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence" fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
@@ -5435,15 +5435,15 @@
 		</effects>
 	</skill>
 	<skill id="11077" toLevel="3" name="Decrease Fire Resistance">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Fire resistance by 20 for 3 seconds. -->
 		<icon>icon.skill11011</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
-			<value level="1">3</value>
-			<value level="2">3</value>
-			<value level="3">10</value>
+			<value level="1">7</value>
+			<value level="2">7</value>
+			<value level="3">15</value>
 		</abnormalTime>
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
@@ -5474,15 +5474,15 @@
 		</effects>
 	</skill>
 	<skill id="11078" toLevel="3" name="Decrease Water Resistance">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Water resistance by 20 for 3 seconds. -->
 		<icon>icon.skill11011</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
-			<value level="1">3</value>
-			<value level="2">3</value>
-			<value level="3">10</value>
+			<value level="1">7</value>
+			<value level="2">7</value>
+			<value level="3">15</value>
 		</abnormalTime>
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
@@ -5513,15 +5513,15 @@
 		</effects>
 	</skill>
 	<skill id="11079" toLevel="3" name="Decrease Wind Resistance">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Wind resistance by 20 for 3 seconds. -->
 		<icon>icon.skill11011</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
-			<value level="1">3</value>
-			<value level="2">3</value>
-			<value level="3">10</value>
+			<value level="1">7</value>
+			<value level="2">7</value>
+			<value level="3">15</value>
 		</abnormalTime>
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
@@ -5552,15 +5552,15 @@
 		</effects>
 	</skill>
 	<skill id="11080" toLevel="3" name="Decrease Earth Resistance">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Earth resistance by 20 for 3 seconds. -->
 		<icon>icon.skill11011</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
-			<value level="1">3</value>
-			<value level="2">3</value>
-			<value level="3">10</value>
+			<value level="1">7</value>
+			<value level="2">7</value>
+			<value level="3">15</value>
 		</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_EARTH</abnormalType>
 		<activateRate>100</activateRate>
@@ -5589,15 +5589,15 @@
 		</effects>
 	</skill>
 	<skill id="11081" toLevel="3" name="Decrease Fire/Water/Wind/Earth Resistances">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Fire/Water/Wind/Earth resistances by 20 for 3 seconds. -->
 		<icon>icon.skill11011</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
-			<value level="1">3</value>
-			<value level="2">3</value>
-			<value level="3">10</value>
+			<value level="1">7</value>
+			<value level="2">7</value>
+			<value level="3">15</value>
 		</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_HOLY</abnormalType>
 		<activateRate>100</activateRate>

@@ -91,13 +91,14 @@
 			</effect>
 		</pvpEffects>
 	</skill>
-	<skill id="10301" toLevel="1" name="Maximum Force Mastery">
+<skill id="10301" toLevel="2" name="Maximum Force Mastery">
 		<!-- Max Momentum increases to Stage 15. -->
 		<icon>icon.skill11842</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="FocusEnergy">
-				<amount>5</amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
 			</effect>
 		</effects>
 	</skill>

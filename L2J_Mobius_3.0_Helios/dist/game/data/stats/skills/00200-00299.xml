@@ -3987,7 +3987,7 @@
 		</effects>
 	</skill>
 	<skill id="261" toLevel="34" name="Triple Sonic Slash">
-		<!-- Confirmed CT2.5 and Updated to IO -->
+		<!-- Confirmed CT2.5 and Updated to HELIOS -->
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -4105,7 +4105,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>

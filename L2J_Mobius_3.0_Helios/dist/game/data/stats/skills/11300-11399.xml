@@ -1964,8 +1964,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11348" toLevel="4" name="Greater Servitor Death Whisper">
-		<!-- Updated to IO -->
+	<skill id="11348" toLevel="7" name="Greater Servitor Death Whisper">
+		<!-- Updated to HELIOS -->
 		<!-- For 30 min., all servitors' Critical Damage + 10%. -->
 		<icon>icon.skill11348</icon>
 		<abnormalLvl>
@@ -1973,6 +1973,9 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
 		</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>GREATER_SERVITOR_BUFF</abnormalType>
@@ -1985,6 +1988,9 @@
 			<value level="2">67</value>
 			<value level="3">73</value>
 			<value level="4">79</value>
+			<value level="5">0</value>
+			<value level="6">0</value>
+			<value level="7">0</value>
 		</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>3500</hitTime>
@@ -1999,31 +2005,82 @@
 					<value level="2">12</value>
 					<value level="3">15</value>
 					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="CriticalDamage">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11349" toLevel="4" name="Greater Servitor Might">
-		<!-- Updated to IO -->
+	<skill id="11349" toLevel="7" name="Greater Servitor Might">
+		<!-- Updated to HELIOS -->
 		<!-- For 30 min., all servitors' P. Atk. + 10%. -->
 		<icon>icon.skill11349</icon>
 		<abnormalLvl>
@@ -2031,6 +2088,9 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
 		</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>GREATER_SERVITOR_BUFF</abnormalType>
@@ -2043,6 +2103,9 @@
 			<value level="2">67</value>
 			<value level="3">73</value>
 			<value level="4">79</value>
+			<value level="5">0</value>
+			<value level="6">0</value>
+			<value level="7">0</value>
 		</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>3500</hitTime>
@@ -2057,24 +2120,51 @@
 					<value level="2">12</value>
 					<value level="3">15</value>
 					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">27</value>
+					<value level="7">30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Accuracy">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3765,8 +3855,8 @@
 		</effects>
 	</skill>
 	<skill id="11387" toLevel="1" name="Arcana's Call">
-		<!-- Updated to IO -->
-		<!-- Uses the power of nature to increase M. Atk. and M. Critical Rate for 30 seconds. Additionally increases your servitor's P. Atk. And success rate of Knock Back / Knock Down. Consumes 10 Spirit Ores. -->
+		<!-- Updated to HELIOS -->
+		<!-- The power of nature is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20%, P. Accuracy +23, Knock Back/Knock Down Success Rate +60% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ore consumed. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3788,12 +3878,16 @@
 		<effects>
 			<effect name="AttackTrait">
 				<!-- Guessed -->
-				<KNOCKBACK>30</KNOCKBACK>
-				<KNOCKDOWN>30</KNOCKDOWN>
+				<KNOCKBACK>60</KNOCKBACK>
+				<KNOCKDOWN>60</KNOCKDOWN>
 			</effect>
 			<effect name="PAtk">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>23</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -3805,7 +3899,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11388" toLevel="1" name="Lord of Arcana">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- M. Atk. + 30%, M. Critical Rate + 30% for 30 seconds. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3825,18 +3919,26 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MAtk">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>30</amount>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11389" toLevel="1" name="Elemental's Call">
-		<!-- Updated to IO -->
-		<!-- Uses the power of spirits to increase M. Atk. And Casting Spd. for 30 seconds. Additionally increases your servitor's P. Atk. and Atk. Spd, and decreases cooldown. Consumes 10 Spirit Ores. -->
+		<!-- Updated to HELIOS -->
+		<!-- The power of nature is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20%, Atk. Spd. +10%, and Skill Cooldown -60% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ore consumed. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3865,12 +3967,12 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount> <!-- Guessed -->
+				<amount>-60</amount> <!-- Guessed -->
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>-60</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
@@ -3884,7 +3986,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11390" toLevel="1" name="Lord of Elemental">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- M. Atk. + 30%, Casting Spd. + 30% for 30 seconds. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3904,18 +4006,26 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MAtk">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>30</amount>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11391" toLevel="1" name="Spectral's Call">
-		<!-- Updated to IO -->
-		<!-- Use the power of ghosts to increase M. Atk. And M. Critical Damage for 30 seconds. Additionally increases your servitor's P. Critical Damage and vital point attack rate. Consumes 10 Spirit Ores. -->
+		<!-- Updated to HELIOS -->
+		<!-- The power of demons is used to increase P. Atk./P. Def./M. Atk./M. Def. by 20% for 30 seconds. Additionally, P. Atk. +20% and P. Critical Damage +20% for servitors. The Servitor also becomes immune to debuffs. 10 Spirit Ore consumed. -->
 		<icon>icon.skill11389</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3935,12 +4045,12 @@
 		<effectPoint>687</effectPoint>
 		<isMagic>1</isMagic>
 		<effects>
-			<effect name="FatalBlowRate">
-				<amount>30</amount>
+			<effect name="PAtk">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3953,7 +4063,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11392" toLevel="1" name="Lord of Spectral">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- M. Atk. + 30%, M. Critical Damage + 30% for 30 seconds. -->
 		<icon>icon.skill11389</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3973,11 +4083,19 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="MAtk">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalDamage">
-				<amount>30</amount>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

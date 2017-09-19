@@ -718,7 +718,7 @@
 			<attack physical="1189.0459514498" magical="811.85773400546" critical="4" attackSpeed="253" range="40" />
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
-		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
+		<status attackable="false" talkable="false" targetable="false" showName="false" hasSummoner="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="22.5" />
