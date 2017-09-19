@@ -21,6 +21,3 @@ What is done
 -Custom community board
 -Premium System
 -User command expon/expoff
-
-Known issues
-Gracia airships stop at random?
