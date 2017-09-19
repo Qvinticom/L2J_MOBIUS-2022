@@ -636,16 +636,35 @@
 		</effects>
 	</skill>
 	<skill id="19220" toLevel="1" name="Sharing Equipment">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., the ability of the equipped item transfers to your servitor. Consumes 5 Spirit Ores. -->
 		<!-- Info: Transfers PvP/PvE attack/defense from items, just as other SAs, but not augments. -->
 		<icon>icon.skill19220</icon>
 		<operateType>A2</operateType>
+		<abnormalTime>1800</abnormalTime>
 		<mpConsume>77</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<isMagic>1</isMagic>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>SPIRIT_SHARING</abnormalType>
+		<effectPoint>418</effectPoint>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+			<effect name="ServitorShare">
+				<ON_EQUIP/>
+			</effect>
+			<effect name="ServitorShare">
+				<ON_CRITICAL_SKILL/>
+			</effect>
+			<effect name="ServitorShare">
+				<ON_MAGIC_SKILL/>
+			</effect>
 	</skill>
 	<skill id="19221" toLevel="1" name="Power of Darkness">
 		<!-- Updated to IO -->
