@@ -16,6 +16,8 @@
  */
 package ai.areas.TalkingIsland;
 
+import java.util.List;
+
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
@@ -46,15 +48,15 @@ public final class YeSagiraGuards extends AbstractNpcAI
 	{
 		if (event.equals("GUARD_AGGRO") && (npc != null) && !npc.isDead() && !npc.isInCombat())
 		{
-			L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, 1000, monster ->
+			final List<L2MonsterInstance> nearbyMonsters = L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class, 1000);
+			if (!nearbyMonsters.isEmpty())
 			{
-				if ((monster != null) && monster.isScriptValue(0)) // not retail - but looks better
+				final L2MonsterInstance monster = nearbyMonsters.get(getRandom(nearbyMonsters.size()));
+				if ((monster != null) && !monster.isDead() && !monster.isInCombat())
 				{
-					monster.setScriptValue(1);
 					npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
-					return; // one target only
 				}
-			});
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
