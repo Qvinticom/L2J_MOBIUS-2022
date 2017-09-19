@@ -3,6 +3,8 @@ L2J-Mobius Helios
 Client: https://mega.nz/#!Uo9TTCSQ!JDstscgcLFY3GeM3Q6j8nUq7jpixzqIV1Gl4z2ob0eA
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
+Geodata: http://www.mediafire.com/file/z0yfz43ds2k4lye/mobius_geodata_helios_l2d.zip
+
 
 Working features...
 

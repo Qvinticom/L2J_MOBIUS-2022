@@ -1,9 +1,10 @@
 L2J-Mobius Classic 2.0
 
-Client: https://mega.nz/#!0lcGQaaI!tuZUFcQS0gVPjzAIPquznOehLqJq0BR-5rm3BXxn6pg
-Use mega downloader to download https://megadownloader.en.softonic.com/
+Client: https://drive.google.com/file/d/0B0Pl9EOrFIjuSVNPXzRpRFRZWlk
+Mirror: https://mega.nz/#!0lcGQaaI!tuZUFcQS0gVPjzAIPquznOehLqJq0BR-5rm3BXxn6pg
 
-Mirror: https://drive.google.com/file/d/0B0Pl9EOrFIjuSVNPXzRpRFRZWlk
+Geodata: http://www.mediafire.com/file/d788bimcg46s5mq/mobius_geodata_saviors_l2d.zip
+
 
 What is done
 -Classic packet compatibility
