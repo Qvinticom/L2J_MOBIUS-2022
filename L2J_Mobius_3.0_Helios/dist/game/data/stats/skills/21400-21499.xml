@@ -482,9 +482,11 @@
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="21477" toLevel="4" name="Power of Abundance - Lv. 4">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15% momentarily with the power of Talisman. -->
+	<skill id="21477" toLevel="4" name="Power of Abundance - Lv. 1">
+		<!-- Level 1 : Increases P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15% momentarily with the power of Talisman. -->
+		<!-- Level 2 : Increases P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16% momentarily with the power of Talisman. -->
+		<!-- Level 3 : Increases P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17% momentarily with the power of Talisman. -->
+		<!-- Level 4 : Increases P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20% momentarily with the power of Talisman. -->
 		<icon>
 			<value level="1">BranchIcon.Icon.g_therich_i00</value>
 			<value level="2">BranchIcon.Icon.g_therich_i01</value>
@@ -496,6 +498,53 @@
 		<hitTime>500</hitTime>
 		<effectPoint>532</effectPoint>
 		<reuseDelay>600000</reuseDelay>
+		<effects>
+			<effect name="PhysicalSkillPower">
+			<amount>
+				<value level="1">15</value>
+				<value level="2">16</value>
+				<value level="3">17</value>
+				<value level="4">20</value>
+			</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+			<amount>
+				<value level="1">15</value>
+				<value level="2">16</value>
+				<value level="3">17</value>
+				<value level="4">20</value>
+			</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+			<amount>
+				<value level="1">15</value>
+				<value level="2">16</value>
+				<value level="3">17</value>
+				<value level="4">20</value>
+			</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+			<amount>
+				<value level="1">15</value>
+				<value level="2">16</value>
+				<value level="3">17</value>
+				<value level="4">20</value>
+			</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalProbability">
+			<amount>
+				<value level="1">15</value>
+				<value level="2">16</value>
+				<value level="3">17</value>
+				<value level="4">20</value>
+			</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21478" toLevel="1" name="Release Agathion's Seal - Griffin">
 		<!-- AUTO GENERATED SKILL -->

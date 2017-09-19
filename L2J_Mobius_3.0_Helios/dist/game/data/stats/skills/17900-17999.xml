@@ -1018,32 +1018,63 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17973" toLevel="1" name="Talisman - Wind: P. Critical Damage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Skill Critical Damage + 10%. -->
 		<icon>icon.r85_talisman_ca_up_passive</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17974" toLevel="1" name="Talisman - Wind: M. Critical Damage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Skill Critical Damage + 10%. -->
 		<icon>icon.r_talisman_mc_up_passive</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17975" toLevel="1" name="Talisman - Wind: Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Lack of information - Needs to be verified -->
 		<!-- Maximizes P./M. Def. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1200000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17976" toLevel="1" name="Talisman - Wind: Debuff Resistance">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Lack of information - Needs to be verified -->
 		<!-- Increases Debuff Resistance. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1200000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ResistAbnormalByCategory">
+				<amount>25</amount>
+				<mode>PER</mode>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17978" toLevel="1" name="Equip Talisman - Insanity">
 		<!-- Ertheia Confirmed -->

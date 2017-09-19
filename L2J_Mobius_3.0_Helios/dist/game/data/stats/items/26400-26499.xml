@@ -482,93 +482,155 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="21477" level="3" />
-			<skill id="21364" level="11" />
+			<skill id="21364" level="1" />
 		</skills>
 	</item>
 	<item id="26448" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
 		<!-- Attribute Resistance + 10 and Debuff Resistance + 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="2" />
+		</skills>
 	</item>
 	<item id="26449" name="Talisman - Abundance" additionalName="Morale" type="Armor">
 		<!-- P./M. Critical Rate + 8%, Received P. Critical Damage - 10%, Received Skill Damage in PvP - 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="3" />
+		</skills>
 	</item>
 	<item id="26450" name="Talisman - Abundance" additionalName="Physique" type="Armor">
 		<!-- Max HP/MP/CP + 325 and HP/MP/CP Recovery Rate + 5. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="4" />
+		</skills>
 	</item>
 	<item id="26451" name="Talisman - Abundance" additionalName="Hunter" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. 271, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received P. Critical Damage - 15%, Received Skill Damage in PvP - 15%. Additionally, received damage in PvP is reduced. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="5" />
+		</skills>
 	</item>
 	<item id="26452" name="Talisman - Abundance" additionalName="Slaughterer" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271 P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP, MP, and CP + 490, and HP, MP, and CP Recovery + 7. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="6" />
+		</skills>
 	</item>
 	<item id="26453" name="Talisman - Abundance" additionalName="Conquerer" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271, P. Evasion/M. Evasion + 7, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received P. Critical Damage - 15%, Received Skill Damage in PvP - 15%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="7" />
+		</skills>
 	</item>
 	<item id="26454" name="Talisman - Abundance" additionalName="Outlaw" type="Armor">
 		<!-- Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received P. Critical Damage - 15%, Received Skill Damage in PvP - 15%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="8" />
+		</skills>
 	</item>
 	<item id="26455" name="Talisman - Abundance Lv. 1 (High-grade)" type="Armor">
 		<!-- Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="9" />
+			<skill id="21477" level="1" />
+		</skills>
 	</item>
 	<item id="26456" name="Talisman - Abundance Lv. 2 (High-grade)" type="Armor">
 		<!-- HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="10" />
+			<skill id="21477" level="2" />
+		</skills>
 	</item>
 	<item id="26457" name="Talisman - Abundance Lv. 3 (High-grade)" type="Armor">
 		<!-- Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="11" />
+			<skill id="21477" level="3" />
+		</skills>
 	</item>
 	<item id="26458" name="Talisman - Abundance Lv. 4 (High-grade)" type="Armor">
-		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25,  Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="12" />
+			<skill id="21477" level="4" />
+		</skills>
 	</item>
 	<item id="26459" name="Recipe: Talisman - Abundance Lv. 1 (High-grade)" type="EtcItem">
 		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 1. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->

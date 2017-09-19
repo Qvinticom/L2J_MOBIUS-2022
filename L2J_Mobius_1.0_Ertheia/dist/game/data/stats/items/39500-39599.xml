@@ -1006,6 +1006,7 @@
 		<!-- P. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1013,13 +1014,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="17973" level="1" />
+		</skills>
 	</item>
 	<item id="39569" name="Talisman - Wind: M. Critical Damage" type="Armor">
 		<!-- M. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1027,13 +1032,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="17974" level="1" />
+		</skills>
 	</item>
 	<item id="39570" name="Talisman - Wind: Defense" type="Armor">
 		<!-- For 15 sec., P./M. Def. are maximized. Cooldown is 20 min. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_active" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1041,13 +1050,17 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="17975" level="1" />
+		</skills>
 	</item>
 	<item id="39571" name="Talisman - Wind: Debuff Resistance" type="Armor">
 		<!-- For 15 sec., Debuff Resistance is increased. Cooldown is 20 min. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1055,8 +1068,11 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="17976" level="1" />
+		</skills>
 	</item>
 	<item id="39572" name="Talisman - Insanity" type="Armor">
 		<!-- Max HP/MP/CP + 800, P./M. Accuracy + 2, P./M. Evasion + 2, Atk./Casting Spd. + 60, P. Critical Rate + 30, M. Critical Rate + 10, P. Atk. + 638, M. Atk. + 742, Skill Power + 5%, Damage Reflect Resistance + 30, P. Def. + 563, M. Def. + 368, Fixed Damage Resistance + 10%, Vampiric Rage + 5, STR/INT/CON/MEN/DEX/WIT/CHA/LUC + 2. Skill MP Consumption - 3%, Skill Cooldown - 3%. -->

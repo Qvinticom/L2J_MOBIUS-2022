@@ -126,7 +126,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26312" name="Offering Test Ingredient  2" type="Weapon">
+	<item id="26312" name="Offering Test Ingredient 2" type="Weapon">
 		<!-- Weapon worth 1000 Adena. Shadow item. -->
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -152,7 +152,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="26313" name="Offering Test Ingredient  3" type="EtcItem">
+	<item id="26313" name="Offering Test Ingredient 3" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Timed item. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -165,7 +165,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="price" val="1000" />
 	</item>
-	<item id="26314" name="Offering Test Ingredient  4" type="EtcItem">
+	<item id="26314" name="Offering Test Ingredient 4" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Premium item. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
@@ -173,14 +173,14 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26315" name="Offering Test Ingredient  5" type="EtcItem">
+	<item id="26315" name="Offering Test Ingredient 5" type="EtcItem">
 		<!-- Price is 0, but can be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26316" name="Offering Test Ingredient  6" type="EtcItem">
+	<item id="26316" name="Offering Test Ingredient 6" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Cannot be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
@@ -189,7 +189,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26317" name="Offering Test Ingredient  7" type="EtcItem">
+	<item id="26317" name="Offering Test Ingredient 7" type="EtcItem">
 		<!-- Stackable item worth 1000. Must be used as an offering. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
@@ -390,29 +390,57 @@
 		<!-- Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21477" level="1" />
+			<skill id="21364" level="9" />
+		</skills>
 	</item>
 	<item id="26339" name="Talisman - Abundance Lv. 2 (High-grade)" type="Armor">
 		<!-- HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21477" level="2" />
+			<skill id="21364" level="10" />
+		</skills>
 	</item>
 	<item id="26340" name="Talisman - Abundance Lv. 3 (High-grade)" type="Armor">
 		<!-- Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21477" level="3" />
+			<skill id="21364" level="11" />
+		</skills>
 	</item>
 	<item id="26341" name="Talisman - Abundance Lv. 4 (High-grade)" type="Armor">
-		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25,  Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
-		<set name="icon" val="BranchIcon.Icon.g_therich_i03" />
+		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21477" level="4" />
+			<skill id="21364" level="12" />
+		</skills>
 	</item>
 	<item id="26342" name="Recipe: Talisman - Abundance Lv. 1 (High-grade)" type="EtcItem">
 		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 1. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->

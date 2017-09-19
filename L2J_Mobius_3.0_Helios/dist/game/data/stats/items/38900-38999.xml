@@ -243,9 +243,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="compoundChance" val="100" />
-		<!-- TODO: Find more retail values -->
+		<!-- Effect is hardcoded - This is only for the passive skill (visual) -->
+		<skills>
+			<skill id="17818" level="3" />
+		</skills>
 	</item>
 	<item id="38928" name="Sapphire" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 3.5%. Effect does not stack with additional jewels of the same type. -->
@@ -264,7 +267,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="compoundChance" val="80" />
-		<!-- TODO: Find more retail values -->
+		<!-- Effect is hardcoded - This is only for the passive skill (visual) -->
+		<skills>
+			<skill id="17818" level="4" />
+		</skills>
 	</item>
 	<item id="38929" name="Sapphire" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
