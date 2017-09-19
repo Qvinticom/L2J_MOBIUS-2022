@@ -2931,9 +2931,48 @@
 		</selfEffects>
 	</skill>
 	<skill id="11153" toLevel="1" name="Chain Blaze">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill11153</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<activateRate>200</activateRate>
+		<abnormalType>SYNERGY_FEOH</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<itemConsumeCount>2</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A2</operateType>
+		<magicLvl>100</magicLvl>
+		<mpConsume>351</mpConsume>
+		<affectRange>1100</affectRange>
+		<hitTime>2560</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>6000</reuseDelay>
+		<effectPoint>-418</effectPoint>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<rideState>NONE</rideState>
+		<isDebuff>true</isDebuff>
+		<trait>PARALYZE</trait>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<affectLimit>6-12</affectLimit>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">349</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+				</power>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="1">-30</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{base - (-0.6 - 0.4 * subIndex)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="11154" toLevel="1" name="Fire Potential">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
