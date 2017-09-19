@@ -866,15 +866,15 @@
 	<item id="39634" name="Venir's Talisman" additionalName="Stage 1" type="Armor">
 		<!-- MEN + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39635" />
+		<set name="compoundChance" val="71" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="price" val="1000000" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39635" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="1" /> <!-- Venir Talisman - Lv1 -->
 		</skills>
@@ -883,14 +883,14 @@
 	<item id="39635" name="Venir's Talisman" additionalName="Stage 2" type="Armor">
 		<!-- MEN/WIT + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39636" />
+		<set name="compoundChance" val="68" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39636" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="2" /> <!-- Venir Talisman - Lv2 -->
 		</skills>
@@ -899,14 +899,14 @@
 	<item id="39636" name="Venir's Talisman" additionalName="Stage 3" type="Armor">
 		<!-- MEN/WIT/CON + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39637" />
+		<set name="compoundChance" val="65" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39637" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="3" /> <!-- Venir Talisman - Lv3 -->
 		</skills>
@@ -915,14 +915,14 @@
 	<item id="39637" name="Venir's Talisman" additionalName="Stage 4" type="Armor">
 		<!-- MEN/WIT/CON/INT + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39638" />
+		<set name="compoundChance" val="62" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39638" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="4" /> <!-- Venir Talisman - Lv4 -->
 		</skills>
@@ -931,14 +931,14 @@
 	<item id="39638" name="Venir's Talisman" additionalName="Stage 5" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39639" />
+		<set name="compoundChance" val="59" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39639" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="5" /> <!-- Venir Talisman - Lv5 -->
 		</skills>
@@ -947,14 +947,14 @@
 	<item id="39639" name="Venir's Talisman" additionalName="Stage 6" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39640" />
+		<set name="compoundChance" val="56" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39640" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="6" /> <!-- Venir Talisman - Lv6 -->
 		</skills>
@@ -963,14 +963,14 @@
 	<item id="39640" name="Venir's Talisman" additionalName="Stage 7" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39641" />
+		<set name="compoundChance" val="53" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39641" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="7" /> <!-- Venir Talisman - Lv7 -->
 		</skills>
@@ -979,14 +979,14 @@
 	<item id="39641" name="Venir's Talisman" additionalName="Stage 8" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39642" />
+		<set name="compoundChance" val="50" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39642" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="8" /> <!-- Venir Talisman - Lv8 -->
 		</skills>
@@ -995,14 +995,14 @@
 	<item id="39642" name="Venir's Talisman" additionalName="Stage 9" type="Armor">
 		<!-- MEN + 2, WIT/CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39643" />
+		<set name="compoundChance" val="47" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39643" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="9" /> <!-- Venir Talisman - Lv9 -->
 		</skills>
@@ -1011,14 +1011,14 @@
 	<item id="39643" name="Venir's Talisman" additionalName="Stage 10" type="Armor">
 		<!-- MEN/WIT + 2, CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39644" />
+		<set name="compoundChance" val="44" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39644" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="10" /> <!-- Venir Talisman - Lv10 -->
 		</skills>
@@ -1027,14 +1027,14 @@
 	<item id="39644" name="Venir's Talisman" additionalName="Stage 11" type="Armor">
 		<!-- MEN/WIT/CON + 2, INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39645" />
+		<set name="compoundChance" val="41" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39645" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="11" /> <!-- Venir Talisman - Lv11 -->
 		</skills>
@@ -1043,14 +1043,14 @@
 	<item id="39645" name="Venir's Talisman" additionalName="Stage 12" type="Armor">
 		<!-- MEN/WIT/CON/INT + 2, DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39646" />
+		<set name="compoundChance" val="38" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39646" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="12" /> <!-- Venir Talisman - Lv12 -->
 		</skills>
@@ -1059,14 +1059,14 @@
 	<item id="39646" name="Venir's Talisman" additionalName="Stage 13" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX + 2, STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39647" />
+		<set name="compoundChance" val="35" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="compoundItem" val="39647" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="13" /> <!-- Venir Talisman - Lv13 -->
 		</skills>
@@ -1075,13 +1075,13 @@
 	<item id="39647" name="Venir's Talisman" additionalName="Stage 14" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR+ 2, LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39648" />
+		<set name="compoundChance" val="32" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39648" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="14" /> <!-- Venir Talisman - Lv14 -->
 		</skills>
@@ -1090,13 +1090,13 @@
 	<item id="39648" name="Venir's Talisman" additionalName="Stage 15" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC + 2, CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39649" />
+		<set name="compoundChance" val="29" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39649" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="15" /> <!-- Venir Talisman - Lv15 -->
 		</skills>
@@ -1105,13 +1105,13 @@
 	<item id="39649" name="Venir's Talisman" additionalName="Stage 16" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39650" />
+		<set name="compoundChance" val="26" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39650" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="16" /> <!-- Venir Talisman - Lv16 -->
 		</skills>
@@ -1120,13 +1120,13 @@
 	<item id="39650" name="Venir's Talisman" additionalName="Stage 17" type="Armor">
 		<!-- MEN + 3, WIT/CON/INT/DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39651" />
+		<set name="compoundChance" val="23" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39651" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="17" /> <!-- Venir Talisman - Lv17 -->
 		</skills>
@@ -1135,13 +1135,13 @@
 	<item id="39651" name="Venir's Talisman" additionalName="Stage 18" type="Armor">
 		<!-- MEN/WIT + 3, CON/INT/DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39652" />
+		<set name="compoundChance" val="20" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39652" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="18" /> <!-- Venir Talisman - Lv18 -->
 		</skills>
@@ -1150,13 +1150,13 @@
 	<item id="39652" name="Venir's Talisman" additionalName="Stage 19" type="Armor">
 		<!-- MEN/WIT/CON + 3, INT/DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39653" />
+		<set name="compoundChance" val="17" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39653" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="19" /> <!-- Venir Talisman - Lv19 -->
 		</skills>
@@ -1165,13 +1165,13 @@
 	<item id="39653" name="Venir's Talisman" additionalName="Stage 20" type="Armor">
 		<!-- MEN/WIT/CON/INT + 3, DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39654" />
+		<set name="compoundChance" val="14" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39654" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="20" /> <!-- Venir Talisman - Lv20 -->
 		</skills>
@@ -1180,13 +1180,13 @@
 	<item id="39654" name="Venir's Talisman" additionalName="Stage 21" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX + 3, STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39655" />
+		<set name="compoundChance" val="11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39655" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="21" /> <!-- Venir Talisman - Lv21 -->
 		</skills>
@@ -1195,13 +1195,13 @@
 	<item id="39655" name="Venir's Talisman" additionalName="Stage 22" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR + 3, LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39656" />
+		<set name="compoundChance" val="8" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39656" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="22" /> <!-- Venir Talisman - Lv22 -->
 		</skills>
@@ -1210,13 +1210,13 @@
 	<item id="39656" name="Venir's Talisman" additionalName="Stage 23" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC + 3, CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
 		<set name="icon" val="BranchIcon.Icon.etc_allstat_talisman_i02" />
+		<set name="compoundItem" val="39657" />
+		<set name="compoundChance" val="5" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="compoundItem" val="39657" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundChance" val="100" />
 		<skills>
 			<skill id="18024" level="23" /> <!-- Venir Talisman - Lv23 -->
 		</skills>

@@ -48,6 +48,7 @@ Goddess of Destruction:
 Ertheia:
 -Ertheia Race
 -Alchemy
+-Brooch system
 -Lucky drops
 -Auto fishing
 

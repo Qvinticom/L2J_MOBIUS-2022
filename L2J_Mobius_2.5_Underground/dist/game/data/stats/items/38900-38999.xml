@@ -231,20 +231,19 @@
 	<item id="38927" name="Sapphire" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="compoundItem" val="38928" />
+		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundItem" val="38928" />
-		<!-- Lv. 2 -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="true" />
-		<set name="compoundChance" val="100" />
 		<!-- Effect is hardcoded - This is only for the passive skill (visual) -->
 		<skills>
 			<skill id="17818" level="3" />
@@ -253,20 +252,19 @@
 	<item id="38928" name="Sapphire" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 3.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="compoundItem" val="38929" />
+		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundItem" val="38929" />
-		<!-- Lv. 3 -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="compoundChance" val="80" />
 		<!-- Effect is hardcoded - This is only for the passive skill (visual) -->
 		<skills>
 			<skill id="17818" level="4" />
@@ -275,39 +273,37 @@
 	<item id="38929" name="Sapphire" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="compoundItem" val="38930" />
+		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundItem" val="38930" />
-		<!-- Lv. 4 -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="compoundChance" val="70" />
 		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="38930" name="Sapphire" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 12.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="compoundItem" val="38931" />
+		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="compoundItem" val="38931" />
-		<!-- Lv. 5 -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="compoundChance" val="50" />
 		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="38931" name="Sapphire" additionalName="Lv. 5" type="Armor">
