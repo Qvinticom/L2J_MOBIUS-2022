@@ -130,27 +130,24 @@ public class AdminZone implements IAdminCommandHandler
 		adminReply.replace("%SCRIPT%", activeChar.isInsideZone(ZoneId.SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO");
 		
 		final StringBuilder zones = new StringBuilder(100);
-		for (L2ZoneType zone : ZoneManager.getInstance().getRegion(activeChar).getZones().values())
+		for (L2ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
 		{
-			if (zone.isCharacterInZone(activeChar))
+			if (zone.getName() != null)
 			{
-				if (zone.getName() != null)
+				zones.append(zone.getName());
+				zones.append("<br1>");
+				if (zone.getId() < 300000)
 				{
-					zones.append(zone.getName());
-					zones.append("<br1>");
-					if (zone.getId() < 300000)
-					{
-						zones.append("(");
-						zones.append(zone.getId());
-						zones.append(")");
-					}
-				}
-				else
-				{
+					zones.append("(");
 					zones.append(zone.getId());
+					zones.append(")");
 				}
-				zones.append(" ");
 			}
+			else
+			{
+				zones.append(zone.getId());
+			}
+			zones.append(" ");
 		}
 		for (L2SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 		{
