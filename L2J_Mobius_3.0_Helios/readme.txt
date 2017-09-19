@@ -117,7 +117,6 @@ Others:
 -Threadpool manager from aCis
 
 TODO:
--Underground five man dungeons
 -Provisional Clan Halls
--Check all quests rewards
+-Mystic Tavern instanced zones
 -Superion Fortress

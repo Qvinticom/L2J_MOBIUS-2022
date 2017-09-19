@@ -110,5 +110,5 @@ Others:
 -Threadpool manager from aCis
 
 TODO:
--Underground five man dungeons
 -Provisional Clan Halls
+-Mystic Tavern instanced zones
