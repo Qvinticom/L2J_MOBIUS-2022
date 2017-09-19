@@ -1861,8 +1861,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11347" toLevel="4" name="Greater Servitor Haste">
-		<!-- Updated to IO -->
+	<skill id="11347" toLevel="7" name="Greater Servitor Haste">
+		<!-- Updated to HELIOS -->
 		<!-- For 30 min., all servitors' Atk. Spd. + 10%. -->
 		<icon>icon.skill11347</icon>
 		<abnormalLvl>
@@ -1870,6 +1870,9 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
 		</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>GREATER_SERVITOR_BUFF</abnormalType>
@@ -1882,6 +1885,9 @@
 			<value level="2">67</value>
 			<value level="3">73</value>
 			<value level="4">79</value>
+			<value level="5">0</value>
+			<value level="6">0</value>
+			<value level="7">0</value>
 		</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>3500</hitTime>
@@ -1896,24 +1902,63 @@
 					<value level="2">12</value>
 					<value level="3">15</value>
 					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">20</value>
+					<value level="7">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
- 				<amount>
- 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="PAtk">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+					<value level="7">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">2</value>
+					<value level="6">4</value>
+					<value level="7">6</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
