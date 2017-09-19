@@ -505,6 +505,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18717" level="1" />
+		</skills>
 	</item>
 	<item id="47689" name="Greater Sapphire" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 20% and M. Atk. By 13%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -514,6 +517,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18719" level="1" />
+		</skills>
 	</item>
 	<item id="47690" name="Greater Obsidian" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 15% and cancels the attacker's target. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->

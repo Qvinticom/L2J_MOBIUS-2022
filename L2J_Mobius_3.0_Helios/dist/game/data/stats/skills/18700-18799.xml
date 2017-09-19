@@ -21,9 +21,15 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18717" toLevel="1" name="Greater Ruby">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18718" toLevel="2" name="Greater Sapphire">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -31,9 +37,15 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18719" toLevel="1" name="Greater Sapphire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MAtk">
+				<amount>13</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18720" toLevel="1" name="Greater Obsidian - Cancel Target">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

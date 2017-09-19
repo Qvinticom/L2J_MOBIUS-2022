@@ -8749,7 +8749,11 @@ public final class L2PcInstance extends L2Playable
 	public void updateActiveBroochJewel()
 	{
 		// Update active Ruby jewel.
-		if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped()))
+		if ((getInventory().getItemByItemId(BroochJewel.GREATER_RUBY.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.GREATER_RUBY.getItemId()).isEquipped()))
+		{
+			setActiveRubyJewel(BroochJewel.GREATER_RUBY);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped()))
 		{
 			setActiveRubyJewel(BroochJewel.RUBY_LV5);
 		}
@@ -8774,7 +8778,11 @@ public final class L2PcInstance extends L2Playable
 			setActiveRubyJewel(null);
 		}
 		// Update active Sapphire jewel.
-		if ((getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()).isEquipped()))
+		if ((getInventory().getItemByItemId(BroochJewel.GREATER_SHAPPHIRE.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.GREATER_SHAPPHIRE.getItemId()).isEquipped()))
+		{
+			setActiveShappireJewel(BroochJewel.GREATER_SHAPPHIRE);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()).isEquipped()))
 		{
 			setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV5);
 		}
