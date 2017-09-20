@@ -181,7 +181,7 @@
 		<hitTime>8000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<effects>
 			<effect name="DefenceTrait">
 				<BOW>50</BOW>
@@ -210,7 +210,7 @@
 		<hitTime>8000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>50</amount>
@@ -281,6 +281,15 @@
 			<effect name="BlockAbnormalSlot">
 				<!-- Guess there is more -->
 				<slot>INVINCIBILITY</slot>
+			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>0</magicTypes>
+			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>1</magicTypes>
+			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>3</magicTypes>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
  				<amount>
@@ -742,12 +751,12 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="19227" toLevel="2" name="Wind Hiding">
-		<!-- Blends into the wind for 7 seconds. Increases Speed by 70. Canceled when using normal attacks or attack skills. -->
+		<!-- Blends into the wind for 5 seconds. Increases Speed by 14. Canceled when using normal attacks or attack skills. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLvl>
-		<abnormalTime>7</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
@@ -767,8 +776,8 @@
 			<effect name="Hide" />
 			<effect name="Speed">
 				<amount>
-					<value level="1">70</value>
-					<value level="2">100</value>
+					<value level="1">7</value>
+					<value level="2">14</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -793,7 +802,7 @@
 		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
 		<abnormalTime>30</abnormalTime>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<effects>
 			<effect name="DefenceTrait">
 				<DAGGER>50</DAGGER>
@@ -844,16 +853,20 @@
 		<hitTime>8000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<effects>
 			<effect name="MAtk">
-				<amount>30</amount>
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19232" toLevel="1" name="Crippling Dance">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Party's P. Skill Power + 30%% for 30 seconds. Consumes 5 Spirit Ores. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -874,10 +887,14 @@
 		<hitTime>8000</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>600000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalSkillPower">
-				<amount>30</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

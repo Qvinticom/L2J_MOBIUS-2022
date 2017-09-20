@@ -1283,7 +1283,7 @@
 		</effects>
 	</skill>
 	<skill id="10517" toLevel="1" name="Shadow Hide">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- You go into Hide state, cancel debuffs and Hold effects on you, increase HP Recovery Bonus, and eliminate enemy enmity toward you. -->
 		<abnormalLvl>1</abnormalLvl>
@@ -1320,10 +1320,6 @@
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
 				<max>10</max>
-			</effect>
-			<effect name="HpRegen">
-				<amount>15</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
@@ -1362,9 +1358,9 @@
 		</effects>
 	</skill>
 	<skill id="10520" toLevel="4" name="Final Ultimate Evasion">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
-		<!-- For 30 sec., increases P. Evasion by 60, M. Evasion by 60, M. Def. by 20%, P. Skill Evasion Rate by 60% and Debuff Resistance. Has a 40% chance of canceling the enemy's targeting when attacked. -->
+		<!-- For 30 seconds, own P. Evasion +25, M. Def. +70%, P. Skill Evasion Rate +35%, Debuff Resistance +35%. Has a chance of canceling the enemy's targeting when attacked. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1418,34 +1414,41 @@
 				<skillId>10544</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="SkillEvasion">
-				<magicType>0</magicType>
-				<amount>60</amount>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>
-					<value level="1">60</value>
-					<value level="2">65</value>
-					<value level="3">70</value>
-					<value level="4">75</value>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalEvasion">
+			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">60</value>
-					<value level="2">70</value>
-					<value level="3">80</value>
-					<value level="4">90</value>
+					<value level="1">70</value>
+					<value level="2">80</value>
+					<value level="3">90</value>
+					<value level="4">100</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillEvasion">
+				<amount>
+					<value level="1">35</value>
+					<value level="2">40</value>
+					<value level="3">45</value>
+					<value level="4">50</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="ResistDispelByCategory">
-				<amount>-30</amount>
+				<amount>
+					<value level="1">35</value>
+					<value level="2">40</value>
+					<value level="3">45</value>
+					<value level="4">50</value>
+				</amount>
 				<slot>BUFF</slot>
 			</effect>
 			<effect name="PAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
@@ -1941,19 +1944,19 @@
 		</effects>
 	</skill>
 	<skill id="10529" toLevel="4" name="Shadow Flash">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
-		<!-- Moves behind the enemy, cancels his target, and inflicts Stun. Additionally increases Critical Damage on target, and prevents target's HP from recovering more than 50%. -->
+		<!-- Teleports to the back of the target to increase the damage from P. Critical Attack by 30% for 10 seconds and prevents it from recovering HP by over 50%. Additionally, the target is unable to hide and this state cannot be canceled. -->
 		<icon>icon.skill10529</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>4</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>CRITICAL_SPECIAL</abnormalType>
+		<abnormalVisualEffect>DEATH_MARK</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="4">100</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<trait>SHOCK</trait>
+		<trait>NONE</trait>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1967,7 +1970,7 @@
 			<value fromLevel="1" toLevel="4">600</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</castRange>
-		<castRange>1100</castRange>
+		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -1980,9 +1983,11 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<targetConditions>
+			<condition name="OpCheckFlag" />
+		</targetConditions>
 		<effects>
 			<effect name="TeleportToTarget" />
-			<effect name="TargetCancel" />
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
@@ -1993,6 +1998,13 @@
 			<effect name="LimitHp">
 				<amount>-50</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="TargetMeProbability">
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -2038,9 +2050,9 @@
 		</effects>
 	</skill>
 	<skill id="10531" toLevel="2" name="Angel of Death">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
-		<!-- Momentarily increases Speed by 30, P. Evasion by 40, skill Evasion by 75, Vital Spot Attack Rate by 40%, and Debuff Resistance by 80%. Casts Crippling Poison on enemies attacking you. Requires a dagger/dual dagger to be equipped. -->
+		<!-- For 30 seconds, Vital Spot Attack Rate +40%, P. Skill Power +10%, P. Accuracy +8, P. Evasion +40, and defends against debuff attacks 5 times. Can be used when Dagger/Dual Dagger is equipped. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2084,48 +2096,29 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="TriggerSkillByDamage">
-				<!-- Crippling Poison -->
-				<attackerType>L2Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
-				<chance>80</chance>
-				<targetType>ENEMY</targetType>
-				<minDamage>1</minDamage>
-				<skillId>10545</skillId>
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-				</skillLevel>
+			<effect name="VitalityPointsRate">
+				<value level="1">40</value>
+				<value level="2">45</value>
+				<mode>PER</mode>
 			</effect>
-			<effect name="SkillEvasion">
-				<magicType>0</magicType>
-				<amount>
-					<value level="1">75</value>
-					<value level="2">80</value>
-				</amount>
+			<effect name="PhysicalSkillPower">
+				<value level="1">10</value>
+				<value level="2">15</value>
+				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="1">30</value>
-					<value level="2">34</value>
-				</amount>
+			<effect name="Accuracy">
+				<amount>8</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>40</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="FatalBlowRate">
-				<amount>
-					<value level="1">40</value>
-					<value level="2">45</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-80</amount>
-				<slot>BUFF</slot>
+			<effect name="AbnormalShield">
+				<times>
+					<value level="1">5</value>
+					<value level="2">7</value>
+				</times>
 			</effect>
 			<effect name="PAtk" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
 				<amount>

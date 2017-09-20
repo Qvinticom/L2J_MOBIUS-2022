@@ -334,7 +334,7 @@
 		</effects>
 	</skill>
 	<skill id="10952" toLevel="1" name="Survival Instinct">
-		<!-- For 60 sec., increases P. Atk. by 40%, P. Def/M. Def. by 20%, and increases Max HP/CP by 20%. Consumes 5 Soulstones. -->
+		<!-- For 60 seconds, own P. Atk +20%, P. Skill Power +15%, Atk. Spd. +15%, P. Def. +20%, M. Def. +20%. 5 Soul Stones consumed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
@@ -355,22 +355,22 @@
 		<reuseDelay>600000</reuseDelay>
 		<effects>
 			<effect name="PAtk">
-				<amount>40</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>20</amount>
+			<effect name="PhysicalSkillPower">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxCp">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxHp">
+			<effect name="MagicalDefence">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
@@ -383,7 +383,7 @@
 		</effects>
 	</skill>
 	<skill id="10953" toLevel="1" name="Hunting Instinct">
-		<!-- For 60 sec., increases Atk. Spd. by 20%, Skill Power by 20%, P. Skill Critical Rate by 40%, and Skill Critical Damage by 20%. Consumes 5 Soulstones. -->
+		<!-- For 60 seconds, own P. Atk +10%, P. Skill Power +15%, P. Skill Critical Rate +15%, P. Skill Critical Damage +15%. 5 Soul Stones consumed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
@@ -403,12 +403,20 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<effects>
-			<effect name="PhysicalAttackSpeed">
-				<amount>20</amount>
+			<effect name="PAtk">
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalSkillPower">
-				<amount>20</amount>
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalProbability">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
@@ -420,7 +428,7 @@
 		</effects>
 	</skill>
 	<skill id="10954" toLevel="1" name="Counter Instinct">
-		<!-- For 60 sec., increases Skill Power by 40%, P. Skill Critical Rate by 20%, and Skill Critical Damage by 40%. Consumes 5 Soulstones. -->
+		<!-- For 60 seconds, own P. Atk +10%, P. Skill Power +15%, P. Skill Critical Damage +25%. 5 Soul Stones consumed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
@@ -440,8 +448,16 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalSkillPower">
-				<amount>40</amount>
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
@@ -453,7 +469,7 @@
 		</effects>
 	</skill>
 	<skill id="10955" toLevel="1" name="Bloody Instinct">
-		<!-- For 60 sec., increases PvP Damage by 20%, and Skill Power by 20%. Consumes 5 Soulstones. -->
+		<!-- For 60 seconds, own PvP damage +15%, P. Atk. +10%, P. Skill Damage +15%. 5 Soul Stones consumed. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">60</value>
@@ -473,20 +489,24 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalSkillPower">
-				<amount>20</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>20</amount>
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>20</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">

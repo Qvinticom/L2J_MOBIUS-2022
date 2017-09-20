@@ -386,7 +386,7 @@
 		<!-- Rushes the enemy to inflict Stun for 1 second. Requires a sword, dualsword or dual blunt to be equipped. -->
 		<icon>icon.skill11508</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
@@ -414,7 +414,7 @@
 		</castRange>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
-		<reuseDelay>10000</reuseDelay>
+		<reuseDelay>7000</reuseDelay>
 		<isDebuff>true</isDebuff>
 		<effectPoint>
 			<value level="1">-687</value>

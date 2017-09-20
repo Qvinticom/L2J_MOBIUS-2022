@@ -2169,7 +2169,7 @@
 	</skill>
 	<skill id="10776" toLevel="4" name="Final Ultimate Escape">
 		<!-- Glory Days confirmed -->
-		<!-- For 30 sec., P. Evasion + 60, M. Evasion + 60, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 80%. -->
+		<!-- For 30 seconds, own P. Evasion +25, M. Def. +70%, P. Skill Evasion +35%, and Buff Cancel Attack Resistance +90%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
@@ -2202,39 +2202,35 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="SkillEvasion">
-				<magicType>0</magicType>
-				<amount>
-					<value level="1">80</value>
-					<value level="2">85</value>
-					<value level="3">90</value>
-					<value level="4">95</value>
-				</amount>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>
-					<value level="1">60</value>
-					<value level="2">70</value>
-					<value level="3">80</value>
-					<value level="4">90</value>
+					<value level="1">25</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalEvasion">
+			<effect name="MagicalDefence">
 				<amount>
-					<value level="1">60</value>
-					<value level="2">70</value>
-					<value level="3">80</value>
-					<value level="4">90</value>
+					<value level="1">70</value>
+					<value level="2">80</value>
+					<value level="3">90</value>
+					<value level="4">100</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillEvasion">
+				<amount>
+					<value level="1">35</value>
+					<value level="2">40</value>
+					<value level="3">45</value>
+					<value level="4">50</value>
+				</amount>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="ResistDispelByCategory">
-				<amount>-95</amount>
+				<amount>-90</amount>
 				<slot>BUFF</slot>
 			</effect>
 			<effect name="PAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
@@ -2640,7 +2636,7 @@
 	</skill>
 	<skill id="10784" toLevel="1" name="Camouflage">
 		<!-- Glory Days confirmed -->
-		<!-- For 30 sec., blends into the environment and hides. Decreases Speed by 30%. -->
+		<!-- For 30 seconds, blends into the environment and hides. Decreases Speed by 100. -->
 		<icon>icon.skill10784</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2659,7 +2655,7 @@
 		<mpConsume>9</mpConsume>
 		<hitTime>200</hitTime>
 		<effectPoint>2</effectPoint>
-		<reuseDelay>120000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>

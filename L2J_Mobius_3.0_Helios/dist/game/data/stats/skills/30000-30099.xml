@@ -615,8 +615,8 @@
 		</selfEffects>
 	</skill>
 	<skill id="30008" toLevel="5" name="Wind Blend">
-		<!-- Updated to IO -->
-		<!-- For 3 sec., blends into the wind. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
+		<!-- Updated to HELIOS -->
+		<!-- For 5 seconds, blends into the wind. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -625,7 +625,7 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 		</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<effectPoint>687</effectPoint>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -661,8 +661,25 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="ReduceDamage">
-				<amount>50</amount>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 		<endEffects>
@@ -679,8 +696,8 @@
 		</endEffects>
 	</skill>
 	<skill id="30009" toLevel="10" name="Deceptive Blink">
-		<!-- Updated to Ertheia -->
-		<!-- For 5 sec., blends into the wind and teleports backward, and Speed + 100. Requires a sword or blunt weapon. -->
+		<!-- Updated to HELIOS -->
+		<!-- The caster is assimilated into the wind, and teleports to the rear. Assimiliation lasts for 5 seconds, and speed increases by 50 while assimilated. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30009</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -734,7 +751,7 @@
 			</effect>
 			<effect name="Hide" />
 			<effect name="Speed">
-				<amount>100</amount>
+				<amount>50</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -822,7 +839,7 @@
 			<value level="14">37</value>
 			<value level="15">38</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>600</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
@@ -844,7 +861,7 @@
 		</effects>
 	</skill>
 	<skill id="30012" toLevel="25" name="Air Rush">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Knocks down target and attacks with 57 Power added to M. Atk. 10% more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30012</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -882,7 +899,7 @@
 			<value level="25">73</value>
 		</mpConsume>
 		<effectPoint>-696</effectPoint>
-		<castRange>900</castRange>
+		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>7000</reuseDelay>
@@ -998,7 +1015,7 @@
 			<value level="14">37</value>
 			<value level="15">38</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>600</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>

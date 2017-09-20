@@ -92,7 +92,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11106" toLevel="7" name="Elemental Mass Burst">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
 		<icon>icon.skill11865</icon>
 		<abnormalTime>
@@ -136,8 +136,8 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>6080</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>2280</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
@@ -761,8 +761,8 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>6080</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>2280</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
@@ -1296,8 +1296,8 @@
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
-		<hitTime>6080</hitTime>
-		<coolTime>500</coolTime>
+		<hitTime>2280</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>

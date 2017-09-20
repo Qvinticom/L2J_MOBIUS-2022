@@ -455,21 +455,12 @@
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="AttackTrait">
+				<GIANT_WEAKNESS>50</GIANT_WEAKNESS>
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>5</amount>
-				<chance>80</chance>
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>
@@ -479,21 +470,12 @@
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="AttackTrait">
+				<GIANT_WEAKNESS>50</GIANT_WEAKNESS>
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>5</amount>
-				<chance>80</chance>
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>

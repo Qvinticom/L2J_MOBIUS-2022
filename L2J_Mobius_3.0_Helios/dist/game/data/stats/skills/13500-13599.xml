@@ -669,12 +669,32 @@
 			<effect name="MagicMpCost">
 				<amount>-5</amount>
 				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
 				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
