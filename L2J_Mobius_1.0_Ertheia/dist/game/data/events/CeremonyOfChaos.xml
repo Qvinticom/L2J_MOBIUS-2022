@@ -23,7 +23,7 @@
 			<!-- Schedule of the event period, usually one month long, executing onPeriodEnd at 00:00 -->
 			<schedule minute="00" hour="00" dayOfMonth="01" month="*" dayOfWeek="*">
 				<event name="#onPeriodEnd">
-					<arg type="String">Test shit</arg>
+					<arg type="String">Ceremony of Chaos has ended.</arg>
 				</event>
 			</schedule>
 
