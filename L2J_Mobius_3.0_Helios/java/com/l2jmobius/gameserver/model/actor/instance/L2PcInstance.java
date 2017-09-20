@@ -2679,13 +2679,14 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public Race getRace()
 	{
+		final ClassId originalClass = getOriginalClass();
+		if (originalClass != null)
+		{
+			return originalClass.getRace();
+		}
+		
 		if (!isSubClassActive())
 		{
-			final ClassId originalClass = getOriginalClass();
-			if (originalClass != null)
-			{
-				return originalClass.getRace();
-			}
 			return getTemplate().getRace();
 		}
 		return PlayerTemplateData.getInstance().getTemplate(_baseClass).getRace();
