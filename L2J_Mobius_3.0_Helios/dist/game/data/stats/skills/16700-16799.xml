@@ -233,9 +233,9 @@
 	<skill id="16746" toLevel="2" name="Helios">
 	<!-- AUTO GENERATED SKILL -->
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
-	<icon>icon.skillboss</icon>
-	<operateType>P</operateType>
-	<targetType>SELF</targetType>
+		<icon>icon.skillboss</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16747" toLevel="1" name="Ring of the Beginning">
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
@@ -253,17 +253,8 @@
 				<PARALYZE>15</PARALYZE>
 				<KNOCKBACK>15</KNOCKBACK>				
 			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="AttackTrait">
+				<GIANT_WEAKNESS>50</GIANT_WEAKNESS>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>15</amount>
@@ -324,17 +315,8 @@
 				<value level="2">30</value>
 			</KNOCKBACK>
 			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="AttackTrait">
+				<GIANT_WEAKNESS>50</GIANT_WEAKNESS>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
@@ -407,17 +389,8 @@
 				<value level="2">30</value>
 			</KNOCKBACK>
 			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="AttackTrait">
+				<GIANT_WEAKNESS>50</GIANT_WEAKNESS>
 			</effect>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -450,6 +423,21 @@
 		</effects>
 	</skill>
 	<skill id="16750" toLevel="1" name="Ramonas Fansy Earrings">
+	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
+	<icon>icon.skillboss</icon>
+	<operateType>P</operateType>
+	<targetType>SELF</targetType>
+		<effects>
+			<effect name="AttackTrait">
+				<GIANT_WEAKNESS>50</GIANT_WEAKNESS>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>100</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="16751" toLevel="1" name="Helios Majestic Earrings">
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
 	<icon>icon.skillboss</icon>
 	<operateType>P</operateType>
