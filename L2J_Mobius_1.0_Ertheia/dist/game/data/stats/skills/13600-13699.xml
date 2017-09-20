@@ -339,31 +339,57 @@
 				<amount>18</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="EnlargeSlot">
-				<amount>18</amount>
-				<mode>DIFF</mode>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDamageBonus">
 				<amount>5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>6</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDefenceBonus">
 				<amount>6</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
 				<amount>6</amount>
 				<mode>PER</mode>
 			</effect>
@@ -396,31 +422,57 @@
 				<amount>18</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="EnlargeSlot">
-				<amount>18</amount>
-				<mode>DIFF</mode>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDamageBonus">
 				<amount>5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PveMagicalSkillDefenceBonus">
 				<amount>6</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDefenceBonus">
 				<amount>6</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
 				<amount>6</amount>
 				<mode>PER</mode>
 			</effect>

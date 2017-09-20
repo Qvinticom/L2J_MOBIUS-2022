@@ -451,7 +451,7 @@
 		<icon>icon.ring_earthworm_heart</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-			<magicLvl>85</magicLvl>
+		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="MaxMp">
 				<amount>38</amount>
@@ -631,8 +631,14 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
-			<effect name="DefenceTrait">
-				<HOLD>35</HOLD>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>35</amount>
+				<attribute>WIND</attribute>
 			</effect>
 			<effect name="DamageShield">
 				<amount>3</amount>
@@ -753,20 +759,15 @@
 				<amount>74</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
+			<effect name="PhysicalSkillPower">
 				<amount>5</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
+			<effect name="MagicalSkillPower">
 				<amount>5</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
-			</effect>
-			<effect name="Reuse">
-				<amount>5</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
 			</effect>
 			<effect name="DefenceAttribute">
 				<amount>35</amount>
