@@ -151,7 +151,11 @@ public final class TriggerSkillByAttack extends AbstractEffect
 		
 		if ((target != null) && target.isCharacter())
 		{
-			SkillCaster.triggerCast(event.getAttacker(), (L2Character) target, triggerSkill);
+			final BuffInfo info = ((L2Character) target).getEffectList().getBuffInfoBySkillId(triggerSkill.getId());
+			if ((info == null) || (info.getSkill().getLevel() < triggerSkill.getLevel()))
+			{
+				SkillCaster.triggerCast(event.getAttacker(), (L2Character) target, triggerSkill);
+			}
 		}
 	}
 	

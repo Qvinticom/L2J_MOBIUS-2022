@@ -199,17 +199,6 @@
 			<value level="10">110</value>
 		</magicLvl>
 		<effects>
-			<effect name="TriggerSkillByAttack">
-				<attackerType>L2Character</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>50</chance>
-				<targetType>SELF</targetType>
-				<isCritical>true</isCritical>
-				<skillId>10284</skillId> <!-- Lightning Force -->
-				<skillLevel>1</skillLevel>
-			</effect>
 			<effect name="SkillCritical">
 				<stat>STR</stat>
 			</effect>
@@ -528,6 +517,17 @@
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>107</maxAttackerLevel>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<isCritical>true</isCritical>
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<chance>50</chance>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<skillId>10284</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2319,27 +2319,35 @@
 		<isMagic>4</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>WEAPON_MASTER_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot" fromLevel="3" toLevel="3">
+				<slot>WEAPON_MASTER_SPECIAL</slot>
+			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
+				<isCritical>true</isCritical>
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>107</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
-				<isCritical>true</isCritical>
-				<skillId>10284</skillId> <!-- Lightning Force -->
+				<minDamage>1</minDamage>
+				<skillId>10284</skillId>
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
+				<isCritical>true</isCritical>
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>107</maxAttackerLevel>
-				<minDamage>1</minDamage>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
-				<isCritical>true</isCritical>
-				<skillId>10284</skillId> <!-- Lightning Force -->
+				<minDamage>1</minDamage>
+				<skillId>10284</skillId>
 				<skillLevel>3</skillLevel>
 			</effect>
 			<effect name="PAtk">

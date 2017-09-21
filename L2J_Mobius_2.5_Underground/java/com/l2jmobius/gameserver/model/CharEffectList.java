@@ -1109,6 +1109,20 @@ public final class CharEffectList
 			return;
 		}
 		
+		// Fix for stacking trigger skills
+		if (skill.isTriggeredSkill())
+		{
+			final BuffInfo triggerInfo = info.getEffected().getEffectList().getBuffInfoBySkillId(skill.getId());
+			if (triggerInfo != null)
+			{
+				if (triggerInfo.getSkill().getLevel() >= skill.getLevel())
+				{
+					return;
+				}
+				stopAndRemove(triggerInfo);
+			}
+		}
+		
 		// Passive effects are treated specially
 		if (skill.isPassive())
 		{
