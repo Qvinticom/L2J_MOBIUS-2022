@@ -1212,6 +1212,48 @@
 		<operateType>P</operateType>
 		<icon>icon.skill19130</icon>
 		<effects>
+			<effect name="AttackAttribute"> <!-- Default Fire, TODO: AttackCurrentAttribute Handler -->
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute"> <!-- Default Fire, TODO: AttackCurrentAttribute Handler -->
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute"> <!-- Default Fire, TODO: AttackCurrentAttribute Handler -->
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="AttackAttribute"> <!-- Default Fire, TODO: AttackCurrentAttribute Handler -->
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="AttackAttribute"> <!-- Default Fire, TODO: AttackCurrentAttribute Handler -->
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute"> <!-- Default Fire, TODO: AttackCurrentAttribute Handler -->
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
 					<value level="1">20</value>
