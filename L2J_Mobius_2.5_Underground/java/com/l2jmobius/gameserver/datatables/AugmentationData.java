@@ -88,6 +88,7 @@ public class AugmentationData
 	
 	private final List<AugmentationChance> _augmentationChances = new ArrayList<>();
 	private final List<augmentationChanceAcc> _augmentationChancesAcc = new ArrayList<>();
+	private final List<Integer> _augmentationStones = new ArrayList<>();
 	
 	private final Map<Integer, SkillHolder> _allSkills = new HashMap<>();
 	
@@ -392,6 +393,10 @@ public class AugmentationData
 																
 																if (OptionData.getInstance().getOptions(aAugmentId) != null)
 																{
+																	if (!_augmentationStones.contains(aStoneId))
+																	{
+																		_augmentationStones.add(aStoneId);
+																	}
 																	_augmentationChances.add(new AugmentationChance(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
 																}
 																else
@@ -490,6 +495,10 @@ public class AugmentationData
 																aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
 																aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
 																
+																if (!_augmentationStones.contains(aStoneId))
+																{
+																	_augmentationStones.add(aStoneId);
+																}
 																_augmentationChancesAcc.add(new augmentationChanceAcc(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
 															}
 														}
@@ -1040,6 +1049,11 @@ public class AugmentationData
 			LOGGER.info(getClass().getSimpleName() + ": Accessory augmentation success: stat12=" + stat12 + "; stat34=" + stat34 + "; level=" + lifeStoneLevel);
 		}
 		return new L2Augmentation(((stat34 << 16) + stat12));
+	}
+	
+	public boolean isAugmentaionStoneValid(int stoneId)
+	{
+		return _augmentationStones.contains(stoneId);
 	}
 	
 	public static AugmentationData getInstance()

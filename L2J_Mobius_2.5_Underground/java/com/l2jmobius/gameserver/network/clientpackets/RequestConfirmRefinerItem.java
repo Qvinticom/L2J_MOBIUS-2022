@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
@@ -59,6 +60,12 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		final L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
 		if (refinerItem == null)
 		{
+			return;
+		}
+		
+		if (!AugmentationData.getInstance().isAugmentaionStoneValid(refinerItem.getId()))
+		{
+			activeChar.sendMessage("This is not a proper life stone."); // need to update retailchances.xml with this item
 			return;
 		}
 		
