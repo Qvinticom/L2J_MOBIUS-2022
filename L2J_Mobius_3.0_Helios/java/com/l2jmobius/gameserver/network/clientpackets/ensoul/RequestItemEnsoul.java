@@ -57,7 +57,7 @@ public class RequestItemEnsoul implements IClientIncomingPacket
 				final int position = packet.readC();
 				final int soulCrystalObjectId = packet.readD();
 				final int soulCrystalOption = packet.readD();
-				if ((position > 0) && (position <= 3) && ((type == 1) || (type == 2)))
+				if ((position > 0) && (position < 3) && ((type == 1) || (type == 2)))
 				{
 					_options[i] = new EnsoulItemOption(type, position, soulCrystalObjectId, soulCrystalOption);
 				}
