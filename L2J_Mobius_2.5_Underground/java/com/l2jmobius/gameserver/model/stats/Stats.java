@@ -223,6 +223,7 @@ public enum Stats
 	
 	// Vitality
 	VITALITY_CONSUME_RATE("vitalityConsumeRate"),
+	VITALITY_EXP_RATE("vitalityExpRate"),
 	
 	// Souls
 	MAX_SOULS("maxSouls"),

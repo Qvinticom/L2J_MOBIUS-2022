@@ -474,7 +474,7 @@ public class PcStat extends PlayableStat
 	
 	public double getVitalityExpBonus()
 	{
-		return (getVitalityPoints() > 0) ? Config.RATE_VITALITY_EXP_MULTIPLIER : 1.0;
+		return (getVitalityPoints() > 0) ? getValue(Stats.VITALITY_EXP_RATE, Config.RATE_VITALITY_EXP_MULTIPLIER) : 1.0;
 	}
 	
 	public void setVitalityPoints(int value)
