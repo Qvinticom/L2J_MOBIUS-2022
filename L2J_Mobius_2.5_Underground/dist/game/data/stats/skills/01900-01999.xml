@@ -1812,11 +1812,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>-9</amount>
+				<amount>-6</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>-9</amount>
+				<amount>-6</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1835,11 +1835,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>-9</amount>
+				<amount>-6</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>-9</amount>
+				<amount>-6</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -2044,11 +2044,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>27</amount>
+				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>27</amount>
+				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -2091,7 +2091,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Heal">
-				<power>5000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
