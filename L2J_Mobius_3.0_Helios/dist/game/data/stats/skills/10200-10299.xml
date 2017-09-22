@@ -2326,65 +2326,30 @@
 			<value level="2">icon.skill10284_2</value>
 			<value level="3">icon.skill10284_3</value>
 		</icon>
-		<operateType>A2</operateType>
-		<castRange>400</castRange>
-		<abnormalType>WEAPON_MASTER_SPECIAL</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effectRange>900</effectRange>
-		<magicLvl>85</magicLvl>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
 		</abnormalLvl>
 		<abnormalTime>
 			<value level="1">30</value>
 			<value level="2">20</value>
 			<value level="3">15</value>
 		</abnormalTime>
-		<isMagic>4</isMagic>
+		<abnormalType>WEAPON_MASTER_SPECIAL</abnormalType>		
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>95</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<castRange>400</castRange>
+		<rideState>NONE</rideState>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<effects>
-			<effect name="DispelBySlotProbability">
-				<dispel>WEAPON_MASTER_SPECIAL</dispel>
-				<rate>100</rate>
-			</effect>
-			<effect name="BlockAbnormalSlot" fromLevel="3" toLevel="3">
-				<slot>WEAPON_MASTER_SPECIAL</slot>
-			</effect>
-			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
-				<isCritical>false</isCritical>
-				<attackerType>L2Character</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
-				<chance>20</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
-				<skillId>10284</skillId>
-				<skillLevel>2</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack" fromLevel="2" toLevel="2">
-				<isCritical>false</isCritical>
-				<attackerType>L2Character</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
-				<chance>10</chance>
-				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
-				<skillId>10284</skillId>
-				<skillLevel>3</skillLevel>
-			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">20</value>
-					<value level="3">30</value>
-				</amount>
-				<mode>PER</mode>
+		<conditions>
+			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
 					<item>POLE</item>
@@ -2393,6 +2358,36 @@
 					<item>DUALFIST</item>
 					<item>DUALBLUNT</item>
 				</weaponType>
+			</condition>
+		</conditions>
+		<effects>		
+			<effect name="TriggerSkillByAttack">
+				<!-- Lightning Force -->
+				<isCritical>false</isCritical>
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<chance>
+					<value level="1">30</value>
+					<value level="2">20</value>
+					<value level="3">0</value>
+				</chance>
+				<targetType>SELF</targetType>
+				<minDamage>1</minDamage>
+				<skillId>10284</skillId>
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">0</value>
+				</skillLevel>
+			</effect>		
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
 				<amount>
