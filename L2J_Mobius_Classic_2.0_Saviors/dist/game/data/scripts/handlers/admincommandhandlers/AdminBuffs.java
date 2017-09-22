@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
@@ -29,6 +30,9 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.html.PageBuilder;
+import com.l2jmobius.gameserver.model.html.PageResult;
+import com.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -39,8 +43,6 @@ import com.l2jmobius.gameserver.util.GMAudit;
 
 public class AdminBuffs implements IAdminCommandHandler
 {
-	private static final int PAGE_LIMIT = 20;
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_buff",
@@ -48,6 +50,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		"admin_getbuffs_ps",
 		"admin_stopbuff",
 		"admin_stopallbuffs",
+		"admin_viewblockedeffects",
 		"admin_areacancel",
 		"admin_removereuse",
 		"admin_switch_gm_buffs"
@@ -109,7 +112,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				final L2PcInstance player = L2World.getInstance().getPlayer(playername);
 				if (player != null)
 				{
-					int page = 1;
+					int page = 0;
 					if (st.hasMoreTokens())
 					{
 						page = Integer.parseInt(st.nextToken());
@@ -122,7 +125,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isCharacter())
 			{
-				showBuffs(activeChar, (L2Character) activeChar.getTarget(), 1, command.endsWith("_ps"));
+				showBuffs(activeChar, (L2Character) activeChar.getTarget(), 0, command.endsWith("_ps"));
 				return true;
 			}
 			else
@@ -165,6 +168,23 @@ public class AdminBuffs implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Failed removing all effects: " + e.getMessage());
 				activeChar.sendMessage("Usage: //stopallbuffs <objectId>");
+				return false;
+			}
+		}
+		else if (command.startsWith("admin_viewblockedeffects"))
+		{
+			try
+			{
+				StringTokenizer st = new StringTokenizer(command, " ");
+				st.nextToken();
+				int objectId = Integer.parseInt(st.nextToken());
+				viewBlockedEffects(activeChar, objectId);
+				return true;
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Failed viewing blocked effects: " + e.getMessage());
+				activeChar.sendMessage("Usage: //viewblockedeffects <objectId>");
 				return false;
 			}
 		}
@@ -283,115 +303,48 @@ public class AdminBuffs implements IAdminCommandHandler
 			effects.addAll(target.getEffectList().getPassives());
 		}
 		
-		if ((page > ((effects.size() / PAGE_LIMIT) + 1)) || (page < 1))
-		{
-			return;
-		}
+		final String pageLink = "bypass -h admin_getbuffs" + (passive ? "_ps " : " ") + target.getName();
 		
-		int max = effects.size() / PAGE_LIMIT;
-		if (effects.size() > (PAGE_LIMIT * max))
+		final PageResult result = PageBuilder.newBuilder(effects, 3, pageLink).currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, info, sb) ->
 		{
-			max++;
-		}
-		
-		final StringBuilder html = new StringBuilder(500 + (effects.size() * 200));
-		html.append("<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ");
-		html.append(target.getName());
-		html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
-		
-		final int start = ((page - 1) * PAGE_LIMIT);
-		final int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.size());
-		int count = 0;
-		for (BuffInfo info : effects)
-		{
-			if ((count >= start) && (count < end))
+			for (AbstractEffect effect : info.getEffects())
 			{
-				final Skill skill = info.getSkill();
-				for (AbstractEffect effect : info.getEffects())
-				{
-					html.append("<tr><td>");
-					html.append(!info.isInUse() ? FONT_RED1 : "");
-					html.append(skill.getName());
-					html.append(" Lv ");
-					html.append(skill.getLevel());
-					html.append(" (");
-					html.append(effect.getClass().getSimpleName());
-					html.append(")");
-					html.append(!info.isInUse() ? FONT_RED2 : "");
-					html.append("</td><td>");
-					html.append(skill.isToggle() ? "T (" + info.getTickCount(effect) + ")" : skill.isPassive() ? "P" : info.getTime() + "s");
-					html.append("</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ");
-					html.append(target.getObjectId());
-					html.append(" ");
-					html.append(skill.getId());
-					html.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
-				}
+				sb.append("<tr><td>");
+				sb.append(!info.isInUse() ? FONT_RED1 : "");
+				sb.append(info.getSkill().getName());
+				sb.append(" Lv ");
+				sb.append(info.getSkill().getLevel());
+				sb.append(" (");
+				sb.append(effect.getClass().getSimpleName());
+				sb.append(")");
+				sb.append(!info.isInUse() ? FONT_RED2 : "");
+				sb.append("</td><td>");
+				sb.append(info.getSkill().isToggle() ? "T (" + info.getTickCount(effect) + ")" : info.getSkill().isPassive() ? "P" : info.getTime() + "s");
+				sb.append("</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ");
+				sb.append(target.getObjectId());
+				sb.append(" ");
+				sb.append(info.getSkill().getId());
+				sb.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 			}
-			count++;
+		}).build();
+		
+		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
+		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/getbuffs.htm");
+		
+		if (result.getPages() > 0)
+		{
+			html.replace("%pages%", "<table width=280 cellspacing=0><tr>" + result.getPagerTemplate() + "</tr></table>");
+		}
+		else
+		{
+			html.replace("%pages%", "");
 		}
 		
-		html.append("</table><table width=300 bgcolor=444444><tr>");
-		for (int x = 0; x < max; x++)
-		{
-			final int pagenr = x + 1;
-			if (page == pagenr)
-			{
-				html.append("<td>Page ");
-				html.append(pagenr);
-				html.append("</td>");
-			}
-			else
-			{
-				html.append("<td><a action=\"bypass -h admin_getbuffs" + (passive ? "_ps " : " "));
-				html.append(target.getName());
-				html.append(" ");
-				html.append(x + 1);
-				html.append("\"> Page ");
-				html.append(pagenr);
-				html.append(" </a></td>");
-			}
-		}
-		
-		html.append("</tr></table>");
-		
-		// Buttons
-		html.append("<br><center><button value=\"Refresh\" action=\"bypass -h admin_getbuffs");
-		html.append(passive ? "_ps " : " ");
-		html.append(target.getName());
-		html.append("\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
-		html.append("<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ");
-		html.append(target.getObjectId());
-		html.append("\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
-		// Legend
-		if (!passive)
-		{
-			html.append(FONT_RED1);
-			html.append("Inactive buffs: ");
-			html.append(target.getEffectList().getHiddenBuffsCount());
-			html.append(FONT_RED2);
-			html.append("<br>");
-		}
-		html.append("Total");
-		html.append(passive ? " passive" : "");
-		html.append(" buff count: ");
-		html.append(effects.size());
-		if ((target.getEffectList().getBlockedAbnormalTypes() != null) && !target.getEffectList().getBlockedAbnormalTypes().isEmpty())
-		{
-			html.append("<br>Blocked buff slots: ");
-			String slots = "";
-			for (AbnormalType slot : target.getEffectList().getBlockedAbnormalTypes())
-			{
-				slots += slot + ", ";
-			}
-			
-			if (!slots.isEmpty() && (slots.length() > 3))
-			{
-				html.append(slots.substring(0, slots.length() - 2));
-			}
-		}
-		html.append("</html>");
-		// Send the packet
-		activeChar.sendPacket(new NpcHtmlMessage(0, 1, html.toString()));
+		html.replace("%targetName%", target.getName());
+		html.replace("%targetObjId%", target.getObjectId());
+		html.replace("%buffs%", result.getBodyTemplate().toString());
+		html.replace("%effectSize%", effects.size());
+		activeChar.sendPacket(html);
 		
 		if (Config.GMAUDIT)
 		{
@@ -418,7 +371,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				activeChar.sendMessage("Removed skill ID: " + skillId + " effects from " + target.getName() + " (" + objId + ").");
 			}
 			
-			showBuffs(activeChar, target, 1, false);
+			showBuffs(activeChar, target, 0, false);
 			if (Config.GMAUDIT)
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "stopbuff", target.getName() + " (" + objId + ")", Integer.toString(skillId));
@@ -441,10 +394,53 @@ public class AdminBuffs implements IAdminCommandHandler
 		{
 			target.stopAllEffects();
 			activeChar.sendMessage("Removed all effects from " + target.getName() + " (" + objId + ")");
-			showBuffs(activeChar, target, 1, false);
+			showBuffs(activeChar, target, 0, false);
 			if (Config.GMAUDIT)
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "stopallbuffs", target.getName() + " (" + objId + ")", "");
+			}
+		}
+	}
+	
+	private static void viewBlockedEffects(L2PcInstance activeChar, int objId)
+	{
+		L2Character target = null;
+		try
+		{
+			target = (L2Character) L2World.getInstance().findObject(objId);
+		}
+		catch (Exception e)
+		{
+			activeChar.sendMessage("Target with object id " + objId + " not found.");
+			return;
+		}
+		
+		if (target != null)
+		{
+			final Set<AbnormalType> blockedAbnormals = target.getEffectList().getBlockedAbnormalTypes();
+			final int blockedAbnormalsSize = blockedAbnormals != null ? blockedAbnormals.size() : 0;
+			final StringBuilder html = new StringBuilder(500 + (blockedAbnormalsSize * 50));
+			html.append("<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Blocked effects of ");
+			html.append(target.getName());
+			html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_getbuffs" + (target.isPlayer() ? (" " + target.getName()) : "") + "\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br>");
+			
+			if ((blockedAbnormals != null) && !blockedAbnormals.isEmpty())
+			{
+				html.append("<br>Blocked buff slots: ");
+				for (AbnormalType slot : blockedAbnormals)
+				{
+					html.append("<br>").append(slot.toString());
+				}
+			}
+			
+			html.append("</html>");
+			
+			// Send the packet
+			activeChar.sendPacket(new NpcHtmlMessage(0, 1, html.toString()));
+			
+			if (Config.GMAUDIT)
+			{
+				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "viewblockedeffects", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");
 			}
 		}
 	}

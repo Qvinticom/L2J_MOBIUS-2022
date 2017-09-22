@@ -38,9 +38,6 @@ public class PetStat extends SummonStat
 		}
 		
 		getActiveChar().updateAndBroadcastStatus(1);
-		// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
-		getActiveChar().updateEffectIcons(true);
-		
 		return true;
 	}
 	

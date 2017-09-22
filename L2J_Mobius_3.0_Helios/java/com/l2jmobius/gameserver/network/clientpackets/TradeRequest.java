@@ -63,7 +63,7 @@ public final class TradeRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		BuffInfo info = player.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+		BuffInfo info = player.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
 		if (info != null)
 		{
 			for (AbstractEffect effect : info.getEffects())
@@ -107,7 +107,7 @@ public final class TradeRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		info = partner.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+		info = partner.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
 		if (info != null)
 		{
 			for (AbstractEffect effect : info.getEffects())

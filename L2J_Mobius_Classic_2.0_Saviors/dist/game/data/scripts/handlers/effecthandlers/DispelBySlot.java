@@ -17,18 +17,15 @@
 package handlers.effecthandlers;
 
 import java.util.Collections;
-import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
-import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -42,10 +39,10 @@ public final class DispelBySlot extends AbstractEffect
 	
 	public DispelBySlot(StatsSet params)
 	{
-		_dispel = params.getString("dispel", null);
+		_dispel = params.getString("dispel");
 		if ((_dispel != null) && !_dispel.isEmpty())
 		{
-			_dispelAbnormals = new EnumMap<>(AbnormalType.class);
+			_dispelAbnormals = new HashMap<>();
 			for (String ngtStack : _dispel.split(";"))
 			{
 				final String[] ngt = ngtStack.split(",");
@@ -78,32 +75,27 @@ public final class DispelBySlot extends AbstractEffect
 			return;
 		}
 		
-		final CharEffectList effectList = effected.getEffectList();
-		// There is no need to iterate over all buffs,
-		// Just iterate once over all slots to dispel and get the buff with that abnormal if exists,
-		// Operation of O(n) for the amount of slots to dispel (which is usually small) and O(1) to get the buff.
-		for (Entry<AbnormalType, Short> entry : _dispelAbnormals.entrySet())
+		// Continue only if target has any of the abnormals. Save useless cycles.
+		if (effected.getEffectList().hasAbnormalType(_dispelAbnormals.keySet()))
 		{
 			// Dispel transformations (buff and by GM)
-			if ((entry.getKey() == AbnormalType.TRANSFORM))
+			final Short transformToDispel = _dispelAbnormals.get(AbnormalType.TRANSFORM);
+			if ((transformToDispel != null) && ((transformToDispel == effected.getTransformationId()) || (transformToDispel < 0)))
 			{
-				if ((entry.getValue() == effected.getTransformationId()) || (entry.getValue() < 0))
+				effected.stopTransformation(true);
+			}
+			
+			effected.getEffectList().stopEffects(info ->
+			{
+				// We have already dealt with transformation from above.
+				if (info.isAbnormalType(AbnormalType.TRANSFORM))
 				{
-					effected.stopTransformation(true);
-					continue;
+					return false;
 				}
-			}
-			
-			final BuffInfo toDispel = effectList.getBuffInfoByAbnormalType(entry.getKey());
-			if (toDispel == null)
-			{
-				continue;
-			}
-			
-			if ((entry.getKey() == toDispel.getSkill().getAbnormalType()) && ((entry.getValue() < 0) || (entry.getValue() >= toDispel.getSkill().getAbnormalLvl())))
-			{
-				effectList.stopSkillEffects(true, entry.getKey());
-			}
+				
+				final Short abnormalLevel = _dispelAbnormals.get(info.getSkill().getAbnormalType());
+				return (abnormalLevel != null) && ((abnormalLevel < 0) || (abnormalLevel >= info.getSkill().getAbnormalLvl()));
+			}, true);
 		}
 	}
 }

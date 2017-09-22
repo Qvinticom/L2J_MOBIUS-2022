@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.conditions;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -55,7 +54,11 @@ public class ConditionPlayerCheckAbnormal extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		final BuffInfo info = effector.getEffectList().getBuffInfoByAbnormalType(_type);
-		return ((info != null) && ((_level == -1) || (_level >= info.getSkill().getAbnormalLvl())));
+		if (_level == -1)
+		{
+			return effector.getEffectList().hasAbnormalType(_type);
+		}
+		
+		return effector.getEffectList().hasAbnormalType(_type, info -> _level >= info.getSkill().getAbnormalLvl());
 	}
 }

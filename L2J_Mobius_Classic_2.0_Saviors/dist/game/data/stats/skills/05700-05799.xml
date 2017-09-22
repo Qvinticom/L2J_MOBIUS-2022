@@ -151,6 +151,7 @@
 	<skill id="5706" toLevel="1" name="Poison">
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>70</activateRate>
@@ -2912,6 +2913,7 @@
 	<skill id="5795" toLevel="1" name="Poison">
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>70</activateRate>
@@ -3000,6 +3002,7 @@
 	<skill id="5799" toLevel="1" name="Bleed">
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>90</activateRate>

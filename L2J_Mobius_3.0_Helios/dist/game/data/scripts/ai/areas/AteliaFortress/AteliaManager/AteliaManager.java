@@ -520,7 +520,7 @@ public final class AteliaManager extends AbstractNpcAI
 					{
 						for (L2Npc monster : spawn.getSpawnedNpcs())
 						{
-							monster.getEffectList().stopSkillEffects(true, AbnormalType.ALL_ATTACK_DOWN);
+							monster.getEffectList().stopEffects(AbnormalType.ALL_ATTACK_DOWN);
 							monster.stopSkillEffects(true, 16526);
 						}
 					}
@@ -535,7 +535,7 @@ public final class AteliaManager extends AbstractNpcAI
 					{
 						for (L2Npc monster : spawn.getSpawnedNpcs())
 						{
-							monster.getEffectList().stopSkillEffects(true, AbnormalType.MAX_HP_DOWN);
+							monster.getEffectList().stopEffects(AbnormalType.MAX_HP_DOWN);
 							monster.stopSkillEffects(true, 16542);
 						}
 					}
@@ -550,7 +550,7 @@ public final class AteliaManager extends AbstractNpcAI
 					{
 						for (L2Npc monster : spawn.getSpawnedNpcs())
 						{
-							monster.getEffectList().stopSkillEffects(true, AbnormalType.MAX_HP_DOWN);
+							monster.getEffectList().stopEffects(AbnormalType.MAX_HP_DOWN);
 							monster.stopSkillEffects(true, 16542);
 						}
 					}

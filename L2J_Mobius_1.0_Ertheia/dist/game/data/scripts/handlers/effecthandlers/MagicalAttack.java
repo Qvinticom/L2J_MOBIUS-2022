@@ -82,7 +82,7 @@ public final class MagicalAttack extends AbstractEffect
 		double damage = Formulas.calcMagicDam(effector, effected, skill, effector.getMAtk(), _power, effected.getMDef(), sps, bss, mcrit);
 		
 		// Apply debuff mod
-		if (effected.getEffectList().hasDebuffs())
+		if (effected.getEffectList().getDebuffCount() > 0)
 		{
 			damage *= _debuffModifier;
 		}

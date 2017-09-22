@@ -27,6 +27,7 @@
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -1178,6 +1179,7 @@
 	<skill id="6269" toLevel="1" name="Trojan Poison">
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>80</activateRate>

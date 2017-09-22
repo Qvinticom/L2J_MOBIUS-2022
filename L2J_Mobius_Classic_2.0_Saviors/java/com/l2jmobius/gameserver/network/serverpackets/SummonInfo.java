@@ -62,7 +62,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 		_attacker = attacker;
 		_title = (summon.getOwner() != null) && summon.getOwner().isOnline() ? summon.getOwner().getName() : "";
 		_val = val;
-		_abnormalVisualEffects = summon.getCurrentAbnormalVisualEffects();
+		_abnormalVisualEffects = summon.getEffectList().getCurrentAbnormalVisualEffects();
 		
 		if (summon.getTemplate().getDisplayId() != summon.getTemplate().getId())
 		{

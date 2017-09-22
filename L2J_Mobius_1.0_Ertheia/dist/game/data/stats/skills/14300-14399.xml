@@ -989,6 +989,7 @@
 		<hitTime>500</hitTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-1</effectPoint>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1099,6 +1100,7 @@
 		<hitTime>10000</hitTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-1</effectPoint>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1427,6 +1429,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-2</effectPoint>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1712,6 +1715,7 @@
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>-2</effectPoint>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE</rideState>
@@ -1744,6 +1748,7 @@
 		<castRange>650</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-2</effectPoint>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE</rideState>
@@ -2806,7 +2811,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<effect name="PhysicalAttack">
+		<effects>
+			<effect name="PhysicalAttack">
 				<power>27849</power>
 			</effect>
 			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
@@ -2815,6 +2821,7 @@
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>
+		</effects>
 	</skill>
 	<skill id="14399" toLevel="1" name="Valakas Meteor Storm">
 		<!-- Glory Days confirmed -->

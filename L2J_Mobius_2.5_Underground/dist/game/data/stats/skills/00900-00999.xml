@@ -247,6 +247,7 @@
 	<skill id="904" toLevel="6" name="Corpse Burst">
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<activateRate>80</activateRate>
 		<affectLimit>6-12</affectLimit>
@@ -589,6 +590,7 @@
 	<skill id="909" toLevel="6" name="Ice Fog">
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<activateRate>80</activateRate>
 		<affectLimit>6-12</affectLimit>
@@ -679,6 +681,7 @@
 	<skill id="910" toLevel="6" name="Water Jet">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<activateRate>80</activateRate>
 		<affectLimit>6-12</affectLimit>
@@ -3138,6 +3141,7 @@
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>100</activateRate>

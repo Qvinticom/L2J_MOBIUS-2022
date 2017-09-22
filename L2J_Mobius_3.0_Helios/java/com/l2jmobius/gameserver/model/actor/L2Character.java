@@ -19,14 +19,11 @@ package com.l2jmobius.gameserver.model.actor;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 
 import java.lang.ref.WeakReference;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.Queue;
 import java.util.Set;
@@ -39,7 +36,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.EmptyQueue;
@@ -120,7 +116,6 @@ import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import com.l2jmobius.gameserver.model.options.OptionsSkillType;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -245,9 +240,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	private SkillChannelizer _channelizer = null;
 	
 	private SkillChannelized _channelized = null;
-	
-	private volatile Set<AbnormalVisualEffect> _abnormalVisualEffects;
-	private volatile Set<AbnormalVisualEffect> _currentAbnormalVisualEffects;
 	
 	private Optional<Transform> _transform = Optional.empty();
 	
@@ -2523,95 +2515,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final void setWalking()
 	{
-		if (isRunning())
-		{
-			setIsRunning(false);
-		}
-	}
-	
-	/**
-	 * Resets the abnormal visual effects recalculating all of them that are applied from skills and sending packet for updating them on client if a change is found.
-	 */
-	public void resetCurrentAbnormalVisualEffects()
-	{
-		final Collection<BuffInfo> passives = getEffectList().hasPassives() ? new ArrayList<>(getEffectList().getPassives()) : null;
-		//@formatter:off
-		final Set<AbnormalVisualEffect> abnormalVisualEffects =  Stream.concat(getEffectList().getEffects().stream(), passives != null ? passives.stream() : Stream.empty())
-			.filter(Objects::nonNull)
-			.map(BuffInfo::getSkill)
-			.filter(Skill::hasAbnormalVisualEffects)
-			.flatMap(s -> s.getAbnormalVisualEffects().stream())
-			.collect(Collectors.toCollection(HashSet::new));
-		//@formatter:on
-		
-		if (_abnormalVisualEffects != null)
-		{
-			abnormalVisualEffects.addAll(_abnormalVisualEffects);
-		}
-		
-		if ((_currentAbnormalVisualEffects == null) || !_currentAbnormalVisualEffects.equals(abnormalVisualEffects))
-		{
-			_currentAbnormalVisualEffects = Collections.unmodifiableSet(abnormalVisualEffects);
-			updateAbnormalVisualEffects();
-		}
-	}
-	
-	/**
-	 * Gets the currently applied abnormal visual effects.
-	 * @return the abnormal visual effects
-	 */
-	public Set<AbnormalVisualEffect> getCurrentAbnormalVisualEffects()
-	{
-		return _currentAbnormalVisualEffects != null ? _currentAbnormalVisualEffects : Collections.emptySet();
-	}
-	
-	/**
-	 * Checks if the creature has the abnormal visual effect.
-	 * @param ave the abnormal visual effect
-	 * @return {@code true} if the creature has the abnormal visual effect, {@code false} otherwise
-	 */
-	public boolean hasAbnormalVisualEffect(AbnormalVisualEffect ave)
-	{
-		return (_abnormalVisualEffects != null) && _abnormalVisualEffects.contains(ave);
-	}
-	
-	/**
-	 * Adds the abnormal visual and sends packet for updating them in client.
-	 * @param aves the abnormal visual effects
-	 */
-	public final void startAbnormalVisualEffect(AbnormalVisualEffect... aves)
-	{
-		for (AbnormalVisualEffect ave : aves)
-		{
-			if (_abnormalVisualEffects == null)
-			{
-				synchronized (this)
-				{
-					if (_abnormalVisualEffects == null)
-					{
-						_abnormalVisualEffects = Collections.newSetFromMap(new ConcurrentHashMap<>());
-					}
-				}
-			}
-			_abnormalVisualEffects.add(ave);
-		}
-		resetCurrentAbnormalVisualEffects();
-	}
-	
-	/**
-	 * Removes the abnormal visual and sends packet for updating them in client.
-	 * @param aves the abnormal visual effects
-	 */
-	public final void stopAbnormalVisualEffect(AbnormalVisualEffect... aves)
-	{
-		if (_abnormalVisualEffects != null)
-		{
-			for (AbnormalVisualEffect ave : aves)
-			{
-				_abnormalVisualEffects.remove(ave);
-			}
-			resetCurrentAbnormalVisualEffects();
-		}
+		setIsRunning(false);
 	}
 	
 	/**
@@ -2670,11 +2574,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void stopSkillEffects(Skill skill)
 	{
 		_effectList.stopSkillEffects(true, skill.getId());
-	}
-	
-	public final void stopEffects(AbnormalType abnormalType)
-	{
-		_effectList.stopSkillEffects(true, abnormalType);
 	}
 	
 	public final void stopEffects(EffectFlag effectFlag)
@@ -2737,7 +2636,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		if (removeEffects)
 		{
-			stopEffects(AbnormalType.STUN);
+			getEffectList().stopEffects(AbnormalType.STUN);
 		}
 		
 		if (!isPlayer())
@@ -2760,8 +2659,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		if (removeEffects)
 		{
-			getEffectList().stopSkillEffects(false, AbnormalType.TRANSFORM);
-			getEffectList().stopSkillEffects(false, AbnormalType.CHANGEBODY);
+			getEffectList().stopEffects(AbnormalType.TRANSFORM);
+			getEffectList().stopEffects(AbnormalType.CHANGEBODY);
 		}
 		
 		if (isTransformed())
@@ -2776,7 +2675,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		updateAbnormalVisualEffects();
 	}
 	
-	public abstract void updateAbnormalVisualEffects();
+	/**
+	 * Updates the visual abnormal state of this character. <br>
+	 */
+	public void updateAbnormalVisualEffects()
+	{
+		// overridden
+	}
 	
 	/**
 	 * Update active skills in progress (In Use and Not In Use because stacked) icons on client.<br>

@@ -945,7 +945,7 @@
 				<minDamage>1</minDamage>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;CASTING_TIME_DOWN</dispel>
+				<slot>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;CASTING_TIME_DOWN</slot>
 			</effect>
 			<effect name="MAtk">
 				<amount>10</amount>
@@ -1296,6 +1296,7 @@
 		<castRange>40</castRange>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-333</effectPoint>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE</rideState>

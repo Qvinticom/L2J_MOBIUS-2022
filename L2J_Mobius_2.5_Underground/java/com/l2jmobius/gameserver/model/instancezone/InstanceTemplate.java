@@ -48,7 +48,6 @@ import com.l2jmobius.gameserver.model.instancezone.conditions.ConditionGroupMax;
 import com.l2jmobius.gameserver.model.instancezone.conditions.ConditionGroupMin;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.model.interfaces.INamable;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
@@ -509,13 +508,8 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		{
 			for (L2Playable playable : affected)
 			{
-				for (BuffInfo info : playable.getEffectList().getBuffs())
-				{
-					if (hasRemoveBuffException(info.getSkill()))
-					{
-						playable.stopSkillEffects(info.getSkill());
-					}
-				}
+				// Stop all buffs.
+				playable.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && info.getSkill().getBuffType().isBuff() && hasRemoveBuffException(info.getSkill()), true);
 			}
 		}
 	}

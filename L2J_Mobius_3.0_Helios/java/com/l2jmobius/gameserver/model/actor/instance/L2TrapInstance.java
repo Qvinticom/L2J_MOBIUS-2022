@@ -361,12 +361,6 @@ public final class L2TrapInstance extends L2Npc
 		}
 	}
 	
-	@Override
-	public void updateAbnormalVisualEffects()
-	{
-		
-	}
-	
 	public boolean hasLifeTime()
 	{
 		return _hasLifeTime;

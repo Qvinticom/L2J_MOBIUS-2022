@@ -5,6 +5,7 @@
 		<!-- Darion Skills -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>90</activateRate>
@@ -860,6 +861,7 @@
 			<value level="12">10</value>
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>100</activateRate>
@@ -2877,6 +2879,7 @@
 	<skill id="5594" toLevel="1" name="Poison">
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>11</activateRate>
@@ -2897,6 +2900,7 @@
 	<skill id="5595" toLevel="1" name="Bleed">
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>11</activateRate>

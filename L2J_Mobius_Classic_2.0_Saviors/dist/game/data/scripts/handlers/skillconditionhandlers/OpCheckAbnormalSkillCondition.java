@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -45,12 +44,8 @@ public class OpCheckAbnormalSkillCondition implements ISkillCondition
 	{
 		if (target.isCharacter())
 		{
-			final BuffInfo info = ((L2Character) target).getEffectList().getBuffInfoByAbnormalType(_type);
-			if (_hasAbnormal)
-			{
-				return (info != null) && (info.getSkill().getAbnormalLvl() >= _level);
-			}
-			return (info == null) || (info.getSkill().getAbnormalLvl() < _level);
+			final boolean hasAbnormal = ((L2Character) target).getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level));
+			return _hasAbnormal ? hasAbnormal : !hasAbnormal;
 		}
 		return false;
 	}

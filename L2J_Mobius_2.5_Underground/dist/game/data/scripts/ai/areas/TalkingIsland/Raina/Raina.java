@@ -515,7 +515,7 @@ public final class Raina extends AbstractNpcAI
 				{
 					player.abortCast();
 					player.stopAllEffectsExceptThoseThatLastThroughDeath();
-					player.stopAllEffectsNotStayOnSubclassChange();
+					player.stopAllEffects();
 					player.stopCubics();
 					player.setActiveClass(classIndex);
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
@@ -555,7 +555,7 @@ public final class Raina extends AbstractNpcAI
 				{
 					player.abortCast();
 					player.stopAllEffectsExceptThoseThatLastThroughDeath();
-					player.stopAllEffectsNotStayOnSubclassChange();
+					player.stopAllEffects();
 					player.stopCubics();
 					player.setActiveClass(classIndex);
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));

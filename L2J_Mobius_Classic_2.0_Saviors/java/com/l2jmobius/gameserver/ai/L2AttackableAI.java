@@ -53,7 +53,6 @@ import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableFact
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableHate;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -350,6 +349,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				_globalAggro--;
 			}
 		}
+		
 		// Add all autoAttackable L2Character in L2Attackable Aggro Range to its _aggroList with 0 damage and 1 hate
 		// A L2Attackable isn't aggressive during 10s after its spawn because _globalAggro is set to -10
 		if (_globalAggro >= 0)
@@ -931,8 +931,13 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			// Skip if target is already affected by such skill.
 			if (skill.isContinuous())
 			{
-				final BuffInfo info = ((L2Character) target).getEffectList().getBuffInfoByAbnormalType(skill.getAbnormalType());
-				if ((info != null) && (info.getSkill().getAbnormalLvl() >= skill.getAbnormalLvl()))
+				if (((L2Character) target).getEffectList().hasAbnormalType(skill.getAbnormalType(), i -> (i.getSkill().getAbnormalLvl() >= skill.getAbnormalLvl())))
+				{
+					return false;
+				}
+				
+				// There are cases where bad skills (negative effect points) are actually buffs and NPCs cast them on players, but they shouldn't.
+				if ((!skill.isDebuff() || !skill.isBad()) && target.isAutoAttackable(getActiveChar()))
 				{
 					return false;
 				}
@@ -943,12 +948,12 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			{
 				if (skill.isBad())
 				{
-					if (!((L2Character) target).getEffectList().hasBuffs() && !((L2Character) target).getEffectList().hasDances())
+					if (((L2Character) target).getEffectList().getBuffCount() == 0)
 					{
 						return false;
 					}
 				}
-				else if (!((L2Character) target).getEffectList().hasDebuffs())
+				else if (((L2Character) target).getEffectList().getDebuffCount() == 0)
 				{
 					return false;
 				}
@@ -1011,11 +1016,14 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			return null;
 		}
 		
+		// There are cases where bad skills (negative effect points) are actually buffs and NPCs cast them on players, but they shouldn't.
+		final boolean isBad = skill.isContinuous() ? skill.isDebuff() : skill.isBad();
+		
 		// Check current target first.
 		final int range = insideCastRange ? skill.getCastRange() + getActiveChar().getTemplate().getCollisionRadius() : 2000; // TODO need some forget range
 		
 		Stream<L2Character> stream;
-		if (skill.isBad())
+		if (isBad)
 		{
 			//@formatter:off
 			stream = npc.getAggroList().values().stream()

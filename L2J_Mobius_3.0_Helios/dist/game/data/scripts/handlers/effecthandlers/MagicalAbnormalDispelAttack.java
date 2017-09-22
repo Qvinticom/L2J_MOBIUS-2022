@@ -59,7 +59,7 @@ public final class MagicalAbnormalDispelAttack extends AbstractEffect
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		// First dispells the effect, then does damage. Sometimes the damage is evaded, but debuff is still dispelled.
-		if (effector.isAlikeDead() || (_abnormalType == AbnormalType.NONE) || !effected.getEffectList().stopSkillEffects(true, _abnormalType))
+		if (effector.isAlikeDead() || (_abnormalType == AbnormalType.NONE) || !effected.getEffectList().stopEffects(_abnormalType))
 		{
 			return;
 		}

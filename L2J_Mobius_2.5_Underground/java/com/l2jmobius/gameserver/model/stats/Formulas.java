@@ -1136,16 +1136,10 @@ public final class Formulas
 					set.set("rate", rate);
 					Debug.sendSkillDebug(activeChar, target, skill, set);
 				}
+				
 				// Prevent initialization.
-				final List<BuffInfo> buffs = target.getEffectList().hasBuffs() ? new ArrayList<>(target.getEffectList().getBuffs()) : new ArrayList<>(1);
-				if (target.getEffectList().hasTriggered())
-				{
-					buffs.addAll(target.getEffectList().getTriggered());
-				}
-				if (target.getEffectList().hasDances())
-				{
-					buffs.addAll(target.getEffectList().getDances());
-				}
+				final List<BuffInfo> buffs = target.getEffectList().getBuffs();
+				
 				for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
 				{
 					final BuffInfo info = buffs.get(i);
@@ -1163,11 +1157,11 @@ public final class Formulas
 			}
 			case DEBUFF:
 			{
-				final List<BuffInfo> debuffs = new ArrayList<>(target.getEffectList().getDebuffs());
+				final List<BuffInfo> debuffs = target.getEffectList().getDebuffs();
 				for (int i = debuffs.size() - 1; i >= 0; i--)
 				{
 					final BuffInfo info = debuffs.get(i);
-					if (info.getSkill().isDebuff() && info.getSkill().canBeDispelled() && (Rnd.get(100) <= rate))
+					if (info.getSkill().canBeDispelled() && (Rnd.get(100) <= rate))
 					{
 						canceled.add(info);
 						if (canceled.size() >= max)
@@ -1497,12 +1491,8 @@ public final class Formulas
 		// Check if target is stunned and 10% chance.
 		if (activeChar.hasBlockActions() && (Rnd.get(10) == 0))
 		{
-			final BuffInfo info = activeChar.getEffectList().getBuffInfoByAbnormalType(AbnormalType.STUN);
-			if (info != null)
-			{
-				// Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
-				return info.getTime() <= info.getSkill().getAbnormalTime();
-			}
+			// Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
+			return activeChar.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());
 		}
 		return false;
 	}

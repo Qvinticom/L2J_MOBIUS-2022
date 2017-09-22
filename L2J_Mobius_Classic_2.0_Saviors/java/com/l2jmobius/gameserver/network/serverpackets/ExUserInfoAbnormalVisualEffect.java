@@ -43,7 +43,7 @@ public class ExUserInfoAbnormalVisualEffect implements IClientOutgoingPacket
 		packet.writeD(_activeChar.getObjectId());
 		packet.writeD(_activeChar.getTransformationId());
 		
-		final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getCurrentAbnormalVisualEffects();
+		final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
 		final boolean isInvisible = _activeChar.isInvisible();
 		packet.writeD(abnormalVisualEffects.size() + (isInvisible ? 1 : 0));
 		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)

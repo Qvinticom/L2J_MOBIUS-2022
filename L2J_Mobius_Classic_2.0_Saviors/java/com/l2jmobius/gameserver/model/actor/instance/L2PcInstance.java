@@ -8468,12 +8468,6 @@ public final class L2PcInstance extends L2Playable
 		updateAndBroadcastStatus(2);
 	}
 	
-	public final void stopAllEffectsNotStayOnSubclassChange()
-	{
-		getEffectList().stopAllEffectsNotStayOnSubclassChange();
-		updateAndBroadcastStatus(2);
-	}
-	
 	public final void stopCubics()
 	{
 		if (!_cubics.isEmpty())
@@ -8866,7 +8860,7 @@ public final class L2PcInstance extends L2Playable
 		setLastLocation();
 		
 		// Remove Hide.
-		getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
+		getEffectList().stopEffects(AbnormalType.HIDE);
 		
 		setObserving(true);
 		sendPacket(new ObservationMode(loc));
@@ -8900,7 +8894,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// Remove Hide.
-		getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
+		getEffectList().stopEffects(AbnormalType.HIDE);
 		
 		if (!_cubics.isEmpty())
 		{
@@ -9757,7 +9751,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			stopAllEffectsExceptThoseThatLastThroughDeath();
-			stopAllEffectsNotStayOnSubclassChange();
+			stopAllEffects();
 			stopCubics();
 			
 			restoreRecipeBook(false);
@@ -10013,7 +10007,6 @@ public final class L2PcInstance extends L2Playable
 	public void doRevive()
 	{
 		super.doRevive();
-		updateEffectIcons();
 		sendPacket(new EtcStatusUpdate(this));
 		_revivePet = false;
 		_reviveRequested = 0;

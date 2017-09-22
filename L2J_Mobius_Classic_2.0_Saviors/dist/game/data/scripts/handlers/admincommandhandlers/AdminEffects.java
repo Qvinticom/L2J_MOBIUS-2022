@@ -39,6 +39,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExRedSky;
+import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -100,6 +101,7 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_setteam",
 		"admin_social",
 		"admin_effect",
+		"admin_npc_use_skill",
 		"admin_effect_menu",
 		"admin_ave_abnormal",
 		"admin_social_menu",
@@ -126,16 +128,16 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				activeChar.setInvisible(true);
 				activeChar.broadcastUserInfo();
+				activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
 				activeChar.decayMe();
 				activeChar.spawnMe();
-				activeChar.startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 				activeChar.sendMessage("You are now invisible.");
 			}
 			else
 			{
 				activeChar.setInvisible(false);
 				activeChar.broadcastUserInfo();
-				activeChar.stopAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
+				activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
 				activeChar.sendMessage("You are now visible.");
 			}
 			
@@ -146,16 +148,16 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			activeChar.setInvisible(true);
 			activeChar.broadcastUserInfo();
+			activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
 			activeChar.decayMe();
 			activeChar.spawnMe();
-			activeChar.startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 			activeChar.sendMessage("You are now invisible.");
 		}
 		else if (command.startsWith("admin_vis"))
 		{
 			activeChar.setInvisible(false);
 			activeChar.broadcastUserInfo();
-			activeChar.stopAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
+			activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
 			activeChar.sendMessage("You are now visible.");
 		}
 		else if (command.startsWith("admin_setinvis"))
@@ -236,7 +238,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				if (!player.isGM())
 				{
-					player.startAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
+					player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 					player.setBlockActions(true);
 					player.startParalyze();
 					player.broadcastInfo();
@@ -247,7 +249,7 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			L2World.getInstance().forEachVisibleObject(activeChar, L2PcInstance.class, player ->
 			{
-				player.stopAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
+				player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 				player.setBlockActions(false);
 				player.broadcastInfo();
 				
@@ -272,11 +274,11 @@ public class AdminEffects implements IAdminCommandHandler
 					player = (L2Character) target;
 					if (type.equals("1"))
 					{
-						player.startAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
+						player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 					}
 					else
 					{
-						player.startAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
+						player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
 					}
 					player.setBlockActions(true);
 					player.startParalyze();
@@ -306,11 +308,11 @@ public class AdminEffects implements IAdminCommandHandler
 					player = (L2Character) target;
 					if (type.equals("1"))
 					{
-						player.stopAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
+						player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.PARALYZE);
 					}
 					else
 					{
-						player.stopAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
+						player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
 					}
 					player.setBlockActions(false);
 					player.broadcastInfo();
@@ -329,7 +331,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.startAbnormalVisualEffect(AbnormalVisualEffect.BIG_HEAD);
+					player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.BIG_HEAD);
 				}
 			}
 			catch (Exception e)
@@ -345,7 +347,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.stopAbnormalVisualEffect(AbnormalVisualEffect.BIG_HEAD);
+					player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.BIG_HEAD);
 				}
 			}
 			catch (Exception e)
@@ -604,7 +606,7 @@ public class AdminEffects implements IAdminCommandHandler
 				return true;
 			}
 		}
-		else if (command.startsWith("admin_effect"))
+		else if (command.startsWith("admin_effect") || command.startsWith("admin_npc_use_skill"))
 		{
 			try
 			{
@@ -707,13 +709,13 @@ public class AdminEffects implements IAdminCommandHandler
 		if (target instanceof L2Character)
 		{
 			final L2Character character = (L2Character) target;
-			if (!character.hasAbnormalVisualEffect(ave))
+			if (!character.getEffectList().hasAbnormalVisualEffect(ave))
 			{
-				character.startAbnormalVisualEffect(ave);
+				character.getEffectList().startAbnormalVisualEffect(ave);
 			}
 			else
 			{
-				character.stopAbnormalVisualEffect(ave);
+				character.getEffectList().stopAbnormalVisualEffect(ave);
 			}
 			return true;
 		}

@@ -795,7 +795,7 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>15
+				<criticalChance>
 					<value fromLevel="1" toLevel="7">15</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
@@ -1069,9 +1069,8 @@
 		<reuseDelay>120000</reuseDelay>
 		<effects>
 			<effect name="DispelByCategory">
-				<!-- TODO rate -->
 				<slot>BUFF</slot>
-				<rate>25
+				<rate> <!-- TODO rate -->
 					<value fromLevel="1" toLevel="6">80</value>
 					<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</rate>

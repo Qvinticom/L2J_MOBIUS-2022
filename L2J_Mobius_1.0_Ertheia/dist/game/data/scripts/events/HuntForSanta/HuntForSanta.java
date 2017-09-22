@@ -133,15 +133,15 @@ public final class HuntForSanta extends LongTimeEvent
 		final BuffInfo buffSnowman = player.getEffectList().getBuffInfoBySkillId(BUFF_SNOWMAN.getSkillId());
 		if (buffStocking != null)
 		{
-			player.getEffectList().remove(true, buffStocking, null);
+			player.getEffectList().stopSkillEffects(true, buffStocking.getSkill());
 		}
 		if (buffTree != null)
 		{
-			player.getEffectList().remove(true, buffTree, null);
+			player.getEffectList().stopSkillEffects(true, buffTree.getSkill());
 		}
 		if (buffSnowman != null)
 		{
-			player.getEffectList().remove(true, buffSnowman, null);
+			player.getEffectList().stopSkillEffects(true, buffSnowman.getSkill());
 		}
 	}
 	

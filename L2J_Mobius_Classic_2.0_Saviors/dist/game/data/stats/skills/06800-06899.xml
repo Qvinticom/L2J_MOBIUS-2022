@@ -453,6 +453,7 @@
 	<skill id="6815" toLevel="16" name="Deadly Poison">
 		<!-- "Poison seeps deeper and for 10 seconds, 800 HP is decreased every second. If not treated, the poison will worsen." -->
 		<operateType>A2</operateType>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -490,6 +491,7 @@
 	<skill id="6816" toLevel="16" name="Deadly Bleed">
 		<!-- "Bleed becomes deeper and for 10 seconds, 800 HP is decreased every second. If not treated, the bleed will worsen." -->
 		<operateType>A2</operateType>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -723,6 +725,7 @@
 		<effectPoint>-10000</effectPoint>
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -825,6 +828,7 @@
 		<effectPoint>-10000</effectPoint>
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1493,6 +1497,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>6</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>70</activateRate>
@@ -1525,6 +1530,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -1570,6 +1576,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<castRange>100</castRange>
@@ -1824,6 +1831,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -2255,6 +2263,7 @@
 		<!-- "For 10 seconds, inflicts bleed and decreases 100 HP every second." -->
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>

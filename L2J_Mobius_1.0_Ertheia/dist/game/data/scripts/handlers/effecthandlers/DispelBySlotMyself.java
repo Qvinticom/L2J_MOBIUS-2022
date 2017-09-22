@@ -20,7 +20,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -39,7 +38,7 @@ public final class DispelBySlotMyself extends AbstractEffect
 	
 	public DispelBySlotMyself(StatsSet params)
 	{
-		final String dispel = params.getString("dispel", null);
+		String dispel = params.getString("dispel");
 		if ((dispel != null) && !dispel.isEmpty())
 		{
 			_dispelAbnormals = new HashSet<>();
@@ -74,14 +73,7 @@ public final class DispelBySlotMyself extends AbstractEffect
 			return;
 		}
 		
-		final CharEffectList effectList = effected.getEffectList();
-		// There is no need to iterate over all buffs,
-		// Just iterate once over all slots to dispel and get the buff with that abnormal if exists,
-		// Operation of O(n) for the amount of slots to dispel (which is usually small) and O(1) to get the buff.
-		for (AbnormalType entry : _dispelAbnormals)
-		{
-			// The effectlist should already check if it has buff with this abnormal type or not.
-			effectList.stopSkillEffects(true, entry);
-		}
+		// The effectlist should already check if it has buff with this abnormal type or not.
+		effected.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && _dispelAbnormals.contains(info.getSkill().getAbnormalType()), true);
 	}
 }

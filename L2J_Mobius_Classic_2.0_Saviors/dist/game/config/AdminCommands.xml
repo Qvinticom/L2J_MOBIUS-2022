@@ -49,6 +49,7 @@
 	<admin command="admin_getbuffs" accessLevel="100" />
 	<admin command="admin_stopbuff" accessLevel="100" />
 	<admin command="admin_stopallbuffs" accessLevel="100" confirmDlg="true" />
+	<admin command="admin_viewblockedeffects" accessLevel="100" />
 	<admin command="admin_areacancel" accessLevel="100" />
 	<admin command="admin_removereuse" accessLevel="100" />
 	<admin command="admin_switch_gm_buffs" accessLevel="100" />
@@ -180,6 +181,7 @@
 	<admin command="admin_social" accessLevel="100" />
 	<admin command="admin_social_menu" accessLevel="100" />
 	<admin command="admin_effect" accessLevel="100" />
+	<admin command="admin_npc_use_skill" accessLevel="100" />
 	<admin command="admin_effect_menu" accessLevel="100" />
 	<admin command="admin_ave_abnormal" accessLevel="100" />
 	<admin command="admin_play_sounds" accessLevel="100" />

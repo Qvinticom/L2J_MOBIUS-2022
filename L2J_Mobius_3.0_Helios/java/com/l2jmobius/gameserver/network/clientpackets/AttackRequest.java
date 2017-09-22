@@ -62,7 +62,7 @@ public final class AttackRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		final BuffInfo info = activeChar.getEffectList().getBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
+		final BuffInfo info = activeChar.getEffectList().getFirstBuffInfoByAbnormalType(AbnormalType.BOT_PENALTY);
 		if (info != null)
 		{
 			for (AbstractEffect effect : info.getEffects())

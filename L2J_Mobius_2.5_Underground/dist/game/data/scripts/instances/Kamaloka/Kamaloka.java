@@ -21,7 +21,6 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.logging.Level;
 
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -34,7 +33,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -492,25 +490,8 @@ public final class Kamaloka extends AbstractInstance
 	 */
 	private static final void removeBuffs(L2Character ch)
 	{
-		final Function<BuffInfo, Boolean> removeBuffs = info ->
-		{
-			if ((info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0))
-			{
-				info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
-				return true;
-			}
-			return false;
-		};
-		
-		ch.getEffectList().forEach(removeBuffs, false);
-		
-		if (ch.hasSummon())
-		{
-			for (L2Npc s : ch.getSummonedNpcs())
-			{
-				s.getEffectList().forEach(removeBuffs, false);
-			}
-		}
+		// Stop all buffs.
+		ch.getEffectList().stopEffects(info -> (info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0), true);
 	}
 	
 	/**

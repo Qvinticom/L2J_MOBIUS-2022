@@ -109,6 +109,8 @@ public final class Skill implements IIdentifiable
 	private final int _abnormalLvl;
 	/** Abnormal type: global effect "group". */
 	private final AbnormalType _abnormalType;
+	/** Abnormal type: local effect "group". */
+	private final AbnormalType _subordinationAbnormalType;
 	/** Abnormal time: global effect duration time. */
 	private final int _abnormalTime;
 	/** Abnormal visual effect: the visual effect displayed ingame. */
@@ -204,6 +206,7 @@ public final class Skill implements IIdentifiable
 	private final Set<AbnormalType> _abnormalResists;
 	
 	private final double _magicCriticalRate;
+	private final SkillBuffType _buffType;
 	
 	public Skill(StatsSet set)
 	{
@@ -229,6 +232,7 @@ public final class Skill implements IIdentifiable
 		_effectRange = set.getInt("effectRange", -1);
 		_abnormalLvl = set.getInt("abnormalLvl", 0);
 		_abnormalType = set.getEnum("abnormalType", AbnormalType.class, AbnormalType.NONE);
+		_subordinationAbnormalType = set.getEnum("subordinationAbnormalType", AbnormalType.class, AbnormalType.NONE);
 		
 		int abnormalTime = set.getInt("abnormalTime", 0);
 		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(getId()))
@@ -437,6 +441,7 @@ public final class Skill implements IIdentifiable
 		}
 		
 		_magicCriticalRate = set.getDouble("magicCriticalRate", 0);
+		_buffType = isTriggeredSkill() ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : isDebuff() ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
 	}
 	
 	public TraitType getTraitType()
@@ -504,6 +509,15 @@ public final class Skill implements IIdentifiable
 	public AbnormalType getAbnormalType()
 	{
 		return _abnormalType;
+	}
+	
+	/**
+	 * Gets the skill subordination abnormal type.
+	 * @return the abnormal type
+	 */
+	public AbnormalType getSubordinationAbnormalType()
+	{
+		return _subordinationAbnormalType;
 	}
 	
 	/**
@@ -1327,7 +1341,16 @@ public final class Skill implements IIdentifiable
 			
 			if (addContinuousEffects)
 			{
-				effected.getEffectList().add(info);
+				// Aura skills reset the abnormal time.
+				final BuffInfo existingInfo = _operateType.isAura() ? effected.getEffectList().getBuffInfoBySkillId(getId()) : null;
+				if (existingInfo != null)
+				{
+					existingInfo.resetAbnormalTime(info.getAbnormalTime());
+				}
+				else
+				{
+					effected.getEffectList().add(info);
+				}
 				
 				// Check for mesmerizing debuffs and increase resist level.
 				if (isDebuff() && (getBasicProperty() != BasicProperty.NONE) && effected.hasBasicPropertyResist())
@@ -1362,7 +1385,16 @@ public final class Skill implements IIdentifiable
 			
 			if (addContinuousEffects)
 			{
-				info.getEffector().getEffectList().add(info);
+				// Aura skills reset the abnormal time.
+				final BuffInfo existingInfo = _operateType.isAura() ? effector.getEffectList().getBuffInfoBySkillId(getId()) : null;
+				if (existingInfo != null)
+				{
+					existingInfo.resetAbnormalTime(info.getAbnormalTime());
+				}
+				else
+				{
+					info.getEffector().getEffectList().add(info);
+				}
 			}
 			
 			// Support for buff sharing feature.
@@ -1699,7 +1731,7 @@ public final class Skill implements IIdentifiable
 		}
 		
 		//@formatter:off
-		final int toggleSkillId = activeChar.getEffectList().getToggles().stream()
+		final int toggleSkillId = activeChar.getEffectList().getEffects().stream()
 		.filter(info -> info.getSkill().getToggleGroupId() == getAttachToggleGroupId())
 		.mapToInt(info -> info.getSkill().getId())
 		.findAny().orElse(0);
@@ -1752,6 +1784,10 @@ public final class Skill implements IIdentifiable
 		return _deleteAbnormalOnLeave;
 	}
 	
+	/**
+	 * @return {@code true} if the buff cannot be replaced, canceled, removed on death, etc.<br>
+	 *         It can be only overriden by higher stack, but buff still remains ticking and activates once the higher stack buff has passed away.
+	 */
 	public boolean isIrreplacableBuff()
 	{
 		return _irreplacableBuff;
@@ -1793,6 +1829,11 @@ public final class Skill implements IIdentifiable
 	public double getMagicCriticalRate()
 	{
 		return _magicCriticalRate;
+	}
+	
+	public SkillBuffType getBuffType()
+	{
+		return _buffType;
 	}
 	
 	public boolean isEnchantable()

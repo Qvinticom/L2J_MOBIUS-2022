@@ -1590,6 +1590,7 @@
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<activateRate>70</activateRate>
@@ -2052,6 +2053,7 @@
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>50</activateRate>
@@ -3881,6 +3883,7 @@
 	<skill id="798" toLevel="1" name="Divine Warrior Crippling Attack">
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>50</activateRate>

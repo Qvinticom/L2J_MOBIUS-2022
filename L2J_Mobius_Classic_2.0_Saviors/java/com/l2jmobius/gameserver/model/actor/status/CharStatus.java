@@ -172,7 +172,7 @@ public class CharStatus
 			}
 			if (Formulas.calcRealTargetBreak())
 			{
-				getActiveChar().getEffectList().stopSkillEffects(true, AbnormalType.REAL_TARGET);
+				getActiveChar().getEffectList().stopEffects(AbnormalType.REAL_TARGET);
 			}
 		}
 		

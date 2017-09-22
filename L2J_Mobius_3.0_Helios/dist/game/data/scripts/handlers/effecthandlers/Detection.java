@@ -70,7 +70,7 @@ public final class Detection extends AbstractEffect
 			}
 			
 			// Remove Hide.
-			target.getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
+			target.getEffectList().stopEffects(AbnormalType.HIDE);
 		}
 	}
 }

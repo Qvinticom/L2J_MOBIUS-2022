@@ -101,16 +101,16 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 			startQuestTimer("FOLLOW", 3000, elcadia, player);
 			
 			final L2Npc guardianStaff = player.getInstanceWorld().getNpc(GUARDIAN_STAFF);
-			guardianStaff.startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+			guardianStaff.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 			guardianStaff.setIsInvul(true);
 			final L2Npc guardianSword = player.getInstanceWorld().getNpc(GUARDIAN_SWORD);
-			guardianSword.startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+			guardianSword.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 			guardianSword.setIsInvul(true);
 			final L2Npc guardianShield = player.getInstanceWorld().getNpc(GUARDIAN_SHIELD);
-			guardianShield.startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+			guardianShield.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 			guardianShield.setIsInvul(true);
 			final L2Npc guardianScroll = player.getInstanceWorld().getNpc(GUARDIAN_SCROLL);
-			guardianScroll.startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+			guardianScroll.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
 			guardianScroll.setIsInvul(true);
 		}
 		else

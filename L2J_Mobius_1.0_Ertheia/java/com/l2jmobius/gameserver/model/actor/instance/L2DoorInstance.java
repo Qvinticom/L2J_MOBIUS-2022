@@ -327,11 +327,6 @@ public final class L2DoorInstance extends L2Character
 		return (isCastle || isFort);
 	}
 	
-	@Override
-	public void updateAbnormalVisualEffects()
-	{
-	}
-	
 	/**
 	 * Return null.
 	 */

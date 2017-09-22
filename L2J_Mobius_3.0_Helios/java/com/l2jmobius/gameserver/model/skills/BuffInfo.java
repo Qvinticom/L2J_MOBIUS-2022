@@ -46,6 +46,7 @@ public final class BuffInfo
 {
 	// Data
 	/** Data. */
+	private final int _effectorObjectId;
 	private final L2Character _effector;
 	private final L2Character _effected;
 	private final Skill _skill;
@@ -63,9 +64,9 @@ public final class BuffInfo
 	private int _periodStartTicks;
 	// Misc
 	/** If {@code true} then this effect has been cancelled. */
-	private boolean _isRemoved = false;
+	private volatile boolean _isRemoved = false;
 	/** If {@code true} then this effect is in use (or has been stop because an Herb took place). */
-	private boolean _isInUse = true;
+	private volatile boolean _isInUse = true;
 	private final boolean _hideStartMessage;
 	private final L2ItemInstance _item;
 	private final Options _option;
@@ -81,6 +82,7 @@ public final class BuffInfo
 	 */
 	public BuffInfo(L2Character effector, L2Character effected, Skill skill, boolean hideStartMessage, L2ItemInstance item, Options option)
 	{
+		_effectorObjectId = (effector != null) ? effector.getObjectId() : 0;
 		_effector = effector;
 		_effected = effected;
 		_skill = skill;
@@ -235,6 +237,35 @@ public final class BuffInfo
 	public void setInUse(boolean val)
 	{
 		_isInUse = val;
+		
+		// Send message that the effect is applied or removed.
+		if ((_skill != null) && !_skill.isHidingMesseges() && _effected.isPlayer())
+		{
+			if (val)
+			{
+				if (!_hideStartMessage && !_skill.isAura())
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
+					sm.addSkillName(_skill);
+					_effected.sendPacket(sm);
+				}
+			}
+			else
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(_skill.isToggle() ? SystemMessageId.S1_HAS_BEEN_ABORTED : SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED);
+				sm.addSkillName(_skill);
+				_effected.sendPacket(sm);
+			}
+		}
+	}
+	
+	/**
+	 * Gets the character's object id that launched the buff.
+	 * @return the object id of the effector.
+	 */
+	public int getEffectorObjectId()
+	{
+		return _effectorObjectId;
 	}
 	
 	/**
@@ -281,7 +312,7 @@ public final class BuffInfo
 		}
 		
 		// When effects are initialized, the successfully landed.
-		if (!_hideStartMessage && _effected.isPlayer() && !_skill.isPassive() && !_skill.isHidingMesseges() && !_skill.isAura())
+		if (!_hideStartMessage && _effected.isPlayer() && !_skill.isHidingMesseges() && !_skill.isAura())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
 			sm.addSkillName(_skill);
@@ -293,9 +324,6 @@ public final class BuffInfo
 		{
 			_scheduledFutureTimeTask = ThreadPoolManager.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000L);
 		}
-		
-		// Reset abnormal visual effects.
-		resetAbnormalVisualEffects();
 		
 		for (AbstractEffect effect : _effects)
 		{
@@ -317,9 +345,6 @@ public final class BuffInfo
 				// Adds the task for ticking.
 				addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
 			}
-			
-			// Recalculate all stats
-			_effected.getStat().recalculateStats(true);
 		}
 	}
 	
@@ -371,12 +396,6 @@ public final class BuffInfo
 			}
 		}
 		
-		// Remove abnormal visual effects.
-		resetAbnormalVisualEffects();
-		
-		// Recalculate all stats
-		_effected.getStat().recalculateStats(true);
-		
 		// Set the proper system message.
 		if ((_skill != null) && !(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMesseges())
 		{
@@ -400,23 +419,6 @@ public final class BuffInfo
 				sm.addSkillName(_skill);
 				_effected.sendPacket(sm);
 			}
-		}
-		// Remove short buff.
-		if (this == _effected.getEffectList().getShortBuff())
-		{
-			_effected.getEffectList().shortBuffStatusUpdate(null);
-		}
-	}
-	
-	/**
-	 * Applies all the abnormal visual effects to the effected.<br>
-	 * Prevents multiple updates.
-	 */
-	private void resetAbnormalVisualEffects()
-	{
-		if ((_skill != null) && _skill.hasAbnormalVisualEffects())
-		{
-			_effected.resetCurrentAbnormalVisualEffects();
 		}
 	}
 	

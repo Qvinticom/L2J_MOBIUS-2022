@@ -119,7 +119,7 @@ public class PcStatus extends PlayableStatus
 				}
 				if (Formulas.calcRealTargetBreak())
 				{
-					getActiveChar().getEffectList().stopSkillEffects(true, AbnormalType.REAL_TARGET);
+					getActiveChar().getEffectList().stopEffects(AbnormalType.REAL_TARGET);
 				}
 			}
 		}

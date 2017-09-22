@@ -189,7 +189,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeC(_summon.getOwner().getSummonPoints()); // Used Summon Points
 		packet.writeC(_summon.getOwner().getMaxSummonPoints()); // Maximum Summon Points
 		
-		final Set<AbnormalVisualEffect> aves = _summon.getCurrentAbnormalVisualEffects();
+		final Set<AbnormalVisualEffect> aves = _summon.getEffectList().getCurrentAbnormalVisualEffects();
 		packet.writeH(aves.size()); // Confirmed
 		for (AbnormalVisualEffect ave : aves)
 		{

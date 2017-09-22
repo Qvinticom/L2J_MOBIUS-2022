@@ -235,7 +235,7 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD((int) Math.round(_activeChar.getCurrentMp())); // Confirmed
 		
 		packet.writeC(0x00); // TODO: Find me!
-		final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getCurrentAbnormalVisualEffects();
+		final Set<AbnormalVisualEffect> abnormalVisualEffects = _activeChar.getEffectList().getCurrentAbnormalVisualEffects();
 		packet.writeD(abnormalVisualEffects.size() + (_gmSeeInvis ? 1 : 0)); // Confirmed
 		for (AbnormalVisualEffect abnormalVisualEffect : abnormalVisualEffects)
 		{

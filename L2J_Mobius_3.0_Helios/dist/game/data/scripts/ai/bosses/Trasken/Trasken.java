@@ -872,7 +872,7 @@ public class Trasken extends AbstractNpcAI
 			final BuffInfo traskenBuff = character.getEffectList().getBuffInfoBySkillId(SKILL_TRASKEN_BUFF.getSkillId());
 			if (traskenBuff != null)
 			{
-				character.getEffectList().remove(true, traskenBuff, null);
+				character.getEffectList().stopSkillEffects(true, traskenBuff.getSkill());
 			}
 		}
 		ThreadPoolManager.schedule(() ->

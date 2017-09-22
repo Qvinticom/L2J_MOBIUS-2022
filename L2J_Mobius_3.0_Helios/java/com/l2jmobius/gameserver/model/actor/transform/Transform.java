@@ -394,8 +394,8 @@ public final class Transform implements IIdentifiable
 				
 				player.sendPacket(ExBasicActionList.STATIC_PACKET);
 				
-				player.getEffectList().stopSkillEffects(false, AbnormalType.TRANSFORM);
-				player.getEffectList().stopSkillEffects(false, AbnormalType.CHANGEBODY);
+				player.getEffectList().stopEffects(AbnormalType.TRANSFORM);
+				player.getEffectList().stopEffects(AbnormalType.CHANGEBODY);
 				
 				if (hasTransformSkills)
 				{

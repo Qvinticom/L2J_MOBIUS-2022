@@ -27,6 +27,7 @@
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-687</effectPoint>
+		<subordinationAbnormalType>MULTI_DEBUFF</subordinationAbnormalType>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -65,6 +66,7 @@
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-692</effectPoint>
+		<subordinationAbnormalType>MULTI_DEBUFF_B</subordinationAbnormalType>
 		<abnormalType>MULTI_DEBUFF_B</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -779,6 +781,7 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-2</effectPoint>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE</rideState>
@@ -1053,6 +1056,7 @@
 		<castRange>100</castRange>
 		<hitTime>2500</hitTime>
 		<effectPoint>-2</effectPoint>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -1085,6 +1089,7 @@
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-2</effectPoint>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -2532,6 +2537,7 @@
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-687</effectPoint>
+		<subordinationAbnormalType>MULTI_DEBUFF</subordinationAbnormalType>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2567,6 +2573,7 @@
 		<coolTime>500</coolTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-692</effectPoint>
+		<subordinationAbnormalType>MULTI_DEBUFF_B</subordinationAbnormalType>
 		<abnormalType>MULTI_DEBUFF_B</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2865,6 +2872,7 @@
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
 		<magicLvl>1</magicLvl>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>MULTI_DEBUFF_B</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
 		<rideState>NONE</rideState>

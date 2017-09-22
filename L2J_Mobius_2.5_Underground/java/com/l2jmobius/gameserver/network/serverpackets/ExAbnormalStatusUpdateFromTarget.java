@@ -18,6 +18,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -60,22 +62,16 @@ public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 	
 	public ExAbnormalStatusUpdateFromTarget(L2Character character)
 	{
+		//@formatter:off
 		_character = character;
-		_effects = new ArrayList<>();
-		
-		for (BuffInfo info : character.getEffectList().getEffects())
-		{
-			if ((info != null) && info.isInUse())
-			{
-				final Skill skill = info.getSkill();
-				
-				// TODO: Check on retail if all effects should be displayed
-				if (skill != null)
-				{
-					_effects.add(new Effect(info));
-				}
-			}
-		}
+		_effects = character.getEffectList().getEffects()
+					.stream()
+					.filter(Objects::nonNull)
+					.filter(BuffInfo::isInUse)
+					.filter(b -> !b.getSkill().isToggle())
+					.map(Effect::new)
+					.collect(Collectors.toList());
+		//@formatter:on
 	}
 	
 	@Override

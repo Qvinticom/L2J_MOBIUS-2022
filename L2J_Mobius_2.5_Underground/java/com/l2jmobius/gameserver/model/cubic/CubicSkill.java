@@ -75,7 +75,7 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder
 	@Override
 	public boolean validateConditions(CubicInstance cubic, L2Character owner, L2Character target)
 	{
-		return (!_targetDebuff || (_targetDebuff && target.getEffectList().hasDebuffs())) && (_conditions.isEmpty() || _conditions.stream().allMatch(condition -> condition.test(cubic, owner, target)));
+		return (!_targetDebuff || (_targetDebuff && (target.getEffectList().getDebuffCount() > 0))) && (_conditions.isEmpty() || _conditions.stream().allMatch(condition -> condition.test(cubic, owner, target)));
 	}
 	
 	@Override

@@ -427,11 +427,6 @@ public abstract class L2Vehicle extends L2Character
 	}
 	
 	@Override
-	public void updateAbnormalVisualEffects()
-	{
-	}
-	
-	@Override
 	public L2ItemInstance getActiveWeaponInstance()
 	{
 		return null;

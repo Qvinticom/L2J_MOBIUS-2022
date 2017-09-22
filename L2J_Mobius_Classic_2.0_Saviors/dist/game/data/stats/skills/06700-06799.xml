@@ -715,6 +715,7 @@
 		<!-- "For 5 seconds, inflicted with poison with 800 HP decrease per second." -->
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
+		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
 		<rideState>NONE</rideState>
@@ -882,6 +883,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>30</activateRate>
@@ -1172,6 +1174,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -1833,6 +1836,7 @@
 		<!-- High Five Skill -->
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>80</activateRate>

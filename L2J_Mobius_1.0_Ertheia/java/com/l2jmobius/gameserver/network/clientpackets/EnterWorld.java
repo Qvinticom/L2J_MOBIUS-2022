@@ -216,7 +216,7 @@ public class EnterWorld implements IClientIncomingPacket
 			if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel()))
 			{
 				activeChar.setInvisible(true);
-				activeChar.startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
+				activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 			}
 			
 			if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel()))
@@ -460,8 +460,6 @@ public class EnterWorld implements IClientIncomingPacket
 				activeChar.sendPacket(new ExPCCafePointInfo());
 			}
 		}
-		
-		activeChar.updateEffectIcons();
 		
 		// Expand Skill
 		activeChar.sendPacket(new ExStorageMaxCount(activeChar));

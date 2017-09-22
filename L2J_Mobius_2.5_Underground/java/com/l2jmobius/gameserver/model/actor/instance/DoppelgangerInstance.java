@@ -69,7 +69,7 @@ public class DoppelgangerInstance extends L2Npc
 		
 		if (_copySummonerEffects && (getSummoner() != null))
 		{
-			for (BuffInfo summonerInfo : getSummoner().getEffectList().getBuffs())
+			for (BuffInfo summonerInfo : getSummoner().getEffectList().getEffects())
 			{
 				if (summonerInfo.getAbnormalTime() > 0)
 				{
