@@ -666,7 +666,7 @@ public final class CharEffectList
 	 * @param info
 	 * @param removed
 	 */
-	private void removeActive(BuffInfo info, boolean removed)
+	private synchronized void removeActive(BuffInfo info, boolean removed)
 	{
 		if (_actives != null)
 		{
@@ -741,7 +741,7 @@ public final class CharEffectList
 		updateEffectList(true);
 	}
 	
-	private void addActive(BuffInfo info)
+	private synchronized void addActive(BuffInfo info)
 	{
 		final Skill skill = info.getSkill();
 		
@@ -796,13 +796,7 @@ public final class CharEffectList
 		// Initialize
 		if (_actives == null)
 		{
-			synchronized (this)
-			{
-				if (_actives == null)
-				{
-					_actives = new ConcurrentLinkedQueue<>();
-				}
-			}
+			_actives = new ConcurrentLinkedQueue<>();
 		}
 		
 		// Manage effect stacking.
