@@ -1551,15 +1551,21 @@
 		</conditions>
 	</skill>
 	<skill id="13352" toLevel="1" name="Increase Hair Accessory Weight Gauge">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Increases Weight Gauge when wearing a hair accessory. -->
 		<icon>icon.Accessory_angel_circlet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="WeightLimit">
+				<amount>2000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13353" toLevel="1" name="Talisman (R-grade) - M. Def. (Active)">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Increases M. Def. by 63 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_md_up_active</icon>
 		<operateType>A2</operateType>
@@ -1578,35 +1584,54 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>63</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13354" toLevel="1" name="Player Commendation - Talisman - M. Def.">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Increases M. Def. by 21 when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>21</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13355" toLevel="1" name="Player Commendation - Talisman - M. Atk. (Active)">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Increases M. Atk. by 111 momentarily through the power of the talisman. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
 		<hitTime>4000</hitTime>
+		<hitCancelTime>500</hitCancelTime>
 		<effectPoint>532</effectPoint>
-		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>111</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13356" toLevel="1" name="Player Commendation - Talisman - M. Atk.">
 		<!-- AUTO GENERATED SKILL -->

@@ -17,6 +17,16 @@
 													<xs:element type="xs:string" name="attribute" minOccurs="0" maxOccurs="1" />
 													<xs:element type="xs:byte" name="magicType" minOccurs="0" maxOccurs="1" />
 													<xs:element type="xs:string" name="stat" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="BLEED" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="DERANGEMENT" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="PARALYZE" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="POISON" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="SHOCK" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="SLEEP" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="KNOCKBACK" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="KNOCKDOWN" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="PULL" minOccurs="0" maxOccurs="1" />
+													<xs:element type="xs:double" name="AIRBIND" minOccurs="0" maxOccurs="1" />
 												</xs:sequence>
 												<xs:attribute name="name" type="xs:string" />
 											</xs:complexType>

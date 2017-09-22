@@ -1669,21 +1669,21 @@
 		</effects>
 	</skill>
 	<skill id="9451" toLevel="1" name="Item Skill: Warp">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Stuns and removes the targeting of nearby enemies and teleport forward. Cooldown is 24 sec. Consumes 10 Gemstones (B-grade). -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>STUN</abnormalType>
 		<icon>icon.wizard_danger_warppow</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>24000</reuseDelay>
 		<effectPoint>-687</effectPoint>
-		<abnormalType>STUN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<activateRate>150</activateRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
 		<trait>SHOCK</trait>
 		<affectRange>150</affectRange>
 		<affectLimit>6-12</affectLimit>
@@ -1693,53 +1693,84 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<itemConsumeId>2132</itemConsumeId> <!-- Gemstone B -->
+		<itemConsumeCount>10</itemConsumeCount>
 		<conditions>
 			<condition name="OpBlink">
 				<direction>FRONT</direction>
 				<range>600</range>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Blink">
+				<!-- Teleport to Front -->
+				<angle>180</angle>
+				<range>600</range>
+			</effect>
+			<effect name="BlockActions" />
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9452" toLevel="1" name="Item Skill: Dash">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- For 10 sec., Speed + 30, P. Evasion + 7, and HP Recovery Bonus + 7. Consumes 10 Gemstones (B-grade). -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SUPER_MOVE</abnormalType>
 		<icon>icon.rogue_shadow_dash</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>692</effectPoint>
-		<abnormalType>SUPER_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>0</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<reuseDelay>90000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>2132</itemConsumeId> <!-- Gemstone B -->
+		<itemConsumeCount>10</itemConsumeCount>
+		<effects>
+			<effect name="Speed">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9453" toLevel="1" name="Item Skill: Undying Will">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Invincible for 5 sec. Can only be used when HP is 20% or below. Consumes 20 Gemstones (B-grade). -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>RACE_ORC2</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<icon>icon.race_orc_immortality</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
-		<abnormalType>RACE_ORC2</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0.2</hitCancelTime>
 		<magicLvl>0</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
 		<staticReuse>true</staticReuse>
-		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<isMagic>2</isMagic>
 		<reuseDelay>480000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>2132</itemConsumeId> <!-- Gemstone B -->
+		<itemConsumeCount>20</itemConsumeCount>
 		<conditions>
 			<condition name="RemainHpPer">
 				<amount>20</amount>
@@ -1747,57 +1778,93 @@
 				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9454" toLevel="1" name="Item Skill: Silence">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- For 5 sec., cannot use P. Atk./M. Atk. Consumes 30 Gemstones (B-grade). -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<icon>icon.song_of_silence</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<hitTime>500</hitTime>
 		<reuseDelay>240000</reuseDelay>
 		<effectPoint>-1</effectPoint>
-		<abnormalType>SILENCE</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<activateRate>80</activateRate>
 		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
 		<trait>DERANGEMENT</trait>
 		<staticReuse>true</staticReuse>
-		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<isMagic>2</isMagic>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>2132</itemConsumeId> <!-- Gemstone B -->
+		<itemConsumeCount>30</itemConsumeCount>
+		<effects>
+			<effect name="PhysicalMute" />
+			<effect name="Mute" />
+		</effects>
 	</skill>
 	<skill id="9455" toLevel="1" name="Item Skill: Disable Target">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- For 5 sec., enemy cannot target you. Consumes 10 Gemstones (B-grade). -->
+		<abnormalLvl>0</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>MA_DOWN</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<icon>icon.notargetting</icon>
 		<operateType>A2</operateType>
 		<hitTime>800</hitTime>
-		<abnormalType>MA_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0.2</hitCancelTime>
 		<activateRate>80</activateRate>
 		<magicLvl>0</magicLvl>
-		<abnormalLvl>0</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
 		<staticReuse>true</staticReuse>
-		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<reuseDelay>480000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>2132</itemConsumeId> <!-- Gemstone B -->
+		<itemConsumeCount>10</itemConsumeCount>
+		<effects>
+			<effect name="DisableTargeting" />
+		</effects>
 	</skill>
 	<skill id="9456" toLevel="3" name="Item Skill: Damage Reflect Resistance">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- For 5 sec., Damage Reflect Resistance + 10%. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<icon>icon.active_damage_shield1</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -1807,7 +1874,6 @@
 			<value level="2">438</value>
 			<value level="3">495</value>
 		</effectPoint>
-		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1816,20 +1882,28 @@
 			<value level="2">64</value>
 			<value level="3">75</value>
 		</magicLvl>
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-		</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9459" toLevel="1" name="Tauti's Wrath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Tauti's Wrath. Inflicts 27557 damage and Knocks Down nearby enemies. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
 		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
 		<operateType>A2</operateType>
 		<mpConsume>191</mpConsume>
@@ -1837,28 +1911,48 @@
 		<coolTime>300</coolTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-687</effectPoint>
-		<abnormalType>KNOCKDOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<lvlBonusRate>30</lvlBonusRate>
-		<activateRate>80</activateRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
 		<trait>KNOCKDOWN</trait>
 		<affectRange>125</affectRange>
 		<affectLimit>5-12</affectLimit>
 		<staticReuse>true</staticReuse>
-		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>27557</power>
+			</effect>
+			<effect name="KnockBack">
+				<distance>50</distance>
+				<speed>400</speed>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<AIRBIND>100</AIRBIND>
+				<KNOCKBACK>100</KNOCKBACK>
+				<SLEEP>100</SLEEP>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SHOCK>100</SHOCK>
+				<HOLD>100</HOLD>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9460" toLevel="1" name="Tauti's Authority">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Tauti's Authority. Inflicts 371 damage and Knocks Down nearby enemies. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<icon>icon.skill1181</icon>
 		<operateType>A2</operateType>
 		<mpConsume>279</mpConsume>
@@ -1867,24 +1961,40 @@
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-687</effectPoint>
-		<abnormalType>KNOCKDOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
 		<trait>KNOCKDOWN</trait>
 		<affectRange>125</affectRange>
 		<affectLimit>5-12</affectLimit>
 		<staticReuse>true</staticReuse>
-		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>371</power>
+			</effect>
+			<effect name="KnockBack">
+				<distance>50</distance>
+				<speed>400</speed>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>100</DERANGEMENT>
+				<SLEEP>100</SLEEP>
+				<HOLD>100</HOLD>
+				<SHOCK>100</SHOCK>
+				<CHANGEBODY>100</CHANGEBODY>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9461" toLevel="1" name="Scroll of Escape: Guillotine Fortress">
 		<!-- AUTO GENERATED SKILL -->

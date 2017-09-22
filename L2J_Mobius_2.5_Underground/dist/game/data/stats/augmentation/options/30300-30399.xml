@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
-	<option id="30300" name="shiny_shirt_passive">
+	<option id="30300" name="o_shiny_tshirt_stat_1">
 		<!-- M. Def. + 9 -->
 		<passive_skill id="13562" level="1" />
 	</option>
-	<option id="30301" name="shiny_shirt_passive">
+	<option id="30301" name="o_shiny_tshirt_stat_2">
 		<!-- M. Def. + 10 -->
 		<passive_skill id="13562" level="2" />
 	</option>
-	<option id="30302" name="shiny_shirt_passive">
+	<option id="30302" name="o_shiny_tshirt_stat_3">
 		<!-- M. Def. + 11 -->
 		<!-- Speed + 7 -->
 		<passive_skill id="13562" level="3" />
 	</option>
-	<option id="30303" name="shiny_shirt_passive">
+	<option id="30303" name="o_shiny_tshirt_stat_4">
 		<!-- M. Def. + 12 -->
 		<!-- Speed + 7 -->
 		<!-- Max HP + 510, Max MP + 510, Attribute Resistance + 6, STR + 1, DEX + 1, CON + 1, INT + 1, WIT + 1, MEN + 1 -->
 		<passive_skill id="13562" level="4" />
 	</option>
-	<option id="30304" name="shiny_shirt_passive">
+	<option id="30304" name="o_shiny_tshirt_stat_5">
 		<!-- M. Def. + 13 -->
 		<!-- Speed + 7 -->
 		<!-- Max HP + 520, Max MP + 520, Skill MP Consumption - 3%, Attribute Resistance + 12, STR + 2, DEX + 2, CON + 2, INT + 2, WIT + 2, MEN + 2 -->
 		<passive_skill id="13562" level="5" />
 	</option>
-	<option id="30305" name="shiny_shirt_passive">
+	<option id="30305" name="o_shiny_tshirt_stat_6">
 		<!-- M. Def. + 14 -->
 		<!-- Speed + 7 -->
 		<!-- Max HP + 531, Max MP + 531 Skill MP Consumption - 3% Damage Reflect Resistance + 5, Attribute Resistance + 18, STR + 3, DEX + 3, CON + 2, INT + 3, WIT + 3, MEN + 2 -->
 		<passive_skill id="13562" level="6" />
 	</option>
-	<option id="30306" name="shiny_shirt_passive">
+	<option id="30306" name="o_shiny_tshirt_stat_7">
 		<!-- M. Def. + 15 -->
 		<!-- Speed + 7 -->
 		<!-- Max HP + 536, Max MP + 536, Skill MP Consumption - 3%, Damage Reflect Resistance + 5, Vampiric Rage + 5%, Attribute Resistance + 24, STR + 3, DEX + 3, CON + 3, INT + 3, WIT + 3, MEN + 3 -->
 		<passive_skill id="13562" level="7" />
 	</option>
-	<option id="30307" name="shiny_shirt_passive">
+	<option id="30307" name="o_shiny_tshirt_stat_8">
 		<!-- M. Def. + 16 -->
 		<!-- Speed + 7 -->
 		<!-- Max HP + 541, Max MP + 541, Skill MP Consumption - 3%, Damage Reflect Resistance + 5, Vampiric Rage + 5%, Skill Cooldown - 3%, Attribute Resistance + 30, STR + 4, DEX + 4, CON + 3, INT + 4, WIT + 4, MEN + 3 -->
 		<passive_skill id="13562" level="8" />
 	</option>
-	<option id="30308" name="shiny_shirt_passive">
+	<option id="30308" name="o_shiny_tshirt_stat_9">
 		<!-- M. Def. + 17 -->
 		<!-- Speed + 7 -->
 		<!-- Max HP + 547, Max MP + 547, Skill MP Consumption - 3%, Damage Reflect Resistance + 5, Vampiric Rage + 5%, Skill Cooldown - 3%, Received Damage - 3%, Attribute Resistance + 36, STR + 4, DEX + 4, CON + 4, INT + 4, WIT + 4, MEN + 4 -->
 		<passive_skill id="13562" level="9" />
 	</option>
-	<option id="30309" name="shiny_shirt_passive">
+	<option id="30309" name="o_shiny_tshirt_stat_10">
 		<!-- M. Def. + 18 -->
 		<!-- Speed + 7 -->
 		<!-- Max HP + 552, Max MP + 552, Skill MP Consumption - 3%, Damage Reflect Resistance + 5, Vampiric Rage + 5%, Skill Cooldown - 3%, Received Damage - 3%, Attribute Resistance + 36, STR + 4, DEX + 4, CON + 4, INT + 4, WIT + 4, MEN + 4 -->
 		<passive_skill id="13562" level="10" />
 	</option>
-	<option id="30310" name="shiny_shirt_skill_1">
+	<option id="30310" name="o_s_shiny_shirt_s1">
 		<!-- Active: Einhasad's Wrath -->
 		<active_skill id="13563" level="1" />
 	</option>
-	<option id="30311" name="shiny_shirt_skill_2">
+	<option id="30311" name="o_s_shiny_shirt_s2">
 		<!-- Active: Einhasad's Wrath/Einhasad's Protection -->
 		<active_skill id="13563" level="2" />
 		<active_skill id="13564" level="1" />
 	</option>
-	<option id="30312" name="shiny_shirt_skill_3">
+	<option id="30312" name="o_s_shiny_shirt_s3">
 		<!-- Active: Einhasad's Wrath/Einhasad's Protection/Einhasad's Silence -->
 		<active_skill id="13563" level="3" />
 		<active_skill id="13564" level="2" />
 		<active_skill id="13565" level="1" />
 	</option>
-	<option id="30313" name="shiny_shirt_skill_4">
+	<option id="30313" name="o_s_shiny_shirt_s4">
 		<!-- Active: Einhasad's Wrath/Einhasad's Protection/Einhasad's Silence/Einhasad's Salvation -->
 		<active_skill id="13564" level="3" />
 		<active_skill id="13563" level="4" />
 		<active_skill id="13565" level="2" />
 		<active_skill id="13566" level="1" />
 	</option>
-	<option id="30314" name="shiny_shirt_skill_5">
+	<option id="30314" name="o_s_shiny_shirt_s5">
 		<!-- Active: Einhasad's Wrath/Einhasad's Protection/Einhasad's Silence/Einhasad's Salvation/Einhasad's Blessing -->
 		<active_skill id="13563" level="5" />
 		<active_skill id="13564" level="4" />

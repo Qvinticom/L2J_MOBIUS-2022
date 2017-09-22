@@ -71,108 +71,292 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13514" toLevel="1" name="Giant's Damage Reflect">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Reflects 20% of damage to attacker. -->
 		<icon>icon.skill0086</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13515" toLevel="1" name="Giant's Critical Damage">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- For 5 min., P. Critical Damage + 15%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<icon>icon.skill0482</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>235</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13516" toLevel="1" name="Giant's Damage Reflect Shield">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Damage Reflect Resistance + 50%. -->
 		<icon>icon.active_damage_shield1</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13517" toLevel="1" name="Giant's Battle Roar">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Max HP/CP + 10% for 5 min. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>235</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13518" toLevel="1" name="Giant's Celestial Shield">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Invincible for 30 sec. Invincibility is removed when you attack. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<icon>icon.skill11758</icon>
 		<operateType>A2</operateType>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effectPoint>867</effectPoint>
 		<isMagic>1</isMagic>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13519" toLevel="1" name="Giant's Undying Will">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Does not die for 10 sec. Can be used when HP is 20% or below. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<icon>icon.race_orc_immortality</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="RemainHpPer">
+				<amount>20</amount>
+				<percentType>LESS</percentType>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13520" toLevel="1" name="Giant's Silence">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- For 5 sec., locks target's P. Skill/ M. Skill. PvP Only. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
+		<effectRange>1500</effectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-379</effectPoint>
+		<activateRate>80</activateRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
 		<isDebuff>true</isDebuff>
+		<trait>DERANGEMENT</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND_PC</affectObject>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</effects>
 	</skill>
 	<skill id="13521" toLevel="1" name="Giant's Sleep">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Sleeps target for 5 sec. PvP Only. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SLEEP</abnormalType>
+		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
 		<icon>icon.skill1069</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
+		<effectRange>1500</effectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
+		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-227</effectPoint>
+		<activateRate>80</activateRate>
 		<isDebuff>true</isDebuff>
+		<trait>SLEEP</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND_PC</affectObject>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="DefenceTrait">
+				<SLEEP>100</SLEEP>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13522" toLevel="1" name="Giant's Winter">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- For 10 sec., decreases target's Atk. Spd./ Casting Spd. by 50%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
 		<icon>icon.skill1454</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
+		<effectRange>1500</effectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
+		<magicLvl>85</magicLvl>
+		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-227</effectPoint>
+		<activateRate>80</activateRate>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13523" toLevel="1" name="Giant's Critical Weakness">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- For 10 sec., increases target's Received Critical Damage and Critical Rate by 90%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>T_CRT_RATE_UP</abnormalType>
+		<nextAction>ATTACK</nextAction>
 		<icon>icon.skill1222</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
+		<effectRange>1500</effectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>4</isMagic>
+		<magicLvl>85</magicLvl>
+		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-711</effectPoint>
+		<activateRate>80</activateRate>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>90</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>90</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13524" toLevel="1" name="Lindvior's Earring">
 		<!-- Petrification Attack/Resistance + 50%, Knock Back/Knock Down Attack/Resistance + 40%, Pull Attack/Resistance + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, and P./M. Abnormal State Reflect + 10%. Has a 10% chance of returning damage magic back to the attacking target. Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Equipping two will only give the effect of one. -->

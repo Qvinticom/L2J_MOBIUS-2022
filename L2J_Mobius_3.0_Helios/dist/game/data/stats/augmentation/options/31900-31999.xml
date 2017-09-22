@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
 	<option id="31900" name="infinite_odyssey">
 		<!-- Passive: Pull/Petrification Resistance + 6%. -->
+		<passive_skill id="13755" level="4" />
 	</option>
 	<option id="31901" name="infinite_odyssey">
 		<!-- P. Def. + 22 -->
@@ -74,12 +75,15 @@
 	</option>
 	<option id="31924" name="infinite_odyssey">
 		<!-- Passive: M. Evasion + 1. -->
+		<passive_skill id="13760" level="6" />
 	</option>
 	<option id="31925" name="infinite_odyssey">
 		<!-- Passive: M. Evasion + 2. -->
+		<passive_skill id="13760" level="7" />
 	</option>
 	<option id="31926" name="infinite_odyssey">
 		<!-- Passive: M. Evasion + 3. -->
+		<passive_skill id="13760" level="8" />
 	</option>
 	<option id="31927" name="infinite_odyssey">
 		<!-- Speed + 3 -->
@@ -290,12 +294,15 @@
 	</option>
 	<option id="31996" name="infinite_odyssey">
 		<!-- Passive: Petrification Resistance + 2%. -->
+		<passive_skill id="13765" level="7" />
 	</option>
 	<option id="31997" name="infinite_odyssey">
 		<!-- Passive: Petrification Resistance + 3%. -->
+		<passive_skill id="13765" level="8" />
 	</option>
 	<option id="31998" name="infinite_odyssey">
-		<!-- Passive: Petrification Resistance + 5%. -->
+		<!-- Passive: Petrification Resistance + 4%. -->
+		<passive_skill id="13765" level="9" />
 	</option>
 	<option id="31999" name="infinite_odyssey">
 		<!-- Stun/Hold Resistance + 6% -->
