@@ -887,6 +887,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="1" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="26477" name="Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 6%. Effect does not stack with additional jewels of the same type. -->
@@ -904,6 +907,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="2" /> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="26478" name="Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 12%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
@@ -921,6 +927,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="3" /> <!-- Vital Stone -->
+			<skill id="27439" level="1" /> <!-- Vital Stone - Vital Wind --> 			
+		</skills>
 	</item>
 	<item id="26479" name="Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 20% and decreases Vitality Point Consumption Speed by 7%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
@@ -938,6 +948,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="4" /> <!-- Vital Stone -->
+			<skill id="27439" level="2" /> <!-- Vital Stone - Vital Wind --> 	
+		</skills>
 	</item>
 	<item id="26480" name="Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 30% and decreases Vitality Point Consumption Speed by 15%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
@@ -946,10 +960,19 @@
 		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="18568" level="5" /> <!-- Vital Stone -->
+			<skill id="27439" level="3" /> <!-- Vital Stone - Vital Wind --> 	
+		</skills>
 	</item>
 	<item id="26481" name="Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Resistance to Debuffs + 3%. Effect does not stack with additional jewels of the same type. -->
