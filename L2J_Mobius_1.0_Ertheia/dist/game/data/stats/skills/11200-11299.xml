@@ -2191,6 +2191,14 @@
 				<CHANGEBODY>100</CHANGEBODY>
 				<SHOCK>100</SHOCK>
 			</effect>
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
 					<value fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>

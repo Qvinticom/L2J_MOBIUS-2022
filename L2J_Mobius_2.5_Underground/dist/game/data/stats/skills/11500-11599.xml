@@ -148,10 +148,6 @@
 					<item>MAGIC</item>
 				</armorType>
 			</effect>
-			<effect name="ShieldDefenceRate">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>4636</amount>
 				<mode>DIFF</mode>
@@ -163,7 +159,7 @@
 	</skill>
 	<skill id="11503" toLevel="10" name="Superior Light Armor Mastery">
 		<!-- Glory Days confirmed -->
-		<!-- Max HP + 4636, P. Def. + 1355 when equipped with Light Armor. -->
+		<!-- Max HP + 4636, P. Def. + 1506, Atk. Spd. + 10%, Speed + 4 when equipped with Light Armor. -->
 		<icon>icon.skill10254</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -182,13 +178,13 @@
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">1355</value>
-					<value level="2">1488</value>
-					<value level="3">1635</value>
-					<value level="4">1763</value>
-					<value level="5">1976</value>
-					<value level="6">2051</value>
-					<value level="7">2128</value>
+					<value level="1">1506</value>
+					<value level="2">1654</value>
+					<value level="3">1817</value>
+					<value level="4">1959</value>
+					<value level="5">2196</value>
+					<value level="6">2279</value>
+					<value level="7">2365</value>
 					<value level="8">2209</value>
 					<value level="9">2302</value>
 					<value level="10">2389</value>
@@ -198,12 +194,15 @@
 					<item>LIGHT</item>
 				</armorType>
 			</effect>
-			<effect name="ShieldDefenceRate">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>4636</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="Speed">
+				<amount>4</amount>
 				<mode>DIFF</mode>
 				<armorType>
 					<item>LIGHT</item>
@@ -213,7 +212,7 @@
 	</skill>
 	<skill id="11504" toLevel="10" name="Superior Heavy Armor Mastery">
 		<!-- Glory Days confirmed -->
-		<!-- Max HP + 4636, P. Def. + 1558 when equipped with Heavy Armor. -->
+		<!-- When heavy armor is equipped, Max HP +4636, P. Def. +1731; P. Critical Damage Received -35%. -->
 		<icon>icon.skill10002</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -232,13 +231,13 @@
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">1558</value>
-					<value level="2">1711</value>
-					<value level="3">1880</value>
-					<value level="4">2027</value>
-					<value level="5">2271</value>
-					<value level="6">2357</value>
-					<value level="7">2446</value>
+					<value level="1">1731</value>
+					<value level="2">1901</value>
+					<value level="3">2088</value>
+					<value level="4">2252</value>
+					<value level="5">2524</value>
+					<value level="6">2619</value>
+					<value level="7">2718</value>
 					<value level="8">2539</value>
 					<value level="9">2646</value>
 					<value level="10">2746</value>
@@ -248,13 +247,16 @@
 					<item>HEAVY</item>
 				</armorType>
 			</effect>
-			<effect name="ShieldDefenceRate">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>4636</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-35</amount>
+				<mode>PER</mode>
 				<armorType>
 					<item>HEAVY</item>
 				</armorType>
