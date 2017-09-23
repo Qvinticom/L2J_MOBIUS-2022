@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19200" toLevel="1" name="Gravity Sign">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., P./M. Def. + 10%. -->
+		<abnormalType>1</abnormalType>
+		<abnormalTime>30</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<icon>icon.skill1997</icon>
 		<operateType>A2</operateType>
 		<effectPoint>2</effectPoint>
 		<isMagic>4</isMagic>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19201" toLevel="1" name="Paladin's Protection">
 		<!-- TODO abnormalType -->
@@ -742,6 +754,14 @@
 					<value level="2">2</value>
 					<value level="3">3</value>
 				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
 				<stat>MEN</stat>
 			</effect>
 			<effect name="StatUp">
@@ -778,7 +798,6 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="19225" toLevel="1" name="Summon Battle Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons 5 Battle Quick Healing Potions. Consumes 40 Crystals (R-grade). -->
 		<icon>icon.skill19225</icon>
 		<operateType>A1</operateType>
@@ -787,6 +806,20 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>21600000</reuseDelay>
+		<itemConsumeId>17371</itemConsumeId> <!-- Consumes 40 Crystals (R-grade) -->
+		<itemConsumeCount>40</itemConsumeCount>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>45945</itemId>
+				<itemCount>5</itemCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19226" toLevel="2" name="Favor of the Exalted">
 		<!-- AUTO GENERATED SKILL -->
@@ -875,7 +908,9 @@
 		</effects>
 	</skill>
 	<skill id="19230" toLevel="30" name="MP Recovery">
-		<!-- AUTO GENERATED SKILL -->
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>MP_REGEN_UP</abnormalType>
 		<icon>icon.skill1047</icon>
 		<operateType>A2</operateType>
 		<effectPoint>635</effectPoint>

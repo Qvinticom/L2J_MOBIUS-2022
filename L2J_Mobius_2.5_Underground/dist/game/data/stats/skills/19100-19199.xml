@@ -223,16 +223,51 @@
 		<abnormalType>TRANSFORM</abnormalType>
 	</skill>
 	<skill id="19110" toLevel="5" name="Clan Resilience">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Clan members' resistance to Knock Back / Knock Down + 12. Elder or above only. -->
+		<!-- Level 1: Clan members' resistance to Knock Back / Knock Down + 12. Elder or above only. -->
+		<!-- Level 2: Clan members' resistance to Knock Back / Knock Down + 13. Elder or above only. -->
+		<!-- Level 3: Clan members' resistance to Knock Back / Knock Down + 14. Elder or above only. -->
+		<!-- Level 4: Clan members' resistance to Knock Back / Knock Down + 15. Elder or above only. -->
+		<!-- Level 5: Clan members' resistance to Knock Back / Knock Down + 16. Elder or above only. -->
 		<icon>icon.skill_tough_spirit</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>
+					<value level="1">12</value>
+					<value level="2">13</value>
+					<value level="3">14</value>
+					<value level="4">15</value>
+					<value level="5">16</value>
+				</KNOCKBACK>
+				<KNOCKDOWN>
+					<value level="1">12</value>
+					<value level="2">13</value>
+					<value level="3">14</value>
+					<value level="4">15</value>
+					<value level="5">16</value>
+				</KNOCKDOWN>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19111" toLevel="5" name="Clan Steadfastness">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Clan members' resistance to Aerial Yoke + 12. Elder or above only. -->
+		<!-- Level 1: Clan members' resistance to Aerial Yoke + 12. Elder or above only. -->
+		<!-- Level 2: Clan members' resistance to Aerial Yoke + 13. Elder or above only. -->
+		<!-- Level 3: Clan members' resistance to Aerial Yoke + 14. Elder or above only. -->
+		<!-- Level 4: Clan members' resistance to Aerial Yoke + 15. Elder or above only. -->
+		<!-- Level 5: Clan members' resistance to Aerial Yoke + 16. Elder or above only. -->
 		<icon>icon.skill_heavy_heart</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<AIRBIND>
+					<value level="1">12</value>
+					<value level="2">13</value>
+					<value level="3">14</value>
+					<value level="4">15</value>
+					<value level="5">16</value>
+				</AIRBIND>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19112" toLevel="1" name="Clan Escape">
 		<!-- AUTO GENERATED SKILL -->
@@ -416,7 +451,7 @@
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PhysicalSkillPower">
+			<effect name="SkillCriticalProbability">
 				<amount>
 					<value level="1">5</value>
 					<value level="2">10</value>
@@ -440,7 +475,8 @@
 		</effects>
 	</skill>
 	<skill id="19127" toLevel="2" name="Noble Guidance">
-		<!-- P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
+		<!-- Level 1: P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15. -->
+		<!-- Level 2: P. Accuracy + 16, M. Accuracy + 16, servitor's P. Accuracy + 23. -->
 		<icon>icon.skill19127</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -458,15 +494,25 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="ServitorShare">
+				<ACCURACY_COMBAT>
+					<value level="1">15</value>
+					<value level="2">23</value>
+				</ACCURACY_COMBAT>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19128" toLevel="2" name="Noble Sting">
-		<!-- Physical Skill Critical Damage + 5%. -->
+		<!-- Level 1: Physical Skill Critical Damage + 5%. -->
+		<!-- Level 2: Physical Skill Critical Damage + 10%. -->
 		<icon>icon.skill10655</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PhysicalSkillPower">
-				<amount>5</amount>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -602,7 +648,7 @@
 					<item>HEAVY</item>
 				</armorType>
 			</effect>
-			<effect name="MaxHp">
+			<effect name="MaxMp">
 				<amount>6</amount>
 				<mode>PER</mode>
 				<armorType>
@@ -727,22 +773,30 @@
 		</effects>
 	</skill>
 	<skill id="19142" toLevel="2" name="Noble Warrior Buffs">
-		<!-- Stun/Restrain success rate and defense rate + 5%. -->
+		<!-- Level 1: Stun/Restrain success rate and defense rate + 5%. -->
+		<!-- Level 2: Stun/Restrain success rate and defense rate + 10%. -->
 		<operateType>P</operateType>
 		<icon>icon.skill19142</icon>
 		<effects>
-			<!-- TODO: Handle Restrain trait -->
 			<effect name="AttackTrait">
 				<SHOCK>
 					<value level="1">5</value>
 					<value level="2">10</value>
 				</SHOCK>
+				<AIRBIND>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</AIRBIND>
 			</effect>
 			<effect name="DefenceTrait">
 				<SHOCK>
 					<value level="1">5</value>
 					<value level="2">10</value>
 				</SHOCK>
+				<AIRBIND>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</AIRBIND>
 			</effect>
 		</effects>
 	</skill>
@@ -903,7 +957,10 @@
 		</effects>
 	</skill>
 	<skill id="19154" toLevel="4" name="Noble Empower">
-		<!-- M. Atk. + 3% and recovery magic Power + 47. -->
+		<!-- Level 1: M. Atk. + 3% and recovery magic Power + 47. -->
+		<!-- Level 2: M. Atk. + 6% and recovery magic Power + 94. -->
+		<!-- Level 3: M. Atk. + 9% and recovery magic Power + 141. -->
+		<!-- Level 4: M. Atk. + 14% and recovery magic Power + 211. -->
 		<operateType>P</operateType>
 		<icon>icon.skill1059</icon>
 		<effects>
@@ -915,6 +972,15 @@
 					<value level="4">14</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">47</value>
+					<value level="2">94</value>
+					<value level="3">141</value>
+					<value level="4">211</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -933,22 +999,30 @@
 		</effects>
 	</skill>
 	<skill id="19156" toLevel="2" name="Noble Wizard Buffs">
-		<!-- Restrain/Mind success rate and defense rate + 5%. -->
+		<!-- Level 1: Restrain/Mind success rate and defense rate + 5%. -->
+		<!-- Level 2: Restrain/Mind success rate and defense rate + 10%. -->
 		<operateType>P</operateType>
 		<icon>icon.skill19156</icon>
 		<effects>
-			<!-- TODO: Handle Restrain trait -->
 			<effect name="AttackTrait">
 				<DERANGEMENT>
 					<value level="1">5</value>
 					<value level="2">10</value>
 				</DERANGEMENT>
+				<AIRBIND>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</AIRBIND>
 			</effect>
 			<effect name="DefenceTrait">
 				<DERANGEMENT>
 					<value level="1">5</value>
 					<value level="2">10</value>
 				</DERANGEMENT>
+				<AIRBIND>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</AIRBIND>
 			</effect>
 		</effects>
 	</skill>
@@ -995,7 +1069,8 @@
 		</effects>
 	</skill>
 	<skill id="19160" toLevel="2" name="Noble Magic Death">
-		<!-- M. Critical Damage + 3% and recovery magic Power + 94. -->
+		<!-- Level 1: M. Critical Damage + 3% and recovery magic Power + 94. -->
+		<!-- Level 2: M. Critical Damage + 5% and recovery magic Power + 211. -->
 		<operateType>P</operateType>
 		<icon>icon.skill19160</icon>
 		<effects>
@@ -1005,6 +1080,13 @@
 					<value level="2">5</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">94</value>
+					<value level="2">211</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

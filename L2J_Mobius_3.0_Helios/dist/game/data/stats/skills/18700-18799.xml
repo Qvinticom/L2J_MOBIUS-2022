@@ -48,19 +48,54 @@
 		</effects>
 	</skill>
 	<skill id="18720" toLevel="1" name="Greater Obsidian - Cancel Target">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Cancels enemy's target on you. -->
+		<icon>icon.bm_jewel_pvpdef_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>15000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<rideState>NONE</rideState>
+		<effects>
+			<effect name="TargetCancel" />
+		</effects>
 	</skill>
 	<skill id="18721" toLevel="1" name="Greater Garnet - Cancel Stun/Silence">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>15000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<rideState>NONE</rideState>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">STUN,9;SILENCE,9;SILENCE_ALL,9;SILENCE_PHYSICAL,9;</value>
+				</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18722" toLevel="1" name="Greater Garnet - Cancel Debuffs">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<rideState>NONE</rideState>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18723" toLevel="4" name="Ultimate Lv. 4 Jewelry Box">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
