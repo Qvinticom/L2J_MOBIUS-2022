@@ -778,49 +778,93 @@
 		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
 		<set name="icon" val="icon.love_potion" />
 		<set name="weight" val="2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17914" level="1" /> <!-- Low-grade Love Potion -->
+		</skills>
 	</item>
 	<item id="39477" name="Love Potion" type="EtcItem">
 		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
 		<set name="icon" val="icon.love_potion" />
 		<set name="weight" val="2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17915" level="1" /> <!-- Love Potion -->
+		</skills>
 	</item>
 	<item id="39478" name="Mid-grade Love Potion" type="EtcItem">
 		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
 		<set name="icon" val="icon.love_potion" />
 		<set name="weight" val="2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17916" level="1" /> <!-- Mid-grade Love Potion -->
+		</skills>
 	</item>
 	<item id="39479" name="High-grade Love Potion" type="EtcItem">
 		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
 		<set name="icon" val="icon.love_potion" />
 		<set name="weight" val="2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17917" level="1" /> <!-- High-grade Love Potion -->
+		</skills>
 	</item>
 	<item id="39480" name="Cruel Love Potion" type="EtcItem">
 		<!-- Double-click for a random effect of love. Cannot be used in the Olympiad. -->
