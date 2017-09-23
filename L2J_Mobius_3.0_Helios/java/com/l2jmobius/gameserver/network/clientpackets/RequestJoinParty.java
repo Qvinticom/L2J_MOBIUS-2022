@@ -92,6 +92,12 @@ public final class RequestJoinParty implements IClientIncomingPacket
 			return;
 		}
 		
+		if (requestor.isOnEvent()) // custom event message
+		{
+			requestor.sendMessage("You cannot invite to a party while participating in an event.");
+			return;
+		}
+		
 		SystemMessage sm;
 		if (target.isInParty())
 		{

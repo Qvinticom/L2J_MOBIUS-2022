@@ -71,6 +71,11 @@ public class RequestChangeAbilityPoint implements IClientIncomingPacket
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
+		else if (activeChar.isOnEvent()) // custom event message
+		{
+			activeChar.sendMessage("You cannot use or reset Ability Points while participating in an event.");
+			return;
+		}
 		
 		final long spRequired = AbilityPointsData.getInstance().getPrice(activeChar.getAbilityPoints());
 		if (spRequired > activeChar.getSp())

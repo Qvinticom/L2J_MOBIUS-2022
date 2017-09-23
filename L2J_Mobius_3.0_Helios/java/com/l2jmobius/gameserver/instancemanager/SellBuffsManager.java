@@ -405,6 +405,11 @@ public final class SellBuffsManager implements IGameXmlReader
 			player.sendMessage("You can't sell buffs with Ceremony of Chaos status!");
 			return false;
 		}
+		else if (player.isOnEvent()) // custom event message
+		{
+			player.sendMessage("You can't sell buffs while registered in an event!");
+			return false;
+		}
 		else if (player.isCursedWeaponEquipped() || (player.getReputation() < 0))
 		{
 			player.sendMessage("You can't sell buffs in Chaotic state!");

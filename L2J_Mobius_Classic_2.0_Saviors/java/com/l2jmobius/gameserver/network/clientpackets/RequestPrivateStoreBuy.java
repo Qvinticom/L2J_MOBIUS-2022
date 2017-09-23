@@ -97,6 +97,12 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 			return;
 		}
 		
+		if (player.isOnEvent()) // custom event message
+		{
+			player.sendMessage("You cannot open a private store while participating in an event.");
+			return;
+		}
+		
 		if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestorebuy"))
 		{
 			player.sendMessage("You are buying items too fast.");

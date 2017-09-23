@@ -68,6 +68,11 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_OR_RESET_ABILITY_POINTS_WHILE_PARTICIPATING_IN_THE_OLYMPIAD_OR_CEREMONY_OF_CHAOS);
 			return;
 		}
+		else if (activeChar.isOnEvent()) // custom event message
+		{
+			activeChar.sendMessage("You cannot use or reset Ability Points while participating in an event.");
+			return;
+		}
 		else if (activeChar.getAbilityPoints() == 0)
 		{
 			activeChar.sendMessage("You don't have ability points to reset!");

@@ -74,6 +74,13 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 			return;
 		}
 		
+		// Cannot request friendship in any custom event.
+		if (activeChar.isOnEvent()) // custom event message
+		{
+			activeChar.sendMessage("You cannot invite a friend while participating in an event.");
+			return;
+		}
+		
 		// Target blocked active player.
 		if (BlockList.isBlocked(friend, activeChar))
 		{

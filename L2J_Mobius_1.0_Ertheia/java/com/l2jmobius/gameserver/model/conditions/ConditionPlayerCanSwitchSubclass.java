@@ -66,6 +66,11 @@ public class ConditionPlayerCanSwitchSubclass extends Condition
 			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERED_IN_THE_CEREMONY_OF_CHAOS);
 			canSwitchSub = false;
 		}
+		else if (player.isOnEvent())
+		{
+			player.sendMessage("You cannot change your subclass while registered in an event.");
+			canSwitchSub = false;
+		}
 		else if (player.isAllSkillsDisabled())
 		{
 			canSwitchSub = false;
