@@ -985,7 +985,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
 			final L2Weapon weaponItem = getActiveWeaponItem();
-			final WeaponType weaponType = getAttackType();
 			
 			// Check if attacker's weapon can attack
 			if (weaponItem != null)
@@ -1125,7 +1124,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			
 			final boolean wasSSCharged = isChargedShot(ShotType.SOULSHOTS) || isChargedShot(ShotType.BLESSED_SOULSHOTS); // Verify if soulshots are charged.
-			final int timeAtk = Formulas.calculateTimeBetweenAttacks(this, weaponType); // Get the Attack Speed of the L2Character (delay (in milliseconds) before next attack)
+			final int timeAtk = Formulas.calculateTimeBetweenAttacks(getPAtkSpd()); // Get the Attack Speed of the L2Character (delay (in milliseconds) before next attack)
 			final int timeToHit = timeAtk / 2; // the hit is calculated to happen halfway to the animation - might need further tuning e.g. in bow case
 			final int ssGrade = (weaponItem != null) ? weaponItem.getItemGrade().ordinal() : 0;
 			final Attack attack = new Attack(this, target, wasSSCharged, ssGrade);
@@ -1268,7 +1267,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			crit1 = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
 			
 			// Calculate physical damages
-			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, 0, shld1, crit1, attack.hasSoulshot());
+			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, shld1, crit1, attack.hasSoulshot());
 			
 			// Bows Ranged Damage Formula (Damage gradually decreases when 60% or lower than full hit range, and increases when 60% or higher).
 			// full hit range is 500 which is the base bow range, and the 60% of this is 800.
@@ -1341,7 +1340,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			crit1 = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
 			
 			// Calculate physical damages of hit 1
-			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, 0, shld1, crit1, attack.hasSoulshot());
+			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, shld1, crit1, attack.hasSoulshot());
 			damage1 /= 2;
 		}
 		
@@ -1355,7 +1354,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			crit2 = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
 			
 			// Calculate physical damages of hit 2
-			damage2 = (int) Formulas.calcAutoAttackDamage(this, target, 0, shld2, crit2, attack.hasSoulshot());
+			damage2 = (int) Formulas.calcAutoAttackDamage(this, target, shld2, crit2, attack.hasSoulshot());
 			damage2 /= 2;
 		}
 		
@@ -1386,7 +1385,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					shld = Formulas.calcShldUse(this, surroundTarget);
 					crit = Formulas.calcCrit(getStat().getCriticalHit(), this, surroundTarget, null);
-					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, 0, shld, crit, attack.hasSoulshot());
+					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, shld, crit, attack.hasSoulshot());
 					damage /= 2;
 				}
 				
@@ -1406,7 +1405,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					shld = Formulas.calcShldUse(this, surroundTarget);
 					crit = Formulas.calcCrit(getStat().getCriticalHit(), this, surroundTarget, null);
-					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, 0, shld, crit, attack.hasSoulshot());
+					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, shld, crit, attack.hasSoulshot());
 					damage /= 2;
 				}
 				
@@ -1456,7 +1455,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			crit1 = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
 			
 			// Calculate physical damages
-			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, 0, shld1, crit1, attack.hasSoulshot());
+			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, shld1, crit1, attack.hasSoulshot());
 		}
 		
 		// Create a new hit task with Medium priority
@@ -1481,7 +1480,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					shld = Formulas.calcShldUse(this, surroundTarget);
 					crit = Formulas.calcCrit(getStat().getCriticalHit(), this, surroundTarget, null);
-					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, 0, shld, crit, attack.hasSoulshot());
+					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, shld, crit, attack.hasSoulshot());
 				}
 				
 				ThreadPoolManager.schedule(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk);

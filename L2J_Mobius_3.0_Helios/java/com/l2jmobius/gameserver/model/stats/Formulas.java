@@ -404,14 +404,13 @@ public final class Formulas
 	}
 	
 	/**
-	 * Calculate how many milliseconds takes to make an attack.
-	 * @param rate
-	 * @return the delay between each attack with a minimum of 50 milliseconds (max. 10000 attack speed)
+	 * @param attackSpeed the attack speed of the Creature.
+	 * @return {@code 500000 / attackSpeed}.
 	 */
-	public static int calcPAtkSpd(double rate)
+	public static int calculateTimeBetweenAttacks(int attackSpeed)
 	{
 		// Measured Nov 2015 by Nik. Formula: atk.spd/500 = hits per second.
-		return (int) Math.max(50, (500000 / rate));
+		return Math.max(50, (500000 / attackSpeed));
 	}
 	
 	/**
@@ -1383,13 +1382,12 @@ public final class Formulas
 	 * Calculated damage caused by ATTACK of attacker on target.
 	 * @param attacker player or NPC that makes ATTACK
 	 * @param target player or NPC, target of ATTACK
-	 * @param power
 	 * @param shld
 	 * @param crit if the ATTACK have critical success
 	 * @param ss if weapon item was charged by soulshot
 	 * @return
 	 */
-	public static double calcAutoAttackDamage(L2Character attacker, L2Character target, double power, byte shld, boolean crit, boolean ss)
+	public static double calcAutoAttackDamage(L2Character attacker, L2Character target, byte shld, boolean crit, boolean ss)
 	{
 		final double distance = attacker.calculateDistance(target, true, false);
 		
@@ -1504,33 +1502,61 @@ public final class Formulas
 	}
 	
 	/**
-	 * @param activeChar
-	 * @param attackType the type of attack. Different attack types have different time between attacks.
-	 * @return the Attack Speed of the L2Character (delay (in milliseconds) before next attack).
+	 * @param totalAttackTime the time needed to make a full attack.
+	 * @param attackType the weapon type used for attack.
+	 * @param twoHanded if the weapon is two handed.
+	 * @param secondHit calculates the second hit for dual attacks.
+	 * @return the time required from the start of the attack until you hit the target.
 	 */
-	public static int calculateTimeBetweenAttacks(L2Character activeChar, WeaponType attackType)
+	public static int calculateTimeToHit(int totalAttackTime, WeaponType attackType, boolean twoHanded, boolean secondHit)
 	{
+		// Gracia Final Retail confirmed:
+		// Time to damage (1 hand, 1 hit): TotalBasicAttackTime * 0.644
+		// Time to damage (2 hand, 1 hit): TotalBasicAttackTime * 0.735
+		// Time to damage (2 hand, 2 hit): TotalBasicAttackTime * 0.2726 and TotalBasicAttackTime * 0.6
+		// Time to damage (bow/xbow): TotalBasicAttackTime * 0.978
+		
+		// Measured July 2016 by Nik.
+		// Due to retail packet delay, we are unable to gather too accurate results. Therefore the below formulas are based on original Gracia Final values.
+		// Any original values that appear higher than tested have been replaced with the tested values, because even with packet delay its obvious they are wrong.
+		// All other original values are compared with the test results and differences are considered to be too insignificant and mostly caused due to packet delay.
 		switch (attackType)
 		{
 			case BOW:
-			{
-				return (1500 * 345) / activeChar.getPAtkSpd();
-			}
 			case CROSSBOW:
 			case TWOHANDCROSSBOW:
 			{
-				return (1200 * 345) / activeChar.getPAtkSpd();
+				return (int) (totalAttackTime * 0.95);
 			}
-			case DAGGER:
+			case DUALBLUNT:
+			case DUALDAGGER:
+			case DUAL:
+			case DUALFIST:
 			{
-				// atkSpd /= 1.15;
-				break;
+				if (secondHit)
+				{
+					return (int) (totalAttackTime * 0.6);
+				}
+				
+				return (int) (totalAttackTime * 0.2726);
+			}
+			default:
+			{
+				if (twoHanded)
+				{
+					return (int) (totalAttackTime * 0.735);
+				}
+				
+				return (int) (totalAttackTime * 0.644);
 			}
 		}
-		
-		return calcPAtkSpd(activeChar.getPAtkSpd());
 	}
 	
+	/**
+	 * @param activeChar
+	 * @param weapon
+	 * @return {@code (500_000 millis + 333 * WeaponItemReuseDelay) / PAttackSpeed}
+	 */
 	public static int calculateReuseTime(L2Character activeChar, L2Weapon weapon)
 	{
 		if (weapon == null)
@@ -1549,9 +1575,9 @@ public final class Formulas
 		}
 		
 		reuse *= activeChar.getStat().getWeaponReuseModifier();
-		final double atkSpd = activeChar.getStat().getPAtkSpd();
+		double atkSpd = activeChar.getStat().getPAtkSpd();
 		
-		return (int) ((reuse * 345) / atkSpd); // ((reuse * 312) / atkSpd)) for non ranged?
+		return (int) ((500000 + (333 * reuse)) / atkSpd);
 	}
 	
 	public static double calculatePvpPveBonus(L2Character attacker, L2Character target, Skill skill, boolean crit)

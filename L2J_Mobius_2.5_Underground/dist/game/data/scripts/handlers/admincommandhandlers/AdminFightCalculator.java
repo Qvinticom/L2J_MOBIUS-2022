@@ -204,8 +204,8 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		double dmg2 = 0;
 		
 		// ATTACK speed in milliseconds
-		int sAtk1 = Formulas.calculateTimeBetweenAttacks(npc1, null);
-		int sAtk2 = Formulas.calculateTimeBetweenAttacks(npc2, null);
+		int sAtk1 = Formulas.calculateTimeBetweenAttacks(npc1.getPAtkSpd());
+		int sAtk2 = Formulas.calculateTimeBetweenAttacks(npc2.getPAtkSpd());
 		// number of ATTACK per 100 seconds
 		sAtk1 = 100000 / sAtk1;
 		sAtk2 = 100000 / sAtk2;
@@ -237,7 +237,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			
 			if (!_miss1)
 			{
-				final double _dmg1 = Formulas.calcAutoAttackDamage(npc1, npc2, 0, _shld1, _crit1, false);
+				final double _dmg1 = Formulas.calcAutoAttackDamage(npc1, npc2, _shld1, _crit1, false);
 				dmg1 += _dmg1;
 				npc1.abortAttack();
 			}
@@ -270,7 +270,7 @@ public class AdminFightCalculator implements IAdminCommandHandler
 			
 			if (!_miss2)
 			{
-				final double _dmg2 = Formulas.calcAutoAttackDamage(npc2, npc1, 0, _shld2, _crit2, false);
+				final double _dmg2 = Formulas.calcAutoAttackDamage(npc2, npc1, _shld2, _crit2, false);
 				dmg2 += _dmg2;
 				npc2.abortAttack();
 			}
