@@ -1165,6 +1165,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				case DUAL:
 				case DUALFIST:
+				case DUALBLUNT:
 				case DUALDAGGER:
 				{
 					hitted = doAttackHitByDual(attack, target, timeToHit);
