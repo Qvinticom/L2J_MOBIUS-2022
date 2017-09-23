@@ -247,8 +247,7 @@ public class Fishing
 		double chance = baitData.getChance();
 		if (_player.isChargedShot(ShotType.FISH_SOULSHOTS))
 		{
-			chance *= 1.25; // +25 % chance to win
-			_player.setChargedShot(ShotType.FISH_SOULSHOTS, false);
+			chance *= 1.5; // +50 % chance to win
 		}
 		
 		if (Rnd.get(0, 100) <= chance)

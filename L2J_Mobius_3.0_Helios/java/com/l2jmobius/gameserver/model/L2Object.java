@@ -21,7 +21,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.handler.ActionHandler;
 import com.l2jmobius.gameserver.handler.ActionShiftHandler;
 import com.l2jmobius.gameserver.handler.IActionHandler;
@@ -452,35 +451,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	public boolean isInsideZone(ZoneId zone)
 	{
 		return false;
-	}
-	
-	/**
-	 * Check if current object has charged shot.
-	 * @param type of the shot to be checked.
-	 * @return {@code true} if the object has charged shot
-	 */
-	public boolean isChargedShot(ShotType type)
-	{
-		return false;
-	}
-	
-	/**
-	 * Charging shot into the current object.
-	 * @param type of the shot to be charged.
-	 * @param charged
-	 */
-	public void setChargedShot(ShotType type, boolean charged)
-	{
-	}
-	
-	/**
-	 * Try to recharge a shot.
-	 * @param physical skill are using Soul shots.
-	 * @param magical skill are using Spirit shots.
-	 * @param fish
-	 */
-	public void rechargeShots(boolean physical, boolean magical, boolean fish)
-	{
 	}
 	
 	/**

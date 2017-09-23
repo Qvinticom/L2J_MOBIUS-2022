@@ -47,7 +47,6 @@ import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
-import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -175,8 +174,6 @@ public final class L2ItemInstance extends L2Object
 	private ScheduledFuture<?> _appearanceLifeTimeTask;
 	
 	private final DropProtection _dropProtection = new DropProtection();
-	
-	private int _shotsMask = 0;
 	
 	private final List<Options> _enchantOptions = new ArrayList<>();
 	private final Map<Integer, EnsoulOption> _ensoulOptions = new LinkedHashMap<>(3);
@@ -1369,7 +1366,6 @@ public final class L2ItemInstance extends L2Object
 					final InventoryUpdate iu = new InventoryUpdate();
 					for (L2ItemInstance item : unequiped)
 					{
-						item.unChargeAllShots();
 						iu.addModifiedItem(item);
 					}
 					player.sendInventoryUpdate(iu);
@@ -1797,7 +1793,6 @@ public final class L2ItemInstance extends L2Object
 				final InventoryUpdate iu = new InventoryUpdate();
 				for (L2ItemInstance item : unequiped)
 				{
-					item.unChargeAllShots();
 					iu.addModifiedItem(item);
 				}
 				player.sendInventoryUpdate(iu);
@@ -2045,30 +2040,6 @@ public final class L2ItemInstance extends L2Object
 				EventDispatcher.getInstance().notifyEventAsync(new OnItemTalk(this, activeChar), getItem());
 			}
 		}
-	}
-	
-	@Override
-	public boolean isChargedShot(ShotType type)
-	{
-		return (_shotsMask & type.getMask()) == type.getMask();
-	}
-	
-	@Override
-	public void setChargedShot(ShotType type, boolean charged)
-	{
-		if (charged)
-		{
-			_shotsMask |= type.getMask();
-		}
-		else
-		{
-			_shotsMask &= ~type.getMask();
-		}
-	}
-	
-	public void unChargeAllShots()
-	{
-		_shotsMask = 0;
 	}
 	
 	/**

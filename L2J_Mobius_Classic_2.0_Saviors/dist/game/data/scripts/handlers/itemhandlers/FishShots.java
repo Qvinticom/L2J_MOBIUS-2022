@@ -75,7 +75,7 @@ public class FishShots implements IItemHandler
 			return false;
 		}
 		
-		activeChar.setChargedShot(ShotType.FISH_SOULSHOTS, true);
+		activeChar.chargeShot(ShotType.FISH_SOULSHOTS);
 		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
 		final L2Object oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);

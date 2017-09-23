@@ -646,17 +646,11 @@ public class EnterWorld implements IClientIncomingPacket
 		activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar));
 		activeChar.sendPacket(ExConnectedTimeAndGettableReward.STATIC_PACKET);
 		
-		if (Config.ENABLE_AUTO_SHOTS)
-		{
-			activeChar.handleAutoShots(true);
-		}
-		else
-		{
-			activeChar.sendPacket(new ExAutoSoulShot(0, false, 0));
-			activeChar.sendPacket(new ExAutoSoulShot(0, false, 1));
-			activeChar.sendPacket(new ExAutoSoulShot(0, false, 2));
-			activeChar.sendPacket(new ExAutoSoulShot(0, false, 3));
-		}
+		// Handle soulshots, disable all on EnterWorld
+		activeChar.sendPacket(new ExAutoSoulShot(0, true, 0));
+		activeChar.sendPacket(new ExAutoSoulShot(0, true, 1));
+		activeChar.sendPacket(new ExAutoSoulShot(0, true, 2));
+		activeChar.sendPacket(new ExAutoSoulShot(0, true, 3));
 		
 		if (Config.HARDWARE_INFO_ENABLED)
 		{

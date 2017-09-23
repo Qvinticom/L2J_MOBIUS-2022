@@ -63,7 +63,6 @@ public class BeastSoulShot implements IItemHandler
 		final List<L2Summon> aliveServitor = playable.getServitors().values().stream().filter(s -> !s.isDead()).collect(Collectors.toList());
 		if ((pet == null) && aliveServitor.isEmpty())
 		{
-			activeOwner.sendMessage("asdas");
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET_OR_SERVITOR_SAD_ISN_T_IT);
 			return false;
 		}

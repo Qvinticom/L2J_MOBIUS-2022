@@ -370,11 +370,6 @@ public abstract class Inventory extends ItemContainer
 						}
 					});
 				}
-				
-				if (item.isWeapon())
-				{
-					player.handleAutoShots(false);
-				}
 			}
 			
 			// Apply skill, if weapon have "skills on unequip"
@@ -388,6 +383,11 @@ public abstract class Inventory extends ItemContainer
 			{
 				player.sendPacket(new SkillCoolTime(player));
 			}
+			
+			if (item.isWeapon())
+			{
+				player.unchargeAllShots();
+			}
 		}
 		
 		@Override
@@ -399,6 +399,13 @@ public abstract class Inventory extends ItemContainer
 			}
 			
 			final L2PcInstance player = (L2PcInstance) inventory.getOwner();
+			
+			// Any items equipped that result in expertise penalty do not give any skills at all.
+			if (item.getItem().getCrystalType().getId() > player.getExpertiseLevel())
+			{
+				return;
+			}
+			
 			final AtomicBoolean update = new AtomicBoolean();
 			final AtomicBoolean updateTimestamp = new AtomicBoolean();
 			
@@ -466,11 +473,6 @@ public abstract class Inventory extends ItemContainer
 			{
 				player.sendPacket(new SkillCoolTime(player));
 			}
-			
-			if (item.isWeapon())
-			{
-				player.handleAutoShots(Config.ENABLE_AUTO_SHOTS);
-			}
 		}
 	}
 	
@@ -496,6 +498,12 @@ public abstract class Inventory extends ItemContainer
 			
 			// Verify and apply normal set
 			if (verifyAndApply(player, item, L2ItemInstance::getId))
+			{
+				update = true;
+			}
+			
+			// Very and apply visual set
+			if (verifyAndApply(player, item, L2ItemInstance::getVisualId))
 			{
 				update = true;
 			}
@@ -615,6 +623,12 @@ public abstract class Inventory extends ItemContainer
 			
 			// verify and remove normal set bonus
 			if (verifyAndRemove(player, item, L2ItemInstance::getId))
+			{
+				remove = true;
+			}
+			
+			// verify and remove visual set bonus
+			if (verifyAndRemove(player, item, L2ItemInstance::getVisualId))
 			{
 				remove = true;
 			}

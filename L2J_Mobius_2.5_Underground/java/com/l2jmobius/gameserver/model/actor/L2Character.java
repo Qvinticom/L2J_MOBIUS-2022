@@ -21,6 +21,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.EnumSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -268,6 +269,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	/** A map holding info about basic property mesmerizing system. */
 	private volatile Map<BasicProperty, BasicPropertyResist> _basicPropertyResists;
+	
+	/** A set containing the shot types currently charged. */
+	private Set<ShotType> _chargedShots = EnumSet.noneOf(ShotType.class);
 	
 	/**
 	 * Creates a creature.
@@ -3861,7 +3865,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		else
 		{
 			// If we didn't miss the hit, discharge the shoulshots, if any
-			setChargedShot(isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS, false);
+			unchargeShot(isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS);
 		}
 		
 		// Check Raidboss attack
@@ -5532,5 +5536,38 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public double distFromMe(L2Character target)
 	{
 		return calculateDistance(target, true, false);
+	}
+	
+	public boolean isChargedShot(ShotType type)
+	{
+		return _chargedShots.contains(type);
+	}
+	
+	/**
+	 * @param type of the shot to charge
+	 * @return {@code true} if there was no shot of this type charged before, {@code false} otherwise.
+	 */
+	public boolean chargeShot(ShotType type)
+	{
+		return _chargedShots.add(type);
+	}
+	
+	/**
+	 * @param type of the shot to uncharge
+	 * @return {@code true} if there was a charged shot of this type, {@code false} otherwise.
+	 */
+	public boolean unchargeShot(ShotType type)
+	{
+		return _chargedShots.remove(type);
+	}
+	
+	public void unchargeAllShots()
+	{
+		_chargedShots = EnumSet.noneOf(ShotType.class);
+	}
+	
+	public void rechargeShots(boolean physical, boolean magic, boolean fish)
+	{
+		// Dummy method to be overriden.
 	}
 }

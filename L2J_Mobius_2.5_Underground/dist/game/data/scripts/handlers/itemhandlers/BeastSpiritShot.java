@@ -122,7 +122,7 @@ public class BeastSpiritShot implements IItemHandler
 		{
 			if (!pet.isChargedShot(shotType))
 			{
-				pet.setChargedShot(shotType, true);
+				pet.chargeShot(shotType);
 				// Visual effect change if player has equipped Sapphire lvl 3 or higher
 				if (activeOwner.getActiveShappireJewel() != null)
 				{
@@ -139,7 +139,7 @@ public class BeastSpiritShot implements IItemHandler
 		{
 			if (!s.isChargedShot(shotType))
 			{
-				s.setChargedShot(shotType, true);
+				s.chargeShot(shotType);
 				// Visual effect change if player has equipped Sapphire lvl 3 or higher
 				if (activeOwner.getActiveShappireJewel() != null)
 				{

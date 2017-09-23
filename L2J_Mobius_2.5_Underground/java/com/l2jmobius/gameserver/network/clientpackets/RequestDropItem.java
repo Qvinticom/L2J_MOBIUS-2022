@@ -180,11 +180,7 @@ public final class RequestDropItem implements IClientIncomingPacket
 		
 		if (item.isEquipped())
 		{
-			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getLocationSlot());
-			for (L2ItemInstance itm : unequiped)
-			{
-				itm.unChargeAllShots();
-			}
+			activeChar.getInventory().unEquipItemInSlot(item.getLocationSlot());
 			activeChar.broadcastUserInfo();
 			activeChar.sendItemList(true);
 		}

@@ -272,11 +272,7 @@ public abstract class AbstractOlympiadGame
 			player.disableAutoShotsAll();
 			
 			// Discharge any active shots
-			final L2ItemInstance item = player.getActiveWeaponInstance();
-			if (item != null)
-			{
-				item.unChargeAllShots();
-			}
+			player.unchargeAllShots();
 			
 			// enable skills with cool time <= 15 minutes
 			for (Skill skill : player.getAllSkills())
