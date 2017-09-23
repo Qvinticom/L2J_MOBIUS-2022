@@ -21,39 +21,123 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17904" toLevel="1" name="Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
 		<icon>icon.etc_potion_scarlet_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealOverTime">
+				<power>24</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17905" toLevel="1" name="Major Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<icon>icon.etc_potion_scarlet_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealOverTime">
+				<power>48</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17906" toLevel="1" name="Greater Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<icon>icon.etc_potion_scarlet_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealOverTime">
+				<power>72</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17907" toLevel="1" name="Superior Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<icon>icon.etc_potion_scarlet_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealOverTime">
+				<power>96</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17908" toLevel="1" name="Supreme Windy Healing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<icon>icon.etc_potion_scarlet_i00</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<icon>icon.etc_potion_scarlet_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealOverTime">
+				<power>120</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17909" toLevel="1" name="Windy Quick Healing Potion">
 		<!-- Restores 625 HP and restores CP with remaining power. No duration. -->
@@ -62,20 +146,14 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Cp">
-				<amount>300</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Hp">
-				<amount>625</amount>
-				<mode>DIFF</mode>
+			<effect name="HpCpHeal">
+				<power>625</power>
 			</effect>
 		</effects>
 	</skill>
@@ -86,20 +164,14 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Cp">
-				<amount>600</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Hp">
-				<amount>1250</amount>
-				<mode>DIFF</mode>
+			<effect name="HpCpHeal">
+				<power>1250</power>
 			</effect>
 		</effects>
 	</skill>
@@ -110,20 +182,14 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Cp">
-				<amount>1200</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Hp">
-				<amount>2500</amount>
-				<mode>DIFF</mode>
+			<effect name="HpCpHeal">
+				<power>2500</power>
 			</effect>
 		</effects>
 	</skill>
@@ -134,20 +200,14 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Cp">
-				<amount>2400</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Hp">
-				<amount>3750</amount>
-				<mode>DIFF</mode>
+			<effect name="HpCpHeal">
+				<power>3750</power>
 			</effect>
 		</effects>
 	</skill>
@@ -158,20 +218,14 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Cp">
-				<amount>3200</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Hp">
-				<amount>5000</amount>
-				<mode>DIFF</mode>
+			<effect name="HpCpHeal">
+				<power>5000</power>
 			</effect>
 		</effects>
 	</skill>

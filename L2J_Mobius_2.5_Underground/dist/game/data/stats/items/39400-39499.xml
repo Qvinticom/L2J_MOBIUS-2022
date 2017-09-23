@@ -547,132 +547,232 @@
 	<item id="39466" name="Windy Healing Potion" type="EtcItem">
 		<!-- Quickly restores HP for 15 sec. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="10000" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17904" level="1" /> <!-- Windy Healing Potion -->
+		</skills>
 	</item>
 	<item id="39467" name="Greater Windy Healing Potion" type="EtcItem">
 		<!-- Quickly restores HP for 15 sec. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="10000" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17905" level="1" /> <!-- Greater Windy Healing Potion -->
+		</skills>
 	</item>
 	<item id="39468" name="Major Windy Healing Potion" type="EtcItem">
 		<!-- Quickly restores HP for 15 sec. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="10000" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17906" level="1" /> <!-- Major Windy Healing Potion -->
+		</skills>
 	</item>
 	<item id="39469" name="Superior Windy Healing Potion" type="EtcItem">
 		<!-- Quickly restores HP for 15 sec. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="10000" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17907" level="1" /> <!-- Superior Windy Healing Potion -->
+		</skills>
 	</item>
 	<item id="39470" name="Supreme Windy Healing Potion" type="EtcItem">
 		<!-- Quickly restores HP for 15 sec. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="10000" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17908" level="1" /> <!-- Supreme Windy Healing Potion -->
+		</skills>
 	</item>
 	<item id="39471" name="Windy Quick Healing Potion" type="EtcItem">
 		<!-- Restores 625 HP. If HP is full, CP is restored. No duration. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17909" level="1" /> <!-- Windy Quick Healing Potion -->
+		</skills>
 	</item>
 	<item id="39472" name="Greater Windy Quick Healing Potion" type="EtcItem">
 		<!-- Restores 1250 HP. If HP is full, CP is restored. No duration. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17910" level="1" /> <!-- Greater Windy Quick Healing Potion -->
+		</skills>
 	</item>
 	<item id="39473" name="Major Windy Quick Healing Potion" type="EtcItem">
 		<!-- Restores 2500 HP. If HP is full, CP is restored. No duration. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17911" level="1" /> <!-- Major Windy Quick Healing Potion -->
+		</skills>
 	</item>
 	<item id="39474" name="Superior Windy Quick Healing Potion" type="EtcItem">
 		<!-- Restores 3750 HP. If HP is full, CP is restored. No duration. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17912" level="1" /> <!-- Superior Windy Quick Healing Potion -->
+		</skills>
 	</item>
 	<item id="39475" name="Supreme Windy Quick Healing Potion" type="EtcItem">
 		<!-- Restores 5000 HP. If HP is full, CP is restored. No duration. Cannot be used in the Olympiad / Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17913" level="1" /> <!-- Supreme Windy Quick Healing Potion -->
+		</skills>
 	</item>
 	<item id="39476" name="Low-grade Love Potion" type="EtcItem">
 		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody Dance. -->
