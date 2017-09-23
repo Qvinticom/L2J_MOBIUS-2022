@@ -54,6 +54,11 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			for (int j = 0; j < size; j++)
 			{
 				final SkillHolder holder = new SkillHolder(packet.readD(), packet.readD());
+				if (holder.getSkillLevel() < 1)
+				{
+					_log.warning("Player " + client + " is trying to learn skill " + holder + " by sending packet with level 0!");
+					return false;
+				}
 				if (_skills.putIfAbsent(holder.getSkillId(), holder) != null)
 				{
 					_log.warning("Player " + client + " is trying to send two times one skill " + holder + " to learn!");
