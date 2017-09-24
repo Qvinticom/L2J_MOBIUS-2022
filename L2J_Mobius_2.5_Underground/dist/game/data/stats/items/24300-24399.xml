@@ -788,31 +788,47 @@
 		<!-- Cute Draco Hat. 7-day. STR/DEX/CON + 2. Can use Blessed Resurrection. Cooldown is 1 hr. Cannot be used in the Olympiad. Can be destroyed and sold in a private warehouse. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />		
 		<set name="time" val="10080" />
+		<set name="handler" val="ItemSkills" />			
+		<skills>
+			<skill id="9516" level="1" /> <!-- Draco's Hat: Wizard -->
+			<skill id="9526" level="1" /> <!-- Draco's Wizard Hat - Blessed Resurrection -->
+		</skills>
 	</item>
 	<item id="24357" name="Draco's Hat: Warrior" additionalName="7-day" type="Armor">
 		<!-- Cute Draco Hat. 7-day. INT/WIT/MEN + 2. Can use Blessed Resurrection. Cooldown is 1 hr. Cannot be used in the Olympiad. Can be destroyed and sold in a private warehouse. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />		
 		<set name="time" val="10080" />
+		<set name="handler" val="ItemSkills" />		
+		<skills>	
+			<skill id="9515" level="1" /> <!-- Draco's Hat: Warrior -->
+			<skill id="9525" level="1" /> <!-- Draco's Warrior Hat - Blessed Resurrection -->
+		</skills>
 	</item>
 	<item id="24358" name="Premium Account: Quick Healing Potion" type="EtcItem">
 		<!-- Rerstores 1250 HP, and remaining power restores CP. No duration. Cannot be exchanged, dropped, sold, used in the Olympiad, or used in the Ceremony of Chaos. Can be stored in the private warehouse. -->
@@ -977,107 +993,163 @@
 	</item>
 	<item id="24368" name="Sayha's Rune: Growth" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, XP gain + 1%. -->
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26217" level="1" /> <!-- Sayha's Rune: Growth -->
+		</skills>
 	</item>
 	<item id="24369" name="Sayha's Rune: Growth" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, XP gain + 3%. -->
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26217" level="2" /> <!-- Sayha's Rune: Growth -->
+		</skills>
 	</item>
 	<item id="24370" name="Sayha's Rune: Growth" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, XP gain + 6%. -->
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26217" level="3" /> <!-- Sayha's Rune: Growth -->
+		</skills>
 	</item>
 	<item id="24371" name="Sayha's Rune: Growth" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, XP gain + 10%. -->
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26217" level="4" /> <!-- Sayha's Rune: Growth -->
+		</skills>
 	</item>
 	<item id="24372" name="Sayha's Rune: Skill" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, SP gain + 1%. -->
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26218" level="1" /> <!-- Sayha's Rune: Skill -->
+		</skills>
 	</item>
 	<item id="24373" name="Sayha's Rune: Skill" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, SP gain + 3%. -->
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26218" level="2" /> <!-- Sayha's Rune: Skill -->
+		</skills>
 	</item>
 	<item id="24374" name="Sayha's Rune: Skill" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, SP gain + 6%. -->
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26218" level="3" /> <!-- Sayha's Rune: Skill -->
+		</skills>
 	</item>
 	<item id="24375" name="Sayha's Rune: Skill" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, SP gain + 10%. -->
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="time" val="10" />
+		<skills>
+			<skill id="26218" level="4" /> <!-- Sayha's Rune: Skill -->
+		</skills>
 	</item>
 	<item id="24376" name="Sayha's Rune: Luck" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting + 1%. -->

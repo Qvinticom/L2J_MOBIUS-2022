@@ -415,13 +415,32 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="17919" toLevel="1" name="Super Elixir">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores HP/CP/MP. -->
 		<icon>icon.super_elixir_potion</icon>
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
-		<reuseDelay>1200000</reuseDelay>
+		<reuseDelay>120</reuseDelay>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CpHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17920" toLevel="4" name="Windy Healing Potion">
 		<!-- AUTO GENERATED SKILL -->
@@ -1555,12 +1574,32 @@
 		</effects>
 	</skill>
 	<skill id="17989" toLevel="1" name="Scroll of Escape: Swamp of Screams">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39494</itemConsumeId> <!-- Scroll of Escape -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<!-- Bloody Swamplan -->
+				<x>-21966</x>
+				<y>40544</y>
+				<z>-3187</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17990" toLevel="1" name="Scroll of Escape: Seed of Annihilation">
 		<!-- Updated to IO -->
@@ -1592,20 +1631,59 @@
 		</effects>
 	</skill>
 	<skill id="17991" toLevel="1" name="Scroll of Escape: Harnak's Underground Ruins">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39498</itemConsumeId> <!-- Scroll of Escape: Harnak Underground Ruins -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<!-- Harnak Underground Ruins -->
+				<x>-114700</x>
+				<y>147909</y>
+				<z>-7710</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17992" toLevel="1" name="Scroll of Escape: Kartia's Labyrinth">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39498</itemConsumeId> <!-- Scroll of Escape: Kartia's Labyrinth -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<x>147553</x>
+				<y>27326</y>
+				<z>-2208</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17993" toLevel="1" name="Scroll of Escape: Fairy Settlement">
 		<!-- Updated to IO -->
@@ -1637,12 +1715,32 @@
 		</effects>
 	</skill>
 	<skill id="17994" toLevel="1" name="Scroll of Escape: Garden of Genesis">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39498</itemConsumeId> <!-- Scroll of Escape: Garden of Genesis -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<!-- Garden of Genesis -->
+				<x>207868</x>
+				<y>112199</y>
+				<z>-2058</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17995" toLevel="1" name="Scroll of Escape: Prison of Darkness">
 		<!-- Updated to IO -->
