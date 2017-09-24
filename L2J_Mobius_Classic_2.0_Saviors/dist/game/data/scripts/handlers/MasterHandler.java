@@ -135,7 +135,6 @@ import handlers.admincommandhandlers.AdminZone;
 import handlers.admincommandhandlers.AdminZones;
 import handlers.bypasshandlers.Augment;
 import handlers.bypasshandlers.Buy;
-import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
 import handlers.bypasshandlers.ClanWarehouse;
 import handlers.bypasshandlers.EnsoulWindow;
@@ -468,7 +467,6 @@ public class MasterHandler
 			// Bypass Handlers
 			Augment.class,
 			Buy.class,
-			BuyShadowItem.class,
 			ChatLink.class,
 			ClanWarehouse.class,
 			EnsoulWindow.class,
