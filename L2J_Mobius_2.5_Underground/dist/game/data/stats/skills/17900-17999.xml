@@ -230,15 +230,15 @@
 		</effects>
 	</skill>
 	<skill id="17914" toLevel="1" name="Low-grade Love Potion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
+		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody. -->
 		<icon>icon.love_potion</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -248,34 +248,41 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>RHAPSODY</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>RHAPSODY</slot>
+			</effect>
 			<effect name="PAtk">
 				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>400</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>15</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>20</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17915" toLevel="1" name="Love Potion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
+		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody. -->
 		<icon>icon.love_potion</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -285,34 +292,41 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>RHAPSODY</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>RHAPSODY</slot>
+			</effect>
 			<effect name="PAtk">
-				<amount>120</amount>
+				<amount>110</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>420</amount>
+				<amount>110</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>20</amount>
+				<amount>110</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>25</amount>
+				<amount>110</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17916" toLevel="1" name="Mid-grade Love Potion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
+		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody. -->
 		<icon>icon.love_potion</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -322,34 +336,41 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>RHAPSODY</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>RHAPSODY</slot>
+			</effect>
 			<effect name="PAtk">
-				<amount>150</amount>
+				<amount>120</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>450</amount>
+				<amount>120</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>25</amount>
+				<amount>120</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>30</amount>
+				<amount>120</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17917" toLevel="1" name="High-grade Love Potion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
+		<!-- For 15 sec., P./M. Atk. and Atk./Casting Spd. are increased. A strange power changes the appearance of your weapon. Cannot be used in the Olympiad. Cannot be stacked with Battle Rhapsody. -->
 		<icon>icon.love_potion</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -359,20 +380,27 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>RHAPSODY</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>RHAPSODY</slot>
+			</effect>
 			<effect name="PAtk">
-				<amount>200</amount>
+				<amount>150</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>500</amount>
+				<amount>150</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>30</amount>
+				<amount>150</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>35</amount>
+				<amount>150</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
