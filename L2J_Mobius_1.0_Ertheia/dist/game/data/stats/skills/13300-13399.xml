@@ -1151,12 +1151,21 @@
 		</effects>
 	</skill>
 	<skill id="13342" toLevel="1" name="T-shirt of Destiny">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, INT + 1 -->
 		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13343" toLevel="1" name="Belt of Destiny">
 		<!-- Increases Weight Gauge when wearing the belt. -->
@@ -1171,12 +1180,16 @@
 		</effects>
 	</skill>
 	<skill id="13344" toLevel="1" name="Bracelet of Insolence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- 4 Talisman(s) can be equipped. -->
 		<icon>icon.bracelet_of_oman</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>61</magicLvl>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>4</slots>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13345" toLevel="1" name="Release Agathion's Seal - Tersi's Light">
 		<!-- AUTO GENERATED SKILL -->

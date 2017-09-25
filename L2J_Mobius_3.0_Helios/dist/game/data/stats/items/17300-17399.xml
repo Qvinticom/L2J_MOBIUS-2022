@@ -1444,8 +1444,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<skills>
-			<skill id="13344" level="1" /> <!-- Bracelet of Insolence -->
+			<skill id="13344" level="1" /> <!-- Bracelet of Insolence -->		
 		</skills>
+		<stats>
+			<stat type="maxMp">60</stat>
+		</stats>
 	</item>
 	<item id="17361" name="Necklace of Insolence" type="Armor">
 		<!-- Necklace of Insolence. Has the effect of MP + 26. -->
@@ -1467,6 +1470,7 @@
 		<set name="weight" val="150" />
 		<stats>
 			<stat type="mDef">95</stat>
+			<stat type="maxMp">26</stat>
 		</stats>
 	</item>
 	<item id="17362" name="Ring of Insolence I" type="Armor">

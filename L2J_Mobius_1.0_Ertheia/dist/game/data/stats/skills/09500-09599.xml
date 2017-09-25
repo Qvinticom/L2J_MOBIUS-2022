@@ -1536,68 +1536,112 @@
 		</effects>
 	</skill>
 	<skill id="9560" toLevel="1" name="Hair Accessory: Critical Rate">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Critical Rate + 50. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9561" toLevel="1" name="Hair Accessory: Critical Damage">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Critical Damage + 90, and M. Critical Damage + 68. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>90</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>68</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9562" toLevel="1" name="Hair Accessory Circlet: P. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 5%. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9563" toLevel="1" name="Hair Accessory: M. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 5%. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9564" toLevel="1" name="Hair Accessory: Evasion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Evasion + 5. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9565" toLevel="1" name="Hair Accessory: P. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 5%. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9566" toLevel="1" name="Hair Accessory: M. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 10%. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9567" toLevel="1" name="Hair Accessory: Accuracy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Accuracy + 5. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="Accuracy">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9568" toLevel="1" name="Tauti's Treasure Chest">
 		<!-- AUTO GENERATED SKILL -->

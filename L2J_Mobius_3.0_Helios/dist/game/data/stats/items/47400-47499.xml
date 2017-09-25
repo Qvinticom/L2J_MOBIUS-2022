@@ -4,12 +4,17 @@
 		<!-- MP +216, CON +2, MEN +2 -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<skills>
+			<skill id="3326" level="1" /> <!-- Jewelry Bracelet -->
+			<skill id="13962" level="1" /> <!-- Duo's Bracelet -->
+			<skill id="18636" level="1" /> <!-- Duo - Energy of Blessing -->
+		</skills>
 		<stats>
 			<stat type="maxMp">216</stat>
 		</stats>
@@ -18,7 +23,7 @@
 		<!-- MP +216, CON +2, MEN +2, activates 5 Talisman Slots when equipped. <Skills Used>. 1. Duo - Prophecy: When used, party members' P./M. Atk. +10% for 5 minutes. (Cooldown: 270 seconds). 2. Duo - Energy of Blessing - When used, EXP/SP gained from hunting +30% for 3 hours. Duo's Gift' item received when the buff ends. (Cooldown: 10 hours). Will be deleted when the event ends. -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -26,6 +31,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3326" level="1" /> <!-- Jewelry Bracelet -->
+			<skill id="13962" level="1" /> <!-- Duo's Bracelet -->
+			<skill id="18635" level="1" /> <!-- Duo - Prophecy -->
+			<skill id="18636" level="1" /> <!-- Duo - Energy of Blessing -->
+		</skills>
 		<stats>
 			<stat type="maxMp">216</stat>
 		</stats>

@@ -959,43 +959,61 @@
 		<!-- When equipped, Skill Power +4%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
-		<set name="enchant_enabled" val="1" />
+		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13959" level="1" /> <!-- Mammon's Talisman - Skill Power -->
+		</skills>
 	</item>
 	<item id="47373" name="Mammon's Talisman" additionalName="Attack Attribute" type="Armor">
 		<!-- When equipped, Attack Attribute Bonus +40. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
-		<set name="enchant_enabled" val="1" />
+		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13960" level="1" /> <!-- Mammon's Talisman - Attack Attribute -->
+		</skills>
 	</item>
 	<item id="47374" name="Mammon's Talisman" additionalName="Skill Cooldown" type="Armor">
 		<!-- When equipped, Skill Cooldown -4%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="R" />
 		<set name="material" val="GOLD" />
-		<set name="enchant_enabled" val="1" />
+		<set name="equip_reuse_delay" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13961" level="1" /> <!-- Mammon's Talisman - Skill Cooldown -->
+		</skills>
 	</item>
 	<item id="47375" name="Mammon's Talisman Box - Skill Power" additionalName="30-day" type="EtcItem">
 		<!-- Double click to obtain Mammon's Talisman - Skill Power 30-day. -->

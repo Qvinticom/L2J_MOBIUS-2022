@@ -1496,15 +1496,18 @@
 	<item id="37092" name="Dimensional Cloak of Light" type="Armor">
 		<!-- Cloak that symbolizes glory and light. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:�Castle skill. Part of its effect does not apply when you are chaotic. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="19042" level="1" /> <!-- King's Summon -->
 			<skill id="19039" level="1" /> <!-- Cloak of Light -->
@@ -1517,15 +1520,18 @@
 	<item id="37093" name="Dimensional Cloak of Darkness" type="Armor">
 		<!-- Cloak that symbolizes avarice and darkness. With the power of dimension, characters of all levels can wear it. Defense + 50, M. Def. + 40 and STR/MEN/DEX/WIT/INT/CON + 2. Damage received during PvP decreases by 5%. Can use Escape:�Castle skill. Cannot be used while in a chaotic state. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="19042" level="1" /> <!-- King's Summon -->
 			<skill id="19040" level="1" /> <!-- Cloak of Darkness -->

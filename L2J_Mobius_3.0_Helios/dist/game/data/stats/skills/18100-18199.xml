@@ -62,10 +62,22 @@
 		</effects>
 	</skill>
 	<skill id="18106" toLevel="1" name="Ertheia Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Activates 5 Talisman slots. STR/INT + 1. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18107" toLevel="1" name="Ertheia's Soul Bottle Pack">
 		<!-- AUTO GENERATED SKILL -->

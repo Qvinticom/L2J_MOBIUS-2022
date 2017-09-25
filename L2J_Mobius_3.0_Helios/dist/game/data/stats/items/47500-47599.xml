@@ -44,7 +44,7 @@
 		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 CON +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
@@ -54,12 +54,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13584" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
+		</skills>
 	</item>
 	<item id="47506" name="Bracelet of the Conqueror - MEN" type="Armor">
 		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 MEN +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
@@ -69,12 +72,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13585" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
+		</skills>
 	</item>
 	<item id="47507" name="Bracelet of the Conqueror - DEX" type="Armor">
 		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 DEX +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
@@ -84,12 +90,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13586" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
+		</skills>
 	</item>
 	<item id="47508" name="Bracelet of the Conqueror - WIT" type="Armor">
 		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 WIT +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
@@ -99,12 +108,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13587" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
+		</skills>
 	</item>
 	<item id="47509" name="Bracelet of the Conqueror - STR" type="Armor">
 		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 STR +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
@@ -114,12 +126,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13588" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
+		</skills>
 	</item>
 	<item id="47510" name="Bracelet of the Conqueror - INT" type="Armor">
 		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 INT +3. -->
 		<set name="icon" val="icon.ertheia_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SILVER" />
@@ -129,6 +144,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13589" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
+		</skills>
 	</item>
 	<item id="47511" name="Dimensional Traces" type="EtcItem">
 		<!-- Traces that have naturally accumulated during activity in the Dimensional Rift. They carry dimensional energy, and help to reach special areas within the Dimensional Rift. -->

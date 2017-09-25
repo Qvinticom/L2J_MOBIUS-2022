@@ -587,34 +587,49 @@
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Str + 1, Int + 1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13489" level="1" /> <!-- Bracelet of Glory: Glory -->
 		</skills>
+		<stats>
+			<stat type="maxMp">216</stat>
+		</stats>
 	</item>
 	<item id="36350" name="Bracelet of Glory: Victory" additionalName="Event" type="Armor">
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Dex + 1, Wit + 1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13491" level="1" /> <!-- Bracelet of Glory: Victory -->
 		</skills>
+		<stats>
+			<stat type="maxMp">216</stat>
+		</stats>
 	</item>
 	<item id="36351" name="Bracelet of Glory: Friendship" additionalName="Event" type="Armor">
 		<!-- Item for the Aden Golden Medal Event. Activates 5 talisman slots when equipped. MP + 216, Con + 1, Men +1. -->
 		<set name="icon" val="icon.london_olympic_bracelet" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13490" level="1" /> <!-- Bracelet of Glory: Friendship -->
 		</skills>
+		<stats>
+			<stat type="maxMp">216</stat>
+		</stats>
 	</item>
 	<item id="36352" name="Red Horns" additionalName="STR (Event)" type="Armor">
 		<!-- Hair accessory for the Aden Golden Medal Event. STR + 3 when equipped. -->

@@ -11,10 +11,35 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27602" toLevel="1" name="Adventurer's Bracelet">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- MEN/WIT/CON/INT/DEX/STR + $s1. Can equip 3 Talismans. -->
+		<!-- MEN/WIT/CON/INT/DEX/STR + 1 -->
 		<icon>BranchIcon.icon.bracelet_of_explorer_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27603" toLevel="1" name="Weekend Login Reward Pack">
 		<!-- AUTO GENERATED SKILL -->
