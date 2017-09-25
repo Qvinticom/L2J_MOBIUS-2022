@@ -1855,15 +1855,22 @@
 	<item id="34790" name="Fire Stone" additionalName="Event" type="EtcItem">
 		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2329" level="1" /> <!-- Fire Stone -->
 		</skills>
@@ -1871,15 +1878,22 @@
 	<item id="34791" name="Water Stone" additionalName="Event" type="EtcItem">
 		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2330" level="1" /> <!-- Water Stone -->
 		</skills>
@@ -1887,15 +1901,22 @@
 	<item id="34792" name="Earth Stone" additionalName="Event" type="EtcItem">
 		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2332" level="1" /> <!-- Earth Stone -->
 		</skills>
@@ -1903,15 +1924,22 @@
 	<item id="34793" name="Wind Stone" additionalName="Event" type="EtcItem">
 		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2331" level="1" /> <!-- Wind Stone -->
 		</skills>
@@ -1919,15 +1947,22 @@
 	<item id="34794" name="Dark Stone" additionalName="Event" type="EtcItem">
 		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2334" level="1" /> <!-- Dark Stone -->
 		</skills>
@@ -1935,15 +1970,22 @@
 	<item id="34795" name="Holy Stone" additionalName="Event" type="EtcItem">
 		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental Resistance can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="2333" level="1" /> <!-- Holy Stone -->
 		</skills>

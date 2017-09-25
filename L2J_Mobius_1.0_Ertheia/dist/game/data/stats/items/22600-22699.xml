@@ -677,127 +677,139 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22635" name="Fire Stone" type="EtcItem">
-		<!-- Premium user exclusive item Fire attack increases by 5 when bestowed on a weapon. Fire attack and water defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Fire attack increases by 5 when bestowed on a weapon. Fire attack and water defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22508" level="1" /> <!-- Fire Stone -->
 		</skills>
 	</item>
 	<item id="22636" name="Water Stone" type="EtcItem">
-		<!-- Premium user exclusive item Water attack increases by 5 when bestowed on a weapon. Water attack and fire defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Water attack increases by 5 when bestowed on a weapon. Water attack and fire defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22509" level="1" /> <!-- Water Stone -->
 		</skills>
 	</item>
 	<item id="22637" name="Earth Stone" type="EtcItem">
-		<!-- Premium user exclusive item Earth attack increases by 5 when bestowed on a weapon. Earth attack and wind defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Earth attack increases by 5 when bestowed on a weapon. Earth attack and wind defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22511" level="1" /> <!-- Earth Stone -->
 		</skills>
 	</item>
 	<item id="22638" name="Wind Stone" type="EtcItem">
-		<!-- Premium user exclusive item Wind attack increases by 5 when bestowed on a weapon. Wind attack and earth defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Wind attack increases by 5 when bestowed on a weapon. Wind attack and earth defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22510" level="1" /> <!-- Wind Stone -->
 		</skills>
 	</item>
 	<item id="22639" name="Dark Stone" type="EtcItem">
-		<!-- Premium user exclusive item Dark attack increases by 5 when bestowed on a weapon. Dark attack and holy defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Dark attack increases by 5 when bestowed on a weapon. Dark attack and holy defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22513" level="1" /> <!-- Dark Stone -->
 		</skills>
 	</item>
 	<item id="22640" name="Holy Stone" type="EtcItem">
-		<!-- Premium user exclusive item Holy attack increases by 5 when bestowed on a weapon. Holy attack and dark defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
+		<!-- Premium user exclusive item. Holy attack increases by 5 when bestowed on a weapon. Holy attack and dark defense increases by 6 when bestowed on armor. Elemental attributes can be bestowed from levels 1- 6. Additional Elemental attributes cannot be bestowed. Additionally, a maximum of three types of Elemental enhancement can be bestowed on armor, and opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22512" level="1" /> <!-- Holy Stone -->
 		</skills>

@@ -2178,19 +2178,22 @@
 	<item id="33481" name="Fire Stone - Super" type="EtcItem">
 		<!-- Fire attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="12875" level="1" /> <!-- Fire Stone -->
 		</skills>
@@ -2198,19 +2201,22 @@
 	<item id="33482" name="Water Stone - Super" type="EtcItem">
 		<!-- Water attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="12876" level="1" /> <!-- Water Stone -->
 		</skills>
@@ -2218,19 +2224,22 @@
 	<item id="33483" name="Earth Stone - Super" type="EtcItem">
 		<!-- Earth attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="12878" level="1" /> <!-- Earth Stone -->
 		</skills>
@@ -2238,19 +2247,22 @@
 	<item id="33484" name="Wind Stone - Super" type="EtcItem">
 		<!-- Wind attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="12877" level="1" /> <!-- Wind Stone -->
 		</skills>
@@ -2258,19 +2270,22 @@
 	<item id="33485" name="Dark Stone - Super" type="EtcItem">
 		<!-- Dark attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="12880" level="1" /> <!-- Dark Stone -->
 		</skills>
@@ -2278,19 +2293,22 @@
 	<item id="33486" name="Holy Stone - Super" type="EtcItem">
 		<!-- Holy attribute up to level 3 can be bestowed at the same time. Additional attributes cannot be bestowed. Also, armor can be enchanted up to 3 attributes. Opposite attributes cannot be bestowed. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
-		<set name="weight" val="1" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
-		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantAttribute" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="12879" level="1" /> <!-- Holy Stone -->
 		</skills>
