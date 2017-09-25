@@ -7967,7 +7967,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Failed remocing character henna.", e);
+			_log.log(Level.SEVERE, "Failed removing character henna.", e);
 		}
 		
 		// Calculate Henna modifiers of this L2PcInstance
@@ -7987,7 +7987,7 @@ public final class L2PcInstance extends L2Playable
 		sm.addItemName(henna.getDyeItemId());
 		sm.addLong(henna.getCancelCount());
 		sendPacket(sm);
-		sendPacket(SystemMessageId.YOU_ARE_MOVING_TO_ANOTHER_VILLAGE_DO_YOU_WANT_TO_CONTINUE);
+		sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_DELETED);
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaRemove(this, henna), this);
