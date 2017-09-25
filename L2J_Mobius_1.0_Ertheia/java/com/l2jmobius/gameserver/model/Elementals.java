@@ -87,7 +87,8 @@ public final class Elementals
 		Roughore(3),
 		Crystal(6),
 		Jewel(9),
-		Energy(12);
+		Energy(12),
+		GoD_Event(9);
 		
 		public int _maxLevel;
 		
@@ -99,51 +100,133 @@ public final class Elementals
 	
 	public enum ElementalItems
 	{
-		fireStone(FIRE, 9546, ElementalItemType.Stone),
-		waterStone(WATER, 9547, ElementalItemType.Stone),
-		windStone(WIND, 9549, ElementalItemType.Stone),
-		earthStone(EARTH, 9548, ElementalItemType.Stone),
-		divineStone(HOLY, 9551, ElementalItemType.Stone),
-		darkStone(DARK, 9550, ElementalItemType.Stone),
+		fireStone(FIRE, 9546, ElementalItemType.Stone, 0),
+		waterStone(WATER, 9547, ElementalItemType.Stone, 0),
+		windStone(WIND, 9549, ElementalItemType.Stone, 0),
+		earthStone(EARTH, 9548, ElementalItemType.Stone, 0),
+		divineStone(HOLY, 9551, ElementalItemType.Stone, 0),
+		darkStone(DARK, 9550, ElementalItemType.Stone, 0),
 		
-		fireRoughtore(FIRE, 10521, ElementalItemType.Roughore),
-		waterRoughtore(WATER, 10522, ElementalItemType.Roughore),
-		windRoughtore(WIND, 10524, ElementalItemType.Roughore),
-		earthRoughtore(EARTH, 10523, ElementalItemType.Roughore),
-		divineRoughtore(HOLY, 10526, ElementalItemType.Roughore),
-		darkRoughtore(DARK, 10525, ElementalItemType.Roughore),
+		fireRoughtore(FIRE, 10521, ElementalItemType.Roughore, 0),
+		waterRoughtore(WATER, 10522, ElementalItemType.Roughore, 0),
+		windRoughtore(WIND, 10524, ElementalItemType.Roughore, 0),
+		earthRoughtore(EARTH, 10523, ElementalItemType.Roughore, 0),
+		divineRoughtore(HOLY, 10526, ElementalItemType.Roughore, 0),
+		darkRoughtore(DARK, 10525, ElementalItemType.Roughore, 0),
 		
-		fireCrystal(FIRE, 9552, ElementalItemType.Crystal),
-		waterCrystal(WATER, 9553, ElementalItemType.Crystal),
-		windCrystal(WIND, 9555, ElementalItemType.Crystal),
-		earthCrystal(EARTH, 9554, ElementalItemType.Crystal),
-		divineCrystal(HOLY, 9557, ElementalItemType.Crystal),
-		darkCrystal(DARK, 9556, ElementalItemType.Crystal),
+		fireCrystal(FIRE, 9552, ElementalItemType.Crystal, 0),
+		waterCrystal(WATER, 9553, ElementalItemType.Crystal, 0),
+		windCrystal(WIND, 9555, ElementalItemType.Crystal, 0),
+		earthCrystal(EARTH, 9554, ElementalItemType.Crystal, 0),
+		divineCrystal(HOLY, 9557, ElementalItemType.Crystal, 0),
+		darkCrystal(DARK, 9556, ElementalItemType.Crystal, 0),
 		
-		fireJewel(FIRE, 9558, ElementalItemType.Jewel),
-		waterJewel(WATER, 9559, ElementalItemType.Jewel),
-		windJewel(WIND, 9561, ElementalItemType.Jewel),
-		earthJewel(EARTH, 9560, ElementalItemType.Jewel),
-		divineJewel(HOLY, 9563, ElementalItemType.Jewel),
-		darkJewel(DARK, 9562, ElementalItemType.Jewel),
+		fireJewel(FIRE, 9558, ElementalItemType.Jewel, 0),
+		waterJewel(WATER, 9559, ElementalItemType.Jewel, 0),
+		windJewel(WIND, 9561, ElementalItemType.Jewel, 0),
+		earthJewel(EARTH, 9560, ElementalItemType.Jewel, 0),
+		divineJewel(HOLY, 9563, ElementalItemType.Jewel, 0),
+		darkJewel(DARK, 9562, ElementalItemType.Jewel, 0),
 		
 		// not yet supported by client (Freya pts)
-		fireEnergy(FIRE, 9564, ElementalItemType.Energy),
-		waterEnergy(WATER, 9565, ElementalItemType.Energy),
-		windEnergy(WIND, 9567, ElementalItemType.Energy),
-		earthEnergy(EARTH, 9566, ElementalItemType.Energy),
-		divineEnergy(HOLY, 9569, ElementalItemType.Energy),
-		darkEnergy(DARK, 9568, ElementalItemType.Energy);
+		fireEnergy(FIRE, 9564, ElementalItemType.Energy, 0),
+		waterEnergy(WATER, 9565, ElementalItemType.Energy, 0),
+		windEnergy(WIND, 9567, ElementalItemType.Energy, 0),
+		earthEnergy(EARTH, 9566, ElementalItemType.Energy, 0),
+		divineEnergy(HOLY, 9569, ElementalItemType.Energy, 0),
+		darkEnergy(DARK, 9568, ElementalItemType.Energy, 0),
+		
+		// GoD+
+		GoD_22635(FIRE, 22635, ElementalItemType.GoD_Event, 0),
+		GoD_22636(WATER, 22636, ElementalItemType.GoD_Event, 0),
+		GoD_22637(EARTH, 22637, ElementalItemType.GoD_Event, 0),
+		GoD_22638(WIND, 22638, ElementalItemType.GoD_Event, 0),
+		GoD_22639(DARK, 22639, ElementalItemType.GoD_Event, 0),
+		GoD_22640(HOLY, 22640, ElementalItemType.GoD_Event, 0),
+		GoD_22919(FIRE, 22919, ElementalItemType.GoD_Event, 0),
+		GoD_22920(WATER, 22920, ElementalItemType.GoD_Event, 0),
+		GoD_22921(EARTH, 22921, ElementalItemType.GoD_Event, 0),
+		GoD_22922(WIND, 22922, ElementalItemType.GoD_Event, 0),
+		GoD_22923(DARK, 22923, ElementalItemType.GoD_Event, 0),
+		GoD_22924(HOLY, 22924, ElementalItemType.GoD_Event, 0),
+		GoD_33481(FIRE, 33481, ElementalItemType.GoD_Event, 0),
+		GoD_33482(WATER, 33482, ElementalItemType.GoD_Event, 0),
+		GoD_33483(EARTH, 33483, ElementalItemType.GoD_Event, 0),
+		GoD_33484(WIND, 33484, ElementalItemType.GoD_Event, 0),
+		GoD_33485(DARK, 33485, ElementalItemType.GoD_Event, 0),
+		GoD_33486(HOLY, 33486, ElementalItemType.GoD_Event, 0),
+		GoD_33863(FIRE, 33863, ElementalItemType.GoD_Event, 60),
+		GoD_33864(WATER, 33864, ElementalItemType.GoD_Event, 60),
+		GoD_33865(EARTH, 33865, ElementalItemType.GoD_Event, 60),
+		GoD_33866(WIND, 33866, ElementalItemType.GoD_Event, 60),
+		GoD_33867(DARK, 33867, ElementalItemType.GoD_Event, 60),
+		GoD_33868(HOLY, 33868, ElementalItemType.GoD_Event, 60),
+		GoD_33869(FIRE, 33869, ElementalItemType.GoD_Event, 150),
+		GoD_33870(WATER, 33870, ElementalItemType.GoD_Event, 150),
+		GoD_33871(EARTH, 33871, ElementalItemType.GoD_Event, 150),
+		GoD_33872(WIND, 33872, ElementalItemType.GoD_Event, 150),
+		GoD_33873(DARK, 33873, ElementalItemType.GoD_Event, 150),
+		GoD_33874(HOLY, 33874, ElementalItemType.GoD_Event, 150),
+		GoD_34661(FIRE, 34661, ElementalItemType.GoD_Event, 60),
+		GoD_34662(WATER, 34662, ElementalItemType.GoD_Event, 60),
+		GoD_34663(EARTH, 34663, ElementalItemType.GoD_Event, 60),
+		GoD_34664(WIND, 34664, ElementalItemType.GoD_Event, 60),
+		GoD_34665(DARK, 34665, ElementalItemType.GoD_Event, 60),
+		GoD_34666(HOLY, 34666, ElementalItemType.GoD_Event, 60),
+		GoD_34667(FIRE, 34667, ElementalItemType.GoD_Event, 150),
+		GoD_34668(WATER, 34668, ElementalItemType.GoD_Event, 150),
+		GoD_34669(EARTH, 34669, ElementalItemType.GoD_Event, 150),
+		GoD_34670(WIND, 34670, ElementalItemType.GoD_Event, 150),
+		GoD_34671(DARK, 34671, ElementalItemType.GoD_Event, 150),
+		GoD_34672(HOLY, 34672, ElementalItemType.GoD_Event, 150),
+		GoD_34790(FIRE, 34790, ElementalItemType.GoD_Event, 0),
+		GoD_34791(WATER, 34791, ElementalItemType.GoD_Event, 0),
+		GoD_34792(EARTH, 34792, ElementalItemType.GoD_Event, 0),
+		GoD_34793(WIND, 34793, ElementalItemType.GoD_Event, 0),
+		GoD_34794(DARK, 34794, ElementalItemType.GoD_Event, 0),
+		GoD_34795(HOLY, 34795, ElementalItemType.GoD_Event, 0),
+		GoD_35729(FIRE, 35729, ElementalItemType.GoD_Event, 60),
+		GoD_35730(WATER, 35730, ElementalItemType.GoD_Event, 60),
+		GoD_35731(EARTH, 35731, ElementalItemType.GoD_Event, 60),
+		GoD_35732(WIND, 35732, ElementalItemType.GoD_Event, 60),
+		GoD_35733(DARK, 35733, ElementalItemType.GoD_Event, 60),
+		GoD_35734(HOLY, 35734, ElementalItemType.GoD_Event, 60),
+		GoD_35735(FIRE, 35735, ElementalItemType.GoD_Event, 150),
+		GoD_35736(WATER, 35736, ElementalItemType.GoD_Event, 150),
+		GoD_35737(EARTH, 35737, ElementalItemType.GoD_Event, 150),
+		GoD_35738(WIND, 35738, ElementalItemType.GoD_Event, 150),
+		GoD_35739(DARK, 35739, ElementalItemType.GoD_Event, 150),
+		GoD_35740(HOLY, 35740, ElementalItemType.GoD_Event, 150),
+		GoD_36960(FIRE, 36960, ElementalItemType.GoD_Event, 60),
+		GoD_36961(WATER, 36961, ElementalItemType.GoD_Event, 60),
+		GoD_36962(EARTH, 36962, ElementalItemType.GoD_Event, 60),
+		GoD_36963(WIND, 36963, ElementalItemType.GoD_Event, 60),
+		GoD_36964(DARK, 36964, ElementalItemType.GoD_Event, 60),
+		GoD_36965(HOLY, 36965, ElementalItemType.GoD_Event, 60),
+		GoD_36966(FIRE, 36966, ElementalItemType.GoD_Event, 150),
+		GoD_36967(WATER, 36967, ElementalItemType.GoD_Event, 150),
+		GoD_36968(EARTH, 36968, ElementalItemType.GoD_Event, 150),
+		GoD_36969(WIND, 36969, ElementalItemType.GoD_Event, 150),
+		GoD_36970(DARK, 36970, ElementalItemType.GoD_Event, 150),
+		GoD_36971(HOLY, 36971, ElementalItemType.GoD_Event, 150),
+		GoD_37499(FIRE, 37499, ElementalItemType.GoD_Event, 0),
+		GoD_37500(WATER, 37500, ElementalItemType.GoD_Event, 0),
+		GoD_37501(EARTH, 37501, ElementalItemType.GoD_Event, 0),
+		GoD_37502(WIND, 37502, ElementalItemType.GoD_Event, 0),
+		GoD_37503(DARK, 37503, ElementalItemType.GoD_Event, 0),
+		GoD_37504(HOLY, 37504, ElementalItemType.GoD_Event, 0);
 		
 		public byte _element;
 		public int _itemId;
 		public ElementalItemType _type;
+		public int _fixedPower;
 		
-		ElementalItems(byte element, int itemId, ElementalItemType type)
+		ElementalItems(byte element, int itemId, ElementalItemType type, int fixedPower)
 		{
 			_element = element;
 			_itemId = itemId;
 			_type = type;
+			_fixedPower = fixedPower;
 		}
 	}
 	
