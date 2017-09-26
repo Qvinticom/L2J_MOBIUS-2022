@@ -10596,9 +10596,9 @@ public final class L2PcInstance extends L2Playable
 		cleanup();
 		storeMe();
 		
-		// Stop all passives and augment options
-		getEffectList().stopAllPassives(false);
-		getEffectList().stopAllOptions(false);
+		// Stop all passives and augment options without broadcasting changes.
+		getEffectList().stopAllPassives(false, false);
+		getEffectList().stopAllOptions(false, false);
 		
 		return super.deleteMe();
 	}

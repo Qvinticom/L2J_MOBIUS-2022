@@ -331,7 +331,7 @@ public class CharStatus
 			{
 				if (_previousHpPercent.compareAndSet(lastHpPercent, currentHpPercent))
 				{
-					_activeChar.getStat().recalculateStats(true);
+					_activeChar.getStat().recalculateStats(broadcastPacket);
 				}
 			}
 			

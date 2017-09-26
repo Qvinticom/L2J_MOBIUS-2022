@@ -74,6 +74,6 @@ public final class DispelBySlotMyself extends AbstractEffect
 		}
 		
 		// The effectlist should already check if it has buff with this abnormal type or not.
-		effected.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && _dispelAbnormals.contains(info.getSkill().getAbnormalType()), true);
+		effected.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && _dispelAbnormals.contains(info.getSkill().getAbnormalType()), true, true);
 	}
 }

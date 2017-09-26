@@ -204,7 +204,7 @@ public class Options
 				if (info.getOption() == this)
 				{
 					player.sendDebugMessage("Removing effects: " + info.getEffects());
-					player.getEffectList().remove(info, false, true);
+					player.getEffectList().remove(info, false, true, true);
 				}
 			}
 		}

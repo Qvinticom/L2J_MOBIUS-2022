@@ -1950,8 +1950,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			getSummoner().removeSummonedNpc(getObjectId());
 		}
 		
-		// Remove all effects
-		_effectList.stopAllEffects();
+		// Remove all effects, do not broadcast changes.
+		_effectList.stopAllEffects(false);
 		
 		// Cancel all timers related to this Creature
 		TimersManager.getInstance().cancelTimers(getObjectId());
@@ -2554,7 +2554,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void stopAllEffects()
 	{
-		_effectList.stopAllEffects();
+		_effectList.stopAllEffects(true);
 	}
 	
 	/**

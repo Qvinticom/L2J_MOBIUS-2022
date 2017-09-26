@@ -98,6 +98,6 @@ public final class DispelBySlotProbability extends AbstractEffect
 			
 			final Short abnormalLevel = (Rnd.get(100) < _rate) ? _dispelAbnormals.get(info.getSkill().getAbnormalType()) : null;
 			return (abnormalLevel != null) && ((abnormalLevel < 0) || (abnormalLevel >= info.getSkill().getAbnormalLvl()));
-		}, true);
+		}, true, true);
 	}
 }

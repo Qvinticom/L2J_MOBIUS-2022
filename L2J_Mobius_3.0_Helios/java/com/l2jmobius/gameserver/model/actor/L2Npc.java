@@ -997,8 +997,8 @@ public class L2Npc extends L2Character
 	 */
 	public void onRespawn()
 	{
-		// Stop all effects
-		stopAllEffects();
+		// Stop all effects and recalculate stats without broadcasting.
+		getEffectList().stopAllEffects(false);
 		
 		// Make it alive
 		setIsDead(false);
@@ -1006,11 +1006,9 @@ public class L2Npc extends L2Character
 		// Reset decay info
 		setDecayed(false);
 		
-		// Recalculate npcs stats
-		getStat().recalculateStats(true);
-		
-		// Set the HP and MP of the L2NpcInstance to the max
-		setCurrentHpMp(getMaxHp(), getMaxMp());
+		// Fully heal npc and don't broadcast packet.
+		setCurrentHp(getMaxHp(), false);
+		setCurrentMp(getMaxMp(), false);
 		
 		// Clear script variables
 		if (hasVariables())

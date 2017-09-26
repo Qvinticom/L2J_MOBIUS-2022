@@ -509,7 +509,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 			for (L2Playable playable : affected)
 			{
 				// Stop all buffs.
-				playable.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && info.getSkill().getBuffType().isBuff() && hasRemoveBuffException(info.getSkill()), true);
+				playable.getEffectList().stopEffects(info -> !info.getSkill().isIrreplacableBuff() && info.getSkill().getBuffType().isBuff() && hasRemoveBuffException(info.getSkill()), true, true);
 			}
 		}
 	}

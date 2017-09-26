@@ -332,10 +332,11 @@ public final class CharEffectList
 	/**
 	 * Exits all effects in this effect list.<br>
 	 * Stops all the effects, clear the effect lists and updates the effect flags and icons.
+	 * @param broadcast {@code true} to broadcast update packets, {@code false} otherwise.
 	 */
-	public void stopAllEffects()
+	public void stopAllEffects(boolean broadcast)
 	{
-		stopEffects(b -> !b.getSkill().isNecessaryToggle() && !b.getSkill().isIrreplacableBuff(), true);
+		stopEffects(b -> !b.getSkill().isNecessaryToggle() && !b.getSkill().isIrreplacableBuff(), true, broadcast);
 	}
 	
 	/**
@@ -343,7 +344,7 @@ public final class CharEffectList
 	 */
 	public void stopAllEffectsExceptThoseThatLastThroughDeath()
 	{
-		stopEffects(info -> !info.getSkill().isStayAfterDeath(), true);
+		stopEffects(info -> !info.getSkill().isStayAfterDeath(), true, true);
 	}
 	
 	/**
@@ -354,7 +355,7 @@ public final class CharEffectList
 		if (getToggleCount() > 0)
 		{
 			// Ignore necessary toggles.
-			stopEffects(b -> b.getSkill().isToggle() && !b.getSkill().isNecessaryToggle() && !b.getSkill().isIrreplacableBuff(), true);
+			stopEffects(b -> b.getSkill().isToggle() && !b.getSkill().isNecessaryToggle() && !b.getSkill().isIrreplacableBuff(), true, true);
 		}
 	}
 	
@@ -362,35 +363,43 @@ public final class CharEffectList
 	{
 		if (getToggleCount() > 0)
 		{
-			stopEffects(b -> b.getSkill().isToggle() && (b.getSkill().getToggleGroupId() == toggleGroup), true);
+			stopEffects(b -> b.getSkill().isToggle() && (b.getSkill().getToggleGroupId() == toggleGroup), true, true);
 		}
 	}
 	
 	/**
 	 * Stops all active dances/songs skills.
 	 * @param update set to true to update the effect flags and icons
+	 * @param broadcast {@code true} to broadcast update packets if updating, {@code false} otherwise.
 	 */
-	public void stopAllPassives(boolean update)
+	public void stopAllPassives(boolean update, boolean broadcast)
 	{
 		if (_passives != null)
 		{
 			_passives.forEach(this::remove);
 			// Update stats, effect flags and icons.
-			updateEffectList(update);
+			if (update)
+			{
+				updateEffectList(broadcast);
+			}
 		}
 	}
 	
 	/**
 	 * Stops all active dances/songs skills.
 	 * @param update set to true to update the effect flags and icons
+	 * @param broadcast {@code true} to broadcast update packets if updating, {@code false} otherwise.
 	 */
-	public void stopAllOptions(boolean update)
+	public void stopAllOptions(boolean update, boolean broadcast)
 	{
 		if (_options != null)
 		{
 			_options.forEach(this::remove);
 			// Update stats, effect flags and icons.
-			updateEffectList(update);
+			if (update)
+			{
+				updateEffectList(broadcast);
+			}
 		}
 	}
 	
@@ -402,7 +411,7 @@ public final class CharEffectList
 	{
 		if (isAffected(effectFlag))
 		{
-			stopEffects(info -> info.getEffects().stream().anyMatch(effect -> (effect != null) && ((effect.getEffectFlags() & effectFlag.getMask()) != 0)), true);
+			stopEffects(info -> info.getEffects().stream().anyMatch(effect -> (effect != null) && ((effect.getEffectFlags() & effectFlag.getMask()) != 0)), true, true);
 		}
 	}
 	
@@ -421,7 +430,7 @@ public final class CharEffectList
 		final BuffInfo info = getBuffInfoBySkillId(skillId);
 		if (info != null)
 		{
-			remove(info, removed, true);
+			remove(info, removed, true, true);
 		}
 	}
 	
@@ -454,7 +463,7 @@ public final class CharEffectList
 	{
 		if (hasAbnormalType(type))
 		{
-			stopEffects(i -> i.isAbnormalType(type), true);
+			stopEffects(i -> i.isAbnormalType(type), true, true);
 			return true;
 		}
 		
@@ -470,7 +479,7 @@ public final class CharEffectList
 	{
 		if (hasAbnormalType(types))
 		{
-			stopEffects(i -> types.contains(i.getSkill().getAbnormalType()), true);
+			stopEffects(i -> types.contains(i.getSkill().getAbnormalType()), true, true);
 			return true;
 		}
 		
@@ -481,15 +490,19 @@ public final class CharEffectList
 	 * Exits all effects matched by a specific filter.<br>
 	 * @param filter any filter to apply when selecting which {@code BuffInfo}s to be removed.
 	 * @param update update effect flags and icons after the operation finishes.
+	 * @param broadcast {@code true} to broadcast update packets if updating, {@code false} otherwise.
 	 */
-	public void stopEffects(Predicate<BuffInfo> filter, boolean update)
+	public void stopEffects(Predicate<BuffInfo> filter, boolean update, boolean broadcast)
 	{
 		if (_actives != null)
 		{
 			_actives.stream().filter(filter).forEach(this::remove);
 			
 			// Update stats, effect flags and icons.
-			updateEffectList(update);
+			if (update)
+			{
+				updateEffectList(broadcast);
+			}
 		}
 	}
 	
@@ -501,7 +514,7 @@ public final class CharEffectList
 	{
 		if (_hasBuffsRemovedOnAnyAction.intValue() > 0)
 		{
-			stopEffects(info -> info.getSkill().isRemovedOnAnyActionExceptMove(), true);
+			stopEffects(info -> info.getSkill().isRemovedOnAnyActionExceptMove(), true, true);
 		}
 	}
 	
@@ -509,7 +522,7 @@ public final class CharEffectList
 	{
 		if (_hasBuffsRemovedOnDamage.intValue() > 0)
 		{
-			stopEffects(info -> info.getSkill().isRemovedOnDamage(), true);
+			stopEffects(info -> info.getSkill().isRemovedOnDamage(), true, true);
 		}
 	}
 	
@@ -626,7 +639,7 @@ public final class CharEffectList
 	 */
 	private void remove(BuffInfo info)
 	{
-		remove(info, true, false);
+		remove(info, true, false, false);
 	}
 	
 	/**
@@ -634,8 +647,9 @@ public final class CharEffectList
 	 * @param info the effects to remove
 	 * @param removed {@code true} if the effect is removed, {@code false} otherwise
 	 * @param update {@code true} if effect flags and icons should be updated after this removal, {@code false} otherwise.
+	 * @param broadcast {@code true} to broadcast update packets if updating, {@code false} otherwise.
 	 */
-	public void remove(BuffInfo info, boolean removed, boolean update)
+	public void remove(BuffInfo info, boolean removed, boolean update, boolean broadcast)
 	{
 		if (info == null)
 		{
@@ -659,7 +673,10 @@ public final class CharEffectList
 		}
 		
 		// Update stats, effect flags and icons.
-		updateEffectList(update);
+		if (update)
+		{
+			updateEffectList(broadcast);
+		}
 	}
 	
 	/**
@@ -1070,74 +1087,74 @@ public final class CharEffectList
 	
 	/**
 	 * Wrapper to update abnormal icons and effect flags.
-	 * @param update if {@code true} performs an update
+	 * @param broadcast {@code true} sends update packets to observing players, {@code false} doesn't send any packets.
 	 */
-	private void updateEffectList(boolean update)
+	private void updateEffectList(boolean broadcast)
 	{
-		if (update)
+		// Create new empty flags.
+		long flags = 0;
+		final Set<AbnormalType> abnormalTypeFlags = EnumSet.noneOf(AbnormalType.class);
+		final Set<AbnormalVisualEffect> abnormalVisualEffectFlags = EnumSet.noneOf(AbnormalVisualEffect.class);
+		final Set<BuffInfo> unhideBuffs = new HashSet<>();
+		
+		// Recalculate new flags
+		if (_actives != null)
 		{
-			// Create new empty flags.
-			long flags = 0;
-			final Set<AbnormalType> abnormalTypeFlags = EnumSet.noneOf(AbnormalType.class);
-			final Set<AbnormalVisualEffect> abnormalVisualEffectFlags = EnumSet.noneOf(AbnormalVisualEffect.class);
-			final Set<BuffInfo> unhideBuffs = new HashSet<>();
-			
-			// Recalculate new flags
-			if (_actives != null)
+			for (BuffInfo info : _actives)
 			{
-				for (BuffInfo info : _actives)
+				if (info != null)
 				{
-					if (info != null)
+					final Skill skill = info.getSkill();
+					
+					// Handle hidden buffs. Check if there was such abnormal before so we can continue.
+					if ((getHiddenBuffsCount() > 0) && _stackedEffects.contains(skill.getAbnormalType()))
 					{
-						final Skill skill = info.getSkill();
-						
-						// Handle hidden buffs. Check if there was such abnormal before so we can continue.
-						if ((getHiddenBuffsCount() > 0) && _stackedEffects.contains(skill.getAbnormalType()))
+						// If incoming buff isnt hidden, remove any hidden buffs with its abnormal type.
+						if (info.isInUse())
 						{
-							// If incoming buff isnt hidden, remove any hidden buffs with its abnormal type.
-							if (info.isInUse())
-							{
-								unhideBuffs.removeIf(b -> b.isAbnormalType(skill.getAbnormalType()));
-							}
-							// If this incoming buff is hidden and its first of its abnormal, or it removes any previous hidden buff with the same or lower abnormal level and add this instead.
-							else if (!abnormalTypeFlags.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl())))
-							{
-								unhideBuffs.add(info);
-							}
+							unhideBuffs.removeIf(b -> b.isAbnormalType(skill.getAbnormalType()));
 						}
-						
-						// Add the EffectType flag.
-						for (AbstractEffect e : info.getEffects())
+						// If this incoming buff is hidden and its first of its abnormal, or it removes any previous hidden buff with the same or lower abnormal level and add this instead.
+						else if (!abnormalTypeFlags.contains(skill.getAbnormalType()) || unhideBuffs.removeIf(b -> (b.isAbnormalType(skill.getAbnormalType())) && (b.getSkill().getAbnormalLvl() <= skill.getAbnormalLvl())))
 						{
-							flags |= e.getEffectFlags();
+							unhideBuffs.add(info);
 						}
-						
-						// Add the AbnormalType flag.
-						abnormalTypeFlags.add(skill.getAbnormalType());
-						
-						// Add AbnormalVisualEffect flag.
-						if (skill.hasAbnormalVisualEffects())
-						{
-							abnormalVisualEffectFlags.addAll(skill.getAbnormalVisualEffects());
-						}
+					}
+					
+					// Add the EffectType flag.
+					for (AbstractEffect e : info.getEffects())
+					{
+						flags |= e.getEffectFlags();
+					}
+					
+					// Add the AbnormalType flag.
+					abnormalTypeFlags.add(skill.getAbnormalType());
+					
+					// Add AbnormalVisualEffect flag.
+					if (skill.hasAbnormalVisualEffects())
+					{
+						abnormalVisualEffectFlags.addAll(skill.getAbnormalVisualEffects());
 					}
 				}
 			}
-			
-			// Replace the old flags with the new flags.
-			_effectFlags = flags;
-			_stackedEffects = abnormalTypeFlags;
-			
-			// Unhide the selected buffs.
-			unhideBuffs.forEach(b ->
-			{
-				b.setInUse(true);
-				_hiddenBuffs.decrementAndGet();
-			});
-			
-			// Recalculate all stats
-			_owner.getStat().recalculateStats(true);
-			
+		}
+		
+		// Replace the old flags with the new flags.
+		_effectFlags = flags;
+		_stackedEffects = abnormalTypeFlags;
+		
+		// Unhide the selected buffs.
+		unhideBuffs.forEach(b ->
+		{
+			b.setInUse(true);
+			_hiddenBuffs.decrementAndGet();
+		});
+		
+		// Recalculate all stats
+		_owner.getStat().recalculateStats(broadcast);
+		
+		if (broadcast)
+		{
 			// Check if there is change in AbnormalVisualEffect
 			if ((abnormalVisualEffectFlags.size() != _abnormalVisualEffects.size()) || !abnormalVisualEffectFlags.containsAll(_abnormalVisualEffects))
 			{

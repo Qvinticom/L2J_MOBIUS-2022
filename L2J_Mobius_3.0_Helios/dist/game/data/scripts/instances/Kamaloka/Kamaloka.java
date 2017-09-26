@@ -491,7 +491,7 @@ public final class Kamaloka extends AbstractInstance
 	private static final void removeBuffs(L2Character ch)
 	{
 		// Stop all buffs.
-		ch.getEffectList().stopEffects(info -> (info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0), true);
+		ch.getEffectList().stopEffects(info -> (info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0), true, true);
 	}
 	
 	/**
