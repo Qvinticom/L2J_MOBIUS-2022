@@ -265,11 +265,20 @@ public class GeoEngine
 	 * Returns block of geodata on given coordinates.
 	 * @param geoX : Geodata X
 	 * @param geoY : Geodata Y
-	 * @return {@link ABlock} : Bloack of geodata.
+	 * @return {@link ABlock} : Block of geodata.
 	 */
 	public final ABlock getBlock(int geoX, int geoY)
 	{
-		return _blocks[geoX / GeoStructure.BLOCK_CELLS_X][geoY / GeoStructure.BLOCK_CELLS_Y];
+		final int x = geoX / GeoStructure.BLOCK_CELLS_X;
+		final int y = geoY / GeoStructure.BLOCK_CELLS_Y;
+		
+		// if x or y is out of array return null
+		if ((x >= GeoStructure.GEO_BLOCKS_X) || (y >= GeoStructure.GEO_BLOCKS_Y))
+		{
+			return null;
+		}
+		
+		return _blocks[x][y];
 	}
 	
 	/**
@@ -281,7 +290,7 @@ public class GeoEngine
 	public final boolean hasGeoPos(int geoX, int geoY)
 	{
 		final ABlock block = getBlock(geoX, geoY);
-		if (block == null) // NPE check
+		if (block == null) // null block check
 		{
 			_log.warning("Cound not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
 			return false;
