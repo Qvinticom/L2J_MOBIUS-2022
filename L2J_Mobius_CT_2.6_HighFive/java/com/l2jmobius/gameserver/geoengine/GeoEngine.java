@@ -278,7 +278,13 @@ public class GeoEngine
 	 */
 	public final boolean hasGeoPos(int geoX, int geoY)
 	{
-		return getBlock(geoX, geoY).hasGeoPos();
+		final ABlock block = getBlock(geoX, geoY);
+		if (block == null) // NPE check
+		{
+			_log.warning("Cound not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
+			return false;
+		}
+		return block.hasGeoPos();
 	}
 	
 	/**
