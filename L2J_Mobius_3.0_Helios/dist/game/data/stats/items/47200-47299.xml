@@ -669,7 +669,7 @@
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -1%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -679,12 +679,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="1" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47262" name="Blackbird Clan Talisman Stage 2" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -2%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -694,12 +697,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="2" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47263" name="Blackbird Clan Talisman Stage 3" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -3%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -709,12 +715,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="3" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47264" name="Blackbird Clan Talisman Stage 4" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -4%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -724,12 +733,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="4" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47265" name="Blackbird Clan Talisman Stage 5" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -5%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -739,12 +751,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="5" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47266" name="Blackbird Clan Talisman Stage 6" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -6%, P. Atk. against Demons +1%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -754,12 +769,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="6" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47267" name="Blackbird Clan Talisman Stage 7" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -7%, P. Atk. against Demons +2%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -769,12 +787,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="7" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47268" name="Blackbird Clan Talisman Stage 8" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -8%, P. Atk. against Demons +3%, P. Atk. +1%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -784,12 +805,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="8" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47269" name="Blackbird Clan Talisman Stage 9" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -9%, P. Atk. against Demons +4%, P. Atk. +2%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -799,12 +823,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="9" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47270" name="Blackbird Clan Talisman Stage 10" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -10%, P. Atk. against Demons +5%, P. Atk. +3%. -->
 		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -814,12 +841,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16735" level="10" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
+		</skills>
 	</item>
 	<item id="47271" name="Mother Tree Guardians Talisman Stage 1" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -1%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -829,12 +859,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="1" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47272" name="Mother Tree Guardians Talisman Stage 2" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -2%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -844,12 +877,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="2" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47273" name="Mother Tree Guardians Talisman Stage 3" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -3%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -859,12 +895,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="3" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47274" name="Mother Tree Guardians Talisman Stage 4" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -4%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -874,12 +913,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="4" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47275" name="Mother Tree Guardians Talisman Stage 5" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -5%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -889,12 +931,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="5" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47276" name="Mother Tree Guardians Talisman Stage 6" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -6%, P. Atk. against Plants +1%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -904,12 +949,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="6" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47277" name="Mother Tree Guardians Talisman Stage 7" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -7%, P. Atk. against Plants +2%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -919,12 +967,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="7" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47278" name="Mother Tree Guardians Talisman Stage 8" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -8%, P. Atk. against Plants +3%, M. Atk. +1%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -934,12 +985,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="8" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47279" name="Mother Tree Guardians Talisman Stage 9" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -9%, P. Atk. against Plants +4%, M. Atk. +2%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -949,12 +1003,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="9" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47280" name="Mother Tree Guardians Talisman Stage 10" type="Armor">
 		<!-- A Talisman created by the Mother Tree Guardians using all of their knowledge. When equipped, damage received from Plants -10%, P. Atk. against Plants +5%, M. Atk. +3%. -->
 		<set name="icon" val="icon.etc_guardian_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -964,12 +1021,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16736" level="10" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
+		</skills>
 	</item>
 	<item id="47281" name="Kingdom's Royal Guard Talisman Stage 1" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -1%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -979,12 +1039,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="1" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47282" name="Kingdom's Royal Guard Talisman Stage 2" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -2%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -994,12 +1057,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="2" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47283" name="Kingdom's Royal Guard Talisman Stage 3" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -3%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1009,12 +1075,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="3" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47284" name="Kingdom's Royal Guard Talisman Stage 4" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -4%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1024,12 +1093,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="4" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47285" name="Kingdom's Royal Guard Talisman Stage 5" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -5%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1039,12 +1111,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="5" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47286" name="Kingdom's Royal Guard Talisman Stage 6" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -6%, P. Atk. against Embryo +1%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1054,12 +1129,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="6" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47287" name="Kingdom's Royal Guard Talisman Stage 7" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -7%, P. Atk. against Embryo +2%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1069,12 +1147,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="7" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47288" name="Kingdom's Royal Guard Talisman Stage 8" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -8%, P. Atk. against Embryo +3%, P./M. Def +1%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1084,12 +1165,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="8" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47289" name="Kingdom's Royal Guard Talisman Stage 9" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -9%, P. Atk. against Embryo +4%, P./M. Def +2%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1099,12 +1183,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="9" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47290" name="Kingdom's Royal Guard Talisman Stage 10" type="Armor">
 		<!-- A Talisman issued by the Kingdom's Royal Guard for the battle against the Embryo. When equipped, damage received from Embryo -10%, P. Atk. against Embryo +5%, P./M. Def +3%. -->
 		<set name="icon" val="icon.etc_royalgurad_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1114,12 +1201,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16737" level="10" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
+		</skills>
 	</item>
 	<item id="47291" name="Unworldly Visitors Talisman Stage 1" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -1%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1129,12 +1219,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="1" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47292" name="Unworldly Visitors Talisman Stage 2" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -2%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1144,12 +1237,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="2" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47293" name="Unworldly Visitors Talisman Stage 3" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -3%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1159,12 +1255,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="3" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47294" name="Unworldly Visitors Talisman Stage 4" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -4%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1174,12 +1273,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="4" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47295" name="Unworldly Visitors Talisman Stage 5" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -5%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1189,12 +1291,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="5" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47296" name="Unworldly Visitors Talisman Stage 6" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -6%, P. Atk. against Spirits +1%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1204,12 +1309,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="6" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47297" name="Unworldly Visitors Talisman Stage 7" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -7%, P. Atk. against Spirits +2%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1219,12 +1327,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="7" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47298" name="Unworldly Visitors Talisman Stage 8" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -8%, P. Atk. against Spirits +3%, M. Critical Damage +1%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1234,12 +1345,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="8" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47299" name="Unworldly Visitors Talisman Stage 9" type="Armor">
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -9%, P. Atk. against Spirits +4%, M. Critical Damage +2%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -1249,5 +1363,8 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="9" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 </list>

@@ -4,7 +4,7 @@
 		<!-- A Talisman created by the energy of the Pure Spirits remaining in the Garden of Spirits. When equipped, damage received from Spirits -10%, P. Atk. against Spirits +5%, M. Critical Damage +3%. -->
 		<set name="icon" val="icon.etc_stranger_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -14,12 +14,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16738" level="10" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
+		</skills>
 	</item>
 	<item id="47301" name="Giant Trackers Talisman Stage 1" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -1%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -29,12 +32,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="1" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47302" name="Giant Trackers Talisman Stage 2" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -2%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -44,12 +50,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="2" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47303" name="Giant Trackers Talisman Stage 3" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -3%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -59,12 +68,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="3" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47304" name="Giant Trackers Talisman Stage 4" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -4%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -74,12 +86,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="4" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47305" name="Giant Trackers Talisman Stage 5" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -5%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -89,12 +104,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="5" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47306" name="Giant Trackers Talisman Stage 6" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -6%, P. Atk. against Giants +1%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -104,12 +122,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="6" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47307" name="Giant Trackers Talisman Stage 7" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -7%, P. Atk. against Giants +2%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -119,12 +140,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="7" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47308" name="Giant Trackers Talisman Stage 8" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -8%, P. Atk. against Giants +3%, P. Critical Damage +1%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -134,12 +158,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="8" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47309" name="Giant Trackers Talisman Stage 9" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -9%, P. Atk. against Giants +4%, P. Critical Damage +2%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -149,12 +176,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="9" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47310" name="Giant Trackers Talisman Stage 10" type="Armor">
 		<!-- A talisman created by the Giant Trackers based on their research into Giant evolution. When equipped, damage received from Giants -10%, P. Atk. against Giants +5%, P. Critical Damage +3%. -->
 		<set name="icon" val="icon.etc_giantslayer_talisman" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="deco1" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="material" val="GOLD" />
@@ -164,6 +194,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="16739" level="10" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
+		</skills>
 	</item>
 	<item id="47311" name="Aromatic Spice" type="EtcItem">
 		<!-- A spice that can be bought through the chefs at each dwelling. Take Fish Stew and the Aromatic Spice to a chef to create a more advanced dish. -->
