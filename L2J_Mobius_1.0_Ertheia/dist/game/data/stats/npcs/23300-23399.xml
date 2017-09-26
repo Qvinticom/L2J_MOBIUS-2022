@@ -2413,10 +2413,10 @@
 		</collision>
 	</npc>
 	<npc id="23358" level="99" type="L2Monster" name="Blow Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
+		<equipment rhand="17330" /> <!-- Apocalypse Thrower -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
