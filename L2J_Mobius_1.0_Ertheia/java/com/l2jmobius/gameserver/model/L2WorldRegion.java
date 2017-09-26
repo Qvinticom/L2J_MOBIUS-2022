@@ -172,7 +172,7 @@ public final class L2WorldRegion
 	
 	public boolean areNeighborsEmpty()
 	{
-		return !forEachSurroundingRegion(w ->
+		return forEachSurroundingRegion(w ->
 		{
 			return !(w.isActive() && w.getVisibleObjects().values().stream().anyMatch(L2Object::isPlayable));
 		});
