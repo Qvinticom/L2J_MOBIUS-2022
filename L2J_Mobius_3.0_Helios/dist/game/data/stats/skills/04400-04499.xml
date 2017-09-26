@@ -727,7 +727,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4416" toLevel="26" name="Embryo">
+	<skill id="4416" toLevel="27" name="Embryo">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Guessed -->
 		<icon>
@@ -757,6 +757,7 @@
 			<value level="24">icon.skill4416_none</value>
 			<value level="25">icon.skill4296</value>
 			<value level="26">icon.skill4296</value>
+			<value level="27">icon.skill4296</value>			
 		</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -790,6 +791,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</CONSTRUCT_WEAKNESS>
 				<ANIMAL_WEAKNESS>
 					<value level="1">0</value>
@@ -818,6 +820,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</ANIMAL_WEAKNESS>
 				<PLANT_WEAKNESS>
 					<value level="1">0</value>
@@ -846,6 +849,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</PLANT_WEAKNESS>
 				<DRAGON_WEAKNESS>
 					<value level="1">0</value>
@@ -874,6 +878,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</DRAGON_WEAKNESS>
 				<DUAL>
 					<value level="1">0</value>
@@ -902,6 +907,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</DUAL>
 				<SHOCK>
 					<value level="1">0</value>
@@ -930,6 +936,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</SHOCK>
 				<BEAST_WEAKNESS>
 					<value level="1">0</value>
@@ -958,6 +965,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</BEAST_WEAKNESS>
 				<BLUNT>
 					<value level="1">0</value>
@@ -986,6 +994,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</BLUNT>
 				<GIANT_WEAKNESS>
 					<value level="1">0</value>
@@ -1014,6 +1023,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</GIANT_WEAKNESS>
 				<BOW>
 					<value level="1">0</value>
@@ -1042,6 +1052,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</BOW>
 				<BUG_WEAKNESS>
 					<value level="1">0</value>
@@ -1070,6 +1081,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</BUG_WEAKNESS>
 				<SWORD>
 					<value level="1">0</value>
@@ -1098,6 +1110,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</SWORD>
 			</effect>
 		</effects>
