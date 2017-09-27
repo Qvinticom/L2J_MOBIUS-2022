@@ -56,6 +56,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class manages AI of L2Attackable.
@@ -922,6 +923,11 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		
 		// Check if target is valid and within cast range.
 		if (skill.getTarget(getActiveChar(), target, false, getActiveChar().isMovementDisabled(), false) == null)
+		{
+			return false;
+		}
+		
+		if (!Util.checkIfInRange(skill.getCastRange(), getActiveChar(), target, true))
 		{
 			return false;
 		}

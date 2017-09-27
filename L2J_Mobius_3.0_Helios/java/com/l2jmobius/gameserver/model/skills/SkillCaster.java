@@ -164,6 +164,11 @@ public class SkillCaster implements Runnable
 			return null;
 		}
 		
+		if (!Util.checkIfInRange(skill.getCastRange(), caster, target, true))
+		{
+			return null;
+		}
+		
 		castTime = castTime > -1 ? castTime : Formulas.calcHitTime(caster, skill);
 		
 		// Schedule a thread that will execute 500ms before casting time is over (for animation issues and retail handling).
@@ -356,6 +361,15 @@ public class SkillCaster implements Runnable
 		
 		if ((caster == null) || (target == null))
 		{
+			return false;
+		}
+		
+		if (!Util.checkIfInRange(_skill.getEffectRange(), caster, target, true))
+		{
+			if (caster.isPlayer())
+			{
+				caster.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+			}
 			return false;
 		}
 		
