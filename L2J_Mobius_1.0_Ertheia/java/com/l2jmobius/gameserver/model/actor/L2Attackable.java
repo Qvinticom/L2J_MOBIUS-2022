@@ -1747,6 +1747,11 @@ public class L2Attackable extends L2Npc
 	@Override
 	public void setTarget(L2Object object)
 	{
+		if (isDead())
+		{
+			return;
+		}
+		
 		if (object == null)
 		{
 			final L2Object target = getTarget();
