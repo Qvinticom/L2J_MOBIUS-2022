@@ -1587,7 +1587,7 @@ public class NpcBuffer extends Quest
 							for (L2CubicInstance cubic : player.getCubics().values())
 							{
 								cubic.stopAction();
-								player.getCubics().remove(cubic);
+								player.getCubics().remove(cubic.getId());
 							}
 						}
 					}
@@ -1852,7 +1852,7 @@ public class NpcBuffer extends Quest
 								for (L2CubicInstance cubic : player.getCubics().values())
 								{
 									cubic.stopAction();
-									player.getCubics().remove(cubic);
+									player.getCubics().remove(cubic.getId());
 								}
 							}
 							npc.broadcastPacket(new MagicSkillUse(npc, player, Integer.parseInt(eventParam1), 1, 1000, 0));
@@ -1873,7 +1873,7 @@ public class NpcBuffer extends Quest
 								for (L2CubicInstance cubic : player.getCubics().values())
 								{
 									cubic.stopAction();
-									player.getCubics().remove(cubic);
+									player.getCubics().remove(cubic.getId());
 								}
 							}
 							npc.broadcastPacket(new MagicSkillUse(npc, player, Integer.parseInt(eventParam1), 1, 1000, 0));

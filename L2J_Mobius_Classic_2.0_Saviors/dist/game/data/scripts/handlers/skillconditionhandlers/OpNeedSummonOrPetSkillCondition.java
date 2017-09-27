@@ -48,6 +48,6 @@ public class OpNeedSummonOrPetSkillCondition implements ISkillCondition
 	{
 		final L2Summon pet = caster.getPet();
 		final Collection<L2Summon> summons = caster.getServitors().values();
-		return ((pet != null) && _npcIds.stream().anyMatch(npcId -> npcId == pet.getId())) || summons.stream().anyMatch(npcId -> _npcIds.contains(npcId));
+		return ((pet != null) && _npcIds.stream().anyMatch(npcId -> npcId == pet.getId())) || summons.stream().anyMatch(summon -> _npcIds.contains(summon.getId()));
 	}
 }

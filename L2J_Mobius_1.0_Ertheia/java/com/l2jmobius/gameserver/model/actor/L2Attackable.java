@@ -626,7 +626,7 @@ public class L2Attackable extends L2Npc
 	@Override
 	public void addAttackerToAttackByList(L2Character player)
 	{
-		if ((player == null) || (player == this) || getAttackByList().contains(player))
+		if ((player == null) || (player == this) || getAttackByList().stream().anyMatch(o -> o.get() == player))
 		{
 			return;
 		}
@@ -864,7 +864,8 @@ public class L2Attackable extends L2Npc
 		
 		result.add(mostHated);
 		
-		if (getAttackByList().contains(secondMostHated))
+		final L2Character secondMostHatedFinal = secondMostHated;
+		if (getAttackByList().stream().anyMatch(o -> o.get() == secondMostHatedFinal))
 		{
 			result.add(secondMostHated);
 		}

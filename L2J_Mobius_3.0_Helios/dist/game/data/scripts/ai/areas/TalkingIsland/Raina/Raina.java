@@ -665,7 +665,7 @@ public final class Raina extends AbstractNpcAI
 					
 					if (subId.equalsOrChildOf(cid))
 					{
-						availSubs.remove(cid);
+						availSubs.remove(subList.getClassDefinition());
 						break;
 					}
 				}

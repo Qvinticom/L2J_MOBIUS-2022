@@ -421,7 +421,7 @@ public final class SkillTreesData implements IGameXmlReader
 						}
 						else if (type.equals("revelationSkillTree") && (subType != null))
 						{
-							final Map<Long, L2SkillLearn> revelationSkillTrees = _revelationSkillTree.get(race);
+							final Map<Long, L2SkillLearn> revelationSkillTrees = _revelationSkillTree.get(subType);
 							if (revelationSkillTrees == null)
 							{
 								_revelationSkillTree.put(subType, revelationSkillTree);

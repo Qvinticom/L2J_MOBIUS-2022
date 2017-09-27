@@ -615,7 +615,7 @@ public final class GameServerTable implements IGameXmlReader
 		{
 			for (GameServerAddress a : _addrs)
 			{
-				if (a.equals(addr))
+				if (a.getAddress().equals(addr.getAddress()))
 				{
 					return a.getServerAddress();
 				}

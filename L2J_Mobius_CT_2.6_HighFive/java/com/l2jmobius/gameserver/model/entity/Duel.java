@@ -1084,7 +1084,7 @@ public class Duel
 			if (cond != null)
 			{
 				cond.teleportBack();
-				_playerConditions.remove(cond);
+				_playerConditions.remove(player.getObjectId());
 			}
 			player.setIsInDuel(0);
 		}
