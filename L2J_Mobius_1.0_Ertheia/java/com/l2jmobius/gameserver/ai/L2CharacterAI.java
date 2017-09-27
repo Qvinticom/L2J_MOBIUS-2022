@@ -744,11 +744,14 @@ public class L2CharacterAI extends AbstractAI
 	protected void onEvtForgetObject(L2Object object)
 	{
 		final L2Object target = getTarget();
+		
+		// Stop any casting pointing to this object.
+		getActor().abortCast(sc -> sc.getTarget() == object);
+		
 		// If the object was targeted and the Intention was AI_INTENTION_INTERACT or AI_INTENTION_PICK_UP, set the Intention to AI_INTENTION_ACTIVE
 		if (target == object)
 		{
 			setTarget(null);
-			getActor().abortCast(sc -> sc.getTarget() == object);
 			
 			if (isFollowing())
 			{
@@ -759,10 +762,8 @@ public class L2CharacterAI extends AbstractAI
 				stopFollow();
 			}
 			
-			if ((getIntention() == AI_INTENTION_INTERACT) || (getIntention() == AI_INTENTION_PICK_UP))
-			{
-				setIntention(AI_INTENTION_ACTIVE);
-			}
+			// Stop any intention that has target we want to forget.
+			setIntention(AI_INTENTION_ACTIVE);
 		}
 		
 		// Check if the targeted object was the actor
@@ -770,7 +771,6 @@ public class L2CharacterAI extends AbstractAI
 		{
 			// Cancel AI target
 			setTarget(null);
-			getActor().abortCast(sc -> sc.getTarget() == object);
 			
 			// Stop an AI Follow Task
 			stopFollow();
