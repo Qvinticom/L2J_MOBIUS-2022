@@ -702,10 +702,7 @@ public final class CharEffectList
 			// Decrease specific buff count
 			increaseDecreaseCount(info, false);
 			
-			if (!removed)
-			{
-				info.getSkill().applyEffectScope(EffectScope.END, info, true, false);
-			}
+			info.getSkill().applyEffectScope(EffectScope.END, info, true, false);
 		}
 	}
 	
