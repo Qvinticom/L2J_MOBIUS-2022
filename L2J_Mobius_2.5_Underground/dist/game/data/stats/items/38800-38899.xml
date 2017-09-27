@@ -1561,6 +1561,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17814" level="1" />
+		</skills>
 	</item>
 	<item id="38856" name="Ruby" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 3.5%. Effect does not stack with additional jewels of the same type. -->
@@ -1578,6 +1581,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17814" level="2" />
+		</skills>
 	</item>
 	<item id="38857" name="Ruby" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
@@ -1595,6 +1601,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17815" level="1" />
+		</skills>
 	</item>
 	<item id="38858" name="Ruby" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 12.5%. Effect does not stack with additional jewels of the same type. -->
@@ -1612,16 +1621,29 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17816" level="1" />
+		</skills>
 	</item>
 	<item id="38859" name="Ruby" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 20%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="compoundItem" val="47688" />
+		<set name="compoundChance" val="100" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17817" level="1" />
+		</skills>
 	</item>
 	<item id="38860" name="Emergency Recovery Jewel Lv. 1" type="Armor">
 		<!-- Recovers 1500 HP/CP. -->
@@ -1824,8 +1846,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="17704" level="5" />
@@ -1917,8 +1944,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="17705" level="5" />
@@ -2013,9 +2045,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17825" level="5" /> <!-- Emerald -->
 		</skills>
@@ -2110,9 +2147,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17823" level="5" />
 		</skills>
@@ -2207,9 +2249,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17708" level="5" />
 		</skills>
@@ -2304,9 +2351,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17709" level="5" />
 		</skills>
