@@ -63,17 +63,6 @@ public final class DecayTaskManager
 			delay += Config.SPOILED_CORPSE_EXTEND_TIME;
 		}
 		
-		add(character, delay);
-	}
-	
-	/**
-	 * Adds a decay task for the specified character.<br>
-	 * <br>
-	 * @param character the character
-	 * @param delay the delay
-	 */
-	public void add(L2Character character, long delay)
-	{
 		if (!_decayTasks.containsKey(character))
 		{
 			_decayTasks.put(character, ThreadPoolManager.schedule(new DecayTask(character), delay * 1000));
