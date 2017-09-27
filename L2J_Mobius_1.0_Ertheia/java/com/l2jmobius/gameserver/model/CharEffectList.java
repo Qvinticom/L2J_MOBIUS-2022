@@ -735,6 +735,12 @@ public final class CharEffectList
 			return;
 		}
 		
+		// Prevent adding and initializing buffs/effects on dead creatures.
+		if (info.getEffected().isDead())
+		{
+			return;
+		}
+		
 		if (info.getSkill() == null)
 		{
 			// Only options are without skills.
