@@ -643,12 +643,21 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17822" toLevel="1" name="Aquamarine">
-		<icon>icon.skill0000</icon>
-		<operateType>P</operateType>
-		<target>SELF</target>
+		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1</abnormalTime>
+		<chance>100</chance>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Mp">
+			<effect name="MpRegen">
 				<amount>136</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -657,20 +666,29 @@
 		<!-- 1%, 2%, 4%, 9%, 15% chance of recovering 136 MP. -->
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="1">
-				<skillId>17822</skillId>
-				<skillLevel>1</skillLevel>
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="5">
+				<!-- Aquamarine -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<minDamage>100</minDamage>
+				<chance>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">9</value>
+					<value level="5">15</value>
+				</chance>
+				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<chance>
-					<value level="1">1</value>
-					<value level="1">2</value>
-					<value level="1">4</value>
-					<value level="1">9</value>
-					<value level="1">15</value>
-				</chance>
+				<allowWeapons>SWORD,BLUNT,DUAL,DUALBLUNT</allowWeapons>
+				<skillId>17822</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -750,7 +768,7 @@
 					<value level="2">1</value>
 					<value level="3">1</value>
 					<value level="4">2</value>
-					<value level="5">1</value>
+					<value level="5">3</value>
 				</amount>
 				<stat>MEN</stat>
 			</effect>
@@ -760,29 +778,9 @@
 					<value level="2">1</value>
 					<value level="3">1</value>
 					<value level="4">2</value>
-					<value level="5">1</value>
+					<value level="5">3</value>
 				</amount>
 				<stat>STR</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">1</value>
-					<value level="4">2</value>
-					<value level="5">1</value>
-				</amount>
-				<stat>WIT</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">1</value>
-					<value level="4">2</value>
-					<value level="5">1</value>
-				</amount>
-				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
 				<amount>
@@ -793,6 +791,26 @@
 					<value level="5">3</value>
 				</amount>
 				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+				</amount>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</skill>
