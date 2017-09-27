@@ -19,12 +19,11 @@ package com.l2jmobius.gameserver.taskmanager;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -34,8 +33,6 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
  */
 public final class DecayTaskManager
 {
-	private final ScheduledExecutorService _decayExecutor = Executors.newSingleThreadScheduledExecutor();
-	
 	protected final Map<L2Character, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
 	
 	/**
@@ -66,34 +63,20 @@ public final class DecayTaskManager
 			delay += Config.SPOILED_CORPSE_EXTEND_TIME;
 		}
 		
-		add(character, delay, TimeUnit.SECONDS);
+		add(character, delay);
 	}
 	
 	/**
 	 * Adds a decay task for the specified character.<br>
 	 * <br>
-	 * If the decay task already exists it cancels it and re-adds it.
 	 * @param character the character
 	 * @param delay the delay
-	 * @param timeUnit the time unit of the delay parameter
 	 */
-	public void add(L2Character character, long delay, TimeUnit timeUnit)
+	public void add(L2Character character, long delay)
 	{
-		ScheduledFuture<?> decayTask = _decayExecutor.schedule(new DecayTask(character), delay, TimeUnit.SECONDS);
-		
-		decayTask = _decayTasks.put(character, decayTask);
-		// if decay task already existed cancel it so we use the new time
-		if (decayTask != null)
+		if (!_decayTasks.containsKey(character))
 		{
-			if (!decayTask.cancel(false))
-			{
-				// old decay task was completed while canceling it remove and cancel the new one
-				decayTask = _decayTasks.remove(character);
-				if (decayTask != null)
-				{
-					decayTask.cancel(false);
-				}
-			}
+			_decayTasks.put(character, ThreadPoolManager.schedule(new DecayTask(character), delay * 1000));
 		}
 	}
 	
