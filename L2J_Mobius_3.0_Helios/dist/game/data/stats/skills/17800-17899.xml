@@ -661,7 +661,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17823" toLevel="5" name="Greater Aquamarine">
+	<skill id="17823" toLevel="6" name="Greater Aquamarine">
 		<!-- Need activation/reuse info ... -->
 		<!-- 1%, 2%, 4%, 9%, 15% chance of recovering 136 MP. -->
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
@@ -669,7 +669,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="5">
+			<effect name="TriggerSkillByAttack" fromLevel="1" toLevel="6">
 				<!-- Aquamarine -->
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
@@ -681,6 +681,7 @@
 					<value level="3">4</value>
 					<value level="4">9</value>
 					<value level="5">15</value>
+					<value level="6">15</value>
 				</chance>
 				<targetType>SELF</targetType>
 				<isCritical>false</isCritical>
@@ -689,6 +690,42 @@
 				<allowWeapons>SWORD,BLUNT,DUAL,DUALBLUNT</allowWeapons>
 				<skillId>17822</skillId>
 				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -743,7 +780,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17825" toLevel="5" name="Greater Emerald">
+	<skill id="17825" toLevel="6" name="Greater Emerald">
 		<!-- CON + 1, MEN + 1 -->
 		<!-- CON + 1, MEN + 1, STR + 1, INT + 1 -->
 		<!-- CON + 1, MEN + 1, STR + 1, INT + 1, DEX + 1, WIT + 1 -->
@@ -759,6 +796,7 @@
 					<value level="3">1</value>
 					<value level="4">2</value>
 					<value level="5">3</value>
+					<value level="6">3</value>
 				</amount>
 				<stat>CON</stat>
 			</effect>
@@ -769,6 +807,7 @@
 					<value level="3">1</value>
 					<value level="4">2</value>
 					<value level="5">3</value>
+					<value level="6">3</value>
 				</amount>
 				<stat>MEN</stat>
 			</effect>
@@ -779,6 +818,7 @@
 					<value level="3">1</value>
 					<value level="4">2</value>
 					<value level="5">3</value>
+					<value level="6">3</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>
@@ -789,6 +829,7 @@
 					<value level="3">1</value>
 					<value level="4">2</value>
 					<value level="5">3</value>
+					<value level="6">3</value>
 				</amount>
 				<stat>INT</stat>
 			</effect>
@@ -799,6 +840,7 @@
 					<value level="3">1</value>
 					<value level="4">2</value>
 					<value level="5">3</value>
+					<value level="6">3</value>
 				</amount>
 				<stat>WIT</stat>
 			</effect>
@@ -809,6 +851,7 @@
 					<value level="3">1</value>
 					<value level="4">2</value>
 					<value level="5">3</value>
+					<value level="6">3</value>
 				</amount>
 				<stat>DEX</stat>
 			</effect>

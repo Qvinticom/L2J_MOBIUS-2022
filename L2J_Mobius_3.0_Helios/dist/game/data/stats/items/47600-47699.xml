@@ -358,6 +358,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="1" />
+		</skills>
 	</item>
 	<item id="47678" name="Red Cat's Eye" additionalName="Lv. 2" type="Armor">
 		<!-- When using a physical skill after equipping, P. Critical Damage + 2% and P. Skill Critical Damage + 2%. Effect does not stack with additional jewels of the same type. -->
@@ -373,6 +376,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="2" />
+		</skills>
 	</item>
 	<item id="47679" name="Red Cat's Eye" additionalName="Lv. 3" type="Armor">
 		<!-- When using a physical skill after equipping, P. Critical Damage + 4% and P. Skill Critical Damage + 4%. Effect does not stack with additional jewels of the same type. -->
@@ -388,6 +394,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="3" />
+		</skills>
 	</item>
 	<item id="47680" name="Red Cat's Eye" additionalName="Lv. 4" type="Armor">
 		<!-- When using a physical skill after equipping, P. Critical Damage + 7% and P. Skill Critical Damage + 7%. Effect does not stack with additional jewels of the same type. -->
@@ -403,6 +412,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="4" />
+		</skills>
 	</item>
 	<item id="47681" name="Red Cat's Eye" additionalName="Lv. 5" type="Armor">
 		<!-- When using a physical skill after equipping, P. Critical Damage + 12% and P. Skill Critical Damage + 12%. Effect does not stack with additional jewels of the same type. -->
@@ -415,6 +427,9 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18713" level="5" />
+		</skills>
 	</item>
 	<item id="47682" name="Blue Cat's Eye" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage + 1%. Effect does not stack with additional jewels of the same type. -->
@@ -430,6 +445,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="1" />
+		</skills>
 	</item>
 	<item id="47683" name="Blue Cat's Eye" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage + 2%. Effect does not stack with additional jewels of the same type. -->
@@ -445,6 +463,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="2" />
+		</skills>
 	</item>
 	<item id="47684" name="Blue Cat's Eye" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage + 4%. Effect does not stack with additional jewels of the same type. -->
@@ -460,6 +481,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="3" />
+		</skills>
 	</item>
 	<item id="47685" name="Blue Cat's Eye" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage + 7%. Effect does not stack with additional jewels of the same type. -->
@@ -475,6 +499,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="4" />
+		</skills>
 	</item>
 	<item id="47686" name="Blue Cat's Eye" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage + 12%. Effect does not stack with additional jewels of the same type. -->
@@ -487,6 +514,9 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18714" level="5" />
+		</skills>
 	</item>
 	<item id="47687" name="Greater Topaz" type="Armor">
 		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 13275 power, ignoring the target's CP. Low chance of killing the enemy instantly. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -496,6 +526,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17701" level="6" />
+		</skills>
 	</item>
 	<item id="47688" name="Greater Ruby" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 20% and P. Atk. By 9%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -506,6 +539,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="18715" level="1" />
 			<skill id="18717" level="1" />
 		</skills>
 	</item>
@@ -518,6 +552,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
+			<skill id="17821" level="2" />
 			<skill id="18719" level="1" />
 		</skills>
 	</item>
@@ -529,6 +564,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17704" level="6" />
+		</skills>
 	</item>
 	<item id="47691" name="Greater Opal" type="Armor">
 		<!-- When equipped, increases Attack Attribute by 120 and all Defense Attributes by 70. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -538,6 +576,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17705" level="6" />
+		</skills>
 	</item>
 	<item id="47692" name="Greater Emerald" type="Armor">
 		<!-- When equipped, all basic stats + 3 and Skill Prominence rate + 30%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -547,6 +588,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17825" level="6" />
+		</skills>
 	</item>
 	<item id="47693" name="Greater Aquamarine" type="Armor">
 		<!-- When using a skill after equipping, there is a 15% chance of recovering 136 MP, and skill cooldown is reduced by 5%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -556,6 +600,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17823" level="6" />
+		</skills>
 	</item>
 	<item id="47694" name="Greater Diamond" type="Armor">
 		<!-- When equipped, P. Def. Increases by 1986 and incoming P. Critical Damage decreases by 5%. P. Def. increases by 10% as well. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -565,6 +612,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17708" level="6" />
+		</skills>
 	</item>
 	<item id="47695" name="Greater Pearl" type="Armor">
 		<!-- When equipped, M. Def. Increases by 1150 and incoming M. Critical Damage decreases by 5%. M. Def. increases by 10% as well. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -574,6 +624,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17709" level="6" />
+		</skills>
 	</item>
 	<item id="47696" name="Greater Vital Stone" type="Armor">
 		<!-- Increases Vitality Status Bonus XP by 30% and the Vitality Point Consumption Speed decreases by 15%. XP Gain increases by 10% as well. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -583,6 +636,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18568" level="6" />
+		</skills>
 	</item>
 	<item id="47697" name="Greater Garnet" type="Armor">
 		<!-- Increases success rate of Resistance to Debuffs by 30%, and when receiving damage to a PC, Stun/Silence are canceled. When used, all debuffs are canceled. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -592,6 +648,10 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="18566" level="6" />
+			<skill id="18567" level="2" />
+		</skills>
 	</item>
 	<item id="47698" name="Greater Tanzanite" type="Armor">
 		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds, and recovers 15% of Max HP immediately. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
@@ -601,14 +661,19 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
-	</item>
-	<item id="47699" name="Greater Red Cat's Eye" type="Armor">
-		<!-- When using a physical skill after equipping, P. Critical Damage + 12%, P. Skill Critical Damage + 12% and P. Skill Power + 5%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
-		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
+		<skills>
+			<skill id="27549" level="6" />
+		</skills>
+	</item>	<item id="47698" name="Greater Tanzanite" type="Armor">
+		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds, and recovers 15% of Max HP immediately. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="27549" level="6" />
+		</skills>
 	</item>
 </list>

@@ -1006,13 +1006,35 @@
 		<reuseDelay>180000</reuseDelay>
 	</skill>
 	<skill id="27549" toLevel="5" name="Tanzanite - Barrier">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. -->
+		<!-- Creates a protection shield that absorbs 10,000 damage for 5 seconds. -->
+		<!-- Creates a protection shield that absorbs 15,000 damage for 10 seconds. -->
+		<!-- Creates a protection shield that absorbs 30,000 damage for 10 seconds. -->
+		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds. -->
 		<icon>icon.etc_bm_jewel_tanzanite</icon>
+		<abnormalTime>
+			<value level="1">5</value>
+			<value level="2">5</value>
+			<value level="3">10</value>
+			<value level="4">10</value>
+			<value level="5">15</value>
+		</abnormalTime>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>180000</reuseDelay>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="AbsorbDamage">
+				<damage>
+					<value level="1">5000</value>
+					<value level="2">10000</value>
+					<value level="3">15000</value>
+					<value level="4">30000</value>
+					<value level="5">50000</value>
+				</damage>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27550" toLevel="5" name="Vital Stone">
 		<!-- AUTO GENERATED SKILL -->

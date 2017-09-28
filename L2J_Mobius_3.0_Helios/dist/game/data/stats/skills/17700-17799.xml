@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17701" toLevel="5" name="Greater Topaz - Spiritshot">
+	<skill id="17701" toLevel="6" name="Greater Topaz - Spiritshot">
 		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of 1062. -->
 		<icon>icon.etc_bm_jewel_topaz_i00</icon>
 		<operateType>A1</operateType>
@@ -10,6 +10,7 @@
 			<value level="3">4</value>
 			<value level="4">5</value>
 			<value level="5">6</value>
+			<value level="6">7</value>
 		</abnormalLvl>
 		<magicLvl>
 			<value level="1">1</value>
@@ -17,6 +18,7 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 			<value level="5">5</value>
+			<value level="6">6</value>
 		</magicLvl>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
@@ -43,7 +45,11 @@
 					<value level="3">6903</value>
 					<value level="4">10089</value>
 					<value level="5">13275</value>
+					<value level="6">13275</value>
 				</power>
+			</effect>
+			<effect name="InstantKillResist" fromLevel="6" toLevel="6">
+				<amount>90</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -83,12 +89,26 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17704" toLevel="5" name="Greater Obsidian">
+	<skill id="17704" toLevel="6" name="Greater Obsidian">
 		<!-- Received Damage in PvP - 1%, 3%, 7%, 11%, 15%. -->
 		<icon>icon.etc_bm_jewel_obsidian_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
+			<effect name="TriggerSkillByDamage" fromLevel="6" toLevel="6">
+				<!-- Greater Garnet - Cancel Stun -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<minDamage>100</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>18720</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
 			<effect name="PvpMagicalSkillDefenceBonus">
 				<amount>
 					<value level="1">1</value>
@@ -96,6 +116,7 @@
 					<value level="3">7</value>
 					<value level="4">11</value>
 					<value level="5">15</value>
+					<value level="6">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -106,6 +127,7 @@
 					<value level="3">7</value>
 					<value level="4">11</value>
 					<value level="5">15</value>
+					<value level="6">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -116,12 +138,13 @@
 					<value level="3">7</value>
 					<value level="4">11</value>
 					<value level="5">15</value>
+					<value level="6">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17705" toLevel="5" name="Greater Opal">
+	<skill id="17705" toLevel="6" name="Greater Opal">
 		<!-- Attack Attribute + 10, +20, +40, +70, +120. -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>P</operateType>
@@ -133,7 +156,74 @@
 					<value level="3">40</value>
 					<value level="4">70</value>
 					<value level="5">120</value>
+					<value level="6">120</value>					
 				</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">70</value>					
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">70</value>					
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">70</value>					
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">70</value>					
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">70</value>					
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">70</value>					
+				</amount>
+				<attribute>HOLY</attribute>
 			</effect>
 		</effects>
 	</skill>
@@ -173,7 +263,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17708" toLevel="5" name="Greater Diamond">
+	<skill id="17708" toLevel="6" name="Greater Diamond">
 		<!-- P. Def. + 283, and Received P. Critical Damage - 1%. -->
 		<icon>icon.etc_bm_jewel_diamond_i00</icon>
 		<operateType>P</operateType>
@@ -186,6 +276,7 @@
 					<value level="3">945</value>
 					<value level="4">1418</value>
 					<value level="5">1986</value>
+					<value level="6">1986</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -196,12 +287,24 @@
 					<value level="3">-3</value>
 					<value level="4">-4</value>
 					<value level="5">-5</value>
+					<value level="6">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17709" toLevel="5" name="Greater Pearl">
+	<skill id="17709" toLevel="6" name="Greater Pearl">
 		<!-- M. Def. + 163, and Received P. Critical Damage - 1%. -->
 		<!-- M. Def. + 328, and Received P. Critical Damage - 2%. -->
 		<!-- M. Def. + 548, and Received P. Critical Damage - 3%. -->
@@ -218,6 +321,7 @@
 					<value level="3">548</value>
 					<value level="4">821</value>
 					<value level="5">1150</value>
+					<value level="6">1150</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -228,6 +332,18 @@
 					<value level="3">-3</value>
 					<value level="4">-4</value>
 					<value level="5">-5</value>
+					<value level="6">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

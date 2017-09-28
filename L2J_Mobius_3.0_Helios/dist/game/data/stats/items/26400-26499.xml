@@ -1285,6 +1285,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="27440" level="1"/>
+		</skills>
 	</item>
 	<item id="26498" name="Cat's Eye" additionalName="Lv. 2" type="Armor">
 		<!-- Decreases damage received from Reflect Damage by 20%. Effect does not stack with additional jewels of the same type. -->
@@ -1302,6 +1305,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="27440" level="2"/>
+		</skills>
 	</item>
 	<item id="26499" name="Cat's Eye" additionalName="Lv. 3" type="Armor">
 		<!-- Decreases damage received from Reflect Damage by 30%. Effect does not stack with additional jewels of the same type. -->
@@ -1319,5 +1325,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="27440" level="3"/>
+		</skills>
 	</item>
 </list>
