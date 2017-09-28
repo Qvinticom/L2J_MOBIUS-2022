@@ -74,6 +74,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("ChangeHairColor", ChangeHairColor::new);
 		EffectHandler.getInstance().registerHandler("ChangeHairStyle", ChangeHairStyle::new);
 		EffectHandler.getInstance().registerHandler("ClassChange", ClassChange::new);
+		EffectHandler.getInstance().registerHandler("Compelling", Compelling::new);
 		EffectHandler.getInstance().registerHandler("Confuse", Confuse::new);
 		EffectHandler.getInstance().registerHandler("ConsumeBody", ConsumeBody::new);
 		EffectHandler.getInstance().registerHandler("ConvertItem", ConvertItem::new);
