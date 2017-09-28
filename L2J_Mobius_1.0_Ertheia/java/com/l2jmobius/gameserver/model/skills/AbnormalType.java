@@ -510,7 +510,9 @@ public enum AbnormalType
 	MAX(284),
 	AIRBIND(365),
 	KNOCKDOWN(367),
-	EARTHWORM_DEBUFF(424);
+	EARTHWORM_DEBUFF(424),
+	INSIDE_POSITION(593),
+	STEEL_MIND(596);
 	
 	private int _clientId;
 	

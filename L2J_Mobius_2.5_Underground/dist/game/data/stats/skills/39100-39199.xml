@@ -22,11 +22,14 @@
 		<mpConsume>1</mpConsume>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="SilentMove">
-				<chance>100</chance>
+			<effect name="ChameleonRest">
+				<power>2</power>
+				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
