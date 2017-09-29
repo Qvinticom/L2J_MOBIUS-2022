@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/PrimeShop.xsd">
+	<!-- cat = 1 - Supplies, 2 - Cosmetic, 3 - Specials, 4 - Enchant, 5 - Boost, 6 - Rewards -->
+	<!-- paymentType = 0 - NCoin, 1 - Adena, 2 - Hero Coin -->
+	<!-- panelType = 0 - None, 1 - Event, 2 - Sale, 3 - New, 4 - Best -->
+	<!-- recommended = 1 - Top, 2 - Left, 4 - Right (bit flags) -->
+	<!-- startSale = unixTime -->
+	<!-- endSale = unixTime -->
 	<item id="1010030" cat="2" paymentType="0" price="8" panelType="0" recommended="0" startSale="315558000" endSale="2127452400" dayOfWeek="127" startHour="0" startMinute="0" stopHour="23" stopMinute="59" stock="-1" maxStock="-1" salePercent="0" minLevel="0" maxLevel="0" minBirthday="0" maxBirthday="0" restrictionDay="0" availableCount="0" >
 		<item itemId="20332" count="5000" /> <!-- Beast Soulshot-->
 	</item>
