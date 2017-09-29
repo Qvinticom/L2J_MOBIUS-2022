@@ -27,11 +27,11 @@ import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 public class OnPlayerChat implements IBaseEvent
 {
 	private final L2PcInstance _activeChar;
-	private final L2PcInstance _target;
+	private final String _target;
 	private final String _text;
 	private final ChatType _type;
 	
-	public OnPlayerChat(L2PcInstance activeChar, L2PcInstance target, String text, ChatType type)
+	public OnPlayerChat(L2PcInstance activeChar, String target, String text, ChatType type)
 	{
 		_activeChar = activeChar;
 		_target = target;
@@ -44,7 +44,7 @@ public class OnPlayerChat implements IBaseEvent
 		return _activeChar;
 	}
 	
-	public L2PcInstance getTarget()
+	public String getTarget()
 	{
 		return _target;
 	}

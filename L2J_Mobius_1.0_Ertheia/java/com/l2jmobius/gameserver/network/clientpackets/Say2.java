@@ -23,7 +23,6 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.ChatHandler;
 import com.l2jmobius.gameserver.handler.IChatHandler;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -209,7 +208,7 @@ public final class Say2 implements IClientIncomingPacket
 			}
 		}
 		
-		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, L2World.getInstance().getPlayer(_target), _text, chatType), activeChar, ChatFilterReturn.class);
+		final ChatFilterReturn filter = EventDispatcher.getInstance().notifyEvent(new OnPlayerChat(activeChar, _target, _text, chatType), activeChar, ChatFilterReturn.class);
 		if (filter != null)
 		{
 			_text = filter.getFilteredText();

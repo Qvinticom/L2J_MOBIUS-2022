@@ -5,8 +5,8 @@
 	<action id="10" handler="PrivateStore" option="1" /> <!-- Private Store Sell -->
 	<action id="12" handler="SocialAction" option="2" /> <!-- Greeting -->
 	<action id="13" handler="SocialAction" option="3" /> <!-- Victory -->
-	<action id="15" handler="PetHold" /> <!-- Change Movement Mode -->
 	<action id="14" handler="SocialAction" option="4" /> <!-- Advance -->
+	<action id="15" handler="PetHold" /> <!-- Change Movement Mode -->
 	<action id="16" handler="PetAttack" /> <!-- Attack -->
 	<action id="17" handler="PetStop" /> <!-- Stop -->
 	<action id="19" handler="UnsummonPet" />
@@ -119,7 +119,7 @@
 	<action id="1068" handler="PetSkillUse" option="5751" /> <!-- Fox Shaman, Spirit Shaman - Lightning Wave -->
 	<action id="1069" handler="PetSkillUse" option="5752" /> <!-- Fox Shaman, Fairy Princess - Flare -->
 	<action id="1070" handler="PetSkillUse" option="5771" /> <!-- White Weasel, Fairy Princess, Improved Baby Buffalo, Improved Baby Kookaburra, Improved Baby Cougar, Spirit Shaman, Toy Knight, Turtle Ascetic - Buff control -->
-	<action id="1071" handler="PetSkillUse" option="5761" /> <!-- Tigress - Power Strike -->
+	<action id="1071" handler="ServitorSkillUse" option="5761" /> <!-- Tigress - Power Strike -->
 	<action id="1072" handler="PetSkillUse" option="6046" /> <!-- Toy Knight - Piercing attack -->
 	<action id="1073" handler="PetSkillUse" option="6047" /> <!-- Toy Knight - Whirlwind -->
 	<action id="1074" handler="PetSkillUse" option="6048" /> <!-- Toy Knight - Lance Smash -->
@@ -132,7 +132,7 @@
 	<action id="1081" handler="ServitorSkillUse" option="6042" /> <!-- Phoenix Cleanse -->
 	<action id="1082" handler="ServitorSkillUse" option="6043" /> <!-- Phoenix Flame Feather -->
 	<action id="1083" handler="ServitorSkillUse" option="6044" /> <!-- Phoenix Flame Beak -->
-	<action id="1084" handler="ServitorSkillUse" option="6054" /> <!-- Switch State -->
+	<action id="1084" handler="PetSkillUse" option="6054" /> <!-- Switch State -->
 	<action id="1086" handler="ServitorSkillUse" option="6094" /> <!-- Panther Cancel -->
 	<action id="1087" handler="ServitorSkillUse" option="6095" /> <!-- Panther Dark Claw -->
 	<action id="1088" handler="ServitorSkillUse" option="6096" /> <!-- Panther Fatal Claw -->
@@ -199,20 +199,20 @@
 	<action id="1153" handler="ServitorSkillUse" option="11384" /> <!-- Dark Crusader - Phantom Blow -->
 	<action id="1154" handler="ServitorSkillUse" option="11385" /> <!-- Banshee Queen - Phantom Spike -->
 	<action id="1155" handler="ServitorSkillUse" option="11386" /> <!-- Banshee Queen - Phantom Crash -->
-	<action id="5000" handler="ServitorSkillUse" option="23155" /> <!-- Baby Rudolph - Reindeer Scratch -->
-	<action id="5001" handler="ServitorSkillUse" option="23167" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Rosy Seduction -->
-	<action id="5002" handler="ServitorSkillUse" option="23168" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Critical Seduction -->
-	<action id="5003" handler="ServitorSkillUse" option="5749" /> <!-- Hyum, Lapham, Hyum, Lapham - Thunder Bolt -->
-	<action id="5004" handler="ServitorSkillUse" option="5750" /> <!-- Hyum, Lapham, Hyum, Lapham - Flash -->
-	<action id="5005" handler="ServitorSkillUse" option="5751" /> <!-- Hyum, Lapham, Hyum, Lapham - Lightning Wave -->
-	<action id="5006" handler="ServitorSkillUse" option="5771" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum, Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Buff Control -->
-	<action id="5007" handler="ServitorSkillUse" option="6046" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Piercing Attack -->
-	<action id="5008" handler="ServitorSkillUse" option="6047" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Spin Attack -->
-	<action id="5009" handler="ServitorSkillUse" option="6048" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Smash -->
-	<action id="5010" handler="ServitorSkillUse" option="6049" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Ignite -->
-	<action id="5011" handler="ServitorSkillUse" option="6050" /> <!-- Rekang, Mafum, Rekang, Mafum - Power Smash -->
-	<action id="5012" handler="ServitorSkillUse" option="6051" /> <!-- Rekang, Mafum, Rekang, Mafum - Energy Burst -->
-	<action id="5013" handler="ServitorSkillUse" option="6052" /> <!-- Rekang, Mafum, Rekang, Mafum - Shockwave -->
-	<action id="5014" handler="ServitorSkillUse" option="6053" /> <!-- Rekang, Mafum, Rekang, Mafum - Ignite -->
-	<action id="5015" handler="ServitorSkillUse" option="6054" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum, Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Switch Stance -->
+	<action id="5000" handler="PetSkillUse" option="23155" /> <!-- Baby Rudolph - Reindeer Scratch -->
+	<action id="5001" handler="PetSkillUse" option="23167" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Rosy Seduction -->
+	<action id="5002" handler="PetSkillUse" option="23168" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Critical Seduction -->
+	<action id="5003" handler="PetSkillUse" option="5749" /> <!-- Hyum, Lapham, Hyum, Lapham - Thunder Bolt -->
+	<action id="5004" handler="PetSkillUse" option="5750" /> <!-- Hyum, Lapham, Hyum, Lapham - Flash -->
+	<action id="5005" handler="PetSkillUse" option="5751" /> <!-- Hyum, Lapham, Hyum, Lapham - Lightning Wave -->
+	<action id="5006" handler="PetSkillUse" option="5771" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum, Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Buff Control -->
+	<action id="5007" handler="PetSkillUse" option="6046" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Piercing Attack -->
+	<action id="5008" handler="PetSkillUse" option="6047" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Spin Attack -->
+	<action id="5009" handler="PetSkillUse" option="6048" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Smash -->
+	<action id="5010" handler="PetSkillUse" option="6049" /> <!-- Deseloph, Lilias, Deseloph, Lilias - Ignite -->
+	<action id="5011" handler="PetSkillUse" option="6050" /> <!-- Rekang, Mafum, Rekang, Mafum - Power Smash -->
+	<action id="5012" handler="PetSkillUse" option="6051" /> <!-- Rekang, Mafum, Rekang, Mafum - Energy Burst -->
+	<action id="5013" handler="PetSkillUse" option="6052" /> <!-- Rekang, Mafum, Rekang, Mafum - Shockwave -->
+	<action id="5014" handler="PetSkillUse" option="6053" /> <!-- Rekang, Mafum, Rekang, Mafum - Ignite -->
+	<action id="5015" handler="PetSkillUse" option="6054" /> <!-- Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum, Deseloph, Hyum, Rekang, Lilias, Lapham, Mafum - Switch Stance -->
 </list>
