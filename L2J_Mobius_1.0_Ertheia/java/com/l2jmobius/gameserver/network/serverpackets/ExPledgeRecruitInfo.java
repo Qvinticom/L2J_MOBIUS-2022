@@ -18,9 +18,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
+import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,12 +27,10 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExPledgeRecruitInfo implements IClientOutgoingPacket
 {
-	private final PledgeRecruitInfo _pledgeRecruitInfo;
 	private final L2Clan _clan;
 	
 	public ExPledgeRecruitInfo(int clanId)
 	{
-		_pledgeRecruitInfo = ClanEntryManager.getInstance().getClanById(clanId);
 		_clan = ClanTable.getInstance().getClan(clanId);
 	}
 	
@@ -42,21 +39,16 @@ public class ExPledgeRecruitInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_PLEDGE_RECRUIT_INFO.writeId(packet);
 		
-		if (_pledgeRecruitInfo == null)
+		final SubPledge[] subPledges = _clan.getAllSubPledges();
+		packet.writeS(_clan.getName());
+		packet.writeS(_clan.getLeaderName());
+		packet.writeD(_clan.getLevel());
+		packet.writeD(_clan.getMembersCount());
+		packet.writeD(subPledges.length);
+		for (SubPledge subPledge : subPledges)
 		{
-			packet.writeS(_clan.getName());
-			packet.writeS(_clan.getLeaderName());
-			packet.writeD(_clan.getLevel());
-			packet.writeD(_clan.getMembersCount());
-			packet.writeD(0x00);
-		}
-		else
-		{
-			packet.writeS(_pledgeRecruitInfo.getClan().getName());
-			packet.writeS(_pledgeRecruitInfo.getClan().getLeaderName());
-			packet.writeD(_pledgeRecruitInfo.getClan().getLevel());
-			packet.writeD(_pledgeRecruitInfo.getClan().getMembersCount());
-			packet.writeD(_pledgeRecruitInfo.getKarma());
+			packet.writeD(subPledge.getId());
+			packet.writeS(subPledge.getName());
 		}
 		return true;
 	}

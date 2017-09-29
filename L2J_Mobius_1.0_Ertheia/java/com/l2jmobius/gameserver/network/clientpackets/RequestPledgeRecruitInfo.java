@@ -52,7 +52,6 @@ public class RequestPledgeRecruitInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExPledgeRecruitInfo(_clanId));
+		activeChar.sendPacket(new ExPledgeRecruitInfo(_clanId));
 	}
-	
 }

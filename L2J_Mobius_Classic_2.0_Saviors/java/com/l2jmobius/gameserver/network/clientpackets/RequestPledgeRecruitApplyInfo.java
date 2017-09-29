@@ -43,7 +43,7 @@ public class RequestPledgeRecruitApplyInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		ClanEntryStatus status = ClanEntryStatus.DEFAULT;
+		final ClanEntryStatus status;
 		
 		if ((activeChar.getClan() != null) && activeChar.isClanLeader() && ClanEntryManager.getInstance().isClanRegistred(activeChar.getClanId()))
 		{
@@ -53,8 +53,11 @@ public class RequestPledgeRecruitApplyInfo implements IClientIncomingPacket
 		{
 			status = ClanEntryStatus.WAITING;
 		}
+		else
+		{
+			status = ClanEntryStatus.DEFAULT;
+		}
 		
 		activeChar.sendPacket(new ExPledgeRecruitApplyInfo(status));
 	}
-	
 }
