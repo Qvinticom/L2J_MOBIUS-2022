@@ -494,29 +494,17 @@
 			<value level="4">BranchIcon.Icon.g_therich_i02</value>
 		</icon>
 		<operateType>A2</operateType>
+		<abnormalTime>
+			<value level="1">60</value>
+			<value level="2">60</value>
+			<value level="3">60</value>
+			<value level="4">60</value>
+		</abnormalTime>
 		<mpConsume>10</mpConsume>
 		<hitTime>500</hitTime>
 		<effectPoint>532</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<effects>
-			<effect name="PhysicalSkillPower">
-			<amount>
-				<value level="1">15</value>
-				<value level="2">16</value>
-				<value level="3">17</value>
-				<value level="4">20</value>
-			</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalSkillPower">
-			<amount>
-				<value level="1">15</value>
-				<value level="2">16</value>
-				<value level="3">17</value>
-				<value level="4">20</value>
-			</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PAtk">
 			<amount>
 				<value level="1">15</value>
@@ -527,6 +515,24 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
+			<amount>
+				<value level="1">15</value>
+				<value level="2">16</value>
+				<value level="3">17</value>
+				<value level="4">20</value>
+			</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+			<amount>
+				<value level="1">15</value>
+				<value level="2">16</value>
+				<value level="3">17</value>
+				<value level="4">20</value>
+			</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
 			<amount>
 				<value level="1">15</value>
 				<value level="2">16</value>

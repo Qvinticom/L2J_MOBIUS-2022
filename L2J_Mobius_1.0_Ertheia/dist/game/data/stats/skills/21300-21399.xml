@@ -1130,23 +1130,6 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">971</value>
-					<value level="10">1051</value>
-					<value level="11">1184</value>
-					<value level="12">1307</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">0</value>
@@ -1164,6 +1147,23 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">971</value>
+					<value level="10">609</value>
+					<value level="11">706</value>
+					<value level="12">799</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>
 					<value level="1">4</value>
@@ -1175,9 +1175,9 @@
 					<value level="7">7</value>
 					<value level="8">0</value>
 					<value level="9">7</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">8</value>
+					<value level="11">9</value>
+					<value level="12">10</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1192,9 +1192,9 @@
 					<value level="7">7</value>
 					<value level="8">0</value>
 					<value level="9">7</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">8</value>
+					<value level="11">9</value>
+					<value level="12">10</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1209,9 +1209,9 @@
 					<value level="7">0</value>
 					<value level="8">15</value>
 					<value level="9">15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+					<value level="12">25</value>
 				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
@@ -1226,9 +1226,9 @@
 					<value level="7">0</value>
 					<value level="8">15</value>
 					<value level="9">15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+					<value level="12">25</value>
 				</amount>
 				<attribute>WATER</attribute>
 			</effect>
@@ -1243,9 +1243,9 @@
 					<value level="7">0</value>
 					<value level="8">15</value>
 					<value level="9">15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+					<value level="12">25</value>
 				</amount>
 				<attribute>WIND</attribute>
 			</effect>
@@ -1260,9 +1260,9 @@
 					<value level="7">0</value>
 					<value level="8">15</value>
 					<value level="9">15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+					<value level="12">25</value>
 				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
@@ -1277,9 +1277,9 @@
 					<value level="7">0</value>
 					<value level="8">15</value>
 					<value level="9">15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+					<value level="12">25</value>
 				</amount>
 				<attribute>DARK</attribute>
 			</effect>
@@ -1294,9 +1294,9 @@
 					<value level="7">0</value>
 					<value level="8">15</value>
 					<value level="9">15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">17</value>
+					<value level="11">20</value>
+					<value level="12">25</value>
 				</amount>
 				<attribute>HOLY</attribute>
 			</effect>
@@ -1311,13 +1311,31 @@
 					<value level="7">0</value>
 					<value level="8">13</value>
 					<value level="9">15</value>
+					<value level="10">15</value>
+					<value level="11">15</value>
+					<value level="12">15</value>
+				</amount>
+				<slot>DEBUFF</slot>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">8</value>
+					<value level="4">0</value>
+					<value level="5">13</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">13</value>
+					<value level="9">0</value>
 					<value level="10">0</value>
 					<value level="11">0</value>
 					<value level="12">0</value>
 				</amount>
-				<slot>DEBUFF</slot>
+				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalRate">
+			<effect name="MagicCriticalRate">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1342,12 +1360,12 @@
 					<value level="4">0</value>
 					<value level="5">-15</value>
 					<value level="6">0</value>
-					<value level="7">0</value>
+					<value level="7">-15</value>
 					<value level="8">-15</value>
 					<value level="9">-15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">-15</value>
+					<value level="11">-15</value>
+					<value level="12">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1362,13 +1380,30 @@
 					<value level="7">-15</value>
 					<value level="8">-15</value>
 					<value level="9">-15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">-15</value>
+					<value level="11">-15</value>
+					<value level="12">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">-15</value>
+					<value level="10">-15</value>
+					<value level="11">-15</value>
+					<value level="12">-15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1379,9 +1414,9 @@
 					<value level="7">-15</value>
 					<value level="8">-15</value>
 					<value level="9">-15</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
+					<value level="10">-15</value>
+					<value level="11">-15</value>
+					<value level="12">-15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1398,24 +1433,7 @@
 					<value level="9">510</value>
 					<value level="10">531</value>
 					<value level="11">563</value>
-					<value level="12">0</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MaxCp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">325</value>
-					<value level="5">0</value>
-					<value level="6">490</value>
-					<value level="7">490</value>
-					<value level="8">490</value>
-					<value level="9">510</value>
-					<value level="10">531</value>
-					<value level="11">563</value>
-					<value level="12">0</value>
+					<value level="12">591</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1432,7 +1450,24 @@
 					<value level="9">510</value>
 					<value level="10">531</value>
 					<value level="11">563</value>
-					<value level="12">0</value>
+					<value level="12">591</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">325</value>
+					<value level="5">0</value>
+					<value level="6">490</value>
+					<value level="7">490</value>
+					<value level="8">490</value>
+					<value level="9">510</value>
+					<value level="10">531</value>
+					<value level="11">563</value>
+					<value level="12">591</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1451,7 +1486,7 @@
 					<value level="11">0</value>
 					<value level="12">0</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MpRegen">
 				<amount>
@@ -1468,7 +1503,7 @@
 					<value level="11">0</value>
 					<value level="12">0</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="CpRegen">
 				<amount>
@@ -1485,7 +1520,7 @@
 					<value level="11">0</value>
 					<value level="12">0</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
