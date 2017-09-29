@@ -23,6 +23,7 @@ import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.L2ExtractableProduct;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
@@ -108,7 +109,7 @@ public class ExtractableItems implements IItemHandler
 							continue;
 						}
 						
-						if (item.isStackable() || (createItemAmount == 1))
+						if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 						{
 							final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
 							if (expi.getMaxEnchant() > 0)
@@ -156,7 +157,7 @@ public class ExtractableItems implements IItemHandler
 						continue;
 					}
 					
-					if (item.isStackable() || (createItemAmount == 1))
+					if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 					{
 						final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
 						if (expi.getMaxEnchant() > 0)

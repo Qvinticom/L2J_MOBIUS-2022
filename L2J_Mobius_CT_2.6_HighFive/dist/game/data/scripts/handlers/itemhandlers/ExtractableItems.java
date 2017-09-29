@@ -19,6 +19,7 @@ package handlers.itemhandlers;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.L2ExtractableProduct;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
@@ -72,7 +73,7 @@ public class ExtractableItems implements IItemHandler
 					continue;
 				}
 				
-				if (item.isStackable() || (createItemAmount == 1))
+				if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 				{
 					activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, true);
 				}
