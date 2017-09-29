@@ -3317,7 +3317,6 @@
 		</collision>
 	</npc>
 	<npc id="25875" level="88" type="L2RaidBoss" name="Queen of Darkness" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<skill name="Skill01_ID" id="14701" level="1" />
@@ -3330,7 +3329,7 @@
 		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1277698" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="3042201" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -3357,24 +3356,38 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<death>
-				<group chance="1.2">
-					<item id="17300" min="1" max="1" chance="25" /> <!-- Requiem Retributer -->
-					<item id="17296" min="1" max="1" chance="25" /> <!-- Requiem Thrower -->
-					<item id="17291" min="1" max="1" chance="25" /> <!-- Requiem Cutter -->
-					<item id="17290" min="1" max="1" chance="25" /> <!-- Requiem Shaper -->
-				</group>
-				<group chance="17.486">
-					<item id="17318" min="1" max="1" chance="24.059247397918" /> <!-- Immortal Gloves Robe -->
-					<item id="17308" min="1" max="1" chance="23.881962713028" /> <!-- Immortal Boots Heavy Armor -->
-					<item id="17304" min="1" max="1" chance="16.407411643601" /> <!-- Immortal Helmet Heavy Armor -->
-					<item id="17310" min="1" max="1" chance="16.121468603454" /> <!-- Immortal Leather Helmet Light Armor -->
-					<item id="17313" min="1" max="1" chance="11.763696671623" /> <!-- Immortal Leather Gloves Light Armor -->
-					<item id="17319" min="1" max="1" chance="7.7662129703763" /> <!-- Immortal Shoes Robe -->
-				</group>
-				<group chance="30.061">
-					<item id="17527" min="1" max="1" chance="92.478626792189" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="17526" min="1" max="1" chance="7.5213732078108" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
+				<item id="17318" min="1" max="1" chance="4.284" /> <!-- Immortal Gloves -->
+				<item id="17308" min="1" max="1" chance="4.270" /> <!-- Immortal Boots -->
+				<item id="17304" min="1" max="1" chance="2.865" /> <!-- Immortal Helmet -->
+				<item id="17310" min="1" max="1" chance="2.854" /> <!-- Immortal Leather Helmet -->
+				<item id="17313" min="1" max="1" chance="2.088" /> <!-- Immortal Leather Gloves -->
+				<item id="17319" min="1" max="1" chance="2.714" /> <!-- Immortal Shoes -->
+				<item id="17300" min="1" max="1" chance="0.75" /> <!-- Requiem Retributer -->
+				<item id="17296" min="1" max="1" chance="0.75" /> <!-- Requiem Thrower -->
+				<item id="17291" min="1" max="1" chance="0.75" /> <!-- Requiem Cutter -->
+				<item id="17290" min="1" max="1" chance="0.75" /> <!-- Requiem Shaper -->
+				<item id="17527" min="1" max="1" chance="28.17" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="2.314" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46474" min="1" max="1" chance="1.173" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.077" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="1.061" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 			</death>
 			<lucky_corpse>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
