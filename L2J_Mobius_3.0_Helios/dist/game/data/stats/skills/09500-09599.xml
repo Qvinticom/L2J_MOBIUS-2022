@@ -703,7 +703,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9529" toLevel="1" name="XP Rune II (Lv. 1-95) 100%">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Obtained XP/SP + 100%. Lv. 95 or below. -->
 		<icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
 		<operateType>P</operateType>
@@ -716,6 +715,16 @@
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9530" toLevel="1" name="Jang Heejin Agathion's Effect">
 		<!-- AUTO GENERATED SKILL -->
