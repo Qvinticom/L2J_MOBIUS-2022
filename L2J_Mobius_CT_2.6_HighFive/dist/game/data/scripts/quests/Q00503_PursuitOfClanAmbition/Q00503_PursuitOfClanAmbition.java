@@ -307,8 +307,8 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 			}
 			case "SPAWN_WITCH":
 			{
-				addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0, false, 5000);
-				addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0, false, 5000);
+				addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0);
+				addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0);
 				break;
 			}
 		}
@@ -803,13 +803,13 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 		{
 			case WITCH_ATHREA:
 			{
-				startQuestTimer("DESPAWN_WITCH_ATHREA", 5000, npc, null);
+				startQuestTimer("DESPAWN_WITCH_ATHREA", 180000, npc, null);
 				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WAR_AND_DEATH));
 				break;
 			}
 			case WITCH_KALIS:
 			{
-				startQuestTimer("DESPAWN_WITCH_KALIS", 5000, npc, null);
+				startQuestTimer("DESPAWN_WITCH_KALIS", 180000, npc, null);
 				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AMBITION_AND_POWER));
 				break;
 			}

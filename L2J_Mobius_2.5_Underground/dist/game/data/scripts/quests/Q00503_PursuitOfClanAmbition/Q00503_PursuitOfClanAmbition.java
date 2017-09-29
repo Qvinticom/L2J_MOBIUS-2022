@@ -804,7 +804,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 			{
 				if (npc.isScriptValue(50301))
 				{
-					startQuestTimer("DESPAWN_WITCH_ATHREA", 5000, npc, null);
+					startQuestTimer("DESPAWN_WITCH_ATHREA", 180000, npc, null);
 					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WAR_AND_DEATH));
 				}
 				break;
@@ -813,7 +813,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 			{
 				if (npc.isScriptValue(50302))
 				{
-					startQuestTimer("DESPAWN_WITCH_KALIS", 5000, npc, null);
+					startQuestTimer("DESPAWN_WITCH_KALIS", 180000, npc, null);
 					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AMBITION_AND_POWER));
 				}
 				break;
