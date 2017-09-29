@@ -582,7 +582,7 @@ public class GeoEngine
 		final int ty = target.getY();
 		final int tz = target.getZ();
 		
-		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld(), false))
+		if (!target.isDoor() && DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld(), false))
 		{
 			return false;
 		}
