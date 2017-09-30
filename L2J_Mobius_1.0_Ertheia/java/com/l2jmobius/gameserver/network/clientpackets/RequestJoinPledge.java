@@ -75,7 +75,7 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 		
 		final String pledgeName = activeChar.getClan().getName();
 		final String subPledgeName = (activeChar.getClan().getSubPledge(_pledgeType) != null ? activeChar.getClan().getSubPledge(_pledgeType).getName() : null);
-		target.sendPacket(new AskJoinPledge(activeChar.getObjectId(), subPledgeName, _pledgeType, pledgeName));
+		target.sendPacket(new AskJoinPledge(activeChar, subPledgeName, _pledgeType, pledgeName));
 	}
 	
 	public int getPledgeType()
