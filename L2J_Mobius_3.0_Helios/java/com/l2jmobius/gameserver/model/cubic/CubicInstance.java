@@ -18,12 +18,14 @@ package com.l2jmobius.gameserver.model.cubic;
 
 import java.util.Comparator;
 import java.util.concurrent.ScheduledFuture;
+import java.util.stream.Stream;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2CubicTemplate;
@@ -52,7 +54,7 @@ public class CubicInstance
 	
 	private void activate()
 	{
-		_skillUseTask = ThreadPoolManager.scheduleAtFixedRate(this::tryToUseSkill, 0, _template.getDelay() * 1000);
+		_skillUseTask = ThreadPoolManager.scheduleAtFixedRate(this::readyToUseSkill, 0, _template.getDelay() * 1000);
 		_expireTask = ThreadPoolManager.schedule(this::deactivate, _template.getDuration() * 1000);
 	}
 	
@@ -74,23 +76,120 @@ public class CubicInstance
 		_owner.broadcastCharInfo();
 	}
 	
-	private void tryToUseSkill()
+	private void readyToUseSkill()
+	{
+		switch (_template.getTargetType())
+		{
+			case TARGET:
+			{
+				actionToCurrentTarget();
+				break;
+			}
+			case BY_SKILL:
+			{
+				actionToTargetBySkill();
+				break;
+			}
+			case HEAL:
+			{
+				actionHeal();
+				break;
+			}
+			case MASTER:
+			{
+				actionToMaster();
+				break;
+			}
+		}
+	}
+	
+	private CubicSkill chooseSkill()
 	{
 		final double random = Rnd.nextDouble() * 100;
 		double commulativeChance = 0;
 		for (CubicSkill cubicSkill : _template.getSkills())
 		{
-			commulativeChance += cubicSkill.getTriggerRate();
-			if (commulativeChance > random)
+			if ((commulativeChance += cubicSkill.getTriggerRate()) > random)
+			{
+				return cubicSkill;
+			}
+		}
+		
+		return null;
+	}
+	
+	private void actionToCurrentTarget()
+	{
+		final CubicSkill skill = chooseSkill();
+		final L2Object target = _owner.getTarget();
+		if ((skill != null) && (target != null))
+		{
+			tryToUseSkill(target, skill);
+		}
+	}
+	
+	private void actionToTargetBySkill()
+	{
+		final CubicSkill skill = chooseSkill();
+		if (skill != null)
+		{
+			switch (skill.getTargetType())
+			{
+				case TARGET:
+				{
+					final L2Object target = _owner.getTarget();
+					if (target != null)
+					{
+						tryToUseSkill(target, skill);
+					}
+					break;
+				}
+				case HEAL:
+				{
+					actionHeal();
+					break;
+				}
+				case MASTER:
+				{
+					tryToUseSkill(_owner, skill);
+					break;
+				}
+			}
+		}
+	}
+	
+	private void actionHeal()
+	{
+		final double random = Rnd.nextDouble() * 100;
+		double commulativeChance = 0;
+		for (CubicSkill cubicSkill : _template.getSkills())
+		{
+			if ((commulativeChance += cubicSkill.getTriggerRate()) > random)
 			{
 				final Skill skill = cubicSkill.getSkill();
 				if ((skill != null) && (Rnd.get(100) < cubicSkill.getSuccessRate()))
 				{
-					final L2Character target = findTarget(cubicSkill);
+					final L2Party party = _owner.getParty();
+					Stream<L2Character> stream;
+					if (party != null)
+					{
+						stream = L2World.getInstance().getVisibleObjects(_owner, L2Character.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
+					}
+					else
+					{
+						stream = _owner.getServitorsAndPets().stream().filter(summon -> _template.validateConditions(this, _owner, summon) && cubicSkill.validateConditions(this, _owner, summon)).map(L2Character.class::cast);
+						
+					}
+					
+					if (_template.validateConditions(this, _owner, _owner) && cubicSkill.validateConditions(this, _owner, _owner))
+					{
+						stream = Stream.concat(stream, Stream.of(_owner));
+					}
+					
+					final L2Character target = stream.sorted(Comparator.comparingInt(L2Character::getCurrentHpPercent)).findFirst().orElse(null);
 					if (target != null)
 					{
-						_owner.broadcastPacket(new MagicSkillUse(_owner, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), skill.getReuseDelay()));
-						skill.activateSkill(_owner, target);
+						activateCubicSkill(skill, target);
 						break;
 					}
 				}
@@ -98,115 +197,49 @@ public class CubicInstance
 		}
 	}
 	
-	private L2Character findTarget(CubicSkill cubicSkill)
+	private void actionToMaster()
 	{
-		switch (_template.getTargetType())
+		final CubicSkill skill = chooseSkill();
+		if (skill != null)
 		{
-			case BY_SKILL:
+			tryToUseSkill(_owner, skill);
+		}
+	}
+	
+	private void tryToUseSkill(L2Object target, CubicSkill cubicSkill)
+	{
+		final Skill skill = cubicSkill.getSkill();
+		if ((_template.getTargetType() != CubicTargetType.MASTER) && !((_template.getTargetType() == CubicTargetType.BY_SKILL) && (cubicSkill.getTargetType() == CubicTargetType.MASTER)))
+		{
+			target = skill.getTarget(_owner, target, false, false, false);
+		}
+		
+		if (target != null)
+		{
+			if (target.isDoor() && !cubicSkill.canUseOnStaticObjects())
 			{
-				if (!_template.validateConditions(this, _owner, _owner))
-				{
-					return null;
-				}
-				
-				final Skill skill = cubicSkill.getSkill();
-				if (skill != null)
-				{
-					switch (cubicSkill.getTargetType())
-					{
-						case HEAL:
-						{
-							final L2Party party = _owner.getParty();
-							if (party != null)
-							{
-								return party.getMembers().stream().filter(member -> cubicSkill.validateConditions(this, _owner, member) && member.isInsideRadius(_owner, Config.ALT_PARTY_RANGE, true, true)).sorted(Comparator.comparingInt(L2Character::getCurrentHpPercent).reversed()).findFirst().orElse(null);
-							}
-							if (cubicSkill.validateConditions(this, _owner, _owner))
-							{
-								return _owner;
-							}
-							break;
-						}
-						case MASTER:
-						{
-							if (cubicSkill.validateConditions(this, _owner, _owner))
-							{
-								return _owner;
-							}
-							break;
-						}
-						case TARGET:
-						{
-							final L2Object possibleTarget = skill.getTarget(_owner, false, false, false);
-							if ((possibleTarget != null) && possibleTarget.isCharacter())
-							{
-								if (cubicSkill.validateConditions(this, _owner, (L2Character) possibleTarget))
-								{
-									return (L2Character) possibleTarget;
-								}
-							}
-							break;
-						}
-					}
-				}
-				break;
+				return;
 			}
-			case TARGET:
+			
+			if (_template.validateConditions(this, _owner, target) && cubicSkill.validateConditions(this, _owner, target))
 			{
-				switch (cubicSkill.getTargetType())
+				if (Rnd.get(100) < cubicSkill.getSuccessRate())
 				{
-					case HEAL:
-					{
-						final L2Party party = _owner.getParty();
-						if (party != null)
-						{
-							return party.getMembers().stream().filter(member -> cubicSkill.validateConditions(this, _owner, member) && member.isInsideRadius(_owner, Config.ALT_PARTY_RANGE, true, true)).sorted(Comparator.comparingInt(L2Character::getCurrentHpPercent).reversed()).findFirst().orElse(null);
-						}
-						if (cubicSkill.validateConditions(this, _owner, _owner))
-						{
-							return _owner;
-						}
-						break;
-					}
-					case MASTER:
-					{
-						if (cubicSkill.validateConditions(this, _owner, _owner))
-						{
-							return _owner;
-						}
-						break;
-					}
-					case TARGET:
-					{
-						final L2Object targetObject = _owner.getTarget();
-						if ((targetObject != null) && targetObject.isCharacter())
-						{
-							final L2Character target = (L2Character) targetObject;
-							if (cubicSkill.validateConditions(this, _owner, target))
-							{
-								return target;
-							}
-						}
-						break;
-					}
+					activateCubicSkill(skill, target);
 				}
-				break;
-			}
-			case HEAL:
-			{
-				final L2Party party = _owner.getParty();
-				if (party != null)
-				{
-					return party.getMembers().stream().filter(member -> member.isInsideRadius(_owner, Config.ALT_PARTY_RANGE, true, true)).sorted(Comparator.comparingInt(L2Character::getCurrentHpPercent).reversed()).findFirst().orElse(null);
-				}
-				if (cubicSkill.validateConditions(this, _owner, _owner))
-				{
-					return _owner;
-				}
-				break;
 			}
 		}
-		return null;
+	}
+	
+	private void activateCubicSkill(Skill skill, L2Object target)
+	{
+		if (!_owner.hasSkillReuse(skill.getReuseHashCode()))
+		{
+			_caster.broadcastPacket(new MagicSkillUse(_owner, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), skill.getReuseDelay()));
+			skill.activateSkill(this, target);
+			
+			_owner.addTimeStamp(skill, skill.getReuseDelay());
+		}
 	}
 	
 	/**

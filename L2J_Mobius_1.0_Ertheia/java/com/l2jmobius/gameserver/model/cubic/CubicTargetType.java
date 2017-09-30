@@ -21,7 +21,8 @@ package com.l2jmobius.gameserver.model.cubic;
  */
 public enum CubicTargetType
 {
-	BY_SKILL,
 	TARGET,
-	HEAL;
+	BY_SKILL,
+	HEAL,
+	MASTER;
 }

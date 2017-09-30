@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.cubic.CubicInstance;
@@ -109,7 +110,7 @@ public class L2CubicTemplate implements ICubicConditionHolder
 	}
 	
 	@Override
-	public boolean validateConditions(CubicInstance cubic, L2Character owner, L2Character target)
+	public boolean validateConditions(CubicInstance cubic, L2Character owner, L2Object target)
 	{
 		return _conditions.isEmpty() || _conditions.stream().allMatch(condition -> condition.test(cubic, owner, target));
 	}

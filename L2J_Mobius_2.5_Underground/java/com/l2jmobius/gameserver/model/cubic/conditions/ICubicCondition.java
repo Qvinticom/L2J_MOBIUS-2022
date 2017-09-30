@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.cubic.conditions;
 
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.cubic.CubicInstance;
 
@@ -24,5 +25,5 @@ import com.l2jmobius.gameserver.model.cubic.CubicInstance;
  */
 public interface ICubicCondition
 {
-	boolean test(CubicInstance cubic, L2Character owner, L2Character target);
+	boolean test(CubicInstance cubic, L2Character owner, L2Object target);
 }

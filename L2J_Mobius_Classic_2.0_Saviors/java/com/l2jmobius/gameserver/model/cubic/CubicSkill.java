@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.cubic.conditions.ICubicCondition;
@@ -33,7 +34,7 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder
 	private final int _triggerRate;
 	private final int _successRate;
 	private final boolean _canUseOnStaticObjects;
-	private final CubicSkillTargetType _targetType;
+	private final CubicTargetType _targetType;
 	private final List<ICubicCondition> _conditions = new ArrayList<>();
 	private final boolean _targetDebuff;
 	
@@ -43,7 +44,7 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder
 		_triggerRate = set.getInt("triggerRate", 100);
 		_successRate = set.getInt("successRate", 100);
 		_canUseOnStaticObjects = set.getBoolean("canUseOnStaticObjects", false);
-		_targetType = set.getEnum("target", CubicSkillTargetType.class, CubicSkillTargetType.TARGET);
+		_targetType = set.getEnum("target", CubicTargetType.class, CubicTargetType.TARGET);
 		_targetDebuff = set.getBoolean("targetDebuff", false);
 	}
 	
@@ -62,7 +63,7 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder
 		return _canUseOnStaticObjects;
 	}
 	
-	public CubicSkillTargetType getTargetType()
+	public CubicTargetType getTargetType()
 	{
 		return _targetType;
 	}
@@ -73,9 +74,9 @@ public class CubicSkill extends SkillHolder implements ICubicConditionHolder
 	}
 	
 	@Override
-	public boolean validateConditions(CubicInstance cubic, L2Character owner, L2Character target)
+	public boolean validateConditions(CubicInstance cubic, L2Character owner, L2Object target)
 	{
-		return (!_targetDebuff || (_targetDebuff && (target.getEffectList().getDebuffCount() > 0))) && (_conditions.isEmpty() || _conditions.stream().allMatch(condition -> condition.test(cubic, owner, target)));
+		return (!_targetDebuff || (_targetDebuff && target.isCharacter() && (((L2Character) target).getEffectList().getDebuffCount() > 0))) && (_conditions.isEmpty() || _conditions.stream().allMatch(condition -> condition.test(cubic, owner, target)));
 	}
 	
 	@Override

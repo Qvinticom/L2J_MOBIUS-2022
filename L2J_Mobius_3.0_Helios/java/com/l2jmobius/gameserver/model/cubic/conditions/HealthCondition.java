@@ -16,7 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.cubic.conditions;
 
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.cubic.CubicInstance;
 
 /**
@@ -34,10 +36,14 @@ public class HealthCondition implements ICubicCondition
 	}
 	
 	@Override
-	public boolean test(CubicInstance cubic, L2Character owner, L2Character target)
+	public boolean test(CubicInstance cubic, L2Character owner, L2Object target)
 	{
-		final double hpPer = target.getCurrentHpPercent();
-		return (hpPer > _min) && (hpPer < _max);
+		if (target.isCharacter() || target.isDoor())
+		{
+			final double hpPer = (target.isDoor() ? (L2DoorInstance) target : (L2Character) target).getCurrentHpPercent();
+			return (hpPer > _min) && (hpPer < _max);
+		}
+		return false;
 	}
 	
 	@Override
