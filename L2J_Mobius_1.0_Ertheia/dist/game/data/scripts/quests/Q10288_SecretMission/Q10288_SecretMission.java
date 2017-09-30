@@ -114,7 +114,7 @@ public class Q10288_SecretMission extends Quest
 		{
 			return "32780-05.html";
 		}
-		return "html/default/32780.htm";
+		return "32780.html";
 	}
 	
 	@Override
