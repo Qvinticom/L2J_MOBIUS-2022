@@ -12345,7 +12345,7 @@
 		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
 		<openStatus default="close" />
 	</door>
-	<door id="23180001" name="hubris_3F_001" childId="23180002">
+	<door id="23180001" name="hubris_3F_001">
 		<nodes nodeZ="-2156">
 			<node x="113832" y="16890" />
 			<node x="113937" y="16996" />
@@ -12355,7 +12355,7 @@
 		<location x="113876" y="16952" z="-1979" height="355" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" randomTime="120" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" />
 	</door>
 	<door id="23180002" name="hubris_3F_002">
 		<nodes nodeZ="-2156">
@@ -12367,10 +12367,9 @@
 		<location x="113771" y="16849" z="-1979" height="355" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" randomTime="120" />
-		<event masterClose="act_close" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" />
 	</door>
-	<door id="23180003" name="hubris_8F_001" childId="23180004">
+	<door id="23180003" name="hubris_8F_001">
 		<nodes nodeZ="3937">
 			<node x="113178" y="15931" />
 			<node x="113316" y="15874" />
@@ -12380,7 +12379,7 @@
 		<location x="113252" y="15914" z="4114" height="355" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" randomTime="120" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" />
 	</door>
 	<door id="23180004" name="hubris_8F_002">
 		<nodes nodeZ="3938">
@@ -12392,8 +12391,7 @@
 		<location x="113117" y="15970" z="4115" height="355" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" randomTime="120" />
-		<event masterClose="act_close" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" />
 	</door>
 	<door id="23180005" name="hubris_11F_002">
 		<nodes nodeZ="6968">
@@ -12405,10 +12403,9 @@
 		<location x="113263" y="15764" z="7145" height="355" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120" randomTime="120" />
-		<event masterClose="act_close" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="120" openTime="120"/>
 	</door>
-	<door id="23180006" name="hubris_11F_001" childId="23180005">
+	<door id="23180006" name="hubris_11F_001">
 		<nodes nodeZ="6968">
 			<node x="113323" y="15806" />
 			<node x="113429" y="15912" />
