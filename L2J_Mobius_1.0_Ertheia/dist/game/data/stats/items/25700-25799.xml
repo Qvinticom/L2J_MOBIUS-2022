@@ -763,16 +763,38 @@
 	<item id="25790" name="Ancient Hero's Weapon Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 14 Ancient Hero weapons (15-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
-	</item>
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="37868" min="1" max="1" chance="100" /> 
+			<item id="37869" min="1" max="1" chance="100" /> 
+			<item id="37870" min="1" max="1" chance="100" /> 
+			<item id="37871" min="1" max="1" chance="100" /> 
+			<item id="37872" min="1" max="1" chance="100" /> 
+			<item id="37873" min="1" max="1" chance="100" /> 
+			<item id="37874" min="1" max="1" chance="100" /> 
+			<item id="37875" min="1" max="1" chance="100" /> 
+			<item id="37876" min="1" max="1" chance="100" /> 
+			<item id="37877" min="1" max="1" chance="100" />
+			<item id="37878" min="1" max="1" chance="100" /> 
+			<item id="37879" min="1" max="1" chance="100" /> 
+			<item id="37880" min="1" max="1" chance="100" />
+			<item id="37881" min="1" max="1" chance="100" />    
+		</capsuled_items>
+ 	</item>
 	<item id="25791" name="Exotic Chest" type="EtcItem">
 		<!-- Has a chance of obtaining a Mysterious Soulshot, Mysterious Blessed Spiritshot, Gemstone (R-grade), Crystal (R-grade), Large Firecracker, Attribute Crystal, Attribute Stone, Scroll: PK, Blessed Scroll of Resurrection, Superior Giant's Codex, croll: Enchant Armor (R-grade), Riding Manual: Lyn Draco, Rare Soul Crystal Pack (R-grade), Kaliel's Energy Box, Dark/Blood Amaranthine Enhancement Stone, Elcyum, Elcyum Powder/Crystal, Life Stone Instilled with Giants' Power, Giant's Energy, or 1 of the 3 Energy of Destruction boxes. -->
 		<set name="icon" val="icon.present_of_destination_event" />

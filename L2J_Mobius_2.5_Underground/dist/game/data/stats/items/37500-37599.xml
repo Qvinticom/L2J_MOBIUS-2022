@@ -380,6 +380,8 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="price" val="1730000" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13539" level="1" /> <!-- Baium's Soul Ring -->
 		</skills>
@@ -398,6 +400,8 @@
 		<set name="price" val="3450000" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="NECKLACE" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="13540" level="1" /> <!-- Frintezza's Soul Necklace -->
 		</skills>
