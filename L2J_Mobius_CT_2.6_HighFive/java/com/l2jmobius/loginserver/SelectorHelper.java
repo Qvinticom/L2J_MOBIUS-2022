@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.loginserver;
 
+import java.net.UnknownHostException;
 import java.nio.channels.SocketChannel;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -59,7 +60,7 @@ public class SelectorHelper implements IMMOExecutor<L2LoginClient>, IClientFacto
 	}
 	
 	@Override
-	public boolean accept(SocketChannel sc)
+	public boolean accept(SocketChannel sc) throws UnknownHostException
 	{
 		return _ipv4filter.accept(sc) && !LoginController.getInstance().isBannedAddress(sc.socket().getInetAddress());
 	}

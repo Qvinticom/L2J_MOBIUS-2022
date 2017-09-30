@@ -599,16 +599,17 @@ public final class GameServerTable implements IXmlReader
 		 * @param addr the addr
 		 * @return the server address
 		 */
+		@SuppressWarnings("unlikely-arg-type")
 		public String getServerAddress(InetAddress addr)
 		{
 			for (GameServerAddress a : _addrs)
 			{
-				if (a.getAddress().equals(addr.getAddress()))
+				if (a.equals(addr))
 				{
 					return a.getServerAddress();
 				}
 			}
-			return null; // should not happens
+			return null; // should not happen
 		}
 		
 		/**
