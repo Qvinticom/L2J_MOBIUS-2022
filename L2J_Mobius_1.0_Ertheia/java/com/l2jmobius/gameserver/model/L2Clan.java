@@ -2265,7 +2265,7 @@ public class L2Clan implements IIdentifiable, INamable
 			activeChar.sendPacket(sm);
 			return false;
 		}
-		if (((target.getLevel() > 40) || (target.getClassId().level() >= 2)) && (pledgeType == -1))
+		if (((target.getLevel() > 75) || (target.getClassId().level() >= 3)) && (pledgeType == -1))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_MEET_THE_REQUIREMENTS_TO_JOIN_A_CLAN_ACADEMY);
 			sm.addString(target.getName());
