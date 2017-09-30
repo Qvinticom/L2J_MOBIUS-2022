@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.loginserver.network.mmocore;
 
-import java.net.UnknownHostException;
 import java.nio.channels.SocketChannel;
 
 /**
@@ -24,5 +23,5 @@ import java.nio.channels.SocketChannel;
  */
 public interface IAcceptFilter
 {
-	boolean accept(SocketChannel sc) throws UnknownHostException;
+	boolean accept(SocketChannel sc);
 }
