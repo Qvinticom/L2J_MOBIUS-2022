@@ -257,70 +257,214 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="27634" toLevel="1" name="Gran Kain's Necklace">
+	<skill id="27634" toLevel="6" name="Gran Kain's Necklace">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">50</value>
+					<value level="3">60</value>
+					<value level="4">60</value>
+					<value level="5">70</value>
+					<value level="6">70</value>
+				</amount>
 				<attribute>DARK</attribute>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
-			<effect name="DamageShieldResist">
-				<amount>5</amount>
+			<effect name="DamageShield">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</amount>
 			</effect>
 			<effect name="PAtk">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxMp">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">17</value>
+					<value level="3">25</value>
+					<value level="4">29</value>
+					<value level="5">35</value>
+					<value level="6">50</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait">
-				<SHOCK>25</SHOCK>
-				<HATE>25</HATE>
-				<BOW>25</BOW>
-				<CROSSBOW>25</CROSSBOW>
-				<DEPORT>25</DEPORT>
-				<DISARM>15</DISARM>
-				<KNOCKBACK>15</KNOCKBACK>
+				<SHOCK>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</SHOCK>
+				<HATE>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</HATE>
+				<BOW>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</CROSSBOW>
+				<DEPORT>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</DEPORT>
+				<DISARM>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</DISARM>
+				<KNOCKBACK>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</KNOCKBACK>
 			</effect>
 		</effects>
 	</skill>
@@ -659,70 +803,214 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27640" toLevel="1" name="Einhasad's Necklace">
+	<skill id="27640" toLevel="6" name="Einhasad's Necklace">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">50</value>
+					<value level="3">60</value>
+					<value level="4">60</value>
+					<value level="5">70</value>
+					<value level="6">70</value>
+				</amount>
 				<attribute>HOLY</attribute>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-13</value>
+					<value level="5">-14</value>
+					<value level="6">-15</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
-			<effect name="DamageShieldResist">
-				<amount>5</amount>
+			<effect name="DamageShield">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</amount>
 			</effect>
 			<effect name="PAtk">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">10</value>
+					<value level="6">10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxMp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">17</value>
+					<value level="3">25</value>
+					<value level="4">29</value>
+					<value level="5">35</value>
+					<value level="6">50</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait">
-				<SHOCK>25</SHOCK>
-				<HATE>25</HATE>
-				<DISARM>25</DISARM>
-				<KNOCKBACK>25</KNOCKBACK>
-				<BOW>15</BOW>
-				<CROSSBOW>15</CROSSBOW>
-				<DEPORT>15</DEPORT>
+				<SHOCK>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</SHOCK>
+				<HATE>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</HATE>
+				<DISARM>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</DISARM>
+				<KNOCKBACK>
+					<value level="1">25</value>
+					<value level="2">26</value>
+					<value level="3">27</value>
+					<value level="4">28</value>
+					<value level="5">29</value>
+					<value level="6">30</value>
+				</KNOCKBACK>
+				<BOW>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</CROSSBOW>
+				<DEPORT>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</DEPORT>
 			</effect>
 		</effects>
 	</skill>
@@ -1061,74 +1349,324 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27646" toLevel="1" name="Pa'agrio's Earring">
+	<skill id="27646" toLevel="6" name="Pa'agrio's Earring">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
+				<amount>
+					<value level="1">70</value>
+					<value level="2">75</value>
+					<value level="3">80</value>
+					<value level="4">85</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>WIT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>MEN</stat>
 			</effect>
 			<effect name="VampiricAttack">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+				</amount>
 				<chance>100</chance>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-5</value>
+					<value level="3">-6</value>
+					<value level="4">-6</value>
+					<value level="5">-7</value>
+					<value level="6">-7</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-5</value>
+					<value level="3">-6</value>
+					<value level="4">-6</value>
+					<value level="5">-7</value>
+					<value level="6">-7</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-5</value>
+					<value level="3">-6</value>
+					<value level="4">-6</value>
+					<value level="5">-7</value>
+					<value level="6">-7</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="HealEffect">
-				<amount>10</amount>
+			<effect name="HealPercent">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">14</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalSkillPower">
-				<amount>80</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">14</value>
+					<value level="3">15</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReflectMagic">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">14</value>
+					<value level="3">15</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalSkillPower">
-				<amount>80</amount>
+			<effect name="SkillEvasion">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">8</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">80</value>
+					<value level="2">88</value>
+					<value level="3">96</value>
+					<value level="4">104</value>
+					<value level="5">108</value>
+					<value level="6">112</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait">
-				<PARALYZE>15</PARALYZE>
-				<DERANGEMENT>15</DERANGEMENT>
-				<SHOCK>15</SHOCK>
-				<KNOCKBACK>15</KNOCKBACK>
-				<AIRBIND>10</AIRBIND>
-				<CHANGEBODY>10</CHANGEBODY>
+				<PARALYZE>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">14</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</PARALYZE>
+				<HOLD>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">14</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</HOLD>
+				<AIRBIND>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</AIRBIND>
+				<CHANGEBODY>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</CHANGEBODY>
+				<SHOCK>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</SHOCK>
+				<KNOCKBACK>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</KNOCKBACK>
+				<KNOCKDOWN>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</KNOCKDOWN>
+				<PULL>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</PULL>
+				<DERANGEMENT>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</DERANGEMENT>
+				<TURN_STONE>
+					<value level="1">40</value>
+					<value level="2">42</value>
+					<value level="3">44</value>
+					<value level="4">46</value>
+					<value level="5">48</value>
+					<value level="6">50</value>
+				</TURN_STONE>
+				<BLEED>
+					<value level="1">40</value>
+					<value level="2">42</value>
+					<value level="3">44</value>
+					<value level="4">46</value>
+					<value level="5">48</value>
+					<value level="6">50</value>
+				</BLEED>
+			</effect>
+			<effect name="RealDamage">
+				<power>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">7</value>
+				</power>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="RealDamage">
+				<power>
+					<value level="1">0</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">10</value>
+				</power>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="AreaDamage">
+				<amount>
+					<value level="1">-30</value>
+					<value level="2">-32</value>
+					<value level="3">-34</value>
+					<value level="4">-36</value>
+					<value level="5">-38</value>
+					<value level="6">-40</value>
+				</amount>
+					<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1487,74 +2025,313 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27652" toLevel="1" name="Eva's Earring">
+	<skill id="27652" toLevel="6" name="Eva's Earring">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
+				<amount>
+					<value level="1">70</value>
+					<value level="2">75</value>
+					<value level="3">80</value>
+					<value level="4">85</value>
+					<value level="5">90</value>
+					<value level="6">100</value>
+				</amount>
 				<attribute>WATER</attribute>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>WIT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>MEN</stat>
 			</effect>
 			<effect name="VampiricAttack">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">6</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+				</amount>
 				<chance>100</chance>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-5</value>
+					<value level="3">-6</value>
+					<value level="4">-6</value>
+					<value level="5">-7</value>
+					<value level="6">-7</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-5</value>
+					<value level="3">-6</value>
+					<value level="4">-6</value>
+					<value level="5">-7</value>
+					<value level="6">-7</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-5</amount>
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-5</value>
+					<value level="3">-6</value>
+					<value level="4">-6</value>
+					<value level="5">-7</value>
+					<value level="6">-7</value>
+				</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">16</value>
+					<value level="3">17</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">14</value>
+					<value level="3">15</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReflectMagic">
+				<amount>
+					<value level="1">13</value>
+					<value level="2">14</value>
+					<value level="3">15</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillEvasion">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">8</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealPercent">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">9</value>
+					<value level="4">11</value>
+					<value level="5">13</value>
+					<value level="6">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="HealEffect">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>160</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicalSkillPower">
-				<amount>160</amount>
+				<amount>
+					<value level="1">160</value>
+					<value level="2">168</value>
+					<value level="3">176</value>
+					<value level="4">184</value>
+					<value level="5">188</value>
+					<value level="6">192</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait">
-				<PARALYZE>15</PARALYZE>
-				<DERANGEMENT>15</DERANGEMENT>
-				<AIRBIND>15</AIRBIND>
-				<CHANGEBODY>15</CHANGEBODY>
-				<SHOCK>10</SHOCK>
-				<KNOCKBACK>10</KNOCKBACK>
+				<PARALYZE>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">14</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</PARALYZE>
+				<HOLD>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">14</value>
+					<value level="4">16</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</HOLD>
+				<AIRBIND>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</AIRBIND>
+				<CHANGEBODY>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</CHANGEBODY>
+				<SHOCK>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</SHOCK>
+				<KNOCKBACK>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</KNOCKBACK>
+				<KNOCKDOWN>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</KNOCKDOWN>
+				<PULL>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</PULL>
+				<DERANGEMENT>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">34</value>
+					<value level="4">36</value>
+					<value level="5">38</value>
+					<value level="6">40</value>
+				</DERANGEMENT>
+				<TURN_STONE>
+					<value level="1">40</value>
+					<value level="2">42</value>
+					<value level="3">44</value>
+					<value level="4">46</value>
+					<value level="5">48</value>
+					<value level="6">50</value>
+				</TURN_STONE>
+				<BLEED>
+					<value level="1">40</value>
+					<value level="2">42</value>
+					<value level="3">44</value>
+					<value level="4">46</value>
+					<value level="5">48</value>
+					<value level="6">50</value>
+				</BLEED>
+			</effect>
+			<effect name="AreaDamage">
+				<amount>
+					<value level="1">-30</value>
+					<value level="2">-32</value>
+					<value level="3">-34</value>
+					<value level="4">-36</value>
+					<value level="5">-38</value>
+					<value level="6">-40</value>
+				</amount>
+					<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1913,76 +2690,239 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27658" toLevel="1" name="Sayha's Ring">
+	<skill id="27658" toLevel="6" name="Sayha's Ring">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<attribute>WIND</attribute>
-			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>CHA</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
+				</amount>
 				<stat>LUC</stat>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>6</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>6</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="SkillCriticalDamage">
-				<amount>10</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">20</value>
+					<value level="3">21</value>
+					<value level="4">21</value>
+					<value level="5">22</value>
+					<value level="6">22</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalDamage">
-				<amount>5</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">20</value>
+					<value level="3">21</value>
+					<value level="4">21</value>
+					<value level="5">22</value>
+					<value level="6">22</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">8</value>
+					<value level="6">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">8</value>
+					<value level="6">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">33</value>
+					<value level="3">35</value>
+					<value level="4">37</value>
+					<value level="5">39</value>
+					<value level="6">45</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAbnormalResist">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAbnormalResist">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">9</value>
+					<value level="3">12</value>
+					<value level="4">16</value>
+					<value level="5">19</value>
+					<value level="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">9</value>
+					<value level="3">12</value>
+					<value level="4">16</value>
+					<value level="5">19</value>
+					<value level="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealPercent">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">18</value>
+					<value level="4">22</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="DefenceTrait">
-				<SHOCK>15</SHOCK>
-				<PULL>15</PULL>
-				<KNOCKBACK>15</KNOCKBACK>
-				<KNOCKDOWN>15</KNOCKDOWN>
-				<HOLD>15</HOLD>
-				<AGGRESSION>10</AGGRESSION>
-				<TURN_STONE>10</TURN_STONE>
+				<SHOCK>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">28</value>
+					<value level="6">30</value>
+				</SHOCK>
+				<KNOCKBACK>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">28</value>
+					<value level="6">30</value>
+				</KNOCKBACK>
+				<KNOCKDOWN>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">28</value>
+					<value level="6">30</value>
+				</KNOCKDOWN>
+				<PULL>
+					<value level="1">12</value>
+					<value level="2">14</value>
+					<value level="3">16</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</PULL>
+				<HOLD>
+					<value level="1">12</value>
+					<value level="2">14</value>
+					<value level="3">16</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</HOLD>
+				<TURN_STONE>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</TURN_STONE>
+				<POISON>
+					<value level="1">40</value>
+					<value level="2">42</value>
+					<value level="3">44</value>
+					<value level="4">46</value>
+					<value level="5">48</value>
+					<value level="6">50</value>
+				</POISON>
+				<AIRBIND>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</AIRBIND>
+				<DEPORT>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</DEPORT>
+			</effect>
+			<effect name="AreaDamage">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-14</value>
+					<value level="4">-16</value>
+					<value level="5">-18</value>
+					<value level="6">-20</value>
+				</amount>
+					<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2351,76 +3291,246 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27664" toLevel="1" name="Maphr's Ring">
+	<skill id="27664" toLevel="6" name="Maphr's Ring">
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<attribute>EARTH</attribute>
-			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
 				<stat>CHA</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+					<value level="1">3</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">5</value>
 				<stat>LUC</stat>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>6</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>6</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="SkillCriticalDamage">
-				<amount>5</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">20</value>
+					<value level="3">21</value>
+					<value level="4">21</value>
+					<value level="5">22</value>
+					<value level="6">22</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalDamage">
-				<amount>10</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">20</value>
+					<value level="3">21</value>
+					<value level="4">21</value>
+					<value level="5">22</value>
+					<value level="6">22</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">8</value>
+					<value level="6">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">8</value>
+					<value level="6">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">33</value>
+					<value level="3">35</value>
+					<value level="4">37</value>
+					<value level="5">39</value>
+					<value level="6">45</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAbnormalResist">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAbnormalResist">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">9</value>
+					<value level="3">12</value>
+					<value level="4">16</value>
+					<value level="5">19</value>
+					<value level="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">9</value>
+					<value level="3">12</value>
+					<value level="4">16</value>
+					<value level="5">19</value>
+					<value level="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">4</value>
+					<value level="6">5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+					<value level="6">7</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ManaHealPercent">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">18</value>
+					<value level="4">22</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait">
-				<SHOCK>15</SHOCK>
-				<PULL>15</PULL>
-				<AGGRESSION>15</AGGRESSION>
-				<TURN_STONE>15</TURN_STONE>
-				<KNOCKBACK>10</KNOCKBACK>
-				<KNOCKDOWN>10</KNOCKDOWN>
-				<HOLD>10</HOLD>
+				<SHOCK>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">28</value>
+					<value level="6">30</value>
+				</SHOCK>
+				<KNOCKBACK>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">28</value>
+					<value level="6">30</value>
+				</KNOCKBACK>
+				<KNOCKDOWN>
+					<value level="1">20</value>
+					<value level="2">22</value>
+					<value level="3">24</value>
+					<value level="4">26</value>
+					<value level="5">28</value>
+					<value level="6">30</value>
+				</KNOCKDOWN>
+				<PULL>
+					<value level="1">12</value>
+					<value level="2">14</value>
+					<value level="3">16</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</PULL>
+				<HOLD>
+					<value level="1">12</value>
+					<value level="2">14</value>
+					<value level="3">16</value>
+					<value level="4">18</value>
+					<value level="5">19</value>
+					<value level="6">20</value>
+				</HOLD>
+				<TURN_STONE>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">12</value>
+					<value level="4">13</value>
+					<value level="5">14</value>
+					<value level="6">15</value>
+				</TURN_STONE>
+				<POISON>
+					<value level="1">40</value>
+					<value level="2">42</value>
+					<value level="3">44</value>
+					<value level="4">46</value>
+					<value level="5">48</value>
+					<value level="6">50</value>
+				</POISON>
+				<AIRBIND>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</AIRBIND>
+				<DEPORT>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</DEPORT>
+			</effect>
+			<effect name="AreaDamage">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-14</value>
+					<value level="4">-16</value>
+					<value level="5">-18</value>
+					<value level="6">-20</value>
+				</amount>
+					<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
