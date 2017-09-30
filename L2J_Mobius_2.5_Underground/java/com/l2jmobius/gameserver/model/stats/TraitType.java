@@ -21,7 +21,7 @@ package com.l2jmobius.gameserver.model.stats;
  */
 public enum TraitType
 {
-	UNK_0(0, 0),
+	NONE(0, 0),
 	SWORD(1, 1),
 	BLUNT(2, 1),
 	DAGGER(3, 1),
@@ -49,10 +49,10 @@ public enum TraitType
 	CONSTRUCT_WEAKNESS(25, 2),
 	DEATH(26, 3),
 	VALAKAS(27, 2),
-	UNK_28(28, 2),
-	UNK_29(29, 3),
+	ANESTHESIA(28, 2),
+	CRITICAL_POISON(29, 3),
 	ROOT_PHYSICALLY(30, 3),
-	UNK_31(31, 3),
+	ROOT_MAGICALLY(31, 3),
 	RAPIER(32, 1),
 	CROSSBOW(33, 1),
 	ANCIENTSWORD(34, 1),
@@ -75,8 +75,7 @@ public enum TraitType
 	CHANGEBODY(51, 3),
 	TWOHANDCROSSBOW(52, 1),
 	ZONE(53, 3),
-	PSYCHIC(54, 3),
-	NONE(55, 0);
+	PSYCHIC(54, 3);
 	
 	private final int _id;
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
