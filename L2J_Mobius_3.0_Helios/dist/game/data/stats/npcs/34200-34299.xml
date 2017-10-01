@@ -518,18 +518,17 @@
 			<height normal="70" />
 		</collision>
 	</npc>
-	<npc id="34243" level="85" type="L2Npc" name="Histie" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="34243" level="100" type="L2Npc" name="Histie" title="">
 		<race>KAMAEL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="14612" hpRegen="9.5" mp="2355" mpRegen="3.3" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="110" />
 			<height normal="70" />
