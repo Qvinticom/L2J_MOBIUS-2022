@@ -117,11 +117,11 @@ public class BeastSpiritShot implements IItemHandler
 		}
 		
 		// Pet uses the power of spirit.
-		activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 		if (pet != null)
 		{
 			if (!pet.isChargedShot(shotType))
 			{
+				activeOwner.sendMessage(isBlessed ? "Your pet uses blessed spiritshot." : "Your pet uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 				pet.setChargedShot(shotType, true);
 				// Visual effect change if player has equipped Sapphire lvl 3 or higher
 				if (activeOwner.getActiveShappireJewel() != null)
@@ -139,6 +139,7 @@ public class BeastSpiritShot implements IItemHandler
 		{
 			if (!s.isChargedShot(shotType))
 			{
+				activeOwner.sendMessage(isBlessed ? "Your servitor uses blessed spiritshot." : "Your servitor uses spiritshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
 				s.setChargedShot(shotType, true);
 				// Visual effect change if player has equipped Sapphire lvl 3 or higher
 				if (activeOwner.getActiveShappireJewel() != null)
