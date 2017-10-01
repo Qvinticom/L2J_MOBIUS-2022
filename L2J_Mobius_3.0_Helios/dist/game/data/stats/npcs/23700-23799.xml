@@ -1913,16 +1913,24 @@
 		</drop_lists>
 	</npc>
 		<npc id="23774" level="102" type="L2Monster" name="Delta Bathus">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16653" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="547017485" sp="1312842" />
-		<stats>
-			<vitals hp="1325641" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="908048947" sp="908061" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1325641.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55.0" />
+				<run ground="180.0" />
 			</speed>
+			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="16590" magical="22114" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1934,9 +1942,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24.0" />
+			<height normal="46.0" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -1960,16 +1973,24 @@
 		</drop_lists>
 	</npc>
 	<npc id="23775" level="102" type="L2Monster" name="Delta Carcass">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16653" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="547017485" sp="1312842" />
-		<stats>
-			<vitals hp="1325641" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="908048947" sp="908061" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1325641.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55.0" />
+				<run ground="190.0" />
 			</speed>
+			<attack physical="3608421.13759" magical="2904018.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="32114" magical="19990" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1980,9 +2001,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24.0" />
+			<height normal="42.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2006,16 +2032,25 @@
 		</drop_lists>
 	</npc>
 	<npc id="23776" level="102" type="L2Monster" name="Delta Kshana">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16655" level="1" />
+			<skill name="Skill02_ID" id="16656" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="547017485" sp="1312842" />
-		<stats>
-			<vitals hp="1325641" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="908048947" sp="908061" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1325641.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55.0" />
+				<run ground="180.0" />
 			</speed>
+			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="16590" magical="22114" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		
+		<status attackable="true" />		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2027,9 +2062,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24.0" />
+			<height normal="47.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2053,16 +2093,25 @@
 		</drop_lists>
 	</npc>
 	<npc id="23777" level="103" type="L2Monster" name="Royal Templar">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16657" level="1" />
+			<skill name="Skill02_ID" id="16658" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="669367163" sp="1606481" />
-		<stats>
-			<vitals hp="1435669" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="1111149422" sp="1111186" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1435669.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55.0" />
+				<run ground="180.0" />
 			</speed>
+			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="17778" magical="17778" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		
+		<status attackable="true" />		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2074,9 +2123,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24.0" />
+			<height normal="45.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2099,16 +2153,26 @@
 		</drop_lists>
 	</npc>
 	<npc id="23778" level="103" type="L2Monster" name="Royal Shooter">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16659" level="1" />
+			<skill name="Skill02_ID" id="16660" level="1" />
+			<skill name="Skill03_ID" id="16661" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="669367163" sp="1606481" />
-		<stats>
-			<vitals hp="1435669" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="1111149422" sp="1111186" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1435669.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55.0" />
+				<run ground="190.0" />
 			</speed>
+			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="17092" magical="22559" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		
+		<status attackable="true" />	
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2119,9 +2183,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24.0" />
+			<height normal="45.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2143,16 +2212,26 @@
 		</drop_lists>
 	</npc>
 	<npc id="23779" level="103" type="L2Monster" name="Royal Wizard">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16662" level="1" />
+			<skill name="Skill02_ID" id="16663" level="1" />
+			<skill name="Skill03_ID" id="16664" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="669367163" sp="1606481" />
-		<stats>
-			<vitals hp="1435669" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="1111149422" sp="1111186" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1435669.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55.0" />
+				<run ground="180.0" />
 			</speed>
-		</stats>
-		
+			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="19092" magical="25559" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
+			</stats>
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2164,9 +2243,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24.0" />
+			<height normal="45.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2188,16 +2272,25 @@
 		</drop_lists>
 	</npc>
 	<npc id="23780" level="103" type="L2Monster" name="Royal Templar Colonel">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16665" level="1" />
+			<skill name="Skill02_ID" id="16666" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="669367163" sp="1606481" />
-		<stats>
-			<vitals hp="1435669" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="1111149422" sp="1111186" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1435669.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40.0" />
+				<run ground="180.0" />
 			</speed>
-		</stats>
-		
+			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="17778" magical="17778" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
+			</stats>
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2209,9 +2302,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="32.0" />
+			<height normal="51.0" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2236,16 +2334,26 @@
 		</drop_lists>
 	</npc>
 	<npc id="23781" level="103" type="L2Monster" name="Royal Sharpshooter">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16667" level="1" />
+			<skill name="Skill02_ID" id="16668" level="1" />
+			<skill name="Skill03_ID" id="16669" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="669367163" sp="1606481" />
-		<stats>
-			<vitals hp="1435669" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="1111149422" sp="1111186" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1435669.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55.0" />
+				<run ground="190.0" />
 			</speed>
-		</stats>
-		
+			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="19092" magical="25559" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
+			</stats>
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2256,9 +2364,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24.0" />
+			<height normal="45.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2281,16 +2394,27 @@
 		</drop_lists>
 	</npc>
 	<npc id="23782" level="103" type="L2Monster" name="Royal Archmage">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16670" level="1" />
+			<skill name="Skill02_ID" id="16671" level="1" />
+			<skill name="Skill03_ID" id="16672" level="1" />
+			<skill name="Skill03_ID" id="16673" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="669367163" sp="1606481" />
-		<stats>
-			<vitals hp="1435669" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="1111149422" sp="1111186" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1435669.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55.0" />
+				<run ground="180.0" />
 			</speed>
-		</stats>
-		
+			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="19092" magical="25559" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
+			</stats>
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2302,9 +2426,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24.0" />
+			<height normal="45.5" />
 		</collision>
 		<drop_lists>
 			<death>
@@ -2328,16 +2457,25 @@
 		</drop_lists>
 	</npc>
 	<npc id="23783" level="103" type="L2Monster" name="Royal Gatekeeper">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16674" level="1" />
+			<skill name="Skill02_ID" id="16675" level="1" />
+		</parameters>
 		<race>GIANT</race>
-		<acquire exp="2231223878" sp="5354937" />
-		<stats>
-			<vitals hp="23927806" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+		<sex>MALE</sex>
+		<acquire exp="3703831584" sp="3703920" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="23927806" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40.0" />
+				<run ground="180.0" />
 			</speed>
-		</stats>
-		
+			<attack physical="7219299.643177" magical="3956372.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
+			<defence physical="28555" magical="31279" />	<!-- Guess -->
+			<abnormalResist physical="10" magical="10" />
+			</stats>
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2349,9 +2487,14 @@
 			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>SUPERION_1</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="48.0" />
+			<height normal="78.0" />
 		</collision>
 		<drop_lists>
 			<death>
