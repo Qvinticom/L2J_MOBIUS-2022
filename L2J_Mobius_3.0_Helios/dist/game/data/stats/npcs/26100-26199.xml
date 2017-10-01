@@ -1217,12 +1217,19 @@
 	<npc id="26141" level="104" type="L2Npc" name="Ramona" title="Queen">
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="64735849" hpRegen="7.5" mp="50920.0" mpRegen="2.7" />
 			<speed>
 				<walk ground="40.0" />
 				<run ground="180.0" />
 			</speed>
+			<attack physical="19247" magical="18723" critical="4" attackSpeed="253" range="40" />	<!-- Calculate for Method of Three -->
+			<defence physical="82220" magical="47436" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="430" />
+			</attribute>
 		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
@@ -1237,12 +1244,19 @@
 	<npc id="26142" level="104" type="L2Npc" name="Ramona" title="Queen">
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="64735849" hpRegen="7.5" mp="50920.0" mpRegen="2.7" />
 			<speed>
 				<walk ground="40.0" />
 				<run ground="180.0" />
 			</speed>
+			<attack physical="19247" magical="18723" critical="4" attackSpeed="253" range="40" />	<!-- Calculate for Method of Three -->
+			<defence physical="82220" magical="47436" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="430" />
+			</attribute>
 		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
@@ -1257,12 +1271,19 @@
 	<npc id="26143" level="104" type="L2RaidBoss" name="Ramona" title="Queen">
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
+		<acquire exp="576969277248" sp="1153938597" raidPoints="300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="64735849" hpRegen="7.5" mp="50920.0" mpRegen="2.7" />
 			<speed>
 				<walk ground="40.0" />
 				<run ground="180.0" />
 			</speed>
+			<attack physical="19247" magical="18723" critical="4" attackSpeed="253" range="40" />	<!-- Calculate for Method of Three -->
+			<defence physical="82220" magical="47436" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="430" />
+			</attribute>
 		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
