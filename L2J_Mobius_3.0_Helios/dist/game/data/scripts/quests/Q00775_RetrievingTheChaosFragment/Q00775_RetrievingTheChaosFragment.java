@@ -16,6 +16,7 @@
  */
 package quests.Q00775_RetrievingTheChaosFragment;
 
+import com.l2jmobius.gameserver.enums.Faction;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -33,9 +34,9 @@ import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
  */
 public class Q00775_RetrievingTheChaosFragment extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int LEONA_BLACKBIRD = 31595;
-	// Monster's
+	// Monsters
 	private static final int[] MONSTERS =
 	{
 		23388, // Kandiloth
@@ -66,8 +67,9 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 	private static final int MIN_LEVEL = 99;
 	// Item
 	private static final int CHAOS_FRAGMENT = 37766;
-	private static final int BLOODIED_DEMONIC_TOME = 37893;
-	private static final int LEONAS_REWARD_BOX = 46559;
+	private static final int BASIC_SUPPLY_BOX = 47172;
+	private static final int INTERMEDIATE_SUPPLY_BOX = 47173;
+	private static final int ADVANCED_SUPPLY_BOX = 47174;
 	
 	public Q00775_RetrievingTheChaosFragment()
 	{
@@ -104,50 +106,30 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 			}
 			case "31595-03.html":
 			{
-				if ((getQuestItemsCount(player, CHAOS_FRAGMENT) >= 200) && (getQuestItemsCount(player, CHAOS_FRAGMENT) < 300))
+				if (qs.isCond(2))
 				{
-					giveItems(player, LEONAS_REWARD_BOX, 1);
+					if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0)
+					{
+						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 100);
+						giveItems(player, BASIC_SUPPLY_BOX, 1);
+						addExpAndSp(player, 4522369500L, 10853640);
+					}
+					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) <= 1)
+					{
+						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 200);
+						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
+						addExpAndSp(player, 9044739000L, 21707280);
+					}
+					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2)
+					{
+						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 300);
+						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+						addExpAndSp(player, 13567108500L, 32560920);
+					}
+					qs.exitQuest(QuestType.DAILY, true);
+					htmltext = event;
+					break;
 				}
-				else if ((getQuestItemsCount(player, CHAOS_FRAGMENT) >= 300) && (getQuestItemsCount(player, CHAOS_FRAGMENT) < 400))
-				{
-					giveItems(player, LEONAS_REWARD_BOX, 2);
-				}
-				else if ((getQuestItemsCount(player, CHAOS_FRAGMENT) >= 400) && (getQuestItemsCount(player, CHAOS_FRAGMENT) < 500))
-				{
-					giveItems(player, LEONAS_REWARD_BOX, 3);
-				}
-				else if ((getQuestItemsCount(player, CHAOS_FRAGMENT) >= 500) && (getQuestItemsCount(player, CHAOS_FRAGMENT) < 600))
-				{
-					giveItems(player, LEONAS_REWARD_BOX, 4);
-				}
-				else if ((getQuestItemsCount(player, CHAOS_FRAGMENT) >= 600) && (getQuestItemsCount(player, CHAOS_FRAGMENT) < 700))
-				{
-					giveItems(player, LEONAS_REWARD_BOX, 5);
-				}
-				else if ((getQuestItemsCount(player, CHAOS_FRAGMENT) >= 700) && (getQuestItemsCount(player, CHAOS_FRAGMENT) < 800))
-				{
-					giveItems(player, LEONAS_REWARD_BOX, 6);
-				}
-				else if ((getQuestItemsCount(player, CHAOS_FRAGMENT) >= 800) && (getQuestItemsCount(player, CHAOS_FRAGMENT) < 900))
-				{
-					giveItems(player, LEONAS_REWARD_BOX, 7);
-				}
-				else if ((getQuestItemsCount(player, CHAOS_FRAGMENT) >= 900) && (getQuestItemsCount(player, CHAOS_FRAGMENT) < 1000))
-				{
-					giveItems(player, LEONAS_REWARD_BOX, 8);
-				}
-				else if (getQuestItemsCount(player, CHAOS_FRAGMENT) >= 1000)
-				{
-					giveItems(player, LEONAS_REWARD_BOX, 900);
-				}
-				if (getRandom(100) < 50)
-				{
-					giveItems(player, BLOODIED_DEMONIC_TOME, 1);
-				}
-				addExpAndSp(player, 463097250, 111143);
-				qs.exitQuest(QuestType.DAILY, true);
-				htmltext = event;
-				break;
 			}
 		}
 		return htmltext;
@@ -209,14 +191,35 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && (getQuestItemsCount(killer, CHAOS_FRAGMENT) < 1000))
+		if (qs != null)
 		{
-			if (getQuestItemsCount(killer, CHAOS_FRAGMENT) == 100)
+			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0) && (getQuestItemsCount(killer, CHAOS_FRAGMENT) < 250))
 			{
-				qs.setCond(2, true);
+				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) == 250)
+				{
+					qs.setCond(2, true);
+				}
+				giveItems(killer, CHAOS_FRAGMENT, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			giveItems(killer, CHAOS_FRAGMENT, 1);
-			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 1) && (getQuestItemsCount(killer, CHAOS_FRAGMENT) < 500))
+			{
+				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) == 500)
+				{
+					qs.setCond(2, true);
+				}
+				giveItems(killer, CHAOS_FRAGMENT, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2) && (getQuestItemsCount(killer, CHAOS_FRAGMENT) < 750))
+			{
+				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) == 750)
+				{
+					qs.setCond(2, true);
+				}
+				giveItems(killer, CHAOS_FRAGMENT, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

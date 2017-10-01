@@ -681,32 +681,65 @@
 	<item id="47172" name="Basic Supply Box" additionalName="Blackbird Clan" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Beleth's Magic Circle area. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="37893" min="1" max="1" chance="100" /> <!-- Bloodied Demonic Tome -->
+			<item id="47256" min="3" max="1" chance="100" /> <!-- Demon Crystal -->
+			<item id="37791" min="1" max="1" chance="100" /> <!-- Sealed Demonic Tome -->	
+		</capsuled_items>
 	</item>
 	<item id="47173" name="Intermediate Supply Box" additionalName="Blackbird Clan" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Blackbird Clan with their mission in the Beleth's Magic Circle area. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="37893" min="1" max="1" chance="100" /> <!-- Bloodied Demonic Tome -->
+			<item id="47256" min="3" max="6" chance="100" /> <!-- Demon Crystal -->
+			<item id="37791" min="2" max="1" chance="100" /> <!-- Sealed Demonic Tome -->	
+		</capsuled_items>
 	</item>
 	<item id="47174" name="Advanced Supply Box" additionalName="Blackbird Clan" type="EtcItem">
 		<!-- An advanced supply box received in exchange for helping the Blackbird Clan with their mission in the Beleth's Magic Circle area. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="37893" min="1" max="1" chance="100" /> <!-- Bloodied Demonic Tome -->
+			<item id="47256" min="9" max="6" chance="100" /> <!-- Demon Crystal -->
+			<item id="37791" min="4" max="1" chance="100" /> <!-- Sealed Demonic Tome -->	
+		</capsuled_items>
 	</item>
 	<item id="47175" name="Basic Supply Box" additionalName="Kingdom's Royal Guard" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Kingdom's Royal Guard with their mission at Atelia Fortress. Double click to view the item. -->
@@ -801,12 +834,37 @@
 	<item id="47184" name="Basic Supply Box" additionalName="Giant Trackers" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission at the upper level of the Giant's Cave. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="47260" min="1" max="1" chance="100" /> <!-- Giant Crystal -->
+			<item id="35330" min="1" max="1" chance="100" /> <!-- Helios Avenger Fragment -->
+			<item id="35335" min="1" max="1" chance="100" /> <!-- Helios Buster Fragment -->
+			<item id="35336" min="1" max="1" chance="100" /> <!-- Helios Caster Fragment -->	
+			<item id="35328" min="1" max="1" chance="100" /> <!-- Helios Cutter Fragment -->
+			<item id="35331" min="1" max="1" chance="100" /> <!-- Helios Fighter Fragment -->
+			<item id="35337" min="1" max="1" chance="100" /> <!-- Helios Retributer Fragment -->
+			<item id="35327" min="1" max="1" chance="100" /> <!-- Helios Shaper Fragment -->
+			<item id="35334" min="1" max="1" chance="100" /> <!-- Helios Shooter Fragment -->
+			<item id="35329" min="1" max="1" chance="100" /> <!-- Helios Slasher Fragment -->
+			<item id="35332" min="1" max="1" chance="100" /> <!-- Helios Stormer Fragment -->	
+			<item id="35333" min="1" max="1" chance="100" /> <!-- Helios Thrower Fragment -->
+			<item id="30297" min="1" max="1" chance="100" /> <!-- Superior Giant's Codex -->
+			<item id="30299" min="1" max="1" chance="100" /> <!-- Superior Giant's Codex - Discipline -->
+			<item id="30298" min="1" max="1" chance="100" /> <!-- Superior Giant's Codex - Mastery -->	
+			<item id="36549" min="1" max="1" chance="100" /> <!-- Weapon Fragment (High-grade) -->
+			<item id="36548" min="1" max="1" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->	
+		</capsuled_items>
 	</item>
 	<item id="47185" name="Intermediate Supply Box" additionalName="Giant Trackers" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Giant Trackers with their mission in the upper level of the Giant's Cave. Double click to view the item. -->
