@@ -858,32 +858,65 @@
 	<item id="47356" name="Basic Supply Box" additionalName="Blackbird Clan" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Phantasmal Ridge's Magic Circle area. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="37893" min="2" max="2" chance="100" /> <!-- Bloodied Demonic Tome -->
+			<item id="47256" min="3" max="3" chance="100" /> <!-- Demon Crystal -->
+			<item id="37791" min="1" max="1" chance="100" /> <!-- Sealed Demonic Tome -->	
+		</capsuled_items>
 	</item>
 	<item id="47357" name="Intermediate Supply Box" additionalName="Blackbird Clan" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Blackbird Clan with their mission at the Phantasmal Ridge. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="37893" min="2" max="2" chance="100" /> <!-- Bloodied Demonic Tome -->
+			<item id="47256" min="6" max="6" chance="100" /> <!-- Demon Crystal -->
+			<item id="37791" min="1" max="1" chance="100" /> <!-- Sealed Demonic Tome -->	
+		</capsuled_items>
 	</item>
 	<item id="47358" name="Advanced Supply Box" additionalName="Blackbird Clan" type="EtcItem">
 		<!-- An advanced supply box received in exchange for helping the Blackbird Clan with their mission at the Phantasmal Ridge. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="37893" min="2" max="2" chance="100" /> <!-- Bloodied Demonic Tome -->
+			<item id="47256" min="9" max="9" chance="100" /> <!-- Demon Crystal -->
+			<item id="37791" min="3" max="3" chance="100" /> <!-- Sealed Demonic Tome -->	
+		</capsuled_items>
 	</item>
 	<item id="47359" name="Basic Supply Box" additionalName="Giant Trackers" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double click to view the item. -->

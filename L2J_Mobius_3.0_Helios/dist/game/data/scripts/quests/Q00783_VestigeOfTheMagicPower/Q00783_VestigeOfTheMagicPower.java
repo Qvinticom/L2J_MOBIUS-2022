@@ -16,6 +16,7 @@
  */
 package quests.Q00783_VestigeOfTheMagicPower;
 
+import com.l2jmobius.gameserver.enums.Faction;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -33,9 +34,9 @@ import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
  */
 public class Q00783_VestigeOfTheMagicPower extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int LEONA_BLACKBIRD = 31595;
-	// Monster's
+	// Monsters
 	private static final int[] MONSTERS =
 	{
 		23384, // Smaug
@@ -52,8 +53,9 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 99;
 	private static final int HIGH_GRADE_FRAGMENT_OF_CHAOS = 46557;
-	private static final int LEONAS_REWARD_BOX = 46558;
-	private static final int BLOODIED_DEMONIC_TOME = 37893;
+	private static final int BASIC_SUPPLY_BOX = 47356;
+	private static final int INTERMEDIATE_SUPPLY_BOX = 47357;
+	private static final int ADVANCED_SUPPLY_BOX = 47358;
 	
 	public Q00783_VestigeOfTheMagicPower()
 	{
@@ -91,43 +93,27 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 			}
 			case "31595-07.html":
 			{
-				if ((getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) >= 250) && (getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 500))
+				if (qs.isCond(2))
 				{
-					addExpAndSp(player, 3876316782L, 9303137);
-					giveItems(player, LEONAS_REWARD_BOX, 1);
-					takeItems(player, HIGH_GRADE_FRAGMENT_OF_CHAOS, -1);
-					giveItems(player, BLOODIED_DEMONIC_TOME, 1);
-					qs.exitQuest(QuestType.REPEATABLE, true);
-					htmltext = event;
-					break;
-				}
-				else if ((getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) >= 500) && (getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 750))
-				{
-					addExpAndSp(player, 7752633564L, 18606274);
-					giveItems(player, LEONAS_REWARD_BOX, 2);
-					takeItems(player, HIGH_GRADE_FRAGMENT_OF_CHAOS, -1);
-					giveItems(player, BLOODIED_DEMONIC_TOME, 1);
-					qs.exitQuest(QuestType.REPEATABLE, true);
-					htmltext = event;
-					break;
-				}
-				else if ((getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) >= 750) && (getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 1000))
-				{
-					addExpAndSp(player, 11628950346L, 27909411);
-					giveItems(player, LEONAS_REWARD_BOX, 3);
-					takeItems(player, HIGH_GRADE_FRAGMENT_OF_CHAOS, -1);
-					giveItems(player, BLOODIED_DEMONIC_TOME, 1);
-					qs.exitQuest(QuestType.REPEATABLE, true);
-					htmltext = event;
-					break;
-				}
-				else if (getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) >= 1000)
-				{
-					addExpAndSp(player, 15505267128L, 37212548);
-					giveItems(player, LEONAS_REWARD_BOX, 4);
-					takeItems(player, HIGH_GRADE_FRAGMENT_OF_CHAOS, -1);
-					giveItems(player, BLOODIED_DEMONIC_TOME, 1);
-					qs.exitQuest(QuestType.REPEATABLE, true);
+					if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0)
+					{
+						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 100);
+						giveItems(player, BASIC_SUPPLY_BOX, 1);
+						addExpAndSp(player, 4845395970L, 11628900);
+					}
+					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) <= 1)
+					{
+						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 200);
+						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
+						addExpAndSp(player, 9690791940L, 23257800);
+					}
+					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2)
+					{
+						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 300);
+						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+						addExpAndSp(player, 14536187910L, 34886700);
+					}
+					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
 					break;
 				}
@@ -169,21 +155,39 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isStarted() && (getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 1000))
+		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
+		if (qs != null)
 		{
-			giveItems(player, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1);
-			if (getQuestItemsCount(player, HIGH_GRADE_FRAGMENT_OF_CHAOS) >= 250)
+			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0) && (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 300))
 			{
-				qs.setCond(2, true);
+				if (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) == 300)
+				{
+					qs.setCond(2, true);
+				}
+				giveItems(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			else
+			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 1) && (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 600))
 			{
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) == 600)
+				{
+					qs.setCond(2, true);
+				}
+				giveItems(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2) && (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 900))
+			{
+				if (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) == 900)
+				{
+					qs.setCond(2, true);
+				}
+				giveItems(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-		return super.onKill(npc, player, isSummon);
+		return super.onKill(npc, killer, isSummon);
 	}
 }
