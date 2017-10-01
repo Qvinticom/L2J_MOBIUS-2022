@@ -644,18 +644,16 @@
 	</skill>
 	<skill id="17822" toLevel="1" name="Aquamarine">
 		<icon>icon.etc_bm_jewel_aquamarine_i00</icon>
-		<operateType>A2</operateType>
-		<abnormalTime>1</abnormalTime>
-		<chance>100</chance>
+		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MpRegen">
+			<effect name="Mp">
 				<amount>136</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -687,7 +685,7 @@
 				<isCritical>false</isCritical>
 				<allowSkillAttack>true</allowSkillAttack>
 				<allowNormalAttack>false</allowNormalAttack>
-				<allowWeapons>SWORD,BLUNT,DUAL,DUALBLUNT</allowWeapons>
+				<allowWeapons>ALL</allowWeapons>
 				<skillId>17822</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
