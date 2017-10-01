@@ -138,6 +138,7 @@ public final class Hardin extends AbstractNpcAI
 				player.getAppearance().setSex(true);
 			}
 			// Change class
+			player.setClassId(newClass.getId());
 			if (player.isDualClassActive())
 			{
 				player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
@@ -146,7 +147,6 @@ public final class Hardin extends AbstractNpcAI
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			player.setClassId(newClass.getId());
 			// Adjustments
 			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 			for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))

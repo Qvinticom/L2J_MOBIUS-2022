@@ -2600,7 +2600,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		int skillCounter = 0;
 		// Get available skills
-		final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getClassId(), includedByFs, includeAutoGet);
+		final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includedByFs, includeAutoGet);
 		final List<Skill> skillsForStore = new ArrayList<>();
 		
 		for (Skill skill : skills)

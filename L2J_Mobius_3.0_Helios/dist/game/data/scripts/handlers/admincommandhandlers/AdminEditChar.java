@@ -371,6 +371,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					{
 						player.resetOriginalClass(); // revert agent of chaos changes
 					}
+					player.setClassId(classidval);
 					if (player.isSubClassActive())
 					{
 						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
@@ -379,7 +380,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
-					player.setClassId(classidval);
 					
 					// Sex checks.
 					if (player.getRace().equals(Race.KAMAEL))
