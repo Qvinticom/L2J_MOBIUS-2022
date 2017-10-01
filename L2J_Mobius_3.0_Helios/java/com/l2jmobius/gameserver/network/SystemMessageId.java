@@ -12373,8 +12373,173 @@ public final class SystemMessageId
 	@ClientString(id = 4355, message = "Failed to apply the Soul Crystal effect because of abnormal circumstances.")
 	public static SystemMessageId FAILED_TO_APPLY_THE_SOUL_CRYSTAL_EFFECT_BECAUSE_OF_ABNORMAL_CIRCUMSTANCES;
 	
+	@ClientString(id = 4356, message = "There are no items that can be searched byn($s1).")
+	public static SystemMessageId THERE_ARE_NO_ITEMS_THAT_CAN_BE_SEARCHED_BY_N_S1;
+	
+	@ClientString(id = 4357, message = "There are no items that can be traded.")
+	public static SystemMessageId THERE_ARE_NO_ITEMS_THAT_CAN_BE_TRADED;
+	
 	@ClientString(id = 4358, message = "The trade was successful.")
 	public static SystemMessageId THE_TRADE_WAS_SUCCESSFUL;
+	
+	@ClientString(id = 4359, message = "Not enough items that are needed. Please check the number of items.")
+	public static SystemMessageId NOT_ENOUGH_ITEMS_THAT_ARE_NEEDED_PLEASE_CHECK_THE_NUMBER_OF_ITEMS;
+	
+	@ClientString(id = 4360, message = "Less than $s1 minute")
+	public static SystemMessageId LESS_THAN_S1_MINUTE2;
+	
+	@ClientString(id = 4361, message = "Cannot show because the conditions are not met.")
+	public static SystemMessageId CANNOT_SHOW_BECAUSE_THE_CONDITIONS_ARE_NOT_MET;
+	
+	@ClientString(id = 4362, message = "Enter the number to be traded.")
+	public static SystemMessageId ENTER_THE_NUMBER_TO_BE_TRADED;
+	
+	@ClientString(id = 4363, message = "When trading, the effects applied to the item might get reset, so keep that in mind. Continue with the trade?")
+	public static SystemMessageId WHEN_TRADING_THE_EFFECTS_APPLIED_TO_THE_ITEM_MIGHT_GET_RESET_SO_KEEP_THAT_IN_MIND_CONTINUE_WITH_THE_TRADE;
+	
+	@ClientString(id = 4364, message = "Not enough $s1 and $s2.")
+	public static SystemMessageId NOT_ENOUGH_S1_AND_S2;
+	
+	@ClientString(id = 4365, message = "The expert has been placed successfully.")
+	public static SystemMessageId THE_EXPERT_HAS_BEEN_PLACED_SUCCESSFULLY;
+	
+	@ClientString(id = 4366, message = "The allocation fee will be deducted from the clan's warehouse, and once the duration expires, it will be withdrawn.nContinue?")
+	public static SystemMessageId THE_ALLOCATION_FEE_WILL_BE_DEDUCTED_FROM_THE_CLAN_S_WAREHOUSE_AND_ONCE_THE_DURATION_EXPIRES_IT_WILL_BE_WITHDRAWN_NCONTINUE;
+	
+	@ClientString(id = 4367, message = "Clan $s1 currently has the 1 day penalty for kicking out  a member, so it cannot accept new members.")
+	public static SystemMessageId CLAN_S1_CURRENTLY_HAS_THE_1_DAY_PENALTY_FOR_KICKING_OUT_A_MEMBER_SO_IT_CANNOT_ACCEPT_NEW_MEMBERS;
+	
+	@ClientString(id = 4368, message = "The Academy/Royal Guard/Order of Knights have been fully filled, so you cannot join the clan.")
+	public static SystemMessageId THE_ACADEMY_ROYAL_GUARD_ORDER_OF_KNIGHTS_HAVE_BEEN_FULLY_FILLED_SO_YOU_CANNOT_JOIN_THE_CLAN;
+	
+	@ClientString(id = 4369, message = "Clan $s1 has requested to be dissolved, so you cannot join the clan.")
+	public static SystemMessageId CLAN_S1_HAS_REQUESTED_TO_BE_DISSOLVED_SO_YOU_CANNOT_JOIN_THE_CLAN;
+	
+	@ClientString(id = 4370, message = "You've already graduated from the Clan Academy, so you cannot join again.")
+	public static SystemMessageId YOU_VE_ALREADY_GRADUATED_FROM_THE_CLAN_ACADEMY_SO_YOU_CANNOT_JOIN_AGAIN;
+	
+	@ClientString(id = 4371, message = "You cannot join a clan while you are in the Training Camp.")
+	public static SystemMessageId YOU_CANNOT_JOIN_A_CLAN_WHILE_YOU_ARE_IN_THE_TRAINING_CAMP;
+	
+	@ClientString(id = 4372, message = "You cannot join another clan for 1 day after leaving a clan.")
+	public static SystemMessageId YOU_CANNOT_JOIN_ANOTHER_CLAN_FOR_1_DAY_AFTER_LEAVING_A_CLAN;
+	
+	@ClientString(id = 4373, message = "The clan has been dissolved so you cannot join it.")
+	public static SystemMessageId THE_CLAN_HAS_BEEN_DISSOLVED_SO_YOU_CANNOT_JOIN_IT;
+	
+	@ClientString(id = 4374, message = "You are trying to join Clan $s1.")
+	public static SystemMessageId YOU_ARE_TRYING_TO_JOIN_CLAN_S1;
+	
+	@ClientString(id = 4375, message = "You have gained $s1 Blackbird Clan Faction points.")
+	public static SystemMessageId YOU_HAVE_GAINED_S1_BLACKBIRD_CLAN_FACTION_POINTS;
+	
+	@ClientString(id = 4376, message = "You have gained $s1 Mother Tree Guardians Faction points.")
+	public static SystemMessageId YOU_HAVE_GAINED_S1_MOTHER_TREE_GUARDIANS_FACTION_POINTS;
+	
+	@ClientString(id = 4377, message = "You have gained $s1 Giant Trackers Faction points.")
+	public static SystemMessageId YOU_HAVE_GAINED_S1_GIANT_TRACKERS_FACTION_POINTS;
+	
+	@ClientString(id = 4378, message = "You have gained $s1 Unworldly Visitors Faction points.")
+	public static SystemMessageId YOU_HAVE_GAINED_S1_UNWORLDLY_VISITORS_FACTION_POINTS;
+	
+	@ClientString(id = 4379, message = "You have gained $s1 Kingdom's Royal Guard Faction points.")
+	public static SystemMessageId YOU_HAVE_GAINED_S1_KINGDOM_S_ROYAL_GUARD_FACTION_POINTS;
+	
+	@ClientString(id = 4380, message = "Expert successfully removed.")
+	public static SystemMessageId EXPERT_SUCCESSFULLY_REMOVED;
+	
+	@ClientString(id = 4381, message = "Experts with the same class within the same forces cannot be placed together.")
+	public static SystemMessageId EXPERTS_WITH_THE_SAME_CLASS_WITHIN_THE_SAME_FORCES_CANNOT_BE_PLACED_TOGETHER;
+	
+	@ClientString(id = 4382, message = "Another expert has already been placed there. The expert must be removed first before placing a new one.")
+	public static SystemMessageId ANOTHER_EXPERT_HAS_ALREADY_BEEN_PLACED_THERE_THE_EXPERT_MUST_BE_REMOVED_FIRST_BEFORE_PLACING_A_NEW_ONE;
+	
+	@ClientString(id = 4383, message = "The cost for placing an Emissary Leader for your forces is zero. The Emissary Leader for your forces, once placed, cannot be changed until the term expires, and the Emissary Leader will be removed once the term expires. nContinue?")
+	public static SystemMessageId THE_COST_FOR_PLACING_AN_EMISSARY_LEADER_FOR_YOUR_FORCES_IS_ZERO_THE_EMISSARY_LEADER_FOR_YOUR_FORCES_ONCE_PLACED_CANNOT_BE_CHANGED_UNTIL_THE_TERM_EXPIRES_AND_THE_EMISSARY_LEADER_WILL_BE_REMOVED_ONCE_THE_TERM_EXPIRES_NCONTINUE;
+	
+	@ClientString(id = 4384, message = "The expert currently in place will be removed. The placement cost will not be refunded.nContinue?")
+	public static SystemMessageId THE_EXPERT_CURRENTLY_IN_PLACE_WILL_BE_REMOVED_THE_PLACEMENT_COST_WILL_NOT_BE_REFUNDED_NCONTINUE;
+	
+	@ClientString(id = 4385, message = "That expert cannot be removed.")
+	public static SystemMessageId THAT_EXPERT_CANNOT_BE_REMOVED;
+	
+	@ClientString(id = 4386, message = "There's not enough Adena in the clan's warehouse.")
+	public static SystemMessageId THERE_S_NOT_ENOUGH_ADENA_IN_THE_CLAN_S_WAREHOUSE;
+	
+	@ClientString(id = 4387, message = "There's not enough $s1 in the clan's warehouse.")
+	public static SystemMessageId THERE_S_NOT_ENOUGH_S1_IN_THE_CLAN_S_WAREHOUSE;
+	
+	@ClientString(id = 4388, message = "There's not enough $s1 and $s2 in the clan's warehouse.")
+	public static SystemMessageId THERE_S_NOT_ENOUGH_S1_AND_S2_IN_THE_CLAN_S_WAREHOUSE;
+	
+	@ClientString(id = 4389, message = "Current Position : $s1 / $s2 / $s3 (Inside Superion)")
+	public static SystemMessageId CURRENT_POSITION_S1_S2_S3_INSIDE_SUPERION;
+	
+	@ClientString(id = 4390, message = "When the clan's information is changed, the waitlist of players trying to join will be deleted.")
+	public static SystemMessageId WHEN_THE_CLAN_S_INFORMATION_IS_CHANGED_THE_WAITLIST_OF_PLAYERS_TRYING_TO_JOIN_WILL_BE_DELETED;
+	
+	@ClientString(id = 4391, message = "Current Position : $s1 / $s2 / $s3 (Battle Fortress Superion)")
+	public static SystemMessageId CURRENT_POSITION_S1_S2_S3_BATTLE_FORTRESS_SUPERION;
+	
+	@ClientString(id = 4392, message = "Failed to place/delete expert; abnormal expert placement/deletion attempt.")
+	public static SystemMessageId FAILED_TO_PLACE_DELETE_EXPERT_ABNORMAL_EXPERT_PLACEMENT_DELETION_ATTEMPT;
+	
+	@ClientString(id = 4393, message = "Cannot enter; some users may not yet be seated.")
+	public static SystemMessageId CANNOT_ENTER_SOME_USERS_MAY_NOT_YET_BE_SEATED;
+	
+	@ClientString(id = 4394, message = "Currently in Stage $s1, Round $s2.")
+	public static SystemMessageId CURRENTLY_IN_STAGE_S1_ROUND_S2;
+	
+	@ClientString(id = 4395, message = "Supply Items are being prepared. The next supply items will be available on the hour.")
+	public static SystemMessageId SUPPLY_ITEMS_ARE_BEING_PREPARED_THE_NEXT_SUPPLY_ITEMS_WILL_BE_AVAILABLE_ON_THE_HOUR;
+	
+	@ClientString(id = 4396, message = "Current Position : $s1 / $s2 / $s3 (Dimensional Rift)")
+	public static SystemMessageId CURRENT_POSITION_S1_S2_S3_DIMENSIONAL_RIFT;
+	
+	@ClientString(id = 4397, message = "Only Level 3-4 Clans can be registered in a Castle Siege")
+	public static SystemMessageId ONLY_LEVEL_3_4_CLANS_CAN_BE_REGISTERED_IN_A_CASTLE_SIEGE;
+	
+	@ClientString(id = 4398, message = "Clans that own castles are automatically registered to the attacking side.")
+	public static SystemMessageId CLANS_THAT_OWN_CASTLES_ARE_AUTOMATICALLY_REGISTERED_TO_THE_ATTACKING_SIDE;
+	
+	@ClientString(id = 4399, message = "Macro copied to the clipboard.")
+	public static SystemMessageId MACRO_COPIED_TO_THE_CLIPBOARD;
+	
+	@ClientString(id = 4400, message = "This command can be used when the target is of Lv. 61 or higher and has completed the 2nd class transfer.")
+	public static SystemMessageId THIS_COMMAND_CAN_BE_USED_WHEN_THE_TARGET_IS_OF_LV_61_OR_HIGHER_AND_HAS_COMPLETED_THE_2ND_CLASS_TRANSFER;
+	
+	@ClientString(id = 4401, message = "The selected preset has been applied.")
+	public static SystemMessageId THE_SELECTED_PRESET_HAS_BEEN_APPLIED;
+	
+	@ClientString(id = 4402, message = "The account has already been used to receive items; cannot receive items again.")
+	public static SystemMessageId THE_ACCOUNT_HAS_ALREADY_BEEN_USED_TO_RECEIVE_ITEMS_CANNOT_RECEIVE_ITEMS_AGAIN;
+	
+	@ClientString(id = 4403, message = "Current Position : $s1 / $s2 / $s3 (West Side, Prison of the Abyss)")
+	public static SystemMessageId CURRENT_POSITION_S1_S2_S3_WEST_SIDE_PRISON_OF_THE_ABYSS;
+	
+	@ClientString(id = 4404, message = "Current Position : $s1 / $s2 / $s3 (East Side, Prison of the Abyss)")
+	public static SystemMessageId CURRENT_POSITION_S1_S2_S3_EAST_SIDE_PRISON_OF_THE_ABYSS;
+	
+	@ClientString(id = 4405, message = "Current Position : $s1 / $s2 / $s3 (Monster Arena)")
+	public static SystemMessageId CURRENT_POSITION_S1_S2_S3_MONSTER_ARENA;
+	
+	@ClientString(id = 4406, message = "Cannot receive the reward; no ranking or reward already received.")
+	public static SystemMessageId CANNOT_RECEIVE_THE_REWARD_NO_RANKING_OR_REWARD_ALREADY_RECEIVED;
+	
+	@ClientString(id = 4407, message = "Current Position : $s1 / $s2 / $s3 (Prison of the Abyss)")
+	public static SystemMessageId CURRENT_POSITION_S1_S2_S3_PRISON_OF_THE_ABYSS;
+	
+	@ClientString(id = 4408, message = "Cannot restart while participating in, or waiting to participate in the Olympiad.")
+	public static SystemMessageId CANNOT_RESTART_WHILE_PARTICIPATING_IN_OR_WAITING_TO_PARTICIPATE_IN_THE_OLYMPIAD;
+	
+	@ClientString(id = 4409, message = "You may only use arenas with the same mode as the first monster arena you have used this week.")
+	public static SystemMessageId YOU_MAY_ONLY_USE_ARENAS_WITH_THE_SAME_MODE_AS_THE_FIRST_MONSTER_ARENA_YOU_HAVE_USED_THIS_WEEK;
+	
+	@ClientString(id = 4410, message = "Chat ban will be lifted in $s1 seconds.")
+	public static SystemMessageId CHAT_BAN_WILL_BE_LIFTED_IN_S1_SECONDS;
+	
+	@ClientString(id = 4411, message = "Macros consisting of chat messages only cannot be used automatically.")
+	public static SystemMessageId MACROS_CONSISTING_OF_CHAT_MESSAGES_ONLY_CANNOT_BE_USED_AUTOMATICALLY;
 	
 	@ClientString(id = 4601, message = "- Great P. Def. and skillful Shield Defense(br)- Increased P. Def. for the whole party(br)- Protect party members")
 	public static SystemMessageId GREAT_P_DEF_AND_SKILLFUL_SHIELD_DEFENSE_BR_INCREASED_P_DEF_FOR_THE_WHOLE_PARTY_BR_PROTECT_PARTY_MEMBERS;
@@ -13471,6 +13636,51 @@ public final class SystemMessageId
 	@ClientString(id = 5331, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the NCSOFT website (https://support.lineage2.com).")
 	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_NCSOFT_WEBSITE_HTTPS_SUPPORT_LINEAGE2_COM122;
 	
+	@ClientString(id = 5332, message = "Your account has been idle for a long time. If you do not play the game for a certain period, your account will become idle. You can reactivate your account at the (font color='FFDF4C')plaync webpage ((/font)(font color='6699FF')(a action='url https://id.plaync.com/account/dormant/index')id.plaync.com/account/dormant/index(/a)(/font)(font color='FFDF4C'))(/font).")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_IDLE_FOR_A_LONG_TIME_IF_YOU_DO_NOT_PLAY_THE_GAME_FOR_A_CERTAIN_PERIOD_YOUR_ACCOUNT_WILL_BECOME_IDLE_YOU_CAN_REACTIVATE_YOUR_ACCOUNT_AT_THE_FONT_COLOR_FFDF4C_PLAYNC_WEBPAGE_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_ID_PLAYNC_COM_ACCOUNT_DORMANT_INDEX_ID_PLAYNC_COM_ACCOUNT_DORMANT_INDEX_FONT_COLOR_FFDF4C;
+	
+	@ClientString(id = 5501, message = "$s1 has been killed by $s2.")
+	public static SystemMessageId S1_HAS_BEEN_KILLED_BY_S2;
+	
+	@ClientString(id = 5502, message = "$s1 has been killed by a monster.")
+	public static SystemMessageId S1_HAS_BEEN_KILLED_BY_A_MONSTER;
+	
+	@ClientString(id = 5503, message = "$s1 has died.")
+	public static SystemMessageId S1_HAS_DIED;
+	
+	@ClientString(id = 5504, message = "The outer castle gates of the village have been taken! All shall gather here!")
+	public static SystemMessageId THE_OUTER_CASTLE_GATES_OF_THE_VILLAGE_HAVE_BEEN_TAKEN_ALL_SHALL_GATHER_HERE;
+	
+	@ClientString(id = 5505, message = "A hidden path into the village has been discovered! All troops gather at the strondhold!")
+	public static SystemMessageId A_HIDDEN_PATH_INTO_THE_VILLAGE_HAS_BEEN_DISCOVERED_ALL_TROOPS_GATHER_AT_THE_STRONDHOLD;
+	
+	@ClientString(id = 5506, message = "The Inner Castle Gate has been opened! All troops, attack Turakan!")
+	public static SystemMessageId THE_INNER_CASTLE_GATE_HAS_BEEN_OPENED_ALL_TROOPS_ATTACK_TURAKAN;
+	
+	@ClientString(id = 5507, message = "What's that? Something has appeared at the center of the village!")
+	public static SystemMessageId WHAT_S_THAT_SOMETHING_HAS_APPEARED_AT_THE_CENTER_OF_THE_VILLAGE;
+	
+	@ClientString(id = 5508, message = "Engrave a seal on the Tower of Seals to take the Orc Castle!")
+	public static SystemMessageId ENGRAVE_A_SEAL_ON_THE_TOWER_OF_SEALS_TO_TAKE_THE_ORC_CASTLE;
+	
+	@ClientString(id = 5509, message = "Starting matching...")
+	public static SystemMessageId STARTING_MATCHING;
+	
+	@ClientString(id = 5510, message = "Matching canceled.")
+	public static SystemMessageId MATCHING_CANCELED;
+	
+	@ClientString(id = 5511, message = "Standing by...")
+	public static SystemMessageId STANDING_BY;
+	
+	@ClientString(id = 5512, message = "$s1 has chosen a class.")
+	public static SystemMessageId S1_HAS_CHOSEN_A_CLASS;
+	
+	@ClientString(id = 5513, message = "The battle will soon begin.")
+	public static SystemMessageId THE_BATTLE_WILL_SOON_BEGIN;
+	
+	@ClientString(id = 5514, message = "Skill enhancement complete.")
+	public static SystemMessageId SKILL_ENHANCEMENT_COMPLETE;
+	
 	@ClientString(id = 6001, message = "The item has been successfully purchased.")
 	public static SystemMessageId THE_ITEM_HAS_BEEN_SUCCESSFULLY_PURCHASED2;
 	
@@ -14086,6 +14296,9 @@ public final class SystemMessageId
 	@ClientString(id = 6205, message = "We're upgrading our systems, and you must migrate your account to continue playing. Click (BLUE02)(u)(a href='event:here')here(/a)(/u)(/BLUE02) to log into your NC Account")
 	public static SystemMessageId WE_RE_UPGRADING_OUR_SYSTEMS_AND_YOU_MUST_MIGRATE_YOUR_ACCOUNT_TO_CONTINUE_PLAYING_CLICK_BLUE02_U_U_BLUE02_TO_LOG_INTO_YOUR_NC_ACCOUNT;
 	
+	@ClientString(id = 6206, message = "When you add offerings, the success rate can be increased up to 100%%. Your current success rate is $s1%%. Continue?")
+	public static SystemMessageId WHEN_YOU_ADD_OFFERINGS_THE_SUCCESS_RATE_CAN_BE_INCREASED_UP_TO_100_YOUR_CURRENT_SUCCESS_RATE_IS_S1_CONTINUE;
+	
 	@ClientString(id = 6501, message = "You cannot bookmark this location because you do not have a My Teleport Flag.")
 	public static SystemMessageId YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG;
 	
@@ -14196,6 +14409,15 @@ public final class SystemMessageId
 	
 	@ClientString(id = 6829, message = "You don't have any Beast Soulshots/Spiritshots. Please buy them at the shop.")
 	public static SystemMessageId YOU_DON_T_HAVE_ANY_BEAST_SOULSHOTS_SPIRITSHOTS_PLEASE_BUY_THEM_AT_THE_SHOP;
+	
+	@ClientString(id = 6830, message = "There are $s1 players in the qeue. Click on cancel to end the server connection.")
+	public static SystemMessageId THERE_ARE_S1_PLAYERS_IN_THE_QEUE_CLICK_ON_CANCEL_TO_END_THE_SERVER_CONNECTION;
+	
+	@ClientString(id = 6831, message = "Cannot request duels when participating in the Olympiad/Ceremony of Chaos.")
+	public static SystemMessageId CANNOT_REQUEST_DUELS_WHEN_PARTICIPATING_IN_THE_OLYMPIAD_CEREMONY_OF_CHAOS;
+	
+	@ClientString(id = 6832, message = "You cannot drop any more items in this zone. Please try again after picking up the item on the ground.")
+	public static SystemMessageId YOU_CANNOT_DROP_ANY_MORE_ITEMS_IN_THIS_ZONE_PLEASE_TRY_AGAIN_AFTER_PICKING_UP_THE_ITEM_ON_THE_GROUND;
 	
 	@ClientString(id = 7001, message = "Cannot proceed until the current dice roll is over.")
 	public static SystemMessageId CANNOT_PROCEED_UNTIL_THE_CURRENT_DICE_ROLL_IS_OVER;
