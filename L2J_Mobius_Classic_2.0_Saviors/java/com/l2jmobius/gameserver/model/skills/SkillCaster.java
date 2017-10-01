@@ -447,7 +447,16 @@ public class SkillCaster implements Runnable
 			return false;
 		}
 		
-		// Noptify skill is casted.
+		// Consume skill reduced item on success.
+		if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS))
+		{
+			if (!caster.destroyItem(_skill.toString(), _item.getObjectId(), _skill.getItemConsumeCount(), target, true))
+			{
+				return false;
+			}
+		}
+		
+		// Notify skill is casted.
 		EventDispatcher.getInstance().notifyEvent(new OnCreatureSkillFinishCast(caster, target, _skill, _skill.isWithoutAction()), caster);
 		
 		// Call the skill's effects and AI interraction and stuff.
@@ -467,12 +476,6 @@ public class SkillCaster implements Runnable
 		
 		// On each repeat recharge shots before cast.
 		caster.rechargeShots(_skill.useSoulShot(), _skill.useSpiritShot(), false);
-		
-		// Consume skill reduced item on success.
-		if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS))
-		{
-			caster.destroyItem(_skill.toString(), _item.getObjectId(), _skill.getItemConsumeCount(), target, true);
-		}
 		
 		return true;
 	}
@@ -905,17 +908,24 @@ public class SkillCaster implements Runnable
 			}
 		}
 		
-		// Check if a summon spell consumes an item.
-		if (skill.hasEffectType(L2EffectType.SUMMON) && (skill.getItemConsumeId() > 0) && (skill.getItemConsumeCount() > 0) && (caster.getInventory() != null))
+		// Check if a spell consumes an item.
+		if ((skill.getItemConsumeId() > 0) && (skill.getItemConsumeCount() > 0) && (caster.getInventory() != null))
 		{
 			// Get the L2ItemInstance consumed by the spell
 			final L2ItemInstance requiredItems = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
 			if ((requiredItems == null) || (requiredItems.getCount() < skill.getItemConsumeCount()))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
-				sm.addItemName(skill.getItemConsumeId());
-				sm.addInt(skill.getItemConsumeCount());
-				caster.sendPacket(sm);
+				if (skill.hasEffectType(L2EffectType.SUMMON))
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_A_SERVITOR_COSTS_S2_S1);
+					sm.addItemName(skill.getItemConsumeId());
+					sm.addInt(skill.getItemConsumeCount());
+					caster.sendPacket(sm);
+				}
+				else
+				{
+					caster.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL));
+				}
 				return false;
 			}
 		}
