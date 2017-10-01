@@ -1006,20 +1006,27 @@
 		</collision>
 	</npc>
 	<npc id="26131" level="101" type="L2RaidBoss" name="Isabella" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<acquire exp="54225186393" sp="130140121" raidPoints="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8161846" hpRegen="7.5" mp="48616" mpRegen="2.7" />
+			<vitals hp="19433358" hpRegen="11.5" mp="48616" mpRegen="3.9" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attack physical="41849" magical="27052" critical="4" attackSpeed="253" range="40" />	<!-- Calculate for Method of Three -->
+			<defence physical="14310" magical="10462" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="WIND" value="430" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="16517" level="2" /> <!-- Isabella -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
@@ -1087,18 +1094,24 @@
 			</lucky_corpse>
 		</drop_lists>
 	</npc>
-	<npc id="26132" level="85" type="L2Monster" name="Croa" title="Raid Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="26132" level="100" type="L2Monster" name="Croa" title="Raid Minion">
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attack physical="36152" magical="2337" critical="4" attackSpeed="253" range="40" />	<!-- Calculate for Method of Three -->
+			<defence physical="1236" magical="903" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="WIND" value="430" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
@@ -1108,18 +1121,24 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="26133" level="85" type="L2Monster" name="Amis" title="Raid Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+	<npc id="26133" level="100" type="L2Monster" name="Amis" title="Raid Minion">
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attack physical="36152" magical="2337" critical="4" attackSpeed="253" range="40" />	<!-- Calculate for Method of Three -->
+			<defence physical="1236" magical="903" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+				<attack type="WIND" value="430" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
