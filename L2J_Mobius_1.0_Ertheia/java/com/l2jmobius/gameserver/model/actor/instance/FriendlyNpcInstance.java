@@ -53,7 +53,7 @@ public class FriendlyNpcInstance extends L2Attackable
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		return _isAutoAttackable && !attacker.isPlayable();
+		return _isAutoAttackable && !attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance);
 	}
 	
 	@Override
@@ -65,7 +65,7 @@ public class FriendlyNpcInstance extends L2Attackable
 	@Override
 	public void addDamage(L2Character attacker, int damage, Skill skill)
 	{
-		if (!attacker.isPlayable())
+		if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance))
 		{
 			super.addDamage(attacker, damage, skill);
 		}
@@ -79,7 +79,7 @@ public class FriendlyNpcInstance extends L2Attackable
 	@Override
 	public void addDamageHate(L2Character attacker, int damage, int aggro)
 	{
-		if (!attacker.isPlayable())
+		if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpcInstance))
 		{
 			super.addDamageHate(attacker, damage, aggro);
 		}
