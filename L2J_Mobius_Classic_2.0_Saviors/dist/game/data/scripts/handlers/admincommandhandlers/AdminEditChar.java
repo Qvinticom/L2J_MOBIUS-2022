@@ -367,7 +367,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2PcInstance player = target.getActingPlayer();
 				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
-					player.setClassId(classidval);
 					if (player.isSubClassActive())
 					{
 						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
@@ -376,6 +375,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
+					player.setClassId(classidval);
 					
 					// Sex checks.
 					if (player.getRace().equals(Race.KAMAEL))

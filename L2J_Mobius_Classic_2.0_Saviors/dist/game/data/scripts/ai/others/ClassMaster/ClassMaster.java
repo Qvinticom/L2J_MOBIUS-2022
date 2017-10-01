@@ -359,7 +359,6 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 						}
 					}
 					
-					player.setClassId(classId);
 					if (player.isSubClassActive())
 					{
 						player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
@@ -368,6 +367,8 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
+					player.setClassId(classId);
+					
 					if (player.isInCategory(CategoryType.AWAKEN_GROUP))
 					{
 						SkillTreesData.getInstance().cleanSkillUponAwakening(player);

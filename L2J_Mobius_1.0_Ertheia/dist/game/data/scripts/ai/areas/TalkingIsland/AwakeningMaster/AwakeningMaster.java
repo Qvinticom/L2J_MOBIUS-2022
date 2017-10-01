@@ -306,7 +306,6 @@ public final class AwakeningMaster extends AbstractNpcAI
 		
 		for (ClassId newClass : player.getClassId().getNextClassIds())
 		{
-			player.setClassId(newClass.getId());
 			if (player.isDualClassActive())
 			{
 				player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
@@ -315,6 +314,8 @@ public final class AwakeningMaster extends AbstractNpcAI
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
+			player.setClassId(newClass.getId());
+			
 			player.sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER);
 			final UserInfo ui = new UserInfo(player, false);
 			ui.addComponentType(UserInfoType.BASIC_INFO);
