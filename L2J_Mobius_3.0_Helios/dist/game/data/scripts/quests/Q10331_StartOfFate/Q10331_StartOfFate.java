@@ -195,17 +195,17 @@ public final class Q10331_StartOfFate extends Quest
 						}
 						case ORC_RAIDER:
 						{
-							htmltext = "32150-14.htm";
+							htmltext = "32150-13.htm";
 							break;
 						}
 						case ORC_MONK:
 						{
-							htmltext = "32150-15.htm";
+							htmltext = "32150-14.htm";
 							break;
 						}
 						case ORC_SHAMAN:
 						{
-							htmltext = "32150-16.htm";
+							htmltext = "32150-15.htm";
 							break;
 						}
 						case SCAVENGER:
