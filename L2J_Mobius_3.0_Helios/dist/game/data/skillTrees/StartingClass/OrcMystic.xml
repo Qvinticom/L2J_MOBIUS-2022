@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="49">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed HELIOS -->
+		<skill skillName="Mana Recovery" skillId="214" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Toughness" skillId="134" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Magician's Movement" skillId="118" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Spellcraft" skillId="163" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Chill Flame" skillId="1100" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Soul Cry" skillId="1001" skillLvl="1" getLevel="1" autoGet="true" />
 
 		<skill skillName="Weapon Mastery" skillId="250" skillLvl="1" getLevel="7" levelUpSp="1" />
@@ -13,7 +18,6 @@
 		<skill skillName="Anti Magic" skillId="146" skillLvl="2" getLevel="7" levelUpSp="1" />
 		<skill skillName="Life Drain" skillId="1090" skillLvl="1" getLevel="7" levelUpSp="1" />
 		<skill skillName="Dreaming Spirit" skillId="1097" skillLvl="1" getLevel="7" levelUpSp="1" />
-		<skill skillName="Chill Flame" skillId="1100" skillLvl="1" getLevel="7" levelUpSp="1" />
 		<skill skillName="Soul Shield" skillId="1010" skillLvl="1" getLevel="7" levelUpSp="1" />
 		<skill skillName="Venom" skillId="1095" skillLvl="1" getLevel="7" levelUpSp="1" />
 
