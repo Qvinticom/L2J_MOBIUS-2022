@@ -181,10 +181,11 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 		
 		_statusMask |= 0x08;
 		
-		if (_statusMask != 0)
-		{
-			addComponentType(NpcInfoType.VISUAL_STATE);
-		}
+		// Show red aura?
+		// if (_statusMask != 0)
+		// {
+		// addComponentType(NpcInfoType.VISUAL_STATE);
+		// }
 	}
 	
 	@Override
