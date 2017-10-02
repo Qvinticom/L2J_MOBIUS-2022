@@ -43,8 +43,8 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 	private static final int DIRTY_PAPER_PIECES = 17578;
 	private static final int LEATHER_SHOES = 37;
 	// Misc
-	private static final int MIN_LEVEL = 13;
-	private static final int MAX_LEVEL = 25;
+	private static final int MIN_LEVEL = 15;
+	private static final int MAX_LEVEL = 20;
 	
 	public Q10364_ObligationsOfTheSeeker()
 	{
