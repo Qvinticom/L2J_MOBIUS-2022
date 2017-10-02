@@ -12108,45 +12108,38 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		final int relation1 = getRelation(activeChar);
+		final RelationChanged rc1 = new RelationChanged();
+		rc1.addRelation(this, relation1, isAutoAttackable(activeChar));
+		if (hasSummon())
+		{
+			final L2Summon pet = getPet();
+			if (pet != null)
+			{
+				rc1.addRelation(pet, relation1, isAutoAttackable(activeChar));
+			}
+			if (hasServitors())
+			{
+				getServitors().values().forEach(s -> rc1.addRelation(s, relation1, isAutoAttackable(activeChar)));
+			}
+		}
+		activeChar.sendPacket(rc1);
+		
 		final int relation2 = activeChar.getRelation(this);
-		Integer oldrelation = getKnownRelations().get(activeChar.getObjectId());
-		if ((oldrelation != null) && (oldrelation != relation1))
+		final RelationChanged rc2 = new RelationChanged();
+		rc2.addRelation(activeChar, relation2, activeChar.isAutoAttackable(this));
+		if (activeChar.hasSummon())
 		{
-			final RelationChanged rc = new RelationChanged();
-			rc.addRelation(this, relation1, isAutoAttackable(activeChar));
-			if (hasSummon())
+			final L2Summon pet = getPet();
+			if (pet != null)
 			{
-				final L2Summon pet = getPet();
-				if (pet != null)
-				{
-					rc.addRelation(pet, relation1, isAutoAttackable(activeChar));
-				}
-				if (hasServitors())
-				{
-					getServitors().values().forEach(s -> rc.addRelation(s, relation1, isAutoAttackable(activeChar)));
-				}
+				rc2.addRelation(pet, relation2, activeChar.isAutoAttackable(this));
 			}
-			activeChar.sendPacket(rc);
-		}
-		oldrelation = activeChar.getKnownRelations().get(getObjectId());
-		if ((oldrelation != null) && (oldrelation != relation2) && activeChar.isVisibleFor(this))
-		{
-			final RelationChanged rc = new RelationChanged();
-			rc.addRelation(activeChar, relation2, activeChar.isAutoAttackable(this));
-			if (activeChar.hasSummon())
+			if (hasServitors())
 			{
-				final L2Summon pet = getPet();
-				if (pet != null)
-				{
-					rc.addRelation(pet, relation2, activeChar.isAutoAttackable(this));
-				}
-				if (hasServitors())
-				{
-					getServitors().values().forEach(s -> rc.addRelation(s, relation2, activeChar.isAutoAttackable(this)));
-				}
+				getServitors().values().forEach(s -> rc2.addRelation(s, relation2, activeChar.isAutoAttackable(this)));
 			}
-			sendPacket(rc);
 		}
+		sendPacket(rc2);
 		
 		switch (getPrivateStoreType())
 		{
