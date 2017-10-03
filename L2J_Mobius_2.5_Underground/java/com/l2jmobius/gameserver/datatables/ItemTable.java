@@ -251,13 +251,16 @@ public class ItemTable
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
 			{
-				if (item.getEnchantLevel() > 0)
+				if ((actor != null) && (reference != null)) // NPE check
 				{
-					LOGGER_ITEMS.info("CREATE:" + process + ", item " + item.getObjectId() + ":+" + item.getEnchantLevel() + " " + item.getItem().getName() + "(" + item.getCount() + "), " + actor + ", " + reference);
-				}
-				else
-				{
-					LOGGER_ITEMS.info("CREATE:" + process + ", item " + item.getObjectId() + ":" + item.getItem().getName() + "(" + item.getCount() + "), " + actor + ", " + reference);
+					if (item.getEnchantLevel() > 0)
+					{
+						LOGGER_ITEMS.info("CREATE:" + process + ", item " + item.getObjectId() + ":+" + item.getEnchantLevel() + " " + item.getItem().getName() + "(" + item.getCount() + "), " + actor + ", " + reference);
+					}
+					else
+					{
+						LOGGER_ITEMS.info("CREATE:" + process + ", item " + item.getObjectId() + ":" + item.getItem().getName() + "(" + item.getCount() + "), " + actor + ", " + reference);
+					}
 				}
 			}
 		}

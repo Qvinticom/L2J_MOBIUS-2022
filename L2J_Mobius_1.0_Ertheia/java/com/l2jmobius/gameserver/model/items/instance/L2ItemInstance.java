@@ -327,13 +327,16 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (getItem().isEquipable() || (getItem().getId() == ADENA_ID))))
 			{
-				if (getEnchantLevel() > 0)
+				if ((creator != null) && (reference != null))
 				{
-					_logItems.info("SETOWNER:" + process + ", item " + getObjectId() + ":+" + getEnchantLevel() + " " + getItem().getName() + "(" + _count + "), " + creator + ", " + reference);
-				}
-				else
-				{
-					_logItems.info("SETOWNER:" + process + ", item " + getObjectId() + ":" + getItem().getName() + "(" + _count + "), " + creator + ", " + reference);
+					if (getEnchantLevel() > 0)
+					{
+						_logItems.info("SETOWNER:" + process + ", item " + getObjectId() + ":+" + getEnchantLevel() + " " + getItem().getName() + "(" + _count + "), " + creator + ", " + reference);
+					}
+					else
+					{
+						_logItems.info("SETOWNER:" + process + ", item " + getObjectId() + ":" + getItem().getName() + "(" + _count + "), " + creator + ", " + reference);
+					}
 				}
 			}
 		}
@@ -493,13 +496,16 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == ADENA_ID))))
 			{
-				if (getEnchantLevel() > 0)
+				if ((creator != null) && (reference != null))
 				{
-					_logItems.info("CHANGE:" + process + ", item " + getObjectId() + ":+" + getEnchantLevel() + " " + getItem().getName() + "(" + _count + "), PrevCount(" + old + "), " + creator + ", " + reference);
-				}
-				else
-				{
-					_logItems.info("CHANGE:" + process + ", item " + getObjectId() + ":" + getItem().getName() + "(" + _count + "), PrevCount(" + old + "), " + creator + ", " + reference);
+					if (getEnchantLevel() > 0)
+					{
+						_logItems.info("CHANGE:" + process + ", item " + getObjectId() + ":+" + getEnchantLevel() + " " + getItem().getName() + "(" + _count + "), PrevCount(" + old + "), " + creator + ", " + reference);
+					}
+					else
+					{
+						_logItems.info("CHANGE:" + process + ", item " + getObjectId() + ":" + getItem().getName() + "(" + _count + "), PrevCount(" + old + "), " + creator + ", " + reference);
+					}
 				}
 			}
 		}
