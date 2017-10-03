@@ -1429,7 +1429,6 @@
 		</conditions>
 	</skill>
 	<skill id="21271" toLevel="1" name="Ride Black Bear">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Ride a Black Bear. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1451,6 +1450,11 @@
 				<transformId>20009</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>20009</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21272" toLevel="1" name="Ride Halloween Witch's Broomstick">
 		<!-- AUTO GENERATED SKILL -->
