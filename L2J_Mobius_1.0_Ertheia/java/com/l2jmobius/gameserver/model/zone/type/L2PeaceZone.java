@@ -17,7 +17,9 @@
 package com.l2jmobius.gameserver.model.zone.type;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -36,6 +38,11 @@ public class L2PeaceZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
+		if (!isEnabled())
+		{
+			return;
+		}
+		
 		if (character.isPlayer())
 		{
 			final L2PcInstance player = character.getActingPlayer();
@@ -69,6 +76,42 @@ public class L2PeaceZone extends L2ZoneType
 		if (!getAllowStore())
 		{
 			character.setInsideZone(ZoneId.NO_STORE, false);
+		}
+	}
+	
+	@Override
+	public void setEnabled(boolean state)
+	{
+		super.setEnabled(state);
+		if (state)
+		{
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
+			{
+				if ((player != null) && isInsideZone(player))
+				{
+					revalidateInZone(player);
+					
+					if (player.getPet() != null)
+					{
+						revalidateInZone(player.getPet());
+					}
+					
+					for (L2Summon summon : player.getServitors().values())
+					{
+						revalidateInZone(summon);
+					}
+				}
+			}
+		}
+		else
+		{
+			for (L2Character character : getCharactersInside())
+			{
+				if (character != null)
+				{
+					removeCharacter(character);
+				}
+			}
 		}
 	}
 }

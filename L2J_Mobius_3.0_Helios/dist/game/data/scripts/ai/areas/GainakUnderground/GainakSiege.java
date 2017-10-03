@@ -49,7 +49,6 @@ public final class GainakSiege extends AbstractNpcAI
 {
 	private static final int SIEGE_EFFECT = 20140700;
 	private static final int SIEGE_DURATION = 30;
-	private static final L2PeaceZone GAINAK_PEACE_ZONE = ZoneManager.getInstance().getZoneById(60018, L2PeaceZone.class);
 	private static final L2SiegeZone GAINAK_SIEGE_ZONE = ZoneManager.getInstance().getZoneById(60019, L2SiegeZone.class);
 	private static final L2PeaceZone GAINAK_TOWN_ZONE = ZoneManager.getInstance().getZoneById(60020, L2PeaceZone.class);
 	protected static final int[] ASSASSIN_IDS =
@@ -97,11 +96,11 @@ public final class GainakSiege extends AbstractNpcAI
 			if (_isInSiege)
 			{
 				_isInSiege = false;
-				GAINAK_PEACE_ZONE.setEnabled(true);
-				GAINAK_SIEGE_ZONE.setIsActive(false);
-				GAINAK_SIEGE_ZONE.updateZoneStatusForCharactersInside();
+				GAINAK_TOWN_ZONE.setEnabled(true); // enable before broadcast
 				GAINAK_TOWN_ZONE.broadcastPacket(new OnEventTrigger(SIEGE_EFFECT, false));
 				GAINAK_TOWN_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.GAINAK_IN_PEACE, ExShowScreenMessage.TOP_CENTER, 5000, true));
+				GAINAK_SIEGE_ZONE.setIsActive(false);
+				GAINAK_SIEGE_ZONE.updateZoneStatusForCharactersInside();
 				startQuestTimer("GAINAK_WAR", getTimeBetweenSieges() * 60000, null, null);
 				if (Config.ANNOUNCE_GAINAK_SIEGE)
 				{
@@ -117,11 +116,11 @@ public final class GainakSiege extends AbstractNpcAI
 					addSpawn(ASSASSIN_IDS[getRandom(ASSASSIN_IDS.length)], loc, true, 1800000);
 				}
 				_isInSiege = true;
-				GAINAK_PEACE_ZONE.setEnabled(false);
-				GAINAK_SIEGE_ZONE.setIsActive(true);
-				GAINAK_SIEGE_ZONE.updateZoneStatusForCharactersInside();
 				GAINAK_TOWN_ZONE.broadcastPacket(new OnEventTrigger(SIEGE_EFFECT, true));
 				GAINAK_TOWN_ZONE.broadcastPacket(new ExShowScreenMessage(NpcStringId.GAINAK_IN_WAR, ExShowScreenMessage.TOP_CENTER, 5000, true));
+				GAINAK_TOWN_ZONE.setEnabled(false); // disable after broadcast
+				GAINAK_SIEGE_ZONE.setIsActive(true);
+				GAINAK_SIEGE_ZONE.updateZoneStatusForCharactersInside();
 				startQuestTimer("GAINAK_WAR", SIEGE_DURATION * 60000, null, null);
 				if (Config.ANNOUNCE_GAINAK_SIEGE)
 				{
