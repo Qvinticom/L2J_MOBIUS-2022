@@ -1713,7 +1713,6 @@
 		</conditions>
 	</skill>
 	<skill id="21286" toLevel="1" name="Ride Unicorn">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mount a Unicorn. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1735,6 +1734,11 @@
 				<transformId>20016</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>20016</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21287" toLevel="1" name="Emergency Ballista Repair">
 		<!-- AUTO GENERATED SKILL -->
