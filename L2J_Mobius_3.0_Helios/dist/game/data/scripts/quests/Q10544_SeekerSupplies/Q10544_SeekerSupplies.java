@@ -118,7 +118,39 @@ public final class Q10544_SeekerSupplies extends Quest
 			}
 			case "32166-02.html":
 			{
-				qs.setCond(5, true);
+				switch (player.getRace())
+				{
+					case HUMAN:
+					{
+						qs.setCond(5, true);
+						break;
+					}
+					case ELF:
+					{
+						qs.setCond(6, true);
+						break;
+					}
+					case DARK_ELF:
+					{
+						qs.setCond(7, true);
+						break;
+					}
+					case ORC:
+					{
+						qs.setCond(8, true);
+						break;
+					}
+					case DWARF:
+					{
+						qs.setCond(9, true);
+						break;
+					}
+					case KAMAEL:
+					{
+						qs.setCond(10, true);
+						break;
+					}
+				}
 				giveItems(player, ACCESSORY_SUPPLY_BOX, 1);
 				htmltext = event;
 				break;
@@ -237,7 +269,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					}
 					case RIVIAN:
 					{
-						if (qs.isCond(5))
+						if (qs.isCond(6))
 						{
 							htmltext = (player.getRace() == Race.ELF) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32147-00.html";
 						}
@@ -245,7 +277,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					}
 					case TOOK:
 					{
-						if (qs.isCond(5))
+						if (qs.isCond(8))
 						{
 							htmltext = (player.getRace() == Race.ORC) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32150-00.html";
 						}
@@ -253,7 +285,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					}
 					case DEVON:
 					{
-						if (qs.isCond(5))
+						if (qs.isCond(7))
 						{
 							htmltext = (player.getRace() == Race.DARK_ELF) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32160-00.html";
 						}
@@ -261,7 +293,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					}
 					case MOKA:
 					{
-						if (qs.isCond(5))
+						if (qs.isCond(9))
 						{
 							htmltext = (player.getRace() == Race.DWARF) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32157-00.html";
 						}
@@ -269,7 +301,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					}
 					case VALFAR:
 					{
-						if (qs.isCond(5))
+						if (qs.isCond(10))
 						{
 							htmltext = (player.getRace() == Race.KAMAEL) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32146-00.html";
 						}
