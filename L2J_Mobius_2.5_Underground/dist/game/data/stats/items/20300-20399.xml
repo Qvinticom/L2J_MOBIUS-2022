@@ -2226,7 +2226,6 @@
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
@@ -2239,7 +2238,7 @@
 		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
-			<skill id="21051" level="1" /> <!-- Ride Steam Beetle -->
+			<skill id="8261" level="1" /> <!-- Ride Steam Beetle -->
 		</skills>
 	</item>
 	<item id="20397" name="Newbie Level-Up Pack" type="EtcItem">
