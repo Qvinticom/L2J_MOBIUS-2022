@@ -517,7 +517,7 @@ public class NpcViewMod implements IBypassHandler
 						
 						sb.append("</td></tr><tr><td width=48 align=right valign=top><font color=\"LEVEL\">Chance:</font></td>");
 						sb.append("<td width=205 align=center>");
-						sb.append(chanceFormat.format(Math.min(generalDropItem.getChance(), 100)));
+						sb.append(chanceFormat.format(Math.min(generalDropItem.getChance(npc, activeChar), 100)));
 						sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=259>&nbsp;</td></tr></table>");
 						
 						height += 64;

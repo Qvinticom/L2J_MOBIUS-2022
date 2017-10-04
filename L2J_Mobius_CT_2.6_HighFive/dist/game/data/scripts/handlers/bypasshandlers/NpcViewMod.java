@@ -93,7 +93,7 @@ public class NpcViewMod implements IBypassHandler
 					return false;
 				}
 				
-				NpcViewMod.sendNpcView(activeChar, npc);
+				sendNpcView(activeChar, npc);
 				break;
 			}
 			case "droplist":

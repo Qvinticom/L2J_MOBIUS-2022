@@ -71,8 +71,40 @@ public class GroupedGeneralDropItem implements IDropItem
 		for (GeneralDropItem gdi : getItems())
 		{
 			final L2Item item = ItemTable.getInstance().getTemplate(gdi.getItemId());
-			if ((item == null) || !item.hasExImmediateEffect())
+			if (item == null)
 			{
+				return 0;
+			}
+			if (!item.hasExImmediateEffect())
+			{
+				// individual chance
+				Float individualDropChanceMultiplier = null;
+				if (killer.getActingPlayer().hasPremiumStatus())
+				{
+					final Float normalMultiplier = Config.RATE_DROP_CHANCE_BY_ID.get(item.getId());
+					final Float premiumMultiplier = Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(item.getId());
+					if ((normalMultiplier != null) && (premiumMultiplier != null))
+					{
+						individualDropChanceMultiplier = normalMultiplier * premiumMultiplier;
+					}
+					else if (normalMultiplier != null)
+					{
+						individualDropChanceMultiplier = normalMultiplier;
+					}
+					else if (premiumMultiplier != null)
+					{
+						individualDropChanceMultiplier = premiumMultiplier;
+					}
+				}
+				else
+				{
+					individualDropChanceMultiplier = Config.RATE_DROP_CHANCE_BY_ID.get(item.getId());
+				}
+				if (individualDropChanceMultiplier != null)
+				{
+					return getChance() * individualDropChanceMultiplier;
+				}
+				
 				return getChance() * getGlobalChanceMultiplier();
 			}
 		}
@@ -130,7 +162,7 @@ public class GroupedGeneralDropItem implements IDropItem
 			for (GeneralDropItem item : getItems())
 			{
 				// Grouped item chance rates should not be modified.
-				totalChance += item.getChance();
+				totalChance += item.getChance(victim, killer);
 				if (totalChance > random)
 				{
 					final Collection<ItemHolder> items = new ArrayList<>(1);
