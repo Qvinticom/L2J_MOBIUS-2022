@@ -687,10 +687,14 @@
 	</item>
 	<item id="46247" name="Halloween Shield" type="Armor">
 		<set name="icon" val="icon.ev_wp_halloween" />
-		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="1130" />
+		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="sDef">546</stat>
 			<stat type="rShld">20</stat>
@@ -702,7 +706,11 @@
 		<set name="armor_type" val="SIGIL" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="920" />
 		<stats>
 			<stat type="pDef">150</stat>
