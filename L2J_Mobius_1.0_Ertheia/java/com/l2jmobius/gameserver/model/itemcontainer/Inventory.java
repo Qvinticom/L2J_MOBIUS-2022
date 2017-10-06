@@ -1273,7 +1273,7 @@ public abstract class Inventory extends ItemContainer
 		try
 		{
 			unEquipItemInSlot(slot);
-			if (getOwner() instanceof L2PcInstance)
+			if (getOwner().isPlayer())
 			{
 				((L2PcInstance) getOwner()).refreshExpertisePenalty();
 			}
@@ -1431,7 +1431,7 @@ public abstract class Inventory extends ItemContainer
 			final L2ItemInstance old = setPaperdollItem(pdollSlot, null);
 			if (old != null)
 			{
-				if (getOwner() instanceof L2PcInstance)
+				if (getOwner().isPlayer())
 				{
 					((L2PcInstance) getOwner()).refreshExpertisePenalty();
 				}
@@ -1473,7 +1473,7 @@ public abstract class Inventory extends ItemContainer
 			return;
 		}
 		
-		if (getOwner() instanceof L2PcInstance)
+		if (getOwner().isPlayer())
 		{
 			final L2PcInstance player = (L2PcInstance) getOwner();
 			
@@ -1794,7 +1794,7 @@ public abstract class Inventory extends ItemContainer
 				while (rs.next())
 				{
 					final L2ItemInstance item = new L2ItemInstance(rs);
-					if (getOwner() instanceof L2PcInstance)
+					if (getOwner().isPlayer())
 					{
 						final L2PcInstance player = (L2PcInstance) getOwner();
 						

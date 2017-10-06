@@ -6745,14 +6745,6 @@ public final class L2PcInstance extends L2Playable
 				player.setOverrideCond(masks);
 			}
 			
-			// Retrieve from the database all items of this L2PcInstance and add them to _inventory
-			player.getInventory().restore();
-			player.getFreight().restore();
-			if (!Config.WAREHOUSE_CACHE)
-			{
-				player.getWarehouse();
-			}
-			
 			// Retrieve from the database all secondary data of this L2PcInstance
 			// Note that Clan, Noblesse and Hero skills are given separately and not here.
 			// Retrieve from the database all skills of this L2PcInstance and add them to _skills
@@ -6760,6 +6752,14 @@ public final class L2PcInstance extends L2Playable
 			
 			// Reward auto-get skills and all available skills if auto-learn skills is true.
 			player.rewardSkills();
+			
+			// Retrieve from the database all items of this L2PcInstance and add them to _inventory
+			player.getInventory().restore();
+			player.getFreight().restore();
+			if (!Config.WAREHOUSE_CACHE)
+			{
+				player.getWarehouse();
+			}
 			
 			player.restoreItemReuse();
 			

@@ -641,6 +641,12 @@ public class EnterWorld implements IClientIncomingPacket
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 		}
 		
+		// Fix for equipped item skills
+		if (!activeChar.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
+		{
+			activeChar.updateAbnormalVisualEffects();
+		}
+		
 		if (Config.HARDWARE_INFO_ENABLED)
 		{
 			ThreadPoolManager.schedule(() ->

@@ -652,6 +652,12 @@ public class EnterWorld implements IClientIncomingPacket
 		activeChar.sendPacket(new ExAutoSoulShot(0, true, 2));
 		activeChar.sendPacket(new ExAutoSoulShot(0, true, 3));
 		
+		// Fix for equipped item skills
+		if (!activeChar.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
+		{
+			activeChar.updateAbnormalVisualEffects();
+		}
+		
 		if (Config.HARDWARE_INFO_ENABLED)
 		{
 			ThreadPoolManager.schedule(() ->
