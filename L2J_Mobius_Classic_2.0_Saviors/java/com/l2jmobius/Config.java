@@ -645,12 +645,6 @@ public final class Config
 	public static int INVENTORY_MAXIMUM_PET;
 	public static double PET_HP_REGEN_MULTIPLIER;
 	public static double PET_MP_REGEN_MULTIPLIER;
-	public static int DROP_ADENA_MIN_LEVEL_DIFFERENCE;
-	public static int DROP_ADENA_MAX_LEVEL_DIFFERENCE;
-	public static double DROP_ADENA_MIN_LEVEL_GAP_CHANCE;
-	public static int DROP_ITEM_MIN_LEVEL_DIFFERENCE;
-	public static int DROP_ITEM_MAX_LEVEL_DIFFERENCE;
-	public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
 	public static int VITALITY_CONSUME_BY_MOB;
 	public static int VITALITY_CONSUME_BY_BOSS;
 	
@@ -704,6 +698,14 @@ public final class Config
 	public static float RATE_RAID_DROP_CHANCE_MULTIPLIER;
 	public static Map<Integer, Float> RATE_DROP_AMOUNT_BY_ID;
 	public static Map<Integer, Float> RATE_DROP_CHANCE_BY_ID;
+	public static int DROP_MAX_OCCURRENCES_NORMAL;
+	public static int DROP_MAX_OCCURRENCES_RAIDBOSS;
+	public static int DROP_ADENA_MIN_LEVEL_DIFFERENCE;
+	public static int DROP_ADENA_MAX_LEVEL_DIFFERENCE;
+	public static double DROP_ADENA_MIN_LEVEL_GAP_CHANCE;
+	public static int DROP_ITEM_MIN_LEVEL_DIFFERENCE;
+	public static int DROP_ITEM_MAX_LEVEL_DIFFERENCE;
+	public static double DROP_ITEM_MIN_LEVEL_GAP_CHANCE;
 	public static float RATE_KARMA_LOST;
 	public static float RATE_KARMA_EXP_LOST;
 	public static float RATE_SIEGE_GUARDS_PRICE;
@@ -2025,6 +2027,9 @@ public final class Config
 					}
 				}
 			}
+			
+			DROP_MAX_OCCURRENCES_NORMAL = RatesSettings.getInt("DropMaxOccurrencesNormal", 2);
+			DROP_MAX_OCCURRENCES_RAIDBOSS = RatesSettings.getInt("DropMaxOccurrencesRaidboss", 7);
 			
 			DROP_ADENA_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropAdenaMinLevelDifference", 8);
 			DROP_ADENA_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropAdenaMaxLevelDifference", 15);

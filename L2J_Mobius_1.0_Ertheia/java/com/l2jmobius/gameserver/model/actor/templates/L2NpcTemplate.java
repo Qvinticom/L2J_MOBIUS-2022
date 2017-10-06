@@ -604,10 +604,21 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 			return null;
 		}
 		
+		// randomize drop order
+		Collections.shuffle(dropList);
+		
 		final int levelDifference = victim.getLevel() - killer.getLevel();
+		int dropOccurrenceCounter = victim.isRaid() ? Config.DROP_MAX_OCCURRENCES_RAIDBOSS : Config.DROP_MAX_OCCURRENCES_NORMAL;
 		Collection<ItemHolder> calculatedDrops = null;
 		for (DropHolder dropItem : dropList)
 		{
+			// check if maximum drop occurrences have been reached
+			// items that have 100% drop chance without server rate multipliers drop normally
+			if ((dropOccurrenceCounter == 0) && (dropItem.getChance() < 100))
+			{
+				continue;
+			}
+			
 			// check level gap that may prevent drop this item
 			final double levelGapChanceToDrop;
 			if (dropItem.getItemId() == Inventory.ADENA_ID)
@@ -637,6 +648,10 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 			}
 			
 			// finally
+			if (dropItem.getChance() < 100)
+			{
+				dropOccurrenceCounter--;
+			}
 			calculatedDrops.add(drop);
 		}
 		
