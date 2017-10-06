@@ -131,10 +131,31 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18426" toLevel="1" name="Scroll of Escape: Blackbird Campsite">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18426</icon>
 		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>20000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>46158</itemConsumeId> <!-- Scroll of Escape: Blackbird Campsite -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-48251</x>
+				<y>69572</y>
+				<z>-3083</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18427" toLevel="1" name="Aden Vanguard Reward Box">
 		<!-- AUTO GENERATED SKILL -->

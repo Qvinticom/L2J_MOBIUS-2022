@@ -24,10 +24,21 @@
 	<item id="37903" name="SP Rune Pack (Top-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (High-grade) (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="37897" min="1" max="1" chance="100" /> <!-- SP Rune (High-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="37904" name="Scroll: 1,000,000,000 SP" type="EtcItem">
 		<!-- Scroll the replenishes 1,000,000,000 SP. -->
