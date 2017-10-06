@@ -210,13 +210,13 @@ public class DropSearchBoard implements IParseBoardHandler
 						{
 							rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId);
 						}
-						else if (cbDropHolder.isRaid)
-						{
-							rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
-						}
 						else if (item.hasExImmediateEffect())
 						{
 							rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
+						}
+						else if (cbDropHolder.isRaid)
+						{
+							rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
 						}
 						else
 						{
