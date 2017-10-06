@@ -154,13 +154,53 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17220" toLevel="1" name="Valiant Scroll">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. + 10%, M. Atk. + 21%, P. Def. + 15%, M. Def. + 15%, Max HP, MP, and CP + 15%, and applied time + 30 minutes. Does not disappear upon death. -->
 		<icon>icon.etc_cave_page_i00</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>1800000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>BR_EVENT_BUF2</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<reuseDelay>300000</reuseDelay>
+		<abnormalTime>1800</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37867</itemConsumeId> <!-- Valiant Scroll -->
 		<effectPoint>1</effectPoint>
-		<isMagic>4</isMagic>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-3</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<trait>ETC</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>21</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		    <effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17221" toLevel="1" name="Hero's SP Scroll (Novice)">
 		<!-- AUTO GENERATED SKILL -->

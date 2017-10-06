@@ -746,11 +746,23 @@
 	<item id="37867" name="Valiant Scroll" type="EtcItem">
 		<!-- For 30 minutes, P. Atk. + 10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_cave_page_i00" />
+		<set name="weight" val="0" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17220" level="1" /> <!-- Valiant Scroll -->
+		</skills>
 	</item>
 	<item id="37868" name="Hero's Weapon: Dagger" additionalName="15-day" type="Weapon">
 		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/Spiritshot/Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->

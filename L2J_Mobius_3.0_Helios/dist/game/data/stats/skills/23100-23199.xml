@@ -1230,12 +1230,16 @@
 		<reuseDelay>300000</reuseDelay>
 		<castRange>900</castRange>
 		<trait>ETC</trait>
-		<targetType>ENEMY_NOT</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PAtk">
