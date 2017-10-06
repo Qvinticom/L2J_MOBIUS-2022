@@ -27,7 +27,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="weight" val="220" />
+		<set name="weight" val="220" />		
+		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">50.0</stat>
 			<stat type="mDef">40.0</stat>
