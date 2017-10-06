@@ -11,7 +11,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">479</stat>
 		</stats>
@@ -27,7 +35,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">299</stat>
 		</stats>
@@ -42,7 +54,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -58,6 +74,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -72,7 +91,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">180</stat>
 		</stats>
@@ -88,7 +110,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">383</stat>
 			<stat type="rEvas">5</stat>
@@ -105,7 +135,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">239</stat>
 			<stat type="rEvas">3</stat>
@@ -121,7 +155,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -137,6 +175,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -151,7 +192,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">180</stat>
 		</stats>
@@ -167,7 +211,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
 			<stat type="mDef">56</stat>
 			<stat type="pDef">263</stat>
@@ -185,7 +237,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">164</stat>
@@ -202,7 +258,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -218,6 +278,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -232,7 +295,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">180</stat>
 		</stats>
@@ -248,7 +314,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">479</stat>
 		</stats>
@@ -264,7 +338,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">299</stat>
 		</stats>
@@ -279,7 +357,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -295,6 +377,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -309,7 +394,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">180</stat>
 		</stats>
@@ -325,7 +413,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">383</stat>
 			<stat type="rEvas">5</stat>
@@ -342,7 +438,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">239</stat>
 			<stat type="rEvas">3</stat>
@@ -358,7 +458,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -374,6 +478,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -388,7 +495,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">180</stat>
 		</stats>
@@ -404,7 +514,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
 			<stat type="mDef">56</stat>
 			<stat type="pDef">263</stat>
@@ -422,7 +540,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">164</stat>
@@ -439,7 +561,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -455,6 +581,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -469,7 +598,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">180</stat>
 		</stats>
@@ -485,7 +617,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">479</stat>
 		</stats>
@@ -501,7 +641,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">299</stat>
 		</stats>
@@ -516,7 +660,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -532,6 +680,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -546,7 +697,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">180</stat>
 		</stats>
@@ -562,7 +716,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">383</stat>
 			<stat type="rEvas">5</stat>
@@ -579,7 +741,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">239</stat>
 			<stat type="rEvas">3</stat>
@@ -595,7 +761,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -611,6 +781,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -625,7 +798,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">180</stat>
 		</stats>
@@ -641,7 +817,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
 			<stat type="mDef">56</stat>
 			<stat type="pDef">263</stat>
@@ -659,7 +843,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">164</stat>
@@ -676,7 +864,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -692,6 +884,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">120</stat>
 		</stats>
@@ -706,7 +901,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -722,7 +920,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">488</stat>
 		</stats>
@@ -738,7 +944,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">305</stat>
 		</stats>
@@ -753,7 +963,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -769,6 +983,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -783,7 +1000,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -799,7 +1019,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">390</stat>
 			<stat type="rEvas">5</stat>
@@ -816,7 +1044,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">244</stat>
 			<stat type="rEvas">3</stat>
@@ -832,7 +1064,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -848,6 +1084,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -862,7 +1101,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -878,7 +1120,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
 			<stat type="mDef">56</stat>
 			<stat type="pDef">268</stat>
@@ -896,7 +1146,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">168</stat>
@@ -913,7 +1167,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -929,6 +1187,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -943,7 +1204,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -959,7 +1223,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">488</stat>
 		</stats>
@@ -975,7 +1247,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">305</stat>
 		</stats>
@@ -990,7 +1266,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1006,6 +1286,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1020,7 +1303,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -1036,7 +1322,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">390</stat>
 			<stat type="rEvas">5</stat>
@@ -1053,7 +1347,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">244</stat>
 			<stat type="rEvas">3</stat>
@@ -1069,7 +1367,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1085,6 +1387,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1099,7 +1404,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -1115,7 +1423,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
 			<stat type="mDef">56</stat>
 			<stat type="pDef">268</stat>
@@ -1133,7 +1449,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">168</stat>
@@ -1150,7 +1470,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1166,6 +1490,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1180,7 +1507,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -1196,7 +1526,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">488</stat>
 		</stats>
@@ -1212,7 +1550,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">305</stat>
 		</stats>
@@ -1227,7 +1569,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1243,6 +1589,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1257,7 +1606,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -1273,7 +1625,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">390</stat>
 			<stat type="rEvas">5</stat>
@@ -1290,7 +1650,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">244</stat>
 			<stat type="rEvas">3</stat>
@@ -1306,7 +1670,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1322,6 +1690,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1336,7 +1707,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">183</stat>
 		</stats>
@@ -1352,7 +1726,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
 			<stat type="mDef">56</stat>
 			<stat type="pDef">268</stat>
@@ -1370,7 +1752,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="mDef">37</stat>
 			<stat type="pDef">168</stat>
@@ -1387,7 +1773,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1403,6 +1793,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">122</stat>
 		</stats>
@@ -1417,7 +1810,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">187</stat>
 		</stats>
@@ -1433,7 +1829,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13310" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Heavy Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">498</stat>
 		</stats>
@@ -1449,7 +1853,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">311</stat>
 		</stats>
@@ -1464,7 +1872,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">125</stat>
 		</stats>
@@ -1480,6 +1892,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">125</stat>
 		</stats>
@@ -1494,7 +1909,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">187</stat>
 		</stats>
@@ -1510,7 +1928,15 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="422292000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_TOP" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="13311" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Light Armor Top Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pDef">398</stat>
 			<stat type="rEvas">5</stat>
@@ -1527,7 +1953,11 @@
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="263933000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<stats>
 			<stat type="pDef">249</stat>
 			<stat type="rEvas">3</stat>
@@ -1543,7 +1973,11 @@
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="105573000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">125</stat>
 		</stats>
@@ -1559,6 +1993,9 @@
 		<set name="weight" val="1070" />
 		<set name="price" val="105573000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="FEET" />
 		<stats>
 			<stat type="pDef">125</stat>
 		</stats>
@@ -1573,7 +2010,10 @@
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="158359000" />
+		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
+		<set name="element_enabled" val="true" />
+		<set name="commissionItemType" val="HELMET" />
 		<stats>
 			<stat type="pDef">187</stat>
 		</stats>
