@@ -774,32 +774,109 @@
 	<item id="47178" name="Basic Supply Box" additionalName="Mother Tree Guardians" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Mother Tree Guardians with their mission at Enchanted Valley. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="36513" min="1" max="1" chance="100" /> <!-- Elcyum Powder -->
+			<item id="47257" min="3" max="3" chance="100" /> <!-- Life Crystal -->
+			<item id="36523" min="1" max="1" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="1" max="1" chance="100" /> <!-- Adamantite Wire -->	
+			<item id="35330" min="1" max="1" chance="100" /> <!-- Helios Avenger Fragment -->
+			<item id="35335" min="1" max="1" chance="100" /> <!-- Helios Buster Fragment -->
+			<item id="35336" min="1" max="1" chance="100" /> <!-- Helios Caster Fragment -->
+			<item id="35328" min="1" max="1" chance="100" /> <!-- Helios Cutter Fragmen -->
+			<item id="35331" min="1" max="1" chance="100" /> <!-- Helios Fighter Fragment -->
+			<item id="35337" min="1" max="1" chance="100" /> <!-- Helios Retributer Fragment -->
+			<item id="35327" min="1" max="1" chance="100" /> <!-- Helios Shaper Fragment -->	
+			<item id="35334" min="1" max="1" chance="100" /> <!-- Helios Shooter Fragment -->
+			<item id="35329" min="1" max="1" chance="100" /> <!-- Helios Slasher Fragment -->
+			<item id="35332" min="1" max="1" chance="100" /> <!-- Helios Stormer Fragment -->
+			<item id="35333" min="1" max="1" chance="100" /> <!-- Helios Thrower Fragment -->	
+			<item id="36524" min="1" max="1" chance="100" /> <!-- Orichalcum -->
+			<item id="36544" min="1" max="1" chance="100" /> <!-- Orichalcum Wire -->	
+		</capsuled_items>
 	</item>
 	<item id="47179" name="Intermediate Supply Box" additionalName="Mother Tree Guardians" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Mother Tree Guardians with their mission at Enchanted Valley. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="36513" min="1" max="1" chance="100" /> <!-- Elcyum Powder -->
+			<item id="47257" min="6" max="6" chance="100" /> <!-- Life Crystal -->
+			<item id="36523" min="1" max="1" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="1" max="1" chance="100" /> <!-- Adamantite Wire -->	
+			<item id="36514" min="1" max="1" chance="100" /> <!-- Elcyum Crystal -->
+			<item id="35330" min="1" max="1" chance="100" /> <!-- Helios Avenger Fragment -->
+			<item id="35335" min="1" max="1" chance="100" /> <!-- Helios Buster Fragment -->
+			<item id="35336" min="1" max="1" chance="100" /> <!-- Helios Caster Fragment -->
+			<item id="35328" min="1" max="1" chance="100" /> <!-- Helios Cutter Fragmen -->
+			<item id="35331" min="1" max="1" chance="100" /> <!-- Helios Fighter Fragment -->
+			<item id="35337" min="1" max="1" chance="100" /> <!-- Helios Retributer Fragment -->
+			<item id="35327" min="1" max="1" chance="100" /> <!-- Helios Shaper Fragment -->	
+			<item id="35334" min="1" max="1" chance="100" /> <!-- Helios Shooter Fragment -->
+			<item id="35329" min="1" max="1" chance="100" /> <!-- Helios Slasher Fragment -->
+			<item id="35332" min="1" max="1" chance="100" /> <!-- Helios Stormer Fragment -->
+			<item id="35333" min="1" max="1" chance="100" /> <!-- Helios Thrower Fragment -->	
+			<item id="36524" min="1" max="1" chance="100" /> <!-- Orichalcum -->
+			<item id="36544" min="1" max="1" chance="100" /> <!-- Orichalcum Wire -->	
+		</capsuled_items>
 	</item>
 	<item id="47180" name="Advanced Supply Box" additionalName="Mother Tree Guardians" type="EtcItem">
 		<!-- An advanced supply box received in exchange for helping the Mother Tree Guardians with their mission at Enchanted Valley. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="36513" min="1" max="1" chance="100" /> <!-- Elcyum Powder -->
+			<item id="47257" min="9" max="9" chance="100" /> <!-- Life Crystal -->
+			<item id="36523" min="1" max="1" chance="100" /> <!-- Adamantite -->
+			<item id="36543" min="1" max="1" chance="100" /> <!-- Adamantite Wire -->	
+			<item id="36514" min="1" max="1" chance="100" /> <!-- Elcyum Crystal -->
+			<item id="35330" min="1" max="1" chance="100" /> <!-- Helios Avenger Fragment -->
+			<item id="35335" min="1" max="1" chance="100" /> <!-- Helios Buster Fragment -->
+			<item id="35336" min="1" max="1" chance="100" /> <!-- Helios Caster Fragment -->
+			<item id="35328" min="1" max="1" chance="100" /> <!-- Helios Cutter Fragmen -->
+			<item id="35331" min="1" max="1" chance="100" /> <!-- Helios Fighter Fragment -->
+			<item id="35337" min="1" max="1" chance="100" /> <!-- Helios Retributer Fragment -->
+			<item id="35327" min="1" max="1" chance="100" /> <!-- Helios Shaper Fragment -->	
+			<item id="35334" min="1" max="1" chance="100" /> <!-- Helios Shooter Fragment -->
+			<item id="35329" min="1" max="1" chance="100" /> <!-- Helios Slasher Fragment -->
+			<item id="35332" min="1" max="1" chance="100" /> <!-- Helios Stormer Fragment -->
+			<item id="35333" min="1" max="1" chance="100" /> <!-- Helios Thrower Fragment -->	
+			<item id="36524" min="1" max="1" chance="100" /> <!-- Orichalcum -->
+			<item id="36544" min="1" max="1" chance="100" /> <!-- Orichalcum Wire -->	
+		</capsuled_items>
 	</item>
 	<item id="47181" name="Basic Supply Box" additionalName="Unworldly Visitors" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Unworldly Visitors with their mission at Garden of Spirits. Double click to view the item. -->
