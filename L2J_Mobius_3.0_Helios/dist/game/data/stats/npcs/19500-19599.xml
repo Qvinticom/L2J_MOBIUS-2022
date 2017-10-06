@@ -80,22 +80,18 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="1932" max="4501" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="37791" min="1" max="1" chance="100" /> <!-- Sealed Demonic Tome -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1932" max="4501" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+			</drop>
+			<spoil>
 				<item id="40049" min="1" max="1" chance="11.28" /> <!-- Scroll: 1,000 SP -->
 				<item id="40050" min="1" max="1" chance="1.092" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="35" />
@@ -126,23 +122,19 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="7209" max="16790" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3055">
-					<item id="37791" min="1" max="1" chance="98.199672667758" /> <!-- Sealed Demonic Tome -->
-					<item id="36898" min="1" max="1" chance="1.8003273322422" /> <!-- Recipe: Quality Leather Braid - Combination -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="7209" max="16790" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Demonic Tome -->
+				<item id="36898" min="1" max="1" chance="0.00549999999999992" /> <!-- Recipe: Quality Leather Braid - Combination -->
+			</drop>
+			<spoil>
 				<item id="40049" min="1" max="1" chance="41.72" /> <!-- Scroll: 1,000 SP -->
 				<item id="40050" min="1" max="1" chance="4.181" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
@@ -173,23 +165,19 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="7209" max="16790" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3055">
-					<item id="37791" min="1" max="1" chance="98.199672667758" /> <!-- Sealed Demonic Tome -->
-					<item id="36898" min="1" max="1" chance="1.8003273322422" /> <!-- Recipe: Quality Leather Braid - Combination -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="7209" max="16790" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Demonic Tome -->
+				<item id="36898" min="1" max="1" chance="0.00549999999999992" /> <!-- Recipe: Quality Leather Braid - Combination -->
+			</drop>
+			<spoil>
 				<item id="40049" min="1" max="1" chance="41.72" /> <!-- Scroll: 1,000 SP -->
 				<item id="40050" min="1" max="1" chance="4.181" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
@@ -394,23 +382,19 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="7209" max="16790" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3055">
-					<item id="37791" min="1" max="1" chance="98.199672667758" /> <!-- Sealed Demonic Tome -->
-					<item id="36898" min="1" max="1" chance="1.8003273322422" /> <!-- Recipe: Quality Leather Braid - Combination -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="7209" max="16790" chance="50" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Demonic Tome -->
+				<item id="36898" min="1" max="1" chance="0.00549999999999992" /> <!-- Recipe: Quality Leather Braid - Combination -->
+			</drop>
+			<spoil>
 				<item id="40049" min="1" max="1" chance="41.72" /> <!-- Scroll: 1,000 SP -->
 				<item id="40050" min="1" max="1" chance="4.181" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="12" />
@@ -442,27 +426,21 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="38746" max="90257" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.003">
-					<item id="17423" min="1" max="1" chance="100" /> <!-- Amaranthine Shooter -->
-				</group>
-				<group chance="0.3805">
-					<item id="37791" min="1" max="1" chance="78.843626806833" /> <!-- Sealed Demonic Tome -->
-					<item id="37777" min="1" max="1" chance="19.710906701708" /> <!-- Scroll of Blessing Scraps: Weapon (R95-grade) -->
-					<item id="37774" min="1" max="1" chance="1.4454664914586" /> <!-- Recipe: Scroll of Blessing: Weapon (R95-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="38746" max="90257" chance="50" /> <!-- Adena -->
+				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shooter -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37777" min="1" max="1" chance="0.0749999999999989" /> <!-- Scroll of Blessing Scraps: Weapon (R95-grade) -->
+				<item id="37774" min="1" max="1" chance="0.00549999999999997" /> <!-- Recipe: Scroll of Blessing: Weapon (R95-grade) -->
+			</drop>
+			<spoil>
 				<item id="40049" min="1" max="5" chance="74.55" /> <!-- Scroll: 1,000 SP -->
 				<item id="40050" min="1" max="1" chance="21.74" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="2.199" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -493,25 +471,21 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="31002" max="72216" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.633">
-					<item id="37786" min="1" max="1" chance="47.39336492891" /> <!-- Scroll of Blessing Scraps: Armor (R95-grade) -->
-					<item id="37791" min="1" max="1" chance="47.39336492891" /> <!-- Sealed Demonic Tome -->
-					<item id="37783" min="1" max="1" chance="4.739336492891" /> <!-- Recipe: Scroll of Blessing: Armor (R95-grade) -->
-					<item id="36921" min="1" max="1" chance="0.4739336492891" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="31002" max="72216" chance="50" /> <!-- Adena -->
+				<item id="37786" min="1" max="1" chance="0.3" /> <!-- Scroll of Blessing Scraps: Armor (R95-grade) -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37783" min="1" max="1" chance="0.03" /> <!-- Recipe: Scroll of Blessing: Armor (R95-grade) -->
+				<item id="36921" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
+			</drop>
+			<spoil>
 				<item id="40049" min="1" max="3" chance="86.97" /> <!-- Scroll: 1,000 SP -->
 				<item id="40050" min="1" max="1" chance="18.55" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="1.79" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -570,27 +544,21 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="38746" max="90257" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.003">
-					<item id="17423" min="1" max="1" chance="100" /> <!-- Amaranthine Shooter -->
-				</group>
-				<group chance="0.3805">
-					<item id="37791" min="1" max="1" chance="78.843626806833" /> <!-- Sealed Demonic Tome -->
-					<item id="37777" min="1" max="1" chance="19.710906701708" /> <!-- Scroll of Blessing Scraps: Weapon (R95-grade) -->
-					<item id="37774" min="1" max="1" chance="1.4454664914586" /> <!-- Recipe: Scroll of Blessing: Weapon (R95-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="38746" max="90257" chance="50" /> <!-- Adena -->
+				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shooter -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37777" min="1" max="1" chance="0.0749999999999989" /> <!-- Scroll of Blessing Scraps: Weapon (R95-grade) -->
+				<item id="37774" min="1" max="1" chance="0.00549999999999997" /> <!-- Recipe: Scroll of Blessing: Weapon (R95-grade) -->
+			</drop>
+			<spoil>
 				<item id="40049" min="1" max="5" chance="75.47" /> <!-- Scroll: 1,000 SP -->
 				<item id="40050" min="1" max="1" chance="23.11" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="2.229" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -621,25 +589,21 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="31002" max="72216" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.633">
-					<item id="37786" min="1" max="1" chance="47.39336492891" /> <!-- Scroll of Blessing Scraps: Armor (R95-grade) -->
-					<item id="37791" min="1" max="1" chance="47.39336492891" /> <!-- Sealed Demonic Tome -->
-					<item id="37783" min="1" max="1" chance="4.739336492891" /> <!-- Recipe: Scroll of Blessing: Armor (R95-grade) -->
-					<item id="36919" min="1" max="1" chance="0.4739336492891" /> <!-- Recipe: Weapon Fragment (High-grade) - Downgrade -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="31002" max="72216" chance="50" /> <!-- Adena -->
+				<item id="37786" min="1" max="1" chance="0.3" /> <!-- Scroll of Blessing Scraps: Armor (R95-grade) -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37783" min="1" max="1" chance="0.03" /> <!-- Recipe: Scroll of Blessing: Armor (R95-grade) -->
+				<item id="36919" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (High-grade) - Downgrade -->
+			</drop>
+			<spoil>
 				<item id="40049" min="1" max="3" chance="91.49" /> <!-- Scroll: 1,000 SP -->
 				<item id="40050" min="1" max="1" chance="17.15" /> <!-- Scroll: 10,000 SP -->
 				<item id="40051" min="1" max="1" chance="1.754" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -969,18 +933,16 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="32.995">
-					<item id="40043" min="1" max="1" chance="12.633732383694" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40042" min="1" max="1" chance="12.588270950144" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40045" min="1" max="1" chance="12.588270950144" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40046" min="1" max="1" chance="12.529171086528" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40041" min="1" max="1" chance="12.462494317321" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40044" min="1" max="1" chance="12.462494317321" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40047" min="1" max="1" chance="12.409455978179" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40048" min="1" max="1" chance="12.326110016669" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				</group>
-			</death>
+			<drop>
+				<item id="40043" min="1" max="1" chance="4.16849999999983" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40042" min="1" max="1" chance="4.15350000000001" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40045" min="1" max="1" chance="4.15350000000001" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40046" min="1" max="1" chance="4.13399999999991" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40041" min="1" max="1" chance="4.11200000000006" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40044" min="1" max="1" chance="4.11200000000006" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40047" min="1" max="1" chance="4.09450000000016" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40048" min="1" max="1" chance="4.06699999999994" /> <!-- Dimensional Bracelet Enhancement Stone -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
@@ -1007,21 +969,17 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="49.18">
-					<item id="40063" min="1" max="4" chance="100" /> <!-- Secret Ancient Tome Fragment -->
-				</group>
-				<group chance="100">
-					<item id="40043" min="1" max="1" chance="13.003372346757" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40047" min="1" max="1" chance="12.874429676651" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40042" min="1" max="1" chance="12.834755008927" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40041" min="1" max="1" chance="12.586788335648" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40045" min="1" max="1" chance="12.289228327713" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40046" min="1" max="1" chance="12.259472326919" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40048" min="1" max="1" chance="12.219797659195" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40044" min="1" max="1" chance="11.932156318191" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				</group>
-			</death>
+			<drop>
+				<item id="40063" min="1" max="4" chance="49.18" /> <!-- Secret Ancient Tome Fragment -->
+				<item id="40043" min="1" max="1" chance="13.003372346757" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40047" min="1" max="1" chance="12.874429676651" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40042" min="1" max="1" chance="12.834755008927" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40041" min="1" max="1" chance="12.586788335648" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40045" min="1" max="1" chance="12.289228327713" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40046" min="1" max="1" chance="12.259472326919" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40048" min="1" max="1" chance="12.219797659195" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40044" min="1" max="1" chance="11.932156318191" /> <!-- Dimensional Bracelet Enhancement Stone -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -1048,21 +1006,17 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="48.78">
-					<item id="40063" min="4" max="8" chance="100" /> <!-- Secret Ancient Tome Fragment -->
-				</group>
-				<group chance="99.69">
-					<item id="40045" min="1" max="2" chance="12.9300832581" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40046" min="1" max="2" chance="12.899989968904" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40048" min="1" max="2" chance="12.548901594944" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40042" min="1" max="2" chance="12.508777209349" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40044" min="1" max="2" chance="12.49874611295" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40047" min="1" max="2" chance="12.478683920152" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40043" min="1" max="2" chance="12.167719931789" /> <!-- Dimensional Bracelet Enhancement Stone -->
-					<item id="40041" min="1" max="2" chance="11.967098003812" /> <!-- Dimensional Bracelet Enhancement Stone -->
-				</group>
-			</death>
+			<drop>
+				<item id="40063" min="4" max="8" chance="48.78" /> <!-- Secret Ancient Tome Fragment -->
+				<item id="40045" min="1" max="2" chance="12.8899999999999" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40046" min="1" max="2" chance="12.8600000000004" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40048" min="1" max="2" chance="12.5099999999997" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40042" min="1" max="2" chance="12.47" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40044" min="1" max="2" chance="12.4599999999999" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40047" min="1" max="2" chance="12.4399999999995" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40043" min="1" max="2" chance="12.1300000000005" /> <!-- Dimensional Bracelet Enhancement Stone -->
+				<item id="40041" min="1" max="2" chance="11.9300000000002" /> <!-- Dimensional Bracelet Enhancement Stone -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="12" />

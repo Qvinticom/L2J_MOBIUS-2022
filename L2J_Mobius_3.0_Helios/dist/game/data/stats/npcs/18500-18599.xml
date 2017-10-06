@@ -1364,12 +1364,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-				</group>
-			</death>
+			<drop>
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8.5" />
@@ -1406,12 +1404,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-				</group>
-			</death>
+			<drop>
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8.5" />
@@ -1448,12 +1444,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-				</group>
-			</death>
+			<drop>
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8.5" />
@@ -1490,12 +1484,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-				</group>
-			</death>
+			<drop>
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8.5" />
@@ -1532,12 +1524,10 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-					<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
-				</group>
-			</death>
+			<drop>
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+				<item id="10432" min="1" max="1" chance="50" /> <!-- Kertang's Herb of Life -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8.5" />
@@ -1756,27 +1746,17 @@
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="12" />
@@ -1830,17 +1810,15 @@
 		<s_npc_prop_hp_rate>8</s_npc_prop_hp_rate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="450" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="381" min="1" max="1" chance="0.92944655682298" /> <!-- Chain Gaiters -->
-					<item id="354" min="1" max="1" chance="0.63371356147022" /> <!-- Chain Mail Shirt -->
-					<item id="1960" min="105" max="315" chance="65.272496831432" /> <!-- Chain Gaiter Fragment -->
-					<item id="1959" min="96" max="288" chance="33.164343050275" /> <!-- Chain Mail Shirt Material -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="381" min="1" max="1" chance="0.92944655682298" /> <!-- Chain Gaiters -->
+				<item id="354" min="1" max="1" chance="0.63371356147022" /> <!-- Chain Mail Shirt -->
+				<item id="1960" min="105" max="315" chance="65.272496831432" /> <!-- Chain Gaiter Fragment -->
+				<item id="1959" min="96" max="288" chance="33.164343050275" /> <!-- Chain Mail Shirt Material -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" grown="18" />
@@ -1901,17 +1879,15 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="450" />
 		<drop_lists>
-			<death>
-				<group chance="15.68">
-					<item id="226" min="1" max="1" chance="1.9132653061224" /> <!-- Cursed Dagger -->
-					<item id="232" min="1" max="1" chance="1.9132653061224" /> <!-- Dark Elven Dagger -->
-					<item id="2072" min="52" max="156" chance="48.469387755102" /> <!-- Dark Elven Dagger Edge -->
-					<item id="2070" min="192" max="576" chance="47.704081632653" /> <!-- Cursed Dagger Blade -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="226" min="1" max="1" chance="0.299999999999992" /> <!-- Cursed Dagger -->
+				<item id="232" min="1" max="1" chance="0.299999999999992" /> <!-- Dark Elven Dagger -->
+				<item id="2072" min="52" max="156" chance="7.59999999999999" /> <!-- Dark Elven Dagger Edge -->
+				<item id="2070" min="192" max="576" chance="7.47999999999999" /> <!-- Cursed Dagger Blade -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" grown="25" />
@@ -1970,19 +1946,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="MAGE" clanHelpRange="300" aggroRange="450" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="71" min="1" max="1" chance="0.50531801785431" /> <!-- Flamberge -->
-					<item id="72" min="1" max="1" chance="0.49139954146353" /> <!-- StormBringer -->
-					<item id="7887" min="1" max="1" chance="0.45660335048657" /> <!-- Mysterious Sword -->
-					<item id="2059" min="14" max="42" chance="33.017718993694" /> <!-- Flamberge Blade -->
-					<item id="2060" min="40" max="120" chance="32.913330420763" /> <!-- StormBringer Blade -->
-					<item id="8334" min="81" max="243" chance="32.615629675738" /> <!-- Mysterious Sword Blade -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="71" min="1" max="1" chance="0.50531801785431" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="0.49139954146353" /> <!-- StormBringer -->
+				<item id="7887" min="1" max="1" chance="0.45660335048657" /> <!-- Mysterious Sword -->
+				<item id="2059" min="14" max="42" chance="33.017718993694" /> <!-- Flamberge Blade -->
+				<item id="2060" min="40" max="120" chance="32.913330420763" /> <!-- StormBringer Blade -->
+				<item id="8334" min="81" max="243" chance="32.615629675738" /> <!-- Mysterious Sword Blade -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
@@ -2033,19 +2007,17 @@
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="66.84">
-					<item id="96" min="1" max="1" chance="0.44883303411131" /> <!-- Scythe -->
-					<item id="298" min="1" max="1" chance="0.44883303411131" /> <!-- Orcish Glaive -->
-					<item id="302" min="1" max="1" chance="0.44883303411131" /> <!-- Body Slasher -->
-					<item id="2076" min="14" max="42" chance="33.213644524237" /> <!-- Body Slasher Blade -->
-					<item id="2062" min="40" max="120" chance="33.108916816278" /> <!-- Scythe Edge -->
-					<item id="2075" min="81" max="243" chance="32.330939557151" /> <!-- Orcish Glaive Blade -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="96" min="1" max="1" chance="0.3" /> <!-- Scythe -->
+				<item id="298" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive -->
+				<item id="302" min="1" max="1" chance="0.3" /> <!-- Body Slasher -->
+				<item id="2076" min="14" max="42" chance="22.2" /> <!-- Body Slasher Blade -->
+				<item id="2062" min="40" max="120" chance="22.1300000000002" /> <!-- Scythe Edge -->
+				<item id="2075" min="81" max="243" chance="21.6099999999997" /> <!-- Orcish Glaive Blade -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
@@ -2101,31 +2073,29 @@
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="62" min="1" max="1" chance="0.18454724409449" /> <!-- Reinforced Mithril Boots -->
-					<item id="2429" min="1" max="1" chance="0.18454724409449" /> <!-- Chain Boots -->
-					<item id="2430" min="1" max="1" chance="0.18454724409449" /> <!-- Karmian Boots -->
-					<item id="2431" min="1" max="1" chance="0.18454724409449" /> <!-- Plated Leather Boots -->
-					<item id="2432" min="1" max="1" chance="0.18454724409449" /> <!-- Dwarven Chain Boots -->
-					<item id="2433" min="1" max="1" chance="0.18454724409449" /> <!-- Boots of Seal -->
-					<item id="2452" min="1" max="1" chance="0.18454724409449" /> <!-- Reinforced Mithril Gloves -->
-					<item id="2453" min="1" max="1" chance="0.18454724409449" /> <!-- Chain Gloves -->
-					<item id="2454" min="1" max="1" chance="0.18454724409449" /> <!-- Karmian Gloves -->
-					<item id="2938" min="2" max="6" chance="11.337352362205" /> <!-- Karmian Boot Fabric -->
-					<item id="2944" min="1" max="1" chance="11.202017716535" /> <!-- Karmian Glove Fabric -->
-					<item id="2940" min="3" max="9" chance="11.078986220472" /> <!-- Dwarven Chain Boot Fragment -->
-					<item id="2937" min="1" max="3" chance="10.980561023622" /> <!-- Chain Boot Fragment -->
-					<item id="2942" min="4" max="12" chance="10.949803149606" /> <!-- Reinforced Mithril Glove Design -->
-					<item id="2943" min="4" max="12" chance="10.802165354331" /> <!-- Chain Glove Design -->
-					<item id="2941" min="3" max="9" chance="10.783710629921" /> <!-- Boots of Seal Pattern -->
-					<item id="1958" min="1" max="3" chance="10.728346456693" /> <!-- Reinforced Mithril Boot Design -->
-					<item id="2939" min="2" max="6" chance="10.476131889764" /> <!-- Plated Leather Boot Lining -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="62" min="1" max="1" chance="0.18454724409449" /> <!-- Reinforced Mithril Boots -->
+				<item id="2429" min="1" max="1" chance="0.18454724409449" /> <!-- Chain Boots -->
+				<item id="2430" min="1" max="1" chance="0.18454724409449" /> <!-- Karmian Boots -->
+				<item id="2431" min="1" max="1" chance="0.18454724409449" /> <!-- Plated Leather Boots -->
+				<item id="2432" min="1" max="1" chance="0.18454724409449" /> <!-- Dwarven Chain Boots -->
+				<item id="2433" min="1" max="1" chance="0.18454724409449" /> <!-- Boots of Seal -->
+				<item id="2452" min="1" max="1" chance="0.18454724409449" /> <!-- Reinforced Mithril Gloves -->
+				<item id="2453" min="1" max="1" chance="0.18454724409449" /> <!-- Chain Gloves -->
+				<item id="2454" min="1" max="1" chance="0.18454724409449" /> <!-- Karmian Gloves -->
+				<item id="2938" min="2" max="6" chance="11.337352362205" /> <!-- Karmian Boot Fabric -->
+				<item id="2944" min="1" max="1" chance="11.202017716535" /> <!-- Karmian Glove Fabric -->
+				<item id="2940" min="3" max="9" chance="11.078986220472" /> <!-- Dwarven Chain Boot Fragment -->
+				<item id="2937" min="1" max="3" chance="10.980561023622" /> <!-- Chain Boot Fragment -->
+				<item id="2942" min="4" max="12" chance="10.949803149606" /> <!-- Reinforced Mithril Glove Design -->
+				<item id="2943" min="4" max="12" chance="10.802165354331" /> <!-- Chain Glove Design -->
+				<item id="2941" min="3" max="9" chance="10.783710629921" /> <!-- Boots of Seal Pattern -->
+				<item id="1958" min="1" max="3" chance="10.728346456693" /> <!-- Reinforced Mithril Boot Design -->
+				<item id="2939" min="2" max="6" chance="10.476131889764" /> <!-- Plated Leather Boot Lining -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" grown="17" />
@@ -2447,15 +2417,13 @@
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="3.411">
-					<item id="465" min="1" max="1" chance="61.213720316623" /> <!-- Cursed Stockings -->
-					<item id="432" min="1" max="1" chance="38.786279683377" /> <!-- Cursed Tunic -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="465" min="1" max="1" chance="2.08800000000001" /> <!-- Cursed Stockings -->
+				<item id="432" min="1" max="1" chance="1.32299999999999" /> <!-- Cursed Tunic -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
@@ -2592,20 +2560,18 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="2423" min="1" max="1" chance="8.1073882703883" /> <!-- Boots of Knowledge -->
-					<item id="2422" min="1" max="1" chance="8.0860810738827" /> <!-- Reinforced Leather Boots -->
-					<item id="553" min="1" max="1" chance="7.707878335908" /> <!-- Iron Boots -->
-					<item id="2446" min="1" max="1" chance="7.6652639428967" /> <!-- Reinforced Leather Gloves -->
-					<item id="63" min="1" max="1" chance="7.5960155542534" /> <!-- Gauntlets -->
-					<item id="2447" min="1" max="1" chance="7.5693815586214" /> <!-- Gloves of Knowledge -->
-					<item id="1940" min="60" max="180" chance="53.267991264049" /> <!-- Iron Boot Design -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="2423" min="1" max="1" chance="8.1073882703883" /> <!-- Boots of Knowledge -->
+				<item id="2422" min="1" max="1" chance="8.0860810738827" /> <!-- Reinforced Leather Boots -->
+				<item id="553" min="1" max="1" chance="7.707878335908" /> <!-- Iron Boots -->
+				<item id="2446" min="1" max="1" chance="7.6652639428967" /> <!-- Reinforced Leather Gloves -->
+				<item id="63" min="1" max="1" chance="7.5960155542534" /> <!-- Gauntlets -->
+				<item id="2447" min="1" max="1" chance="7.5693815586214" /> <!-- Gloves of Knowledge -->
+				<item id="1940" min="60" max="180" chance="53.267991264049" /> <!-- Iron Boot Design -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="19" />
@@ -2653,17 +2619,13 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="5.144">
-					<item id="628" min="1" max="2" chance="100" /> <!-- Hoplon -->
-				</group>
-				<group chance="3.529">
-					<item id="47" min="1" max="2" chance="100" /> <!-- Helmet -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="628" min="1" max="2" chance="5.144" /> <!-- Hoplon -->
+				<item id="47" min="1" max="2" chance="3.529" /> <!-- Helmet -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="21" />
@@ -2802,19 +2764,15 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="380" min="1" max="2" chance="18.619791666667" /> <!-- Plate Gaiters -->
-					<item id="1951" min="6" max="48" chance="81.380208333333" /> <!-- Plate Gaiter Fragment -->
-				</group>
-				<group chance="100">
-					<item id="353" min="1" max="2" chance="12.257611652189" /> <!-- Half Plate Armor -->
-					<item id="1950" min="16" max="114" chance="87.742388347811" /> <!-- Half Plate Temper -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="380" min="1" max="2" chance="18.619791666667" /> <!-- Plate Gaiters -->
+				<item id="1951" min="6" max="48" chance="81.380208333333" /> <!-- Plate Gaiter Fragment -->
+				<item id="353" min="1" max="2" chance="12.257611652189" /> <!-- Half Plate Armor -->
+				<item id="1950" min="16" max="114" chance="87.742388347811" /> <!-- Half Plate Temper -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />
@@ -2907,15 +2865,13 @@
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="36.76">
-					<item id="281" min="1" max="2" chance="2.0402611534276" /> <!-- Crystallized Ice Bow -->
-					<item id="2074" min="192" max="732" chance="97.959738846572" /> <!-- Crystallized Ice Bow Shaft -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="281" min="1" max="2" chance="0.749999999999986" /> <!-- Crystallized Ice Bow -->
+				<item id="2074" min="192" max="732" chance="36.0099999999999" /> <!-- Crystallized Ice Bow Shaft -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="55" />
@@ -2971,21 +2927,17 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="2495" min="1" max="1" chance="50.370919881306" /> <!-- Chain Shield -->
-					<item id="631" min="1" max="1" chance="49.629080118694" /> <!-- Eldarake -->
-				</group>
-				<group chance="100">
-					<item id="2413" min="1" max="1" chance="12.247345482201" /> <!-- Chain Hood -->
-					<item id="1964" min="40" max="120" chance="29.250884839266" /> <!-- Eldarake Temper -->
-					<item id="2936" min="14" max="42" chance="29.250884839266" /> <!-- Chain Hood Pattern -->
-					<item id="2945" min="81" max="243" chance="29.250884839266" /> <!-- Chain Shield Fragment -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="2495" min="1" max="1" chance="50.370919881306" /> <!-- Chain Shield -->
+				<item id="631" min="1" max="1" chance="49.629080118694" /> <!-- Eldarake -->
+				<item id="2413" min="1" max="1" chance="12.247345482201" /> <!-- Chain Hood -->
+				<item id="1964" min="40" max="120" chance="29.250884839266" /> <!-- Eldarake Temper -->
+				<item id="2936" min="14" max="42" chance="29.250884839266" /> <!-- Chain Hood Pattern -->
+				<item id="2945" min="81" max="243" chance="29.250884839266" /> <!-- Chain Shield Fragment -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="30" />
@@ -3033,15 +2985,13 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="20.81">
-					<item id="266" min="1" max="2" chance="1.4416146083614" /> <!-- Great Pata -->
-					<item id="2120" min="192" max="732" chance="98.558385391639" /> <!-- Great Pata Blade -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="266" min="1" max="2" chance="0.300000000000007" /> <!-- Great Pata -->
+				<item id="2120" min="192" max="732" chance="20.5100000000001" /> <!-- Great Pata Blade -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="36" />
@@ -3126,21 +3076,19 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="383" min="1" max="2" chance="0.90417010534492" /> <!-- Zubei's Gaiters -->
-					<item id="2379" min="1" max="2" chance="0.88863537064906" /> <!-- Avadon Gaiters -->
-					<item id="357" min="1" max="2" chance="0.56677508616923" /> <!-- Zubei's Breastplate -->
-					<item id="2376" min="1" max="2" chance="0.5483275887179" /> <!-- Avadon Breastplate -->
-					<item id="4056" min="3" max="21" chance="24.27302296228" /> <!-- Zubei's Breastplate Part -->
-					<item id="4057" min="2" max="12" chance="24.27302296228" /> <!-- Zubei's Gaiter Material -->
-					<item id="4064" min="3" max="21" chance="24.27302296228" /> <!-- Avadon Breastplate Part -->
-					<item id="4065" min="1" max="6" chance="24.27302296228" /> <!-- Avadon Gaiter Material -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="383" min="1" max="2" chance="0.90417010534492" /> <!-- Zubei's Gaiters -->
+				<item id="2379" min="1" max="2" chance="0.88863537064906" /> <!-- Avadon Gaiters -->
+				<item id="357" min="1" max="2" chance="0.56677508616923" /> <!-- Zubei's Breastplate -->
+				<item id="2376" min="1" max="2" chance="0.5483275887179" /> <!-- Avadon Breastplate -->
+				<item id="4056" min="3" max="21" chance="24.27302296228" /> <!-- Zubei's Breastplate Part -->
+				<item id="4057" min="2" max="12" chance="24.27302296228" /> <!-- Zubei's Gaiter Material -->
+				<item id="4064" min="3" max="21" chance="24.27302296228" /> <!-- Avadon Breastplate Part -->
+				<item id="4065" min="1" max="6" chance="24.27302296228" /> <!-- Avadon Gaiter Material -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="11" />
@@ -3227,19 +3175,17 @@
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="148" min="1" max="1" chance="0.50221876241998" /> <!-- Sword of Valhalla -->
-					<item id="78" min="1" max="1" chance="0.48875181064809" /> <!-- Great Sword -->
-					<item id="142" min="1" max="1" chance="0.47035792530112" /> <!-- Keshanberk -->
-					<item id="4104" min="40" max="120" chance="32.846223833877" /> <!-- Great Sword Blade -->
-					<item id="4107" min="81" max="243" chance="32.846223833877" /> <!-- Keshanberk Blade -->
-					<item id="4108" min="14" max="42" chance="32.846223833877" /> <!-- Sword of Valhalla Blade -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="148" min="1" max="1" chance="0.50221876241998" /> <!-- Sword of Valhalla -->
+				<item id="78" min="1" max="1" chance="0.48875181064809" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="0.47035792530112" /> <!-- Keshanberk -->
+				<item id="4104" min="40" max="120" chance="32.846223833877" /> <!-- Great Sword Blade -->
+				<item id="4107" min="81" max="243" chance="32.846223833877" /> <!-- Keshanberk Blade -->
+				<item id="4108" min="14" max="42" chance="32.846223833877" /> <!-- Sword of Valhalla Blade -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="23" />
@@ -3285,21 +3231,19 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="2403" min="1" max="2" chance="1.0154922393767" /> <!-- Blue Wolf Stockings -->
-					<item id="2404" min="1" max="2" chance="1.0046145553082" /> <!-- Stockings of Doom -->
-					<item id="2399" min="1" max="2" chance="0.64830997048522" /> <!-- Tunic of Doom -->
-					<item id="2398" min="1" max="2" chance="0.64105818110619" /> <!-- Blue Wolf Tunic -->
-					<item id="4084" min="3" max="21" chance="24.172631263431" /> <!-- Blue Wolf Tunic Fabric -->
-					<item id="4085" min="3" max="21" chance="24.172631263431" /> <!-- Tunic of Doom Pattern -->
-					<item id="4086" min="1" max="9" chance="24.172631263431" /> <!-- Blue Wolf Stocking Pattern -->
-					<item id="4087" min="1" max="9" chance="24.172631263431" /> <!-- Stockings of Doom Pattern -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="2403" min="1" max="2" chance="1.0154922393767" /> <!-- Blue Wolf Stockings -->
+				<item id="2404" min="1" max="2" chance="1.0046145553082" /> <!-- Stockings of Doom -->
+				<item id="2399" min="1" max="2" chance="0.64830997048522" /> <!-- Tunic of Doom -->
+				<item id="2398" min="1" max="2" chance="0.64105818110619" /> <!-- Blue Wolf Tunic -->
+				<item id="4084" min="3" max="21" chance="24.172631263431" /> <!-- Blue Wolf Tunic Fabric -->
+				<item id="4085" min="3" max="21" chance="24.172631263431" /> <!-- Tunic of Doom Pattern -->
+				<item id="4086" min="1" max="9" chance="24.172631263431" /> <!-- Blue Wolf Stocking Pattern -->
+				<item id="4087" min="1" max="9" chance="24.172631263431" /> <!-- Stockings of Doom Pattern -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="25" />
@@ -3392,21 +3336,19 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="2439" min="1" max="2" chance="1.8505948175005" /> <!-- Sealed Blue Wolf Boots -->
-					<item id="2475" min="1" max="2" chance="1.8302076938225" /> <!-- Sealed Doom Gloves -->
-					<item id="2487" min="1" max="2" chance="1.8267326159228" /> <!-- Sealed Blue Wolf Gloves -->
-					<item id="601" min="1" max="2" chance="1.8237208817431" /> <!-- Sealed Doom Boots -->
-					<item id="4090" min="1" max="12" chance="23.167185997753" /> <!-- Sealed Blue Wolf Boot Design -->
-					<item id="4091" min="2" max="18" chance="23.167185997753" /> <!-- Sealed Doom Glove Fragment -->
-					<item id="4096" min="2" max="18" chance="23.167185997753" /> <!-- Sealed Blue Wolf Glove Fabric -->
-					<item id="4099" min="1" max="12" chance="23.167185997753" /> <!-- Sealed Doom Boot Fragment -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="2439" min="1" max="2" chance="1.8505948175005" /> <!-- Sealed Blue Wolf Boots -->
+				<item id="2475" min="1" max="2" chance="1.8302076938225" /> <!-- Sealed Doom Gloves -->
+				<item id="2487" min="1" max="2" chance="1.8267326159228" /> <!-- Sealed Blue Wolf Gloves -->
+				<item id="601" min="1" max="2" chance="1.8237208817431" /> <!-- Sealed Doom Boots -->
+				<item id="4090" min="1" max="12" chance="23.167185997753" /> <!-- Sealed Blue Wolf Boot Design -->
+				<item id="4091" min="2" max="18" chance="23.167185997753" /> <!-- Sealed Doom Glove Fragment -->
+				<item id="4096" min="2" max="18" chance="23.167185997753" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="4099" min="1" max="12" chance="23.167185997753" /> <!-- Sealed Doom Boot Fragment -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="19" />
@@ -3498,25 +3440,21 @@
 		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="171" min="1" max="2" chance="0.15475085112968" /> <!-- Deadman's Glory -->
-					<item id="175" min="1" max="2" chance="0.15475085112968" /> <!-- Art of Battle Axe -->
-					<item id="210" min="1" max="2" chance="0.15475085112968" /> <!-- Staff of Evil Spirits -->
-					<item id="7893" min="1" max="2" chance="0.15475085112968" /> <!-- Kaim Vanul's Bones -->
-					<item id="7901" min="1" max="2" chance="0.15475085112968" /> <!-- Star Buster -->
-					<item id="8348" min="3" max="10" chance="33.364283503559" /> <!-- Star Buster Head -->
-					<item id="4118" min="2" max="18" chance="32.946456205509" /> <!-- Evil Spirit Head -->
-					<item id="4117" min="1" max="15" chance="32.915506035283" /> <!-- Art of Battle Axe Blade -->
-				</group>
-				<group chance="100">
-					<item id="4116" min="1" max="12" chance="50.169622205089" /> <!-- Deadman's Glory Stone -->
-					<item id="8340" min="2" max="7" chance="49.830377794911" /> <!-- Bones Head of Kaim Vanul -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="171" min="1" max="2" chance="0.15475085112968" /> <!-- Deadman's Glory -->
+				<item id="175" min="1" max="2" chance="0.15475085112968" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="2" chance="0.15475085112968" /> <!-- Staff of Evil Spirits -->
+				<item id="7893" min="1" max="2" chance="0.15475085112968" /> <!-- Kaim Vanul's Bones -->
+				<item id="7901" min="1" max="2" chance="0.15475085112968" /> <!-- Star Buster -->
+				<item id="8348" min="3" max="10" chance="33.364283503559" /> <!-- Star Buster Head -->
+				<item id="4118" min="2" max="18" chance="32.946456205509" /> <!-- Evil Spirit Head -->
+				<item id="4117" min="1" max="15" chance="32.915506035283" /> <!-- Art of Battle Axe Blade -->
+				<item id="4116" min="1" max="12" chance="50.169622205089" /> <!-- Deadman's Glory Stone -->
+				<item id="8340" min="2" max="7" chance="49.830377794911" /> <!-- Bones Head of Kaim Vanul -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="22" />
@@ -3605,19 +3543,17 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="6325" min="1" max="1" chance="1.2903455715845" /> <!-- Sealed Phoenix Ring -->
-					<item id="6324" min="1" max="1" chance="0.85785465065424" /> <!-- Sealed Phoenix Earring -->
-					<item id="6323" min="1" max="1" chance="0.6628287821898" /> <!-- Sealed Phoenix Necklace -->
-					<item id="6341" min="81" max="243" chance="32.39632366519" /> <!-- Sealed Phoenix Earring Gemstone -->
-					<item id="6343" min="14" max="42" chance="32.39632366519" /> <!-- Sealed Phoenix Necklace Beads -->
-					<item id="6345" min="40" max="120" chance="32.39632366519" /> <!-- Sealed Phoenix Ring Gemstone -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="6325" min="1" max="1" chance="1.2903455715845" /> <!-- Sealed Phoenix Ring -->
+				<item id="6324" min="1" max="1" chance="0.85785465065424" /> <!-- Sealed Phoenix Earring -->
+				<item id="6323" min="1" max="1" chance="0.6628287821898" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6341" min="81" max="243" chance="32.39632366519" /> <!-- Sealed Phoenix Earring Gemstone -->
+				<item id="6343" min="14" max="42" chance="32.39632366519" /> <!-- Sealed Phoenix Necklace Beads -->
+				<item id="6345" min="40" max="120" chance="32.39632366519" /> <!-- Sealed Phoenix Ring Gemstone -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="21" />
@@ -3713,27 +3649,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -3789,27 +3715,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
@@ -3863,27 +3779,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -3940,27 +3846,17 @@
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
@@ -4014,27 +3910,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
@@ -4089,27 +3975,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
@@ -4165,27 +4041,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
@@ -4239,27 +4105,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -4316,27 +4172,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="25" />
@@ -4393,27 +4239,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -4467,27 +4303,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -4544,27 +4370,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -4619,27 +4435,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
@@ -4699,27 +4505,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
@@ -4778,27 +4574,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
@@ -4857,27 +4643,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
@@ -4939,27 +4715,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -5018,27 +4784,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -5100,27 +4856,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="25" />
@@ -5184,27 +4930,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="25" />
@@ -5266,27 +5002,17 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="21" />

@@ -47,39 +47,25 @@
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="33" max="76" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.499">
-					<item id="36527" min="1" max="1" chance="100" /> <!-- Synthetic Fiber -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="33" max="76" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="2.499" /> <!-- Synthetic Fiber -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="36527" min="1" max="1" chance="2.547" /> <!-- Synthetic Fiber -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -140,39 +126,25 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="39" max="92" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.75">
-					<item id="36537" min="1" max="1" chance="100" /> <!-- Leather Braid -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="39" max="92" chance="70" /> <!-- Adena -->
 				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
-			</corpse>
-			<lucky_corpse>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
@@ -236,39 +208,25 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="37" max="86" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="36542" min="1" max="1" chance="100" /> <!-- Silver Wire -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="37" max="86" chance="70" /> <!-- Adena -->
 				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
-			</corpse>
-			<lucky_corpse>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
@@ -325,39 +283,25 @@
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="70" max="162" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="36547" min="1" max="1" chance="100" /> <!-- Weapon Fragment -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="70" max="162" chance="70" /> <!-- Adena -->
 				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
-			</corpse>
-			<lucky_corpse>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36547" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment -->
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -414,51 +358,33 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="34" max="79" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="2401" min="1" max="1" chance="71.428571428571" /> <!-- Mithril Stockings -->
-					<item id="2396" min="1" max="1" chance="28.571428571429" /> <!-- Elven Mithril Tunic -->
-				</group>
-				<group chance="0.9">
-					<item id="2424" min="1" max="1" chance="33.333333333333" /> <!-- Manticore Skin Boots -->
-					<item id="2425" min="1" max="1" chance="33.333333333333" /> <!-- Brigandine Boots -->
-					<item id="2426" min="1" max="1" chance="33.333333333333" /> <!-- Elven Mithril Boots -->
-				</group>
-				<group chance="0.0355">
-					<item id="36523" min="1" max="1" chance="84.507042253521" /> <!-- Adamantite -->
-					<item id="951" min="1" max="1" chance="15.492957746479" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="34" max="79" chance="70" /> <!-- Adena -->
+				<item id="2401" min="1" max="1" chance="0.0749999999999996" /> <!-- Mithril Stockings -->
+				<item id="2396" min="1" max="1" chance="0.0300000000000005" /> <!-- Elven Mithril Tunic -->
+				<item id="2424" min="1" max="1" chance="0.299999999999997" /> <!-- Manticore Skin Boots -->
+				<item id="2425" min="1" max="1" chance="0.299999999999997" /> <!-- Brigandine Boots -->
+				<item id="2426" min="1" max="1" chance="0.299999999999997" /> <!-- Elven Mithril Boots -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="951" min="1" max="1" chance="0.00550000000000004" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="36556" min="1" max="1" chance="5.756" /> <!-- Accessory Gem (Low-grade) -->
 				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="36" />
@@ -515,49 +441,31 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="37" max="86" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.06">
-					<item id="280" min="1" max="1" chance="50" /> <!-- Light Crossbow -->
-					<item id="1660" min="1" max="1" chance="50" /> <!-- Cursed Maingauche -->
-				</group>
-				<group chance="0.075">
-					<item id="353" min="1" max="1" chance="100" /> <!-- Half Plate Armor -->
-				</group>
-				<group chance="0.105">
-					<item id="36528" min="1" max="1" chance="71.428571428571" /> <!-- Metallic Fiber -->
-					<item id="951" min="1" max="1" chance="28.571428571429" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="37" max="86" chance="70" /> <!-- Adena -->
+				<item id="280" min="1" max="1" chance="0.03" /> <!-- Light Crossbow -->
+				<item id="1660" min="1" max="1" chance="0.03" /> <!-- Cursed Maingauche -->
+				<item id="353" min="1" max="1" chance="0.075" /> <!-- Half Plate Armor -->
+				<item id="36528" min="1" max="1" chance="0.0749999999999996" /> <!-- Metallic Fiber -->
+				<item id="951" min="1" max="1" chance="0.0300000000000005" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="36531" min="1" max="1" chance="13.53" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="40" />
@@ -614,50 +522,32 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="35" max="82" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="2494" min="1" max="1" chance="100" /> <!-- Plate Shield -->
-				</group>
-				<group chance="0.675">
-					<item id="1124" min="1" max="1" chance="44.444444444444" /> <!-- Boots of Strength -->
-					<item id="1125" min="1" max="1" chance="44.444444444444" /> <!-- Assault Boots -->
-					<item id="497" min="1" max="1" chance="11.111111111111" /> <!-- Chain Helmet -->
-				</group>
-				<group chance="0.0355">
-					<item id="951" min="1" max="1" chance="84.507042253521" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-					<item id="36558" min="1" max="1" chance="15.492957746479" /> <!-- Accessory Gem (Mid-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="35" max="82" chance="70" /> <!-- Adena -->
+				<item id="2494" min="1" max="1" chance="0.3" /> <!-- Plate Shield -->
+				<item id="1124" min="1" max="1" chance="0.299999999999997" /> <!-- Boots of Strength -->
+				<item id="1125" min="1" max="1" chance="0.299999999999997" /> <!-- Assault Boots -->
+				<item id="497" min="1" max="1" chance="0.0749999999999993" /> <!-- Chain Helmet -->
+				<item id="951" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="36558" min="1" max="1" chance="0.00550000000000004" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="36531" min="1" max="1" chance="13.48" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="36" />
@@ -718,52 +608,36 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="37" max="87" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0335">
-					<item id="93" min="1" max="1" chance="16.417910447761" /> <!-- Winged Spear -->
-					<item id="129" min="1" max="1" chance="16.417910447761" /> <!-- Sword of Revolution -->
-					<item id="158" min="1" max="1" chance="16.417910447761" /> <!-- Tarbar -->
-					<item id="169" min="1" max="1" chance="16.417910447761" /> <!-- Skull Breaker -->
-					<item id="172" min="1" max="1" chance="16.417910447761" /> <!-- Heavy Bone Club -->
-					<item id="187" min="1" max="1" chance="8.955223880597" /> <!-- Atuba Hammer -->
-					<item id="188" min="1" max="1" chance="8.955223880597" /> <!-- Ghost Staff -->
-				</group>
-				<group chance="0.0385">
-					<item id="36523" min="1" max="1" chance="77.922077922078" /> <!-- Adamantite -->
-					<item id="36543" min="1" max="1" chance="14.285714285714" /> <!-- Adamantite Wire -->
-					<item id="36563" min="1" max="1" chance="7.7922077922078" /> <!-- Synthetic Cokes -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="37" max="87" chance="70" /> <!-- Adena -->
+				<item id="93" min="1" max="1" chance="0.00549999999999993" /> <!-- Winged Spear -->
+				<item id="129" min="1" max="1" chance="0.00549999999999993" /> <!-- Sword of Revolution -->
+				<item id="158" min="1" max="1" chance="0.00549999999999993" /> <!-- Tarbar -->
+				<item id="169" min="1" max="1" chance="0.00549999999999993" /> <!-- Skull Breaker -->
+				<item id="172" min="1" max="1" chance="0.00549999999999993" /> <!-- Heavy Bone Club -->
+				<item id="187" min="1" max="1" chance="0.00299999999999999" /> <!-- Atuba Hammer -->
+				<item id="188" min="1" max="1" chance="0.00299999999999999" /> <!-- Ghost Staff -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36543" min="1" max="1" chance="0.00549999999999989" /> <!-- Adamantite Wire -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="36531" min="1" max="1" chance="13.24" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="24" />
@@ -823,46 +697,30 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="46" max="107" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.06">
-					<item id="261" min="1" max="1" chance="50" /> <!-- Bich'Hwa -->
-					<item id="262" min="1" max="1" chance="50" /> <!-- Scallop Jamadhr -->
-				</group>
-				<group chance="0.078">
-					<item id="36528" min="1" max="1" chance="96.153846153846" /> <!-- Metallic Fiber -->
-					<item id="36548" min="1" max="1" chance="3.8461538461538" /> <!-- Weapon Fragment (Mid-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
+				<item id="261" min="1" max="1" chance="0.03" /> <!-- Bich'Hwa -->
+				<item id="262" min="1" max="1" chance="0.03" /> <!-- Scallop Jamadhr -->
+				<item id="36528" min="1" max="1" chance="0.0749999999999999" /> <!-- Metallic Fiber -->
+				<item id="36548" min="1" max="1" chance="0.00299999999999996" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="36531" min="1" max="1" chance="16.47" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="52" />
@@ -2306,22 +2164,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="44.27">
-					<item id="36518" min="1" max="1" chance="53.467359385588" /> <!-- Durable Leather -->
-					<item id="36517" min="3" max="9" chance="46.532640614412" /> <!-- Leather -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="23.6699999999998" /> <!-- Durable Leather -->
+				<item id="36517" min="3" max="9" chance="20.6000000000002" /> <!-- Leather -->
+			</drop>
+			<spoil>
 				<item id="36517" min="1" max="3" chance="49.18" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="18.2" /> <!-- Durable Leather -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" grown="12" />
@@ -2382,22 +2236,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="47.3">
-					<item id="36518" min="1" max="1" chance="53.720930232558" /> <!-- Durable Leather -->
-					<item id="36517" min="3" max="9" chance="46.279069767442" /> <!-- Leather -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="25.4099999999999" /> <!-- Durable Leather -->
+				<item id="36517" min="3" max="9" chance="21.8900000000001" /> <!-- Leather -->
+			</drop>
+			<spoil>
 				<item id="36517" min="1" max="3" chance="48.27" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="18.21" /> <!-- Durable Leather -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="11" />
@@ -2509,22 +2359,18 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="24.073">
-					<item id="36557" min="1" max="1" chance="84.534540771819" /> <!-- Accessory Gem -->
-					<item id="36558" min="1" max="1" chance="15.465459228181" /> <!-- Accessory Gem (Mid-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36557" min="1" max="1" chance="20.35" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="3.72300000000001" /> <!-- Accessory Gem (Mid-grade) -->
+			</drop>
+			<spoil>
 				<item id="36557" min="1" max="1" chance="15.8" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="2.958" /> <!-- Accessory Gem (Mid-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -2585,22 +2431,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2324" max="5426" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="37.145">
-					<item id="36527" min="3" max="9" chance="77.345537757437" /> <!-- Synthetic Fiber -->
-					<item id="36528" min="2" max="6" chance="22.654462242563" /> <!-- Metallic Fiber -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="2324" max="5426" chance="70" /> <!-- Adena -->
+				<item id="36527" min="3" max="9" chance="28.73" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="2" max="6" chance="8.41500000000003" /> <!-- Metallic Fiber -->
+			</drop>
+			<spoil>
 				<item id="36527" min="1" max="3" chance="65.95" /> <!-- Synthetic Fiber -->
 				<item id="36528" min="1" max="1" chance="25.39" /> <!-- Metallic Fiber -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -2769,22 +2611,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="34.824">
-					<item id="36522" min="1" max="3" chance="72.852056053297" /> <!-- Silver -->
-					<item id="36523" min="1" max="1" chance="27.147943946703" /> <!-- Adamantite -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="3" chance="25.3700000000001" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="9.45399999999985" /> <!-- Adamantite -->
+			</drop>
+			<spoil>
 				<item id="36522" min="1" max="1" chance="37.29" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="7.36" /> <!-- Adamantite -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="12" />
@@ -2846,24 +2684,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="6.446">
-					<item id="36547" min="1" max="1" chance="100" /> <!-- Weapon Fragment -->
-				</group>
-				<group chance="1.321">
-					<item id="36548" min="1" max="1" chance="100" /> <!-- Weapon Fragment (Mid-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="6.446" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="1.321" /> <!-- Weapon Fragment (Mid-grade) -->
+			</drop>
+			<spoil>
 				<item id="36547" min="1" max="1" chance="5.091" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment (Mid-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -2987,22 +2819,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="22.575">
-					<item id="36557" min="1" max="1" chance="83.012181616833" /> <!-- Accessory Gem -->
-					<item id="36558" min="1" max="1" chance="16.987818383167" /> <!-- Accessory Gem (Mid-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36557" min="1" max="1" chance="18.7400000000001" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="3.83499999999995" /> <!-- Accessory Gem (Mid-grade) -->
+			</drop>
+			<spoil>
 				<item id="36557" min="1" max="1" chance="15.79" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="2.919" /> <!-- Accessory Gem (Mid-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -3066,22 +2894,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="361" max="842" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.578">
-					<item id="36557" min="1" max="1" chance="83.617300131062" /> <!-- Accessory Gem -->
-					<item id="36558" min="1" max="1" chance="16.382699868938" /> <!-- Accessory Gem (Mid-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="361" max="842" chance="70" /> <!-- Adena -->
+				<item id="36557" min="1" max="1" chance="3.82800000000002" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.749999999999982" /> <!-- Accessory Gem (Mid-grade) -->
+			</drop>
+			<spoil>
 				<item id="36557" min="1" max="1" chance="2.926" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="11" />
@@ -3143,22 +2967,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.483">
-					<item id="36562" min="1" max="1" chance="86.321356921393" /> <!-- Greater Cokes -->
-					<item id="36563" min="1" max="1" chance="13.678643078607" /> <!-- Synthetic Cokes -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="4.73299999999998" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.750000000000022" /> <!-- Synthetic Cokes -->
+			</drop>
+			<spoil>
 				<item id="36562" min="1" max="1" chance="3.733" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="0.75" /> <!-- Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="24" grown="29" />
@@ -3221,22 +3041,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="33.038">
-					<item id="36522" min="1" max="3" chance="71.493431805799" /> <!-- Silver -->
-					<item id="36523" min="1" max="1" chance="28.506568194201" /> <!-- Adamantite -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="3" chance="23.6199999999999" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="9.41800000000013" /> <!-- Adamantite -->
+			</drop>
+			<spoil>
 				<item id="36522" min="1" max="1" chance="38.57" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="7.361" /> <!-- Adamantite -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -3368,22 +3184,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1861" max="4344" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="32.702">
-					<item id="36522" min="1" max="3" chance="71.188306525595" /> <!-- Silver -->
-					<item id="36523" min="1" max="1" chance="28.811693474405" /> <!-- Adamantite -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1861" max="4344" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="3" chance="23.2800000000001" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="9.42199999999992" /> <!-- Adamantite -->
+			</drop>
+			<spoil>
 				<item id="36522" min="1" max="1" chance="39.31" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="7.352" /> <!-- Adamantite -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="12" />
@@ -3439,22 +3251,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2340" max="5464" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="44.21">
-					<item id="36522" min="1" max="3" chance="72.381814069215" /> <!-- Silver -->
-					<item id="36523" min="1" max="1" chance="27.618185930785" /> <!-- Adamantite -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="2340" max="5464" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="3" chance="32" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="12.21" /> <!-- Adamantite -->
+			</drop>
+			<spoil>
 				<item id="36522" min="1" max="1" chance="48.51" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="9.242" /> <!-- Adamantite -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -3513,43 +3321,27 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="25" max="60" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="36552" min="1" max="1" chance="100" /> <!-- Armor Fragment -->
-				</group>
-				<group chance="0.75">
-					<item id="36517" min="1" max="1" chance="100" /> <!-- Leather -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="25" max="60" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
+				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
 				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="5" />

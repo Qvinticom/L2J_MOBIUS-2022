@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.announce.EventAnnouncement;
-import com.l2jmobius.gameserver.model.drops.GeneralDropItem;
+import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.script.DateRange;
 import com.l2jmobius.gameserver.util.Broadcast;
@@ -62,7 +62,7 @@ public class LongTimeEvent extends Quest
 	private final List<NpcSpawn> _spawnList = new ArrayList<>();
 	
 	// Drop data for event
-	private final List<GeneralDropItem> _dropList = new ArrayList<>();
+	private final List<DropHolder> _dropList = new ArrayList<>();
 	
 	private class NpcSpawn
 	{
@@ -180,7 +180,7 @@ public class LongTimeEvent extends Quest
 										continue;
 									}
 									
-									_dropList.add(new GeneralDropItem(itemId, minCount, maxCount, finalChance));
+									_dropList.add(new DropHolder(null, itemId, minCount, maxCount, finalChance));
 								}
 								catch (NumberFormatException nfe)
 								{
@@ -260,7 +260,7 @@ public class LongTimeEvent extends Quest
 		// Add drop
 		if ((_dropList != null) && (currentTime < _dropPeriod.getEndDate().getTime()))
 		{
-			for (GeneralDropItem drop : _dropList)
+			for (DropHolder drop : _dropList)
 			{
 				EventDroplist.getInstance().addGlobalDrop(drop.getItemId(), drop.getMin(), drop.getMax(), (int) drop.getChance(), _dropPeriod);
 			}

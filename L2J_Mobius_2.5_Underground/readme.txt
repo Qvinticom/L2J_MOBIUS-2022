@@ -105,6 +105,7 @@ Others:
 -Reworked tax system
 -Reworked quest system
 -Reworked spawn system
+-Reworked drop system
 -Skill system from L2jUnity
 -GeoEngine from aCis
 -Threadpool manager from aCis

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19200" level="85" type="FriendlyNpc" name="Reep" title="Weapons Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -529,12 +529,10 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="4.675">
-					<item id="17527" min="1" max="1" chance="93.582887700535" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="17526" min="1" max="1" chance="6.4171122994652" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="17527" min="1" max="1" chance="4.37500000000001" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.299999999999998" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -3440,11 +3438,9 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="4.961">
-					<item id="17376" min="1" max="1" chance="100" /> <!-- Trace of Kimerian's Cavern -->
-				</group>
-			</death>
+			<drop>
+				<item id="17376" min="1" max="1" chance="4.961" /> <!-- Trace of Kimerian's Cavern -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />

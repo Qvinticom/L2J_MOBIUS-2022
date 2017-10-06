@@ -3990,7 +3990,7 @@
 			<height normal="40.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="912" min="1" max="1" chance="23.28" /> <!-- Near Forest Necklace -->
 				<item id="849" min="1" max="3" chance="22.76" /> <!-- Tiger's Eye -->
 				<item id="880" min="1" max="3" chance="22.31" /> <!-- Black Pearl Ring -->
@@ -4006,7 +4006,7 @@
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="3" max="9" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25392" level="32" type="L2RaidBoss" name="Queen's Royal Guard Captain" title="Raid Boss">

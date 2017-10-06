@@ -2927,26 +2927,20 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1370" max="2743" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1363999992609024">
-					<item id="81" min="1" max="1" chance="0.0869" /> <!-- Dragon Slayer -->
-					<item id="5529" min="1" max="1" chance="32.1905" /> <!-- Dragon Slayer Edge -->
-					<item id="151" min="1" max="1" chance="0.0869" /> <!-- Sword of Miracles -->
-					<item id="5546" min="1" max="1" chance="35.3582" /> <!-- Sword of Miracles Edge -->
-					<item id="2500" min="1" max="1" chance="0.0869" /> <!-- Dark Legion's Edge -->
-					<item id="5545" min="1" max="1" chance="32.1906" /> <!-- Dark Legion's Edge Blade -->
-				</group>
-				<group chance="6.83050012588501">
-					<item id="1895" min="1" max="1" chance="80.3123" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.6219" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.6849" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.3698" /> <!-- Asofe -->
-					<item id="959" min="1" max="1" chance="0.0111" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="1370" max="2743" chance="70" /> <!-- Adena -->
+				<item id="81" min="1" max="1" chance="0.000118531599357724" /> <!-- Dragon Slayer -->
+				<item id="5529" min="1" max="1" chance="0.0439078417620808" /> <!-- Dragon Slayer Edge -->
+				<item id="151" min="1" max="1" chance="0.000118531599357724" /> <!-- Sword of Miracles -->
+				<item id="5546" min="1" max="1" chance="0.0482285845386684" /> <!-- Sword of Miracles Edge -->
+				<item id="2500" min="1" max="1" chance="0.000118531599357724" /> <!-- Dark Legion's Edge -->
+				<item id="5545" min="1" max="1" chance="0.0439079781620801" /> <!-- Dark Legion's Edge Blade -->
+				<item id="1895" min="1" max="1" chance="5.48573175260115" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="0.384003886577129" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="0.320002100397587" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="0.640004200795174" /> <!-- Asofe -->
+				<item id="959" min="1" max="1" chance="0.000758185513973236" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3273,29 +3267,27 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.5500" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="955" min="1" max="1" chance="0.6300" /> <!-- Scroll: Enchant Weapon D-Grade -->
-					<item id="956" min="1" max="1" chance="5.5100" /> <!-- Scroll: Enchant Armor D-Grade -->
-					<item id="10133" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Grail Apostle -->
-					<item id="20364" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Onyx Beast -->
-					<item id="10132" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Death Blader -->
-				</group>
-			</death>
+			<drop>
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
+				<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
+				<item id="10133" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Grail Apostle -->
+				<item id="20364" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Onyx Beast -->
+				<item id="10132" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Death Blader -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3334,29 +3326,27 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.5500" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="955" min="1" max="1" chance="0.6300" /> <!-- Scroll: Enchant Weapon D-Grade -->
-					<item id="956" min="1" max="1" chance="5.5100" /> <!-- Scroll: Enchant Armor D-Grade -->
-					<item id="10133" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Grail Apostle -->
-					<item id="20364" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Onyx Beast -->
-					<item id="10132" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Death Blader -->
-				</group>
-			</death>
+			<drop>
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
+				<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
+				<item id="10133" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Grail Apostle -->
+				<item id="20364" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Onyx Beast -->
+				<item id="10132" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Death Blader -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3395,29 +3385,27 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.5500" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="955" min="1" max="1" chance="0.6300" /> <!-- Scroll: Enchant Weapon D-Grade -->
-					<item id="956" min="1" max="1" chance="5.5100" /> <!-- Scroll: Enchant Armor D-Grade -->
-					<item id="10133" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Grail Apostle -->
-					<item id="20364" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Onyx Beast -->
-					<item id="10132" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Death Blader -->
-				</group>
-			</death>
+			<drop>
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
+				<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
+				<item id="10133" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Grail Apostle -->
+				<item id="20364" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Onyx Beast -->
+				<item id="10132" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Death Blader -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3456,29 +3444,27 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.5500" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="955" min="1" max="1" chance="0.6300" /> <!-- Scroll: Enchant Weapon D-Grade -->
-					<item id="956" min="1" max="1" chance="5.5100" /> <!-- Scroll: Enchant Armor D-Grade -->
-					<item id="20368" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Lilim Knight -->
-					<item id="20369" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Golem Guardian -->
-					<!--  <item id="21747" min="1" max="1" chance="5" /> --> <!-- Beginner Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
+				<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
+				<item id="20368" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Lilim Knight -->
+				<item id="20369" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Golem Guardian -->
+				<item id="21747" min="1" max="1" chance="5" /> <!-- Beginner Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3517,29 +3503,27 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
-					<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
-					<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
-					<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
-					<item id="20368" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Lilim Knight -->
-					<item id="20369" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Golem Guardian -->
-					<!--  <item id="21747" min="1" max="1" chance="5" /> --> <!-- Beginner Adventurer's Treasure Sack -->
-					<item id="5593" min="1" max="1" chance="75" /> <!-- SP Scroll Low-Grade -->
-				</group>
-			</death>
+			<drop>
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
+				<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
+				<item id="20368" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Lilim Knight -->
+				<item id="20369" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Golem Guardian -->
+				<item id="21747" min="1" max="1" chance="5" /> <!-- Beginner Adventurer's Treasure Sack -->
+				<item id="5593" min="1" max="1" chance="75" /> <!-- SP Scroll Low-Grade -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3578,30 +3562,28 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
-					<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
-					<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
-					<item id="20368" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Lilim Knight -->
-					<item id="20369" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Golem Guardian -->
-					<!-- <item id="21747" min="1" max="1" chance="5" /> --> <!-- Beginner Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
+				<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
+				<item id="20368" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Lilim Knight -->
+				<item id="20369" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Golem Guardian -->
+				<item id="21747" min="1" max="1" chance="5" /> <!-- Beginner Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3640,30 +3622,28 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
-					<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
-					<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
-					<item id="20368" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Lilim Knight -->
-					<item id="20369" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Golem Guardian -->
-					<!-- <item id="21747" min="1" max="1" chance="5" /> --> <!-- Beginner Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="955" min="1" max="1" chance="0.63" /> <!-- Scroll: Enchant Weapon D-Grade -->
+				<item id="956" min="1" max="1" chance="5.51" /> <!-- Scroll: Enchant Armor D-Grade -->
+				<item id="20368" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Lilim Knight -->
+				<item id="20369" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Golem Guardian -->
+				<item id="21747" min="1" max="1" chance="5" /> <!-- Beginner Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3702,35 +3682,33 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8636" min="2" max="3" chance="94.4700" /> <!-- Elixir of CP C-Grade -->
-					<item id="8625" min="1" max="2" chance="52.5400" /> <!-- Elixir of Life B-Grade -->
-					<item id="8631" min="1" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength B-Grade -->
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="1538" min="1" max="2" chance="46.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.5500" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.6500" /> <!-- SP Scroll High Grade -->
-					<item id="951" min="1" max="1" chance="0.4700" /> <!-- Scroll: Enchant Weapon C-Grade -->
-					<item id="956" min="1" max="1" chance="3.5100" /> <!-- Scroll: Enchant Armor C-Grade -->
-					<item id="20371" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Dragon Bomber -->
-					<item id="20370" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Inferno Drake -->
-					<!-- <item id="21747" min="1" max="1" chance="5" /> --> <!-- Beginner Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8636" min="2" max="3" chance="94.47" /> <!-- Elixir of CP C-Grade -->
+				<item id="8625" min="1" max="2" chance="52.54" /> <!-- Elixir of Life B-Grade -->
+				<item id="8631" min="1" max="2" chance="67.68" /> <!-- Elixir of Mental Strength B-Grade -->
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="1538" min="1" max="2" chance="46.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="951" min="1" max="1" chance="0.47" /> <!-- Scroll: Enchant Weapon C-Grade -->
+				<item id="956" min="1" max="1" chance="3.51" /> <!-- Scroll: Enchant Armor C-Grade -->
+				<item id="20371" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Dragon Bomber -->
+				<item id="20370" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Inferno Drake -->
+				<item id="21747" min="1" max="1" chance="5" /> <!-- Beginner Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3769,35 +3747,33 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8636" min="2" max="3" chance="94.4700" /> <!-- Elixir of CP C-Grade -->
-					<item id="8625" min="1" max="2" chance="52.5400" /> <!-- Elixir of Life B-Grade -->
-					<item id="8631" min="1" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength B-Grade -->
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="1538" min="1" max="2" chance="46.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.5500" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.6500" /> <!-- SP Scroll High Grade -->
-					<item id="951" min="1" max="1" chance="0.4700" /> <!-- Scroll: Enchant Weapon C-Grade -->
-					<item id="956" min="1" max="1" chance="3.5100" /> <!-- Scroll: Enchant Armor C-Grade -->
-					<item id="20371" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Dragon Bomber -->
-					<item id="20370" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Inferno Drake -->
-					<!-- <item id="21747" min="1" max="1" chance="5" /> --> <!-- Beginner Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8636" min="2" max="3" chance="94.47" /> <!-- Elixir of CP C-Grade -->
+				<item id="8625" min="1" max="2" chance="52.54" /> <!-- Elixir of Life B-Grade -->
+				<item id="8631" min="1" max="2" chance="67.68" /> <!-- Elixir of Mental Strength B-Grade -->
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="1538" min="1" max="2" chance="46.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="951" min="1" max="1" chance="0.47" /> <!-- Scroll: Enchant Weapon C-Grade -->
+				<item id="956" min="1" max="1" chance="3.51" /> <!-- Scroll: Enchant Armor C-Grade -->
+				<item id="20371" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Dragon Bomber -->
+				<item id="20370" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Inferno Drake -->
+				<item id="21747" min="1" max="1" chance="5" /> <!-- Beginner Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3836,35 +3812,33 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8636" min="2" max="3" chance="94.4700" /> <!-- Elixir of CP C-Grade -->
-					<item id="8625" min="1" max="2" chance="52.5400" /> <!-- Elixir of Life B-Grade -->
-					<item id="8631" min="1" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength B-Grade -->
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="1538" min="1" max="2" chance="46.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.5500" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.6500" /> <!-- SP Scroll High Grade -->
-					<item id="951" min="1" max="1" chance="0.4700" /> <!-- Scroll: Enchant Weapon C-Grade -->
-					<item id="956" min="1" max="1" chance="3.5100" /> <!-- Scroll: Enchant Armor C-Grade -->
-					<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
-					<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
-					<!-- <item id="21747" min="1" max="1" chance="5" /> --> <!-- Beginner Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8636" min="2" max="3" chance="94.47" /> <!-- Elixir of CP C-Grade -->
+				<item id="8625" min="1" max="2" chance="52.54" /> <!-- Elixir of Life B-Grade -->
+				<item id="8631" min="1" max="2" chance="67.68" /> <!-- Elixir of Mental Strength B-Grade -->
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="1538" min="1" max="2" chance="46.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="951" min="1" max="1" chance="0.47" /> <!-- Scroll: Enchant Weapon C-Grade -->
+				<item id="956" min="1" max="1" chance="3.51" /> <!-- Scroll: Enchant Armor C-Grade -->
+				<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
+				<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
+				<item id="21747" min="1" max="1" chance="5" /> <!-- Beginner Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3903,38 +3877,36 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8637" min="2" max="3" chance="94.4700" /> <!-- Elixir of CP B-Grade -->
-					<item id="8626" min="1" max="2" chance="52.5400" /> <!-- Elixir of Life A-Grade -->
-					<item id="8632" min="1" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength A-Grade -->
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="1538" min="1" max="2" chance="46.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8738" min="1" max="1" chance="32.5600" /> <!-- Mid-Grade Life Stone - Level 61 -->
-					<item id="8737" min="1" max="1" chance="36.0000" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8736" min="1" max="1" chance="31.1000" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5593" min="1" max="1" chance="75.5500" /> <!-- SP Scroll Low-Grade -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.6500" /> <!-- SP Scroll High Grade -->
-					<item id="947" min="1" max="1" chance="0.1900" /> <!-- Scroll: Enchant Weapon B-Grade -->
-					<item id="948" min="1" max="1" chance="1.2000" /> <!-- Scroll: Enchant Armor B-Grade -->
-					<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
-					<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
-					<!-- <item id="21747" min="1" max="1" chance="5" /> --> <!-- Beginner Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8637" min="2" max="3" chance="94.47" /> <!-- Elixir of CP B-Grade -->
+				<item id="8626" min="1" max="2" chance="52.54" /> <!-- Elixir of Life A-Grade -->
+				<item id="8632" min="1" max="2" chance="67.68" /> <!-- Elixir of Mental Strength A-Grade -->
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="1538" min="1" max="2" chance="46.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8738" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 61 -->
+				<item id="8737" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 58 -->
+				<item id="8736" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 55 -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5593" min="1" max="1" chance="75.55" /> <!-- SP Scroll Low-Grade -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="947" min="1" max="1" chance="0.19" /> <!-- Scroll: Enchant Weapon B-Grade -->
+				<item id="948" min="1" max="1" chance="1.2" /> <!-- Scroll: Enchant Armor B-Grade -->
+				<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
+				<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
+				<item id="21747" min="1" max="1" chance="5" /> <!-- Beginner Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3973,37 +3945,35 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8637" min="2" max="3" chance="94.4700" /> <!-- Elixir of CP B-Grade -->
-					<item id="8626" min="1" max="2" chance="52.5400" /> <!-- Elixir of Life A-Grade -->
-					<item id="8632" min="1" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength A-Grade -->
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="1538" min="1" max="2" chance="46.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8738" min="1" max="1" chance="32.5600" /> <!-- Mid-Grade Life Stone - Level 61 -->
-					<item id="8737" min="1" max="1" chance="36.0000" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8736" min="1" max="1" chance="31.1000" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.6500" /> <!-- SP Scroll High Grade -->
-					<item id="947" min="1" max="1" chance="0.1900" /> <!-- Scroll: Enchant Weapon B-Grade -->
-					<item id="948" min="1" max="1" chance="1.2000" /> <!-- Scroll: Enchant Armor B-Grade -->
-					<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
-					<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
-					<!-- <item id="21748" min="1" max="1" chance="0.85" /> --> <!-- Experienced Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8637" min="2" max="3" chance="94.47" /> <!-- Elixir of CP B-Grade -->
+				<item id="8626" min="1" max="2" chance="52.54" /> <!-- Elixir of Life A-Grade -->
+				<item id="8632" min="1" max="2" chance="67.68" /> <!-- Elixir of Mental Strength A-Grade -->
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="1538" min="1" max="2" chance="46.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8738" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 61 -->
+				<item id="8737" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 58 -->
+				<item id="8736" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 55 -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="947" min="1" max="1" chance="0.19" /> <!-- Scroll: Enchant Weapon B-Grade -->
+				<item id="948" min="1" max="1" chance="1.2" /> <!-- Scroll: Enchant Armor B-Grade -->
+				<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
+				<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
+				<item id="21748" min="1" max="1" chance="0.85" /> <!-- Experienced Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4042,37 +4012,35 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8637" min="2" max="3" chance="94.4700" /> <!-- Elixir of CP B-Grade -->
-					<item id="8626" min="1" max="2" chance="52.5400" /> <!-- Elixir of Life A-Grade -->
-					<item id="8632" min="1" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength A-Grade -->
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="1538" min="1" max="2" chance="46.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8738" min="1" max="1" chance="32.5600" /> <!-- Mid-Grade Life Stone - Level 61 -->
-					<item id="8737" min="1" max="1" chance="36.0000" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8736" min="1" max="1" chance="31.1000" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.6500" /> <!-- SP Scroll High Grade -->
-					<item id="947" min="1" max="1" chance="0.1900" /> <!-- Scroll: Enchant Weapon B-Grade -->
-					<item id="948" min="1" max="1" chance="1.2000" /> <!-- Scroll: Enchant Armor B-Grade -->
-					<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
-					<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
-					<!-- <item id="21748" min="1" max="1" chance="0.85" /> --> <!-- Experienced Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8637" min="2" max="3" chance="94.47" /> <!-- Elixir of CP B-Grade -->
+				<item id="8626" min="1" max="2" chance="52.54" /> <!-- Elixir of Life A-Grade -->
+				<item id="8632" min="1" max="2" chance="67.68" /> <!-- Elixir of Mental Strength A-Grade -->
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="1538" min="1" max="2" chance="46.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8738" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 61 -->
+				<item id="8737" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 58 -->
+				<item id="8736" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 55 -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="947" min="1" max="1" chance="0.19" /> <!-- Scroll: Enchant Weapon B-Grade -->
+				<item id="948" min="1" max="1" chance="1.2" /> <!-- Scroll: Enchant Armor B-Grade -->
+				<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
+				<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
+				<item id="21748" min="1" max="1" chance="0.85" /> <!-- Experienced Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4111,37 +4079,35 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8637" min="2" max="3" chance="94.4700" /> <!-- Elixir of CP B-Grade -->
-					<item id="8626" min="1" max="2" chance="52.5400" /> <!-- Elixir of Life A-Grade -->
-					<item id="8632" min="1" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength A-Grade -->
-					<item id="736" min="4" max="8" chance="90.9100" /> <!-- Scroll Of Escape -->
-					<item id="737" min="1" max="3" chance="90.9100" /> <!-- Scroll Of Resurrection -->
-					<item id="1538" min="1" max="2" chance="46.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8738" min="1" max="1" chance="32.5600" /> <!-- Mid-Grade Life Stone - Level 61 -->
-					<item id="8737" min="1" max="1" chance="36.0000" /> <!-- Mid-Grade Life Stone - Level 58 -->
-					<item id="8736" min="1" max="1" chance="31.1000" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="10262" min="1" max="1" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="1" max="1" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="1" max="1" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="1" max="1" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="1" max="1" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="1" max="1" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="1" max="1" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="1" max="1" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="1" max="1" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="1" max="1" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5594" min="1" max="1" chance="63.5500" /> <!-- SP Scroll Medium-Grade -->
-					<item id="5595" min="1" max="1" chance="6.6500" /> <!-- SP Scroll High Grade -->
-					<item id="947" min="1" max="1" chance="0.1900" /> <!-- Scroll: Enchant Weapon B-Grade -->
-					<item id="948" min="1" max="1" chance="1.2000" /> <!-- Scroll: Enchant Armor B-Grade -->
-					<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
-					<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
-					<!-- <item id="21748" min="1" max="1" chance="0.85" /> --> <!-- Experienced Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8637" min="2" max="3" chance="94.47" /> <!-- Elixir of CP B-Grade -->
+				<item id="8626" min="1" max="2" chance="52.54" /> <!-- Elixir of Life A-Grade -->
+				<item id="8632" min="1" max="2" chance="67.68" /> <!-- Elixir of Mental Strength A-Grade -->
+				<item id="736" min="4" max="8" chance="90.91" /> <!-- Scroll Of Escape -->
+				<item id="737" min="1" max="3" chance="90.91" /> <!-- Scroll Of Resurrection -->
+				<item id="1538" min="1" max="2" chance="46.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8738" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 61 -->
+				<item id="8737" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 58 -->
+				<item id="8736" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 55 -->
+				<item id="10262" min="1" max="1" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="1" max="1" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="1" max="1" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="1" max="1" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="1" max="1" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="1" max="1" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="1" max="1" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="1" max="1" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="1" max="1" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="1" max="1" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5594" min="1" max="1" chance="63.55" /> <!-- SP Scroll Medium-Grade -->
+				<item id="5595" min="1" max="1" chance="6.65" /> <!-- SP Scroll High Grade -->
+				<item id="947" min="1" max="1" chance="0.19" /> <!-- Scroll: Enchant Weapon B-Grade -->
+				<item id="948" min="1" max="1" chance="1.2" /> <!-- Scroll: Enchant Armor B-Grade -->
+				<item id="21184" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Doll Blader - Event -->
+				<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
+				<item id="21748" min="1" max="1" chance="0.85" /> <!-- Experienced Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4180,36 +4146,34 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8638" min="3" max="6" chance="54.47" /> <!-- Elixir of CP A-Grade -->
-					<item id="8627" min="2" max="2" chance="52.54" /> <!-- Elixir of Life S-Grade -->
-					<item id="8633" min="2" max="2" chance="67.68" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8742" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8741" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8740" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8739" min="1" max="1" chance="52" /> <!-- Mid-Grade Life Stone - Level 64 -->
-					<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
-					<item id="10260" min="3" max="3" chance="38.1" /> <!-- Alacrity Juice -->
-					<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
-					<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
-					<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
-					<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
-					<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
-					<item id="947" min="1" max="1" chance="0.19" /> <!-- Scroll: Enchant Weapon B-Grade -->
-					<item id="948" min="1" max="1" chance="1.2" /> <!-- Scroll: Enchant Armor B-Grade -->
-					<item id="21180" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Heretic - Event -->
-					<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
-					<item id="21181" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Veil Master - Event -->
-					<!-- <item id="21748" min="1" max="1" chance="0.85" /> --> <!-- Experienced Adventurer's Treasure Sack -->
-					<item id="5595" min="1" max="1" chance="4.65" /> <!-- SP Scroll High Grade -->
-				</group>
-			</death>
+			<drop>
+				<item id="8638" min="3" max="6" chance="54.47" /> <!-- Elixir of CP A-Grade -->
+				<item id="8627" min="2" max="2" chance="52.54" /> <!-- Elixir of Life S-Grade -->
+				<item id="8633" min="2" max="2" chance="67.68" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8742" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 76 -->
+				<item id="8741" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 70 -->
+				<item id="8740" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 67 -->
+				<item id="8739" min="1" max="1" chance="52" /> <!-- Mid-Grade Life Stone - Level 64 -->
+				<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="3" max="3" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="947" min="1" max="1" chance="0.19" /> <!-- Scroll: Enchant Weapon B-Grade -->
+				<item id="948" min="1" max="1" chance="1.2" /> <!-- Scroll: Enchant Armor B-Grade -->
+				<item id="21180" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Heretic - Event -->
+				<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
+				<item id="21181" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Veil Master - Event -->
+				<item id="21748" min="1" max="1" chance="0.85" /> <!-- Experienced Adventurer's Treasure Sack -->
+				<item id="5595" min="1" max="1" chance="4.65" /> <!-- SP Scroll High Grade -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4248,35 +4212,33 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8638" min="3" max="6" chance="54.4700" /> <!-- Elixir of CP A-Grade -->
-					<item id="8627" min="2" max="2" chance="52.5400" /> <!-- Elixir of Life S-Grade -->
-					<item id="8633" min="2" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="1538" min="1" max="2" chance="55.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8742" min="1" max="1" chance="31.1000" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8741" min="1" max="1" chance="32.5600" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8740" min="1" max="1" chance="36.0000" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8739" min="1" max="1" chance="52.0000" /> <!-- Mid-Grade Life Stone - Level 64 -->
-					<item id="10262" min="3" max="3" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="3" max="3" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="3" max="3" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="3" max="3" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="3" max="3" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="3" max="3" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="3" max="3" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="3" max="3" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="3" max="3" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="3" max="3" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5595" min="1" max="2" chance="4.6500" /> <!-- SP Scroll High Grade -->
-					<item id="729" min="1" max="1" chance="0.0600" /> <!-- Scroll: Enchant Weapon A-Grade -->
-					<item id="730" min="1" max="1" chance="0.4200" /> <!-- Scroll: Enchant Armor A-Grade -->
-					<item id="21180" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Heretic - Event -->
-					<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
-					<item id="21181" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Veil Master - Event -->
-				</group>
-			</death>
+			<drop>
+				<item id="8638" min="3" max="6" chance="54.47" /> <!-- Elixir of CP A-Grade -->
+				<item id="8627" min="2" max="2" chance="52.54" /> <!-- Elixir of Life S-Grade -->
+				<item id="8633" min="2" max="2" chance="67.68" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8742" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 76 -->
+				<item id="8741" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 70 -->
+				<item id="8740" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 67 -->
+				<item id="8739" min="1" max="1" chance="52" /> <!-- Mid-Grade Life Stone - Level 64 -->
+				<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="3" max="3" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
+				<item id="729" min="1" max="1" chance="0.06" /> <!-- Scroll: Enchant Weapon A-Grade -->
+				<item id="730" min="1" max="1" chance="0.42" /> <!-- Scroll: Enchant Armor A-Grade -->
+				<item id="21180" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Heretic - Event -->
+				<item id="21182" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Saber Tooth Tiger - Event -->
+				<item id="21181" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Veil Master - Event -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4315,36 +4277,34 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8638" min="3" max="6" chance="54.4700" /> <!-- Elixir of CP A-Grade -->
-					<item id="8627" min="2" max="2" chance="52.5400" /> <!-- Elixir of Life S-Grade -->
-					<item id="8633" min="2" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="1538" min="1" max="2" chance="55.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8742" min="1" max="1" chance="31.1000" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8741" min="1" max="1" chance="32.5600" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8740" min="1" max="1" chance="36.0000" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8739" min="1" max="1" chance="52.0000" /> <!-- Mid-Grade Life Stone - Level 64 -->
-					<item id="10262" min="3" max="3" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="3" max="3" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="3" max="3" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="3" max="3" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="3" max="3" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="3" max="3" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="3" max="3" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="3" max="3" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="3" max="3" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="3" max="3" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5595" min="1" max="2" chance="4.6500" /> <!-- SP Scroll High Grade -->
-					<item id="729" min="1" max="1" chance="0.0600" /> <!-- Scroll: Enchant Weapon A-Grade -->
-					<item id="730" min="1" max="1" chance="0.4200" /> <!-- Scroll: Enchant Armor A-Grade -->
-					<item id="21184" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Doll Blader - Event -->
-					<item id="21185" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Zaken - Event -->
-					<item id="21183" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ol Mahum - Event -->
-					<!-- <item id="21748" min="1" max="1" chance="0.85" /> --> <!-- Experienced Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8638" min="3" max="6" chance="54.47" /> <!-- Elixir of CP A-Grade -->
+				<item id="8627" min="2" max="2" chance="52.54" /> <!-- Elixir of Life S-Grade -->
+				<item id="8633" min="2" max="2" chance="67.68" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8742" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 76 -->
+				<item id="8741" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 70 -->
+				<item id="8740" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 67 -->
+				<item id="8739" min="1" max="1" chance="52" /> <!-- Mid-Grade Life Stone - Level 64 -->
+				<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="3" max="3" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
+				<item id="729" min="1" max="1" chance="0.06" /> <!-- Scroll: Enchant Weapon A-Grade -->
+				<item id="730" min="1" max="1" chance="0.42" /> <!-- Scroll: Enchant Armor A-Grade -->
+				<item id="21184" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Doll Blader - Event -->
+				<item id="21185" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Zaken - Event -->
+				<item id="21183" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ol Mahum - Event -->
+				<item id="21748" min="1" max="1" chance="0.85" /> <!-- Experienced Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4383,36 +4343,34 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8638" min="3" max="6" chance="54.4700" /> <!-- Elixir of CP A-Grade -->
-					<item id="8627" min="2" max="2" chance="52.5400" /> <!-- Elixir of Life S-Grade -->
-					<item id="8633" min="2" max="2" chance="67.6800" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="1538" min="1" max="2" chance="55.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8742" min="1" max="1" chance="31.1000" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8741" min="1" max="1" chance="32.5600" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8740" min="1" max="1" chance="36.0000" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="8739" min="1" max="1" chance="52.0000" /> <!-- Mid-Grade Life Stone - Level 64 -->
-					<item id="10262" min="3" max="3" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="3" max="3" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="3" max="3" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="3" max="3" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="3" max="3" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="3" max="3" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="3" max="3" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="3" max="3" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="3" max="3" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="3" max="3" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5595" min="1" max="2" chance="4.6500" /> <!-- SP Scroll High Grade -->
-					<item id="729" min="1" max="1" chance="0.1000" /> <!-- Scroll: Enchant Weapon A-Grade -->
-					<item id="730" min="1" max="1" chance="8.0200" /> <!-- Scroll: Enchant Armor A-Grade -->
-					<item id="21184" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Doll Blader - Event -->
-					<item id="21185" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Zaken - Event -->
-					<item id="21183" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ol Mahum - Event -->
-					<!-- <item id="21748" min="1" max="1" chance="0.85" /> --> <!-- Experienced Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8638" min="3" max="6" chance="54.47" /> <!-- Elixir of CP A-Grade -->
+				<item id="8627" min="2" max="2" chance="52.54" /> <!-- Elixir of Life S-Grade -->
+				<item id="8633" min="2" max="2" chance="67.68" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8742" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 76 -->
+				<item id="8741" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 70 -->
+				<item id="8740" min="1" max="1" chance="36" /> <!-- Mid-Grade Life Stone - Level 67 -->
+				<item id="8739" min="1" max="1" chance="52" /> <!-- Mid-Grade Life Stone - Level 64 -->
+				<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="3" max="3" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
+				<item id="729" min="1" max="1" chance="0.1" /> <!-- Scroll: Enchant Weapon A-Grade -->
+				<item id="730" min="1" max="1" chance="8.02" /> <!-- Scroll: Enchant Armor A-Grade -->
+				<item id="21184" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Doll Blader - Event -->
+				<item id="21185" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Zaken - Event -->
+				<item id="21183" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ol Mahum - Event -->
+				<item id="21748" min="1" max="1" chance="0.85" /> <!-- Experienced Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4451,42 +4409,40 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8639" min="2" max="5" chance="59.3200" /> <!-- Elixir of CP S-Grade -->
-					<item id="8638" min="3" max="6" chance="58.4700" /> <!-- Elixir of CP A-Grade -->
-					<item id="8627" min="2" max="2" chance="57.6300" /> <!-- Elixir of Life S-Grade -->
-					<item id="8627" min="2" max="2" chance="52.5400" /> <!-- Elixir of Life S-Grade -->
-					<item id="8633" min="2" max="2" chance="53.3900" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="8633" min="2" max="2" chance="61.6800" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="1538" min="1" max="2" chance="55.2400" /> <!-- Blessed Scroll of Escape -->
-					<item id="3936" min="1" max="1" chance="37.1400" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="8742" min="1" max="1" chance="31.1000" /> <!-- Mid-Grade Life Stone - Level 76 -->
-					<item id="8741" min="1" max="1" chance="32.5600" /> <!-- Mid-Grade Life Stone - Level 70 -->
-					<item id="8740" min="1" max="1" chance="32.0000" /> <!-- Mid-Grade Life Stone - Level 67 -->
-					<item id="10262" min="3" max="3" chance="40.0000" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="3" max="3" chance="40.0000" /> <!-- Evasion Juice -->
-					<item id="10260" min="3" max="3" chance="38.1000" /> <!-- Alacrity Juice -->
-					<item id="10264" min="3" max="3" chance="32.8800" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="3" max="3" chance="33.7200" /> <!-- Defense Juice -->
-					<item id="10268" min="3" max="3" chance="33.7200" /> <!-- Speed Juice -->
-					<item id="10261" min="3" max="3" chance="29.5200" /> <!-- Accuracy Juice -->
-					<item id="10267" min="3" max="3" chance="30.2300" /> <!-- Power Juice -->
-					<item id="10266" min="3" max="3" chance="28.5700" /> <!-- M. Atk. Juice -->
-					<item id="10263" min="3" max="3" chance="31.4000" /> <!-- Critical Rate Juice -->
-					<item id="5595" min="1" max="2" chance="4.6500" /> <!-- SP Scroll High Grade -->
-					<item id="729" min="1" max="1" chance="3.3300" /> <!-- Scroll: Enchant Weapon A-Grade -->
-					<item id="730" min="1" max="1" chance="11.0200" /> <!-- Scroll: Enchant Armor A-Grade -->
-					<item id="21189" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ranku - Event -->
-					<item id="21185" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Zaken - Event -->
-					<item id="21187" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Venom - Event -->
-					<item id="21188" min="1" max="1" chance="20" /> <!-- Transformation Scroll: Gordon - Event -->
-					<item id="21191" min="1" max="1" chance="18" /> <!-- Transformation Scroll: Demon Prince - Event -->
-					<item id="21186" min="1" max="1" chance="1.6" /> <!-- Transformation Scroll: Anakim - Event -->
-					<item id="21190" min="1" max="1" chance="17" /> <!-- Transformation Scroll: Kechi - Event -->
-					<!-- <item id="21748" min="1" max="1" chance="0.85" /> --> <!-- Experienced Adventurer's Treasure Sack -->
-				</group>
-			</death>
+			<drop>
+				<item id="8639" min="2" max="5" chance="59.32" /> <!-- Elixir of CP S-Grade -->
+				<item id="8638" min="3" max="6" chance="58.47" /> <!-- Elixir of CP A-Grade -->
+				<item id="8627" min="2" max="2" chance="57.63" /> <!-- Elixir of Life S-Grade -->
+				<item id="8627" min="2" max="2" chance="52.54" /> <!-- Elixir of Life S-Grade -->
+				<item id="8633" min="2" max="2" chance="53.39" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="8633" min="2" max="2" chance="61.68" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8742" min="1" max="1" chance="31.1" /> <!-- Mid-Grade Life Stone - Level 76 -->
+				<item id="8741" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 70 -->
+				<item id="8740" min="1" max="1" chance="32" /> <!-- Mid-Grade Life Stone - Level 67 -->
+				<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
+				<item id="10260" min="3" max="3" chance="38.1" /> <!-- Alacrity Juice -->
+				<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
+				<item id="729" min="1" max="1" chance="3.33" /> <!-- Scroll: Enchant Weapon A-Grade -->
+				<item id="730" min="1" max="1" chance="11.02" /> <!-- Scroll: Enchant Armor A-Grade -->
+				<item id="21189" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ranku - Event -->
+				<item id="21185" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Zaken - Event -->
+				<item id="21187" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Venom - Event -->
+				<item id="21188" min="1" max="1" chance="20" /> <!-- Transformation Scroll: Gordon - Event -->
+				<item id="21191" min="1" max="1" chance="18" /> <!-- Transformation Scroll: Demon Prince - Event -->
+				<item id="21186" min="1" max="1" chance="1.6" /> <!-- Transformation Scroll: Anakim - Event -->
+				<item id="21190" min="1" max="1" chance="17" /> <!-- Transformation Scroll: Kechi - Event -->
+				<item id="21748" min="1" max="1" chance="0.85" /> <!-- Experienced Adventurer's Treasure Sack -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4525,49 +4481,47 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8639" min="4" max="4" chance="97.14" /> <!-- Elixir of CP S-Grade -->
-					<item id="8627" min="2" max="2" chance="69.52" /> <!-- Elixir of Life S-Grade -->
-					<item id="8633" min="2" max="2" chance="66.67" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
-					<item id="9574" min="1" max="1" chance="32" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
-					<item id="14167" min="1" max="1" chance="38.1" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="10260" min="3" max="3" chance="38" /> <!-- Alacrity Juice -->
-					<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
-					<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
-					<item id="10484" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
-					<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
-					<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
-					<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
-					<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
-					<!-- <item id="9556" min="1" max="1" chance="2.33" /> --> <!-- Dark Crystal -->
-					<!-- <item id="9555" min="1" max="1" chance="1.16" /> --> <!-- Wind Crystal -->
-					<!-- <item id="9553" min="1" max="1" chance="1.16" /> --> <!-- Water Crystal -->
-					<item id="17185" min="1" max="1" chance="1.16" /> <!-- Scroll: 1,000,000 SP -->
-					<item id="960" min="1" max="1" chance="0.37" /> <!-- Scroll: Enchant Armor S-Grade -->
-					<item id="21185" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Zaken - Event -->
-					<item id="21187" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Venom - Event -->
-					<item id="21188" min="1" max="1" chance="20" /> <!-- Transformation Scroll: Gordon - Event -->
-					<item id="21191" min="1" max="1" chance="18" /> <!-- Transformation Scroll: Demon Prince - Event -->
-					<item id="21186" min="1" max="1" chance="1.6" /> <!-- Transformation Scroll: Anakim - Event -->
-					<item id="21190" min="1" max="1" chance="17" /> <!-- Transformation Scroll: Kechi - Event -->
-					<!-- <item id="9546" min="1" max="1" chance="8" /> --> <!-- Fire Stone -->
-					<!-- <item id="9547" min="1" max="1" chance="10" /> --> <!-- Water Stone -->
-					<!-- <item id="9548" min="1" max="1" chance="10" /> --> <!-- Earth Stone -->
-					<!-- <item id="9549" min="1" max="1" chance="10" /> --> <!-- Wind Stone -->
-					<!-- <item id="9550" min="1" max="1" chance="8" /> --> <!-- Dark Stone -->
-					<!-- <item id="9551" min="1" max="1" chance="13" /> --> <!-- Holy Stone -->
-					<!-- <item id="9627" min="1" max="1" chance="1.49" /> --> <!-- Giant's Codex - Mastery -->
-					<!-- <item id="6622" min="1" max="1" chance="33" /> --> <!-- Giant's Codex -->
-					<item id="21189" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ranku - Event -->
-				</group>
-			</death>
+			<drop>
+				<item id="8639" min="4" max="4" chance="97.14" /> <!-- Elixir of CP S-Grade -->
+				<item id="8627" min="2" max="2" chance="69.52" /> <!-- Elixir of Life S-Grade -->
+				<item id="8633" min="2" max="2" chance="66.67" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="9574" min="1" max="1" chance="32" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
+				<item id="14167" min="1" max="1" chance="38.1" /> <!-- Mid-Grade Life Stone - Level 84 -->
+				<item id="10260" min="3" max="3" chance="38" /> <!-- Alacrity Juice -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10484" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
+				<item id="9556" min="1" max="1" chance="2.33" /> <!-- Dark Crystal -->
+				<item id="9555" min="1" max="1" chance="1.16" /> <!-- Wind Crystal -->
+				<item id="9553" min="1" max="1" chance="1.16" /> <!-- Water Crystal -->
+				<item id="17185" min="1" max="1" chance="1.16" /> <!-- Scroll: 1,000,000 SP -->
+				<item id="960" min="1" max="1" chance="0.37" /> <!-- Scroll: Enchant Armor S-Grade -->
+				<item id="21185" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Zaken - Event -->
+				<item id="21187" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Venom - Event -->
+				<item id="21188" min="1" max="1" chance="20" /> <!-- Transformation Scroll: Gordon - Event -->
+				<item id="21191" min="1" max="1" chance="18" /> <!-- Transformation Scroll: Demon Prince - Event -->
+				<item id="21186" min="1" max="1" chance="1.6" /> <!-- Transformation Scroll: Anakim - Event -->
+				<item id="21190" min="1" max="1" chance="17" /> <!-- Transformation Scroll: Kechi - Event -->
+				<item id="9546" min="1" max="1" chance="8" /> <!-- Fire Stone -->
+				<item id="9547" min="1" max="1" chance="10" /> <!-- Water Stone -->
+				<item id="9548" min="1" max="1" chance="10" /> <!-- Earth Stone -->
+				<item id="9549" min="1" max="1" chance="10" /> <!-- Wind Stone -->
+				<item id="9550" min="1" max="1" chance="8" /> <!-- Dark Stone -->
+				<item id="9551" min="1" max="1" chance="13" /> <!-- Holy Stone -->
+				<item id="9627" min="1" max="1" chance="1.49" /> <!-- Giant's Codex - Mastery -->
+				<item id="6622" min="1" max="1" chance="33" /> <!-- Giant's Codex -->
+				<item id="21189" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ranku - Event -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4606,49 +4560,47 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8639" min="4" max="4" chance="97.14" /> <!-- Elixir of CP S-Grade -->
-					<item id="8627" min="2" max="2" chance="69.52" /> <!-- Elixir of Life S-Grade -->
-					<item id="8633" min="2" max="2" chance="66.67" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
-					<item id="9574" min="1" max="1" chance="32" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
-					<item id="14167" min="1" max="1" chance="38.1" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="10260" min="3" max="3" chance="38" /> <!-- Alacrity Juice -->
-					<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
-					<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
-					<item id="10484" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
-					<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
-					<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
-					<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
-					<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
-					<!-- <item id="9556" min="1" max="1" chance="2.33" /> --> <!-- Dark Crystal -->
-					<!-- <item id="9555" min="1" max="1" chance="1.16" /> --> <!-- Wind Crystal -->
-					<!-- <item id="9553" min="1" max="1" chance="1.16" /> --> <!-- Water Crystal -->
-					<item id="17185" min="1" max="1" chance="1.16" /> <!-- Scroll: 1,000,000 SP -->
-					<item id="960" min="1" max="1" chance="0.37" /> <!-- Scroll: Enchant Armor S-Grade -->
-					<item id="21185" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Zaken - Event -->
-					<item id="21187" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Venom - Event -->
-					<item id="21188" min="1" max="1" chance="20" /> <!-- Transformation Scroll: Gordon - Event -->
-					<item id="21191" min="1" max="1" chance="18" /> <!-- Transformation Scroll: Demon Prince - Event -->
-					<item id="21186" min="1" max="1" chance="1.6" /> <!-- Transformation Scroll: Anakim - Event -->
-					<item id="21190" min="1" max="1" chance="17" /> <!-- Transformation Scroll: Kechi - Event -->
-					<!-- <item id="9546" min="1" max="1" chance="8" /> --> <!-- Fire Stone -->
-					<!-- <item id="9547" min="1" max="1" chance="10" /> --> <!-- Water Stone -->
-					<!-- <item id="9548" min="1" max="1" chance="10" /> --> <!-- Earth Stone -->
-					<!-- <item id="9549" min="1" max="1" chance="10" /> --> <!-- Wind Stone -->
-					<!-- <item id="9550" min="1" max="1" chance="8" /> --> <!-- Dark Stone -->
-					<!-- <item id="9551" min="1" max="1" chance="13" /> --> <!-- Holy Stone -->
-					<!-- <item id="21749" min="1" max="1" chance="1.1" /> --> <!-- Great Adventurer's Treasure Sack -->
-					<!-- <item id="6622" min="1" max="1" chance="33" /> --> <!-- Giant's Codex -->
-					<item id="21189" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ranku - Event -->
-				</group>
-			</death>
+			<drop>
+				<item id="8639" min="4" max="4" chance="97.14" /> <!-- Elixir of CP S-Grade -->
+				<item id="8627" min="2" max="2" chance="69.52" /> <!-- Elixir of Life S-Grade -->
+				<item id="8633" min="2" max="2" chance="66.67" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="9574" min="1" max="1" chance="32" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
+				<item id="14167" min="1" max="1" chance="38.1" /> <!-- Mid-Grade Life Stone - Level 84 -->
+				<item id="10260" min="3" max="3" chance="38" /> <!-- Alacrity Juice -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10484" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
+				<item id="9556" min="1" max="1" chance="2.33" /> <!-- Dark Crystal -->
+				<item id="9555" min="1" max="1" chance="1.16" /> <!-- Wind Crystal -->
+				<item id="9553" min="1" max="1" chance="1.16" /> <!-- Water Crystal -->
+				<item id="17185" min="1" max="1" chance="1.16" /> <!-- Scroll: 1,000,000 SP -->
+				<item id="960" min="1" max="1" chance="0.37" /> <!-- Scroll: Enchant Armor S-Grade -->
+				<item id="21185" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Zaken - Event -->
+				<item id="21187" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Venom - Event -->
+				<item id="21188" min="1" max="1" chance="20" /> <!-- Transformation Scroll: Gordon - Event -->
+				<item id="21191" min="1" max="1" chance="18" /> <!-- Transformation Scroll: Demon Prince - Event -->
+				<item id="21186" min="1" max="1" chance="1.6" /> <!-- Transformation Scroll: Anakim - Event -->
+				<item id="21190" min="1" max="1" chance="17" /> <!-- Transformation Scroll: Kechi - Event -->
+				<item id="9546" min="1" max="1" chance="8" /> <!-- Fire Stone -->
+				<item id="9547" min="1" max="1" chance="10" /> <!-- Water Stone -->
+				<item id="9548" min="1" max="1" chance="10" /> <!-- Earth Stone -->
+				<item id="9549" min="1" max="1" chance="10" /> <!-- Wind Stone -->
+				<item id="9550" min="1" max="1" chance="8" /> <!-- Dark Stone -->
+				<item id="9551" min="1" max="1" chance="13" /> <!-- Holy Stone -->
+				<item id="21749" min="1" max="1" chance="1.1" /> <!-- Great Adventurer's Treasure Sack -->
+				<item id="6622" min="1" max="1" chance="33" /> <!-- Giant's Codex -->
+				<item id="21189" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ranku - Event -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4687,49 +4639,47 @@
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="8639" min="4" max="4" chance="97.14" /> <!-- Elixir of CP S-Grade -->
-					<item id="8627" min="2" max="2" chance="69.52" /> <!-- Elixir of Life S-Grade -->
-					<item id="8633" min="2" max="2" chance="66.67" /> <!-- Elixir of Mental Strength S-Grade -->
-					<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
-					<item id="9574" min="1" max="1" chance="32" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
-					<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
-					<item id="14167" min="1" max="1" chance="38.1" /> <!-- Mid-Grade Life Stone - Level 84 -->
-					<item id="10260" min="3" max="3" chance="38" /> <!-- Alacrity Juice -->
-					<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
-					<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
-					<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
-					<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
-					<item id="10484" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
-					<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
-					<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
-					<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
-					<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
-					<!-- <item id="9556" min="1" max="1" chance="2.33" /> --> <!-- Dark Crystal -->
-					<!-- <item id="9555" min="1" max="1" chance="1.16" /> --> <!-- Wind Crystal -->
-					<!-- <item id="9553" min="1" max="1" chance="1.16" /> --> <!-- Water Crystal -->
-					<item id="17185" min="1" max="1" chance="1.16" /> <!-- Scroll: 1,000,000 SP -->
-					<item id="960" min="1" max="1" chance="0.37" /> <!-- Scroll: Enchant Armor S-Grade -->
-					<item id="21185" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Zaken - Event -->
-					<item id="21187" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Venom - Event -->
-					<item id="21188" min="1" max="1" chance="20" /> <!-- Transformation Scroll: Gordon - Event -->
-					<item id="21191" min="1" max="1" chance="18" /> <!-- Transformation Scroll: Demon Prince - Event -->
-					<item id="21186" min="1" max="1" chance="1.6" /> <!-- Transformation Scroll: Anakim - Event -->
-					<item id="21190" min="1" max="1" chance="17" /> <!-- Transformation Scroll: Kechi - Event -->
-					<!-- <item id="9546" min="1" max="1" chance="8" /> --> <!-- Fire Stone -->
-					<!-- <item id="9547" min="1" max="1" chance="10" /> --> <!-- Water Stone -->
-					<!-- <item id="9548" min="1" max="1" chance="10" /> --> <!-- Earth Stone -->
-					<!-- <item id="9549" min="1" max="1" chance="10" /> --> <!-- Wind Stone -->
-					<!-- <item id="9550" min="1" max="1" chance="8" /> --> <!-- Dark Stone -->
-					<!-- <item id="9551" min="1" max="1" chance="13" /> --> <!-- Holy Stone -->
-					<!-- <item id="21749" min="1" max="1" chance="1.1" /> --> <!-- Great Adventurer's Treasure Sack -->
-					<!-- <item id="6622" min="1" max="1" chance="33" /> --> <!-- Giant's Codex -->
-					<item id="21189" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ranku - Event -->
-				</group>
-			</death>
+			<drop>
+				<item id="8639" min="4" max="4" chance="97.14" /> <!-- Elixir of CP S-Grade -->
+				<item id="8627" min="2" max="2" chance="69.52" /> <!-- Elixir of Life S-Grade -->
+				<item id="8633" min="2" max="2" chance="66.67" /> <!-- Elixir of Mental Strength S-Grade -->
+				<item id="1538" min="1" max="2" chance="55.24" /> <!-- Blessed Scroll of Escape -->
+				<item id="9574" min="1" max="1" chance="32" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="10262" min="3" max="3" chance="40" /> <!-- Critical Hit Juice -->
+				<item id="10265" min="3" max="3" chance="40" /> <!-- Evasion Juice -->
+				<item id="14167" min="1" max="1" chance="38.1" /> <!-- Mid-Grade Life Stone - Level 84 -->
+				<item id="10260" min="3" max="3" chance="38" /> <!-- Alacrity Juice -->
+				<item id="3936" min="1" max="1" chance="37.14" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="10264" min="3" max="3" chance="32.88" /> <!-- Casting Spd. Juice -->
+				<item id="10269" min="3" max="3" chance="33.72" /> <!-- Defense Juice -->
+				<item id="10268" min="3" max="3" chance="33.72" /> <!-- Speed Juice -->
+				<item id="10484" min="1" max="1" chance="32.56" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10263" min="3" max="3" chance="31.4" /> <!-- Critical Rate Juice -->
+				<item id="10261" min="3" max="3" chance="29.52" /> <!-- Accuracy Juice -->
+				<item id="10267" min="3" max="3" chance="30.23" /> <!-- Power Juice -->
+				<item id="10266" min="3" max="3" chance="28.57" /> <!-- M. Atk. Juice -->
+				<item id="5595" min="1" max="2" chance="4.65" /> <!-- SP Scroll High Grade -->
+				<item id="9556" min="1" max="1" chance="2.33" /> <!-- Dark Crystal -->
+				<item id="9555" min="1" max="1" chance="1.16" /> <!-- Wind Crystal -->
+				<item id="9553" min="1" max="1" chance="1.16" /> <!-- Water Crystal -->
+				<item id="17185" min="1" max="1" chance="1.16" /> <!-- Scroll: 1,000,000 SP -->
+				<item id="960" min="1" max="1" chance="0.37" /> <!-- Scroll: Enchant Armor S-Grade -->
+				<item id="21185" min="1" max="1" chance="31" /> <!-- Transformation Scroll: Zaken - Event -->
+				<item id="21187" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Venom - Event -->
+				<item id="21188" min="1" max="1" chance="20" /> <!-- Transformation Scroll: Gordon - Event -->
+				<item id="21191" min="1" max="1" chance="18" /> <!-- Transformation Scroll: Demon Prince - Event -->
+				<item id="21186" min="1" max="1" chance="1.6" /> <!-- Transformation Scroll: Anakim - Event -->
+				<item id="21190" min="1" max="1" chance="17" /> <!-- Transformation Scroll: Kechi - Event -->
+				<item id="9546" min="1" max="1" chance="8" /> <!-- Fire Stone -->
+				<item id="9547" min="1" max="1" chance="10" /> <!-- Water Stone -->
+				<item id="9548" min="1" max="1" chance="10" /> <!-- Earth Stone -->
+				<item id="9549" min="1" max="1" chance="10" /> <!-- Wind Stone -->
+				<item id="9550" min="1" max="1" chance="8" /> <!-- Dark Stone -->
+				<item id="9551" min="1" max="1" chance="13" /> <!-- Holy Stone -->
+				<item id="21749" min="1" max="1" chance="1.1" /> <!-- Great Adventurer's Treasure Sack -->
+				<item id="6622" min="1" max="1" chance="33" /> <!-- Giant's Codex -->
+				<item id="21189" min="1" max="1" chance="22" /> <!-- Transformation Scroll: Ranku - Event -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4773,15 +4723,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="186" max="372" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4067000150680542">
-					<item id="955" min="1" max="1" chance="10.7143" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-					<item id="956" min="1" max="1" chance="89.2857" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="186" max="372" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.150718059714437" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.25598195535362" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4825,15 +4771,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="207" max="413" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5676000118255615">
-					<item id="955" min="1" max="1" chance="10.7143" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-					<item id="956" min="1" max="1" chance="89.2857" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="207" max="413" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.167957368067026" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.39964264375854" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4877,15 +4819,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="308" max="617" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9322999715805054">
-					<item id="951" min="1" max="1" chance="12" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="1" max="1" chance="88" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="308" max="617" chance="70" /> <!-- Adena -->
+				<item id="951" min="1" max="1" chance="0.111875996589661" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="952" min="1" max="1" chance="0.820423974990845" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4929,15 +4867,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="338" max="676" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0037000179290771">
-					<item id="951" min="1" max="1" chance="12" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="1" max="1" chance="88" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="338" max="676" chance="70" /> <!-- Adena -->
+				<item id="951" min="1" max="1" chance="0.120444002151489" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="952" min="1" max="1" chance="0.883256015777588" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -4981,15 +4915,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="472" max="944" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.2513999938964844">
-					<item id="947" min="1" max="1" chance="13.7931" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-					<item id="948" min="1" max="1" chance="86.2069" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="472" max="944" chance="70" /> <!-- Adena -->
+				<item id="947" min="1" max="1" chance="0.034675852558136" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.216724141338348" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -5033,15 +4963,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="519" max="1010" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.27160000801086426">
-					<item id="947" min="1" max="1" chance="13.7931" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-					<item id="948" min="1" max="1" chance="86.2069" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="519" max="1010" chance="70" /> <!-- Adena -->
+				<item id="947" min="1" max="1" chance="0.0374620607049465" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.234137947305918" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -5085,15 +5011,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="681" max="1361" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.11249999701976776">
-					<item id="729" min="1" max="1" chance="11.7647" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="730" min="1" max="1" chance="88.2353" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="681" max="1361" chance="70" /> <!-- Adena -->
+				<item id="729" min="1" max="1" chance="0.0132352871493846" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.0992647098703831" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -5137,15 +5059,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="728" max="1457" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.12039999663829803">
-					<item id="729" min="1" max="1" chance="11.7647" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="730" min="1" max="1" chance="88.2353" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="728" max="1457" chance="70" /> <!-- Adena -->
+				<item id="729" min="1" max="1" chance="0.0141646984045058" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.106235298233792" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -5189,15 +5107,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="938" max="1879" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.15520000457763672">
-					<item id="729" min="1" max="1" chance="11.7647" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="730" min="1" max="1" chance="88.2353" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="938" max="1879" chance="70" /> <!-- Adena -->
+				<item id="729" min="1" max="1" chance="0.0182588149385452" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.136941189639091" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -5241,15 +5155,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="995" max="1993" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.07670000195503235">
-					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="995" max="1993" chance="70" /> <!-- Adena -->
+				<item id="959" min="1" max="1" chance="0.00697272047773004" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0697272814773023" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -5293,15 +5203,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1239" max="2481" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.09549999982118607">
-					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="1239" max="2481" chance="70" /> <!-- Adena -->
+				<item id="959" min="1" max="1" chance="0.0086818094837442" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0868181903374419" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -5345,15 +5251,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1301" max="2604" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.10029999911785126">
-					<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="1301" max="2604" chance="70" /> <!-- Adena -->
+				<item id="959" min="1" max="1" chance="0.00911817261980474" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0911818264980465" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />

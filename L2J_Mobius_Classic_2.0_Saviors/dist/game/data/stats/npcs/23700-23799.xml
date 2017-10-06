@@ -733,7 +733,7 @@
 			<height normal="44" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
 				<item id="57" min="5301" max="12380" chance="70" /> <!-- Adena -->
 				<item id="1865" min="7" max="21" chance="21.4" /> <!-- Varnish -->
@@ -743,14 +743,14 @@
 				<item id="5502" min="1" max="1" chance="3.605" /> <!-- Sealed Boots of Nightmare Lining -->
 				<item id="5514" min="1" max="1" chance="3.601" /> <!-- Sealed Gauntlets of Nightmare Design -->
 				<item id="5503" min="1" max="1" chance="3.593" /> <!-- Sealed Majestic Boot Lining -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1865" min="1" max="31" chance="92.99" /> <!-- Varnish -->
 				<item id="5404" min="1" max="1" chance="4.281" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
 				<item id="5380" min="1" max="1" chance="4.226" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
 				<item id="5382" min="1" max="1" chance="4.221" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
 				<item id="5406" min="1" max="1" chance="4.221" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="23735" level="100" type="L2Monster" name="Captive Familiar Spirit">

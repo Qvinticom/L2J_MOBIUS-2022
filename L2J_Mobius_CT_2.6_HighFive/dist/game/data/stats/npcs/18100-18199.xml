@@ -138,11 +138,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="12" grown="14" />
@@ -198,11 +196,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="10" />
@@ -256,11 +252,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="13" />
@@ -315,11 +309,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="14" />
@@ -414,11 +406,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="12" />
@@ -471,11 +461,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="1000" clanHelpRange="500" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="902" max="1804" chance="100" /> <!-- Adena -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="902" max="1804" chance="70" /> <!-- Adena -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="14" />
@@ -524,16 +512,14 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="68.5553970336914">
-					<item id="8923" min="1" max="1" chance="0.014" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.014" /> <!-- Butterfly Hairpin -->
-					<item id="955" min="1" max="1" chance="0.1395" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-					<item id="956" min="1" max="1" chance="1.1629" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-					<item id="1060" min="1" max="1" chance="77.5262" /> <!-- Lesser Healing Potion -->
-					<item id="1061" min="1" max="1" chance="21.1434" /> <!-- Greater Healing Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0095977555847168" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0095977555847168" /> <!-- Butterfly Hairpin -->
+				<item id="955" min="1" max="1" chance="0.0956347788619995" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="956" min="1" max="1" chance="0.797230712104797" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="1060" min="1" max="1" chance="53.1483942151337" /> <!-- Lesser Healing Potion -->
+				<item id="1061" min="1" max="1" chance="14.4949418164215" /> <!-- Greater Healing Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -582,17 +568,15 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="104.08070373535156">
-					<item id="8923" min="1" max="1" chance="0.0141" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.0141" /> <!-- Butterfly Hairpin -->
-					<item id="951" min="1" max="1" chance="0.0639" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="1" max="1" chance="0.4688" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="1832" min="1" max="1" chance="39.0654" /> <!-- Greater Antidote -->
-					<item id="1061" min="1" max="1" chance="21.3084" /> <!-- Greater Healing Potion -->
-					<item id="1834" min="1" max="1" chance="39.0653" /> <!-- Emergency Dressing -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0146753792266846" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0146753792266846" /> <!-- Butterfly Hairpin -->
+				<item id="951" min="1" max="1" chance="0.0665075696868896" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="952" min="1" max="1" chance="0.487930339111328" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="1832" min="1" max="1" chance="40.65954323703" /> <!-- Greater Antidote -->
+				<item id="1061" min="1" max="1" chance="22.1779326747437" /> <!-- Greater Healing Potion -->
+				<item id="1834" min="1" max="1" chance="40.6594391563263" /> <!-- Emergency Dressing -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -641,17 +625,15 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="28.283199310302734">
-					<item id="8923" min="1" max="1" chance="0.0819" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.0819" /> <!-- Butterfly Hairpin -->
-					<item id="951" min="1" max="1" chance="0.3724" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="1" max="1" chance="2.7313" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="734" min="1" max="1" chance="34.1409" /> <!-- Haste Potion -->
-					<item id="1539" min="1" max="1" chance="45.5211" /> <!-- Greater Healing Potion -->
-					<item id="735" min="1" max="1" chance="17.0705" /> <!-- Alacrity Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0231639402351379" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0231639402351379" /> <!-- Butterfly Hairpin -->
+				<item id="951" min="1" max="1" chance="0.105326634231567" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="952" min="1" max="1" chance="0.772499022762299" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="734" min="1" max="1" chance="9.65613879333115" /> <!-- Haste Potion -->
+				<item id="1539" min="1" max="1" chance="12.8748234412422" /> <!-- Greater Healing Potion -->
+				<item id="735" min="1" max="1" chance="4.82808353826523" /> <!-- Alacrity Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -700,17 +682,15 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="40.10879898071289">
-					<item id="8923" min="1" max="1" chance="0.084" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.084" /> <!-- Butterfly Hairpin -->
-					<item id="947" min="1" max="1" chance="0.084" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-					<item id="948" min="1" max="1" chance="0.5253" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-					<item id="734" min="1" max="1" chance="35.0197" /> <!-- Haste Potion -->
-					<item id="1539" min="1" max="1" chance="46.693" /> <!-- Greater Healing Potion -->
-					<item id="735" min="1" max="1" chance="17.51" /> <!-- Alacrity Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0336913911437988" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0336913911437988" /> <!-- Butterfly Hairpin -->
+				<item id="947" min="1" max="1" chance="0.0336913911437988" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.210691521045685" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="734" min="1" max="1" chance="14.0459810766487" /> <!-- Haste Potion -->
+				<item id="1539" min="1" max="1" chance="18.7280015080643" /> <!-- Greater Healing Potion -->
+				<item id="735" min="1" max="1" chance="7.02305070152283" /> <!-- Alacrity Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -759,17 +739,15 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="53.43259811401367">
-					<item id="8923" min="1" max="1" chance="0.0844" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.0844" /> <!-- Butterfly Hairpin -->
-					<item id="729" min="1" max="1" chance="0.0234" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="730" min="1" max="1" chance="0.1758" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-					<item id="734" min="1" max="1" chance="35.1642" /> <!-- Haste Potion -->
-					<item id="1539" min="1" max="1" chance="46.8856" /> <!-- Greater Healing Potion -->
-					<item id="735" min="1" max="1" chance="17.5822" /> <!-- Alacrity Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0450971128082275" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0450971128082275" /> <!-- Butterfly Hairpin -->
+				<item id="729" min="1" max="1" chance="0.0125032279586792" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.093934507484436" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="734" min="1" max="1" chance="18.789145666008" /> <!-- Haste Potion -->
+				<item id="1539" min="1" max="1" chance="25.052194221344" /> <!-- Greater Healing Potion -->
+				<item id="735" min="1" max="1" chance="9.39462626560211" /> <!-- Alacrity Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -818,16 +796,14 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="68.5553970336914">
-					<item id="8923" min="1" max="1" chance="0.014" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.014" /> <!-- Butterfly Hairpin -->
-					<item id="955" min="1" max="1" chance="0.1395" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-					<item id="956" min="1" max="1" chance="1.1629" /> <!-- Scroll: Enchant Armor (D-Grade) -->
-					<item id="1060" min="1" max="1" chance="77.5262" /> <!-- Lesser Healing Potion -->
-					<item id="1061" min="1" max="1" chance="21.1434" /> <!-- Greater Healing Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0095977555847168" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0095977555847168" /> <!-- Butterfly Hairpin -->
+				<item id="955" min="1" max="1" chance="0.0956347788619995" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="956" min="1" max="1" chance="0.797230712104797" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="1060" min="1" max="1" chance="53.1483942151337" /> <!-- Lesser Healing Potion -->
+				<item id="1061" min="1" max="1" chance="14.4949418164215" /> <!-- Greater Healing Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -876,17 +852,15 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="104.08070373535156">
-					<item id="8923" min="1" max="1" chance="0.0141" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.0141" /> <!-- Butterfly Hairpin -->
-					<item id="951" min="1" max="1" chance="0.0639" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="1" max="1" chance="0.4688" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="1832" min="1" max="1" chance="39.0654" /> <!-- Greater Antidote -->
-					<item id="1061" min="1" max="1" chance="21.3084" /> <!-- Greater Healing Potion -->
-					<item id="1834" min="1" max="1" chance="39.0653" /> <!-- Emergency Dressing -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0146753792266846" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0146753792266846" /> <!-- Butterfly Hairpin -->
+				<item id="951" min="1" max="1" chance="0.0665075696868896" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="952" min="1" max="1" chance="0.487930339111328" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="1832" min="1" max="1" chance="40.65954323703" /> <!-- Greater Antidote -->
+				<item id="1061" min="1" max="1" chance="22.1779326747437" /> <!-- Greater Healing Potion -->
+				<item id="1834" min="1" max="1" chance="40.6594391563263" /> <!-- Emergency Dressing -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -935,17 +909,15 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="28.283199310302734">
-					<item id="8923" min="1" max="1" chance="0.0819" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.0819" /> <!-- Butterfly Hairpin -->
-					<item id="951" min="1" max="1" chance="0.3724" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-					<item id="952" min="1" max="1" chance="2.7313" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-					<item id="734" min="1" max="1" chance="34.1409" /> <!-- Haste Potion -->
-					<item id="1539" min="1" max="1" chance="45.5211" /> <!-- Greater Healing Potion -->
-					<item id="735" min="1" max="1" chance="17.0705" /> <!-- Alacrity Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0231639402351379" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0231639402351379" /> <!-- Butterfly Hairpin -->
+				<item id="951" min="1" max="1" chance="0.105326634231567" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="952" min="1" max="1" chance="0.772499022762299" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="734" min="1" max="1" chance="9.65613879333115" /> <!-- Haste Potion -->
+				<item id="1539" min="1" max="1" chance="12.8748234412422" /> <!-- Greater Healing Potion -->
+				<item id="735" min="1" max="1" chance="4.82808353826523" /> <!-- Alacrity Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -994,17 +966,15 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="40.10879898071289">
-					<item id="8923" min="1" max="1" chance="0.084" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.084" /> <!-- Butterfly Hairpin -->
-					<item id="947" min="1" max="1" chance="0.084" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-					<item id="948" min="1" max="1" chance="0.5253" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-					<item id="734" min="1" max="1" chance="35.0197" /> <!-- Haste Potion -->
-					<item id="1539" min="1" max="1" chance="46.693" /> <!-- Greater Healing Potion -->
-					<item id="735" min="1" max="1" chance="17.51" /> <!-- Alacrity Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0336913911437988" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0336913911437988" /> <!-- Butterfly Hairpin -->
+				<item id="947" min="1" max="1" chance="0.0336913911437988" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.210691521045685" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="734" min="1" max="1" chance="14.0459810766487" /> <!-- Haste Potion -->
+				<item id="1539" min="1" max="1" chance="18.7280015080643" /> <!-- Greater Healing Potion -->
+				<item id="735" min="1" max="1" chance="7.02305070152283" /> <!-- Alacrity Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -1053,17 +1023,15 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="53.43259811401367">
-					<item id="8923" min="1" max="1" chance="0.0844" /> <!-- Scar -->
-					<item id="8913" min="1" max="1" chance="0.0844" /> <!-- Butterfly Hairpin -->
-					<item id="729" min="1" max="1" chance="0.0234" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-					<item id="730" min="1" max="1" chance="0.1758" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-					<item id="734" min="1" max="1" chance="35.1642" /> <!-- Haste Potion -->
-					<item id="1539" min="1" max="1" chance="46.8856" /> <!-- Greater Healing Potion -->
-					<item id="735" min="1" max="1" chance="17.5822" /> <!-- Alacrity Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="8923" min="1" max="1" chance="0.0450971128082275" /> <!-- Scar -->
+				<item id="8913" min="1" max="1" chance="0.0450971128082275" /> <!-- Butterfly Hairpin -->
+				<item id="729" min="1" max="1" chance="0.0125032279586792" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.093934507484436" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="734" min="1" max="1" chance="18.789145666008" /> <!-- Haste Potion -->
+				<item id="1539" min="1" max="1" chance="25.052194221344" /> <!-- Greater Healing Potion -->
+				<item id="735" min="1" max="1" chance="9.39462626560211" /> <!-- Alacrity Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />

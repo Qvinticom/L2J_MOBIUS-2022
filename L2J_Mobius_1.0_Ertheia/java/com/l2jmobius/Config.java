@@ -118,7 +118,6 @@ public final class Config
 	public static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
 	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
 	public static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
-	public static final String CUSTOM_OLD_DROP_BEHAVIOR_CONFIG_FILE = "./config/Custom/OldDropBehavior.ini";
 	public static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
 	public static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
 	public static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
@@ -451,7 +450,6 @@ public final class Config
 	public static boolean CLEAR_DROPPED_ITEM_TABLE;
 	public static boolean ORDER_QUEST_LIST_BY_QUESTID;
 	public static boolean AUTODELETE_INVALID_QUEST_DATA;
-	public static boolean PRECISE_DROP_CALCULATION;
 	public static boolean MULTIPLE_ITEM_DROP;
 	public static boolean FORCE_INVENTORY_UPDATE;
 	public static boolean LAZY_CACHE;
@@ -695,11 +693,11 @@ public final class Config
 	public static float RATE_QUEST_REWARD_RECIPE;
 	public static float RATE_QUEST_REWARD_MATERIAL;
 	public static float RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
-	public static float RATE_CORPSE_DROP_AMOUNT_MULTIPLIER;
+	public static float RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
 	public static float RATE_HERB_DROP_AMOUNT_MULTIPLIER;
 	public static float RATE_RAID_DROP_AMOUNT_MULTIPLIER;
 	public static float RATE_DEATH_DROP_CHANCE_MULTIPLIER;
-	public static float RATE_CORPSE_DROP_CHANCE_MULTIPLIER;
+	public static float RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
 	public static float RATE_HERB_DROP_CHANCE_MULTIPLIER;
 	public static float RATE_RAID_DROP_CHANCE_MULTIPLIER;
 	public static Map<Integer, Float> RATE_DROP_AMOUNT_BY_ID;
@@ -1053,7 +1051,6 @@ public final class Config
 	public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
 	public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
 	public static boolean ALLOW_CHANGE_PASSWORD;
-	public static boolean OLD_DROP_BEHAVIOR;
 	public static boolean ALLOW_HUMAN;
 	public static boolean ALLOW_ELF;
 	public static boolean ALLOW_DARKELF;
@@ -1954,14 +1951,6 @@ public final class Config
 			PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
 			PET_MP_REGEN_MULTIPLIER = NPC.getDouble("PetMpRegenMultiplier", 100) / 100;
 			
-			DROP_ADENA_MIN_LEVEL_DIFFERENCE = NPC.getInt("DropAdenaMinLevelDifference", 8);
-			DROP_ADENA_MAX_LEVEL_DIFFERENCE = NPC.getInt("DropAdenaMaxLevelDifference", 15);
-			DROP_ADENA_MIN_LEVEL_GAP_CHANCE = NPC.getDouble("DropAdenaMinLevelGapChance", 10);
-			
-			DROP_ITEM_MIN_LEVEL_DIFFERENCE = NPC.getInt("DropItemMinLevelDifference", 5);
-			DROP_ITEM_MAX_LEVEL_DIFFERENCE = NPC.getInt("DropItemMaxLevelDifference", 10);
-			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = NPC.getDouble("DropItemMinLevelGapChance", 10);
-			
 			VITALITY_CONSUME_BY_MOB = NPC.getInt("VitalityConsumeByMob", 2250);
 			VITALITY_CONSUME_BY_BOSS = NPC.getInt("VitalityConsumeByBoss", 1125);
 			
@@ -2034,11 +2023,11 @@ public final class Config
 			KARMA_RATE_DROP_EQUIP_WEAPON = RatesSettings.getInt("KarmaRateDropEquipWeapon", 10);
 			
 			RATE_DEATH_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("DeathDropAmountMultiplier", 1);
-			RATE_CORPSE_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("CorpseDropAmountMultiplier", 1);
+			RATE_SPOIL_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("SpoilDropAmountMultiplier", 1);
 			RATE_HERB_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("HerbDropAmountMultiplier", 1);
 			RATE_RAID_DROP_AMOUNT_MULTIPLIER = RatesSettings.getFloat("RaidDropAmountMultiplier", 1);
 			RATE_DEATH_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("DeathDropChanceMultiplier", 1);
-			RATE_CORPSE_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("CorpseDropChanceMultiplier", 1);
+			RATE_SPOIL_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("SpoilDropChanceMultiplier", 1);
 			RATE_HERB_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("HerbDropChanceMultiplier", 1);
 			RATE_RAID_DROP_CHANCE_MULTIPLIER = RatesSettings.getFloat("RaidDropChanceMultiplier", 1);
 			
@@ -2097,6 +2086,13 @@ public final class Config
 					}
 				}
 			}
+			
+			DROP_ADENA_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropAdenaMinLevelDifference", 8);
+			DROP_ADENA_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropAdenaMaxLevelDifference", 15);
+			DROP_ADENA_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropAdenaMinLevelGapChance", 10);
+			DROP_ITEM_MIN_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMinLevelDifference", 5);
+			DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
+			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
 			
 			// Load PvP config file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
@@ -2496,11 +2492,6 @@ public final class Config
 			OFFLINE_MAX_DAYS = OfflineTrade.getInt("OfflineMaxDays", 10);
 			OFFLINE_DISCONNECT_FINISHED = OfflineTrade.getBoolean("OfflineDisconnectFinished", true);
 			STORE_OFFLINE_TRADE_IN_REALTIME = OfflineTrade.getBoolean("StoreOfflineTradeInRealtime", true);
-			
-			// Load OldDropBehavior config file (if exists)
-			final PropertiesParser OldDropBehavior = new PropertiesParser(CUSTOM_OLD_DROP_BEHAVIOR_CONFIG_FILE);
-			
-			OLD_DROP_BEHAVIOR = OldDropBehavior.getBoolean("OldDropBehavior", false);
 			
 			// Load PasswordChange config file (if exists)
 			final PropertiesParser PasswordChange = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);

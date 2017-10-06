@@ -51,27 +51,17 @@
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="34" />
@@ -358,44 +348,32 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="1.8054">
-					<item id="15703" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Moirai Gauntlets -->
-					<item id="15704" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Moirai Gloves -->
-					<item id="15706" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Moirai Shoes -->
-					<item id="15654" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Moirai Gauntlets Piece -->
-					<item id="15655" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Moirai Gloves Piece -->
-					<item id="15657" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="15703" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Gauntlets -->
+				<item id="15704" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Shoes -->
+				<item id="15654" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Moirai Gauntlets Piece -->
+				<item id="15655" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15657" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="29" />
@@ -447,44 +425,30 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="0.003">
-					<item id="15710" min="1" max="1" chance="100" /> <!-- Sealed Moirai Shield -->
-				</group>
-				<group chance="1.5057">
-					<item id="15709" min="1" max="1" chance="0.19924287706714" /> <!-- Sealed Moirai Sigil -->
-					<item id="15694" min="1" max="1" chance="0.059772863120143" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.059772863120143" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.059772863120143" /> <!-- Sealed Moirai Circlet -->
-					<item id="15645" min="1" max="1" chance="19.924287706714" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15646" min="1" max="1" chance="19.924287706714" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="19.924287706714" /> <!-- Sealed Moirai Circlet Piece -->
-					<item id="15692" min="1" max="1" chance="19.924287706714" /> <!-- Sealed Moirai Sigil Piece -->
-					<item id="15693" min="1" max="1" chance="19.924287706714" /> <!-- Sealed Moirai Shield Fragment -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="15710" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shield -->
+				<item id="15709" min="1" max="1" chance="0.00299999999999993" /> <!-- Sealed Moirai Sigil -->
+				<item id="15694" min="1" max="1" chance="0.000899999999999993" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.000899999999999993" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="0.000899999999999993" /> <!-- Sealed Moirai Circlet -->
+				<item id="15645" min="1" max="1" chance="0.299999999999993" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="15646" min="1" max="1" chance="0.299999999999993" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15647" min="1" max="1" chance="0.299999999999993" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="15692" min="1" max="1" chance="0.299999999999993" /> <!-- Sealed Moirai Sigil Piece -->
+				<item id="15693" min="1" max="1" chance="0.299999999999993" /> <!-- Sealed Moirai Shield Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="27" />
@@ -586,25 +550,23 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="1.8054">
-					<item id="14109" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Vesper Gauntlets -->
-					<item id="14110" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Vesper Boots -->
-					<item id="14113" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14114" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14116" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Vesper Gloves -->
-					<item id="14117" min="1" max="1" chance="0.049850448654038" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Vesper Gauntlets Piece -->
-					<item id="15668" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15671" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15672" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15674" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15675" min="1" max="1" chance="16.616816218013" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="14109" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14110" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Vesper Boots -->
+				<item id="14113" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Vesper Gloves -->
+				<item id="14117" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Vesper Gauntlets Piece -->
+				<item id="15668" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15671" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15672" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15674" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15675" min="1" max="1" chance="0.300000000000007" /> <!-- Sealed Vesper Shoes Piece -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="12" />
@@ -658,25 +620,23 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="1.818">
-					<item id="14109" min="1" max="1" chance="0.16501650165017" /> <!-- Sealed Vesper Gauntlets -->
-					<item id="14110" min="1" max="1" chance="0.16501650165017" /> <!-- Sealed Vesper Boots -->
-					<item id="14113" min="1" max="1" chance="0.16501650165017" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14114" min="1" max="1" chance="0.16501650165017" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14116" min="1" max="1" chance="0.16501650165017" /> <!-- Sealed Vesper Gloves -->
-					<item id="14117" min="1" max="1" chance="0.16501650165017" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.501650165016" /> <!-- Sealed Vesper Gauntlets Piece -->
-					<item id="15668" min="1" max="1" chance="16.501650165016" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15671" min="1" max="1" chance="16.501650165016" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15672" min="1" max="1" chance="16.501650165016" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15674" min="1" max="1" chance="16.501650165016" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15675" min="1" max="1" chance="16.501650165016" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="14109" min="1" max="1" chance="0.00300000000000009" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14110" min="1" max="1" chance="0.00300000000000009" /> <!-- Sealed Vesper Boots -->
+				<item id="14113" min="1" max="1" chance="0.00300000000000009" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="0.00300000000000009" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="0.00300000000000009" /> <!-- Sealed Vesper Gloves -->
+				<item id="14117" min="1" max="1" chance="0.00300000000000009" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="0.299999999999991" /> <!-- Sealed Vesper Gauntlets Piece -->
+				<item id="15668" min="1" max="1" chance="0.299999999999991" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15671" min="1" max="1" chance="0.299999999999991" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15672" min="1" max="1" chance="0.299999999999991" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15674" min="1" max="1" chance="0.299999999999991" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15675" min="1" max="1" chance="0.299999999999991" /> <!-- Sealed Vesper Shoes Piece -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />
@@ -2953,33 +2913,23 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4118" max="9597" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.003">
-					<item id="17401" min="1" max="1" chance="100" /> <!-- Seraph Shield -->
-				</group>
-				<group chance="0.006">
-					<item id="17402" min="1" max="1" chance="50" /> <!-- Seraph Leather Helmet -->
-					<item id="17412" min="1" max="1" chance="50" /> <!-- Seraph Sigil -->
-				</group>
-				<group chance="0.075">
-					<item id="35325" min="1" max="1" chance="100" /> <!-- Seraph Earring Gem -->
-				</group>
-				<group chance="0.0355">
-					<item id="17526" min="1" max="1" chance="84.507042253521" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="36942" min="1" max="1" chance="15.492957746479" /> <!-- Recipe: Synthetic Cokes - Upgrade -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="4118" max="9597" chance="70" /> <!-- Adena -->
+				<item id="17401" min="1" max="1" chance="0.003" /> <!-- Seraph Shield -->
+				<item id="17402" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Helmet -->
+				<item id="17412" min="1" max="1" chance="0.003" /> <!-- Seraph Sigil -->
+				<item id="35325" min="1" max="1" chance="0.075" /> <!-- Seraph Earring Gem -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36942" min="1" max="1" chance="0.00550000000000004" /> <!-- Recipe: Synthetic Cokes - Upgrade -->
+			</drop>
+			<spoil>
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
 				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
@@ -3036,30 +2986,24 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4118" max="9597" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.009">
-					<item id="17397" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Breastplate -->
-					<item id="17404" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Leather Leggings -->
-					<item id="17408" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Tunic -->
-				</group>
-				<group chance="0.1089">
-					<item id="17527" min="1" max="1" chance="68.870523415978" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="9555" min="1" max="1" chance="27.548209366391" /> <!-- Wind Crystal -->
-					<item id="35427" min="1" max="1" chance="2.7548209366391" /> <!-- Recipe: Specter Shooter (60%) -->
-					<item id="36944" min="1" max="1" chance="0.82644628099174" /> <!-- Recipe: Greater Synthetic Cokes - Upgrade -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="4118" max="9597" chance="70" /> <!-- Adena -->
+				<item id="17397" min="1" max="1" chance="0.00299999999999997" /> <!-- Seraph Breastplate -->
+				<item id="17404" min="1" max="1" chance="0.00299999999999997" /> <!-- Seraph Leather Leggings -->
+				<item id="17408" min="1" max="1" chance="0.00299999999999997" /> <!-- Seraph Tunic -->
+				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="9555" min="1" max="1" chance="0.0299999999999998" /> <!-- Wind Crystal -->
+				<item id="35427" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="36944" min="1" max="1" chance="0.000900000000000005" /> <!-- Recipe: Greater Synthetic Cokes - Upgrade -->
+			</drop>
+			<spoil>
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
 				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
@@ -3116,31 +3060,21 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4118" max="9597" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="17401" min="1" max="1" chance="100" /> <!-- Seraph Shield -->
-				</group>
-				<group chance="0.0055">
-					<item id="17412" min="1" max="1" chance="100" /> <!-- Seraph Sigil -->
-				</group>
-				<group chance="0.075">
-					<item id="35325" min="1" max="1" chance="100" /> <!-- Seraph Earring Gem -->
-				</group>
-				<group chance="0.03">
-					<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="4118" max="9597" chance="70" /> <!-- Adena -->
+				<item id="17401" min="1" max="1" chance="0.0055" /> <!-- Seraph Shield -->
+				<item id="17412" min="1" max="1" chance="0.0055" /> <!-- Seraph Sigil -->
+				<item id="35325" min="1" max="1" chance="0.075" /> <!-- Seraph Earring Gem -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
 				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
@@ -3197,28 +3131,22 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4118" max="9597" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.009">
-					<item id="17397" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Breastplate -->
-					<item id="17404" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Leather Leggings -->
-					<item id="17408" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Tunic -->
-				</group>
-				<group chance="0.033">
-					<item id="9555" min="1" max="1" chance="90.909090909091" /> <!-- Wind Crystal -->
-					<item id="35427" min="1" max="1" chance="9.0909090909091" /> <!-- Recipe: Specter Shooter (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="4118" max="9597" chance="70" /> <!-- Adena -->
+				<item id="17397" min="1" max="1" chance="0.00299999999999997" /> <!-- Seraph Breastplate -->
+				<item id="17404" min="1" max="1" chance="0.00299999999999997" /> <!-- Seraph Leather Leggings -->
+				<item id="17408" min="1" max="1" chance="0.00299999999999997" /> <!-- Seraph Tunic -->
+				<item id="9555" min="1" max="1" chance="0.03" /> <!-- Wind Crystal -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Shooter (60%) -->
+			</drop>
+			<spoil>
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
 				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
@@ -3275,26 +3203,18 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4109" max="9597" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0027">
-					<item id="17398" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Gaiters -->
-					<item id="17403" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Leather Armor -->
-					<item id="17409" min="1" max="1" chance="33.333333333333" /> <!-- Seraph Stockings -->
-				</group>
-				<group chance="0.3">
-					<item id="35326" min="1" max="1" chance="100" /> <!-- Seraph Ring Gem -->
-				</group>
-				<group chance="0.033">
-					<item id="30424" min="1" max="1" chance="90.909090909091" /> <!-- Recipe: Spiritshot (R-grade) -->
-					<item id="17526" min="1" max="1" chance="9.0909090909091" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="4109" max="9597" chance="70" /> <!-- Adena -->
+				<item id="17398" min="1" max="1" chance="0.000899999999999991" /> <!-- Seraph Gaiters -->
+				<item id="17403" min="1" max="1" chance="0.000899999999999991" /> <!-- Seraph Leather Armor -->
+				<item id="17409" min="1" max="1" chance="0.000899999999999991" /> <!-- Seraph Stockings -->
+				<item id="35326" min="1" max="1" chance="0.3" /> <!-- Seraph Ring Gem -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
 				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
@@ -3351,25 +3271,17 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4109" max="9597" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.603">
-					<item id="17401" min="1" max="1" chance="0.49751243781095" /> <!-- Seraph Shield -->
-					<item id="35301" min="1" max="1" chance="49.751243781095" /> <!-- Specter Stormer Fragment -->
-					<item id="35304" min="1" max="1" chance="49.751243781095" /> <!-- Specter Buster Fragment -->
-				</group>
-				<group chance="0.003">
-					<item id="17412" min="1" max="1" chance="100" /> <!-- Seraph Sigil -->
-				</group>
-				<group chance="0.075">
-					<item id="9557" min="1" max="1" chance="100" /> <!-- Holy Crystal -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="4109" max="9597" chance="70" /> <!-- Adena -->
+				<item id="17401" min="1" max="1" chance="0.00300000000000003" /> <!-- Seraph Shield -->
+				<item id="35301" min="1" max="1" chance="0.300000000000003" /> <!-- Specter Stormer Fragment -->
+				<item id="35304" min="1" max="1" chance="0.300000000000003" /> <!-- Specter Buster Fragment -->
+				<item id="17412" min="1" max="1" chance="0.003" /> <!-- Seraph Sigil -->
+				<item id="9557" min="1" max="1" chance="0.075" /> <!-- Holy Crystal -->
+			</drop>
+			<spoil>
 				<item id="17403" min="1" max="1" chance="0.0055" /> <!-- Seraph Leather Armor -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />

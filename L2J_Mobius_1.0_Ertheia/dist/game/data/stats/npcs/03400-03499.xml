@@ -2771,7 +2771,7 @@
 			<height normal="68" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17404" min="1" max="1" chance="1.074" /> <!-- Seraph Leather Leggings -->
 				<item id="17398" min="1" max="1" chance="1.043" /> <!-- Seraph Gaiters -->
 				<item id="17409" min="1" max="1" chance="0.974" /> <!-- Seraph Stockings -->
@@ -2821,7 +2821,7 @@
 				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
 				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
 				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="3474" level="95" type="L2Monster" name="Super Kat the Cat">
@@ -3003,7 +3003,7 @@
 			<height normal="37.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17308" min="1" max="1" chance="23.3" /> <!-- Immortal Boots -->
 				<item id="17318" min="1" max="1" chance="22.9" /> <!-- Immortal Gloves -->
 				<item id="17304" min="1" max="1" chance="16.58" /> <!-- Immortal Helmet -->
@@ -3016,7 +3016,7 @@
 				<item id="17291" min="1" max="1" chance="1.482" /> <!-- Requiem Cutter -->
 				<item id="17527" min="1" max="1" chance="46.38" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="3.604" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="3478" level="87" type="L2Monster" name="Reinforced Kat the Cat">
@@ -3112,7 +3112,7 @@
 			<height normal="37.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17343" min="1" max="1" chance="66.6" /> <!-- Twilight Shield -->
 				<item id="17339" min="1" max="1" chance="17.44" /> <!-- Twilight Breastplate -->
 				<item id="17350" min="1" max="1" chance="16.67" /> <!-- Twilight Tunic -->
@@ -3120,7 +3120,7 @@
 				<item id="17330" min="1" max="1" chance="0.75" /> <!-- Apocalypse Thrower -->
 				<item id="17527" min="1" max="1" chance="46.65" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="1" chance="3.631" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="3480" level="91" type="L2Monster" name="Mind-controlling Feline Queen">
@@ -3216,13 +3216,13 @@
 			<height normal="37.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17352" min="1" max="1" chance="91.435" /> <!-- Twilight Gloves -->
 				<item id="17347" min="1" max="1" chance="19.86" /> <!-- Twilight Leather Gloves -->
 				<item id="17330" min="1" max="1" chance="7.489" /> <!-- Apocalypse Thrower -->
 				<item id="17334" min="1" max="1" chance="1.587" /> <!-- Apocalypse Retributer -->
 				<item id="17526" min="1" max="1" chance="35.82" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="3482" level="93" type="L2Monster" name="Traitorous Mew the Cat">

@@ -21,3 +21,6 @@ What is done
 -Custom community board
 -Premium System
 -User command expon/expoff
+-Reworked drop system
+-GeoEngine from aCis
+-Threadpool manager from aCis

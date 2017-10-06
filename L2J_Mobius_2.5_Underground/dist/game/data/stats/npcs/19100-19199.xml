@@ -1876,7 +1876,7 @@
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17623" min="1" max="1" chance="10.047" /> <!-- Earth Wyrm Heart Ring -->
 				<item id="17422" min="1" max="1" chance="9.133" /> <!-- Helios Thrower -->
 				<item id="17425" min="1" max="1" chance="9.106" /> <!-- Helios Caster -->
@@ -1960,11 +1960,11 @@
 				<item id="39483" min="1" max="1" chance="3.31" /> <!-- Alchemic Tome: Enchant Scroll -->
 				<item id="46449" min="1" max="1" chance="3.275" /> <!-- Kain's Soul Crystal - Stage 6 -->
 				<item id="39485" min="1" max="1" chance="3.266" /> <!-- Alchemic Tome: Dye -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 				<item id="40198" min="1" max="1" chance="2.518" /> <!-- Disassembly Recipe Pouch: Armor -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="500" />

@@ -2780,7 +2780,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="538" max="1257" chance="70" /> <!-- Adena -->
 				<item id="1871" min="1" max="1" chance="15.08" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="10.61" /> <!-- Suede -->
@@ -2789,15 +2789,15 @@
 				<item id="6345" min="1" max="1" chance="4.253" /> <!-- Sealed Phoenix Ring Gemstone -->
 				<item id="1876" min="1" max="1" chance="3.143" /> <!-- Mithril Ore -->
 				<item id="1879" min="1" max="1" chance="2.638" /> <!-- Cokes -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="87.78" /> <!-- Suede -->
 				<item id="1870" min="1" max="3" chance="64.1" /> <!-- Coal -->
 				<item id="1871" min="1" max="3" chance="62.6" /> <!-- Charcoal -->
 				<item id="1895" min="1" max="1" chance="37.44" /> <!-- Metallic Fiber -->
 				<item id="1876" min="1" max="1" chance="26.3" /> <!-- Mithril Ore -->
 				<item id="1879" min="1" max="1" chance="20.68" /> <!-- Cokes -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="21651" level="74" type="L2Monster" name="Flame Drake">
@@ -2852,7 +2852,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="538" max="1257" chance="70" /> <!-- Adena -->
 				<item id="1871" min="1" max="1" chance="15.39" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="10.06" /> <!-- Suede -->
@@ -2861,15 +2861,15 @@
 				<item id="6345" min="1" max="1" chance="4.216" /> <!-- Sealed Phoenix Ring Gemstone -->
 				<item id="1876" min="1" max="1" chance="3.105" /> <!-- Mithril Ore -->
 				<item id="1879" min="1" max="1" chance="2.626" /> <!-- Cokes -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="85.91" /> <!-- Suede -->
 				<item id="1870" min="1" max="3" chance="63.5" /> <!-- Coal -->
 				<item id="1871" min="1" max="3" chance="63.43" /> <!-- Charcoal -->
 				<item id="1895" min="1" max="1" chance="37.84" /> <!-- Metallic Fiber -->
 				<item id="1876" min="1" max="1" chance="24.31" /> <!-- Mithril Ore -->
 				<item id="1879" min="1" max="1" chance="20.42" /> <!-- Cokes -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="21652" level="75" type="L2Monster" name="Fiery Ifrit">
@@ -2905,7 +2905,7 @@
 			<height normal="39" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="554" max="1294" chance="70" /> <!-- Adena -->
 				<item id="1871" min="1" max="1" chance="16.45" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="10.73" /> <!-- Suede -->
@@ -2914,15 +2914,15 @@
 				<item id="1876" min="1" max="1" chance="3.281" /> <!-- Mithril Ore -->
 				<item id="6341" min="1" max="1" chance="3.165" /> <!-- Sealed Phoenix Earring Gemstone -->
 				<item id="1879" min="1" max="1" chance="2.742" /> <!-- Cokes -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="90.76" /> <!-- Suede -->
 				<item id="1870" min="1" max="3" chance="66.56" /> <!-- Coal -->
 				<item id="1871" min="1" max="3" chance="64.12" /> <!-- Charcoal -->
 				<item id="1895" min="1" max="1" chance="37.01" /> <!-- Metallic Fiber -->
 				<item id="1876" min="1" max="1" chance="25.55" /> <!-- Mithril Ore -->
 				<item id="1879" min="1" max="1" chance="21.64" /> <!-- Cokes -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="21653" level="75" type="L2Monster" name="Ikedit">
@@ -2958,7 +2958,7 @@
 			<height normal="54.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="554" max="1294" chance="70" /> <!-- Adena -->
 				<item id="1870" min="1" max="1" chance="13.81" /> <!-- Coal -->
 				<item id="1871" min="1" max="1" chance="13.79" /> <!-- Charcoal -->
@@ -2968,15 +2968,15 @@
 				<item id="1876" min="1" max="1" chance="2.824" /> <!-- Mithril Ore -->
 				<item id="1879" min="1" max="1" chance="2.26" /> <!-- Cokes -->
 				<item id="90045" min="1" max="1" chance="0.0075" /> <!-- Magical Tablet -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="89.86" /> <!-- Suede -->
 				<item id="1871" min="1" max="3" chance="64.54" /> <!-- Charcoal -->
 				<item id="1870" min="1" max="3" chance="64.38" /> <!-- Coal -->
 				<item id="1895" min="1" max="1" chance="38.33" /> <!-- Metallic Fiber -->
 				<item id="1876" min="1" max="1" chance="27.2" /> <!-- Mithril Ore -->
 				<item id="1879" min="1" max="1" chance="21.46" /> <!-- Cokes -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="21654" level="81" type="L2Monster" name="Dreco" title="Earth Guardian">

@@ -800,7 +800,7 @@
 			<height normal="58" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="93" min="1" max="1" chance="3.63" /> <!-- Winged Spear -->
 				<item id="172" min="1" max="1" chance="3.605" /> <!-- Heavy Bone Club -->
 				<item id="169" min="1" max="1" chance="3.597" /> <!-- Skull Breaker -->
@@ -812,7 +812,7 @@
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25119" level="50" type="L2RaidBoss" name="Fairy Queen's Messenger Berun" title="Raid Boss">
@@ -1111,7 +1111,7 @@
 			<height normal="87" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="918" min="1" max="1" chance="31.31" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="31.12" /> <!-- Adamantite Earring -->
 				<item id="887" min="1" max="3" chance="29.93" /> <!-- Adamantite Ring -->
@@ -1127,7 +1127,7 @@
 				<item id="947" min="1" max="1" chance="50.93" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="49.42" /> <!-- Scroll: Enchant Armor (B-grade) -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25126" level="79" type="L2RaidBoss" name="Longhorn Golkonda" title="Raid Boss">
@@ -1228,7 +1228,7 @@
 			<height normal="57" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="432" min="1" max="3" chance="8.069" /> <!-- Cursed Tunic -->
 				<item id="604" min="2" max="6" chance="8.067" /> <!-- Quality Leather Gloves -->
 				<item id="465" min="1" max="3" chance="8.017" /> <!-- Cursed Stockings -->
@@ -1242,7 +1242,7 @@
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25128" level="33" type="L2RaidBoss" name="Vuku Grand Priest Gharmash" title="Raid Boss">
@@ -2536,7 +2536,7 @@
 			<height normal="126" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="852" min="1" max="3" chance="31.77" /> <!-- Moonstone Earring -->
 				<item id="883" min="1" max="3" chance="30.36" /> <!-- Aquastone Ring -->
 				<item id="915" min="1" max="1" chance="30.22" /> <!-- Aquastone Necklace -->
@@ -2562,7 +2562,7 @@
 				<item id="70000" min="7" max="20" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="951" min="1" max="1" chance="28.73" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25159" level="54" type="L2RaidBoss" name="Paniel the Unicorn" title="Raid Boss">
@@ -2956,7 +2956,7 @@
 			<height normal="52" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="849" min="1" max="3" chance="32.76" /> <!-- Tiger's Eye -->
 				<item id="880" min="1" max="3" chance="31.55" /> <!-- Black Pearl Ring -->
 				<item id="912" min="1" max="1" chance="30.2" /> <!-- Near Forest Necklace -->
@@ -2969,7 +2969,7 @@
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25170" level="38" type="L2RaidBoss" name="Lizardmen Captain Hellion" title="Raid Boss">

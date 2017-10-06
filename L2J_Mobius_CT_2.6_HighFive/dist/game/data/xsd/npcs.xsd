@@ -85,22 +85,14 @@
 	
 		<xs:complexType name="dropListsType">
 		<xs:all>
-			<xs:element name="death" type="dropList" minOccurs="0" maxOccurs="1" />
-			<xs:element name="corpse" type="dropList" minOccurs="0" maxOccurs="1" />
+			<xs:element name="drop" type="dropList" minOccurs="0" maxOccurs="1" />
+			<xs:element name="spoil" type="dropList" minOccurs="0" maxOccurs="1" />
 		</xs:all>
 	</xs:complexType>
 	
 	<xs:complexType name="dropList">
 		<xs:choice minOccurs="1" maxOccurs="unbounded">
 			<xs:element name="item" type="dropListItem" />
-			<xs:element name="group">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="item" type="dropListItem" minOccurs="1" maxOccurs="unbounded" />
-					</xs:sequence>
-					<xs:attribute name="chance" type="xs:decimal" />
-				</xs:complexType>
-			</xs:element>
 		</xs:choice>
 	</xs:complexType>
 	

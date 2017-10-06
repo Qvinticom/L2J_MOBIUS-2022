@@ -49,7 +49,7 @@
 			<height normal="53" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="882" min="1" max="3" chance="34.9" /> <!-- Mithril Ring -->
 				<item id="915" min="1" max="1" chance="34.38" /> <!-- Aquastone Necklace -->
 				<item id="852" min="1" max="3" chance="34.33" /> <!-- Moonstone Earring -->
@@ -149,7 +149,7 @@
 				<item id="2430" min="1" max="3" chance="5.483" /> <!-- Karmian Boots -->
 				<item id="2387" min="1" max="1" chance="5.481" /> <!-- Reinforced Mithril Gaiters -->
 				<item id="70000" min="76" max="228" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="29002" level="29" type="L2Monster" name="Queen Ant Larva">
@@ -365,7 +365,7 @@
 			<height normal="75" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="854" min="1" max="3" chance="34.44" /> <!-- Earring of Seal -->
 				<item id="1127" min="1" max="3" chance="34.14" /> <!-- Forgotten Boots -->
 				<item id="1149" min="1" max="3" chance="33.75" /> <!-- Shining Circlet -->
@@ -442,7 +442,7 @@
 				<item id="301" min="1" max="1" chance="4.098" /> <!-- Scorpion -->
 				<item id="70000" min="297" max="891" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="8620" min="1" max="3" chance="49.66" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="29007" level="50" type="L2Monster" name="Death Knight">
@@ -492,7 +492,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="162" min="1" max="1" chance="0.003" /> <!-- War Axe -->
 				<item id="174" min="1" max="1" chance="0.003" /> <!-- Nirvana Axe -->
 				<item id="196" min="1" max="1" chance="0.003" /> <!-- Stick of Eternity -->
@@ -519,11 +519,11 @@
 				<item id="2099" min="1" max="1" chance="0.3" /> <!-- Stick of Eternity Shaft -->
 				<item id="2102" min="1" max="1" chance="0.3" /> <!-- Pa'agrio Hammer Head -->
 				<item id="2360" min="1" max="1" chance="0.03" /> <!-- Recipe: Orcish Poleaxe -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1914" min="1" max="1" chance="46.73" /> <!-- Earring of Seal Gemstone -->
 				<item id="3011" min="1" max="1" chance="22.02" /> <!-- Recipe: Divine Boots -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="29008" level="55" type="L2Monster" name="Doom Wraith">
@@ -621,7 +621,7 @@
 			<height normal="25.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="1126" min="1" max="1" chance="0.075" /> <!-- Crimson Boots -->
 				<item id="2434" min="1" max="1" chance="0.075" /> <!-- Rind Leather Boots -->
 				<item id="2455" min="1" max="1" chance="0.075" /> <!-- Plated Leather Gloves -->
@@ -642,11 +642,11 @@
 				<item id="1885" min="1" max="1" chance="1.627" /> <!-- High-grade Suede -->
 				<item id="2339" min="1" max="1" chance="0.03" /> <!-- Recipe: Inferno Staff -->
 				<item id="2350" min="1" max="1" chance="0.03" /> <!-- Recipe: Pa'agrio Axe -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1895" min="1" max="5" chance="65.95" /> <!-- Metallic Fiber -->
 				<item id="2944" min="1" max="1" chance="62.87" /> <!-- Karmian Glove Fabric -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="29010" level="46" type="L2Monster" name="Validus">
@@ -693,7 +693,7 @@
 			<height normal="29" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="354" min="1" max="1" chance="0.03" /> <!-- Chain Mail Shirt -->
 				<item id="232" min="1" max="1" chance="0.0075" /> <!-- Dark Elven Dagger -->
 				<item id="281" min="1" max="1" chance="0.0075" /> <!-- Crystallized Ice Bow -->
@@ -708,12 +708,12 @@
 				<item id="2074" min="5" max="15" chance="0.75" /> <!-- Crystallized Ice Bow Shaft -->
 				<item id="2319" min="1" max="1" chance="0.075" /> <!-- Recipe: Raid Sword -->
 				<item id="951" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1873" min="1" max="3" chance="83.29" /> <!-- Silver Nugget -->
 				<item id="2060" min="1" max="1" chance="3.426" /> <!-- StormBringer Blade -->
 				<item id="2067" min="1" max="1" chance="3.17" /> <!-- Crystal Staff Head -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="29011" level="49" type="L2Monster" name="Susceptor">
@@ -811,7 +811,7 @@
 			<height normal="34" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="1126" min="1" max="1" chance="0.075" /> <!--  Crimson Boots -->
 				<item id="2434" min="1" max="1" chance="0.075" /> <!-- Rind Leather Boots -->
 				<item id="2455" min="1" max="1" chance="0.075" /> <!-- Plated Leather Gloves -->
@@ -833,11 +833,11 @@
 				<item id="1973" min="3" max="9" chance="0.75" /> <!-- Pa'agrio Hand Design -->
 				<item id="2344" min="1" max="1" chance="0.075" /> <!-- Recipe: Grace Dagger -->
 				<item id="951" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2073" min="1" max="1" chance="7.903" /> <!-- Chakram Edge -->
 				<item id="2352" min="1" max="1" chance="2.133" /> <!-- Recipe: Widow Maker -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="29013" level="45" type="L2Monster" name="Premo">
@@ -884,7 +884,7 @@
 			<height normal="35" grown="43" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="631" min="1" max="1" chance="0.3" /> <!--  Eldarake -->
 				<item id="2945" min="1" max="1" chance="0.3" /> <!-- Chain Shield -->
 				<item id="2413" min="1" max="1" chance="0.075" /> <!-- Chain Hood -->
@@ -900,12 +900,12 @@
 				<item id="2207" min="1" max="1" chance="0.3" /> <!-- Oriharukon Ore -->
 				<item id="2323" min="1" max="1" chance="0.075" /> <!-- Recipe: Elemental Bow -->
 				<item id="2326" min="1" max="1" chance="0.075" /> <!-- Recipe: Horn of Glory -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1876" min="1" max="1" chance="79.28" /> <!-- Mithril Ore -->
 				<item id="1962" min="1" max="1" chance="13.55" /> <!-- Karmian Tunic Pattern -->
 				<item id="2073" min="1" max="1" chance="3.096" /> <!-- Chakram Edge -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="29014" level="50" type="L2GrandBoss" name="Orfen">
@@ -959,7 +959,7 @@
 			<height normal="143" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="887" min="1" max="3" chance="34.78" /> <!-- Adamantite Ring -->
 				<item id="918" min="1" max="1" chance="34.06" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="3" chance="33.27" /> <!-- Adamantite Earring -->
@@ -1010,7 +1010,7 @@
 				<item id="4051" min="20" max="80" chance="12.26" /> <!-- Adamantite Necklace Chain -->
 				<item id="4439" min="20" max="80" chance="12.07" /> <!-- Avadon Shield Fragment -->
 				<item id="4065" min="20" max="80" chance="12.07" /> <!-- Avadon Gaiter Material -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="29015" level="48" type="L2Monster" name="Laikel">
@@ -1231,7 +1231,7 @@
 			<height normal="300" />
 		</collision>
 		<drop_lists> <!-- CT2.5 -->
-			<death>
+			<drop>
 				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
 				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
@@ -1295,7 +1295,7 @@
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="29020" level="75" type="L2GrandBoss" name="Baium">
@@ -1337,7 +1337,7 @@
 			<height normal="174" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="6328" min="1" max="3" chance="51.82" /> <!-- Sealed Majestic Ring -->
 				<item id="49580" min="1" max="1" chance="30.47" /> <!-- Baium's Ring -->
 				<item id="6327" min="1" max="1" chance="20.23" /> <!-- Sealed Majestic Earring -->
@@ -1410,7 +1410,7 @@
 				<item id="33808" min="1" max="1" chance="50.09" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
 				<item id="729" min="1" max="1" chance="50.04" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 				<item id="49682" min="1" max="1" chance="25.99" /> <!-- Baium’s Soul -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="29021" level="74" type="L2Monster" name="Archangel">
@@ -1495,7 +1495,7 @@
 			<height normal="32" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="6328" min="1" max="1" chance="52.5" /> <!-- Sealed Majestic Ring -->
 				<!-- <item id="90763" min="1" max="1" chance="20.82" /> Zaken's Earring  Not used Saviors client -->
 				<item id="6327" min="1" max="1" chance="20.33" /> <!-- Sealed Majestic Earring -->
@@ -1566,7 +1566,7 @@
 				<item id="33808" min="1" max="1" chance="33.38" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
 				<item id="729" min="1" max="1" chance="24.09" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 				<item id="730" min="1" max="1" chance="24.08" /> <!-- Scroll: Enchant Armor (A-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="29023" level="58" type="L2Monster" name="Maiden Doll">
@@ -1615,18 +1615,18 @@
 			<height normal="12" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="97" min="1" max="1" chance="0.0075" /> <!-- Lance -->
 				<item id="268" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus -->
 				<item id="57" min="2433" max="5685" chance="70" /> <!-- Adena -->
 				<item id="1887" min="1" max="1" chance="10.51" /> <!-- Varnish of Purity -->
 				<item id="4120" min="1" max="1" chance="1.697" /> <!-- Bellion Cestus Edge -->
 				<item id="4115" min="1" max="1" chance="1.686" /> <!-- Lance Blade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="948" min="1" max="1" chance="4.351" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="29024" level="59" type="L2Monster" name="Veil Master">
@@ -1674,7 +1674,7 @@
 			<height normal="40" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus-->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
 				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
@@ -1686,11 +1686,11 @@
 				<item id="1871" min="9" max="27" chance="2.287" /> <!-- Charcoal -->
 				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
 				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="948" min="1" max="1" chance="2.495" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="29025" level="75" type="L2Npc" name="Baium">
@@ -1853,7 +1853,7 @@
 			<height normal="15" />
 		</collision>
 		<drop_lists> <!-- CT2.5 -->
-			<death>
+			<drop>
 				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
 				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
@@ -1917,7 +1917,7 @@
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="29067" level="1" type="L2GrandBoss" name="Antharas">
@@ -1963,7 +1963,7 @@
 			<height normal="15" />
 		</collision>
 		<drop_lists> <!-- CT2.5 -->
-			<death>
+			<drop>
 				<item id="8620" min="1" max="1" chance="25" /> <!-- Ancient Book: Divine Inspiration -->
 				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
 				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
@@ -2027,7 +2027,7 @@
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="29068" level="79" type="L2GrandBoss" name="Antharas" title="Land Dragon">

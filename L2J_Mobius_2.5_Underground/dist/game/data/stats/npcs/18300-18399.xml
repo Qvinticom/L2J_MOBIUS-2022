@@ -2175,20 +2175,16 @@
 		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="711" max="1659" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="17.71">
-					<item id="8787" min="1" max="1" chance="100" /> <!-- Sprigant's Fruit -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="711" max="1659" chance="70" /> <!-- Adena -->
+				<item id="8787" min="1" max="1" chance="17.71" /> <!-- Sprigant's Fruit -->
+			</drop>
+			<spoil>
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="45" />

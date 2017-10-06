@@ -34,16 +34,15 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
+import com.l2jmobius.gameserver.enums.DropType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.drops.DropListScope;
-import com.l2jmobius.gameserver.model.drops.GeneralDropItem;
-import com.l2jmobius.gameserver.model.drops.GroupedGeneralDropItem;
-import com.l2jmobius.gameserver.model.drops.IDropItem;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -102,7 +101,7 @@ public class NpcData implements IXmlReader
 						Map<Integer, Skill> skills = null;
 						Set<Integer> clans = null;
 						Set<Integer> ignoreClanNpcIds = null;
-						Map<DropListScope, List<IDropItem>> dropLists = null;
+						List<DropHolder> dropLists = null;
 						set.set("id", npcId);
 						set.set("displayId", parseInteger(attrs, "displayId"));
 						set.set("level", parseByte(attrs, "level"));
@@ -443,28 +442,41 @@ public class NpcData implements IXmlReader
 								}
 								case "droplists":
 								{
-									for (Node dropListsNode = npcNode.getFirstChild(); dropListsNode != null; dropListsNode = dropListsNode.getNextSibling())
+									for (Node drop_lists_node = npcNode.getFirstChild(); drop_lists_node != null; drop_lists_node = drop_lists_node.getNextSibling())
 									{
-										DropListScope dropListScope = null;
+										DropType dropType = null;
 										
 										try
 										{
-											dropListScope = Enum.valueOf(DropListScope.class, dropListsNode.getNodeName().toUpperCase());
+											dropType = Enum.valueOf(DropType.class, drop_lists_node.getNodeName().toUpperCase());
 										}
 										catch (Exception e)
 										{
 										}
 										
-										if (dropListScope != null)
+										if (dropType != null)
 										{
 											if (dropLists == null)
 											{
-												dropLists = new EnumMap<>(DropListScope.class);
+												dropLists = new ArrayList<>();
 											}
 											
-											final List<IDropItem> dropList = new ArrayList<>();
-											parseDropList(f, dropListsNode, dropListScope, dropList);
-											dropLists.put(dropListScope, Collections.unmodifiableList(dropList));
+											for (Node drop_node = drop_lists_node.getFirstChild(); drop_node != null; drop_node = drop_node.getNextSibling())
+											{
+												final NamedNodeMap drop_attrs = drop_node.getAttributes();
+												if ("item".equals(drop_node.getNodeName().toLowerCase()))
+												{
+													final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), parseDouble(drop_attrs, "chance"));
+													if (ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null)
+													{
+														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
+													}
+													else
+													{
+														dropLists.add(dropItem);
+													}
+												}
+											}
 										}
 									}
 									break;
@@ -628,67 +640,27 @@ public class NpcData implements IXmlReader
 						template.setClans(clans);
 						template.setIgnoreClanNpcIds(ignoreClanNpcIds);
 						
-						template.setDropLists(dropLists);
-					}
-				}
-			}
-		}
-	}
-	
-	private void parseDropList(File f, Node dropListNode, DropListScope dropListScope, List<IDropItem> drops)
-	{
-		for (Node dropNode = dropListNode.getFirstChild(); dropNode != null; dropNode = dropNode.getNextSibling())
-		{
-			switch (dropNode.getNodeName().toLowerCase())
-			{
-				case "group":
-				{
-					final GroupedGeneralDropItem dropItem = dropListScope.newGroupedDropItem(parseDouble(dropNode.getAttributes(), "chance"));
-					final List<IDropItem> groupedDropList = new ArrayList<>(2);
-					for (Node groupNode = dropNode.getFirstChild(); groupNode != null; groupNode = groupNode.getNextSibling())
-					{
-						parseDropListItem(groupNode, dropListScope, groupedDropList);
-					}
-					
-					final List<GeneralDropItem> items = new ArrayList<>(groupedDropList.size());
-					for (IDropItem item : groupedDropList)
-					{
-						if (item instanceof GeneralDropItem)
+						if (dropLists != null)
 						{
-							items.add((GeneralDropItem) item);
-						}
-						else
-						{
-							LOGGER.warning("[" + f + "] grouped general drop item supports only general drop item.");
+							for (DropHolder dropHolder : dropLists)
+							{
+								switch (dropHolder.getDropType())
+								{
+									case DROP:
+									{
+										template.addDrop(dropHolder);
+										break;
+									}
+									case SPOIL:
+									{
+										template.addSpoil(dropHolder);
+										break;
+									}
+								}
+							}
 						}
 					}
-					dropItem.setItems(items);
-					
-					drops.add(dropItem);
-					break;
 				}
-				default:
-				{
-					parseDropListItem(dropNode, dropListScope, drops);
-					break;
-				}
-			}
-		}
-	}
-	
-	private void parseDropListItem(Node dropListItem, DropListScope dropListScope, List<IDropItem> drops)
-	{
-		final NamedNodeMap attrs = dropListItem.getAttributes();
-		switch (dropListItem.getNodeName().toLowerCase())
-		{
-			case "item":
-			{
-				final IDropItem dropItem = dropListScope.newDropItem(parseInteger(attrs, "id"), parseLong(attrs, "min"), parseLong(attrs, "max"), parseDouble(attrs, "chance"));
-				if (dropItem != null)
-				{
-					drops.add(dropItem);
-				}
-				break;
 			}
 		}
 	}

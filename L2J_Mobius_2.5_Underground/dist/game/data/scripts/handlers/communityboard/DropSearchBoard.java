@@ -22,23 +22,21 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 import java.util.StringJoiner;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.enums.DropType;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.drops.DropListScope;
-import com.l2jmobius.gameserver.model.drops.GeneralDropItem;
-import com.l2jmobius.gameserver.model.drops.GroupedGeneralDropItem;
-import com.l2jmobius.gameserver.model.drops.IDropItem;
+import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
@@ -56,40 +54,40 @@ public class DropSearchBoard implements IParseBoardHandler
 		"_bbs_npc_trace"
 	};
 	
-	class DropHolder
+	class CBDropHolder
 	{
 		int itemId;
 		int npcId;
 		byte npcLevel;
-		long basemin;
-		long basemax;
-		double baseGroupChance;
-		double basechance;
-		boolean isSweep;
+		long min;
+		long max;
+		double chance;
+		boolean isSpoil;
+		boolean isRaid;
 		
-		public DropHolder(L2NpcTemplate npc, GeneralDropItem item, double groupChance, boolean isSweep)
+		public CBDropHolder(L2NpcTemplate npcTemplate, DropHolder dropHolder)
 		{
-			itemId = item.getItemId();
-			npcId = npc.getId();
-			npcLevel = npc.getLevel();
-			basemin = item.getMin();
-			basemax = item.getMax();
-			baseGroupChance = groupChance;
-			basechance = item.getChance();
-			this.isSweep = isSweep;
+			isSpoil = dropHolder.getDropType() == DropType.SPOIL;
+			itemId = dropHolder.getItemId();
+			npcId = npcTemplate.getId();
+			npcLevel = npcTemplate.getLevel();
+			min = dropHolder.getMin();
+			max = dropHolder.getMax();
+			chance = dropHolder.getChance();
+			isRaid = npcTemplate.getType().equals("L2RaidBoss") || npcTemplate.getType().equals("L2GrandBoss");
 		}
 		
 		/**
-		 * only for debug'/;
+		 * only for debug
 		 */
 		@Override
 		public String toString()
 		{
-			return "DropHolder [itemId=" + itemId + ", npcId=" + npcId + ", npcLevel=" + npcLevel + ", basemin=" + basemin + ", basemax=" + basemax + ", baseGroupChance=" + baseGroupChance + ", basechance=" + basechance + ", isSweep=" + isSweep + "]";
+			return "DropHolder [itemId=" + itemId + ", npcId=" + npcId + ", npcLevel=" + npcLevel + ", min=" + min + ", max=" + max + ", chance=" + chance + ", isSpoil=" + isSpoil + "]";
 		}
 	}
 	
-	private final Map<Integer, List<DropHolder>> DROP_INDEX_CACHE = new HashMap<>();
+	private final Map<Integer, List<CBDropHolder>> DROP_INDEX_CACHE = new HashMap<>();
 	
 	// nonsupport items
 	private final Set<Integer> BLOCK_ID = new HashSet<>();
@@ -104,44 +102,39 @@ public class DropSearchBoard implements IParseBoardHandler
 	
 	private void buildDropIndex()
 	{
-		NpcData.getInstance().getTemplates(npc -> npc.getDropLists() != null).forEach(npcTemplate ->
+		NpcData.getInstance().getTemplates(npc -> npc.getDropList(DropType.DROP) != null).forEach(npcTemplate ->
 		{
-			for (Entry<DropListScope, List<IDropItem>> entry : npcTemplate.getDropLists().entrySet())
+			for (DropHolder dropHolder : npcTemplate.getDropList(DropType.DROP))
 			{
-				entry.getValue().forEach(idrop ->
-				{
-					if (idrop instanceof GroupedGeneralDropItem)
-					{
-						GroupedGeneralDropItem ggd = (GroupedGeneralDropItem) idrop;
-						ggd.getItems().stream().forEach(gd -> addToDropList(npcTemplate, gd, ggd.getChance(), entry.getKey() == DropListScope.CORPSE));
-					}
-					else
-					{
-						GeneralDropItem gd = (GeneralDropItem) idrop;
-						addToDropList(npcTemplate, gd, 100.0, entry.getKey() == DropListScope.CORPSE);
-					}
-				});
+				addToDropList(npcTemplate, dropHolder);
+			}
+		});
+		NpcData.getInstance().getTemplates(npc -> npc.getDropList(DropType.SPOIL) != null).forEach(npcTemplate ->
+		{
+			for (DropHolder dropHolder : npcTemplate.getDropList(DropType.SPOIL))
+			{
+				addToDropList(npcTemplate, dropHolder);
 			}
 		});
 		
 		DROP_INDEX_CACHE.values().stream().forEach(l -> l.sort((d1, d2) -> Byte.valueOf(d1.npcLevel).compareTo(Byte.valueOf(d2.npcLevel))));
 	}
 	
-	private void addToDropList(L2NpcTemplate npcTemplate, GeneralDropItem gd, double groupChance, boolean isSweep)
+	private void addToDropList(L2NpcTemplate npcTemplate, DropHolder dropHolder)
 	{
-		if (BLOCK_ID.contains(gd.getItemId()))
+		if (BLOCK_ID.contains(dropHolder.getItemId()))
 		{
 			return;
 		}
 		
-		List<DropHolder> dropList = DROP_INDEX_CACHE.get(gd.getItemId());
+		List<CBDropHolder> dropList = DROP_INDEX_CACHE.get(dropHolder.getItemId());
 		if (dropList == null)
 		{
 			dropList = new ArrayList<>();
-			DROP_INDEX_CACHE.put(gd.getItemId(), dropList);
+			DROP_INDEX_CACHE.put(dropHolder.getItemId(), dropList);
 		}
 		
-		dropList.add(new DropHolder(npcTemplate, gd, groupChance, isSweep));
+		dropList.add(new CBDropHolder(npcTemplate, dropHolder));
 	}
 	
 	@Override
@@ -164,7 +157,7 @@ public class DropSearchBoard implements IParseBoardHandler
 				final DecimalFormat chanceFormat = new DecimalFormat("0.00##");
 				int itemId = Integer.parseInt(params[1]);
 				int page = Integer.parseInt(params[2]);
-				List<DropHolder> list = DROP_INDEX_CACHE.get(itemId);
+				List<CBDropHolder> list = DROP_INDEX_CACHE.get(itemId);
 				int pages = list.size() / 14;
 				if (pages == 0)
 				{
@@ -176,13 +169,106 @@ public class DropSearchBoard implements IParseBoardHandler
 				StringBuilder builder = new StringBuilder();
 				for (int index = start; index <= end; index++)
 				{
-					DropHolder dropHolder = list.get(index);
+					CBDropHolder cbDropHolder = list.get(index);
+					
+					// real time server rate calculations
+					double rateChance = 1;
+					double rateAmount = 1;
+					if (cbDropHolder.isSpoil)
+					{
+						rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
+						rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
+						
+						// also check premium rates if available
+						if (Config.PREMIUM_SYSTEM_ENABLED && player.hasPremiumStatus())
+						{
+							rateChance *= Config.PREMIUM_RATE_SPOIL_CHANCE;
+							rateAmount *= Config.PREMIUM_RATE_SPOIL_AMOUNT;
+						}
+					}
+					else
+					{
+						final L2Item item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
+						
+						if (Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
+						{
+							rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId);
+						}
+						else if (item.hasExImmediateEffect())
+						{
+							rateChance *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
+						}
+						else if (cbDropHolder.isRaid)
+						{
+							rateAmount *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
+						}
+						else
+						{
+							rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
+						}
+						
+						if (Config.RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId) != null)
+						{
+							rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId);
+						}
+						else if (cbDropHolder.isRaid)
+						{
+							rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
+						}
+						else if (item.hasExImmediateEffect())
+						{
+							rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
+						}
+						else
+						{
+							rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
+						}
+						
+						// also check premium rates if available
+						if (Config.PREMIUM_SYSTEM_ENABLED && player.hasPremiumStatus())
+						{
+							if (Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
+							{
+								rateChance *= Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId);
+							}
+							else if (item.hasExImmediateEffect())
+							{
+								// TODO: Premium herb chance? :)
+							}
+							else if (cbDropHolder.isRaid)
+							{
+								// TODO: Premium raid chance? :)
+							}
+							else
+							{
+								rateChance *= Config.PREMIUM_RATE_DROP_CHANCE;
+							}
+							
+							if (Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId) != null)
+							{
+								rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(cbDropHolder.itemId);
+							}
+							else if (item.hasExImmediateEffect())
+							{
+								// TODO: Premium herb amount? :)
+							}
+							else if (cbDropHolder.isRaid)
+							{
+								// TODO: Premium raid amount? :)
+							}
+							else
+							{
+								rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
+							}
+						}
+					}
+					
 					builder.append("<tr>");
-					builder.append("<td width=30>").append(dropHolder.npcLevel).append("</td>");
-					builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace " + dropHolder.npcId + "\">").append("&@").append(dropHolder.npcId).append(";").append("</a>").append("</td>");
-					builder.append("<td width=80 align=CENTER>").append(dropHolder.basemin).append("-").append(dropHolder.basemax).append("</td>");
-					builder.append("<td width=50 align=CENTER>").append(chanceFormat.format((dropHolder.basechance * dropHolder.baseGroupChance) / 100)).append("%").append("</td>");
-					builder.append("<td width=50 align=CENTER>").append(dropHolder.isSweep ? "Sweep" : "Drop").append("</td>");
+					builder.append("<td width=30>").append(cbDropHolder.npcLevel).append("</td>");
+					builder.append("<td width=170>").append("<a action=\"bypass _bbs_npc_trace " + cbDropHolder.npcId + "\">").append("&@").append(cbDropHolder.npcId).append(";").append("</a>").append("</td>");
+					builder.append("<td width=80 align=CENTER>").append(cbDropHolder.min * rateAmount).append("-").append(cbDropHolder.max * rateAmount).append("</td>");
+					builder.append("<td width=50 align=CENTER>").append(chanceFormat.format(cbDropHolder.chance * rateChance)).append("%").append("</td>");
+					builder.append("<td width=50 align=CENTER>").append(cbDropHolder.isSpoil ? "Spoil" : "Drop").append("</td>");
 					builder.append("</tr>");
 				}
 				
@@ -204,7 +290,7 @@ public class DropSearchBoard implements IParseBoardHandler
 				List<NpcSpawnTemplate> spawnList = SpawnsData.getInstance().getNpcSpawns(npc -> npc.getId() == npcId);
 				if (spawnList.isEmpty())
 				{
-					player.sendMessage("cant find any spawn maybe boss or instance mob");
+					player.sendMessage("Cannot find any spawn. Maybe dropped by a boss or instance monster.");
 				}
 				else
 				{

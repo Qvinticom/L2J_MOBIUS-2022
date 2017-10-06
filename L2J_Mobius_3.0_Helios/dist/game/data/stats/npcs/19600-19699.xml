@@ -22,17 +22,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
 				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Circlet (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="19601" level="85" type="L2Npc" name="" title="">
@@ -665,7 +665,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="47244" min="1" max="1" chance="50.24" /> <!-- Ramona’s Fancy Earrings -->
 				<item id="47128" min="60" max="60" chance="100" /> <!-- Giants Lightning Protection Potion -->
 				<item id="47129" min="60" max="60" chance="100" /> <!-- Particle Dissolver -->
@@ -734,11 +734,11 @@
 				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
 				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<item id="40198" min="1" max="1" chance="0.0002452" /> <!-- Disassembly Recipe Pouch: Armor --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="19648" level="104" type="L2RaidBoss" name="Ramona">
@@ -770,7 +770,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="47244" min="1" max="1" chance="50.24" /> <!-- Ramona’s Fancy Earrings -->
 				<item id="47128" min="60" max="60" chance="100" /> <!-- Giants Lightning Protection Potion -->
 				<item id="47129" min="60" max="60" chance="100" /> <!-- Particle Dissolver -->
@@ -839,11 +839,11 @@
 				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
 				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<item id="40198" min="1" max="1" chance="0.0002452" /> <!-- Disassembly Recipe Pouch: Armor --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 </list>

@@ -27,7 +27,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots -->
 				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield -->
 				<item id="57" min="30979" max="72169" chance="70" /> <!-- Adena -->
@@ -37,14 +37,14 @@
 				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
 				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
 				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="1.059" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23801" level="99" type="L2Monster" name="">
@@ -236,15 +236,15 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
 				<item id="37776" min="1" max="1" chance="0.075" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
 				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
 				<item id="37773" min="1" max="1" chance="0.0075" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>	
 	<npc id="23812" level="99" type="L2Monster" name="Cantera Deathmoz">
@@ -266,15 +266,15 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
 				<item id="37778" min="1" max="1" chance="0.003" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
 				<item id="37775" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23813" level="99" type="L2Monster" name="Cantera Floxis">
@@ -296,16 +296,16 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
 				<item id="37787" min="1" max="1" chance="0.0075" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
 				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
 				<item id="37784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23814" level="99" type="L2Monster" name="Cantera Belika">
@@ -327,15 +327,15 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
 				<item id="37778" min="1" max="1" chance="0.003" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
 				<item id="37775" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23815" level="99" type="L2Monster" name="Cantera Bridget">
@@ -357,16 +357,16 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
 				<item id="37787" min="1" max="1" chance="0.0075" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
 				<item id="36919" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (High-grade) - Downgrade -->
 				<item id="37784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 </list>

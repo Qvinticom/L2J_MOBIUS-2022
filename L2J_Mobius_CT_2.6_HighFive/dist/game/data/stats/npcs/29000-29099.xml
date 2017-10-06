@@ -41,63 +41,37 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="50">
-					<item id="2499" min="1" max="1" chance="12" /> <!-- Elven Long Sword -->
-					<item id="70" min="1" max="1" chance="12" /> <!-- Claymore -->
-					<item id="159" min="1" max="1" chance="11" /> <!-- Bonebreaker -->
-					<item id="189" min="1" max="1" chance="11" /> <!-- Staff of Life -->
-					<item id="188" min="1" max="1" chance="11" /> <!-- Ghost Staff -->
-					<item id="225" min="1" max="1" chance="11" /> <!-- Mithril Dagger -->
-					<item id="262" min="1" max="1" chance="10" /> <!-- Scallop Jamadhr -->
-					<item id="280" min="1" max="1" chance="11" /> <!-- Light Crossbow -->
-					<item id="297" min="1" max="1" chance="11" /> <!-- Glaive -->
-				</group>
-				<group chance="100">
-					<item id="851" min="1" max="2" chance="35" /> <!-- Omen Beast's Eye Earring -->
-					<item id="914" min="1" max="2" chance="30" /> <!-- Necklace of Darkness -->
-					<item id="882" min="1" max="2" chance="35" /> <!-- Mithril Ring -->
-				</group>
-				<group chance="75">
-					<item id="353" min="1" max="2" chance="50" /> <!-- Half Plate Armor -->
-					<item id="380" min="1" max="2" chance="50" /> <!-- Plate Gaiters -->
-				</group>
-				<group chance="85">
-					<item id="396" min="1" max="2" chance="50" /> <!-- Salamander Skin Mail -->
-					<item id="438" min="1" max="2" chance="50" /> <!-- Sage's Rag -->
-				</group>
-				<group chance="100">
-					<item id="2412" min="1" max="3" chance="20" /> <!-- Plate Helmet -->
-					<item id="1125" min="1" max="3" chance="20" /> <!-- Assault Boots -->
-					<item id="607" min="1" max="3" chance="20" /> <!-- Ogre Power Gauntlets -->
-					<item id="630" min="1" max="3" chance="20" /> <!-- Square Shield -->
-					<item id="955" min="1" max="3" chance="20" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="120000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="30">
-					<item id="6660" min="1" max="1" chance="100" /> <!-- Ring of Queen Ant -->
-				</group>
-			</death>
+			<drop>
+				<item id="2499" min="1" max="1" chance="6" /> <!-- Elven Long Sword -->
+				<item id="70" min="1" max="1" chance="6" /> <!-- Claymore -->
+				<item id="159" min="1" max="1" chance="5.5" /> <!-- Bonebreaker -->
+				<item id="189" min="1" max="1" chance="5.5" /> <!-- Staff of Life -->
+				<item id="188" min="1" max="1" chance="5.5" /> <!-- Ghost Staff -->
+				<item id="225" min="1" max="1" chance="5.5" /> <!-- Mithril Dagger -->
+				<item id="262" min="1" max="1" chance="5" /> <!-- Scallop Jamadhr -->
+				<item id="280" min="1" max="1" chance="5.5" /> <!-- Light Crossbow -->
+				<item id="297" min="1" max="1" chance="5.5" /> <!-- Glaive -->
+				<item id="851" min="1" max="2" chance="35" /> <!-- Omen Beast's Eye Earring -->
+				<item id="914" min="1" max="2" chance="30" /> <!-- Necklace of Darkness -->
+				<item id="882" min="1" max="2" chance="35" /> <!-- Mithril Ring -->
+				<item id="353" min="1" max="2" chance="37.5" /> <!-- Half Plate Armor -->
+				<item id="380" min="1" max="2" chance="37.5" /> <!-- Plate Gaiters -->
+				<item id="396" min="1" max="2" chance="42.5" /> <!-- Salamander Skin Mail -->
+				<item id="438" min="1" max="2" chance="42.5" /> <!-- Sage's Rag -->
+				<item id="2412" min="1" max="3" chance="20" /> <!-- Plate Helmet -->
+				<item id="1125" min="1" max="3" chance="20" /> <!-- Assault Boots -->
+				<item id="607" min="1" max="3" chance="20" /> <!-- Ogre Power Gauntlets -->
+				<item id="630" min="1" max="3" chance="20" /> <!-- Square Shield -->
+				<item id="955" min="1" max="3" chance="20" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
+				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
+				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
+				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
+				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
+				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
+				<item id="57" min="120000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="6660" min="1" max="1" chance="30" /> <!-- Ring of Queen Ant -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="45" />
@@ -319,57 +293,37 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="40">
-					<item id="75" min="1" max="1" chance="12" /> <!-- Caliburs -->
-					<item id="84" min="1" max="1" chance="10" /> <!-- Homunkulus's Sword -->
-					<item id="162" min="1" max="1" chance="12" /> <!-- War Axe -->
-					<item id="174" min="1" max="1" chance="10" /> <!-- Nirvana Axe -->
-					<item id="200" min="1" max="1" chance="10" /> <!-- Sage's Staff -->
-					<item id="233" min="1" max="1" chance="12" /> <!-- Dark Screamer -->
-					<item id="265" min="1" max="1" chance="10" /> <!-- Fisted Blade -->
-					<item id="283" min="1" max="1" chance="12" /> <!-- Akat Long Bow -->
-					<item id="301" min="1" max="1" chance="12" /> <!-- Scorpion -->
-				</group>
-				<group chance="60">
-					<item id="60" min="1" max="1" chance="20" /> <!-- Composite Armor -->
-					<item id="400" min="1" max="1" chance="20" /> <!-- Theca Leather Armor -->
-					<item id="420" min="1" max="1" chance="20" /> <!-- Theca Leather Gaiters -->
-					<item id="441" min="1" max="1" chance="20" /> <!-- Demon's Tunic -->
-					<item id="472" min="1" max="1" chance="20" /> <!-- Demon's Stockings -->
-				</group>
-				<group chance="70">
-					<item id="517" min="1" max="1" chance="20" /> <!-- Composite Helmet -->
-					<item id="2435" min="1" max="1" chance="20" /> <!-- Demon's Boots -->
-					<item id="2459" min="1" max="1" chance="20" /> <!-- Demon's Gloves -->
-					<item id="107" min="1" max="1" chance="20" /> <!-- Composite Shield -->
-					<item id="951" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 49 -->
-					<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 52 -->
-				</group>
-				<group chance="30">
-					<item id="6662" min="1" max="1" chance="100" /> <!-- Ring of Core -->
-				</group>
-			</death>
+			<drop>
+				<item id="75" min="1" max="1" chance="4.8" /> <!-- Caliburs -->
+				<item id="84" min="1" max="1" chance="4" /> <!-- Homunkulus's Sword -->
+				<item id="162" min="1" max="1" chance="4.8" /> <!-- War Axe -->
+				<item id="174" min="1" max="1" chance="4" /> <!-- Nirvana Axe -->
+				<item id="200" min="1" max="1" chance="4" /> <!-- Sage's Staff -->
+				<item id="233" min="1" max="1" chance="4.8" /> <!-- Dark Screamer -->
+				<item id="265" min="1" max="1" chance="4" /> <!-- Fisted Blade -->
+				<item id="283" min="1" max="1" chance="4.8" /> <!-- Akat Long Bow -->
+				<item id="301" min="1" max="1" chance="4.8" /> <!-- Scorpion -->
+				<item id="60" min="1" max="1" chance="12" /> <!-- Composite Armor -->
+				<item id="400" min="1" max="1" chance="12" /> <!-- Theca Leather Armor -->
+				<item id="420" min="1" max="1" chance="12" /> <!-- Theca Leather Gaiters -->
+				<item id="441" min="1" max="1" chance="12" /> <!-- Demon's Tunic -->
+				<item id="472" min="1" max="1" chance="12" /> <!-- Demon's Stockings -->
+				<item id="517" min="1" max="1" chance="14" /> <!-- Composite Helmet -->
+				<item id="2435" min="1" max="1" chance="14" /> <!-- Demon's Boots -->
+				<item id="2459" min="1" max="1" chance="14" /> <!-- Demon's Gloves -->
+				<item id="107" min="1" max="1" chance="14" /> <!-- Composite Shield -->
+				<item id="951" min="1" max="1" chance="14" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 49 -->
+				<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 52 -->
+				<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="6662" min="1" max="1" chance="30" /> <!-- Ring of Core -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="140" />
@@ -767,62 +721,40 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="35">
-					<item id="76" min="1" max="1" chance="12" /> <!-- Sword of Delusion -->
-					<item id="145" min="1" max="1" chance="10" /> <!-- Sword of Whispering Death -->
-					<item id="162" min="1" max="1" chance="12" /> <!-- War Axe -->
-					<item id="201" min="1" max="1" chance="10" /> <!-- Club of Nature -->
-					<item id="199" min="1" max="1" chance="10" /> <!-- Pa'agrian Hammer -->
-					<item id="231" min="1" max="1" chance="12" /> <!-- Grace Dagger -->
-					<item id="265" min="1" max="1" chance="10" /> <!-- Fisted Blade -->
-					<item id="283" min="1" max="1" chance="12" /> <!-- Akat Long Bow -->
-					<item id="303" min="1" max="1" chance="12" /> <!-- Widow Maker -->
-				</group>
-				<group chance="100">
-					<item id="854" min="1" max="2" chance="35" /> <!-- Earring of Seal -->
-					<item id="917" min="1" max="2" chance="30" /> <!-- Necklace of Mermaid -->
-					<item id="885" min="1" max="2" chance="35" /> <!-- Ring of Ages -->
-				</group>
-				<group chance="50">
-					<item id="60" min="1" max="1" chance="20" /> <!-- Composite Armor -->
-					<item id="400" min="1" max="1" chance="20" /> <!-- Theca Leather Armor -->
-					<item id="420" min="1" max="1" chance="20" /> <!-- Theca Leather Gaiters -->
-					<item id="441" min="1" max="1" chance="20" /> <!-- Demon's Tunic -->
-					<item id="472" min="1" max="1" chance="20" /> <!-- Demon's Stockings -->
-				</group>
-				<group chance="50">
-					<item id="517" min="1" max="2" chance="20" /> <!-- Composite Helmet -->
-					<item id="64" min="1" max="2" chance="20" /> <!-- Composite Boots -->
-					<item id="608" min="1" max="2" chance="20" /> <!-- Mithril Gauntlets -->
-					<item id="103" min="1" max="2" chance="20" /> <!-- Tower Shield -->
-					<item id="951" min="1" max="2" chance="20" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 49 -->
-					<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 52 -->
-					<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 49 -->
-					<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 52 -->
-				</group>
-				<group chance="30">
-					<item id="6661" min="1" max="1" chance="100" /> <!-- Earring of Orfen -->
-				</group>
-			</death>
+			<drop>
+				<item id="76" min="1" max="1" chance="4.2" /> <!-- Sword of Delusion -->
+				<item id="145" min="1" max="1" chance="3.5" /> <!-- Sword of Whispering Death -->
+				<item id="162" min="1" max="1" chance="4.2" /> <!-- War Axe -->
+				<item id="201" min="1" max="1" chance="3.5" /> <!-- Club of Nature -->
+				<item id="199" min="1" max="1" chance="3.5" /> <!-- Pa'agrian Hammer -->
+				<item id="231" min="1" max="1" chance="4.2" /> <!-- Grace Dagger -->
+				<item id="265" min="1" max="1" chance="3.5" /> <!-- Fisted Blade -->
+				<item id="283" min="1" max="1" chance="4.2" /> <!-- Akat Long Bow -->
+				<item id="303" min="1" max="1" chance="4.2" /> <!-- Widow Maker -->
+				<item id="854" min="1" max="2" chance="35" /> <!-- Earring of Seal -->
+				<item id="917" min="1" max="2" chance="30" /> <!-- Necklace of Mermaid -->
+				<item id="885" min="1" max="2" chance="35" /> <!-- Ring of Ages -->
+				<item id="60" min="1" max="1" chance="10" /> <!-- Composite Armor -->
+				<item id="400" min="1" max="1" chance="10" /> <!-- Theca Leather Armor -->
+				<item id="420" min="1" max="1" chance="10" /> <!-- Theca Leather Gaiters -->
+				<item id="441" min="1" max="1" chance="10" /> <!-- Demon's Tunic -->
+				<item id="472" min="1" max="1" chance="10" /> <!-- Demon's Stockings -->
+				<item id="517" min="1" max="2" chance="10" /> <!-- Composite Helmet -->
+				<item id="64" min="1" max="2" chance="10" /> <!-- Composite Boots -->
+				<item id="608" min="1" max="2" chance="10" /> <!-- Mithril Gauntlets -->
+				<item id="103" min="1" max="2" chance="10" /> <!-- Tower Shield -->
+				<item id="951" min="1" max="2" chance="10" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
+				<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 49 -->
+				<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 52 -->
+				<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="6661" min="1" max="1" chance="30" /> <!-- Earring of Orfen -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="35" />
@@ -1058,165 +990,101 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
-			<death>
+			<drop>
 				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
-				<group chance="100">
-					<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
-					<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
-					<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
-					<item id="2504" min="1" max="2" chance="25" /> <!-- Meteor Shower -->
-				</group>
-				<group chance="100">
-					<item id="235" min="1" max="2" chance="25" /> <!-- Bloody Orchid -->
-					<item id="288" min="1" max="2" chance="25" /> <!-- Carnage Bow -->
-					<item id="150" min="1" max="2" chance="25" /> <!-- Elemental Sword -->
-					<item id="212" min="1" max="2" chance="25" /> <!-- Dasparion's Staff -->
-				</group>
-				<group chance="100">
-					<item id="81" min="1" max="2" chance="25" /> <!-- Dragon Slayer -->
-					<item id="151" min="1" max="2" chance="25" /> <!-- Sword of Miracles -->
-					<item id="2500" min="1" max="2" chance="25" /> <!-- Dark Legion's Edge -->
-					<item id="164" min="1" max="2" chance="25" /> <!-- Elysian -->
-				</group>
-				<group chance="100">
-					<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
-					<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
-					<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
-					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
-					<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
-				</group>
-				<group chance="100">
-					<item id="6364" min="1" max="1" chance="17" /> <!-- Forgotten Blade -->
-					<item id="6365" min="1" max="1" chance="17" /> <!-- Basalt Battlehammer -->
-					<item id="6369" min="1" max="1" chance="17" /> <!-- Dragon Hunter Axe -->
-					<item id="6370" min="1" max="1" chance="17" /> <!-- Saint Spear -->
-					<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
-					<item id="6580" min="1" max="1" chance="16" /> <!-- Tallum Blade*Dark Legion's Edge -->
-				</group>
-				<group chance="100">
-					<item id="7575" min="1" max="1" chance="20" /> <!-- Draconic Bow -->
-					<item id="6366" min="1" max="1" chance="20" /> <!-- Imperial Staff -->
-					<item id="6367" min="1" max="1" chance="20" /> <!-- Angel Slayer -->
-					<item id="6371" min="1" max="1" chance="20" /> <!-- Demon Splinter -->
-					<item id="6579" min="1" max="1" chance="20" /> <!-- Arcana Mace -->
-				</group>
-				<group chance="100">
-					<item id="6326" min="1" max="5" chance="30" /> <!-- Sealed Majestic Necklace -->
-					<item id="6327" min="1" max="5" chance="35" /> <!-- Sealed Majestic Earring -->
-					<item id="6328" min="1" max="5" chance="35" /> <!-- Sealed Majestic Ring -->
-				</group>
-				<group chance="100">
-					<item id="6323" min="1" max="5" chance="30" /> <!-- Sealed Phoenix Necklace -->
-					<item id="6324" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Earring -->
-					<item id="6325" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Ring -->
-				</group>
-				<group chance="100">
-					<item id="6724" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="30" /> <!-- Sealed Tateossian Necklace -->
-				</group>
-				<group chance="100">
-					<item id="5287" min="1" max="3" chance="50" /> <!-- Sealed Dark Crystal breastplate -->
-					<item id="5297" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
-				</group>
-				<group chance="100">
-					<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
-					<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
-					<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
-				</group>
-				<group chance="100">
-					<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
-					<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
-					<item id="5316" min="1" max="3" chance="8" /> <!-- Sealed Majestic Plate Armor -->
-					<item id="5323" min="1" max="3" chance="8" /> <!-- Sealed Majestic Leather Armor -->
-					<item id="5329" min="1" max="3" chance="9" /> <!-- Sealed Majestic Robe -->
-				</group>
-				<group chance="100">
-					<item id="5288" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Gaiters -->
-					<item id="5298" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5305" min="1" max="3" chance="30" /> <!-- Sealed Tallum Stockings -->
-				</group>
-				<group chance="100">
-					<item id="6674" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6680" min="1" max="1" chance="35" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6684" min="1" max="1" chance="35" /> <!-- Sealed Major Arcana Robe -->
-				</group>
-				<group chance="100">
-					<item id="5289" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5294" min="1" max="3" chance="25" /> <!-- Sealed Tallum Helmet -->
-					<item id="5312" min="1" max="3" chance="25" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5317" min="1" max="3" chance="25" /> <!-- Sealed Majestic Circlet -->
-				</group>
-				<group chance="100">
-					<item id="5291" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Boots -->
-					<item id="5296" min="1" max="3" chance="25" /> <!-- Sealed Tallum Boots -->
-					<item id="5314" min="1" max="3" chance="25" /> <!-- Sealed Boots of Nightmare -->
-					<item id="5319" min="1" max="3" chance="25" /> <!-- Sealed Majestic Boots -->
-				</group>
-				<group chance="100">
-					<item id="5290" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Gloves -->
-					<item id="5295" min="1" max="3" chance="25" /> <!-- Sealed Tallum Gloves -->
-					<item id="5313" min="1" max="3" chance="25" /> <!-- Sealed Gauntlets of Nightmare -->
-					<item id="5318" min="1" max="3" chance="25" /> <!-- Sealed Majestic Gauntlets -->
-				</group>
-				<group chance="100">
-					<item id="5292" min="1" max="3" chance="40" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5315" min="1" max="3" chance="40" /> <!-- Sealed Shield of Nightmare -->
-					<item id="6678" min="1" max="1" chance="20" /> <!-- Sealed Imperial Crusader Shield -->
-				</group>
-				<group chance="100">
-					<item id="6676" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6681" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6685" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Glove -->
-				</group>
-				<group chance="100">
-					<item id="6677" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6682" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6686" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Boots -->
-				</group>
-				<group chance="100">
-					<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
-				</group>
-				<group chance="100">
-					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
-				</group>
-				<group chance="100">
-					<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
-				</group>
-			</death>
+				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
+				<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="2" chance="25" /> <!-- Meteor Shower -->
+				<item id="235" min="1" max="2" chance="25" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="2" chance="25" /> <!-- Carnage Bow -->
+				<item id="150" min="1" max="2" chance="25" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="2" chance="25" /> <!-- Dasparion's Staff -->
+				<item id="81" min="1" max="2" chance="25" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="2" chance="25" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="2" chance="25" /> <!-- Dark Legion's Edge -->
+				<item id="164" min="1" max="2" chance="25" /> <!-- Elysian -->
+				<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
+				<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
+				<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+				<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
+				<item id="6364" min="1" max="1" chance="17" /> <!-- Forgotten Blade -->
+				<item id="6365" min="1" max="1" chance="17" /> <!-- Basalt Battlehammer -->
+				<item id="6369" min="1" max="1" chance="17" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="17" /> <!-- Saint Spear -->
+				<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
+				<item id="6580" min="1" max="1" chance="16" /> <!-- Tallum Blade*Dark Legion's Edge -->
+				<item id="7575" min="1" max="1" chance="20" /> <!-- Draconic Bow -->
+				<item id="6366" min="1" max="1" chance="20" /> <!-- Imperial Staff -->
+				<item id="6367" min="1" max="1" chance="20" /> <!-- Angel Slayer -->
+				<item id="6371" min="1" max="1" chance="20" /> <!-- Demon Splinter -->
+				<item id="6579" min="1" max="1" chance="20" /> <!-- Arcana Mace -->
+				<item id="6326" min="1" max="5" chance="30" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="5" chance="35" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="5" chance="35" /> <!-- Sealed Majestic Ring -->
+				<item id="6323" min="1" max="5" chance="30" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Ring -->
+				<item id="6724" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Earring -->
+				<item id="6725" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Ring -->
+				<item id="6726" min="1" max="1" chance="30" /> <!-- Sealed Tateossian Necklace -->
+				<item id="5287" min="1" max="3" chance="50" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5297" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
+				<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5316" min="1" max="3" chance="8" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="3" chance="8" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="3" chance="9" /> <!-- Sealed Majestic Robe -->
+				<item id="5288" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5298" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="3" chance="30" /> <!-- Sealed Tallum Stockings -->
+				<item id="6674" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6680" min="1" max="1" chance="35" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6684" min="1" max="1" chance="35" /> <!-- Sealed Major Arcana Robe -->
+				<item id="5289" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="3" chance="25" /> <!-- Sealed Tallum Helmet -->
+				<item id="5312" min="1" max="3" chance="25" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="3" chance="25" /> <!-- Sealed Majestic Circlet -->
+				<item id="5291" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5296" min="1" max="3" chance="25" /> <!-- Sealed Tallum Boots -->
+				<item id="5314" min="1" max="3" chance="25" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="3" chance="25" /> <!-- Sealed Majestic Boots -->
+				<item id="5290" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="25" /> <!-- Sealed Tallum Gloves -->
+				<item id="5313" min="1" max="3" chance="25" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="3" chance="25" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5292" min="1" max="3" chance="40" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="3" chance="40" /> <!-- Sealed Shield of Nightmare -->
+				<item id="6678" min="1" max="1" chance="20" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6676" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Gauntlet -->
+				<item id="6681" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Glove -->
+				<item id="6685" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Glove -->
+				<item id="6677" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6682" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6686" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
+				<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="300" />
@@ -1261,39 +1129,33 @@
 			<skill primaryId="4127" />
 		</ai>
 		<dropLists>
-			<death>
+			<drop>
 				<item id="6658" min="1" max="1" chance="100" /> <!-- Ring of Baium -->
 				<item id="8620" min="5" max="15" chance="100" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<group chance="30">
-					<item id="80" min="1" max="1" chance="20" /> <!-- Tallum Blade -->
-					<item id="98" min="1" max="1" chance="20" /> <!-- Halberd -->
-					<item id="288" min="1" max="1" chance="20" /> <!-- Carnage Bow -->
-					<item id="150" min="1" max="1" chance="20" /> <!-- Elemental Sword -->
-					<item id="6364" min="1" max="1" chance="4" /> <!-- Forgotten Blade -->
-					<item id="6365" min="1" max="1" chance="4" /> <!-- Basalt Battlehammer -->
-					<item id="6580" min="1" max="1" chance="3" /> <!-- Tallum Blade*Dark Legion's Edge -->
-					<item id="6367" min="1" max="1" chance="3" /> <!-- Angel Slayer -->
-					<item id="6369" min="1" max="1" chance="3" /> <!-- Dragon Hunter Axe -->
-					<item id="6370" min="1" max="1" chance="3" /> <!-- Saint Spear -->
-				</group>
-				<group chance="30">
-					<item id="269" min="1" max="1" chance="20" /> <!-- Blood Tornado -->
-					<item id="2504" min="1" max="1" chance="20" /> <!-- Meteor Shower -->
-					<item id="235" min="1" max="1" chance="20" /> <!-- Bloody Orchid -->
-					<item id="212" min="1" max="1" chance="20" /> <!-- Dasparion's Staff -->
-					<item id="7575" min="1" max="1" chance="4" /> <!-- Draconic Bow -->
-					<item id="6366" min="1" max="1" chance="4" /> <!-- Imperial Staff -->
-					<item id="6371" min="1" max="1" chance="4" /> <!-- Demon Splinter -->
-					<item id="6579" min="1" max="1" chance="4" /> <!-- Arcana Mace -->
-					<item id="6372" min="1" max="1" chance="4" /> <!-- Heaven's Divider -->
-				</group>
-				<group chance="100">
-					<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
-					<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
-					<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
-				</group>
-			</death>
+				<item id="80" min="1" max="1" chance="6" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="1" chance="6" /> <!-- Halberd -->
+				<item id="288" min="1" max="1" chance="6" /> <!-- Carnage Bow -->
+				<item id="150" min="1" max="1" chance="6" /> <!-- Elemental Sword -->
+				<item id="6364" min="1" max="1" chance="1.2" /> <!-- Forgotten Blade -->
+				<item id="6365" min="1" max="1" chance="1.2" /> <!-- Basalt Battlehammer -->
+				<item id="6580" min="1" max="1" chance="0.9" /> <!-- Tallum Blade*Dark Legion's Edge -->
+				<item id="6367" min="1" max="1" chance="0.9" /> <!-- Angel Slayer -->
+				<item id="6369" min="1" max="1" chance="0.9" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="0.9" /> <!-- Saint Spear -->
+				<item id="269" min="1" max="1" chance="6" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="1" chance="6" /> <!-- Meteor Shower -->
+				<item id="235" min="1" max="1" chance="6" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="6" /> <!-- Dasparion's Staff -->
+				<item id="7575" min="1" max="1" chance="1.2" /> <!-- Draconic Bow -->
+				<item id="6366" min="1" max="1" chance="1.2" /> <!-- Imperial Staff -->
+				<item id="6371" min="1" max="1" chance="1.2" /> <!-- Demon Splinter -->
+				<item id="6579" min="1" max="1" chance="1.2" /> <!-- Arcana Mace -->
+				<item id="6372" min="1" max="1" chance="1.2" /> <!-- Heaven's Divider -->
+				<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
+				<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="65" />
@@ -1379,95 +1241,61 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="30">
-					<item id="135" min="1" max="1" chance="16" /> <!-- Samurai Longsword -->
-					<item id="204" min="1" max="1" chance="4" /> <!-- Deadman's Staff -->
-					<item id="205" min="1" max="1" chance="4" /> <!-- Ghoul's Staff -->
-					<item id="206" min="1" max="1" chance="5" /> <!-- Demon's Staff -->
-					<item id="228" min="1" max="1" chance="16" /> <!-- Crystal Dagger -->
-					<item id="266" min="1" max="1" chance="10" /> <!-- Great Pata -->
-					<item id="286" min="1" max="1" chance="13" /> <!-- Eminence Bow -->
-					<item id="299" min="1" max="1" chance="10" /> <!-- Orcish Poleaxe -->
-					<item id="2503" min="1" max="1" chance="12" /> <!-- Yaksa Mace -->
-					<item id="5286" min="1" max="1" chance="10" /> <!-- Berserker Blade -->
-				</group>
-				<group chance="10">
-					<item id="78" min="1" max="1" chance="10" /> <!-- Great Sword -->
-					<item id="91" min="1" max="1" chance="12" /> <!-- Heavy War Axe -->
-					<item id="92" min="1" max="1" chance="13" /> <!-- Sprite's Staff -->
-					<item id="142" min="1" max="1" chance="8" /> <!-- Keshanberk -->
-					<item id="148" min="1" max="1" chance="8" /> <!-- Sword of Valhalla -->
-					<item id="229" min="1" max="1" chance="8" /> <!-- Kris -->
-					<item id="243" min="1" max="1" chance="8" /> <!-- Hell Knife -->
-					<item id="267" min="1" max="1" chance="10" /> <!-- Arthro Nail -->
-					<item id="284" min="1" max="1" chance="13" /> <!-- Dark Elven Long Bow -->
-					<item id="300" min="1" max="1" chance="10" /> <!-- Great Axe -->
-				</group>
-				<group chance="20">
-					<item id="357" min="1" max="1" chance="25" /> <!-- Zubei's Breastplate -->
-					<item id="2384" min="1" max="1" chance="25" /> <!-- Zubei's Leather Shirt -->
-					<item id="2376" min="1" max="1" chance="25" /> <!-- Avadon Breastplate -->
-					<item id="2397" min="1" max="1" chance="25" /> <!-- Tunic of Zubei -->
-				</group>
-				<group chance="20">
-					<item id="383" min="1" max="1" chance="25" /> <!-- Zubei's Gaiters -->
-					<item id="2379" min="1" max="1" chance="25" /> <!-- Avadon Gaiters -->
-					<item id="2388" min="1" max="1" chance="25" /> <!-- Zubei's Leather Gaiters -->
-					<item id="2402" min="1" max="1" chance="25" /> <!-- Stockings of Zubei -->
-				</group>
-				<group chance="20">
-					<item id="2390" min="1" max="1" chance="50" /> <!-- Avadon Leather Armor -->
-					<item id="2406" min="1" max="1" chance="50" /> <!-- Avadon Robe -->
-				</group>
-				<group chance="30">
-					<item id="503" min="1" max="1" chance="10" /> <!-- Zubei's Helmet -->
-					<item id="554" min="1" max="1" chance="10" /> <!-- Sealed Zubei's Boots -->
-					<item id="600" min="1" max="1" chance="10" /> <!-- Sealed Avadon Boots -->
-					<item id="612" min="1" max="1" chance="10" /> <!-- Sealed Zubei's Gauntlets -->
-					<item id="633" min="1" max="1" chance="10" /> <!-- Zubei's Shield -->
-					<item id="673" min="1" max="1" chance="10" /> <!-- Avadon Shield -->
-					<item id="2415" min="1" max="1" chance="10" /> <!-- Avadon Circlet -->
-					<item id="2464" min="1" max="1" chance="10" /> <!-- Sealed Avadon Gloves -->
-					<item id="947" min="1" max="1" chance="20" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="85">
-					<item id="6659" min="1" max="1" chance="100" /> <!-- Earring of Zaken -->
-				</group>
-				<group chance="100">
-					<item id="8747" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 58 -->
-					<item id="8748" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 61 -->
-					<item id="8757" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 58 -->
-					<item id="8758" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 61 -->
-				</group>
-				<group chance="1">
-					<item id="8922" min="1" max="1" chance="100" /> <!-- Pirate Hat -->
-				</group>
-				<group chance="1.0">
-					<item id="10295" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Zaken -->
-				</group>
-			</death>
+			<drop>
+				<item id="135" min="1" max="1" chance="4.8" /> <!-- Samurai Longsword -->
+				<item id="204" min="1" max="1" chance="1.2" /> <!-- Deadman's Staff -->
+				<item id="205" min="1" max="1" chance="1.2" /> <!-- Ghoul's Staff -->
+				<item id="206" min="1" max="1" chance="1.5" /> <!-- Demon's Staff -->
+				<item id="228" min="1" max="1" chance="4.8" /> <!-- Crystal Dagger -->
+				<item id="266" min="1" max="1" chance="3" /> <!-- Great Pata -->
+				<item id="286" min="1" max="1" chance="3.9" /> <!-- Eminence Bow -->
+				<item id="299" min="1" max="1" chance="3" /> <!-- Orcish Poleaxe -->
+				<item id="2503" min="1" max="1" chance="3.6" /> <!-- Yaksa Mace -->
+				<item id="5286" min="1" max="1" chance="3" /> <!-- Berserker Blade -->
+				<item id="78" min="1" max="1" chance="1" /> <!-- Great Sword -->
+				<item id="91" min="1" max="1" chance="1.2" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="1.3" /> <!-- Sprite's Staff -->
+				<item id="142" min="1" max="1" chance="0.8" /> <!-- Keshanberk -->
+				<item id="148" min="1" max="1" chance="0.8" /> <!-- Sword of Valhalla -->
+				<item id="229" min="1" max="1" chance="0.8" /> <!-- Kris -->
+				<item id="243" min="1" max="1" chance="0.8" /> <!-- Hell Knife -->
+				<item id="267" min="1" max="1" chance="1" /> <!-- Arthro Nail -->
+				<item id="284" min="1" max="1" chance="1.3" /> <!-- Dark Elven Long Bow -->
+				<item id="300" min="1" max="1" chance="1" /> <!-- Great Axe -->
+				<item id="357" min="1" max="1" chance="5" /> <!-- Zubei's Breastplate -->
+				<item id="2384" min="1" max="1" chance="5" /> <!-- Zubei's Leather Shirt -->
+				<item id="2376" min="1" max="1" chance="5" /> <!-- Avadon Breastplate -->
+				<item id="2397" min="1" max="1" chance="5" /> <!-- Tunic of Zubei -->
+				<item id="383" min="1" max="1" chance="5" /> <!-- Zubei's Gaiters -->
+				<item id="2379" min="1" max="1" chance="5" /> <!-- Avadon Gaiters -->
+				<item id="2388" min="1" max="1" chance="5" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2402" min="1" max="1" chance="5" /> <!-- Stockings of Zubei -->
+				<item id="2390" min="1" max="1" chance="10" /> <!-- Avadon Leather Armor -->
+				<item id="2406" min="1" max="1" chance="10" /> <!-- Avadon Robe -->
+				<item id="503" min="1" max="1" chance="3" /> <!-- Zubei's Helmet -->
+				<item id="554" min="1" max="1" chance="3" /> <!-- Sealed Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="3" /> <!-- Sealed Avadon Boots -->
+				<item id="612" min="1" max="1" chance="3" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="633" min="1" max="1" chance="3" /> <!-- Zubei's Shield -->
+				<item id="673" min="1" max="1" chance="3" /> <!-- Avadon Shield -->
+				<item id="2415" min="1" max="1" chance="3" /> <!-- Avadon Circlet -->
+				<item id="2464" min="1" max="1" chance="3" /> <!-- Sealed Avadon Gloves -->
+				<item id="947" min="1" max="1" chance="6" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
+				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
+				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
+				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
+				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
+				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
+				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
+				<item id="6659" min="1" max="1" chance="85" /> <!-- Earring of Zaken -->
+				<item id="8747" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 58 -->
+				<item id="8748" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 61 -->
+				<item id="8757" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 58 -->
+				<item id="8758" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="8922" min="1" max="1" chance="1" /> <!-- Pirate Hat -->
+				<item id="10295" min="1" max="1" chance="1" /> <!-- Transformation Sealbook: Zaken -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="16" />
@@ -1517,11 +1345,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="20">
-					<item id="1061" min="4" max="8" chance="100" /> <!-- Greater Healing Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="1061" min="4" max="8" chance="20" /> <!-- Greater Healing Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="6" />
@@ -1570,11 +1396,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="20">
-					<item id="1061" min="4" max="8" chance="100" /> <!-- Greater Healing Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="1061" min="4" max="8" chance="20" /> <!-- Greater Healing Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="12" />
@@ -1657,11 +1481,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="20">
-					<item id="1061" min="4" max="8" chance="100" /> <!-- Greater Healing Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="1061" min="4" max="8" chance="20" /> <!-- Greater Healing Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="17" />
@@ -1708,11 +1530,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="20">
-					<item id="1061" min="4" max="8" chance="100" /> <!-- Greater Healing Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="1061" min="4" max="8" chance="20" /> <!-- Greater Healing Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="10" />
@@ -1761,91 +1581,65 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
+			<drop>
 				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
-				<group chance="70">
-					<item id="15560" min="1" max="1" chance="9.1" /> <!-- Vigwik Axe -->
-					<item id="15561" min="1" max="1" chance="9.09" /> <!-- Devilish Maul -->
-					<item id="15562" min="1" max="1" chance="9.09" /> <!-- Feather Eye Blade -->
-					<item id="15563" min="1" max="1" chance="9.09" /> <!-- Octo Claw -->
-					<item id="15564" min="1" max="1" chance="9.09" /> <!-- Doubletop Spear -->
-					<item id="15565" min="1" max="1" chance="9.09" /> <!-- Rising Star -->
-					<item id="15566" min="1" max="1" chance="9.09" /> <!-- Black Visage -->
-					<item id="15567" min="1" max="1" chance="9.09" /> <!-- Veniplant Sword -->
-					<item id="15568" min="1" max="1" chance="9.09" /> <!-- Skull Carnium Bow -->
-					<item id="15558" min="1" max="1" chance="9.09" /> <!-- Periel Sword -->
-					<item id="15559" min="1" max="1" chance="9.09" /> <!-- Skull Edge -->
-				</group>
-				<group chance="50">
-					<item id="15544" min="1" max="1" chance="9.09" /> <!-- Eternal Core Sword -->
-					<item id="15545" min="1" max="1" chance="9.09" /> <!-- Mamba Edge -->
-					<item id="15546" min="1" max="1" chance="9.09" /> <!-- Eversor Mace -->
-					<item id="15547" min="1" max="1" chance="9.09" /> <!-- Contristo Hammer -->
-					<item id="15548" min="1" max="1" chance="9.09" /> <!-- Lava Saw -->
-					<item id="15549" min="1" max="1" chance="9.09" /> <!-- Jade Claw -->
-					<item id="15550" min="1" max="1" chance="9.09" /> <!-- Demitelum -->
-					<item id="15551" min="1" max="1" chance="9.09" /> <!-- Sacredium -->
-					<item id="15552" min="1" max="1" chance="9.09" /> <!-- Cyclic Cane -->
-					<item id="15553" min="1" max="1" chance="9.09" /> <!-- Archangel Sword -->
-					<item id="15554" min="1" max="1" chance="9.09" /> <!-- Recurve Thorne Bow -->
-				</group>
-				<group chance="100">
-					<item id="15743" min="1" max="1" chance="9.1" /> <!-- Sealed Vorpal Helmet -->
-					<item id="15744" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Helmet -->
-					<item id="15745" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Circlet -->
-					<item id="15752" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gauntlet -->
-					<item id="15753" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Gloves -->
-					<item id="15754" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gloves -->
-					<item id="15755" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Boots -->
-					<item id="15756" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Boots -->
-					<item id="15757" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shoes -->
-					<item id="15758" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shield -->
-					<item id="15759" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Sigil -->
-				</group>
-				<group chance="100">
-					<item id="15746" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Breastplate -->
-					<item id="15747" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Breastplate -->
-					<item id="15748" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Tunic -->
-					<item id="15749" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Gaiter -->
-					<item id="15750" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Legging -->
-					<item id="15751" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Stockings -->
-				</group>
-				<group chance="50">
-					<item id="15763" min="1" max="1" chance="33.4" /> <!-- Sealed Vorpal Ring -->
-					<item id="15764" min="1" max="1" chance="33.3" /> <!-- Sealed Vorpal Earring -->
-					<item id="15765" min="1" max="1" chance="33.3" /> <!-- Sealed Vorpal Necklace -->
-				</group>
-				<group chance="100">
-					<item id="959" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
-				</group>
-				<group chance="100">
-					<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="2000000" max="6000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="16162" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 85 -->
-					<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
-					<item id="16163" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 85 -->
-					<item id="16167" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 86 -->
-				</group>
-				<group chance="100">
-					<item id="6657" min="1" max="1" chance="100" /> <!-- Necklace of Valakas -->
-				</group>
-				<group chance="100.0">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
-				</group>
-			</death>
+				<item id="15560" min="1" max="1" chance="6.37" /> <!-- Vigwik Axe -->
+				<item id="15561" min="1" max="1" chance="6.363" /> <!-- Devilish Maul -->
+				<item id="15562" min="1" max="1" chance="6.363" /> <!-- Feather Eye Blade -->
+				<item id="15563" min="1" max="1" chance="6.363" /> <!-- Octo Claw -->
+				<item id="15564" min="1" max="1" chance="6.363" /> <!-- Doubletop Spear -->
+				<item id="15565" min="1" max="1" chance="6.363" /> <!-- Rising Star -->
+				<item id="15566" min="1" max="1" chance="6.363" /> <!-- Black Visage -->
+				<item id="15567" min="1" max="1" chance="6.363" /> <!-- Veniplant Sword -->
+				<item id="15568" min="1" max="1" chance="6.363" /> <!-- Skull Carnium Bow -->
+				<item id="15558" min="1" max="1" chance="6.363" /> <!-- Periel Sword -->
+				<item id="15559" min="1" max="1" chance="6.363" /> <!-- Skull Edge -->
+				<item id="15544" min="1" max="1" chance="4.545" /> <!-- Eternal Core Sword -->
+				<item id="15545" min="1" max="1" chance="4.545" /> <!-- Mamba Edge -->
+				<item id="15546" min="1" max="1" chance="4.545" /> <!-- Eversor Mace -->
+				<item id="15547" min="1" max="1" chance="4.545" /> <!-- Contristo Hammer -->
+				<item id="15548" min="1" max="1" chance="4.545" /> <!-- Lava Saw -->
+				<item id="15549" min="1" max="1" chance="4.545" /> <!-- Jade Claw -->
+				<item id="15550" min="1" max="1" chance="4.545" /> <!-- Demitelum -->
+				<item id="15551" min="1" max="1" chance="4.545" /> <!-- Sacredium -->
+				<item id="15552" min="1" max="1" chance="4.545" /> <!-- Cyclic Cane -->
+				<item id="15553" min="1" max="1" chance="4.545" /> <!-- Archangel Sword -->
+				<item id="15554" min="1" max="1" chance="4.545" /> <!-- Recurve Thorne Bow -->
+				<item id="15743" min="1" max="1" chance="9.1" /> <!-- Sealed Vorpal Helmet -->
+				<item id="15744" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Helmet -->
+				<item id="15745" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Circlet -->
+				<item id="15752" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gauntlet -->
+				<item id="15753" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Gloves -->
+				<item id="15754" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gloves -->
+				<item id="15755" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Boots -->
+				<item id="15756" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Boots -->
+				<item id="15757" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shoes -->
+				<item id="15758" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shield -->
+				<item id="15759" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Sigil -->
+				<item id="15746" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Breastplate -->
+				<item id="15747" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Breastplate -->
+				<item id="15748" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Tunic -->
+				<item id="15749" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Gaiter -->
+				<item id="15750" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Legging -->
+				<item id="15751" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Stockings -->
+				<item id="15763" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Ring -->
+				<item id="15764" min="1" max="1" chance="16.65" /> <!-- Sealed Vorpal Earring -->
+				<item id="15765" min="1" max="1" chance="16.65" /> <!-- Sealed Vorpal Necklace -->
+				<item id="959" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="2000000" max="6000000" chance="100" /> <!-- Adena -->
+				<item id="16162" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 85 -->
+				<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
+				<item id="16163" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 85 -->
+				<item id="16167" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 86 -->
+				<item id="6657" min="1" max="1" chance="100" /> <!-- Necklace of Valakas -->
+				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
+				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
+				<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="190" />
@@ -1952,13 +1746,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="29.326099395751953">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
-					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
-					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
-				</group>
-			</death>
+			<drop>
+				<item id="6652" min="2" max="6" chance="18.6738630078354" /> <!-- Scroll: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.48397125030136" /> <!-- Scroll: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.1682651376152" /> <!-- Scroll: Slay Valakas -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="21" />
@@ -2101,13 +1893,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="29.7450008392334">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
-					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
-					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
-				</group>
-			</death>
+			<drop>
+				<item id="6652" min="2" max="6" chance="18.9406052043953" /> <!-- Scroll: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.57658994055367" /> <!-- Scroll: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.22780569428444" /> <!-- Scroll: Slay Valakas -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="21" />
@@ -2252,13 +2042,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="30.19099998474121">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
-					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
-					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
-				</group>
-			</death>
+			<drop>
+				<item id="6652" min="2" max="6" chance="19.2246022962837" /> <!-- Scroll: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.6751999056263" /> <!-- Scroll: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.29119778283119" /> <!-- Scroll: Slay Valakas -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="21" />
@@ -2317,13 +2105,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="30.621299743652344">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
-					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
-					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
-				</group>
-			</death>
+			<drop>
+				<item id="6652" min="2" max="6" chance="19.4986025525665" /> <!-- Scroll: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.77033875202179" /> <!-- Scroll: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.35235843906403" /> <!-- Scroll: Slay Valakas -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="21" />
@@ -2481,13 +2267,11 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="31.03580093383789">
-					<item id="6652" min="2" max="6" chance="63.6766" /> <!-- Scroll: Protection of Valakas -->
-					<item id="6654" min="18" max="54" chance="22.1099" /> <!-- Scroll: Flames of Valakas -->
-					<item id="6655" min="14" max="42" chance="14.2135" /> <!-- Scroll: Slay Valakas -->
-				</group>
-			</death>
+			<drop>
+				<item id="6652" min="2" max="6" chance="19.7625428174362" /> <!-- Scroll: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.86198455067062" /> <!-- Scroll: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.41127356573105" /> <!-- Scroll: Slay Valakas -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="29" />
@@ -2808,68 +2592,48 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
+			<drop>
 				<item id="8620" min="5" max="25" chance="60" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="1" chance="40" /> <!-- Sealed Holy Spirit's Cloak -->
-				<group chance="70">
-					<item id="15743" min="1" max="1" chance="9.1" /> <!-- Sealed Vorpal Helmet -->
-					<item id="15744" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Helmet -->
-					<item id="15745" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Circlet -->
-					<item id="15752" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gauntlet -->
-					<item id="15753" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Gloves -->
-					<item id="15754" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gloves -->
-					<item id="15755" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Boots -->
-					<item id="15756" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Boots -->
-					<item id="15757" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shoes -->
-					<item id="15758" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shield -->
-					<item id="15759" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Sigil -->
-				</group>
-				<group chance="70">
-					<item id="15746" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Breastplate -->
-					<item id="15747" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Breastplate -->
-					<item id="15748" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Tunic -->
-					<item id="15749" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Gaiter -->
-					<item id="15750" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Legging -->
-					<item id="15751" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Stockings -->
-				</group>
-				<group chance="50">
-					<item id="13457" min="1" max="1" chance="9.1" /> <!-- Vesper Cutter -->
-					<item id="13458" min="1" max="1" chance="9.09" /> <!-- Vesper Slasher -->
-					<item id="13459" min="1" max="1" chance="9.09" /> <!-- Vesper Buster -->
-					<item id="13460" min="1" max="1" chance="9.09" /> <!-- Vesper Shaper -->
-					<item id="13466" min="1" max="1" chance="9.09" /> <!-- Vesper Singer -->
-					<item id="13461" min="1" max="1" chance="9.09" /> <!-- Vesper Fighter -->
-					<item id="13462" min="1" max="1" chance="9.09" /> <!-- Vesper Stormer -->
-					<item id="13463" min="1" max="1" chance="9.09" /> <!-- Vesper Avenger -->
-					<item id="13464" min="1" max="1" chance="9.09" /> <!-- Vesper Retributer -->
-					<item id="13465" min="1" max="1" chance="9.09" /> <!-- Vesper Caster -->
-					<item id="13467" min="1" max="1" chance="9.09" /> <!-- Vesper Thrower -->
-				</group>
-				<group chance="60">
-					<item id="1538" min="1" max="30" chance="100" /> <!-- Blessed Scroll of Escape -->
-				</group>
-				<group chance="60">
-					<item id="3936" min="1" max="10" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
-				<group chance="100">
-					<item id="57" min="9000000" max="11000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="9000000" max="11000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="16162" min="2" max="4" chance="60" /> <!-- High-Grade Life Stone - Level 85 -->
-					<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
-				</group>
-				<group chance="30">
-					<item id="8191" min="1" max="1" chance="100" /> <!-- Necklace of Frintezza -->
-				</group>
-				<group chance="100.0">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
-				</group>
-			</death>
+				<item id="15743" min="1" max="1" chance="6.37" /> <!-- Sealed Vorpal Helmet -->
+				<item id="15744" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Leather Helmet -->
+				<item id="15745" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Circlet -->
+				<item id="15752" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Gauntlet -->
+				<item id="15753" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Leather Gloves -->
+				<item id="15754" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Gloves -->
+				<item id="15755" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Boots -->
+				<item id="15756" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Leather Boots -->
+				<item id="15757" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Shoes -->
+				<item id="15758" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Shield -->
+				<item id="15759" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Sigil -->
+				<item id="15746" min="1" max="1" chance="11.69" /> <!-- Sealed Vorpal Breastplate -->
+				<item id="15747" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Leather Breastplate -->
+				<item id="15748" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Tunic -->
+				<item id="15749" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Gaiter -->
+				<item id="15750" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Leather Legging -->
+				<item id="15751" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Stockings -->
+				<item id="13457" min="1" max="1" chance="4.55" /> <!-- Vesper Cutter -->
+				<item id="13458" min="1" max="1" chance="4.545" /> <!-- Vesper Slasher -->
+				<item id="13459" min="1" max="1" chance="4.545" /> <!-- Vesper Buster -->
+				<item id="13460" min="1" max="1" chance="4.545" /> <!-- Vesper Shaper -->
+				<item id="13466" min="1" max="1" chance="4.545" /> <!-- Vesper Singer -->
+				<item id="13461" min="1" max="1" chance="4.545" /> <!-- Vesper Fighter -->
+				<item id="13462" min="1" max="1" chance="4.545" /> <!-- Vesper Stormer -->
+				<item id="13463" min="1" max="1" chance="4.545" /> <!-- Vesper Avenger -->
+				<item id="13464" min="1" max="1" chance="4.545" /> <!-- Vesper Retributer -->
+				<item id="13465" min="1" max="1" chance="4.545" /> <!-- Vesper Caster -->
+				<item id="13467" min="1" max="1" chance="4.545" /> <!-- Vesper Thrower -->
+				<item id="1538" min="1" max="30" chance="60" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="10" chance="60" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="57" min="9000000" max="11000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="9000000" max="11000000" chance="100" /> <!-- Adena -->
+				<item id="16162" min="2" max="4" chance="60" /> <!-- High-Grade Life Stone - Level 85 -->
+				<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
+				<item id="8191" min="1" max="1" chance="30" /> <!-- Necklace of Frintezza -->
+				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
+				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
+				<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="92" />
@@ -3173,23 +2937,17 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="1000" />
 		<dropLists>
-			<death>
-				<group chance="68.26920318603516">
-					<item id="6674" min="1" max="1" chance="2.619" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="4.1798" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6701" min="8" max="22" chance="66.4645" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-					<item id="6702" min="24" max="72" chance="26.7367" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				</group>
-				<group chance="37.97719955444336">
-					<item id="6364" min="1" max="1" chance="2.0694" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="2.0694" /> <!-- Heaven's Divider -->
-					<item id="6688" min="8" max="22" chance="72.7618" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="24" max="72" chance="23.0994" /> <!-- Heavens Divider Edge -->
-				</group>
-				<group chance="1.0">
-					<item id="10297" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Venom -->
-				</group>
-			</death>
+			<drop>
+				<item id="6674" min="1" max="1" chance="1.78797043144226" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="2.8535161547699" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6701" min="8" max="22" chance="45.3747845515823" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6702" min="24" max="72" chance="18.2529320482407" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				<item id="6364" min="1" max="1" chance="0.785900167579651" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.785900167579651" /> <!-- Heaven's Divider -->
+				<item id="6688" min="8" max="22" chance="27.632893985405" /> <!-- Forgotten Blade Edge -->
+				<item id="6696" min="24" max="72" chance="8.77250523387909" /> <!-- Heavens Divider Edge -->
+				<item id="10297" min="1" max="1" chance="1" /> <!-- Transformation Sealbook: Venom -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="20" />
@@ -3291,34 +3049,26 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="69.37020111083984">
-					<item id="110" min="1" max="1" chance="5.169" /> <!-- Doom Shield -->
-					<item id="2416" min="1" max="1" chance="3.6098" /> <!-- Blue Wolf Helmet -->
-					<item id="2417" min="1" max="1" chance="3.6098" /> <!-- Doom Helmet -->
-					<item id="4077" min="40" max="120" chance="12.2803" /> <!-- Doom Shield Fragment -->
-					<item id="4088" min="9" max="27" chance="45.8537" /> <!-- Blue Wolf Helmet Design -->
-					<item id="4089" min="14" max="42" chance="29.4774" /> <!-- Doom Helmet Pattern -->
-				</group>
-				<group chance="49.42179870605469">
-					<item id="171" min="1" max="1" chance="0.4212" /> <!-- Deadman's Glory -->
-					<item id="175" min="1" max="1" chance="0.4212" /> <!-- Art of Battle Axe -->
-					<item id="210" min="1" max="1" chance="0.4212" /> <!-- Staff of Evil Spirits -->
-					<item id="7893" min="1" max="1" chance="0.4212" /> <!-- Kaim Vanul's Bones -->
-					<item id="7901" min="1" max="1" chance="0.4212" /> <!-- Star Buster -->
-					<item id="4116" min="3" max="9" chance="20.0929" /> <!-- Deadman's Glory Stone -->
-					<item id="4117" min="4" max="10" chance="17.2225" /> <!-- Art of Battle Axe Blade -->
-					<item id="4118" min="4" max="12" chance="14.2776" /> <!-- Evil Spirit Head -->
-					<item id="8340" min="36" max="108" chance="7.9829" /> <!-- Bones Head of Kaim Vanul -->
-					<item id="8348" min="8" max="22" chance="38.3181" /> <!-- Star Buster Head -->
-				</group>
-				<group chance="20">
-					<item id="8180" min="1" max="1" chance="100" /> <!-- Circlet of Ice Fairy Sirra -->
-				</group>
-				<group chance="35.06890106201172">
-					<item id="1343" min="100" max="200" chance="100" /> <!-- Silver Arrow -->
-				</group>
-			</death>
+			<drop>
+				<item id="110" min="1" max="1" chance="3.58574569541931" /> <!-- Doom Shield -->
+				<item id="2416" min="1" max="1" chance="2.5041255196991" /> <!-- Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="2.5041255196991" /> <!-- Doom Helmet -->
+				<item id="4077" min="40" max="120" chance="8.51886880701447" /> <!-- Doom Shield Fragment -->
+				<item id="4088" min="9" max="27" chance="31.8088039067612" /> <!-- Blue Wolf Helmet Design -->
+				<item id="4089" min="14" max="42" chance="20.4485316622467" /> <!-- Doom Helmet Pattern -->
+				<item id="171" min="1" max="1" chance="0.208164616149902" /> <!-- Deadman's Glory -->
+				<item id="175" min="1" max="1" chance="0.208164616149902" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="0.208164616149902" /> <!-- Staff of Evil Spirits -->
+				<item id="7893" min="1" max="1" chance="0.208164616149902" /> <!-- Kaim Vanul's Bones -->
+				<item id="7901" min="1" max="1" chance="0.208164616149902" /> <!-- Star Buster -->
+				<item id="4116" min="3" max="9" chance="9.93027259220886" /> <!-- Deadman's Glory Stone -->
+				<item id="4117" min="4" max="10" chance="8.51166928215027" /> <!-- Art of Battle Axe Blade -->
+				<item id="4118" min="4" max="12" chance="7.05624673205566" /> <!-- Evil Spirit Head -->
+				<item id="8340" min="36" max="108" chance="3.94529276890564" /> <!-- Bones Head of Kaim Vanul -->
+				<item id="8348" min="8" max="22" chance="18.9374942499847" /> <!-- Star Buster Head -->
+				<item id="8180" min="1" max="1" chance="20" /> <!-- Circlet of Ice Fairy Sirra -->
+				<item id="1343" min="100" max="200" chance="35.0689010620117" /> <!-- Silver Arrow -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="16" />
@@ -3368,11 +3118,9 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="92.80000305175781">
-					<item id="1344" min="20" max="60" chance="100" /> <!-- Mithril Arrow -->
-				</group>
-			</death>
+			<drop>
+				<item id="1344" min="20" max="60" chance="92.8000030517578" /> <!-- Mithril Arrow -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="12" />
@@ -3416,11 +3164,9 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="22.773300170898438">
-					<item id="1539" min="1" max="1" chance="100" /> <!-- Greater Healing Potion -->
-				</group>
-			</death>
+			<drop>
+				<item id="1539" min="1" max="1" chance="22.7733001708984" /> <!-- Greater Healing Potion -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="18" />
@@ -3512,23 +3258,17 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="56.09880065917969">
-					<item id="2391" min="1" max="1" chance="2.486" /> <!-- Blue Wolf Leather Armor -->
-					<item id="2392" min="1" max="1" chance="2.486" /> <!-- Leather Armor of Doom -->
-					<item id="4082" min="4" max="12" chance="61.9748" /> <!-- Blue Wolf Leather Armor Texture -->
-					<item id="4083" min="8" max="22" chance="33.0532" /> <!-- Leather Armor of Doom Design -->
-				</group>
-				<group chance="54.72829818725586">
-					<item id="287" min="1" max="1" chance="2.06" /> <!-- Bow of Peril -->
-					<item id="4121" min="3" max="9" chance="97.94" /> <!-- Bow of Peril Shaft -->
-				</group>
-				<group chance="80.68769836425781">
-					<item id="4616" min="1" max="3" chance="27.2727" /> <!-- Greater Dye of CON <Con+4 Dex-4> -->
-					<item id="4617" min="2" max="4" chance="18.1818" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
-					<item id="4618" min="1" max="1" chance="54.5455" /> <!-- Greater Dye of DEX <Dex+4 Con-4> -->
-				</group>
-			</death>
+			<drop>
+				<item id="2391" min="1" max="1" chance="1.39461618438721" /> <!-- Blue Wolf Leather Armor -->
+				<item id="2392" min="1" max="1" chance="1.39461618438721" /> <!-- Leather Armor of Doom -->
+				<item id="4082" min="4" max="12" chance="34.7671195109253" /> <!-- Blue Wolf Leather Armor Texture -->
+				<item id="4083" min="8" max="22" chance="18.54244877948" /> <!-- Leather Armor of Doom Design -->
+				<item id="287" min="1" max="1" chance="1.12740294265747" /> <!-- Bow of Peril -->
+				<item id="4121" min="3" max="9" chance="53.6008952445984" /> <!-- Bow of Peril Shaft -->
+				<item id="4616" min="1" max="3" chance="22.0057139117889" /> <!-- Greater Dye of CON <Con+4 Dex-4> -->
+				<item id="4617" min="2" max="4" chance="14.6704759411926" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
+				<item id="4618" min="1" max="1" chance="44.0115085112762" /> <!-- Greater Dye of DEX <Dex+4 Con-4> -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="19" />
@@ -3622,22 +3362,16 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="32.33980178833008">
-					<item id="6684" min="1" max="1" chance="5.274" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="12" max="36" chance="94.726" /> <!-- Sealed Major Arcana Robe Part -->
-				</group>
-				<group chance="24.400800704956055">
-					<item id="7575" min="1" max="1" chance="4.3049" /> <!-- Draconic Bow -->
-					<item id="7579" min="12" max="36" chance="95.6951" /> <!-- Draconic Bow Shaft -->
-				</group>
-				<group chance="67.75350189208984">
-					<item id="8921" min="1" max="1" chance="47.2441" /> <!-- Demon Circlet -->
-					<item id="959" min="1" max="1" chance="4.7244" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="47.2441" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="0.7874" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="6684" min="1" max="1" chance="1.70560114631653" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6711" min="12" max="36" chance="30.6342006420135" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="7575" min="1" max="1" chance="1.05043006954765" /> <!-- Draconic Bow -->
+				<item id="7579" min="12" max="36" chance="23.3503706354084" /> <!-- Draconic Bow Shaft -->
+				<item id="8921" min="1" max="1" chance="32.0095321874008" /> <!-- Demon Circlet -->
+				<item id="959" min="1" max="1" chance="3.20094644338989" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="32.0095321874008" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.533491073898315" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="9" />
@@ -3688,11 +3422,9 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="38.49330139160156">
-					<item id="1344" min="60" max="180" chance="100" /> <!-- Mithril Arrow -->
-				</group>
-			</death>
+			<drop>
+				<item id="1344" min="60" max="180" chance="38.4933013916016" /> <!-- Mithril Arrow -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="7.7" />
@@ -3743,11 +3475,9 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="37.599998474121094">
-					<item id="1344" min="60" max="180" chance="100" /> <!-- Mithril Arrow -->
-				</group>
-			</death>
+			<drop>
+				<item id="1344" min="60" max="180" chance="37.5999984741211" /> <!-- Mithril Arrow -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="7.7" />
@@ -3801,21 +3531,15 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="53.194801330566406">
-					<item id="6680" min="1" max="1" chance="1.3728" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6707" min="3" max="9" chance="98.6272" /> <!-- Sealed Draconic Leather Armor Part -->
-				</group>
-				<group chance="39.980899810791016">
-					<item id="6367" min="1" max="1" chance="1.1249" /> <!-- Angel Slayer -->
-					<item id="6691" min="3" max="9" chance="98.8751" /> <!-- Angel Slayer Blade -->
-				</group>
-				<group chance="20.40530014038086">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="6680" min="1" max="1" chance="0.730258232666016" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6707" min="3" max="9" chance="52.4645430979004" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6367" min="1" max="1" chance="0.449745141971588" /> <!-- Angel Slayer -->
+				<item id="6691" min="3" max="9" chance="39.5311546688194" /> <!-- Angel Slayer Blade -->
+				<item id="959" min="1" max="1" chance="1.82733543817139" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="18.2733951923141" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.304569509895325" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="100" />
@@ -3863,176 +3587,108 @@
 			<skill maxChance="25" />
 		</ai>
 		<dropLists>
-			<death>
+			<drop>
 				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
-				<group chance="100">
-					<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
-					<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
-					<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
-					<item id="2504" min="1" max="2" chance="25" /> <!-- Meteor Shower -->
-				</group>
-				<group chance="100">
-					<item id="235" min="1" max="2" chance="25" /> <!-- Bloody Orchid -->
-					<item id="288" min="1" max="2" chance="25" /> <!-- Carnage Bow -->
-					<item id="150" min="1" max="2" chance="25" /> <!-- Elemental Sword -->
-					<item id="212" min="1" max="2" chance="25" /> <!-- Dasparion's Staff -->
-				</group>
-				<group chance="100">
-					<item id="81" min="1" max="2" chance="25" /> <!-- Dragon Slayer -->
-					<item id="151" min="1" max="2" chance="25" /> <!-- Sword of Miracles -->
-					<item id="2500" min="1" max="2" chance="25" /> <!-- Dark Legion's Edge -->
-					<item id="164" min="1" max="2" chance="25" /> <!-- Elysian -->
-				</group>
-				<group chance="100">
-					<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
-					<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
-					<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
-					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
-					<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
-				</group>
-				<group chance="100">
-					<item id="6364" min="1" max="1" chance="17" /> <!-- Forgotten Blade -->
-					<item id="6365" min="1" max="1" chance="17" /> <!-- Basalt Battlehammer -->
-					<item id="6369" min="1" max="1" chance="17" /> <!-- Dragon Hunter Axe -->
-					<item id="6370" min="1" max="1" chance="17" /> <!-- Saint Spear -->
-					<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
-					<item id="6580" min="1" max="1" chance="16" /> <!-- Tallum Blade*Dark Legion's Edge -->
-				</group>
-				<group chance="100">
-					<item id="7575" min="1" max="1" chance="20" /> <!-- Draconic Bow -->
-					<item id="6366" min="1" max="1" chance="20" /> <!-- Imperial Staff -->
-					<item id="6367" min="1" max="1" chance="20" /> <!-- Angel Slayer -->
-					<item id="6371" min="1" max="1" chance="20" /> <!-- Demon Splinter -->
-					<item id="6579" min="1" max="1" chance="20" /> <!-- Arcana Mace -->
-				</group>
-				<group chance="100">
-					<item id="6326" min="1" max="5" chance="30" /> <!-- Sealed Majestic Necklace -->
-					<item id="6327" min="1" max="5" chance="35" /> <!-- Sealed Majestic Earring -->
-					<item id="6328" min="1" max="5" chance="35" /> <!-- Sealed Majestic Ring -->
-				</group>
-				<group chance="100">
-					<item id="6323" min="1" max="5" chance="30" /> <!-- Sealed Phoenix Necklace -->
-					<item id="6324" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Earring -->
-					<item id="6325" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Ring -->
-				</group>
-				<group chance="100">
-					<item id="6724" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="30" /> <!-- Sealed Tateossian Necklace -->
-				</group>
-				<group chance="100">
-					<item id="5287" min="1" max="3" chance="50" /> <!-- Sealed Dark Crystal breastplate -->
-					<item id="5297" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
-				</group>
-				<group chance="100">
-					<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
-					<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
-					<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
-				</group>
-				<group chance="100">
-					<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
-					<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
-					<item id="5316" min="1" max="3" chance="8" /> <!-- Sealed Majestic Plate Armor -->
-					<item id="5323" min="1" max="3" chance="8" /> <!-- Sealed Majestic Leather Armor -->
-					<item id="5329" min="1" max="3" chance="9" /> <!-- Sealed Majestic Robe -->
-				</group>
-				<group chance="100">
-					<item id="5288" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Gaiters -->
-					<item id="5298" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5305" min="1" max="3" chance="30" /> <!-- Sealed Tallum Stockings -->
-				</group>
-				<group chance="100">
-					<item id="6674" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6680" min="1" max="1" chance="35" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6684" min="1" max="1" chance="35" /> <!-- Sealed Major Arcana Robe -->
-				</group>
-				<group chance="100">
-					<item id="5289" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5294" min="1" max="3" chance="25" /> <!-- Sealed Tallum Helmet -->
-					<item id="5312" min="1" max="3" chance="25" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5317" min="1" max="3" chance="25" /> <!-- Sealed Majestic Circlet -->
-				</group>
-				<group chance="100">
-					<item id="5291" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Boots -->
-					<item id="5296" min="1" max="3" chance="25" /> <!-- Sealed Tallum Boots -->
-					<item id="5314" min="1" max="3" chance="25" /> <!-- Sealed Boots of Nightmare -->
-					<item id="5319" min="1" max="3" chance="25" /> <!-- Sealed Majestic Boots -->
-				</group>
-				<group chance="100">
-					<item id="5290" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Gloves -->
-					<item id="5295" min="1" max="3" chance="25" /> <!-- Sealed Tallum Gloves -->
-					<item id="5313" min="1" max="3" chance="25" /> <!-- Sealed Gauntlets of Nightmare -->
-					<item id="5318" min="1" max="3" chance="25" /> <!-- Sealed Majestic Gauntlets -->
-				</group>
-				<group chance="100">
-					<item id="5292" min="1" max="3" chance="40" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5315" min="1" max="3" chance="40" /> <!-- Sealed Shield of Nightmare -->
-					<item id="6678" min="1" max="1" chance="20" /> <!-- Sealed Imperial Crusader Shield -->
-				</group>
-				<group chance="100">
-					<item id="6676" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6681" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6685" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Glove -->
-				</group>
-				<group chance="100">
-					<item id="6677" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6682" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6686" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Boots -->
-				</group>
-				<group chance="100">
-					<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
-				</group>
-				<group chance="100">
-					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
-				</group>
-				<group chance="100">
-					<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="8751" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8752" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
-					<item id="8761" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
-					<item id="8762" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
-				</group>
-				<group chance="100">
-					<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
-				</group>
-				<group chance="100.0">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
-				</group>
-			</death>
+				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
+				<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="2" chance="25" /> <!-- Meteor Shower -->
+				<item id="235" min="1" max="2" chance="25" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="2" chance="25" /> <!-- Carnage Bow -->
+				<item id="150" min="1" max="2" chance="25" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="2" chance="25" /> <!-- Dasparion's Staff -->
+				<item id="81" min="1" max="2" chance="25" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="2" chance="25" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="2" chance="25" /> <!-- Dark Legion's Edge -->
+				<item id="164" min="1" max="2" chance="25" /> <!-- Elysian -->
+				<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
+				<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
+				<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+				<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
+				<item id="6364" min="1" max="1" chance="17" /> <!-- Forgotten Blade -->
+				<item id="6365" min="1" max="1" chance="17" /> <!-- Basalt Battlehammer -->
+				<item id="6369" min="1" max="1" chance="17" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="17" /> <!-- Saint Spear -->
+				<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
+				<item id="6580" min="1" max="1" chance="16" /> <!-- Tallum Blade*Dark Legion's Edge -->
+				<item id="7575" min="1" max="1" chance="20" /> <!-- Draconic Bow -->
+				<item id="6366" min="1" max="1" chance="20" /> <!-- Imperial Staff -->
+				<item id="6367" min="1" max="1" chance="20" /> <!-- Angel Slayer -->
+				<item id="6371" min="1" max="1" chance="20" /> <!-- Demon Splinter -->
+				<item id="6579" min="1" max="1" chance="20" /> <!-- Arcana Mace -->
+				<item id="6326" min="1" max="5" chance="30" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="5" chance="35" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="5" chance="35" /> <!-- Sealed Majestic Ring -->
+				<item id="6323" min="1" max="5" chance="30" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Ring -->
+				<item id="6724" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Earring -->
+				<item id="6725" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Ring -->
+				<item id="6726" min="1" max="1" chance="30" /> <!-- Sealed Tateossian Necklace -->
+				<item id="5287" min="1" max="3" chance="50" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5297" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
+				<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5316" min="1" max="3" chance="8" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="3" chance="8" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="3" chance="9" /> <!-- Sealed Majestic Robe -->
+				<item id="5288" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5298" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="3" chance="30" /> <!-- Sealed Tallum Stockings -->
+				<item id="6674" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6680" min="1" max="1" chance="35" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6684" min="1" max="1" chance="35" /> <!-- Sealed Major Arcana Robe -->
+				<item id="5289" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="3" chance="25" /> <!-- Sealed Tallum Helmet -->
+				<item id="5312" min="1" max="3" chance="25" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="3" chance="25" /> <!-- Sealed Majestic Circlet -->
+				<item id="5291" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5296" min="1" max="3" chance="25" /> <!-- Sealed Tallum Boots -->
+				<item id="5314" min="1" max="3" chance="25" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="3" chance="25" /> <!-- Sealed Majestic Boots -->
+				<item id="5290" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="25" /> <!-- Sealed Tallum Gloves -->
+				<item id="5313" min="1" max="3" chance="25" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="3" chance="25" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5292" min="1" max="3" chance="40" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="3" chance="40" /> <!-- Sealed Shield of Nightmare -->
+				<item id="6678" min="1" max="1" chance="20" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6676" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Gauntlet -->
+				<item id="6681" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Glove -->
+				<item id="6685" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Glove -->
+				<item id="6677" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6682" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6686" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
+				<item id="8751" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
+				<item id="8752" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="8761" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8762" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
+				<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
+				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
+				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
+				<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="300" />
@@ -4080,179 +3736,109 @@
 			<skill maxChance="25" />
 		</ai>
 		<dropLists>
-			<death>
+			<drop>
 				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
-				<group chance="100">
-					<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
-					<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
-					<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
-					<item id="2504" min="1" max="2" chance="25" /> <!-- Meteor Shower -->
-				</group>
-				<group chance="100">
-					<item id="235" min="1" max="2" chance="25" /> <!-- Bloody Orchid -->
-					<item id="288" min="1" max="2" chance="25" /> <!-- Carnage Bow -->
-					<item id="150" min="1" max="2" chance="25" /> <!-- Elemental Sword -->
-					<item id="212" min="1" max="2" chance="25" /> <!-- Dasparion's Staff -->
-				</group>
-				<group chance="100">
-					<item id="81" min="1" max="2" chance="25" /> <!-- Dragon Slayer -->
-					<item id="151" min="1" max="2" chance="25" /> <!-- Sword of Miracles -->
-					<item id="2500" min="1" max="2" chance="25" /> <!-- Dark Legion's Edge -->
-					<item id="164" min="1" max="2" chance="25" /> <!-- Elysian -->
-				</group>
-				<group chance="100">
-					<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
-					<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
-					<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
-					<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
-					<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
-				</group>
-				<group chance="100">
-					<item id="6364" min="1" max="1" chance="17" /> <!-- Forgotten Blade -->
-					<item id="6365" min="1" max="1" chance="17" /> <!-- Basalt Battlehammer -->
-					<item id="6369" min="1" max="1" chance="17" /> <!-- Dragon Hunter Axe -->
-					<item id="6370" min="1" max="1" chance="17" /> <!-- Saint Spear -->
-					<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
-					<item id="6580" min="1" max="1" chance="16" /> <!-- Tallum Blade*Dark Legion's Edge -->
-				</group>
-				<group chance="100">
-					<item id="7575" min="1" max="1" chance="20" /> <!-- Draconic Bow -->
-					<item id="6366" min="1" max="1" chance="20" /> <!-- Imperial Staff -->
-					<item id="6367" min="1" max="1" chance="20" /> <!-- Angel Slayer -->
-					<item id="6371" min="1" max="1" chance="20" /> <!-- Demon Splinter -->
-					<item id="6579" min="1" max="1" chance="20" /> <!-- Arcana Mace -->
-				</group>
-				<group chance="100">
-					<item id="6326" min="1" max="5" chance="30" /> <!-- Sealed Majestic Necklace -->
-					<item id="6327" min="1" max="5" chance="35" /> <!-- Sealed Majestic Earring -->
-					<item id="6328" min="1" max="5" chance="35" /> <!-- Sealed Majestic Ring -->
-				</group>
-				<group chance="100">
-					<item id="6323" min="1" max="5" chance="30" /> <!-- Sealed Phoenix Necklace -->
-					<item id="6324" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Earring -->
-					<item id="6325" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Ring -->
-				</group>
-				<group chance="100">
-					<item id="6724" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Earring -->
-					<item id="6725" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Ring -->
-					<item id="6726" min="1" max="1" chance="30" /> <!-- Sealed Tateossian Necklace -->
-				</group>
-				<group chance="100">
-					<item id="5287" min="1" max="3" chance="50" /> <!-- Sealed Dark Crystal breastplate -->
-					<item id="5297" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Leather Armor -->
-					<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
-				</group>
-				<group chance="100">
-					<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
-					<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
-					<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
-				</group>
-				<group chance="100">
-					<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
-					<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
-					<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
-					<item id="5316" min="1" max="3" chance="8" /> <!-- Sealed Majestic Plate Armor -->
-					<item id="5323" min="1" max="3" chance="8" /> <!-- Sealed Majestic Leather Armor -->
-					<item id="5329" min="1" max="3" chance="9" /> <!-- Sealed Majestic Robe -->
-				</group>
-				<group chance="100">
-					<item id="5288" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Gaiters -->
-					<item id="5298" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Leggings -->
-					<item id="5305" min="1" max="3" chance="30" /> <!-- Sealed Tallum Stockings -->
-				</group>
-				<group chance="100">
-					<item id="6674" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6680" min="1" max="1" chance="35" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6684" min="1" max="1" chance="35" /> <!-- Sealed Major Arcana Robe -->
-				</group>
-				<group chance="100">
-					<item id="5289" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Helmet -->
-					<item id="5294" min="1" max="3" chance="25" /> <!-- Sealed Tallum Helmet -->
-					<item id="5312" min="1" max="3" chance="25" /> <!-- Sealed Helm of Nightmare -->
-					<item id="5317" min="1" max="3" chance="25" /> <!-- Sealed Majestic Circlet -->
-				</group>
-				<group chance="100">
-					<item id="5291" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Boots -->
-					<item id="5296" min="1" max="3" chance="25" /> <!-- Sealed Tallum Boots -->
-					<item id="5314" min="1" max="3" chance="25" /> <!-- Sealed Boots of Nightmare -->
-					<item id="5319" min="1" max="3" chance="25" /> <!-- Sealed Majestic Boots -->
-				</group>
-				<group chance="100">
-					<item id="5290" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Gloves -->
-					<item id="5295" min="1" max="3" chance="25" /> <!-- Sealed Tallum Gloves -->
-					<item id="5313" min="1" max="3" chance="25" /> <!-- Sealed Gauntlets of Nightmare -->
-					<item id="5318" min="1" max="3" chance="25" /> <!-- Sealed Majestic Gauntlets -->
-				</group>
-				<group chance="100">
-					<item id="5292" min="1" max="3" chance="40" /> <!-- Sealed Dark Crystal Shield -->
-					<item id="5315" min="1" max="3" chance="40" /> <!-- Sealed Shield of Nightmare -->
-					<item id="6678" min="1" max="1" chance="20" /> <!-- Sealed Imperial Crusader Shield -->
-				</group>
-				<group chance="100">
-					<item id="6676" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Gauntlet -->
-					<item id="6681" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Glove -->
-					<item id="6685" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Glove -->
-				</group>
-				<group chance="100">
-					<item id="6677" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Boots -->
-					<item id="6682" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Boots -->
-					<item id="6686" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Boots -->
-				</group>
-				<group chance="100">
-					<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
-				</group>
-				<group chance="100">
-					<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
-				</group>
-				<group chance="100">
-					<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="8751" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
-					<item id="8752" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
-					<item id="8761" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
-					<item id="8762" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
-				</group>
-				<group chance="100">
-					<item id="959" min="8" max="12" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-				<group chance="100">
-					<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
-				</group>
-				<group chance="100.0">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
-				</group>
-			</death>
+				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
+				<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="2" chance="25" /> <!-- Meteor Shower -->
+				<item id="235" min="1" max="2" chance="25" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="2" chance="25" /> <!-- Carnage Bow -->
+				<item id="150" min="1" max="2" chance="25" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="2" chance="25" /> <!-- Dasparion's Staff -->
+				<item id="81" min="1" max="2" chance="25" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="2" chance="25" /> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="2" chance="25" /> <!-- Dark Legion's Edge -->
+				<item id="164" min="1" max="2" chance="25" /> <!-- Elysian -->
+				<item id="236" min="1" max="2" chance="20" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="2" chance="20" /> <!-- Dragon Grinder -->
+				<item id="289" min="1" max="2" chance="20" /> <!-- Soul Bow -->
+				<item id="213" min="1" max="2" chance="20" /> <!-- Branch of the Mother Tree -->
+				<item id="305" min="1" max="2" chance="20" /> <!-- Tallum Glaive -->
+				<item id="6364" min="1" max="1" chance="17" /> <!-- Forgotten Blade -->
+				<item id="6365" min="1" max="1" chance="17" /> <!-- Basalt Battlehammer -->
+				<item id="6369" min="1" max="1" chance="17" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="17" /> <!-- Saint Spear -->
+				<item id="6372" min="1" max="1" chance="16" /> <!-- Heaven's Divider -->
+				<item id="6580" min="1" max="1" chance="16" /> <!-- Tallum Blade*Dark Legion's Edge -->
+				<item id="7575" min="1" max="1" chance="20" /> <!-- Draconic Bow -->
+				<item id="6366" min="1" max="1" chance="20" /> <!-- Imperial Staff -->
+				<item id="6367" min="1" max="1" chance="20" /> <!-- Angel Slayer -->
+				<item id="6371" min="1" max="1" chance="20" /> <!-- Demon Splinter -->
+				<item id="6579" min="1" max="1" chance="20" /> <!-- Arcana Mace -->
+				<item id="6326" min="1" max="5" chance="30" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="5" chance="35" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="5" chance="35" /> <!-- Sealed Majestic Ring -->
+				<item id="6323" min="1" max="5" chance="30" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="5" chance="35" /> <!-- Sealed Phoenix Ring -->
+				<item id="6724" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Earring -->
+				<item id="6725" min="1" max="1" chance="35" /> <!-- Sealed Tateossian Ring -->
+				<item id="6726" min="1" max="1" chance="30" /> <!-- Sealed Tateossian Necklace -->
+				<item id="5287" min="1" max="3" chance="50" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5297" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
+				<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5316" min="1" max="3" chance="8" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="3" chance="8" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="3" chance="9" /> <!-- Sealed Majestic Robe -->
+				<item id="5288" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5298" min="1" max="3" chance="35" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="3" chance="30" /> <!-- Sealed Tallum Stockings -->
+				<item id="6674" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="15" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6680" min="1" max="1" chance="35" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6684" min="1" max="1" chance="35" /> <!-- Sealed Major Arcana Robe -->
+				<item id="5289" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="3" chance="25" /> <!-- Sealed Tallum Helmet -->
+				<item id="5312" min="1" max="3" chance="25" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="3" chance="25" /> <!-- Sealed Majestic Circlet -->
+				<item id="5291" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5296" min="1" max="3" chance="25" /> <!-- Sealed Tallum Boots -->
+				<item id="5314" min="1" max="3" chance="25" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="3" chance="25" /> <!-- Sealed Majestic Boots -->
+				<item id="5290" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="25" /> <!-- Sealed Tallum Gloves -->
+				<item id="5313" min="1" max="3" chance="25" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="3" chance="25" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5292" min="1" max="3" chance="40" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="3" chance="40" /> <!-- Sealed Shield of Nightmare -->
+				<item id="6678" min="1" max="1" chance="20" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6676" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Gauntlet -->
+				<item id="6681" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Glove -->
+				<item id="6685" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Glove -->
+				<item id="6677" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6682" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6686" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
+				<item id="8751" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
+				<item id="8752" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="8761" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8762" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
+				<item id="959" min="8" max="12" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
+				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
+				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
+				<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="300" />
@@ -4303,91 +3889,65 @@
 			<skill maxChance="25" primaryId="4112" />
 		</ai>
 		<dropLists>
-			<death>
+			<drop>
 				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
-				<group chance="70">
-					<item id="15560" min="1" max="1" chance="9.1" /> <!-- Vigwik Axe -->
-					<item id="15561" min="1" max="1" chance="9.09" /> <!-- Devilish Maul -->
-					<item id="15562" min="1" max="1" chance="9.09" /> <!-- Feather Eye Blade -->
-					<item id="15563" min="1" max="1" chance="9.09" /> <!-- Octo Claw -->
-					<item id="15564" min="1" max="1" chance="9.09" /> <!-- Doubletop Spear -->
-					<item id="15565" min="1" max="1" chance="9.09" /> <!-- Rising Star -->
-					<item id="15566" min="1" max="1" chance="9.09" /> <!-- Black Visage -->
-					<item id="15567" min="1" max="1" chance="9.09" /> <!-- Veniplant Sword -->
-					<item id="15568" min="1" max="1" chance="9.09" /> <!-- Skull Carnium Bow -->
-					<item id="15558" min="1" max="1" chance="9.09" /> <!-- Periel Sword -->
-					<item id="15559" min="1" max="1" chance="9.09" /> <!-- Skull Edge -->
-				</group>
-				<group chance="50">
-					<item id="15544" min="1" max="1" chance="9.1" /> <!-- Eternal Core Sword -->
-					<item id="15545" min="1" max="1" chance="9.09" /> <!-- Mamba Edge -->
-					<item id="15546" min="1" max="1" chance="9.09" /> <!-- Eversor Mace -->
-					<item id="15547" min="1" max="1" chance="9.09" /> <!-- Contristo Hammer -->
-					<item id="15548" min="1" max="1" chance="9.09" /> <!-- Lava Saw -->
-					<item id="15549" min="1" max="1" chance="9.09" /> <!-- Jade Claw -->
-					<item id="15550" min="1" max="1" chance="9.09" /> <!-- Demitelum -->
-					<item id="15551" min="1" max="1" chance="9.09" /> <!-- Sacredium -->
-					<item id="15552" min="1" max="1" chance="9.09" /> <!-- Cyclic Cane -->
-					<item id="15553" min="1" max="1" chance="9.09" /> <!-- Archangel Sword -->
-					<item id="15554" min="1" max="1" chance="9.09" /> <!-- Recurve Thorne Bow -->
-				</group>
-				<group chance="100">
-					<item id="15743" min="1" max="1" chance="9.1" /> <!-- Sealed Vorpal Helmet -->
-					<item id="15744" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Helmet -->
-					<item id="15745" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Circlet -->
-					<item id="15752" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gauntlet -->
-					<item id="15753" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Gloves -->
-					<item id="15754" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gloves -->
-					<item id="15755" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Boots -->
-					<item id="15756" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Boots -->
-					<item id="15757" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shoes -->
-					<item id="15758" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shield -->
-					<item id="15759" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Sigil -->
-				</group>
-				<group chance="100">
-					<item id="15746" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Breastplate -->
-					<item id="15747" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Breastplate -->
-					<item id="15748" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Tunic -->
-					<item id="15749" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Gaiter -->
-					<item id="15750" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Legging -->
-					<item id="15751" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Stockings -->
-				</group>
-				<group chance="50">
-					<item id="15763" min="1" max="1" chance="33.4" /> <!-- Sealed Vorpal Ring -->
-					<item id="15764" min="1" max="1" chance="33.3" /> <!-- Sealed Vorpal Earring -->
-					<item id="15765" min="1" max="1" chance="33.3" /> <!-- Sealed Vorpal Necklace -->
-				</group>
-				<group chance="100">
-					<item id="959" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-				<group chance="60">
-					<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
-				</group>
-				<group chance="60">
-					<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-				</group>
-				<group chance="100">
-					<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="57" min="2000000" max="6000000" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="100">
-					<item id="16162" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 85 -->
-					<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
-					<item id="16163" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 85 -->
-					<item id="16167" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 86 -->
-				</group>
-				<group chance="100">
-					<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
-				</group>
-				<group chance="100.0">
-					<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
-					<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
-					<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
-				</group>
-			</death>
+				<item id="15560" min="1" max="1" chance="6.37" /> <!-- Vigwik Axe -->
+				<item id="15561" min="1" max="1" chance="6.363" /> <!-- Devilish Maul -->
+				<item id="15562" min="1" max="1" chance="6.363" /> <!-- Feather Eye Blade -->
+				<item id="15563" min="1" max="1" chance="6.363" /> <!-- Octo Claw -->
+				<item id="15564" min="1" max="1" chance="6.363" /> <!-- Doubletop Spear -->
+				<item id="15565" min="1" max="1" chance="6.363" /> <!-- Rising Star -->
+				<item id="15566" min="1" max="1" chance="6.363" /> <!-- Black Visage -->
+				<item id="15567" min="1" max="1" chance="6.363" /> <!-- Veniplant Sword -->
+				<item id="15568" min="1" max="1" chance="6.363" /> <!-- Skull Carnium Bow -->
+				<item id="15558" min="1" max="1" chance="6.363" /> <!-- Periel Sword -->
+				<item id="15559" min="1" max="1" chance="6.363" /> <!-- Skull Edge -->
+				<item id="15544" min="1" max="1" chance="4.55" /> <!-- Eternal Core Sword -->
+				<item id="15545" min="1" max="1" chance="4.545" /> <!-- Mamba Edge -->
+				<item id="15546" min="1" max="1" chance="4.545" /> <!-- Eversor Mace -->
+				<item id="15547" min="1" max="1" chance="4.545" /> <!-- Contristo Hammer -->
+				<item id="15548" min="1" max="1" chance="4.545" /> <!-- Lava Saw -->
+				<item id="15549" min="1" max="1" chance="4.545" /> <!-- Jade Claw -->
+				<item id="15550" min="1" max="1" chance="4.545" /> <!-- Demitelum -->
+				<item id="15551" min="1" max="1" chance="4.545" /> <!-- Sacredium -->
+				<item id="15552" min="1" max="1" chance="4.545" /> <!-- Cyclic Cane -->
+				<item id="15553" min="1" max="1" chance="4.545" /> <!-- Archangel Sword -->
+				<item id="15554" min="1" max="1" chance="4.545" /> <!-- Recurve Thorne Bow -->
+				<item id="15743" min="1" max="1" chance="9.1" /> <!-- Sealed Vorpal Helmet -->
+				<item id="15744" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Helmet -->
+				<item id="15745" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Circlet -->
+				<item id="15752" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gauntlet -->
+				<item id="15753" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Gloves -->
+				<item id="15754" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gloves -->
+				<item id="15755" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Boots -->
+				<item id="15756" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Boots -->
+				<item id="15757" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shoes -->
+				<item id="15758" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shield -->
+				<item id="15759" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Sigil -->
+				<item id="15746" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Breastplate -->
+				<item id="15747" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Breastplate -->
+				<item id="15748" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Tunic -->
+				<item id="15749" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Gaiter -->
+				<item id="15750" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Legging -->
+				<item id="15751" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Stockings -->
+				<item id="15763" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Ring -->
+				<item id="15764" min="1" max="1" chance="16.65" /> <!-- Sealed Vorpal Earring -->
+				<item id="15765" min="1" max="1" chance="16.65" /> <!-- Sealed Vorpal Necklace -->
+				<item id="959" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="1538" min="1" max="59" chance="60" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="39" chance="60" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="2000000" max="6000000" chance="100" /> <!-- Adena -->
+				<item id="16162" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 85 -->
+				<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
+				<item id="16163" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 85 -->
+				<item id="16167" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 86 -->
+				<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
+				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
+				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
+				<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="300" />
@@ -4437,14 +3997,10 @@
 			<skill maxChance="25" />
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="10" max="20" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="10" max="20" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="10" max="20" chance="100" /> <!-- Greater Herb of Life -->
+				<item id="8953" min="10" max="20" chance="100" /> <!-- Greater Herb of Mana -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="63" />
@@ -4489,14 +4045,10 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
+				<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="37" />
@@ -4539,14 +4091,10 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
+				<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="37" />
@@ -4589,14 +4137,10 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
+				<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="37" />
@@ -4639,14 +4183,10 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
+				<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="37" />
@@ -4689,14 +4229,10 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
+				<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="37" />
@@ -4739,14 +4275,10 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
+				<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="37" />
@@ -4791,14 +4323,10 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="200" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="100.0">
-					<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
-				</group>
-				<group chance="100.0">
-					<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="1" max="3" chance="100" /> <!-- Greater Herb of Life -->
+				<item id="8953" min="1" max="3" chance="100" /> <!-- Greater Herb of Mana -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="42" />
@@ -5805,24 +5333,16 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="24.999900817871094">
-					<item id="6684" min="1" max="1" chance="5.274" /> <!-- Sealed Major Arcana Robe -->
-					<item id="6711" min="12" max="36" chance="94.726" /> <!-- Sealed Major Arcana Robe Part -->
-				</group>
-				<group chance="70.8447036743164">
-					<item id="6371" min="1" max="1" chance="1.1462" /> <!-- Demon Splinter -->
-					<item id="6695" min="3" max="9" chance="98.8538" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="36.84199905395508">
-					<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				</group>
-				<group chance="1.0">
-					<item id="10298" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Gordon -->
-				</group>
-			</death>
+			<drop>
+				<item id="6684" min="1" max="1" chance="1.31849476913452" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6711" min="12" max="36" chance="23.6814060487366" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="6371" min="1" max="1" chance="0.812021993515015" /> <!-- Demon Splinter -->
+				<item id="6695" min="3" max="9" chance="70.0326816808014" /> <!-- Demon Splinter Blade -->
+				<item id="959" min="1" max="1" chance="3.29927469927979" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="32.992820676796" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.549903677879333" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="10298" min="1" max="1" chance="1" /> <!-- Transformation Sealbook: Gordon -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="43" />
@@ -5881,24 +5401,18 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="71.57669830322266">
-					<item id="6674" min="1" max="1" chance="1.1207" /> <!-- Sealed Imperial Crusader Breastplate -->
-					<item id="6675" min="1" max="1" chance="1.7887" /> <!-- Sealed Imperial Crusader Gaiters -->
-					<item id="6701" min="8" max="22" chance="28.4421" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-					<item id="6702" min="4" max="12" chance="68.6485" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
-				</group>
-				<group chance="73.47949981689453">
-					<item id="6370" min="1" max="1" chance="1.1051" /> <!-- Saint Spear -->
-					<item id="6694" min="3" max="9" chance="98.8949" /> <!-- Saint Spear Blade -->
-				</group>
-				<group chance="52.37620162963867">
-					<item id="959" min="1" max="1" chance="4.7244" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-					<item id="960" min="1" max="1" chance="47.2441" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-					<item id="6577" min="1" max="1" chance="0.7874" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-					<item id="8920" min="1" max="1" chance="47.2441" /> <!-- Angel Halo -->
-				</group>
-			</death>
+			<drop>
+				<item id="6674" min="1" max="1" chance="0.802160057884216" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="1.28029240254974" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6701" min="8" max="22" chance="20.3579161081009" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6702" min="4" max="12" chance="49.1363297346878" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				<item id="6370" min="1" max="1" chance="0.812021952476501" /> <!-- Saint Spear -->
+				<item id="6694" min="3" max="9" chance="72.667477864418" /> <!-- Saint Spear Blade -->
+				<item id="959" min="1" max="1" chance="2.47446126979065" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="24.7446650741081" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.412410211631775" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="8920" min="1" max="1" chance="24.7446650741081" /> <!-- Angel Halo -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="16" />
@@ -5944,11 +5458,9 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="38.49330139160156">
-					<item id="1344" min="60" max="180" chance="100" /> <!-- Mithril Arrow -->
-				</group>
-			</death>
+			<drop>
+				<item id="1344" min="60" max="180" chance="38.4933013916016" /> <!-- Mithril Arrow -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="13" />
@@ -5997,11 +5509,9 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="38.49330139160156">
-					<item id="1344" min="60" max="180" chance="100" /> <!-- Mithril Arrow -->
-				</group>
-			</death>
+			<drop>
+				<item id="1344" min="60" max="180" chance="38.4933013916016" /> <!-- Mithril Arrow -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="13" />

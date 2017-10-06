@@ -3099,7 +3099,7 @@
 			<height normal="43.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="314" min="1" max="1" chance="5.74" /> <!-- Proof of Revenge -->
 				<item id="258" min="1" max="1" chance="5.71" /> <!-- Bagh-Nakh -->
 				<item id="313" min="1" max="1" chance="5.7" /> <!-- Temptation of Abyss -->
@@ -3112,7 +3112,7 @@
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25273" level="50" type="L2RaidBoss" name="Carnamakos" title="Raid Boss">

@@ -14,30 +14,52 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.drops;
+package com.l2jmobius.gameserver.model.holders;
 
-import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.enums.DropType;
 
 /**
- * @author NosBit
+ * @author Mobius
  */
-public class GroupedCorpseDropItem extends GroupedGeneralDropItem
+public class DropHolder
 {
-	/**
-	 * @param chance the chance of this drop item.
-	 */
-	public GroupedCorpseDropItem(double chance)
+	private final DropType _dropType;
+	private final int _itemId;
+	private final long _min;
+	private final long _max;
+	private final double _chance;
+	
+	public DropHolder(DropType dropType, int itemId, long min, long max, double chance)
 	{
-		super(chance);
+		_dropType = dropType;
+		_itemId = itemId;
+		_min = min;
+		_max = max;
+		_chance = chance;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.drops.GroupedGeneralDropItem#getGlobalChanceMultiplier()
-	 */
-	@Override
-	protected double getGlobalChanceMultiplier()
+	public DropType getDropType()
 	{
-		return Config.RATE_CORPSE_DROP_CHANCE_MULTIPLIER;
+		return _dropType;
+	}
+	
+	public int getItemId()
+	{
+		return _itemId;
+	}
+	
+	public long getMin()
+	{
+		return _min;
+	}
+	
+	public long getMax()
+	{
+		return _max;
+	}
+	
+	public double getChance()
+	{
+		return _chance;
 	}
 }

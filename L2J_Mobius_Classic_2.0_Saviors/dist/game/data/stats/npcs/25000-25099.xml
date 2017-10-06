@@ -45,13 +45,13 @@
 			<height normal="43.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="910" min="2" max="4" chance="33.09" /> <!-- Necklace of Devotion -->
 				<item id="847" min="4" max="8" chance="30.81" /> <!-- Red Crescent -->
 				<item id="890" min="4" max="8" chance="30.28" /> <!-- Ring of Devotion -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="1866" min="2" max="6" chance="100" /> <!-- Scroll: Enchant Armor (D-grade)-->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25002" level="22" type="L2Monster" name="Kutus' Escort" title="Raid Fighter">
@@ -179,7 +179,7 @@
 			<height normal="47" grown="27.6" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="316" min="1" max="1" chance="6.378" /> <!-- Sage's Blood -->
 				<item id="628" min="1" max="1" chance="6.361" /> <!-- Hoplon -->
 				<item id="317" min="1" max="1" chance="6.354" /> <!-- Tome of Blood -->
@@ -189,7 +189,7 @@
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25005" level="29" type="L2Monster" name="Turek Mercenary Archer" title="Raid Fighter">
@@ -310,7 +310,7 @@
 			<height normal="25.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="851" min="2" max="2" chance="18.38" /> <!-- Onyx Beast's Eye Earring -->
 				<item id="882" min="2" max="2" chance="18.33" /> <!-- Mithril Ring -->
 				<item id="914" min="1" max="1" chance="17.73" /> <!-- Dark Necklace -->
@@ -322,7 +322,7 @@
 				<item id="955" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="70000" min="5" max="15" chance="100" /> <!-- Sealed Rune - Stage 1 -->	
 				<item id="956" min="5" max="15" chance="49.85" /> <!-- Scroll: Enchant Armor (D-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25008" level="41" type="L2Monster" name="Cletu's Confidant" title="Raid Fighter">
@@ -442,7 +442,7 @@
 			<height normal="90" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="195" min="1" max="1" chance="3.549" /> <!-- Cursed Staff -->
 				<item id="2502" min="1" max="1" chance="3.546" /> <!-- Dwarven War Hammer -->
 				<item id="227" min="1" max="1" chance="3.528" /> <!-- Stiletto -->
@@ -458,7 +458,7 @@
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="28.66" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25011" level="54" type="L2Monster" name="Thieles' Escort" title="Raid Fighter">
@@ -583,7 +583,7 @@
 			<height normal="39" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="883" min="1" max="3" chance="29.55" /> <!-- Aquastone Ring -->
 				<item id="915" min="1" max="3" chance="28.55" /> <!-- Aquastone Necklace -->
 				<item id="852" min="1" max="3" chance="28.5" /> <!-- Moonstone Earring -->
@@ -626,7 +626,7 @@
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="8" max="23" chance="100" /> <!-- Sealed Rune - Stage 1 -->	
 				<item id="951" min="5" max="15" chance="29.49" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25014" level="49" type="L2Monster" name="Ghost of Peasant" title="Raid Fighter">
@@ -874,7 +874,7 @@
 			<height normal="73" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="156" min="1" max="1" chance="7.546" /> <!-- Hand Axe -->
 				<item id="221" min="1" max="1" chance="7.53" /> <!-- Assassin Knife -->
 				<item id="166" min="1" max="1" chance="7.5175" /> <!-- Heavy Mace -->
@@ -883,7 +883,7 @@
 				<item id="101" min="1" max="1" chance="7.434" /> <!-- Scroll of Wisdom -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="955" min="1" max="1" chance="48.86" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25020" level="34" type="L2RaidBoss" name="Breka Warlock Pastu" title="Raid Boss">
@@ -931,7 +931,7 @@
 			<height normal="35" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="628" min="1" max="1" chance="5.877" /> <!-- Hoplon -->
 				<item id="239" min="1" max="1" chance="5.859" /> <!-- Mystic Knife -->
 				<item id="317" min="1" max="1" chance="5.835" /> <!-- Tome of Blood -->
@@ -941,7 +941,7 @@
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25021" level="33" type="L2Monster" name="Pastu's Silhouette" title="Raid Fighter">
@@ -1071,7 +1071,7 @@
 			<height normal="76" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="880" min="1" max="3" chance="29.21" /> <!-- Black Pearl Ring -->
 				<item id="849" min="1" max="3" chance="28.27" /> <!-- Tiger's Eye -->
 				<item id="912" min="1" max="1" chance="27.74" /> <!-- Near Forest Necklace -->
@@ -1083,7 +1083,7 @@
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25024" level="33" type="L2Monster" name="Jeruna's Escort Captain" title="Raid Fighter">
@@ -1205,7 +1205,7 @@
 			<height normal="24" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="193" min="1" max="1" chance="1.957" /> <!-- Stick of Faith -->
 				<item id="72" min="1" max="1" chance="1.95" /> <!-- StormBringer -->
 				<item id="160" min="1" max="1" chance="1.946" /> <!-- Battle Axe -->
@@ -1224,7 +1224,7 @@
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="7" max="21" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="951" min="1" max="1" chance="31.24" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25027" level="48" type="L2Monster" name="Ketra Marksman" title="Raid Fighter">
@@ -1591,7 +1591,7 @@
 			<height normal="63" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="918" min="1" max="1" chance="27.66" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="26.55" /> <!-- Adamantite Earring -->
 				<item id="887" min="1" max="1" chance="25.83" /> <!-- Adamantite Ring -->
@@ -1638,7 +1638,7 @@
 				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="948" min="1" max="1" chance="80.24" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="19.92" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25036" level="69" type="L2Monster" name="Cabrio Captor" title="Raid Fighter">
@@ -1769,14 +1769,14 @@
 			<height normal="75" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="847" min="2" max="10" chance="33.03" /> <!-- Red Crescent -->
 				<item id="890" min="2" max="10" chance="32" /> <!-- Ring of Devotion -->
 				<item id="910" min="2" max="4" chance="30.17" /> <!-- Necklace of Devotion -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25039" level="27" type="L2Monster" name="Tirak's Escort" title="Raid Fighter">
@@ -1902,7 +1902,7 @@
 			<height normal="76" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="912" min="1" max="1" chance="31" /> <!-- Near Forest Necklace -->
 				<item id="880" min="1" max="3" chance="30.69" /> <!-- Black Pearl Ring -->
 				<item id="849" min="1" max="3" chance="30.41" /> <!-- Tiger's Eye -->
@@ -1914,7 +1914,7 @@
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25042" level="34" type="L2Monster" name="Remmel's Archer" title="Raid Fighter">
@@ -2040,7 +2040,7 @@
 			<height normal="39" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="297" min="1" max="1" chance="5.06" /> <!-- Glaive -->
 				<item id="262" min="1" max="1" chance="5.047" /> <!-- Scallop Jamadhr -->
 				<item id="159" min="1" max="1" chance="5.044" /> <!-- Bonebreaker -->
@@ -2051,7 +2051,7 @@
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="7" max="20" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25045" level="46" type="L2Monster" name="Barion's Dark Wizard" title="Raid Fighter">
@@ -2183,7 +2183,7 @@
 			<height normal="47.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="226" min="1" max="1" chance="1.955" /> <!-- Cursed Dagger -->
 				<item id="191" min="1" max="1" chance="1.94" /> <!-- Heavy Doom Hammer -->
 				<item id="173" min="1" max="1" chance="1.936" /> <!-- Skull Graver -->
@@ -2205,7 +2205,7 @@
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="7" max="21" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="30.62" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25048" level="48" type="L2Monster" name="Karte's Chief Knight" title="Raid Fighter">
@@ -2335,7 +2335,7 @@
 			<height normal="141" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="281" min="1" max="1" chance="2.564" /> <!-- Crystallized Ice Bow -->
 				<item id="230" min="1" max="1" chance="2.558" /> <!-- Needle Wolverine -->
 				<item id="192" min="1" max="1" chance="2.546" /> <!-- Crystal Staff -->
@@ -2357,7 +2357,7 @@
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="8" max="23" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="31.48" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25051" level="65" type="L2RaidBoss" name="Rahha" title="Raid Boss">
@@ -2405,7 +2405,7 @@
 			<height normal="34" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="887" min="1" max="3" chance="30.74" /> <!-- Adamantite Ring -->
 				<item id="918" min="1" max="1" chance="30.61" /> <!-- Adamantite Necklace -->
 				<item id="856" min="1" max="1" chance="28.71" /> <!-- Adamantite Earring -->
@@ -2420,7 +2420,7 @@
 				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="947" min="1" max="1" chance="50.33" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 				<item id="948" min="1" max="1" chance="49.93" /> <!-- Scroll: Enchant Armor (B-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25052" level="64" type="L2Monster" name="Priestess of Rahha" title="Raid Fighter">
@@ -2671,7 +2671,7 @@
 			<height normal="50" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="914" min="1" max="1" chance="32.48" /> <!-- Dark Necklace -->
 				<item id="882" min="1" max="3" chance="31.18" /> <!-- Mithril Ring -->
 				<item id="851" min="1" max="3" chance="30.92" /> <!-- Onyx Beast's Eye Earring -->
@@ -2683,7 +2683,7 @@
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25058" level="44" type="L2Monster" name="Beacon's Shooter" title="Raid Fighter">
@@ -2937,7 +2937,7 @@
 			<height normal="51" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="238" min="1" max="1" chance="6.45" /> <!-- Dagger of Mana -->
 				<item id="278" min="1" max="1" chance="6.437" /> <!-- Gastraphetes -->
 				<item id="260" min="1" max="1" chance="6.421" /> <!-- Triple-Edged Jamadhr -->
@@ -2946,7 +2946,7 @@
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25064" level="40" type="L2RaidBoss" name="Wizard of Storm Teruk" title="Raid Boss">
@@ -3000,7 +3000,7 @@
 			<height normal="55" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="851" min="1" max="1" chance="31.14" /> <!-- Onyx Beast's Eye Earring -->
 				<item id="882" min="1" max="1" chance="30.72" /> <!-- Mithril Ring -->
 				<item id="914" min="1" max="1" chance="30.41" /> <!-- Dark Necklace -->
@@ -3012,7 +3012,7 @@
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="5" max="14" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25065" level="39" type="L2Monster" name="Teruk's Escort" title="Raid Fighter">
@@ -3134,7 +3134,7 @@
 			<height normal="60" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="915" min="1" max="3" chance="31.5" /> <!-- Aquastone Necklace -->
 				<item id="883" min="1" max="3" chance="28.96" /> <!-- Aquastone Ring -->
 				<item id="852" min="1" max="3" chance="28.5" /> <!-- Moonstone Earring -->
@@ -3177,7 +3177,7 @@
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="8" max="24" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.26" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25068" level="51" type="L2Monster" name="Shaka's Sniper" title="Raid Fighter">
@@ -3551,7 +3551,7 @@
 			<height normal="20" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="168" min="1" max="1" chance="5.717" /> <!-- Work Hammer -->
 				<item id="123" min="1" max="1" chance="5.714" /> <!-- Saber -->
 				<item id="258" min="1" max="1" chance="5.712" /> <!-- Bagh-Nakh -->
@@ -3562,7 +3562,7 @@
 				<item id="178" min="1" max="1" chance="5.604" /> <!-- Bone Staff -->
 				<item id="291" min="1" max="1" chance="5.596" /> <!-- Trident -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25077" level="24" type="L2Monster" name="Escort Captain Dogun" title="Raid Fighter">
@@ -3804,7 +3804,7 @@
 			<height normal="26" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="260" min="1" max="1" chance="2.004" /> <!-- Triple-Edged Jamadhr -->
 				<item id="278" min="1" max="1" chance="2.003" /> <!-- Gastraphetes -->
 				<item id="130" min="1" max="1" chance="2.002" /> <!-- Elven Sword -->
@@ -3825,7 +3825,7 @@
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="5" max="14" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25083" level="38" type="L2Monster" name="Cat Gang" title="Raid Fighter">
@@ -3951,7 +3951,7 @@
 			<height normal="51" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="914" min="1" max="1" chance="32.16" /> <!-- Dark Necklace -->
 				<item id="851" min="1" max="3" chance="32.08" /> <!-- Onyx Beast's Eye Earring -->
 				<item id="882" min="1" max="3" chance="30.44" /> <!-- Mithril Ring -->
@@ -3963,7 +3963,7 @@
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="6" max="17" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25086" level="43" type="L2Monster" name="Timak Orc Ranger" title="Raid Fighter">
@@ -4086,7 +4086,7 @@
 			<height normal="63" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="882" min="1" max="3" chance="31.14" /> <!-- Mithril Ring -->
 				<item id="914" min="1" max="1" chance="31.03" /> <!-- Dark Necklace -->
 				<item id="851" min="1" max="3" chance="30.5" /> <!-- Onyx Beast's Eye Earring -->
@@ -4097,7 +4097,7 @@
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="6" max="17" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25089" level="59" type="L2RaidBoss" name="Soulless Wild Boar" title="Raid Boss">
@@ -4144,7 +4144,7 @@
 			<height normal="27" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="103" min="1" max="3" chance="2.563" /> <!-- Tower Shield -->
 				<item id="64" min="1" max="3" chance="2.562" /> <!-- Compound Boots -->
 				<item id="441" min="1" max="1" chance="2.552" /> <!-- Demon's Tunic -->
@@ -4188,7 +4188,7 @@
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.02" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25090" level="58" type="L2Monster" name="Soulless Wolf" title="Raid Fighter">
@@ -4440,7 +4440,7 @@
 			<height normal="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="166" min="1" max="1" chance="8.567" /> <!-- Heavy Mace -->
 				<item id="312" min="1" max="1" chance="8.543" /> <!-- Branch of Life -->
 				<item id="156" min="1" max="1" chance="8.535" /> <!-- Hand Axe -->
@@ -4449,7 +4449,7 @@
 				<item id="167" min="1" max="1" chance="8.458" /> <!-- Scalpel -->
 				<item id="955" min="2" max="10" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25096" level="28" type="L2Monster" name="Renoa's Elpy" title="Raid Fighter">
@@ -4577,7 +4577,7 @@
 			<height normal="43" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="880" min="1" max="3" chance="31.33" /> <!-- Black Pearl Ring -->
 				<item id="912" min="1" max="1" chance="30.74" /> <!-- Near Forest Necklace -->
 				<item id="849" min="1" max="3" chance="30.49" /> <!-- Tiger's Eye -->
@@ -4589,7 +4589,7 @@
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25099" level="56" type="L2RaidBoss" name="Rotting Tree Repiro" title="Raid Boss">
@@ -4638,7 +4638,7 @@
 			<height normal="80" grown="96" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="285" min="1" max="1" chance="4.2305" /> <!-- Noble Elven Bow -->
 				<item id="195" min="1" max="1" chance="4.2165" /> <!-- Cursed Staff -->
 				<item id="242" min="1" max="1" chance="4.213" /> <!-- Soulfire Dirk -->
@@ -4654,7 +4654,7 @@
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.3" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 </list>

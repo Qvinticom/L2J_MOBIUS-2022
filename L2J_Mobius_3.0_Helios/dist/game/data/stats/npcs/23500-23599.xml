@@ -28,27 +28,21 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1692" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="35328" min="1" max="1" chance="100" /> <!-- Amaranthine Cutter Fragment -->
-				</group>
-				<group chance="0.9009">
-					<item id="36543" min="1" max="1" chance="83.250083250083" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="8.3250083250083" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="8.3250083250083" /> <!-- Orichalcum Wire -->
-					<item id="35469" min="1" max="1" chance="0.0999000999001" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
+				<item id="35328" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="36543" min="1" max="1" chance="0.749999999999998" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.0749999999999998" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.0749999999999998" /> <!-- Orichalcum Wire -->
+				<item id="35469" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
 				<item id="36543" min="1" max="1" chance="1.334" /> <!-- Adamantite Wire -->
 				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -83,27 +77,21 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1692" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="35332" min="1" max="1" chance="100" /> <!-- Amaranthine Stormer Fragment -->
-				</group>
-				<group chance="0.903">
-					<item id="36543" min="1" max="1" chance="83.056478405316" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="8.3056478405316" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="8.3056478405316" /> <!-- Orichalcum Wire -->
-					<item id="35471" min="1" max="1" chance="0.33222591362126" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
+				<item id="35332" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="36543" min="1" max="1" chance="0.750000000000004" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.0750000000000004" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.0750000000000004" /> <!-- Orichalcum Wire -->
+				<item id="35471" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</drop>
+			<spoil>
 				<item id="36538" min="1" max="1" chance="1.92" /> <!-- Durable Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="23" />
@@ -138,27 +126,21 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1692" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="35335" min="1" max="1" chance="100" /> <!-- Amaranthine Buster Fragment -->
-				</group>
-				<group chance="0.903">
-					<item id="36543" min="1" max="1" chance="83.056478405316" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="8.3056478405316" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="8.3056478405316" /> <!-- Orichalcum Wire -->
-					<item id="35472" min="1" max="1" chance="0.33222591362126" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
+				<item id="35335" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Buster Fragment -->
+				<item id="36543" min="1" max="1" chance="0.750000000000004" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.0750000000000004" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.0750000000000004" /> <!-- Orichalcum Wire -->
+				<item id="35472" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</drop>
+			<spoil>
 				<item id="36518" min="1" max="1" chance="7.512" /> <!-- Durable Leather -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -193,27 +175,21 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1692" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="35336" min="1" max="1" chance="100" /> <!-- Amaranthine Caster Fragment -->
-				</group>
-				<group chance="0.903">
-					<item id="36543" min="1" max="1" chance="83.056478405316" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="8.3056478405316" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="8.3056478405316" /> <!-- Orichalcum Wire -->
-					<item id="35477" min="1" max="1" chance="0.33222591362126" /> <!-- Recipe: Eternal Shoes (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
+				<item id="35336" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Caster Fragment -->
+				<item id="36543" min="1" max="1" chance="0.750000000000004" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.0750000000000004" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.0750000000000004" /> <!-- Orichalcum Wire -->
+				<item id="35477" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Eternal Shoes (60%) -->
+			</drop>
+			<spoil>
 				<item id="36543" min="1" max="1" chance="1.331" /> <!-- Adamantite Wire -->
 				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -248,27 +224,21 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1692" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="35328" min="1" max="1" chance="100" /> <!-- Amaranthine Cutter Fragment -->
-				</group>
-				<group chance="0.9009">
-					<item id="36543" min="1" max="1" chance="83.250083250083" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="8.3250083250083" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="8.3250083250083" /> <!-- Orichalcum Wire -->
-					<item id="35469" min="1" max="1" chance="0.0999000999001" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
+				<item id="35328" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="36543" min="1" max="1" chance="0.749999999999998" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.0749999999999998" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36544" min="1" max="1" chance="0.0749999999999998" /> <!-- Orichalcum Wire -->
+				<item id="35469" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
 				<item id="36538" min="1" max="1" chance="1.835" /> <!-- Durable Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -310,20 +280,20 @@
 			<height normal="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23981" max="56047" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="4" /> <!-- Quality Leather -->
 				<item id="35347" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Glove Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
 				<item id="35327" min="1" max="1" chance="0.3" /> <!-- Amaranthine Shaper Fragment -->
 				<item id="35471" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23506" level="101" type="L2Monster" name="Fortress Guardian Captain">
@@ -365,19 +335,19 @@
 			<height normal="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
 				<item id="35346" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Legging Ingredient -->
 				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
 				<item id="36909" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum Wire - Downgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36554" min="1" max="1" chance="2.399" /> <!-- Armor Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23507" level="101" type="L2Monster" name="Atelia Passionate Soldier">
@@ -414,20 +384,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23981" max="56047" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="3.855" /> <!-- Quality Leather -->
 				<item id="35348" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boot Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
 				<item id="35337" min="1" max="1" chance="0.3" /> <!-- Amaranthine Retributer Fragment -->
 				<item id="35472" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23508" level="101" type="L2Monster" name="Atelia Elite Captain">
@@ -468,19 +438,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
 				<item id="36911" min="1" max="1" chance="0.0075" /> <!-- Recipe: Orichalcum Wire - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23509" level="102" type="L2Monster" name="Fortress Dark Wizard">
@@ -520,19 +490,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="24525" max="57134" chance="70" /> <!-- Adena -->
 				<item id="35344" min="1" max="1" chance="1.264" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
 				<item id="35468" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
 				<item id="36907" min="1" max="1" chance="0.03" /> <!-- Recipe: Adamantite Wire - Upgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23510" level="102" type="L2Monster" name="Atelia Flame Master">
@@ -572,19 +542,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="24525" max="57134" chance="70" /> <!-- Adena -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
 				<item id="36908" min="1" max="1" chance="0.03" /> <!-- Recipe: Adamantite Wire - Combination -->
 				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36554" min="1" max="1" chance="2.103" /> <!-- Armor Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23511" level="102" type="L2Monster" name="Fortress Archon">
@@ -626,19 +596,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings -->
 				<item id="57" min="28716" max="66899" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="1.763" /> <!-- Quality Leather Braid -->
 				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36912" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Upgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23512" level="102" type="L2Monster" name="Atelia High Priest">
@@ -680,19 +650,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
 				<item id="57" min="28716" max="66899" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="7.055" /> <!-- Quality Leather -->
 				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23530" level="101" type="L2Monster" name="Fortress Guardian Captain" title="Kelbim's Call">
@@ -733,19 +703,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
 				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
 				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
 				<item id="36909" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum Wire - Downgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36554" min="1" max="1" chance="2.399" /> <!-- Armor Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23532" level="101" type="L2Monster" name="Atelia Elite Captain" title="Kelbim's Call">
@@ -786,19 +756,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
 				<item id="36911" min="1" max="1" chance="0.0075" /> <!-- Recipe: Orichalcum Wire - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23535" level="102" type="L2Monster" name="Atelia Archon" title="Kelbim's Call">
@@ -839,19 +809,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shaper -->
 				<item id="57" min="30484" max="71016" chance="70" /> <!-- Adena -->
 				<item id="19440" min="1" max="3" chance="70.37" /> <!-- Gemstone (R-grade) -->
 				<item id="35348" min="1" max="1" chance="1.246" /> <!-- Eternal Leather Boot Ingredient -->
 				<item id="37802" min="1" max="1" chance="0.0075" /> <!-- Dark Eternal Enhancement Stone Fragment -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="46081" min="1" max="1" chance="0.75" /> <!-- Recipe: Mysterious Blessed Spiritshot (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23536" level="102" type="L2Monster" name="Atelia High Priest" title="Kelbim's Call">
@@ -892,19 +862,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
 				<item id="57" min="28716" max="66899" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="7.055" /> <!-- Quality Leather -->
 				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23537" level="101" type="L2Monster" name="Atelia Elite Captain" title="Atelia Infuser">
@@ -946,19 +916,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
 				<item id="36911" min="1" max="1" chance="0.0075" /> <!-- Recipe: Orichalcum Wire - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23538" level="102" type="L2Monster" name="Atelia High Priest" title="Atelia Infuser">
@@ -999,19 +969,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
 				<item id="57" min="28716" max="66899" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="7.055" /> <!-- Quality Leather -->
 				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23539" level="104" type="L2Monster" name="Atelia Trial Guardian Captain" title="Trial Guardian">
@@ -1070,18 +1040,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="21345" max="49763" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="6.629" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="36896" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Downgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36549" min="1" max="1" chance="2.08" /> <!-- Weapon Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23542" level="101" type="L2Monster" name="Kerberos Fort">
@@ -1118,20 +1088,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23479" max="54872" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="1.499" /> <!-- Orichalcum -->
 				<item id="35338" min="1" max="1" chance="0.75" /> <!-- Eternal Helmet Ingredient -->
 				<item id="35330" min="1" max="1" chance="0.3" /> <!-- Amaranthine Avenger Fragment -->
 				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
 				<item id="36897" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Upgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36549" min="1" max="1" chance="2.314" /> <!-- Weapon Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23543" level="100" type="L2Monster" name="Kerberos Nero">
@@ -1168,20 +1138,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17431" min="1" max="1" chance="0.0075" /> <!-- Eternal Breastplate -->
 				<item id="57" min="21345" max="49763" chance="70" /> <!-- Adena -->
 				<item id="36544" min="1" max="1" chance="0.75" /> <!-- Orichalcum Wire -->
 				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
 				<item id="36525" min="1" max="1" chance="0.075" /> <!-- Durandil -->
 				<item id="35464" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Gaiters (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="1.478" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23544" level="101" type="L2Monster" name="Fury Sylph Barrena">
@@ -1218,19 +1188,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17431" min="1" max="1" chance="0.0075" /> <!-- Eternal Breastplate -->
 				<item id="57" min="27009" max="63122" chance="70" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="35463" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Breastplate (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="19448" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23545" level="100" type="L2Monster" name="Fury Kiku">
@@ -1267,19 +1237,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="2753" max="6419" chance="70" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.075" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
 				<item id="36545" min="1" max="1" chance="0.003" /> <!-- Durandil Wire -->
 				<item id="36863" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather - Upgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23546" level="101" type="L2Monster" name="Fury Sylph Temptress">
@@ -1351,19 +1321,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets -->
 				<item id="57" min="23479" max="54872" chance="70" /> <!-- Adena -->
 				<item id="35341" min="1" max="1" chance="0.75" /> <!-- Eternal Gauntlet Ingredient -->
 				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
 				<item id="35465" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="1.6355" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23548" level="100" type="L2Monster" name="Fury Kerberos Liger">
@@ -1399,17 +1369,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23080" max="53808" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="4.39" /> <!-- Orichalcum -->
 				<item id="35342" min="1" max="1" chance="1.81" /> <!-- Eternal Boot Ingredient -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="1.689" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23549" level="100" type="L2Monster" name="Fury Kerberos Nero">
@@ -1445,18 +1415,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17434" min="1" max="1" chance="0.075" /> <!-- Eternal Boots -->
 				<item id="57" min="23080" max="53808" chance="70" /> <!-- Adena -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23550" level="100" type="L2Monster" name="Kerberos Liger" title="Spirit of the Night">
@@ -1493,18 +1463,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="21345" max="49763" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="6.629" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="36896" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Downgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36549" min="1" max="1" chance="2.08" /> <!-- Weapon Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23551" level="101" type="L2Monster" name="Kerberos Fort" title="Spirit of the Night">
@@ -1541,20 +1511,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23479" max="54872" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="1.499" /> <!-- Orichalcum -->
 				<item id="35338" min="1" max="1" chance="0.75" /> <!-- Eternal Helmet Ingredient -->
 				<item id="35330" min="1" max="1" chance="0.3" /> <!-- Amaranthine Avenger Fragment -->
 				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
 				<item id="36897" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Upgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36549" min="1" max="1" chance="2.314" /> <!-- Weapon Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23552" level="100" type="L2Monster" name="Kerberos Nero" title="Spirit of the Night">
@@ -1591,17 +1561,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="21345" max="49763" chance="70" /> <!-- Adena -->
 				<item id="36544" min="1" max="1" chance="4.609" /> <!-- Orichalcum Wire -->
 				<item id="36525" min="1" max="1" chance="0.75" /> <!-- Durandil -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36549" min="1" max="1" chance="2.104" /> <!-- Weapon Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23553" level="101" type="L2Monster" name="Fury Sylph Barrena" title="Spirit of the Night">
@@ -1638,20 +1608,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
 				<item id="57" min="27009" max="63122" chance="70" /> <!-- Adena -->
 				<item id="35330" min="1" max="1" chance="0.3" /> <!-- Amaranthine Avenger Fragment -->
 				<item id="35339" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="36898" min="1" max="1" chance="0.0075" /> <!-- Recipe: Quality Leather Braid - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="19448" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23554" level="100" type="L2Monster" name="Fury Kiku">
@@ -1685,19 +1655,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="2753" max="6419" chance="70" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.075" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
 				<item id="36545" min="1" max="1" chance="0.003" /> <!-- Durandil Wire -->
 				<item id="36863" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather - Upgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23555" level="101" type="L2Monster" name="Fury Sylph Temptress" title="Spirit of the Night">
@@ -1768,20 +1738,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
 				<item id="57" min="23479" max="54872" chance="70" /> <!-- Adena -->
 				<item id="35341" min="1" max="1" chance="0.75" /> <!-- Eternal Gauntlet Ingredient -->
 				<item id="35333" min="1" max="1" chance="0.3" /> <!-- Amaranthine Thrower Fragment -->
 				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
 				<item id="36861" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather - Downgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="1.645" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23557" level="100" type="L2Monster" name="Fury Kerberos Liger">
@@ -1817,18 +1787,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23080" max="53808" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="2.235" /> <!-- Orichalcum -->
 				<item id="35342" min="1" max="1" chance="1.795" /> <!-- Eternal Boot Ingredient -->
 				<item id="36900" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="1.631" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23558" level="100" type="L2Monster" name="Fury Kerberos Nero">
@@ -1864,17 +1834,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23080" max="53808" chance="70" /> <!-- Adena -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="35899" min="1" max="1" chance="0.003" /> <!-- Recipe: Exquisite Leather Braid - Upgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23559" level="100" type="L2Monster" name="El Floato">
@@ -1912,20 +1882,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Amaranthine Avenger -->
 				<item id="57" min="38695" max="90213" chance="70" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.75" /> <!-- Eternal Helmet Ingredient -->
 				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
 				<item id="37801" min="1" max="1" chance="0.0075" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
 				<item id="46130" min="1" max="1" chance="0.003" /> <!-- Spirit Evil Thought Piece -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="19448" min="1" max="1" chance="1.056" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23560" level="100" type="L2Monster" name="El Floato">
@@ -1963,20 +1933,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
 				<item id="57" min="38695" max="90213" chance="70" /> <!-- Adena -->
 				<item id="35341" min="1" max="1" chance="1.005" /> <!-- Eternal Gauntlet Ingredient -->
 				<item id="35339" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Ingredient -->
 				<item id="37801" min="1" max="1" chance="0.0075" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
 				<item id="46130" min="1" max="1" chance="0.003" /> <!-- Spirit Evil Thought Piece -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="19447" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23561" level="100" type="L2Monster" name="Harpe">
@@ -2030,43 +2000,31 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="12000000" max="12000000" chance="100" /> <!-- Adena -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="26" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="65" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="9" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<lucky_corpse>
+				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="2.86" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="7.15" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="0.99" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23563" level="101" type="L2Monster" name="Croamis" title="Gatekeeper">
@@ -2157,19 +2115,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 				<item id="35352" min="1" max="1" chance="0.075" /> <!-- Eternal Glove Ingredient -->
 				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Amaranthine Buster Fragment -->
 				<item id="36549" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (High-grade)-->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23567" level="100" type="L2Monster" name="Nymph Rose">
@@ -2193,18 +2151,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
 				<item id="35354" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Ingredient -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="35476" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Gloves (60%)-->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23568" level="100" type="L2Monster" name="Nymph Lily">
@@ -2228,19 +2186,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 				<item id="35353" min="1" max="1" chance="0.075" /> <!-- Eternal Shoe Ingredient -->
 				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Amaranthine Caster Fragment -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23569" level="103" type="L2Monster" name="Nymph Lily">
@@ -2270,18 +2228,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
 				<item id="35349" min="1" max="1" chance="0.075" /> <!-- Eternal Circlet Ingredient -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
 				<item id="35477" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Shoes (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>	
 	<npc id="23570" level="100" type="L2Monster" name="Nymph Tulip">
@@ -2305,17 +2263,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="35351" min="1" max="1" chance="0.075" /> <!-- Eternal Stocking Ingredient -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 		<npc id="23571" level="103" type="L2Monster" name="Nymph Tulip">
@@ -2345,18 +2303,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves -->
 				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
 				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="36550" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Top-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23572" level="100" type="L2Monster" name="Nymph Cosmos">
@@ -2380,17 +2338,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="1.273" /> <!-- Quality Fiber -->
 				<item id="35350" min="1" max="1" chance="0.03" /> <!-- Eternal Tunic Ingredient -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23573" level="103" type="L2Monster" name="Nymph Cosmos">
@@ -2420,18 +2378,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes -->
 				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36555" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Top-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>	
 	<npc id="23574" level="103" type="L2Monster" name="Nymph Rose" title="Fancy">
@@ -2459,18 +2417,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil -->
 				<item id="57" min="9360" max="21823" chance="30" /> <!-- Adena -->
 				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade)-->
 				<item id="35478" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Sigil (60%)-->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="19448" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Armor (R-grade)-->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23575" level="101" type="L2Monster" name="Nymph Lily" title="Fancy">
@@ -2494,17 +2452,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
 				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Circlet (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23576" level="101" type="L2Monster" name="Nymph Tulip" title="Fancy">
@@ -2528,17 +2486,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="35475" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Stockings (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23577" level="101" type="L2Monster" name="Nymph Cosmos" title="Fancy">
@@ -2562,17 +2520,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
 				<item id="35474" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Tunic (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23578" level="102" type="L2Monster" name="Nymph Guardian" title="Guardian of the Flower">
@@ -2596,21 +2554,21 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17424" min="1" max="1" chance="0.003" /> <!-- Amaranthine Buster -->
 				<item id="57" min="19032" max="44338" chance="100" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (High-grade) -->
 				<item id="35335" min="1" max="1" chance="0.3" /> <!-- Amaranthine Buster Fragment -->
 				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Amaranthine Caster Fragment -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="19448" min="1" max="1" chance="1.031" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="36513" min="1" max="1" chance="0.3" /> <!-- Elcyum Powder -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23579" level="100" type="L2Monster" name="Buoyant Seed">
@@ -2634,18 +2592,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="4804" max="11201" chance="30" /> <!-- Adena -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="35459" min="1" max="1" chance="0.0075" /> <!-- Recipe: Amaranthine Buster (60%) -->
 				<item id="36535" min="1" max="1" chance="0.0075" /> <!-- Quality Braid -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23580" level="100" type="L2Monster" name="Fluttering Seed">
@@ -2669,17 +2627,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="4804" max="11201" chance="30" /> <!-- Adena -->
 				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
 				<item id="35460" min="1" max="1" chance="0.0075" /> <!-- Recipe: Amaranthine Caster (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23581" level="100" type="L2Monster" name="Apherus" title="Instilled with life">
@@ -2703,46 +2661,34 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6425" max="29942" chance="30" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.7" /> <!-- Quality Fiber -->
 				<item id="36535" min="1" max="1" chance="1.7" /> <!-- Quality Braid -->
 				<item id="36534" min="1" max="1" chance="0.7" /> <!-- Durable Braid -->
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="26" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="65" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="9" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<lucky_corpse>
+				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="2.86" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="7.15" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="0.99" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23582" level="101" type="L2Monster" name="Nymph Rose" title="Elegant">
@@ -2766,17 +2712,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade)-->
 				<item id="35478" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Sigil (60%)-->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23583" level="101" type="L2Monster" name="Nymph Lily" title="Elegant">
@@ -2800,17 +2746,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
 				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Circlet (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23584" level="101" type="L2Monster" name="Nymph Tulip" title="Elegant">
@@ -2834,17 +2780,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="35475" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Stockings (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23585" level="101" type="L2Monster" name="Nymph Cosmos" title="Elegant">
@@ -2868,17 +2814,17 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
 				<item id="35474" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Tunic (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23586" level="103" type="L2Monster" name="Geork" title="Embryo Master Artisan">
@@ -2942,7 +2888,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17527" min="1" max="1" chance="60.7" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36586" min="1" max="1" chance="51.23" /> <!-- Scroll: Modify Armor (R-grade) -->
 				<item id="36574" min="1" max="1" chance="50.42" /> <!-- Scroll: Modify Weapon (R-grade) -->
@@ -3003,10 +2949,10 @@
 				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
 				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
 				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shaper (60%) -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23588" level="102" type="L2Monster" name="Hummel" title="Embryo Quartermaster">
@@ -3241,20 +3187,20 @@
 			<height normal="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23981" max="56047" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="4" /> <!-- Quality Leather -->
 				<item id="35347" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Glove Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
 				<item id="35327" min="1" max="1" chance="0.3" /> <!-- Amaranthine Shaper Fragment -->
 				<item id="35471" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23596" level="101" type="L2Monster" name="Fortress Guardian Captain" usingServerSideTitle="true">
@@ -3296,19 +3242,19 @@
 			<height normal="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
 				<item id="35346" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Legging Ingredient -->
 				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
 				<item id="36909" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum Wire - Downgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36554" min="1" max="1" chance="2.399" /> <!-- Armor Fragment (High-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23597" level="101" type="L2Monster" name="Atelia Passionate Soldier" usingServerSideTitle="true">
@@ -3345,20 +3291,20 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="23981" max="56047" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="3.855" /> <!-- Quality Leather -->
 				<item id="35348" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boot Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
 				<item id="35337" min="1" max="1" chance="0.3" /> <!-- Amaranthine Retributer Fragment -->
 				<item id="35472" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23598" level="102" type="L2Monster" name="Atelia Elite Captain" usingServerSideTitle="true">
@@ -3398,19 +3344,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots -->
 				<item id="57" min="28080" max="65626" chance="70" /> <!-- Adena -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
 				<item id="36911" min="1" max="1" chance="0.0075" /> <!-- Recipe: Orichalcum Wire - Combination -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23599" level="102" type="L2Monster" name="Fortress Dark Wizard" usingServerSideTitle="true">
@@ -3450,19 +3396,19 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="24525" max="57134" chance="70" /> <!-- Adena -->
 				<item id="35344" min="1" max="1" chance="1.264" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
 				<item id="35468" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
 				<item id="36907" min="1" max="1" chance="0.03" /> <!-- Recipe: Adamantite Wire - Upgrade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 </list>

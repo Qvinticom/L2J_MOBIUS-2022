@@ -661,7 +661,7 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="495" max="955" chance="70" /> <!-- Adena -->
 				<item id="156" min="1" max="1" chance="0.013" /> <!-- Hand Axe -->
 				<item id="167" min="1" max="1" chance="0.013" /> <!-- Scalpel -->
@@ -671,12 +671,12 @@
 				<item id="1881" min="1" max="1" chance="1.719" /> <!-- Coarse Bone Powder -->
 				<item id="1875" min="1" max="1" chance="0.857" /> <!-- Stone of Purity -->
 				<item id="5437" min="1" max="1" chance="0.315" /> <!-- Recipe: Heavy Sword(100%) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1931" min="1" max="1" chance="15.0011" /> <!-- Leather Boots Lining -->
 				<item id="2152" min="1" max="1" chance="20.2039" /> <!-- Recipe: Enchanted Necklace -->
 				<item id="1932" min="1" max="1" chance="18.2156" /> <!-- Bone Helmet Design -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -1833,7 +1833,7 @@
 			<height normal="43" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="217" min="1" max="1" chance="0.075" /> <!-- Shining Knife -->
 				<item id="218" min="1" max="1" chance="0.075" /> <!-- Throwing Knife -->
 				<item id="57" min="41" max="97" chance="70" /> <!-- Adena -->
@@ -1843,12 +1843,12 @@
 				<item id="1871" min="1" max="1" chance="3.273" /> <!-- Charcoal -->
 				<item id="1869" min="1" max="1" chance="3.191" /> <!-- Iron Ore -->
 				<item id="1866" min="1" max="1" chance="2.124" /> <!-- Suede -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="1" chance="52.46" /> <!-- Thread -->
 				<item id="1897" min="1" max="1" chance="6.266" /> <!-- Necklace of Wisdom Chain -->
 				<item id="734" min="1" max="1" chance="4.401" /> <!-- Wind Walk Potion -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="21258" level="71" type="L2Monster" name="Fallen Orc Shaman">

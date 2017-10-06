@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27500" level="80" type="L2Monster" name="Ketra's Commander Tayr" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -556,20 +556,16 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="6" max="14" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="21.69">
-					<item id="36526" min="1" max="1" chance="100" /> <!-- Fiber -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="1" chance="21.69" /> <!-- Fiber -->
+			</drop>
+			<spoil>
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="23" />
@@ -663,14 +659,10 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-			</death>
+			<drop>
+				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
+				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -697,14 +689,10 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-			</death>
+			<drop>
+				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
+				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -799,14 +787,10 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-			</death>
+			<drop>
+				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
+				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />

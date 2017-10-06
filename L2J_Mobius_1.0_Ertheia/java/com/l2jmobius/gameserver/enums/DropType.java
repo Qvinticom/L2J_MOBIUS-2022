@@ -14,30 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.drops;
-
-import com.l2jmobius.Config;
+package com.l2jmobius.gameserver.enums;
 
 /**
- * @author NosBit
+ * @author Mobius
  */
-public class GroupedDeathDropItem extends GroupedGeneralDropItem
+public enum DropType
 {
-	/**
-	 * @param chance the chance of this drop item.
-	 */
-	public GroupedDeathDropItem(double chance)
-	{
-		super(chance);
-	}
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.drops.GroupedGeneralDropItem#getGlobalChanceMultiplier()
-	 */
-	@Override
-	protected double getGlobalChanceMultiplier()
-	{
-		return Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
-	}
+	DROP,
+	SPOIL,
+	LUCKY_DROP;
 }

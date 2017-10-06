@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22100" level="58" type="L2Monster" name="Freya's Gardener">
 		<!-- Confirmed CT2.5 -->
@@ -58,27 +58,23 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="205" max="477" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="41.584">
-					<item id="36516" min="3" max="9" chance="42.179684494036" /> <!-- Worn Leather -->
-					<item id="36521" min="2" max="6" chance="23.350327048865" /> <!-- Iron Ore -->
-					<item id="36536" min="2" max="6" chance="12.759715275106" /> <!-- Worn Leather Braid -->
-					<item id="36551" min="1" max="1" chance="11.480377068103" /> <!-- Armor Fragment (Low-grade) -->
-					<item id="36561" min="1" max="1" chance="9.5084647941516" /> <!-- Cokes -->
-					<item id="36542" min="1" max="1" chance="0.72143131973836" /> <!-- Silver Wire -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="205" max="477" chance="70" /> <!-- Adena -->
+				<item id="36516" min="3" max="9" chance="17.5399999999999" /> <!-- Worn Leather -->
+				<item id="36521" min="2" max="6" chance="9.71000000000002" /> <!-- Iron Ore -->
+				<item id="36536" min="2" max="6" chance="5.30600000000008" /> <!-- Worn Leather Braid -->
+				<item id="36551" min="1" max="1" chance="4.77399999999995" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36561" min="1" max="1" chance="3.954" /> <!-- Cokes -->
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+			</drop>
+			<spoil>
 				<item id="36531" min="1" max="1" chance="73.97" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="1.626" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -136,29 +132,23 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="179" max="418" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="36552" min="1" max="1" chance="100" /> <!-- Armor Fragment -->
-				</group>
-				<group chance="8.354">
-					<item id="36546" min="1" max="1" chance="56.344266219775" /> <!-- Weapon Fragment (Low-grade) -->
-					<item id="36517" min="1" max="1" chance="24.802489825233" /> <!-- Leather -->
-					<item id="36522" min="1" max="1" chance="8.9777352166627" /> <!-- Silver -->
-					<item id="36537" min="1" max="1" chance="8.9777352166627" /> <!-- Leather Braid -->
-					<item id="36562" min="1" max="1" chance="0.89777352166627" /> <!-- Greater Cokes -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="179" max="418" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
+				<item id="36546" min="1" max="1" chance="4.707" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36517" min="1" max="1" chance="2.07199999999996" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="0.750000000000002" /> <!-- Silver -->
+				<item id="36537" min="1" max="1" chance="0.750000000000002" /> <!-- Leather Braid -->
+				<item id="36562" min="1" max="1" chance="0.0750000000000002" /> <!-- Greater Cokes -->
+			</drop>
+			<spoil>
 				<item id="36531" min="1" max="1" chance="64.37" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="1.473" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
@@ -272,26 +262,22 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="181" max="421" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="9.113">
-					<item id="36551" min="1" max="1" chance="55.426314056842" /> <!-- Armor Fragment (Low-grade) -->
-					<item id="36527" min="1" max="1" chance="29.759683967958" /> <!-- Synthetic Fiber -->
-					<item id="36522" min="1" max="1" chance="8.2300010973335" /> <!-- Silver -->
-					<item id="36542" min="1" max="1" chance="3.2920004389334" /> <!-- Silver Wire -->
-					<item id="36557" min="1" max="1" chance="3.2920004389334" /> <!-- Accessory Gem -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="181" max="421" chance="70" /> <!-- Adena -->
+				<item id="36551" min="1" max="1" chance="5.05100000000001" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36527" min="1" max="1" chance="2.71200000000001" /> <!-- Synthetic Fiber -->
+				<item id="36522" min="1" max="1" chance="0.750000000000002" /> <!-- Silver -->
+				<item id="36542" min="1" max="1" chance="0.300000000000001" /> <!-- Silver Wire -->
+				<item id="36557" min="1" max="1" chance="0.300000000000001" /> <!-- Accessory Gem -->
+			</drop>
+			<spoil>
 				<item id="36531" min="1" max="1" chance="67.56" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="1.423" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="21" />
@@ -354,28 +340,22 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="189" max="440" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="36552" min="1" max="1" chance="100" /> <!-- Armor Fragment -->
-				</group>
-				<group chance="39.162">
-					<item id="36526" min="3" max="9" chance="54.542668913743" /> <!-- Fiber -->
-					<item id="36536" min="2" max="6" chance="18.80138910168" /> <!-- Worn Leather Braid -->
-					<item id="36546" min="1" max="1" chance="15.474184158112" /> <!-- Weapon Fragment (Low-grade) -->
-					<item id="36561" min="1" max="1" chance="11.181757826464" /> <!-- Cokes -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="189" max="440" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
+				<item id="36526" min="3" max="9" chance="21.36" /> <!-- Fiber -->
+				<item id="36536" min="2" max="6" chance="7.36299999999992" /> <!-- Worn Leather Braid -->
+				<item id="36546" min="1" max="1" chance="6.05999999999982" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36561" min="1" max="1" chance="4.37899999999983" /> <!-- Cokes -->
+			</drop>
+			<spoil>
 				<item id="36531" min="1" max="1" chance="70.02" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="1.478" /> <!-- Thin Braid -->
 				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
@@ -2381,23 +2361,19 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="763" max="1777" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.8215">
-					<item id="36523" min="1" max="1" chance="89.172426014531" /> <!-- Adamantite -->
-					<item id="36524" min="1" max="1" chance="10.63264221159" /> <!-- Orichalcum -->
-					<item id="17526" min="1" max="1" chance="0.19493177387914" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="2.51599999999999" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.300000000000012" /> <!-- Orichalcum -->
+				<item id="17526" min="1" max="1" chance="0.00549999999999993" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="7.402" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -2464,23 +2440,19 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="763" max="1777" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.9435">
-					<item id="36523" min="1" max="1" chance="89.62119925259" /> <!-- Adamantite -->
-					<item id="36524" min="1" max="1" chance="10.191948360795" /> <!-- Orichalcum -->
-					<item id="17526" min="1" max="1" chance="0.18685238661457" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="2.63799999999999" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.300000000000001" /> <!-- Orichalcum -->
+				<item id="17526" min="1" max="1" chance="0.00549999999999987" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="7.424" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="11" />
@@ -2547,28 +2519,22 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="763" max="1777" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0309">
-					<item id="17436" min="1" max="1" chance="2.9126213592233" /> <!-- Eternal Leather Helmet -->
-					<item id="35344" min="1" max="1" chance="97.087378640777" /> <!-- Eternal Leather Helmet Ingredient -->
-				</group>
-				<group chance="0.0369">
-					<item id="36563" min="1" max="1" chance="81.30081300813" /> <!-- Synthetic Cokes -->
-					<item id="17526" min="1" max="1" chance="8.130081300813" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="36564" min="1" max="1" chance="8.130081300813" /> <!-- Greater Synthetic Cokes -->
-					<item id="35468" min="1" max="1" chance="2.4390243902439" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
+				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet -->
+				<item id="35344" min="1" max="1" chance="0.0300000000000001" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35468" min="1" max="1" chance="0.000899999999999999" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="7.364" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="11" />
@@ -2647,29 +2613,23 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="763" max="1777" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0009">
-					<item id="17433" min="1" max="1" chance="100" /> <!-- Eternal Gauntlets -->
-				</group>
-				<group chance="0.3639">
-					<item id="36523" min="1" max="1" chance="82.440230832646" /> <!-- Adamantite -->
-					<item id="35341" min="1" max="1" chance="8.2440230832646" /> <!-- Eternal Gauntlet Ingredient -->
-					<item id="36524" min="1" max="1" chance="8.2440230832646" /> <!-- Orichalcum -->
-					<item id="17526" min="1" max="1" chance="0.82440230832646" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35465" min="1" max="1" chance="0.24732069249794" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
+				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets -->
+				<item id="36523" min="1" max="1" chance="0.299999999999999" /> <!-- Adamantite -->
+				<item id="35341" min="1" max="1" chance="0.0299999999999999" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.0299999999999999" /> <!-- Orichalcum -->
+				<item id="17526" min="1" max="1" chance="0.00299999999999999" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35465" min="1" max="1" chance="0.000900000000000004" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+			</drop>
+			<spoil>
 				<item id="36523" min="1" max="1" chance="2.03" /> <!-- Adamantite -->
 				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="7.7" />
@@ -2750,25 +2710,19 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="763" max="1777" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35338" min="1" max="1" chance="100" /> <!-- Eternal Helmet Ingredient -->
-				</group>
-				<group chance="0.0039">
-					<item id="17526" min="1" max="1" chance="76.923076923077" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35462" min="1" max="1" chance="23.076923076923" /> <!-- Recipe: Eternal Helmet (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35462" min="1" max="1" chance="0.000899999999999997" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="7.7" />
@@ -2834,28 +2788,22 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="763" max="1777" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35331" min="1" max="1" chance="100" /> <!-- Amaranthine Fighter Fragment -->
-				</group>
-				<group chance="0.0369">
-					<item id="36563" min="1" max="1" chance="81.30081300813" /> <!-- Synthetic Cokes -->
-					<item id="17526" min="1" max="1" chance="8.130081300813" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="36564" min="1" max="1" chance="8.130081300813" /> <!-- Greater Synthetic Cokes -->
-					<item id="35455" min="1" max="1" chance="2.4390243902439" /> <!-- Recipe: Amaranthine Fighter (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
+				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Amaranthine Fighter Fragment -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35455" min="1" max="1" chance="0.000899999999999999" /> <!-- Recipe: Amaranthine Fighter (60%) -->
+			</drop>
+			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.0055" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -2921,28 +2869,22 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="763" max="1777" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35333" min="1" max="1" chance="100" /> <!-- Amaranthine Thrower Fragment -->
-				</group>
-				<group chance="0.0369">
-					<item id="36563" min="1" max="1" chance="81.30081300813" /> <!-- Synthetic Cokes -->
-					<item id="19448" min="1" max="1" chance="8.130081300813" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="36564" min="1" max="1" chance="8.130081300813" /> <!-- Greater Synthetic Cokes -->
-					<item id="35457" min="1" max="1" chance="2.4390243902439" /> <!-- Recipe: Amaranthine Thrower (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Amaranthine Thrower Fragment -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35457" min="1" max="1" chance="0.000899999999999999" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+			</drop>
+			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
@@ -3022,26 +2964,20 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="853" max="1986" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35339" min="1" max="1" chance="100" /> <!-- Eternal Breastplate Ingredient -->
-				</group>
-				<group chance="0.0069">
-					<item id="17526" min="1" max="1" chance="43.478260869565" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="19448" min="1" max="1" chance="43.478260869565" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="35463" min="1" max="1" chance="13.04347826087" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.00299999999999998" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.00299999999999998" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.00090000000000003" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="8.293" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="7.7" />
@@ -3108,24 +3044,20 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="853" max="1986" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3364">
-					<item id="36563" min="1" max="1" chance="89.179548156956" /> <!-- Synthetic Cokes -->
-					<item id="36564" min="1" max="1" chance="8.9179548156956" /> <!-- Greater Synthetic Cokes -->
-					<item id="17526" min="1" max="1" chance="1.6349583828775" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="19447" min="1" max="1" chance="0.26753864447087" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.00549999999999991" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.000900000000000007" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="8.298" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -3260,26 +3192,20 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="853" max="1986" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35327" min="1" max="1" chance="100" /> <!-- Amaranthine Shaper Fragment -->
-				</group>
-				<group chance="0.0048">
-					<item id="17526" min="1" max="1" chance="62.5" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="19447" min="1" max="1" chance="18.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-					<item id="35451" min="1" max="1" chance="18.75" /> <!-- Recipe: Amaranthine Shaper (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
+				<item id="35327" min="1" max="1" chance="0.03" /> <!-- Amaranthine Shaper Fragment -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="35451" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Shaper (60%) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="8.332" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -3495,26 +3421,20 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="853" max="1986" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35340" min="1" max="1" chance="100" /> <!-- Eternal Gaiter Ingredient -->
-				</group>
-				<group chance="0.0069">
-					<item id="17526" min="1" max="1" chance="43.478260869565" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="19448" min="1" max="1" chance="43.478260869565" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="35464" min="1" max="1" chance="13.04347826087" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
+				<item id="35340" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.00299999999999998" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.00299999999999998" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35464" min="1" max="1" chance="0.00090000000000003" /> <!-- Recipe: Eternal Gaiters (60%) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="8.299" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -3584,26 +3504,20 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="853" max="1986" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35329" min="1" max="1" chance="100" /> <!-- Amaranthine Slasher Fragment -->
-				</group>
-				<group chance="0.0048">
-					<item id="19448" min="1" max="1" chance="62.5" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="19447" min="1" max="1" chance="18.75" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-					<item id="35453" min="1" max="1" chance="18.75" /> <!-- Recipe: Amaranthine Slasher (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
+				<item id="35329" min="1" max="1" chance="0.03" /> <!-- Amaranthine Slasher Fragment -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Slasher (60%) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="8.251" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -3743,27 +3657,21 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2813" max="6553" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0805">
-					<item id="17449" min="1" max="1" chance="6.832298136646" /> <!-- Eternal Ring -->
-					<item id="35357" min="1" max="1" chance="93.167701863354" /> <!-- Eternal Ring Gem -->
-				</group>
-				<group chance="0.0094">
-					<item id="35481" min="1" max="1" chance="31.914893617021" /> <!-- Recipe: Eternal Ring (60%) -->
-					<item id="19448" min="1" max="1" chance="58.510638297872" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="19447" min="1" max="1" chance="9.5744680851064" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="2813" max="6553" chance="70" /> <!-- Adena -->
+				<item id="17449" min="1" max="1" chance="0.00550000000000003" /> <!-- Eternal Ring -->
+				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
+				<item id="35481" min="1" max="1" chance="0.00299999999999997" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="19448" min="1" max="1" chance="0.00549999999999997" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.000900000000000002" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="26.59" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
@@ -5184,27 +5092,21 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3749" max="8733" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="35336" min="1" max="1" chance="100" /> <!-- Amaranthine Caster Fragment -->
-				</group>
-				<group chance="0.0128">
-					<item id="17526" min="1" max="1" chance="42.96875" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="19448" min="1" max="1" chance="42.96875" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="19447" min="1" max="1" chance="7.03125" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-					<item id="35460" min="1" max="1" chance="7.03125" /> <!-- Recipe: Amaranthine Caster (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="3749" max="8733" chance="70" /> <!-- Adena -->
+				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Amaranthine Caster Fragment -->
+				<item id="17526" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0055" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Caster (60%) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="37.37" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -5275,24 +5177,20 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3749" max="8733" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.314">
-					<item id="35353" min="1" max="1" chance="95.541401273885" /> <!-- Eternal Shoe Ingredient -->
-					<item id="17526" min="1" max="1" chance="1.7515923566879" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="19448" min="1" max="1" chance="1.7515923566879" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="35477" min="1" max="1" chance="0.95541401273885" /> <!-- Recipe: Eternal Shoes (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="3749" max="8733" chance="70" /> <!-- Adena -->
+				<item id="35353" min="1" max="1" chance="0.299999999999999" /> <!-- Eternal Shoe Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.00550000000000001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.00550000000000001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35477" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Eternal Shoes (60%) -->
+			</drop>
+			<spoil>
 				<item id="40207" min="1" max="1" chance="37.2" /> <!-- Amaranthine Fragment -->
 				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -5367,26 +5265,20 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3749" max="8733" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="35336" min="1" max="1" chance="100" /> <!-- Amaranthine Caster Fragment -->
-				</group>
-				<group chance="0.0018">
-					<item id="19447" min="1" max="1" chance="50" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-					<item id="35460" min="1" max="1" chance="50" /> <!-- Recipe: Amaranthine Caster (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="3749" max="8733" chance="70" /> <!-- Adena -->
+				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Amaranthine Caster Fragment -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Caster (60%) -->
+			</drop>
+			<spoil>
 				<item id="36533" min="1" max="1" chance="8.587" /> <!-- Synthetic Braid -->
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -5455,26 +5347,22 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3749" max="8733" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="2.5375">
-					<item id="36523" min="1" max="1" chance="76.019704433498" /> <!-- Adamantite -->
-					<item id="35353" min="1" max="1" chance="11.822660098522" /> <!-- Eternal Shoe Ingredient -->
-					<item id="36524" min="1" max="1" chance="11.822660098522" /> <!-- Orichalcum -->
-					<item id="17526" min="1" max="1" chance="0.21674876847291" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35477" min="1" max="1" chance="0.11822660098522" /> <!-- Recipe: Eternal Shoes (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="3749" max="8733" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="1.92900000000001" /> <!-- Adamantite -->
+				<item id="35353" min="1" max="1" chance="0.299999999999996" /> <!-- Eternal Shoe Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.299999999999996" /> <!-- Orichalcum -->
+				<item id="17526" min="1" max="1" chance="0.00550000000000009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35477" min="1" max="1" chance="0.00299999999999996" /> <!-- Recipe: Eternal Shoes (60%) -->
+			</drop>
+			<spoil>
 				<item id="36523" min="1" max="1" chance="9.864" /> <!-- Adamantite -->
 				<item id="36524" min="1" max="1" chance="0.75" /> <!-- Orichalcum -->
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -5615,35 +5503,27 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1912" max="4454" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0355">
-					<item id="35340" min="1" max="1" chance="84.507042253521" /> <!-- Eternal Gaiter Ingredient -->
-					<item id="35339" min="1" max="1" chance="15.492957746479" /> <!-- Eternal Breastplate Ingredient -->
-				</group>
-				<group chance="0.06">
-					<item id="35343" min="1" max="1" chance="50" /> <!-- Eternal Shield Ingredient -->
-					<item id="35338" min="1" max="1" chance="50" /> <!-- Eternal Helmet Ingredient -->
-				</group>
-				<group chance="0.0723">
-					<item id="35342" min="1" max="1" chance="41.49377593361" /> <!-- Eternal Boot Ingredient -->
-					<item id="35341" min="1" max="1" chance="41.49377593361" /> <!-- Eternal Gauntlet Ingredient -->
-					<item id="19448" min="1" max="1" chance="4.149377593361" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="17526" min="1" max="1" chance="4.149377593361" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35466" min="1" max="1" chance="1.2448132780083" /> <!-- Recipe: Eternal Boots (60%) -->
-					<item id="35465" min="1" max="1" chance="1.2448132780083" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-					<item id="35464" min="1" max="1" chance="1.2448132780083" /> <!-- Recipe: Eternal Gaiters (60%) -->
-					<item id="35463" min="1" max="1" chance="1.2448132780083" /> <!-- Recipe: Eternal Breastplate (60%) -->
-					<item id="35462" min="1" max="1" chance="1.2448132780083" /> <!-- Recipe: Eternal Helmet (60%) -->
-					<item id="19447" min="1" max="1" chance="1.2448132780083" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-					<item id="35467" min="1" max="1" chance="1.2448132780083" /> <!-- Recipe: Eternal Shield (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1912" max="4454" chance="70" /> <!-- Adena -->
+				<item id="35340" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="35339" min="1" max="1" chance="0.00550000000000004" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="35343" min="1" max="1" chance="0.03" /> <!-- Eternal Shield Ingredient -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35342" min="1" max="1" chance="0.03" /> <!-- Eternal Boot Ingredient -->
+				<item id="35341" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35466" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35465" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35464" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35463" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35462" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="19447" min="1" max="1" chance="0.000900000000000001" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="35467" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Shield (60%) -->
+			</drop>
+			<spoil>
 				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -5715,20 +5595,16 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2068" max="4816" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3115">
-					<item id="35348" min="1" max="1" chance="96.308186195827" /> <!-- Eternal Leather Boot Ingredient -->
-					<item id="17526" min="1" max="1" chance="1.7656500802568" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="19448" min="1" max="1" chance="0.96308186195827" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="35472" min="1" max="1" chance="0.96308186195827" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="2068" max="4816" chance="70" /> <!-- Adena -->
+				<item id="35348" min="1" max="1" chance="0.300000000000001" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.00549999999999993" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.00300000000000001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35472" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</drop>
+			<spoil>
 				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -5798,20 +5674,16 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1912" max="4454" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.309">
-					<item id="35347" min="1" max="1" chance="97.087378640777" /> <!-- Eternal Leather Glove Ingredient -->
-					<item id="17526" min="1" max="1" chance="0.97087378640777" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="19448" min="1" max="1" chance="0.97087378640777" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="35471" min="1" max="1" chance="0.97087378640777" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1912" max="4454" chance="70" /> <!-- Adena -->
+				<item id="35347" min="1" max="1" chance="0.300000000000001" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.00300000000000001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.00300000000000001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35471" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</drop>
+			<spoil>
 				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -6023,28 +5895,24 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="140" max="327" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.367">
-					<item id="36527" min="1" max="1" chance="68.330661781543" /> <!-- Synthetic Fiber -->
-					<item id="36537" min="1" max="1" chance="17.174261506755" /> <!-- Leather Braid -->
-					<item id="9573" min="1" max="1" chance="6.8697046027021" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="6.8697046027021" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9575" min="1" max="1" chance="0.68697046027021" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="9576" min="1" max="1" chance="0.068697046027021" /> <!-- Top-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="2.98399999999998" /> <!-- Synthetic Fiber -->
+				<item id="36537" min="1" max="1" chance="0.749999999999991" /> <!-- Leather Braid -->
+				<item id="9573" min="1" max="1" chance="0.300000000000001" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.300000000000001" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="9575" min="1" max="1" chance="0.0300000000000001" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.00300000000000001" /> <!-- Top-grade Life Stone - Lv. 80 -->
+			</drop>
+			<spoil>
 				<item id="36532" min="1" max="1" chance="1.445" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -6105,28 +5973,24 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="140" max="327" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.683">
-					<item id="36528" min="1" max="1" chance="44.563279857398" /> <!-- Metallic Fiber -->
-					<item id="9573" min="1" max="1" chance="17.825311942959" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="17.825311942959" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="36538" min="1" max="1" chance="17.825311942959" /> <!-- Durable Leather Braid -->
-					<item id="9575" min="1" max="1" chance="1.7825311942959" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="9576" min="1" max="1" chance="0.17825311942959" /> <!-- Top-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.750000000000008" /> <!-- Metallic Fiber -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.003" /> <!-- Top-grade Life Stone - Lv. 80 -->
+			</drop>
+			<spoil>
 				<item id="36532" min="1" max="1" chance="1.43" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -6199,28 +6063,24 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="140" max="327" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.683">
-					<item id="36537" min="1" max="1" chance="44.563279857398" /> <!-- Leather Braid -->
-					<item id="9573" min="1" max="1" chance="17.825311942959" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="17.825311942959" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="36542" min="1" max="1" chance="17.825311942959" /> <!-- Silver Wire -->
-					<item id="9575" min="1" max="1" chance="1.7825311942959" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="9576" min="1" max="1" chance="0.17825311942959" /> <!-- Top-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
+				<item id="36537" min="1" max="1" chance="0.750000000000008" /> <!-- Leather Braid -->
+				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.003" /> <!-- Top-grade Life Stone - Lv. 80 -->
+			</drop>
+			<spoil>
 				<item id="36532" min="1" max="1" chance="1.464" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -6295,28 +6155,24 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="140" max="327" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.008">
-					<item id="9573" min="1" max="1" chance="29.761904761905" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="29.761904761905" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="36538" min="1" max="1" chance="29.761904761905" /> <!-- Durable Leather Braid -->
-					<item id="36543" min="1" max="1" chance="7.4404761904762" /> <!-- Adamantite Wire -->
-					<item id="9575" min="1" max="1" chance="2.9761904761905" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="9576" min="1" max="1" chance="0.29761904761905" /> <!-- Top-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
+				<item id="9573" min="1" max="1" chance="0.300000000000002" /> <!-- Life Stone - Lv. 80 -->
+				<item id="9574" min="1" max="1" chance="0.300000000000002" /> <!-- Mid-grade Life Stone - Lv. 80 -->
+				<item id="36538" min="1" max="1" chance="0.300000000000002" /> <!-- Durable Leather Braid -->
+				<item id="36543" min="1" max="1" chance="0.0750000000000001" /> <!-- Adamantite Wire -->
+				<item id="9575" min="1" max="1" chance="0.0300000000000002" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9576" min="1" max="1" chance="0.00300000000000002" /> <!-- Top-grade Life Stone - Lv. 80 -->
+			</drop>
+			<spoil>
 				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="36" />

@@ -85,7 +85,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="47245" min="1" max="1" chance="100" /> <!-- Helios's Majestic Earrings -->
 				<item id="47214" min="1" max="1" chance="42.00" /> <!-- Ring of the Beginning -->
 				<item id="17440" min="1" max="3" chance="20.68" /> <!-- Eternal Leather Boots -->
@@ -171,11 +171,11 @@
 				<item id="46466" min="1" max="1" chance="5.155" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
 				<item id="46451" min="1" max="1" chance="5.116" /> <!-- Kain's Soul Crystal - Stage 8 -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<item id="40199" min="1" max="1" chance="100" /> <!-- Disassembly Recipe Pouch: Weapon --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="29304" level="105" type="L2Monster" name="Helios" title="Emperor of the Beginning">
@@ -198,7 +198,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="47245" min="1" max="1" chance="100" /> <!-- Helios's Majestic Earrings -->
 				<item id="47214" min="1" max="1" chance="42.00" /> <!-- Ring of the Beginning -->
 				<item id="17440" min="1" max="3" chance="20.68" /> <!-- Eternal Leather Boots -->
@@ -284,11 +284,11 @@
 				<item id="46466" min="1" max="1" chance="5.155" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
 				<item id="46451" min="1" max="1" chance="5.116" /> <!-- Kain's Soul Crystal - Stage 8 -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<item id="40199" min="1" max="1" chance="100" /> <!-- Disassembly Recipe Pouch: Weapon --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="29305" level="105" type="L2Monster" name="Helios" title="Emperor of the Beginning">
@@ -311,7 +311,7 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="47245" min="1" max="1" chance="100" /> <!-- Helios's Majestic Earrings -->
 				<item id="47214" min="1" max="1" chance="42.00" /> <!-- Ring of the Beginning -->
 				<item id="17440" min="1" max="3" chance="20.68" /> <!-- Eternal Leather Boots -->
@@ -397,11 +397,11 @@
 				<item id="46466" min="1" max="1" chance="5.155" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
 				<item id="46451" min="1" max="1" chance="5.116" /> <!-- Kain's Soul Crystal - Stage 8 -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 				<item id="40199" min="1" max="1" chance="100" /> <!-- Disassembly Recipe Pouch: Weapon --> <!-- Lucky Drop -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="29306" level="99" type="L2Monster" name="">

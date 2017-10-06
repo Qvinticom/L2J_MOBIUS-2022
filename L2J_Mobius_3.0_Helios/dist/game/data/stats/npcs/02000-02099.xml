@@ -48,38 +48,26 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="42">
-					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="45" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="35" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11">
-					<item id="8603" min="1" max="1" chance="10" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="54" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="36" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Haste Herb -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of HP Drain -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Wizard Herb -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Wind Walk Herb -->
-					<item id="10657" min="1" max="1" chance="6" /> <!-- Mysterious Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="1.1" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.66" /> <!-- Mysterious Herb -->
+			</drop>
 		</drop_lists>
 		<status undying="false" />
 		<collision>
@@ -138,38 +126,26 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="42">
-					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="45" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="35" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11">
-					<item id="8603" min="1" max="1" chance="10" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="54" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="36" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Haste Herb -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of HP Drain -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Wizard Herb -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Wind Walk Herb -->
-					<item id="10657" min="1" max="1" chance="6" /> <!-- Mysterious Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="1.1" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.66" /> <!-- Mysterious Herb -->
+			</drop>
 		</drop_lists>
 		<status undying="false" />
 		<collision>
@@ -230,38 +206,26 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="42">
-					<item id="8600" min="1" max="1" chance="20" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="45" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="35" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11">
-					<item id="8603" min="1" max="1" chance="10" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="54" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="36" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Haste Herb -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of HP Drain -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Wizard Herb -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Wind Walk Herb -->
-					<item id="10657" min="1" max="1" chance="6" /> <!-- Mysterious Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="1.1" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
+				<item id="10657" min="1" max="1" chance="0.66" /> <!-- Mysterious Herb -->
+			</drop>
 		</drop_lists>
 		<status undying="false" />
 		<collision>

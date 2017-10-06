@@ -116,7 +116,7 @@
 			<height normal="16.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="116" min="1" max="1" chance="7.072" /> <!-- Magic Ring -->
 				<item id="118" min="1" max="1" chance="5.594" /> <!-- Magic Necklace -->
 				<item id="112" min="1" max="1" chance="2.112" /> <!-- Apprentice's Earring -->
@@ -126,11 +126,11 @@
 				<item id="1867" min="1" max="1" chance="4.182" /> <!-- Animal Skin -->
 				<item id="1871" min="1" max="1" chance="3.091" /> <!-- Charcoal -->
 				<item id="1788" min="1" max="1" chance="2.434" /> <!-- Recipe: Bow -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="116" min="1" max="1" chance="76.89" /> <!-- Magic Ring -->
 				<item id="1871" min="1" max="1" chance="12.17" /> <!-- Charcoal -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20004" level="6" type="L2Monster" name="Imp">
@@ -178,7 +178,7 @@
 			<height normal="24" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="1122" min="1" max="1" chance="3.848" /> <!-- Cotton Shoes -->
 				<item id="1129" min="1" max="1" chance="3.831" /> <!-- Crude Leather Shoes -->
 				<item id="1119" min="1" max="1" chance="3.757" /> <!-- Short Leather Gloves -->
@@ -186,11 +186,11 @@
 				<item id="1868" min="1" max="1" chance="5.046" /> <!-- Thread -->
 				<item id="1867" min="1" max="1" chance="3.379" /> <!-- Animal Skin -->
 				<item id="1871" min="1" max="1" chance="2.543" /> <!-- Charcoal -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="10.72" /> <!-- Suede -->
 				<item id="2006" min="1" max="1" chance="1.062" /> <!-- Willow Staff Head -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20005" level="7" type="L2Monster" name="Imp Elder">
@@ -238,18 +238,18 @@
 			<height normal="24" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="19" min="1" max="1" chance="6.804" /> <!-- Small Shield -->
 				<item id="42" min="1" max="1" chance="4.817" /> <!-- Leather Cap -->
 				<item id="57" min="20" max="48" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="6.369" /> <!-- Thread -->
 				<item id="1867" min="1" max="1" chance="4.328" /> <!-- Animal Skin -->
 				<item id="1871" min="1" max="1" chance="3.188" /> <!-- Charcoal -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1060" min="1" max="1" chance="44.08" /> <!-- Healing Potion -->
 				<item id="1866" min="1" max="1" chance="13.52" /> <!-- Suede -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20006" level="8" type="L2Monster" name="Orc Archer">
@@ -299,18 +299,18 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="25" max="61" chance="70" /> <!-- Adena -->
 				<item id="17" min="10" max="30" chance="15.43" /> <!-- Wooden Arrow -->
 				<item id="1868" min="1" max="1" chance="6.176" /> <!-- Thread -->
 				<item id="1867" min="1" max="1" chance="4.112" /> <!-- Animal Skin -->
 				<item id="1796" min="1" max="1" chance="3.88" /> <!-- Recipe: Leather Tunic -->
 				<item id="2007" min="1" max="1" chance="1.955" /> <!-- Bow Shaft -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1060" min="1" max="1" chance="55.53" /> <!-- Healing Potion -->
 				<item id="113" min="1" max="1" chance="6.107" /> <!-- Mage Earring -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20007" level="9" type="L2Monster" name="Green Fungus">
@@ -344,17 +344,17 @@
 			<height normal="22.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="29" min="1" max="1" chance="4.318" /> <!-- Leather Pants -->
 				<item id="22" min="1" max="1" chance="2.665" /> <!-- Leather Shirt -->
 				<item id="57" min="31" max="74" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="14.46" /> <!-- Thread -->
 				<item id="1867" min="1" max="1" chance="9.849" /> <!-- Animal Skin -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="19.9" /> <!-- Suede -->
 				<item id="1122" min="1" max="1" chance="9.872" /> <!-- Cotton Shoes -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20008" level="14" type="L2Monster" name="Felim Lizardman">
@@ -401,18 +401,18 @@
 			<height normal="23" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="255" min="1" max="1" chance="0.3" /> <!-- Fox Claw Gloves -->
 				<item id="2371" min="1" max="1" chance="0.3" /> <!-- Fist of Butcher -->
 				<item id="57" min="41" max="97" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="12.95" /> <!-- Thread -->
 				<item id="1867" min="1" max="1" chance="8.648" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="4.355" /> <!-- Suede -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1871" min="1" max="1" chance="40.98" /> <!-- Charcoal -->
 				<item id="1793" min="1" max="1" chance="2.87" /> <!-- Recipe: Sword of Reflection -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20009" level="14" type="L2Monster" name="Vuku Orc">
@@ -461,18 +461,18 @@
 			<height normal="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="255" min="1" max="1" chance="0.3" /> <!-- Fox Claw Gloves -->
 				<item id="2371" min="1" max="1" chance="0.3" /> <!-- Fist of Butcher -->
 				<item id="57" min="41" max="97" chance="70" /> <!-- Adena -->
 				<item id="1871" min="1" max="1" chance="6.535" /> <!-- Charcoal -->
 				<item id="1870" min="1" max="1" chance="6.483" /> <!-- Coal -->
 				<item id="1873" min="1" max="1" chance="2.651" /> <!-- Silver Nugget -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1870" min="1" max="1" chance="39.74" /> <!-- Coal -->
 				<item id="43" min="1" max="1" chance="1.981" /> <!-- Wooden Helmet -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20010" level="15" type="L2Monster" name="Felim Lizardman Scout">
@@ -519,7 +519,7 @@
 			<height normal="23" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="271" min="1" max="1" chance="0.3" /> <!-- Hunting Bow -->
 				<item id="57" min="43" max="101" chance="70" /> <!-- Adena -->
 				<item id="1060" min="1" max="1" chance="9.033" /> <!-- Healing Potion -->
@@ -527,10 +527,10 @@
 				<item id="1867" min="1" max="1" chance="5.504" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="2.763" /> <!-- Suede -->
 				<item id="1794" min="1" max="1" chance="0.3" /> <!-- Recipe: Forest Bow -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1833" min="1" max="5" chance="72.26" /> <!-- Bandage -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20011" level="15" type="L2Monster" name="Vuku Orc Archer">
@@ -579,7 +579,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="271" min="1" max="1" chance="0.3" /> <!-- Hunting Bow -->
 				<item id="57" min="43" max="101" chance="70" /> <!-- Adena -->
 				<item id="17" min="10" max="30" chance="17.22" /> <!-- Wooden Arrow -->
@@ -588,10 +588,10 @@
 				<item id="1865" min="1" max="1" chance="3.33" /> <!-- Varnish -->
 				<item id="1798" min="1" max="1" chance="3.283" /> <!-- Recipe: Leather Helmet -->
 				<item id="1873" min="1" max="1" chance="1.331" /> <!-- Silver Nugget -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1792" min="1" max="1" chance="6.052" /> <!-- Recipe: Short Spear -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20012" level="16" type="L2Monster" name="Gora Werewolf">
@@ -638,7 +638,7 @@
 			<height normal="26" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="1101" min="1" max="1" chance="0.3" /> <!-- Tunic of Devotion -->
 				<item id="1104" min="1" max="1" chance="0.3" /> <!-- Stockings of Devotion -->
 				<item id="946" min="1" max="1" chance="0.075" /> <!-- Skeleton Dagger -->
@@ -647,11 +647,11 @@
 				<item id="1867" min="1" max="1" chance="6.128" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="3.069" /> <!-- Suede -->
 				<item id="2143" min="1" max="1" chance="0.75" /> <!-- Recipe: Synthetic Cokes -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1800" min="1" max="1" chance="11.5" /> <!-- Recipe: Piece Bone Breastplate -->
 				<item id="2253" min="1" max="1" chance="1.537" /> <!-- Recipe: Sword Breaker -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20013" level="13" type="L2Monster" name="Dryad">
@@ -699,7 +699,7 @@
 			<height normal="20" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="9" min="1" max="1" chance="0.3" /> <!-- Cedar Staff -->
 				<item id="154" min="1" max="1" chance="0.3" /> <!-- Dwarven Mace -->
 				<item id="57" min="39" max="93" chance="70" /> <!-- Adena -->
@@ -709,11 +709,11 @@
 				<item id="1869" min="1" max="1" chance="3.787" /> <!-- Iron Ore -->
 				<item id="1871" min="1" max="1" chance="3.685" /> <!-- Charcoal -->
 				<item id="2008" min="1" max="1" chance="1.115" /> <!-- Cedar Staff Head -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="24.33" /> <!-- Suede -->
 				<item id="1896" min="1" max="1" chance="16.42" /> <!-- Necklace of Anguish Chain -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20014" level="17" type="L2Monster" name="Felim Lizardman Warrior">
@@ -761,7 +761,7 @@
 			<height normal="30" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="2" min="1" max="1" chance="0.03" /> <!-- Long Sword -->
 				<item id="120" min="1" max="1" chance="0.03" /> <!-- Sword of Reflection -->
 				<item id="121" min="1" max="1" chance="0.03" /> <!-- Sword of Watershadow -->
@@ -770,11 +770,11 @@
 				<item id="1867" min="1" max="1" chance="8.465" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="4.165" /> <!-- Suede -->
 				<item id="2012" min="1" max="1" chance="0.3" /> <!-- Sword of Reflection Blade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1867" min="1" max="1" chance="51.35" /> <!-- Animal Skin -->
 				<item id="2254" min="1" max="1" chance="1.594" /> <!-- Recipe: Compound Bow -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20015" level="13" type="L2Monster" name="Zombie Forest Elf">
@@ -810,7 +810,7 @@
 			<height normal="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="9" min="1" max="1" chance="0.3" /> <!-- Cedar Staff -->
 				<item id="154" min="1" max="1" chance="0.3" /> <!-- Dwarven Mace -->
 				<item id="57" min="47" max="112" chance="70" /> <!-- Adena -->
@@ -822,11 +822,11 @@
 				<item id="1871" min="1" max="1" chance="3.203" /> <!-- Charcoal -->
 				<item id="1803" min="1" max="1" chance="2.77" /> <!-- Recipe: Necklace of Wisdom -->
 				<item id="2008" min="1" max="1" chance="1.296" /> <!-- Cedar Staff Head -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1798" min="1" max="1" chance="45.55" /> <!-- Recipe: Leather Helmet -->
 				<item id="1871" min="1" max="1" chance="44.9" /> <!-- Charcoal -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20016" level="13" type="L2Monster" name="Stone Golem">
@@ -859,19 +859,19 @@
 			<height normal="31" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="271" min="1" max="1" chance="0.3" /> <!-- Hunting Bow -->
 				<item id="57" min="47" max="110" chance="70" /> <!-- Adena -->
 				<item id="1864" min="1" max="1" chance="10.94" /> <!-- Stem -->
 				<item id="1868" min="1" max="1" chance="10.61" /> <!-- Thread -->
 				<item id="1871" min="1" max="1" chance="5.51" /> <!-- Charcoal -->
 				<item id="1869" min="1" max="1" chance="5.487" /> <!-- Iron Ore -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1833" min="1" max="1" chance="77.82" /> <!-- Bandage -->
 				<item id="1865" min="1" max="1" chance="29.54" /> <!-- Varnish -->
 				<item id="37" min="1" max="1" chance="2.334" /> <!-- Leather Shoes -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20017" level="17" type="L2Monster" name="Vuku Orc Warrior">
@@ -922,7 +922,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="2" min="1" max="1" chance="0.03" /> <!-- Long Sword -->
 				<item id="120" min="1" max="1" chance="0.03" /> <!-- Sword of Reflection -->
 				<item id="121" min="1" max="1" chance="0.03" /> <!-- Sword of Watershadow -->
@@ -931,11 +931,11 @@
 				<item id="1871" min="1" max="1" chance="6.262" /> <!-- Charcoal -->
 				<item id="1873" min="1" max="1" chance="2.597" /> <!-- Silver Nugget -->
 				<item id="2012" min="1" max="1" chance="0.3" /> <!-- Sword of Reflection Blade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1870" min="1" max="1" chance="37.75" /> <!-- Coal -->
 				<item id="1897" min="1" max="1" chance="9.207" /> <!-- Necklace of Wisdom Chain -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20018" level="14" type="L2Monster" name="Carnivorous Fungus">
@@ -1028,7 +1028,7 @@
 			<height normal="20" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="429" min="1" max="1" chance="0.75" /> <!-- Leather Tunic -->
 				<item id="464" min="1" max="1" chance="0.75" /> <!-- Leather Stockings -->
 				<item id="57" min="41" max="97" chance="70" /> <!-- Adena -->
@@ -1040,11 +1040,11 @@
 				<item id="1867" min="1" max="1" chance="4.388" /> <!-- Animal Skin -->
 				<item id="1871" min="1" max="1" chance="3.246" /> <!-- Charcoal -->
 				<item id="1869" min="1" max="1" chance="3.191" /> <!-- Iron Ore -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1864" min="1" max="1" chance="79.71" /> <!-- Stem -->
 				<item id="1923" min="1" max="1" chance="16.27" /> <!-- Leather Stocking Pattern -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20020" level="14" type="L2Monster" name="Zombie Forest Elf Researcher">
@@ -1080,7 +1080,7 @@
 			<height normal="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="49" min="1" max="1" chance="2.616" /> <!-- Gloves (item) -->
 				<item id="37" min="1" max="1" chance="2.527" /> <!-- Leather Shoes -->
 				<item id="57" min="47" max="112" chance="70" /> <!-- Adena -->
@@ -1091,11 +1091,11 @@
 				<item id="1869" min="1" max="1" chance="3.818" /> <!-- Iron Ore -->
 				<item id="1871" min="1" max="1" chance="3.8" /> <!-- Charcoal -->
 				<item id="1661" min="1" max="1" chance="0.75" /> <!-- Thief Key -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1799" min="1" max="1" chance="68.94" /> <!-- Recipe: Leather Gloves -->
 				<item id="1831" min="1" max="3" chance="60.05" /> <!-- Antidote -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20021" level="14" type="L2Monster" name="Red Bear">
@@ -1141,7 +1141,7 @@
 			<height normal="40" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="9" min="1" max="1" chance="0.3" /> <!-- Cedar Staff -->
 				<item id="154" min="1" max="1" chance="0.3" /> <!-- Dwarven Mace -->
 				<item id="57" min="41" max="98" chance="70" /> <!-- Adena -->
@@ -1150,11 +1150,11 @@
 				<item id="1866" min="1" max="1" chance="3.317" /> <!-- Suede -->
 				<item id="2008" min="1" max="1" chance="1.213" /> <!-- Cedar Staff Head -->
 				<item id="1793" min="1" max="1" chance="0.3" /> <!-- Recipe: Sword of Reflection -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1921" min="1" max="1" chance="24.81" /> <!-- Leather Shoe Texture -->
 				<item id="1792" min="1" max="1" chance="3.001" /> <!-- Recipe: Short Spear -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20022" level="14" type="L2Monster" name="Misery Skeleton">
@@ -1193,7 +1193,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="20" min="1" max="1" chance="3.189" /> <!-- Buckler -->
 				<item id="43" min="1" max="1" chance="2.275" /> <!-- Wooden Helmet -->
 				<item id="57" min="42" max="100" chance="70" /> <!-- Adena -->
@@ -1201,11 +1201,11 @@
 				<item id="1873" min="1" max="1" chance="2.083" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="1.054" /> <!-- Mithril Ore -->
 				<item id="1793" min="1" max="1" chance="0.3" /> <!-- Recipe: Sword of Reflection -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1872" min="1" max="1" chance="55.15" /> <!-- Animal Bone -->
 				<item id="1831" min="1" max="3" chance="54.49" /> <!-- Antidote -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20023" level="15" type="L2Monster" name="Shadow Beast">
@@ -1251,7 +1251,7 @@
 			<height normal="14.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="429" min="1" max="1" chance="0.75" /> <!-- Leather Tunic -->
 				<item id="464" min="1" max="1" chance="0.75" /> <!-- Leather Stockings -->
 				<item id="57" min="43" max="101" chance="70" /> <!-- Adena -->
@@ -1262,11 +1262,11 @@
 				<item id="1867" min="1" max="1" chance="5.477" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="2.7" /> <!-- Suede -->
 				<item id="1794" min="1" max="1" chance="0.3" /> <!-- Recipe: Forest Bow -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="1" chance="86.81" /> <!-- Thread -->
 				<item id="1922" min="1" max="1" chance="11.06" /> <!-- Leather Tunic Pattern -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20024" level="17" type="L2Monster" name="Langk Lizardman Warrior">
@@ -1314,7 +1314,7 @@
 			<height normal="30" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="2" min="1" max="1" chance="0.03" /> <!-- Long Sword -->
 				<item id="120" min="1" max="1" chance="0.03" /> <!-- Sword of Reflection -->
 				<item id="121" min="1" max="1" chance="0.03" /> <!-- Sword of Watershadow -->
@@ -1325,11 +1325,11 @@
 				<item id="1866" min="1" max="1" chance="2.509" /> <!-- Suede -->
 				<item id="1817" min="1" max="1" chance="0.75" /> <!-- Recipe: Cord -->
 				<item id="2012" min="1" max="1" chance="0.3" /> <!-- Sword of Reflection Blade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1817" min="1" max="1" chance="7.777" /> <!-- Recipe: Cord -->
 				<item id="2253" min="1" max="1" chance="1.548" /> <!-- Recipe: Sword Breaker -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20025" level="15" type="L2Monster" name="Lesser Dark Horror">
@@ -1359,7 +1359,7 @@
 			<height normal="35" grown="42" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="429" min="1" max="1" chance="0.75" /> <!-- Leather Tunic -->
 				<item id="464" min="1" max="1" chance="0.75" /> <!-- Leather Stockings -->
 				<item id="57" min="43" max="101" chance="70" /> <!-- Adena -->
@@ -1371,11 +1371,11 @@
 				<item id="1869" min="1" max="1" chance="3.342" /> <!-- Iron Ore -->
 				<item id="1871" min="1" max="1" chance="3.322" /> <!-- Charcoal -->
 				<item id="1798" min="1" max="1" chance="3.263" /> <!-- Recipe: Leather Helmet -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1799" min="1" max="1" chance="59.9" /> <!-- Recipe: Leather Gloves -->
 				<item id="1869" min="1" max="1" chance="41.39" /> <!-- Iron Ore -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20026" level="15" type="L2Monster" name="Ruin Zombie">
@@ -1425,7 +1425,7 @@
 			<height normal="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="49" min="1" max="1" chance="2.81" /> <!-- Gloves (item) -->
 				<item id="37" min="1" max="1" chance="2.729" /> <!-- Leather Shoes -->
 				<item id="57" min="52" max="120" chance="70" /> <!-- Adena -->
@@ -1437,11 +1437,11 @@
 				<item id="1871" min="1" max="1" chance="3.489" /> <!-- Charcoal -->
 				<item id="1865" min="1" max="1" chance="3.434" /> <!-- Varnish -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="32.59" /> <!-- Suede -->
 				<item id="1923" min="1" max="1" chance="19.23" /> <!-- Leather Stocking Pattern -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20027" level="16" type="L2Monster" name="Langk Lizardman Scout">
@@ -1489,7 +1489,7 @@
 			<height normal="23" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="38" min="1" max="1" chance="0.75" /> <!-- Low Boots -->
 				<item id="50" min="1" max="1" chance="0.75" /> <!-- Leather Gloves -->
 				<item id="57" min="39" max="90" chance="70" /> <!-- Adena -->
@@ -1498,11 +1498,11 @@
 				<item id="1867" min="1" max="1" chance="6.062" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="2.999" /> <!-- Suede -->
 				<item id="1800" min="1" max="1" chance="1.465" /> <!-- Recipe: Piece Bone Breastplate -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1865" min="1" max="1" chance="37.32" /> <!-- Varnish -->
 				<item id="845" min="1" max="1" chance="0.75" /> <!-- Cat's Eye -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20028" level="16" type="L2Monster" name="Pincher">
@@ -1549,7 +1549,7 @@
 			<height normal="25.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="877" min="1" max="1" chance="0.75" /> <!-- Ring of Wisdom -->
 				<item id="845" min="1" max="1" chance="0.3" /> <!-- Cat's Eye -->
 				<item id="908" min="1" max="1" chance="0.3" /> <!-- Necklace of Wisdom -->
@@ -1559,11 +1559,11 @@
 				<item id="1897" min="1" max="1" chance="4.69" /> <!-- Necklace of Wisdom Chain -->
 				<item id="1866" min="1" max="1" chance="3.078" /> <!-- Suede -->
 				<item id="2150" min="1" max="1" chance="2.16" /> <!-- Recipe: Blue Diamond Necklace -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="1" chance="74.31" /> <!-- Thread -->
 				<item id="1801" min="1" max="1" chance="18.14" /> <!-- Recipe: Piece Bone Gaiters -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20029" level="16" type="L2Monster" name="Ruin Zombie Leader">
@@ -1614,7 +1614,7 @@
 			<height normal="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="15" min="1" max="1" chance="0.075" /> <!-- Short Spear -->
 				<item id="57" min="44" max="104" chance="70" /> <!-- Adena -->
 				<item id="1831" min="1" max="1" chance="6.993" /> <!-- Antidote -->
@@ -1626,11 +1626,11 @@
 				<item id="2011" min="1" max="1" chance="1.026" /> <!-- Short Spear Edge -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2144" min="1" max="1" chance="0.75" /> <!-- Recipe: Synthetic Braid -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1864" min="1" max="1" chance="87.49" /> <!-- Stem -->
 				<item id="2013" min="1" max="1" chance="0.75" /> <!-- Forest Bow Shaft -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20030" level="15" type="L2Monster" name="Langk Lizardman">
@@ -1677,18 +1677,18 @@
 			<height normal="23" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="216" min="1" max="1" chance="0.3" /> <!-- Dirk -->
 				<item id="57" min="43" max="101" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="13.46" /> <!-- Thread -->
 				<item id="1867" min="1" max="1" chance="8.998" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="4.532" /> <!-- Suede -->
 				<item id="2009" min="1" max="1" chance="1.586" /> <!-- Dirk Blade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1831" min="1" max="3" chance="55.52" /> <!-- Antidote -->
 				<item id="1798" min="1" max="1" chance="40.11" /> <!-- Recipe: Leather Helmet -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20031" level="17" type="L2Monster" name="Onyx Beast">
@@ -1725,7 +1725,7 @@
 			<height normal="14.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="24" min="1" max="1" chance="0.3" /> <!-- Bone Breastplate -->
 				<item id="31" min="1" max="1" chance="0.3" /> <!-- Bone Gaiters -->
 				<item id="390" min="1" max="1" chance="0.3" /> <!-- Cotton Shirt -->
@@ -1738,11 +1738,11 @@
 				<item id="1873" min="1" max="1" chance="1.18" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2139" min="1" max="1" chance="0.75" /> <!-- Recipe: Steel Mold -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1865" min="1" max="1" chance="38.31" /> <!-- Varnish -->
 				<item id="24" min="1" max="1" chance="0.3" /> <!-- Bone Breastplate -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20032" level="17" type="L2Monster" name="Pinrul">
@@ -1790,7 +1790,7 @@
 			<height normal="25.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="24" min="1" max="1" chance="0.3" /> <!-- Bone Breastplate -->
 				<item id="31" min="1" max="1" chance="0.3" /> <!-- Bone Gaiters -->
 				<item id="390" min="1" max="1" chance="0.3" /> <!-- Cotton Shirt -->
@@ -1799,11 +1799,11 @@
 				<item id="1868" min="1" max="1" chance="13.05" /> <!-- Thread -->
 				<item id="1864" min="1" max="1" chance="12.85" /> <!-- Stem -->
 				<item id="1866" min="1" max="1" chance="4.266" /> <!-- Suede -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="1" chance="77.62" /> <!-- Thread -->
 				<item id="734" min="1" max="1" chance="6.48" /> <!-- Wind Walk Potion -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20033" level="17" type="L2Monster" name="Shade Horror">
@@ -1854,7 +1854,7 @@
 			<height normal="35" grown="42" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="877" min="1" max="1" chance="0.75" /> <!-- Ring of Wisdom -->
 				<item id="845" min="1" max="1" chance="0.3" /> <!-- Cat's Eye -->
 				<item id="908" min="1" max="1" chance="0.3" /> <!-- Necklace of Wisdom -->
@@ -1864,11 +1864,11 @@
 				<item id="1873" min="1" max="1" chance="2" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2253" min="1" max="1" chance="0.3" /> <!-- Recipe: Sword Breaker -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1924" min="1" max="1" chance="12.93" /> <!-- Leather Helmet Design -->
 				<item id="2139" min="1" max="1" chance="7.884" /> <!-- Recipe: Steel Mold -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20034" level="17" type="L2Monster" name="Prowler">
@@ -1910,7 +1910,7 @@
 			<height normal="25.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="38" min="1" max="1" chance="0.75" /> <!-- Low Boots -->
 				<item id="50" min="1" max="1" chance="0.75" /> <!-- Leather Gloves -->
 				<item id="57" min="40" max="94" chance="70" /> <!-- Adena -->
@@ -1922,11 +1922,11 @@
 				<item id="1869" min="1" max="1" chance="2.777" /> <!-- Iron Ore -->
 				<item id="1871" min="1" max="1" chance="2.707" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="1.779" /> <!-- Suede -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="1" chance="75.52" /> <!-- Thread -->
 				<item id="2254" min="1" max="1" chance="1.604" /> <!-- Recipe: Compound Bow -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20035" level="17" type="L2Monster" name="Skeleton Tracker">
@@ -1974,7 +1974,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="38" min="1" max="1" chance="0.75" /> <!-- Low Boots -->
 				<item id="50" min="1" max="1" chance="0.75" /> <!-- Leather Gloves -->
 				<item id="57" min="40" max="94" chance="70" /> <!-- Adena -->
@@ -1987,12 +1987,12 @@
 				<item id="1876" min="1" max="1" chance="0.3" /> <!-- Mithril Ore -->
 				<item id="1817" min="1" max="1" chance="0.3" /> <!-- Recipe: Cord -->
 				<item id="5268" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="1" chance="51.92" /> <!-- Thread -->
 				<item id="1925" min="1" max="1" chance="17.31" /> <!-- Leather Glove Lining -->
 				<item id="2140" min="1" max="1" chance="5.186" /> <!-- Recipe: High-grade Suede -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20036" level="18" type="L2Monster" name="Lirein">
@@ -2043,7 +2043,7 @@
 			<height normal="35" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="877" min="1" max="1" chance="0.75" /> <!-- Ring of Wisdom -->
 				<item id="845" min="1" max="1" chance="0.3" /> <!-- Cat's Eye -->
 				<item id="908" min="1" max="1" chance="0.3" /> <!-- Necklace of Wisdom -->
@@ -2055,11 +2055,11 @@
 				<item id="1869" min="1" max="1" chance="3.232" /> <!-- Iron Ore -->
 				<item id="1871" min="1" max="1" chance="3.198" /> <!-- Charcoal -->
 				<item id="2173" min="1" max="1" chance="0.75" /> <!-- Recipe: Durable Leather Shirt -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2175" min="1" max="1" chance="33.79" /> <!-- Recipe: Boots -->
 				<item id="1873" min="1" max="1" chance="15.54" /> <!-- Silver Nugget -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20037" level="18" type="L2Monster" name="Mana Seeker">
@@ -2156,7 +2156,7 @@
 			<height normal="25.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="2" min="1" max="1" chance="0.03" /> <!-- Long Sword -->
 				<item id="120" min="1" max="1" chance="0.03" /> <!-- Sword of Reflection -->
 				<item id="121" min="1" max="1" chance="0.03" /> <!-- Sword of Watershadow -->
@@ -2166,11 +2166,11 @@
 				<item id="2175" min="1" max="1" chance="3.993" /> <!-- Recipe: Boots -->
 				<item id="1866" min="1" max="1" chance="3.199" /> <!-- Suede -->
 				<item id="2012" min="1" max="1" chance="0.3" /> <!-- Sword of Reflection Blade -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="1" chance="79.47" /> <!-- Thread -->
 				<item id="2174" min="1" max="1" chance="17.78" /> <!-- Recipe: Durable Leather Gaiters -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20039" level="18" type="L2Monster" name="Ratman Scavenger">
@@ -2218,7 +2218,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="945" min="1" max="1" chance="1.145" /> <!-- Skeleton Buckler -->
 				<item id="102" min="1" max="1" chance="0.75" /> <!-- Round Shield -->
 				<item id="44" min="1" max="1" chance="0.3" /> <!-- Leather Helmet -->
@@ -2227,11 +2227,11 @@
 				<item id="1924" min="1" max="1" chance="6.73" /> <!-- Leather Helmet Design -->
 				<item id="1871" min="1" max="1" chance="6.502" /> <!-- Charcoal -->
 				<item id="2252" min="1" max="1" chance="0.3" /> <!-- Recipe: Iron Hammer -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1872" min="1" max="1" chance="51.77" /> <!-- Animal Bone -->
 				<item id="2011" min="1" max="1" chance="0.75" /> <!-- Short Spear Edge -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20040" level="18" type="L2Monster" name="Sukar Ratman">
@@ -2279,7 +2279,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="945" min="1" max="1" chance="1.247" /> <!-- Skeleton Buckler -->
 				<item id="102" min="1" max="1" chance="0.75" /> <!-- Round Shield -->
 				<item id="44" min="1" max="1" chance="0.3" /> <!-- Leather Helmet -->
@@ -2292,11 +2292,11 @@
 				<item id="1873" min="1" max="1" chance="1.11" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2253" min="1" max="1" chance="0.3" /> <!-- Recipe: Sword Breaker -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2175" min="1" max="1" chance="34.7" /> <!-- Recipe: Boots -->
 				<item id="2140" min="1" max="1" chance="8.145" /> <!-- Recipe: High-grade Suede -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20041" level="18" type="L2Monster" name="Contortion of Lunacy">
@@ -2340,7 +2340,7 @@
 			<height normal="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="217" min="1" max="1" chance="0.075" /> <!-- Shining Knife -->
 				<item id="218" min="1" max="1" chance="0.075" /> <!-- Throwing Knife -->
 				<item id="57" min="49" max="116" chance="70" /> <!-- Adena -->
@@ -2351,12 +2351,12 @@
 				<item id="1873" min="1" max="1" chance="1.355" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2253" min="1" max="1" chance="0.3" /> <!-- Recipe: Sword Breaker -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1817" min="1" max="1" chance="6.356" /> <!-- Recipe: Cord -->
 				<item id="1880" min="1" max="1" chance="3.098" /> <!-- Steel -->
 				<item id="2012" min="1" max="1" chance="0.75" /> <!-- Sword of Reflection Blade -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20042" level="18" type="L2Monster" name="Skeleton Tracker Captain">
@@ -2401,7 +2401,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="309" min="1" max="1" chance="0.075" /> <!-- Tears of Eva -->
 				<item id="310" min="1" max="1" chance="0.075" /> <!-- Relic of the Saints -->
 				<item id="57" min="41" max="98" chance="70" /> <!-- Adena -->
@@ -2413,10 +2413,10 @@
 				<item id="1870" min="1" max="1" chance="2.393" /> <!-- Coal -->
 				<item id="1876" min="1" max="1" chance="0.3" /> <!-- Mithril Ore -->
 				<item id="956" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (D-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="734" min="1" max="2" chance="6.548" /> <!-- Wind Walk Potion -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20043" level="19" type="L2Monster" name="Arachnid Tracker">
@@ -2466,15 +2466,15 @@
 			<height normal="25.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="256" min="1" max="1" chance="0.3" /> <!-- Cestus -->
 				<item id="57" min="42" max="99" chance="70" /> <!-- Adena -->
 				<item id="1060" min="1" max="1" chance="44.81" /> <!-- Healing Potion -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1924" min="1" max="1" chance="12.75" /> <!-- Leather Helmet Design -->
 				<item id="1817" min="1" max="1" chance="8.156" /> <!-- Recipe: Cord -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20044" level="19" type="L2Monster" name="Lirein Elder">
@@ -2527,7 +2527,7 @@
 			<height normal="35" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="309" min="1" max="1" chance="0.075" /> <!-- Tears of Eva -->
 				<item id="310" min="1" max="1" chance="0.075" /> <!-- Relic of the Saints -->
 				<item id="57" min="42" max="100" chance="70" /> <!-- Adena -->
@@ -2538,11 +2538,11 @@
 				<item id="1871" min="1" max="1" chance="2.859" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="1.935" /> <!-- Suede -->
 				<item id="2141" min="1" max="1" chance="0.75" /> <!-- Recipe: Silver Mold -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1865" min="1" max="1" chance="40.83" /> <!-- Varnish -->
 				<item id="2142" min="1" max="1" chance="8.198" /> <!-- Recipe: Varnish of Purity -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20045" level="19" type="L2Monster" name="Skeleton Scout">
@@ -2590,7 +2590,7 @@
 			<height normal="27" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="217" min="1" max="1" chance="0.075" /> <!-- Shining Knife -->
 				<item id="218" min="1" max="1" chance="0.075" /> <!-- Throwing Knife -->
 				<item id="57" min="42" max="99" chance="70" /> <!-- Adena -->
@@ -2601,11 +2601,11 @@
 				<item id="1869" min="1" max="1" chance="2.826" /> <!-- Iron Ore -->
 				<item id="1871" min="1" max="1" chance="2.78" /> <!-- Charcoal -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1925" min="1" max="1" chance="26.33" /> <!-- Leather Glove Lining -->
 				<item id="734" min="1" max="1" chance="6.764" /> <!-- Wind Walk Potion -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20046" level="19" type="L2Monster" name="Stink Zombie">
@@ -2647,7 +2647,7 @@
 			<height normal="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="845" min="1" max="1" chance="0.75" /> <!-- Cat's Eye -->
 				<item id="877" min="1" max="1" chance="0.75" /> <!-- Ring of Wisdom -->
 				<item id="908" min="1" max="1" chance="0.3" /> <!-- Necklace of Wisdom -->
@@ -2660,11 +2660,11 @@
 				<item id="1873" min="1" max="1" chance="1.426" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2142" min="1" max="1" chance="0.75" /> <!-- Recipe: Varnish of Purity -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2139" min="1" max="1" chance="9.769" /> <!-- Recipe: Steel Mold -->
 				<item id="735" min="1" max="1" chance="4.06" /> <!-- Haste Potion -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20047" level="19" type="L2Monster" name="Sukar Ratman Captain">
@@ -2712,7 +2712,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="24" min="1" max="1" chance="0.3" /> <!-- Bone Breastplate -->
 				<item id="31" min="1" max="1" chance="0.3" /> <!-- Bone Gaiters -->
 				<item id="390" min="1" max="1" chance="0.3" /> <!-- Cotton Shirt -->
@@ -2725,11 +2725,11 @@
 				<item id="1873" min="1" max="1" chance="1.247" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2173" min="1" max="1" chance="0.75" /> <!-- Recipe: Durable Leather Shirt -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1869" min="1" max="1" chance="42.6" /> <!-- Iron Ore -->
 				<item id="38" min="1" max="1" chance="1.266" /> <!-- Low Boots -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20048" level="20" type="L2Monster" name="Lesser Succubus">
@@ -2768,7 +2768,7 @@
 			<height normal="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="256" min="1" max="1" chance="0.3" /> <!-- Cestus -->
 				<item id="57" min="81" max="190" chance="70" /> <!-- Adena -->
 				<item id="1867" min="1" max="1" chance="4.943" /> <!-- Animal Skin -->
@@ -2777,11 +2777,11 @@
 				<item id="1866" min="1" max="1" chance="2.507" /> <!-- Suede -->
 				<item id="1873" min="1" max="1" chance="1.419" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2144" min="1" max="1" chance="9.117" /> <!-- Recipe: Synthetic Braid -->
 				<item id="50" min="1" max="1" chance="1.308" /> <!-- Leather Gloves -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20049" level="20" type="L2Monster" name="Lycanthrope">
@@ -2828,14 +2828,14 @@
 			<height normal="26" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="256" min="1" max="1" chance="0.3" /> <!-- Cestus -->
 				<item id="57" min="80" max="187" chance="70" /> <!-- Adena -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1924" min="1" max="1" chance="14.61" /> <!-- Leather Helmet Design -->
 				<item id="1882" min="1" max="1" chance="9.909" /> <!-- Leather -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20050" level="20" type="L2Monster" name="Poisonous Thornleg">
@@ -2885,16 +2885,16 @@
 			<height normal="25.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="15" min="1" max="1" chance="0.075" /> <!-- Short Spear -->
 				<item id="57" min="80" max="187" chance="70" /> <!-- Adena -->
 				<item id="2174" min="1" max="1" chance="9.534" /> <!-- Recipe: Durable Leather Gaiters -->
 				<item id="2011" min="1" max="1" chance="1.115" /> <!-- Short Spear Edge -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="28.99" /> <!-- Suede -->
 				<item id="735" min="1" max="1" chance="3.685" /> <!-- Haste Potion -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20051" level="20" type="L2Monster" name="Skeleton Bowman">
@@ -2942,17 +2942,17 @@
 			<height normal="27" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="272" min="1" max="1" chance="0.075" /> <!-- Forest Bow -->
 				<item id="57" min="79" max="185" chance="70" /> <!-- Adena -->
 				<item id="1341" min="10" max="30" chance="35.78" /> <!-- Bone Arrow -->
 				<item id="2139" min="1" max="1" chance="2.215" /> <!-- Recipe: Steel Mold -->
 				<item id="2013" min="1" max="1" chance="0.75" /> <!-- Forest Bow Shaft -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1925" min="1" max="1" chance="28.28" /> <!-- Leather Glove Lining -->
 				<item id="2254" min="1" max="1" chance="1.767" /> <!-- Recipe: Compound Bow -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20052" level="21" type="L2Monster" name="Lesser Succubus Turen">
@@ -3005,16 +3005,16 @@
 			<height normal="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="219" min="1" max="1" chance="0.03" /> <!-- Sword Breaker -->
 				<item id="57" min="74" max="173" chance="70" /> <!-- Adena -->
 				<item id="2151" min="1" max="1" chance="5.676" /> <!-- Recipe: Necklace of Devotion -->
 				<item id="2015" min="1" max="1" chance="0.3" /> <!-- Sword Breaker Edge -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="3" chance="57.54" /> <!-- Thread -->
 				<item id="1866" min="1" max="1" chance="38.57" /> <!-- Suede -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20053" level="21" type="L2Monster" name="Ol Mahum Patrol">
@@ -3067,7 +3067,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
@@ -3078,11 +3078,11 @@
 				<item id="2176" min="1" max="1" chance="1.603" /> <!-- Recipe: Leather Boots -->
 				<item id="1882" min="1" max="1" chance="0.75" /> <!-- Leather -->
 				<item id="1885" min="1" max="1" chance="0.3" /> <!-- High-grade Suede -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1926" min="1" max="1" chance="5.674" /> <!-- Piece Bone Breastplate Fragment -->
 				<item id="2015" min="1" max="1" chance="0.75" /> <!-- Sword Breaker Edge -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20054" level="21" type="L2Monster" name="Ruin Spartoi">
@@ -3136,7 +3136,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="72" max="167" chance="70" /> <!-- Adena -->
@@ -3148,11 +3148,11 @@
 				<item id="1869" min="1" max="1" chance="2.774" /> <!-- Iron Ore -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2177" min="1" max="1" chance="0.75" /> <!-- Recipe: Bone Helmet -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1880" min="1" max="1" chance="5.546" /> <!-- Steel -->
 				<item id="3032" min="1" max="1" chance="2.222" /> <!-- Recipe: Spiritshot (D-grade) -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20055" level="21" type="L2Monster" name="Monster Eye Watchman">
@@ -3210,7 +3210,7 @@
 			<height normal="43" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="219" min="1" max="1" chance="0.03" /> <!-- Sword Breaker -->
 				<item id="57" min="72" max="167" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="9.824" /> <!-- Thread -->
@@ -3218,11 +3218,11 @@
 				<item id="1866" min="1" max="1" chance="3.306" /> <!-- Suede -->
 				<item id="2178" min="1" max="1" chance="0.75" /> <!-- Recipe: Dark Stockings -->
 				<item id="2015" min="1" max="1" chance="0.3" /> <!-- Sword Breaker Edge -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2176" min="1" max="1" chance="26.1" /> <!-- Recipe: Leather Boots -->
 				<item id="1928" min="1" max="1" chance="8.172" /> <!-- Piece Bone Gaiter Fragment -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20056" level="22" type="L2Monster" name="Dre Vanul Disposer">
@@ -3277,7 +3277,7 @@
 			<height normal="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="27" min="1" max="1" chance="0.3" /> <!-- Durable Leather Shirt -->
 				<item id="33" min="1" max="1" chance="0.3" /> <!-- Durable Leather Gaiters -->
 				<item id="57" min="79" max="184" chance="70" /> <!-- Adena -->
@@ -3290,12 +3290,12 @@
 				<item id="1873" min="1" max="1" chance="1.257" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2256" min="1" max="1" chance="0.075" /> <!-- Recipe: Assassin Knife -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2151" min="1" max="1" chance="11.6" /> <!-- Recipe: Necklace of Devotion -->
 				<item id="1926" min="1" max="1" chance="4.158" /> <!-- Piece Bone Breastplate Fragment -->
 				<item id="5163" min="1" max="1" chance="1.578" /> <!-- Recipe: Blessed Spiritshot Compressed Package (D-grade) -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20057" level="22" type="L2Monster" name="Lesser Succubus Tilfo">
@@ -3348,7 +3348,7 @@
 			<height normal="36" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="1102" min="1" max="1" chance="0.3" /> <!-- Tunic of Magic -->
 				<item id="1105" min="1" max="1" chance="0.3" /> <!-- Stockings of Magic -->
 				<item id="57" min="79" max="184" chance="70" /> <!-- Adena -->
@@ -3359,11 +3359,11 @@
 				<item id="1873" min="1" max="1" chance="1.223" /> <!-- Silver Nugget -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2258" min="1" max="1" chance="0.075" /> <!-- Recipe: Temptation of Abyss -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2176" min="1" max="1" chance="30.33" /> <!-- Recipe: Leather Boots -->
 				<item id="2258" min="1" max="1" chance="1.466" /> <!-- Recipe: Temptation of Abyss -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20058" level="22" type="L2Monster" name="Ol Mahum Guard">
@@ -3416,7 +3416,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="16" min="1" max="1" chance="0.075" /> <!-- Great Spear -->
 				<item id="57" min="77" max="179" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="8.439" /> <!-- Thread -->
@@ -3424,11 +3424,11 @@
 				<item id="1866" min="1" max="1" chance="2.852" /> <!-- Suede -->
 				<item id="2255" min="1" max="1" chance="0.3" /> <!-- Recipe: Saber -->
 				<item id="5153" min="1" max="1" chance="0.3" /> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1873" min="1" max="1" chance="22.92" /> <!-- Silver Nugget -->
 				<item id="1926" min="1" max="1" chance="5.965" /> <!-- Piece Bone Breastplate Fragment -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20059" level="22" type="L2Monster" name="Monster Eye Patrol">
@@ -3486,7 +3486,7 @@
 			<height normal="43" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="625" min="1" max="1" chance="0.75" /> <!-- Bone Shield -->
 				<item id="1148" min="1" max="1" chance="0.3" /> <!-- Durable Leather Helmet -->
 				<item id="57" min="77" max="179" chance="70" /> <!-- Adena -->
@@ -3495,11 +3495,11 @@
 				<item id="1866" min="1" max="1" chance="2.774" /> <!-- Suede -->
 				<item id="1804" min="1" max="1" chance="0.3" /> <!-- Recipe: Soulshot (D-grade) -->
 				<item id="5268" min="1" max="1" chance="0.3" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2177" min="1" max="1" chance="19.08" /> <!-- Recipe: Bone Helmet -->
 				<item id="32" min="1" max="1" chance="0.75" /> <!-- Piece Bone Gaiters -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20060" level="22" type="L2Monster" name="Raging Spartoi">
@@ -3553,7 +3553,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="87" min="1" max="1" chance="0.03" /> <!-- Iron Hammer -->
 				<item id="155" min="1" max="1" chance="0.03" /> <!-- Flanged Mace -->
 				<item id="177" min="1" max="1" chance="0.03" /> <!-- Mage Staff -->
@@ -3567,11 +3567,11 @@
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2014" min="1" max="1" chance="0.3" /> <!-- Iron Hammer Head -->
 				<item id="5268" min="1" max="1" chance="0.3" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1869" min="1" max="1" chance="58.58" /> <!-- Iron Ore -->
 				<item id="1928" min="1" max="1" chance="8.549" /> <!-- Piece Bone Gaiter Fragment -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20061" level="23" type="L2Monster" name="Ol Mahum Straggler">
@@ -3624,7 +3624,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="273" min="1" max="1" chance="0.03" /> <!-- Compound Bow -->
 				<item id="57" min="76" max="177" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="10.89" /> <!-- Thread -->
@@ -3632,11 +3632,11 @@
 				<item id="1866" min="1" max="1" chance="3.426" /> <!-- Suede -->
 				<item id="2179" min="1" max="1" chance="2.506" /> <!-- Recipe: Quality Leather Gloves -->
 				<item id="2016" min="1" max="1" chance="0.3" /> <!-- Compound Bow Shaft -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1880" min="1" max="1" chance="5.887" /> <!-- Steel -->
 				<item id="1927" min="1" max="1" chance="4.685" /> <!-- Durable Leather Shirt Pattern -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20062" level="23" type="L2Monster" name="Tumran Bugbear">
@@ -3689,7 +3689,7 @@
 			<height normal="35" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="219" min="1" max="1" chance="0.03" /> <!-- Sword Breaker -->
 				<item id="57" min="76" max="176" chance="70" /> <!-- Adena -->
 				<item id="1872" min="1" max="1" chance="3.964" /> <!-- Animal Bone -->
@@ -3700,11 +3700,11 @@
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="2015" min="1" max="1" chance="0.75" /> <!-- Sword Breaker Edge -->
 				<item id="2255" min="1" max="1" chance="0.075" /> <!-- Recipe: Saber -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2257" min="1" max="1" chance="1.405" /> <!-- Recipe: Trident -->
 				<item id="27" min="1" max="1" chance="0.3" /> <!-- Durable Leather Shirt -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20063" level="24" type="L2Monster" name="Ol Mahum Shooter">
@@ -3757,7 +3757,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="273" min="1" max="1" chance="0.03" /> <!-- Compound Bow -->
 				<item id="57" min="84" max="196" chance="70" /> <!-- Adena -->
 				<item id="1341" min="10" max="30" chance="15.35" /> <!-- Bone Arrow -->
@@ -3766,11 +3766,11 @@
 				<item id="1866" min="1" max="1" chance="3.045" /> <!-- Suede -->
 				<item id="2016" min="1" max="1" chance="0.75" /> <!-- Compound Bow Shaft -->
 				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2176" min="1" max="1" chance="32.74" /> <!-- Recipe: Leather Boots -->
 				<item id="34" min="1" max="1" chance="0.3" /> <!-- Bronze Gaiters -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20064" level="24" type="L2Monster" name="Tumran Bugbear Warrior">
@@ -3821,7 +3821,7 @@
 			<height normal="35" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="27" min="1" max="1" chance="0.3" /> <!-- Durable Leather Shirt -->
 				<item id="33" min="1" max="1" chance="0.3" /> <!-- Durable Leather Gaiters -->
 				<item id="57" min="84" max="197" chance="70" /> <!-- Adena -->
@@ -3835,11 +3835,11 @@
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="1804" min="1" max="1" chance="0.3" /> <!-- Recipe: Soulshot (D-grade) -->
 				<item id="5153" min="1" max="1" chance="0.3" /> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1873" min="1" max="1" chance="27.57" /> <!-- Silver Nugget -->
 				<item id="1926" min="1" max="1" chance="6.703" /> <!-- Piece Bone Breastplate Fragment -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20065" level="25" type="L2Monster" name="Ol Mahum Patrolman">
@@ -3944,7 +3944,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="347" min="1" max="1" chance="0.3" /> <!-- Ring Breastplate -->
 				<item id="376" min="1" max="1" chance="0.3" /> <!-- Iron Plate Gaiters -->
 				<item id="57" min="88" max="207" chance="70" /> <!-- Adena -->
@@ -3954,11 +3954,11 @@
 				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="5273" min="1" max="1" chance="0.3" /> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
 				<item id="2261" min="1" max="1" chance="0.075" /> <!-- Recipe: Conjuror's Staff -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1865" min="1" max="1" chance="68.13" /> <!-- Varnish -->
 				<item id="347" min="1" max="1" chance="0.3" /> <!-- Ring Breastplate -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20067" level="25" type="L2Monster" name="Monster Eye Watcher">
@@ -4017,7 +4017,7 @@
 			<height normal="43" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="847" min="1" max="1" chance="0.3" /> <!-- Red Crescent -->
 				<item id="890" min="1" max="1" chance="0.3" /> <!-- Ring of Devotion -->
 				<item id="910" min="1" max="1" chance="0.3" /> <!-- Necklace of Devotion -->
@@ -4026,11 +4026,11 @@
 				<item id="1866" min="1" max="1" chance="6.748" /> <!-- Suede -->
 				<item id="1899" min="1" max="1" chance="4.408" /> <!-- Necklace of Devotion Chain -->
 				<item id="1878" min="1" max="1" chance="3.985" /> <!-- Durable Braid -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2180" min="1" max="1" chance="6.43" /> <!-- Recipe: Scale Mail -->
 				<item id="2020" min="1" max="1" chance="1.462" /> <!-- Temptation of Abyss Piece -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20068" level="26" type="L2Monster" name="Monster Eye Destroyer">
@@ -4090,7 +4090,7 @@
 			<height normal="43" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="101" min="1" max="1" chance="0.0075" /> <!-- Scroll of Wisdom -->
 				<item id="312" min="1" max="1" chance="0.0075" /> <!-- Branch of Life -->
 				<item id="313" min="1" max="1" chance="0.0075" /> <!-- Temptation of Abyss -->
@@ -4101,11 +4101,11 @@
 				<item id="1866" min="1" max="1" chance="4.372" /> <!-- Suede -->
 				<item id="1878" min="1" max="1" chance="2.602" /> <!-- Durable Braid -->
 				<item id="2020" min="1" max="1" chance="0.3" /> <!-- Temptation of Abyss Piece -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2261" min="1" max="1" chance="1.15" /> <!-- Recipe: Conjuror's Staff -->
 				<item id="391" min="1" max="1" chance="0.3" /> <!-- Puma Skin Shirt -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20069" level="26" type="L2Monster" name="Selu Lizardman Scout">
@@ -4203,7 +4203,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="40" min="1" max="1" chance="0.3" /> <!-- Leather Boots -->
 				<item id="604" min="1" max="1" chance="0.3" /> <!-- Quality Leather Gloves -->
 				<item id="57" min="101" max="236" chance="70" /> <!-- Adena -->
@@ -4214,11 +4214,11 @@
 				<item id="1934" min="1" max="1" chance="3.367" /> <!-- Quality Leather Glove Lining -->
 				<item id="1882" min="1" max="1" chance="1.224" /> <!-- Leather -->
 				<item id="1885" min="1" max="1" chance="0.3" /> <!-- High-grade Suede -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1872" min="1" max="3" chance="52.13" /> <!-- Animal Bone -->
 				<item id="2182" min="1" max="1" chance="9.474" /> <!-- Recipe: Scale Gaiters -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20071" level="27" type="L2Monster" name="Selu Lizardman Warrior">
@@ -4316,7 +4316,7 @@
 			<height normal="25" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="45" min="1" max="1" chance="0.3" /> <!-- Bone Helmet -->
 				<item id="626" min="1" max="1" chance="0.3" /> <!-- Bronze Shield -->
 				<item id="57" min="117" max="273" chance="70" /> <!-- Adena -->
@@ -4327,11 +4327,11 @@
 				<item id="1882" min="1" max="1" chance="1.221" /> <!-- Leather -->
 				<item id="1885" min="1" max="1" chance="0.3" /> <!-- High-grade Suede -->
 				<item id="2262" min="1" max="1" chance="0.075" /> <!-- Recipe: Elven Bow -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="3953" min="1" max="1" chance="3.588" /> <!-- Recipe: Blessed Spiritshot (D-grade) -->
 				<item id="2263" min="1" max="1" chance="1.481" /> <!-- Recipe: Dwarven Trident -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20073" level="28" type="L2Monster" name="Ol Mahum Legionnaire">
@@ -4428,17 +4428,17 @@
 			<height normal="14.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="315" min="1" max="1" chance="0.03" /> <!-- Divine Tome -->
 				<item id="57" min="69" max="161" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="11.97" /> <!-- Thread -->
 				<item id="1867" min="1" max="1" chance="8.362" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="4.151" /> <!-- Suede -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="3" chance="65.08" /> <!-- Thread -->
 				<item id="2250" min="1" max="1" chance="15.75" /> <!-- Recipe: Bone Arrow -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20075" level="29" type="L2Monster" name="Ant Larva">
@@ -4493,7 +4493,7 @@
 			<height normal="8" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="848" min="1" max="1" chance="0.3" /> <!-- Earring of Magic -->
 				<item id="879" min="1" max="1" chance="0.3" /> <!-- Ring of Magic -->
 				<item id="911" min="1" max="1" chance="0.075" /> <!-- Magic Necklace -->
@@ -4502,11 +4502,11 @@
 				<item id="1866" min="1" max="1" chance="6.307" /> <!-- Suede -->
 				<item id="1884" min="1" max="1" chance="5.897" /> <!-- Cord -->
 				<item id="1900" min="1" max="1" chance="2.293" /> <!-- Necklace Chain of Magic -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1061" min="1" max="1" chance="60.6" /> <!-- Major Healing Potion -->
 				<item id="348" min="1" max="1" chance="0.3" /> <!-- Scale Mail -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20076" level="29" type="L2Monster" name="Ol Mahum Commander">
@@ -4561,7 +4561,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="605" min="1" max="1" chance="0.3" /> <!-- Leather Gauntlets -->
 				<item id="1123" min="1" max="1" chance="0.3" /> <!-- Blue Buckskin Boots -->
 				<item id="57" min="151" max="354" chance="70" /> <!-- Adena -->
@@ -4569,11 +4569,11 @@
 				<item id="1867" min="1" max="1" chance="13.77" /> <!-- Animal Skin -->
 				<item id="1866" min="1" max="1" chance="6.903" /> <!-- Suede -->
 				<item id="2203" min="1" max="1" chance="2.313" /> <!-- Recipe: Reinforced Mithril Boots -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2250" min="1" max="1" chance="35.21" /> <!-- Recipe: Bone Arrow -->
 				<item id="1880" min="1" max="1" chance="14.51" /> <!-- Steel -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20077" level="30" type="L2Monster" name="Androscorpio Hunter">
@@ -4624,7 +4624,7 @@
 			<height normal="14.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="224" max="448" chance="70" /> <!-- Adena -->
 				<item id="627" min="1" max="1" chance="0.8055" /> <!-- Aspis -->
 				<item id="46" min="1" max="1" chance="0.6945" /> <!-- Bronze Helmet -->
@@ -4632,12 +4632,12 @@
 				<item id="1865" min="1" max="1" chance="7.2936" /> <!-- Varnish -->
 				<item id="1874" min="1" max="1" chance="5.2196" /> <!-- Oriharukon Ore -->
 				<item id="955" min="1" max="1" chance="1.1932" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2153" min="1" max="1" chance="8.2578" /> <!-- Recipe: Tiger's Eye Earring -->
 				<item id="1933" min="1" max="1" chance="6.2468" /> <!-- Dark Stockings Fabric -->
 				<item id="2183" min="1" max="1" chance="3.4933" /> <!-- Recipe: Mithril Banded Mail -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20078" level="30" type="L2Monster" name="Whispering Wind">
@@ -4693,7 +4693,7 @@
 			<height normal="70" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="433" min="1" max="1" chance="0.03" /> <!-- Elven Tunic -->
 				<item id="434" min="1" max="1" chance="0.03" /> <!-- White Tunic -->
 				<item id="435" min="1" max="1" chance="0.03" /> <!-- Wizard Tunic -->
@@ -4708,11 +4708,11 @@
 				<item id="1933" min="1" max="1" chance="0.75" /> <!-- Dark Stocking Fabric -->
 				<item id="1936" min="1" max="1" chance="0.75" /> <!-- White Tunic Pattern -->
 				<item id="2184" min="1" max="1" chance="0.3" /> <!-- Recipe: Mithril Banded Gaiters -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2023" min="1" max="1" chance="0.75" /> <!-- Conjuror's Staff Head -->
 				<item id="2024" min="1" max="1" chance="0.75" /> <!-- Elven Bow Shaft -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20079" level="30" type="L2Monster" name="Ant">
@@ -4765,7 +4765,7 @@
 			<height normal="15" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="848" min="1" max="1" chance="0.3" /> <!-- Earring of Magic -->
 				<item id="879" min="1" max="1" chance="0.3" /> <!-- Ring of Magic -->
 				<item id="911" min="1" max="1" chance="0.075" /> <!-- Magic Necklace -->
@@ -4775,11 +4775,11 @@
 				<item id="1884" min="1" max="1" chance="4.436" /> <!-- Cord -->
 				<item id="1061" min="1" max="1" chance="4.254" /> <!-- Major Healing Potion -->
 				<item id="1900" min="1" max="1" chance="2.325" /> <!-- Necklace Chain of Magic -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="64.56" /> <!-- Suede -->
 				<item id="2266" min="1" max="1" chance="0.978" /> <!-- Recipe: Shilen Knife -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20080" level="31" type="L2Monster" name="Ant Captain">
@@ -4832,18 +4832,18 @@
 			<height normal="15" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="259" min="1" max="1" chance="0.03" /> <!-- Single-Edged Jamadhr -->
 				<item id="57" min="174" max="405" chance="70" /> <!-- Adena -->
 				<item id="1868" min="1" max="1" chance="14.64" /> <!-- Thread -->
 				<item id="1866" min="1" max="1" chance="5.114" /> <!-- Suede -->
 				<item id="1884" min="1" max="1" chance="4.691" /> <!-- Cord -->
 				<item id="1895" min="1" max="1" chance="2.16" /> <!-- Metallic Fiber -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2021" min="1" max="1" chance="1.31" /> <!-- Spinebone Sword Blade -->
 				<item id="2268" min="1" max="1" chance="1.095" /> <!-- Recipe: Tome of Blood -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20081" level="32" type="L2Monster" name="Ant Overseer">
@@ -4899,7 +4899,7 @@
 			<height normal="15" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="392" min="1" max="1" chance="0.3" /> <!-- Lion Skin Shirt -->
 				<item id="414" min="1" max="1" chance="0.3" /> <!-- Lion Skin Gaiters -->
 				<item id="57" min="261" max="611" chance="70" /> <!-- Adena -->
@@ -4908,11 +4908,11 @@
 				<item id="1866" min="1" max="1" chance="6.075" /> <!-- Suede -->
 				<item id="1884" min="1" max="1" chance="5.677" /> <!-- Cord -->
 				<item id="1895" min="1" max="1" chance="2.578" /> <!-- Metallic Fiber -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1061" min="1" max="3" chance="47.53" /> <!-- Major Healing Potion -->
 				<item id="1933" min="1" max="1" chance="18.58" /> <!-- Dark Stocking Fabric -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20082" level="33" type="L2Monster" name="Ant Recruit">
@@ -4967,7 +4967,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="316" min="1" max="1" chance="0.0075" /> <!-- Sage's Blood -->
 				<item id="317" min="1" max="1" chance="0.0075" /> <!-- Tome of Blood -->
 				<item id="57" min="194" max="453" chance="70" /> <!-- Adena -->
@@ -4977,11 +4977,11 @@
 				<item id="1895" min="1" max="1" chance="1.987" /> <!-- Metallic Fiber -->
 				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="2030" min="1" max="1" chance="0.3" /> <!-- Tome of Blood Page -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1884" min="1" max="1" chance="72.66" /> <!-- Cord -->
 				<item id="2275" min="1" max="1" chance="0.75" /> <!-- Recipe: Heavy Bone Club -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20083" level="33" type="L2Monster" name="Granite Golem">
@@ -5036,7 +5036,7 @@
 			<height normal="31" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="58" min="1" max="1" chance="0.03" /> <!-- Mithril Breastplate -->
 				<item id="59" min="1" max="1" chance="0.03" /> <!-- Mithril Gaiters -->
 				<item id="349" min="1" max="1" chance="0.03" /> <!-- Compound Scale Mail -->
@@ -5048,11 +5048,11 @@
 				<item id="1865" min="1" max="1" chance="13.47" /> <!-- Varnish -->
 				<item id="1869" min="1" max="1" chance="13.47" /> <!-- Iron Ore -->
 				<item id="1873" min="1" max="1" chance="5.236" /> <!-- Silver Nugget -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2987" min="1" max="1" chance="13.48" /> <!-- Recipe: Plate Shield -->
 				<item id="2975" min="1" max="1" chance="11.67" /> <!-- Recipe: Brigandine Helmet -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20084" level="34" type="L2Monster" name="Ant Patrol">
@@ -5108,7 +5108,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="316" min="1" max="1" chance="0.0075" /> <!-- Sage's Blood -->
 				<item id="317" min="1" max="1" chance="0.0075" /> <!-- Tome of Blood -->
 				<item id="57" min="212" max="494" chance="70" /> <!-- Adena -->
@@ -5118,11 +5118,11 @@
 				<item id="1895" min="1" max="1" chance="2.078" /> <!-- Metallic Fiber -->
 				<item id="2190" min="1" max="1" chance="0.75" /> <!-- Recipe: Mithril Stockings -->
 				<item id="2030" min="1" max="1" chance="0.3" /> <!-- Tome of Blood Page -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2978" min="1" max="1" chance="17.22" /> <!-- Recipe: Elven Mithril Boots -->
 				<item id="1885" min="1" max="1" chance="11.17" /> <!-- High-grade Suede -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20085" level="34" type="L2Monster" name="Puncher">
@@ -5177,7 +5177,7 @@
 			<height normal="31" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="63" min="1" max="1" chance="0.075" /> <!-- Gauntlets -->
 				<item id="553" min="1" max="1" chance="0.075" /> <!-- Iron Boots -->
 				<item id="2422" min="1" max="1" chance="0.075" /> <!-- Reinforced Leather Boots -->
@@ -5193,11 +5193,11 @@
 				<item id="1940" min="1" max="1" chance="2.043" /> <!-- Iron Boot Design -->
 				<item id="1958" min="1" max="1" chance="1.213" /> <!-- Reinforced Mithril Boot Design -->
 				<item id="1880" min="1" max="1" chance="0.75" /> <!-- Steel -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="2278" min="1" max="1" chance="0.967" /> <!-- Recipe: Reinforced Longbow -->
 				<item id="2422" min="1" max="1" chance="0.75" /> <!-- Reinforced Leather Boots -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20086" level="35" type="L2Monster" name="Ant Guard">
@@ -5254,7 +5254,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="278" min="1" max="1" chance="0.03" /> <!-- Gastraphetes -->
 				<item id="57" min="226" max="526" chance="70" /> <!-- Adena -->
 				<item id="1341" min="10" max="30" chance="22.78" /> <!-- Bone Arrow -->
@@ -5264,11 +5264,11 @@
 				<item id="1895" min="1" max="1" chance="1.867" /> <!-- Metallic Fiber -->
 				<item id="2029" min="1" max="1" chance="0.75" /> <!-- Gastraphetes Shaft -->
 				<item id="2982" min="1" max="1" chance="0.75" /> <!-- Recipe: Brigandine Shield -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="5" chance="92.43" /> <!-- Thread -->
 				<item id="469" min="1" max="1" chance="0.3" /> <!-- Stockings of Knowledge -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20087" level="35" type="L2Monster" name="Ant Soldier">
@@ -5324,7 +5324,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="415" min="1" max="1" chance="0.075" /> <!-- Mithril Banded Gaiters -->
 				<item id="416" min="1" max="1" chance="0.075" /> <!-- Reinforced Leather Gaiters -->
 				<item id="393" min="1" max="1" chance="0.03" /> <!-- Mithril Banded Mail -->
@@ -5338,11 +5338,11 @@
 				<item id="1939" min="1" max="1" chance="2.329" /> <!-- Mithril Banded Gaiters Material -->
 				<item id="1938" min="1" max="1" chance="1.863" /> <!-- Mithril Banded Mail Material -->
 				<item id="2281" min="1" max="1" chance="0.075" /> <!-- Recipe: Eye of Infinity -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1940" min="1" max="1" chance="28.86" /> <!-- Iron Boot Design -->
 				<item id="2191" min="1" max="1" chance="26.09" /> <!-- Recipe: RIP Gauntlets -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20088" level="36" type="L2Monster" name="Ant Warrior Captain">
@@ -5399,7 +5399,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="293" min="1" max="1" chance="0.03" /> <!-- War Hammer -->
 				<item id="296" min="1" max="1" chance="0.03" /> <!-- Dwarven Pike -->
 				<item id="57" min="474" max="1109" chance="70" /> <!-- Adena -->
@@ -5410,11 +5410,11 @@
 				<item id="1895" min="1" max="1" chance="3.341" /> <!-- Metallic Fiber -->
 				<item id="1885" min="1" max="1" chance="0.75" /> <!-- High-grade Suede -->
 				<item id="2283" min="1" max="1" chance="0.075" /> <!-- Recipe: Blue Crystal Skull -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1895" min="1" max="1" chance="85.02" /> <!-- Metallic Fiber -->
 				<item id="2149" min="1" max="1" chance="19.74" /> <!-- Recipe: Metallic Fiber -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20089" level="37" type="L2Monster" name="Noble Ant">
@@ -5467,7 +5467,7 @@
 			<height normal="48" grown="57" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="606" min="1" max="1" chance="0.03" /> <!-- Rip Gauntlets -->
 				<item id="1124" min="1" max="1" chance="0.03" /> <!-- Boots of Strength -->
 				<item id="2424" min="1" max="1" chance="0.03" /> <!-- Manticore Skin Boots -->
@@ -5495,11 +5495,11 @@
 				<item id="4470" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR   1 DEX - 1) -->
 				<item id="4477" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men   1 Int - 1) -->
 				<item id="4478" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men   1 Wit - 1) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1884" min="1" max="3" chance="64.49" /> <!-- Cord -->
 				<item id="2159" min="1" max="1" chance="12.99" /> <!-- Recipe: Dark Necklace -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20090" level="38" type="L2Monster" name="Noble Ant Captain">
@@ -5555,7 +5555,7 @@
 			<height normal="48" grown="57" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="850" min="1" max="1" chance="0.3" /> <!-- Elven Earring -->
 				<item id="881" min="1" max="1" chance="0.3" /> <!-- Elven Ring -->
 				<item id="913" min="1" max="1" chance="0.075" /> <!-- Elven Necklace -->
@@ -5570,11 +5570,11 @@
 				<item id="1885" min="1" max="1" chance="1.21" /> <!-- High-grade Suede -->
 				<item id="2973" min="1" max="1" chance="0.75" /> <!-- Recipe: Elven Mithril Tunic -->
 				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1868" min="1" max="13" chance="92.105" /> <!-- Thread -->
 				<item id="2197" min="1" max="1" chance="6.884" /> <!-- Recipe: Salamander Skin Mail -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20091" level="1" type="L2Monster" name="Young Fox">
@@ -5654,7 +5654,7 @@
 			<height normal="43" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="113" min="1" max="1" chance="6.65" /> <!-- Mage Earring -->
 				<item id="875" min="1" max="1" chance="4.999" /> <!-- Ring of Knowledge -->
 				<item id="906" min="1" max="1" chance="4.946" /> <!-- Necklace of Knowledge -->
@@ -5666,11 +5666,11 @@
 				<item id="1873" min="1" max="1" chance="0.976" /> <!-- Silver Nugget -->
 				<item id="1666" min="1" max="1" chance="0.75" /> <!-- Recipe: Wooden Arrow -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1866" min="1" max="1" chance="23.39" /> <!-- Suede -->
 				<item id="1666" min="1" max="1" chance="11.95" /> <!-- Recipe: Wooden Arrow -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20093" level="10" type="L2Monster" name="Orc Warrior">
@@ -5720,7 +5720,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="3" min="1" max="1" chance="0.75" /> <!-- Broadsword -->
 				<item id="57" min="37" max="88" chance="70" /> <!-- Adena -->
 				<item id="1060" min="1" max="1" chance="4.883" /> <!-- Healing Potion -->
@@ -5732,11 +5732,11 @@
 				<item id="1871" min="1" max="1" chance="2.186" /> <!-- Charcoal -->
 				<item id="1869" min="1" max="1" chance="2.158" /> <!-- Iron Ore -->
 				<item id="1866" min="1" max="1" chance="1.416" /> <!-- Suede -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1867" min="1" max="1" chance="47.13" /> <!-- Animal Skin -->
 				<item id="2007" min="1" max="1" chance="2.619" /> <!-- Bow Shaft -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20094" level="10" type="L2Monster" name="Orc Sniper">
@@ -5825,7 +5825,7 @@
 			<height normal="33.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="1103" min="1" max="1" chance="2.689" /> <!-- Cotton Stockings -->
 				<item id="463" min="1" max="1" chance="2.669" /> <!-- Feriotic Stockings -->
 				<item id="1100" min="1" max="1" chance="1.646" /> <!-- Cotton Tunic -->
@@ -5839,11 +5839,11 @@
 				<item id="1873" min="1" max="1" chance="0.75" /> <!-- Silver Nugget -->
 				<item id="1790" min="1" max="1" chance="0.3" /> <!-- Recipe: Dirk -->
 				<item id="1876" min="1" max="1" chance="0.3" /> <!-- Mithril Ore -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1864" min="1" max="1" chance="71.78" /> <!-- Stem -->
 				<item id="2006" min="1" max="1" chance="2.646" /> <!-- Willow Staff Head -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20096" level="11" type="L2Monster" name="Orc Lieutenant">
@@ -5891,7 +5891,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="49" min="1" max="1" chance="2.016" /> <!-- Gloves (item) -->
 				<item id="37" min="1" max="1" chance="1.927" /> <!-- Leather Shoes -->
 				<item id="57" min="37" max="87" chance="70" /> <!-- Adena -->
@@ -5902,11 +5902,11 @@
 				<item id="1871" min="1" max="1" chance="2.931" /> <!-- Charcoal -->
 				<item id="1869" min="1" max="1" chance="2.893" /> <!-- Iron Ore -->
 				<item id="1798" min="1" max="1" chance="2.807" /> <!-- Recipe: Leather Helmet -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1799" min="1" max="1" chance="52.32" /> <!-- Recipe: Leather Gloves -->
 				<item id="1921" min="1" max="1" chance="22.66" /> <!-- Leather Shoe Texture -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20097" level="11" type="L2Monster" name="Clawed Bat">
@@ -5953,17 +5953,17 @@
 			<height normal="33.5" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="2386" min="1" max="1" chance="1.101" /> <!-- Wooden Gaiters -->
 				<item id="30" min="1" max="1" chance="1.086" /> <!-- Durable Leather Pants -->
 				<item id="23" min="1" max="1" chance="0.75" /> <!-- Wooden Breastplate -->
 				<item id="57" min="38" max="90" chance="70" /> <!-- Adena -->
 				<item id="1793" min="1" max="1" chance="1.32" /> <!-- Recipe: Sword of Reflection -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1864" min="1" max="1" chance="74.91" /> <!-- Stem -->
 				<item id="1793" min="1" max="1" chance="2.742" /> <!-- Recipe: Sword of Reflection -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20098" level="12" type="L2Monster" name="Orc Captain">
@@ -6009,7 +6009,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="66" min="1" max="1" chance="0.3" /> <!-- Gladius -->
 				<item id="1333" min="1" max="1" chance="0.3" /> <!-- Brandish -->
 				<item id="57" min="39" max="92" chance="70" /> <!-- Adena -->
@@ -6021,10 +6021,10 @@
 				<item id="1869" min="1" max="1" chance="2.624" /> <!-- Iron Ore -->
 				<item id="2010" min="1" max="1" chance="1.141" /> <!-- Brandish Blade -->
 				<item id="1792" min="1" max="1" chance="0.3" /> <!-- Recipe: Short Spear -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1867" min="1" max="3" chance="50.82" /> <!-- Animal Skin -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 	<npc id="20099" level="12" type="L2Monster" name="Skeleton">
@@ -6067,7 +6067,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="66" min="1" max="1" chance="0.3" /> <!-- Gladius -->
 				<item id="1333" min="1" max="1" chance="0.3" /> <!-- Brandish -->
 				<item id="57" min="40" max="94" chance="70" /> <!-- Adena -->
@@ -6076,12 +6076,12 @@
 				<item id="2010" min="1" max="1" chance="1.133" /> <!-- Brandish Blade -->
 				<item id="1876" min="1" max="1" chance="0.75" /> <!-- Mithril Ore -->
 				<item id="1794" min="1" max="1" chance="0.3" /> <!-- Recipe: Forest Bow -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="1831" min="1" max="1" chance="67.85" /> <!-- Antidote -->
 				<item id="1896" min="1" max="1" chance="11.28" /> <!-- Necklace of Anguish Chain -->
 				<item id="2009" min="1" max="1" chance="0.75" /> <!-- Dirk Blade -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 	</npc>
 </list>

@@ -23,18 +23,18 @@
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
 				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Circlet (60%) -->
 				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</death>
-			<corpse>
+			</drop>
+			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
-			</corpse>
-			<lucky_corpse>
+			</spoil>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="19601" level="85" type="L2Npc" name="" title="">

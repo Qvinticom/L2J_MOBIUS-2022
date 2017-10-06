@@ -1000,11 +1000,9 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="9142" min="1" max="2" chance="100" /> <!-- Apiga -->
-				</group>
-			</death>
+			<drop>
+				<item id="9142" min="1" max="2" chance="100" /> <!-- Apiga -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="15" />
@@ -1127,14 +1125,10 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="9142" min="4" max="6" chance="100" /> <!-- Apiga -->
-				</group>
-				<group chance="50">
-					<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty -->
-				</group>
-			</death>
+			<drop>
+				<item id="9142" min="4" max="6" chance="100" /> <!-- Apiga -->
+				<item id="9144" min="1" max="1" chance="50" /> <!-- Pirate's Booty -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="29" />
@@ -1177,14 +1171,10 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="9142" min="1" max="3" chance="100" /> <!-- Apiga -->
-				</group>
-				<group chance="100">
-					<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty -->
-				</group>
-			</death>
+			<drop>
+				<item id="9142" min="1" max="3" chance="100" /> <!-- Apiga -->
+				<item id="9144" min="1" max="1" chance="100" /> <!-- Pirate's Booty -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="15" />
@@ -1225,25 +1215,17 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="9170" min="1" max="4" chance="100" /> <!-- Magic Reagents -->
-				</group>
-				<group chance="100">
-					<item id="9168" min="1" max="2" chance="100" /> <!-- Philosopher's Stone Ore -->
-				</group>
-				<group chance="10">
-					<item id="9169" min="1" max="1" chance="100" /> <!-- Philosopher's Stone Conversion Formula -->
-				</group>
-				<group chance="10">
-					<item id="9162" min="1" max="1" chance="16.5" /> <!-- Red Philosopher's Stone Transmutation Circle -->
-					<item id="9163" min="1" max="1" chance="16.5" /> <!-- Blue Philosopher's Stone Transmutation Circle -->
-					<item id="9164" min="1" max="1" chance="16.5" /> <!-- Orange Philosopher's Stone Transmutation Circle -->
-					<item id="9165" min="1" max="1" chance="16.5" /> <!-- Black Philosopher's Stone Transmutation Circle -->
-					<item id="9166" min="1" max="1" chance="16.5" /> <!-- White Philosopher's Stone Transmutation Circle -->
-					<item id="9167" min="1" max="1" chance="17.5" /> <!-- Green Philosopher's Stone Transmutation Circle -->
-				</group>
-			</death>
+			<drop>
+				<item id="9170" min="1" max="4" chance="100" /> <!-- Magic Reagents -->
+				<item id="9168" min="1" max="2" chance="100" /> <!-- Philosopher's Stone Ore -->
+				<item id="9169" min="1" max="1" chance="10" /> <!-- Philosopher's Stone Conversion Formula -->
+				<item id="9162" min="1" max="1" chance="1.65" /> <!-- Red Philosopher's Stone Transmutation Circle -->
+				<item id="9163" min="1" max="1" chance="1.65" /> <!-- Blue Philosopher's Stone Transmutation Circle -->
+				<item id="9164" min="1" max="1" chance="1.65" /> <!-- Orange Philosopher's Stone Transmutation Circle -->
+				<item id="9165" min="1" max="1" chance="1.65" /> <!-- Black Philosopher's Stone Transmutation Circle -->
+				<item id="9166" min="1" max="1" chance="1.65" /> <!-- White Philosopher's Stone Transmutation Circle -->
+				<item id="9167" min="1" max="1" chance="1.75" /> <!-- Green Philosopher's Stone Transmutation Circle -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />
@@ -3686,11 +3668,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="10272" min="3" max="7" chance="100" /> <!-- Treasure Sack Piece -->
-				</group>
-			</death>
+			<drop>
+				<item id="10272" min="3" max="7" chance="100" /> <!-- Treasure Sack Piece -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="8.5" />

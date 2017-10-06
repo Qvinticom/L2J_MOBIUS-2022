@@ -63,19 +63,17 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="8.082">
-					<item id="2397" min="1" max="1" chance="0.37119524870082" /> <!-- Tunic of Zubei -->
-					<item id="2402" min="1" max="1" chance="0.37119524870082" /> <!-- Stockings of Zubei -->
-					<item id="2406" min="1" max="1" chance="0.37119524870082" /> <!-- Avadon Robe -->
-					<item id="4070" min="1" max="1" chance="45.842613214551" /> <!-- Stockings of Zubei Fabric -->
-					<item id="4069" min="1" max="1" chance="30.623608017817" /> <!-- Tunic of Zubei Fabric -->
-					<item id="4071" min="1" max="1" chance="22.420193021529" /> <!-- Avadon Robe Fabric -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="2397" min="1" max="1" chance="0.0300000000000003" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="0.0300000000000003" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="0.0300000000000003" /> <!-- Avadon Robe -->
+				<item id="4070" min="1" max="1" chance="3.70500000000001" /> <!-- Stockings of Zubei Fabric -->
+				<item id="4069" min="1" max="1" chance="2.47499999999997" /> <!-- Tunic of Zubei Fabric -->
+				<item id="4071" min="1" max="1" chance="1.81199999999997" /> <!-- Avadon Robe Fabric -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />

@@ -50,39 +50,27 @@
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="34" />
@@ -363,67 +351,49 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="686" max="1402" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6238999962806702">
-					<item id="15703" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gauntlet -->
-					<item id="15704" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gloves -->
-					<item id="15706" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Shoes -->
-					<item id="15654" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gauntlet Piece -->
-					<item id="15655" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15656" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gloves Piece -->
-					<item id="15657" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="16.6228" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="4.810500144958496">
-					<item id="1879" min="1" max="1" chance="60.3191" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1595" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8385" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9048" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5735" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.5133" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="686" max="1402" chance="70" /> <!-- Adena -->
+				<item id="15703" min="1" max="1" chance="0.000275763798356056" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="0.000275763798356056" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.000275763798356056" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.000275763798356056" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.000275763798356056" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.000275763798356056" /> <!-- Sealed Moirai Shoes -->
+				<item id="15654" min="1" max="1" chance="0.103707152981758" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15655" min="1" max="1" chance="0.103707152981758" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.103707152981758" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15657" min="1" max="1" chance="0.103707152981758" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.103707152981758" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.103709648581743" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="1879" min="1" max="1" chance="2.90165039293766" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="1.45082279121876" /> <!-- High-Grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.136546046614647" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="0.0916304067611694" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.0756932197809219" /> <!-- Adamantine -->
+				<item id="10483" min="1" max="1" chance="0.120902300143242" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0302243724107742" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.00303061509132385" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="15654" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Gauntlet Piece -->
 				<item id="15655" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Leather Gloves Piece -->
 				<item id="15656" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Gloves Piece -->
@@ -437,7 +407,7 @@
 				<item id="15787" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
 				<item id="15788" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
 				<item id="15789" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
-			</corpse>
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="29" />
@@ -488,65 +458,47 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="725" max="1481" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.5767999887466431">
-					<item id="15694" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Circlet -->
-					<item id="15710" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Shield -->
-					<item id="15709" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Sigil -->
-					<item id="15645" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15646" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Circlet Piece -->
-					<item id="15693" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Shield Piece -->
-					<item id="15692" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Sigil Piece -->
-				</group>
-				<group chance="5.081299781799316">
-					<item id="1879" min="1" max="1" chance="60.3191" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="30.1595" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.8385" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.9048" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5735" /> <!-- Adamantine -->
-					<item id="10483" min="1" max="1" chance="2.5133" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="725" max="1481" chance="70" /> <!-- Adena -->
+				<item id="15694" min="1" max="1" chance="0.000233027195453644" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.000233027195453644" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="0.000233027195453644" /> <!-- Sealed Moirai Circlet -->
+				<item id="15710" min="1" max="1" chance="0.00033339039349556" /> <!-- Sealed Moirai Shield -->
+				<item id="15709" min="1" max="1" chance="0.00033339039349556" /> <!-- Sealed Moirai Sigil -->
+				<item id="15645" min="1" max="1" chance="0.0873840446951389" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="15646" min="1" max="1" chance="0.0873840446951389" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15647" min="1" max="1" chance="0.0873840446951389" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="15693" min="1" max="1" chance="0.156640996143937" /> <!-- Sealed Moirai Shield Piece -->
+				<item id="15692" min="1" max="1" chance="0.156640996143937" /> <!-- Sealed Moirai Sigil Piece -->
+				<item id="1879" min="1" max="1" chance="3.06499429668331" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="1.53249460769176" /> <!-- High-Grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.144232694306374" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="0.0967885982437134" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.0799542520666122" /> <!-- Adamantine -->
+				<item id="10483" min="1" max="1" chance="0.127708307415962" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0319258065290451" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.00320121886253357" /> <!-- High-Grade Life Stone - Level 82 -->
+				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
 				<item id="15645" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Helmet Piece -->
 				<item id="15646" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Leather Helmet Piece -->
 				<item id="15647" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Circlet Piece -->
@@ -557,7 +509,7 @@
 				<item id="15777" min="1" max="1" chance="0.071" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
 				<item id="15791" min="1" max="1" chance="0.1014" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
 				<item id="15790" min="1" max="1" chance="0.1014" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
-			</corpse>
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="27" />
@@ -608,11 +560,9 @@
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="25">
-					<item id="15492" min="1" max="2" chance="100" /> <!-- Sel Mahum Salmon Porridge -->
-				</group>
-			</death>
+			<drop>
+				<item id="15492" min="1" max="2" chance="25" /> <!-- Sel Mahum Salmon Porridge -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="35" />
@@ -665,42 +615,36 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1170" max="2361" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.9041000008583069">
-					<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="4.732900142669678">
-					<item id="1879" min="1" max="1" chance="59.2169" /> <!-- Cokes -->
-					<item id="1885" min="1" max="1" chance="29.6085" /> <!-- High-Grade Suede -->
-					<item id="9628" min="1" max="1" chance="2.7867" /> <!-- Leonard -->
-					<item id="9630" min="1" max="1" chance="1.87" /> <!-- Orichalcum -->
-					<item id="9629" min="1" max="1" chance="1.5448" /> <!-- Adamantine -->
-					<item id="9573" min="1" max="1" chance="2.4674" /> <!-- Life Stone - Level 80 -->
-					<item id="9574" min="1" max="1" chance="0.6168" /> <!-- Mid-Grade Life Stone - Level 80 -->
-					<item id="9575" min="1" max="1" chance="0.0617" /> <!-- High-Grade Life Stone - Level 80 -->
-					<item id="15801" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
-					<item id="15802" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
-					<item id="15803" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
-					<item id="15804" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
-					<item id="15805" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
-					<item id="15806" min="1" max="1" chance="0.3047" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1170" max="2361" chance="70" /> <!-- Adena -->
+				<item id="14109" min="1" max="1" chance="0.00033632520031929" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.00033632520031929" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.00033632520031929" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="0.00033632520031929" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.00033632520031929" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.00033632520031929" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="0.150347309642732" /> <!-- Sealed Vesper Gauntlet Piece -->
+				<item id="15671" min="1" max="1" chance="0.150347309642732" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15674" min="1" max="1" chance="0.150347309642732" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15668" min="1" max="1" chance="0.150347309642732" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15672" min="1" max="1" chance="0.150347309642732" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15675" min="1" max="1" chance="0.15034550144273" /> <!-- Sealed Vesper Shoes Piece -->
+				<item id="1879" min="1" max="1" chance="2.80267674458456" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="1.40134073874235" /> <!-- High-Grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.131891728275776" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="0.088505232667923" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.0731138414039612" /> <!-- Adamantine -->
+				<item id="9573" min="1" max="1" chance="0.116779578120232" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0291925280799866" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00292019938802719" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="15801" min="1" max="1" chance="0.0144116809344292" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
+				<item id="15802" min="1" max="1" chance="0.0144116809344292" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
+				<item id="15803" min="1" max="1" chance="0.0144116809344292" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
+				<item id="15804" min="1" max="1" chance="0.0144116809344292" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
+				<item id="15805" min="1" max="1" chance="0.0144116809344292" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
+				<item id="15806" min="1" max="1" chance="0.0144211467347145" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
+			</drop>
+			<spoil>
 				<item id="15667" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Gauntlet Piece -->
 				<item id="15671" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Leather Gloves Piece -->
 				<item id="15674" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Gloves Piece -->
@@ -714,7 +658,7 @@
 				<item id="15804" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
 				<item id="15805" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
 				<item id="15806" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-			</corpse>
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="12" />
@@ -768,35 +712,29 @@
 			</clanList>
 		</ai>
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1730" max="3492" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.3371000289916992">
-					<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
-					<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
-					<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
-					<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
-					<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
-					<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
-					<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
-					<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
-					<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
-					<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
-				</group>
-				<group chance="18.134199142456055">
-					<item id="1895" min="1" max="1" chance="78.3705" /> <!-- Metallic Fiber -->
-					<item id="4040" min="1" max="1" chance="5.4859" /> <!-- Mold Lubricant -->
-					<item id="4042" min="1" max="1" chance="4.5716" /> <!-- Enria -->
-					<item id="4043" min="1" max="1" chance="9.1432" /> <!-- Asofe -->
-					<item id="10483" min="1" max="1" chance="1.9048" /> <!-- Life Stone - Level 82 -->
-					<item id="10484" min="1" max="1" chance="0.4762" /> <!-- Mid-Grade Life Stone - Level 82 -->
-					<item id="10485" min="1" max="1" chance="0.0478" /> <!-- High-Grade Life Stone - Level 82 -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="1730" max="3492" chance="70" /> <!-- Adena -->
+				<item id="14109" min="1" max="1" chance="0.000497401210784912" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.000497401210784912" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.000497401210784912" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="0.000497401210784912" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.000497401210784912" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.000497401210784912" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="0.222353049321175" /> <!-- Sealed Vesper Gauntlet Piece -->
+				<item id="15671" min="1" max="1" chance="0.222353049321175" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15674" min="1" max="1" chance="0.222353049321175" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15668" min="1" max="1" chance="0.222353049321175" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15672" min="1" max="1" chance="0.222353049321175" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15675" min="1" max="1" chance="0.222350375121117" /> <!-- Sealed Vesper Shoes Piece -->
+				<item id="1895" min="1" max="1" chance="14.2118625389385" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="0.994824030755997" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="0.829023047996521" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="1.65804609599304" /> <!-- Asofe -->
+				<item id="10483" min="1" max="1" chance="0.345420225265503" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0863550563163757" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.00866814719009399" /> <!-- High-Grade Life Stone - Level 82 -->
+			</drop>
+			<spoil>
 				<item id="15667" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Gauntlet Piece -->
 				<item id="15671" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Leather Gloves Piece -->
 				<item id="15674" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Gloves Piece -->
@@ -809,7 +747,7 @@
 				<item id="15804" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
 				<item id="15805" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
 				<item id="15806" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
-			</corpse>
+			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="14" />
@@ -847,12 +785,10 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="730" min="1" max="1" chance="60" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-					<item id="960" min="1" max="1" chance="40" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="730" min="1" max="1" chance="60" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="960" min="1" max="1" chance="40" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="17" />
@@ -1069,50 +1005,34 @@
 		<sNpcPropHpRate>0.25</sNpcPropHpRate>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
-			<death>
-				<group chance="70">
-					<item id="57" min="361" max="738" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.0607000589370728">
-					<item id="9546" min="1" max="1" chance="16.6667" /> <!-- Fire Stone -->
-					<item id="9547" min="1" max="1" chance="16.6667" /> <!-- Water Stone -->
-					<item id="9548" min="1" max="1" chance="16.6667" /> <!-- Earth Stone -->
-					<item id="9549" min="1" max="1" chance="16.6667" /> <!-- Wind Stone -->
-					<item id="9550" min="1" max="1" chance="16.6667" /> <!-- Dark Stone -->
-					<item id="9551" min="1" max="1" chance="16.6665" /> <!-- Holy Stone -->
-				</group>
-				<group chance="42.0">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="11.0">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="25.0">
-					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
-					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
-					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
-					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
-					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
-				</group>
-				<group chance="10.0">
-					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
-					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
-				</group>
-				<group chance="1.0">
-					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
-					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
-					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
-				</group>
-				<group chance="11.0">
-					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
-					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
-					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
+			<drop>
+				<item id="57" min="361" max="738" chance="70" /> <!-- Adena -->
+				<item id="9546" min="1" max="1" chance="0.176783696722865" /> <!-- Fire Stone -->
+				<item id="9547" min="1" max="1" chance="0.176783696722865" /> <!-- Water Stone -->
+				<item id="9548" min="1" max="1" chance="0.176783696722865" /> <!-- Earth Stone -->
+				<item id="9549" min="1" max="1" chance="0.176783696722865" /> <!-- Wind Stone -->
+				<item id="9550" min="1" max="1" chance="0.176783696722865" /> <!-- Dark Stone -->
+				<item id="9551" min="1" max="1" chance="0.176781575322747" /> <!-- Holy Stone -->
+				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="4.4" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
+				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
+				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
+				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
+				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="0.33" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="12" />
@@ -1745,11 +1665,9 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
-			<death>
-				<group chance="100">
-					<item id="960" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				</group>
-			</death>
+			<drop>
+				<item id="960" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="17" />

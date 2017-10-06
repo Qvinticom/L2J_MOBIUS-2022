@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21797" level="55" type="L2Monster" name="Timiniel's Spirit">
 		<!-- Confirmed CT2.5 -->
@@ -53,35 +53,29 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="315" max="643" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6668000221252441">
-					<item id="2497" min="1" max="1" chance="0.7653" /> <!-- Full Plate Shield -->
-					<item id="2966" min="1" max="1" chance="60.4723" /> <!-- Full Plate Shield Fragment -->
-					<item id="2414" min="1" max="1" chance="0.5357" /> <!-- Full Plate Helmet -->
-					<item id="2959" min="1" max="1" chance="38.2267" /> <!-- Full Plate Helmet Design -->
-				</group>
-				<group chance="15.31820011138916">
-					<item id="1869" min="1" max="1" chance="17.4926" /> <!-- Iron Ore -->
-					<item id="1870" min="1" max="1" chance="17.4926" /> <!-- Coal -->
-					<item id="1871" min="1" max="1" chance="17.4926" /> <!-- Charcoal -->
-					<item id="1872" min="1" max="1" chance="23.3234" /> <!-- Animal Bone -->
-					<item id="1867" min="1" max="1" chance="23.3234" /> <!-- Animal Skin -->
-					<item id="4175" min="1" max="1" chance="0.337" /> <!-- Recipe: Sealed Avadon Boots (100%) -->
-					<item id="4972" min="1" max="1" chance="0.0202" /> <!-- Recipe: Great Axe (60%) -->
-					<item id="8726" min="1" max="1" chance="0.4049" /> <!-- Life Stone - Level 55 -->
-					<item id="8736" min="1" max="1" chance="0.1012" /> <!-- Mid-Grade Life Stone - Level 55 -->
-					<item id="8746" min="1" max="1" chance="0.0101" /> <!-- High-Grade Life Stone - Level 55 -->
-					<item id="8756" min="1" max="1" chance="0.002" /> <!-- Top-Grade Life Stone - Level 55 -->
-				</group>
-			</death>
-			<corpse>
+			<drop>
+				<item id="57" min="315" max="643" chance="70" /> <!-- Adena -->
+				<item id="2497" min="1" max="1" chance="0.00510302056932449" /> <!-- Full Plate Shield -->
+				<item id="2966" min="1" max="1" chance="0.403229309779644" /> <!-- Full Plate Shield Fragment -->
+				<item id="2414" min="1" max="1" chance="0.00357204771852493" /> <!-- Full Plate Helmet -->
+				<item id="2959" min="1" max="1" chance="0.254895644057751" /> <!-- Full Plate Helmet Design -->
+				<item id="1869" min="1" max="1" chance="2.67955147268486" /> <!-- Iron Ore -->
+				<item id="1870" min="1" max="1" chance="2.67955147268486" /> <!-- Coal -->
+				<item id="1871" min="1" max="1" chance="2.67955147268486" /> <!-- Charcoal -->
+				<item id="1872" min="1" max="1" chance="3.57272508477974" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="1" chance="3.57272508477974" /> <!-- Animal Skin -->
+				<item id="4175" min="1" max="1" chance="0.0516223343753815" /> <!-- Recipe: Sealed Avadon Boots (100%) -->
+				<item id="4972" min="1" max="1" chance="0.00309427642250061" /> <!-- Recipe: Great Axe (60%) -->
+				<item id="8726" min="1" max="1" chance="0.0620233922510147" /> <!-- Life Stone - Level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0155020185127258" /> <!-- Mid-Grade Life Stone - Level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00154713821125031" /> <!-- High-Grade Life Stone - Level 55 -->
+				<item id="8756" min="1" max="1" chance="0.000306364002227783" /> <!-- Top-Grade Life Stone - Level 55 -->
+			</drop>
+			<spoil>
 				<item id="2961" min="1" max="1" chance="4.3468" /> <!-- Full Plate Boots Part -->
 				<item id="1867" min="1" max="3" chance="53.219" /> <!-- Animal Skin -->
 				<item id="1869" min="1" max="1" chance="79.8286" /> <!-- Iron Ore -->
-			</corpse>
+			</spoil>
 		</drop_lists>
 		<collision>
 			<radius normal="5" />

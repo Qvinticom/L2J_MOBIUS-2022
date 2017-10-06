@@ -44,7 +44,7 @@
 		</skillList>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
-			<death>
+			<drop>
 				<item id="223" min="1" max="1" chance="1.975622141" /> <!-- Kukuri -->
 				<item id="238" min="1" max="1" chance="1.975622141" /> <!-- Dagger of Mana -->
 				<item id="239" min="1" max="1" chance="1.975622141" /> <!-- Mystic Knife -->
@@ -57,7 +57,7 @@
 				<item id="1939" min="28" max="84" chance="46.0776635407" /> <!-- Mithril Banded Gaiters Material -->
 				<item id="2028" min="27" max="81" chance="6.4637854247" /> <!-- Shilen Knife Edge -->
 				<item id="22229" min="1" max="1" chance="12.6939" /> <!-- Scroll: Enchant Weapon of Destruction (D-Grade) - Event -->
-			</death>
+			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="13" />

@@ -9,14 +9,6 @@
 	<xs:complexType name="drop_list">
 		<xs:choice minOccurs="1" maxOccurs="unbounded">
 			<xs:element name="item" type="drop_list_item" />
-			<xs:element name="group">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="item" type="drop_list_item" minOccurs="1" maxOccurs="unbounded" />
-					</xs:sequence>
-					<xs:attribute name="chance" type="xs:decimal" />
-				</xs:complexType>
-			</xs:element>
 		</xs:choice>
 	</xs:complexType>
 	<xs:element name="list">
@@ -267,9 +259,9 @@
 							<xs:element name="drop_lists" minOccurs="0" maxOccurs="1">
 								<xs:complexType>
 									<xs:all>
-										<xs:element name="death" type="drop_list" minOccurs="0" maxOccurs="1" />
-										<xs:element name="corpse" type="drop_list" minOccurs="0" maxOccurs="1" />
-										<xs:element name="lucky_corpse" type="drop_list" minOccurs="0" maxOccurs="1" />
+										<xs:element name="drop" type="drop_list" minOccurs="0" maxOccurs="1" />
+										<xs:element name="spoil" type="drop_list" minOccurs="0" maxOccurs="1" />
+										<xs:element name="lucky_drop" type="drop_list" minOccurs="0" maxOccurs="1" />
 									</xs:all>
 								</xs:complexType>
 							</xs:element>

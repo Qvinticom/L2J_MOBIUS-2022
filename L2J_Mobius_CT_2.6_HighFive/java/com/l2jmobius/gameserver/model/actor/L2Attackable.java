@@ -37,6 +37,7 @@ import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.EventDroplist.DateDrop;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.DropType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -56,7 +57,6 @@ import com.l2jmobius.gameserver.model.actor.knownlist.AttackableKnownList;
 import com.l2jmobius.gameserver.model.actor.status.AttackableStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.drops.DropListScope;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableAggroRangeEnter;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableAttack;
@@ -961,10 +961,10 @@ public class L2Attackable extends L2Npc
 		
 		if (isSpoiled())
 		{
-			_sweepItems.set(npcTemplate.calculateDrops(DropListScope.CORPSE, this, player));
+			_sweepItems.set(npcTemplate.calculateDrops(DropType.SPOIL, this, player));
 		}
 		
-		final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropListScope.DEATH, this, player);
+		final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropType.DROP, this, player);
 		if (deathItems != null)
 		{
 			for (ItemHolder drop : deathItems)

@@ -1659,7 +1659,7 @@
 			<height normal="52" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="159" min="1" max="1" chance="5.45" /> <!-- Bonebreaker -->
 				<item id="2499" min="1" max="1" chance="5.428" /> <!-- Elven Long Sword -->
 				<item id="280" min="1" max="1" chance="5.424" /> <!-- Light Crossbow -->
@@ -1671,7 +1671,7 @@
 				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
 				<item id="955" min="1" max="1" chance="49.25" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 			<!-- FIXME: Also drops herbs. -->
-			</death>
+			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="25438" level="44" type="L2RaidBoss" name="Thief Kelbar" title="Raid Boss">

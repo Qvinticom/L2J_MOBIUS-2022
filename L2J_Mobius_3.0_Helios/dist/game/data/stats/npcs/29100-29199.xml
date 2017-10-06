@@ -702,7 +702,7 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="13893" min="1" max="1" chance="38.2799" /> <!-- Sealed Holy Spirit's Cloak -->
 				<item id="10215" min="1" max="1" chance="5.662" /> <!-- Icarus Sawsword -->
 				<item id="10216" min="1" max="1" chance="5.483" /> <!-- Icarus Disperser -->
@@ -727,7 +727,7 @@
 				<item id="13465" min="1" max="1" chance="3.714" /> <!-- Vesper Caster -->
 				<item id="13466" min="1" max="1" chance="3.82" /> <!-- Vesper Singer -->
 				<item id="13467" min="1" max="1" chance="3.766" /> <!-- Vesper Thrower -->
-			</death>
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -1265,28 +1265,22 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="52.811">
-					<item id="71" min="1" max="1" chance="12.609115525175" /> <!-- Flamberge -->
-					<item id="72" min="1" max="1" chance="12.446270663309" /> <!-- StormBringer -->
-					<item id="2059" min="8" max="22" chance="56.560186324819" /> <!-- Flamberge Blade -->
-					<item id="2060" min="24" max="72" chance="18.384427486698" /> <!-- StormBringer Blade -->
-				</group>
-				<group chance="47.917">
-					<item id="439" min="1" max="1" chance="53.863973120187" /> <!-- Karmian Tunic -->
-					<item id="471" min="5" max="13" chance="9.8482793163178" /> <!-- Karmian Stockings -->
-					<item id="1962" min="53" max="157" chance="25.105912306697" /> <!-- Karmian Tunic Pattern -->
-					<item id="1954" min="192" max="576" chance="11.181835256798" /> <!-- Karmian Stocking Design -->
-				</group>
-				<group chance="60.73">
-					<item id="6574" min="1" max="1" chance="46.747900543389" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
-					<item id="4589" min="4" max="12" chance="35.452000658653" /> <!-- Greater STR Dye (STR + 2 CON - 2) -->
-					<item id="4590" min="8" max="22" chance="17.800098797958" /> <!-- Greater STR Dye (STR + 2 DEX - 2) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="71" min="1" max="1" chance="6.65900000000017" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="6.57300000000012" /> <!-- StormBringer -->
+				<item id="2059" min="8" max="22" chance="29.8700000000002" /> <!-- Flamberge Blade -->
+				<item id="2060" min="24" max="72" chance="9.70900000000008" /> <!-- StormBringer Blade -->
+				<item id="439" min="1" max="1" chance="25.81" /> <!-- Karmian Tunic -->
+				<item id="471" min="5" max="13" chance="4.719" /> <!-- Karmian Stockings -->
+				<item id="1962" min="53" max="157" chance="12.03" /> <!-- Karmian Tunic Pattern -->
+				<item id="1954" min="192" max="576" chance="5.3579999999999" /> <!-- Karmian Stocking Design -->
+				<item id="6574" min="1" max="1" chance="28.3900000000001" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="4589" min="4" max="12" chance="21.53" /> <!-- Greater STR Dye (STR + 2 CON - 2) -->
+				<item id="4590" min="8" max="22" chance="10.8099999999999" /> <!-- Greater STR Dye (STR + 2 DEX - 2) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="50.53" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="40" />
@@ -1424,29 +1418,23 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="39.133">
-					<item id="286" min="1" max="1" chance="17.997597935246" /> <!-- Eminence Bow -->
-					<item id="2121" min="12" max="36" chance="82.002402064754" /> <!-- Eminence Bow Shaft -->
-				</group>
-				<group chance="58.144">
-					<item id="855" min="1" max="1" chance="37.080352228949" /> <!-- Nassen's Earring -->
-					<item id="119" min="1" max="1" chance="29.426940011007" /> <!-- Necklace of Seal -->
-					<item id="886" min="6" max="16" chance="5.2283984589983" /> <!-- Ring of Seal -->
-					<item id="1918" min="81" max="243" chance="16.818588332416" /> <!-- Nassen's Earring Gemstone -->
-					<item id="1920" min="140" max="420" chance="7.7755228398459" /> <!-- Necklace of Seal Chain -->
-					<item id="2917" min="480" max="1440" chance="3.6701981287837" /> <!-- Ring of Seal Gemstone -->
-				</group>
-				<group chance="86.055">
-					<item id="4608" min="2" max="4" chance="46.330834931149" /> <!-- Greater INT Dye (Int + 3 Wit - 3) -->
-					<item id="4609" min="2" max="6" chance="35.384347219801" /> <!-- Greater MEN Dye (Men + 3 Int - 3) -->
-					<item id="4607" min="5" max="15" chance="14.20022078903" /> <!-- Greater INT Dye (Int + 3 Men - 3) -->
-					<item id="6573" min="1" max="1" chance="4.0845970600198" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="286" min="1" max="1" chance="7.04299999999982" /> <!-- Eminence Bow -->
+				<item id="2121" min="12" max="36" chance="32.0900000000002" /> <!-- Eminence Bow Shaft -->
+				<item id="855" min="1" max="1" chance="21.5600000000001" /> <!-- Nassen's Earring -->
+				<item id="119" min="1" max="1" chance="17.1099999999999" /> <!-- Necklace of Seal -->
+				<item id="886" min="6" max="16" chance="3.03999999999997" /> <!-- Ring of Seal -->
+				<item id="1918" min="81" max="243" chance="9.77899999999996" /> <!-- Nassen's Earring Gemstone -->
+				<item id="1920" min="140" max="420" chance="4.521" /> <!-- Necklace of Seal Chain -->
+				<item id="2917" min="480" max="1440" chance="2.13399999999999" /> <!-- Ring of Seal Gemstone -->
+				<item id="4608" min="2" max="4" chance="39.8700000000003" /> <!-- Greater INT Dye (Int + 3 Wit - 3) -->
+				<item id="4609" min="2" max="6" chance="30.4499999999998" /> <!-- Greater MEN Dye (Men + 3 Int - 3) -->
+				<item id="4607" min="5" max="15" chance="12.2199999999998" /> <!-- Greater INT Dye (Int + 3 Men - 3) -->
+				<item id="6573" min="1" max="1" chance="3.51500000000004" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="60.27" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="45" />
@@ -1584,33 +1572,27 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="32.748">
-					<item id="175" min="1" max="1" chance="4.5804323928179" /> <!-- Art of Battle Axe -->
-					<item id="171" min="1" max="1" chance="4.5651642848418" /> <!-- Deadman's Glory -->
-					<item id="210" min="1" max="1" chance="4.3758397459387" /> <!-- Staff of Evil Spirits -->
-					<item id="4117" min="9" max="27" chance="53.102479540735" /> <!-- Art of Battle Axe Blade -->
-					<item id="4118" min="14" max="42" chance="33.376084035666" /> <!-- Evil Spirit Head -->
-				</group>
-				<group chance="62.313">
-					<item id="895" min="1" max="1" chance="31.999743231749" /> <!-- Black Ore Ring -->
-					<item id="864" min="1" max="1" chance="23.478246914769" /> <!-- Black Ore Earring -->
-					<item id="926" min="1" max="1" chance="16.930656524321" /> <!-- Black Ore Necklace -->
-					<item id="4052" min="81" max="243" chance="17.98982555807" /> <!-- Black Ore Earring Piece -->
-					<item id="4053" min="280" max="840" chance="6.030844286104" /> <!-- Black Ore Ring Gemstone -->
-					<item id="4054" min="220" max="660" chance="3.5706834849871" /> <!-- Black Ore Necklace Beads -->
-				</group>
-				<group chance="100">
-					<item id="4617" min="2" max="4" chance="27.5468121196" /> <!-- Greater DEX Dye (Dex + 4 Str - 4) -->
-					<item id="4116" min="5" max="15" chance="26.973093424685" /> <!-- Deadman's Glory Stone -->
-					<item id="4618" min="2" max="6" chance="20.953204509928" /> <!-- Greater DEX Dye (Dex + 4 CON - 4) -->
-					<item id="6572" min="1" max="1" chance="16.222103967805" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
-					<item id="4616" min="5" max="15" chance="8.3047859779825" /> <!-- Greater CON Dye (Con + 4 DEX - 4) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="175" min="1" max="1" chance="1.50000000000001" /> <!-- Art of Battle Axe -->
+				<item id="171" min="1" max="1" chance="1.49499999999999" /> <!-- Deadman's Glory -->
+				<item id="210" min="1" max="1" chance="1.43300000000001" /> <!-- Staff of Evil Spirits -->
+				<item id="4117" min="9" max="27" chance="17.3899999999999" /> <!-- Art of Battle Axe Blade -->
+				<item id="4118" min="14" max="42" chance="10.9299999999999" /> <!-- Evil Spirit Head -->
+				<item id="895" min="1" max="1" chance="19.9399999999998" /> <!-- Black Ore Ring -->
+				<item id="864" min="1" max="1" chance="14.63" /> <!-- Black Ore Earring -->
+				<item id="926" min="1" max="1" chance="10.5500000000001" /> <!-- Black Ore Necklace -->
+				<item id="4052" min="81" max="243" chance="11.2100000000002" /> <!-- Black Ore Earring Piece -->
+				<item id="4053" min="280" max="840" chance="3.75799999999999" /> <!-- Black Ore Ring Gemstone -->
+				<item id="4054" min="220" max="660" chance="2.22500000000001" /> <!-- Black Ore Necklace Beads -->
+				<item id="4617" min="2" max="4" chance="27.5468121196" /> <!-- Greater DEX Dye (Dex + 4 Str - 4) -->
+				<item id="4116" min="5" max="15" chance="26.973093424685" /> <!-- Deadman's Glory Stone -->
+				<item id="4618" min="2" max="6" chance="20.953204509928" /> <!-- Greater DEX Dye (Dex + 4 CON - 4) -->
+				<item id="6572" min="1" max="1" chance="16.222103967805" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+				<item id="4616" min="5" max="15" chance="8.3047859779825" /> <!-- Greater CON Dye (Con + 4 DEX - 4) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="70.99" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="35" />
@@ -1747,26 +1729,20 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="26.834">
-					<item id="289" min="1" max="1" chance="7.691734366848" /> <!-- Soul Bow -->
-					<item id="5534" min="12" max="36" chance="92.308265633152" /> <!-- Soul Bow Shaft -->
-				</group>
-				<group chance="66.012">
-					<item id="5326" min="1" max="1" chance="3.3584802763134" /> <!-- Sealed Robe of Nightmare -->
-					<item id="5329" min="1" max="1" chance="3.3403017633158" /> <!-- Sealed Majestic Robe -->
-					<item id="5487" min="4" max="12" chance="60.034539174696" /> <!-- Sealed Robe of Nightmare Fabric -->
-					<item id="5488" min="8" max="22" chance="33.266678785675" /> <!-- Sealed Majestic Robe Fabric -->
-				</group>
-				<group chance="90.7">
-					<item id="730" min="1" max="1" chance="87.331863285557" /> <!-- Scroll: Enchant Armor (A-grade) -->
-					<item id="729" min="1" max="1" chance="11.367144432194" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-					<item id="6569" min="1" max="1" chance="1.3009922822492" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="289" min="1" max="1" chance="2.06399999999999" /> <!-- Soul Bow -->
+				<item id="5534" min="12" max="36" chance="24.77" /> <!-- Soul Bow Shaft -->
+				<item id="5326" min="1" max="1" chance="2.217" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="2.20500000000003" /> <!-- Sealed Majestic Robe -->
+				<item id="5487" min="4" max="12" chance="39.6300000000003" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="8" max="22" chance="21.9599999999998" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="730" min="1" max="1" chance="79.2100000000002" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="10.31" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="6569" min="1" max="1" chance="1.18000000000002" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="81.69" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="40" />
@@ -1909,24 +1885,18 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="38.489">
-					<item id="7575" min="1" max="1" chance="4.8299514146899" /> <!-- Draconic Bow -->
-					<item id="7579" min="12" max="36" chance="95.17004858531" /> <!-- Draconic Bow Shaft -->
-				</group>
-				<group chance="57.53">
-					<item id="6680" min="1" max="1" chance="5.8404310794368" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6707" min="12" max="36" chance="94.159568920563" /> <!-- Sealed Draconic Leather Armor Part -->
-				</group>
-				<group chance="75.111">
-					<item id="960" min="1" max="1" chance="89.587410632264" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="959" min="1" max="1" chance="8.864214296175" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-					<item id="6577" min="1" max="1" chance="1.5483750715608" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="7575" min="1" max="1" chance="1.859" /> <!-- Draconic Bow -->
+				<item id="7579" min="12" max="36" chance="36.63" /> <!-- Draconic Bow Shaft -->
+				<item id="6680" min="1" max="1" chance="3.35999999999999" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6707" min="12" max="36" chance="54.1699999999999" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="960" min="1" max="1" chance="67.2899999999998" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="6.658" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="1.16300000000003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="79.27" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="15" />
@@ -2079,30 +2049,24 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="38.628">
-					<item id="6678" min="1" max="1" chance="9.3455524490007" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="6371" min="1" max="1" chance="4.3181112146629" /> <!-- Demon Splinter -->
-					<item id="6695" min="12" max="36" chance="86.336336336336" /> <!-- Demon Splinter Blade -->
-				</group>
-				<group chance="72.083">
-					<item id="6687" min="1" max="1" chance="3.6333115991288" /> <!-- Sealed Major Arcana Circlet -->
-					<item id="6679" min="1" max="1" chance="3.6291497301722" /> <!-- Sealed Imperial Crusader Helmet -->
-					<item id="6683" min="1" max="1" chance="3.6208259922589" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6714" min="16" max="48" chance="44.310031491475" /> <!-- Sealed Major Arcana Circlet Pattern -->
-					<item id="6705" min="23" max="67" chance="27.398970631078" /> <!-- Sealed Imperial Crusader Shield Part -->
-					<item id="6706" min="60" max="180" chance="11.4742727134" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-					<item id="6710" min="116" max="346" chance="5.9334378424871" /> <!-- Sealed Draconic Leather Helmet Pattern -->
-				</group>
-				<group chance="70.405">
-					<item id="960" min="1" max="1" chance="89.439670477949" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="959" min="1" max="1" chance="9.0320289752148" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-					<item id="6577" min="1" max="1" chance="1.5283005468362" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="6678" min="1" max="1" chance="3.60999999999999" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6371" min="1" max="1" chance="1.66799999999999" /> <!-- Demon Splinter -->
+				<item id="6695" min="12" max="36" chance="33.3499999999999" /> <!-- Demon Splinter Blade -->
+				<item id="6687" min="1" max="1" chance="2.61900000000001" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6679" min="1" max="1" chance="2.61600000000003" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="2.60999999999998" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6714" min="16" max="48" chance="31.9399999999999" /> <!-- Sealed Major Arcana Circlet Pattern -->
+				<item id="6705" min="23" max="67" chance="19.75" /> <!-- Sealed Imperial Crusader Shield Part -->
+				<item id="6706" min="60" max="180" chance="8.27100000000012" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+				<item id="6710" min="116" max="346" chance="4.27699999999998" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+				<item id="960" min="1" max="1" chance="62.97" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="6.35899999999998" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="1.07600000000003" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="90.785" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="44" />
@@ -2245,59 +2209,49 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="35.215">
-					<item id="9529" min="1" max="1" chance="8.5418145676558" /> <!-- Sealed Dynasty Shield -->
-					<item id="14111" min="1" max="1" chance="8.4253869089876" /> <!-- Sealed Vesper Shield -->
-					<item id="10552" min="1" max="1" chance="83.032798523357" /> <!-- Forgotten Scroll: Fighter's Will -->
-				</group>
-				<group chance="35.388">
-					<item id="17012" min="1" max="1" chance="8.5057081496553" /> <!-- Sealed Vesper Noble Leather Leggings -->
-					<item id="17008" min="1" max="1" chance="8.5000565163332" /> <!-- Sealed Vesper Noble Tunic -->
-					<item id="17007" min="1" max="1" chance="8.4802757997061" /> <!-- Sealed Vesper Noble Leather Breastplate -->
-					<item id="14112" min="1" max="1" chance="8.4096303831807" /> <!-- Sealed Vesper Leather Leggings -->
-					<item id="17006" min="1" max="1" chance="8.3841980332316" /> <!-- Sealed Vesper Noble Breastplate -->
-					<item id="14115" min="1" max="1" chance="8.3785463999096" /> <!-- Sealed Vesper Stockings -->
-					<item id="14105" min="1" max="1" chance="8.3305075166723" /> <!-- Sealed Vesper Breastplate -->
-					<item id="14108" min="1" max="1" chance="8.2937719000791" /> <!-- Sealed Vesper Gaiters -->
-					<item id="14106" min="1" max="1" chance="8.2259523002148" /> <!-- Sealed Vesper Leather Breastplate -->
-					<item id="14107" min="1" max="1" chance="8.2259523002148" /> <!-- Sealed Vesper Tunic -->
-					<item id="17009" min="1" max="1" chance="8.1411778003843" /> <!-- Sealed Vesper Noble Gaiters -->
-					<item id="17015" min="1" max="1" chance="8.1242229004182" /> <!-- Sealed Vesper Noble Stockings -->
-				</group>
-				<group chance="58.696">
-					<item id="17017" min="1" max="1" chance="5.1127845168325" /> <!-- Sealed Vesper Noble Shoes -->
-					<item id="14117" min="1" max="1" chance="5.0480441597383" /> <!-- Sealed Vesper Shoes -->
-					<item id="14113" min="1" max="1" chance="5.0463404661306" /> <!-- Sealed Vesper Leather Gloves -->
-					<item id="13887" min="1" max="1" chance="5.0361183044841" /> <!-- Sealed Vesper Sigil -->
-					<item id="13148" min="1" max="1" chance="5.0224887556222" /> <!-- Sealed Vesper Noble Circlet -->
-					<item id="13145" min="1" max="1" chance="5.0207850620144" /> <!-- Sealed Vesper Circlet -->
-					<item id="13143" min="1" max="1" chance="5.0207850620144" /> <!-- Sealed Vesper Helmet -->
-					<item id="13886" min="1" max="1" chance="5.0190813684067" /> <!-- Sealed Dynasty Sigil -->
-					<item id="13144" min="1" max="1" chance="5.010562900368" /> <!-- Sealed Vesper Leather Helmet -->
-					<item id="17014" min="1" max="1" chance="5.0020444323293" /> <!-- Sealed Vesper Noble Leather Boots -->
-					<item id="17011" min="1" max="1" chance="4.9986370451138" /> <!-- Sealed Vesper Noble Boots -->
-					<item id="13146" min="1" max="1" chance="4.9986370451138" /> <!-- Sealed Vesper Noble Helmet -->
-					<item id="14116" min="1" max="1" chance="4.9935259642906" /> <!-- Sealed Vesper Gloves -->
-					<item id="13147" min="1" max="1" chance="4.9781927218209" /> <!-- Sealed Vesper Noble Leather Helmet -->
-					<item id="14109" min="1" max="1" chance="4.9764890282132" /> <!-- Sealed Vesper Gauntlets -->
-					<item id="17016" min="1" max="1" chance="4.9662668665667" /> <!-- Sealed Vesper Noble Gloves -->
-					<item id="17013" min="1" max="1" chance="4.9662668665667" /> <!-- Sealed Vesper Noble Leather Gloves -->
-					<item id="14114" min="1" max="1" chance="4.9526373177048" /> <!-- Sealed Vesper Leather Boots -->
-					<item id="14110" min="1" max="1" chance="4.9236745263732" /> <!-- Sealed Vesper Boots -->
-					<item id="17010" min="1" max="1" chance="4.9066375902958" /> <!-- Sealed Vesper Noble Gauntlets -->
-				</group>
-				<group chance="99.29">
-					<item id="14162" min="1" max="1" chance="35.592708228422" /> <!-- Sealed Vesper Ring -->
-					<item id="14160" min="1" max="1" chance="34.394198811562" /> <!-- Sealed Vesper Earring -->
-					<item id="14161" min="1" max="1" chance="30.013092960016" /> <!-- Sealed Vesper Necklace -->
-				</group>
-				<group chance="67.944">
-					<item id="14219" min="1" max="1" chance="42.741080890145" /> <!-- Forgotten Scroll: Magician's Will -->
-					<item id="10553" min="1" max="1" chance="42.490874838102" /> <!-- Forgotten Scroll: Archer's Will -->
-					<item id="13893" min="1" max="1" chance="14.768044271753" /> <!-- Sealed Holy Spirit's Cloak -->
-				</group>
-			</death>
+			<drop>
+				<item id="9529" min="1" max="1" chance="3.00799999999999" /> <!-- Sealed Dynasty Shield -->
+				<item id="14111" min="1" max="1" chance="2.96699999999998" /> <!-- Sealed Vesper Shield -->
+				<item id="10552" min="1" max="1" chance="29.2400000000002" /> <!-- Forgotten Scroll: Fighter's Will -->
+				<item id="17012" min="1" max="1" chance="3.01000000000002" /> <!-- Sealed Vesper Noble Leather Leggings -->
+				<item id="17008" min="1" max="1" chance="3.00799999999999" /> <!-- Sealed Vesper Noble Tunic -->
+				<item id="17007" min="1" max="1" chance="3.00099999999999" /> <!-- Sealed Vesper Noble Leather Breastplate -->
+				<item id="14112" min="1" max="1" chance="2.97599999999999" /> <!-- Sealed Vesper Leather Leggings -->
+				<item id="17006" min="1" max="1" chance="2.967" /> <!-- Sealed Vesper Noble Breastplate -->
+				<item id="14115" min="1" max="1" chance="2.96500000000001" /> <!-- Sealed Vesper Stockings -->
+				<item id="14105" min="1" max="1" chance="2.94799999999999" /> <!-- Sealed Vesper Breastplate -->
+				<item id="14108" min="1" max="1" chance="2.93499999999999" /> <!-- Sealed Vesper Gaiters -->
+				<item id="14106" min="1" max="1" chance="2.91100000000001" /> <!-- Sealed Vesper Leather Breastplate -->
+				<item id="14107" min="1" max="1" chance="2.91100000000001" /> <!-- Sealed Vesper Tunic -->
+				<item id="17009" min="1" max="1" chance="2.881" /> <!-- Sealed Vesper Noble Gaiters -->
+				<item id="17015" min="1" max="1" chance="2.87499999999999" /> <!-- Sealed Vesper Noble Stockings -->
+				<item id="17017" min="1" max="1" chance="3.001" /> <!-- Sealed Vesper Noble Shoes -->
+				<item id="14117" min="1" max="1" chance="2.96299999999999" /> <!-- Sealed Vesper Shoes -->
+				<item id="14113" min="1" max="1" chance="2.96200000000002" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="13887" min="1" max="1" chance="2.95599999999999" /> <!-- Sealed Vesper Sigil -->
+				<item id="13148" min="1" max="1" chance="2.94800000000001" /> <!-- Sealed Vesper Noble Circlet -->
+				<item id="13145" min="1" max="1" chance="2.94699999999997" /> <!-- Sealed Vesper Circlet -->
+				<item id="13143" min="1" max="1" chance="2.94699999999997" /> <!-- Sealed Vesper Helmet -->
+				<item id="13886" min="1" max="1" chance="2.946" /> <!-- Sealed Dynasty Sigil -->
+				<item id="13144" min="1" max="1" chance="2.941" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="17014" min="1" max="1" chance="2.93600000000001" /> <!-- Sealed Vesper Noble Leather Boots -->
+				<item id="17011" min="1" max="1" chance="2.934" /> <!-- Sealed Vesper Noble Boots -->
+				<item id="13146" min="1" max="1" chance="2.934" /> <!-- Sealed Vesper Noble Helmet -->
+				<item id="14116" min="1" max="1" chance="2.93100000000001" /> <!-- Sealed Vesper Gloves -->
+				<item id="13147" min="1" max="1" chance="2.922" /> <!-- Sealed Vesper Noble Leather Helmet -->
+				<item id="14109" min="1" max="1" chance="2.92100000000002" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="17016" min="1" max="1" chance="2.91499999999999" /> <!-- Sealed Vesper Noble Gloves -->
+				<item id="17013" min="1" max="1" chance="2.91499999999999" /> <!-- Sealed Vesper Noble Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="2.90700000000001" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14110" min="1" max="1" chance="2.89000000000001" /> <!-- Sealed Vesper Boots -->
+				<item id="17010" min="1" max="1" chance="2.88000000000002" /> <!-- Sealed Vesper Noble Gauntlets -->
+				<item id="14162" min="1" max="1" chance="35.3400000000002" /> <!-- Sealed Vesper Ring -->
+				<item id="14160" min="1" max="1" chance="34.1499999999999" /> <!-- Sealed Vesper Earring -->
+				<item id="14161" min="1" max="1" chance="29.7999999999999" /> <!-- Sealed Vesper Necklace -->
+				<item id="14219" min="1" max="1" chance="29.0400000000001" /> <!-- Forgotten Scroll: Magician's Will -->
+				<item id="10553" min="1" max="1" chance="28.87" /> <!-- Forgotten Scroll: Archer's Will -->
+				<item id="13893" min="1" max="1" chance="10.0339999999999" /> <!-- Sealed Holy Spirit's Cloak -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="25" />
@@ -3917,14 +3871,10 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8952" min="10" max="20" chance="100" /> <!-- Major Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8953" min="10" max="20" chance="100" /> <!-- Major Herb of Mana -->
-				</group>
-			</death>
+			<drop>
+				<item id="8952" min="10" max="20" chance="100" /> <!-- Major Herb of Life -->
+				<item id="8953" min="10" max="20" chance="100" /> <!-- Major Herb of Mana -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="63" />
@@ -4095,7 +4045,7 @@
 			<height normal="81" />
 		</collision>
 		<drop_lists>
-			<death>
+			<drop>
 				<item id="19462" min="1" max="1" chance="1.370" /> <!-- Octavis' Shirt -->
 				<item id="19459" min="1" max="1" chance="0.3" /> <!-- Octavis' Necklace -->
 				<item id="19458" min="1" max="1" chance="0.3" /> <!-- Octavis' Earring -->
@@ -4168,10 +4118,10 @@
 				<item id="38015" min="1" max="1" chance="0.075" /> <!-- Specter Avenger Crafting Pack -->
 				<item id="38017" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Crafting Pack -->
 				<item id="38018" min="1" max="1" chance="0.075" /> <!-- Specter Thrower Crafting Pack -->
-			</death>
-			<lucky_corpse>
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="2" max="2" chance="99" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky_corpse>	
+			</lucky_drop>	
 		</drop_lists>
 	</npc>
 	<npc id="29195" level="94" type="L2RaidBoss" name="Istina" title="Queen of Annihilation">
@@ -4217,95 +4167,85 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="4.875">
-					<item id="17343" min="1" max="1" chance="15.384615384615" /> <!-- Twilight Shield Heavy Armor -->
-					<item id="37986" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Stormer Crafting Pack -->
-					<item id="37981" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Shaper Crafting Pack -->
-					<item id="37982" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Cutter Crafting Pack -->
-					<item id="37983" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Slasher Crafting Pack -->
-					<item id="37984" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Avenger Crafting Pack -->
-					<item id="37985" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Fighter Crafting Pack -->
-					<item id="37987" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Thrower Crafting Pack -->
-					<item id="37988" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Shooter Crafting Pack -->
-					<item id="37989" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Buster Crafting Pack -->
-					<item id="37990" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Caster Crafting Pack -->
-					<item id="37991" min="1" max="1" chance="6.1538461538462" /> <!-- Apocalypse Retributer Crafting Pack -->
-					<item id="38020" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Buster Crafting Pack -->
-					<item id="38012" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Shaper Crafting Pack -->
-					<item id="38022" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Retributer Crafting Pack -->
-					<item id="38019" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Shooter Crafting Pack -->
-					<item id="38018" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Thrower Crafting Pack -->
-					<item id="38017" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Stormer Crafting Pack -->
-					<item id="38016" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Fighter Crafting Pack -->
-					<item id="38015" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Avenger Crafting Pack -->
-					<item id="38014" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Slasher Crafting Pack -->
-					<item id="38013" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Cutter Crafting Pack -->
-					<item id="38021" min="1" max="1" chance="1.5384615384615" /> <!-- Specter Caster Crafting Pack -->
-				</group>
-				<group chance="32.113">
-					<item id="19456" min="1" max="1" chance="6.3494534923551" /> <!-- Istina's Shirt -->
-					<item id="38005" min="1" max="1" chance="14.853797527481" /> <!-- Twilight Stockings Crafting Pack Robe -->
-					<item id="37999" min="1" max="1" chance="14.847569520132" /> <!-- Twilight Leather Armor Crafting Pack Light Armor -->
-					<item id="37994" min="1" max="1" chance="14.791517453991" /> <!-- Twilight Gaiters Crafting Pack Heavy Armor -->
-					<item id="37993" min="1" max="1" chance="14.573537196774" /> <!-- Twilight Breastplate Crafting Pack Heavy Armor -->
-					<item id="38004" min="1" max="1" chance="14.50191511226" /> <!-- Twilight Tunic Crafting Pack Robe -->
-					<item id="38000" min="1" max="1" chance="14.477003082864" /> <!-- Twilight Leather Leggings Crafting Pack Light Armor -->
-					<item id="38024" min="1" max="1" chance="0.9342011023573" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
-					<item id="38025" min="1" max="1" chance="0.9342011023573" /> <!-- Seraph Gaiters Crafting Pack Heavy Armor -->
-					<item id="38030" min="1" max="1" chance="0.9342011023573" /> <!-- Seraph Leather Armor Crafting Pack Light Armor -->
-					<item id="38031" min="1" max="1" chance="0.9342011023573" /> <!-- Seraph Leather Leggings Crafting Pack Light Armor -->
-					<item id="38035" min="1" max="1" chance="0.9342011023573" /> <!-- Seraph Tunic Crafting Pack Robe -->
-					<item id="38036" min="1" max="1" chance="0.9342011023573" /> <!-- Seraph Stockings Crafting Pack Robe -->
-				</group>
-				<group chance="62.587">
-					<item id="17354" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Sigil Robe -->
-					<item id="17353" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Shoes Robe -->
-					<item id="17352" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Gloves Robe -->
-					<item id="17349" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Circlet Robe -->
-					<item id="17348" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Leather Boots Light Armor -->
-					<item id="17347" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Leather Gloves Light Armor -->
-					<item id="17344" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Leather Helmet Light Armor -->
-					<item id="17342" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Boots Heavy Armor -->
-					<item id="17341" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Gauntlets Heavy Armor -->
-					<item id="17338" min="1" max="1" chance="1.1983319219646" /> <!-- Twilight Helmet Heavy Armor -->
-					<item id="38003" min="1" max="1" chance="7.6181954719031" /> <!-- Twilight Circlet Crafting Pack Robe -->
-					<item id="37995" min="1" max="1" chance="7.6086088165274" /> <!-- Twilight Gauntlets Crafting Pack Heavy Armor -->
-					<item id="38001" min="1" max="1" chance="7.5846421780881" /> <!-- Twilight Leather Gloves Crafting Pack Light Armor -->
-					<item id="38006" min="1" max="1" chance="7.5830444021922" /> <!-- Twilight Gloves Crafting Pack Robe -->
-					<item id="38007" min="1" max="1" chance="7.5431000047933" /> <!-- Twilight Shoes Crafting Pack Robe -->
-					<item id="37997" min="1" max="1" chance="7.5271222458338" /> <!-- Twilight Shield Crafting Pack Heavy Armor -->
-					<item id="37996" min="1" max="1" chance="7.5079489350824" /> <!-- Twilight Boots Crafting Pack Heavy Armor -->
-					<item id="37992" min="1" max="1" chance="7.4775911930593" /> <!-- Twilight Helmet Crafting Pack Heavy Armor -->
-					<item id="38002" min="1" max="1" chance="7.4456356751402" /> <!-- Twilight Leather Boots Crafting Pack Light Armor -->
-					<item id="37998" min="1" max="1" chance="7.4360490197645" /> <!-- Twilight Leather Helmet Crafting Pack Light Armor -->
-					<item id="38008" min="1" max="1" chance="7.4120823813252" /> <!-- Twilight Sigil Crafting Pack Robe -->
-					<item id="38023" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
-					<item id="38027" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Boots Crafting Pack Heavy Armor -->
-					<item id="38028" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Shield Crafting Pack Heavy Armor -->
-					<item id="38029" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Leather Helmet Crafting Pack Light Armor -->
-					<item id="38032" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Leather Gloves Crafting Pack Light Armor -->
-					<item id="38033" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Leather Boots Crafting Pack Light Armor -->
-					<item id="38034" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Circlet Crafting Pack Robe -->
-					<item id="38037" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Gloves Crafting Pack Robe -->
-					<item id="38038" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Shoes Crafting Pack Robe -->
-					<item id="38039" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Sigil Crafting Pack Robe -->
-					<item id="38026" min="1" max="1" chance="0.47933276878585" /> <!-- Seraph Gauntlets Crafting Pack Heavy Armor -->
-				</group>
-				<group chance="0.9">
-					<item id="19451" min="1" max="1" chance="33.333333333333" /> <!-- Istina's Ring -->
-					<item id="19452" min="1" max="1" chance="33.333333333333" /> <!-- Istina's Earring -->
-					<item id="19453" min="1" max="1" chance="33.333333333333" /> <!-- Istina's Necklace -->
-				</group>
-				<group chance="100">
-					<item id="39738" min="1" max="1" chance="90.887608383473" /> <!-- Rune Stone -->
-					<item id="19448" min="1" max="1" chance="7.2800974315162" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="19447" min="1" max="1" chance="1.8322941850108" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="17343" min="1" max="1" chance="0.749999999999981" /> <!-- Twilight Shield Heavy Armor -->
+				<item id="37986" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Stormer Crafting Pack -->
+				<item id="37981" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Shaper Crafting Pack -->
+				<item id="37982" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Cutter Crafting Pack -->
+				<item id="37983" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Slasher Crafting Pack -->
+				<item id="37984" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Avenger Crafting Pack -->
+				<item id="37985" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Fighter Crafting Pack -->
+				<item id="37987" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Thrower Crafting Pack -->
+				<item id="37988" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Shooter Crafting Pack -->
+				<item id="37989" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Buster Crafting Pack -->
+				<item id="37990" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Caster Crafting Pack -->
+				<item id="37991" min="1" max="1" chance="0.300000000000002" /> <!-- Apocalypse Retributer Crafting Pack -->
+				<item id="38020" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Buster Crafting Pack -->
+				<item id="38012" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Shaper Crafting Pack -->
+				<item id="38022" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Retributer Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38018" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Thrower Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38016" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38021" min="1" max="1" chance="0.0749999999999981" /> <!-- Specter Caster Crafting Pack -->
+				<item id="19456" min="1" max="1" chance="2.03899999999999" /> <!-- Istina's Shirt -->
+				<item id="38005" min="1" max="1" chance="4.76999999999997" /> <!-- Twilight Stockings Crafting Pack Robe -->
+				<item id="37999" min="1" max="1" chance="4.76799999999999" /> <!-- Twilight Leather Armor Crafting Pack Light Armor -->
+				<item id="37994" min="1" max="1" chance="4.75000000000013" /> <!-- Twilight Gaiters Crafting Pack Heavy Armor -->
+				<item id="37993" min="1" max="1" chance="4.68000000000003" /> <!-- Twilight Breastplate Crafting Pack Heavy Armor -->
+				<item id="38004" min="1" max="1" chance="4.65700000000005" /> <!-- Twilight Tunic Crafting Pack Robe -->
+				<item id="38000" min="1" max="1" chance="4.64900000000012" /> <!-- Twilight Leather Leggings Crafting Pack Light Armor -->
+				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
+				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack Heavy Armor -->
+				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack Light Armor -->
+				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack Light Armor -->
+				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack Robe -->
+				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack Robe -->
+				<item id="17354" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Sigil Robe -->
+				<item id="17353" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Shoes Robe -->
+				<item id="17352" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Gloves Robe -->
+				<item id="17349" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Circlet Robe -->
+				<item id="17348" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Leather Boots Light Armor -->
+				<item id="17347" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Leather Gloves Light Armor -->
+				<item id="17344" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Leather Helmet Light Armor -->
+				<item id="17342" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Boots Heavy Armor -->
+				<item id="17341" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Gauntlets Heavy Armor -->
+				<item id="17338" min="1" max="1" chance="0.749999999999984" /> <!-- Twilight Helmet Heavy Armor -->
+				<item id="38003" min="1" max="1" chance="4.76799999999999" /> <!-- Twilight Circlet Crafting Pack Robe -->
+				<item id="37995" min="1" max="1" chance="4.762" /> <!-- Twilight Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38001" min="1" max="1" chance="4.747" /> <!-- Twilight Leather Gloves Crafting Pack Light Armor -->
+				<item id="38006" min="1" max="1" chance="4.74600000000003" /> <!-- Twilight Gloves Crafting Pack Robe -->
+				<item id="38007" min="1" max="1" chance="4.72099999999998" /> <!-- Twilight Shoes Crafting Pack Robe -->
+				<item id="37997" min="1" max="1" chance="4.711" /> <!-- Twilight Shield Crafting Pack Heavy Armor -->
+				<item id="37996" min="1" max="1" chance="4.69900000000002" /> <!-- Twilight Boots Crafting Pack Heavy Armor -->
+				<item id="37992" min="1" max="1" chance="4.68000000000002" /> <!-- Twilight Helmet Crafting Pack Heavy Armor -->
+				<item id="38002" min="1" max="1" chance="4.66" /> <!-- Twilight Leather Boots Crafting Pack Light Armor -->
+				<item id="37998" min="1" max="1" chance="4.65400000000001" /> <!-- Twilight Leather Helmet Crafting Pack Light Armor -->
+				<item id="38008" min="1" max="1" chance="4.639" /> <!-- Twilight Sigil Crafting Pack Robe -->
+				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack Heavy Armor -->
+				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack Heavy Armor -->
+				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack Light Armor -->
+				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack Light Armor -->
+				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack Light Armor -->
+				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack Robe -->
+				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack Robe -->
+				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack Robe -->
+				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack Robe -->
+				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack Heavy Armor -->
+				<item id="19451" min="1" max="1" chance="0.299999999999997" /> <!-- Istina's Ring -->
+				<item id="19452" min="1" max="1" chance="0.299999999999997" /> <!-- Istina's Earring -->
+				<item id="19453" min="1" max="1" chance="0.299999999999997" /> <!-- Istina's Necklace -->
+				<item id="39738" min="1" max="1" chance="90.887608383473" /> <!-- Rune Stone -->
+				<item id="19448" min="1" max="1" chance="7.2800974315162" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="1.8322941850108" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="100" />
@@ -4355,85 +4295,75 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="0.825">
-					<item id="38044" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Cutter Crafting Pack -->
-					<item id="38045" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Slasher Crafting Pack -->
-					<item id="38046" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Avenger Crafting Pack -->
-					<item id="38048" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Stormer Crafting Pack -->
-					<item id="38047" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Fighter Crafting Pack -->
-					<item id="38049" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Thrower Crafting Pack -->
-					<item id="38050" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Shooter Crafting Pack -->
-					<item id="38051" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Buster Crafting Pack -->
-					<item id="38052" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Caster Crafting Pack -->
-					<item id="38053" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Retributer Crafting Pack -->
-					<item id="38043" min="1" max="1" chance="9.0909090909091" /> <!-- Amaranthine Shaper Crafting Pack -->
-				</group>
-				<group chance="36.551">
-					<item id="19456" min="1" max="1" chance="59.861563295122" /> <!-- Istina's Shirt -->
-					<item id="17397" min="1" max="1" chance="4.7276408306202" /> <!-- Seraph Breastplate Heavy Armor -->
-					<item id="17404" min="1" max="1" chance="4.6920740882602" /> <!-- Seraph Leather Leggings Light Armor -->
-					<item id="17398" min="1" max="1" chance="4.672922765451" /> <!-- Seraph Gaiters Heavy Armor -->
-					<item id="17403" min="1" max="1" chance="4.6647150556756" /> <!-- Seraph Leather Armor Light Armor -->
-					<item id="17409" min="1" max="1" chance="4.5799020546633" /> <!-- Seraph Stockings Robe -->
-					<item id="17408" min="1" max="1" chance="4.4896172471341" /> <!-- Seraph Tunic Robe -->
-					<item id="38061" min="1" max="1" chance="2.0519274438456" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
-					<item id="38062" min="1" max="1" chance="2.0519274438456" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
-					<item id="38066" min="1" max="1" chance="2.0519274438456" /> <!-- Eternal Tunic Crafting Pack Robe -->
-					<item id="38056" min="1" max="1" chance="2.0519274438456" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
-					<item id="38055" min="1" max="1" chance="2.0519274438456" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
-					<item id="38067" min="1" max="1" chance="2.0519274438456" /> <!-- Eternal Stockings Crafting Pack Robe -->
-				</group>
-				<group chance="8.25">
-					<item id="38059" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
-					<item id="38060" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
-					<item id="38063" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
-					<item id="38064" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
-					<item id="38065" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Circlet Crafting Pack Robe -->
-					<item id="38068" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Gloves Crafting Pack Robe -->
-					<item id="38069" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Shoes Crafting Pack Robe -->
-					<item id="38070" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Sigil Crafting Pack Robe -->
-					<item id="38058" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
-					<item id="38057" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
-					<item id="38054" min="1" max="1" chance="9.0909090909091" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
-				</group>
-				<group chance="8.996">
-					<item id="19453" min="1" max="1" chance="33.937305469097" /> <!-- Istina's Necklace -->
-					<item id="19451" min="1" max="1" chance="33.125833703868" /> <!-- Istina's Ring -->
-					<item id="19452" min="1" max="1" chance="32.936860827034" /> <!-- Istina's Earring -->
-				</group>
-				<group chance="100">
-					<item id="19447" min="1" max="1" chance="24.805251044905" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-					<item id="19448" min="1" max="1" chance="24.026741792809" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="37076" min="1" max="1" chance="2.4659280560137" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
-					<item id="37071" min="1" max="1" chance="2.4620355097533" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
-					<item id="37070" min="1" max="1" chance="2.4542504172323" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
-					<item id="37084" min="1" max="1" chance="2.4513310075369" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
-					<item id="37078" min="1" max="1" chance="2.4508444392544" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
-					<item id="37068" min="1" max="1" chance="2.447925029559" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
-					<item id="37073" min="1" max="1" chance="2.4474384612765" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
-					<item id="37081" min="1" max="1" chance="2.4469518929939" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
-					<item id="37083" min="1" max="1" chance="2.4464653247113" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
-					<item id="37077" min="1" max="1" chance="2.4450056198637" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
-					<item id="37082" min="1" max="1" chance="2.4386802321904" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
-					<item id="37074" min="1" max="1" chance="2.4362473907776" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
-					<item id="37085" min="1" max="1" chance="2.4328414127997" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
-					<item id="37075" min="1" max="1" chance="2.431381707952" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
-					<item id="37072" min="1" max="1" chance="2.4260294568438" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
-					<item id="37086" min="1" max="1" chance="2.4153249546275" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
-					<item id="37069" min="1" max="1" chance="2.4065667255414" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
-					<item id="37067" min="1" max="1" chance="2.4046204524112" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
-					<item id="37079" min="1" max="1" chance="2.4026741792809" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
-					<item id="37080" min="1" max="1" chance="2.3987816330205" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
-					<item id="39485" min="1" max="1" chance="0.83738401428564" /> <!-- Alchemic Tome: Dye -->
-					<item id="39483" min="1" max="1" chance="0.83495117287284" /> <!-- Alchemic Tome: Enchant Scroll -->
-					<item id="39484" min="1" max="1" chance="0.78434807148661" /> <!-- Alchemic Tome: Life Stone -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="38044" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Slasher Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Avenger Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Stormer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Fighter Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Buster Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Retributer Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Shaper Crafting Pack -->
+				<item id="19456" min="1" max="1" chance="21.88" /> <!-- Istina's Shirt -->
+				<item id="17397" min="1" max="1" chance="1.72799999999999" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17404" min="1" max="1" chance="1.71499999999999" /> <!-- Seraph Leather Leggings Light Armor -->
+				<item id="17398" min="1" max="1" chance="1.708" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="17403" min="1" max="1" chance="1.70499999999999" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17409" min="1" max="1" chance="1.67399999999998" /> <!-- Seraph Stockings Robe -->
+				<item id="17408" min="1" max="1" chance="1.64099999999998" /> <!-- Seraph Tunic Robe -->
+				<item id="38061" min="1" max="1" chance="0.750000000000005" /> <!-- Eternal Leather Armor Crafting Pack Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.750000000000005" /> <!-- Eternal Leather Leggings Crafting Pack Light Armor -->
+				<item id="38066" min="1" max="1" chance="0.750000000000005" /> <!-- Eternal Tunic Crafting Pack Robe -->
+				<item id="38056" min="1" max="1" chance="0.750000000000005" /> <!-- Eternal Gaiters Crafting Pack Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.750000000000005" /> <!-- Eternal Breastplate Crafting Pack Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.750000000000005" /> <!-- Eternal Stockings Crafting Pack Robe -->
+				<item id="38059" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Shield Crafting Pack Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Leather Helmet Crafting Pack Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Leather Gloves Crafting Pack Light Armor -->
+				<item id="38064" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Leather Boots Crafting Pack Light Armor -->
+				<item id="38065" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Circlet Crafting Pack Robe -->
+				<item id="38068" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Gloves Crafting Pack Robe -->
+				<item id="38069" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Shoes Crafting Pack Robe -->
+				<item id="38070" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Sigil Crafting Pack Robe -->
+				<item id="38058" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Boots Crafting Pack Heavy Armor -->
+				<item id="38057" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Gauntlets Crafting Pack Heavy Armor -->
+				<item id="38054" min="1" max="1" chance="0.750000000000001" /> <!-- Eternal Helmet Crafting Pack Heavy Armor -->
+				<item id="19453" min="1" max="1" chance="3.05299999999997" /> <!-- Istina's Necklace -->
+				<item id="19451" min="1" max="1" chance="2.97999999999997" /> <!-- Istina's Ring -->
+				<item id="19452" min="1" max="1" chance="2.96299999999998" /> <!-- Istina's Earring -->
+				<item id="19447" min="1" max="1" chance="24.805251044905" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="24.026741792809" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="37076" min="1" max="1" chance="2.4659280560137" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37071" min="1" max="1" chance="2.4620355097533" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
+				<item id="37070" min="1" max="1" chance="2.4542504172323" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dualsword -->
+				<item id="37084" min="1" max="1" chance="2.4513310075369" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37078" min="1" max="1" chance="2.4508444392544" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37068" min="1" max="1" chance="2.447925029559" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37073" min="1" max="1" chance="2.4474384612765" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37081" min="1" max="1" chance="2.4469518929939" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37083" min="1" max="1" chance="2.4464653247113" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37077" min="1" max="1" chance="2.4450056198637" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37082" min="1" max="1" chance="2.4386802321904" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37074" min="1" max="1" chance="2.4362473907776" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="37085" min="1" max="1" chance="2.4328414127997" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37075" min="1" max="1" chance="2.431381707952" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37072" min="1" max="1" chance="2.4260294568438" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37086" min="1" max="1" chance="2.4153249546275" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="37069" min="1" max="1" chance="2.4065667255414" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37067" min="1" max="1" chance="2.4046204524112" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37079" min="1" max="1" chance="2.4026741792809" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37080" min="1" max="1" chance="2.3987816330205" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="39485" min="1" max="1" chance="0.83738401428564" /> <!-- Alchemic Tome: Dye -->
+				<item id="39483" min="1" max="1" chance="0.83495117287284" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39484" min="1" max="1" chance="0.78434807148661" /> <!-- Alchemic Tome: Life Stone -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 				<item id="40198" min="1" max="1" chance="0.03" /> <!-- Disassembly Recipe Pouch: Armor -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="100" />
@@ -4489,83 +4419,73 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="17426" min="1" max="1" chance="8.6643350033084" /> <!-- Amaranthine Retributer -->
-					<item id="17419" min="1" max="1" chance="8.6416485490122" /> <!-- Amaranthine Avenger -->
-					<item id="17418" min="1" max="1" chance="8.6378674732962" /> <!-- Amaranthine Slasher -->
-					<item id="17416" min="1" max="1" chance="8.5981661782777" /> <!-- Amaranthine Shaper -->
-					<item id="17424" min="1" max="1" chance="8.5943851025617" /> <!-- Amaranthine Buster -->
-					<item id="17421" min="1" max="1" chance="8.5849324132716" /> <!-- Amaranthine Stormer -->
-					<item id="17425" min="1" max="1" chance="8.5735891861235" /> <!-- Amaranthine Caster -->
-					<item id="17420" min="1" max="1" chance="8.5669723036204" /> <!-- Amaranthine Fighter -->
-					<item id="17422" min="1" max="1" chance="8.5613006900463" /> <!-- Amaranthine Thrower -->
-					<item id="17417" min="1" max="1" chance="8.5386142357501" /> <!-- Amaranthine Cutter -->
-					<item id="17423" min="1" max="1" chance="8.535778428963" /> <!-- Amaranthine Shooter -->
-					<item id="17435" min="1" max="1" chance="5.502410435769" /> <!-- Eternal Shield Heavy Armor -->
-				</group>
-				<group chance="35.258">
-					<item id="17442" min="1" max="1" chance="16.841567871121" /> <!-- Eternal Tunic Robe -->
-					<item id="17438" min="1" max="1" chance="16.736627148449" /> <!-- Eternal Leather Leggings Light Armor -->
-					<item id="17443" min="1" max="1" chance="16.708264790969" /> <!-- Eternal Stockings Robe -->
-					<item id="17432" min="1" max="1" chance="16.660048783255" /> <!-- Eternal Gaiters Heavy Armor -->
-					<item id="17431" min="1" max="1" chance="16.546599353338" /> <!-- Eternal Breastplate Heavy Armor -->
-					<item id="17437" min="1" max="1" chance="16.506892052867" /> <!-- Eternal Leather Armor Light Armor -->
-				</group>
-				<group chance="58.851">
-					<item id="17433" min="1" max="1" chance="10.093286435235" /> <!-- Eternal Gauntlets Heavy Armor -->
-					<item id="17434" min="1" max="1" chance="10.07969278347" /> <!-- Eternal Boots Heavy Armor -->
-					<item id="17446" min="1" max="1" chance="10.064399925235" /> <!-- Eternal Sigil Robe -->
-					<item id="17444" min="1" max="1" chance="10.02191976347" /> <!-- Eternal Gloves Robe -->
-					<item id="17436" min="1" max="1" chance="10.006626905235" /> <!-- Eternal Leather Helmet Light Armor -->
-					<item id="17430" min="1" max="1" chance="9.9913340470001" /> <!-- Eternal Helmet Heavy Armor -->
-					<item id="17439" min="1" max="1" chance="9.9777403952354" /> <!-- Eternal Leather Gloves Light Armor -->
-					<item id="17445" min="1" max="1" chance="9.9624475370002" /> <!-- Eternal Shoes Robe -->
-					<item id="17440" min="1" max="1" chance="9.90297531053" /> <!-- Eternal Leather Boots Light Armor -->
-					<item id="17441" min="1" max="1" chance="9.8995768975888" /> <!-- Eternal Circlet Robe -->
-				</group>
-				<group chance="10.052">
-					<item id="17623" min="1" max="1" chance="100" /> <!-- Earth Wyrm Heart Ring -->
-				</group>
-				<group chance="100">
-					<item id="37781" min="1" max="1" chance="7.805172593469" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
-					<item id="37772" min="1" max="1" chance="7.5047968172428" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
-					<item id="18562" min="1" max="1" chance="5.0788026653753" /> <!-- Purple Soul Crystal (R99-grade) -->
-					<item id="18560" min="1" max="1" chance="4.9623304256141" /> <!-- Yellow Soul Crystal (R99-grade) -->
-					<item id="18561" min="1" max="1" chance="4.885703952087" /> <!-- Teal Soul Crystal (R99-grade) -->
-					<item id="36389" min="5" max="5" chance="4.8090774785599" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-					<item id="35568" min="1" max="1" chance="4.7998823017367" /> <!-- Bloody Amaranthine Enhancement Stone -->
-					<item id="19448" min="5" max="5" chance="4.684942591446" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="36386" min="2" max="2" chance="3.2045191229027" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-					<item id="19447" min="2" max="2" chance="3.0221481159083" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-					<item id="17704" min="1" max="1" chance="2.6681338082131" /> <!-- Lv. 5 Ancient DEX Dye DEX + 5 / Earth Resistance + 25 -->
-					<item id="17711" min="1" max="1" chance="2.6589386313899" /> <!-- Lv. 5 Legendary CON Dye CON + 5 / STR + 1 / Dark Resistance + 25 -->
-					<item id="17701" min="1" max="1" chance="2.6558735724488" /> <!-- Lv. 5 Giant WIT Dye Wit + 5 -->
-					<item id="17709" min="1" max="1" chance="2.6528085135077" /> <!-- Lv. 5 Legendary STR Dye STR + 5 / DEX + 1 / Fire Resistance + 25 -->
-					<item id="17705" min="1" max="1" chance="2.6190928651558" /> <!-- Lv. 5 Ancient CON Dye CON + 5 / Dark Resistance + 25 -->
-					<item id="17706" min="1" max="1" chance="2.6129627472736" /> <!-- Lv. 5 Ancient INT Dye INT + 5 / Water Resistance + 25 -->
-					<item id="17710" min="1" max="1" chance="2.5930398641566" /> <!-- Lv. 5 Legendary DEX Dye DEX + 5 / CON + 1 / Earth Resistance + 25 -->
-					<item id="17703" min="1" max="1" chance="2.591507334686" /> <!-- Lv. 5 Ancient STR Dye STR + 5 / Fire Resistance + 25 -->
-					<item id="17713" min="1" max="1" chance="2.5899748052155" /> <!-- Lv. 5 Legendary WIT Dye WIT + 5 / MEN + 1 / Wind Resistance + 25 -->
-					<item id="17700" min="1" max="1" chance="2.571584451569" /> <!-- Lv. 5 Giant INT Dye INT + 5 -->
-					<item id="17712" min="1" max="1" chance="2.571584451569" /> <!-- Lv. 5 Legendary INT Dye INT + 5 / WIT + 1 / Water Resistance + 25 -->
-					<item id="17697" min="1" max="1" chance="2.5302061558644" /> <!-- Lv. 5 Giant STR Dye STR + 5 -->
-					<item id="17699" min="1" max="1" chance="2.5256085674528" /> <!-- Lv. 5 Giant CON Dye CON + 5 -->
-					<item id="17698" min="1" max="1" chance="2.5072182138063" /> <!-- Lv. 5 Giant DEX Dye DEX + 5 -->
-					<item id="17702" min="1" max="1" chance="2.5026206253946" /> <!-- Lv. 5 Giant MEN Dye Men + 5 -->
-					<item id="17714" min="1" max="1" chance="2.4566447412784" /> <!-- Lv. 5 Legendary MEN Dye MEN + 5 / INT + 1 / Holy Resistance + 25 -->
-					<item id="17708" min="1" max="1" chance="2.4520471528667" /> <!-- Lv. 5 Ancient MEN Dye MEN + 5 / Holy Resistance + 25 -->
-					<item id="17707" min="1" max="1" chance="2.4382543876319" /> <!-- Lv. 5 Ancient WIT Dye WIT + 5 / Wind Resistance + 25 -->
-					<item id="36162" min="1" max="1" chance="1.5222615230891" /> <!-- Scroll of Blessing (R99-grade) -->
-					<item id="39484" min="1" max="1" chance="0.51355062557853" /> <!-- Alchemic Tome: Life Stone -->
-					<item id="39483" min="1" max="1" chance="0.50711400180225" /> <!-- Alchemic Tome: Enchant Scroll -->
-					<item id="39485" min="1" max="1" chance="0.5015968957083" /> <!-- Alchemic Tome: Dye -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="17426" min="1" max="1" chance="8.6643350033084" /> <!-- Amaranthine Retributer -->
+				<item id="17419" min="1" max="1" chance="8.6416485490122" /> <!-- Amaranthine Avenger -->
+				<item id="17418" min="1" max="1" chance="8.6378674732962" /> <!-- Amaranthine Slasher -->
+				<item id="17416" min="1" max="1" chance="8.5981661782777" /> <!-- Amaranthine Shaper -->
+				<item id="17424" min="1" max="1" chance="8.5943851025617" /> <!-- Amaranthine Buster -->
+				<item id="17421" min="1" max="1" chance="8.5849324132716" /> <!-- Amaranthine Stormer -->
+				<item id="17425" min="1" max="1" chance="8.5735891861235" /> <!-- Amaranthine Caster -->
+				<item id="17420" min="1" max="1" chance="8.5669723036204" /> <!-- Amaranthine Fighter -->
+				<item id="17422" min="1" max="1" chance="8.5613006900463" /> <!-- Amaranthine Thrower -->
+				<item id="17417" min="1" max="1" chance="8.5386142357501" /> <!-- Amaranthine Cutter -->
+				<item id="17423" min="1" max="1" chance="8.535778428963" /> <!-- Amaranthine Shooter -->
+				<item id="17435" min="1" max="1" chance="5.502410435769" /> <!-- Eternal Shield Heavy Armor -->
+				<item id="17442" min="1" max="1" chance="5.93799999999984" /> <!-- Eternal Tunic Robe -->
+				<item id="17438" min="1" max="1" chance="5.90100000000015" /> <!-- Eternal Leather Leggings Light Armor -->
+				<item id="17443" min="1" max="1" chance="5.89099999999985" /> <!-- Eternal Stockings Robe -->
+				<item id="17432" min="1" max="1" chance="5.87400000000005" /> <!-- Eternal Gaiters Heavy Armor -->
+				<item id="17431" min="1" max="1" chance="5.83399999999991" /> <!-- Eternal Breastplate Heavy Armor -->
+				<item id="17437" min="1" max="1" chance="5.81999999999985" /> <!-- Eternal Leather Armor Light Armor -->
+				<item id="17433" min="1" max="1" chance="5.94000000000015" /> <!-- Eternal Gauntlets Heavy Armor -->
+				<item id="17434" min="1" max="1" chance="5.93199999999993" /> <!-- Eternal Boots Heavy Armor -->
+				<item id="17446" min="1" max="1" chance="5.92300000000005" /> <!-- Eternal Sigil Robe -->
+				<item id="17444" min="1" max="1" chance="5.89799999999973" /> <!-- Eternal Gloves Robe -->
+				<item id="17436" min="1" max="1" chance="5.88899999999985" /> <!-- Eternal Leather Helmet Light Armor -->
+				<item id="17430" min="1" max="1" chance="5.88000000000003" /> <!-- Eternal Helmet Heavy Armor -->
+				<item id="17439" min="1" max="1" chance="5.87199999999999" /> <!-- Eternal Leather Gloves Light Armor -->
+				<item id="17445" min="1" max="1" chance="5.86299999999999" /> <!-- Eternal Shoes Robe -->
+				<item id="17440" min="1" max="1" chance="5.82800000000001" /> <!-- Eternal Leather Boots Light Armor -->
+				<item id="17441" min="1" max="1" chance="5.82599999999998" /> <!-- Eternal Circlet Robe -->
+				<item id="17623" min="1" max="1" chance="10.052" /> <!-- Earth Wyrm Heart Ring -->
+				<item id="37781" min="1" max="1" chance="7.805172593469" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
+				<item id="37772" min="1" max="1" chance="7.5047968172428" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
+				<item id="18562" min="1" max="1" chance="5.0788026653753" /> <!-- Purple Soul Crystal (R99-grade) -->
+				<item id="18560" min="1" max="1" chance="4.9623304256141" /> <!-- Yellow Soul Crystal (R99-grade) -->
+				<item id="18561" min="1" max="1" chance="4.885703952087" /> <!-- Teal Soul Crystal (R99-grade) -->
+				<item id="36389" min="5" max="5" chance="4.8090774785599" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="35568" min="1" max="1" chance="4.7998823017367" /> <!-- Bloody Amaranthine Enhancement Stone -->
+				<item id="19448" min="5" max="5" chance="4.684942591446" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36386" min="2" max="2" chance="3.2045191229027" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="2" max="2" chance="3.0221481159083" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="17704" min="1" max="1" chance="2.6681338082131" /> <!-- Lv. 5 Ancient DEX Dye DEX + 5 / Earth Resistance + 25 -->
+				<item id="17711" min="1" max="1" chance="2.6589386313899" /> <!-- Lv. 5 Legendary CON Dye CON + 5 / STR + 1 / Dark Resistance + 25 -->
+				<item id="17701" min="1" max="1" chance="2.6558735724488" /> <!-- Lv. 5 Giant WIT Dye Wit + 5 -->
+				<item id="17709" min="1" max="1" chance="2.6528085135077" /> <!-- Lv. 5 Legendary STR Dye STR + 5 / DEX + 1 / Fire Resistance + 25 -->
+				<item id="17705" min="1" max="1" chance="2.6190928651558" /> <!-- Lv. 5 Ancient CON Dye CON + 5 / Dark Resistance + 25 -->
+				<item id="17706" min="1" max="1" chance="2.6129627472736" /> <!-- Lv. 5 Ancient INT Dye INT + 5 / Water Resistance + 25 -->
+				<item id="17710" min="1" max="1" chance="2.5930398641566" /> <!-- Lv. 5 Legendary DEX Dye DEX + 5 / CON + 1 / Earth Resistance + 25 -->
+				<item id="17703" min="1" max="1" chance="2.591507334686" /> <!-- Lv. 5 Ancient STR Dye STR + 5 / Fire Resistance + 25 -->
+				<item id="17713" min="1" max="1" chance="2.5899748052155" /> <!-- Lv. 5 Legendary WIT Dye WIT + 5 / MEN + 1 / Wind Resistance + 25 -->
+				<item id="17700" min="1" max="1" chance="2.571584451569" /> <!-- Lv. 5 Giant INT Dye INT + 5 -->
+				<item id="17712" min="1" max="1" chance="2.571584451569" /> <!-- Lv. 5 Legendary INT Dye INT + 5 / WIT + 1 / Water Resistance + 25 -->
+				<item id="17697" min="1" max="1" chance="2.5302061558644" /> <!-- Lv. 5 Giant STR Dye STR + 5 -->
+				<item id="17699" min="1" max="1" chance="2.5256085674528" /> <!-- Lv. 5 Giant CON Dye CON + 5 -->
+				<item id="17698" min="1" max="1" chance="2.5072182138063" /> <!-- Lv. 5 Giant DEX Dye DEX + 5 -->
+				<item id="17702" min="1" max="1" chance="2.5026206253946" /> <!-- Lv. 5 Giant MEN Dye Men + 5 -->
+				<item id="17714" min="1" max="1" chance="2.4566447412784" /> <!-- Lv. 5 Legendary MEN Dye MEN + 5 / INT + 1 / Holy Resistance + 25 -->
+				<item id="17708" min="1" max="1" chance="2.4520471528667" /> <!-- Lv. 5 Ancient MEN Dye MEN + 5 / Holy Resistance + 25 -->
+				<item id="17707" min="1" max="1" chance="2.4382543876319" /> <!-- Lv. 5 Ancient WIT Dye WIT + 5 / Wind Resistance + 25 -->
+				<item id="36162" min="1" max="1" chance="1.5222615230891" /> <!-- Scroll of Blessing (R99-grade) -->
+				<item id="39484" min="1" max="1" chance="0.51355062557853" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="39483" min="1" max="1" chance="0.50711400180225" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39485" min="1" max="1" chance="0.5015968957083" /> <!-- Alchemic Tome: Dye -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 				<item id="40198" min="1" max="1" chance="2.551" /> <!-- Disassembly Recipe Pouch: Armor -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="500" />

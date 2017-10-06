@@ -19,15 +19,17 @@ package com.l2jmobius.gameserver.model.actor.templates;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.AIType;
+import com.l2jmobius.gameserver.enums.DropType;
 import com.l2jmobius.gameserver.enums.MpRewardAffectType;
 import com.l2jmobius.gameserver.enums.MpRewardType;
 import com.l2jmobius.gameserver.enums.Race;
@@ -35,11 +37,13 @@ import com.l2jmobius.gameserver.enums.Sex;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.drops.DropListScope;
-import com.l2jmobius.gameserver.model.drops.IDropItem;
+import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
+import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * NPC template.
@@ -96,7 +100,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private Map<AISkillScope, List<Skill>> _aiSkillLists;
 	private Set<Integer> _clans;
 	private Set<Integer> _ignoreClanNpcIds;
-	private Map<DropListScope, List<IDropItem>> _dropLists;
+	private List<DropHolder> _dropListDeath;
+	private List<DropHolder> _dropListSpoil;
 	private double _collisionRadiusGrown;
 	private double _collisionHeightGrown;
 	private int _mpRewardValue;
@@ -556,47 +561,220 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_ignoreClanNpcIds = ignoreClanNpcIds != null ? Collections.unmodifiableSet(ignoreClanNpcIds) : null;
 	}
 	
-	public Map<DropListScope, List<IDropItem>> getDropLists()
+	public void addDrop(DropHolder dropHolder)
 	{
-		return _dropLists;
+		if (_dropListDeath == null)
+		{
+			_dropListDeath = new ArrayList<>();
+		}
+		_dropListDeath.add(dropHolder);
 	}
 	
-	public void setDropLists(Map<DropListScope, List<IDropItem>> dropLists)
+	public void addSpoil(DropHolder dropHolder)
 	{
-		_dropLists = dropLists != null ? Collections.unmodifiableMap(dropLists) : null;
+		if (_dropListSpoil == null)
+		{
+			_dropListSpoil = new ArrayList<>();
+		}
+		_dropListSpoil.add(dropHolder);
 	}
 	
-	public List<IDropItem> getDropList(DropListScope dropListScope)
+	public List<DropHolder> getDropList(DropType dropType)
 	{
-		return _dropLists != null ? _dropLists.get(dropListScope) : null;
+		switch (dropType)
+		{
+			case DROP:
+			case LUCKY_DROP: // never happens
+			{
+				return _dropListDeath;
+			}
+			case SPOIL:
+			{
+				return _dropListSpoil;
+			}
+		}
+		return null;
 	}
 	
-	public Collection<ItemHolder> calculateDrops(DropListScope dropListScope, L2Character victim, L2Character killer)
+	public Collection<ItemHolder> calculateDrops(DropType dropType, L2Character victim, L2Character killer)
 	{
-		final List<IDropItem> dropList = getDropList(dropListScope);
+		final List<DropHolder> dropList = getDropList(dropType);
 		if (dropList == null)
 		{
 			return null;
 		}
 		
+		final int levelDifference = victim.getLevel() - killer.getLevel();
 		Collection<ItemHolder> calculatedDrops = null;
-		for (IDropItem dropItem : dropList)
+		for (DropHolder dropItem : dropList)
 		{
-			final Collection<ItemHolder> drops = dropItem.calculateDrops(victim, killer);
-			if ((drops == null) || drops.isEmpty())
+			// check level gap that may prevent drop this item
+			final double levelGapChanceToDrop;
+			if (dropItem.getItemId() == Inventory.ADENA_ID)
+			{
+				levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ADENA_MAX_LEVEL_DIFFERENCE, -Config.DROP_ADENA_MIN_LEVEL_DIFFERENCE, Config.DROP_ADENA_MIN_LEVEL_GAP_CHANCE, 100.0);
+			}
+			else
+			{
+				levelGapChanceToDrop = Util.map(levelDifference, -Config.DROP_ITEM_MAX_LEVEL_DIFFERENCE, -Config.DROP_ITEM_MIN_LEVEL_DIFFERENCE, Config.DROP_ITEM_MIN_LEVEL_GAP_CHANCE, 100.0);
+			}
+			if ((Rnd.nextDouble() * 100) > levelGapChanceToDrop)
 			{
 				continue;
 			}
 			
-			if (calculatedDrops == null)
+			// calculate chances
+			final ItemHolder drop = calculateDrop(dropItem, victim, killer);
+			if (drop == null)
 			{
-				calculatedDrops = new LinkedList<>();
+				continue;
 			}
 			
-			calculatedDrops.addAll(drops);
+			// create list
+			if (calculatedDrops == null)
+			{
+				calculatedDrops = new ArrayList<>();
+			}
+			
+			// finally
+			calculatedDrops.add(drop);
 		}
 		
 		return calculatedDrops;
+	}
+	
+	/**
+	 * All item drop chance calculations are done by this method.
+	 * @param dropItem
+	 * @param victim
+	 * @param killer
+	 * @return ItemHolder
+	 */
+	private ItemHolder calculateDrop(DropHolder dropItem, L2Character victim, L2Character killer)
+	{
+		switch (dropItem.getDropType())
+		{
+			case DROP:
+			case LUCKY_DROP:
+			{
+				final L2Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
+				
+				// chance
+				double rateChance = 1;
+				if (Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId()) != null)
+				{
+					rateChance *= Config.RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
+				}
+				else if (item.hasExImmediateEffect())
+				{
+					rateChance *= Config.RATE_HERB_DROP_CHANCE_MULTIPLIER;
+				}
+				else if (victim.isRaid())
+				{
+					rateChance *= Config.RATE_RAID_DROP_CHANCE_MULTIPLIER;
+				}
+				else
+				{
+					rateChance *= Config.RATE_DEATH_DROP_CHANCE_MULTIPLIER;
+				}
+				
+				// premium chance
+				if (Config.PREMIUM_SYSTEM_ENABLED && killer.getActingPlayer().hasPremiumStatus())
+				{
+					if (Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId()) != null)
+					{
+						rateChance *= Config.PREMIUM_RATE_DROP_CHANCE_BY_ID.get(dropItem.getItemId());
+					}
+					else if (item.hasExImmediateEffect())
+					{
+						// TODO: Premium herb chance? :)
+					}
+					else if (victim.isRaid())
+					{
+						// TODO: Premium raid chance? :)
+					}
+					else
+					{
+						rateChance *= Config.PREMIUM_RATE_DROP_CHANCE;
+					}
+				}
+				
+				// calculate if item will drop
+				if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance))
+				{
+					// amount is calculated after chance returned success
+					double rateAmount = 1;
+					if (Config.RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId()) != null)
+					{
+						rateAmount *= Config.RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId());
+					}
+					else if (item.hasExImmediateEffect())
+					{
+						rateAmount *= Config.RATE_HERB_DROP_AMOUNT_MULTIPLIER;
+					}
+					else if (victim.isRaid())
+					{
+						rateAmount *= Config.RATE_RAID_DROP_AMOUNT_MULTIPLIER;
+					}
+					else
+					{
+						rateAmount *= Config.RATE_DEATH_DROP_AMOUNT_MULTIPLIER;
+					}
+					
+					// premium chance
+					if (Config.PREMIUM_SYSTEM_ENABLED && killer.getActingPlayer().hasPremiumStatus())
+					{
+						if (Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId()) != null)
+						{
+							rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT_BY_ID.get(dropItem.getItemId());
+						}
+						else if (item.hasExImmediateEffect())
+						{
+							// TODO: Premium herb amount? :)
+						}
+						else if (victim.isRaid())
+						{
+							// TODO: Premium raid amount? :)
+						}
+						else
+						{
+							rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
+						}
+					}
+					
+					// finally
+					return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+				}
+				break;
+			}
+			case SPOIL:
+			{
+				// chance
+				double rateChance = Config.RATE_SPOIL_DROP_CHANCE_MULTIPLIER;
+				// premium chance
+				if (Config.PREMIUM_SYSTEM_ENABLED && killer.getActingPlayer().hasPremiumStatus())
+				{
+					rateChance *= Config.PREMIUM_RATE_SPOIL_CHANCE;
+				}
+				
+				// calculate if item will be rewarded
+				if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance))
+				{
+					// amount is calculated after chance returned success
+					double rateAmount = Config.RATE_SPOIL_DROP_AMOUNT_MULTIPLIER;
+					// premium amount
+					if (Config.PREMIUM_SYSTEM_ENABLED && killer.getActingPlayer().hasPremiumStatus())
+					{
+						rateAmount *= Config.PREMIUM_RATE_SPOIL_AMOUNT;
+					}
+					
+					// finally
+					return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+				}
+				break;
+			}
+		}
+		return null;
 	}
 	
 	public double getCollisionRadiusGrown()

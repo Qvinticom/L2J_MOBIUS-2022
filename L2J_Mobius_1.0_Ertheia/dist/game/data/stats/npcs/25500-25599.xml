@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25500" level="44" type="L2Monster" name="Alligator of Istary" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -80,25 +80,19 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="10.418">
-					<item id="1660" min="1" max="1" chance="86.993664810904" /> <!-- Cursed Maingauche -->
-					<item id="224" min="1" max="1" chance="13.006335189096" /> <!-- Maingauche -->
-				</group>
-				<group chance="5.707">
-					<item id="395" min="1" max="1" chance="66.234448922376" /> <!-- Manticore Skin Shirt -->
-					<item id="417" min="1" max="1" chance="33.765551077624" /> <!-- Manticore Skin Gaiters -->
-				</group>
-				<group chance="41.15">
-					<item id="4555" min="1" max="1" chance="33.195625759417" /> <!-- Greater CON Dye (Con + 1 Str - 1) -->
-					<item id="4554" min="1" max="1" chance="32.539489671932" /> <!-- Greater STR Dye (STR + 1 DEX - 1) -->
-					<item id="4553" min="1" max="1" chance="32.442284325638" /> <!-- Greater STR Dye (STR + 1 CON - 1) -->
-					<item id="6575" min="1" max="1" chance="1.8226002430134" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="1660" min="1" max="1" chance="9.06299999999998" /> <!-- Cursed Maingauche -->
+				<item id="224" min="1" max="1" chance="1.35500000000002" /> <!-- Maingauche -->
+				<item id="395" min="1" max="1" chance="3.78" /> <!-- Manticore Skin Shirt -->
+				<item id="417" min="1" max="1" chance="1.927" /> <!-- Manticore Skin Gaiters -->
+				<item id="4555" min="1" max="1" chance="13.6600000000001" /> <!-- Greater CON Dye (Con + 1 Str - 1) -->
+				<item id="4554" min="1" max="1" chance="13.39" /> <!-- Greater STR Dye (STR + 1 DEX - 1) -->
+				<item id="4553" min="1" max="1" chance="13.35" /> <!-- Greater STR Dye (STR + 1 CON - 1) -->
+				<item id="6575" min="1" max="1" chance="0.750000000000014" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="50.62" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="11" />
@@ -227,32 +221,26 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="7.297">
-					<item id="298" min="1" max="1" chance="34.12361244347" /> <!-- Orcish Glaive -->
-					<item id="302" min="1" max="1" chance="32.986158695354" /> <!-- Body Slasher -->
-					<item id="96" min="1" max="1" chance="32.890228861176" /> <!-- Scythe -->
-				</group>
-				<group chance="100">
-					<item id="2454" min="1" max="1" chance="34.77090686393" /> <!-- Karmian Gloves -->
-					<item id="62" min="1" max="1" chance="17.445889538913" /> <!-- Reinforced Mithril Boots -->
-					<item id="2429" min="1" max="1" chance="12.425663588454" /> <!-- Chain Boots -->
-					<item id="2430" min="1" max="1" chance="8.8236716143693" /> <!-- Karmian Boots -->
-					<item id="2431" min="1" max="1" chance="7.0726361424036" /> <!-- Plated Leather Boots -->
-					<item id="2432" min="1" max="1" chance="5.9436896646199" /> <!-- Dwarven Chain Boots -->
-					<item id="2433" min="1" max="1" chance="5.1298167577237" /> <!-- Boots of Seal -->
-					<item id="2452" min="1" max="1" chance="4.4561556189463" /> <!-- Reinforced Mithril Gloves -->
-					<item id="2453" min="1" max="1" chance="3.93157021064" /> <!-- Chain Gloves -->
-				</group>
-				<group chance="49.26">
-					<item id="952" min="1" max="3" chance="77.283800243605" /> <!-- Scroll: Enchant Armor (C-grade) -->
-					<item id="951" min="1" max="1" chance="22.1071863581" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-					<item id="6573" min="1" max="1" chance="0.60901339829476" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="298" min="1" max="1" chance="2.49000000000001" /> <!-- Orcish Glaive -->
+				<item id="302" min="1" max="1" chance="2.40699999999998" /> <!-- Body Slasher -->
+				<item id="96" min="1" max="1" chance="2.40000000000001" /> <!-- Scythe -->
+				<item id="2454" min="1" max="1" chance="34.77090686393" /> <!-- Karmian Gloves -->
+				<item id="62" min="1" max="1" chance="17.445889538913" /> <!-- Reinforced Mithril Boots -->
+				<item id="2429" min="1" max="1" chance="12.425663588454" /> <!-- Chain Boots -->
+				<item id="2430" min="1" max="1" chance="8.8236716143693" /> <!-- Karmian Boots -->
+				<item id="2431" min="1" max="1" chance="7.0726361424036" /> <!-- Plated Leather Boots -->
+				<item id="2432" min="1" max="1" chance="5.9436896646199" /> <!-- Dwarven Chain Boots -->
+				<item id="2433" min="1" max="1" chance="5.1298167577237" /> <!-- Boots of Seal -->
+				<item id="2452" min="1" max="1" chance="4.4561556189463" /> <!-- Reinforced Mithril Gloves -->
+				<item id="2453" min="1" max="1" chance="3.93157021064" /> <!-- Chain Gloves -->
+				<item id="952" min="1" max="3" chance="38.0699999999998" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="951" min="1" max="1" chance="10.8900000000001" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="6573" min="1" max="1" chance="0.299999999999999" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="49.85" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -345,21 +333,15 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="8.894">
-					<item id="281" min="1" max="1" chance="100" /> <!-- Crystallized Ice Bow -->
-				</group>
-				<group chance="5.266">
-					<item id="397" min="1" max="1" chance="67.147740220281" /> <!-- Reinforced Mithril Shirt -->
-					<item id="2387" min="1" max="1" chance="32.852259779719" /> <!-- Reinforced Mithril Gaiters -->
-				</group>
-				<group chance="9.011">
-					<item id="6574" min="1" max="1" chance="100" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="281" min="1" max="1" chance="8.894" /> <!-- Crystallized Ice Bow -->
+				<item id="397" min="1" max="1" chance="3.536" /> <!-- Reinforced Mithril Shirt -->
+				<item id="2387" min="1" max="1" chance="1.73" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="6574" min="1" max="1" chance="9.011" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="49.1" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
@@ -808,26 +790,20 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="7.042">
-					<item id="6678" min="1" max="1" chance="89.349616586197" /> <!-- Sealed Imperial Crusader Shield -->
-					<item id="6367" min="1" max="1" chance="10.650383413803" /> <!-- Angel Slayer -->
-				</group>
-				<group chance="11.802">
-					<item id="6683" min="1" max="1" chance="75.48720555838" /> <!-- Sealed Draconic Leather Helmet -->
-					<item id="6679" min="1" max="1" chance="24.51279444162" /> <!-- Sealed Imperial Crusader Helmet -->
-				</group>
-				<group chance="100">
-					<item id="9817" min="3" max="7" chance="37.098249732454" /> <!-- Nonliving Nucleus -->
-					<item id="8176" min="1" max="4" chance="36.955846307868" /> <!-- Destruction Tombstone -->
-					<item id="8619" min="1" max="1" chance="23.984188904616" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-					<item id="6570" min="1" max="1" chance="1.3886491524839" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
-					<item id="6578" min="1" max="1" chance="0.5730659025788" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="6678" min="1" max="1" chance="6.29199999999999" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6367" min="1" max="1" chance="0.750000000000007" /> <!-- Angel Slayer -->
+				<item id="6683" min="1" max="1" chance="8.90900000000001" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6679" min="1" max="1" chance="2.89299999999999" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="9817" min="3" max="7" chance="37.098249732454" /> <!-- Nonliving Nucleus -->
+				<item id="8176" min="1" max="4" chance="36.955846307868" /> <!-- Destruction Tombstone -->
+				<item id="8619" min="1" max="1" chance="23.984188904616" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="6570" min="1" max="1" chance="1.3886491524839" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="6578" min="1" max="1" chance="0.5730659025788" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="79.47" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="35" />
@@ -878,30 +854,24 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="98.395">
-					<item id="81" min="1" max="1" chance="1.1819706285889" /> <!-- Dragon Slayer -->
-					<item id="2500" min="1" max="1" chance="1.1697748869353" /> <!-- Dark Legion's Edge -->
-					<item id="151" min="1" max="1" chance="1.0783068245338" /> <!-- Sword of Miracles -->
-					<item id="5529" min="2" max="6" chance="38.192997611667" /> <!-- Dragon Slayer Edge -->
-					<item id="5546" min="3" max="9" chance="30.458864779714" /> <!-- Sword of Miracles Edge -->
-					<item id="5545" min="3" max="9" chance="27.91808526856" /> <!-- Dark Legion's Edge Blade -->
-				</group>
-				<group chance="27.371">
-					<item id="5316" min="1" max="1" chance="9.769464031274" /> <!-- Sealed Majestic Plate Armor -->
-					<item id="5311" min="1" max="1" chance="9.4552628694604" /> <!-- Sealed Armor of Nightmare -->
-					<item id="5523" min="12" max="36" chance="61.013481421943" /> <!-- Sealed Majestic Plate Armor Pattern -->
-					<item id="5522" min="36" max="108" chance="19.761791677323" /> <!-- Sealed Armor of Nightmare Pattern -->
-				</group>
-				<group chance="11.526">
-					<item id="960" min="1" max="1" chance="88.842616692695" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="959" min="1" max="1" chance="8.5545722713864" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-					<item id="6577" min="1" max="1" chance="2.6028110359188" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="81" min="1" max="1" chance="1.16300000000005" /> <!-- Dragon Slayer -->
+				<item id="2500" min="1" max="1" chance="1.15099999999999" /> <!-- Dark Legion's Edge -->
+				<item id="151" min="1" max="1" chance="1.06100000000003" /> <!-- Sword of Miracles -->
+				<item id="5529" min="2" max="6" chance="37.5799999999997" /> <!-- Dragon Slayer Edge -->
+				<item id="5546" min="3" max="9" chance="29.9699999999996" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="3" max="9" chance="27.4699999999996" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5316" min="1" max="1" chance="2.67400000000001" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5311" min="1" max="1" chance="2.58800000000001" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5523" min="12" max="36" chance="16.7" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5522" min="36" max="108" chance="5.40900000000008" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="960" min="1" max="1" chance="10.24" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.985999999999996" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.300000000000001" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="80.87" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="38" />
@@ -1029,22 +999,18 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<drop_lists>
-			<death>
-				<group chance="1.2">
-					<item id="6365" min="1" max="1" chance="25" /> <!-- Basalt Battlehammer -->
-					<item id="6366" min="1" max="1" chance="25" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="25" /> <!-- Dragon Hunter Axe -->
-					<item id="6579" min="1" max="1" chance="25" /> <!-- Arcana Mace -->
-				</group>
-				<group chance="16.09">
-					<item id="6725" min="1" max="1" chance="46.041019266625" /> <!-- Sealed Tateossian Ring -->
-					<item id="6724" min="1" max="1" chance="30.702299564947" /> <!-- Sealed Tateossian Earring -->
-					<item id="6726" min="1" max="1" chance="23.256681168428" /> <!-- Sealed Tateossian Necklace -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
+				<item id="6369" min="1" max="1" chance="0.3" /> <!-- Dragon Hunter Axe -->
+				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
+				<item id="6725" min="1" max="1" chance="7.40799999999996" /> <!-- Sealed Tateossian Ring -->
+				<item id="6724" min="1" max="1" chance="4.93999999999997" /> <!-- Sealed Tateossian Earring -->
+				<item id="6726" min="1" max="1" chance="3.74200000000007" /> <!-- Sealed Tateossian Necklace -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="86.09" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="30" />
@@ -1111,32 +1077,24 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="25.14">
-					<item id="128" min="1" max="1" chance="11.304693715195" /> <!-- Knight's Sword -->
-					<item id="126" min="1" max="1" chance="11.121718377088" /> <!-- Artisan's Sword -->
-					<item id="69" min="1" max="1" chance="10.954653937947" /> <!-- Bastard Sword -->
-					<item id="125" min="1" max="1" chance="10.891010342084" /> <!-- Spinebone Sword -->
-					<item id="2021" min="3" max="9" chance="55.727923627685" /> <!-- Spinebone Sword Blade -->
-				</group>
-				<group chance="12.859">
-					<item id="377" min="1" max="1" chance="18.267361381134" /> <!-- Scale Gaiters -->
-					<item id="1937" min="28" max="84" chance="81.732638618866" /> <!-- Scale Gaiter Fragment -->
-				</group>
-				<group chance="17.361">
-					<item id="348" min="1" max="1" chance="81.331720523011" /> <!-- Scale Mail -->
-					<item id="1935" min="60" max="180" chance="18.668279476989" /> <!-- Scale Mail Fragment -->
-				</group>
-				<group chance="100">
-					<item id="9712" min="1" max="1" chance="66.761467951157" /> <!-- Gate Key: Massive Cavern -->
-					<item id="956" min="1" max="1" chance="31.1642532396" /> <!-- Scroll: Enchant Armor (D-grade) -->
-					<item id="6576" min="1" max="1" chance="1.873994405389" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
-					<item id="6575" min="1" max="1" chance="0.20028440385347" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="128" min="1" max="1" chance="2.84200000000002" /> <!-- Knight's Sword -->
+				<item id="126" min="1" max="1" chance="2.79599999999992" /> <!-- Artisan's Sword -->
+				<item id="69" min="1" max="1" chance="2.75399999999988" /> <!-- Bastard Sword -->
+				<item id="125" min="1" max="1" chance="2.73799999999992" /> <!-- Spinebone Sword -->
+				<item id="2021" min="3" max="9" chance="14.01" /> <!-- Spinebone Sword Blade -->
+				<item id="377" min="1" max="1" chance="2.34900000000002" /> <!-- Scale Gaiters -->
+				<item id="1937" min="28" max="84" chance="10.51" /> <!-- Scale Gaiter Fragment -->
+				<item id="348" min="1" max="1" chance="14.1199999999999" /> <!-- Scale Mail -->
+				<item id="1935" min="60" max="180" chance="3.24100000000006" /> <!-- Scale Mail Fragment -->
+				<item id="9712" min="1" max="1" chance="66.761467951157" /> <!-- Gate Key: Massive Cavern -->
+				<item id="956" min="1" max="1" chance="31.1642532396" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="6576" min="1" max="1" chance="1.873994405389" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="6575" min="1" max="1" chance="0.20028440385347" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="41.29" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -1766,28 +1724,22 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="6365" min="1" max="1" chance="0.22675736961451" /> <!-- Basalt Battlehammer -->
-					<item id="6366" min="1" max="1" chance="0.22675736961451" /> <!-- Imperial Staff -->
-					<item id="6369" min="1" max="1" chance="0.22675736961451" /> <!-- Dragon Hunter Axe -->
-					<item id="6579" min="1" max="1" chance="0.22675736961451" /> <!-- Arcana Mace -->
-					<item id="6693" min="3" max="9" chance="25.343915343915" /> <!-- Dragon Hunter Axe Blade -->
-					<item id="6689" min="18" max="54" chance="25.147392290249" /> <!-- Basalt Battlehammer Head -->
-					<item id="6697" min="3" max="9" chance="24.331065759637" /> <!-- Arcana Mace Head -->
-					<item id="6690" min="2" max="6" chance="24.27059712774" /> <!-- Imperial Staff Head -->
-				</group>
-				<group chance="93.145">
-					<item id="6680" min="1" max="1" chance="0.80519619947394" /> <!-- Sealed Draconic Leather Armor -->
-					<item id="6707" min="24" max="72" chance="99.194803800526" /> <!-- Sealed Draconic Leather Armor Part -->
-				</group>
-				<group chance="0.03">
-					<item id="10301" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Demon Prince -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="6365" min="1" max="1" chance="0.22675736961451" /> <!-- Basalt Battlehammer -->
+				<item id="6366" min="1" max="1" chance="0.22675736961451" /> <!-- Imperial Staff -->
+				<item id="6369" min="1" max="1" chance="0.22675736961451" /> <!-- Dragon Hunter Axe -->
+				<item id="6579" min="1" max="1" chance="0.22675736961451" /> <!-- Arcana Mace -->
+				<item id="6693" min="3" max="9" chance="25.343915343915" /> <!-- Dragon Hunter Axe Blade -->
+				<item id="6689" min="18" max="54" chance="25.147392290249" /> <!-- Basalt Battlehammer Head -->
+				<item id="6697" min="3" max="9" chance="24.331065759637" /> <!-- Arcana Mace Head -->
+				<item id="6690" min="2" max="6" chance="24.27059712774" /> <!-- Imperial Staff Head -->
+				<item id="6680" min="1" max="1" chance="0.750000000000001" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6707" min="24" max="72" chance="92.3949999999999" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="10301" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Demon Prince -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="92.445" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="33" grown="39.6" />
@@ -1897,22 +1849,18 @@
 			</clan_list>
 		</ai>
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="6364" min="1" max="1" chance="0.17707472553418" /> <!-- Forgotten Blade -->
-					<item id="6372" min="1" max="1" chance="0.17707472553418" /> <!-- Heaven's Divider -->
-					<item id="7575" min="1" max="1" chance="0.17707472553418" /> <!-- Draconic Bow -->
-					<item id="6688" min="40" max="120" chance="33.301853382127" /> <!-- Forgotten Blade Edge -->
-					<item id="6696" min="81" max="243" chance="33.095266202337" /> <!-- Heaven's Divider Edge -->
-					<item id="7579" min="14" max="42" chance="33.071656238933" /> <!-- Draconic Bow Shaft -->
-				</group>
-				<group chance="0.03">
-					<item id="10299" min="1" max="1" chance="100" /> <!-- Transformation Sealbook: Ranku -->
-				</group>
-			</death>
-			<lucky_corpse>
+			<drop>
+				<item id="6364" min="1" max="1" chance="0.17707472553418" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.17707472553418" /> <!-- Heaven's Divider -->
+				<item id="7575" min="1" max="1" chance="0.17707472553418" /> <!-- Draconic Bow -->
+				<item id="6688" min="40" max="120" chance="33.301853382127" /> <!-- Forgotten Blade Edge -->
+				<item id="6696" min="81" max="243" chance="33.095266202337" /> <!-- Heaven's Divider Edge -->
+				<item id="7579" min="14" max="42" chance="33.071656238933" /> <!-- Draconic Bow Shaft -->
+				<item id="10299" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Ranku -->
+			</drop>
+			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="89.68" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -3006,11 +2954,9 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="36313" min="14" max="21" chance="100" /> <!-- Battleground Scroll: Sleep -->
-				</group>
-			</death>
+			<drop>
+				<item id="36313" min="14" max="21" chance="100" /> <!-- Battleground Scroll: Sleep -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -3170,11 +3116,9 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflect Resistance -->
-				</group>
-			</death>
+			<drop>
+				<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflect Resistance -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="10" />
@@ -3336,11 +3280,9 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="36309" min="100" max="150" chance="100" /> <!-- Healing Potion (Battleground) -->
-				</group>
-			</death>
+			<drop>
+				<item id="36309" min="100" max="150" chance="100" /> <!-- Healing Potion (Battleground) -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
@@ -4379,11 +4321,9 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="36313" min="14" max="21" chance="100" /> <!-- Battleground Scroll: Sleep -->
-				</group>
-			</death>
+			<drop>
+				<item id="36313" min="14" max="21" chance="100" /> <!-- Battleground Scroll: Sleep -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="19.5" />
@@ -4540,11 +4480,9 @@
 		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflect Resistance -->
-				</group>
-			</death>
+			<drop>
+				<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflect Resistance -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -4603,11 +4541,9 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="36309" min="100" max="150" chance="100" /> <!-- Healing Potion (Battleground) -->
-				</group>
-			</death>
+			<drop>
+				<item id="36309" min="100" max="150" chance="100" /> <!-- Healing Potion (Battleground) -->
+			</drop>
 		</drop_lists>
 		<collision>
 			<radius normal="46" />
