@@ -280,7 +280,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSetCompassZoneCode;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ExStartScenePlayer;
 import com.l2jmobius.gameserver.network.serverpackets.ExStopScenePlayer;
 import com.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
@@ -13881,9 +13880,14 @@ public final class L2PcInstance extends L2Playable
 		_trueHero = val;
 	}
 	
+	public int getFactionPoints(Faction faction)
+	{
+		return getVariables().getInt(faction.toString(), 0);
+	}
+	
 	public int getFactionLevel(Faction faction)
 	{
-		final int currentPoints = getVariables().getInt(faction.toString(), 0);
+		final int currentPoints = getFactionPoints(faction);
 		for (int i = 0; i < faction.getLevelCount(); i++)
 		{
 			if (currentPoints <= faction.getPointsOfLevel(i))
@@ -13897,7 +13901,7 @@ public final class L2PcInstance extends L2Playable
 	public float getFactionProgress(Faction faction)
 	{
 		final int currentLevel = getFactionLevel(faction);
-		final int currentLevelPoints = getVariables().getInt(faction.toString(), 0);
+		final int currentLevelPoints = getFactionPoints(faction);
 		final int previousLevelPoints = faction.getPointsOfLevel(currentLevel - 1);
 		final int nextLevelPoints = faction.getPointsOfLevel(currentLevel + 1);
 		return (float) (currentLevelPoints - previousLevelPoints) / (nextLevelPoints - previousLevelPoints);
@@ -13905,20 +13909,15 @@ public final class L2PcInstance extends L2Playable
 	
 	public void addFactionPoints(Faction faction, int count)
 	{
-		final int currentPoints = getVariables().getInt(faction.toString(), 0);
-		final String message;
-		if ((currentPoints + count) > faction.getPointsOfLevel(faction.getLevelCount() - 1))
+		final int currentPoints = getFactionPoints(faction);
+		if ((currentPoints + count) < faction.getPointsOfLevel(faction.getLevelCount() - 1))
 		{
-			getVariables().set(faction.toString(), faction.getPointsOfLevel(faction.getLevelCount() - 1));
-			message = "Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction is at the highest level possible.";
+			getVariables().set(faction.toString(), currentPoints + count);
 		}
 		else
 		{
-			getVariables().set(faction.toString(), currentPoints + count);
-			message = "Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction was increased by " + count + " points.";
+			getVariables().set(faction.toString(), faction.getPointsOfLevel(faction.getLevelCount() - 1));
 		}
-		sendPacket(new ExShowScreenMessage(message, 5000));
-		sendMessage(message);
 	}
 	
 	@Override

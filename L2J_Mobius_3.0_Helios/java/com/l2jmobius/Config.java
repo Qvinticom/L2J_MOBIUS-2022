@@ -681,6 +681,7 @@ public final class Config
 	public static float RATE_QUEST_REWARD;
 	public static float RATE_QUEST_REWARD_XP;
 	public static float RATE_QUEST_REWARD_SP;
+	public static float RATE_QUEST_REWARD_FP;
 	public static float RATE_QUEST_REWARD_ADENA;
 	public static boolean RATE_QUEST_REWARD_USE_MULTIPLIERS;
 	public static float RATE_QUEST_REWARD_POTION;
@@ -1993,6 +1994,7 @@ public final class Config
 			RATE_QUEST_REWARD = RatesSettings.getFloat("RateQuestReward", 1);
 			RATE_QUEST_REWARD_XP = RatesSettings.getFloat("RateQuestRewardXP", 1);
 			RATE_QUEST_REWARD_SP = RatesSettings.getFloat("RateQuestRewardSP", 1);
+			RATE_QUEST_REWARD_FP = RatesSettings.getFloat("RateQuestRewardFP", 1);
 			RATE_QUEST_REWARD_ADENA = RatesSettings.getFloat("RateQuestRewardAdena", 1);
 			RATE_QUEST_REWARD_USE_MULTIPLIERS = RatesSettings.getBoolean("UseQuestRewardMultipliers", false);
 			RATE_QUEST_REWARD_POTION = RatesSettings.getFloat("RateQuestRewardPotion", 1);
