@@ -3011,10 +3011,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		{
 			player.sendPacket(new ExShowScreenMessage("Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction was increased by " + factionPoints + " points.", 5000));
 		}
-		else
-		{
-			player.sendPacket(new ExShowScreenMessage("Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction is at the highest level possible.", 5000));
-		}
 		
 		player.addFactionPoints(faction, factionPoints);
 		final int newLevel = player.getFactionLevel(faction);
