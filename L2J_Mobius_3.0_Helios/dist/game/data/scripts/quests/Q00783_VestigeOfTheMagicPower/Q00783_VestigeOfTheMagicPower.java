@@ -97,19 +97,19 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 				{
 					if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0)
 					{
-						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 100);
+						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 100);
 						giveItems(player, BASIC_SUPPLY_BOX, 1);
 						addExpAndSp(player, 4845395970L, 11628900);
 					}
 					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) <= 1)
 					{
-						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 200);
+						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 200);
 						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
 						addExpAndSp(player, 9690791940L, 23257800);
 					}
 					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2)
 					{
-						player.addFactionPoints(Faction.BLACKBIRD_CLAN, 300);
+						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 300);
 						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
 						addExpAndSp(player, 14536187910L, 34886700);
 					}

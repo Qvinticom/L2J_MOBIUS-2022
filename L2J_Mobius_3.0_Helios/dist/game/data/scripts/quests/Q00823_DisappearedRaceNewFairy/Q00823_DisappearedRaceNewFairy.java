@@ -97,19 +97,19 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 				{
 					if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) == 0)
 					{
-						player.addFactionPoints(Faction.MOTHER_TREE_GUARDIANS, 100);
+						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 100);
 						giveItems(player, BASIC_SUPPLY_BOX, 1);
 						addExpAndSp(player, 5536944000L, 13288590);
 					}
 					else if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) == 1)
 					{
-						player.addFactionPoints(Faction.MOTHER_TREE_GUARDIANS, 200);
+						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 200);
 						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
 						addExpAndSp(player, 11073888000L, 26577180);
 					}
 					else if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 2)
 					{
-						player.addFactionPoints(Faction.MOTHER_TREE_GUARDIANS, 300);
+						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 300);
 						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
 						addExpAndSp(player, 16610832000L, 39865770);
 					}

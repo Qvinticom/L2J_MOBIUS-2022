@@ -112,7 +112,7 @@ public class Q00937_ToReviveTheFishingGuild extends Quest
 					{
 						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
 					}
-					player.addFactionPoints(Faction.FISHING_GUILD, 100);
+					addFactionPoints(player, Faction.FISHING_GUILD, 100);
 					qs.exitQuest(QuestType.REPEATABLE, true);
 					htmltext = event;
 				}
