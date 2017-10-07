@@ -2508,7 +2508,6 @@
 		</effects>
 	</skill>
 	<skill id="9467" toLevel="1" name="Contaminated Draco Egg">
-		<!-- AUTO GENERATED SKILL -->
 		<itemConsumeId>34863</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
@@ -2538,7 +2537,6 @@
 		</effects>
 	</skill>
 	<skill id="9468" toLevel="1" name="Small Draco Egg">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
@@ -2546,22 +2544,25 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>34864</itemConsumeId> <!-- Small Draco Egg -->
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanNotUseAirship" />
-			<condition name="OpCheckAbnormal">
-				<type>SIGNAL_C</type>
-				<level>8</level>
-				<hasAbnormal>false</hasAbnormal>
-			</condition>
 			<condition name="OpPeacezone" />
 		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>19257</npcId> <!-- Small Draco Egg -->
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9469" toLevel="1" name="Large Draco Egg">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
@@ -2569,22 +2570,25 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>34865</itemConsumeId> <!-- Large Draco Egg -->
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanNotUseAirship" />
-			<condition name="OpCheckAbnormal">
-				<type>SIGNAL_C</type>
-				<level>8</level>
-				<hasAbnormal>false</hasAbnormal>
-			</condition>
 			<condition name="OpPeacezone" />
 		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>19258</npcId> <!-- Large Draco Egg -->
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9470" toLevel="1" name="Draco's Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<itemConsumeId>34867</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
@@ -2652,7 +2656,6 @@
 		</effects>
 	</skill>
 	<skill id="9471" toLevel="1" name="Draco's Shiny Gift">
-		<!-- AUTO GENERATED SKILL -->
 		<itemConsumeId>34868</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
@@ -2668,7 +2671,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.007">
-						<item id="35751" count="1" />
+						<item id="36324" count="1" />
 					</item>
 					<item chance="0.097">
 						<item id="19447" count="1" />

@@ -2203,55 +2203,63 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="19257" level="1" type="L2Npc" name="Small Draco Egg" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="19257" level="99" type="L2Monster" name="Small Draco Egg" title="">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1" hpRegen="1" mp="1" mpRegen="1" />
+		<stats str="80" int="79" dex="55" wit="78" con="73" men="78">
+			<vitals hp="65863" hpRegen="3" mp="56645458" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="60" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="0" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
-			<defence physical="1" magical="1" />
-			<abnormalResist physical="0" magical="0" />
+			<attack physical="8000" magical="7200" critical="84" attackSpeed="553" range="0" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<defence physical="900" magical="800" />
+			<abnormalResist physical="10" magical="27" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<drop_lists>
+			<drop>
+				<item id="34867" min="1" max="5" chance="70" /> <!-- Draco's Gift -->
+			</drop>
+		 </drop_lists>
 		<collision>
-			<radius normal="8" />
-			<height normal="20" />
+			<radius normal="10" />
+			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="19258" level="1" type="L2Npc" name="Large Draco Egg" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="19258" level="99" type="L2Monster" name="Large Draco Egg" title="">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1" hpRegen="1" mp="1" mpRegen="1" />
+		<stats str="103" int="79" dex="55" wit="78" con="108" men="78">
+			<vitals hp="65863" hpRegen="3" mp="56645458" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="60" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="0" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
-			<defence physical="1" magical="1" />
-			<abnormalResist physical="0" magical="0" />
+			<attack physical="14000" magical="12200" critical="334" attackSpeed="653" range="0" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<defence physical="1000" magical="1300" />
+			<abnormalResist physical="10" magical="27" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<drop_lists>
+			<drop>
+				<item id="34868" min="1" max="3" chance="60" /> <!-- Draco's Shiny Gift -->
+			</drop>
+		 </drop_lists>
 		<collision>
 			<radius normal="10" />
 			<height normal="27" />
