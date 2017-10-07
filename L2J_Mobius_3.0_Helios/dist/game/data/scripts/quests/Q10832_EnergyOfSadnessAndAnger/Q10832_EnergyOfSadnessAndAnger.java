@@ -98,7 +98,7 @@ public final class Q10832_EnergyOfSadnessAndAnger extends Quest
 			case "34056-07.html":
 			{
 				giveItems(player, SOE, 1);
-				addExpAndSp(player, 7909920000L, 18983760);
+				addExpAndSp(player, 3614952704L, 18983760);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;

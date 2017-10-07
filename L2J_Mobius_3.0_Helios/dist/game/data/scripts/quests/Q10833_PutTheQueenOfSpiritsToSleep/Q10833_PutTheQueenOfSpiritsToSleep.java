@@ -83,7 +83,7 @@ public final class Q10833_PutTheQueenOfSpiritsToSleep extends Quest
 				giveItems(player, GIANTS_CODEX, 1);
 				giveItems(player, ELCYUM_CRYSTAL, 1);
 				giveItems(player, SOE, 1);
-				addExpAndSp(player, 5932440000L, 14237820);
+				addExpAndSp(player, 1637472704L, 14237820);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;

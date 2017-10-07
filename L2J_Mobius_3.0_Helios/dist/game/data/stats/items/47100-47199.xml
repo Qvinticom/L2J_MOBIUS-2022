@@ -387,12 +387,24 @@
 		<!-- A book that explains how to mount the Pegasus. Only characters with Lv. 99 or above can mount. Can be obtained in Main Class status. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="20" />
-		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="weight" val="20" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="113">
+			<and>
+				<player level="99" />
+				<player subclass="false" />
+			</and>
+		</cond>
+		<skills>
+			<skill id="7118" level="1" /> <!-- Spellbook: Pegasus -->
+		</skills>
 	</item>
 	<item id="47151" name="Spellbook: Griffin" type="EtcItem">
 		<!-- A book that explains how to mount the Griffin. Only characters with Lv. 99 or above can mount. Can be obtained in Main Class status. -->

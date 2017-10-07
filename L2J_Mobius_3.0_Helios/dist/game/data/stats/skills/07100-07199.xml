@@ -794,9 +794,37 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="7118" toLevel="1" name="Spellbook: Pegasus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Updated to GC -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47150</itemConsumeId>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8907</skillId> <!-- Riding the Pegasus -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>8907</skillId> <!-- Riding the Pegasus -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7119" toLevel="1" name="Spellbook: Wing Hound">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

@@ -242,9 +242,39 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="8907" toLevel="1" name="Riding the Pegasus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<icon>icon.pegasus_vehicle</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>159</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">CHANGEBODY,-1</value>
+					<value level="2">TURN_STONE,-1</value>
+					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
+				</dispel>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>159</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8908" toLevel="1" name="Riding the Wing Hound">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

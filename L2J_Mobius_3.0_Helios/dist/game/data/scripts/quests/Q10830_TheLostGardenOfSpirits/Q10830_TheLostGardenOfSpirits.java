@@ -89,7 +89,7 @@ public final class Q10830_TheLostGardenOfSpirits extends Quest
 			case "34055-07.html":
 			{
 				giveItems(player, SOE, 1);
-				addExpAndSp(player, 5932440000L, 14237820);
+				addExpAndSp(player, 1637472704L, 14237820);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;

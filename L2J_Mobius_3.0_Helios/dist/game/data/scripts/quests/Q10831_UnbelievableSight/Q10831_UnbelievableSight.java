@@ -91,7 +91,7 @@ public final class Q10831_UnbelievableSight extends Quest
 			{
 				giveItems(player, SOE, 1);
 				giveItems(player, SPIRIT_EVIL_TOUGHT_PIACE, 1);
-				addExpAndSp(player, 5932440000L, 14237820);
+				addExpAndSp(player, 1637472704L, 14237820);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
