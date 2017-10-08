@@ -89,7 +89,7 @@ public final class Q10399_TheAlphabetOfTheGiants extends Quest
 					giveStoryQuestReward(player, 37);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 3_811_500, 914);
+						addExpAndSp(player, 8779765, 914);
 					}
 					htmltext = event;
 				}
@@ -140,7 +140,7 @@ public final class Q10399_TheAlphabetOfTheGiants extends Quest
 		
 		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
-			if (giveItemRandomly(killer, npc, TABLET, 1, 20, 1, true))
+			if (giveItemRandomly(killer, npc, TABLET, 1, 50, 1, true))
 			{
 				st.setCond(2);
 			}
