@@ -2999,26 +2999,11 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 * Add faction points as quest reward.
 	 * @param player the player whom to reward with the faction points.
 	 * @param faction the faction to which the points belong
-	 * @param factionPoints the base amount of faction points to give to the player. It will be influenced by RATE_QUEST_REWARD_FP.
+	 * @param points the base amount of faction points to give to the player. It is influenced by RATE_QUEST_REWARD_FP.
 	 */
-	public static void addFactionPoints(L2PcInstance player, Faction faction, int factionPoints)
+	public static void addFactionPoints(L2PcInstance player, Faction faction, int points)
 	{
-		factionPoints *= Config.RATE_QUEST_REWARD_FP;
-		final int currentPoints = player.getFactionPoints(faction);
-		final int oldLevel = player.getFactionLevel(faction);
-		
-		if ((currentPoints + factionPoints) < faction.getPointsOfLevel(faction.getLevelCount() - 1))
-		{
-			player.sendPacket(new ExShowScreenMessage("Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction was increased by " + factionPoints + " points.", 5000));
-		}
-		
-		player.addFactionPoints(faction, factionPoints);
-		final int newLevel = player.getFactionLevel(faction);
-		
-		if (oldLevel < newLevel)
-		{
-			player.sendPacket(new ExShowScreenMessage("Your reputation level with the " + faction.toString().toLowerCase().replace("_", " ") + " faction has increased.", 5000));
-		}
+		player.addFactionPoints(faction, (int) (points * Config.RATE_QUEST_REWARD_FP));
 	}
 	
 	/**

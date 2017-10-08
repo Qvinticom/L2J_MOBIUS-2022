@@ -13910,13 +13910,20 @@ public final class L2PcInstance extends L2Playable
 	public void addFactionPoints(Faction faction, int count)
 	{
 		final int currentPoints = getFactionPoints(faction);
+		final int oldLevel = getFactionLevel(faction);
 		if ((currentPoints + count) < faction.getPointsOfLevel(faction.getLevelCount() - 1))
 		{
 			getVariables().set(faction.toString(), currentPoints + count);
+			sendMessage("You obtained " + count + " Faction Points for " + faction.toString().toLowerCase().replace("_", " ") + ".");
 		}
 		else
 		{
 			getVariables().set(faction.toString(), faction.getPointsOfLevel(faction.getLevelCount() - 1));
+			
+		}
+		if (oldLevel < getFactionLevel(faction))
+		{
+			sendMessage("The Faction Level of " + faction.toString().toLowerCase().replace("_", " ") + " has increased. Open the Factions window to check.");
 		}
 	}
 	
