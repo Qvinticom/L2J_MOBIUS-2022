@@ -91,7 +91,7 @@ public final class Q10398_ASuspiciousBadge extends Quest
 					giveStoryQuestReward(player, 36);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 3_811_500, 914);
+						addExpAndSp(player, 6135787, 914);
 					}
 				}
 				break;
@@ -147,7 +147,7 @@ public final class Q10398_ASuspiciousBadge extends Quest
 		
 		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
-			if (giveItemRandomly(killer, npc, BADGE, 1, 20, 0.75, true))
+			if (giveItemRandomly(killer, npc, BADGE, 1, 50, 0.75, true))
 			{
 				st.setCond(2);
 			}
