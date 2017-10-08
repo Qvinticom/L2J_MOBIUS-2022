@@ -93,7 +93,7 @@ public final class Q10780_AWeakenedBarrier extends Quest
 				{
 					giveItems(player, ENCHANT_ARMOR_B, 5);
 					giveStoryQuestReward(player, 36);
-					addExpAndSp(player, 3811500, 914);
+					addExpAndSp(player, 15108843, 914);
 					qs.exitQuest(false, true);
 				}
 				break;
@@ -150,10 +150,10 @@ public final class Q10780_AWeakenedBarrier extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			int count = qs.getInt(KILL_COUNT_VAR);
-			if (count < 20)
+			if (count < 80)
 			{
 				qs.set(KILL_COUNT_VAR, ++count);
-				if (count >= 20)
+				if (count >= 80)
 				{
 					qs.setCond(2, true);
 				}
