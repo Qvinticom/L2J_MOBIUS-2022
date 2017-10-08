@@ -1492,7 +1492,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="27435" level="76" type="L2Monster" name="Victim's Spirit" title="">
+	<npc id="27435" level="76" type="L2Monster" name="Victim's Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1526,7 +1526,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27436" level="77" type="L2Monster" name="Resurrected Chaos" title="">
+	<npc id="27436" level="77" type="L2Monster" name="Resurrected Chaos">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2423,7 +2423,7 @@
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
 		</skill_list>
 	</npc>
-	<npc id="27456" level="10" type="L2Monster" name="Wisp" title="">
+	<npc id="27456" level="10" type="L2Monster" name="Wisp">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2482,7 +2482,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27458" level="30" type="L2Monster" name="Bat" title="">
+	<npc id="27458" level="30" type="L2Monster" name="Bat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -2517,7 +2517,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="27459" level="38" type="L2Monster" name="Regenerated Kanilov" title="">
+	<npc id="27459" level="38" type="L2Monster" name="Regenerated Kanilov">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="4073" level="4" />
@@ -2556,7 +2556,7 @@
 			<height normal="19.5" />
 		</collision>
 	</npc>
-	<npc id="27460" level="38" type="L2Monster" name="Regenerated Poslof" title="">
+	<npc id="27460" level="38" type="L2Monster" name="Regenerated Poslof">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="4073" level="4" />
@@ -2596,7 +2596,7 @@
 			<height normal="19.5" />
 		</collision>
 	</npc>
-	<npc id="27461" level="38" type="L2Monster" name="Sakum's Summoned Pet" title="">
+	<npc id="27461" level="38" type="L2Monster" name="Sakum's Summoned Pet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14095" level="1" />
@@ -3380,7 +3380,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="27480" level="84" type="L2Monster" name="Sehkmeti" title="">
+	<npc id="27480" level="84" type="L2Monster" name="Sehkmeti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
@@ -3501,7 +3501,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27484" level="80" type="L2Npc" name="" title="">
+	<npc id="27484" level="80" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3530,7 +3530,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="27485" level="80" type="L2Npc" name="" title="">
+	<npc id="27485" level="80" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3559,7 +3559,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="27486" level="80" type="FriendlyNpc" name="Helping Tree" title="">
+	<npc id="27486" level="80" type="FriendlyNpc" name="Helping Tree">
 		<race>PLANT</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
@@ -3587,7 +3587,7 @@
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="27487" level="90" type="L2Npc" name="" title="">
+	<npc id="27487" level="90" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3617,7 +3617,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="27488" level="90" type="L2Npc" name="" title="">
+	<npc id="27488" level="90" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3647,7 +3647,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="27489" level="90" type="L2Npc" name="" title="">
+	<npc id="27489" level="90" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3677,7 +3677,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="27490" level="90" type="L2Npc" name="" title="">
+	<npc id="27490" level="90" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -3707,7 +3707,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="27491" level="40" type="L2Npc" name="Corpse of the Chamberlain of Darkness" title="">
+	<npc id="27491" level="40" type="L2Npc" name="Corpse of the Chamberlain of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -3736,7 +3736,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="27492" level="85" type="L2Monster" name="Shilen's Messenger" title="">
+	<npc id="27492" level="85" type="L2Monster" name="Shilen's Messenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3766,7 +3766,7 @@
 			<height normal="41.6" />
 		</collision>
 	</npc>
-	<npc id="27493" level="85" type="L2Monster" name="Grotesque Bug" title="">
+	<npc id="27493" level="85" type="L2Monster" name="Grotesque Bug">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -3794,7 +3794,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="27494" level="86" type="L2Monster" name="Grotesque Giant Bug" title="">
+	<npc id="27494" level="86" type="L2Monster" name="Grotesque Giant Bug">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -3823,7 +3823,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27495" level="99" type="L2Monster" name="Lindvior's Minion" title="">
+	<npc id="27495" level="99" type="L2Monster" name="Lindvior's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -3852,7 +3852,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="27496" level="85" type="L2Monster" name="Unconscious Dwarf Workman" title="">
+	<npc id="27496" level="85" type="L2Monster" name="Unconscious Dwarf Workman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DWARF</race>
 		<sex>MALE</sex>
