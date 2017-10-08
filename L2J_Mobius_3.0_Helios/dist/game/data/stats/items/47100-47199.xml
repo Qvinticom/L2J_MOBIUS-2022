@@ -366,22 +366,46 @@
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="20" />
-		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="113">
+			<and>
+				<player level="99" />
+				<player subclass="false" />
+			</and>
+		</cond>
+		<skills>
+			<skill id="7117" level="1" /> <!-- Spellbook: Hell Hound -->
+		</skills>
 	</item>
 	<item id="47149" name="Spellbook: War Horse" type="EtcItem">
 		<!-- A book that explains how to mount the War Horse. Only characters with Lv. 99 or above can mount. Can be obtained in Main Class status. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="20" />
-		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="113">
+			<and>
+				<player level="99" />
+				<player subclass="false" />
+			</and>
+		</cond>
+		<skills>
+			<skill id="7120" level="1" /> <!-- Spellbook: War Horse -->
+		</skills>
 	</item>
 	<item id="47150" name="Spellbook: Pegasus" type="EtcItem">
 		<!-- A book that explains how to mount the Pegasus. Only characters with Lv. 99 or above can mount. Can be obtained in Main Class status. -->
@@ -411,22 +435,46 @@
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="20" />
-		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="113">
+			<and>
+				<player level="99" />
+				<player subclass="false" />
+			</and>
+		</cond>
+		<skills>
+			<skill id="7121" level="1" /> <!-- Spellbook: Griffin -->
+		</skills>
 	</item>
 	<item id="47152" name="Spellbook: Wing Hound" type="EtcItem">
 		<!-- A book that explains how to mount the Wing Hound. Only characters with Lv. 99 or above can mount. Can be obtained in Main Class status. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="20" />
-		<set name="is_tradable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="113">
+			<and>
+				<player level="99" />
+				<player subclass="false" />
+			</and>
+		</cond>
+		<skills>
+			<skill id="7119" level="1" /> <!-- Spellbook: Wing Hound -->
+		</skills>
 	</item>
 	<item id="47153" name="NPC-only Blackbird Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />

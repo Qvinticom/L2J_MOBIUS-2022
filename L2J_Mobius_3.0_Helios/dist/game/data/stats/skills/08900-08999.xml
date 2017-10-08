@@ -237,9 +237,41 @@
 		</effects>
 	</skill>
 	<skill id="8906" toLevel="1" name="Riding the Hell Hound">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<icon>icon.hellound_vehicle</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelayType>S</reuseDelayType>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>158</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<dispel>
+				<value level="1">CHANGEBODY,-1</value>
+				<value level="2">TURN_STONE,-1</value>
+				<value level="3">BUFF_SPECIAL_MULTI,-1</value>
+			</dispel>
+			<effect name="Transformation">
+				<transformationId>158</transformationId>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8907" toLevel="1" name="Riding the Pegasus">
 		<abnormalLvl>1</abnormalLvl>
@@ -274,21 +306,126 @@
 			<effect name="Transformation">
 				<transformationId>159</transformationId>
 			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="8908" toLevel="1" name="Riding the Wing Hound">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<icon>icon.winghound_vehicle</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelayType>S</reuseDelayType>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>160</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">CHANGEBODY,-1</value>
+					<value level="2">TURN_STONE,-1</value>
+					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
+				</dispel>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>160</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8909" toLevel="1" name="Riding the War Horse">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<icon>icon.warhorse_vehicle</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelayType>S</reuseDelayType>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>161</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">CHANGEBODY,-1</value>
+					<value level="2">TURN_STONE,-1</value>
+					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
+				</dispel>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>161</transformationId>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8910" toLevel="1" name="Riding the Griffin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<icon>icon.griffin_vehicle</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelayType>S</reuseDelayType>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>162</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">CHANGEBODY,-1</value>
+					<value level="2">TURN_STONE,-1</value>
+					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
+				</dispel>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>162</transformationId>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
 </list>

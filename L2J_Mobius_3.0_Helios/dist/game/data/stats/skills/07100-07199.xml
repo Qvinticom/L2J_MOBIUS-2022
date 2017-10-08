@@ -789,15 +789,42 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="7117" toLevel="1" name="Spellbook: Hell Hound">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill7117</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47148</itemConsumeId>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="OpMainjob" />
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8906</skillId> <!-- Riding the Hell Hound -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>8906</skillId> <!-- Riding the Hell Hound -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7118" toLevel="1" name="Spellbook: Pegasus">
-		<!-- Updated to GC -->
+		<icon>icon.skill7118</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47150</itemConsumeId>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -827,18 +854,99 @@
 		</effects>
 	</skill>
 	<skill id="7119" toLevel="1" name="Spellbook: Wing Hound">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill7119</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47152</itemConsumeId>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8908</skillId> <!-- Riding the Wing Hound -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>8908</skillId> <!-- Riding the Wing Hound -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7120" toLevel="1" name="Spellbook: War Horse">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill7120</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47149</itemConsumeId>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8909</skillId> <!-- Riding the War Horse -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>8909</skillId> <!-- Riding the War Horse -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="7121" toLevel="1" name="Spellbook: Griffin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill7121</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47151</itemConsumeId>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8910</skillId> <!-- Riding the Griffin -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>8910</skillId> <!-- Riding the Griffin -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 </list>
