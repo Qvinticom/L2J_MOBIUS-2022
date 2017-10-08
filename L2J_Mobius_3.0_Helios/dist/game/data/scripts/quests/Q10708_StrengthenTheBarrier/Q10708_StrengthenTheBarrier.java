@@ -104,7 +104,7 @@ public final class Q10708_StrengthenTheBarrier extends Quest
 					giveStoryQuestReward(player, 17);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 635_250, 152);
+						addExpAndSp(player, 20881876, 152);
 					}
 					htmltext = event;
 				}
