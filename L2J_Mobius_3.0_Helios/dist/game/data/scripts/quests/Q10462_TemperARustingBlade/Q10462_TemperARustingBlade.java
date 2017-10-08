@@ -43,8 +43,8 @@ public final class Q10462_TemperARustingBlade extends Quest
 	private static final int PRACTICE_LIFE_STONE = 36718;
 	private static final int PRACTICE_LIFE_GEMSTONE = 36719;
 	// Misc
-	private static final int MIN_LEVEL = 46;
-	private static final int MAX_LEVEL = 52;
+	private static final int MIN_LEVEL = 85;
+	private static final int MAX_LEVEL = 105;
 	
 	public Q10462_TemperARustingBlade()
 	{

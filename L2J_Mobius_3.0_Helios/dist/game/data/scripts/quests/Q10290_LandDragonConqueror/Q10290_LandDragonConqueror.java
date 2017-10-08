@@ -42,7 +42,7 @@ public final class Q10290_LandDragonConqueror extends Quest
 	// Reward
 	private static final int ANTHARAS_SLAYER_CIRCLET = 8568;
 	// Misc
-	private static final int MIN_LEVEL = 83;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q10290_LandDragonConqueror()
 	{
@@ -143,7 +143,7 @@ public final class Q10290_LandDragonConqueror extends Quest
 				{
 					htmltext = "30755-08.html";
 					giveAdena(player, 131236, true);
-					addExpAndSp(player, 702557, 76334);
+					addExpAndSp(player, 702557, 168);
 					giveItems(player, ANTHARAS_SLAYER_CIRCLET, 1);
 					qs.exitQuest(false, true);
 				}

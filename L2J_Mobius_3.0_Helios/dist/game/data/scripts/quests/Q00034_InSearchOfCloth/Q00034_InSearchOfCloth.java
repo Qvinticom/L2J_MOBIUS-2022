@@ -46,7 +46,7 @@ public class Q00034_InSearchOfCloth extends Quest
 	private static final int SKEIN_OF_YARN = 7161;
 	private static final int SPINNERET = 7528;
 	// Misc
-	private static final int MIN_LEVEL = 60;
+	private static final int MIN_LEVEL = 85;
 	private static final int SPINNERET_COUNT = 10;
 	private static final int ARMOR_FRAGMENT_COUNT = 420;
 	private static final int ACCESSORY_GEM_COUNT = 750;

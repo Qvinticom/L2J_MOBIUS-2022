@@ -40,7 +40,7 @@ public class Q00906_TheCallOfValakas extends Quest
 	private static final int SCROLL_VALAKAS_CALL = 21895;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
 	// Misc
-	private static final int MIN_LEVEL = 83;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q00906_TheCallOfValakas()
 	{

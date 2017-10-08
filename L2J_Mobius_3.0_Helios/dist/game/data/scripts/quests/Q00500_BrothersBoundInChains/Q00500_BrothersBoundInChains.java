@@ -67,7 +67,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	};
 	// Misc
 	private static final int DROP_QI_CHANCE = 5; // in % TODO: check that value
-	private static final int MIN_LEVEL = 60;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q00500_BrothersBoundInChains()
 	{

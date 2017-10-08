@@ -38,7 +38,7 @@ public final class Q00040_ASpecialOrder extends Quest
 	private static final int ELCYUM_CRYSTAL = 36514;
 	private static final int WONDEROUS_CUBIC = 10632;
 	// Misc
-	private static final int MIN_LEVEL = 40;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q00040_ASpecialOrder()
 	{

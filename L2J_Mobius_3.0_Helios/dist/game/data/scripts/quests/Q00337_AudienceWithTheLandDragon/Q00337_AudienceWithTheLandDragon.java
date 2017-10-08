@@ -43,7 +43,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 	private static final int GILMORE = 30754; // Dragon Valley
 	private static final int THEODRIC = 30755; // Antharas's Lair
 	// Misc
-	private static final int MIN_LEVEL = 50;
+	private static final int MIN_LEVEL = 85;
 	// Items
 	private static final int FEATHER_OF_GABRIELLE = 3852; // Gabrielle's Feather
 	private static final int MARSH_DRAKE_TALONS = 3854; // Marsh Drake Talons

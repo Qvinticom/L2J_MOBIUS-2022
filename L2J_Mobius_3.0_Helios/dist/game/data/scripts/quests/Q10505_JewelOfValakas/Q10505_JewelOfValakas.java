@@ -40,7 +40,7 @@ public class Q10505_JewelOfValakas extends Quest
 	private static final int JEWEL_OF_VALAKAS = 21896;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
 	// Misc
-	private static final int MIN_LEVEL = 83;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q10505_JewelOfValakas()
 	{

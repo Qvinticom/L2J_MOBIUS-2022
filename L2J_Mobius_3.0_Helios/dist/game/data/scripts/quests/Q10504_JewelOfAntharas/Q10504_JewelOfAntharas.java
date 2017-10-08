@@ -40,7 +40,7 @@ public final class Q10504_JewelOfAntharas extends Quest
 	private static final int JEWEL_OF_ANTHARAS = 21898;
 	private static final int PORTAL_STONE = 3865;
 	// Misc
-	private static final int MIN_LEVEL = 84;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q10504_JewelOfAntharas()
 	{

@@ -39,7 +39,7 @@ public class Q00907_DragonTrophyValakas extends Quest
 	private static final int MEDAL_OF_GLORY = 21874;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
 	// Misc
-	private static final int MIN_LEVEL = 84;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q00907_DragonTrophyValakas()
 	{

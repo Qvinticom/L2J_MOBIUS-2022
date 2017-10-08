@@ -43,7 +43,7 @@ public class Q00037_MakeFormalWear extends Quest
 	private static final int ICE_WINE = 7160;
 	private static final int SIGNET_RING = 7164;
 	// Misc
-	private static final int MIN_LEVEL = 60;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q00037_MakeFormalWear()
 	{

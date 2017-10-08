@@ -115,7 +115,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 		{
 			case State.CREATED:
 			{
-				if (player.getLevel() < 83)
+				if (player.getLevel() < 85)
 				{
 					htmltext = "31540-00.htm";
 				}
@@ -143,7 +143,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 				{
 					htmltext = "31540-08.html";
 					giveAdena(player, 126549, true);
-					addExpAndSp(player, 717291, 77397);
+					addExpAndSp(player, 717291, 172);
 					giveItems(player, VALAKAS_SLAYER_CIRCLET, 1);
 					st.exitQuest(false, true);
 				}

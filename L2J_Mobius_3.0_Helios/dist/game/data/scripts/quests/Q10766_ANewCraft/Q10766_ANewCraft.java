@@ -47,7 +47,7 @@ public class Q10766_ANewCraft extends Quest
 	private static final int AIR_STONE = 39461;
 	private static final int WINDY_HEALING_POTION_1 = 39466;
 	// Misc
-	private static final int MIN_LEVEL = 40;
+	private static final int MIN_LEVEL = 85;
 	// Reward
 	private static final int EXP_REWARD = 168000;
 	private static final int SP_REWARD = 40;

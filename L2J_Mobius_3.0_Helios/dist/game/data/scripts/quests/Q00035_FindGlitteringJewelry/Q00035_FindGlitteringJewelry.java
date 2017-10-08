@@ -41,7 +41,7 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	private static final int JEWEL_BOX = 7077;
 	private static final int ROUGH_JEWEL = 7162;
 	// Misc
-	private static final int MIN_LEVEL = 60;
+	private static final int MIN_LEVEL = 85;
 	private static final int JEWEL_COUNT = 10;
 	private static final int IRON_ORE_COUNT = 95;
 	private static final int ACCESSORY_GEM_COUNT = 385;

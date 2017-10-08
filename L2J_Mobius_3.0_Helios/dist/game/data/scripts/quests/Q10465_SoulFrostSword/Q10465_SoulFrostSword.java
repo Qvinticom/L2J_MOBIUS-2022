@@ -38,8 +38,8 @@ public class Q10465_SoulFrostSword extends Quest
 	private static final int PRACTICE_STORMBRINGER = 46629;
 	private static final int PRACTICE_SOUL_CRYSTAL = 46526;
 	// Misc
-	private static final int MIN_LEVEL = 40;
-	private static final int MAX_LEVEL = 58;
+	private static final int MIN_LEVEL = 85;
+	private static final int MAX_LEVEL = 105;
 	
 	public Q10465_SoulFrostSword()
 	{

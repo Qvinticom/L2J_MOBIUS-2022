@@ -42,7 +42,7 @@ public class Q00903_TheCallOfAntharas extends Quest
 	private static final int SCROLL_ANTHARAS_CALL = 21897;
 	private static final int PORTAL_STONE = 3865;
 	// Misc
-	private static final int MIN_LEVEL = 83;
+	private static final int MIN_LEVEL = 85;
 	
 	public Q00903_TheCallOfAntharas()
 	{
