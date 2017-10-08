@@ -88,7 +88,7 @@ public final class Q10781_IngredientsToEnforcements extends Quest
 				{
 					giveItems(player, ENCHANT_ARMOR_B, 5);
 					giveStoryQuestReward(player, 37);
-					addExpAndSp(player, 3811500, 914);
+					addExpAndSp(player, 19688585, 914);
 					qs.exitQuest(false, true);
 				}
 				break;
@@ -135,10 +135,10 @@ public final class Q10781_IngredientsToEnforcements extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final long itemCount = getQuestItemsCount(killer, WIND_SPIRIT_FRAGMENT);
-			if (itemCount < 20)
+			if (itemCount < 80)
 			{
 				giveItems(killer, WIND_SPIRIT_FRAGMENT, 1);
-				if (getQuestItemsCount(killer, WIND_SPIRIT_FRAGMENT) >= 20)
+				if (getQuestItemsCount(killer, WIND_SPIRIT_FRAGMENT) >= 80)
 				{
 					qs.setCond(2, true);
 				}
