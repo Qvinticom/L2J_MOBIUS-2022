@@ -32,14 +32,14 @@ public class Q00036_MakeASewingKit extends Quest
 	// NPC
 	private static final int FERRIS = 30847;
 	// Monster
-	private static final int ENCHANTED_IRON_GOLEM = 20566;
+	private static final int REINFORCED_IRON_GOLEM = 20566;
 	// Items
-	private static final int ARTISANS_FRAME = 1891;
-	private static final int ORIHARUKON = 1893;
+	private static final int IRON_ORE = 36521;
+	private static final int COKES = 36561;
 	private static final int SEWING_KIT = 7078;
-	private static final int ENCHANTED_IRON = 7163;
+	private static final int REINFORCED_IRON = 7163;
 	// Misc
-	private static final int MIN_LEVEL = 60;
+	private static final int MIN_LEVEL = 85;
 	private static final int IRON_COUNT = 5;
 	private static final int COUNT = 10;
 	
@@ -48,8 +48,8 @@ public class Q00036_MakeASewingKit extends Quest
 		super(36);
 		addStartNpc(FERRIS);
 		addTalkId(FERRIS);
-		addKillId(ENCHANTED_IRON_GOLEM);
-		registerQuestItems(ENCHANTED_IRON);
+		addKillId(REINFORCED_IRON_GOLEM);
+		registerQuestItems(REINFORCED_IRON);
 	}
 	
 	@Override
@@ -71,20 +71,20 @@ public class Q00036_MakeASewingKit extends Quest
 			}
 			case "30847-06.html":
 			{
-				if (getQuestItemsCount(player, ENCHANTED_IRON) < IRON_COUNT)
+				if (getQuestItemsCount(player, REINFORCED_IRON) < IRON_COUNT)
 				{
 					return getNoQuestMsg(player);
 				}
-				takeItems(player, ENCHANTED_IRON, -1);
+				takeItems(player, REINFORCED_IRON, -1);
 				qs.setCond(3, true);
 				break;
 			}
 			case "30847-09.html":
 			{
-				if ((getQuestItemsCount(player, ARTISANS_FRAME) >= COUNT) && (getQuestItemsCount(player, ORIHARUKON) >= COUNT))
+				if ((getQuestItemsCount(player, IRON_ORE) >= COUNT) && (getQuestItemsCount(player, COKES) >= COUNT))
 				{
-					takeItems(player, ARTISANS_FRAME, 10);
-					takeItems(player, ORIHARUKON, 10);
+					takeItems(player, IRON_ORE, 180);
+					takeItems(player, COKES, 360);
 					giveItems(player, SEWING_KIT, 1);
 					qs.exitQuest(false, true);
 				}
@@ -109,8 +109,8 @@ public class Q00036_MakeASewingKit extends Quest
 		final L2PcInstance member = getRandomPartyMember(player, 1);
 		if ((member != null) && getRandomBoolean())
 		{
-			giveItems(player, ENCHANTED_IRON, 1);
-			if (getQuestItemsCount(player, ENCHANTED_IRON) >= IRON_COUNT)
+			giveItems(player, REINFORCED_IRON, 1);
+			if (getQuestItemsCount(player, REINFORCED_IRON) >= IRON_COUNT)
 			{
 				getQuestState(member, false).setCond(2, true);
 			}
@@ -151,7 +151,7 @@ public class Q00036_MakeASewingKit extends Quest
 					}
 					case 3:
 					{
-						htmltext = ((getQuestItemsCount(player, ARTISANS_FRAME) >= COUNT) && (getQuestItemsCount(player, ORIHARUKON) >= COUNT)) ? "30847-07.html" : "30847-08.html";
+						htmltext = ((getQuestItemsCount(player, IRON_ORE) >= COUNT) && (getQuestItemsCount(player, COKES) >= COUNT)) ? "30847-07.html" : "30847-08.html";
 						break;
 					}
 				}
