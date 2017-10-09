@@ -66,7 +66,9 @@ Underground:
 
 Helios:
 -Giants Cave
+-Superion Fortress
 -Ramona
+-Helios
 -Faction system
 
 Events:
@@ -120,5 +122,3 @@ Others:
 TODO:
 -Provisional Clan Halls
 -Mystic Tavern instanced zones
--Helios Boss
-
