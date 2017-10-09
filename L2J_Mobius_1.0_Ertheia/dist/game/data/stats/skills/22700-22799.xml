@@ -17,18 +17,36 @@
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
 	</skill>
-	<skill id="22701" toLevel="1" name="Harp's Sealed Rune of Power_Trigger">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="22701" toLevel="1" name="Harp's Sealed Rune of Power Trigger" usingServerSideName="true">
 		<!-- Has a 5% chance of Stunning all enemies within 400 grids for 3 sec. -->
 		<icon>icon.skill1551</icon>
-		<operateType>P</operateType>
-		<effectPoint>1000</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<passiveConditions>
-			<condition name="OpNotOlympiad" />
-		</passiveConditions>
+		<operateType>A2</operateType>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>400</affectRange>
+		<activateRate>130</activateRate>
+		<effectPoint>-712</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<castRange>40</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>1390</hitTime>
+		<coolTime>200</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="22702" toLevel="1" name="Harp's Sealed Rune of Magic_Trigger_Decrease Defense">
 		<!-- AUTO GENERATED SKILL -->

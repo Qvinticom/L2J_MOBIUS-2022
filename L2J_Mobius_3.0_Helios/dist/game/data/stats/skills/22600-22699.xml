@@ -2740,21 +2740,30 @@
 		</effects>
 	</skill>
 	<skill id="22695" toLevel="1" name="Harp's Sealed Rune of Power">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 7 permanently, and has a 5% chance of Stunning all enemies within 400 grids for 3 sec. during a standard attack. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
 		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Chance of Stunning 5% -->
+				<minDamage>1</minDamage>
+				<skillId>22701</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>5</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<targetType>ENEMY</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="StatUp">
+				<amount>7</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22696" toLevel="1" name="Harp's Sealed Rune of Magic">
 		<!-- AUTO GENERATED SKILL -->
