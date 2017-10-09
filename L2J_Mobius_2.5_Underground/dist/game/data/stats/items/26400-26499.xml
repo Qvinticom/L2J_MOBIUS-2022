@@ -785,10 +785,12 @@
 		<!-- MP + 59, Petrification and Resistance to it + 50%, Knock Back/Knock Down and Resistance to it + 40%, Pulling and Resistance to it + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, P./M. Abnormal Status Reflection + 10%. Reflect damage magic back to the attacker with the probability of 10%. Movement Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. When two identical earrings are equipped, only one effect is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -796,6 +798,10 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -804,10 +810,12 @@
 		<!-- MP + 59, Petrification and Resistance to it + 50%, Knock Back/Knock Down and Resistance to it + 40%, Pulling and Resistance to it + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, P./M. Abnormal Status Reflection + 10%. Reflect damage magic back to the attacker with the probability of 10%. Movement Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Enables the skill of cancelling Knock Back/Knock Down and increases Knock Back/Knock Down Resistance to 100% instantly. When two identical earrings are equipped, only one effect is applied. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -815,6 +823,10 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
