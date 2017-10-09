@@ -934,6 +934,13 @@ public final class Config
 	public static int LILITH_MIN_PLAYER_LVL;
 	public static int LILITH_MAX_PLAYER_LVL;
 	
+	// Helios
+	public static int HELIOS_WAIT_TIME;
+	public static int HELIOS_SPAWN_INTERVAL;
+	public static int HELIOS_SPAWN_RANDOM;
+	public static int HELIOS_MIN_PLAYER;
+	public static int HELIOS_MIN_PLAYER_LVL;
+	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
 	public static long SOD_STAGE_2_LENGTH;
@@ -2261,16 +2268,24 @@ public final class Config
 			LILITH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLilithSpawn", 148);
 			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
 			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
+			
 			TRASKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfTraskenSpawn", 264);
 			TRASKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfTraskenSpawn", 72);
 			TRASKEN_MIN_PLAYERS = GrandBossSettings.getInt("TraskenMinPlayers", 49);
 			TRASKEN_MAX_PLAYERS = GrandBossSettings.getInt("TraskenMaxPlayers", 112);
 			TRASKEN_MIN_PLAYER_LVL = GrandBossSettings.getInt("TraskenMinPlayerLvl", 85);
+			
 			LINDVIOR_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfLindviorSpawn", 264);
 			LINDVIOR_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLindviorSpawn", 72);
 			LINDVIOR_MIN_PLAYERS = GrandBossSettings.getInt("LindviorMinPlayers", 49);
 			LINDVIOR_MAX_PLAYERS = GrandBossSettings.getInt("LindviorMaxPlayers", 112);
 			LINDVIOR_MIN_PLAYER_LVL = GrandBossSettings.getInt("LindviorMinPlayerLvl", 99);
+			
+			HELIOS_WAIT_TIME = GrandBossSettings.getInt("HeliosWaitTime", 10);
+			HELIOS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfHeliosSpawn", 264);
+			HELIOS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfHeliosSpawn", 72);
+			HELIOS_MIN_PLAYER = GrandBossSettings.getInt("HeliosMinPlayers", 70);
+			HELIOS_MIN_PLAYER_LVL = GrandBossSettings.getInt("HeliosMinPlayerLvl", 102);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);

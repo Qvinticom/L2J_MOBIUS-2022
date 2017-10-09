@@ -291,14 +291,14 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="29305" level="105" type="L2Monster" name="Helios" title="Emperor of the Beginning">
+	<npc id="29305" level="105" type="L2GrandBoss" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<acquire exp="6127016742000" sp="14704840180" />
 		<stats>
 			<vitals hp="589355368" hpRegen="11.5" mp="51696" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="0" />
+				<run ground="0" />
 			</speed>
 		</stats>
 		<skill_list>
