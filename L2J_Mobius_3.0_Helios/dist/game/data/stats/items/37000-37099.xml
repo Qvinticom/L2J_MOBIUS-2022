@@ -52,6 +52,18 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="3877" min="1" max="1" chance="28.571" />
+			<item id="3879" min="1" max="1" chance="14.286" />
+			<item id="3880" min="1" max="1" chance="14.286" />
+			<item id="3884" min="1" max="1" chance="14.286" />
+			<item id="3887" min="1" max="1" chance="28.571" />
+		</capsuled_items>
 	</item>
 	<item id="37004" name="Letter Collector's Pouch: LINEAGE II" type="EtcItem">
 		<!-- Magic pouch that contains the letters of LINEAGE. Double-click to get one of the following letters: L, I, N, E, A, G and E. The letter II can be obtained from the RIIS pouch at a certain probability. -->
@@ -60,6 +72,19 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="3875" min="1" max="1" chance="14.286" />
+			<item id="3877" min="1" max="1" chance="28.571" />
+			<item id="3879" min="1" max="1" chance="14.285" />
+			<item id="3881" min="1" max="1" chance="14.286" />
+			<item id="3882" min="1" max="1" chance="14.286" />
+			<item id="3883" min="1" max="1" chance="14.286" />
+		</capsuled_items>
 	</item>
 	<item id="37005" name="Letter Collector's Pouch: NCSOFT" type="EtcItem">
 		<!-- Magic pouch that contains the letters of NCOFT. Double-click to get one of the following letters: N, C, O, F and T. The letter S can be obtained from the RIIS pouch at a certain probability. -->
@@ -68,6 +93,18 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="3876" min="1" max="1" chance="20" />
+			<item id="3878" min="1" max="1" chance="20" />
+			<item id="3883" min="1" max="1" chance="20" />
+			<item id="3884" min="1" max="1" chance="20" />
+			<item id="3887" min="1" max="1" chance="20" />
+		</capsuled_items>
 	</item>
 	<item id="37006" name="Letter Collector's Pouch: RIIS" type="EtcItem">
 		<!-- Magic pouch that contains the letters of RIIS. Double-click to get one of the following letters: R, II and S. -->
@@ -76,6 +113,16 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="3888" min="1" max="1" chance="33.333" />
+			<item id="3885" min="1" max="1" chance="33.333" />
+			<item id="3886" min="1" max="1" chance="33.334" />
+		</capsuled_items>
 	</item>
 	<item id="37007" name="Letter Collector's Lucky Pouch" type="EtcItem">
 		<!-- Chance to test your luck! You can get Letter Collector's Pouch: RIIS at a certain probability. If you fail, you won't get anything. -->
@@ -84,6 +131,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37006" min="1" max="1" chance="75" />
+		</capsuled_items>
 	</item>
 	<item id="37008" name="Strawberry Cake (HP)" type="EtcItem">
 		<!-- Restores HP by 50%. Cooldown is 2 min. -->

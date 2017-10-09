@@ -20,10 +20,10 @@
 		<add npc="33873" x="-78832" y="249115" z="-3272" heading="56380" /> <!-- Faeron Village -->
 		<add npc="33873" x="-80485" y="149537" z="-3016" heading="16383" /> <!-- Gluddin -->
 		<add npc="33873" x="117380" y="76684" z="-2672" heading="40961" /> <!-- Hunters Village -->
-		<add npc="33873" x="208499" y="87743" z="-1006" heading="11264" /> <!-- Arcan Village -->
+		<add npc="33873" x="208499" y="87743" z="-1006" heading="11264" /> <!-- Arcan -->
 	</spawnlist>
 	<messages>
 		<add type="onEnd" text="Letter Collector: Event end!" />
-		<add type="onEnter" text="Letter Collector (5/11~6/1)" />
+		<add type="onEnter" text="Letter Collector: Event ongoing!" />
 	</messages>
 </event>

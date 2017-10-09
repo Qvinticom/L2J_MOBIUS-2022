@@ -22,8 +22,14 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17321" level="1" /> <!-- Leona's Scroll: 1,000,000 SP -->
+		</skills>
 	</item>
 	<item id="38102" name="Leona's Scroll: 5,000,000 SP" type="EtcItem">
 		<!-- Double-click to obtain 5,000,000 SP. -->
@@ -34,6 +40,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17322" level="1" /> <!-- Leona's Scroll: 5,000,000 SP -->
+		</skills>
 	</item>
 	<item id="38103" name="Leona's Scroll: 10,000,000 SP" type="EtcItem">
 		<!-- Double-click to obtain 10,000,000 SP. -->
@@ -44,6 +57,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17323" level="1" /> <!-- Leona's Scroll: 10,000,000 SP -->
+		</skills>
 	</item>
 	<item id="38104" name="Leona's Cube Pack" type="EtcItem">
 		<!-- Double-click to obtain Leona's Cube (30-day). -->

@@ -18,12 +18,13 @@ package events.LetterCollector;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
  * Event: Letter Collector
  * @URL http://www.lineage2.com/en/news/events/letter-collector-event-05112016.php
- * @author Gigi
+ * @author Mobius, Gigi
  */
 public final class LetterCollector extends LongTimeEvent
 {
@@ -44,74 +45,75 @@ public final class LetterCollector extends LongTimeEvent
 	private static final int S = 3886;
 	private static final int T = 3887;
 	private static final int II = 3888;
-	// Rewards Together
-	private static final int DARK_AMARANTHINE_ENHANCEMENT_STONE = 3875;
-	private static final int TAUTI_DUAL_AXE = 35001;
-	private static final int TAUTI_ONE_HEADED_AXE = 34998;
-	private static final int KELBIM_BOW = 46062;
-	private static final int KELBIM_DUAL_DAGER = 46061;
-	private static final int KELBIM_DAGER = 46060;
-	private static final int KELBIM_CROSSBOW = 46063;
-	private static final int KELBIM_ATELIA_FRAGMENT = 46079;
-	private static final int BLESSED_SPECTER_THROWER = 18041;
-	private static final int BLESSED_SPECTER_STORMER = 18040;
-	private static final int BLESSED_SPECTER_RETRIBUTER = 18045;
-	private static final int BLESSED_SPECTER_BUSTER = 18043;
-	private static final int BLESSED_SPECTER_DUALSWORD = 18046;
-	private static final int BLESSED_SPECTER_FIGHTER = 18039;
-	private static final int BLESSED_SPECTER_CASTER = 18044;
-	private static final int BLESSED_SPECTER_DUAL_DAGGER = 18047;
-	private static final int BLESSED_SPECTER_SLASHER = 18037;
-	private static final int BLESSED_SPECTER_CUTTER = 18036;
-	private static final int BLESSED_SPECTER_SHAPER = 18035;
-	private static final int BLESSED_SPECTER_AVANGER = 18038;
-	private static final int BLESSED_SPECTER_DUAL_BLUNT = 18048;
-	private static final int BLESSED_SPECTER_SHOOTER = 18042;
-	private static final int DARK_ETERNAL_ENHACEMENT_STONE = 35567;
-	private static final int BLESSED_SERAPH_BREASTPLATE = 18050;
-	private static final int BLESSED_SERAPH_LEATHER_ARMOR = 18056;
-	private static final int BLESSED_SERAPH_TUNIC = 18061;
-	private static final int BLESSED_SERAPH_LEATHER_LEGGINGS = 18057;
-	private static final int HIGH_GRADE_WIND_DEY_PACK = 39562;
-	private static final int BLESSED_SERAPH_STOCKINGS = 18062;
-	private static final int LV_5_LEGENDERY_DEY_PACK = 34954;
-	private static final int BLESSED_SERAPH_SHOES = 18064;
-	private static final int BLESSED_SERAPH_HELMET = 18049;
-	private static final int BLESSED_SERAPH_GAITERS = 18051;
-	private static final int BLESSED_SERAPH_LEATHER_HELMET = 18055;
-	private static final int BLESSED_SERAPH_CIRCLET = 18060;
-	private static final int BLESSED_SERAPH_GUANTLETS = 18052;
-	private static final int BLESSED_SERAPH_LEATHER_GLOVES = 18058;
-	private static final int LV_5_ANCIENT_DEY_PACK = 34955;
-	private static final int BLESSED_SERAPH_LEATHER_BOOTS = 18059;
-	private static final int BLESSED_SERAPH_BOOTS = 18053;
-	private static final int BLESSED_SERAPH_GLOVES = 18063;
-	private static final int LV_5_GIANT_DEY_PACK = 34953;
-	private static final int BLESSED_SERAPH_SIGIL = 18065;
-	private static final int BLESSED_SERAPH_SHIELD = 18054;
-	private static final int DARK_ETERNAL_ENHACEMENT_STONE_FRAGMENT = 37802;
-	private static final int TOP_GRADE_SPIRIT_STONE = 45932;
-	private static final int MID_GRADE_WIND_DYE_PACK = 39561;
-	private static final int LV_4_LEGENDERY_DEY_PACK = 34951;
-	private static final int FORTUNE_POKET_STAGE_5 = 39633;
-	private static final int LEONAS_SCROLL_10000000_SP = 38103;
-	private static final int LOW_GRADE_WIND_DYE_PACK = 39560;
-	private static final int LV_4_ANCIENT_DEY_PACK = 34952;
-	private static final int LV_3_LEGENDERY_DEY_PACK = 34946;
-	private static final int HIGH_GRADE_SPIRIT_STONE = 45931;
-	private static final int LEONAS_SCROLL_5000000_SP = 38102;
-	private static final int LV_4_GIANT_DEY_PACK = 34950;
-	private static final int MID_GRADE_SPIRIT_STONE = 45930;
-	private static final int SPIRIT_STONE_HAIR_ACCESSORY = 45937;
-	private static final int LV_3_ANCIENT_DEY_PACK = 34947;
-	private static final int LV_3_GIANT_DEY_PACK = 34945;
-	private static final int LEONAS_SCROLL_1000000_SP = 38101;
-	private static final int GAMESTONE_R_GRADE = 19440;
-	private static final int BLUEBERRY_CAKE = 37009;
-	private static final int SPIRIT_STONE = 45929;
-	private static final int BLESSED_SPIRITSHOT_R_GEADE = 19442;
-	private static final int SOULSHOT_R_GEADE = 17754;
-	private static final int CRYSTAL_R_GEADE = 17371;
+	// Rewards
+	private static final ItemHolder[] REWARDS_TAUTI =
+	{
+		new ItemHolder(34998, 1), // Tauti's One-handed Axe
+		new ItemHolder(35001, 1), // Tauti's Dual Axe
+	};
+	private static final ItemHolder[] REWARDS_SPECTER =
+	{
+		new ItemHolder(18035, 1), // Blessed Specter Shaper
+		new ItemHolder(18036, 1), // Blessed Specter Cutter
+		new ItemHolder(18037, 1), // Blessed Specter Slasher
+		new ItemHolder(18038, 1), // Blessed Specter Avenger
+		new ItemHolder(18039, 1), // Blessed Specter Fighter
+		new ItemHolder(18040, 1), // Blessed Specter Stormer
+		new ItemHolder(18041, 1), // Blessed Specter Thrower
+		new ItemHolder(18042, 1), // Blessed Specter Shooter
+		new ItemHolder(18043, 1), // Blessed Specter Buster
+		new ItemHolder(18044, 1), // Blessed Specter Caster
+		new ItemHolder(18045, 1), // Blessed Specter Retributer
+		new ItemHolder(18046, 1), // Blessed Specter Dualsword
+		new ItemHolder(18047, 1), // Blessed Specter Dual Dagger
+		new ItemHolder(18048, 1), // Blessed Specter Dual Blunt Weapon
+	};
+	private static final ItemHolder[] REWARDS_SERAPH =
+	{
+		new ItemHolder(18049, 1), // Blessed Seraph Helmet
+		new ItemHolder(18050, 1), // Blessed Seraph Breastplate
+		new ItemHolder(18051, 1), // Blessed Seraph Gaiters
+		new ItemHolder(18052, 1), // Blessed Seraph Gauntlets
+		new ItemHolder(18053, 1), // Blessed Seraph Boots
+		new ItemHolder(18054, 1), // Blessed Seraph Shield
+		new ItemHolder(18055, 1), // Blessed Seraph Leather Helmet
+		new ItemHolder(18056, 1), // Blessed Seraph Leather Armor
+		new ItemHolder(18057, 1), // Blessed Seraph Leather Leggings
+		new ItemHolder(18058, 1), // Blessed Seraph Leather Gloves
+		new ItemHolder(18059, 1), // Blessed Seraph Leather Boots
+		new ItemHolder(18060, 1), // Blessed Seraph Circlet
+		new ItemHolder(18061, 1), // Blessed Seraph Tunic
+		new ItemHolder(18062, 1), // Blessed Seraph Stockings
+		new ItemHolder(18063, 1), // Blessed Seraph Gloves
+		new ItemHolder(18064, 1), // Blessed Seraph Shoes
+		new ItemHolder(18065, 1), // Blessed Seraph Sigil
+	};
+	private static final ItemHolder[] OTHER_REWARDS =
+	{
+		new ItemHolder(17371, 20), // Crystal (R-grade)
+		new ItemHolder(17754, 2000), // Soulshot (R-grade)
+		new ItemHolder(19440, 1), // Gemstone (R-grade)
+		new ItemHolder(19442, 500), // Blessed Spiritshot (R-grade)
+		new ItemHolder(34945, 1), // Lv. 3 Giant Dye Pack
+		new ItemHolder(34946, 1), // Lv. 3 Legendary Dye Pack
+		new ItemHolder(34947, 1), // Lv. 3 Ancient Dye Pack
+		new ItemHolder(34950, 1), // Lv. 4 Giant Dye Pack
+		new ItemHolder(34951, 1), // Lv. 4 Legendary Dye Pack
+		new ItemHolder(34952, 1), // Lv. 4 Ancient Dye Pack
+		new ItemHolder(34953, 1), // Lv. 5 Giant Dye Pack
+		new ItemHolder(34954, 1), // Lv. 5 Legendary Dye Pack
+		new ItemHolder(34955, 1), // Lv. 5 Ancient Dye Pack
+		new ItemHolder(35567, 1), // Dark Eternal Enhancement Stone
+		new ItemHolder(37009, 3), // Blueberry Cake (MP)
+		new ItemHolder(37802, 1), // Dark Eternal Enhancement Stone Fragment
+		new ItemHolder(38101, 1), // Leona's Scroll: 1,000,000 SP
+		new ItemHolder(38102, 1), // Leona's Scroll: 5,000,000 SP
+		new ItemHolder(38103, 1), // Leona's Scroll: 10,000,000 SP
+		new ItemHolder(39560, 1), // Low-grade Wind Dye Pack
+		new ItemHolder(39561, 1), // Mid-grade Wind Dye Pack
+		new ItemHolder(39562, 1), // High-grade Wind Dye Pack
+		new ItemHolder(39633, 1), // Fortune Pocket - Stage 5
+	};
 	
 	private LetterCollector()
 	{
@@ -134,7 +136,13 @@ public final class LetterCollector extends LongTimeEvent
 			}
 			case "lineage":
 			{
-				if ((getQuestItemsCount(player, L) >= 1) && (getQuestItemsCount(player, I) >= 1) && (getQuestItemsCount(player, N) >= 1) && (getQuestItemsCount(player, E) >= 2) && (getQuestItemsCount(player, A) >= 1) && (getQuestItemsCount(player, G) >= 1) && (getQuestItemsCount(player, II) >= 1))
+				if ((getQuestItemsCount(player, L) >= 1) && //
+					(getQuestItemsCount(player, I) >= 1) && //
+					(getQuestItemsCount(player, N) >= 1) && //
+					(getQuestItemsCount(player, E) >= 2) && //
+					(getQuestItemsCount(player, A) >= 1) && //
+					(getQuestItemsCount(player, G) >= 1) && //
+					(getQuestItemsCount(player, II) >= 1))
 				{
 					takeItems(player, L, 1);
 					takeItems(player, I, 1);
@@ -143,6 +151,7 @@ public final class LetterCollector extends LongTimeEvent
 					takeItems(player, A, 1);
 					takeItems(player, G, 1);
 					takeItems(player, II, 1);
+					giveItems(player, getReward());
 					htmltext = "33873-1.htm";
 				}
 				else
@@ -153,7 +162,12 @@ public final class LetterCollector extends LongTimeEvent
 			}
 			case "together":
 			{
-				if ((getQuestItemsCount(player, T) >= 2) && (getQuestItemsCount(player, O) >= 1) && (getQuestItemsCount(player, G) >= 1) && (getQuestItemsCount(player, E) >= 2) && (getQuestItemsCount(player, H) >= 1) && (getQuestItemsCount(player, R) >= 1))
+				if ((getQuestItemsCount(player, T) >= 2) && //
+					(getQuestItemsCount(player, O) >= 1) && //
+					(getQuestItemsCount(player, G) >= 1) && //
+					(getQuestItemsCount(player, E) >= 2) && //
+					(getQuestItemsCount(player, H) >= 1) && //
+					(getQuestItemsCount(player, R) >= 1))
 				{
 					takeItems(player, T, 2);
 					takeItems(player, O, 1);
@@ -161,73 +175,7 @@ public final class LetterCollector extends LongTimeEvent
 					takeItems(player, E, 2);
 					takeItems(player, H, 1);
 					takeItems(player, R, 1);
-					giveItemRandomly(player, null, DARK_AMARANTHINE_ENHANCEMENT_STONE, 1, 1, 0.07, false);
-					giveItemRandomly(player, null, TAUTI_DUAL_AXE, 1, 1, 0.01, false);
-					giveItemRandomly(player, null, TAUTI_ONE_HEADED_AXE, 1, 1, 0.01, false);
-					giveItemRandomly(player, null, KELBIM_BOW, 1, 1, 0.01, false);
-					giveItemRandomly(player, null, KELBIM_DUAL_DAGER, 1, 1, 0.01, false);
-					giveItemRandomly(player, null, KELBIM_DAGER, 1, 1, 0.01, false);
-					giveItemRandomly(player, null, KELBIM_CROSSBOW, 1, 1, 0.01, false);
-					giveItemRandomly(player, null, KELBIM_ATELIA_FRAGMENT, 1, 1, 0.05, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_THROWER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_STORMER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_RETRIBUTER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_BUSTER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_DUALSWORD, 1, 1, 0.015, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_FIGHTER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_CASTER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_DUAL_DAGGER, 1, 1, 0.015, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_SLASHER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_CUTTER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_SHAPER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_AVANGER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_DUAL_BLUNT, 1, 1, 0.015, false);
-					giveItemRandomly(player, null, BLESSED_SPECTER_SHOOTER, 1, 1, 0.02, false);
-					giveItemRandomly(player, null, DARK_ETERNAL_ENHACEMENT_STONE, 1, 1, 0.25, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_BREASTPLATE, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_LEATHER_ARMOR, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_TUNIC, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_LEATHER_LEGGINGS, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, HIGH_GRADE_WIND_DEY_PACK, 1, 1, 0.3, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_STOCKINGS, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, LV_5_LEGENDERY_DEY_PACK, 1, 1, 0.1, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_SHOES, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_HELMET, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_GAITERS, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_LEATHER_HELMET, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_CIRCLET, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_GUANTLETS, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_LEATHER_GLOVES, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, LV_5_ANCIENT_DEY_PACK, 1, 1, 0.15, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_LEATHER_BOOTS, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_BOOTS, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_GLOVES, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, LV_5_GIANT_DEY_PACK, 1, 1, 0.15, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_SIGIL, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, BLESSED_SERAPH_SHIELD, 1, 1, 0.025, false);
-					giveItemRandomly(player, null, DARK_ETERNAL_ENHACEMENT_STONE_FRAGMENT, 1, 1, 0.55, false);
-					giveItemRandomly(player, null, TOP_GRADE_SPIRIT_STONE, 1, 1, 0.06, false);
-					giveItemRandomly(player, null, MID_GRADE_WIND_DYE_PACK, 1, 1, 0.3, false);
-					giveItemRandomly(player, null, LV_4_LEGENDERY_DEY_PACK, 1, 1, 0.2, false);
-					giveItemRandomly(player, null, FORTUNE_POKET_STAGE_5, 1, 1, 0.32, false);
-					giveItemRandomly(player, null, LEONAS_SCROLL_10000000_SP, 1, 1, 0.25, false);
-					giveItemRandomly(player, null, LOW_GRADE_WIND_DYE_PACK, 1, 1, 0.38, false);
-					giveItemRandomly(player, null, LV_4_ANCIENT_DEY_PACK, 1, 1, 0.24, false);
-					giveItemRandomly(player, null, LV_3_LEGENDERY_DEY_PACK, 1, 1, 0.25, false);
-					giveItemRandomly(player, null, HIGH_GRADE_SPIRIT_STONE, 1, 1, 0.08, false);
-					giveItemRandomly(player, null, LV_4_GIANT_DEY_PACK, 1, 1, 0.2, false);
-					giveItemRandomly(player, null, MID_GRADE_SPIRIT_STONE, 1, 1, 0.1, false);
-					giveItemRandomly(player, null, SPIRIT_STONE_HAIR_ACCESSORY, 1, 1, 0.1, false);
-					giveItemRandomly(player, null, LV_3_ANCIENT_DEY_PACK, 1, 1, 0.26, false);
-					giveItemRandomly(player, null, LEONAS_SCROLL_5000000_SP, 1, 1, 0.3, false);
-					giveItemRandomly(player, null, LV_3_GIANT_DEY_PACK, 1, 1, 0.25, false);
-					giveItemRandomly(player, null, LEONAS_SCROLL_1000000_SP, 1, 1, 0.35, false);
-					giveItemRandomly(player, null, GAMESTONE_R_GRADE, 1, 1, 0.8, false);
-					giveItemRandomly(player, null, BLUEBERRY_CAKE, 3, 3, 0.3, false);
-					giveItemRandomly(player, null, SPIRIT_STONE, 1, 1, 0.15, false);
-					giveItemRandomly(player, null, BLESSED_SPIRITSHOT_R_GEADE, 500, 500, 0.7, false);
-					giveItemRandomly(player, null, SOULSHOT_R_GEADE, 2000, 2000, 0.8, false);
-					giveItemRandomly(player, null, CRYSTAL_R_GEADE, 20, 20, 0.14, false);
+					giveItems(player, getReward());
 					htmltext = "33873-1.htm";
 				}
 				else
@@ -238,7 +186,12 @@ public final class LetterCollector extends LongTimeEvent
 			}
 			case "ncsoft":
 			{
-				if ((getQuestItemsCount(player, N) >= 1) && (getQuestItemsCount(player, C) >= 1) && (getQuestItemsCount(player, S) >= 1) && (getQuestItemsCount(player, O) >= 1) && (getQuestItemsCount(player, F) >= 1) && (getQuestItemsCount(player, T) >= 1))
+				if ((getQuestItemsCount(player, N) >= 1) && //
+					(getQuestItemsCount(player, C) >= 1) && //
+					(getQuestItemsCount(player, S) >= 1) && //
+					(getQuestItemsCount(player, O) >= 1) && //
+					(getQuestItemsCount(player, F) >= 1) && //
+					(getQuestItemsCount(player, T) >= 1))
 				{
 					takeItems(player, N, 1);
 					takeItems(player, C, 1);
@@ -246,6 +199,7 @@ public final class LetterCollector extends LongTimeEvent
 					takeItems(player, O, 1);
 					takeItems(player, F, 1);
 					takeItems(player, T, 1);
+					giveItems(player, getReward());
 					htmltext = "33873-1.htm";
 				}
 				else
@@ -256,6 +210,26 @@ public final class LetterCollector extends LongTimeEvent
 			}
 		}
 		return htmltext;
+	}
+	
+	private ItemHolder getReward()
+	{
+		if (getRandom(100) < 1)
+		{
+			return REWARDS_TAUTI[getRandom(REWARDS_TAUTI.length)];
+		}
+		else if (getRandom(100) < 4)
+		{
+			return REWARDS_SPECTER[getRandom(REWARDS_SPECTER.length)];
+		}
+		else if (getRandom(100) < 4)
+		{
+			return REWARDS_SERAPH[getRandom(REWARDS_SERAPH.length)];
+		}
+		else
+		{
+			return OTHER_REWARDS[getRandom(OTHER_REWARDS.length)];
+		}
 	}
 	
 	@Override
