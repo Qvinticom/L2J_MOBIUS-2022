@@ -102,7 +102,7 @@ public class Helios extends AbstractNpcAI
 		if (npc.getId() == HELIOS)
 		{
 			GrandBossManager.getInstance().setBossStatus(HELIOS, DEAD);
-			final long respawnTime = (Config.HELIOS_SPAWN_INTERVAL + getRandom(-Config.HELIOS_SPAWN_RANDOM, Config.LINDVIOR_SPAWN_RANDOM)) * 3600000;
+			final long respawnTime = (Config.HELIOS_SPAWN_INTERVAL + getRandom(-Config.HELIOS_SPAWN_RANDOM, Config.HELIOS_SPAWN_RANDOM)) * 3600000;
 			final StatsSet info = GrandBossManager.getInstance().getStatsSet(HELIOS);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(HELIOS, info);
