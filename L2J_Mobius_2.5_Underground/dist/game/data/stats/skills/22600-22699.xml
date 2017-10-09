@@ -2823,21 +2823,30 @@
 		</effects>
 	</skill>
 	<skill id="22698" toLevel="1" name="Flynt's Sealed Rune of Destruction">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 7 permanently, and has a 5% chance of inflicting 20% additional damage during a skill attack. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
 		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- 5% Chance of inflicting additional damage. -->
+				<minDamage>1</minDamage>
+				<skillId>22704</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>5</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="StatUp">
+				<amount>7</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22699" toLevel="1" name="Dr. Destroy's Sealed Rune of Skill">
 		<!-- AUTO GENERATED SKILL -->

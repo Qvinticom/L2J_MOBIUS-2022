@@ -109,12 +109,10 @@
 		</effects>
 	</skill>
 	<skill id="22704" toLevel="1" name="Flynt's Sealed Rune of Destruction_Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Rune is activated, inflicting a brand and additional damage. -->
 		<icon>icon.skill11511</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
-		<coolTime>30000</coolTime>
 		<effectPoint>-712</effectPoint>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -122,13 +120,18 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
-		<activateRate>0</activateRate>
-		<magicLvl>1</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
-		<reuseDelay>30000</reuseDelay>
-		<targetType>ENEMY</targetType>
+		<abnormalTime>1</abnormalTime>
+		<activateRate>100</activateRate>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22705" toLevel="1" name="Dr. Destroy's Sealed Rune of Skill">
 		<!-- AUTO GENERATED SKILL -->
