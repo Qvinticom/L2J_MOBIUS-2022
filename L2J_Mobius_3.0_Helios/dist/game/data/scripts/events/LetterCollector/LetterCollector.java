@@ -88,7 +88,7 @@ public final class LetterCollector extends LongTimeEvent
 		new ItemHolder(18064, 1), // Blessed Seraph Shoes
 		new ItemHolder(18065, 1), // Blessed Seraph Sigil
 	};
-	private static final ItemHolder[] OTHER_REWARDS =
+	private static final ItemHolder[] REWARDS_OTHER =
 	{
 		new ItemHolder(17371, 20), // Crystal (R-grade)
 		new ItemHolder(17754, 2000), // Soulshot (R-grade)
@@ -218,17 +218,17 @@ public final class LetterCollector extends LongTimeEvent
 		{
 			return REWARDS_TAUTI[getRandom(REWARDS_TAUTI.length)];
 		}
-		else if (getRandom(100) < 4)
+		else if (getRandom(100) < 3)
 		{
 			return REWARDS_SPECTER[getRandom(REWARDS_SPECTER.length)];
 		}
-		else if (getRandom(100) < 4)
+		else if (getRandom(100) < 3)
 		{
 			return REWARDS_SERAPH[getRandom(REWARDS_SERAPH.length)];
 		}
 		else
 		{
-			return OTHER_REWARDS[getRandom(OTHER_REWARDS.length)];
+			return REWARDS_OTHER[getRandom(REWARDS_OTHER.length)];
 		}
 	}
 	
