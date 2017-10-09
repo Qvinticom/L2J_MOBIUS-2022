@@ -2792,7 +2792,6 @@
 		</effects>
 	</skill>
 	<skill id="22697" toLevel="1" name="Flynt's Sealed Rune of Will">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 7 permanently, and has a 5% chance of becoming invincible for 5 sec. when attacked. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
@@ -2800,13 +2799,28 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- 5% Chance of becoming invincible for 5 sec. -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>5</chance>
+				<targetType>SELF</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>22703</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="StatUp">
+				<amount>7</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22698" toLevel="1" name="Flynt's Sealed Rune of Destruction">
 		<!-- AUTO GENERATED SKILL -->
