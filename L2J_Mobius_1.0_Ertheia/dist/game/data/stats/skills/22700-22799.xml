@@ -1,21 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22700" toLevel="1" name="Dr. Destroy's Sealed Rune of Wisdom">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 7 permanently, and has a 10% chance of not consuming MP for healing skills. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
 		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- 10% chance of not consuming MP for healing skills. -->
+				<minDamage>1</minDamage>
+				<skillId>22706</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>10</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="StatUp">
+				<amount>7</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22701" toLevel="1" name="Harp's Sealed Rune of Power Trigger" usingServerSideName="true">
 		<!-- Has a 5% chance of Stunning all enemies within 400 grids for 3 sec. -->
@@ -159,7 +168,6 @@
 		</effects>
 	</skill>
 	<skill id="22706" toLevel="1" name="Dr. Destroy's Sealed Rune of Wisdom_Trigger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 sec., skills do not consume MP. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<operateType>A2</operateType>
@@ -174,6 +182,13 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22707" toLevel="2" name="Vitality Maintaining Potion">
 		<!-- AUTO GENERATED SKILL -->
