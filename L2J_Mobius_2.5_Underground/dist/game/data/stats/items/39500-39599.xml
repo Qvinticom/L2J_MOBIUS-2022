@@ -954,12 +954,36 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39386" min="1" max="1" chance="30" />
+			<item id="39381" min="1" max="1" chance="30" />
+			<item id="39387" min="1" max="1" chance="15" />
+			<item id="39382" min="1" max="1" chance="15" />
+			<item id="39388" min="1" max="1" chance="5" />
+			<item id="39383" min="1" max="1" chance="5" />
+			<item id="39592" min="1" max="1" chance="50" />
+		</capsuled_items>
 	</item>
 	<item id="39561" name="Mid-grade Wind Dye Pack" type="EtcItem">
 		<!-- Wrapped Pack containing aLv. 4 CHA/LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39389" min="1" max="1" chance="50" />
+			<item id="39384" min="1" max="1" chance="50" />
+			<item id="39592" min="1" max="1" chance="30" />
+		</capsuled_items>
 	</item>
 	<item id="39562" name="High-grade Wind Dye Pack" type="EtcItem">
 		<!-- Wrapped Pack containing aLv. 5 CHA/LUC Dye. -->
@@ -967,6 +991,16 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39390" min="1" max="1" chance="50" />
+			<item id="39385" min="1" max="1" chance="50" />
+			<item id="39592" min="1" max="1" chance="10" />
+		</capsuled_items>
 	</item>
 	<item id="39563" name="Talisman - Wind Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind. -->
