@@ -43,6 +43,7 @@ public class Helios extends AbstractNpcAI
 	// Status
 	private static final int ALIVE = 0;
 	private static final int WAITING = 1;
+	private static final int FIGHTING = 1;
 	private static final int DEAD = 3;
 	// Misc
 	private static final int HELIOS_RAID_DURATION = 5; // hours
@@ -77,9 +78,12 @@ public class Helios extends AbstractNpcAI
 			}
 			case "beginning":
 			{
-				GrandBossManager.getInstance().setBossStatus(HELIOS, WAITING);
-				bossInstance = addSpawn(HELIOS, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
-				startQuestTimer("resetRaid", HELIOS_RAID_DURATION * 60 * 60 * 1000, bossInstance, null);
+				if (GrandBossManager.getInstance().getBossStatus(HELIOS) == WAITING)
+				{
+					GrandBossManager.getInstance().setBossStatus(HELIOS, FIGHTING);
+					bossInstance = addSpawn(HELIOS, HELIOS_SPAWN_LOC.getX(), HELIOS_SPAWN_LOC.getY(), HELIOS_SPAWN_LOC.getZ(), HELIOS_SPAWN_LOC.getHeading(), false, 0, false);
+					startQuestTimer("resetRaid", HELIOS_RAID_DURATION * 60 * 60 * 1000, bossInstance, null);
+				}
 				break;
 			}
 			case "resetRaid":

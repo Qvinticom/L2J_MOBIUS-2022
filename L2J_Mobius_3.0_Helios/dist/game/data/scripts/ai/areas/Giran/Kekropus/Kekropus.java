@@ -46,6 +46,7 @@ public final class Kekropus extends AbstractNpcAI
 	private static final Location RAID_ENTER_LOC = new Location(79313, 153617, 2307);
 	// Status
 	private static final int ALIVE = 0;
+	private static final int WAITING = 1;
 	private static final int DEAD = 3;
 	
 	private Kekropus()
@@ -129,6 +130,7 @@ public final class Kekropus extends AbstractNpcAI
 						}
 					}
 				}
+				GrandBossManager.getInstance().setBossStatus(HELIOS, WAITING);
 				heliosAI().startQuestTimer("beginning", Config.HELIOS_WAIT_TIME * 60000, null, null);
 				break;
 			}
