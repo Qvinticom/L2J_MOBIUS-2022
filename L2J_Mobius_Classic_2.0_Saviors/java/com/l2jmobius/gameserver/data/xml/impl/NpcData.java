@@ -446,7 +446,8 @@ public class NpcData implements IGameXmlReader
 												final NamedNodeMap drop_attrs = drop_node.getAttributes();
 												if ("item".equals(drop_node.getNodeName().toLowerCase()))
 												{
-													final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), parseDouble(drop_attrs, "chance"));
+													final double chance = parseDouble(drop_attrs, "chance");
+													final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY_DROP ? chance / 100 : chance);
 													if (ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null)
 													{
 														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
