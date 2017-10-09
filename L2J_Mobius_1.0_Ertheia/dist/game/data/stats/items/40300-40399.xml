@@ -1038,6 +1038,43 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="22887" min="1" max="1" chance="0.82" /> <!-- Unicorn Bracelet -->
+			<item id="22265" min="1" max="1" chance="0.82" /> <!-- Diadem from the Pegasus Horn Event -->
+			<item id="39738" min="1" max="1" chance="0.82" /> <!-- Rune Stone -->
+			<item id="37008" min="1" max="1" chance="11" /> <!-- Strawberry Cake (HP Elixir) -->
+			<item id="37009" min="1" max="1" chance="11" /> <!-- Blueberry Cake (Elixir of MP) -->
+			<item id="37010" min="1" max="1" chance="11" /> <!-- Cheesecake (Elixir CP) -->
+			<item id="39381" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 1 -->
+			<item id="39382" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 2 -->
+			<item id="39383" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 3 -->
+			<item id="39384" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 4 -->
+			<item id="39385" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 5 -->
+			<item id="39386" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 1 -->
+			<item id="39387" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 2 -->
+			<item id="39388" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 3 -->
+			<item id="39389" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 4 -->
+			<item id="39390" min="1" max="1" chance="0.82" /> <!-- Paint of the Wind Lv. 5 -->
+			<item id="40063" min="1" max="1" chance="6" /> <!-- A fragment of the Ancient Book of Secrets -->
+			<item id="23861" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
+			<item id="23862" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
+			<item id="23863" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
+			<item id="23864" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
+			<item id="23865" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
+			<item id="23866" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
+			<item id="23867" min="1" max="1" chance="0.82" /> <!-- Shard of Bottles -->
+			<item id="36513" min="1" max="1" chance="0.82" /> <!-- Elsium Power -->
+			<item id="3936" min="1" max="1" chance="21" /> <!-- Scroll of Resurrection -->
+			<item id="1538" min="1" max="1" chance="21" /> <!-- Scroll of Teleport -->
+			<item id="23860" min="1" max="1" chance="0.82" /> <!-- Chest with Raid Boss Soul -->
+			<item id="23977" min="1" max="1" chance="0.82" /> <!-- Packing: Agathion Pegasus -->
+		</capsuled_items>
 	</item>
 	<item id="40366" name="Galup's Gift Pouch" type="EtcItem">
 		<!-- Galup's gift after he had eaten his fill. Double-click to obtain a Carrot Pouch and feel some Horse Power. -->
