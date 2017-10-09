@@ -43,7 +43,7 @@ public class Helios extends AbstractNpcAI
 	// Status
 	private static final int ALIVE = 0;
 	private static final int WAITING = 1;
-	private static final int FIGHTING = 1;
+	private static final int FIGHTING = 2;
 	private static final int DEAD = 3;
 	// Misc
 	private static final int HELIOS_RAID_DURATION = 5; // hours
