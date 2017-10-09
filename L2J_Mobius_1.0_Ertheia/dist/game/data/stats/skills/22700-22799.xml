@@ -49,30 +49,33 @@
 		</effects>
 	</skill>
 	<skill id="22702" toLevel="1" name="Harp's Sealed Rune of Magic_Trigger_Decrease Defense">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases M. Def. of target and all enemies within 400 grids by 20% for 10 sec. -->
 		<icon>icon.skill1263</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
-		<hitTime>1500</hitTime>
-		<reuseDelay>5000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-209</effectPoint>
 		<abnormalType>MD_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>100</activateRate>
 		<magicLvl>1</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
-		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22703" toLevel="1" name="Flynt's Sealed Rune of Will_Trigger">
 		<!-- AUTO GENERATED SKILL -->

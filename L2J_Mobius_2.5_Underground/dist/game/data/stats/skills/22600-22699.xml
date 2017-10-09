@@ -2766,21 +2766,30 @@
 		</effects>
 	</skill>
 	<skill id="22696" toLevel="1" name="Harp's Sealed Rune of Magic">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 7 permanently, and has a 10% chance of decreasing M. Def. of all enemies within 400 grids by 20% for 10 sec. during a magical attack. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
 		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Chance of decreasing -10% M. Def -->
+				<minDamage>1</minDamage>
+				<skillId>22702</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>10</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>ENEMY</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="StatUp">
+				<amount>7</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22697" toLevel="1" name="Flynt's Sealed Rune of Will">
 		<!-- AUTO GENERATED SKILL -->
