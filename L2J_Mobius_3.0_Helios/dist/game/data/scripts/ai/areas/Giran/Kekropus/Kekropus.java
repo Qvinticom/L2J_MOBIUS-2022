@@ -60,6 +60,7 @@ public final class Kekropus extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
+		final int status = GrandBossManager.getInstance().getBossStatus(HELIOS);
 		switch (event)
 		{
 			case "teleport":
@@ -75,7 +76,6 @@ public final class Kekropus extends AbstractNpcAI
 				}
 				else
 				{
-					final int status = GrandBossManager.getInstance().getBossStatus(HELIOS);
 					if ((status > ALIVE) && (status < DEAD))
 					{
 						return "34222-03.html";
@@ -130,8 +130,11 @@ public final class Kekropus extends AbstractNpcAI
 						}
 					}
 				}
-				GrandBossManager.getInstance().setBossStatus(HELIOS, WAITING);
-				heliosAI().startQuestTimer("beginning", Config.HELIOS_WAIT_TIME * 60000, null, null);
+				if (status == ALIVE)
+				{
+					GrandBossManager.getInstance().setBossStatus(HELIOS, WAITING);
+					heliosAI().startQuestTimer("beginning", Config.HELIOS_WAIT_TIME * 60000, null, null);
+				}
 				break;
 			}
 		}
