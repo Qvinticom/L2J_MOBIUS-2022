@@ -60,7 +60,6 @@ public final class Kekropus extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		final int status = GrandBossManager.getInstance().getBossStatus(HELIOS);
 		switch (event)
 		{
 			case "teleport":
@@ -70,6 +69,7 @@ public final class Kekropus extends AbstractNpcAI
 			}
 			case "helios":
 			{
+				final int status = GrandBossManager.getInstance().getBossStatus(HELIOS);
 				if (player.isGM())
 				{
 					player.teleToLocation(RAID_ENTER_LOC, true);
