@@ -2849,20 +2849,29 @@
 		</effects>
 	</skill>
 	<skill id="22699" toLevel="1" name="Dr. Destroy's Sealed Rune of Skill">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 7 permanently, and has a 5% chance of increasing Critical Damage and Critical Rate by 30% for 10 sec. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
 		<passiveConditions>
-			<condition name="CheckLevel">
-				<minLevel>1</minLevel>
-				<maxLevel>85</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
 			<condition name="OpNotOlympiad" />
 		</passiveConditions>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- 5% chance of increasing Critical Damage and Critical Rate. -->
+				<minDamage>1</minDamage>
+				<skillId>22705</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>5</chance>
+				<isCritical>true</isCritical>
+				<allowSkillAttack>false</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="StatUp">
+				<amount>7</amount>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
 	</skill>
 </list>

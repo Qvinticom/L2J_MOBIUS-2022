@@ -134,7 +134,6 @@
 		</effects>
 	</skill>
 	<skill id="22705" toLevel="1" name="Dr. Destroy's Sealed Rune of Skill">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 sec., Critical Damage and Critical Rage are increased. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A2</operateType>
@@ -148,6 +147,16 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22706" toLevel="1" name="Dr. Destroy's Sealed Rune of Wisdom_Trigger">
 		<!-- AUTO GENERATED SKILL -->
