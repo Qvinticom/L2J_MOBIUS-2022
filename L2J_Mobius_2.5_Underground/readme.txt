@@ -65,11 +65,13 @@ Underground:
 -Daily rewards
 
 Events:
+-Birth of Draco
 -Character Birthday
 -Eve the Fortune Teller
 -Freya Celebration
 -Gift of Vitality
 -Heavy Medal
+-Hungry Horse
 -Hunt for Santa
 -Letter Collector
 -Love your Gatekeeper

@@ -17,6 +17,7 @@ Before Goddess of Destruction:
 -Kamaloka
 -Castle Dungeons
 -Fortress Dungeons
+-Prime Shop
 
 Goddess of Destruction:
 -New Talking Island
@@ -52,11 +53,13 @@ Ertheia:
 -Auto fishing
 
 Events:
+-Birth of Draco
 -Character Birthday
 -Eve the Fortune Teller
 -Freya Celebration
 -Gift of Vitality
 -Heavy Medal
+-Hungry Horse
 -Hunt for Santa
 -Letter Collector
 -Love your Gatekeeper

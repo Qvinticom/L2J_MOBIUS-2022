@@ -67,16 +67,16 @@ Underground:
 Helios:
 -Giants Cave
 -Ramona
--Updated Daily Rewards
--Updated quests
 -Faction system
 
 Events:
+-Birth of Draco
 -Character Birthday
 -Eve the Fortune Teller
 -Freya Celebration
 -Gift of Vitality
 -Heavy Medal
+-Hungry Horse
 -Hunt for Santa
 -Letter Collector
 -Love your Gatekeeper
@@ -120,4 +120,5 @@ Others:
 TODO:
 -Provisional Clan Halls
 -Mystic Tavern instanced zones
--Superion Fortress
+-Helios Boss
+
