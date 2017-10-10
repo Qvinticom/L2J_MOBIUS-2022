@@ -2099,13 +2099,18 @@
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218" magical="1877" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2135,13 +2140,18 @@
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218" magical="1877" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2168,15 +2178,20 @@
 	<npc id="23568" level="100" type="L2Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="24981655" sp="59955" />
+		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218" magical="1877" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2204,15 +2219,20 @@
 	<npc id="23569" level="103" type="L2Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="69350056" sp="166440" />
+		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="77986" hpRegen="11.5" mp="25074" mpRegen="3.9" />
+			<vitals hp="53771" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218" magical="1877" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2247,13 +2267,18 @@
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218" magical="1877" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2281,13 +2306,18 @@
 		<race>PLANT</race>
 		<acquire exp="69350056" sp="166440" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="77986" hpRegen="11.5" mp="25074" mpRegen="3.9" />
+			<vitals hp="53771" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218" magical="1877" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2322,13 +2352,18 @@
 		<race>PLANT</race>
 		<acquire exp="24981655" sp="59955" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218" magical="1877" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2356,22 +2391,21 @@
 		<race>PLANT</race>
 		<acquire exp="69350056" sp="166440" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="77986" hpRegen="11.5" mp="25074" mpRegen="3.9" />
+			<vitals hp="53771" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4218" magical="1877" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="5" /> <!-- Plants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2397,20 +2431,23 @@
 		<race>PLANT</race>
 		<acquire exp="69350056" sp="166440" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="77986" hpRegen="10.5" mp="25074" mpRegen="3.6" />
+			<vitals hp="87349" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6920" magical="1925" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
-			<skill id="4416" level="5" /> <!-- Plant -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> 
-			<skill id="4411" level="12" /> 
-			<skill id="4412" level="12" /> 
-			<skill id="4413" level="12" /> 
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2436,16 +2473,23 @@
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="87349" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6920" magical="1925" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2470,16 +2514,23 @@
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="87349" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6920" magical="1925" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2504,16 +2555,23 @@
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="87349" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6920" magical="1925" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2538,13 +2596,18 @@
 		<race>PLANT</race>
 		<acquire exp="112355490" sp="269653" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="196391" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="189198" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<attack physical="102565" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="14990" magical="1956" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2576,13 +2639,18 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="24981655" sp="59955" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<attack physical="28300" magical="12593" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4136" magical="1840" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2611,13 +2679,18 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="24981655" sp="59955" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<attack physical="28300" magical="12593" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4136" magical="1840" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2645,13 +2718,18 @@
 		<race>PLANT</race>
 		<acquire exp="32981655" sp="71155" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="93023" hpRegen="10.5" mp="30928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<attack physical="28300" magical="12593" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4136" magical="1840" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2696,13 +2774,18 @@
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60447" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="87349" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6920" magical="1925" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2730,13 +2813,18 @@
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="87349" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6920" magical="1925" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2764,13 +2852,18 @@
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="87349" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6920" magical="1925" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2798,13 +2891,18 @@
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="87349" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6920" magical="1925" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->

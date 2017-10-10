@@ -1471,7 +1471,6 @@
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1515,7 +1514,6 @@
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1560,7 +1558,6 @@
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1611,7 +1608,6 @@
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1659,7 +1655,6 @@
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1703,7 +1698,6 @@
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1747,7 +1741,6 @@
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1787,7 +1780,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1814,7 +1806,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1841,7 +1832,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1868,7 +1858,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1895,7 +1884,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1912,7 +1900,7 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-		<npc id="23774" level="102" type="L2Monster" name="Delta Bathus">
+	<npc id="23774" level="102" type="L2Monster" name="Delta Bathus">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="16653" level="1" />
@@ -1930,7 +1918,7 @@
 			<defence physical="16590" magical="22114" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" />
+
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1990,7 +1978,6 @@
 			<defence physical="32114" magical="19990" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2049,8 +2036,7 @@
 			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
 			<defence physical="16590" magical="22114" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="true" />		
+		</stats>		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2110,8 +2096,7 @@
 			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
 			<defence physical="17778" magical="17778" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="true" />		
+		</stats>	
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2172,7 +2157,6 @@
 			<defence physical="17092" magical="22559" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="true" />	
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2231,7 +2215,6 @@
 			<defence physical="19092" magical="25559" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
 			</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2290,7 +2273,6 @@
 			<defence physical="17778" magical="17778" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
 			</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2353,7 +2335,6 @@
 			<defence physical="19092" magical="25559" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
 			</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2414,7 +2395,6 @@
 			<defence physical="19092" magical="25559" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
 			</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2475,7 +2455,6 @@
 			<defence physical="28555" magical="31279" />	<!-- Guess -->
 			<abnormalResist physical="10" magical="10" />
 			</stats>
-		<status attackable="true" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2512,7 +2491,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2546,7 +2524,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2579,17 +2556,24 @@
 	<npc id="23786" level="100" type="L2Monster" name="Nymph Rose">
 		<race>PLANT</race>
 		<acquire exp="24987295" sp="59969" />
-		<stats>
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="94599" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7495" magical="1956" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->			
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2614,17 +2598,24 @@
 	<npc id="23787" level="100" type="L2Monster" name="Nymph Lily">
 		<race>PLANT</race>
 		<acquire exp="24987295" sp="59969" />
-		<stats>
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="94599" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7495" magical="1956" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2649,17 +2640,24 @@
 	<npc id="23788" level="100" type="L2Monster" name="Nymph Tulip">
 		<race>PLANT</race>
 		<acquire exp="24987295" sp="59969" />
-		<stats>
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="94599" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7495" magical="1956" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2682,17 +2680,24 @@
 	<npc id="23789" level="100" type="L2Monster" name="Nymph Cosmos">
 		<race>PLANT</race>
 		<acquire exp="24987295" sp="59969" />
-		<stats>
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="94599" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="7495" magical="1956" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
@@ -2722,7 +2727,6 @@
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->

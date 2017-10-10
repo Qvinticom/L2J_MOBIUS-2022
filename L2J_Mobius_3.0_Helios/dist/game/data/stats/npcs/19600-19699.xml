@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19600" level="101" type="L2Monster" name="Flower Bud">
-		<!-- GUESSED BASED OTHER NPC's in AREA - FIXME -->
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
-		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="58233" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<attack physical="30955" magical="12921" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4524" magical="1888" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
 			</speed>
-			<attack physical="7606.89031824671" magical="1021.122892374432" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="948.680184461517" magical="950.138334234944" />
 		</stats>
 		<skill_list>
 			<skill id="4416" level="5" /> <!-- Plants -->
