@@ -685,7 +685,6 @@
 			<attack physical="129.70430107527" magical="89.081014598074" critical="4" attackSpeed="253" range="40" />
 			<defence physical="137.23825693265" magical="100.07063809748" />
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="4412" level="5" /> <!-- Very Weak P. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -713,7 +712,6 @@
 			<attack physical="129.70430107527" magical="89.081014598074" critical="4" attackSpeed="253" range="40" />
 			<defence physical="137.09677419355" magical="100.97713739913" />
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -727,25 +725,24 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="23423" level="77" type="L2Monster" name="Mesmer Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23423" level="80" type="L2Monster" name="Mesmer Dragon">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="274158" sp="65" />
+		<acquire exp="269969" sp="64" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8570" hpRegen="8.5" mp="1574" mpRegen="3" />
-			<speed>
-				<walk ground="46" />
-				<run ground="170" />
-			</speed>
-			<attack physical="856.50236230318" magical="585.03293260884" critical="4" attackSpeed="253" range="40" />
-			<defence physical="328.31325301205" magical="240.56622529723" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="19742" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<attack physical="13819" magical="1506" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5922" magical="837" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -772,25 +769,24 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="23424" level="78" type="L2Monster" name="Gargoyle Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23424" level="81" type="L2Monster" name="Gargoyle Dragon">
 		<race>CONSTRUCT</race>
-		<sex>FEMALE</sex>
-		<acquire exp="297057" sp="71" />
+		<sex>MALE</sex>
+		<acquire exp="331748" sp="79" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8923" hpRegen="8.5" mp="1607" mpRegen="3" />
-			<speed>
-				<walk ground="100" />
-				<run ground="170" />
-			</speed>
-			<attack physical="890.59699860337" magical="608.15416942607" critical="4" attackSpeed="253" range="40" />
-			<defence physical="333.15187806206" magical="243.61717608887" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
@@ -820,25 +816,24 @@
 			<height normal="65" />
 		</collision>
 	</npc>
-	<npc id="23425" level="78" type="L2Monster" name="Black Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23425" level="81" type="L2Monster" name="Black Dragon">
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="292767" sp="70" />
+		<sex>MALE</sex>
+		<acquire exp="331748" sp="79" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8923" hpRegen="8.5" mp="1607" mpRegen="3" />
-			<speed>
-				<walk ground="55" />
-				<run ground="170" />
-			</speed>
-			<attack physical="890.87947159795" magical="608.15416942607" critical="4" attackSpeed="253" range="40" />
-			<defence physical="333.15187806206" magical="243.61717608887" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
@@ -867,25 +862,24 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="23426" level="79" type="L2Monster" name="Emerald Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23426" level="82" type="L2Monster" name="Emerald Dragon">
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="321007" sp="77" />
+		<sex>MALE</sex>
+		<acquire exp="420002" sp="100" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<attack physical="930.14225705108" magical="635.13464757312" critical="4" attackSpeed="253" range="40" />
-			<defence physical="337.46556473829" magical="246.7779245457" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="21862" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="15303" magical="1568" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6558" magical="871" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 				<attack type="WIND" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -915,25 +909,24 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="23427" level="80" type="L2Monster" name="Sand Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23427" level="83" type="L2Monster" name="Sand Dragon">
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="337462" sp="80" />
+		<sex>MALE</sex>
+		<acquire exp="440867" sp="105" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<attack physical="970.59928454004" magical="662.87666622077" critical="4" attackSpeed="253" range="40" />
-			<defence physical="341.82600616167" magical="249.83671040584" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="23014" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<attack physical="16109" magical="1599" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6904" magical="888" />
 			<attribute>
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -963,25 +956,24 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="23428" level="80" type="L2Monster" name="Captain" title="Dragonblood">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23428" level="83" type="L2Monster" name="Dragonblood Captain">
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="356719" sp="85" />
+		<sex>MALE</sex>
+		<acquire exp="440867" sp="105" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
-			<speed>
-				<walk ground="56" />
-				<run ground="170" />
-			</speed>
-			<attack physical="970.59928454004" magical="662.87666622077" critical="4" attackSpeed="253" range="40" />
-			<defence physical="341.68260888909" magical="249.90709241321" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="23014" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<attack physical="16109" magical="1599" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6904" magical="888" />
 			<attribute>
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -1011,25 +1003,24 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="23429" level="79" type="L2Monster" name="Minion" title="Dragonblood">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23429" level="82" type="L2Monster" name="Dragonblood Minion">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="155222" sp="37" />
+		<sex>MALE</sex>
+		<acquire exp="420002" sp="100" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<speed>
-				<walk ground="80" />
-				<run ground="170" />
-			</speed>
-			<attack physical="930.14225705108" magical="635.09238576197" critical="4" attackSpeed="253" range="40" />
-			<defence physical="337.5" magical="246.73895961025" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="10931" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="7651" magical="1568" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3279" magical="871" />
 			<attribute>
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1057,24 +1048,23 @@
 		</collision>
 	</npc>
 	<npc id="23430" level="81" type="L2Monster" name="Prey Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="414684" sp="99" />
+		<sex>MALE</sex>
+		<acquire exp="331748" sp="79" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10385" hpRegen="9.5" mp="1708" mpRegen="3.3" />
-			<speed>
-				<walk ground="100" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1012.5147167837" magical="691.47164483324" critical="4" attackSpeed="253" range="40" />
-			<defence physical="345.88235294118" magical="253.15472723743" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -1102,24 +1092,23 @@
 		</collision>
 	</npc>
 	<npc id="23431" level="82" type="L2Monster" name="Beast Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="525002" sp="126" />
+		<sex>MALE</sex>
+		<acquire exp="420002" sp="100" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10930" hpRegen="9.5" mp="1743" mpRegen="3.3" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1055.4001301226" magical="720.63055725761" critical="4" attackSpeed="253" range="40" />
-			<defence physical="349.99780152135" magical="255.98127679804" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="21862" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="15303" magical="1568" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6558" magical="871" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -1150,24 +1139,23 @@
 		</collision>
 	</npc>
 	<npc id="23432" level="82" type="L2Monster" name="Dust Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="484480" sp="116" />
+		<sex>MALE</sex>
+		<acquire exp="387585" sp="93" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10930" hpRegen="9.5" mp="1743" mpRegen="3.3" />
-			<speed>
-				<walk ground="46" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1055.5793982114" magical="720.70631373288" critical="4" attackSpeed="253" range="40" />
-			<defence physical="349.91058914504" magical="256.16596747394" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="21862" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="15303" magical="1568" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6558" magical="871" />
 			<attribute>
 				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
 				<attack type="EARTH" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
@@ -1198,24 +1186,23 @@
 		</collision>
 	</npc>
 	<npc id="23433" level="83" type="L2Monster" name="Vampiric Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="551083" sp="132" />
+		<sex>MALE</sex>
+		<acquire exp="440867" sp="105" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11506" hpRegen="9.5" mp="1777" mpRegen="3.3" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1099.4913629169" magical="750.95869354616" critical="4" attackSpeed="253" range="40" />
-			<defence physical="354.08288162266" magical="259.10966686807" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="23014" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<attack physical="16109" magical="1599" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6904" magical="888" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
 				<attack type="WIND" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -1246,24 +1233,23 @@
 		</collision>
 	</npc>
 	<npc id="23434" level="81" type="L2Monster" name="Dragon Hatchling">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="210187" sp="50" />
+		<sex>MALE</sex>
+		<acquire exp="168151" sp="40" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10385" hpRegen="9.5" mp="1708" mpRegen="3.3" />
-			<speed>
-				<walk ground="80" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1012.5147167837" magical="691.47164483324" critical="4" attackSpeed="253" range="40" />
-			<defence physical="345.88235294118" magical="253.15472723743" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -1291,24 +1277,23 @@
 		</collision>
 	</npc>
 	<npc id="23435" level="83" type="L2Monster" name="Leopard Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="410401" sp="98" />
+		<sex>MALE</sex>
+		<acquire exp="328322" sp="78" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11506" hpRegen="9.5" mp="1777" mpRegen="3.3" />
-			<speed>
-				<walk ground="57" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1099.4362749323" magical="750.95869354616" critical="4" attackSpeed="253" range="40" />
-			<defence physical="354.06976744186" magical="259.03753166014" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="23014" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<attack physical="16109" magical="1599" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6904" magical="888" />
 			<attribute>
 				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="FIRE" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="57" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -1340,23 +1325,23 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="23436" level="77" type="L2Monster" name="Cave Servant Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23436" level="80" type="L2Monster" name="Cave Servant Archer">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="274158" sp="65" />
+		<acquire exp="269969" sp="64" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8570" hpRegen="8.5" mp="1574" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-			<attack physical="856.50236230318" magical="585.03293260884" critical="4" attackSpeed="253" range="1100" />
-			<defence physical="328.31325301205" magical="240.56622529723" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="19742" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<attack physical="13819" magical="1506" critical="4" attackSpeed="253" range="40" />
+			<defence physical="5922" magical="837" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1385,25 +1370,24 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23437" level="78" type="L2Monster" name="Cave Servant Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23437" level="81" type="L2Monster" name="Cave Servant Warrior">
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<acquire exp="306496" sp="73" />
+		<sex>MALE</sex>
+		<acquire exp="331748" sp="79" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8923" hpRegen="8.5" mp="1607" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-			<attack physical="890.87947159795" magical="608.15416942607" critical="4" attackSpeed="253" range="40" />
-			<defence physical="333.05290245954" magical="243.68250651957" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
@@ -1432,25 +1416,24 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23438" level="78" type="L2Monster" name="Metallic Cave Servant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23438" level="81" type="L2Monster" name="Metallic Cave Servant">
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<acquire exp="362848" sp="87" />
+		<sex>MALE</sex>
+		<acquire exp="331748" sp="79" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8923" hpRegen="8.5" mp="1607" mpRegen="3" />
-			<speed>
-				<walk ground="80" />
-				<run ground="170" />
-			</speed>
-			<attack physical="890.50855304734" magical="608.15416942607" critical="4" attackSpeed="253" range="40" />
-			<defence physical="333.03256500697" magical="243.64670902329" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1480,25 +1463,24 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="23439" level="79" type="L2Monster" name="Iron Cave Servant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23439" level="82" type="L2Monster" name="Iron Cave Servant">
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<acquire exp="372211" sp="89" />
+		<sex>MALE</sex>
+		<acquire exp="420002" sp="100" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<speed>
-				<walk ground="45" />
-				<run ground="170" />
-			</speed>
-			<attack physical="929.93674616795" magical="635.09238576197" critical="4" attackSpeed="253" range="40" />
-			<defence physical="337.16568819309" magical="246.77125246771" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="21862" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="15303" magical="1568" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6558" magical="871" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1528,23 +1510,23 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23440" level="80" type="L2Monster" name="Headless Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23440" level="83" type="L2Monster" name="Headless Knight">
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<acquire exp="295937" sp="71" />
+		<sex>MALE</sex>
+		<acquire exp="440867" sp="105" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
-			<speed>
-				<walk ground="70" />
-				<run ground="170" />
-			</speed>
-			<attack physical="970.69492633158" magical="662.87666622077" critical="4" attackSpeed="253" range="40" />
-			<defence physical="341.4201183432" magical="249.96582498487" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="23014" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<attack physical="16109" magical="1599" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6904" magical="888" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="170" />
+			</speed>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1574,24 +1556,23 @@
 		</collision>
 	</npc>
 	<npc id="23441" level="81" type="L2Monster" name="Bloody Grave Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<acquire exp="534852" sp="128" />
+		<sex>MALE</sex>
+		<acquire exp="427882" sp="102" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10385" hpRegen="9.5" mp="1708" mpRegen="3.3" />
-			<speed>
-				<walk ground="68" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1012.4788768234" magical="691.47164483324" critical="4" attackSpeed="253" range="40" />
-			<defence physical="345.68896051571" magical="252.91006135263" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="68" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1622,24 +1603,23 @@
 		</collision>
 	</npc>
 	<npc id="23442" level="82" type="L2Monster" name="Dark Grave Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<acquire exp="561759" sp="134" />
+		<sex>MALE</sex>
+		<acquire exp="449407" sp="107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10930" hpRegen="9.5" mp="1743" mpRegen="3.3" />
-			<speed>
-				<walk ground="42.5" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1055.5497062365" magical="720.63055725761" critical="4" attackSpeed="253" range="40" />
-			<defence physical="350.07610350076" magical="256.1900025619" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="21862" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="15303" magical="1568" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6558" magical="871" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="42.5" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1670,24 +1650,23 @@
 		</collision>
 	</npc>
 	<npc id="23443" level="82" type="L2Monster" name="Dark Grave Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="519466" sp="124" />
+		<acquire exp="415573" sp="99" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10930" hpRegen="9.5" mp="1743" mpRegen="3.3" />
-			<speed>
-				<walk ground="46" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1055.5793982114" magical="720.65939805393" critical="4" attackSpeed="253" range="40" />
-			<defence physical="349.99780152135" magical="255.98127679804" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="21862" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="15303" magical="1568" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6558" magical="871" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
@@ -1718,24 +1697,23 @@
 		</collision>
 	</npc>
 	<npc id="23444" level="83" type="L2Monster" name="Dark Grave Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<acquire exp="589667" sp="141" />
+		<sex>MALE</sex>
+		<acquire exp="471734" sp="113" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11506" hpRegen="9.5" mp="1777" mpRegen="3.3" />
-			<speed>
-				<walk ground="45" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1099.5956794067" magical="750.95869354616" critical="4" attackSpeed="253" range="40" />
-			<defence physical="354.01401720293" magical="259.16895608006" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="23014" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<attack physical="16109" magical="1599" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6904" magical="888" />
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
 				<attack type="DARK" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1765,25 +1743,24 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23445" level="77" type="L2Monster" name="Chaos Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23445" level="81" type="L2Monster" name="Chaos Dragon">
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="365544" sp="87" />
+		<sex>MALE</sex>
+		<acquire exp="331748" sp="79" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3309" hpRegen="8.5" mp="1540" mpRegen="3" />
-			<speed>
-				<walk ground="200" />
-				<run ground="170" />
-			</speed>
-			<attack physical="856.50236230318" magical="585.03293260884" critical="4" attackSpeed="253" range="40" />
-			<defence physical="328.31325301205" magical="240.56622529723" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="200" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -1811,24 +1788,23 @@
 		</collision>
 	</npc>
 	<npc id="23446" level="81" type="L2Monster" name="Crag Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="414684" sp="99" />
+		<sex>MALE</sex>
+		<acquire exp="331748" sp="79" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4154" hpRegen="9.5" mp="1708" mpRegen="3.3" />
-			<speed>
-				<walk ground="180" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1012.5147167837" magical="691.47164483324" critical="4" attackSpeed="253" range="40" />
-			<defence physical="345.88235294118" magical="253.15472723743" />
+			<!-- L2 Wiki Update date: 2017-09-12 -->
+			<vitals hp="20773" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="14541" magical="1537" critical="4" attackSpeed="253" range="40" />
+			<defence physical="6231" magical="854" />
 			<attribute>
 				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
 				<attack type="WATER" value="100" />
 			</attribute>
+			<speed>
+				<walk ground="180" />
+				<run ground="170" />
+			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
