@@ -322,21 +322,22 @@
 			<height normal="68" />
 		</collision>
 	</npc>
-	<npc id="23718" level="85" type="L2Npc" name="Glacier Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="23718" level="100" type="L2Monster" name="Glacier Golem">
+		<!-- Source: www.l2wiki.com -->
+		<race>ELEMENTAL</race>
+		<acquire exp="191032200" sp="382100" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="268854" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="2232572" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attack physical="47619.04761904762" magical="8403.361344537815" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3703.703703703704" magical="2150.537634408602" />
 		</stats>
-		<status attackable="false" />
 		<skill_list>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skill_list>
 		<collision>
 			<radius normal="40" />
