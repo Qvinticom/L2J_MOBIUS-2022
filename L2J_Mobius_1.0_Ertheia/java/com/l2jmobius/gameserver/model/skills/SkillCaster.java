@@ -343,11 +343,26 @@ public class SkillCaster implements Runnable
 		if (caster.isPlayer())
 		{
 			final L2PcInstance player = caster.getActingPlayer();
-			final L2Clan clan = player.getClan();
+			
+			// Consume fame points
+			if (_skill.getFamePointConsume() > 0)
+			{
+				if (player.getFame() < _skill.getFamePointConsume())
+				{
+					player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
+					return false;
+				}
+				player.setFame(player.getFame() - _skill.getFamePointConsume());
+				
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_FAME_HAS_BEEN_CONSUMED);
+				msg.addInt(_skill.getFamePointConsume());
+				player.sendPacket(msg);
+			}
 			
 			// Consume clan reputation points
 			if (_skill.getClanRepConsume() > 0)
 			{
+				final L2Clan clan = player.getClan();
 				if ((clan == null) || (clan.getReputationScore() < _skill.getClanRepConsume()))
 				{
 					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
@@ -978,6 +993,12 @@ public class SkillCaster implements Runnable
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(skill);
 				player.sendPacket(sm);
+				return false;
+			}
+			
+			if (player.getFame() < skill.getFamePointConsume())
+			{
+				player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
 				return false;
 			}
 			
