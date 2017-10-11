@@ -1281,6 +1281,9 @@
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="TalismanSlot">
+				<slots>6</slots>
+			</effect>
 			<effect name="StatUp">
 				<amount>5</amount>
 				<stat>CHA</stat>
