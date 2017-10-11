@@ -596,7 +596,11 @@ public abstract class Inventory extends ItemContainer
 							continue;
 						}
 						
-						player.removeSkill(itemSkill, false, itemSkill.isPassive());
+						// Update if a skill has been removed.
+						if (player.removeSkill(itemSkill, false, itemSkill.isPassive()) != null)
+						{
+							update = true;
+						}
 					}
 				}
 				
