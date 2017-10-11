@@ -823,4 +823,58 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="28486" name="La Vie En Rose's Radiant Brooch" type="Armor">
+		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="10" />
+		<skills>
+			<skill id="27832" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
+		</skills>
+		<stats>
+			<stat type="mDef">114</stat>
+		</stats>
+	</item>
+	<item id="28487" name="La Vie En Rose's Radiant Brooch" additionalName="Enchant Type" type="Armor">
+		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. CHA +1. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="10" />
+		<skills>
+			<skill id="27832" level="2" /> <!-- La Vie En Rose's Radiant Brooch -->
+		</skills>
+		<stats>
+			<stat type="mDef">114</stat>
+		</stats>
+	</item>
+	<item id="28488" name="La Vie En Rose's Radiant Brooch" additionalName="Rare Type" type="Armor">
+		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. All Basic Stats +2, Max CP +12%. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="10" />
+		<skills>
+			<skill id="27832" level="3" /> <!-- La Vie En Rose's Radiant Brooch -->
+		</skills>
+		<stats>
+			<stat type="mDef">114</stat>
+		</stats>
+	</item>
 </list>
