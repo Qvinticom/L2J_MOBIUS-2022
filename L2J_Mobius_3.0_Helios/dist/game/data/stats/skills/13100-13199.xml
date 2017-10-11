@@ -167,52 +167,76 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="13116" toLevel="1" name="Talisman (R-grade) - Knock Back Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Knock Back Resistance when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>15</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13117" toLevel="1" name="Talisman (R-grade) - Knock Down Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Knock Down Resistance when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<KNOCKDOWN>15</KNOCKDOWN>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13118" toLevel="1" name="Talisman (R-grade) - Binding Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Resistance to yoke when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>15</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13119" toLevel="1" name="Talisman (R-grade) - Pulling Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Resistance to pulling when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<PULL>15</PULL>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13120" toLevel="1" name="Talisman (R-grade) - Banishment Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Resistance to banishment when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<DEPORT>15</DEPORT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13121" toLevel="1" name="Talisman (R-grade) - Mutation Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Resistance to change when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<CHANGEBODY>15</CHANGEBODY>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13122" toLevel="1" name="Added Blow Quiver">
 		<!-- AUTO GENERATED SKILL -->
