@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.NextActionType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -336,6 +337,27 @@ public class SkillCaster implements Runnable
 			if (!caster.destroyItemByItemId(_skill.toString(), _skill.getItemConsumeId(), _skill.getItemConsumeCount(), null, true))
 			{
 				return false;
+			}
+		}
+		
+		if (caster.isPlayer())
+		{
+			final L2PcInstance player = caster.getActingPlayer();
+			final L2Clan clan = player.getClan();
+			
+			// Consume clan reputation points
+			if (_skill.getClanRepConsume() > 0)
+			{
+				if ((clan == null) || (clan.getReputationScore() < _skill.getClanRepConsume()))
+				{
+					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
+					return false;
+				}
+				clan.takeReputationScore(_skill.getClanRepConsume(), true);
+				
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_REPUTATION_HAS_BEEN_CONSUMED);
+				msg.addInt(_skill.getClanRepConsume());
+				player.sendPacket(msg);
 			}
 		}
 		
@@ -957,6 +979,17 @@ public class SkillCaster implements Runnable
 				sm.addSkillName(skill);
 				player.sendPacket(sm);
 				return false;
+			}
+			
+			// Consume clan reputation points
+			if (skill.getClanRepConsume() > 0)
+			{
+				final L2Clan clan = player.getClan();
+				if ((clan == null) || (clan.getReputationScore() < skill.getClanRepConsume()))
+				{
+					player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
+					return false;
+				}
 			}
 			
 			// Check for skill reuse (fixes macro right click press exploit).

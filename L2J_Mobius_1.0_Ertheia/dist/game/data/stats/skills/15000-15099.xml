@@ -2985,7 +2985,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15094" toLevel="1" name="Clan Flag">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Clan Flag that symbolizes your clan. Applies a buff on clan members and a de-buff on enemy clan members within a 2000 grid. It is despawned after 30 minutes but the effect lasts for 10 more minutes. Consumes 100 Clan Reputation. Can be used be Count or higher. Cooldown is 30 minute(s). -->
 		<icon>icon.etc_alliance_flag_i00</icon>
 		<operateType>A1</operateType>
@@ -2999,28 +2998,36 @@
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<clanRepConsume>100</clanRepConsume>
 		<conditions>
 			<condition name="OpCanNotUseAirship" />
 			<condition name="OpSocialClass">
 				<socialClass>8</socialClass>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>19269</npcId> <!-- Clan Flag -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15095" toLevel="1" name="Clan Rising">
 		<!-- Glory Days confirmed -->
 		<!-- Through the clan flag, increases clan members' PvP damage by 5% and decreases received PvP damage by 5%. -->
 		<icon>BranchSys2.icon.skill20006</icon>
-		<operateType>A2</operateType>
-		<hitTime>1500</hitTime>
+		<operateType>A5</operateType> <!-- Hide system messages -->
+		<blockedInOlympiad>false</blockedInOlympiad>
 		<abnormalType>FLAG_BUF</abnormalType>
+		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>99</magicLvl>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>90</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>40</abnormalTime>
+		<abnormalTime>600</abnormalTime> <!-- It is despawned after 30 minutes but the effect lasts for 10 more minutes. -->
 		<affectRange>2000</affectRange>
-		<isMagic>1</isMagic>
+		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>FRIEND_PC</affectObject>
@@ -3048,10 +3055,9 @@
 		</effects>
 	</skill>
 	<skill id="15096" toLevel="1" name="Clan Curse">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Domain where the clan flag's curse applies. -->
 		<icon>icon.skill1167</icon>
-		<operateType>A2</operateType>
+		<operateType>A5</operateType> <!-- Hide system messages -->
 		<abnormalType>FLAG_DEBUF</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
@@ -3062,13 +3068,12 @@
 		<activateRate>100</activateRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>40</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<trait>POISON</trait>
 		<affectRange>2000</affectRange>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND_PC</affectObject>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15097" toLevel="1" name="Raid Boss">
 		<!-- Glory Days confirmed -->

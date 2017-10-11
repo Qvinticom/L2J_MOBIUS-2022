@@ -2662,11 +2662,9 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="19269" level="90" type="L2Monster" name="Clan Flag">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="19269" level="90" type="L2EffectPoint" name="Clan Flag" usingServerSideName="true">
 		<race>CONSTRUCT</race>
 		<sex>ETC</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1277698" hpRegen="8.5" mp="40" mpRegen="0.9" />
 			<speed>
@@ -2678,17 +2676,9 @@
 			<attribute>
 				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
 			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
-		<skill_list>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<status targetable="false" canMove="false" undying="true" />
+		<ai clanHelpRange="1000" aggroRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="120" />

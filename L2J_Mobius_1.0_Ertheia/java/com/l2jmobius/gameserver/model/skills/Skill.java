@@ -99,6 +99,8 @@ public final class Skill implements IIdentifiable
 	private final int _itemConsumeCount;
 	/** Id of item consumed by this skill from caster. */
 	private final int _itemConsumeId;
+	/** Clan points consumed by this skill from caster's clan */
+	private final int _clanRepConsume;
 	/** Cast range: how far can be the target. */
 	private final int _castRange;
 	/** Effect range: how far the skill affect the target. */
@@ -227,6 +229,7 @@ public final class Skill implements IIdentifiable
 		_hpConsume = set.getInt("hpConsume", 0);
 		_itemConsumeCount = set.getInt("itemConsumeCount", 0);
 		_itemConsumeId = set.getInt("itemConsumeId", 0);
+		_clanRepConsume = set.getInt("clanRepConsume", 0);
 		
 		_castRange = set.getInt("castRange", -1);
 		_effectRange = set.getInt("effectRange", -1);
@@ -722,6 +725,14 @@ public final class Skill implements IIdentifiable
 	public int getItemConsumeId()
 	{
 		return _itemConsumeId;
+	}
+	
+	/**
+	 * @return Clan points consumed by this skill from caster's clan
+	 */
+	public int getClanRepConsume()
+	{
+		return _clanRepConsume;
 	}
 	
 	/**
