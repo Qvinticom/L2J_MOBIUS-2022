@@ -507,13 +507,16 @@
 	<item id="37533" name="NC Messenger's Hat" type="Armor">
 		<!-- NC Messenger's Hat. Uses 2 hair accessory slots. When equipped, STR/DEX/INT/WIT each increase by 1. -->
 		<set name="icon" val="icon.nc_hair_acc" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="default_action" val="EQUIP" />
 		<skills>
 			<skill id="13543" level="1" /> <!-- NC Messenger's Hat -->
 		</skills>

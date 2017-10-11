@@ -946,10 +946,27 @@
 		</effects>
 	</skill>
 	<skill id="13543" toLevel="1" name="NC Messenger's Hat">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1/ DEX + 1/ INT + 1/ WIT + 1. -->
 		<icon>icon.nc_hair_acc</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13544" toLevel="1" name="Kisung's Mysterious Power">
 		<!-- AUTO GENERATED SKILL -->
