@@ -3025,7 +3025,7 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>90</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>600</abnormalTime> <!-- It is despawned after 30 minutes but the effect lasts for 10 more minutes. -->
+		<abnormalTime>5</abnormalTime> <!-- TODO: It is despawned after 30 minutes but the effect lasts for 10 more minutes. -->
 		<affectRange>2000</affectRange>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
