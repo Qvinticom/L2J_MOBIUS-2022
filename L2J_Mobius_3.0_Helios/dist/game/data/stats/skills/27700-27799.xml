@@ -91,14 +91,23 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27718" toLevel="1" name="La Vie En Rose's Elegant Brooch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="JewelSlot">
+				<amount>6</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27719" toLevel="1" name="La Vie En Rose's Elegant Brooch">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="EnlargeSlot">
+				<amount>12</amount>
+				<type>INVENTORY_NORMAL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27720" toLevel="1" name="Ultimate Jewelry Box">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
