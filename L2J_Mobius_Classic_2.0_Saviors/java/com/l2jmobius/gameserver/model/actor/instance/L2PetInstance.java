@@ -36,6 +36,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import com.l2jmobius.gameserver.data.sql.impl.SummonEffectsTable;
 import com.l2jmobius.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
+import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
@@ -1199,12 +1200,20 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public long getExpForThisLevel()
 	{
+		if (getLevel() >= ExperienceData.getInstance().getMaxPetLevel())
+		{
+			return 0;
+		}
 		return getStat().getExpForLevel(getLevel());
 	}
 	
 	@Override
 	public long getExpForNextLevel()
 	{
+		if (getLevel() >= (ExperienceData.getInstance().getMaxPetLevel() - 1))
+		{
+			return 0;
+		}
 		return getStat().getExpForLevel(getLevel() + 1);
 	}
 	
