@@ -730,6 +730,7 @@
 		<!-- MP + 187. Activates 5 Talisman slots when equipped. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.high_agathion_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="commissionItemType" val="BRACELET" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -738,7 +739,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="4000" level="1" /> <!-- Returning Warrior's Bracelet -->
+		</skills>
+		<stats>
+			<stat type="maxMp">187</stat>
+		</stats>
 	</item>
 	<item id="45648" name="Pippi's Talisman" additionalName="Event" type="Armor">
 		<!-- Talisman to summon Pippi. Will be deleted once the event ends. -->
