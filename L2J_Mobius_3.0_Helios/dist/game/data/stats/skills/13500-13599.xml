@@ -969,106 +969,548 @@
 		</effects>
 	</skill>
 	<skill id="13544" toLevel="1" name="Kisung's Mysterious Power">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Magic Skill MP Consumption - 3%. -->
 		<icon>icon.skill17085</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13545" toLevel="1" name="Kisung's Great Power">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd./ Casting Spd. + 50. -->
 		<icon>icon.skill17085</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13546" toLevel="1" name="Kisung's Balanced Power">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- All stats + 1. -->
 		<icon>icon.skill17085</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13547" toLevel="1" name="Mysterious Shaper">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 440, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_the_dagger_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>440</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13548" toLevel="1" name="Mysterious Cutter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_the_sword_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>503</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13549" toLevel="1" name="Mysterious Slasher">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_the_two_handed_sword_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>612</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13550" toLevel="1" name="Mysterious Avenger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_the_axe_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>503</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13551" toLevel="1" name="Mysterious Fighter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_the_fist_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>612</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13552" toLevel="1" name="Mysterious Stormer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. Can attack multiple enemies. -->
 		<icon>icon.bm_the_pole_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>503</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13553" toLevel="1" name="Mysterious Thrower">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 991, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_the_bow_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>991</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13554" toLevel="1" name="Mysterious Shooter">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 893, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_infinity_shooter</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>893</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13555" toLevel="1" name="Mysterious Buster">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 598, Casting Spd. + 15%, and PvP Damage + 15%. -->
 		<icon>icon.bm_infinity_sword</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>598</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus"> 
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13556" toLevel="1" name="Mysterious Caster">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 598, Casting Spd. + 15%, and PvP Damage + 15%. -->
 		<icon>icon.bm_the_mace_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>598</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus"> 
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13557" toLevel="1" name="Mysterious Retributer">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, M. Atk. + 657, Casting Spd. + 15%, and PvP Damage + 15%. -->
 		<icon>icon.bm_the_staff_of_hero</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>657</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus"> 
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13558" toLevel="1" name="Mysterious Dualsword">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_r_dualsword</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>612</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13559" toLevel="1" name="Mysterious Dual Dagger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 503, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_r_dualdagger</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>503</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13560" toLevel="1" name="Mysterious Dual Blunt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max HP + 25%, Max MP + 30%, Max CP + 50%, P. Atk. + 612, Atk. Spd. + 15%, and PVP Damage + 15%. -->
 		<icon>icon.bm_r_dualblunt</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>612</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13561" toLevel="1" name="Basic Effect: Shiny Elemental Shirt">
 		<!-- M. Def. + 8. -->
