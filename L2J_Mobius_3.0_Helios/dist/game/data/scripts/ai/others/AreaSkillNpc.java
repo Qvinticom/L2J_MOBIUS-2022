@@ -18,7 +18,6 @@ package ai.others;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -34,6 +33,10 @@ public final class AreaSkillNpc extends AbstractNpcAI
 	// NPCs
 	private static final int[] BASIC = // area_skill_npc
 	{
+		143, // Totem of Body
+		144, // Totem of Spirit
+		145, // Totem of Bravery
+		146, // Totem of Fortitude
 		13018, // Maximum Defense
 		13019, // Anti-Music
 		13020, // Maximum Resist Status
@@ -58,13 +61,6 @@ public final class AreaSkillNpc extends AbstractNpcAI
 		13452, // Solo Dance
 		13453, // Solo Dance
 		13454, // Solo Dance
-	};
-	private static final int[] TOTEMS = // ai_totem_of_body
-	{
-		143, // Totem of Body
-		144, // Totem of Spirit
-		145, // Totem of Bravery
-		146, // Totem of Fortitude
 	};
 	private static final int[] DECOY = // ai_decoy
 	{
@@ -91,32 +87,25 @@ public final class AreaSkillNpc extends AbstractNpcAI
 	private AreaSkillNpc()
 	{
 		addSpawnId(BASIC);
-		addSpawnId(TOTEMS);
 		addSpawnId(DECOY);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		final L2Character summoner = npc.getSummoner();
-		if ((summoner != null) && summoner.isPlayer())
+		if (CommonUtil.contains(DECOY, npc.getId()))
 		{
-			final L2PcInstance player = summoner.getActingPlayer();
-			
-			if (CommonUtil.contains(BASIC, npc.getId()) || CommonUtil.contains(TOTEMS, npc.getId()))
-			{
-				final int despawnTime = npc.getTemplate().getParameters().getInt("despawn_time", 7);
-				getTimers().addTimer("SKILL_CAST_BASIC", 100, npc, player);
-				getTimers().addTimer("DELETE_ME", (despawnTime * 1000), npc, player);
-			}
-			else if (CommonUtil.contains(DECOY, npc.getId()))
-			{
-				final int castTime = npc.getTemplate().getParameters().getInt("i_use_term_time", 5000);
-				final int despawnTime = npc.getTemplate().getParameters().getInt("i_despawn_time", 30000);
-				onTimerEvent("SKILL_CAST_BASIC", null, npc, player); // Trigger cast instantly
-				getTimers().addTimer("SKILL_CAST_BASIC", castTime, npc, player);
-				getTimers().addTimer("DELETE_ME", despawnTime, npc, player);
-			}
+			final int castTime = npc.getTemplate().getParameters().getInt("i_use_term_time", 5000);
+			final int despawnTime = npc.getTemplate().getParameters().getInt("i_despawn_time", 30000);
+			onTimerEvent("SKILL_CAST_BASIC", null, npc, null); // Trigger cast instantly
+			getTimers().addTimer("SKILL_CAST_TIMED", castTime, npc, null);
+			getTimers().addTimer("DELETE_ME", despawnTime, npc, null);
+		}
+		else
+		{
+			final int despawnTime = npc.getTemplate().getParameters().getInt("despawn_time", 7);
+			getTimers().addTimer("SKILL_CAST_TIMED", 100, npc, null);
+			getTimers().addTimer("DELETE_ME", (despawnTime * 1000), npc, null);
 		}
 		return super.onSpawn(npc);
 	}
@@ -124,21 +113,33 @@ public final class AreaSkillNpc extends AbstractNpcAI
 	@Override
 	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("SKILL_CAST_BASIC"))
+		switch (event)
 		{
-			final SkillHolder skill = npc.getParameters().getSkillHolder(CommonUtil.contains(DECOY, npc.getId()) ? "decoy_skill" : "union_skill");
-			final int skillDelay = npc.getParameters().getInt("skill_delay", 2);
-			
-			if (skill != null)
+			case "SKILL_CAST_BASIC":
 			{
-				npc.doCast(skill.getSkill());
-				getTimers().addTimer("SKILL_CAST_BASIC", skillDelay * 1000, npc, player);
+				final SkillHolder skill = npc.getParameters().getSkillHolder(CommonUtil.contains(DECOY, npc.getId()) ? "decoy_skill" : "union_skill");
+				if (skill != null)
+				{
+					npc.doCast(skill.getSkill());
+				}
+				break;
 			}
-		}
-		else if (event.equals("DELETE_ME"))
-		{
-			getTimers().cancelTimer("SKILL_CAST_BASIC", npc, player);
-			npc.deleteMe();
+			case "SKILL_CAST_TIMED":
+			{
+				final SkillHolder skill = npc.getParameters().getSkillHolder(CommonUtil.contains(DECOY, npc.getId()) ? "decoy_skill" : "union_skill");
+				if (skill != null)
+				{
+					npc.doCast(skill.getSkill());
+					getTimers().addRepeatingTimer("SKILL_CAST_BASIC", npc.getParameters().getInt("skill_delay", 2) * 1000, npc, null);
+				}
+				break;
+			}
+			case "DELETE_ME":
+			{
+				getTimers().cancelTimer("SKILL_CAST_BASIC", npc, null);
+				npc.deleteMe();
+				break;
+			}
 		}
 	}
 	
