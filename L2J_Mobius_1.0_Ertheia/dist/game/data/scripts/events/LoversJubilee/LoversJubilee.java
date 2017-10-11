@@ -251,7 +251,7 @@ public final class LoversJubilee extends LongTimeEvent
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerLogin(OnPlayerLogin event)
 	{
-		if (isActive())
+		if (isEventPeriod())
 		{
 			event.getActiveChar().sendPacket(new ExBrBroadcastEventState(ExBrBroadcastEventState.LOVERS_JUBILEE, 1));
 		}
