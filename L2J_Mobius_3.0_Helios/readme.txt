@@ -81,6 +81,7 @@ Events:
 -Hungry Horse
 -Hunt for Santa
 -Letter Collector
+-Lovers Jubilee
 -Love your Gatekeeper
 -Master of Enchanting
 -The Power of Love
