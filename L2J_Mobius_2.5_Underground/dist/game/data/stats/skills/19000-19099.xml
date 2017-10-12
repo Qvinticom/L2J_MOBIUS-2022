@@ -499,7 +499,6 @@
 		</effects>
 	</skill>
 	<skill id="19017" toLevel="1" name="Clan Prison">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 sec., Speed of nearby enemies - 23% and stops them from escaping. Consumes 30 Spirit Ore. Consumes 3000 Individual Fame. Applies after the duke stage. -->
 		<icon>icon.skill19017</icon>
 		<operateType>A2</operateType>
@@ -526,6 +525,14 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<itemConsumeCount>30</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<famePointConsume>3000</famePointConsume>
+		<effects>
+			<effect name="Speed">
+				<amount>-23</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Root" />
+		</effects>
 	</skill>
 	<skill id="19018" toLevel="1" name="Clan Guardian Recovery">
 		<!-- Restores HP/MP/CP. -->
