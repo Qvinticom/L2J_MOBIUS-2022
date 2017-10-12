@@ -1557,7 +1557,6 @@
 		</conditions>
 	</skill>
 	<skill id="19088" toLevel="4" name="Summon Siege Golem">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a siege weapon. Requires 400 R-grade Crystals. Automatically acquired by dwarves at level 85. -->
 		<icon>icon.skill0013</icon>
 		<operateType>A1</operateType>
@@ -1579,9 +1578,19 @@
 			<condition name="CanSummonSiegeGolem" />
 			<condition name="CanSummon" />
 		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>
+					<value level="1">15054</value>
+					<value level="2">15055</value>
+					<value level="3">15056</value>
+					<value level="4">15057</value>
+				</npcId>
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19089" toLevel="4" name="Summon Wild Hog Cannon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes 30 seconds. Requires 100 R-grade Crystals. Automatically acquired by Maestro class at level 85. -->
 		<icon>icon.skill0299</icon>
 		<operateType>A1</operateType>
@@ -1603,9 +1612,19 @@
 			<condition name="CanSummonSiegeGolem" />
 			<condition name="CanSummon" />
 		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>
+					<value level="1">15058</value>
+					<value level="2">15059</value>
+					<value level="3">15060</value>
+					<value level="4">15061</value>
+				</npcId>
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19090" toLevel="4" name="Summon Swoop Cannon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Swoop Cannon. Requires 500 R-grade Crystals. Automatically acquired by dwarves at level 85. -->
 		<icon>icon.skill0448</icon>
 		<operateType>A1</operateType>
@@ -1628,6 +1647,17 @@
 			<condition name="CanSummonSiegeGolem" />
 			<condition name="CanSummon" />
 		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>
+					<value level="1">15062</value>
+					<value level="2">15063</value>
+					<value level="3">15064</value>
+					<value level="4">15065</value>
+				</npcId>
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19091" toLevel="1" name="Increase Item Drop Rate">
 		<!-- AUTO GENERATED SKILL -->
