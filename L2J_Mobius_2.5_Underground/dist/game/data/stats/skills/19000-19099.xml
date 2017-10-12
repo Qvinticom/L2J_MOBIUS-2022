@@ -1357,7 +1357,6 @@
 		</effects>
 	</skill>
 	<skill id="19080" toLevel="1" name="Sigel Ixion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1380,9 +1379,13 @@
 				<transformId>508</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>508</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19081" toLevel="1" name="Tyrr Ixion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1405,9 +1408,13 @@
 				<transformId>510</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>510</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19082" toLevel="1" name="Othell Ixion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1430,9 +1437,13 @@
 				<transformId>511</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>511</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19083" toLevel="1" name="Yul Ixion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1455,9 +1466,13 @@
 				<transformId>512</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>512</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19084" toLevel="1" name="Feoh Ixion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1480,9 +1495,13 @@
 				<transformId>513</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>513</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19085" toLevel="1" name="Iss Ixion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1505,9 +1524,13 @@
 				<transformId>514</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>514</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19086" toLevel="1" name="Wynn Ixion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1530,9 +1553,13 @@
 				<transformId>515</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>515</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19087" toLevel="1" name="Aeore Ixion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ixion. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1555,6 +1582,11 @@
 				<transformId>516</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>516</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19088" toLevel="4" name="Summon Siege Golem">
 		<!-- Summons a siege weapon. Requires 400 R-grade Crystals. Automatically acquired by dwarves at level 85. -->
