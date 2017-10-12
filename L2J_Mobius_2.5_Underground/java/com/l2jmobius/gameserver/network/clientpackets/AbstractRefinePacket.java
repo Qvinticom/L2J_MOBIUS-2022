@@ -246,6 +246,8 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		
 		_lifeStones.put(36731, new LifeStone(GRADE_NONE, 13));
 		
+		_lifeStones.put(38571, new LifeStone(GRADE_ACC, 0));
+		
 		_lifeStones.put(45929, new LifeStone(GRADE_NONE, 0));
 		_lifeStones.put(45930, new LifeStone(GRADE_MID, 13));
 		_lifeStones.put(45931, new LifeStone(GRADE_HIGH, 14));
