@@ -179,7 +179,6 @@
 		</effects>
 	</skill>
 	<skill id="19007" toLevel="1" name="Clan Summon">
-		<!-- TODO: consume Fame point -->
 		<!-- Summons a clan member. Consumes 5 Spirit Ores. Consumes 900 Individual Fame. Applies after the viscount stage. -->
 		<icon>icon.skill19007</icon>
 		<operateType>A1</operateType>
@@ -194,6 +193,7 @@
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>OTHERS</targetType>
 		<affectScope>SINGLE</affectScope>
+		<famePointConsume>900</famePointConsume>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
@@ -205,7 +205,6 @@
         </effects>
 	</skill>
 	<skill id="19008" toLevel="1" name="Clan Guardian">
-		<!-- TODO: consume Reputation -->
 		<!-- Uses the clan guardian's power to restore nearby clan members' HP/MP/CP. Consumes 100 Spirit Ores. Consumes 1000 Clan Reputation. Distinguished King or above only. -->
 		<icon>icon.skill19008</icon>
 		<operateType>A1</operateType>
@@ -219,6 +218,7 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<clanRepConsume>1000</clanRepConsume>
 		<itemConsumeCount>100</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<conditions>
@@ -295,9 +295,9 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<famePointConsume>1500</famePointConsume>
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<famePointConsume>1500</famePointConsume>
 		<effects>
 			<effect name="SummonNpc">
 				<npcId>13076</npcId>
@@ -329,7 +329,6 @@
 		</effects>
 	</skill>
 	<skill id="19012" toLevel="1" name="Clan Hide">
-        <!-- TODO: consume Reputation Point -->
 		<!-- Hides nearby clan members. Decreases Speed by 50% when hidden. Consumes 150 Soulstones. Consumes 1000 Clan Reputation. Applies after the lord stage. -->
 		<icon>icon.skill19012</icon>
 		<operateType>A2</operateType>
@@ -352,6 +351,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<clanRepConsume>1000</clanRepConsume>
 		<itemConsumeCount>150</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
         <effects>
@@ -363,7 +363,6 @@
         </effects>
 	</skill>
 	<skill id="19013" toLevel="1" name="Clan Un-debuff">
-        <!-- TODO: consume Fame Point -->
 		<!-- Cancels all debuffs of nearby clan members. Consumes 30 Spirit Ore. Consumes 1500 Individual Fame. Applies after the marquis stage. -->
 		<icon>icon.skill19013</icon>
 		<operateType>A1</operateType>
@@ -381,6 +380,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<famePointConsume>1500</famePointConsume>
 		<itemConsumeCount>30</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effect name="DispelByCategory">
@@ -390,7 +390,6 @@
 		</effect>
 	</skill>
 	<skill id="19014" toLevel="1" name="Clan Defense">
-        <!-- TODO: consume Fame Point -->
 		<!-- Makes nearby clan members invincible. Consumes 30 Spirit Ore. Consumes 1000 Clan Reputation. Applies after the distinguished king stage. -->
 		<icon>icon.SKILL19014</icon>
 		<operateType>A2</operateType>
@@ -412,6 +411,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<clanRepConsume>1000</clanRepConsume>
 		<itemConsumeCount>30</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
         <effects>
@@ -430,7 +430,6 @@
 	</skill>
 	<skill id="19015" toLevel="1" name="Clan Friendly">
 		<!-- Increases nearby clan members' P. Critical Rate by 3% and M. Critical Rate by 20. Consumes 50 Spirit Ore. Consumes 3500 Individual Fame. Applies after the marquis stage. -->
-        <!-- TODO: consume Fame Point -->
 		<icon>icon.skill19015</icon>
 		<operateType>A2</operateType>
 		<hitTime>2500</hitTime>
@@ -450,6 +449,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<famePointConsume>3500</famePointConsume>
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
@@ -465,7 +465,6 @@
 	</skill>
 	<skill id="19016" toLevel="1" name="Clan Boundary">
 		<!-- Increases nearby clan members' P. Atk. by 3% and P. Def. by 3%. Consumes 50 Spirit Ore. Consumes 3000 Individual Fame. Applies after the count stage. -->
-        <!-- TODO: consume Fame Point -->
 		<icon>icon.skill19016</icon>
 		<operateType>A2</operateType>
 		<hitTime>2500</hitTime>
@@ -485,6 +484,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<famePointConsume>3000</famePointConsume>
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
@@ -523,9 +523,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<famePointConsume>3000</famePointConsume>
 		<itemConsumeCount>30</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<famePointConsume>3000</famePointConsume>
 		<effects>
 			<effect name="Speed">
 				<amount>-23</amount>
