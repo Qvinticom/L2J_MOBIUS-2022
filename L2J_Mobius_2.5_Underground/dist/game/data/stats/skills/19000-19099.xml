@@ -284,20 +284,26 @@
 		</effects>
 	</skill>
 	<skill id="19010" toLevel="1" name="Clan Copy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a copy of yourself to cause confusion among the enemy. Consumes 50 Spirit Ores. Consumes 1500 Individual Fame. Marquis or above only. -->
 		<icon>icon.skill19010</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
-		<isMagic>2</isMagic>
+		<magicLvl>74</magicLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<famePointConsume>1500</famePointConsume>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13076</npcId>
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19011" toLevel="1" name="Clan Legend">
 		<!-- AUTO GENERATED SKILL -->
