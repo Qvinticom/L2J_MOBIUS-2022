@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * Target other things (skills with this target type appear to be disabled).
@@ -37,6 +38,11 @@ public class Others implements ITargetTypeHandler
 	@Override
 	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		return null;
+		if (selectedTarget == activeChar)
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ON_YOURSELF);
+			return null;
+		}
+		return selectedTarget;
 	}
 }

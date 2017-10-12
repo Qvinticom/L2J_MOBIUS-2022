@@ -48,6 +48,6 @@ public class MyParty implements ITargetTypeHandler
 			}
 		}
 		
-		return null;
+		return activeChar;
 	}
 }

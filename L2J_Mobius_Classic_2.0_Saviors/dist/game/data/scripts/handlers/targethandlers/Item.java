@@ -37,6 +37,6 @@ public class Item implements ITargetTypeHandler
 	@Override
 	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		return null;
+		return (selectedTarget != null) && selectedTarget.isItem() ? selectedTarget : null;
 	}
 }
