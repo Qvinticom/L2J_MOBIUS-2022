@@ -1202,11 +1202,8 @@
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
-		<irreplacableBuff>true</irreplacableBuff>
 		<hitTime>3000</hitTime>
 		<castRange>900</castRange>
-		<itemConsumeId>20904</itemConsumeId>
-		<itemConsumeCount>3</itemConsumeCount>
 		<targetType>ENEMY_NOT</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1245,15 +1242,13 @@
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
-		<irreplacableBuff>true</irreplacableBuff>
 		<affectRange>1000</affectRange>
 		<hitTime>5000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<castRange>900</castRange>
 		<trait>ETC</trait>
-		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<targetType>ENEMY_NOT</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MaxHp">
 				<amount>30</amount>

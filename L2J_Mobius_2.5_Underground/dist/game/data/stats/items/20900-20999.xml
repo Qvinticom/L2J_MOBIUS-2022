@@ -81,13 +81,11 @@
 	<item id="20904" name="Rose Essence" type="EtcItem">
 		<!-- Rose energy extract that is needed to use the Rose Spirit's special skill. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="20905" name="One Red Rose Bud" type="EtcItem">
