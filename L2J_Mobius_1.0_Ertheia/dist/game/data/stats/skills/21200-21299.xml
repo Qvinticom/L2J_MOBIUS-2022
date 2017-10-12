@@ -1457,7 +1457,6 @@
 		</effects>
 	</skill>
 	<skill id="21272" toLevel="1" name="Ride Halloween Witch's Broomstick">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Ride a Halloween Witch's Broomstick. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1479,6 +1478,11 @@
 				<transformId>20010</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>20010</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21273" toLevel="7" name="Release Agathion's Seal - Valakas">
 		<!-- Removes the Agathion's seal. -->
