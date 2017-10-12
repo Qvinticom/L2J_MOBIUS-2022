@@ -623,7 +623,6 @@
 		</effects>
 	</skill>
 	<skill id="22415" toLevel="1" name="Halloween Cookie">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Speed by 33 for 60 minutes. -->
 		<icon>BranchSys3.Icon.ev_halloween_cookie</icon>
 		<operateType>A2</operateType>
@@ -642,6 +641,14 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>22385</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22416" toLevel="1" name="Halloween Special Cookie">
 		<!-- AUTO GENERATED SKILL -->
