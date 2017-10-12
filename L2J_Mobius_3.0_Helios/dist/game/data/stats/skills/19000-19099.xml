@@ -306,12 +306,27 @@
 		</effects>
 	</skill>
 	<skill id="19011" toLevel="1" name="Clan Legend">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. and P. Def. when HP is below 30%. Applies after the lord stage. -->
 		<icon>icon.skill19011</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<conditions>
+			<condition name="CanUseInBattlefield" />
+			<condition name="RemainHpPer">
+				<amount>30</amount>
+				<percentType>LESS</percentType>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19012" toLevel="1" name="Clan Hide">
         <!-- TODO: consume Reputation Point -->
