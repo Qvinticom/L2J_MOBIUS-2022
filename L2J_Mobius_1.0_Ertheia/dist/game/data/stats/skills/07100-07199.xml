@@ -743,6 +743,8 @@
 		<hitTime>1500</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>34895</itemConsumeId> <!-- Spellbook: Clan Flag -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<conditions>
 			<condition name="OpMainjob" />
 			<condition name="OpSocialClass">
