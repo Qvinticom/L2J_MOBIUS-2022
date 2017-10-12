@@ -165,7 +165,7 @@ public class SkillCaster implements Runnable
 			return null;
 		}
 		
-		if (!Util.checkIfInRange(skill.getCastRange(), caster, target, true))
+		if ((skill.getCastRange() > 0) && !Util.checkIfInRange(skill.getCastRange(), caster, target, true))
 		{
 			return null;
 		}
@@ -401,7 +401,7 @@ public class SkillCaster implements Runnable
 			return false;
 		}
 		
-		if (!Util.checkIfInRange(_skill.getEffectRange(), caster, target, true))
+		if ((_skill.getEffectRange() > 0) && !Util.checkIfInRange(_skill.getEffectRange(), caster, target, true))
 		{
 			if (caster.isPlayer())
 			{
