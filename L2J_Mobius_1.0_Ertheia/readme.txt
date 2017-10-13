@@ -58,6 +58,7 @@ Events:
 -Eve the Fortune Teller
 -Freya Celebration
 -Gift of Vitality
+-Halloween
 -Heavy Medal
 -Hungry Horse
 -Hunt for Santa
