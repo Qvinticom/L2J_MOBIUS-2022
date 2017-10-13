@@ -4825,7 +4825,7 @@
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
-		<activateRate>100</activateRate>
+		<activateRate>80</activateRate>
 		<affectRange>150</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
@@ -4837,7 +4837,6 @@
 			<value level="7">105</value>
 		</magicLvl>
 		<basicProperty>MAGIC</basicProperty>
-		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -4888,7 +4887,7 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>100</activateRate>
+		<activateRate>80</activateRate>
 		<affectRange>600</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<nextAction>ATTACK</nextAction>

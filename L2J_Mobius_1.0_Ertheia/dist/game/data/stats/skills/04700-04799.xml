@@ -892,13 +892,11 @@
 	</skill>
 	<skill id="4708" toLevel="17" name="Cursed Strike">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Guessed -->
-		<!-- Guessed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -997,8 +995,6 @@
 	</skill>
 	<skill id="4709" toLevel="17" name="Cursed Blow">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<!-- Guessed -->
-		<!-- Guessed -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-279</value>
@@ -1086,8 +1082,8 @@
 					<value level="16">9648</value>
 					<value level="17">9830</value>
 				</power>
-				<criticalChance>10</criticalChance>
-				<chance>20</chance>
+				<criticalChance>30</criticalChance>
+				<chance>50</chance>
 			</effect>
 		</effects>
 	</skill>
