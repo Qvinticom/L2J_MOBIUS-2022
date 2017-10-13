@@ -23,8 +23,8 @@ import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2SummonAI;
 import com.l2jmobius.gameserver.ai.NextAction;
-import com.l2jmobius.gameserver.data.sql.impl.SummonSkillsTable;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import com.l2jmobius.gameserver.data.xml.impl.PetSkillData;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -1136,7 +1136,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 		else
 		{
-			lvl = SummonSkillsTable.getInstance().getAvailableLevel(summon, skillId);
+			lvl = PetSkillData.getInstance().getAvailableLevel(summon, skillId);
 		}
 		
 		if (lvl > 0)

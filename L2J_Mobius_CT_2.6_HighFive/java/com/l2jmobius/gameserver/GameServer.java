@@ -41,7 +41,6 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.data.sql.impl.NpcBufferTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
-import com.l2jmobius.gameserver.data.sql.impl.SummonSkillsTable;
 import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
@@ -67,6 +66,7 @@ import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import com.l2jmobius.gameserver.data.xml.impl.PetSkillData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerXpPercentLostData;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
@@ -193,7 +193,7 @@ public final class GameServer
 		EnchantSkillGroupsData.getInstance();
 		SkillTreesData.getInstance();
 		SkillData.getInstance();
-		SummonSkillsTable.getInstance();
+		PetSkillData.getInstance();
 		
 		printSection("Items");
 		ItemTable.getInstance();

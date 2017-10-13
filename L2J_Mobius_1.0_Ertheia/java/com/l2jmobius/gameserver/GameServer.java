@@ -38,7 +38,6 @@ import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
-import com.l2jmobius.gameserver.data.sql.impl.SummonSkillsTable;
 import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jmobius.gameserver.data.xml.impl.ActionData;
@@ -88,6 +87,7 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillLearnData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
+import com.l2jmobius.gameserver.data.xml.impl.PetSkillData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.data.xml.impl.UIData;
@@ -213,7 +213,7 @@ public class GameServer
 		EnchantSkillGroupsData.getInstance();
 		SkillTreesData.getInstance();
 		SkillData.getInstance();
-		SummonSkillsTable.getInstance();
+		PetSkillData.getInstance();
 		
 		printSection("Items");
 		ConditionHandler.getInstance().executeScript();

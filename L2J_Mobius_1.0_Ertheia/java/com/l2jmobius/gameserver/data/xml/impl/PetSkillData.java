@@ -14,62 +14,81 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.data.sql.impl;
+package com.l2jmobius.gameserver.data.xml.impl;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 
-public class SummonSkillsTable
+/**
+ * @author Mobius
+ */
+public class PetSkillData implements IGameXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(SummonSkillsTable.class.getName());
-	private final Map<Integer, Map<Integer, L2PetSkillLearn>> _skillTrees = new HashMap<>();
+	private static Logger LOGGER = Logger.getLogger(PetSkillData.class.getName());
+	private final Map<Integer, Map<Long, L2PetSkillLearn>> _skillTrees = new HashMap<>();
 	
-	protected SummonSkillsTable()
+	protected PetSkillData()
 	{
 		load();
 	}
 	
+	@Override
 	public void load()
 	{
 		_skillTrees.clear();
-		int count = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery("SELECT templateId, minLvl, skillId, skillLvl FROM pets_skills"))
+		parseDatapackFile("data/PetSkillData.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _skillTrees.size() + " skills.");
+	}
+	
+	@Override
+	public void parseDocument(Document doc, File f)
+	{
+		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
-			while (rs.next())
+			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				final int npcId = rs.getInt("templateId");
-				Map<Integer, L2PetSkillLearn> skillTree = _skillTrees.get(npcId);
-				if (skillTree == null)
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					skillTree = new HashMap<>();
-					_skillTrees.put(npcId, skillTree);
+					if ("skill".equalsIgnoreCase(d.getNodeName()))
+					{
+						final NamedNodeMap attrs = d.getAttributes();
+						
+						final int npcId = parseInteger(attrs, "templateId");
+						final int id = parseInteger(attrs, "skillId");
+						final int lvl = parseInteger(attrs, "skillLvl");
+						final int minLvl = parseInteger(attrs, "minLvl");
+						
+						Map<Long, L2PetSkillLearn> skillTree = _skillTrees.get(npcId);
+						if (skillTree == null)
+						{
+							skillTree = new HashMap<>();
+							_skillTrees.put(npcId, skillTree);
+						}
+						
+						if (SkillData.getInstance().getSkill(id, lvl == 0 ? 1 : lvl) != null)
+						{
+							skillTree.put(SkillData.getSkillHashCode(id, lvl + 1), new L2PetSkillLearn(id, lvl, minLvl));
+						}
+						else
+						{
+							LOGGER.info(getClass().getSimpleName() + ": Could not find skill with id " + id + ", level " + lvl + " for NPC " + npcId + ".");
+						}
+					}
 				}
-				
-				final int id = rs.getInt("skillId");
-				final int lvl = rs.getInt("skillLvl");
-				skillTree.put(SkillData.getSkillHashCode(id, lvl + 1), new L2PetSkillLearn(id, lvl, rs.getInt("minLvl")));
-				count++;
 			}
 		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while loading pet skill tree:", e);
-		}
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " skills.");
 	}
 	
 	public int getAvailableLevel(L2Summon cha, int skillId)
@@ -110,9 +129,12 @@ public class SummonSkillsTable
 				}
 				break;
 			}
-			if ((temp.getMinLevel() <= cha.getLevel()) && (temp.getLevel() > lvl))
+			else if (temp.getMinLevel() <= cha.getLevel())
 			{
-				lvl = temp.getLevel();
+				if (temp.getLevel() > lvl)
+				{
+					lvl = temp.getLevel();
+				}
 			}
 		}
 		return lvl;
@@ -167,13 +189,13 @@ public class SummonSkillsTable
 		}
 	}
 	
-	public static SummonSkillsTable getInstance()
+	public static PetSkillData getInstance()
 	{
 		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final SummonSkillsTable _instance = new SummonSkillsTable();
+		protected static final PetSkillData _instance = new PetSkillData();
 	}
 }

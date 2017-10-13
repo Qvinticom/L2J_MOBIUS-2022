@@ -16,8 +16,8 @@
  */
 package handlers.playeractions;
 
-import com.l2jmobius.gameserver.data.sql.impl.SummonSkillsTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.PetSkillData;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -53,7 +53,7 @@ public final class ServitorSkillUse implements IPlayerActionHandler
 				return;
 			}
 			
-			final int skillLevel = SummonSkillsTable.getInstance().getAvailableLevel(servitor, data.getOptionId());
+			final int skillLevel = PetSkillData.getInstance().getAvailableLevel(servitor, data.getOptionId());
 			if (skillLevel > 0)
 			{
 				servitor.setTarget(activeChar.getTarget());
