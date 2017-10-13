@@ -282,12 +282,21 @@
 	<item id="39720" name="Maphr's Luck Potion" type="EtcItem">
 		<!-- For 15 sec., LUC + 5. -->
 		<set name="icon" val="icon.etc_instant_lucky_potion_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="20000" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_freightable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="POTION" />
-		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18050" level="1" /> <!-- Luck Potion -->
+		</skills>
 	</item>
 	<item id="39721" name="Wind Spirit Fragment" type="EtcItem">
 		<!-- Obtained by killing monsters in the Sea of Spores. Perhaps it's related to the cause of the weakening of the barrier there? Take this to Bacon. -->
