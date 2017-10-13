@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="15000" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -33,7 +32,6 @@
 		</collision>
 	</npc>
 	<npc id="15001" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -65,7 +63,6 @@
 		</collision>
 	</npc>
 	<npc id="15002" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -97,7 +94,6 @@
 		</collision>
 	</npc>
 	<npc id="15003" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -129,7 +125,6 @@
 		</collision>
 	</npc>
 	<npc id="15004" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -161,7 +156,6 @@
 		</collision>
 	</npc>
 	<npc id="15005" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -193,7 +187,6 @@
 		</collision>
 	</npc>
 	<npc id="15006" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -225,7 +218,6 @@
 		</collision>
 	</npc>
 	<npc id="15007" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -257,7 +249,6 @@
 		</collision>
 	</npc>
 	<npc id="15008" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -289,7 +280,6 @@
 		</collision>
 	</npc>
 	<npc id="15009" level="99" type="L2Monster" name="Unison of Lights">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="35708" /> <!-- Lumi Exclusive Weapon -->
@@ -321,7 +311,6 @@
 		</collision>
 	</npc>
 	<npc id="15010" level="95" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="3" />
 		</parameters>
@@ -347,13 +336,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15011" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="4" />
 		</parameters>
@@ -379,13 +368,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15012" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="101" />
 		</parameters>
@@ -411,13 +400,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15013" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="102" />
 		</parameters>
@@ -443,13 +432,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15014" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="103" />
 		</parameters>
@@ -475,13 +464,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15015" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="104" />
 		</parameters>
@@ -507,13 +496,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15016" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="105" />
 		</parameters>
@@ -539,13 +528,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15017" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="106" />
 		</parameters>
@@ -571,13 +560,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15018" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="107" />
 		</parameters>
@@ -603,13 +592,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15019" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="108" />
 		</parameters>
@@ -635,13 +624,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15020" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="109" />
 		</parameters>
@@ -667,13 +656,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15021" level="99" type="L2Servitor" name="Tree of Life">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="s_tree_heal" id="11806" level="110" />
 		</parameters>
@@ -699,13 +688,13 @@
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="15022" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="101" />
 			<skill name="Skill02_ID" id="11279" level="101" />
@@ -741,7 +730,6 @@
 		</collision>
 	</npc>
 	<npc id="15023" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="102" />
 			<skill name="Skill02_ID" id="11279" level="102" />
@@ -777,7 +765,6 @@
 		</collision>
 	</npc>
 	<npc id="15024" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="103" />
 			<skill name="Skill02_ID" id="11279" level="103" />
@@ -813,7 +800,6 @@
 		</collision>
 	</npc>
 	<npc id="15025" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="104" />
 			<skill name="Skill02_ID" id="11279" level="104" />
@@ -849,7 +835,6 @@
 		</collision>
 	</npc>
 	<npc id="15026" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="105" />
 			<skill name="Skill02_ID" id="11279" level="105" />
@@ -885,7 +870,6 @@
 		</collision>
 	</npc>
 	<npc id="15027" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="106" />
 			<skill name="Skill02_ID" id="11279" level="106" />
@@ -921,7 +905,6 @@
 		</collision>
 	</npc>
 	<npc id="15028" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="107" />
 			<skill name="Skill02_ID" id="11279" level="107" />
@@ -957,7 +940,6 @@
 		</collision>
 	</npc>
 	<npc id="15029" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="108" />
 			<skill name="Skill02_ID" id="11279" level="108" />
@@ -993,7 +975,6 @@
 		</collision>
 	</npc>
 	<npc id="15030" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="109" />
 			<skill name="Skill02_ID" id="11279" level="109" />
@@ -1029,7 +1010,6 @@
 		</collision>
 	</npc>
 	<npc id="15031" level="99" type="L2Servitor" name="Cute Bear">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11278" level="110" />
 			<skill name="Skill02_ID" id="11279" level="110" />
@@ -1065,7 +1045,6 @@
 		</collision>
 	</npc>
 	<npc id="15032" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="101" />
 			<skill name="Skill02_ID" id="11281" level="101" />
@@ -1101,7 +1080,6 @@
 		</collision>
 	</npc>
 	<npc id="15033" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="102" />
 			<skill name="Skill02_ID" id="11281" level="102" />
@@ -1137,7 +1115,6 @@
 		</collision>
 	</npc>
 	<npc id="15034" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="103" />
 			<skill name="Skill02_ID" id="11281" level="103" />
@@ -1173,7 +1150,6 @@
 		</collision>
 	</npc>
 	<npc id="15035" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="104" />
 			<skill name="Skill02_ID" id="11281" level="104" />
@@ -1209,7 +1185,6 @@
 		</collision>
 	</npc>
 	<npc id="15036" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="105" />
 			<skill name="Skill02_ID" id="11281" level="105" />
@@ -1245,7 +1220,6 @@
 		</collision>
 	</npc>
 	<npc id="15037" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="106" />
 			<skill name="Skill02_ID" id="11281" level="106" />
@@ -1281,7 +1255,6 @@
 		</collision>
 	</npc>
 	<npc id="15038" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="107" />
 			<skill name="Skill02_ID" id="11281" level="107" />
@@ -1317,7 +1290,6 @@
 		</collision>
 	</npc>
 	<npc id="15039" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="108" />
 			<skill name="Skill02_ID" id="11281" level="108" />
@@ -1353,7 +1325,6 @@
 		</collision>
 	</npc>
 	<npc id="15040" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="109" />
 			<skill name="Skill02_ID" id="11281" level="109" />
@@ -1389,7 +1360,6 @@
 		</collision>
 	</npc>
 	<npc id="15041" level="99" type="L2Servitor" name="Saber Tooth Cougar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11280" level="110" />
 			<skill name="Skill02_ID" id="11281" level="110" />
@@ -1425,7 +1395,6 @@
 		</collision>
 	</npc>
 	<npc id="15042" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="101" />
 			<skill name="Skill02_ID" id="11283" level="101" />
@@ -1461,7 +1430,6 @@
 		</collision>
 	</npc>
 	<npc id="15043" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="102" />
 			<skill name="Skill02_ID" id="11283" level="102" />
@@ -1497,7 +1465,6 @@
 		</collision>
 	</npc>
 	<npc id="15044" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="103" />
 			<skill name="Skill02_ID" id="11283" level="103" />
@@ -1533,7 +1500,6 @@
 		</collision>
 	</npc>
 	<npc id="15045" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="104" />
 			<skill name="Skill02_ID" id="11283" level="104" />
@@ -1569,7 +1535,6 @@
 		</collision>
 	</npc>
 	<npc id="15046" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="105" />
 			<skill name="Skill02_ID" id="11283" level="105" />
@@ -1605,7 +1570,6 @@
 		</collision>
 	</npc>
 	<npc id="15047" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="106" />
 			<skill name="Skill02_ID" id="11283" level="106" />
@@ -1641,7 +1605,6 @@
 		</collision>
 	</npc>
 	<npc id="15048" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="107" />
 			<skill name="Skill02_ID" id="11283" level="107" />
@@ -1677,7 +1640,6 @@
 		</collision>
 	</npc>
 	<npc id="15049" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="108" />
 			<skill name="Skill02_ID" id="11283" level="108" />
@@ -1713,7 +1675,6 @@
 		</collision>
 	</npc>
 	<npc id="15050" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="109" />
 			<skill name="Skill02_ID" id="11283" level="109" />
@@ -1749,7 +1710,6 @@
 		</collision>
 	</npc>
 	<npc id="15051" level="99" type="L2Servitor" name="Grim Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="11282" level="110" />
 			<skill name="Skill02_ID" id="11283" level="110" />
@@ -1784,8 +1744,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="15052" level="99" type="L2Monster" name="Naviarope">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15052" level="99" type="L2Servitor" name="Naviarope">
 		<parameters>
 			<skill name="Skill01_ID" id="11284" level="4" />
 			<skill name="Skill02_ID" id="11285" level="4" />
@@ -1818,8 +1777,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="15053" level="85" type="L2Monster" name="Clan Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15053" level="85" type="L2Servitor" name="Clan Guardian">
 		<parameters>
 			<param name="skill_delay" value="1" />
 			<param name="despawn_time" value="180" />
@@ -1847,13 +1805,13 @@
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="15054" level="85" type="L2Monster" name="Siege Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15054" level="85" type="L2Servitor" name="Siege Golem">
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1881,8 +1839,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="15055" level="90" type="L2Monster" name="Siege Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15055" level="90" type="L2Servitor" name="Siege Golem">
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1910,8 +1867,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="15056" level="95" type="L2Monster" name="Siege Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15056" level="95" type="L2Servitor" name="Siege Golem">
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1939,8 +1895,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="15057" level="99" type="L2Monster" name="Siege Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15057" level="99" type="L2Servitor" name="Siege Golem">
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1968,8 +1923,7 @@
 			<height normal="140" />
 		</collision>
 	</npc>
-	<npc id="15058" level="85" type="L2Monster" name="Wild Hog Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15058" level="85" type="L2Servitor" name="Wild Hog Cannon">
 		<parameters>
 			<skill name="DDMagic" id="4230" level="1" />
 		</parameters>
@@ -2003,8 +1957,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="15059" level="90" type="L2Monster" name="Wild Hog Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15059" level="90" type="L2Servitor" name="Wild Hog Cannon">
 		<parameters>
 			<skill name="DDMagic" id="4230" level="1" />
 		</parameters>
@@ -2038,8 +1991,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="15060" level="95" type="L2Monster" name="Wild Hog Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15060" level="95" type="L2Servitor" name="Wild Hog Cannon">
 		<parameters>
 			<skill name="DDMagic" id="4230" level="1" />
 		</parameters>
@@ -2073,8 +2025,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="15061" level="99" type="L2Monster" name="Wild Hog Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15061" level="99" type="L2Servitor" name="Wild Hog Cannon">
 		<parameters>
 			<skill name="DDMagic" id="4230" level="1" />
 		</parameters>
@@ -2108,8 +2059,7 @@
 			<height normal="90" />
 		</collision>
 	</npc>
-	<npc id="15062" level="85" type="L2Monster" name="Swoop Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15062" level="85" type="L2Servitor" name="Swoop Cannon">
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2137,8 +2087,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="15063" level="90" type="L2Monster" name="Swoop Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15063" level="90" type="L2Servitor" name="Swoop Cannon">
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2166,8 +2115,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="15064" level="95" type="L2Monster" name="Swoop Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15064" level="95" type="L2Servitor" name="Swoop Cannon">
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2195,8 +2143,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="15065" level="99" type="L2Monster" name="Swoop Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15065" level="99" type="L2Servitor" name="Swoop Cannon">
 		<race>SIEGE_WEAPON</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2225,7 +2172,6 @@
 		</collision>
 	</npc>
 	<npc id="15066" level="85" type="L2Servitor" name="Wynn Kai the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2240,18 +2186,18 @@
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15067" level="87" type="L2Servitor" name="Wynn Kai the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2266,18 +2212,18 @@
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15068" level="89" type="L2Servitor" name="Wynn Kai the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2292,18 +2238,18 @@
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15069" level="91" type="L2Servitor" name="Wynn Kai the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2318,18 +2264,18 @@
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15070" level="93" type="L2Servitor" name="Wynn Kai the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2344,18 +2290,18 @@
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15071" level="95" type="L2Servitor" name="Wynn Kai the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2370,18 +2316,18 @@
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15072" level="97" type="L2Servitor" name="Wynn Kai the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2396,18 +2342,18 @@
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15073" level="99" type="L2Servitor" name="Wynn Kai the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2422,18 +2368,18 @@
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15074" level="85" type="L2Servitor" name="Wynn Feline King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2448,18 +2394,18 @@
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="6" />
 			<height normal="16.0055" />
 		</collision>
 	</npc>
 	<npc id="15075" level="87" type="L2Servitor" name="Wynn Feline King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2474,18 +2420,18 @@
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="6" />
 			<height normal="16.0055" />
 		</collision>
 	</npc>
 	<npc id="15076" level="89" type="L2Servitor" name="Wynn Feline King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2500,18 +2446,18 @@
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="6" />
 			<height normal="16.0055" />
 		</collision>
 	</npc>
 	<npc id="15077" level="91" type="L2Servitor" name="Wynn Feline King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2526,18 +2472,18 @@
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="6" />
 			<height normal="16.0055" />
 		</collision>
 	</npc>
 	<npc id="15078" level="93" type="L2Servitor" name="Wynn Feline King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2552,18 +2498,18 @@
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="6" />
 			<height normal="16.0055" />
 		</collision>
 	</npc>
 	<npc id="15079" level="95" type="L2Servitor" name="Wynn Feline King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2578,18 +2524,18 @@
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="6" />
 			<height normal="16.0055" />
 		</collision>
 	</npc>
 	<npc id="15080" level="97" type="L2Servitor" name="Wynn Feline King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2604,18 +2550,18 @@
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="6" />
 			<height normal="16.0055" />
 		</collision>
 	</npc>
 	<npc id="15081" level="99" type="L2Servitor" name="Wynn Feline King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2630,18 +2576,18 @@
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="6" />
 			<height normal="16.0055" />
 		</collision>
 	</npc>
 	<npc id="15082" level="85" type="L2Servitor" name="Wynn Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2656,18 +2602,18 @@
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15083" level="87" type="L2Servitor" name="Wynn Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2682,18 +2628,18 @@
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15084" level="89" type="L2Servitor" name="Wynn Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2708,18 +2654,18 @@
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15085" level="91" type="L2Servitor" name="Wynn Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2734,18 +2680,18 @@
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15086" level="93" type="L2Servitor" name="Wynn Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2760,18 +2706,18 @@
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15087" level="95" type="L2Servitor" name="Wynn Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2786,18 +2732,18 @@
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15088" level="97" type="L2Servitor" name="Wynn Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2812,18 +2758,18 @@
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15089" level="99" type="L2Servitor" name="Wynn Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2838,18 +2784,18 @@
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="15090" level="85" type="L2Servitor" name="Wynn Nightshade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2864,18 +2810,18 @@
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="15091" level="87" type="L2Servitor" name="Wynn Nightshade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2890,18 +2836,18 @@
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="15092" level="89" type="L2Servitor" name="Wynn Nightshade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2916,18 +2862,18 @@
 				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="15093" level="91" type="L2Servitor" name="Wynn Nightshade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2942,18 +2888,18 @@
 				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="15094" level="93" type="L2Servitor" name="Wynn Nightshade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2968,18 +2914,18 @@
 				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="15095" level="95" type="L2Servitor" name="Wynn Nightshade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2994,18 +2940,18 @@
 				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="15096" level="97" type="L2Servitor" name="Wynn Nightshade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3020,18 +2966,18 @@
 				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="15097" level="99" type="L2Servitor" name="Wynn Nightshade">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3046,18 +2992,18 @@
 				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="10" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="15098" level="85" type="L2Servitor" name="Wynn Spectral Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3072,18 +3018,18 @@
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
 		</collision>
 	</npc>
 	<npc id="15099" level="87" type="L2Servitor" name="Wynn Spectral Lord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3098,11 +3044,12 @@
 				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5038" level="15" /> <!-- Servitor PvP Penalty -->
 			<skill id="11496" level="2" /> <!-- Summoner Boss Penalty -->
 		</skill_list>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
