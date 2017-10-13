@@ -170,10 +170,13 @@ public final class Q10829_InSearchOfTheCause extends Quest
 	@Override
 	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		final QuestState qs = getQuestState((L2PcInstance) creature, true);
-		if ((qs != null) && qs.isCond(1) && creature.isPlayer())
+		if (creature.isPlayer())
 		{
-			qs.setCond(2, true);
+			final QuestState qs = getQuestState((L2PcInstance) creature, true);
+			if ((qs != null) && qs.isCond(1) && creature.isPlayer())
+			{
+				qs.setCond(2, true);
+			}
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
