@@ -345,9 +345,8 @@
 		</collision>
 	</npc>
 	<npc id="23719" level="85" type="L2Npc" name="Frozen Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
@@ -515,19 +514,18 @@
 	<npc id="23727" level="100" type="L2Monster" name="Shaqrima Bathus">
 		<race>GIANT</race>
 		<acquire exp="401600520" sp="963841" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"> <!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"> 
 			<vitals hp="1130239" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -540,8 +538,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="46" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -570,19 +568,18 @@
 	<npc id="23728" level="100" type="L2Monster" name="Shaqrima Carcass">
 		<race>GIANT</race>
 		<acquire exp="401600520" sp="963841" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1130239" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="190" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -594,8 +591,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="42.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -619,19 +616,18 @@
 	<npc id="23729" level="100" type="L2Monster" name="Shaqrima Kshana">
 		<race>GIANT</race>
 		<acquire exp="401600520" sp="963841" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1130239" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -644,8 +640,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="47.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -669,19 +665,18 @@
 	<npc id="23730" level="101" type="L2Monster" name="Om Bathus">
 		<race>GIANT</race>
 		<acquire exp="357545773" sp="858109" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="816032" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -694,8 +689,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="46" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -720,19 +715,18 @@
 	<npc id="23731" level="101" type="L2Monster" name="Om Carcass">
 		<race>GIANT</race>
 		<acquire exp="357545773" sp="858109" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="816032" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="190" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -744,8 +738,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="42.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -771,11 +765,10 @@
 		<stats>
 			<vitals hp="816032" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="180" />
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -788,8 +781,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="47.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -812,19 +805,18 @@
 	<npc id="23733" level="100" type="L2Monster" name="Lesser Giant Warrior">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="200932" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -832,8 +824,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="31.50" />
+			<height normal="69" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -856,19 +848,18 @@
 	<npc id="23734" level="100" type="L2Monster" name="Lesser Giant Wizard">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="200932" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -876,8 +867,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="50" />
+			<height normal="66" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -901,19 +892,18 @@
 	<npc id="23735" level="100" type="L2Monster" name="Captive Familiar Spirit">
 		<race>DEMONIC</race>
 		<acquire exp="32126522" sp="77103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="100466" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="37" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -921,8 +911,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="19" />
+			<height normal="32" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -946,19 +936,18 @@
 	<npc id="23736" level="100" type="L2Monster" name="Captive Hell Demon">
 		<race>DEMONIC</race>
 		<acquire exp="32126522" sp="77103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="100466" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -966,8 +955,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="21" />
+			<height normal="40" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -990,19 +979,18 @@
 	<npc id="23737" level="100" type="L2Monster" name="Captive Succubus">
 		<race>DEMONIC</race>
 		<acquire exp="32126522" sp="77103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="100466" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="80" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1010,8 +998,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="20" />
+			<height normal="39.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1034,19 +1022,18 @@
 	<npc id="23738" level="100" type="L2Monster" name="Captive Phantom">
 		<race>DEMONIC</race>
 		<acquire exp="32126522" sp="77103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="100466" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1054,8 +1041,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="17" />
+			<height normal="37" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1078,19 +1065,18 @@
 	<npc id="23739" level="101" type="L2Monster" name="Marka">
 		<race>DEMONIC</race>
 		<acquire exp="238364881" sp="572075" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3264077" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1098,8 +1084,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="36" />
+			<height normal="55" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1125,19 +1111,18 @@
 	<npc id="23740" level="101" type="L2Monster" name="Schlien">
 		<race>DEMONIC</race>
 		<acquire exp="238364881" sp="572075" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3264077" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="79" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1145,8 +1130,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="23" />
+			<height normal="60" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1172,19 +1157,18 @@
 	<npc id="23741" level="101" type="L2Monster" name="Berimah">
 		<race>DEMONIC</race>
 		<acquire exp="238364881" sp="572075" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3264077" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1192,8 +1176,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="26" />
+			<height normal="52" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1219,19 +1203,18 @@
 	<npc id="23742" level="101" type="L2Monster" name="Naia Bathus">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="293767" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1239,8 +1222,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="46" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1261,39 +1244,66 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23743" level="101" type="L2Monster" name="Naia Karkus">
-		<!-- TODO FIX IT -->
+	<npc id="23743" level="101" type="L2Monster" name="Naia Carcass">
+		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
-		<acquire exp="148978051" sp="357547" />
-		<stats><!-- TODO FIX IT-->
+		<acquire exp="247303557" sp="247374" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="293767" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="140" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="42.50" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="4998" max="11658" chance="20" /> <!-- Adena -->
+				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36540" min="1" max="1" chance="0.0075" /> <!-- Exquisite Leather Braid -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="23744" level="101" type="L2Monster" name="Naia Kshana">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="293767" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1301,8 +1311,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="47.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1326,19 +1336,18 @@
 	<npc id="23745" level="101" type="L2Monster" name="Naia Lucas">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="293767" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1346,8 +1355,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="42.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1371,19 +1380,18 @@
 	<npc id="23746" level="101" type="L2Monster" name="Recovering Lesser Giant Warrior">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="293767" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1391,8 +1399,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="31.50" />
+			<height normal="69" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1416,19 +1424,18 @@
 	<npc id="23747" level="101" type="L2Monster" name="Recovering Lesser Giant Wizard">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="293767" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1436,8 +1443,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="50" />
+			<height normal="66" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1460,16 +1467,16 @@
 	<npc id="23748" level="100" type="L2Monster" name="Lesser Giant Soldier">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="200932" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
 		<skill_list>
@@ -1479,8 +1486,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="50" />
+			<height normal="66" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1501,18 +1508,18 @@
 		</drop_lists>
 	</npc>
 	<npc id="23749" level="100" type="L2Monster" name="Root of the Lesser Giant">
-		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<race>CONSTRUCT</race>
 		<acquire exp="39265749" sp="94237" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="100466" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="27" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
 		<skill_list>
@@ -1522,8 +1529,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1547,16 +1554,16 @@
 	<npc id="23750" level="100" type="L2Monster" name="Shaqrima Lucas">
 		<race>GIANT</race>
 		<acquire exp="401600520" sp="963841" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1130239" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="190" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
 		<skill_list>
@@ -1570,8 +1577,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="24.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1597,16 +1604,16 @@
 	<npc id="23751" level="101" type="L2Monster" name="Om Lucas">
 		<race>GIANT</race>
 		<acquire exp="357545773" sp="858109" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="816032" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="190" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
 		<skill_list>
@@ -1620,8 +1627,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="24.50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1644,16 +1651,16 @@
 	<npc id="23752" level="100" type="L2Monster" name="Lesser Giant Archer">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="200932" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
 		<skill_list>
@@ -1663,8 +1670,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="50" />
+			<height normal="66" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1687,16 +1694,16 @@
 	<npc id="23753" level="100" type="L2Monster" name="Lesser Giant Support Troop">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="200932" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
 		<skill_list>
@@ -1706,8 +1713,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="50" />
+			<height normal="66" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1728,18 +1735,18 @@
 		</drop_lists>
 	</npc>
 	<npc id="23754" level="100" type="L2Monster" name="Essence of the Lesser Giant">
-		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<race>CONSTRUCT</race>
 		<acquire exp="39265749" sp="94237" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"><!-- TODO FIX IT-->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="100466" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="27" />
+				<run ground="140" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" /><!-- TODO FIX IT-->
-			<defence physical="3839.95121517957" magical="2066.69244923556" /><!-- TODO FIX IT-->
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" /><!-- TODO FIX IT-->
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
 		<skill_list>
@@ -1749,8 +1756,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1771,14 +1778,16 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-		<npc id="23755" level="97" type="L2Monster" name="Wandering Dead of the Dimension">
+	<npc id="23755" level="97" type="L2Monster" name="Wandering Dead of the Dimension">
 		<race>UNDEAD</race>
 		<acquire exp="27916503" sp="66999" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="162815" hpRegen="10.5" mp="2280" mpRegen="3.6" />
+			<attack physical="42937.022246666" magical="7578.7049610443" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2830.1075268817" magical="2030.5901557898" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="170" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1788,8 +1797,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="28.50" />
 		</collision>
 		<drop_lists>
 			<lucky_drop>
@@ -1800,11 +1809,13 @@
 	<npc id="23757" level="97" type="L2Monster" name="Lost Soul of the Dimension">
 		<race>UNDEAD</race>
 		<acquire exp="27916503" sp="66999" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="162815" hpRegen="10.5" mp="2280" mpRegen="3.6" />
+			<attack physical="42937.022246666" magical="7578.7049610443" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2830.1075268817" magical="2030.5901557898" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="170" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1814,8 +1825,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="26" />
 		</collision>
 		<drop_lists>
 			<lucky_drop>
@@ -1826,11 +1837,13 @@
 	<npc id="23759" level="97" type="L2Monster" name="Roaming Vengeance of the Dimension">
 		<race>HUMANOID</race>
 		<acquire exp="27916503" sp="66999" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="162815" hpRegen="10.5" mp="2280" mpRegen="3.6" />
+			<attack physical="42937.022246666" magical="7578.7049610443" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2830.1075268817" magical="2030.5901557898" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1840,8 +1853,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="15" />
+			<height normal="24.50" />
 		</collision>
 		<drop_lists>
 			<lucky_drop>
@@ -1852,11 +1865,13 @@
 	<npc id="23760" level="98" type="L2Monster" name="Dimensional Vagabond">
 		<race>UNDEAD</race>
 		<acquire exp="119675444" sp="287221" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="493312" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<attack physical="45027.610073614" magical="7933.4451512287" critical="4" attackSpeed="253" range="1100" />
+			<defence physical="2886.6310160428" magical="2081.5022678738" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1866,8 +1881,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="23" />
+			<height normal="64" />
 		</collision>
 		<drop_lists>
 			<lucky_drop>
@@ -1878,11 +1893,13 @@
 	<npc id="23761" level="98" type="L2Monster" name="Dimension Dissolver">
 		<race>HUMANOID</race>
 		<acquire exp="1196792856" sp="2872302" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3288743" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<attack physical="45027.610073614" magical="7933.4451512287" critical="4" attackSpeed="253" range="1100" />
+			<defence physical="2886.6310160428" magical="2081.5022678738" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1892,8 +1909,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="18" />
+			<height normal="42" />
 		</collision>
 		<drop_lists>
 			<lucky_drop>
@@ -1915,11 +1932,10 @@
 				<walk ground="55.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="16590" magical="22114" />	<!-- Guess -->
+			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="16590" magical="22114" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1975,8 +1991,8 @@
 				<walk ground="55.0" />
 				<run ground="190.0" />
 			</speed>
-			<attack physical="3608421.13759" magical="2904018.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="32114" magical="19990" />	<!-- Guess -->
+			<attack physical="3608421.13759" magical="2904018.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="32114" magical="19990" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skill_list>
@@ -2034,8 +2050,8 @@
 				<walk ground="55.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="16590" magical="22114" />	<!-- Guess -->
+			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="16590" magical="22114" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>		
 		<skill_list>
@@ -2094,8 +2110,8 @@
 				<walk ground="55.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="17778" magical="17778" />	<!-- Guess -->
+			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="17778" magical="17778" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>	
 		<skill_list>
@@ -2154,8 +2170,8 @@
 				<walk ground="55.0" />
 				<run ground="190.0" />
 			</speed>
-			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="17092" magical="22559" />	<!-- Guess -->
+			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="17092" magical="22559" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skill_list>
@@ -2212,8 +2228,8 @@
 				<walk ground="55.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="19092" magical="25559" />	<!-- Guess -->
+			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="19092" magical="25559" />
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skill_list>
@@ -2270,8 +2286,8 @@
 				<walk ground="40.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="17778" magical="17778" />	<!-- Guess -->
+			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="17778" magical="17778" />
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skill_list>
@@ -2332,8 +2348,8 @@
 				<walk ground="55.0" />
 				<run ground="190.0" />
 			</speed>
-			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="19092" magical="25559" />	<!-- Guess -->
+			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="19092" magical="25559" />
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skill_list>
@@ -2392,8 +2408,8 @@
 				<walk ground="55.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="19092" magical="25559" />	<!-- Guess -->
+			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="19092" magical="25559" />
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skill_list>
@@ -2452,10 +2468,10 @@
 				<walk ground="40.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="7219299.643177" magical="3956372.0" critical="8" attackSpeed="398" range="900" />	<!-- Guess -->
-			<defence physical="28555" magical="31279" />	<!-- Guess -->
+			<attack physical="7219299.643177" magical="3956372.0" critical="8" attackSpeed="398" range="900" />
+			<defence physical="28555" magical="31279" />
 			<abnormalResist physical="10" magical="10" />
-			</stats>
+		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2485,11 +2501,13 @@
 	<npc id="23784" level="100" type="L2Monster" name="Dark Wizard of the Magic Circle">
 		<race>DEMONIC</race>
 		<acquire exp="27418833" sp="65805" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="78141" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2497,8 +2515,8 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16" />
+			<height normal="13.25" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2518,11 +2536,13 @@
 	<npc id="23785" level="100" type="L2Monster" name="Scorpion King">
 		<race>DEMONIC</race>
 		<acquire exp="231310406" sp="555145" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="657748" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2536,21 +2556,16 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16" />
+			<height normal="13.25" />
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="20364" max="47435" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="7051" max="16439" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="58.71" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.872" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2566,8 +2581,8 @@
 				<attack type="EARTH" value="280" />
 			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2577,8 +2592,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->			
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="14" />
+			<height normal="39" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2608,8 +2623,8 @@
 				<attack type="EARTH" value="280" />
 			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2619,8 +2634,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="14" />
+			<height normal="39" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2650,8 +2665,8 @@
 				<attack type="EARTH" value="280" />
 			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2661,8 +2676,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="14" />
+			<height normal="39" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2690,8 +2705,8 @@
 				<attack type="EARTH" value="280" />
 			</attribute>
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="140" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2701,8 +2716,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="14" />
+			<height normal="39" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2723,9 +2738,11 @@
 		<acquire exp="82709042" sp="198501" />
 		<stats>
 			<vitals hp="196389" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2735,8 +2752,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="22" />
+			<height normal="52" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2895,14 +2912,15 @@
 	<npc id="23798" level="102" type="L2Monster" name="Delta Bathus" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="547017485" sp="1312842" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1325641" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="140" />
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2915,8 +2933,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="46" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2942,14 +2960,15 @@
 	<npc id="23799" level="102" type="L2Monster" name="Delta Carcass" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="547017485" sp="1312842" />
-		<stats>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1325641" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="140" />
 			</speed>
 		</stats>
-		
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2961,8 +2980,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="42.50" />
 		</collision>
 		<drop_lists>
 			<drop>
