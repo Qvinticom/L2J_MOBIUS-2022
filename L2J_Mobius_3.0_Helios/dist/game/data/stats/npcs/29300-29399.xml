@@ -65,18 +65,19 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-		<npc id="29303" level="105" type="L2Monster" name="Helios" title="Emperor of the Beginning">
+	<npc id="29303" level="105" type="L2Monster" name="Helios" title="Emperor of the Beginning">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="589355368" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<speed>
-				<walk ground="0" />
-				<run ground="0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3888.88888888889" magical="2258.06451612903" />
 		</stats>
+		<status canMove="false" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -93,12 +94,13 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="589355368" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<speed>
-				<walk ground="0" />
-				<run ground="0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3888.88888888889" magical="2258.06451612903" />
 		</stats>
+		<status canMove="false" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -116,12 +118,13 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="589355368" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<speed>
-				<walk ground="0" />
-				<run ground="0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3888.88888888889" magical="2258.06451612903" />
 		</stats>
+		<status canMove="false" />
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
