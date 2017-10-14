@@ -29,6 +29,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
@@ -51,6 +52,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
@@ -402,10 +404,24 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					}
 					if (player.isInCategory(CategoryType.AWAKEN_GROUP))
 					{
-						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-						for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+						if (Config.AUTO_LEARN_SKILLS) // needs better cleanup
 						{
-							player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+							for (Skill skill : SkillTreesData.getInstance().getAllAvailableSkills(player, player.getClassId().getParent(), Config.AUTO_LEARN_FS_SKILLS, true))
+							{
+								player.removeSkill(skill, true);
+							}
+							for (Skill skill : SkillTreesData.getInstance().getAllAvailableSkills(player, player.getClassId(), Config.AUTO_LEARN_FS_SKILLS, true))
+							{
+								player.addSkill(skill, true);
+							}
+						}
+						else
+						{
+							SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+							for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+							{
+								player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+							}
 						}
 					}
 					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
