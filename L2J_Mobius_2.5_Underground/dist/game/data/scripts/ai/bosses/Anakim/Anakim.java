@@ -341,10 +341,22 @@ public class Anakim extends AbstractNpcAI
 		
 		// Unlock
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ANAKIM);
-		final long time = info.getLong("respawn_time") - System.currentTimeMillis();
-		if (time > 0)
+		final int status = GrandBossManager.getInstance().getBossStatus(ANAKIM);
+		if (status == DEAD)
 		{
-			startQuestTimer("unlock_anakim", time, null, null);
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			if (time > 0)
+			{
+				startQuestTimer("unlock_anakim", time, null, null);
+			}
+			else
+			{
+				GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
+			}
+		}
+		else if (status != ALIVE)
+		{
+			GrandBossManager.getInstance().setBossStatus(ANAKIM, ALIVE);
 		}
 	}
 	

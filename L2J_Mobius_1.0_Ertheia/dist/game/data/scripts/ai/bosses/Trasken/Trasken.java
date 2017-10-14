@@ -16,10 +16,10 @@
  */
 package ai.bosses.Trasken;
 
-import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
@@ -41,11 +41,9 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.type.L2NoSummonFriendZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 import ai.AbstractNpcAI;
 
@@ -323,21 +321,29 @@ public class Trasken extends AbstractNpcAI
 		{
 			DoorData.getInstance().getDoor(DOOR).openMe();
 		}
+		// Unlock
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(TRASKEN);
+		final int status = GrandBossManager.getInstance().getBossStatus(TRASKEN);
+		if (status == DEAD)
+		{
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			if (time > 0)
+			{
+				startQuestTimer("unlock_trasken", time, null, null);
+			}
+			else
+			{
+				GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
+			}
+		}
+		else if (status != ALIVE)
+		{
+			GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
+		}
 	}
 	
 	private void init()
 	{
-		int status = GrandBossManager.getInstance().getBossStatus(TRASKEN);
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(TRASKEN);
-		final Long respawnTime = info.getLong("respawn_time");
-		if ((status == 3) && (respawnTime <= System.currentTimeMillis()))
-		{
-			GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
-		}
-		else if (status == 3)
-		{
-			ThreadPoolManager.schedule(() -> GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE), respawnTime - System.currentTimeMillis());
-		}
 		int size = _zoneLair.getPlayersInside().size();
 		if ((size >= 14) && (size <= 28))
 		{
@@ -579,6 +585,11 @@ public class Trasken extends AbstractNpcAI
 	{
 		switch (event)
 		{
+			case "unlock_trasken":
+			{
+				GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
+				break;
+			}
 			case "exitEarthWyrnCave":
 			{
 				if (npc.getId() == TELEPORT_ORB)
@@ -589,7 +600,6 @@ public class Trasken extends AbstractNpcAI
 			}
 			case "finish":
 			{
-				GrandBossManager.getInstance().setBossStatus(TRASKEN, DEAD);
 				trasken.doDie(player);
 				trasken.setIsDead(true);
 				_zoneLair2.getPlayersInside().forEach(players -> players.teleToLocation(CENTER_LOCATION));
@@ -597,7 +607,6 @@ public class Trasken extends AbstractNpcAI
 				{
 					playMovie(p, Movie.SC_EARTHWORM_ENDING);
 				});
-				final long respawnTime = 72 * 3600000;
 				if (_collapseTask != null)
 				{
 					_collapseTask.cancel(true);
@@ -608,8 +617,14 @@ public class Trasken extends AbstractNpcAI
 				_zoneLair2.getCharactersInside().stream().filter(L2Character::isNpc).forEach(mob -> mob.deleteMe());
 				_zoneLair2.getCharactersInside().stream().filter(L2Object::isMonster).forEach(cha -> ((L2MonsterInstance) cha).getSpawn().stopRespawn());
 				ThreadPoolManager.schedule(() -> npc.decayMe(), 10000);
-				ThreadPoolManager.schedule(new UnlockTrasken(), respawnTime);
 				cancelQuestTimer("finish", npc, null);
+				
+				GrandBossManager.getInstance().setBossStatus(TRASKEN, DEAD);
+				final long respawnTime = (Config.TRASKEN_SPAWN_INTERVAL + getRandom(-Config.TRASKEN_SPAWN_RANDOM, Config.TRASKEN_SPAWN_RANDOM)) * 3600000;
+				final StatsSet info = GrandBossManager.getInstance().getStatsSet(TRASKEN);
+				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+				GrandBossManager.getInstance().setStatsSet(TRASKEN, info);
+				startQuestTimer("unlock_trasken", respawnTime, null, null);
 				break;
 			}
 			case "spawn_rnd":
@@ -880,38 +895,6 @@ public class Trasken extends AbstractNpcAI
 			character.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_EXCEEDED_THE_MAXIMUM_NUMBER_OF_PERSONNEL, 5, 24000, true));
 			character.doCast(SKILL_TRASKEN_SLEEP.getSkill());
 		}, 4050);
-	}
-	
-	public boolean getTimeUnlock()
-	{
-		Calendar cal = Calendar.getInstance();
-		if ((cal.get(Calendar.WEEK_OF_MONTH) == 1) || (cal.get(Calendar.WEEK_OF_MONTH) == 3))
-		{
-			switch (cal.get(Calendar.DAY_OF_WEEK))
-			{
-				case Calendar.FRIDAY:
-				case Calendar.SATURDAY:
-				case Calendar.SUNDAY:
-				{
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-	
-	private class UnlockTrasken implements Runnable
-	{
-		public UnlockTrasken()
-		{
-		}
-		
-		@Override
-		public void run()
-		{
-			GrandBossManager.getInstance().setBossStatus(TRASKEN, ALIVE);
-			Broadcast.toAllOnlinePlayers(new Earthquake(CENTER_LOCATION.getX(), CENTER_LOCATION.getY(), CENTER_LOCATION.getZ(), CENTER_LOCATION.getHeading(), 10));
-		}
 	}
 	
 	public static void main(String[] args)

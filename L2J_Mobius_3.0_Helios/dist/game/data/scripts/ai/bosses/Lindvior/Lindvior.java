@@ -245,10 +245,22 @@ public class Lindvior extends AbstractNpcAI
 		_zoneLair = ZoneManager.getInstance().getZoneById(ZONE_ID, L2NoSummonFriendZone.class);
 		// Unlock
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(LINDVIOR_RAID);
-		final long time = info.getLong("respawn_time") - System.currentTimeMillis();
-		if (time > 0)
+		final int status = GrandBossManager.getInstance().getBossStatus(LINDVIOR_RAID);
+		if (status == DEAD)
 		{
-			startQuestTimer("unlock_lindvior", time, null, null);
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			if (time > 0)
+			{
+				startQuestTimer("unlock_lindvior", time, null, null);
+			}
+			else
+			{
+				GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
+			}
+		}
+		else if (status != ALIVE)
+		{
+			GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, ALIVE);
 		}
 	}
 	
@@ -812,12 +824,6 @@ public class Lindvior extends AbstractNpcAI
 		if (npc.getId() == LINDVIOR_RAID)
 		{
 			_zoneLair.broadcastPacket(new ExShowScreenMessage(NpcStringId.HONORABLE_WARRIORS_HAVE_DRIVEN_OFF_LINDVIOR_THE_EVIL_WIND_DRAGON, ExShowScreenMessage.TOP_CENTER, 10000, true));
-			GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, DEAD);
-			final long respawnTime = (Config.LINDVIOR_SPAWN_INTERVAL + getRandom(-Config.LINDVIOR_SPAWN_RANDOM, Config.LINDVIOR_SPAWN_RANDOM)) * 3600000;
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(LINDVIOR_RAID);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(LINDVIOR_RAID, info);
-			startQuestTimer("unlock_lindvior", respawnTime, null, null);
 			if (_mobsSpawnTask != null)
 			{
 				_mobsSpawnTask.cancel(true);
@@ -828,6 +834,13 @@ public class Lindvior extends AbstractNpcAI
 			_zoneLair.broadcastPacket(new OnEventTrigger(SECOND_STAGE_EVENT_TRIGGER, false));
 			_zoneLair.broadcastPacket(new OnEventTrigger(FIRST_STAGE_EVENT_TRIGGER, true));
 			_lionel.deleteMe();
+			
+			GrandBossManager.getInstance().setBossStatus(LINDVIOR_RAID, DEAD);
+			final long respawnTime = (Config.LINDVIOR_SPAWN_INTERVAL + getRandom(-Config.LINDVIOR_SPAWN_RANDOM, Config.LINDVIOR_SPAWN_RANDOM)) * 3600000;
+			final StatsSet info = GrandBossManager.getInstance().getStatsSet(LINDVIOR_RAID);
+			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+			GrandBossManager.getInstance().setStatsSet(LINDVIOR_RAID, info);
+			startQuestTimer("unlock_lindvior", respawnTime, null, null);
 		}
 		else if (npc.getId() == NPC_GENERATOR)
 		{

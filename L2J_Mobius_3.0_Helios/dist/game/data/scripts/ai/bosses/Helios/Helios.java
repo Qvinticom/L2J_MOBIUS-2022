@@ -54,15 +54,27 @@ public class Helios extends AbstractNpcAI
 	{
 		addAttackId(HELIOS);
 		addKillId(HELIOS);
-		// Unlock
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(HELIOS);
-		final long time = info.getLong("respawn_time") - System.currentTimeMillis();
-		if (time > 0)
-		{
-			startQuestTimer("unlock_helios", time, null, null);
-		}
 		// Zone
 		bossZone = ZoneManager.getInstance().getZoneById(ZONE_ID, L2NoSummonFriendZone.class);
+		// Unlock
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(HELIOS);
+		final int status = GrandBossManager.getInstance().getBossStatus(HELIOS);
+		if (status == DEAD)
+		{
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			if (time > 0)
+			{
+				startQuestTimer("unlock_helios", time, null, null);
+			}
+			else
+			{
+				GrandBossManager.getInstance().setBossStatus(HELIOS, ALIVE);
+			}
+		}
+		else if (status != ALIVE)
+		{
+			GrandBossManager.getInstance().setBossStatus(HELIOS, ALIVE);
+		}
 	}
 	
 	@Override
@@ -105,13 +117,14 @@ public class Helios extends AbstractNpcAI
 	{
 		if (npc.getId() == HELIOS)
 		{
+			bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_DEFEATED_TAKES_FLIGHT_DEEP_IN_TO_THE_SUPERION_FORT_HIS_THRONE_IS_RENDERED_INACTIVE, ExShowScreenMessage.TOP_CENTER, 10000, true));
+			
 			GrandBossManager.getInstance().setBossStatus(HELIOS, DEAD);
 			final long respawnTime = (Config.HELIOS_SPAWN_INTERVAL + getRandom(-Config.HELIOS_SPAWN_RANDOM, Config.HELIOS_SPAWN_RANDOM)) * 3600000;
 			final StatsSet info = GrandBossManager.getInstance().getStatsSet(HELIOS);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(HELIOS, info);
 			startQuestTimer("unlock_helios", respawnTime, null, null);
-			bossZone.broadcastPacket(new ExShowScreenMessage(NpcStringId.HELIOS_DEFEATED_TAKES_FLIGHT_DEEP_IN_TO_THE_SUPERION_FORT_HIS_THRONE_IS_RENDERED_INACTIVE, ExShowScreenMessage.TOP_CENTER, 10000, true));
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

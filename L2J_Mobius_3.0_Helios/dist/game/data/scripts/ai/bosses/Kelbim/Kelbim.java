@@ -117,15 +117,26 @@ public class Kelbim extends AbstractNpcAI
 		
 		// Unlock
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(KELBIM);
-		final long time = info.getLong("respawn_time") - System.currentTimeMillis();
-		if (time > 0)
+		final int status = GrandBossManager.getInstance().getBossStatus(KELBIM);
+		if (status == DEAD)
 		{
-			startQuestTimer("unlock_kelbim", time, null, null);
+			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
+			if (time > 0)
+			{
+				startQuestTimer("unlock_kelbim", time, null, null);
+			}
+			else
+			{
+				openDoor(DOOR1, 0);
+				openDoor(DOOR2, 0);
+				GrandBossManager.getInstance().setBossStatus(KELBIM, ALIVE);
+			}
 		}
-		else
+		else if (status != ALIVE)
 		{
 			openDoor(DOOR1, 0);
 			openDoor(DOOR2, 0);
+			GrandBossManager.getInstance().setBossStatus(KELBIM, ALIVE);
 		}
 	}
 	
