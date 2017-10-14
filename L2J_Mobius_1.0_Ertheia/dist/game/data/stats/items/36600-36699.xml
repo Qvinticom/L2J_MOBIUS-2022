@@ -9,6 +9,14 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22558" level="1" /> <!-- Equipment Restoration Stone (A-grade) -->
+		</skills>
 	</item>
 	<item id="36601" name="Scroll: Restore Equipment (B-grade)" type="EtcItem">
 		<!-- Restores the original appearance of B-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -19,6 +27,14 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22559" level="1" /> <!-- Equipment Restoration Stone (B-grade) -->
+		</skills>
 	</item>
 	<item id="36602" name="Scroll: Restore Equipment (C-grade)" type="EtcItem">
 		<!-- Restores the original appearance of C-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -29,6 +45,14 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22560" level="1" /> <!-- Equipment Restoration Stone (C-grade) -->
+		</skills>
 	</item>
 	<item id="36603" name="Scroll: Restore Equipment (D-grade)" type="EtcItem">
 		<!-- Restores the original appearance of D-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -39,6 +63,14 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RESTORE_SHAPE_SHIFTING_ALLITEM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="22561" level="1" /> <!-- Equipment Restoration Stone (D-grade) -->
+		</skills>
 	</item>
 	<item id="36604" name="Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.  Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
