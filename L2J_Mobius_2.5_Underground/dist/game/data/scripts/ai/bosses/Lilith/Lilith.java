@@ -17,6 +17,7 @@
 package ai.bosses.Lilith;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import com.l2jmobius.Config;
@@ -633,8 +634,7 @@ public class Lilith extends AbstractNpcAI
 			addSpawn(EXIST_CUBIC, 185062, -9605, -5499, 15640, false, 900000); // 15min
 			
 			GrandBossManager.getInstance().setBossStatus(LILITH, DEAD);
-			// TODO Retail Raid Respawn time: Thursday (21:00) and Saturday (14:00).
-			final long respawnTime = (Config.LILITH_SPAWN_INTERVAL + getRandom(-Config.LILITH_SPAWN_RANDOM, Config.LILITH_SPAWN_RANDOM)) * 3600000;
+			final long respawnTime = getRespawnTime();
 			final StatsSet info = GrandBossManager.getInstance().getStatsSet(LILITH);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(LILITH, info);
@@ -683,6 +683,41 @@ public class Lilith extends AbstractNpcAI
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
+	}
+	
+	private int getRespawnTime()
+	{
+		return (int) calcReuseFromDays(0, 21, Calendar.THURSDAY, 0, 14, Calendar.SATURDAY);
+	}
+	
+	private long calcReuseFromDays(int day1Minute, int day1Hour, int day1Day, int day2Minute, int day2Hour, int day2Day)
+	{
+		Calendar now = Calendar.getInstance();
+		Calendar day1 = (Calendar) now.clone();
+		day1.set(Calendar.MINUTE, day1Minute);
+		day1.set(Calendar.HOUR_OF_DAY, day1Hour);
+		day1.set(Calendar.DAY_OF_WEEK, day1Day);
+		
+		Calendar day2 = (Calendar) day1.clone();
+		day2.set(Calendar.MINUTE, day2Minute);
+		day2.set(Calendar.HOUR_OF_DAY, day2Hour);
+		day2.set(Calendar.DAY_OF_WEEK, day2Day);
+		
+		if (now.after(day1))
+		{
+			day1.add(Calendar.WEEK_OF_MONTH, 1);
+		}
+		if (now.after(day2))
+		{
+			day2.add(Calendar.WEEK_OF_MONTH, 1);
+		}
+		
+		Calendar reenter = day1;
+		if (day2.before(day1))
+		{
+			reenter = day2;
+		}
+		return reenter.getTimeInMillis() - System.currentTimeMillis();
 	}
 	
 	@Override
