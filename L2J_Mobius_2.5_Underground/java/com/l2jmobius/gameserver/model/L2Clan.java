@@ -486,7 +486,7 @@ public class L2Clan implements IIdentifiable, INamable
 		if (exMember.isOnline())
 		{
 			final L2PcInstance player = exMember.getPlayerInstance();
-			if (!player.isNoble())
+			if (player.getNobleLevel() == 0)
 			{
 				player.setTitle("");
 			}

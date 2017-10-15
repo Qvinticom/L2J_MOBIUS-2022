@@ -271,7 +271,7 @@ public class Siege implements Siegable
 						if (member != null)
 						{
 							final L2PcInstance player = member.getPlayerInstance();
-							if ((player != null) && player.isNoble())
+							if ((player != null) && (player.getNobleLevel() > 0))
 							{
 								Hero.getInstance().setCastleTaken(player.getObjectId(), getCastle().getResidenceId());
 							}

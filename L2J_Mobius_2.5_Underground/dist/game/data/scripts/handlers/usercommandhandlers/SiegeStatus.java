@@ -46,7 +46,7 @@ public class SiegeStatus implements IUserCommandHandler
 			return false;
 		}
 		
-		if (!activeChar.isNoble() || !activeChar.isClanLeader())
+		if ((activeChar.getNobleLevel() == 0) || !activeChar.isClanLeader())
 		{
 			activeChar.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_EXALTED_CAN_VIEW_THE_SIEGE_WAR_STATUS_WINDOW_DURING_A_SIEGE_WAR);
 			return false;

@@ -303,7 +303,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(22);
 			packet.writeC(_activeChar.getPvpFlag());
 			packet.writeD(_activeChar.getReputation()); // Reputation
-			packet.writeC(_activeChar.isNoble() ? 0x01 : 0x00);
+			packet.writeC(_activeChar.getNobleLevel());
 			packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0);
 			packet.writeC(_activeChar.getPledgeClass());
 			packet.writeD(_activeChar.getPkKills());

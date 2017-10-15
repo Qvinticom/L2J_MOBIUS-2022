@@ -111,7 +111,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 						return false;
 					}
 					
-					if (player.isNoble())
+					if (player.getNobleLevel() > 0)
 					{
 						final StatsSet statDat = getPlayerSet(player);
 						final int oldpoints = Olympiad.getInstance().getNoblePoints(player);
@@ -152,7 +152,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 						return false;
 					}
 					
-					if (player.isNoble())
+					if (player.getNobleLevel() > 0)
 					{
 						final StatsSet playerStat = Olympiad.getNobleStats(player.getObjectId());
 						if (playerStat == null)
@@ -194,7 +194,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 						return false;
 					}
 					
-					if (player.isNoble())
+					if (player.getNobleLevel() > 0)
 					{
 						final StatsSet statDat = getPlayerSet(player);
 						final int oldpoints = Olympiad.getInstance().getNoblePoints(player);

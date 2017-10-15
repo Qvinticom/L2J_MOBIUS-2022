@@ -269,7 +269,7 @@ public class OlympiadManager
 			return false;
 		}
 		
-		if (!noble.isNoble())
+		if (noble.getNobleLevel() == 0)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_ONLY_NOBLESSE_EXALTED_CHARACTERS_CAN_PARTICIPATE_IN_THE_OLYMPIAD);
 			sm.addString(noble.getName());

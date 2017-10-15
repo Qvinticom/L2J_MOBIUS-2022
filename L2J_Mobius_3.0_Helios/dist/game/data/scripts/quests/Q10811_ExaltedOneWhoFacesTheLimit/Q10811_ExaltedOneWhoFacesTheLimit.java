@@ -119,7 +119,7 @@ public final class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LEVEL) && player.isNoble() ? "33383-01.htm" : "33383-07.htm";
+				htmltext = (player.getLevel() >= MIN_LEVEL) && (player.getNobleLevel() > 0) ? "33383-01.htm" : "33383-07.htm";
 				break;
 			}
 			case State.STARTED:

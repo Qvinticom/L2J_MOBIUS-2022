@@ -46,7 +46,7 @@ public class RequestGiveNickName implements IClientIncomingPacket
 		}
 		
 		// Noblesse can bestow a title to themselves
-		if (activeChar.isNoble() && _target.equalsIgnoreCase(activeChar.getName()))
+		if ((activeChar.getNobleLevel() > 0) && _target.equalsIgnoreCase(activeChar.getName()))
 		{
 			activeChar.setTitle(_title);
 			client.sendPacket(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED);

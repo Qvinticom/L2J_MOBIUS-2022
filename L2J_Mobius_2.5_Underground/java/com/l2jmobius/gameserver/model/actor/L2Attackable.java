@@ -406,7 +406,7 @@ public class L2Attackable extends L2Npc
 						p.increaseRaidbossPoints(points);
 						p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
 						
-						if (p.isNoble())
+						if (p.getNobleLevel() > 0)
 						{
 							Hero.getInstance().setRBkilled(p.getObjectId(), getId());
 						}
@@ -417,7 +417,7 @@ public class L2Attackable extends L2Npc
 					final int points = Math.max(raidbossPoints, 1);
 					player.increaseRaidbossPoints(points);
 					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(points));
-					if (player.isNoble())
+					if (player.getNobleLevel() > 0)
 					{
 						Hero.getInstance().setRBkilled(player.getObjectId(), getId());
 					}

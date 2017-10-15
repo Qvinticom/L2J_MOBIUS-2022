@@ -254,7 +254,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return player.isNoble() ? "MonumentOfHeroes-noblesse.html" : "MonumentOfHeroes-noNoblesse.html";
+		return player.getNobleLevel() > 0 ? "MonumentOfHeroes-noblesse.html" : "MonumentOfHeroes-noNoblesse.html";
 	}
 	
 	private int getOlympiadRank(L2PcInstance player)

@@ -154,7 +154,7 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		
 		packet.writeD(_activeChar.getPledgeClass()); // changes the text above CP on Status Window
 		
-		packet.writeC(_activeChar.isNoble() ? 0x01 : 0x00);
+		packet.writeC(_activeChar.getNobleLevel());
 		packet.writeC(_activeChar.isHero() ? 0x01 : 0x00);
 		
 		packet.writeD(_activeChar.getAppearance().getNameColor());

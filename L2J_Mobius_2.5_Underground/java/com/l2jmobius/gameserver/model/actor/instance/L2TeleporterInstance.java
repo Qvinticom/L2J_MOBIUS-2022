@@ -80,7 +80,7 @@ public final class L2TeleporterInstance extends L2Npc
 			case "showNoblesSelect":
 			{
 				final NpcHtmlMessage msg = new NpcHtmlMessage(getObjectId());
-				msg.setFile(player.getHtmlPrefix(), "data/html/teleporter/" + (player.isNoble() ? "nobles_select" : "not_nobles") + ".htm");
+				msg.setFile(player.getHtmlPrefix(), "data/html/teleporter/" + (player.getNobleLevel() > 0 ? "nobles_select" : "not_nobles") + ".htm");
 				msg.replace("%objectId%", getObjectId());
 				player.sendPacket(msg);
 				break;
@@ -88,7 +88,7 @@ public final class L2TeleporterInstance extends L2Npc
 			case "showTeleports":
 			{
 				final TeleportType type = parseTeleportType(st);
-				if (((type == TeleportType.NOBLES_TOKEN) || (type == TeleportType.NOBLES_ADENA)) && !player.isNoble())
+				if (((type == TeleportType.NOBLES_TOKEN) || (type == TeleportType.NOBLES_ADENA)) && (player.getNobleLevel() == 0))
 				{
 					_log.warning(player + " attempted to use nobles teleport without being nobles!");
 					break;
@@ -148,7 +148,7 @@ public final class L2TeleporterInstance extends L2Npc
 				}
 				
 				final TeleportType type = TeleportType.values()[typeId];
-				if (((type == TeleportType.NOBLES_TOKEN) || (type == TeleportType.NOBLES_ADENA)) && !player.isNoble())
+				if (((type == TeleportType.NOBLES_TOKEN) || (type == TeleportType.NOBLES_ADENA)) && (player.getNobleLevel() == 0))
 				{
 					_log.warning(player + " attempted to use nobles teleport without being nobles!");
 					break;
@@ -481,7 +481,7 @@ public final class L2TeleporterInstance extends L2Npc
 				player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
 				return;
 			}
-			else if (list.getIsForNoble() && !player.isNoble())
+			else if (list.getIsForNoble() && (player.getNobleLevel() == 0))
 			{
 				final String filename = "data/html/teleporter/nobleteleporter-no.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());

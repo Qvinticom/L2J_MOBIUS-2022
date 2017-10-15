@@ -564,7 +564,7 @@ public final class L2PcInstance extends L2Playable
 	// Multisell
 	private PreparedListContainer _currentMultiSell = null;
 	
-	private boolean _noble = false;
+	private int _nobleLevel = 0;
 	private boolean _hero = false;
 	private boolean _trueHero = false;
 	
@@ -2557,9 +2557,9 @@ public final class L2PcInstance extends L2Playable
 		// Do not call this on enterworld or char load
 		
 		// Add noble skills if noble
-		if (isNoble())
+		if (_nobleLevel > 0)
 		{
-			setNoble(true);
+			setNoble(_nobleLevel);
 		}
 		
 		// Add Hero skills if hero
@@ -6516,7 +6516,7 @@ public final class L2PcInstance extends L2Playable
 			statement.setInt(30, getClanPrivileges().getBitmask());
 			statement.setInt(31, getWantsPeace());
 			statement.setInt(32, getBaseClass());
-			statement.setInt(33, isNoble() ? 1 : 0);
+			statement.setInt(33, _nobleLevel);
 			statement.setLong(34, 0);
 			statement.setInt(35, PcStat.MIN_VITALITY_POINTS);
 			statement.setDate(36, new Date(getCreateDate().getTimeInMillis()));
@@ -6578,7 +6578,8 @@ public final class L2PcInstance extends L2Playable
 					player.setPvpKills(rset.getInt("pvpkills"));
 					player.setPkKills(rset.getInt("pkkills"));
 					player.setOnlineTime(rset.getLong("onlinetime"));
-					player.setNoble(rset.getInt("nobless") == 1);
+					final int nobleLevel = rset.getInt("nobless");
+					player.setNoble(nobleLevel);
 					
 					final int factionId = rset.getInt("faction");
 					if (factionId == 1)
@@ -6636,7 +6637,7 @@ public final class L2PcInstance extends L2Playable
 					}
 					else
 					{
-						if (player.isNoble())
+						if (nobleLevel > 0)
 						{
 							player.setPledgeClass(5);
 						}
@@ -7164,7 +7165,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			statement.setLong(34, totalOnlineTime);
-			statement.setInt(35, isNoble() ? 1 : 0);
+			statement.setInt(35, _nobleLevel);
 			statement.setInt(36, getPowerGrade());
 			statement.setInt(37, getPledgeType());
 			statement.setInt(38, getLvlJoinedAcademy());
@@ -8456,7 +8457,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			case STRIDER: // Strider
 			{
-				if (isNoble())
+				if (_nobleLevel > 0)
 				{
 					addSkill(CommonSkill.STRIDER_SIEGE_ASSAULT.getSkill(), false);
 				}
@@ -9328,15 +9329,15 @@ public final class L2PcInstance extends L2Playable
 		return true;
 	}
 	
-	public boolean isNoble()
+	public int getNobleLevel()
 	{
-		return _noble;
+		return _nobleLevel;
 	}
 	
-	public void setNoble(boolean val)
+	public void setNoble(int level)
 	{
 		final Collection<Skill> nobleSkillTree = SkillTreesData.getInstance().getNobleSkillTree().values();
-		if (val)
+		if (level != 0)
 		{
 			for (Skill skill : nobleSkillTree)
 			{
@@ -9351,10 +9352,10 @@ public final class L2PcInstance extends L2Playable
 			}
 		}
 		
-		_noble = val;
+		_nobleLevel = level;
 		
 		sendSkillList();
-		if (val && (getLevel() >= 99))
+		if ((level != 0) && (getLevel() >= 99))
 		{
 			sendPacket(new ExAcquireAPSkillList(this));
 		}

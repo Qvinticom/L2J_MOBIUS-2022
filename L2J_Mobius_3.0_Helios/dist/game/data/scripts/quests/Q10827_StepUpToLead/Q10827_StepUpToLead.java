@@ -97,6 +97,12 @@ public final class Q10827_StepUpToLead extends Quest
 						}
 						giveItems(player, GUSTAV_CERTIFICATE, 1);
 						giveItems(player, SPELLBOOK_FAVOR_OF_THE_EXALTED, 1);
+						
+						// Give Exalted status here?
+						// https://l2wiki.com/Noblesse
+						player.setNoble(2);
+						player.broadcastUserInfo();
+						
 						qs.exitQuest(false, true);
 					}
 					else

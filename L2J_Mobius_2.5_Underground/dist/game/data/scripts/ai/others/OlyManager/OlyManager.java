@@ -311,7 +311,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		
 		if (!player.isCursedWeaponEquipped())
 		{
-			htmltext = player.isNoble() ? "OlyManager-noble.html" : "OlyManager-noNoble.html";
+			htmltext = player.getNobleLevel() > 0 ? "OlyManager-noble.html" : "OlyManager-noNoble.html";
 		}
 		else
 		{

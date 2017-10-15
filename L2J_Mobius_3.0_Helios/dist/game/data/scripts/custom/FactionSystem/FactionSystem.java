@@ -76,7 +76,7 @@ public final class FactionSystem extends AbstractNpcAI
 				}
 				if (Config.FACTION_AUTO_NOBLESS)
 				{
-					player.setNoble(true);
+					player.setNoble(1);
 				}
 				player.setGood();
 				player.getAppearance().setNameColor(Config.FACTION_GOOD_NAME_COLOR);
@@ -103,7 +103,7 @@ public final class FactionSystem extends AbstractNpcAI
 				}
 				if (Config.FACTION_AUTO_NOBLESS)
 				{
-					player.setNoble(true);
+					player.setNoble(1);
 				}
 				player.setEvil();
 				player.getAppearance().setNameColor(Config.FACTION_EVIL_NAME_COLOR);

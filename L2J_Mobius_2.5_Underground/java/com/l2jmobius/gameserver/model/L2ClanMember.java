@@ -801,7 +801,7 @@ public class L2ClanMember
 			}
 		}
 		
-		if (player.isNoble() && (pledgeClass < 5))
+		if ((player.getNobleLevel() > 0) && (pledgeClass < 5))
 		{
 			pledgeClass = 5;
 		}

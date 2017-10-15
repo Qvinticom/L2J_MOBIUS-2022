@@ -58,7 +58,7 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 		{
 			return;
 		}
-		else if ((activeChar.getLevel() < 99) || !activeChar.isNoble())
+		else if ((activeChar.getLevel() < 99) || (activeChar.getNobleLevel() == 0))
 		{
 			client.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
 			return;

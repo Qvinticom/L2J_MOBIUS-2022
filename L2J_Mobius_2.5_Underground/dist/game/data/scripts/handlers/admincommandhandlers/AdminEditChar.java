@@ -860,7 +860,8 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if (player != null)
 			{
-				player.setNoble(!player.isNoble());
+				final int nobleLevel = player.getNobleLevel();
+				player.setNoble(nobleLevel == 2 ? 0 : nobleLevel + 1);
 				if (player.getObjectId() != activeChar.getObjectId())
 				{
 					activeChar.sendMessage("You've changed nobless status of: " + player.getName());
@@ -1169,7 +1170,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%hwid%", (player.getClient() != null) && (player.getClient().getHardwareInfo() != null) ? player.getClient().getHardwareInfo().getMacAddress() : "Unknown");
 		adminReply.replace("%ai%", player.getAI().getIntention().name());
 		adminReply.replace("%inst%", player.isInInstance() ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns " + player.getInstanceId() + "\">" + player.getInstanceId() + "</a></td></tr>" : "");
-		adminReply.replace("%noblesse%", player.isNoble() ? "Yes" : "No");
+		final int nobleLevel = player.getNobleLevel();
+		adminReply.replace("%noblesse%", nobleLevel == 0 ? "No" : nobleLevel == 1 ? "Noble" : "Exalted");
 		activeChar.sendPacket(adminReply);
 	}
 	

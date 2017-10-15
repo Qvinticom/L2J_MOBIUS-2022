@@ -222,7 +222,7 @@ public class Q00551_OlympiadStarter extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if ((player.getLevel() < 75) || !player.isNoble())
+		if ((player.getLevel() < 75) || (player.getNobleLevel() == 0))
 		{
 			htmltext = "31688-00.htm";
 		}
@@ -235,7 +235,7 @@ public class Q00551_OlympiadStarter extends Quest
 			if (qs.isNowAvailable())
 			{
 				qs.setState(State.CREATED);
-				htmltext = (player.getLevel() < 75) || !player.isNoble() ? "31688-00.htm" : "31688-01.htm";
+				htmltext = (player.getLevel() < 75) || (player.getNobleLevel() == 0) ? "31688-00.htm" : "31688-01.htm";
 			}
 			else
 			{

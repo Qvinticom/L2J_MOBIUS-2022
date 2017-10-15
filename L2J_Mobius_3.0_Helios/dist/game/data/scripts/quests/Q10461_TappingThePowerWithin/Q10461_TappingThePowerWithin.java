@@ -98,7 +98,7 @@ public final class Q10461_TappingThePowerWithin extends Quest
 		{
 			case State.CREATED:
 			{
-				if (((player.getLevel() >= MIN_LEVEL) && player.isNoble()))
+				if (((player.getLevel() >= MIN_LEVEL) && (player.getNobleLevel() > 0)))
 				{
 					htmltext = "33907-01.htm";
 					break;

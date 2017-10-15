@@ -90,7 +90,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((activeChar.getLevel() < 99) || !activeChar.isNoble())
+		if ((activeChar.getLevel() < 99) || (activeChar.getNobleLevel() == 0))
 		{
 			activeChar.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
 			return;

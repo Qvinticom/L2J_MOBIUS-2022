@@ -750,7 +750,7 @@ public class L2Npc extends L2Character
 		{
 			case 31688:
 			{
-				if (player.isNoble())
+				if (player.getNobleLevel() > 0)
 				{
 					filename = Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm";
 				}
@@ -766,7 +766,7 @@ public class L2Npc extends L2Character
 			case 31771:
 			case 31772:
 			{
-				if (player.isHero() || player.isNoble())
+				if (player.isHero() || (player.getNobleLevel() > 0))
 				{
 					filename = Olympiad.OLYMPIAD_HTML_PATH + "hero_main.htm";
 				}

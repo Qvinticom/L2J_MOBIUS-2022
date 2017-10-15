@@ -361,7 +361,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 								{
 									player.doCast(NOBLESSE_PRESENTATION.getSkill());
 									showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 5000);
-									player.setNoble(true);
+									player.setNoble(1);
 									player.broadcastUserInfo();
 									giveItems(player, DIMENSIONAL_DIAMOND, 10);
 									giveItems(player, NOBLESSE_TIARA, 1);
