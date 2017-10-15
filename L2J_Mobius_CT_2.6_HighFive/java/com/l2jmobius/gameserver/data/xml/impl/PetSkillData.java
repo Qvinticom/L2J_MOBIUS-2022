@@ -66,9 +66,9 @@ public class PetSkillData implements IXmlReader
 					{
 						final NamedNodeMap attrs = d.getAttributes();
 						
-						final int npcId = parseInteger(attrs, "templateId");
-						final int id = parseInteger(attrs, "skillId");
-						final int lvl = parseInteger(attrs, "skillLvl");
+						final int npcId = parseInteger(attrs, "npcId");
+						final int skillId = parseInteger(attrs, "skillId");
+						final int skillLvl = parseInteger(attrs, "skillLvl");
 						
 						Map<Long, SkillHolder> skillTree = _skillTrees.get(npcId);
 						if (skillTree == null)
@@ -77,13 +77,13 @@ public class PetSkillData implements IXmlReader
 							_skillTrees.put(npcId, skillTree);
 						}
 						
-						if (SkillData.getInstance().getSkill(id, lvl == 0 ? 1 : lvl) != null)
+						if (SkillData.getInstance().getSkill(skillId, skillLvl == 0 ? 1 : skillLvl) != null)
 						{
-							skillTree.put((long) SkillData.getSkillHashCode(id, lvl + 1), new SkillHolder(id, lvl));
+							skillTree.put((long) SkillData.getSkillHashCode(skillId, skillLvl + 1), new SkillHolder(skillId, skillLvl));
 						}
 						else
 						{
-							LOGGER.info(getClass().getSimpleName() + ": Could not find skill with id " + id + ", level " + lvl + " for NPC " + npcId + ".");
+							LOGGER.info(getClass().getSimpleName() + ": Could not find skill with id " + skillId + ", level " + skillLvl + " for NPC " + npcId + ".");
 						}
 					}
 				}
