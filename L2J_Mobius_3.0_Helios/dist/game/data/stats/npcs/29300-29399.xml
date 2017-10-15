@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29300" level="85" type="L2Monster" name="Varkaron" title="Dimensional Invader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="231808530" hpRegen="7.5" mp="47100" mpRegen="2.7" />
+	<npc id="29300" level="99" type="L2Monster" name="Varkaron" title="Dimensional Invader">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="551936112" hpRegen="7.5" mp="47100" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="350" />
+				<attack type="DARK" value="430" />
+			</attribute>
 			<speed>
 				<walk ground="63" />
 				<run ground="300" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -23,18 +27,21 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="29301" level="85" type="L2Monster" name="Minion Monisac">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="168928" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+	<npc id="29301" level="99" type="L2Monster" name="Minion Monisac">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="175348" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1872.4946037619" magical="1243.0937820887" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="230" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -44,18 +51,21 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="29302" level="85" type="L2Monster" name="Minion Monishe">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="168928" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+	<npc id="29302" level="99" type="L2Monster" name="Minion Monishe">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="175348" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1872.4946037619" magical="1243.0937820887" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="100" dark="200" />
+			</attribute>
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -76,6 +86,10 @@
 			</speed>
 			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3888.88888888889" magical="2258.06451612903" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
 		</stats>
 		<status canMove="false" />
 		<skill_list>
@@ -93,6 +107,10 @@
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="589355368" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -117,6 +135,10 @@
 		<acquire exp="6127016742000" sp="14704840180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="589355368" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -272,6 +294,248 @@
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="29309" level="105" type="L2Monster" name="Leopold Origin" title="Ultimate Kamael">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2403304" hpRegen="7.5" mp="25848" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="230" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4286" level="1" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skill_list>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="30" />
+			<height normal="35.50" />
+		</collision>
+	</npc>
+	<npc id="29310" level="105" type="L2Monster" name="Enuma Elish Origin" title="Ultimate Kamael">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2403304" hpRegen="7.5" mp="25848" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="230" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4286" level="1" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skill_list>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="30" />
+			<height normal="35.50" />
+		</collision>
+	</npc>
+	<npc id="29311" level="105" type="L2Monster" name="Royal Templar Colonel" title="Emperor's Escort">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="4823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->			
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="10" /> <!-- Servitor Attack Weakness -->
+		</skill_list>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="24" />
+			<height normal="45.50" />
+		</collision>
+	</npc>
+	<npc id="29312" level="105" type="L2Monster" name="Royal Sharpshooter" title="Emperor's Escort">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="190" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="4823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->			
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="10" /> <!-- Servitor Attack Weakness -->
+		</skill_list>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="24" />
+			<height normal="45.50" />
+		</collision>
+	</npc>
+	<npc id="29313" level="105" type="L2Monster" name="Royal Archmage" title="Emperor's Escort">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="4823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->			
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="10" /> <!-- Servitor Attack Weakness -->
+		</skill_list>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="24" />
+			<height normal="45.50" />
+		</collision>
+	</npc>
+	<npc id="29314" level="105" type="L2Monster" name="Royal Gatekeeper" title="Emperor's Escort">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="4823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->			
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16608" level="10" /> <!-- Servitor Attack Weakness -->
+		</skill_list>
+		<collision>
+			<radius normal="24" />
+			<height normal="45.50" />
+		</collision>
+	</npc>
+	<npc id="29315" level="105" type="L2Monster" name="Mimillion" title="Red Lightning Watchman">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="60082600" hpRegen="7.5" mp="25848" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+		</skill_list>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="32" />
+			<height normal="50.5" />
+		</collision>
+	</npc>
+	<npc id="29316" level="105" type="L2Monster" name="Mimillus" title="Blue Lightning Watchman">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="60082600" hpRegen="7.5" mp="25848" mpRegen="2.7" />
+			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4347.718797982" magical="2100.4713645644" />
+			<attribute>
+				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
+				<attack type="EARTH" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+		</skill_list>
+		<ai type="BALANCED" />
+		<collision>
+			<radius normal="32" />
+			<height normal="50.5" />
 		</collision>
 	</npc>
 </list>
