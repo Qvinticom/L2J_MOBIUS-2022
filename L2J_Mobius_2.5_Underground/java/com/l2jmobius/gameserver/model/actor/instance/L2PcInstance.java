@@ -2557,7 +2557,7 @@ public final class L2PcInstance extends L2Playable
 		// Add noble skills if noble
 		if (_nobleLevel > 0)
 		{
-			setNoble(_nobleLevel);
+			setNobleLevel(_nobleLevel);
 		}
 		
 		// Add Hero skills if hero
@@ -6577,7 +6577,7 @@ public final class L2PcInstance extends L2Playable
 					player.setPkKills(rset.getInt("pkkills"));
 					player.setOnlineTime(rset.getLong("onlinetime"));
 					final int nobleLevel = rset.getInt("nobless");
-					player.setNoble(nobleLevel);
+					player.setNobleLevel(nobleLevel);
 					
 					final int factionId = rset.getInt("faction");
 					if (factionId == 1)
@@ -9324,7 +9324,7 @@ public final class L2PcInstance extends L2Playable
 		return _nobleLevel;
 	}
 	
-	public void setNoble(int level)
+	public void setNobleLevel(int level)
 	{
 		final Collection<Skill> nobleSkillTree = SkillTreesData.getInstance().getNobleSkillTree().values();
 		if (level != 0)

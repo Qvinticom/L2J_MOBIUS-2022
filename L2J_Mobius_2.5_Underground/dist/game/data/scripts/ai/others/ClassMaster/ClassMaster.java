@@ -266,7 +266,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 				}
 				else
 				{
-					player.setNoble(1);
+					player.setNobleLevel(1);
 					player.broadcastUserInfo();
 					// TODO: SetOneTimeQuestFlag(talker, 10385, 1);
 					htmltext = "test_server_helper025.html";

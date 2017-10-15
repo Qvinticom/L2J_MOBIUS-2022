@@ -100,7 +100,7 @@ public final class Q10827_StepUpToLead extends Quest
 						
 						// Give Exalted status here?
 						// https://l2wiki.com/Noblesse
-						player.setNoble(2);
+						player.setNobleLevel(2);
 						player.broadcastUserInfo();
 						
 						qs.exitQuest(false, true);

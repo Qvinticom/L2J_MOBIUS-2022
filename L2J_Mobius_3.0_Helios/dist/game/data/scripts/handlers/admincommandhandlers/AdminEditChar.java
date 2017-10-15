@@ -860,14 +860,32 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if (player != null)
 			{
-				final int nobleLevel = player.getNobleLevel();
-				player.setNoble(nobleLevel == 2 ? 0 : nobleLevel + 1);
+				switch (player.getNobleLevel())
+				{
+					case 0:
+					{
+						player.setNobleLevel(1);
+						player.sendMessage("A GM added you nobless status!");
+						break;
+					}
+					case 1:
+					{
+						player.setNobleLevel(2);
+						player.sendMessage("A GM changed your nobless status to exalted!");
+						break;
+					}
+					case 2:
+					{
+						player.setNobleLevel(0);
+						player.sendMessage("A GM removed your nobless status!");
+						break;
+					}
+				}
 				if (player.getObjectId() != activeChar.getObjectId())
 				{
 					activeChar.sendMessage("You've changed nobless status of: " + player.getName());
 				}
 				player.broadcastUserInfo();
-				player.sendMessage("GM changed your nobless status!");
 			}
 		}
 		else if (command.startsWith("admin_set_hp"))
