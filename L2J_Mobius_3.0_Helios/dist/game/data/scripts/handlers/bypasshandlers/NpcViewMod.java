@@ -505,7 +505,7 @@ public class NpcViewMod implements IBypassHandler
 				// bonus drop rate effect
 				if (dropRateEffectBonus > 0)
 				{
-					rateChance *= dropRateEffectBonus;
+					rateChance += rateChance * dropRateEffectBonus;
 				}
 			}
 			

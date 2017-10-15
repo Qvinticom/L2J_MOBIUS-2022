@@ -267,7 +267,7 @@ public class DropSearchBoard implements IParseBoardHandler
 						// bonus drop rate effect
 						if (dropRateEffectBonus > 0)
 						{
-							rateChance *= dropRateEffectBonus;
+							rateChance += rateChance * dropRateEffectBonus;
 						}
 					}
 					

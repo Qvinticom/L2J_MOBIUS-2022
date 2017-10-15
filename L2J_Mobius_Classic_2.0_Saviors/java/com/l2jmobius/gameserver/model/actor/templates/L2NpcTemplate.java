@@ -719,7 +719,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 				final double dropRateEffectBonus = killer.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
 				if (dropRateEffectBonus > 0)
 				{
-					rateChance *= dropRateEffectBonus;
+					rateChance += rateChance * dropRateEffectBonus;
 				}
 				
 				// calculate if item will drop
