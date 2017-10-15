@@ -69,7 +69,6 @@ public class PetSkillData implements IXmlReader
 						final int npcId = parseInteger(attrs, "templateId");
 						final int id = parseInteger(attrs, "skillId");
 						final int lvl = parseInteger(attrs, "skillLvl");
-						final int minLvl = parseInteger(attrs, "minLvl");
 						
 						Map<Long, L2PetSkillLearn> skillTree = _skillTrees.get(npcId);
 						if (skillTree == null)
@@ -80,7 +79,7 @@ public class PetSkillData implements IXmlReader
 						
 						if (SkillData.getInstance().getSkill(id, lvl == 0 ? 1 : lvl) != null)
 						{
-							skillTree.put((long) SkillData.getSkillHashCode(id, lvl + 1), new L2PetSkillLearn(id, lvl, minLvl));
+							skillTree.put((long) SkillData.getSkillHashCode(id, lvl + 1), new L2PetSkillLearn(id, lvl));
 						}
 						else
 						{
@@ -130,7 +129,7 @@ public class PetSkillData implements IXmlReader
 				}
 				break;
 			}
-			else if (temp.getMinLevel() <= cha.getLevel())
+			else if (1 <= cha.getLevel())
 			{
 				if (temp.getLevel() > lvl)
 				{
@@ -165,13 +164,11 @@ public class PetSkillData implements IXmlReader
 	{
 		private final int _id;
 		private final int _level;
-		private final int _minLevel;
 		
-		public L2PetSkillLearn(int id, int lvl, int minLvl)
+		public L2PetSkillLearn(int id, int lvl)
 		{
 			_id = id;
 			_level = lvl;
-			_minLevel = minLvl;
 		}
 		
 		public int getId()
@@ -182,11 +179,6 @@ public class PetSkillData implements IXmlReader
 		public int getLevel()
 		{
 			return _level;
-		}
-		
-		public int getMinLevel()
-		{
-			return _minLevel;
 		}
 	}
 	
