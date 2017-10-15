@@ -293,7 +293,7 @@
 		<set name="icon" val="icon.ev_charge_box" />
 	</item>
 	<item id="45922" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 1" type="EtcItem">
-		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 1, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 1. Can be obtained in the main class status. -->
+		<!-- Learn passive skill Dignity of the Exalted Lv. 1, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 1. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -306,9 +306,17 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<skills>
+			<skill id="18345" level="1" /> <!-- Dignity of the Exalted Lv. 1 -->
+		</skills>
 	</item>
 	<item id="45923" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 2" type="EtcItem">
-		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 2, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 2. Can be obtained in the main class status. -->
+		<!-- Learn passive skill Dignity of the Exalted Lv. 2, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 2. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -321,9 +329,17 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<skills>
+			<skill id="18346" level="1" /> <!-- Dignity of the Exalted Lv. 2 -->
+		</skills>
 	</item>
 	<item id="45924" name="Spellbook: Dignity of the Exalted" additionalName="Lv. 3" type="EtcItem">
-		<!-- Needed to learn passive skill, Dignity of the Exalted Lv. 3, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 3. Can be obtained in the main class status. -->
+		<!-- Learn passive skill Dignity of the Exalted Lv. 3, with the effect of STR/DEX/CON/MEN/INT/WIT/CHA + 3. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -336,6 +352,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<skills>
+			<skill id="18347" level="1" /> <!-- Dignity of the Exalted Lv. 3 -->
+		</skills>
 	</item>
 	<item id="45925" name="Spellbook: Belief of the Exalted" type="EtcItem">
 		<!-- Needed to learn active skill, Belief of the Exalted, used to teleport to a selected party member. Can be obtained in the main class status. -->
@@ -351,6 +375,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<skills>
+			<skill id="18348" level="1" /> <!-- Belief of the Exalted -->
+		</skills>
 	</item>
 	<item id="45926" name="Spellbook: Blessing of the Exalted" type="EtcItem">
 		<!-- Needed to learn active skill, Blessing of the Exalted, used to buff every party member with buff/de-buff protection even after death. Can be obtained in the main class status. -->
@@ -366,6 +398,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<skills>
+			<skill id="18349" level="1" /> <!-- Blessing of the Exalted -->
+		</skills>
 	</item>
 	<item id="45927" name="Spellbook: Summon Battle Potion" type="EtcItem">
 		<!-- Needed to learn the Exalted skill Summon Battle Potion. Can be obtained in the main class status. -->
@@ -381,6 +421,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<skills>
+			<skill id="18350" level="1" /> <!-- Summon Instant Cure Potion -->
+		</skills>
 	</item>
 	<item id="45928" name="Spellbook: Favor of the Exalted" additionalName="Lv. 1" type="EtcItem">
 		<!-- Needed to learn active skill, Favor of the Exalted Lv. 1, used to buff a target with 3% Bonus XP and SP. Can be obtained in the main class status. -->
@@ -396,6 +444,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<skills>
+			<skill id="18351" level="1" /> <!-- Favor of the Exalted -->
+		</skills>
 	</item>
 	<item id="45929" name="Spirit Stone" type="EtcItem">
 		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters level 46 or above. -->
@@ -616,7 +672,15 @@
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
+		<set name="reuse_delay" val="500" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="16453" level="1" /> <!-- Exalted Production -->
+		</skills>
 	</item>
 	<item id="45946" name="Sirra's Blade of Fortune Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get a + 4 enchanted Sirra's Blade of Fortune. -->

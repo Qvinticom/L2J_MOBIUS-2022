@@ -1500,6 +1500,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18351" level="2" /> <!-- Favor of the Exalted -->
+		</skills>
 	</item>
 	<item id="45871" name="Proof of Disposal" type="EtcItem">
 		<!-- Item obtained from defeating the monsters that Elikia requested. Take it to Elikia in Heine. -->

@@ -446,6 +446,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="20" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18266" level="1" /> <!-- Fate of the Exalted -->
+		</skills>
 	</item>
 	<item id="46037" name="Awakened Hero's Olympiad Gift" type="EtcItem">
 		<!-- An Olympiad gift for awakened heroes. -->

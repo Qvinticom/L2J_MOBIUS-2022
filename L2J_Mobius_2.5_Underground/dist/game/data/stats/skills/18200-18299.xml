@@ -651,10 +651,34 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18266" toLevel="1" name="Spellbook: Fate of the Exalted">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>46036</itemConsumeId> <!-- Spellbook: Fate of the Exalted -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>105</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19229</skillId>
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19229</skillId>
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18270" toLevel="1" name="Apocalypse Shaper Focus">
 		<!-- AUTO GENERATED SKILL -->

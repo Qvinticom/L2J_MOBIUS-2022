@@ -706,9 +706,22 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16453" toLevel="1" name="Exalted Production">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0922</icon>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>1000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpCpHeal">
+				<power>3000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16454" toLevel="1" name="Spinning Slasher">
 		<!-- AUTO GENERATED SKILL -->

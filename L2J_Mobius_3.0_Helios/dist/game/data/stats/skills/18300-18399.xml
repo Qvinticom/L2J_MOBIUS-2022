@@ -9,46 +9,230 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="18345" toLevel="1" name="Spellbook: Dignity of the Exalted Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>45922</itemConsumeId> <!-- Spellbook: Dignity of the Exalted Lv. 1 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>105</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19222</skillId>
+				<skillLevel>1</skillLevel>
+				<skillLevel>2</skillLevel>
+				<skillLevel>3</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19222</skillId>
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18346" toLevel="1" name="Spellbook: Dignity of the Exalted Lv. 2">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>45923</itemConsumeId> <!-- Spellbook: Dignity of the Exalted Lv. 2 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>105</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19222</skillId>
+				<skillLevel>2</skillLevel>
+				<skillLevel>3</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19222</skillId>
+				<skillLvl>2</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18347" toLevel="1" name="Spellbook: Dignity of the Exalted Lv. 3">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>45924</itemConsumeId> <!-- Spellbook: Dignity of the Exalted Lv. 3 -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>105</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19222</skillId>
+				<skillLevel>3</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19222</skillId>
+				<skillLvl>3</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18348" toLevel="1" name="Spellbook: Belief of the Exalted">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>45925</itemConsumeId> <!-- Spellbook: Belief of the Exalted -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>105</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19223</skillId>
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19223</skillId>
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18349" toLevel="1" name="Spellbook: Blessing of the Exalted">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>45926</itemConsumeId> <!-- Spellbook: Blessing of the Exalted -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>105</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19224</skillId>
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19224</skillId>
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18350" toLevel="1" name="Spellbook: Summon Instant Cure Potion">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>45927</itemConsumeId> <!-- Spellbook: Summon Battle Potion -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>105</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19225</skillId>
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19225</skillId>
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18351" toLevel="2" name="Spellbook: Favor of the Exalted Lv. 2">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">45928</value> <!-- Spellbook: Favor of the Exalted Lv. 1 -->
+			<value level="2">45870</value> <!-- Spellbook: Favor of the Exalted Lv. 2 -->
+		</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>105</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19226</skillId>
+				<skillLevel>1</skillLevel>
+				<skillLevel>2</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19226</skillId>
+				<skillLvl>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18352" toLevel="1" name="Special Magic Ornament Eternal Belt">
 		<!-- AUTO GENERATED SKILL -->
