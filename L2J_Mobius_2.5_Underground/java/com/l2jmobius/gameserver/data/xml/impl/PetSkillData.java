@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +29,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
  * @author Mobius
@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 public class PetSkillData implements IGameXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(PetSkillData.class.getName());
-	private final Map<Integer, Map<Long, L2PetSkillLearn>> _skillTrees = new HashMap<>();
+	private final Map<Integer, Map<Long, SkillHolder>> _skillTrees = new HashMap<>();
 	
 	protected PetSkillData()
 	{
@@ -69,7 +69,7 @@ public class PetSkillData implements IGameXmlReader
 						final int id = parseInteger(attrs, "skillId");
 						final int lvl = parseInteger(attrs, "skillLvl");
 						
-						Map<Long, L2PetSkillLearn> skillTree = _skillTrees.get(npcId);
+						Map<Long, SkillHolder> skillTree = _skillTrees.get(npcId);
 						if (skillTree == null)
 						{
 							skillTree = new HashMap<>();
@@ -78,7 +78,7 @@ public class PetSkillData implements IGameXmlReader
 						
 						if (SkillData.getInstance().getSkill(id, lvl == 0 ? 1 : lvl) != null)
 						{
-							skillTree.put(SkillData.getSkillHashCode(id, lvl + 1), new L2PetSkillLearn(id, lvl));
+							skillTree.put(SkillData.getSkillHashCode(id, lvl + 1), new SkillHolder(id, lvl));
 						}
 						else
 						{
@@ -90,26 +90,26 @@ public class PetSkillData implements IGameXmlReader
 		}
 	}
 	
-	public int getAvailableLevel(L2Summon cha, int skillId)
+	public int getAvailableLevel(L2Summon pet, int skillId)
 	{
 		int lvl = 0;
-		if (!_skillTrees.containsKey(cha.getId()))
+		if (!_skillTrees.containsKey(pet.getId()))
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Pet id " + cha.getId() + " does not have any skills assigned.");
+			LOGGER.warning(getClass().getSimpleName() + ": Pet id " + pet.getId() + " does not have any skills assigned.");
 			return lvl;
 		}
-		final Collection<L2PetSkillLearn> skills = _skillTrees.get(cha.getId()).values();
-		for (L2PetSkillLearn temp : skills)
+		
+		for (SkillHolder skillHolder : _skillTrees.get(pet.getId()).values())
 		{
-			if (temp.getId() != skillId)
+			if (skillHolder.getSkillId() != skillId)
 			{
 				continue;
 			}
-			if (temp.getLevel() == 0)
+			if (skillHolder.getSkillLevel() == 0)
 			{
-				if (cha.getLevel() < 70)
+				if (pet.getLevel() < 70)
 				{
-					lvl = cha.getLevel() / 10;
+					lvl = pet.getLevel() / 10;
 					if (lvl <= 0)
 					{
 						lvl = 1;
@@ -117,68 +117,48 @@ public class PetSkillData implements IGameXmlReader
 				}
 				else
 				{
-					lvl = 7 + ((cha.getLevel() - 70) / 5);
+					lvl = 7 + ((pet.getLevel() - 70) / 5);
 				}
 				
 				// formula usable for skill that have 10 or more skill levels
-				final int maxLvl = SkillData.getInstance().getMaxLevel(temp.getId());
+				final int maxLvl = SkillData.getInstance().getMaxLevel(skillHolder.getSkillId());
 				if (lvl > maxLvl)
 				{
 					lvl = maxLvl;
 				}
 				break;
 			}
-			else if (1 <= cha.getLevel())
+			else if (1 <= pet.getLevel())
 			{
-				if (temp.getLevel() > lvl)
+				if (skillHolder.getSkillLevel() > lvl)
 				{
-					lvl = temp.getLevel();
+					lvl = skillHolder.getSkillLevel();
 				}
 			}
 		}
+		
 		return lvl;
 	}
 	
-	public List<Integer> getAvailableSkills(L2Summon cha)
+	public List<Integer> getAvailableSkills(L2Summon pet)
 	{
 		final List<Integer> skillIds = new ArrayList<>();
-		if (!_skillTrees.containsKey(cha.getId()))
+		if (!_skillTrees.containsKey(pet.getId()))
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Pet id " + cha.getId() + " does not have any skills assigned.");
+			LOGGER.warning(getClass().getSimpleName() + ": Pet id " + pet.getId() + " does not have any skills assigned.");
 			return skillIds;
 		}
-		final Collection<L2PetSkillLearn> skills = _skillTrees.get(cha.getId()).values();
-		for (L2PetSkillLearn temp : skills)
+		
+		for (SkillHolder skillHolder : _skillTrees.get(pet.getId()).values())
 		{
-			if (skillIds.contains(temp.getId()))
+			if (skillIds.contains(skillHolder.getSkillId()))
 			{
 				continue;
 			}
-			skillIds.add(temp.getId());
+			skillIds.add(skillHolder.getSkillId());
 		}
+		
 		return skillIds;
-	}
-	
-	public static final class L2PetSkillLearn
-	{
-		private final int _id;
-		private final int _level;
-		
-		public L2PetSkillLearn(int id, int lvl)
-		{
-			_id = id;
-			_level = lvl;
-		}
-		
-		public int getId()
-		{
-			return _id;
-		}
-		
-		public int getLevel()
-		{
-			return _level;
-		}
 	}
 	
 	public static PetSkillData getInstance()
