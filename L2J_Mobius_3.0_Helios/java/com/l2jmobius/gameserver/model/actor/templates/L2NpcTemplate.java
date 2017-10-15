@@ -43,6 +43,7 @@ import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -712,6 +713,13 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 					{
 						rateChance *= Config.PREMIUM_RATE_DROP_CHANCE;
 					}
+				}
+				
+				// bonus drop rate effect
+				final double dropRateEffectBonus = killer.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
+				if (dropRateEffectBonus > 0)
+				{
+					rateChance *= dropRateEffectBonus;
 				}
 				
 				// calculate if item will drop

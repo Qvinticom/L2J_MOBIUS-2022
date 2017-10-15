@@ -40,6 +40,7 @@ import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * @author yksdtc
@@ -167,6 +168,7 @@ public class DropSearchBoard implements IParseBoardHandler
 				int start = (page - 1) * 14;
 				int end = Math.min(list.size() - 1, start + 14);
 				StringBuilder builder = new StringBuilder();
+				final double dropRateEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
 				for (int index = start; index <= end; index++)
 				{
 					CBDropHolder cbDropHolder = list.get(index);
@@ -260,6 +262,12 @@ public class DropSearchBoard implements IParseBoardHandler
 							{
 								rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
 							}
+						}
+						
+						// bonus drop rate effect
+						if (dropRateEffectBonus > 0)
+						{
+							rateChance *= dropRateEffectBonus;
 						}
 					}
 					

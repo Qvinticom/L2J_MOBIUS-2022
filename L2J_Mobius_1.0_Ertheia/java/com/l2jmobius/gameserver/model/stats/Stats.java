@@ -130,6 +130,7 @@ public enum Stats
 	EXPSP_RATE("rExp"),
 	BONUS_EXP("bonusExp"),
 	BONUS_SP("bonusSp"),
+	BONUS_DROP_RATE("bonusDropRate"),
 	ATTACK_CANCEL("cancel"),
 	
 	// ACCURACY & RANGE

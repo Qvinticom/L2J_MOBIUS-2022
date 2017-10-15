@@ -37,6 +37,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.HtmlUtil;
 import com.l2jmobius.gameserver.util.Util;
@@ -400,6 +401,7 @@ public class NpcViewMod implements IBypassHandler
 		
 		int leftHeight = 0;
 		int rightHeight = 0;
+		final double dropRateEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
 		final StringBuilder leftSb = new StringBuilder();
 		final StringBuilder rightSb = new StringBuilder();
 		String limitReachedMsg = "";
@@ -498,6 +500,12 @@ public class NpcViewMod implements IBypassHandler
 					{
 						rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
 					}
+				}
+				
+				// bonus drop rate effect
+				if (dropRateEffectBonus > 0)
+				{
+					rateChance *= dropRateEffectBonus;
 				}
 			}
 			
