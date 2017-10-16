@@ -18,7 +18,7 @@
 										<xs:element name="rewards" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="item">
+													<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
 														<xs:complexType>
 															<xs:simpleContent>
 																<xs:extension base="xs:string">

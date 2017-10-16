@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/classMaster.xsd">
-	<classMaster classChangeEnabled="false" spawnClassMasters="false" showPopupWindow="false">
+	<classMaster classChangeEnabled="true" spawnClassMasters="false" showPopupWindow="true">
 		<classChangeOption name="Free">
 			<appliesTo>
 				<category>FIRST_CLASS_GROUP</category>
@@ -10,33 +10,113 @@
 				<category>SECOND_CLASS_GROUP</category>
 			</appliesTo>
 		</classChangeOption>
-		<classChangeOption name="Pay Adena">
+		<classChangeOption name="Free">
 			<appliesTo>
 				<category>THIRD_CLASS_GROUP</category>
 			</appliesTo>
-			<conditions>
-				<item id="57" count="500000" /> <!-- 500,000 Adena for third class -->
-			</conditions>
 		</classChangeOption>
-		<classChangeOption name="Pay Ancient Adena">
+		<classChangeOption name="Free">
 			<appliesTo>
-				<category>THIRD_CLASS_GROUP</category>
+				<category>SIGEL_CANDIDATE</category>
 			</appliesTo>
-			<conditions>
-				<item id="5575" count="50000" /> <!-- 50,000 Ancient Adena for third class -->
-			</conditions>
+			<rewards>
+				<item id="32264" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
 		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>TYRR_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="32265" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>OTHELL_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="32266" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>YUL_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="32267" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>FEOH_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="32268" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>ISS_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="32269" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>WYNN_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="32270" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>AEORE_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="32271" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>EVISCERATOR_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="40268" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<classChangeOption name="Free">
+			<appliesTo>
+				<category>SAYHA_SEER_CANDIDATE</category>
+			</appliesTo>
+			<rewards>
+				<item id="40269" count="1" />
+				<item id="37374" count="2" />
+			</rewards>
+		</classChangeOption>
+		<!-- Example:
 		<classChangeOption name="Pay Adena and Ancient Adena">
 			<appliesTo>
 				<category>FOURTH_CLASS_GROUP</category>
 			</appliesTo>
 			<rewards>
-				<item id="37044" count="1" /> <!-- Immortal Scroll (Skill Enchantment, untradable) -->
+				<item id="37044" count="1" /> Immortal Scroll (Skill Enchantment, untradable)
 			</rewards>
 			<conditions>
-				<item id="57" count="3000000" /> <!-- 3 million Adena for fourth class -->
-				<item id="5575" count="300000" /> <!-- 300k Ancient Adena for fourth class -->
+				<item id="57" count="3000000" /> 3 million Adena for fourth class
+				<item id="5575" count="300000" /> 300k Ancient Adena for fourth class
 			</conditions>
-		</classChangeOption>
+		</classChangeOption> -->
 	</classMaster>
 </list>
