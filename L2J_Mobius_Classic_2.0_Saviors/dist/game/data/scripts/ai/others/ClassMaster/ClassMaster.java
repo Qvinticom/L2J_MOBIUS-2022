@@ -344,19 +344,41 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					}
 					
 					final ClassChangeData data = getClassChangeData(classDataIndex);
-					if ((data != null) && (data.getItemsRequired().size() > 0))
+					if (data != null)
 					{
-						for (ItemHolder ri : data.getItemsRequired())
+						// Required items.
+						if (data.getItemsRequired().size() > 0)
 						{
-							if (player.getInventory().getInventoryItemCount(ri.getId(), -1) < ri.getCount())
+							for (ItemHolder ri : data.getItemsRequired())
 							{
-								player.sendMessage("You do not have enough items.");
-								return null; // No class change if payment failed.
+								if (player.getInventory().getInventoryItemCount(ri.getId(), -1) < ri.getCount())
+								{
+									player.sendMessage("You do not have enough items.");
+									return null; // No class change if payment failed.
+								}
+							}
+							for (ItemHolder ri : data.getItemsRequired())
+							{
+								player.destroyItemByItemId(getClass().getSimpleName(), ri.getId(), ri.getCount(), npc, true);
 							}
 						}
-						for (ItemHolder ri : data.getItemsRequired())
+						// Give possible rewards.
+						if (data.getItemsRewarded().size() > 0)
 						{
-							player.destroyItemByItemId(getClass().getSimpleName(), ri.getId(), ri.getCount(), npc, true);
+							for (ItemHolder ri : data.getItemsRewarded())
+							{
+								giveItems(player, ri);
+							}
+						}
+						// Give possible nobless status reward.
+						if (data.isRewardNoblesse())
+						{
+							player.setNoble(true);
+						}
+						// Give possible hero status reward.
+						if (data.isRewardHero())
+						{
+							player.setHero(true);
 						}
 					}
 					
@@ -750,6 +772,45 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		}
 		else
 		{
+			final ClassChangeData data = _classChangeData.stream().filter(ccd -> ccd.isInCategory(player)).findFirst().get();
+			if (data != null)
+			{
+				// Required items.
+				if (data.getItemsRequired().size() > 0)
+				{
+					for (ItemHolder ri : data.getItemsRequired())
+					{
+						if (player.getInventory().getInventoryItemCount(ri.getId(), -1) < ri.getCount())
+						{
+							player.sendMessage("You do not have enough items.");
+							return false; // No class change if payment failed.
+						}
+					}
+					for (ItemHolder ri : data.getItemsRequired())
+					{
+						player.destroyItemByItemId(getClass().getSimpleName(), ri.getId(), ri.getCount(), player, true);
+					}
+				}
+				// Give possible rewards.
+				if (data.getItemsRewarded().size() > 0)
+				{
+					for (ItemHolder ri : data.getItemsRewarded())
+					{
+						giveItems(player, ri);
+					}
+				}
+				// Give possible nobless status reward.
+				if (data.isRewardNoblesse())
+				{
+					player.setNoble(true);
+				}
+				// Give possible hero status reward.
+				if (data.isRewardHero())
+				{
+					player.setHero(true);
+				}
+			}
+			
 			player.setClassId(newClass.getId());
 			if (player.isSubClassActive())
 			{
