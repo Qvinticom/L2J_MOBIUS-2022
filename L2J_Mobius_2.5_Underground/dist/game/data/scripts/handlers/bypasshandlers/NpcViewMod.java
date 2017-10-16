@@ -401,8 +401,9 @@ public class NpcViewMod implements IBypassHandler
 		
 		int leftHeight = 0;
 		int rightHeight = 0;
-		final double dropAmountEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 0);
-		final double dropRateEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
+		final double dropAmountEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
+		final double dropRateEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
+		final double spoilRateEffectBonus = activeChar.getStat().getValue(Stats.BONUS_SPOIL_RATE, 1);
 		final StringBuilder leftSb = new StringBuilder();
 		final StringBuilder rightSb = new StringBuilder();
 		String limitReachedMsg = "";
@@ -428,6 +429,9 @@ public class NpcViewMod implements IBypassHandler
 					rateChance *= Config.PREMIUM_RATE_SPOIL_CHANCE;
 					rateAmount *= Config.PREMIUM_RATE_SPOIL_AMOUNT;
 				}
+				
+				// bonus spoil rate effect
+				rateChance *= spoilRateEffectBonus;
 			}
 			else
 			{
@@ -504,16 +508,9 @@ public class NpcViewMod implements IBypassHandler
 				}
 				
 				// bonus drop amount effect
-				if (dropAmountEffectBonus > 0)
-				{
-					rateAmount += rateAmount * dropAmountEffectBonus;
-				}
-				
+				rateAmount *= dropAmountEffectBonus;
 				// bonus drop rate effect
-				if (dropRateEffectBonus > 0)
-				{
-					rateChance += rateChance * dropRateEffectBonus;
-				}
+				rateChance *= dropRateEffectBonus;
 			}
 			
 			sb.append("<table width=332 cellpadding=2 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");

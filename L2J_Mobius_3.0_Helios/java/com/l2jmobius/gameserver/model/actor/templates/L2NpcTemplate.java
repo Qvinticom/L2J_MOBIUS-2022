@@ -716,11 +716,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 				}
 				
 				// bonus drop rate effect
-				final double dropRateEffectBonus = killer.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
-				if (dropRateEffectBonus > 0)
-				{
-					rateChance += rateChance * dropRateEffectBonus;
-				}
+				rateChance *= killer.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
 				
 				// calculate if item will drop
 				if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance))
@@ -766,11 +762,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 					}
 					
 					// bonus drop amount effect
-					final double dropAmountEffectBonus = killer.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 0);
-					if (dropAmountEffectBonus > 0)
-					{
-						rateAmount += rateAmount * dropAmountEffectBonus;
-					}
+					rateAmount *= killer.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
 					
 					// finally
 					return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
@@ -786,6 +778,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 				{
 					rateChance *= Config.PREMIUM_RATE_SPOIL_CHANCE;
 				}
+				// bonus drop rate effect
+				rateChance *= killer.getStat().getValue(Stats.BONUS_SPOIL_RATE, 1);
 				
 				// calculate if item will be rewarded
 				if ((Rnd.nextDouble() * 100) < (dropItem.getChance() * rateChance))

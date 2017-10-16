@@ -132,6 +132,7 @@ public enum Stats
 	BONUS_SP("bonusSp"),
 	BONUS_DROP_AMOUNT("bonusDropAmount"),
 	BONUS_DROP_RATE("bonusDropRate"),
+	BONUS_SPOIL_RATE("bonusSpoilRate"),
 	ATTACK_CANCEL("cancel"),
 	
 	// ACCURACY & RANGE

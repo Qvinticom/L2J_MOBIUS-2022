@@ -168,8 +168,9 @@ public class DropSearchBoard implements IParseBoardHandler
 				int start = (page - 1) * 14;
 				int end = Math.min(list.size() - 1, start + 14);
 				StringBuilder builder = new StringBuilder();
-				final double dropAmountEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 0);
-				final double dropRateEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
+				final double dropAmountEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 1);
+				final double dropRateEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_RATE, 1);
+				final double spoilRateEffectBonus = player.getStat().getValue(Stats.BONUS_SPOIL_RATE, 1);
 				for (int index = start; index <= end; index++)
 				{
 					CBDropHolder cbDropHolder = list.get(index);
@@ -188,6 +189,9 @@ public class DropSearchBoard implements IParseBoardHandler
 							rateChance *= Config.PREMIUM_RATE_SPOIL_CHANCE;
 							rateAmount *= Config.PREMIUM_RATE_SPOIL_AMOUNT;
 						}
+						
+						// bonus spoil rate effect
+						rateChance *= spoilRateEffectBonus;
 					}
 					else
 					{
@@ -266,16 +270,9 @@ public class DropSearchBoard implements IParseBoardHandler
 						}
 						
 						// bonus drop amount effect
-						if (dropAmountEffectBonus > 0)
-						{
-							rateAmount += rateAmount * dropAmountEffectBonus;
-						}
-						
+						rateAmount *= dropAmountEffectBonus;
 						// bonus drop rate effect
-						if (dropRateEffectBonus > 0)
-						{
-							rateChance += rateChance * dropRateEffectBonus;
-						}
+						rateChance *= dropRateEffectBonus;
 					}
 					
 					builder.append("<tr>");
