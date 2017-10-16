@@ -1371,49 +1371,67 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9439" toLevel="1" name="Scroll: 10,000 Individual Fame">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 10,000 Individual Fame. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>35664</itemConsumeId> <!-- Scroll: 10,000 Individual Fame -->
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveFame">
+				<fame>10000</fame>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9440" toLevel="1" name="Scroll: 50,000 Individual Fame">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 50,000 Individual Fame. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>35665</itemConsumeId> <!-- Scroll: 50,000 Individual Fame -->
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveFame">
+				<fame>50000</fame>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9441" toLevel="1" name="Scroll: 100,000 Individual Fame">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 100,000 Individual Fame. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>35666</itemConsumeId> <!-- Scroll: 100,000 Individual Fame -->
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveFame">
+				<fame>100000</fame>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9442" toLevel="1" name="Trowel">
 		<!-- Gathers the Flame Flower. -->
