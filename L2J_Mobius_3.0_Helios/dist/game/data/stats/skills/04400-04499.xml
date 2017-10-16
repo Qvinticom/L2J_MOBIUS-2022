@@ -2715,6 +2715,9 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Spoil" />
+		</effects>
 	</skill>
 	<skill id="4471" toLevel="12" name="Anger">
 		<!-- Confirmed CT2.5 -->

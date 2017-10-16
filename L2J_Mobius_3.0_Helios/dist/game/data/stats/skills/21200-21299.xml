@@ -1625,7 +1625,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21278" toLevel="1" name="Vitality Recovery Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, recovers Vitality when acquiring XP. -->
 		<icon>BranchSys2.br_essence_rose_i00</icon>
 		<operateType>A2</operateType>
@@ -1651,6 +1650,12 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21279" toLevel="1" name="Drake Lord's Authority">
 		<!-- AUTO GENERATED SKILL -->
