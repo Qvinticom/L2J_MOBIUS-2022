@@ -765,6 +765,13 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 						}
 					}
 					
+					// bonus drop amount effect
+					final double dropAmountEffectBonus = killer.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 0);
+					if (dropAmountEffectBonus > 0)
+					{
+						rateAmount += rateAmount * dropAmountEffectBonus;
+					}
+					
 					// finally
 					return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
 				}

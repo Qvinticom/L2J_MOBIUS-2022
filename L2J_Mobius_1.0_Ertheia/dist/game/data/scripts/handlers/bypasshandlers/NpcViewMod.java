@@ -401,6 +401,7 @@ public class NpcViewMod implements IBypassHandler
 		
 		int leftHeight = 0;
 		int rightHeight = 0;
+		final double dropAmountEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 0);
 		final double dropRateEffectBonus = activeChar.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
 		final StringBuilder leftSb = new StringBuilder();
 		final StringBuilder rightSb = new StringBuilder();
@@ -500,6 +501,12 @@ public class NpcViewMod implements IBypassHandler
 					{
 						rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
 					}
+				}
+				
+				// bonus drop amount effect
+				if (dropAmountEffectBonus > 0)
+				{
+					rateAmount += rateAmount * dropAmountEffectBonus;
 				}
 				
 				// bonus drop rate effect

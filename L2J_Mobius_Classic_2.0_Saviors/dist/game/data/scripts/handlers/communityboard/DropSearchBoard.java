@@ -168,6 +168,7 @@ public class DropSearchBoard implements IParseBoardHandler
 				int start = (page - 1) * 14;
 				int end = Math.min(list.size() - 1, start + 14);
 				StringBuilder builder = new StringBuilder();
+				final double dropAmountEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_AMOUNT, 0);
 				final double dropRateEffectBonus = player.getStat().getValue(Stats.BONUS_DROP_RATE, 0);
 				for (int index = start; index <= end; index++)
 				{
@@ -262,6 +263,12 @@ public class DropSearchBoard implements IParseBoardHandler
 							{
 								rateAmount *= Config.PREMIUM_RATE_DROP_AMOUNT;
 							}
+						}
+						
+						// bonus drop amount effect
+						if (dropAmountEffectBonus > 0)
+						{
+							rateAmount += rateAmount * dropAmountEffectBonus;
 						}
 						
 						// bonus drop rate effect
