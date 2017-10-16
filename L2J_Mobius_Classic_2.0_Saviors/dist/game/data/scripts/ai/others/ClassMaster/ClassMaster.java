@@ -347,7 +347,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					if (data != null)
 					{
 						// Required items.
-						if (data.getItemsRequired().size() > 0)
+						if (!data.getItemsRequired().isEmpty())
 						{
 							for (ItemHolder ri : data.getItemsRequired())
 							{
@@ -363,7 +363,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 							}
 						}
 						// Give possible rewards.
-						if (data.getItemsRewarded().size() > 0)
+						if (!data.getItemsRewarded().isEmpty())
 						{
 							for (ItemHolder ri : data.getItemsRewarded())
 							{
@@ -776,7 +776,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			if (data != null)
 			{
 				// Required items.
-				if (data.getItemsRequired().size() > 0)
+				if (!data.getItemsRequired().isEmpty())
 				{
 					for (ItemHolder ri : data.getItemsRequired())
 					{
@@ -792,7 +792,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					}
 				}
 				// Give possible rewards.
-				if (data.getItemsRewarded().size() > 0)
+				if (!data.getItemsRewarded().isEmpty())
 				{
 					for (ItemHolder ri : data.getItemsRewarded())
 					{
