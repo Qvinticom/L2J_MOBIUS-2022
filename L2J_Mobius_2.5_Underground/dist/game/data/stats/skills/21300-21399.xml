@@ -1179,6 +1179,8 @@
 		<!-- Earth Resistance + 20, Skill Cooldown - 1%. -->
 		<icon>BranchSys3.icon1.g_premium_hena_dwarf</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>20</amount>
@@ -1200,12 +1202,10 @@
 		<!-- Dark Resistance + 20, PvP Damage + 1%. -->
 		<icon>BranchSys3.icon1.g_premium_hena_kamael</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DefenceAttribute">
-				<amount>20</amount>
-				<attribute>DARK</attribute>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
+			<effect name="PvpMagicalSkillDamageBonus"> 
 				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1216,6 +1216,10 @@
 			<effect name="PvpPhysicalSkillDamageBonus">
 				<amount>1</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
 			</effect>
 		</effects>
 	</skill>
@@ -1740,24 +1744,137 @@
 		</effects>
 	</skill>
 	<skill id="21366" toLevel="1" name="Wondrous Hunt Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- When HP is 90% or above, P. Def. + 20% and Speed + 33 in the Olympiad and the Ceremony of Chaos. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_defence</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<conditions>
+			<condition name="RemainHpPer">
+				<amount>90</amount>
+				<percentType>MORE</percentType>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21367" toLevel="1" name="Wondrous Slaughter Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- In a battlefield, Received Damage - 2% and Damage Reflect Resistance + 2. Skill Lv. up with each PC kill. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByKill">
+				<chance>100</chance>
+				<skillId>21368</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21368" toLevel="5" name="Wondrous Slaughter Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Received Damage - 5% and Damage Reflect Resistance + 5. -->
-		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
+		<icon>
+			<value level="1">BranchSys3.icon1.g_premium_hena_etc_slaughter</value>
+			<value level="2">BranchSys3.icon1.g_premium_hena_etc_slaughter_2</value>
+			<value level="3">BranchSys3.icon1.g_premium_hena_etc_slaughter_3</value>
+			<value level="4">BranchSys3.icon1.g_premium_hena_etc_slaughter_4</value>
+			<value level="5">BranchSys3.icon1.g_premium_hena_etc_slaughter_5</value>
+		</icon>
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+		</abnormalLvl>
+		<abnormalTime>
+			<value level="1">3600</value>
+			<value level="2">3600</value>
+			<value level="3">3600</value>
+			<value level="4">3600</value>
+			<value level="5">3600</value>
+		</abnormalTime>
+		<abnormalType>POSSESSION_SPECIAL</abnormalType>		
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
-		<effectPoint>1</effectPoint>
-		<isMagic>1</isMagic>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>900</effectRange>
+		<castRange>400</castRange>
+		<rideState>NONE</rideState>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByKill">
+				<chance>
+					<value level="1">100</value>
+					<value level="2">100</value>
+					<value level="3">100</value>
+					<value level="4">100</value>
+					<value level="5">100</value>
+				</chance>
+				<skillId>21368</skillId>
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">0</value>
+				</skillLevel>
+			</effect>		
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">8</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">8</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">8</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">30</value>
+					<value level="5">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21369" toLevel="1" name="Cancel Wondrous Dye Effect">
 		<!-- AUTO GENERATED SKILL -->
@@ -2264,49 +2381,107 @@
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="21389" toLevel="1" name="Mysterious Dark Resistance Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Dark Resistance + 120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_unholy</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>90</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>90</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21390" toLevel="1" name="Mysterious Holy Resistance Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Holy Resistance + 120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_holy</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21391" toLevel="1" name="Mysterious Fire Resistance Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Resistance + 120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_fire</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21392" toLevel="1" name="Mysterious Water Resistance Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Resistance + 120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_water</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21393" toLevel="1" name="Mysterious Wind Resistance Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Resistance + 120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_wind</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21394" toLevel="1" name="Mysterious Earth Resistance Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Resistance + 120 when fighting normal monsters. -->
 		<icon>BranchSys3.icon1.g_premium_hena_attribute_earth</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21395" toLevel="1" name="Mysterious Abnormal State Resistance Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Hold, Sleep, Paralysis, Mental, Poison, Bleed, and Stun Resistance + 20. Buff Cancellation Resistance + 20. Has a 5% chance of reflecting physical and magical abnormal states. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_debuff</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>20</DERANGEMENT>
+				<SHOCK>20</SHOCK>
+				<PARALYZE>20</PARALYZE>
+				<POISON>20</POISON>
+				<BLEED>20</BLEED>
+				<SLEEP>20</SLEEP>
+				<HOLD>20</HOLD>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-20</amount>
+				<slot>BUFF</slot>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>5</amount>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>5</amount>
+				<type>MAGIC</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21396" toLevel="1" name="Mysterious Invincibility Boost Dye">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Duration for Invincibility against normal hits and skills increases by 50%. -->
 		<icon>BranchSys3.icon1.g_premium_hena_etc_buff</icon>
 		<operateType>P</operateType>
