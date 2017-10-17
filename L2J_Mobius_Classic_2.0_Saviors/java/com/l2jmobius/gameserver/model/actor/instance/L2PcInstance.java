@@ -163,6 +163,7 @@ import com.l2jmobius.gameserver.model.actor.status.PcStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.player.DismountTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.FameTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.GameGuardCheckTask;
+import com.l2jmobius.gameserver.model.actor.tasks.player.HennaDurationTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.InventoryEnableTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.PetFeedTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.PvPFlagTask;
@@ -593,9 +594,10 @@ public final class L2PcInstance extends L2Playable
 	private final Set<L2PcInstance> _snoopListener = ConcurrentHashMap.newKeySet();
 	private final Set<L2PcInstance> _snoopedPlayer = ConcurrentHashMap.newKeySet();
 	
-	// hennas
+	/** Hennas */
 	private final L2Henna[] _henna = new L2Henna[3];
 	private final Map<BaseStats, Integer> _hennaBaseStats = new ConcurrentHashMap<>();
+	private final Map<Integer, ScheduledFuture<?>> _hennaRemoveSchedules = new ConcurrentHashMap<>(3);
 	
 	/** The Pet of the L2PcInstance */
 	private L2PetInstance _pet = null;
@@ -7724,9 +7726,9 @@ public final class L2PcInstance extends L2Playable
 	 */
 	private void restoreHenna()
 	{
-		for (int i = 0; i < 3; i++)
+		for (int i = 1; i < 4; i++)
 		{
-			_henna[i] = null;
+			_henna[i - 1] = null;
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -7751,7 +7753,28 @@ public final class L2PcInstance extends L2Playable
 					{
 						continue;
 					}
-					_henna[slot - 1] = HennaData.getInstance().getHenna(symbolId);
+					
+					final L2Henna henna = HennaData.getInstance().getHenna(symbolId);
+					
+					// Task for henna duration
+					if (henna.getDuration() > 0)
+					{
+						final long remainingTime = getVariables().getLong("HennaDuration" + slot, 0) - System.currentTimeMillis();
+						if (remainingTime < 0)
+						{
+							removeHenna(slot);
+							continue;
+						}
+						_hennaRemoveSchedules.put(slot, ThreadPoolManager.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
+					}
+					
+					_henna[slot - 1] = henna;
+					
+					// Reward henna skills
+					for (Skill skill : henna.getSkills())
+					{
+						addSkill(skill, false);
+					}
 				}
 			}
 		}
@@ -7807,27 +7830,25 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		slot--;
-		
-		final L2Henna henna = _henna[slot];
+		final L2Henna henna = _henna[slot - 1];
 		if (henna == null)
 		{
 			return false;
 		}
 		
-		_henna[slot] = null;
+		_henna[slot - 1] = null;
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(DELETE_CHAR_HENNA))
 		{
 			statement.setInt(1, getObjectId());
-			statement.setInt(2, slot + 1);
+			statement.setInt(2, slot);
 			statement.setInt(3, getClassIndex());
 			statement.execute();
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Failed remocing character henna.", e);
+			_log.log(Level.SEVERE, "Failed removing character henna.", e);
 		}
 		
 		// Calculate Henna modifiers of this L2PcInstance
@@ -7840,15 +7861,42 @@ public final class L2PcInstance extends L2Playable
 		final UserInfo ui = new UserInfo(this, false);
 		ui.addComponentType(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 		sendPacket(ui);
-		// Add the recovered dyes to the player's inventory and notify them.
-		getInventory().addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
-		reduceAdena("Henna", henna.getCancelFee(), this, false);
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-		sm.addItemName(henna.getDyeItemId());
-		sm.addLong(henna.getCancelCount());
-		sendPacket(sm);
+		final long remainingTime = getVariables().getLong("HennaDuration" + slot, 0) - System.currentTimeMillis();
+		if ((henna.getDuration() < 0) || (remainingTime > 0))
+		{
+			// Add the recovered dyes to the player's inventory and notify them.
+			if (henna.getCancelFee() > 0)
+			{
+				reduceAdena("Henna", henna.getCancelFee(), this, false);
+			}
+			if (henna.getCancelCount() > 0)
+			{
+				getInventory().addItem("Henna", henna.getDyeItemId(), henna.getCancelCount(), this, null);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+				sm.addItemName(henna.getDyeItemId());
+				sm.addLong(henna.getCancelCount());
+				sendPacket(sm);
+			}
+		}
 		sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_DELETED);
+		
+		// Remove henna duration task
+		if (henna.getDuration() > 0)
+		{
+			getVariables().remove("HennaDuration" + slot);
+			if (_hennaRemoveSchedules.get(slot) != null)
+			{
+				_hennaRemoveSchedules.get(slot).cancel(false);
+				_hennaRemoveSchedules.remove(slot);
+			}
+		}
+		
+		// Remove henna skills
+		for (Skill skill : henna.getSkills())
+		{
+			removeSkill(skill, false);
+		}
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaRemove(this, henna), this);
@@ -7862,11 +7910,11 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean addHenna(L2Henna henna)
 	{
-		for (int i = 0; i < 3; i++)
+		for (int i = 1; i < 4; i++)
 		{
-			if (_henna[i] == null)
+			if (_henna[i - 1] == null)
 			{
-				_henna[i] = henna;
+				_henna[i - 1] = henna;
 				
 				// Calculate Henna modifiers of this L2PcInstance
 				recalcHennaStats();
@@ -7876,13 +7924,26 @@ public final class L2PcInstance extends L2Playable
 				{
 					statement.setInt(1, getObjectId());
 					statement.setInt(2, henna.getDyeId());
-					statement.setInt(3, i + 1);
+					statement.setInt(3, i);
 					statement.setInt(4, getClassIndex());
 					statement.execute();
 				}
 				catch (Exception e)
 				{
 					_log.log(Level.SEVERE, "Failed saving character henna.", e);
+				}
+				
+				// Task for henna duration
+				if (henna.getDuration() > 0)
+				{
+					getVariables().set("HennaDuration" + i, System.currentTimeMillis() + (henna.getDuration() * 60000));
+					_hennaRemoveSchedules.put(i, ThreadPoolManager.schedule(new HennaDurationTask(this, i), System.currentTimeMillis() + (henna.getDuration() * 60000)));
+				}
+				
+				// Reward henna skills
+				for (Skill skill : henna.getSkills())
+				{
+					addSkill(skill, false);
 				}
 				
 				// Send Server->Client HennaInfo packet to this L2PcInstance

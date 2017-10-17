@@ -23,6 +23,7 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.base.ClassId;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -40,6 +41,8 @@ public class L2Henna
 	private final int _wear_count;
 	private final int _cancel_fee;
 	private final int _cancel_count;
+	private final int _duration;
+	private final List<Skill> _skills;
 	private final List<ClassId> _wear_class;
 	
 	public L2Henna(StatsSet set)
@@ -59,6 +62,8 @@ public class L2Henna
 		_wear_count = set.getInt("wear_count");
 		_cancel_fee = set.getInt("cancel_fee");
 		_cancel_count = set.getInt("cancel_count");
+		_duration = set.getInt("duration", -1);
+		_skills = new ArrayList<>();
 		_wear_class = new ArrayList<>();
 	}
 	
@@ -126,6 +131,30 @@ public class L2Henna
 	public int getCancelCount()
 	{
 		return _cancel_count;
+	}
+	
+	/**
+	 * @return the duration of this dye.
+	 */
+	public int getDuration()
+	{
+		return _duration;
+	}
+	
+	/**
+	 * @param skillList the list of skills related to this dye.
+	 */
+	public void setSkills(List<Skill> skillList)
+	{
+		_skills.addAll(skillList);
+	}
+	
+	/**
+	 * @return the skills related to this dye.
+	 */
+	public List<Skill> getSkills()
+	{
+		return _skills;
 	}
 	
 	/**

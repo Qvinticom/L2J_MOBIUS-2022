@@ -31,13 +31,14 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * This class holds the henna related information.<br>
  * Cost and required amount to add the henna to the player.<br>
  * Cost and retrieved amount for removing the henna from the player.<br>
  * Allowed classes to wear each henna.
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public final class HennaData implements IGameXmlReader
 {
@@ -87,6 +88,7 @@ public final class HennaData implements IGameXmlReader
 	{
 		final StatsSet set = new StatsSet();
 		final List<ClassId> wearClassIds = new ArrayList<>();
+		final List<Skill> skills = new ArrayList<>();
 		NamedNodeMap attrs = d.getAttributes();
 		Node attr;
 		for (int i = 0; i < attrs.getLength(); i++)
@@ -126,6 +128,17 @@ public final class HennaData implements IGameXmlReader
 					set.set("cancel_fee", attr.getNodeValue());
 					break;
 				}
+				case "duration":
+				{
+					attr = attrs.getNamedItem("time"); // in minutes
+					set.set("duration", attr.getNodeValue());
+					break;
+				}
+				case "skill":
+				{
+					skills.add(SkillData.getInstance().getSkill(parseInteger(attrs, "id"), parseInteger(attrs, "level")));
+					break;
+				}
 				case "classId":
 				{
 					wearClassIds.add(ClassId.getClassId(Integer.parseInt(c.getTextContent())));
@@ -134,6 +147,7 @@ public final class HennaData implements IGameXmlReader
 			}
 		}
 		final L2Henna henna = new L2Henna(set);
+		henna.setSkills(skills);
 		henna.setWearClassIds(wearClassIds);
 		_hennaList.put(henna.getDyeId(), henna);
 	}
