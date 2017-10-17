@@ -246,6 +246,16 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5418" toLevel="1" name="Invincibility">
 		<!-- Invincible against general attack and skill, buff/de-buff. -->
@@ -254,6 +264,16 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5419" toLevel="1" name="Invincible Blow">
 		<!-- Crystaline Golem -->
@@ -276,6 +296,16 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5422" toLevel="12" name="Flame">
 		<!-- Body is on fire. HP continually decreases. -->

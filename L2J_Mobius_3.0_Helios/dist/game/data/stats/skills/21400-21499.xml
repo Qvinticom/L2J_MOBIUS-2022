@@ -18,12 +18,34 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="21402" toLevel="1" name="Mysterious Human Dye - Unbind">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes all debuffs and becomes invincible to debuffs for 10 seconds. -->
 		<icon>icon.skill1904</icon>
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
+		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<effectPoint>867</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>95</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21403" toLevel="1" name="Mysterious Elf Dye - Prevision">
 		<!-- AUTO GENERATED SKILL -->
