@@ -792,71 +792,126 @@
 		</effects>
 	</skill>
 	<skill id="13329" toLevel="1" name="Bestow Fire Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow fire damage by 300. -->
 		<icon>icon.skill4009</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>300</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13330" toLevel="1" name="Bestow Water Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow water damage by 300. -->
 		<icon>icon.skill4010</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>300</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13331" toLevel="1" name="Bestow Wind Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow wind damage by 300. -->
 		<icon>icon.skill4011</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>300</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13332" toLevel="1" name="Bestow Earth Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow earth damage by 300. -->
 		<icon>icon.skill4012</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>300</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13333" toLevel="1" name="Bestow Holy Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow holy damage by 300. -->
 		<icon>icon.skill4337</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>300</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13334" toLevel="1" name="Bestow Darkness Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow darkness damage by 300. -->
 		<icon>icon.skill4333</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>300</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13335" toLevel="1" name="Bestow Fire/Wind/Darkness Armor">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow Fire/Wind/Dark Resistance by 120. -->
 		<icon>icon.skill4337</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13336" toLevel="1" name="Bestow Water/Earth/Holy Armor">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestow Water/Earth/Holy Resistance by 120. -->
 		<icon>icon.skill4333</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>120</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13337" toLevel="1" name="Talisman (R-grade) - M. Def. (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 seconds, increases M. Def. + 50% through the power of the talisman. -->
 		<icon>icon.r_talisman_mm_up_active</icon>
 		<operateType>A2</operateType>
@@ -875,9 +930,14 @@
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13338" toLevel="1" name="Talisman (R-grade) - Ranged P. Def. (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 seconds, increases Bow/Crossbow Resistance + 80% through the power of Talisman. -->
 		<icon>icon.r85_sp_talisman_ad_ex_passive</icon>
 		<operateType>A2</operateType>
@@ -896,6 +956,12 @@
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>80</BOW>
+				<CROSSBOW>80</CROSSBOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13339" toLevel="3" name="Enchant Heavy Armor Set + 6 (R-grade)">
 		<!-- Set item is enchanted. P. Def. + 93, and MP Recovery Bonus + 32 when standing/ sitting. -->
@@ -1271,7 +1337,6 @@
 		</conditions>
 	</skill>
 	<skill id="13349" toLevel="1" name="Talisman (R-grade) - Damage Reflect Resistance (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 seconds, increases Damage Reflect Resistance by 10 through the power of the talisman. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>A2</operateType>
@@ -1290,9 +1355,14 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13350" toLevel="1" name="Talisman (R-grade) - Lethal Strike Resistance (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 seconds, increases lethal strike resistance by 30 through the power of the talisman. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>A2</operateType>
@@ -1311,6 +1381,11 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="InstantKillResist">
+				<amount>90</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13351" toLevel="1" name="Notifier">
 		<!-- AUTO GENERATED SKILL -->
@@ -1413,15 +1488,19 @@
 		</effects>
 	</skill>
 	<skill id="13356" toLevel="1" name="Player Commendation - Talisman - M. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Atk. by 37 when equipped. -->
 		<icon>icon.r85_talisman_ma_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MagicalAttack">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13357" toLevel="1" name="Player Commendation - Talisman - P. Atk. (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. by 111 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>A2</operateType>
@@ -1440,17 +1519,27 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>111</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13358" toLevel="1" name="Player Commendation - Talisman - P. Atk.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk by 37 when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13359" toLevel="1" name="Player Commendation - Talisman - P. Def. (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. by 114 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_pd_up_active</icon>
 		<operateType>A2</operateType>
@@ -1469,17 +1558,27 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>114</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13360" toLevel="1" name="Player Commendation - Talisman - P. Def.">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. by 38 when equipped. -->
 		<icon>icon.r85_talisman_pd_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>38</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13361" toLevel="1" name="Player Commendation - Talisman - Max CP (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 297 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_cp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1498,17 +1597,27 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxCp">
+				<amount>279</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13362" toLevel="1" name="Player Commendation - Talisman - Max CP">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 99 when equipped. -->
 		<icon>icon.r85_talisman_cp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>99</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13363" toLevel="1" name="Player Commendation - Talisman - Max HP (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 657 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_hp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1527,17 +1636,27 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>657</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13364" toLevel="1" name="Player Commendation - Talisman - Max HP">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 219 when equipped. -->
 		<icon>icon.r85_talisman_hp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>219</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13365" toLevel="1" name="Player Commendation - Talisman - Max MP (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 327 momentarily through the power of the talisman. -->
 		<icon>icon.r85_talisman_mp_up_active</icon>
 		<operateType>A2</operateType>
@@ -1556,17 +1675,27 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxMp">
+				<amount>327</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13366" toLevel="1" name="Player Commendation - Talisman - Max MP">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max MP by 119 when equipped. -->
 		<icon>icon.r85_talisman_mp_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxMp">
+				<amount>119</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13367" toLevel="1" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Active)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily increases Half-kill/Lethal Strike Resistance by 30 through the power of the talisman. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>A2</operateType>
@@ -1585,62 +1714,150 @@
 		<reuseDelay>360000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="InstantKillResist">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13368" toLevel="1" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Half-kill/Lethal Strike Resistance by 10 when a talisman is equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="InstantKillResist">
+				<amount>10</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13369" toLevel="1" name="Squash Ring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Critical attack power by 15% and P. Accuracy by 2. -->
 		<icon>icon.accessory_ring_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>75</magicLvl>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13370" toLevel="1" name="Squash Ring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Critical Rate by 2% and M. Accuracy by 2. -->
 		<icon>icon.accessory_ring_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>75</magicLvl>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13371" toLevel="1" name="Squash Earring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. Spd. by 4%. and Speed by 5. -->
 		<icon>icon.accessory_earring_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>75</magicLvl>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13372" toLevel="1" name="Squash Earring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Casting Spd. by 4% and Speed by 5. -->
 		<icon>icon.accessory_earring_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>75</magicLvl>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13373" toLevel="1" name="Squash Necklace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Sleep/Paralysis/Stun/Poison/Bleed resistance and attack rate by 20%. Decreases skill Cooldown by 5% and skill MP Consumption by 5%. -->
 		<icon>icon.accessory_necklace_of_gourd_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>75</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>20</BLEED>
+				<SHOCK>20</SHOCK>
+				<POISON>20</POISON>
+				<PARALYZE>20</PARALYZE>
+				<SLEEP>20</SLEEP>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13374" toLevel="1" name="Circlet of Earthquake">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth resistance by 60. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13375" toLevel="1" name="Release Agathion's Seal - XP Bottle">
 		<!-- AUTO GENERATED SKILL -->
@@ -2053,35 +2270,55 @@
 		</effects>
 	</skill>
 	<skill id="13396" toLevel="1" name="Rabbit Ears: STR">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1 -->
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>		
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13397" toLevel="1" name="Rabbit Ears: DEX">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 1 -->
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>		
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13398" toLevel="1" name="Rabbit Ears: WIT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 1 -->
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>		
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13399" toLevel="1" name="Rabbit Ears: INT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 1 -->
 		<icon>icon.accessory_rabbit_ear_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>		
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 </list>

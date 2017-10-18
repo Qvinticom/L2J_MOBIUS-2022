@@ -534,7 +534,6 @@
 	<skill id="10256" toLevel="10" name="Superior HP Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- Max HP + 606, Max CP + 296, HP Recovery Bonus + 12, MP Recovery Bonus + 6. When HP falls below 60%, P. Atk. + 1027. STR + 2. When receiving damage, has a chance of recovering 10% of Max HP. -->
-		<!-- TODO: Find trigger for When receiving damage, has a chance of recovering 10% of Max HP. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -554,7 +553,7 @@
 			<effect name="PAtk">
 				<amount>
 					<value level="1">1027</value>
-					<value level="2">1027</value>
+					<value level="2">1191</value>
 					<value level="3">1381</value>
 					<value level="4">1554</value>
 					<value level="5">1761</value>
@@ -569,7 +568,7 @@
 			<effect name="MaxCp">
 				<amount>
 					<value level="1">296</value>
-					<value level="2">296</value>
+					<value level="2">353</value>
 					<value level="3">411</value>
 					<value level="4">489</value>
 					<value level="5">533</value>
@@ -592,7 +591,7 @@
 			<effect name="MaxHp">
 				<amount>
 					<value level="1">606</value>
-					<value level="2">606</value>
+					<value level="2">724</value>
 					<value level="3">843</value>
 					<value level="4">1002</value>
 					<value level="5">1092</value>
@@ -604,13 +603,27 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="HpRegen">
+			<effect name="MpRegen">
 				<amount>6</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="TriggerSkillByDamage">
+				<!-- Self Heal (Warrior) - Recovers 10% of Max HP. -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>20</chance>
+				<targetType>SELF</targetType>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>10323</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="10257" toLevel="1" name="Self Heal (Warrior)">
+	<skill id="10257" toLevel="1" name="Superior Spirit Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->
 		<operateType>P</operateType>
