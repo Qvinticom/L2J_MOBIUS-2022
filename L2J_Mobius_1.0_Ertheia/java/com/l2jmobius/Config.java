@@ -1112,6 +1112,7 @@ public final class Config
 	public static float PREMIUM_RATE_SPOIL_CHANCE;
 	public static float PREMIUM_RATE_SPOIL_AMOUNT;
 	public static boolean PREMIUM_HENNA_SLOT_ENABLED;
+	public static boolean PREMIUM_HENNA_SLOT_ALL_DYES;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
 	public static boolean PC_CAFE_ENABLED;
@@ -2548,6 +2549,7 @@ public final class Config
 			PREMIUM_RATE_SPOIL_CHANCE = PremiumSystem.getFloat("PremiumRateSpoilChance", 2);
 			PREMIUM_RATE_SPOIL_AMOUNT = PremiumSystem.getFloat("PremiumRateSpoilAmount", 1);
 			PREMIUM_HENNA_SLOT_ENABLED = PremiumSystem.getBoolean("EnablePremiumHennaSlot", true);
+			PREMIUM_HENNA_SLOT_ALL_DYES = PremiumSystem.getBoolean("EnableAnyHennaAtPremiumSlot", false);
 			final String[] premiumDropChanceMultiplier = PremiumSystem.getString("PremiumRateDropChanceByItemId", "").split(";");
 			PREMIUM_RATE_DROP_CHANCE_BY_ID = new HashMap<>(premiumDropChanceMultiplier.length);
 			if (!premiumDropChanceMultiplier[0].isEmpty())

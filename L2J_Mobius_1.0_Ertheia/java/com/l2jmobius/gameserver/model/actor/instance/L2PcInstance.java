@@ -7940,6 +7940,22 @@ public final class L2PcInstance extends L2Playable
 	{
 		for (int i = 1; i < 5; i++)
 		{
+			// Check for retail premium dyes slot
+			if (!Config.PREMIUM_HENNA_SLOT_ALL_DYES)
+			{
+				if (i == 4)
+				{
+					if ((_henna[3] != null) || (henna.getDyeItemId() < 23825) || (henna.getDyeItemId() > 23830))
+					{
+						return false;
+					}
+				}
+				else if ((henna.getDyeItemId() > 23824) && (henna.getDyeItemId() < 23831))
+				{
+					continue;
+				}
+			}
+			
 			if (_henna[i - 1] == null)
 			{
 				_henna[i - 1] = henna;
