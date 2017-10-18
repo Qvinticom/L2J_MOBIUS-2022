@@ -1676,7 +1676,7 @@
 			<value level="3">105</value>
 		</magicLvl>
 		<affectLimit>6-12</affectLimit>
-		<affectRange>200</affectRange>
+		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<operateType>A1</operateType>
 		<fanRange>0;0;200;900</fanRange>
@@ -1687,7 +1687,7 @@
 		<effectPoint>-125</effectPoint>
 		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SQUARE_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<nextAction>ATTACK</nextAction>

@@ -694,130 +694,553 @@
 		</effects>
 	</skill>
 	<skill id="13670" toLevel="1" name="Special Water Resistance Necklace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP + 10%, and P./M. Skill Cooldown - 5%. -->
 		<icon>icon.accessary_inferno_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>65</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13671" toLevel="1" name="Special Fire Resistance Necklace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP + 10%, and P./M. Skill Cooldown - 5%. -->
 		<icon>icon.accessary_inferno_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>65</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13672" toLevel="1" name="Special Holy Resistance Necklace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP + 10%, and P./M. Skill Cooldown - 5%. -->
 		<icon>icon.accessary_inferno_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>65</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13673" toLevel="1" name="Special Dark Resistance Necklace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP + 10%, and P./M. Skill Cooldown - 5%. -->
 		<icon>icon.accessary_inferno_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>65</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13674" toLevel="1" name="Special Wind Resistance Necklace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP + 10%, and P./M. Skill Cooldown - 5%. -->
 		<icon>icon.accessary_inferno_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>65</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13675" toLevel="1" name="Special Earth Resistance Necklace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max CP + 10%, and P./M. Skill Cooldown - 5%. -->
 		<icon>icon.accessary_inferno_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>65</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13676" toLevel="1" name="Special Earth Resistance Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max CP + 10%, nad P./M. Critical Damage + 5%. -->
+		<!-- Max CP + 10%, and P./M. Critical Damage + 5%. -->
 		<icon>icon.accessary_inferno_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13677" toLevel="1" name="Special Water Resistance Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max CP + 10%, nad P./M. Critical Damage + 5%. -->
+		<!-- Max CP + 10%, and P./M. Critical Damage + 5%. -->
 		<icon>icon.accessary_inferno_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13678" toLevel="1" name="Special Fire Resistance Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max CP + 10%, nad P./M. Critical Damage + 5%. -->
+		<!-- Max CP + 10%, and P./M. Critical Damage + 5%. -->
 		<icon>icon.accessary_inferno_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13679" toLevel="1" name="Special Holy Resistance Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max CP + 10%, nad P./M. Critical Damage + 5%. -->
+		<!-- Max CP + 10%, and P./M. Critical Damage + 5%. -->
 		<icon>icon.accessary_inferno_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13680" toLevel="1" name="Special Dark Resistance Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max CP + 10%, nad P./M. Critical Damage + 5%. -->
+		<!-- Max CP + 10%, and P./M. Critical Damage + 5%. -->
 		<icon>icon.accessary_inferno_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13681" toLevel="1" name="Special Wind Resistance Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Max CP + 10%, nad P./M. Critical Damage + 5%. -->
+		<!-- Max CP + 10%, and P./M. Critical Damage + 5%. -->
 		<icon>icon.accessary_inferno_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13682" toLevel="1" name="Special Resistance Earring - Stun">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Stun Bonus by 40%, Stun Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<SHOCK>40</SHOCK>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>40</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13683" toLevel="1" name="Special Resistance Earring - Hold">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Hold Bonus by 40%, Hold Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<HOLD>40</HOLD>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>40</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13684" toLevel="1" name="Special Resistance Earring - Bleed">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Bleed Bonus by 40%, Bleed Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<BLEED>40</BLEED>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>40</BLEED>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13685" toLevel="1" name="Special Resistance Earring - Paralyze">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Paralyze Bonus by 40%, Paralysis Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<PARALYZE>40</PARALYZE>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>40</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13686" toLevel="1" name="Special Resistance Earring - Mental Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Mental Attack Bonus by 40%, Mental Attack Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<DERANGEMENT>40</DERANGEMENT>
+			</effect>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>40</DERANGEMENT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13687" toLevel="1" name="Special Resistance Earring - Sleep">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Sleep Bonus by 40%, Sleep Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<SLEEP>40</SLEEP>
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>40</SLEEP>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13688" toLevel="1" name="Special Resistance Earring - Poison">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Poison Bonus by 40%, Poison Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<POISON>40</POISON>
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>40</POISON>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13689" toLevel="1" name="Special Resistance Earring - Knock Back/Knock Down">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Knock Back/Knock Down Bonus by 40%, Knock Back/Knock Down Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<KNOCKBACK>40</KNOCKBACK>
+			</effect>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>40</KNOCKBACK>
+			</effect>
+			<effect name="AttackTrait">
+				<KNOCKDOWN>40</KNOCKDOWN>
+			</effect>
+			<effect name="DefenceTrait">
+				<KNOCKDOWN>40</KNOCKDOWN>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13690" toLevel="1" name="Special Resistance Earring - Aerial Yoke">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 10%, Aerial Yoke Bonus by 40%, Aerial Yoke Resistance by 40, and Vampiric Rage by 3%. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>3</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="AttackTrait">
+				<AIRBIND>40</AIRBIND>
+			</effect>
+			<effect name="DefenceTrait">
+				<AIRBIND>40</AIRBIND>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13691" toLevel="1" name="Talisman - Battle: Attack">
 		<!-- AUTO GENERATED SKILL -->

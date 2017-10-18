@@ -4,6 +4,7 @@
 		<!-- Earring purchased with a Mark of Battle. MP + 49, CP + 10%, Paralysis Attack/Resistance + 40%, and Vampiric Rage Effect by + 3%. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -11,6 +12,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13685" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">130</stat>
 		</stats>
@@ -19,6 +23,7 @@
 		<!-- Earring purchased with a Mark of Battle. MP + 49, CP + 10%, Mental Attack/Resistance + 40%, and Vampiric Rage Effect by + 3%. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -26,6 +31,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13686" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">130</stat>
 		</stats>
@@ -34,6 +42,7 @@
 		<!-- Earring purchased with a Mark of Battle. MP + 49, CP + 10%, Sleep Attack/Resistance + 40%, and Vampiric Rage Effect by + 3%. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -41,6 +50,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13687" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">130</stat>
 		</stats>
@@ -49,6 +61,7 @@
 		<!-- Earring purchased with a Mark of Battle. MP + 49, CP + 10%, Poison Attack/Resistance + 40%, and Vampiric Rage Effect by + 3%. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -56,6 +69,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13688" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">130</stat>
 		</stats>
@@ -64,6 +80,7 @@
 		<!-- Earring purchased with a Mark of Battle. MP + 49, CP + 10%, Knock Back/Knock Down Attack/Resistance + 40%, and Vampiric Rage Effect by + 3%. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -71,6 +88,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13689" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">130</stat>
 		</stats>
@@ -79,6 +99,7 @@
 		<!-- Earring purchased with a Mark of Battle. MP + 49, CP + 10%, Aerial Yoke Attack/Resistance + 40%, and Vampiric Rage Effect by + 3%. Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -86,6 +107,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13690" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">130</stat>
 		</stats>
@@ -95,12 +119,19 @@
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="75" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<skills>
+			<skill id="18352" level="1" /> <!-- Special Magic Ornament Eternal Belt -->
+		</skills>
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -110,12 +141,19 @@
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="75" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<skills>
+			<skill id="18353" level="1" /> <!-- Special Magic Ornament Eternal Belt -->
+		</skills>
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -125,12 +163,19 @@
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="75" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<skills>
+			<skill id="18354" level="1" /> <!-- Special Magic Ornament Eternal Belt -->
+		</skills>
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -140,12 +185,19 @@
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
 		<set name="crystal_type" val="R99" />
+		<set name="crystal_count" val="75" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="440" />
+		<skills>
+			<skill id="18355" level="1" /> <!-- Special Magic Ornament Eternal Belt -->
+		</skills>
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>

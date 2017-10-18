@@ -2027,6 +2027,7 @@
 		<!-- MP + 62, Sleep Resistance + 40%, Sleep Atk. Rate + 40%, HP + 445, Skill Cooldown decreases, P./M. Atk. Increases, Wild Magic Effect, Damage Shield Effect, and Fire Resistance increases. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2038,6 +2039,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="3557" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">125</stat>
 		</stats>
@@ -2046,6 +2050,7 @@
 		<!-- MP + 62, Sleep/Paralysis/Stun Resistance + 15%, Sleep/Paralysis/Stun Atk. Rate + 15%, Poison/Bleed Resistance + 25%, Poison/Bleed Atk. Rate + 25%, Skill Cooldown decreases, Damage Shield Effect and Dark Resistance increases. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2057,6 +2062,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="3604" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">95</stat>
 		</stats>
@@ -2065,6 +2073,7 @@
 		<!-- MP + 46, Sleep Resistance + 40%, Bleed Atk. Rate + 40%, Heal Amount increases, Vampiric Rage Effect, Stun/Mental Attak Resistance + 30%, Stun/Mental Atk. Rate + 30%,  MP Consumption decreases, and Earth Resistance increases.  Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2076,6 +2085,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="3558" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">94</stat>
 		</stats>
@@ -2084,6 +2096,7 @@
 		<!-- MP + 46, Bleed Resistance + 30%, Bleed Atk. Rate + 30%, Heal Amount increases, Vampiric Rage Effect, Stun/Mental Resistance + 20%, Stun/Mental Atk. Rate + 20%. Only one effect is applied even when wearing two earrings with the same effect. If worn with Blessed Zaken's Earring, only that earring's effects will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2095,6 +2108,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="3559" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">71</stat>
 		</stats>
@@ -2103,6 +2119,7 @@
 		<!-- MP +31, Poison Resistance + 40%, Poison Atk. Rate + 40%, Accuracy increases, P. Critical Damage increases, Hold Resistance + 30%, Hold Atk. Rate + 30%, P./M. Atk. increases. Only one effect is applied even when wearing two rings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2114,6 +2131,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="3561" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 		</stats>
@@ -2122,6 +2142,7 @@
 		<!-- MP +31, Poison Resistance + 30%, Poison Atk. Rate + 30%, Accuracy increases, P. Critical Damage increases, Hold Resistance + 20%, Hold Atk. Rate + 20%. Only one effect is applied even when wearing two rings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
@@ -2133,6 +2154,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="3562" level="1"/>
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 		</stats>

@@ -235,28 +235,104 @@
 		</effects>
 	</skill>
 	<skill id="18352" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Weight + 12800, Inventory Slot + 18, and Damage + 6% during PvE. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>12800</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>18</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18353" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Weight + 12800, Inventory Slot + 18, and Damage Received + 7% during PvE. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>12800</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>18</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18354" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Weight + 12800, Inventory Slot + 18, AND Damage + 6% during PvP. -->
+		<!-- Weight + 12800, Inventory Slot + 18, and Damage + 6% during PvP. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>12800</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>18</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18355" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Weight + 12800, Inventory Slot + 18, and Damage Received + 7% during PvP. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>12800</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>18</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18356" toLevel="1" name="Atelia Energy Combination Box">
 		<!-- AUTO GENERATED SKILL -->
@@ -388,28 +464,76 @@
 		<reuseDelay>604800000</reuseDelay>
 	</skill>
 	<skill id="18374" toLevel="1" name="Pippi's Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7, STR + 1, and INT + 1. -->
 		<icon>icon.r1_shirt_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18375" toLevel="1" name="Kokko's Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7, STR + 1, INT + 1, CON + 1, and MEN + 1. -->
 		<icon>icon.r1_shirt_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18376" toLevel="1" name="Pippi's Belt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Weight + 12800 and Inventory Slot + 12. -->
 		<icon>icon.belt_i03</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="WeightPenalty">
+				<amount>12800</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>12</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18377" toLevel="1" name="Kokko's Belt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Weight + 12800 and Inventory Slot + 18. -->
 		<icon>icon.belt_i03</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="WeightPenalty">
+				<amount>12800</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>18</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18378" toLevel="1" name="Awakened Hero's Olympiad Gift">
 		<!-- AUTO GENERATED SKILL -->
@@ -424,82 +548,146 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18380" toLevel="1" name="Mysterious Talisman - STR">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18381" toLevel="1" name="Mysterious Talisman - INT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18382" toLevel="1" name="Mysterious Talisman - DEX">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18383" toLevel="1" name="Mysterious Talisman - WIT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18384" toLevel="1" name="Mysterious Talisman - CON">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18385" toLevel="1" name="Mysterious Talisman - MEN">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18386" toLevel="1" name="Mysterious Talisman - Attack Attribute">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attack Attribute + 50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>50</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18387" toLevel="1" name="Player Commendation - Talisman - Fire Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Resistance + 50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18388" toLevel="1" name="Player Commendation - Talisman - Water Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Resistance + 50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18389" toLevel="1" name="Player Commendation - Talisman - Wind Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Resistance + 50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18390" toLevel="1" name="Player Commendation - Talisman - Earth Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Resistance + 50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18391" toLevel="1" name="Player Commendation - Talisman - Holy Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Holy Resistance + 50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18392" toLevel="1" name="Player Commendation - Talisman - Dark Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Dark Resistance + 50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18393" toLevel="1" name="Dimensional Elcyum Pack">
 		<!-- AUTO GENERATED SKILL -->

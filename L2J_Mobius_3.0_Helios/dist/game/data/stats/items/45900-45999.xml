@@ -58,6 +58,7 @@
 		<!-- Speed + 7, STR + 1, INT +1 when equipped. -->
 		<set name="icon" val="icon.r1_shirt_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -67,6 +68,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="130" />
+		<skills>
+			<skill id="18374" level="1"/>
+		</skills>
 		<stats>
 			<stat type="pDef">38</stat>
 		</stats>
@@ -75,6 +79,7 @@
 		<!-- Speed + 7, STR/INT/CON/MEN + 1 when equipped. -->
 		<set name="icon" val="icon.r1_shirt_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -84,6 +89,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="130" />
+		<skills>
+			<skill id="18375" level="1"/>
+		</skills>
 		<stats>
 			<stat type="pDef">38</stat>
 		</stats>
@@ -93,6 +101,7 @@
 		<set name="icon" val="icon.belt_i03" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -102,6 +111,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="440" />
+		<skills>
+			<skill id="18376" level="1"/>
+		</skills>
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -111,6 +123,7 @@
 		<set name="icon" val="icon.belt_i03" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -120,6 +133,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="440" />
+		<skills>
+			<skill id="18377" level="1"/>
+		</skills>
 		<stats>
 			<stat type="pDef">25</stat>
 		</stats>
@@ -308,9 +324,7 @@
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPELLBOOK" />
 		<skills>
 			<skill id="18345" level="1" /> <!-- Dignity of the Exalted Lv. 1 -->
 		</skills>
@@ -331,9 +345,7 @@
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPELLBOOK" />
 		<skills>
 			<skill id="18346" level="1" /> <!-- Dignity of the Exalted Lv. 2 -->
 		</skills>
@@ -354,9 +366,7 @@
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPELLBOOK" />
 		<skills>
 			<skill id="18347" level="1" /> <!-- Dignity of the Exalted Lv. 3 -->
 		</skills>
@@ -377,9 +387,7 @@
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPELLBOOK" />
 		<skills>
 			<skill id="18348" level="1" /> <!-- Belief of the Exalted -->
 		</skills>
@@ -400,9 +408,7 @@
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPELLBOOK" />
 		<skills>
 			<skill id="18349" level="1" /> <!-- Blessing of the Exalted -->
 		</skills>
@@ -423,9 +429,7 @@
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPELLBOOK" />
 		<skills>
 			<skill id="18350" level="1" /> <!-- Summon Instant Cure Potion -->
 		</skills>
@@ -446,9 +450,7 @@
 		<set name="weight" val="20" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="commissionItemType" val="SPELLBOOK" />
 		<skills>
 			<skill id="18351" level="1" /> <!-- Favor of the Exalted -->
 		</skills>
