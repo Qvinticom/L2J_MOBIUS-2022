@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Henna;
@@ -38,17 +37,10 @@ public class HennaRemoveList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.HENNA_UNEQUIP_LIST.writeId(packet);
-		
 		packet.writeQ(_player.getAdena());
-		
-		boolean premiumSlotEnabled = false;
-		if (_player.hasPremiumStatus() && Config.PREMIUM_HENNA_SLOT_ENABLED && (_player.getClassId().level() > 1) && (_player.getHenna(4) != null))
-		{
-			premiumSlotEnabled = true;
-		}
+		final boolean premiumSlotEnabled = _player.getHenna(4) != null;
 		packet.writeD(premiumSlotEnabled ? 0x04 : 0x03); // seems to be max size
 		packet.writeD((premiumSlotEnabled ? 4 : 3) - _player.getHennaEmptySlots()); // slots used
-		
 		for (L2Henna henna : _player.getHennaList())
 		{
 			if (henna != null)
