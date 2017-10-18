@@ -57,7 +57,12 @@ public final class RequestHennaEquip implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.getHennaEmptySlots() == 0)
+		int totalHennaSlots = activeChar.getHennaEmptySlots();
+		if (activeChar.hasPremiumStatus() && Config.PREMIUM_HENNA_SLOT_ENABLED && (activeChar.getClassId().level() > 1) && (activeChar.getHenna(4) == null))
+		{
+			totalHennaSlots++;
+		}
+		if (totalHennaSlots == 0)
 		{
 			activeChar.sendPacket(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
 			client.sendPacket(ActionFailed.STATIC_PACKET);

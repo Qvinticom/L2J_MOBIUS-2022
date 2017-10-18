@@ -50,6 +50,7 @@ public class PremiumManager
 	private static final String LOAD_SQL = "SELECT account_name,enddate FROM account_premium";
 	private static final String UPDATE_SQL = "UPDATE account_premium SET enddate = ? WHERE account_name = ?";
 	private static final String ADD_SQL = "INSERT INTO account_premium (enddate,account_name) VALUE (?,?)";
+	private static final String DELETE_SQL = "DELETE FROM account_premium WHERE account_name = ?";
 	
 	class PremiumExpireTask implements Runnable
 	{
@@ -65,6 +66,10 @@ public class PremiumManager
 		{
 			player.setPremiumStatus(false);
 			player.sendPacket(new ExBrPremiumState(player));
+			if (player.getHenna(4) != null)
+			{
+				player.removeHenna(4);
+			}
 		}
 	}
 	
@@ -89,6 +94,10 @@ public class PremiumManager
 		if (player.hasPremiumStatus())
 		{
 			startExpireTask(player, premiumExpiration - now);
+		}
+		else if (player.getHenna(4) != null)
+		{
+			player.removeHenna(4);
 		}
 	};
 	
@@ -202,6 +211,10 @@ public class PremiumManager
 			playerOnline.setPremiumStatus(false);
 			playerOnline.sendPacket(new ExBrPremiumState(playerOnline));
 			stopExpireTask(playerOnline);
+			if (playerOnline.getHenna(4) != null)
+			{
+				playerOnline.removeHenna(4);
+			}
 		}
 		
 		// UPDATE CACHE
@@ -209,10 +222,9 @@ public class PremiumManager
 		
 		// UPDATE DATABASE
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement stmt = con.prepareStatement(UPDATE_SQL))
+			PreparedStatement stmt = con.prepareStatement(DELETE_SQL))
 		{
-			stmt.setLong(1, 0L);
-			stmt.setString(2, accountName);
+			stmt.setString(1, accountName);
 			stmt.execute();
 		}
 		catch (SQLException e)

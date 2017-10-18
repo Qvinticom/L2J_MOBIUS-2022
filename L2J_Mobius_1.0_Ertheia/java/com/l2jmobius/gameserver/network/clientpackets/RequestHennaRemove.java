@@ -54,7 +54,7 @@ public final class RequestHennaRemove implements IClientIncomingPacket
 		
 		L2Henna henna;
 		boolean found = false;
-		for (int i = 1; i <= 3; i++)
+		for (int i = 1; i <= 4; i++)
 		{
 			henna = activeChar.getHenna(i);
 			if ((henna != null) && (henna.getDyeId() == _symbolId))

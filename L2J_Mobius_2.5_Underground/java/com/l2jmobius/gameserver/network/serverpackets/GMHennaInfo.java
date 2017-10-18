@@ -37,11 +37,11 @@ public final class GMHennaInfo implements IClientOutgoingPacket
 	public GMHennaInfo(L2PcInstance player)
 	{
 		_activeChar = player;
-		for (L2Henna henna : _activeChar.getHennaList())
+		for (int i = 1; i < 4; i++)
 		{
-			if (henna != null)
+			if (player.getHenna(i) != null)
 			{
-				_hennas.add(henna);
+				_hennas.add(player.getHenna(i));
 			}
 		}
 	}
@@ -66,9 +66,18 @@ public final class GMHennaInfo implements IClientOutgoingPacket
 			packet.writeD(henna.getDyeId());
 			packet.writeD(0x01);
 		}
-		packet.writeD(0x00);
-		packet.writeD(0x00);
-		packet.writeD(0x00);
+		if (_activeChar.getHenna(4) != null)
+		{
+			packet.writeD(_activeChar.getHenna(4).getDyeId());
+			packet.writeD(0x00); // Premium Slot Dye Time Left
+			packet.writeD(_activeChar.getHenna(4).isAllowedClass(_activeChar.getClassId()) ? 0x01 : 0x00);
+		}
+		else
+		{
+			packet.writeD(0x00); // Premium Slot Dye ID
+			packet.writeD(0x00); // Premium Slot Dye Time Left
+			packet.writeD(0x00); // Premium Slot Dye ID isValid
+		}
 		return true;
 	}
 }

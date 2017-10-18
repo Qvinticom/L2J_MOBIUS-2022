@@ -597,9 +597,9 @@ public final class L2PcInstance extends L2Playable
 	private final Set<L2PcInstance> _snoopedPlayer = ConcurrentHashMap.newKeySet();
 	
 	/** Hennas */
-	private final L2Henna[] _henna = new L2Henna[3];
+	private final L2Henna[] _henna = new L2Henna[4];
 	private final Map<BaseStats, Integer> _hennaBaseStats = new ConcurrentHashMap<>();
-	private final Map<Integer, ScheduledFuture<?>> _hennaRemoveSchedules = new ConcurrentHashMap<>(3);
+	private final Map<Integer, ScheduledFuture<?>> _hennaRemoveSchedules = new ConcurrentHashMap<>(4);
 	
 	/** The Pet of the L2PcInstance */
 	private L2PetInstance _pet = null;
@@ -7754,7 +7754,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	private void restoreHenna()
 	{
-		for (int i = 1; i < 4; i++)
+		for (int i = 1; i < 5; i++)
 		{
 			_henna[i - 1] = null;
 		}
@@ -7771,7 +7771,7 @@ public final class L2PcInstance extends L2Playable
 				while (rset.next())
 				{
 					slot = rset.getInt("slot");
-					if ((slot < 1) || (slot > 3))
+					if ((slot < 1) || (slot > 4))
 					{
 						continue;
 					}
@@ -7825,7 +7825,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			totalSlots = 2;
 		}
-		else
+		else if (getClassId().level() > 1)
 		{
 			totalSlots = 3;
 		}
@@ -7853,7 +7853,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean removeHenna(int slot)
 	{
-		if ((slot < 1) || (slot > 3))
+		if ((slot < 1) || (slot > 4))
 		{
 			return false;
 		}
@@ -7894,7 +7894,7 @@ public final class L2PcInstance extends L2Playable
 		if ((henna.getDuration() < 0) || (remainingTime > 0))
 		{
 			// Add the recovered dyes to the player's inventory and notify them.
-			if (henna.getCancelFee() > 0)
+			if ((henna.getCancelFee() > 0) && (hasPremiumStatus() || (slot != 4)))
 			{
 				reduceAdena("Henna", henna.getCancelFee(), this, false);
 			}
@@ -7938,7 +7938,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean addHenna(L2Henna henna)
 	{
-		for (int i = 1; i < 4; i++)
+		for (int i = 1; i < 5; i++)
 		{
 			if (_henna[i - 1] == null)
 			{
@@ -8016,7 +8016,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public L2Henna getHenna(int slot)
 	{
-		if ((slot < 1) || (slot > 3))
+		if ((slot < 1) || (slot > 4))
 		{
 			return null;
 		}

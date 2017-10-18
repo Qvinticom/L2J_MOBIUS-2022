@@ -7797,7 +7797,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			totalSlots = 2;
 		}
-		else
+		else if (getClassId().level() > 1)
 		{
 			totalSlots = 3;
 		}
