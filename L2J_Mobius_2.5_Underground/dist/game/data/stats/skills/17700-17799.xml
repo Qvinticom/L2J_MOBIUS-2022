@@ -25,6 +25,9 @@
 		<reuseDelay>30000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<targetConditions>
+			<condition name="OpCheckFlag" />
+		</targetConditions>
 		<effects>
 			<effect name="BlockSkill">
 				<magicTypes>1;3</magicTypes>

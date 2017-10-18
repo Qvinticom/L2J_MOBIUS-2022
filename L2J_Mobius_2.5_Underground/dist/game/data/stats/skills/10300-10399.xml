@@ -1686,7 +1686,16 @@
 			<value level="2">icon.skill0526</value>
 			<value level="3">icon.skill0526</value>
 		</icon>
-		<operateType>A1</operateType>
+		<itemConsumeCount>
+			<value level="1">1</value>
+			<value level="2">1</value>
+			<value level="3">1</value>
+		</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">1785</value>
+			<value level="2">1785</value>
+			<value level="3">1785</value>
+		</itemConsumeId>
 		<mpConsume>
 			<value level="1">233</value>
 			<value level="2">236</value>
@@ -1697,11 +1706,30 @@
 			<value level="2">103</value>
 			<value level="3">105</value>
 		</magicLvl>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<operateType>A1</operateType>
+		<fanRange>0;0;200;900</fanRange>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-125</effectPoint>
+		<coolTime>500</coolTime>s
 		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-125</effectPoint>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE_PB</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1709,8 +1737,7 @@
 					<value level="2">17094</value>
 					<value level="3">17959</value>
 				</power>
-				<overHit>true</overHit>				
-				<criticalChance>15</criticalChance>
+				<overHit>false</overHit>				
 				<pDefMod>0.7</pDefMod>
 			</effect>
 		</effects>
