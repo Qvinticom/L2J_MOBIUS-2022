@@ -13668,7 +13668,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		// Immediate store upon change
 		final AccountVariables vars = getAccountVariables();
-		vars.set("PRIME_POINTS", points);
+		vars.set("PRIME_POINTS", Math.max(points, 0));
 		vars.storeMe();
 	}
 	
