@@ -27,7 +27,8 @@ public enum PrivateStoreType
 	BUY(3),
 	BUY_MANAGE(4),
 	MANUFACTURE(5),
-	PACKAGE_SELL(8);
+	PACKAGE_SELL(8),
+	SELL_BUFFS(9);
 	
 	private int _id;
 	
