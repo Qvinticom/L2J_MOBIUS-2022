@@ -7945,12 +7945,12 @@ public final class L2PcInstance extends L2Playable
 			{
 				if (i == 4)
 				{
-					if ((_henna[3] != null) || (henna.getDyeItemId() < 23825) || (henna.getDyeItemId() > 23830))
+					if ((_henna[3] != null) || !henna.isPremium())
 					{
 						return false;
 					}
 				}
-				else if ((henna.getDyeItemId() > 23824) && (henna.getDyeItemId() < 23831))
+				else if (henna.isPremium())
 				{
 					continue;
 				}

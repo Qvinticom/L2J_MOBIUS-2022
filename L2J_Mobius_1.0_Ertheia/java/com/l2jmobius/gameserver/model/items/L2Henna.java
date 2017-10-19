@@ -36,6 +36,7 @@ public class L2Henna
 	private final int _dyeId;
 	private final String _dyeName;
 	private final int _dyeItemId;
+	private final boolean _isPremium;
 	private final Map<BaseStats, Integer> _baseStats = new HashMap<>();
 	private final int _wear_fee;
 	private final int _wear_count;
@@ -50,6 +51,7 @@ public class L2Henna
 		_dyeId = set.getInt("dyeId");
 		_dyeName = set.getString("dyeName");
 		_dyeItemId = set.getInt("dyeItemId");
+		_isPremium = set.getBoolean("isPremium", false);
 		_baseStats.put(BaseStats.STR, set.getInt("str", 0));
 		_baseStats.put(BaseStats.CON, set.getInt("con", 0));
 		_baseStats.put(BaseStats.DEX, set.getInt("dex", 0));
@@ -89,6 +91,14 @@ public class L2Henna
 	public int getDyeItemId()
 	{
 		return _dyeItemId;
+	}
+	
+	/**
+	 * @return true if this dye is premium.
+	 */
+	public boolean isPremium()
+	{
+		return _isPremium;
 	}
 	
 	public int getBaseStats(Stats stat)

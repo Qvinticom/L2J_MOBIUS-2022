@@ -66,10 +66,6 @@ public class PremiumManager
 		{
 			player.setPremiumStatus(false);
 			player.sendPacket(new ExBrPremiumState(player));
-			if (player.getHenna(4) != null)
-			{
-				player.removeHenna(4);
-			}
 		}
 	}
 	
@@ -94,10 +90,6 @@ public class PremiumManager
 		if (player.hasPremiumStatus())
 		{
 			startExpireTask(player, premiumExpiration - now);
-		}
-		else if (player.getHenna(4) != null)
-		{
-			player.removeHenna(4);
 		}
 	};
 	
@@ -211,10 +203,6 @@ public class PremiumManager
 			playerOnline.setPremiumStatus(false);
 			playerOnline.sendPacket(new ExBrPremiumState(playerOnline));
 			stopExpireTask(playerOnline);
-			if (playerOnline.getHenna(4) != null)
-			{
-				playerOnline.removeHenna(4);
-			}
 		}
 		
 		// UPDATE CACHE

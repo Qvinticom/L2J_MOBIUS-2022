@@ -358,14 +358,7 @@ public class EnterWorld implements IClientIncomingPacket
 		// activeChar.queryGameGuard();
 		
 		// Send Dye Information
-		if (!Config.PREMIUM_SYSTEM_ENABLED && (activeChar.getHenna(4) != null))
-		{
-			activeChar.removeHenna(4);
-		}
-		else
-		{
-			activeChar.sendPacket(new HennaInfo(activeChar));
-		}
+		activeChar.sendPacket(new HennaInfo(activeChar));
 		
 		// Send Skill list
 		activeChar.sendSkillList();
