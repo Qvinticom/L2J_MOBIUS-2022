@@ -963,6 +963,11 @@
 		<hitTime>3000</hitTime>
 		<coolTime>200</coolTime>
 		<effectPoint>1811</effectPoint>
+		<magicCriticalRate>5</magicCriticalRate>
+		<rideState>NONE</rideState>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -977,6 +982,25 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="CpHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>50</rate>
+				<max>10</max>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27350" toLevel="12" name="Skipping Kid">
 		<!-- AUTO GENERATED SKILL -->
@@ -986,6 +1010,12 @@
 		<hitTime>100</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>2</effectPoint>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1000,6 +1030,16 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<selfEffects>
+			<effect name="Blink">
+				<!-- Teleport to Front -->
+				<angle>180</angle>
+				<range>600</range>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="27351" toLevel="12" name="Scale of Life">
 		<!-- AUTO GENERATED SKILL -->
@@ -1008,6 +1048,18 @@
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
+		<effectPoint>1844</effectPoint>
+		<abnormalTime>15</abnormalTime>
+		<isMagic>1</isMagic>
+		<affectRange>1000</affectRange>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>4</abnormalLvl>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1022,8 +1074,19 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
-		<effectPoint>1844</effectPoint>
-		<isMagic>1</isMagic>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="RebalanceHP" />
+			<effect name="HealOverTime">
+				<power>
+					<value fromLevel="1" toLevel="1">333</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27352" toLevel="12" name="Rocky Camouflage">
 		<!-- AUTO GENERATED SKILL -->
@@ -1032,6 +1095,19 @@
 		<operateType>A2</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
+		<effectPoint>100</effectPoint>
+		<abnormalTime>15</abnormalTime>
+		<isMagic>1</isMagic>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalType>TURN_STONE</abnormalType>
+		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
+		<effectPoint>-687</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>
 			<value level="1">225000</value>
 			<value level="2">210000</value>
@@ -1046,8 +1122,21 @@
 			<value level="11">75000</value>
 			<value level="12">60000</value>
 		</reuseDelay>
-		<effectPoint>100</effectPoint>
-		<isMagic>1</isMagic>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>CHANGEBODY,9</dispel>
+			</effect>
+			<effect name="Untargetable" />
+			<effect name="ChangeBody">
+				<templates>
+					<item templateId="505" minChance="0" maxChance="100" />
+				</templates>
+			</effect>
+			<effect name="DeleteHate" />
+		</effects>
 	</skill>
 	<skill id="27353" toLevel="12" name="Mad Cow">
 		<!-- AUTO GENERATED SKILL -->
@@ -1057,6 +1146,14 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>687</effectPoint>
+		<abnormalTime>30</abnormalTime>
+		<operateType>A2</operateType>
+		<abnormalType>RHAPSODY</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -1071,6 +1168,27 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27354" toLevel="12" name="Maiden's Prayer">
 		<!-- AUTO GENERATED SKILL -->
@@ -1078,6 +1196,15 @@
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_july_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
+		<effectPoint>867</effectPoint>
+		<abnormalTime>10</abnormalTime>
+		<isMagic>1</isMagic>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -1092,14 +1219,46 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
-		<effectPoint>867</effectPoint>
-		<isMagic>1</isMagic>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27355" toLevel="12" name="Bountiful Resurrection">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Resurrect from death with full health restored. Buff/Debuffs remain after death. Noblesse Blessing and Lucky Charm are an exception. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_may_skill_i00</icon>
 		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
+		<abnormalTime>3600</abnormalTime>
+		<castRange>600</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>4000</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>
 			<value level="1">13500000</value>
 			<value level="2">12600000</value>
@@ -1114,8 +1273,14 @@
 			<value level="11">4500000</value>
 			<value level="12">3600000</value>
 		</reuseDelay>
-		<effectPoint>1</effectPoint>
-		<isMagic>1</isMagic>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="ResurrectionSpecial">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27356" toLevel="12" name="Scorpion's Mass Exile">
 		<!-- AUTO GENERATED SKILL -->
@@ -1126,6 +1291,26 @@
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
+		<isMagic>1</isMagic>
+		<effectPoint>-687</effectPoint>
+		<isDebuff>true</isDebuff>
+		<trait>DEPORT</trait>
+		<abnormalType>DEPORT</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<activateRate>80</activateRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectRange>150</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1140,9 +1325,26 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
-		<isMagic>1</isMagic>
-		<effectPoint>-687</effectPoint>
-		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="DamOverTime">
+				<power>282</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="BuffBlock" />
+			<effect name="DebuffBlock" />
+		</effects>
 	</skill>
 	<skill id="27357" toLevel="12" name="Mass Binding Flood">
 		<!-- AUTO GENERATED SKILL -->
@@ -1151,6 +1353,26 @@
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>
 		<hitTime>10000</hitTime>
+		<effectPoint>-707</effectPoint>
+		<abnormalTime>9</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>AIRBIND</abnormalType>
+		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<trait>AIRBIND</trait>
+		<castRange>1100</castRange>
+		<effectRange>1100</effectRange>
+		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelayGroup>11052</reuseDelayGroup>
+		<affectRange>150</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelay>
 			<value level="1">118000</value>
 			<value level="2">110000</value>
@@ -1165,8 +1387,44 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
-		<effectPoint>-707</effectPoint>
-		<isDebuff>true</isDebuff>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<conditions>
+			<condition name="OpCheckCrtEffect" />
+		</conditions>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="BlockControl" />
+			<effect name="DamOverTime">
+				<power>100</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<DERANGEMENT>100</DERANGEMENT>
+				<SHOCK>100</SHOCK>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SLEEP>100</SLEEP>
+				<AIRBIND>100</AIRBIND>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27358" toLevel="12" name="Slippery Scale">
 		<!-- AUTO GENERATED SKILL -->
@@ -1175,6 +1433,15 @@
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<effectPoint>2</effectPoint>
+		<abnormalType>RACE_KAMAEL1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<activateRate>0</activateRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -1189,6 +1456,14 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="AbnormalShield">
+				<times>5</times>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27359" toLevel="12" name="Archer's Call">
 		<!-- AUTO GENERATED SKILL -->
@@ -1196,6 +1471,16 @@
 		<icon>BranchIcon.Icon.accessary_sign_agathion_nov_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
+		<effectPoint>467</effectPoint>
+		<isMagic>4</isMagic>
+		<effectRange>-2</effectRange>
+		<operateType>A1</operateType>
+		<castRange>-2</castRange>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>OTHERS</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<reuseDelay>
 			<value level="1">6750000</value>
 			<value level="2">6300000</value>
@@ -1210,8 +1495,18 @@
 			<value level="11">2250000</value>
 			<value level="12">1800000</value>
 		</reuseDelay>
-		<effectPoint>467</effectPoint>
-		<isMagic>4</isMagic>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="27360" toLevel="12" name="Exoskeletal Shield">
 		<!-- AUTO GENERATED SKILL -->
@@ -1220,6 +1515,16 @@
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>379</effectPoint>
+		<abnormalType>DMG_SHIELD</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>
 			<value level="1">4500000</value>
 			<value level="2">4200000</value>
@@ -1234,6 +1539,14 @@
 			<value level="11">1500000</value>
 			<value level="12">1200000</value>
 		</reuseDelay>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27361" toLevel="1" name="Matryoshka Teleport: Talking Island Village">
 		<!-- AUTO GENERATED SKILL -->
