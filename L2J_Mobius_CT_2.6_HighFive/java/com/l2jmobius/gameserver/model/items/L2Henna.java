@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.model.base.ClassId;
 public class L2Henna
 {
 	private final int _dyeId;
-	private final String _dyeName;
 	private final int _dyeItemId;
 	private final int _str;
 	private final int _con;
@@ -46,7 +45,6 @@ public class L2Henna
 	public L2Henna(StatsSet set)
 	{
 		_dyeId = set.getInt("dyeId");
-		_dyeName = set.getString("dyeName");
 		_dyeItemId = set.getInt("dyeItemId");
 		_str = set.getInt("str", 0);
 		_con = set.getInt("con", 0);
@@ -67,14 +65,6 @@ public class L2Henna
 	public int getDyeId()
 	{
 		return _dyeId;
-	}
-	
-	/**
-	 * @return the dye server-side name.
-	 */
-	public String getDyeName()
-	{
-		return _dyeName;
 	}
 	
 	/**

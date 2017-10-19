@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class L2Henna
 {
 	private final int _dyeId;
-	private final String _dyeName;
 	private final int _dyeItemId;
 	private final boolean _isPremium;
 	private final Map<BaseStats, Integer> _baseStats = new HashMap<>();
@@ -49,7 +48,6 @@ public class L2Henna
 	public L2Henna(StatsSet set)
 	{
 		_dyeId = set.getInt("dyeId");
-		_dyeName = set.getString("dyeName");
 		_dyeItemId = set.getInt("dyeItemId");
 		_isPremium = set.getBoolean("isPremium", false);
 		_baseStats.put(BaseStats.STR, set.getInt("str", 0));
@@ -75,14 +73,6 @@ public class L2Henna
 	public int getDyeId()
 	{
 		return _dyeId;
-	}
-	
-	/**
-	 * @return the dye server-side name.
-	 */
-	public String getDyeName()
-	{
-		return _dyeName;
 	}
 	
 	/**
