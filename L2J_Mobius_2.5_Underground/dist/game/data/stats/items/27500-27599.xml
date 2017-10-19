@@ -584,11 +584,14 @@
 	<item id="27541" name="Mysterious Abnormal State Resistance Dye" additionalName="Abnormal State/ Buff Cancellation Resistance, Abnormal State Reflect, 30-day" type="EtcItem">
 		<!-- Bring this to the village symbol maker to imprint a 30-day magic symbol that boosts stats (Hold, Sleep, Paralysis, Mental Attack, Poison, Bleed, Stun Resistance + 20 / Buff-canceling Attack Resistance + 20 / 5% chance of reflecting physical and magical abnormal status). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_debuff" />
-		<set name="etcitem_type" val="DYE" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="DYE" />
 	</item>
 	<item id="27542" name="Riding Manual: Wolf" type="EtcItem">
 		<!-- Double-click to learn how to ride a Wolf. -->
