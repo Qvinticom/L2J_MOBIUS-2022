@@ -124,7 +124,7 @@ public final class RequestBRBuyProduct implements IClientIncomingPacket
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid brId from Prime", Config.DEFAULT_PUNISH);
 			return false;
 		}
-		else if ((count < 1) && (count > 99))
+		else if ((count < 1) || (count > 99))
 		{
 			Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to buy invalid itemcount [" + count + "] from Prime", Config.DEFAULT_PUNISH);
 			player.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.INVALID_USER_STATE));
