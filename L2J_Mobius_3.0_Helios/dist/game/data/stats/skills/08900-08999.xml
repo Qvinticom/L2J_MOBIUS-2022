@@ -342,11 +342,11 @@
 					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
 				</dispel>
 			</effect>
-			<effect name="TargetCancel">
-				<chance>100</chance>
-			</effect>
 			<effect name="Transformation">
 				<transformationId>160</transformationId>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>

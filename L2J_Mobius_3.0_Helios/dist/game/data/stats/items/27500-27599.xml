@@ -596,19 +596,11 @@
 	<item id="27542" name="Riding Manual: Wolf" type="EtcItem">
 		<!-- Double-click to learn how to ride a Wolf. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="27596" level="1" /> <!-- Wolf -->
+			<skill id="27597" level="1" /> <!-- Riding Wolf -->
 		</skills>
 	</item>
 	<item id="27543" name="Lv. 41 Equipment Pack" type="EtcItem">

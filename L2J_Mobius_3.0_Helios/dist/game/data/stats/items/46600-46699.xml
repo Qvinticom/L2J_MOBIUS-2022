@@ -172,6 +172,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="30" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="material" val="SILVER" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="13901" level="1" /> <!-- Shadow Blue -->
+		</skills>
 	</item>
 	<item id="46622" name="1,000,000,000 Adana" additionalName="Event" type="EtcItem">
 		<!-- Adena? No, this is Adana. Receive the Abundant Blessing buff from Miss Patch when in possession of this Adana. Lv. 85 or above. Deleted after event. -->

@@ -511,13 +511,22 @@
 	<item id="45443" name="Transformation Potion: L2B2" additionalName="Event" type="EtcItem">
 		<!-- For 10 min., transform into a speedy L2B2. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
+		<set name="handler" val="ItemSkills" />	
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
+		<set name="reuse_delay" val="300" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="POTION" />
+		<set name="is_sellable" val="false" />		
+		<set name="commissionItemType" val="POTION" />		
+		<skills>
+			<skill id="18214" level="1" /> <!-- L2B2 -->
+		</skills>
 	</item>
 	<item id="45444" name="Scroll of Escape: Blazing Swamp" type="EtcItem">
 		<!-- Teleports you to the Blazing Swamp. -->

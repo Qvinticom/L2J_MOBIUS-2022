@@ -2381,10 +2381,37 @@
 		</effects>
 	</skill>
 	<skill id="27597" toLevel="1" name="Summon Riding Wolf">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0083</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>36952</itemConsumeId>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="OpMainjob" />
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>27596</skillId> <!-- Riding Wolf -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>27596</skillId> <!-- Riding Wolf -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27598" toLevel="1" name="Perfect Swing">
 		<!-- AUTO GENERATED SKILL -->

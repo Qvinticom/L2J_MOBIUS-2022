@@ -577,10 +577,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
-		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="19115" level="1" /> <!-- Air Bike -->
+			<skill id="7116" level="1" /> <!-- Air Bike -->
 		</skills>
 	</item>
 	<item id="36953" name="Support Box" type="EtcItem">

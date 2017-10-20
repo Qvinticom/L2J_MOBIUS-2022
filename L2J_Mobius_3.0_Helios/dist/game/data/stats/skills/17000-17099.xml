@@ -537,10 +537,38 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17081" toLevel="1" name="Summon Lyn Draco">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37496</itemConsumeId>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="OpMainjob" />
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19116</skillId> <!-- Lyn Draco -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19116</skillId> <!-- Lyn Draco -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17082" toLevel="1" name="Mentor's Prevailing Sonata">
 		<!-- Mentor's assistance. Atk. Spd. + 10%, Casting Spd. + 20%, Max HP + 20%, and MP Recovery Bonus + 10%. M. Skill MP Consumption - 5%, and decreases chance of cancellation while casting. Applied only when mentor is logged in. Lasts 5 min. after mentor logs out. -->
