@@ -492,12 +492,12 @@
 		</collision>
 	</npc>
 	<npc id="8627" level="85" type="L2Monster" name="Elk">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>ETC</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1673" hpRegen="7.5" mp="889" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
+				<walk ground="80.0" />
 				<run ground="180.0" />
 			</speed>
 		</stats>
