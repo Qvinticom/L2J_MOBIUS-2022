@@ -302,8 +302,16 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_mailable" val="false" />
+		<skills>
+			<skill id="27786" level="1" /> <!-- Ride Elk -->
+		</skills>
 	</item>
 	<item id="28435" name="Draco's Hat: Warrior" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. Uses 2 Hair Accessory slots. STR + 2, DEX + 2, CON + 2. -->
@@ -727,9 +735,17 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="27786" level="1" /> <!-- Ride Elk -->
+		</skills>
 	</item>
 	<item id="28472" name="Mount - Elk" additionalName="30-day" type="Armor">
 		<!-- Can mount an Elk when equipped. -->
@@ -741,9 +757,17 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="27786" level="1" /> <!-- Ride Elk -->
+		</skills>
 	</item>
 	<item id="28473" name="Mount - Elk (Event)" additionalName="7-day" type="Armor">
 		<!-- Can mount an Elk when equipped. <Active Skill>. 1. Elk's Blessing: Maintain vitality for 1 hour. (Cooldown 12 hours). 2. Elk's Summoning: Can summon a party member. (Cooldown 10 minutes.) -->
@@ -755,9 +779,17 @@
 		<set name="weight" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="27786" level="1" /> <!-- Ride Elk -->
+		</skills>
 	</item>
 	<item id="28474" name="Mount - Elk (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Mount - Elk (7-day) -->

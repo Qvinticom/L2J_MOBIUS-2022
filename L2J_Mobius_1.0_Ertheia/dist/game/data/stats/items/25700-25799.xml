@@ -848,7 +848,17 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="26917" level="1" /> <!-- Transformation Scroll: Priestess Tsubaki -->
+		</skills>
 	</item>
 	<item id="25795" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" type="EtcItem">
 		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 solo dungeon. -->

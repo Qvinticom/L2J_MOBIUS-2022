@@ -1129,7 +1129,6 @@
 		</effects>
 	</skill>
 	<skill id="22727" toLevel="1" name="Transformation Scroll: Saber Tooth Tiger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Saber Tooth Tiger. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1151,9 +1150,13 @@
 				<transformId>5</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>5</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22728" toLevel="1" name="Transformation Scroll: Oel Mahum">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Oel Mahum. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1175,9 +1178,13 @@
 				<transformId>6</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>6</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22729" toLevel="1" name="Transformation Scroll: Doll Blader">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Doll Blader. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1199,9 +1206,13 @@
 				<transformId>7</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>7</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22730" toLevel="1" name="Transformation Scroll: Zaken">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Zaken. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1223,9 +1234,13 @@
 				<transformId>305</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>305</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22731" toLevel="1" name="Transformation Scroll: Anakim">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Anakim. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1247,9 +1262,13 @@
 				<transformId>306</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>306</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22732" toLevel="1" name="Transformation Scroll: Venom">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Venom. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1271,9 +1290,13 @@
 				<transformId>307</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>307</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22733" toLevel="1" name="Transformation Scroll: Gordon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Gordon. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1295,9 +1318,13 @@
 				<transformId>308</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>308</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22734" toLevel="1" name="Transformation Scroll: Ranku">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Ranku. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1319,9 +1346,13 @@
 				<transformId>309</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>309</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22735" toLevel="1" name="Transformation Scroll: Kechi">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Kechi. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1343,9 +1374,13 @@
 				<transformId>310</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>310</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22736" toLevel="1" name="Transformation Scroll: Demon Prince">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Demon Prince. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1367,6 +1402,11 @@
 				<transformId>311</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>311</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22737" toLevel="1" name="Ink Herb">
 		<!-- AUTO GENERATED SKILL -->

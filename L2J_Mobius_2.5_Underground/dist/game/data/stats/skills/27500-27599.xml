@@ -2348,11 +2348,32 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27596" toLevel="1" name="Riding Wolf">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can mount the Riding Wolf. -->
 		<icon>icon.skill0083</icon>
 		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
+		<effectPoint>1</effectPoint>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60000</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>20021</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>20021</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27597" toLevel="1" name="Summon Riding Wolf">
 		<!-- AUTO GENERATED SKILL -->

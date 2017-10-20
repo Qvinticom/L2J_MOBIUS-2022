@@ -94,12 +94,32 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26917" toLevel="1" name="Transformation Scroll: Priestess Tsubaki">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Priestess Tsubaki temporarily. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<reuseDelay>60000</reuseDelay>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60000</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>20020</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>20020</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26918" toLevel="1" name="Premium Account: Enhanced Rose Spirit">
 		<!-- AUTO GENERATED SKILL -->
