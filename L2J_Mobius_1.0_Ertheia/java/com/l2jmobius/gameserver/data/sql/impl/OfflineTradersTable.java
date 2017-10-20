@@ -322,26 +322,6 @@ public class OfflineTradersTable
 		}
 	}
 	
-	public static synchronized void removeTrader(int traderObjId)
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
-			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER))
-		{
-			stm1.setInt(1, traderObjId);
-			stm1.execute();
-			stm1.close();
-			
-			stm2.setInt(1, traderObjId);
-			stm2.execute();
-			stm2.close();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "OfflineTradersTable[onTransaction()]: Error while removing offline trader: " + traderObjId + " " + e, e);
-		}
-	}
-	
 	public static synchronized void onTransaction(L2PcInstance trader, boolean finished, boolean firstCall)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -461,6 +441,26 @@ public class OfflineTradersTable
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, "OfflineTradersTable[storeTradeItems()]: Error while saving offline traders: " + e, e);
+		}
+	}
+	
+	public static synchronized void removeTrader(int traderObjId)
+	{
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
+			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER))
+		{
+			stm1.setInt(1, traderObjId);
+			stm1.execute();
+			stm1.close();
+			
+			stm2.setInt(1, traderObjId);
+			stm2.execute();
+			stm2.close();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "OfflineTradersTable[removeTrader()]: Error while removing offline trader: " + traderObjId + " " + e, e);
 		}
 	}
 	
