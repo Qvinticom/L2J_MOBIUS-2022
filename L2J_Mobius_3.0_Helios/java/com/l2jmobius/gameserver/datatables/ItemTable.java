@@ -255,11 +255,22 @@ public class ItemTable
 				{
 					if (item.getEnchantLevel() > 0)
 					{
-						LOGGER_ITEMS.info("CREATE:" + process + ", item " + item.getObjectId() + ":+" + item.getEnchantLevel() + " " + item.getItem().getName() + "(" + item.getCount() + "), " + actor + ", " + reference);
+						LOGGER_ITEMS.info("CREATE:" + process //
+							+ ", item " + item.getObjectId() //
+							+ ":+" + item.getEnchantLevel() //
+							+ " " + item.getItem().getName() //
+							+ "(" + item.getCount() //
+							+ "), " + actor //
+							+ ", " + reference);
 					}
 					else
 					{
-						LOGGER_ITEMS.info("CREATE:" + process + ", item " + item.getObjectId() + ":" + item.getItem().getName() + "(" + item.getCount() + "), " + actor + ", " + reference);
+						LOGGER_ITEMS.info("CREATE:" + process //
+							+ ", item " + item.getObjectId() //
+							+ ":" + item.getItem().getName() //
+							+ "(" + item.getCount() //
+							+ "), " + actor //
+							+ ", " + reference);
 					}
 				}
 			}
@@ -281,7 +292,14 @@ public class ItemTable
 				final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
 				if (Config.GMAUDIT)
 				{
-					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + itemId + " count: " + count + " name: " + item.getItemName() + " objId: " + item.getObjectId() + ")", targetName, "L2Object referencing this action is: " + referenceName);
+					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]"//
+						, process //
+							+ "(id: " + itemId //
+							+ " count: " + count //
+							+ " name: " + item.getItemName() //
+							+ " objId: " + item.getObjectId() + ")" //
+						, targetName //
+						, "L2Object referencing this action is: " + referenceName);
 				}
 			}
 		}
@@ -326,13 +344,29 @@ public class ItemTable
 			{
 				if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
 				{
-					if (item.getEnchantLevel() > 0)
+					if ((actor != null) && (reference != null)) // NPE check
 					{
-						LOGGER_ITEMS.info("DELETE:" + process + ", item " + item.getObjectId() + ":+" + item.getEnchantLevel() + " " + item.getItem().getName() + "(" + item.getCount() + "), PrevCount(" + old + "), " + actor + ", " + reference);
-					}
-					else
-					{
-						LOGGER_ITEMS.info("DELETE:" + process + ", item " + item.getObjectId() + ":" + item.getItem().getName() + "(" + item.getCount() + "), PrevCount(" + old + "), " + actor + ", " + reference);
+						if (item.getEnchantLevel() > 0)
+						{
+							LOGGER_ITEMS.info("DELETE:" + process //
+								+ ", item " + item.getObjectId() //
+								+ ":+" + item.getEnchantLevel() //
+								+ " " + item.getItem().getName() //
+								+ "(" + item.getCount() //
+								+ "), PrevCount(" + old //
+								+ "), " + actor //
+								+ ", " + reference);
+						}
+						else
+						{
+							LOGGER_ITEMS.info("DELETE:" + process //
+								+ ", item " + item.getObjectId() //
+								+ ":" + item.getItem().getName() //
+								+ "(" + item.getCount() //
+								+ "), PrevCount(" + old //
+								+ "), " + actor //
+								+ ", " + reference);
+						}
 					}
 				}
 			}
@@ -353,7 +387,14 @@ public class ItemTable
 					final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
 					if (Config.GMAUDIT)
 					{
-						GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]", process + "(id: " + item.getId() + " count: " + item.getCount() + " itemObjId: " + item.getObjectId() + ")", targetName, "L2Object referencing this action is: " + referenceName);
+						GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]" //
+							, process //
+								+ "(id: " + item.getId() //
+								+ " count: " + item.getCount() //
+								+ " itemObjId: " //
+								+ item.getObjectId() + ")" //
+							, targetName //
+							, "L2Object referencing this action is: " + referenceName);
 					}
 				}
 			}
