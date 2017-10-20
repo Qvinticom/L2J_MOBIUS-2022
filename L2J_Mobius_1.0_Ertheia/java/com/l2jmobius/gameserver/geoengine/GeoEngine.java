@@ -107,11 +107,19 @@ public class GeoEngine
 		
 		_log.info("GeoEngine: Loaded " + loaded + " geodata files.");
 		
-		// Avoid wrong config when no files loaded
-		if ((loaded == 0) && (Config.COORD_SYNCHRONIZE == 2))
+		// avoid wrong configs when no files are loaded
+		if (loaded == 0)
 		{
-			Config.COORD_SYNCHRONIZE = -1;
-			_log.info("GeoEngine: Forcing CoordSynchronize setting to -1.");
+			if (Config.PATHFINDING)
+			{
+				Config.PATHFINDING = false;
+				_log.info("GeoEngine: Forcing PathFinding setting to false.");
+			}
+			if (Config.COORD_SYNCHRONIZE == 2)
+			{
+				Config.COORD_SYNCHRONIZE = -1;
+				_log.info("GeoEngine: Forcing CoordSynchronize setting to -1.");
+			}
 		}
 		
 		// release multilayer block temporarily buffer
