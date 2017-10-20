@@ -304,7 +304,11 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					return null;
 				}
 				
-				final int classId = Integer.parseInt(st.nextToken());
+				int classId = Integer.parseInt(st.nextToken());
+				if (classId == ClassId.FEMALE_SOUL_HOUND.getId())
+				{
+					classId = ClassId.FEOH_SOUL_HOUND.getId(); // Fix for Female Soulhounds
+				}
 				
 				boolean canChange = false;
 				if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
