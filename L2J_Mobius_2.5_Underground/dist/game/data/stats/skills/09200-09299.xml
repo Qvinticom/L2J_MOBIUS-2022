@@ -283,7 +283,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9209" toLevel="1" name="Kukuru">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mounts a Kukuru. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -311,6 +310,11 @@
 				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>13</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9210" toLevel="1" name="Dismount">
 		<!-- Dismounts from a ridable mount. -->
@@ -354,7 +358,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9213" toLevel="1" name="Kukurin">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mounts a Kukurin. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -377,6 +380,11 @@
 				<transformId>138</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>138</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9214" toLevel="1" name="Divine Inspiration">
 		<!-- Glory Days confirmed -->
