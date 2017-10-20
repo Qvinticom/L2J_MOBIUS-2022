@@ -115,7 +115,7 @@ public final class AdventurersGuide extends AbstractNpcAI
 	
 	private String applyBuffs(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		if (player.getLevel() > 90)
+		if (player.getLevel() > 94)
 		{
 			return "guide-noBuffs.html";
 		}
