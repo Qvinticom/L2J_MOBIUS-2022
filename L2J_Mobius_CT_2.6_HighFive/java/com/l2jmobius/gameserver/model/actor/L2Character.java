@@ -66,8 +66,6 @@ import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.TimeStamp;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2RiftInvaderInstance;
 import com.l2jmobius.gameserver.model.actor.knownlist.CharKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.actor.status.CharStatus;
@@ -4391,9 +4389,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
 		
-		if (!isFlying() // flying chars not checked
-			&& (!isInsideZone(ZoneId.WATER) || isInsideZone(ZoneId.SIEGE)) // swimming not checked unless in siege zone
-			&& !isWalker() && !isVehicle()) // walkers and vehicles also not checked
+		if (!isFlying() && !isInsideZone(ZoneId.WATER) && !isVehicle())
 		{
 			final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
 			if (isInVehicle)
@@ -4442,14 +4438,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				dy = y - curY;
 				dz = z - curZ;
 				distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
-			}
-			
-			// Pathfinding checks.
-			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && !isInVehicle)
-			{
-				// Path calculation -- overrides previous movement check
-				if (isPlayable() || isMinion() || isInCombat() || (this instanceof L2QuestGuardInstance))
+				
+				// Pathfinding checks.
+				if (((originalDistance - distance) > 30) && !isAfraid() && !isInVehicle)
 				{
+					// Path calculation -- overrides previous movement check
 					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
@@ -4492,7 +4485,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			
 			// If no distance to go through, the movement is canceled
-			if ((distance < 1) && (Config.PATHFINDING || isPlayable() || (this instanceof L2RiftInvaderInstance) || isAfraid()))
+			if ((distance < 1) && (Config.PATHFINDING || isPlayable()))
 			{
 				if (isSummon())
 				{

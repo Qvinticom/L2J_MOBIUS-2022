@@ -76,7 +76,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.TimeStamp;
-import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
@@ -3481,7 +3480,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
 		
-		if (!isFlying() && !isInsideZone(ZoneId.WATER) && !isWalker() && !isVehicle())
+		if (!isFlying() && !isInsideZone(ZoneId.WATER) && !isVehicle())
 		{
 			final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
 			if (isInVehicle)
@@ -3530,14 +3529,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				dy = y - curY;
 				dz = z - curZ;
 				distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
-			}
-			
-			// Pathfinding checks.
-			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && !isControlBlocked() && !isInVehicle)
-			{
-				// Path calculation -- overrides previous movement check
-				if (isPlayable() || isMinion() || isInCombat() || (this instanceof FriendlyNpcInstance))
+				
+				// Pathfinding checks.
+				if (((originalDistance - distance) > 30) && !isControlBlocked() && !isInVehicle)
 				{
+					// Path calculation -- overrides previous movement check
 					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
