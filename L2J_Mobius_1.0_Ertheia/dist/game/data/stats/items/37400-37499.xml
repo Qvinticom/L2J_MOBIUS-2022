@@ -1449,6 +1449,7 @@
 	</item>
 	<item id="37496" name="Riding Manual: Lyn Draco" type="EtcItem">
 		<!-- Double-click to learn how to ride a Lyn Draco. -->
+		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1456,7 +1457,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_kamael_skill_book_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="19116" level="1" /> <!-- Lyn Draco -->
+		</skills>
 	</item>
 	<item id="37497" name="Lindvior Slayer's Helmet" type="Armor">
 		<!-- Glorious circlet given to the player who successfully attacks Lindvior. -->

@@ -304,20 +304,60 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="19115" toLevel="1" name="Air Bike">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can mount the Air Bike. Must belong to a clan Lv. 5 or above. -->
 		<icon>icon.etc_dwarf_craft_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<hitTime>1000</hitTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>146</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>146</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19116" toLevel="1" name="Summon Lyn Draco">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can mount a Lind Rider. -->
 		<icon>icon.etc_lind_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<hitTime>1000</hitTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>147</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>147</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19117" toLevel="1" name="Dimensional Defense">
 		<!-- AUTO GENERATED SKILL -->
