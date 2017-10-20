@@ -718,7 +718,7 @@
 			<attack physical="1189.0459514498" magical="811.85773400546" critical="4" attackSpeed="253" range="40" />
 			<defence physical="362.06896551724" magical="264.78509919958" />
 		</stats>
-		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
+		<status attackable="false" talkable="false" targetable="false" showName="false" hasSummoner="false" />
 		<collision>
 			<radius normal="10" />
 			<height normal="22.5" />
@@ -1048,7 +1048,6 @@
 		</collision>
 	</npc>
 	<npc id="13450" level="99" type="L2Npc" name="L2B2" title="Alien Spy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1066,10 +1065,9 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="13451" level="55" type="L2Npc" name="L2B2">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13451" level="85" type="L2Npc" name="L2B2">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
 			<speed>
@@ -1568,8 +1566,7 @@
 			<height normal="15.0" />
 		</collision>
 	</npc>
-	<npc id="13473" level="85" type="L2Npc" name="Blue Dynasty Unicorn">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13473" level="85" type="L2Monster" name="Blue Dynasty Unicorn">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">

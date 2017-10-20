@@ -24,11 +24,34 @@
 		</effects>
 	</skill>
 	<skill id="13901" toLevel="1" name="Shadow Blue">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Mounts the Shadow Blue. -->
 		<icon>icon.skill8601</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
 		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>157</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>157</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13902" toLevel="1" name="Fury (Practice)">
 		<!-- Atk. Spd. +1% -->

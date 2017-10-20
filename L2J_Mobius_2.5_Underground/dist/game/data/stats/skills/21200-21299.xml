@@ -1405,7 +1405,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21270" toLevel="1" name="Ride Tame Princess Ant">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Ride a Tame Princess Ant. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1427,6 +1426,11 @@
 				<transformId>20008</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>20008</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21271" toLevel="1" name="Ride Black Bear">
 		<!-- Ride a Black Bear. -->

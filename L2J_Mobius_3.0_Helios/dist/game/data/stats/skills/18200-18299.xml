@@ -78,12 +78,44 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18214" toLevel="1" name="Transformation Potion: L2B2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into the very fast L2B2 for 10 minutes. -->
-		<icon>Icon.ev_invasion_debuff</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<icon>icon.warhorse_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
-		<reuseDelay>60000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<hitTime>1000</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelayType>S</reuseDelayType>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>156</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">CHANGEBODY,-1</value>
+					<value level="2">TURN_STONE,-1</value>
+					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
+				</dispel>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>156</transformationId>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18215" toLevel="1" name="Alien's Nano Cannister">
 		<!-- AUTO GENERATED SKILL -->

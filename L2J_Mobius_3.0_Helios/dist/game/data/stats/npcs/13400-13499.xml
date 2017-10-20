@@ -1048,7 +1048,6 @@
 		</collision>
 	</npc>
 	<npc id="13450" level="99" type="L2Npc" name="L2B2" title="Alien Spy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1066,10 +1065,9 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="13451" level="55" type="L2Npc" name="L2B2">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13451" level="85" type="L2Npc" name="L2B2">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
 			<speed>
@@ -1568,8 +1566,7 @@
 			<height normal="15.0" />
 		</collision>
 	</npc>
-	<npc id="13473" level="85" type="L2Npc" name="Blue Dynasty Unicorn">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13473" level="85" type="L2Monster" name="Blue Dynasty Unicorn">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1583,6 +1580,86 @@
 		<collision>
 			<radius normal="30.0" />
 			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="13474" level="85" type="L2Npc" name="Tame Hell Hound">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4234" hpRegen="7.5" mp="1846" mpRegen="2.7" />
+			<speed>
+				<walk ground="60.0" />
+				<run ground="180.0" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="13475" level="85" type="L2Npc" name="Pegasus">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4234" hpRegen="7.5" mp="1846" mpRegen="2.7" />
+			<speed>
+				<walk ground="60.0" />
+				<run ground="180.0" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="29" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="13476" level="85" type="L2Npc" name="Tame Wing Hound">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4234" hpRegen="7.5" mp="1846" mpRegen="2.7" />
+			<speed>
+				<walk ground="60.0" />
+				<run ground="180.0" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="24.5" />
+		</collision>
+	</npc>
+	<npc id="13477" level="85" type="L2Monster" name="War Horse">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4234" hpRegen="7.5" mp="1846" mpRegen="2.7" />
+			<speed>
+				<walk ground="60.0" />
+				<run ground="180.0" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="13478" level="85" type="L2Monster" name="Griffin">
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4234" hpRegen="7.5" mp="1846" mpRegen="2.7" />
+			<speed>
+				<walk ground="60.0" />
+				<run ground="180.0" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="32" />
+			<height normal="29" />
 		</collision>
 	</npc>
 </list>
