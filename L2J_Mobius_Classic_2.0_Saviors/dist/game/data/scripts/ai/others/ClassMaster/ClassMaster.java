@@ -304,12 +304,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					return null;
 				}
 				
-				int classId = Integer.parseInt(st.nextToken());
-				if (classId == ClassId.FEMALE_SOUL_HOUND.getId())
-				{
-					classId = ClassId.FEOH_SOUL_HOUND.getId(); // Fix for Female Soulhounds
-				}
-				
+				final int classId = Integer.parseInt(st.nextToken());
 				boolean canChange = false;
 				if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
 				{
@@ -702,11 +697,13 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 						htmltext = "test_server_helper020a.html";
 						break;
 					}
+					case MALE_SOLDIER:
 					case TROOPER:
 					{
 						htmltext = "test_server_helper020c.html";
 						break;
 					}
+					case FEMALE_SOLDIER:
 					case WARDER:
 					{
 						htmltext = "test_server_helper020d.html";
