@@ -64,7 +64,7 @@ public final class SellBuffsManager implements IGameXmlReader
 		{
 			ALLOWED_BUFFS.clear();
 			parseDatapackFile("data/SellBuffData.xml");
-			LOGGER.info(": Loaded " + ALLOWED_BUFFS.size() + " allowed buffs.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + ALLOWED_BUFFS.size() + " allowed buffs.");
 		}
 	}
 	
