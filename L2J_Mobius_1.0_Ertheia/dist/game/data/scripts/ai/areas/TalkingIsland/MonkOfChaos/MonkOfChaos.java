@@ -159,7 +159,7 @@ public final class MonkOfChaos extends AbstractNpcAI
 					{
 						player.removeSkill(sk);
 						player.getVariables().remove(varName);
-						giveItems(player, chaosPomander, count);
+						giveItems(player, chaosPomander, 1);
 					}
 				}
 				htmltext = "canceled.html";
