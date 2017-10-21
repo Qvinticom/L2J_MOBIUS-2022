@@ -3038,7 +3038,7 @@
 			<value level="2">1800</value>
 			<value fromLevel="2" toLevel="2" fromSubLevel="1001" toSubLevel="1030">{base + 90 * subIndex}</value>
 		</abnormalTime>
-		<abnormalType>MA_UP_SPECIAL</abnormalType>
+		<!--<abnormalType>MA_UP_SPECIAL</abnormalType>--> <!-- Reported as retail by Hope -->
 		<effectPoint>1</effectPoint>
 		<hitTime>4000</hitTime>
 		<icon>icon.skill1457</icon>
