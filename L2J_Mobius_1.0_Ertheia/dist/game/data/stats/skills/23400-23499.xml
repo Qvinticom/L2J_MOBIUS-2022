@@ -2111,57 +2111,136 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23475" toLevel="2" name="(Crippling Attack)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts 9711 physical damage. For 10 sec., target's P. Def./ M. Def. - 30%, and P. Evasion - 10. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
-		<operateType>A2</operateType>
-		<mpConsume>46</mpConsume>
-		<castRange>40</castRange>
-		<hitTime>910</hitTime>
-		<coolTime>300</coolTime>
-		<reuseDelay>7000</reuseDelay>
-		<effectPoint>-687</effectPoint>
-		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effectRange>400</effectRange>
-		<activateRate>99</activateRate>
-		<magicLvl>
-			<value level="1">90</value>
-			<value level="2">95</value>
-		</magicLvl>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
+		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
+		<activateRate>99</activateRate>
+		<castRange>40</castRange>
+		<coolTime>300</coolTime>
+		<effectRange>400</effectRange>
+		<hitTime>910</hitTime>
+		<icon>icon.skill11509</icon>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">86</value>
+		</magicLvl>
+		<mpConsume>46</mpConsume>
+		<operateType>A2</operateType>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>7000</reuseDelay>
+		<rideState>NONE</rideState>
+		<effectPoint>
+			<value level="1">-687</value>
+			<value level="2">-694</value>
+		</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
+		<alterSkill>
+			<item id="10750" level="1" chance="100" abnormalType="KNOCKDOWN" /> <!-- Heavy Hit -->
+			<item id="10749" level="1" chance="100" abnormalType="AIRBIND" /> <!-- Heavy Hit -->
+			<item id="14579" level="1" chance="100" abnormalType="EARTHWORM_DEBUFF" />
+		</alterSkill>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">9711</value>
+					<value level="2">11443</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+				<pDefMod>1</pDefMod>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>-10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23476" toLevel="2" name="(Horn Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' P. Atk. + 19%, P. Def. + 15%, M. Atk. + 83%, and M. Def. + 30%. -->
+		<icon>icon.skill11517</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<affectRange>1000</affectRange>
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<hitTime>700</hitTime>
 		<coolTime>300</coolTime>
-		<effectPoint>687</effectPoint>
-		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
-			<value level="1">90</value>
-			<value level="2">95</value>
-		</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
 		<isMagic>22</isMagic>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+		</magicLvl>
 		<reuseDelay>2000</reuseDelay>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
+		<effectPoint>
+			<value level="1">687</value>
+			<value level="2">698</value>
+		</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_PA_PD_UP;PA_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_PA_PD_UP;PA_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">19</value>
+					<value level="2">21</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">83</value>
+					<value level="2">87</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23477" toLevel="2" name="(Assault Rush)">
 		<!-- AUTO GENERATED SKILL -->
@@ -2310,127 +2389,311 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23485" toLevel="1" name="Unknown Sculptor - Horn Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 min., target's P. Atk. + 23%, P. Def. + 15%, M. Atk. + 91%, and M. Def. + 30%. -->
 		<icon>icon.skill11517</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<operateType>A2</operateType>
-		<mpConsume>140</mpConsume>
-		<hitTime>700</hitTime>
-		<effectPoint>687</effectPoint>
+		<effectPoint>1</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<magicLvl>99</magicLvl>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>33766</itemConsumeId> <!-- Elixir of Blessing -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="PAtk">
+				<amount>23</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>91</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23486" toLevel="1" name="Unknown Sculptor - Drum Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 min., target's Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, P. Critical Damage in standard attacks + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and increases P. Def. when receiving a critical attack. Party members equipped with melee weapons/bows/crossbows have increased Critical Damage after receiving an amount of damage. -->
 		<icon>icon.skill11522</icon>
-		<operateType>A2</operateType>
-		<mpConsume>140</mpConsume>
-		<hitTime>700</hitTime>
-		<effectPoint>687</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>99</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- Critical Damage Increase -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<chance>80</chance>
+				<targetType>SELF</targetType>
+				<minDamage>300</minDamage>
+				<skillId>11569</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>MULTI_BUFF;COUNTER_CRITICAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23487" toLevel="1" name="Unknown Sculptor - Pipe Organ Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 min., target's Max HP/MP/CP + 43%, and HP Recovery Bonus + 20%. -->
 		<icon>icon.skill11519</icon>
-		<operateType>A2</operateType>
-		<mpConsume>140</mpConsume>
-		<hitTime>700</hitTime>
-		<effectPoint>687</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>99</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>43</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>43</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>43</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23488" toLevel="1" name="Unknown Sculptor - Guitar Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 min., target's P. Critical Rate + 38%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanters' Enchant Skill MP Consumption - 20%. -->
 		<icon>icon.skill11520</icon>
-		<operateType>A2</operateType>
-		<mpConsume>140</mpConsume>
-		<hitTime>700</hitTime>
-		<effectPoint>687</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>99</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>38</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23489" toLevel="1" name="Unknown Sculptor - Harp Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 min., target's P. Accuracy + 8, P./M. Evasion + 8, and Speed + 37. Received Critical Damage - 30%. -->
 		<icon>icon.skill11521</icon>
-		<operateType>A2</operateType>
-		<mpConsume>140</mpConsume>
-		<hitTime>700</hitTime>
-		<effectPoint>687</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>99</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Accuracy">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23490" toLevel="1" name="Unknown Sculptor - Lute Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 min., target's Atk. Spd. + 37%, Casting Spd. +34%, and has a chance of applying 6% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
-		<operateType>A2</operateType>
-		<mpConsume>140</mpConsume>
-		<hitTime>700</hitTime>
-		<effectPoint>687</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>99</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>37</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>34</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>6</amount>
+				<chance>80</chance>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23491" toLevel="1" name="Jermann - Swiftness">
 		<!-- AUTO GENERATED SKILL -->
@@ -2466,179 +2729,461 @@
 		</conditions>
 	</skill>
 	<skill id="23492" toLevel="1" name="(Horn Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' P. Atk. + 19%, P. Def. + 15%, M. Atk. + 83%, and M. Def. + 30%. -->
 		<icon>icon.skill11517</icon>
-		<operateType>A2</operateType>
-		<mpConsume>151</mpConsume>
-		<hitTime>500</hitTime>
-		<effectPoint>698</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>90</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>CLAN</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>33766</itemConsumeId> <!-- Elixir of Blessing -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="PAtk">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>79</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23493" toLevel="1" name="(Horn Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' P. Atk. + 21%, P. Def. + 15%, M. Atk. + 87%, and M. Def. + 30%. -->
 		<icon>icon.skill11517</icon>
-		<operateType>A2</operateType>
-		<mpConsume>170</mpConsume>
-		<hitTime>500</hitTime>
-		<effectPoint>707</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>95</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>CLAN</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>33766</itemConsumeId> <!-- Elixir of Blessing -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="PAtk">
+				<amount>21</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>87</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23494" toLevel="1" name="(Drum Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, P. Critical Damage in standard attacks + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Increases P. Def. when receiving a Critical Attack. Speed - 10%, and party members equipped with bow/crossbow/melee weapons have increased Critical Damage after receiving some damage. -->
 		<icon>icon.skill11522</icon>
-		<operateType>A2</operateType>
-		<mpConsume>151</mpConsume>
-		<hitTime>500</hitTime>
-		<effectPoint>698</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>90</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>CLAN</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- Critical Damage Increase -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<chance>80</chance>
+				<targetType>SELF</targetType>
+				<minDamage>300</minDamage>
+				<skillId>11569</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>MULTI_BUFF;COUNTER_CRITICAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23495" toLevel="1" name="(Drum Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, P. Critical Damage in standard attacks + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Increases P. Def. when receiving a Critical Attack. Speed - 5%, and party members equipped with bow/crossbow/melee weapons have increased Critical Damage after receiving some damage. -->
 		<icon>icon.skill11522</icon>
-		<operateType>A2</operateType>
-		<mpConsume>170</mpConsume>
-		<hitTime>500</hitTime>
-		<effectPoint>707</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>95</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>CLAN</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- Critical Damage Increase -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<chance>80</chance>
+				<targetType>SELF</targetType>
+				<minDamage>300</minDamage>
+				<skillId>11569</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>MULTI_BUFF;COUNTER_CRITICAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23496" toLevel="1" name="(Pipe Organ Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' Max HP/MPCP + 39%, and HP Recovery Bonus + 20%. -->
 		<icon>icon.skill11519</icon>
-		<operateType>A2</operateType>
-		<mpConsume>151</mpConsume>
-		<hitTime>500</hitTime>
-		<effectPoint>698</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>90</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>CLAN</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>39</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>39</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>39</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23497" toLevel="1" name="(Pipe Organ Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' Max HP/MPCP + 41%, and HP Recovery Bonus + 20%. -->
 		<icon>icon.skill11519</icon>
-		<operateType>A2</operateType>
-		<mpConsume>170</mpConsume>
-		<hitTime>500</hitTime>
-		<effectPoint>707</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>95</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>CLAN</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>41</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23498" toLevel="1" name="(Guitar Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' P. Critical Rate + 34%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanters' Enchant Skill MP Consumption - 20%. -->
 		<icon>icon.skill11520</icon>
-		<operateType>A2</operateType>
-		<mpConsume>151</mpConsume>
-		<hitTime>500</hitTime>
-		<effectPoint>687</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>90</magicLvl>
-		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>CLAN</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>34</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23499" toLevel="1" name="(Guitar Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' P. Critical Rate + 36%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanters' Enchant Skill MP Consumption - 20%. -->
 		<icon>icon.skill11520</icon>
-		<operateType>A2</operateType>
-		<mpConsume>170</mpConsume>
-		<hitTime>500</hitTime>
-		<effectPoint>687</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>95</magicLvl>
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<affectRange>1000</affectRange>
-		<isMagic>22</isMagic>
-		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>CLAN</affectObject>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>36</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</slot>
+			</effect>
+		</effects>
 	</skill>
 </list>

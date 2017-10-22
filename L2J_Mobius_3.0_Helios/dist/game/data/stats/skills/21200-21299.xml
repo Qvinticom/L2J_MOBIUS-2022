@@ -1061,7 +1061,6 @@
 	</skill>
 	<skill id="21252" toLevel="1" name="Hellblade">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<icon>BranchSys2.icon.br_wp_Caladbulg_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>84</magicLvl>
@@ -1073,7 +1072,7 @@
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
-				<chance>3</chance>
+				<chance>5</chance>
 				<targetType>TARGET</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
@@ -1084,7 +1083,6 @@
 	</skill>
 	<skill id="21253" toLevel="1" name="Butcher Blades">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<icon>BranchSys2.icon.br_wp_habus_knife_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>83</magicLvl>
@@ -1096,7 +1094,7 @@
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
-				<chance>3</chance>
+				<chance>5</chance>
 				<targetType>TARGET</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
@@ -1107,7 +1105,6 @@
 	</skill>
 	<skill id="21254" toLevel="1" name="Claw of Destruction">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<icon>BranchSys2.icon.br_wp_tiatenon_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>82</magicLvl>
@@ -1119,7 +1116,7 @@
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
-				<chance>3</chance>
+				<chance>5</chance>
 				<targetType>TARGET</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
@@ -1130,7 +1127,6 @@
 	</skill>
 	<skill id="21255" toLevel="1" name="Blades of Delusion">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<icon>BranchSys2.icon.br_wp_astarot_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>82</magicLvl>
@@ -1142,7 +1138,7 @@
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
-				<chance>3</chance>
+				<chance>5</chance>
 				<targetType>TARGET</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
@@ -1153,7 +1149,6 @@
 	</skill>
 	<skill id="21256" toLevel="1" name="Blood Brother">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<icon>BranchSys2.icon.br_wp_tirbing_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>82</magicLvl>
@@ -1165,7 +1160,7 @@
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
 				<minDamage>1</minDamage>
-				<chance>3</chance>
+				<chance>5</chance>
 				<targetType>TARGET</targetType>
 				<isCritical>false</isCritical>
 				<allowWeapons>ALL</allowWeapons>
@@ -1176,7 +1171,6 @@
 	</skill>
 	<skill id="21257" toLevel="1" name="Mardil">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<icon>BranchSys2.icon.br_wp_wind_of_mardil_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>71</magicLvl>
@@ -1187,9 +1181,9 @@
 				<attackerType>L2Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>100</maxAttackerLevel>
-				<chance>3</chance>
+				<chance>5</chance>
 				<targetType>SELF</targetType>
-				<minDamage>1</minDamage>
+				<minDamage>100</minDamage>
 				<skillId>23324</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -1198,7 +1192,7 @@
 	<skill id="21258" toLevel="1" name="Ride Rocking Horse">
 		<!-- High Five Skill -->
 		<!-- Mounts a rocking horse. -->
-		<abnormalTime>3600</abnormalTime> <!-- FIXME: value unconfirmed -->
+		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>

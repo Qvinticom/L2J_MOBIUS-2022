@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23500" toLevel="1" name="(Harp Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' P. Accuracy + 7, P./M. Evasion + 7, and Speed + 36. Received Critical Damage - 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -21,9 +20,37 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</slot>
+			</effect>
+			<effect name="Speed">
+				<amount>36</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23501" toLevel="1" name="(Harp Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' P. Accuracy + 7, P. Evasion and M. Evasion + 7, Speed + 36, Received Critical Damage - 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -43,9 +70,37 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</slot>
+			</effect>
+			<effect name="Speed">
+				<amount>36</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23502" toLevel="1" name="(Lute Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' Atk. Spd. + 35%, Casting Spd. + 32%, and has a chance of applying 9% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -65,9 +120,28 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>IMPROVE_VAMPIRIC_HASTE,-1;ATTACK_TIME_DOWN,-1;VAMPIRIC_ATTACK,-1;CASTING_TIME_DOWN,-1</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</slot>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>32</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23503" toLevel="1" name="(Lute Melody)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., party members' Atk. Spd. + 36%, Casting Spd. + 33%, and has a chance of applying 9% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -87,9 +161,28 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>IMPROVE_VAMPIRIC_HASTE,-1;ATTACK_TIME_DOWN,-1;VAMPIRIC_ATTACK,-1;CASTING_TIME_DOWN,-1</dispel>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</slot>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>36</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>33</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23504" toLevel="1" name="(Knight's Harmony)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., selected party members' P. Atk. + 12%, P. Def. + 45%, Shield Defense Rate + 30%, Shield Defense + 50%, P. Critical Damage + 35%, and P. Critical Rate + 100%. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
@@ -109,9 +202,41 @@
 		<reuseDelay>2000</reuseDelay>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</slot>
+			</effect>
+			<effect name="PAtk">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>45</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23505" toLevel="1" name="(Warrior's Harmony)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., selected party members' P. Atk. + 35%, M. Atk. + 16%, Atk./Casting Spd. + 8%, P. Critical Damage + 35%, P. Critical Rate + 100%, and Speed + 8. M. Def. - 16%, P. Def. - 8%, and P. Evasion - 4. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -131,9 +256,57 @@
 		<reuseDelay>2000</reuseDelay>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</slot>
+			</effect>
+			<effect name="PAtk">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>-4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23506" toLevel="1" name="(Wizard's Harmony)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., selected party members' P. Atk. + 8%, M. Atk. + 40%, Atk./Casting Spd. + 8%, M. Def. + 14%, M. Critical Rate + 100%, MP Recovery Bonus + 20%, and Speed + 8. P. Def. - 8%, P. Evasion - 4, M. Skill MP Consumption - 15%, P. Skill MP Consumption - 5%, and Skill Cooldown - 20%. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -153,9 +326,74 @@
 		<reuseDelay>2000</reuseDelay>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</slot>
+			</effect>
+			<effect name="PAtk">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>14</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23507" toLevel="1" name="(Prevailing Sonata)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 min., party members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP Recovery Bonus + 20%. M. Skill MP Consumption - 10%, and decreases chance of cancellation when casting. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
@@ -176,9 +414,42 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</slot>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23508" toLevel="1" name="(Daring Sonata)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 min., party members' P. Atk. + 8%, M. Atk. + 16%, and Atk./Casting Spd. + 8%. P. Def. - 3%, and M. Def. - 11%, and P. Evasion - 4. Has a chance of applying 8% Vampiric Rage, and reflects 10% of received damage back to enemy. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
@@ -199,9 +470,53 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</slot>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>30</chance>
+			</effect>
+			<effect name="PAtk">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>-4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23509" toLevel="1" name="(Refreshing Sonata)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 min., party members' HP Recovery Bonus + 20%, P. Accuracy + 4, P. Evasion + 3, and Speed + 20. Skill MP Consumption - 20%, and Skill Cooldown - 10%. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
@@ -222,9 +537,53 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</slot>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23510" toLevel="1" name="(Brilliant Heal)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals self and surrounding party members with 1210 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11757</icon>
 		<operateType>A1</operateType>
@@ -241,6 +600,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="HpCpHeal">
+				<power>1210</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23511" toLevel="1" name="Ancient Kartia's End (Presentation)">
 		<!-- AUTO GENERATED SKILL -->
@@ -262,7 +626,6 @@
 		<affectScope>RANGE</affectScope>
 	</skill>
 	<skill id="23512" toLevel="1" name="Zombification">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Zombified. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -292,9 +655,23 @@
 				<transformId>20017</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">CHANGEBODY,-1</value>
+					<value level="2">TURN_STONE,-1</value>
+					<value level="3">BUFF_SPECIAL_MULTI,-1</value>
+				</dispel>
+			</effect>
+			<effect name="Transformation">
+				<transformationId>20017</transformationId>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23513" toLevel="1" name="Zombified">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bitten by a zombie. Speed is decreasing, and the infection is spreading. Will turn into a zombie if not cured with Nevit's Touch within 1 min. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A2</operateType>
@@ -324,9 +701,14 @@
 		<conditions>
 			<condition name="OpCannotUseTargetWithPrivateStore" />
 		</conditions>
+		<effects>
+			<effect name="Speed">
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23514" toLevel="1" name="Zombie Bite">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bite ferociously to infect target. -->
 		<icon>icon.skill1310</icon>
 		<operateType>A1</operateType>
@@ -352,6 +734,20 @@
 		<conditions>
 			<condition name="OpCannotUseTargetWithPrivateStore" />
 		</conditions>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Bite ferociously to infect target. -->
+				<minDamage>1</minDamage>
+				<skillId>23513</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23515" toLevel="1" name="Zombie Leap">
 		<!-- AUTO GENERATED SKILL -->
@@ -387,7 +783,6 @@
 		</conditions>
 	</skill>
 	<skill id="23516" toLevel="1" name="Petrify">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Petrified by an unknown power. -->
 		<icon>icon.skill1540</icon>
 		<operateType>A2</operateType>
@@ -405,9 +800,11 @@
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="23517" toLevel="1" name="Summon Tree of Life - NPC">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 sec., restores all party members' HP by 666 a sec. -->
 		<icon>icon.skill1229</icon>
 		<operateType>A2</operateType>
@@ -419,13 +816,19 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<affectRange>300</affectRange>
 		<affectLimit>50-50</affectLimit>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="HealOverTime">
+				<power>666</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23518" toLevel="1" name="Bloody Grand Blow">
 		<!-- AUTO GENERATED SKILL -->
@@ -576,7 +979,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23524" toLevel="1" name="Zombie Bite">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bite ferociously to infect target. Unusable on those already infected. -->
 		<icon>icon.skill1310</icon>
 		<operateType>A1</operateType>
@@ -602,9 +1004,22 @@
 		<conditions>
 			<condition name="OpCannotUseTargetWithPrivateStore" />
 		</conditions>
+		<effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Bite ferociously to infect target. -->
+				<minDamage>1</minDamage>
+				<skillId>23513</skillId>
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>true</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23525" toLevel="1" name="Zombified">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bitten by a zombie. Speed is decreasing, and the infection is spreading. Will suffer side effects if not cured with Nevit's Touch within 1 min. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A2</operateType>
@@ -634,6 +1049,12 @@
 		<conditions>
 			<condition name="OpCannotUseTargetWithPrivateStore" />
 		</conditions>
+		<effects>
+			<effect name="Speed">
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23526" toLevel="1" name="Zombification Side Effects">
 		<!-- AUTO GENERATED SKILL -->
@@ -870,7 +1291,6 @@
 		</targetConditions>
 	</skill>
 	<skill id="23536" toLevel="1" name="Elixir of Blessing - Horn Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
@@ -887,9 +1307,33 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_PA_PD_UP;PA_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_PA_PD_UP;PA_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
+			</effect>
+			<effect name="PAtk">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>79</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23537" toLevel="1" name="Elixir of Blessing - Drum Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, Critical Damage during standard attacks + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and P. Def. when receiving Critical Damage. Speed - 15%, and party members equipped with melee weapons have increased Critical Damage after receiving some damage. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
@@ -906,9 +1350,80 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- Critical Damage Increase -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<chance>80</chance>
+				<targetType>SELF</targetType>
+				<minDamage>300</minDamage>
+				<skillId>11569</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>MULTI_BUFF;COUNTER_CRITICAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23538" toLevel="1" name="Elixir of Blessing - Pipe Organ Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -925,9 +1440,33 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
+			</effect>
+			<effect name="MaxCp">
+				<amount>37</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>37</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23539" toLevel="1" name="Elixir of Blessing - Guitar Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanters' Enchant Skill MP Consumption - 20%. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -944,9 +1483,49 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</slot>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>32</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23540" toLevel="1" name="Elixir of Blessing - Harp Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Accuracy + 5, P./M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -963,9 +1542,37 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</slot>
+			</effect>
+			<effect name="Speed">
+				<amount>34</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23541" toLevel="1" name="Elixir of Blessing - Lute Melody">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Atk. Spd. + 34%, Casting Spd. + 31%, and has a chance of applying 9% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -982,6 +1589,27 @@
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>CLAN</affectObject>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>34</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>31</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23542" toLevel="1" name="Uthanka Agathion Cute Trick">
 		<!-- AUTO GENERATED SKILL -->

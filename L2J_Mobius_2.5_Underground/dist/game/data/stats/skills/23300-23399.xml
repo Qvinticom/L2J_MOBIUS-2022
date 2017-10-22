@@ -399,7 +399,6 @@
 	</skill>
 	<skill id="23319" toLevel="1" name="Blood Seeker">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -430,14 +429,16 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="DamOverTime">
-				<power>170</power>
+				<power>52</power>
 				<ticks>5</ticks>
+			</effect>
+			<effect name="PhysicalAttack">
+				<power>2616</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="23320" toLevel="1" name="Greedy Throat">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -468,14 +469,13 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="DamOverTime">
-				<power>230</power>
+				<power>67</power>
 				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="23321" toLevel="1" name="Draconic Evolver">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -508,7 +508,6 @@
 	</skill>
 	<skill id="23322" toLevel="10" name="Demonic Desire">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<!-- This skill only has one level, 10. -->
 		<abnormalLvl>13</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -542,13 +541,12 @@
 	</skill>
 	<skill id="23323" toLevel="10" name="Fury of Darkness">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<!-- This skill only has one level, 10. -->
 		<abnormalLvl>13</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>80</activateRate>
-		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
+		<basicProperty>PHYSICAL</basicProperty>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>80</castRange>
 		<effectPoint>-100</effectPoint>
@@ -579,21 +577,19 @@
 	</skill>
 	<skill id="23324" toLevel="1" name="Jet Black Typhoon">
 		<!-- High Five Skill -->
-		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>800</effectPoint>
 		<icon>BranchSys2.icon.br_wp_wind_of_mardil_i00</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<!-- set name="abnormalType" val="RAID_WEAPON" / --> <!-- FIXME: Value unconfirmed. -->
 		<isMagic>1</isMagic>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>71</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
-		<basicProperty>NONE</basicProperty>
+		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
