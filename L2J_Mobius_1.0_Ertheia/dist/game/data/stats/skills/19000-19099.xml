@@ -921,18 +921,11 @@
 		</effects>
 	</skill>
 	<skill id="19032" toLevel="1" name="Ability of Light">
-		<!-- TODO: confirm me -->
 		<!-- Imbued with the Ability of Light. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Effects do not apply when in Chaotic state. Can be used by a Marquis or higher. -->
 		<icon>icon.skill19008</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<passiveConditions>
-			<condition name="OpAlignment">
-				<alignment>LAWFUL</alignment>
-				<affectType>CASTER</affectType>
-			</condition>
-		</passiveConditions>
 		<effects>
 			<effect name="MaxCp">
 				<amount>3000</amount>
@@ -953,7 +946,6 @@
 		</effects>
 	</skill>
 	<skill id="19033" toLevel="1" name="Ability of Darkness">
-		<!-- TODO: confirm me -->
 		<!-- Imbued with the Ability of Darkness. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Can be used by a Marquis or higher. -->
 		<icon>icon.skill19008</icon>
 		<magicLvl>85</magicLvl>
@@ -1031,7 +1023,6 @@
 		</effects>
 	</skill>
 	<skill id="19036" toLevel="1" name="Blessing of Light">
-		<!-- TODO: Confir me -->
 		<!-- Acquires 3% additional XP and SP through the blessing of the Guardian of Light. -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A2</operateType>
@@ -1252,7 +1243,6 @@
 		</effects>
 	</skill>
 	<skill id="19041" toLevel="1" name="Escape: Castle">
-		<!-- TODO: Confirm me -->
 		<!-- Return to Castle. -->
 		<hitTime>20000</hitTime>
 		<icon>icon.vesper_cloack_i00</icon>
@@ -1274,7 +1264,6 @@
 		</effects>
 	</skill>
 	<skill id="19042" toLevel="1" name="Blessed Scroll of Escape: Castle">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Castle. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>A1</operateType>
@@ -1293,6 +1282,11 @@
 				<type>CASTLE</type>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>CASTLE</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19074" toLevel="2" name="Academy Precept">
 		<!-- AUTO GENERATED SKILL -->

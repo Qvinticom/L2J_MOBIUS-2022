@@ -90,8 +90,8 @@
 		<!-- Decreases target's Bow/Crossbow Resistance by 60% for 7 seconds. Does not cancel when striking. Consumes 1 Soulstone. -->
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
-		<abnormalType>REAL_TARGET</abnormalType> <!-- TODO confirm -->
-		<abnormalVisualEffect>REAL_TARGET_2</abnormalVisualEffect> <!-- TODO confirm -->
+		<abnormalType>REAL_TARGET</abnormalType>
+		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<icon>icon.skill19203</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
