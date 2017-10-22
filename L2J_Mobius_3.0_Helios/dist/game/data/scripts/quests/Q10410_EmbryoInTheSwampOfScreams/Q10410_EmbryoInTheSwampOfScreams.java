@@ -107,7 +107,7 @@ public final class Q10410_EmbryoInTheSwampOfScreams extends Quest
 					giveStoryQuestReward(player, 63);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 16_968_420, 4072);
+						addExpAndSp(player, 161_046_201, 4072);
 					}
 					htmltext = event;
 				}
@@ -155,7 +155,7 @@ public final class Q10410_EmbryoInTheSwampOfScreams extends Quest
 			{
 				int count = st.getInt("KillCount");
 				st.set("KillCount", ++count);
-				if (count >= 50)
+				if (count >= 300)
 				{
 					st.setCond(2, true);
 				}
