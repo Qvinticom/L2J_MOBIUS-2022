@@ -246,7 +246,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("SELECT exp, sp, level, vitality_points FROM character_subclasses WHERE charId=? && class_id=? ORDER BY charId"))
+			PreparedStatement statement = con.prepareStatement("SELECT exp, sp, level, vitality_points FROM character_subclasses WHERE charId=? AND class_id=? ORDER BY charId"))
 		{
 			statement.setInt(1, ObjectId);
 			statement.setInt(2, activeClassId);
@@ -255,7 +255,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				if (charList.next())
 				{
 					charInfopackage.setExp(charList.getLong("exp"));
-					charInfopackage.setSp(charList.getInt("sp"));
+					charInfopackage.setSp(charList.getLong("sp"));
 					charInfopackage.setLevel(charList.getInt("level"));
 					charInfopackage.setVitalityPoints(charList.getInt("vitality_points"));
 				}
