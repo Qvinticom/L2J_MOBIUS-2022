@@ -1723,6 +1723,12 @@ public final class SkillTreesData implements IGameXmlReader
 			return true;
 		}
 		
+		// Exclude Revelation Skills from this check.
+		if (getRevelationSkill(player.isDualClassActive() ? SubclassType.DUALCLASS : player.isSubClassActive() ? SubclassType.SUBCLASS : SubclassType.BASECLASS, skill.getId(), Math.min(skill.getLevel(), maxLvl)) != null)
+		{
+			return true;
+		}
+		
 		// Exclude Transfer Skills from this check.
 		if (getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getClassId()) != null)
 		{
