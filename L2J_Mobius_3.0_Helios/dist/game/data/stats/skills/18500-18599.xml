@@ -555,9 +555,9 @@
 					<value level="1">0</value>
 					<value level="2">0</value>
 					<value level="3">0</value>
-					<value level="4">-7</value>
-					<value level="5">-15</value>
-					<value level="6">-15</value>
+					<value level="4">7</value>
+					<value level="5">15</value>
+					<value level="6">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -587,44 +587,153 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18571" toLevel="1" name="Warrior Basics I">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18572" toLevel="1" name="Warrior Basics II">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18573" toLevel="1" name="Warrior Basics III">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18574" toLevel="1" name="Peaceful Town of Giran">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>140000</value>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-0</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18575" toLevel="1" name="Hunting Cry I">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackRange">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>BOW</item>
+					<item>CROSSBOW</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18576" toLevel="1" name="Hunting Cry II">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>10</BOW>
+				<CROSSBOW>10</CROSSBOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18577" toLevel="1" name="Roar of the Battlefield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18578" toLevel="1" name="The World's Next Top Singer">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="18579" toLevel="1" name="Entrance Pass: Embryo Command Post">
 		<!-- AUTO GENERATED SKILL -->

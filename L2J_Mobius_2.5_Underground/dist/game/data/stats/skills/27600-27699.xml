@@ -125,19 +125,29 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
-				<amount>-100</amount>
+				<amount>200</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27616" toLevel="1" name="Vitality Maintaining Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- State in which the Vitality Stage is maintained. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
 		<isMagic>4</isMagic>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27617" toLevel="1" name="Abundance Box">
 		<!-- AUTO GENERATED SKILL -->

@@ -204,38 +204,42 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27439" toLevel="3" name="Vital Stone - Vital Wind">
-		<!-- TODO Vitality Consuption Core support -->
 		<!-- For 15 seconds when hunting monsters, Vitality Consumption + 20%, XP/SP Gain + 20%. Cooldown 20 minutes.  -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1200000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>EXP_SPECIAL</abnormalType>
 		<hitTime>750</hitTime>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
-		<effect name="VitalityPointsRate">
-			<amount>
-				<value level="1">10</value>
-				<value level="2">15</value>
-				<value level="3">20</value>
-			</amount>
-			<mode>PER</mode>
-		</effect>
-		<effect name="ExpModify">
-			<amount>
-				<value level="1">10</value>
-				<value level="2">15</value>
-				<value level="3">20</value>
-			</amount>
-			<mode>PER</mode>
-		</effect>
-		<effect name="SpModify">
-			<amount>
-				<value level="1">10</value>
-				<value level="2">15</value>
-				<value level="3">20</value>
-			</amount>
-			<mode>PER</mode>
+			<effect name="VitalityPointsRate">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">20</value>
+					<value level="2">50</value>
+					<value level="3">100</value>
+				</amount>
+				<mode>PER</mode>
+				</effect>
 		</effects>
 	</skill>
 	<skill id="27440" toLevel="6" name="Greater Cat's Eye">

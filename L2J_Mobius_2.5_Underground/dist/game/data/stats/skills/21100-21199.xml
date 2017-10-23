@@ -2783,17 +2783,14 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointUp">
 				<value>20000</value>
 			</effect>
 			<effect name="VitalityPointsRate">
-				<amount>-0</amount>
-				<mode>DIFF</mode>
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>

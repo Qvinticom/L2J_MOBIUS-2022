@@ -983,7 +983,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="VitalityPointsRate">
-				<amount>-100</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1011,7 +1011,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="VitalityPointsRate">
-				<amount>-100</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1066,8 +1066,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="VitalityExpRate">
-				<amount>100</amount>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1095,7 +1095,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="VitalityPointsRate">
-				<amount>-50</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

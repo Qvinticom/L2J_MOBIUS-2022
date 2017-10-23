@@ -93,10 +93,6 @@
 		<specialLevel>-1</specialLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-10</amount>
@@ -119,10 +115,6 @@
 		<specialLevel>-1</specialLevel>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointUp">
 				<value>600</value>
@@ -142,10 +134,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointUp">
 				<value>20000</value>

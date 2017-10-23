@@ -126,7 +126,7 @@
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="AttackAttribute"> <!-- Default Fire, TODO: AttackCurrentAttribute Handler -->
+			<effect name="AttackAttributeAdd">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
@@ -134,6 +134,66 @@
 					<value level="4">70</value>
 					<value level="5">120</value>
 				</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+				</amount>
+				<attribute>HOLY</attribute>
 			</effect>
 		</effects>
 	</skill>
@@ -199,6 +259,16 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="17709" toLevel="5" name="Pearl">
@@ -228,6 +298,16 @@
 					<value level="3">-3</value>
 					<value level="4">-4</value>
 					<value level="5">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

@@ -817,13 +817,12 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23774" toLevel="1" name="Clan Teamwork - Stage 1">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teamwork achieved thanks to the clan activities. XP/SP + 8%% and Vitality Consumption Speed - 3%% for 3 hours. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<abnormalTime>10800</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
@@ -837,20 +836,19 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
-				<amount>-3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="23775" toLevel="1" name="Clan Teamwork - Stage 2">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teamwork achieved thanks to the clan activities. XP/SP + 16%%, PvE Damage + 2%%, and Vitality Consumption Speed - 3%% for 3 hours. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<abnormalTime>10800</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
@@ -876,20 +874,19 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
-				<amount>-3</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="23776" toLevel="1" name="Clan Teamwork - Stage 3">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teamwork achieved thanks to the clan activities. XP/SP + 24%%, PvE Damage + 5%%, and Vitality Consumption Speed - 5%% for 3 hours. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<abnormalTime>10800</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
@@ -915,20 +912,19 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
-				<amount>-5</amount>
+				<amount>5</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="23777" toLevel="1" name="Clan Teamwork - Stage 4">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teamwork achieved thanks to the clan activities. XP/SP + 35%%, PvE Damage + 8%%, Vitality Consumption Speed - 3%%, and Damage Received from Raid/Boss Monsters - 8%% for 3 hours. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<abnormalTime>10800</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
@@ -966,7 +962,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="VitalityPointsRate">
-				<amount>-5</amount>
+				<amount>5</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
