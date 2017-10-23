@@ -382,7 +382,7 @@ public final class L2PcInstance extends L2Playable
 	
 	// Character Henna SQL String Definitions:
 	private static final String RESTORE_CHAR_HENNAS = "SELECT slot,symbol_id FROM character_hennas WHERE charId=? AND class_index=?";
-	private static final String ADD_CHAR_HENNA = "INSERT INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
+	private static final String ADD_CHAR_HENNA = "REPLACE INTO character_hennas (charId,symbol_id,slot,class_index) VALUES (?,?,?,?)";
 	private static final String DELETE_CHAR_HENNA = "DELETE FROM character_hennas WHERE charId=? AND slot=? AND class_index=?";
 	private static final String DELETE_CHAR_HENNAS = "DELETE FROM character_hennas WHERE charId=? AND class_index=?";
 	
@@ -7787,7 +7787,8 @@ public final class L2PcInstance extends L2Playable
 					// Task for henna duration
 					if (henna.getDuration() > 0)
 					{
-						final long remainingTime = getVariables().getLong("HennaDuration" + slot, 0) - System.currentTimeMillis();
+						final long currentTime = System.currentTimeMillis();
+						final long remainingTime = currentTime - getVariables().getLong("HennaDuration" + slot, currentTime);
 						if (remainingTime < 0)
 						{
 							removeHenna(slot);
@@ -7890,8 +7891,9 @@ public final class L2PcInstance extends L2Playable
 		ui.addComponentType(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 		sendPacket(ui);
 		
-		final long remainingTime = getVariables().getLong("HennaDuration" + slot, 0) - System.currentTimeMillis();
-		if ((henna.getDuration() < 0) || (remainingTime > 0))
+		final long currentTime = System.currentTimeMillis();
+		final long timeLeft = getVariables().getLong("HennaDuration" + slot, currentTime) - currentTime;
+		if ((henna.getDuration() < 0) || (timeLeft > 0))
 		{
 			// Add the recovered dyes to the player's inventory and notify them.
 			if ((henna.getCancelFee() > 0) && (hasPremiumStatus() || (slot != 4)))
@@ -7980,8 +7982,10 @@ public final class L2PcInstance extends L2Playable
 				// Task for henna duration
 				if (henna.getDuration() > 0)
 				{
-					getVariables().set("HennaDuration" + i, System.currentTimeMillis() + (henna.getDuration() * 60000));
-					_hennaRemoveSchedules.put(i, ThreadPoolManager.schedule(new HennaDurationTask(this, i), System.currentTimeMillis() + (henna.getDuration() * 60000)));
+					final long currentTime = System.currentTimeMillis();
+					final long durationInMillis = henna.getDuration() * 60000;
+					getVariables().set("HennaDuration" + i, currentTime + durationInMillis);
+					_hennaRemoveSchedules.put(i, ThreadPoolManager.schedule(new HennaDurationTask(this, i), currentTime + durationInMillis));
 				}
 				
 				// Reward henna skills
@@ -9876,7 +9880,7 @@ public final class L2PcInstance extends L2Playable
 			
 			sendPacket(new EtcStatusUpdate(this));
 			
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 4; i++)
 			{
 				_henna[i] = null;
 			}
