@@ -3470,7 +3470,6 @@
 		</collision>
 	</npc>
 	<npc id="23076" level="92" type="L2Monster" name="Restrained Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3483,7 +3482,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="304477" hpRegen="8.5" mp="20960" mpRegen="30" />
+			<vitals hp="316048" hpRegen="8.5" mp="20960" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3496,13 +3495,9 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14176" level="1" /> <!-- Exorcism -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -3515,7 +3510,6 @@
 		</collision>
 	</npc>
 	<npc id="23077" level="92" type="L2Monster" name="Nameless Lunacy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3527,7 +3521,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13907" hpRegen="8.5" mp="2096" mpRegen="3" />
+			<vitals hp="14437" hpRegen="8.5" mp="2096" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3540,22 +3534,21 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14258" level="1" /> <!-- Scalp -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
+			<clan_list>
+				<clan>FORTUNA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="23078" level="93" type="L2Monster" name="Restrained Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3569,7 +3562,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844" hpRegen="8.5" mp="31986" mpRegen="30" />
+			<vitals hp="324733" hpRegen="8.5" mp="31986" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3582,13 +3575,9 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14178" level="1" /> <!-- Exorcism -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -3601,7 +3590,6 @@
 		</collision>
 	</npc>
 	<npc id="23079" level="93" type="L2Monster" name="Nameless Lunacy">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3627,22 +3615,21 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14262" level="1" /> <!-- Flame Hurl -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
+			<clan_list>
+				<clan>FORTUNA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
 		</collision>
 	</npc>
 	<npc id="23080" level="94" type="L2Monster" name="Corrupted Poison Cloud">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3653,7 +3640,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10" hpRegen="8.5" mp="2169" mpRegen="3" />
+			<vitals hp="11" hpRegen="8.5" mp="2169" mpRegen="3" />
 			<speed>
 				<walk ground="20" />
 				<run ground="90" />
@@ -3666,12 +3653,9 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -3684,7 +3668,6 @@
 		</collision>
 	</npc>
 	<npc id="23081" level="95" type="L2Monster" name="Restrained Vampire" title="Absorber of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3699,7 +3682,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15122" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<vitals hp="15698" hpRegen="8.5" mp="2205" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3712,22 +3695,21 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14260" level="1" /> <!-- HP Drain -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
+			<clan_list>
+				<clan>FORTUNA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="39" />
 		</collision>
 	</npc>
 	<npc id="23082" level="96" type="L2Monster" name="Restrained Elite Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3741,7 +3723,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="322511" hpRegen="8.5" mp="33642" mpRegen="30" />
+			<vitals hp="669535" hpRegen="8.5" mp="33642" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3754,15 +3736,10 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14177" level="1" /> <!-- Exorcism -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -3775,7 +3752,6 @@
 		</collision>
 	</npc>
 	<npc id="23083" level="96" type="L2Monster" name="Nameless Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3788,7 +3764,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="30948" hpRegen="8.5" mp="2242" mpRegen="3" />
+			<vitals hp="32125" hpRegen="8.5" mp="2242" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3801,7 +3777,6 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -3810,14 +3785,17 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
+			<clan_list>
+				<clan>FORTUNA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="23084" level="96" type="L2Monster" name="Restrained Elite Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3832,7 +3810,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="322511" hpRegen="8.5" mp="22428" mpRegen="30" />
+			<vitals hp="669535" hpRegen="8.5" mp="22428" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3845,15 +3823,10 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14178" level="1" /> <!-- Exorcism -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -3866,7 +3839,6 @@
 		</collision>
 	</npc>
 	<npc id="23085" level="96" type="L2Monster" name="Nameless Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3880,7 +3852,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="30948" hpRegen="8.5" mp="2242" mpRegen="3" />
+			<vitals hp="32125" hpRegen="8.5" mp="2242" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3893,16 +3865,16 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14262" level="1" /> <!-- Flame Hurl -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
+			<clan_list>
+				<clan>FORTUNA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />

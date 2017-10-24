@@ -921,7 +921,6 @@
 		</collision>
 	</npc>
 	<npc id="25822" level="95" type="L2Monster" name="Lakielo" title="Cursed Hero">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14267" level="1" />
@@ -933,7 +932,7 @@
 		<sex>MALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="66024" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="68534" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
@@ -946,14 +945,9 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5259" level="12" /> <!-- Fear -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -966,7 +960,6 @@
 		</collision>
 	</npc>
 	<npc id="25823" level="95" type="L2Monster" name="Brakiera" title="Cursed Hero">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14267" level="2" />
 			<skill name="summonSkill" id="14265" level="1" />
@@ -977,7 +970,7 @@
 		<sex>MALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="66024" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="68534" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
@@ -990,14 +983,9 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14265" level="1" /> <!-- Resurrection -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>

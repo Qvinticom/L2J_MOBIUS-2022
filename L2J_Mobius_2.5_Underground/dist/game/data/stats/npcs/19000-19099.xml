@@ -2420,14 +2420,13 @@
 		</collision>
 	</npc>
 	<npc id="19084" level="97" type="L2Monster" name="Cursed Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Area_Skill" id="14365" level="1" />
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<vitals hp="7915" hpRegen="8.5" mp="2280" mpRegen="3" />
 			<speed>
 				<walk ground="65" />
 				<run ground="220" />
@@ -2436,15 +2435,15 @@
 			<defence physical="400.83818" magical="293.31598" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="14365" level="1" /> <!-- Hellfire -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
+			<clan_list>
+				<clan>FORTUNA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="14" />
 			<height normal="22.5" />
