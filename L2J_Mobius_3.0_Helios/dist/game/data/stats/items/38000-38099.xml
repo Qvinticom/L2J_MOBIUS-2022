@@ -1589,5 +1589,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="17320" level="1" /> <!-- Leona's Scroll: Buffs -->
+		</skills>
 	</item>
 </list>

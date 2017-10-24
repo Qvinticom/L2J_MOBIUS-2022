@@ -82,6 +82,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<skills>
+			<skill id="27422" level="1" /> <!-- Dragon's Ascension -->
+		</skills>
 	</item>
 	<item id="26409" name="XP Rune IV (Lv. 1-99) 100% Pack (1-day)" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune IV (Lv. 1-99) 100% (1-day). -->
@@ -118,6 +121,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
+		<skills>
+			<skill id="27422" level="1" /> <!-- Dragon's Ascension -->
+		</skills>
 	</item>
 	<item id="26412" name="XP Rune IV (Lv. 1-99) 100% Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune IV (Lv. 1-99) 100% (7-day). -->
@@ -154,6 +160,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="27422" level="1" /> <!-- Dragon's Ascension -->
+		</skills>
 	</item>
 	<item id="26415" name="XP Rune IV (Lv. 1-99) 100% Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune IV (Lv. 1-99) 100% (30-day). -->
@@ -190,6 +199,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="27422" level="1" /> <!-- Dragon's Ascension -->
+		</skills>
 	</item>
 	<item id="26418" name="Recipe: Talisman - Abundance Lv. 1 (High-grade)" type="EtcItem">
 		<!-- For 4th class only. Recipe for Talisman - Abundance (High-grade) Lv. 1. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->

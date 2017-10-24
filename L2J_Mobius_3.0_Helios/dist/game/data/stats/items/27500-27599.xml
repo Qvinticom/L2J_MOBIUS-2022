@@ -388,7 +388,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="27589" level="1" /> <!-- Adventurer's Support Cube -->
+		</skills>
 	</item>
 	<item id="27523" name="Adventurer's Support Box" type="EtcItem">
 		<!-- Support box containing a Adventurer's Shirt, Circlet, and Bracelet. -->
@@ -398,6 +404,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27519" min="1" max="1" chance="100" /> <!-- Adventurer's Shirt -->
+			<item id="27520" min="1" max="1" chance="100" /> <!-- Adventurer's Circlet -->
+			<item id="27521" min="1" max="1" chance="100" /> <!-- Adventurer's Bracelet -->
+		</capsuled_items>
 	</item>
 	<item id="27524" name="Talisman - Abundance Pack" type="EtcItem">
 		<!-- Double-click to get a Talisman - Abundance (War, Tactics, Morale, or Physique.) -->
@@ -406,6 +420,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27590" level="1" /> <!-- Talisman - Abundance Pack -->
+		</skills>
 	</item>
 	<item id="27525" name="Requiem Weapon Coupon" type="EtcItem">
 		<!-- Take it to the Dimensional Merchant to exchange for a Requiem weapon. -->
@@ -706,6 +726,16 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27552" min="1" max="1" chance="100" /> <!-- Ruler's Authority -->
+			<item id="37667" min="1" max="1" chance="100" /> <!-- Blessed Anthara's Earring -->
+			<item id="37668" min="1" max="1" chance="100" /> <!-- Blessed Valaka's Necklace -->
+			<item id="37669" min="1" max="1" chance="100" /> <!-- Blessed Tauti's Ring -->
+			<item id="37670" min="1" max="1" chance="100" /> <!-- Earth Wyrm Heart Ring -->
+		</capsuled_items>
 	</item>
 	<item id="27552" name="Ruler's Authority" additionalName="30-day" type="Armor">
 		<!-- Item given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, weight by 25600, and damage by 8%. Decreases received damage by 9% and Damage Reflect Resistance by 5%. Increases the number of inventory slots by 36, and Attribute Resistance by 15. Cannot be used in the Olympiad. -->
@@ -719,10 +749,21 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="15145" level="1" /> <!-- Ruler's Authority -->
+		</skills>
 		<stats>
-			<stat type="pDef">50.0</stat>
+			<stat type="pDef">50</stat>
+			<stat type="fireRes">15</stat>
+			<stat type="waterRes">15</stat>
+			<stat type="windRes">15</stat>
+			<stat type="earthRes">15</stat>
+			<stat type="holyRes">15</stat>
+			<stat type="darkRes">15</stat>
 		</stats>
 	</item>
 	<item id="27553" name="Agathion - Griffin" additionalName="Premium" type="Armor">
@@ -816,7 +857,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="time" val="43200" />
+		<capsuled_items>
+			<item id="27522" min="1" max="1" chance="100" /> <!-- Ultimate Support Cube -->
+		</capsuled_items>
 	</item>
 	<item id="27562" name="Noble Pack" type="EtcItem">
 		<!-- Double-click to get the following: XP Rune IV (Lv. 1-99) 100% (7-day) x1, Venir's Talisman Stage 4 x1, Adventurer's Support Box x1, Talisman - Abundance Pack x1, Radiant Zodiac Agathion Pack (30-day) x1, Beauty Shop Ticket x5, Leona's Scroll: Buffs x10, Dandy's Scroll: Passion x10. -->
@@ -826,6 +873,19 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26414" min="1" max="1" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% (7-day) x1 -->
+			<item id="39637" min="1" max="1" chance="100" /> <!-- Venir's Talisman Stage 4 x1 -->
+			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box x1 -->
+			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack x1 -->
+			<item id="45573" min="1" max="1" chance="100" /> <!-- Radiant Zodiac Agathion Pack (30-day) x1 -->
+			<item id="36308" min="5" max="5" chance="100" /> <!-- Beauty Shop Ticket x5 -->
+			<item id="38099" min="10" max="10" chance="100" /> <!-- Leona's Scroll: Buffs x10 -->
+			<item id="37730" min="10" max="10" chance="100" /> <!-- Dandy's Scroll: Passion x10 -->
+		</capsuled_items>
 	</item>
 	<item id="27563" name="Divine Pack" type="EtcItem">
 		<!-- Double-click to get the following: XP Rune IV (Lv. 1-99) 100% (7-day) x2, Requiem Weapon Coupon x1, Immortal Armor Set Coupon x1, Lv. 3 Giant Dye Exchange Coupon x10, Venir's Talisman Stage 6 x1, Adventurer's Support Box x1, Talisman - Abundance Pack x1, Twinkling Zodiac Agathion Pack (30-day) x1, Beauty Shop Ticket x10, Leona's Scroll: Buffs x20, Dandy's Scroll: Passion x20, Mysterious Abnormal State Resistance Dye (30-day) x1, Rare Accessory Pack (30-day) x1. -->
@@ -835,6 +895,24 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="26414" min="2" max="2" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% (7-day) x1 -->
+			<item id="27525" min="1" max="1" chance="100" /> <!-- Requiem Weapon Coupon x1 -->
+			<item id="27526" min="1" max="1" chance="100" /> <!-- Immortal Armor Set Coupon x1 -->
+			<item id="27555" min="10" max="10" chance="100" /> <!-- Lv. 3 Giant Dye Exchange Coupon x10 -->
+			<item id="39639" min="1" max="1" chance="100" /> <!-- Venir's Talisman Stage 6 x1 -->
+			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box x1, Talisman - Abundance Pack x1 -->
+			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack x1 -->
+			<item id="45574" min="1" max="1" chance="100" /> <!-- Twinkling Zodiac Agathion Pack (30-day) x1 -->
+			<item id="36308" min="10" max="10" chance="100" /> <!-- Beauty Shop Ticket x10 -->
+			<item id="38099" min="20" max="20" chance="100" /> <!-- Leona's Scroll: Buffs x20 -->
+			<item id="37730" min="20" max="20" chance="100" /> <!-- Dandy's Scroll: Passion x20 -->
+			<item id="27541" min="1" max="1" chance="100" /> <!-- Mysterious Abnormal State Resistance Dye (30-day) x1 -->
+			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack (30-day) x1 -->
+		</capsuled_items>
 	</item>
 	<item id="27564" name="Ultimate Pack" type="EtcItem">
 		<!-- Double-click to get the following: Ultimate Support Cube x1, Requiem Weapon Coupon x1, Immortal Armor Set Coupon x1, Lv. 4 Legendary Dye Exchange Coupon x10, Venir's Talisman Stage 8 x1, XP Rune IV (Lv. 1-99) 100% (7-day) x4, Adventurer's Support Box x1, Talisman - Abundance Pack x1, Giant's Energy 100-unit Pack x1, Energy of Destruction 100-unit Pack x1, Blessed Zodiac Agathion Pack (30-day) x1, Beauty Shop Ticket x20, Leona's Scroll: Buffs x40, Dandy's Scroll: Passion x40, Mysterious Abnormal State Resistance Dye x1, Rare Accessory Pack (30-day) x1, Riding Manual: Riding Wolf x1. -->
@@ -844,6 +922,28 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27561" min="1" max="1" chance="100" /> <!-- Ultimate Support Cube x1 -->
+			<item id="27525" min="1" max="1" chance="100" /> <!-- Requiem Weapon Coupon x1 -->
+			<item id="27526" min="1" max="1" chance="100" /> <!-- Immortal Armor Set Coupon x1 -->
+			<item id="27556" min="10" max="10" chance="100" /> <!-- Lv. 4 Legendary Dye Exchange Coupon x10 -->
+			<item id="39641" min="1" max="1" chance="100" /> <!-- Venir's Talisman Stage 8 x1 -->
+			<item id="26414" min="4" max="4" chance="100" /> <!-- XP Rune IV (Lv. 1-99) 100% (7-day) x4 -->
+			<item id="27523" min="1" max="1" chance="100" /> <!-- Adventurer's Support Box x1 -->
+			<item id="27524" min="1" max="1" chance="100" /> <!-- Talisman - Abundance Pack x1 -->
+			<item id="40236" min="1" max="1" chance="100" /> <!-- Giant's Energy 100-unit Pack x1 -->
+			<item id="38763" min="1" max="1" chance="100" /> <!-- Energy of Destruction 100-unit Pack x1 -->
+			<item id="46369" min="1" max="1" chance="100" /> <!-- Blessed Zodiac Agathion Pack (30-day) x1 -->
+			<item id="36308" min="20" max="20" chance="100" /> <!-- Beauty Shop Ticket x20 -->
+			<item id="38099" min="20" max="20" chance="100" /> <!-- Leona's Scroll: Buffs x40 -->
+			<item id="37730" min="20" max="20" chance="100" /> <!-- Dandy's Scroll: Passion x40 -->
+			<item id="27541" min="1" max="1" chance="100" /> <!-- Mysterious Abnormal State Resistance Dye (30-day) x1 -->
+			<item id="27551" min="1" max="1" chance="100" /> <!-- Rare Accessory Pack (30-day) x1 -->
+			<item id="27542" min="1" max="1" chance="100" /> <!-- Riding Manual: Riding Wolf x1 -->
+		</capsuled_items>
 	</item>
 	<item id="27565" name="Weapon Pack (C-grade)" type="EtcItem">
 		<!-- Double-click to obtain a C-grade Steel weapon. -->

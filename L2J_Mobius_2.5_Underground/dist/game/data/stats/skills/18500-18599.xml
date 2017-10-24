@@ -17,16 +17,76 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="18502" toLevel="1" name="Scroll: Enchant Shadow Weapon">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18503" toLevel="1" name="Blessed Zodiac Agathion Pack (30-day)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.333333333333333">
+						<item id="46357" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46358" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46359" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46360" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46361" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46362" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46363" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46364" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46365" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46366" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46367" count="1" />
+					</item>
+					<item chance="8.333333333333333">
+						<item id="46368" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18504" toLevel="1" name="Emergency Whistle - Aden Vanguard">
 		<!-- AUTO GENERATED SKILL -->

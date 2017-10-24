@@ -2310,17 +2310,194 @@
 		</effects>
 	</skill>
 	<skill id="27589" toLevel="1" name="Adventurer's Support Cube">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>Branchsys2.icon.cube_event_i02</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>-1000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.325581395348837">
+						<item id="17382" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17383" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17384" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17385" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17386" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17387" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17388" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17389" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17390" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17391" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17392" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17393" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17394" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17395" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17396" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17397" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17398" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17399" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17400" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17401" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17402" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17403" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17404" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17405" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17406" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17407" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17408" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17409" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17410" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17411" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17412" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17413" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17414" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="17415" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="19447" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="19448" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="45929" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="9552" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="9553" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="9554" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="9555" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="9556" count="1" />
+					</item>
+					<item chance="2.325581395348837">
+						<item id="9557" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27590" toLevel="1" name="Talisman - Abundance Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="23833" count="1" />
+					</item>
+					<item chance="25">
+						<item id="23834" count="1" />
+					</item>
+					<item chance="25">
+						<item id="23835" count="1" />
+					</item>
+					<item chance="25">
+						<item id="23836" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27591" toLevel="1" name="+ 8 Shiny Elemental Shirt Pack">
 		<!-- AUTO GENERATED SKILL -->

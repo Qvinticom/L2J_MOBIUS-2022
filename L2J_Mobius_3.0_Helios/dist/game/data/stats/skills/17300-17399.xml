@@ -191,9 +191,19 @@
 		<!-- For 30 min., XP/SP gain + 30%, Max HP/MP/CP + 30%, P. Def./ M. Def. + 30%, Speed + 20, P. Atk. + 10%, M. Atk. + 20%. Skill MP Consumption - 15%. Cannot use with the Art of Seduction. Cooldown is 30min. -->
 		<icon>icon.event_altair_enchant_scroll_i00</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
 		<reuseDelay>1800000</reuseDelay>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38099</itemConsumeId> <!-- Leona's Scroll: Buffs -->
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
+		<hitTime>200</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ExpModify">
 				<amount>30</amount>
@@ -241,7 +251,7 @@
 				<magicType>1</magicType>
 			</effect>
 		</effects>
-			</skill>
+	</skill>
 	<skill id="17321" toLevel="1" name="Leona's Scroll: 1,000,000 SP">
 		<!-- Gives 1,000,000 SP. -->
 		<icon>icon.etc_sp_scroll1_i00</icon>
@@ -300,10 +310,23 @@
 		</effects>
 	</skill>
 	<skill id="17324" toLevel="1" name="Superior CP Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 1000 CP. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CpHeal">
+				<power>1000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17325" toLevel="1" name="Leona's Cube (1-time)">
 		<!-- AUTO GENERATED SKILL -->

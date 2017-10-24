@@ -118,10 +118,26 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27422" toLevel="1" name="XP Rune (Dragon's Ascension)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases XP/SP by 100%. (Lv. 99 or below) -->
 		<icon>br_cashtex.item.br_cash_rune_of_feather_i00</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>99</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27423" toLevel="1" name="Luck Box 1">
 		<!-- AUTO GENERATED SKILL -->

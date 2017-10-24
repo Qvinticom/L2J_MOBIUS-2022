@@ -6,10 +6,29 @@
 		<set name="compoundItem" val="38499" />
 		<set name="compoundChance" val="50" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="17621" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="17567" level="1" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="38501" name="Agathion - Radiant Cancer" type="Armor">
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy  Def. each increases by 30. -->
@@ -17,10 +36,29 @@
 		<set name="compoundItem" val="38500" />
 		<set name="compoundChance" val="50" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="17621" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="17568" level="1" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="38502" name="Agathion - Cancer" type="Armor">
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
@@ -37,6 +75,19 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="17621" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="38503" name="Agathion - Faint Cancer" type="Armor">
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
@@ -53,6 +104,18 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="17621" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="38504" name="Agathion - Blessed Capricorn Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Capricorn -->
@@ -62,6 +125,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38449" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38505" name="Agathion - Twinkling Capricorn Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Capricorn -->
@@ -71,6 +140,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38450" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38506" name="Agathion - Radiant Capricorn Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Capricorn -->
@@ -80,6 +155,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38451" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38507" name="Agathion - Capricorn Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Capricorn. -->
@@ -89,6 +170,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38452" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38508" name="Agathion - Faint Capricorn Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Capricorn. -->
@@ -98,6 +185,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38453" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38509" name="Agathion - Blessed Libra Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Libra -->
@@ -107,6 +200,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38454" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38510" name="Agathion - Twinkling Libra Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Libra -->
@@ -116,6 +215,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38455" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38511" name="Agathion - Radiant Libra Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Libra -->
@@ -125,6 +230,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38456" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38512" name="Agathion - Libra Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Libra. -->
@@ -134,6 +245,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38457" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38513" name="Agathion - Faint Libra Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Libra. -->
@@ -143,6 +260,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38458" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38514" name="Agathion - Blessed Aries Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Aries -->
@@ -152,6 +275,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38459" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38515" name="Agathion - Twinkling Aries Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Aries -->
@@ -161,6 +290,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38460" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38516" name="Agathion - Radiant Aries Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Aries -->
@@ -170,6 +305,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38461" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38517" name="Agathion - Aries Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Aries. -->
@@ -179,6 +320,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38462" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38518" name="Agathion - Faint Aries Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Aries. -->
@@ -188,6 +335,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38463" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38519" name="Agathion - Blessed Taurus Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Taurus -->
@@ -197,6 +350,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38464" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38520" name="Agathion - Twinkling Taurus Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Taurus -->
@@ -206,6 +365,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38465" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38521" name="Agathion - Radiant Taurus Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Taurus -->
@@ -215,6 +380,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38466" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38522" name="Agathion - Taurus Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Taurus. -->
@@ -224,6 +395,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38467" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38523" name="Agathion - Faint Taurus Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Taurus. -->
@@ -233,6 +410,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38468" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38524" name="Agathion - Blessed Leo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Leo -->
@@ -242,6 +425,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38469" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38525" name="Agathion - Twinkling Leo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Leo -->
@@ -251,6 +440,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38470" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38526" name="Agathion - Radiant Leo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Leo -->
@@ -260,6 +455,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38471" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38527" name="Agathion - Leo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Leo. -->
@@ -269,6 +470,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38472" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38528" name="Agathion - Faint Leo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Leo. -->
@@ -278,6 +485,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38473" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38529" name="Agathion - Blessed Gemini Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Gemini -->
@@ -287,6 +500,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38474" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38530" name="Agathion - Twinkling Gemini Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Gemini -->
@@ -296,6 +515,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38475" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38531" name="Agathion - Radiant Gemini Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Gemini -->
@@ -305,6 +530,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38476" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38532" name="Agathion - Gemini Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Gemini. -->
@@ -314,6 +545,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38477" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38533" name="Agathion - Faint Gemini Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Gemini. -->
@@ -323,6 +560,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38478" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38534" name="Agathion - Blessed Scorpio Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Scorpio -->
@@ -332,6 +575,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38479" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38535" name="Agathion - Twinkling Scorpio Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Scorpio -->
@@ -341,6 +590,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38480" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38536" name="Agathion - Radiant Scorpio Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Scorpio -->
@@ -350,6 +605,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38481" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38537" name="Agathion - Scorpio Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Scorpio. -->
@@ -359,6 +620,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38482" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38538" name="Agathion - Faint Scorpio Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Scorpio. -->
@@ -368,6 +635,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38483" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38539" name="Agathion - Blessed Aquarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Aquarius -->
@@ -377,6 +650,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38484" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38540" name="Agathion - Twinkling Aquarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Aquarius -->
@@ -386,6 +665,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38485" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38541" name="Agathion - Radiant Aquarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Aquarius -->
@@ -395,6 +680,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38486" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38542" name="Agathion - Aquarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Aquarius. -->
@@ -404,6 +695,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38487" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38543" name="Agathion - Faint Aquarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Aquarius. -->
@@ -413,6 +710,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38488" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38544" name="Agathion - Blessed Pisces Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Pisces -->
@@ -422,6 +725,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38489" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38545" name="Agathion - Twinkling Pisces Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Pisces -->
@@ -431,6 +740,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38490" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38546" name="Agathion - Radiant Pisces Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Pisces -->
@@ -440,6 +755,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38491" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38547" name="Agathion - Pisces Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Pisces. -->
@@ -449,6 +770,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38492" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38548" name="Agathion - Faint Pisces Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Pisces. -->
@@ -458,6 +785,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38493" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38549" name="Agathion - Blessed Sagittarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Sagittarius -->
@@ -467,6 +800,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38494" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38550" name="Agathion - Twinkling Sagittarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Sagittarius -->
@@ -476,6 +815,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38495" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38551" name="Agathion - Radiant Sagittarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Sagittarius -->
@@ -485,6 +830,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38496" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38552" name="Agathion - Sagittarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Sagittarius. -->
@@ -494,6 +845,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38497" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38553" name="Agathion - Faint Sagittarius Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Sagittarius. -->
@@ -503,6 +860,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38498" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38554" name="Agathion - Blessed Cancer Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Cancer -->
@@ -512,6 +875,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38499" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38555" name="Agathion - Twinkling Cancer Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Cancer -->
@@ -521,6 +890,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38500" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38556" name="Agathion - Radiant Cancer Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Cancer -->
@@ -530,6 +905,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38501" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38557" name="Agathion - Cancer Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Cancer. -->
@@ -539,6 +920,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38502" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38558" name="Agathion - Faint Cancer Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Cancer. -->
@@ -548,6 +935,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38503" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38559" name="Monster Only: Mahum Throwing Blade" type="Weapon">
 		<!-- Monster weapon. -->

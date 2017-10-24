@@ -2643,11 +2643,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanTransform">
 				<transformId>20002</transformId>
 			</condition>
-			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
 		<effects>
 			<effect name="Transformation">
@@ -2683,11 +2681,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanTransform">
 				<transformId>20003</transformId>
 			</condition>
-			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
 		<effects>
 			<effect name="Transformation">

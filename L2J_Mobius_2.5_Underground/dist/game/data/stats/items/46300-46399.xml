@@ -812,7 +812,6 @@
 		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -821,13 +820,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17610" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46347" name="Agathion - Blessed Capricorn" additionalName="30-day" type="Armor">
 		<!-- Summons Capricorn. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -836,13 +849,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17611" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46348" name="Agathion - Blessed Libra" additionalName="30-day" type="Armor">
 		<!-- Summons Libra. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -851,13 +878,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17612" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46349" name="Agathion - Blessed Aries" additionalName="30-day" type="Armor">
 		<!-- Summons Aries. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -866,13 +907,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17613" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46350" name="Agathion - Blessed Taurus" additionalName="30-day" type="Armor">
 		<!-- Summons Taurus. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -881,13 +936,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17614" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46351" name="Agathion - Blessed Leo" additionalName="30-day" type="Armor">
 		<!-- Summons Leo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -896,13 +965,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17615" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46352" name="Agathion - Blessed Gemini" additionalName="30-day" type="Armor">
 		<!-- Summons Gemini. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -911,13 +994,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17616" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46353" name="Agathion - Blessed Scorpio" additionalName="30-day" type="Armor">
 		<!-- Summons Scorpio. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -926,13 +1023,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17617" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46354" name="Agathion - Blessed Aquarius" additionalName="30-day" type="Armor">
 		<!-- Summons Aquarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -941,13 +1052,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17618" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46355" name="Agathion - Blessed Sagittarius" additionalName="30-day" type="Armor">
 		<!-- Summons Sagittarius. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -956,13 +1081,27 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17620" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46356" name="Agathion - Blessed Cancer" additionalName="30-day" type="Armor">
 		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -971,7 +1110,22 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17621" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="46357" name="Agathion - Blessed Virgo Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Virgo (30-day). -->
@@ -982,6 +1136,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46346" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Virgo -->
+		</capsuled_items>
 	</item>
 	<item id="46358" name="Agathion - Blessed Capricorn Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Capricorn (30-day). -->
@@ -992,6 +1152,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46347" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Capricorn -->
+		</capsuled_items>
 	</item>
 	<item id="46359" name="Agathion - Blessed Libra Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Libra (30-day). -->
@@ -1002,6 +1168,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46348" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Libra -->
+		</capsuled_items>
 	</item>
 	<item id="46360" name="Agathion - Blessed Aries Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Aries (30-day). -->
@@ -1012,6 +1184,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46349" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aries -->
+		</capsuled_items>
 	</item>
 	<item id="46361" name="Agathion - Blessed Taurus Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Taurus (30-day). -->
@@ -1022,6 +1200,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46350" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Taurus -->
+		</capsuled_items>
 	</item>
 	<item id="46362" name="Agathion - Blessed Leo Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Leo (30-day). -->
@@ -1032,6 +1216,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46351" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Leo -->
+		</capsuled_items>
 	</item>
 	<item id="46363" name="Agathion - Blessed Gemini Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Gemini (30-day). -->
@@ -1042,6 +1232,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46352" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Gemini -->
+		</capsuled_items>
 	</item>
 	<item id="46364" name="Agathion - Blessed Scorpio Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Scorpio (30-day). -->
@@ -1052,6 +1248,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46353" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Scorpio -->
+		</capsuled_items>
 	</item>
 	<item id="46365" name="Agathion - Blessed Aquarius Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Aquarius (30-day). -->
@@ -1062,6 +1264,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46354" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aquarius -->
+		</capsuled_items>
 	</item>
 	<item id="46366" name="Agathion - Blessed Pisces Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Pisces (30-day). -->
@@ -1072,6 +1280,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Pisces -->
+		</capsuled_items>
 	</item>
 	<item id="46367" name="Agathion - Blessed Sagittarius Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Sagittarius (30-day). -->
@@ -1082,6 +1296,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46355" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Sagittarius -->
+		</capsuled_items>
 	</item>
 	<item id="46368" name="Agathion - Blessed Cancer Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Cancer (30-day). -->
@@ -1092,6 +1312,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46356" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Cancer -->
+		</capsuled_items>
 	</item>
 	<item id="46369" name="Blessed Zodiac Agathion Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing a Blessed Zodiac Agathion (30-day). -->
@@ -1103,8 +1329,16 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="18503" level="1" /> <!-- Blessed Zodiac Agathion Pack -->
+		</skills>
 	</item>
 	<item id="46370" name="Christmas Card" additionalName="Event" type="EtcItem">
 		<!-- Christmas Card given by Santa Claus. Only given to people who have been good for a year. Will be deleted after the event. -->

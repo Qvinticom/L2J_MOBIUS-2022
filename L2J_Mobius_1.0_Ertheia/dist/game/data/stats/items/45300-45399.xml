@@ -4,31 +4,45 @@
 		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="43200" />
+		<set name="weight" val="150" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="17619" level="1" /> <!-- Release Agathion's Seal -->
+			<skill id="17547" level="1" /> <!-- Agathion Teleport: Town of Aden -->
+			<skill id="17548" level="1" /> <!-- Agathion Teleport: Town of Rune -->
+			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
+			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
+			<skill id="26117" level="5" /> <!-- Zodiac Agathion Attribute Enchant -->
+			<skill id="9606" level="1" />
+			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
+		</skills>
 	</item>
 	<item id="45373" name="Agathion - Blessed Pisces Pack" type="EtcItem">
 		<!-- Wrapped Pack containing an Agathion - Blessed Pisces (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="weight" val="10" />
+		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Pisces -->
+		</capsuled_items>
 	</item>
 	<item id="45374" name="Laser Gun" additionalName="Event" type="Weapon">
 		<!-- Use this and its active skill Pew Pew to defeat Alien Researchers! Deleted after event. -->

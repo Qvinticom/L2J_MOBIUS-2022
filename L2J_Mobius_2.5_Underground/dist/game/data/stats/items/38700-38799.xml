@@ -1454,6 +1454,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35562" min="3" max="3" chance="100" /> <!-- Energy of Destruction -->
+		</capsuled_items>
 	</item>
 	<item id="38762" name="Energy of Destruction 20-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Energy of Destruction x 20. -->
@@ -1462,6 +1468,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35562" min="20" max="20" chance="100" /> <!-- Energy of Destruction -->
+		</capsuled_items>
 	</item>
 	<item id="38763" name="Energy of Destruction 100-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Energy of Destruction x 100. -->
@@ -1470,6 +1482,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35562" min="100" max="100" chance="100" /> <!-- Energy of Destruction -->
+		</capsuled_items>
 	</item>
 	<item id="38764" name="My Teleport Pack" type="EtcItem">
 		<!-- Double-click to obtain a My Teleport Book and My Teleport Scroll x 10. -->

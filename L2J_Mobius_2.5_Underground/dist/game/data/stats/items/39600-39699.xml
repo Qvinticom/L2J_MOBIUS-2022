@@ -871,14 +871,17 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="price" val="1000000" />
+		<set name="price" val="1400000" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="1" /> <!-- Venir Talisman - Lv1 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39635" name="Venir's Talisman" additionalName="Stage 2" type="Armor">
 		<!-- MEN/WIT + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -891,10 +894,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="2" /> <!-- Venir Talisman - Lv2 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39636" name="Venir's Talisman" additionalName="Stage 3" type="Armor">
 		<!-- MEN/WIT/CON + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -907,10 +913,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="3" /> <!-- Venir Talisman - Lv3 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39637" name="Venir's Talisman" additionalName="Stage 4" type="Armor">
 		<!-- MEN/WIT/CON/INT + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -923,10 +932,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="4" /> <!-- Venir Talisman - Lv4 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39638" name="Venir's Talisman" additionalName="Stage 5" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -939,10 +951,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="5" /> <!-- Venir Talisman - Lv5 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39639" name="Venir's Talisman" additionalName="Stage 6" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -955,10 +970,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="6" /> <!-- Venir Talisman - Lv6 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39640" name="Venir's Talisman" additionalName="Stage 7" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -971,10 +989,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="7" /> <!-- Venir Talisman - Lv7 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39641" name="Venir's Talisman" additionalName="Stage 8" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -987,10 +1008,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="8" /> <!-- Venir Talisman - Lv8 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39642" name="Venir's Talisman" additionalName="Stage 9" type="Armor">
 		<!-- MEN + 2, WIT/CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1003,10 +1027,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="9" /> <!-- Venir Talisman - Lv9 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39643" name="Venir's Talisman" additionalName="Stage 10" type="Armor">
 		<!-- MEN/WIT + 2, CON/INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1019,10 +1046,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="10" /> <!-- Venir Talisman - Lv10 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39644" name="Venir's Talisman" additionalName="Stage 11" type="Armor">
 		<!-- MEN/WIT/CON + 2, INT/DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1035,10 +1065,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="11" /> <!-- Venir Talisman - Lv11 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39645" name="Venir's Talisman" additionalName="Stage 12" type="Armor">
 		<!-- MEN/WIT/CON/INT + 2, DEX/STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1051,10 +1084,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="12" /> <!-- Venir Talisman - Lv12 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39646" name="Venir's Talisman" additionalName="Stage 13" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX + 2, STR/LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1067,10 +1103,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="13" /> <!-- Venir Talisman - Lv13 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39647" name="Venir's Talisman" additionalName="Stage 14" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR+ 2, LUC/CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1082,10 +1121,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="14" /> <!-- Venir Talisman - Lv14 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39648" name="Venir's Talisman" additionalName="Stage 15" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC + 2, CHA + 1. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1097,10 +1139,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="15" /> <!-- Venir Talisman - Lv15 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39649" name="Venir's Talisman" additionalName="Stage 16" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1112,10 +1157,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="16" /> <!-- Venir Talisman - Lv16 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39650" name="Venir's Talisman" additionalName="Stage 17" type="Armor">
 		<!-- MEN + 3, WIT/CON/INT/DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1127,10 +1175,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="17" /> <!-- Venir Talisman - Lv17 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39651" name="Venir's Talisman" additionalName="Stage 18" type="Armor">
 		<!-- MEN/WIT + 3, CON/INT/DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1142,10 +1193,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="18" /> <!-- Venir Talisman - Lv18 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39652" name="Venir's Talisman" additionalName="Stage 19" type="Armor">
 		<!-- MEN/WIT/CON + 3, INT/DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1157,10 +1211,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="19" /> <!-- Venir Talisman - Lv19 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39653" name="Venir's Talisman" additionalName="Stage 20" type="Armor">
 		<!-- MEN/WIT/CON/INT + 3, DEX/STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1172,10 +1229,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="20" /> <!-- Venir Talisman - Lv20 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39654" name="Venir's Talisman" additionalName="Stage 21" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX + 3, STR/LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1187,10 +1247,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="21" /> <!-- Venir Talisman - Lv21 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39655" name="Venir's Talisman" additionalName="Stage 22" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR + 3, LUC/CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1202,10 +1265,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="22" /> <!-- Venir Talisman - Lv22 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39656" name="Venir's Talisman" additionalName="Stage 23" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC + 3, CHA + 2. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->
@@ -1217,10 +1283,13 @@
 		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_destroyable" val="true" />
 		<skills>
 			<skill id="18024" level="23" /> <!-- Venir Talisman - Lv23 -->
 		</skills>
-		<!-- TODO: Find more retail values -->
 	</item>
 	<item id="39657" name="Venir's Talisman" additionalName="Stage 24" type="Armor">
 		<!-- MEN/WIT/CON/INT/DEX/STR/LUC/CHA + 3. Equipping 2 or more Venir's Talismans gives the effect of the highest-level talisman. -->

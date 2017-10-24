@@ -523,16 +523,45 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17567" toLevel="1" name="Enchant Attribute Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- All attribute attacks + 30. -->
 		<icon>icon.bracelet_tersi_agathion</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17568" toLevel="1" name="Enchant Attribute Defense">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- All attribute resistance + 30. -->
 		<icon>icon.bracelet_tersi_agathion</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17569" toLevel="1" name="Expertise Rune (D-grade)">
 		<!-- AUTO GENERATED SKILL -->

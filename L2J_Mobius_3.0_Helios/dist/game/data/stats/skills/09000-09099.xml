@@ -4809,10 +4809,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-100</amount>
