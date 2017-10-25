@@ -251,56 +251,50 @@ public class ItemTable
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
 			{
-				if ((actor != null) && (reference != null)) // NPE check
+				if (item.getEnchantLevel() > 0)
 				{
-					if (item.getEnchantLevel() > 0)
-					{
-						LOGGER_ITEMS.info("CREATE:" + process //
-							+ ", item " + item.getObjectId() //
-							+ ":+" + item.getEnchantLevel() //
-							+ " " + item.getItem().getName() //
-							+ "(" + item.getCount() //
-							+ "), " + actor //
-							+ ", " + reference);
-					}
-					else
-					{
-						LOGGER_ITEMS.info("CREATE:" + process //
-							+ ", item " + item.getObjectId() //
-							+ ":" + item.getItem().getName() //
-							+ "(" + item.getCount() //
-							+ "), " + actor //
-							+ ", " + reference);
-					}
+					LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
+						+ ", item " + item.getObjectId() //
+						+ ":+" + item.getEnchantLevel() //
+						+ " " + item.getItem().getName() //
+						+ "(" + item.getCount() //
+						+ "), " + String.valueOf(actor) // in case of null
+						+ ", " + String.valueOf(reference)); // in case of null
+				}
+				else
+				{
+					LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
+						+ ", item " + item.getObjectId() //
+						+ ":" + item.getItem().getName() //
+						+ "(" + item.getCount() //
+						+ "), " + String.valueOf(actor) // in case of null
+						+ ", " + String.valueOf(reference)); // in case of null
 				}
 			}
 		}
 		
-		if (actor != null)
+		if ((actor != null) && actor.isGM())
 		{
-			if (actor.isGM())
+			String referenceName = "no-reference";
+			if (reference instanceof L2Object)
 			{
-				String referenceName = "no-reference";
-				if (reference instanceof L2Object)
-				{
-					referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
-				}
-				else if (reference instanceof String)
-				{
-					referenceName = (String) reference;
-				}
-				final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
-				if (Config.GMAUDIT)
-				{
-					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]"//
-						, process //
-							+ "(id: " + itemId //
-							+ " count: " + count //
-							+ " name: " + item.getItemName() //
-							+ " objId: " + item.getObjectId() + ")" //
-						, targetName //
-						, "L2Object referencing this action is: " + referenceName);
-				}
+				referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+			}
+			else if (reference instanceof String)
+			{
+				referenceName = (String) reference;
+			}
+			final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
+			if (Config.GMAUDIT)
+			{
+				GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]" //
+					, String.valueOf(process) // in case of null
+						+ "(id: " + itemId //
+						+ " count: " + count //
+						+ " name: " + item.getItemName() //
+						+ " objId: " + item.getObjectId() + ")" //
+					, targetName //
+					, "L2Object referencing this action is: " + referenceName);
 			}
 		}
 		
@@ -344,58 +338,52 @@ public class ItemTable
 			{
 				if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
 				{
-					if ((actor != null) && (reference != null)) // NPE check
+					if (item.getEnchantLevel() > 0)
 					{
-						if (item.getEnchantLevel() > 0)
-						{
-							LOGGER_ITEMS.info("DELETE:" + process //
-								+ ", item " + item.getObjectId() //
-								+ ":+" + item.getEnchantLevel() //
-								+ " " + item.getItem().getName() //
-								+ "(" + item.getCount() //
-								+ "), PrevCount(" + old //
-								+ "), " + actor //
-								+ ", " + reference);
-						}
-						else
-						{
-							LOGGER_ITEMS.info("DELETE:" + process //
-								+ ", item " + item.getObjectId() //
-								+ ":" + item.getItem().getName() //
-								+ "(" + item.getCount() //
-								+ "), PrevCount(" + old //
-								+ "), " + actor //
-								+ ", " + reference);
-						}
+						LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
+							+ ", item " + item.getObjectId() //
+							+ ":+" + item.getEnchantLevel() //
+							+ " " + item.getItem().getName() //
+							+ "(" + item.getCount() //
+							+ "), PrevCount(" + old //
+							+ "), " + String.valueOf(actor) // in case of null
+							+ ", " + String.valueOf(reference)); // in case of null
+					}
+					else
+					{
+						LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
+							+ ", item " + item.getObjectId() //
+							+ ":" + item.getItem().getName() //
+							+ "(" + item.getCount() //
+							+ "), PrevCount(" + old //
+							+ "), " + String.valueOf(actor) // in case of null
+							+ ", " + String.valueOf(reference)); // in case of null
 					}
 				}
 			}
 			
-			if (actor != null)
+			if ((actor != null) && actor.isGM())
 			{
-				if (actor.isGM())
+				String referenceName = "no-reference";
+				if (reference instanceof L2Object)
 				{
-					String referenceName = "no-reference";
-					if (reference instanceof L2Object)
-					{
-						referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
-					}
-					else if (reference instanceof String)
-					{
-						referenceName = (String) reference;
-					}
-					final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
-					if (Config.GMAUDIT)
-					{
-						GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]" //
-							, process //
-								+ "(id: " + item.getId() //
-								+ " count: " + item.getCount() //
-								+ " itemObjId: " //
-								+ item.getObjectId() + ")" //
-							, targetName //
-							, "L2Object referencing this action is: " + referenceName);
-					}
+					referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+				}
+				else if (reference instanceof String)
+				{
+					referenceName = (String) reference;
+				}
+				final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
+				if (Config.GMAUDIT)
+				{
+					GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]" //
+						, String.valueOf(process) // in case of null
+							+ "(id: " + item.getId() //
+							+ " count: " + item.getCount() //
+							+ " itemObjId: " //
+							+ item.getObjectId() + ")" //
+						, targetName //
+						, "L2Object referencing this action is: " + referenceName);
 				}
 			}
 			
