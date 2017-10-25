@@ -351,7 +351,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="18531" level="1" /> <!-- Rare Accessory Pack -->
+		</skills>
 	</item>
 	<item id="46536" name="Expertise Rune Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to get one of the following: Expertise Rune Pack R, R95, or R99. Deleted after event. -->
@@ -366,6 +372,12 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18532" level="1" /> <!-- Expertise Rune Pack -->
+		</skills>
 	</item>
 	<item id="46537" name="Mystic Soul Crystal Fragment" type="EtcItem">
 		<!-- Crystal fragment containing the soul of one of the progatonists of the stories told in the Mystic Tavern. Take 10 of these to Settlen in the Mystic Tavern to exchange for a Mystic Soul Crystal. -->

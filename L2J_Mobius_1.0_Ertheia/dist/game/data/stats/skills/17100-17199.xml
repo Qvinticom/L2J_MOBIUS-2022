@@ -706,27 +706,177 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17186" toLevel="1" name="Dandy's Cheers">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hours, increases P. Atk. + 5%, Atk. Spd. + 5%, P. Critical Rate + 30, M. Atk. + 10%, Casting Spd. + 5%, M. Critical Rate + 20. MP consumption - 3%, Cooldown - 3%. Does not apply at the same time as the Dandy's Passion and Dandy's Faith buffs. Armor's appearance changes to that of the NC Dinos Uniform. -->
 		<icon>BranchSys2.icon.br_worldcup_stick_i04</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<effectPoint>1</effectPoint>
+		<hitTime>200</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17187" toLevel="1" name="Dandy's Challenge">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases acquired XP and SP by 30%. Does not apply at the same time as Scroll: Energy of Glory. -->
 		<icon>BranchSys.icon.br_xmas_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
 		<isMagic>4</isMagic>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37731</itemConsumeId> <!-- Dandy's Scroll: Challenge -->
+		<effectPoint>1</effectPoint>
+		<hitTime>200</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17188" toLevel="1" name="Dandy's Faith">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases P. Atk. + 5%, Atk. Spd. + 5%, P. Critical Rate + 30, M. Atk. + 10%, Casting Spd. + 5%, M. Critical Rate + 20. MP consumption - 3%, Cooldown - 3%. Does not apply at the same time as the Dandy's Cheer and Dandy's Faith buffs. -->
 		<icon>BranchSys.icon.br_xmas_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
 		<isMagic>4</isMagic>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37729</itemConsumeId> <!-- Dandy's Scroll: Faith -->
+		<effectPoint>1</effectPoint>
+		<hitTime>200</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttack">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17189" toLevel="1" name="Dandy's Passion">
 		<!-- For 60 minutes, decreases all received damage - 10%. Does not apply at the same time as Dandy's Cheer and Dandy's Faith buffs. -->
@@ -737,7 +887,7 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>38099</itemConsumeId> <!-- Leona's Scroll: Buffs -->
+		<itemConsumeId>37730</itemConsumeId> <!-- Dandy's Scroll: Passion -->
 		<effectPoint>1</effectPoint>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>

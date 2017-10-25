@@ -8,7 +8,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="120" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38399" min="1" max="1" chance="100" /> <!-- Expertise Rune (C-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38401" name="Expertise Rune (B-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise B Skill. -->
@@ -23,6 +28,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17571" level="1" /> <!-- Expertise Rune (B-grade) -->
+		</skills>
 	</item>
 	<item id="38402" name="Expertise Rune Pack" additionalName="B-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (B-grade) (2-hour). -->
@@ -32,6 +40,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38401" min="1" max="1" chance="100" /> <!-- Expertise Rune (B-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38403" name="Expertise Rune (A-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise A Skill. -->
@@ -46,6 +60,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17572" level="1" /> <!-- Expertise Rune (A-grade) -->
+		</skills>
 	</item>
 	<item id="38404" name="Expertise Rune Pack" additionalName="A-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (A-grade) (2-hour). -->
@@ -55,6 +72,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38403" min="1" max="1" chance="100" /> <!-- Expertise Rune (A-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38405" name="Expertise Rune (S-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise S Skill. -->
@@ -69,6 +92,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17573" level="1" /> <!-- Expertise Rune (S-grade) -->
+		</skills>
 	</item>
 	<item id="38406" name="Expertise Rune Pack" additionalName="S-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (S-grade) (2-hour). -->
@@ -78,6 +104,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38405" min="1" max="1" chance="100" /> <!-- Expertise Rune (S-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38407" name="Expertise Rune (S80-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise S80 Skill. -->
@@ -92,6 +124,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17574" level="1" /> <!-- Expertise Rune (S80-grade) -->
+		</skills>
 	</item>
 	<item id="38408" name="Expertise Rune Pack" additionalName="S80-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (S80-grade) (2-hour). -->
@@ -101,6 +136,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38407" min="1" max="1" chance="100" /> <!-- Expertise Rune (S80-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38409" name="Expertise Rune (R-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise R Skill. -->
@@ -115,6 +156,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17575" level="1" /> <!-- Expertise Rune (R-grade) -->
+		</skills>
 	</item>
 	<item id="38410" name="Expertise Rune Pack" additionalName="R-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R-grade) (2-hour). -->
@@ -124,6 +168,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38409" min="1" max="1" chance="100" /> <!-- Expertise Rune (R-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38411" name="Expertise Rune (R95-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise R95 Skill. -->
@@ -138,6 +188,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17576" level="1" /> <!-- Expertise Rune (R95-grade) -->
+		</skills>
 	</item>
 	<item id="38412" name="Expertise Rune Pack" additionalName="R95-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R95-grade) (2-hour). -->
@@ -147,6 +200,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38411" min="1" max="1" chance="100" /> <!-- Expertise Rune (R95-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38413" name="Expertise Rune (R99-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise R99 Skill. -->
@@ -161,6 +220,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17577" level="1" /> <!-- Expertise Rune (R99-grade) -->
+		</skills>
 	</item>
 	<item id="38414" name="Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R99-grade) (2-hour). -->
@@ -171,6 +233,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="120" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38413" min="1" max="1" chance="100" /> <!-- Expertise Rune (R99-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38415" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a dual blunt weapon into that of a Blue Mackerel. 30-day. -->

@@ -14,6 +14,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />	
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III 100% (1-hr) -->
+		</capsuled_items>
 	</item>
 	<item id="28402" name="XP Rune III 100% Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune III 100% (7-day). -->
@@ -22,6 +29,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />	
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23255" min="1" max="1" chance="100" /> <!-- XP Rune III 100% (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="28403" name="SP Rune 100% Pack (1-hr)" type="EtcItem">
 		<!-- Wrapped Pack containing SP Rune 100% (1-hr). -->
@@ -30,6 +44,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% (1-hr) -->
+		</capsuled_items>
 	</item>
 	<item id="28404" name="SP Rune 100% Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing SP Rune 100% (7-day). -->
@@ -38,6 +59,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />	
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="28405" name="Maphr's Rune 100% Pack (1-hr)" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Rune 100% (1-hr). -->
@@ -46,15 +74,28 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />	
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="23271" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (1-hr) -->
+		</capsuled_items>
 	</item>
 	<item id="28406" name="Maphr's Rune 100% Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Rune 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />	
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="22759" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="28407" name="Eva's Rune" additionalName="7-day" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, grants the user Eva's Rune passive skill. The remaining time decreases even when not playing. -->
@@ -81,6 +122,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />	
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28407" min="1" max="1" chance="100" /> <!-- Eva's Rune (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="28410" name="Eva's Rune Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Eva's Rune (30-day). -->
@@ -89,15 +137,29 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />	
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="28408" min="1" max="1" chance="100" /> <!-- Eva's Rune Pack (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="28411" name="XP Rune II Pack (7-day)" type="EtcItem">
 		<!-- Wrapped Pack containing XP Rune II Pack (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="weight" val="100" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_commissionable" val="false" />	
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35933" min="1" max="1" chance="100" /> <!-- XP Rune II (7-day) -->
+		</capsuled_items>
 	</item>
 	<item id="28412" name="+10 Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a + 10 Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->

@@ -67,6 +67,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17577" level="1" /> <!-- Expertise Rune (R99-grade) -->
+		</skills>
 	</item>
 	<item id="40306" name="Dual Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
 		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day). Cannot be used in the Olympiad. -->
@@ -81,6 +84,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40305" min="1" max="1" chance="100" /> <!-- Dual Expertise Rune (R99-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="40307" name="Dynamic Dual Master Gift Pack" type="EtcItem">
 		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day) and a Mysterious Friend Summon Bracelet Pack (30-day). Cannot be used in the Olympiad. -->

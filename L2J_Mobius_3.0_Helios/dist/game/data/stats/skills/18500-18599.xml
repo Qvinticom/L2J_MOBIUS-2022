@@ -222,23 +222,76 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="18531" toLevel="1" name="Rare Accessory Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Double-click to get one of the following: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, or Blessed Zaken's Earring (7-day). Cannot be used in the Olympiad. Deleted after event. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<itemConsumeId>46535</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20">
+						<item id="37732" count="1" />
+					</item>
+					<item chance="20">
+						<item id="37733" count="1" />
+					</item>
+					<item chance="20">
+						<item id="37734" count="1" />
+					</item>
+					<item chance="20">
+						<item id="37735" count="1" />
+					</item>
+					<item chance="20">
+						<item id="37736" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18532" toLevel="1" name="Expertise Rune Pack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Double-click to get one of the following: Expertise Rune Pack R, R95, or R99. Deleted after event. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
+		<itemConsumeId>46536</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33.33333333333333">
+						<item id="38410" count="1" />
+					</item>
+					<item chance="33.33333333333333">
+						<item id="38412" count="1" />
+					</item>
+					<item chance="33.33333333333333">
+						<item id="38414" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18534" toLevel="1" name="Scroll of Escape: Mystic Tavern">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>

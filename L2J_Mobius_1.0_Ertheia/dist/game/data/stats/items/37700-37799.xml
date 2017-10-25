@@ -409,6 +409,17 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37732" min="1" max="1" chance="100" /> <!-- Blessed Antharas's Earring -->
+			<item id="37733" min="1" max="1" chance="100" /> <!-- Blessed Valakas's Necklace -->
+			<item id="37734" min="1" max="1" chance="100" /> <!-- Tauti's Ring -->
+			<item id="37735" min="1" max="1" chance="100" /> <!-- Earth Wyrm Heart Ring -->
+			<item id="37736" min="1" max="1" chance="100" /> <!-- Blessed Zaken's Earring -->
+			<item id="37737" min="1" max="1" chance="100" /> <!-- Ruler's Authority Belt -->
+		</capsuled_items>
 	</item>
 	<item id="37728" name="Dandy's Challenge Box" type="EtcItem">
 		<!-- Double click to acquire Dandy's Challenge Scroll and the NC Dinos Uniform. -->
@@ -422,6 +433,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37731" min="1" max="1" chance="100" /> <!-- Dandy's Challenge Scroll -->
+			<item id="37725" min="1" max="1" chance="100" /> <!-- NC Dinos Uniform -->
+		</capsuled_items>
 	</item>
 	<item id="37729" name="Dandy's Scroll: Faith" type="EtcItem">
 		<!-- For 60 minutes, decreases P. Atk. by 5%, Atk. Spd. by 5%, P. Critical Rate by 30, M. Atk. by 10%, Casting Spd. by 5%, M. Critical Rate by 20, MP consumption by 3%, and cooldown by 3%. Dandy's Cheer and Dandy's Passion buffs are not applied at the same time. -->
@@ -436,6 +454,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="17188" level="1" /> <!-- Dandy's Scroll: Faith -->
+		</skills>
 	</item>
 	<item id="37730" name="Dandy's Scroll: Passion" type="EtcItem">
 		<!-- For 60 minutes, decreases all received damage by 10%. Dandy's Cheer and Dandy's Faith buffs are not applied at the same time. -->
@@ -457,7 +483,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="17320" level="1" /> <!-- Leona's Scroll: Buffs -->
+			<skill id="17189" level="1" /> <!-- Dandy's Scroll: Passion -->
 		</skills>
 	</item>
 	<item id="37731" name="Dandy's Scroll: Challenge" type="EtcItem">
@@ -473,6 +499,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="17187" level="1" /> <!-- Dandy's Scroll: Challenge -->
+		</skills>
 	</item>
 	<item id="37732" name="Blessed Antharas' Earring" additionalName="7-day" type="Armor">
 		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, Holy Resistance increase, CON +3, MEN +3. P. Def./M. Def. are increased. Can use the Stun canceling skill. Momentarily increases Stun resistance by 100%. Only one effect is applied even when the same two earrings are worn. Cannot be used in the Olympiad. -->
@@ -488,6 +522,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
+			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 		</stats>
@@ -506,6 +544,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
+			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">226</stat>
 		</stats>
@@ -524,8 +566,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="8870" level="1" /> <!-- Tauti's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">108</stat>
+			<stat type="fireRes">25</stat>
+			<stat type="darkRes">25</stat>
+			<stat type="maxMp">38</stat>
 		</stats>
 	</item>
 	<item id="37735" name="Earth Wyrm Heart Ring" additionalName="7-day" type="Armor">
@@ -542,6 +590,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="13318" level="1" /> <!-- Earth Wyrm Heart Ring -->
+			<skill id="13319" level="1" /> <!-- Earth Wyrm Heart Ring -->
+			<skill id="13317" level="1" /> <!-- Earth Wyrm Heart Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">108</stat>
 		</stats>
@@ -560,8 +613,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="3559" level="2" /> <!-- Blessed Zaken's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">94</stat>
+			<stat type="maxMp">37</stat>
 		</stats>
 	</item>
 	<item id="37737" name="Ruler's Authority" additionalName="7-day" type="Armor">
@@ -578,8 +635,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="15145" level="1" /> <!-- Ruler's Authority -->
+		</skills>
 		<stats>
 			<stat type="pDef">50</stat>
+			<stat type="fireRes">15</stat>
+			<stat type="waterRes">15</stat>
+			<stat type="windRes">15</stat>
+			<stat type="earthRes">15</stat>
+			<stat type="holyRes">15</stat>
+			<stat type="darkRes">15</stat>
 		</stats>
 	</item>
 	<item id="37738" name="Test Soulshot (D-grade)" additionalName="Not in Use" type="EtcItem">

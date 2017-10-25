@@ -808,6 +808,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17569" level="1" /> <!-- Expertise Rune (D-grade) -->
+		</skills>
 	</item>
 	<item id="38398" name="Expertise Rune Pack" additionalName="D-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (D-grade) (2-hour). -->
@@ -817,6 +820,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38397" min="1" max="1" chance="100" /> <!-- Expertise Rune (D-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="38399" name="Expertise Rune (C-grade)" additionalName="2-hour" type="EtcItem">
 		<!-- 2-hour.When possessed, gives Expertise C Skill. -->
@@ -831,5 +840,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="120" />
+		<skills>
+			<skill id="17570" level="1" /> <!-- Expertise Rune (C-grade) -->
+		</skills>
 	</item>
 </list>
