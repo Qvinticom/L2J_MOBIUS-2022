@@ -846,8 +846,13 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="BLESS_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="commissionItemType" val="WEAPON_ENCHANT_STONE" />
+		<skills>
+			<skill id="22965" level="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (R-grade) -->
+		</skills>
 	</item>
 	<item id="37567" name="Blessed Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 10% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
@@ -855,8 +860,13 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="BLESS_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="commissionItemType" val="ARMOR_ENCHANT_STONE" />
+		<skills>
+			<skill id="22971" level="1" /> <!-- Blessed Lucky Enchant Stone: Armor (R-grade) -->
+		</skills>
 	</item>
 	<item id="37568" name="Legendary Card Pouch: Dragon" type="EtcItem">
 		<!-- Pouch of legendary cards brimming with magic. Double-click to obtain either the Antharas, Valakas, or Lindvior. -->

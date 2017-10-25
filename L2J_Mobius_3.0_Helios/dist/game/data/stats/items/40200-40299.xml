@@ -387,8 +387,13 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="BLESS_INC_PROP_ENCHT_WP" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18131" level="1" /> <!-- Freya's Lucky Enchant Stone: Weapon (R-grade) -->
+		</skills>
 	</item>
 	<item id="40233" name="Freya's Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 30% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 15. If enchanting fails, the enchant value will drop by 1. -->
@@ -397,8 +402,13 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="BLESS_INC_PROP_ENCHT_AM" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18132" level="1" /> <!-- Freya's Lucky Enchant Stone: Armor (R-grade) -->
+		</skills>
 	</item>
 	<item id="40234" name="Giant's Energy 3-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain 3 Giant's Energy. -->

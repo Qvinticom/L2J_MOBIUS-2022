@@ -1414,8 +1414,13 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="BLESS_INC_PROP_ENCHT_WP" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="17691" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Weapon (R-grade) -->
+		</skills>
 	</item>
 	<item id="38758" name="Blessed High-grade Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
 		<!-- Success rate + 30% for enchanting R-grade armor with Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. One-piece armor must be enchanted between + 4 and + 9. -->
@@ -1424,8 +1429,13 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="BLESS_INC_PROP_ENCHT_AM" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="17692" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Armor (R-grade) -->
+		</skills>
 	</item>
 	<item id="38759" name="Blessed High-grade Lucky Enchant Stone: Weapon (S-grade)" type="EtcItem">
 		<!-- Success rate + 20% for enchanting S-grade weapons with Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 9. -->
@@ -1434,8 +1444,13 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="BLESS_INC_PROP_ENCHT_WP" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="17693" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Weapon (S-grade) -->
+		</skills>
 	</item>
 	<item id="38760" name="Blessed High-grade Lucky Enchant Stone: Armor (S-grade)" type="EtcItem">
 		<!-- Success rate + 30% for enchanting S-grade armor with Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. One-piece armor must be enchanted between + 4 and + 9. -->
@@ -1444,8 +1459,13 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="BLESS_INC_PROP_ENCHT_AM" />
+		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="17694" level="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Armor (S-grade) -->
+		</skills>
 	</item>
 	<item id="38761" name="Energy of Destruction 3-unit Pack" type="EtcItem">
 		<!-- Double-click to obtain Energy of Destruction x  3. -->
