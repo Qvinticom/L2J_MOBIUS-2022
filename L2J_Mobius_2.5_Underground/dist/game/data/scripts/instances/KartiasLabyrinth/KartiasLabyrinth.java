@@ -134,19 +134,19 @@ public final class KartiasLabyrinth extends AbstractInstance
 	// Zones
 	private static final int KARTIA_85_DETECT_1 = 12020;
 	private static final int KARTIA_85_DETECT_2 = 12021;
-	private static final int KARTIA_85_TELEPORT_1 = 12022;
-	private static final int KARTIA_85_TELEPORT_2 = 12023;
-	private static final int KARTIA_85_TELEPORT_3 = 12024;
+	// private static final int KARTIA_85_TELEPORT_1 = 12022;
+	// private static final int KARTIA_85_TELEPORT_2 = 12023;
+	// private static final int KARTIA_85_TELEPORT_3 = 12024;
 	private static final int KARTIA_90_DETECT_1 = 12025;
 	private static final int KARTIA_90_DETECT_2 = 12026;
-	private static final int KARTIA_90_TELEPORT_1 = 12027;
-	private static final int KARTIA_90_TELEPORT_2 = 12028;
-	private static final int KARTIA_90_TELEPORT_3 = 12029;
+	// private static final int KARTIA_90_TELEPORT_1 = 12027;
+	// private static final int KARTIA_90_TELEPORT_2 = 12028;
+	// private static final int KARTIA_90_TELEPORT_3 = 12029;
 	private static final int KARTIA_95_DETECT_1 = 12030;
 	private static final int KARTIA_95_DETECT_2 = 12031;
-	private static final int KARTIA_95_TELEPORT_1 = 12032;
-	private static final int KARTIA_95_TELEPORT_2 = 12033;
-	private static final int KARTIA_95_TELEPORT_3 = 12034;
+	// private static final int KARTIA_95_TELEPORT_1 = 12032;
+	// private static final int KARTIA_95_TELEPORT_2 = 12033;
+	// private static final int KARTIA_95_TELEPORT_3 = 12034;
 	// Misc
 	private static final int TEMPLATE_ID_SOLO_85 = 205;
 	private static final int TEMPLATE_ID_SOLO_90 = 206;
@@ -177,9 +177,9 @@ public final class KartiasLabyrinth extends AbstractInstance
 		setCreatureKillId(this::onCreatureKill, MONSTERS);
 		setCreatureKillId(this::onBossKill, BOSSES);
 		setCreatureSeeId(this::onCreatureSee, MONSTERS);
-		addEnterZoneId(KARTIA_85_DETECT_1, KARTIA_85_DETECT_2, KARTIA_85_TELEPORT_1, KARTIA_85_TELEPORT_2, KARTIA_85_TELEPORT_3);
-		addEnterZoneId(KARTIA_90_DETECT_1, KARTIA_90_DETECT_2, KARTIA_90_TELEPORT_1, KARTIA_90_TELEPORT_2, KARTIA_90_TELEPORT_3);
-		addEnterZoneId(KARTIA_95_DETECT_1, KARTIA_95_DETECT_2, KARTIA_95_TELEPORT_1, KARTIA_95_TELEPORT_2, KARTIA_95_TELEPORT_3);
+		addEnterZoneId(KARTIA_85_DETECT_1, KARTIA_85_DETECT_2 /* , KARTIA_85_TELEPORT_1, KARTIA_85_TELEPORT_2, KARTIA_85_TELEPORT_3 */);
+		addEnterZoneId(KARTIA_90_DETECT_1, KARTIA_90_DETECT_2 /* , KARTIA_90_TELEPORT_1, KARTIA_90_TELEPORT_2, KARTIA_90_TELEPORT_3 */);
+		addEnterZoneId(KARTIA_95_DETECT_1, KARTIA_95_DETECT_2 /* , KARTIA_95_TELEPORT_1, KARTIA_95_TELEPORT_2, KARTIA_95_TELEPORT_3 */);
 		addInstanceCreatedId(TEMPLATE_ID_SOLO_85, TEMPLATE_ID_SOLO_90, TEMPLATE_ID_SOLO_95, TEMPLATE_ID_GROUP_85, TEMPLATE_ID_GROUP_90, TEMPLATE_ID_GROUP_95);
 	}
 	
@@ -503,7 +503,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		final Instance instance = character.getInstanceWorld();
 		if ((instance != null) && character.isPlayer())
 		{
-			final L2PcInstance player = character.getActingPlayer();
+			// final L2PcInstance player = character.getActingPlayer();
 			switch (zone.getId())
 			{
 				case KARTIA_85_DETECT_1:
@@ -532,36 +532,11 @@ public final class KartiasLabyrinth extends AbstractInstance
 					}
 					break;
 				}
-				case KARTIA_85_TELEPORT_1:
-				case KARTIA_90_TELEPORT_1:
-				case KARTIA_95_TELEPORT_1:
-				{
-					if (instance.getParameters().getBoolean("TELEPORT_1_ENABLED", false))
-					{
-						player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone1_loc"));
-					}
-					break;
-				}
-				case KARTIA_85_TELEPORT_2:
-				case KARTIA_90_TELEPORT_2:
-				case KARTIA_95_TELEPORT_2:
-				{
-					if (instance.getParameters().getBoolean("TELEPORT_2_ENABLED", false))
-					{
-						player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone2_loc"));
-					}
-					break;
-				}
-				case KARTIA_85_TELEPORT_3:
-				case KARTIA_90_TELEPORT_3:
-				case KARTIA_95_TELEPORT_3:
-				{
-					if (instance.getParameters().getBoolean("TELEPORT_3_ENABLED", false))
-					{
-						player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone3_loc"));
-					}
-					break;
-				}
+				/*
+				 * case KARTIA_85_TELEPORT_1: case KARTIA_90_TELEPORT_1: case KARTIA_95_TELEPORT_1: { if (instance.getParameters().getBoolean("TELEPORT_1_ENABLED", false)) { player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone1_loc")); } break; } case
+				 * KARTIA_85_TELEPORT_2: case KARTIA_90_TELEPORT_2: case KARTIA_95_TELEPORT_2: { if (instance.getParameters().getBoolean("TELEPORT_2_ENABLED", false)) { player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone2_loc")); } break; } case KARTIA_85_TELEPORT_3:
+				 * case KARTIA_90_TELEPORT_3: case KARTIA_95_TELEPORT_3: { if (instance.getParameters().getBoolean("TELEPORT_3_ENABLED", false)) { player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone3_loc")); } break; }
+				 */
 			}
 		}
 		return super.onEnterZone(character, zone);
