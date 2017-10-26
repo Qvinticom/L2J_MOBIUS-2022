@@ -47,7 +47,7 @@ public class CubicInstance
 	public CubicInstance(L2PcInstance owner, L2PcInstance caster, L2CubicTemplate template)
 	{
 		_owner = owner;
-		_caster = caster;
+		_caster = caster == null ? owner : caster;
 		_template = template;
 		activate();
 	}
