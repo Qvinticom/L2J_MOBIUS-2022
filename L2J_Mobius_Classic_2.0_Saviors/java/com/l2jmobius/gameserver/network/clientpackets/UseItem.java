@@ -248,11 +248,11 @@ public final class UseItem implements IClientIncomingPacket
 			{
 				ThreadPoolManager.schedule(() ->
 				{
-					// If character is still engaged in strike we should not change weapon
-					if (activeChar.isAttackingNow())
-					{
-						return;
-					}
+					// Removed for preventing retail behavior.
+					// if (activeChar.isAttackingNow()) // If character is still engaged in strike we should not change weapon
+					// {
+					// return;
+					// }
 					
 					// Equip or unEquip
 					activeChar.useEquippableItem(item, false);
