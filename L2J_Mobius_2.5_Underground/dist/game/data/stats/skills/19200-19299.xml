@@ -769,12 +769,9 @@
 		<icon>icon.skill19223</icon>
 		<operateType>A1</operateType>
 		<mpConsume>142</mpConsume>
-		<castRange>1100</castRange>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
 		<reuseDelay>600000</reuseDelay>
-		<effectRange>1100</effectRange>
 		<icon>icon.skill0821</icon>
 		<magicLvl>99</magicLvl>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -783,8 +780,13 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
 		<effects>
-			<effect name="TeleportToTarget" />
+			<effect name="TeleportToPlayer" />
 		</effects>
 	</skill>
 	<skill id="19224" toLevel="1" name="Blessing of the Exalted">
