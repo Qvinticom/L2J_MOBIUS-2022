@@ -53,14 +53,14 @@ public class TeleportToPlayer extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if ((effected.getTarget() != null) && (effected.getTarget() != effected) && effected.getTarget().isPlayer())
+		if ((effector.getTarget() != null) && (effector.getTarget() != effector) && effector.getTarget().isPlayer())
 		{
-			final L2PcInstance target = (L2PcInstance) effected.getTarget();
+			final L2PcInstance target = (L2PcInstance) effector.getTarget();
 			if (target.isAlikeDead())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 				sm.addPcName(target);
-				effected.sendPacket(sm);
+				effector.sendPacket(sm);
 				return;
 			}
 			
@@ -68,7 +68,7 @@ public class TeleportToPlayer extends AbstractEffect
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 				sm.addPcName(target);
-				effected.sendPacket(sm);
+				effector.sendPacket(sm);
 				return;
 			}
 			
@@ -76,19 +76,19 @@ public class TeleportToPlayer extends AbstractEffect
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED);
 				sm.addPcName(target);
-				effected.sendPacket(sm);
+				effector.sendPacket(sm);
 				return;
 			}
 			
 			if (target.isInOlympiadMode())
 			{
-				effected.sendPacket(SystemMessageId.A_USER_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_USE_SUMMONING_OR_TELEPORTING);
+				effector.sendPacket(SystemMessageId.A_USER_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_USE_SUMMONING_OR_TELEPORTING);
 				return;
 			}
 			
 			if (target.isFlyingMounted() || target.isCombatFlagEquipped())
 			{
-				effected.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
+				effector.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
 				return;
 			}
 			
@@ -96,7 +96,7 @@ public class TeleportToPlayer extends AbstractEffect
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING2);
 				sm.addCharName(target);
-				effected.sendPacket(sm);
+				effector.sendPacket(sm);
 				return;
 			}
 			
@@ -104,7 +104,7 @@ public class TeleportToPlayer extends AbstractEffect
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 				sm.addString(target.getName());
-				effected.sendPacket(sm);
+				effector.sendPacket(sm);
 				return;
 			}
 			
@@ -113,11 +113,11 @@ public class TeleportToPlayer extends AbstractEffect
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 				sm.addString(target.getName());
-				effected.sendPacket(sm);
+				effector.sendPacket(sm);
 				return;
 			}
 			
-			effected.teleToLocation(effected.getTarget(), true, null);
+			effector.teleToLocation(effector.getTarget(), true, null);
 		}
 	}
 }
