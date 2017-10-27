@@ -322,6 +322,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("TargetMeProbability", TargetMeProbability::new);
 		EffectHandler.getInstance().registerHandler("Teleport", Teleport::new);
 		EffectHandler.getInstance().registerHandler("TeleportToNpc", TeleportToNpc::new);
+		EffectHandler.getInstance().registerHandler("TeleportToPlayer", TeleportToPlayer::new);
 		EffectHandler.getInstance().registerHandler("TeleportToSummon", TeleportToSummon::new);
 		EffectHandler.getInstance().registerHandler("TeleportToTarget", TeleportToTarget::new);
 		EffectHandler.getInstance().registerHandler("FlyAway", FlyAway::new);
