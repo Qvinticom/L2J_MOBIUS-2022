@@ -789,7 +789,7 @@
 	</skill>
 	<skill id="2322" toLevel="1" name="Chest Key (Event)">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -798,7 +798,7 @@
 		<itemConsumeId>9205</itemConsumeId> <!-- Alchemist's Chest Key -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>DOOR_TREASURE</targetType>
@@ -1454,7 +1454,7 @@
 	</skill>
 	<skill id="2343" toLevel="1" name="Gate Key: Kamael">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1485,7 +1485,7 @@
 	</skill>
 	<skill id="2344" toLevel="1" name="Gate Key: Archives">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1516,7 +1516,7 @@
 	</skill>
 	<skill id="2345" toLevel="1" name="Gate Key: Observation">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1547,7 +1547,7 @@
 	</skill>
 	<skill id="2346" toLevel="1" name="Gate Key: Spicula">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1578,7 +1578,7 @@
 	</skill>
 	<skill id="2347" toLevel="1" name="Enuma Elish Key">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1609,7 +1609,7 @@
 	</skill>
 	<skill id="2348" toLevel="1" name="Prahnah Key">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1640,7 +1640,7 @@
 	</skill>
 	<skill id="2349" toLevel="1" name="Gate Key: Arviterre">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1671,7 +1671,7 @@
 	</skill>
 	<skill id="2350" toLevel="1" name="Leopold Key">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1702,7 +1702,7 @@
 	</skill>
 	<skill id="2351" toLevel="1" name="Gate Key: Prediction">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1733,7 +1733,7 @@
 	</skill>
 	<skill id="2352" toLevel="1" name="Gate Key: Nornil">
 		<afterEffectId>1</afterEffectId> <!-- Hack to keep doors opened -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1786,7 +1786,7 @@
 	</skill>
 	<skill id="2354" toLevel="1" name="Gate Key: Darkness">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1817,7 +1817,7 @@
 	</skill>
 	<skill id="2355" toLevel="1" name="Gate Key: Destruction">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1848,7 +1848,7 @@
 	</skill>
 	<skill id="2356" toLevel="1" name="Gate Key: Blood">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1897,7 +1897,7 @@
 	</skill>
 	<skill id="2358" toLevel="1" name="Holy Water">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1912,7 +1912,7 @@
 	</skill>
 	<skill id="2359" toLevel="1" name="Magic Bottle">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -1967,7 +1967,7 @@
 	</skill>
 	<skill id="2362" toLevel="1" name="Prison Gate Key">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -2008,7 +2008,7 @@
 	</skill>
 	<skill id="2363" toLevel="1" name="Underground Warehouse Key">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -2083,7 +2083,7 @@
 	</skill>
 	<skill id="2366" toLevel="1" name="Blue Coral Key">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -2114,7 +2114,7 @@
 	</skill>
 	<skill id="2367" toLevel="1" name="Red Coral Key">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>

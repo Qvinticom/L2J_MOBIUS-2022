@@ -140,7 +140,7 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -716,7 +716,7 @@
 	</skill>
 	<skill id="2633" toLevel="1" name="Elmoreden's Holy Water">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
@@ -747,7 +747,7 @@
 	</skill>
 	<skill id="2634" toLevel="1" name="Court Wizard's Blessing">
 		<!-- Confirmed CT2.5 -->
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<effectPoint>-100000</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>500</hitTime>
