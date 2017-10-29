@@ -225,7 +225,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[4]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[7]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[14]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal.despawnAll();
 				}
@@ -260,7 +260,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[4]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[7]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[14]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal.despawnAll();
 				}
@@ -290,7 +290,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[4]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[7]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[14]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateNormal.despawnAll();
 				}
