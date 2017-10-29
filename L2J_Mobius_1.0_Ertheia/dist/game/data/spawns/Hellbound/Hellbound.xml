@@ -270,5 +270,8 @@
 			<npc id="33903" x="-28385" y="254258" z="-2192" heading="11076" respawnTime="60sec" /> <!-- Philline -->
 			<npc id="33901" x="-28009" y="253706" z="-2200" respawnTime="60sec" /> <!-- Wormhole -->
 		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="33897" x="-27838" y="254965" z="-2192" heading="32767" respawnTime="60sec" /> <!-- Theorn -->
+		</group>
 	</spawn>
 </list>

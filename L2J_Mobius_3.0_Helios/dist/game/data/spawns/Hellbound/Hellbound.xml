@@ -272,5 +272,8 @@
 			<npc id="33901" x="-28009" y="253706" z="-2200" respawnTime="60sec" /> <!-- Wormhole -->
 			<npc id="34230" x="-29304" y="257276" z="-2160" heading="59261" respawnTime="60sec" /> <!-- Sporcha -->
 		</group>
+		<group name="nightTime" spawnByDefault="false">
+			<npc id="33897" x="-27838" y="254965" z="-2192" heading="32767" respawnTime="60sec" /> <!-- Theorn -->
+		</group>
 	</spawn>
 </list>
