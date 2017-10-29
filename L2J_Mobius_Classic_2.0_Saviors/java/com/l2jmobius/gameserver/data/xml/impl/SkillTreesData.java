@@ -1404,7 +1404,11 @@ public final class SkillTreesData implements IGameXmlReader
 	 */
 	public L2SkillLearn getRevelationSkill(SubclassType type, int id, int lvl)
 	{
-		return _revelationSkillTree.get(type).get(SkillData.getSkillHashCode(id, lvl));
+		if (_revelationSkillTree.get(type) != null)
+		{
+			return _revelationSkillTree.get(type).get(SkillData.getSkillHashCode(id, lvl));
+		}
+		return null;
 	}
 	
 	/**
