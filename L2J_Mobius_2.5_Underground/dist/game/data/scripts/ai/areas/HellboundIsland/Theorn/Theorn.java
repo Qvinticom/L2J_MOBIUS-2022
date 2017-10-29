@@ -73,102 +73,52 @@ public class Theorn extends AbstractNpcAI
 			}
 			case "light_1":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_1, true);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_1, true);
 				break;
 			}
 			case "darkness_1":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_1, false);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_1, false);
 				break;
 			}
 			case "light_2":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_2, true);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_2, true);
 				break;
 			}
 			case "darkness_2":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_2, false);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_2, false);
 				break;
 			}
 			case "light_3":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_3, true);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_3, true);
 				break;
 			}
 			case "darkness_3":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_3, false);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_3, false);
 				break;
 			}
 			case "light_4":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_4, true);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_4, true);
 				break;
 			}
 			case "darkness_4":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_4, false);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_4, false);
 				break;
 			}
 			case "light_5":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_5, true);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_5, true);
 				break;
 			}
 			case "darkness_5":
 			{
-				if ((player.getSp() < 500000) || (player.getAdena() < 100000))
-				{
-					htmltext = "nosp.html";
-					break;
-				}
-				tryLuck(npc, player, RESEARCH_SUCCESS_5, false);
+				htmltext = tryLuck(npc, player, RESEARCH_SUCCESS_5, false);
 				break;
 			}
 			case "stop_1":
@@ -256,17 +206,22 @@ public class Theorn extends AbstractNpcAI
 		return "33897.html";
 	}
 	
-	private void tryLuck(L2Npc npc, L2PcInstance player, Skill skill, boolean isLight)
+	private String tryLuck(L2Npc npc, L2PcInstance player, Skill skill, boolean isLight)
 	{
+		if ((player.getSp() < 500000) || (player.getAdena() < 100000))
+		{
+			return "nosp.html";
+		}
 		takeItems(player, Inventory.ADENA_ID, 100000);
 		player.setSp(player.getSp() - 500000);
 		if (isLight ? getRandom(10) > 4 : getRandom(10) < 5)
 		{
 			SkillCaster.triggerCast(npc, player, skill);
-			return;
+			return null;
 		}
 		SkillCaster.triggerCast(npc, player, RESEARCH_FAIL);
 		startQuestTimer("REMOVE_BUFF", 3000, npc, player);
+		return null;
 	}
 	
 	@Override
