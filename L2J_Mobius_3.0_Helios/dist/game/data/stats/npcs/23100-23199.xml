@@ -2775,7 +2775,6 @@
 		</extend_drop>
 	</npc>
 	<npc id="23150" level="96" type="L2Monster" name="Hellish Creature">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -2787,10 +2786,10 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3334574" sp="800" />
+		<acquire exp="8903301" sp="8939" />
 		<mpReward value="134" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14890" hpRegen="8.5" mp="2242" mpRegen="3" />
+			<vitals hp="61827" hpRegen="8.5" mp="2242" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2803,20 +2802,13 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
 		<skill_list>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14664" level="1" /> <!-- Destruction Blow -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14650" level="1" /> <!-- Corpse' Blow -->
-			<skill id="14656" level="1" /> <!-- Corpse Lunacy -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -2825,27 +2817,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="686" max="1603" chance="70" /> <!-- Adena -->
 				<item id="17402" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Helmet -->
-				<item id="35313" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="57" min="1175" max="2742" chance="20" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 				<item id="9549" min="1" max="1" chance="0.03" /> <!-- Wind Stone -->
 				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="35313" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Helmet Ingredient -->
 				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
-				<item id="35437" min="1" max="1" chance="0.000899999999999987" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="35437" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="40206" min="1" max="1" chance="5.587" /> <!-- Specter Fragment -->
-				<item id="36523" min="1" max="1" chance="1.792" /> <!-- Adamantite -->
+				<item id="40206" min="1" max="1" chance="5.62" /> <!-- Specter Fragment -->
+				<item id="36523" min="1" max="1" chance="1.866" /> <!-- Adamantite -->
 				<item id="40211" min="1" max="1" chance="0.0009" /> <!-- Recipe: R95 (100%) -->
 			</spoil>
 			<lucky_drop>
