@@ -180,62 +180,64 @@ public class Q10304_ForForgottenHeroes extends Quest
 	@Override
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		
 		final QuestState qs = getQuestState(player, false);
-		int cond = qs.getCond();
-		int npcId = npc.getId();
-		if (player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true))
+		if (qs != null)
 		{
-			if ((npcId == YUI) && (cond == 2))
+			int cond = qs.getCond();
+			int npcId = npc.getId();
+			if (player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true))
 			{
-				qs.setCond(3, true);
-			}
-			else if ((npcId == KINEN) && (cond == 3))
-			{
-				qs.setCond(4, true);
-			}
-			else if ((npcId == KONYAR) && (cond == 4))
-			{
-				qs.setCond(5, true);
-			}
-			else if ((npcId == LESYINDA) && (cond == 5))
-			{
-				qs.setCond(6, true);
-			}
-			else if ((npcId == MAKSHU) && (cond == 6))
-			{
-				int kills = qs.getInt(Integer.toString(MAKSHU));
-				if (kills < 1)
+				if ((npcId == YUI) && (cond == 2))
 				{
-					kills++;
-					qs.set(Integer.toString(MAKSHU), kills);
+					qs.setCond(3, true);
+				}
+				else if ((npcId == KINEN) && (cond == 3))
+				{
+					qs.setCond(4, true);
+				}
+				else if ((npcId == KONYAR) && (cond == 4))
+				{
+					qs.setCond(5, true);
+				}
+				else if ((npcId == LESYINDA) && (cond == 5))
+				{
+					qs.setCond(6, true);
+				}
+				else if ((npcId == MAKSHU) && (cond == 6))
+				{
+					int kills = qs.getInt(Integer.toString(MAKSHU));
+					if (kills < 1)
+					{
+						kills++;
+						qs.set(Integer.toString(MAKSHU), kills);
+					}
+				}
+				else if ((npcId == HORNAFI) && (cond == 6))
+				{
+					int kills = qs.getInt(Integer.toString(HORNAFI));
+					if (kills < 1)
+					{
+						kills++;
+						qs.set(Integer.toString(HORNAFI), kills);
+					}
+				}
+				else if ((npcId == YONTYMAK) && (cond == 7))
+				{
+					qs.setCond(8);
+				}
+				else if ((npcId == RON) && (cond == 8))
+				{
+					qs.setCond(8);
 				}
 			}
-			else if ((npcId == HORNAFI) && (cond == 6))
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+			log.addNpc(MAKSHU, qs.getInt(Integer.toString(MAKSHU)));
+			log.addNpc(HORNAFI, qs.getInt(Integer.toString(HORNAFI)));
+			qs.getPlayer().sendPacket(log);
+			if ((qs.getInt(Integer.toString(MAKSHU)) >= 1) && (qs.getInt(Integer.toString(HORNAFI)) >= 1))
 			{
-				int kills = qs.getInt(Integer.toString(HORNAFI));
-				if (kills < 1)
-				{
-					kills++;
-					qs.set(Integer.toString(HORNAFI), kills);
-				}
+				qs.setCond(7, true);
 			}
-			else if ((npcId == YONTYMAK) && (cond == 7))
-			{
-				qs.setCond(8);
-			}
-			else if ((npcId == RON) && (cond == 8))
-			{
-				qs.setCond(8);
-			}
-		}
-		final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-		log.addNpc(MAKSHU, qs.getInt(Integer.toString(MAKSHU)));
-		log.addNpc(HORNAFI, qs.getInt(Integer.toString(HORNAFI)));
-		qs.getPlayer().sendPacket(log);
-		if ((qs.getInt(Integer.toString(MAKSHU)) >= 1) && (qs.getInt(Integer.toString(HORNAFI)) >= 1))
-		{
-			qs.setCond(7, true);
 		}
 	}
 	
