@@ -119,6 +119,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("OpEquipItem", OpEquipItemSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpInstantzone", OpInstantzoneSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpSubjob", OpSubjobSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpAffectedBySkill", OpAffectedBySkillSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpAgathionEnergy", OpAgathionEnergySkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpPledge", OpPledgeSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpSocialClass", OpSocialClassSkillCondition::new);
