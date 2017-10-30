@@ -27,6 +27,8 @@ Goddess of Destruction:
 -Garden of Genesis
 -Guillotine Fortress
 -Orbis Temple
+-Kartia
+-Fortuna
 -Nursery
 -Kimerian
 -Istina
