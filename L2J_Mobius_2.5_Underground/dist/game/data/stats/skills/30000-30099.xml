@@ -432,7 +432,9 @@
 		</magicLvl>
 		<trait>KNOCKBACK</trait>
 		<conditions>
-			<!-- TODO: Must be blended into wind. -->
+			<condition name="OpAffectedBySkill">
+				<skillId>19227</skillId>
+			</condition>
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
