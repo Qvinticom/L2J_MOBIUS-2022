@@ -574,7 +574,6 @@
 		</effects>
 	</skill>
 	<skill id="9725" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85 Solo">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -584,9 +583,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>205</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9726" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90 Solo">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -596,9 +599,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>206</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9727" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 Solo">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -608,9 +615,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>207</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9728" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85 Party">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -620,9 +631,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9729" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90 Party">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -632,9 +647,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>209</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9730" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 Party">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -644,9 +663,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>210</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9731" toLevel="1" name="Entrance Pass: Teredor">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -656,9 +679,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>160</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9732" toLevel="1" name="Entrance Pass: Fortuna">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -668,9 +695,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>179</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9733" toLevel="1" name="Entrance Pass: Spezion (Normal)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -680,9 +711,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>159</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9734" toLevel="1" name="Entrance Pass: Spezion (Epic)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -692,9 +727,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>196</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9735" toLevel="1" name="Entrance Pass: Baylor">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -704,13 +743,17 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>166</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9736" toLevel="1" name="Key of Pagans">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Key to opening the doors inside the Pagan Temple. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<castRange>40</castRange>
+		<castRange>400</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-1</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -718,15 +761,25 @@
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>1000</reuseDelay>
 		<targetType>DOOR_TREASURE</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>19160001</item>
+				</doorIds>
+			</condition>
 		</conditions>
+		<effects>
+			<effect name="OpenDoor">
+				<chance>100</chance>
+				<isItem>true</isItem>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9737" toLevel="1" name="Entrance Pass: Istina">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -736,9 +789,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>169</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9738" toLevel="1" name="Entrance Pass: Nornil's Garden">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -748,9 +805,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>245</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9739" toLevel="1" name="Entrance Pass: Octavis">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -760,6 +821,11 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>180</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9740" toLevel="1" name="Memorable Raid Box: Queen Ant">
 		<!-- AUTO GENERATED SKILL -->
@@ -1565,7 +1631,6 @@
 		</effects>
 	</skill>
 	<skill id="9744" toLevel="1" name="Transformation Scroll: Anakim">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Anakim. -->
 		<icon>icon.skilltransform1</icon>
 		<operateType>A2</operateType>
@@ -1588,9 +1653,13 @@
 				<transformId>306</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>306</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9745" toLevel="1" name="Transformation Potion: Queen Ant">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Queen Ant for 10 min. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1612,9 +1681,13 @@
 				<transformId>143</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>143</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9746" toLevel="1" name="Transformation Potion: Orfen">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Orfen for 10 min. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1636,9 +1709,13 @@
 				<transformId>142</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>142</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9747" toLevel="1" name="Transformation Potion: Anakim">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Anakim for 10 min. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1660,9 +1737,13 @@
 				<transformId>145</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>145</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9748" toLevel="1" name="Transformation Potion: Lilith">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into Lilith for 10 min. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1684,6 +1765,11 @@
 				<transformId>144</transformId>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>144</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9749" toLevel="1" name="Divine Box">
 		<!-- AUTO GENERATED SKILL -->
@@ -1727,7 +1813,6 @@
 		</effects>
 	</skill>
 	<skill id="9750" toLevel="1" name="Vitality Replenishing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1744,9 +1829,14 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9751" toLevel="1" name="Vitality Replenishing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1763,11 +1853,18 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-10</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9752" toLevel="1" name="Dragon Vitality Replenishing Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_potion_of_energy_i00</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>35976</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1778,11 +1875,21 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>10000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9753" toLevel="1" name="Star Food">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>20764</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1797,11 +1904,17 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>1000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9754" toLevel="1" name="Star Food">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>20765</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1816,11 +1929,17 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>1000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9755" toLevel="1" name="Star Food">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>20766</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1835,11 +1954,17 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>1000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9756" toLevel="1" name="Star Food">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>20767</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1854,9 +1979,13 @@
 			<condition name="CanRestoreVitalPoint" />
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>1000</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9757" toLevel="1" name="Horn Melody (Battleground)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. Buff remains even after death, and cannot forcefully be deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
@@ -1873,9 +2002,33 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_PA_PD_UP;PA_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_PA_PD_UP;PA_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
+			</effect>
+			<effect name="PAtk">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>79</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9758" toLevel="1" name="Drum Melody (Battleground)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Rate + 20%, P. Atk. + 20%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30% and Speed - 15%. Increases Critical Damage during a standard attack for a member equipped with a melee weapon/bow/crossbow who receives more than a certain amount of damage. Buff remains even after death, and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
@@ -1892,9 +2045,80 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- Critical Damage Increase -->
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<chance>80</chance>
+				<targetType>SELF</targetType>
+				<minDamage>300</minDamage>
+				<skillId>11569</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>MULTI_BUFF;COUNTER_CRITICAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-10</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9759" toLevel="1" name="Lute Melody (Battleground)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Atk. Spd. + 34%, and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage. Buff remains even after death, and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
@@ -1911,9 +2135,29 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>34</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>31</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9760" toLevel="1" name="Pipe Organ Melody (Battleground)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. Buff remains even after death, and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
@@ -1930,9 +2174,33 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
+			</effect>
+			<effect name="MaxCp">
+				<amount>37</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>37</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9761" toLevel="1" name="Guitar Melody (Battleground)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. Buff remains even after death, and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
@@ -1949,9 +2217,49 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</slot>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>32</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>22</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9762" toLevel="1" name="Harp Melody (Battleground)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., P. Accuracy + 5, P. Evasion/M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. Buff remains even after death, and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
@@ -1968,11 +2276,41 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</slot>
+			</effect>
+			<effect name="Speed">
+				<amount>34</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9763" toLevel="1" name="Healing Potion (Battleground)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>36309</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1982,12 +2320,18 @@
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpCpHeal">
+				<power>2500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9764" toLevel="1" name="Battleground Scroll: Damage Reflect Resistance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Damage Reflect Resistance. -->
 		<icon>icon.etc_roll_of_paper_black_i00</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>36311</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<hitTime>1000</hitTime>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>532</effectPoint>
@@ -2002,12 +2346,19 @@
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9765" toLevel="1" name="Battleground Scroll: Sleep">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Sleeps target for 10 sec. -->
 		<icon>icon.skill4046</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>36313</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<castRange>400</castRange>
 		<hitTime>1000</hitTime>
 		<reuseDelay>60000</reuseDelay>
@@ -2027,11 +2378,16 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<trait>SLEEP</trait>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="9766" toLevel="1" name="Battleground Scroll: Remove Invincibility">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>36310</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<castRange>400</castRange>
 		<effectPoint>-2036</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2044,6 +2400,15 @@
 		<reuseDelay>600000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>INVINCIBILITY</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9767" toLevel="1" name="Small Draco Egg x10">
 		<!-- AUTO GENERATED SKILL -->

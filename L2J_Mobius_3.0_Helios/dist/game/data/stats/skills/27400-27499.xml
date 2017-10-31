@@ -366,18 +366,24 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>-2036</effectPoint>
-		<isMagic>1</isMagic>
-		<effect name="DamageBlock">
-			<type>BLOCK_HP</type>
-		</effect>
-		<effect name="DamageBlock">
-			<type>BLOCK_MP</type>
-		</effect>
-		<effect name="DebuffBlock" />
-		<effect name="ResistDispelByCategory">
-			<amount>-100</amount>
-			<slot>ALL</slot>
-		</effect>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>600</effectRange>
+		<magicLvl>1</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>INVINCIBILITY</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27444" toLevel="1" name="Summon Scroll: Pomona">
 		<!-- AUTO GENERATED SKILL -->

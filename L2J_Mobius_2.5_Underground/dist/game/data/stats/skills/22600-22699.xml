@@ -129,7 +129,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22607" toLevel="1" name="Extra Pass">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -139,9 +138,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>205</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22608" toLevel="1" name="Extra Pass">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -151,9 +154,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>206</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22609" toLevel="1" name="Extra Pass">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -163,9 +170,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>207</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22610" toLevel="1" name="Extra Pass">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -175,9 +186,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22611" toLevel="1" name="Extra Pass">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -187,9 +202,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>209</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22612" toLevel="1" name="Extra Pass">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -199,6 +218,11 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>210</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22613" toLevel="1" name="Flower Shower">
 		<!-- AUTO GENERATED SKILL -->
@@ -213,13 +237,18 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22614" toLevel="5" name="XP Rune III (Lv. 1-99) 50%">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Obtained XP + 50%. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_5</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isDebuff>false</isDebuff>
+		<effects>
+			<effect name="ExpModify" fromLevel="5" toLevel="5">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22615" toLevel="1" name="Honeymoon Ticket - Joy of Vitality">
 		<!-- AUTO GENERATED SKILL -->
@@ -741,9 +770,10 @@
 		</effects>
 	</skill>
 	<skill id="22626" toLevel="1" name="Extra Pass">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23137</itemConsumeId> <!-- Extra Pass: Ancient Kartia's Labyrinth -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -751,6 +781,11 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>228;229;230</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22627" toLevel="1" name="Exorcist's Gift">
 		<!-- AUTO GENERATED SKILL -->

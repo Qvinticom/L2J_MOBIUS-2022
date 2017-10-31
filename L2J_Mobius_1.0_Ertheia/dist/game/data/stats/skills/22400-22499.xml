@@ -204,8 +204,9 @@
 		</effects>
 	</skill>
 	<skill id="22403" toLevel="1" name="Extra Pass: Kamaloka (Hall of Nightmares)">
-		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>22337</itemConsumeId> <!-- Extra Pass: Rim Kamaloka -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -213,6 +214,11 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>258</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22404" toLevel="1" name="Pathfinder's Reward">
 		<!-- Desciption: There is no available description. -->
@@ -2369,9 +2375,10 @@
 		</effects>
 	</skill>
 	<skill id="22499" toLevel="1" name="Extra Pass: Rim Kamaloka">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>22615</itemConsumeId> <!-- Extra Pass: Rim Kamaloka -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2379,5 +2386,10 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>46;47;48;49;50;51;52;53;54;55;56</instanceId>
+			</effect>
+		</effects>
 	</skill>
 </list>

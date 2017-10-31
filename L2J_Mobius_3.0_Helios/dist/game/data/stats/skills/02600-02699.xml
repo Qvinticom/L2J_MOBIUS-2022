@@ -479,6 +479,11 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>57;58;60;61;63;64;66;67;69;70;72</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="2620" toLevel="1" name="Extra Pass: Near Kamaloka (Event)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -491,6 +496,11 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>59;62;65;68;71</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="2621" toLevel="1" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -503,6 +513,11 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>73;74;75;76;77;78;79</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="2622" toLevel="1" name="Summon Life-size Decoy">
 		<!-- Confirmed CT2.5 -->

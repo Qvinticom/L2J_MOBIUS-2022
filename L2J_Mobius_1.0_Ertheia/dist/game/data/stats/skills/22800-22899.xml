@@ -663,7 +663,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22842" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85 Solo">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -673,9 +672,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>205</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22843" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90 Solo">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -685,9 +688,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>206</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22844" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 Solo">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -697,9 +704,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>207</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22845" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 85 Party">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -709,9 +720,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>208</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22846" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 90 Party">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -721,9 +736,13 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>209</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22847" toLevel="1" name="Extra Pass: Kartia's Labyrinth Lv. 95 Party">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -733,6 +752,11 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>210</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22848" toLevel="1" name="Vitality Maintaining Potion">
 		<!-- AUTO GENERATED SKILL -->

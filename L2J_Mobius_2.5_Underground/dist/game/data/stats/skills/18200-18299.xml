@@ -182,9 +182,22 @@
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="18222" toLevel="1" name="Extra Pass - Nightmare Kamaloka">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>45463</itemConsumeId> <!-- Entrance Pass: Nightmare Kamaloka -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>258</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18223" toLevel="1" name="Power Scroll">
 		<!-- AUTO GENERATED SKILL -->

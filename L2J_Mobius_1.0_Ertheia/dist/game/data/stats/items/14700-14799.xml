@@ -1171,6 +1171,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="86400000" />
 		<set name="time" val="1440" />
 		<skills>
 			<skill id="2892" level="1" /> <!-- Event - Extra Pass: Rim Kamaloka -->

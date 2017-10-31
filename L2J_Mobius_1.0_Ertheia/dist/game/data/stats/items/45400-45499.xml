@@ -750,11 +750,18 @@
 	<item id="45463" name="Entrance Pass: Nightmare Kamaloka" type="EtcItem">
 		<!-- Double-click to reset cooldown to Nightmare Kamaloka. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
 		<set name="weight" val="5" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
+		<skills>
+			<skill id="18222" level="1" /> <!-- Extra Pass: Near Kamaloka -->
+		</skills>	
 	</item>
 	<item id="45464" name="Zorro Hat" type="Armor">
 		<!-- A swashbuckler's hat. -->

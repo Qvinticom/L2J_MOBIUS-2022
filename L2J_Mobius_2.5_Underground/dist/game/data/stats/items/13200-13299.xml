@@ -2532,6 +2532,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="86400000" />
 		<skills>
 			<skill id="2619" level="1" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) -->
 		</skills>
@@ -2551,6 +2552,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="86400000" />
 		<skills>
 			<skill id="2620" level="1" /> <!-- Extra Pass: Near Kamaloka (Event) -->
 		</skills>
@@ -2570,6 +2572,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="reuse_delay" val="86400000" />
 		<skills>
 			<skill id="2621" level="1" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) (Event) -->
 		</skills>

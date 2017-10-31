@@ -866,11 +866,18 @@
 	</item>
 	<item id="23952" name="Extra Pass: Infernal/Lunatic Kamaloka" type="EtcItem">
 		<!-- Entry Pass to Infernal and Lunatic Kamaloka. Use to reset cooldown and enter the dungeon up to 5 times within the cooldown. -->
-		<set name="is_clan_depositable" val="false" />
+		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="1440" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 	</item>
 	<item id="23953" name="2014 World Olympiad Hero's Accessory" type="Armor">
 		<!-- Hair Accessory worn by the hero of the 2014 World Olympiad. Equip for a boost of + 5 on all stats. -->

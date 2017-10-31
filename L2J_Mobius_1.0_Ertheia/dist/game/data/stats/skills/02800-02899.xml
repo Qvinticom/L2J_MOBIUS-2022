@@ -3348,10 +3348,16 @@
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<reuseDelay>86400000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>46;47;48;49;50;51;52;53;54;55;56</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="2893" toLevel="1" name="Solo Escape Petition">
 		<abnormalLvl>2</abnormalLvl>

@@ -511,6 +511,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 		<skills>
 			<skill id="22019" level="1" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) -->
 		</skills>
@@ -525,6 +526,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 		<skills>
 			<skill id="22020" level="1" /> <!-- Extra Pass: Near Kamaloka -->
 		</skills>
@@ -539,6 +541,7 @@
 		<set name="is_premium" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ItemSkills" />
+		<set name="reuse_delay" val="86400000" />
 		<skills>
 			<skill id="22021" level="1" /> <!-- Extra Pass: Kamaloka (Labyrinth of the Abyss) -->
 		</skills>

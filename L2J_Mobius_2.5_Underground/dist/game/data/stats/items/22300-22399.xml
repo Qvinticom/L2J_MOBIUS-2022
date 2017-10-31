@@ -800,6 +800,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="86400000" />
 		<skills>
 			<skill id="22403" level="1" /> <!-- Extra Pass: Kamaloka (Hall of Nightmares) -->
 		</skills>

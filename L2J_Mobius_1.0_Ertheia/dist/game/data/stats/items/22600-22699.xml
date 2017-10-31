@@ -295,6 +295,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="5" />
+		<set name="reuse_delay" val="86400000" />
 		<skills>
 			<skill id="22499" level="1" /> <!-- Extra Pass: Rim Kamaloka -->
 		</skills>

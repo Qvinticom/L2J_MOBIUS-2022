@@ -26,14 +26,36 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26105" toLevel="1" name="Extra Pass: Infernal Kamaloka">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>256</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26106" toLevel="1" name="Extra Pass: Lunatic Kamaloka">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ResetInstanceEntry">
+				<instanceId>257</instanceId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26107" toLevel="1" name="Angel Cat's Blessing">
 		<!-- AUTO GENERATED SKILL -->
@@ -51,9 +73,15 @@
 		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="26109" toLevel="1" name="Extra Pass: Epic Kamaloka">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="26110" toLevel="1" name="2014 World Olympiad Hero's Accessory">
 		<!-- All Stats + 5. -->
