@@ -249,7 +249,7 @@ public abstract class ItemContainer
 	 * Adds item to inventory
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item Identifier of the item to be added
-	 * @param count : int Quantity of items to be added
+	 * @param count : long Quantity of items to be added
 	 * @param actor : L2PcInstance Player requesting the item add
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return L2ItemInstance corresponding to the new item or the updated item in inventory
