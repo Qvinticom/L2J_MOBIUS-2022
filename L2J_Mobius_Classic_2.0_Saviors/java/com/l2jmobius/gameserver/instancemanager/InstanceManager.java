@@ -625,7 +625,10 @@ public final class InstanceManager implements IGameXmlReader
 			ps.setInt(1, player.getObjectId());
 			ps.setInt(2, id);
 			ps.execute();
-			_playerInstanceTimes.get(player.getObjectId()).remove(id);
+			if (_playerInstanceTimes.get(player.getObjectId()) != null)
+			{
+				_playerInstanceTimes.get(player.getObjectId()).remove(id);
+			}
 		}
 		catch (Exception e)
 		{
