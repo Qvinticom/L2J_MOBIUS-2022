@@ -2895,10 +2895,9 @@
 			<height normal="28.25" />
 		</collision>
 	</npc>
-	<npc id="26141" level="104" type="L2RaidBoss" name="Ramona" title="Queen">
+	<npc id="26141" level="104" type="L2Monster" name="Ramona" title="Queen">
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="576969277248" sp="1153938597" raidPoints="300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="64735849" hpRegen="7.5" mp="50920.0" mpRegen="2.7" />
 			<speed>
@@ -2917,91 +2916,15 @@
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skill_list>
 		<status attackable="true" />
-		<drop_lists>
-			<drop>
-				<item id="38053" min="1" max="1" chance="0.989000000000042" /> <!-- Amaranthine Retributer Crafting Pack -->
-				<item id="38052" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Caster Crafting Pack -->
-				<item id="38043" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Shaper Crafting Pack -->
-				<item id="38044" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Cutter Crafting Pack -->
-				<item id="38049" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Thrower Crafting Pack -->
-				<item id="38050" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Shooter Crafting Pack -->
-				<item id="38051" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Buster Crafting Pack -->
-				<item id="38046" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Avenger Crafting Pack -->
-				<item id="38047" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Fighter Crafting Pack -->
-				<item id="38048" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Stormer Crafting Pack -->
-				<item id="38045" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Slasher Crafting Pack -->
-				<item id="38061" min="1" max="1" chance="7.8520000000001" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38062" min="1" max="1" chance="7.8419999999998" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38056" min="1" max="1" chance="6.5549999999998" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38066" min="1" max="1" chance="6.55399999999994" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="6.51799999999987" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38055" min="1" max="1" chance="6.47700000000007" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38063" min="1" max="1" chance="7.86600000000033" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38064" min="1" max="1" chance="7.74399999999993" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38060" min="1" max="1" chance="7.72999999999976" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38059" min="1" max="1" chance="6.57499999999997" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-				<item id="38070" min="1" max="1" chance="6.56100000000002" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="6.55000000000002" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38057" min="1" max="1" chance="6.48799999999999" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38069" min="1" max="1" chance="6.458" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38054" min="1" max="1" chance="6.45600000000004" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38065" min="1" max="1" chance="6.45600000000004" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38058" min="1" max="1" chance="6.45499999999998" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="47244" min="1" max="1" chance="50.43" /> <!-- Ramona's Fancy Earrings -->
-				<item id="47127" min="60" max="60" chance="12.241130688759" /> <!-- Giants Deterioration Protection Potion -->
-				<item id="47129" min="60" max="60" chance="12.241130688759" /> <!-- Particle Dissolver -->
-				<item id="47128" min="60" max="60" chance="12.241130688759" /> <!-- Giants Lightning Protection Potion -->
-				<item id="36389" min="1" max="1" chance="9.6092875906762" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-				<item id="46491" min="1" max="2" chance="2.9390954783711" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46506" min="1" max="2" chance="2.8791139379962" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="46476" min="1" max="2" chance="2.753030291902" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="36386" min="1" max="1" chance="2.5632927662262" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="46492" min="1" max="1" chance="2.41762331103" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46507" min="1" max="1" chance="2.3613141098617" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46477" min="1" max="1" chance="2.3294871700709" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="17710" min="1" max="1" chance="2.1348531921197" /> <!-- Lv. 5 Legendary DEX Dye - DEX + 5 / CON + 1 / Earth Resistance + 25 -->
-				<item id="17714" min="1" max="1" chance="2.1336290790508" /> <!-- Lv. 5 Legendary MEN Dye - MEN + 5 / INT + 1 / Holy Resistance + 25 -->
-				<item id="17711" min="1" max="1" chance="2.1189397222243" /> <!-- Lv. 5 Legendary CON Dye - CON + 5 / STR + 1 / Dark Resistance + 25 -->
-				<item id="17712" min="1" max="1" chance="2.0540617295738" /> <!-- Lv. 5 Legendary INT Dye - INT + 5 / WIT + 1 / Water Resistance + 25 -->
-				<item id="17713" min="1" max="1" chance="2.0381482596785" /> <!-- Lv. 5 Legendary WIT Dye - WIT + 5 / MEN + 1 / Wind Resistance + 25 -->
-				<item id="17709" min="1" max="1" chance="1.9659255886148" /> <!-- Lv. 5 Legendary STR Dye - STR + 5 / DEX + 1 / Fire Resistance + 25 -->
-				<item id="46461" min="1" max="2" chance="1.9365468749617" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46508" min="1" max="1" chance="1.9451156664439" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46493" min="1" max="1" chance="1.9206334050664" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46478" min="1" max="1" chance="1.8961511436888" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46446" min="1" max="2" chance="1.8459625078649" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46462" min="1" max="1" chance="1.6170533639851" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46447" min="1" max="1" chance="1.5533994844036" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46463" min="1" max="1" chance="1.3538690541768" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="46448" min="1" max="1" chance="1.3526449411079" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46509" min="1" max="1" chance="1.2037927919326" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="46479" min="1" max="1" chance="1.2008549205673" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="46494" min="1" max="1" chance="1.1965705248262" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46464" min="1" max="1" chance="0.80730256892369" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="0.798244132214" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46510" min="1" max="1" chance="0.40677277278748" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46480" min="1" max="1" chance="0.39844880391912" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46495" min="1" max="1" chance="0.39183859334719" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="35567" min="1" max="1" chance="0.31031266296005" /> <!-- Dark Eternal Enhancement Stone -->
-				<item id="35569" min="1" max="1" chance="0.30443692022945" /> <!-- Bloody Eternal Enhancement Stone -->
-				<item id="46465" min="1" max="1" chance="0.27505820657643" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="0.26379636634277" /> <!-- Kain's Soul Crystal - Stage 7 -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="3" max="3" chance="100" />
-				<item id="40198" min="1" max="1" chance="2.52" />
-			</lucky_drop>
-		</drop_lists>
 		<collision>
 			<radius normal="40.0" />
 			<height normal="87.0" />
 		</collision>
 	</npc>
-	<npc id="26142" level="104" type="L2Npc" name="Ramona" title="Queen">
+	<npc id="26142" level="104" type="L2Monster" name="Ramona" title="Queen">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="576969277248" sp="1153938597" raidPoints="300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="27188512" hpRegen="1824.56140350877" mp="50920" mpRegen="1925.92592592593" />
 			<speed>
@@ -3018,81 +2941,6 @@
 			<skill id="16746" level="1" /> <!-- Ramona -->
 			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
 		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="38053" min="1" max="1" chance="0.989000000000042" /> <!-- Amaranthine Retributer Crafting Pack -->
-				<item id="38052" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Caster Crafting Pack -->
-				<item id="38043" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Shaper Crafting Pack -->
-				<item id="38044" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Cutter Crafting Pack -->
-				<item id="38049" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Thrower Crafting Pack -->
-				<item id="38050" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Shooter Crafting Pack -->
-				<item id="38051" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Buster Crafting Pack -->
-				<item id="38046" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Avenger Crafting Pack -->
-				<item id="38047" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Fighter Crafting Pack -->
-				<item id="38048" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Stormer Crafting Pack -->
-				<item id="38045" min="1" max="1" chance="0.749999999999996" /> <!-- Amaranthine Slasher Crafting Pack -->
-				<item id="38061" min="1" max="1" chance="7.8520000000001" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-				<item id="38062" min="1" max="1" chance="7.8419999999998" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-				<item id="38056" min="1" max="1" chance="6.5549999999998" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-				<item id="38066" min="1" max="1" chance="6.55399999999994" /> <!-- Eternal Tunic Crafting Pack - Robe -->
-				<item id="38067" min="1" max="1" chance="6.51799999999987" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-				<item id="38055" min="1" max="1" chance="6.47700000000007" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-				<item id="38063" min="1" max="1" chance="7.86600000000033" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-				<item id="38064" min="1" max="1" chance="7.74399999999993" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-				<item id="38060" min="1" max="1" chance="7.72999999999976" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-				<item id="38059" min="1" max="1" chance="6.57499999999997" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-				<item id="38070" min="1" max="1" chance="6.56100000000002" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-				<item id="38068" min="1" max="1" chance="6.55000000000002" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-				<item id="38057" min="1" max="1" chance="6.48799999999999" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-				<item id="38069" min="1" max="1" chance="6.458" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-				<item id="38054" min="1" max="1" chance="6.45600000000004" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-				<item id="38065" min="1" max="1" chance="6.45600000000004" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-				<item id="38058" min="1" max="1" chance="6.45499999999998" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-				<item id="47244" min="1" max="1" chance="50.43" /> <!-- Ramona's Fancy Earrings -->
-				<item id="47127" min="60" max="60" chance="12.241130688759" /> <!-- Giants Deterioration Protection Potion -->
-				<item id="47129" min="60" max="60" chance="12.241130688759" /> <!-- Particle Dissolver -->
-				<item id="47128" min="60" max="60" chance="12.241130688759" /> <!-- Giants Lightning Protection Potion -->
-				<item id="36389" min="1" max="1" chance="9.6092875906762" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-				<item id="46491" min="1" max="2" chance="2.9390954783711" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46506" min="1" max="2" chance="2.8791139379962" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="46476" min="1" max="2" chance="2.753030291902" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="36386" min="1" max="1" chance="2.5632927662262" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="46492" min="1" max="1" chance="2.41762331103" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46507" min="1" max="1" chance="2.3613141098617" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46477" min="1" max="1" chance="2.3294871700709" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="17710" min="1" max="1" chance="2.1348531921197" /> <!-- Lv. 5 Legendary DEX Dye - DEX + 5 / CON + 1 / Earth Resistance + 25 -->
-				<item id="17714" min="1" max="1" chance="2.1336290790508" /> <!-- Lv. 5 Legendary MEN Dye - MEN + 5 / INT + 1 / Holy Resistance + 25 -->
-				<item id="17711" min="1" max="1" chance="2.1189397222243" /> <!-- Lv. 5 Legendary CON Dye - CON + 5 / STR + 1 / Dark Resistance + 25 -->
-				<item id="17712" min="1" max="1" chance="2.0540617295738" /> <!-- Lv. 5 Legendary INT Dye - INT + 5 / WIT + 1 / Water Resistance + 25 -->
-				<item id="17713" min="1" max="1" chance="2.0381482596785" /> <!-- Lv. 5 Legendary WIT Dye - WIT + 5 / MEN + 1 / Wind Resistance + 25 -->
-				<item id="17709" min="1" max="1" chance="1.9659255886148" /> <!-- Lv. 5 Legendary STR Dye - STR + 5 / DEX + 1 / Fire Resistance + 25 -->
-				<item id="46461" min="1" max="2" chance="1.9365468749617" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46508" min="1" max="1" chance="1.9451156664439" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46493" min="1" max="1" chance="1.9206334050664" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46478" min="1" max="1" chance="1.8961511436888" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46446" min="1" max="2" chance="1.8459625078649" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46462" min="1" max="1" chance="1.6170533639851" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46447" min="1" max="1" chance="1.5533994844036" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46463" min="1" max="1" chance="1.3538690541768" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="46448" min="1" max="1" chance="1.3526449411079" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46509" min="1" max="1" chance="1.2037927919326" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="46479" min="1" max="1" chance="1.2008549205673" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="46494" min="1" max="1" chance="1.1965705248262" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46464" min="1" max="1" chance="0.80730256892369" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="0.798244132214" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46510" min="1" max="1" chance="0.40677277278748" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46480" min="1" max="1" chance="0.39844880391912" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46495" min="1" max="1" chance="0.39183859334719" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="35567" min="1" max="1" chance="0.31031266296005" /> <!-- Dark Eternal Enhancement Stone -->
-				<item id="35569" min="1" max="1" chance="0.30443692022945" /> <!-- Bloody Eternal Enhancement Stone -->
-				<item id="46465" min="1" max="1" chance="0.27505820657643" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="0.26379636634277" /> <!-- Kain's Soul Crystal - Stage 7 -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="3" max="3" chance="100" />
-				<item id="40198" min="1" max="1" chance="2.52" />
-			</lucky_drop>
-		</drop_lists>
 		<collision>
 			<radius normal="40.0" />
 			<height normal="87.0" />
