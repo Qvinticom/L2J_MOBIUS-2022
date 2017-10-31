@@ -734,6 +734,8 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill01_Type" value="1" />
 			<param name="Skill03_Probablity" value="2000" />
 			<param name="Skill03_Type" value="2" />
 			<param name="Attack_DecayRatio" value="30" />
@@ -747,9 +749,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="15603" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
+		<acquire exp="4681" sp="1" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2018" hpRegen="5.5" mp="504" mpRegen="2.1" />
 			<attack physical="187.11878" magical="127.77787" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="160.69002" magical="117.58598" />
 			<speed>
@@ -759,20 +761,14 @@
 			<hit_time>390</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4046" level="4" /> <!-- Sleep -->
-			<skill id="4087" level="4" /> <!-- NPC Blaze -->
-			<skill id="4093" level="1" /> <!-- Evasion -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="18" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="16" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4046" level="4" /> <!-- Sleep -->		
+			<skill id="4087" level="4" /> <!-- Blaze -->		
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4093" level="1" /> <!-- Evasion -->
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
@@ -785,20 +781,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="82" max="192" chance="70" /> <!-- Adena -->
-				<item id="36517" min="1" max="1" chance="2.76800000000001" /> <!-- Leather -->
-				<item id="36557" min="1" max="1" chance="0.300000000000001" /> <!-- Accessory Gem -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="36517" min="1" max="1" chance="2.847" /> <!-- Leather -->
+				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="3.002" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="2.939" /> <!-- Leather -->
 				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 			</spoil>
 			<lucky_drop>
