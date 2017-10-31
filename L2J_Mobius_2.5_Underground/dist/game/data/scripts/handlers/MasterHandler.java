@@ -297,6 +297,7 @@ import handlers.telnethandlers.player.GMList;
 import handlers.telnethandlers.player.Give;
 import handlers.telnethandlers.player.Jail;
 import handlers.telnethandlers.player.Kick;
+import handlers.telnethandlers.player.SendMail;
 import handlers.telnethandlers.player.Unban;
 import handlers.telnethandlers.player.UnbanChat;
 import handlers.telnethandlers.player.Unjail;
@@ -746,6 +747,7 @@ public class MasterHandler
 			TelnetServer.getInstance().addHandler(new Performance());
 			TelnetServer.getInstance().addHandler(new Purge());
 			TelnetServer.getInstance().addHandler(new Reload());
+			TelnetServer.getInstance().addHandler(new SendMail());
 			TelnetServer.getInstance().addHandler(new ServerAbort());
 			TelnetServer.getInstance().addHandler(new ServerRestart());
 			TelnetServer.getInstance().addHandler(new ServerShutdown());
