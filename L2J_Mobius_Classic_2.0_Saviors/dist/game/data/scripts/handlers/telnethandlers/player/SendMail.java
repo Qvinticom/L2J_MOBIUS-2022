@@ -73,7 +73,7 @@ public class SendMail implements ITelnetCommand
 					final String itemCount = str.toLowerCase().split("x")[1];
 					if (Util.isDigit(itemId) && Util.isDigit(itemCount))
 					{
-						itemHolders.add(new ItemHolder(Integer.parseInt(itemId), Integer.parseInt(itemCount)));
+						itemHolders.add(new ItemHolder(Integer.parseInt(itemId), Long.parseLong(itemCount)));
 					}
 				}
 				else if (Util.isDigit(str))
@@ -86,7 +86,7 @@ public class SendMail implements ITelnetCommand
 				final Mail attachments = msg.createAttachments();
 				for (ItemHolder itemHolder : itemHolders)
 				{
-					attachments.addItem("Telnet", itemHolder.getId(), itemHolder.getCount(), null, null);
+					attachments.addItem("Telnet-Mail", itemHolder.getId(), itemHolder.getCount(), null, null);
 				}
 			}
 			MailManager.getInstance().sendMessage(msg);
