@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.enums.MailType;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.entity.Message;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Mail;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 import com.l2jmobius.gameserver.util.Util;
@@ -43,7 +44,7 @@ public class SendMail implements ITelnetCommand
 	@Override
 	public String getUsage()
 	{
-		return "sendmail <player name> <mail subject (use _ for spaces)> <mail message (use _ for spaces)> <item id/ids seperated by space (optional)>";
+		return "sendmail <player name> <mail subject (use _ for spaces)> <mail message (use _ for spaces)> <item(s) (optional) e.g. 57x1000000>";
 	}
 	
 	@Override
@@ -57,7 +58,7 @@ public class SendMail implements ITelnetCommand
 		if (objectId > 0)
 		{
 			final Message msg = new Message(objectId, args[1].replace("_", " "), args[2].replace("_", " "), args.length > 3 ? MailType.PRIME_SHOP_GIFT : MailType.REGULAR);
-			final List<Integer> itemIds = new ArrayList<>();
+			final List<ItemHolder> itemHolders = new ArrayList<>();
 			int counter = -1;
 			for (String str : args)
 			{
@@ -66,17 +67,26 @@ public class SendMail implements ITelnetCommand
 				{
 					continue;
 				}
-				if (Util.isDigit(str))
+				if (str.toLowerCase().contains("x"))
 				{
-					itemIds.add(Integer.valueOf(str));
+					final String itemId = str.toLowerCase().split("x")[0];
+					final String itemCount = str.toLowerCase().split("x")[1];
+					if (Util.isDigit(itemId) && Util.isDigit(itemCount))
+					{
+						itemHolders.add(new ItemHolder(Integer.parseInt(itemId), Integer.parseInt(itemCount)));
+					}
+				}
+				else if (Util.isDigit(str))
+				{
+					itemHolders.add(new ItemHolder(Integer.parseInt(str), 1));
 				}
 			}
-			if (!itemIds.isEmpty())
+			if (!itemHolders.isEmpty())
 			{
 				final Mail attachments = msg.createAttachments();
-				for (int itemId : itemIds)
+				for (ItemHolder itemHolder : itemHolders)
 				{
-					attachments.addItem("Telnet", itemId, 1, null, null);
+					attachments.addItem("Telnet", itemHolder.getId(), itemHolder.getCount(), null, null);
 				}
 			}
 			MailManager.getInstance().sendMessage(msg);
