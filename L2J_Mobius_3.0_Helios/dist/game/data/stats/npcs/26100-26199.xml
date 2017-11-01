@@ -2904,18 +2904,24 @@
 				<walk ground="40.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="19247" magical="18723" critical="4" attackSpeed="253" range="40" />	<!-- Calculate for Method of Three -->
-			<defence physical="82220" magical="47436" />
+			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
+			<defence physical="3851.85185185185" magical="2236.55913978495" />
 			<attribute>
 				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
-				<attack type="EARTH" value="430" />
+				<attack type="EARTH" value="450" />
 			</attribute>
 		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+            <skill id="5465" level="1"/> <!-- Earth Attack -->
+            <skill id="16746" level="1"/> <!-- Ramona -->
 		</skill_list>
-		<status attackable="true" />
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>RAMONA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="40.0" />
 			<height normal="87.0" />
@@ -2931,16 +2937,20 @@
 				<walk ground="40.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" attackSpeed="253" range="40" />
+			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
 			<defence physical="3851.85185185185" magical="2236.55913978495" />
 		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16746" level="1" /> <!-- Ramona -->
-			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
+            <skill id="5465" level="1"/> <!-- Earth Attack -->
+            <skill id="16746" level="1"/> <!-- Ramona -->
 		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>RAMONA</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="40.0" />
 			<height normal="87.0" />
@@ -2957,7 +2967,7 @@
 				<walk ground="40.0" />
 				<run ground="180.0" />
 			</speed>
-			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" attackSpeed="253" range="40" />
+			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
 			<defence physical="3851.85185185185" magical="2236.55913978495" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="370" holy="300" dark="300"/>
@@ -2965,11 +2975,15 @@
 		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16746" level="1" /> <!-- Ramona -->
-			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
+            <skill id="5465" level="1"/> <!-- Earth Attack -->
+            <skill id="16746" level="1"/> <!-- Ramona -->
 		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>RAMONA</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="47244" min="1" max="1" chance="50.91" /> <!-- Ramona's Fancy Earring -->
@@ -3044,6 +3058,141 @@
 		<collision>
 			<radius normal="40.0" />
 			<height normal="82.0" />
+		</collision>
+	</npc>
+	<npc id="26144" level="104" type="L2Monster" name="Dancer of the Queen">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="575863" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="55" />
+				<run ground="180" />
+			</speed>
+			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="DUAL" attackSpeed="253" range="40" />
+			<defence physical="3851.85185185185" magical="2236.55913978495" />
+		</stats>
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>RAMONA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="36.79" />
+		</collision>
+	</npc>
+	<npc id="26145" level="104" type="L2Monster" name="Commander of the Queen">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="575863" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
+			<defence physical="3851.85185185185" magical="2236.55913978495" />
+		</stats>
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>RAMONA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="32" />
+			<height normal="51" />
+		</collision>
+	</npc>
+	<npc id="26146" level="104" type="L2Monster" name="Shooter of the Queen">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="575863" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="55" />
+				<run ground="190" />
+			</speed>
+			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BOW" attackSpeed="253" range="1100" />
+			<defence physical="3851.85185185185" magical="2236.55913978495" />
+		</stats>
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>RAMONA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="24" />
+			<height normal="45.5" />
+		</collision>
+	</npc>
+	<npc id="26147" level="104" type="L2Monster" name="Wizard of the Queen">
+		<race>GIANT</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="575863" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="55" />
+				<run ground="180" />
+			</speed>
+			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" type="BLUNT" attackSpeed="253" range="40" />
+			<defence physical="3851.85185185185" magical="2236.55913978495" />
+		</stats>
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+            <skill id="4438" level="5"/>
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>RAMONA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="24" />
+			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="26148" level="102" type="L2RaidBoss" name="Enhanced Mimir">
