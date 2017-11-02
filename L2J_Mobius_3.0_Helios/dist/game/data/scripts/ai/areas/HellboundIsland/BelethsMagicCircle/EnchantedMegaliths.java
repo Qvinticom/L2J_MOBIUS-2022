@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
@@ -74,6 +75,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	private EnchantedMegaliths()
 	{
 		addKillId(MONSTERS);
+		addSpawnId(MONSTERS);
 		addEnterZoneId(HELLBOUND_ZONE.getId());
 		startQuestTimer("CHECK_STATUS", 60000, null, null, true);
 		stage = GlobalVariablesManager.getInstance().getInt(HB_MEGALITH_STAGE, 1);
@@ -309,6 +311,16 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	{
 		kills++;
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		if ((stage == 2) && (npc.getSpawn().getNpcSpawnTemplate().getSpawnTemplate().getName().equals("enchanted_megaliths_stage_1")))
+		{
+			npc.setTitleString(NpcStringId.ABNORMAL_MAGIC_CIRCLE);
+		}
+		return super.onSpawn(npc);
 	}
 	
 	public static void main(String[] args)
