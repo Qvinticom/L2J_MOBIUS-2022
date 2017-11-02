@@ -23,14 +23,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public final class AskJoinPledge implements IClientOutgoingPacket
 {
 	private final L2PcInstance _requestor;
-	private final String _subPledgeName;
 	private final int _pledgeType;
 	private final String _pledgeName;
 	
-	public AskJoinPledge(L2PcInstance requestor, String subPledgeName, int pledgeType, String pledgeName)
+	public AskJoinPledge(L2PcInstance requestor, int pledgeType, String pledgeName)
 	{
 		_requestor = requestor;
-		_subPledgeName = subPledgeName;
 		_pledgeType = pledgeType;
 		_pledgeName = pledgeName;
 	}
@@ -39,14 +37,8 @@ public final class AskJoinPledge implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ASK_JOIN_PLEDGE.writeId(packet);
-		
 		packet.writeD(_requestor.getObjectId());
 		packet.writeS(_requestor.getName());
-		
-		if (_subPledgeName != null)
-		{
-			packet.writeS(_pledgeType > 0 ? _subPledgeName : _pledgeName);
-		}
 		packet.writeS(_pledgeName);
 		if (_pledgeType != 0)
 		{

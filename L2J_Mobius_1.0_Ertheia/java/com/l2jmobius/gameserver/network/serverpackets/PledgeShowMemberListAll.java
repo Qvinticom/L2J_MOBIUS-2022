@@ -34,15 +34,18 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 	private final String _name;
 	private final String _leaderName;
 	private final Collection<L2ClanMember> _members;
-	private int _pledgeType;
+	private final int _pledgeId;
+	private final boolean _isSubPledge;
 	
-	private PledgeShowMemberListAll(L2Clan clan, SubPledge pledge)
+	private PledgeShowMemberListAll(L2Clan clan, SubPledge pledge, boolean isSubPledge)
 	{
 		_clan = clan;
 		_pledge = pledge;
+		_pledgeId = _pledge == null ? 0x00 : _pledge.getId();
 		_leaderName = pledge == null ? clan.getLeaderName() : CharNameTable.getInstance().getNameById(pledge.getLeaderId());
 		_name = pledge == null ? clan.getName() : pledge.getName();
 		_members = _clan.getMembers();
+		_isSubPledge = isSubPledge;
 	}
 	
 	public static void sendAllTo(L2PcInstance player)
@@ -50,33 +53,32 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		final L2Clan clan = player.getClan();
 		if (clan != null)
 		{
-			player.sendPacket(new PledgeShowMemberListAll(clan, null));
 			for (SubPledge subPledge : clan.getAllSubPledges())
 			{
-				player.sendPacket(new PledgeShowMemberListAll(clan, subPledge));
+				player.sendPacket(new PledgeShowMemberListAll(clan, subPledge, false));
 			}
+			player.sendPacket(new PledgeShowMemberListAll(clan, null, true));
 		}
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		final int pledgeId = (_pledge == null ? 0x00 : _pledge.getId());
 		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
 		
-		packet.writeD(_pledge == null ? 0 : 1);
+		packet.writeD(_isSubPledge ? 0x00 : 0x01);
 		packet.writeD(_clan.getId());
 		packet.writeD(Config.SERVER_ID);
-		packet.writeD(pledgeId);
+		packet.writeD(_pledgeId);
 		packet.writeS(_name);
 		packet.writeS(_leaderName);
 		
 		packet.writeD(_clan.getCrestId()); // crest id .. is used again
 		packet.writeD(_clan.getLevel());
 		packet.writeD(_clan.getCastleId());
+		packet.writeD(0x00);
 		packet.writeD(_clan.getHideoutId());
 		packet.writeD(_clan.getFortId());
-		packet.writeD(0x00);
 		packet.writeD(_clan.getRank());
 		packet.writeD(_clan.getReputationScore());
 		packet.writeD(0x00); // 0
@@ -86,11 +88,11 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(_clan.getAllyCrestId());
 		packet.writeD(_clan.isAtWar() ? 1 : 0); // new c3
 		packet.writeD(0x00); // Territory castle ID
-		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeType));
+		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeId));
 		
 		for (L2ClanMember m : _members)
 		{
-			if (m.getPledgeType() != _pledgeType)
+			if (m.getPledgeType() != _pledgeId)
 			{
 				continue;
 			}
@@ -110,7 +112,6 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			}
 			packet.writeD(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
 			packet.writeD(m.getSponsor() != 0 ? 1 : 0);
-			packet.writeC(m.getOnlineStatus());
 		}
 		return true;
 	}

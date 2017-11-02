@@ -77,7 +77,7 @@ public final class RequestPledgeSetMemberPowerGrade implements IClientIncomingPa
 		if (member.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
 		{
 			// also checked from client side
-			activeChar.sendMessage("You cannot change academy member grade");
+			activeChar.sendPacket(SystemMessageId.THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER);
 			return;
 		}
 		

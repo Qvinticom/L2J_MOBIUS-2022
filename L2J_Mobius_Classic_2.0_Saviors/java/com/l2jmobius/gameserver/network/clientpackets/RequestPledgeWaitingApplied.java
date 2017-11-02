@@ -39,7 +39,7 @@ public class RequestPledgeWaitingApplied implements IClientIncomingPacket
 	public void run(L2GameClient client)
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || (activeChar.getClan() == null))
+		if ((activeChar == null) || (activeChar.getClan() != null))
 		{
 			return;
 		}

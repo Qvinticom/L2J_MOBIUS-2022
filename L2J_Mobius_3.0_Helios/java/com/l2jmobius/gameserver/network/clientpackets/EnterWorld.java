@@ -89,7 +89,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 import com.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
@@ -376,7 +375,6 @@ public class EnterWorld implements IClientIncomingPacket
 			PledgeShowMemberListAll.sendAllTo(activeChar);
 			clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 			activeChar.sendPacket(new PledgeSkillList(clan));
-			activeChar.sendPacket(new PledgeShowInfoUpdate(clan));
 			final ClanHall ch = ClanHallData.getInstance().getClanHallByClan(clan);
 			if ((ch != null) && (ch.getCostFailDay() > 0))
 			{

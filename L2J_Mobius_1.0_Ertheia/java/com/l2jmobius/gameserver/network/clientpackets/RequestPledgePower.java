@@ -53,6 +53,7 @@ public final class RequestPledgePower implements IClientIncomingPacket
 			return;
 		}
 		
+		player.sendPacket(new ManagePledgePower(client.getActiveChar().getClan(), _action, _rank));
 		if (_action == 2)
 		{
 			if (player.isClanLeader())
@@ -70,10 +71,6 @@ public final class RequestPledgePower implements IClientIncomingPacket
 				}
 				player.getClan().setRankPrivs(_rank, _privs);
 			}
-		}
-		else
-		{
-			player.sendPacket(new ManagePledgePower(client.getActiveChar().getClan(), _action, _rank));
 		}
 	}
 }

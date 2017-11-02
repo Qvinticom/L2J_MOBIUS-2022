@@ -36,16 +36,12 @@ public class ManagePledgePower implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		// TODO: Verify this!
-		if (_action == 1)
-		{
-			OutgoingPackets.MANAGE_PLEDGE_POWER.writeId(packet);
-			
-			packet.writeD(_rank);
-			packet.writeD(_action);
-			packet.writeD(_clan.getRankPrivs(_rank).getBitmask());
-			return true;
-		}
-		return false;
+		OutgoingPackets.MANAGE_PLEDGE_POWER.writeId(packet);
+		
+		packet.writeD(_rank);
+		packet.writeD(_action);
+		packet.writeD(_clan.getRankPrivs(_rank).getBitmask());
+		
+		return true;
 	}
 }

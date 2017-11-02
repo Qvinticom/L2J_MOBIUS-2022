@@ -57,6 +57,6 @@ public class RequestClanAskJoinByName implements IClientIncomingPacket
 			return;
 		}
 		
-		invitedPlayer.sendPacket(new AskJoinPledge(activeChar, activeChar.getClan().getSubPledge(_pledgeType) != null ? activeChar.getClan().getSubPledge(_pledgeType).getName() : null, _pledgeType, activeChar.getClan().getName()));
+		invitedPlayer.sendPacket(new AskJoinPledge(activeChar, _pledgeType, activeChar.getClan().getName()));
 	}
 }

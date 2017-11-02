@@ -82,14 +82,14 @@ public class ExPledgeBonusOpen implements IClientOutgoingPacket
 		// Members online bonus
 		packet.writeD(highestMembersOnlineBonus.getRequiredAmount());
 		packet.writeD(clan.getMaxOnlineMembers());
-		packet.writeD(highestMembersOnlineBonus.getSkillReward().getSkillId());
+		packet.writeD(membersOnlineBonus != null ? highestMembersOnlineBonus.getSkillReward().getSkillId() : 0x00);
 		packet.writeC(membersOnlineBonus != null ? membersOnlineBonus.getLevel() : 0x00);
 		packet.writeC(membersOnlineBonus != null ? 0x01 : 0x00);
 		
 		// Hunting bonus
 		packet.writeD(highestHuntingBonus.getRequiredAmount());
 		packet.writeD(clan.getHuntingPoints());
-		packet.writeD(highestHuntingBonus.getItemReward().getId());
+		packet.writeD(huntingBonus != null ? highestHuntingBonus.getItemReward().getId() : 0x00);
 		packet.writeC(huntingBonus != null ? huntingBonus.getLevel() : 0x00);
 		packet.writeC(huntingBonus != null ? 0x01 : 0x00);
 		return true;
