@@ -42,7 +42,7 @@ public final class Q10365_ForTheSearchdogKing extends Quest
 	// Items
 	private static final int KINGS_TONIC = 47607;
 	// Misc
-	private static final int MIN_LEVEL = 16;
+	private static final int MIN_LEVEL = 15;
 	private static final int MAX_LEVEL = 25;
 	
 	public Q10365_ForTheSearchdogKing()
