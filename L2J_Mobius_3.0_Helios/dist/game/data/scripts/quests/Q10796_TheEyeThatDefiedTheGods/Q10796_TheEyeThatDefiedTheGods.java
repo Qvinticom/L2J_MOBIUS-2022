@@ -95,7 +95,7 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 				}
 				else if (qs.isCond(1))
 				{
-					htmltext = "31616-05.htm";
+					htmltext = "31616-05.html";
 				}
 				if (qs.isCompleted())
 				{
