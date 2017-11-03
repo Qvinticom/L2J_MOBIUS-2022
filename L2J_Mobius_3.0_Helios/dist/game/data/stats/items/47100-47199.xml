@@ -203,25 +203,47 @@
 		<!-- When used in the Giant Emperor Helios Warzone, the damage received from the Enuma Elish - Red Lightning Spear' skill used by Helios is reduced for 5 seconds. -->
 		<set name="icon" val="icon.giant_red_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="25" />
 		<set name="price" val="2000000" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="210109" />
+		</cond>
+		<skills>
+			<skill id="16627" level="1" /> <!-- Giants Deterioration Protection Potion -->
+		</skills>
 	</item>
 	<item id="47128" name="Giants Lightning Protection Potion" type="EtcItem">
 		<!-- When used in the Giant Emperor Helios Warzone, the damage received from the Enuma Elish - Blue Lightning Spear' skill used by Helios is reduced for 5 seconds. -->
 		<set name="icon" val="icon.giant_blue_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="25" />
 		<set name="price" val="2000000" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="210109" />
+		</cond>
+		<skills>
+			<skill id="16628" level="1" /> <!-- Giants Lightning Protection Potion -->
+		</skills>
 	</item>
 	<item id="47129" name="Particle Dissolver" type="EtcItem">
 		<!-- In the Giant Emperor Helios Warzone, when Helios' Shield of Light - Pranarach' skill is engaged, use against Helios to create the debuff Dissolving Shield of Light Particles'. When the status of the debuff reaches Stage 50, the skill Shield of Light - Pranarach' is disarmed. -->
 		<set name="icon" val="icon.giant_item_equip" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="25" />
 		<set name="price" val="2000000" />
 		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="30000" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="210109" />
+		</cond>
+		<skills>
+			<skill id="16626" level="1" /> <!-- Giants Particle Dissolver -->
+		</skills>
 	</item>
 	<item id="47130" name="Faction Points" type="EtcItem">
 		<!-- Faction Points are obtained as a reward. -->
