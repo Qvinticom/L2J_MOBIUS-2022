@@ -35,6 +35,7 @@ import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
+import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -217,6 +218,9 @@ public class ClanTable
 		}
 		
 		clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_HAS_DISPERSED));
+		
+		ClanEntryManager.getInstance().removeFromClanList(clan.getId());
+		
 		final int castleId = clan.getCastleId();
 		if (castleId == 0)
 		{

@@ -356,7 +356,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	EX_REQUEST_VIP_INFO(0x10E, null, ConnectionState.IN_GAME),
 	REQUEST_CAPTCHA_ANSWER(0x10F, null, ConnectionState.IN_GAME),
 	REQUEST_REFRESH_CAPTCHA_IMAGE(0x110, null, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_SIGN_IN_FOR_OPEN_JOINING_METHOD(0x111, null, ConnectionState.IN_GAME),
+	REQUEST_PLEDGE_SIGN_IN_FOR_OPEN_JOINING_METHOD(0x111, RequestPledgeSignInForOpenJoiningMethod::new, ConnectionState.IN_GAME),
 	EX_REQUEST_MATCH_ARENA(0x112, null, ConnectionState.IN_GAME),
 	EX_CONFIRM_MATCH_ARENA(0x113, null, ConnectionState.IN_GAME),
 	EX_CANCEL_MATCH_ARENA(0x114, null, ConnectionState.IN_GAME),
