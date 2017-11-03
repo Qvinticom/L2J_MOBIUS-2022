@@ -17,7 +17,6 @@
 package quests.Q00775_RetrievingTheChaosFragment;
 
 import com.l2jmobius.gameserver.enums.Faction;
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -108,19 +107,20 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0)
+					final int factionLevel = player.getFactionLevel(Faction.BLACKBIRD_CLAN);
+					if (factionLevel == 0)
 					{
 						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 100);
 						giveItems(player, BASIC_SUPPLY_BOX, 1);
 						addExpAndSp(player, 4522369500L, 10853640);
 					}
-					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) <= 1)
+					else if (factionLevel == 1)
 					{
 						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 200);
 						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
 						addExpAndSp(player, 9044739000L, 21707280);
 					}
-					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2)
+					else if (factionLevel > 1)
 					{
 						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 300);
 						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
@@ -191,34 +191,32 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if (qs != null)
+		if ((qs != null) && qs.isCond(1))
 		{
-			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0) && (getQuestItemsCount(killer, CHAOS_FRAGMENT) < 250))
+			final int factionLevel = killer.getFactionLevel(Faction.BLACKBIRD_CLAN);
+			if (factionLevel == 0)
 			{
-				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) == 250)
+				giveItems(killer, CHAOS_FRAGMENT, 1, true);
+				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) >= 300)
 				{
 					qs.setCond(2, true);
 				}
-				giveItems(killer, CHAOS_FRAGMENT, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 1) && (getQuestItemsCount(killer, CHAOS_FRAGMENT) < 500))
+			else if (factionLevel == 1)
 			{
-				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) == 500)
+				giveItems(killer, CHAOS_FRAGMENT, 1, true);
+				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) >= 600)
 				{
 					qs.setCond(2, true);
 				}
-				giveItems(killer, CHAOS_FRAGMENT, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2) && (getQuestItemsCount(killer, CHAOS_FRAGMENT) < 750))
+			else if (factionLevel > 1)
 			{
-				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) == 750)
+				giveItems(killer, CHAOS_FRAGMENT, 1, true);
+				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) >= 900)
 				{
 					qs.setCond(2, true);
 				}
-				giveItems(killer, CHAOS_FRAGMENT, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

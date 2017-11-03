@@ -17,7 +17,6 @@
 package quests.Q00823_DisappearedRaceNewFairy;
 
 import com.l2jmobius.gameserver.enums.Faction;
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -95,19 +94,20 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) == 0)
+					final int factionLevel = player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS);
+					if (factionLevel == 0)
 					{
 						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 100);
 						giveItems(player, BASIC_SUPPLY_BOX, 1);
 						addExpAndSp(player, 5536944000L, 13288590);
 					}
-					else if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) == 1)
+					else if (factionLevel == 1)
 					{
 						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 200);
 						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
 						addExpAndSp(player, 11073888000L, 26577180);
 					}
-					else if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 2)
+					else if (factionLevel > 1)
 					{
 						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 300);
 						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
@@ -168,34 +168,32 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if (qs != null)
+		if ((qs != null) && qs.isCond(1))
 		{
-			if ((killer.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) == 0) && (getQuestItemsCount(killer, NYMPH_STAMEN) < 250))
+			final int factionLevel = killer.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS);
+			if (factionLevel == 0)
 			{
-				if (getQuestItemsCount(killer, NYMPH_STAMEN) == 300)
+				giveItems(killer, NYMPH_STAMEN, 1, true);
+				if (getQuestItemsCount(killer, NYMPH_STAMEN) >= 300)
 				{
 					qs.setCond(2, true);
 				}
-				giveItems(killer, NYMPH_STAMEN, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if ((killer.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) == 1) && (getQuestItemsCount(killer, NYMPH_STAMEN) < 500))
+			else if (factionLevel == 1)
 			{
-				if (getQuestItemsCount(killer, NYMPH_STAMEN) == 600)
+				giveItems(killer, NYMPH_STAMEN, 1, true);
+				if (getQuestItemsCount(killer, NYMPH_STAMEN) >= 600)
 				{
 					qs.setCond(2, true);
 				}
-				giveItems(killer, NYMPH_STAMEN, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if ((killer.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 2) && (getQuestItemsCount(killer, NYMPH_STAMEN) < 750))
+			else if (factionLevel > 1)
 			{
-				if (getQuestItemsCount(killer, NYMPH_STAMEN) == 900)
+				giveItems(killer, NYMPH_STAMEN, 1, true);
+				if (getQuestItemsCount(killer, NYMPH_STAMEN) >= 900)
 				{
 					qs.setCond(2, true);
 				}
-				giveItems(killer, NYMPH_STAMEN, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
