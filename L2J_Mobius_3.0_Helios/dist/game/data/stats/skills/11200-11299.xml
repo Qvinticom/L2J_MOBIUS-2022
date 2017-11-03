@@ -1599,7 +1599,7 @@
 		<affectRange>1000</affectRange>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
+		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="Heal">
@@ -3570,7 +3570,7 @@
 		</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<isMagic>1</isMagic>
-		<targetType>SUMMON</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
