@@ -27,6 +27,7 @@ import com.l2jmobius.commons.network.IIncomingPackets;
 import com.l2jmobius.gameserver.network.clientpackets.*;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestAnswerFriendInvite;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDel;
+import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendInvite;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendList;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestSendFriendMsg;
 
