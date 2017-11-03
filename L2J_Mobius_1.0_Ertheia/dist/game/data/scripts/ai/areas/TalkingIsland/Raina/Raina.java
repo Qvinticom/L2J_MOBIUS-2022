@@ -84,7 +84,6 @@ public final class Raina extends AbstractNpcAI
 	private static final Set<PlayerClass> subclasseSet4 = EnumSet.of(PlayerClass.Warlock, PlayerClass.ElementalSummoner, PlayerClass.PhantomSummoner);
 	private static final Set<PlayerClass> subclasseSet5 = EnumSet.of(PlayerClass.Sorceror, PlayerClass.Spellsinger, PlayerClass.Spellhowler);
 	private static final EnumMap<PlayerClass, Set<PlayerClass>> subclassSetMap = new EnumMap<>(PlayerClass.class);
-	
 	static
 	{
 		final Set<PlayerClass> subclasses = PlayerClass.getSet(null, THIRD);
@@ -109,20 +108,18 @@ public final class Raina extends AbstractNpcAI
 	}
 	
 	private static final Map<CategoryType, Integer> classCloak = new HashMap<>();
-	
 	{
 		classCloak.put(CategoryType.SIGEL_GROUP, 30310); // Abelius Cloak
 		classCloak.put(CategoryType.TYRR_GROUP, 30311); // Sapyros Cloak Grade
 		classCloak.put(CategoryType.OTHELL_GROUP, 30312); // Ashagen Cloak Grade
 		classCloak.put(CategoryType.YUL_GROUP, 30313); // Cranigg Cloak Grade
 		classCloak.put(CategoryType.FEOH_GROUP, 30314); // Soltkreig Cloak Grade
-		classCloak.put(CategoryType.ISS_GROUP, 30315); // Naviarope Cloak Grade
-		classCloak.put(CategoryType.WYNN_GROUP, 30316); // Leister Cloak Grade
+		classCloak.put(CategoryType.WYNN_GROUP, 30315); // Naviarope Cloak Grade
+		classCloak.put(CategoryType.ISS_GROUP, 30316); // Leister Cloak Grade
 		classCloak.put(CategoryType.AEORE_GROUP, 30317); // Laksis Cloak Grade
 	}
 	
 	private static final List<PlayerClass> dualClassList = new ArrayList<>();
-	
 	{
 		dualClassList.addAll(Arrays.asList(PlayerClass.sigelPhoenixKnight, PlayerClass.sigelHellKnight, PlayerClass.sigelEvasTemplar, PlayerClass.sigelShilenTemplar));
 		dualClassList.addAll(Arrays.asList(PlayerClass.tyrrDuelist, PlayerClass.tyrrDreadnought, PlayerClass.tyrrTitan, PlayerClass.tyrrGrandKhavatari, PlayerClass.tyrrDoombringer));
@@ -270,6 +267,10 @@ public final class Raina extends AbstractNpcAI
 				{
 					htmltext = "noErtheia.html";
 				}
+				else if (!player.isInventoryUnder80(true) || (player.getWeightPenalty() >= 2))
+				{
+					htmltext = "inventoryLimit.html";
+				}
 				else if (player.getSubClasses().isEmpty())
 				{
 					htmltext = "noSubChange.html";
@@ -287,7 +288,7 @@ public final class Raina extends AbstractNpcAI
 			case "ertheiaDualClass":
 			{
 				// TODO: Maybe html is different when you have 85lvl but you haven't completed quest
-				if (player.hasDualClass() || !haveDoneQuest(player, true))
+				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";
 				}
@@ -306,6 +307,12 @@ public final class Raina extends AbstractNpcAI
 			case "addDualClass_WYNN_GROUP":
 			case "addDualClass_AEORE_GROUP":
 			{
+				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()) || player.hasDualClass() || !haveDoneQuest(player, true))
+				{
+					htmltext = "addDualClassErtheiaFailed.html";
+					break;
+				}
+				
 				final CategoryType cType = CategoryType.valueOf(event.replace("addDualClass_", ""));
 				
 				if (cType == null)
@@ -337,9 +344,13 @@ public final class Raina extends AbstractNpcAI
 				{
 					htmltext = "noSummon.html";
 				}
-				else if (!player.hasDualClass() || !player.isDualClassActive() || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()))
+				else if (!player.hasDualClass() || (player.getLevel() < 85) || !player.isDualClassActive() || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()))
 				{
 					htmltext = "reawakenNoDual.html";
+				}
+				else if (!player.isInventoryUnder80(true) || (player.getWeightPenalty() >= 2))
+				{
+					htmltext = "inventoryLimit.html";
 				}
 				else
 				{
@@ -623,11 +634,11 @@ public final class Raina extends AbstractNpcAI
 		{
 			itemId = SOLTKREIG_POWER;
 		}
-		else if (player.isInCategory(CategoryType.ISS_GROUP))
+		else if (player.isInCategory(CategoryType.WYNN_GROUP))
 		{
 			itemId = NAVIAROPE_POWER;
 		}
-		else if (player.isInCategory(CategoryType.WYNN_GROUP))
+		else if (player.isInCategory(CategoryType.ISS_GROUP))
 		{
 			itemId = LEISTER_POWER;
 		}
