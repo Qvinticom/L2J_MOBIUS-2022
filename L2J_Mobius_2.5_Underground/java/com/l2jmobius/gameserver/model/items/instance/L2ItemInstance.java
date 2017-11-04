@@ -331,38 +331,43 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (getItem().isEquipable() || (getItem().getId() == ADENA_ID))))
 			{
-				if ((creator != null) && (reference != null))
+				if (getEnchantLevel() > 0)
 				{
-					if (getEnchantLevel() > 0)
-					{
-						_logItems.info("SETOWNER:" + process + ", item " + getObjectId() + ":+" + getEnchantLevel() + " " + getItem().getName() + "(" + _count + "), " + creator + ", " + reference);
-					}
-					else
-					{
-						_logItems.info("SETOWNER:" + process + ", item " + getObjectId() + ":" + getItem().getName() + "(" + _count + "), " + creator + ", " + reference);
-					}
+					_logItems.info("SETOWNER:" + String.valueOf(process) // in case of null
+						+ ", item " + getObjectId() //
+						+ ":+" + getEnchantLevel() //
+						+ " " + getItem().getName() //
+						+ "(" + _count + "), " //
+						+ String.valueOf(creator) + ", " // in case of null
+						+ String.valueOf(reference)); // in case of null
+				}
+				else
+				{
+					_logItems.info("SETOWNER:" + String.valueOf(process) // in case of null
+						+ ", item " + getObjectId() //
+						+ ":" + getItem().getName() //
+						+ "(" + _count + "), " //
+						+ String.valueOf(creator) + ", " // in case of null
+						+ String.valueOf(reference)); // in case of null
 				}
 			}
 		}
 		
-		if (creator != null)
+		if ((creator != null) && creator.isGM())
 		{
-			if (creator.isGM())
+			String referenceName = "no-reference";
+			if (reference instanceof L2Object)
 			{
-				String referenceName = "no-reference";
-				if (reference instanceof L2Object)
-				{
-					referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
-				}
-				else if (reference instanceof String)
-				{
-					referenceName = (String) reference;
-				}
-				final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
-				if (Config.GMAUDIT)
-				{
-					GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " name: " + getName() + ")", targetName, "L2Object referencing this action is: " + referenceName);
-				}
+				referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+			}
+			else if (reference instanceof String)
+			{
+				referenceName = (String) reference;
+			}
+			final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
+			if (Config.GMAUDIT)
+			{
+				GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " name: " + getName() + ")", targetName, "L2Object referencing this action is: " + referenceName);
 			}
 		}
 	}
@@ -500,38 +505,45 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == ADENA_ID))))
 			{
-				if ((creator != null) && (reference != null))
+				if (getEnchantLevel() > 0)
 				{
-					if (getEnchantLevel() > 0)
-					{
-						_logItems.info("CHANGE:" + process + ", item " + getObjectId() + ":+" + getEnchantLevel() + " " + getItem().getName() + "(" + _count + "), PrevCount(" + old + "), " + creator + ", " + reference);
-					}
-					else
-					{
-						_logItems.info("CHANGE:" + process + ", item " + getObjectId() + ":" + getItem().getName() + "(" + _count + "), PrevCount(" + old + "), " + creator + ", " + reference);
-					}
+					_logItems.info("CHANGE:" + String.valueOf(process) // in case of null
+						+ ", item " + getObjectId() //
+						+ ":+" + getEnchantLevel() //
+						+ " " + getItem().getName() //
+						+ "(" + _count + "), PrevCount(" //
+						+ String.valueOf(old) + "), " // in case of null
+						+ String.valueOf(creator) + ", " // in case of null
+						+ String.valueOf(reference)); // in case of null
+				}
+				else
+				{
+					_logItems.info("CHANGE:" + String.valueOf(process) // in case of null
+						+ ", item " + getObjectId() //
+						+ ":" + getItem().getName() //
+						+ "(" + _count + "), PrevCount(" //
+						+ String.valueOf(old) + "), " // in case of null
+						+ String.valueOf(creator) + ", " // in case of null
+						+ String.valueOf(reference)); // in case of null
 				}
 			}
 		}
 		
-		if (creator != null)
+		if ((creator != null) && creator.isGM())
 		{
-			if (creator.isGM())
+			String referenceName = "no-reference";
+			if (reference instanceof L2Object)
 			{
-				String referenceName = "no-reference";
-				if (reference instanceof L2Object)
-				{
-					referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
-				}
-				else if (reference instanceof String)
-				{
-					referenceName = (String) reference;
-				}
-				final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
-				if (Config.GMAUDIT)
-				{
-					GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "L2Object referencing this action is: " + referenceName);
-				}
+				referenceName = (((L2Object) reference).getName() != null ? ((L2Object) reference).getName() : "no-name");
+			}
+			else if (reference instanceof String)
+			{
+				referenceName = (String) reference;
+			}
+			final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
+			if (Config.GMAUDIT)
+			{
+				GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "L2Object referencing this action is: " + referenceName);
 			}
 		}
 	}
