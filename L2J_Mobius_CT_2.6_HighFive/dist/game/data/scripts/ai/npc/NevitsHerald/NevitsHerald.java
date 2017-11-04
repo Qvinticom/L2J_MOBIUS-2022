@@ -34,7 +34,7 @@ import ai.AbstractNpcAI;
 
 /**
  * Nevit's Herald AI.
- * @author Sacrifice
+ * @author Sacrifice, Mobius
  */
 public final class NevitsHerald extends AbstractNpcAI
 {
@@ -62,7 +62,6 @@ public final class NevitsHerald extends AbstractNpcAI
 		NpcStringId.SHOUT_TO_CELEBRATE_THE_VICTORY_OF_THE_HEROES,
 		NpcStringId.PRAISE_THE_ACHIEVEMENT_OF_THE_HEROES_AND_RECEIVE_NEVIT_S_BLESSING
 	};
-	private static boolean isActive = false;
 	// Skill
 	private static final SkillHolder FALL_OF_THE_DRAGON = new SkillHolder(23312, 1);
 	
@@ -84,8 +83,6 @@ public final class NevitsHerald extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		
 		if (npc.getId() == NEVITS_HERALD)
 		{
 			if (event.equalsIgnoreCase("buff"))
@@ -96,25 +93,27 @@ public final class NevitsHerald extends AbstractNpcAI
 				}
 				npc.setTarget(player);
 				npc.doCast(FALL_OF_THE_DRAGON.getSkill());
-				return null;
 			}
 		}
 		else if (event.equalsIgnoreCase("text_spam"))
 		{
-			cancelQuestTimer("text_spam", npc, player);
 			npc.broadcastSay(ChatType.SHOUT, SPAM[Rnd.get(0, SPAM.length - 1)]);
-			startQuestTimer("text_spam", 60000, npc, player);
-			return null;
+			startQuestTimer("text_spam", 60000, npc, null);
 		}
 		else if (event.equalsIgnoreCase("despawn"))
 		{
-			despawnHeralds();
+			for (L2Npc spawn : SPAWNS)
+			{
+				cancelQuestTimer("text_spam", spawn, null);
+				spawn.deleteMe();
+			}
+			SPAWNS.clear();
 		}
-		return htmltext;
+		return null;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		ExShowScreenMessage message = null;
 		
@@ -136,36 +135,18 @@ public final class NevitsHerald extends AbstractNpcAI
 			onlinePlayer.sendPacket(message);
 		}
 		
-		if (!isActive)
+		if (SPAWNS.isEmpty())
 		{
-			isActive = true;
-			
-			SPAWNS.clear();
-			
 			for (Location loc : NEVITS_HERALD_LOC)
 			{
 				L2Npc herald = addSpawn(NEVITS_HERALD, loc, false, 0);
-				if (herald != null)
-				{
-					SPAWNS.add(herald);
-				}
+				startQuestTimer("text_spam", 3000, herald, null);
+				SPAWNS.add(herald);
 			}
-			startQuestTimer("despawn", 14400000, npc, killer);
-			startQuestTimer("text_spam", 3000, npc, killer);
+			startQuestTimer("despawn", 14400000, null, null);
 		}
-		return null;
-	}
-	
-	private void despawnHeralds()
-	{
-		if (!SPAWNS.isEmpty())
-		{
-			for (L2Npc npc : SPAWNS)
-			{
-				npc.deleteMe();
-			}
-		}
-		SPAWNS.clear();
+		
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)
