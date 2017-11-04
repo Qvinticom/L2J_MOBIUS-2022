@@ -136,6 +136,7 @@ public class AdminEffects implements IAdminCommandHandler
 			else
 			{
 				activeChar.setInvisible(false);
+				activeChar.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 				activeChar.broadcastUserInfo();
 				activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
 				activeChar.sendMessage("You are now visible.");
@@ -156,6 +157,7 @@ public class AdminEffects implements IAdminCommandHandler
 		else if (command.startsWith("admin_vis"))
 		{
 			activeChar.setInvisible(false);
+			activeChar.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 			activeChar.broadcastUserInfo();
 			activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
 			activeChar.sendMessage("You are now visible.");
