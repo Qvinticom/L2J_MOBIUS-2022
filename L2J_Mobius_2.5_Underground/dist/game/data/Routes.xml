@@ -1396,6 +1396,16 @@
 		<point X="-116531" Y="257318" Z="-1512" delay="0" run="false" />
 		<point X="-116741" Y="255686" Z="-1424" delay="0" run="false" />
 	</route>
+	<route name="si_town_01" repeat="true" repeatStyle="back">
+		<target id="33234" spawnX="-113733" spawnY="249870" spawnZ="-1693" />
+		<point X="-113440" Y="249824" Z="-1816" delay="0" run="false" />
+		<point X="-113979" Y="250268" Z="-1816" delay="0" run="false" />
+		<point X="-114541" Y="252889" Z="-1536" delay="0" run="false" />
+		<point X="-114682" Y="254170" Z="-1528" delay="0" run="false" />
+		<point X="-114775" Y="255221" Z="-1512" delay="0" run="false" />
+		<point X="-113605" Y="256342" Z="-1496" delay="0" run="false" />
+		<point X="-112448" Y="256969" Z="-1480" delay="0" run="false" />
+	</route>
 	<route name="si_town_03" repeat="true" repeatStyle="back">
 		<target id="33208" spawnX="-114344" spawnY="255204" spawnZ="-1520" />
 		<point X="-114166" Y="255085" Z="-1528" delay="0" run="false" />
@@ -1415,6 +1425,38 @@
 		<point X="-114683" Y="254738" Z="-1528" delay="0" run="false" />
 		<point X="-114550" Y="253273" Z="-1536" delay="0" run="false" />
 		<point X="-114343" Y="252676" Z="-1544" delay="0" run="false" />
+	</route>
+	<route name="si_monkey_road02" repeat="true" repeatStyle="back">
+		<target id="33218" spawnX="-113404" spawnY="249823" spawnZ="-1816" />
+		<point X="-114280" Y="252371" Z="-1560" delay="0" run="false" />
+		<point X="-114395" Y="250846" Z="-1760" delay="0" run="false" />
+		<point X="-113147" Y="250428" Z="-1920" delay="0" run="false" />
+		<point X="-112726" Y="250467" Z="-1984" delay="0" run="false" />
+		<point X="-112411" Y="250372" Z="-2032" delay="0" run="false" />
+		<point X="-112015" Y="249579" Z="-2280" delay="0" run="false" />
+		<point X="-110878" Y="249113" Z="-2512" delay="0" run="false" />
+		<point X="-110040" Y="248279" Z="-2704" delay="0" run="false" />
+		<point X="-109804" Y="247916" Z="-2776" delay="0" run="false" />
+		<point X="-109707" Y="246949" Z="-2960" delay="0" run="false" />
+		<point X="-109043" Y="246986" Z="-3112" delay="0" run="false" />
+		<point X="-107786" Y="248825" Z="-3216" delay="0" run="false" />
+	</route>
+	<route name="si_lib_02" repeat="true" repeatStyle="back">
+		<target id="33111" spawnX="-114945" spawnY="243991" spawnZ="-7968" />
+		<point X="-115087" Y="244056" Z="-7968" delay="0" run="false" />
+		<point X="-115376" Y="244716" Z="-7968" delay="0" run="false" />
+		<point X="-115247" Y="245152" Z="-7968" delay="0" run="false" />
+		<point X="-115087" Y="245291" Z="-7968" delay="0" run="false" />
+		<point X="-114628" Y="245384" Z="-7968" delay="0" run="false" />
+		<point X="-114285" Y="245265" Z="-7968" delay="0" run="false" />
+		<point X="-114178" Y="245119" Z="-7968" delay="0" run="false" />
+		<point X="-114112" Y="244728" Z="-7968" delay="0" run="false" />
+		<point X="-114155" Y="244311" Z="-7968" delay="0" run="false" />
+		<point X="-114375" Y="244073" Z="-7968" delay="0" run="false" />
+		<point X="-114634" Y="244011" Z="-7968" delay="0" run="false" />
+		<point X="-115037" Y="244079" Z="-7968" delay="0" run="false" />
+		<point X="-115320" Y="244411" Z="-7968" delay="0" run="false" />
+		<point X="-115322" Y="245040" Z="-7968" delay="0" run="false" />
 	</route>
 	<!-- Windmill Hill walkers -->
 	<route name="windmill_decoline1" repeat="true" repeatStyle="back">

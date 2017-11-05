@@ -18,6 +18,8 @@ package ai;
 
 import java.util.logging.Logger;
 
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
@@ -26,6 +28,7 @@ import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Abstract NPC AI class for datapack based AIs.
@@ -100,5 +103,37 @@ public abstract class AbstractNpcAI extends Quest
 		{
 			addMinion((L2MonsterInstance) npc, is.getId());
 		}
+	}
+	
+	protected void followNpc(final L2Npc npc, int followedNpcId, int followingAngle, int minDistance, int maxDistance)
+	{
+		L2World.getInstance().forEachVisibleObject(npc, L2Npc.class, npcAround ->
+		{
+			if (npcAround.getId() != followedNpcId)
+			{
+				return;
+			}
+			
+			final double distance = npc.calculateDistance(npcAround, true, false);
+			if ((distance >= maxDistance) && npc.isScriptValue(0))
+			{
+				npc.setRunning();
+				npc.setScriptValue(1);
+			}
+			else if ((distance <= (minDistance * 1.5)) && npc.isScriptValue(1))
+			{
+				npc.setWalking();
+				npc.setScriptValue(0);
+			}
+			
+			final double course = Math.toRadians(followingAngle);
+			final double radian = Math.toRadians(Util.convertHeadingToDegree(npcAround.getHeading()));
+			final double nRadius = npc.getCollisionRadius() + npcAround.getCollisionRadius() + minDistance;
+			final int x = npcAround.getLocation().getX() + (int) (Math.cos(Math.PI + radian + course) * nRadius);
+			final int y = npcAround.getLocation().getY() + (int) (Math.sin(Math.PI + radian + course) * nRadius);
+			final int z = npcAround.getLocation().getZ();
+			
+			npc.getAI().moveTo(new Location(x, y, z));
+		});
 	}
 }
