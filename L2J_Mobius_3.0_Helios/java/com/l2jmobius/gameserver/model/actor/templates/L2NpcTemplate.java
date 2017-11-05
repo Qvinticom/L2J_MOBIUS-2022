@@ -671,7 +671,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		switch (dropItem.getDropType())
 		{
 			case DROP:
-			case LUCKY_DROP:
 			{
 				final L2Item item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
 				
@@ -766,6 +765,15 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 					
 					// finally
 					return new ItemHolder(dropItem.getItemId(), (long) (Rnd.get(dropItem.getMin(), dropItem.getMax()) * rateAmount));
+				}
+				break;
+			}
+			case LUCKY_DROP:
+			{
+				// try chance before luck
+				if (((Rnd.nextDouble() * 100) < dropItem.getChance()) && killer.getActingPlayer().tryLuck())
+				{
+					return new ItemHolder(dropItem.getItemId(), Rnd.get(dropItem.getMin(), dropItem.getMax()));
 				}
 				break;
 			}

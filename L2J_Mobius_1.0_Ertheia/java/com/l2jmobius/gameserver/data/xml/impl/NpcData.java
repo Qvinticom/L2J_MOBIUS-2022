@@ -446,8 +446,7 @@ public class NpcData implements IGameXmlReader
 												final NamedNodeMap drop_attrs = drop_node.getAttributes();
 												if ("item".equals(drop_node.getNodeName().toLowerCase()))
 												{
-													final double chance = parseDouble(drop_attrs, "chance");
-													final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY_DROP ? chance / 100 : chance);
+													final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), parseDouble(drop_attrs, "chance"));
 													if (ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null)
 													{
 														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
@@ -630,7 +629,7 @@ public class NpcData implements IGameXmlReader
 								switch (dropHolder.getDropType())
 								{
 									case DROP:
-									case LUCKY_DROP: // TODO: Luck is added to death drops.
+									case LUCKY_DROP: // Lucky drops are added to normal drops and calculated later
 									{
 										template.addDrop(dropHolder);
 										break;
