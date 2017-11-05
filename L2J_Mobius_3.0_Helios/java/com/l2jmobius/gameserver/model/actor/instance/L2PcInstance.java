@@ -14017,4 +14017,15 @@ public final class L2PcInstance extends L2Playable
 		addStatusUpdateValue(StatusUpdateType.MAX_CP);
 		addStatusUpdateValue(StatusUpdateType.CUR_CP);
 	}
+	
+	public boolean tryLuck()
+	{
+		if ((Rnd.nextDouble() < BaseStats.LUC.getValue(getLUC())) && !hasSkillReuse(CommonSkill.LUCKY_CLOVER.getSkill().getReuseHashCode()))
+		{
+			SkillCaster.triggerCast(this, this, CommonSkill.LUCKY_CLOVER.getSkill());
+			sendPacket(SystemMessageId.LADY_LUCK_SMILES_UPON_YOU);
+			return true;
+		}
+		return false;
+	}
 }

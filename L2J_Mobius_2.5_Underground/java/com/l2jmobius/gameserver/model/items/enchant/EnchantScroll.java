@@ -170,7 +170,7 @@ public final class EnchantScroll extends AbstractEnchantItem
 		final double finalChance = Math.min(chance + bonusRate + supportBonusRate, 100);
 		
 		final double random = 100 * Rnd.nextDouble();
-		final boolean success = (random < finalChance);
+		boolean success = (random < finalChance) || player.tryLuck();
 		
 		if (player.isDebug())
 		{

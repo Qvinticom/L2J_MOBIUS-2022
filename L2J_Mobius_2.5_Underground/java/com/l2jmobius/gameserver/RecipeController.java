@@ -407,9 +407,9 @@ public class RecipeController
 				// handle possible cheaters here
 				// (they click craft then try to get rid of items in order to get free craft)
 			}
-			else if (Rnd.get(100) < _recipeList.getSuccessRate())
+			else if ((Rnd.get(100) < _recipeList.getSuccessRate()) || _target.tryLuck())
 			{
-				rewardPlayer(); // and immediately puts created item in its place
+				rewardPlayer(_target); // and immediately puts created item in its place
 				updateMakeInfo(true);
 			}
 			else
@@ -657,7 +657,7 @@ public class RecipeController
 			_activeMakers.remove(_player.getObjectId());
 		}
 		
-		private void rewardPlayer()
+		private void rewardPlayer(L2PcInstance player)
 		{
 			final int rareProdId = _recipeList.getRareItemId();
 			int itemId = _recipeList.getItemId();
@@ -672,6 +672,11 @@ public class RecipeController
 					itemId = rareProdId;
 					itemCount = _recipeList.getRareCount();
 				}
+			}
+			
+			if (player.tryLuck())
+			{
+				itemCount *= 2;
 			}
 			
 			_target.getInventory().addItem("Manufacture", itemId, itemCount, _target, _player);
