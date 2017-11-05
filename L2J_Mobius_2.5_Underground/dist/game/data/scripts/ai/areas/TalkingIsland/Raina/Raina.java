@@ -288,7 +288,7 @@ public final class Raina extends AbstractNpcAI
 			case "ertheiaDualClass":
 			{
 				// TODO: Maybe html is different when you have 85lvl but you haven't completed quest
-				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()) || player.hasDualClass() || !haveDoneQuest(player, true))
+				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.AWAKEN_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";
 				}
@@ -307,7 +307,7 @@ public final class Raina extends AbstractNpcAI
 			case "addDualClass_WYNN_GROUP":
 			case "addDualClass_AEORE_GROUP":
 			{
-				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()) || player.hasDualClass() || !haveDoneQuest(player, true))
+				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.AWAKEN_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";
 					break;
