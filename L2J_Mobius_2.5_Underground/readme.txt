@@ -33,6 +33,7 @@ Goddess of Destruction:
 -Kimerian
 -Istina
 -Octavis
+-Spezion
 -Tauti
 -Teredor
 -Trasken
