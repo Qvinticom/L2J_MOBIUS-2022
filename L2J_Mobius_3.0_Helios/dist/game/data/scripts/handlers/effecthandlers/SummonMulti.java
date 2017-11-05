@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -91,6 +92,16 @@ public final class SummonMulti extends AbstractEffect
 		else
 		{
 			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(summon.getLevel() % ExperienceData.getInstance().getMaxLevel()));
+		}
+		
+		// Summons must have their master buffs upon spawn.
+		for (BuffInfo effect : player.getEffectList().getEffects())
+		{
+			final Skill sk = effect.getSkill();
+			if (!sk.isBad())
+			{
+				sk.applyEffects(player, summon, false, effect.getTime());
+			}
 		}
 		
 		summon.setCurrentHp(summon.getMaxHp());
