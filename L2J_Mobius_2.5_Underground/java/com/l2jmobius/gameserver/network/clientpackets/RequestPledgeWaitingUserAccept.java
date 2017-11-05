@@ -23,7 +23,11 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.JoinPledge;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
@@ -65,6 +69,12 @@ public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 				ui.addComponentType(UserInfoType.CLAN);
 				player.sendPacket(ui);
 				player.broadcastInfo();
+				
+				// update clan list
+				clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(player));
+				PledgeShowMemberListAll.sendAllTo(player);
+				clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
+				player.sendPacket(new PledgeSkillList(clan));
 				
 				ClanEntryManager.getInstance().removePlayerApplication(clan.getId(), _playerId);
 			}

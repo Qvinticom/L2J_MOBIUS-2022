@@ -18,10 +18,15 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
+import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.JoinPledge;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
@@ -49,13 +54,22 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 		}
 		
 		final PledgeRecruitInfo pledgeRecruitInfo = ClanEntryManager.getInstance().getClanById(_clanId);
-		if (pledgeRecruitInfo.getRecruitType() == 1)
+		if (pledgeRecruitInfo != null)
 		{
-			pledgeRecruitInfo.getClan().addClanMember(activeChar);
-			activeChar.sendPacket(new JoinPledge(_clanId));
-			activeChar.sendPacket(new UserInfo(activeChar));
-			activeChar.broadcastInfo();
-			return;
+			final L2Clan clan = pledgeRecruitInfo.getClan();
+			if (clan != null)
+			{
+				clan.addClanMember(activeChar);
+				activeChar.sendPacket(new JoinPledge(_clanId));
+				activeChar.sendPacket(new UserInfo(activeChar));
+				activeChar.broadcastInfo();
+				
+				// update clan list
+				clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(activeChar));
+				PledgeShowMemberListAll.sendAllTo(activeChar);
+				clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
+				activeChar.sendPacket(new PledgeSkillList(clan));
+			}
 		}
 	}
 }
