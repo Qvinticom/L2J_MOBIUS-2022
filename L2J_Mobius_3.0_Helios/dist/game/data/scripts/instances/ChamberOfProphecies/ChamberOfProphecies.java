@@ -146,12 +146,12 @@ public final class ChamberOfProphecies extends AbstractInstance
 				}
 				case "teleport":
 				{
-					world.getNpc(FERIN).deleteMe();
+					world.getNpc(FERIN).deleteMe(); // probably needs another npc id for initial room
 					world.spawnGroup("q10753_16_instance_halter_1_1");
 					world.spawnGroup("wof_room1");
 					player.teleToLocation(FIRST_ROOM_LOC);
 					cancelQuestTimers("CHECK_STATUS");
-					startQuestTimer("CHECK_STATUS", 7000, player.getInstanceWorld().getNpc(KAIN_VAN_HALTER), null);
+					startQuestTimer("CHECK_STATUS", 7000, world.getNpc(KAIN_VAN_HALTER), null);
 					break;
 				}
 				case "CHECK_STATUS":
@@ -162,11 +162,9 @@ public final class ChamberOfProphecies extends AbstractInstance
 						{
 							if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
 							{
-								final L2Npc ferin = world.getNpc(FERIN);
-								final L2Npc halter = world.getNpc(VAN_HALTER);
 								final L2PcInstance pl = world.getFirstPlayer();
-								startQuestTimer("SEY2", 14000, ferin, pl);
-								startQuestTimer("SEY_KAIN", 24000, halter, pl);
+								startQuestTimer("SEY2", 14000, world.getNpc(FERIN), pl);
+								startQuestTimer("SEY_KAIN", 24000, world.getNpc(VAN_HALTER), pl);
 								startQuestTimer("OPEN_DOOR1", 5000, npc, pl);
 							}
 							startQuestTimer("CHECK_STATUS", 7000, npc, null);
@@ -186,9 +184,8 @@ public final class ChamberOfProphecies extends AbstractInstance
 						{
 							if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
 							{
-								final L2Npc ferin = world.getNpc(FERIN);
 								final L2PcInstance pl = world.getFirstPlayer();
-								startQuestTimer("SEY3", 8000, ferin, pl);
+								startQuestTimer("SEY3", 8000, world.getNpc(FERIN), pl);
 								startQuestTimer("OPEN_DOOR2", 5000, npc, pl);
 							}
 							startQuestTimer("CHECK_STATUS", 7000, npc, null);
@@ -201,8 +198,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 								world.setStatus(4);
 								world.spawnGroup("wof_room3_2");
 								world.openCloseDoor(DOOR_3, false);
-								final L2Npc halter = world.getNpc(VAN_HALTER);
-								startQuestTimer("SEY_KAIN_1", 5000, halter, world.getFirstPlayer());
+								startQuestTimer("SEY_KAIN_1", 5000, world.getNpc(VAN_HALTER), world.getFirstPlayer());
 							}
 							startQuestTimer("CHECK_STATUS", 7000, npc, null);
 							break;
@@ -213,11 +209,9 @@ public final class ChamberOfProphecies extends AbstractInstance
 							{
 								world.setStatus(5);
 								world.spawnGroup("wof_room4");
-								final L2Npc ferin = world.getNpc(FERIN);
-								final L2Npc halter = world.getNpc(VAN_HALTER);
 								final L2PcInstance pl = world.getFirstPlayer();
-								startQuestTimer("SEY_KAIN_2", 3000, halter, pl);
-								startQuestTimer("SEY4", 7000, ferin, pl);
+								startQuestTimer("SEY_KAIN_2", 3000, world.getNpc(VAN_HALTER), pl);
+								startQuestTimer("SEY4", 7000, world.getNpc(FERIN), pl);
 							}
 							else
 							{
@@ -240,16 +234,13 @@ public final class ChamberOfProphecies extends AbstractInstance
 						npc.setTarget(player);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					}
-					else
+					else if (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 					{
-						if (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
+						L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, 3000, monster ->
 						{
-							L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, 3000, chars ->
-							{
-								addAttackDesire(npc, chars);
-								return;
-							});
-						}
+							addAttackDesire(npc, monster);
+							return;
+						});
 					}
 					break;
 				}
@@ -264,8 +255,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 				case "OPEN_DOOR2":
 				{
 					cancelQuestTimers("ATTACK1");
-					final L2Npc halter = world.getNpc(VAN_HALTER);
-					startQuestTimer("ATTACK2", 200, halter, player, true);
+					startQuestTimer("ATTACK2", 200, world.getNpc(VAN_HALTER), player, true);
 					world.setStatus(3);
 					world.spawnGroup("wof_room3");
 					world.openCloseDoor(DOOR_3, true);
