@@ -116,39 +116,141 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16723" toLevel="3" name="Powered Mimir Strike">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<mpConsume>13</mpConsume>
+		<castRange>150</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<effectPoint>-1000</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">		<!-- TODO -->
+				<power>100000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16724" toLevel="3" name="Powered Mimir Slasher">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<mpConsume>13</mpConsume>
+		<castRange>150</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<effectPoint>-1000</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;150;360</fanRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>150000</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16725" toLevel="3" name="Powered Mimir Plasma">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<mpConsume>34</mpConsume>
+		<castRange>900</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power>		<!-- TODO -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16726" toLevel="3" name="Powered Mimir Storm">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<affectLimit>20-25</affectLimit>
+		<castRange>900</castRange>
+		<effectRange>900</effectRange>
+		<affectRange>600</affectRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power>		<!-- TODO -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16727" toLevel="1" name="Helios Storm Fist">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<castRange>-1</castRange>
+		<hitTime>1500</hitTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">		<!-- TODO -->
+				<power>100000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16728" toLevel="1" name="Side Slasher">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>400</castRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;900;120</fanRange>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>150000</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16729" toLevel="1" name="Side Megabomber">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectLimit>20-25</affectLimit>
+		<mpConsume>1</mpConsume>
+		<castRange>400</castRange>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;900;160</fanRange>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<trait>KNOCKDOWN</trait>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>200</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16730" toLevel="1" name="Faction Level-up">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

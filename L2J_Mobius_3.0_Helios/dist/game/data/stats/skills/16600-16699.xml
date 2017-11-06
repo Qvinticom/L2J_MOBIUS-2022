@@ -161,13 +161,14 @@
 		<coolTime>500</coolTime>
 		<effectRange>100</effectRange>
 		<affectRange>200</affectRange>
-		<isDebuff>true</isDebuff>
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<effectPoint>-709</effectPoint>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<trait>SHOCK</trait>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">		<!-- TODO -->
 				<power>100000</power>
@@ -175,6 +176,9 @@
 			<effect name="KnockBack">
 				<speed>400</speed>
 				<distance>200</distance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
