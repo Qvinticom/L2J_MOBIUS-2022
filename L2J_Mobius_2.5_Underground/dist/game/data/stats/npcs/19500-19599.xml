@@ -1336,7 +1336,7 @@
 			<attack physical="1189.0459514498" magical="811.85773400546" critical="4" attackSpeed="253" range="40" />
 			<defence physical="36100" magical="26400.364174348" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" />
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>

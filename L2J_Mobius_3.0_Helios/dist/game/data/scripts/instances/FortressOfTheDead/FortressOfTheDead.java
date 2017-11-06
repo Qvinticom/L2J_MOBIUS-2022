@@ -162,7 +162,7 @@ public final class FortressOfTheDead extends AbstractInstance
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = player.getQuestState(Q10752_WindsOfFateAPromise.class.getSimpleName());
-		if (qs.isCond(8))
+		if ((qs != null) && qs.isCond(8))
 		{
 			return "33979.html";
 		}

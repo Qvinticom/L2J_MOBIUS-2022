@@ -10,10 +10,6 @@
 			<location x="-78696" y="251000" z="-2998" />
 		</exit>
 	</locations>
-	<parameters>
-		<param name="vanhalter" value="33999" />
-		<param name="ferin" value="34001" />
-	</parameters>
 	<conditions>
 		<condition type="Level">
 			<param name="min" value="85" />
@@ -27,7 +23,7 @@
 	</doorlist>	
 	<spawnlist>
 		<group name="q10753_16_instance_halter_1" spawnByDefault="true">
-			<npc id="33979" x="-88424" y="186904" z="-10476" heading="49151" respawnTime="60sec" /> <!-- Kain van Halter -->
+			<npc id="31639" x="-88424" y="186904" z="-10476" heading="49151" respawnTime="60sec" /> <!-- Kain van Halter -->
 			<npc id="34001" x="-88584" y="186904" z="-10476" heading="49151" respawnTime="60sec" /> <!-- Ferin -->
 		</group>
 		<group name="q10753_16_instance_halter_1_1" spawnByDefault="false">
@@ -35,7 +31,7 @@
 			<npc id="34001" x="-88581" y="184785" z="-10472" heading="49980" respawnTime="60sec" /> <!-- Ferin -->
 		</group>
 		<group name="q10753_16_instance_halter_2" spawnByDefault="false">
-			<npc id="33979" x="-88440" y="173352" z="-10476" heading="31287" respawnTime="60sec" /> <!-- Kain van Halter -->
+			<npc id="31639" x="-88440" y="173352" z="-10476" heading="31287" respawnTime="60sec" /> <!-- Kain van Halter -->
 			<npc id="34001" x="-88440" y="173240" z="-10476" heading="31287" respawnTime="60sec" /> <!-- Ferin -->
 		</group>
 		<group name="q10753_16_instance_grail" spawnByDefault="false">
