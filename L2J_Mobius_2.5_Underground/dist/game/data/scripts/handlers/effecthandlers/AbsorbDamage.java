@@ -50,7 +50,7 @@ public class AbsorbDamage extends AbstractEffect
 		
 		final int objectId = event.getTarget().getObjectId();
 		
-		final double damageLeft = _damageHolder.get(objectId);
+		final double damageLeft = _damageHolder.get(objectId) != null ? _damageHolder.get(objectId) : 0;
 		final double newDamageLeft = Math.max(damageLeft - event.getDamage(), 0);
 		final double newDamage = Math.max(event.getDamage() - damageLeft, 0);
 		

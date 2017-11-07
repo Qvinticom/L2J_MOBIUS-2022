@@ -47,7 +47,6 @@ public class FunctionEventListener extends AbstractEventListener
 		try
 		{
 			return returnBackClass.cast(_callback.apply(event));
-			
 		}
 		catch (Exception e)
 		{
