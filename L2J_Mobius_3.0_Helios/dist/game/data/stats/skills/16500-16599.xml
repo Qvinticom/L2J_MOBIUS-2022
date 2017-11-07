@@ -923,53 +923,240 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="16590" toLevel="1" name="Ancient Power Thunder">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<activateRate>150</activateRate>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<mpConsume>10</mpConsume>
+		<castRange>900</castRange>
+		<effectRange>900</effectRange>
+		<affectRange>200</affectRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<effectPoint>-828</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>PARALYZE</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power> <!-- TODO -->
+			</effect>
+			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16591" toLevel="1" name="Ancient Plasma Wave">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>10-10</affectLimit>
+		<mpConsume>10</mpConsume>
+		<affectRange>300</affectRange>
+		<castRange>900</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-709</effectPoint>
+		<isMagic>1</isMagic>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16592" toLevel="1" name="Ancient Earthquake">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<castRange>600</castRange>
+		<abnormalType>STUN</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectLimit>10-25</affectLimit>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>90</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<affectRange>400</affectRange>
+		<effectRange>600</effectRange>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-709</effectPoint>
+		<mpConsume>10</mpConsume>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<trait>SHOCK</trait>
+		<isDebuff>true</isDebuff>
+		<effects>
+		<effect name="BlockActions" />
+		<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+		</effects>	
 	</skill>
 	<skill id="16593" toLevel="1" name="Prayer for the Emperor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<targetType>SELF</targetType>
+		<castRange>-1</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<mpConsume>10</mpConsume>
+		<effectPoint>418</effectPoint>
+		<isMagic>1</isMagic>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttack">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>	
+		</effects>	
 	</skill>
 	<skill id="16594" toLevel="1" name="Plasma Strike">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<castRange>100</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<effectPoint>-828</effectPoint>
+		<mpConsume>10</mpConsume>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- TODO -->
+				<power>100000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16595" toLevel="1" name="Plasma Shooter">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<effectPoint>-828</effectPoint>
+		<mpConsume>10</mpConsume>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- TODO -->
+				<power>100000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16596" toLevel="1" name="Plasma Ball">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<effectPoint>-828</effectPoint>
+		<mpConsume>10</mpConsume>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power> <!-- TODO -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16597" toLevel="1" name="Plasma Wave">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<affectLimit>10-10</affectLimit>
+		<castRange>600</castRange>
+		<affectRange>200</affectRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<mpConsume>10</mpConsume>
+		<effectPoint>-709</effectPoint>
+		<isMagic>1</isMagic>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16598" toLevel="1" name="Stun Strike">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<activateRate>90</activateRate>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<mpConsume>10</mpConsume>
+		<castRange>100</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<effectPoint>-828</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>PARALYZE</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- TODO -->
+				<power>100000</power>
+			</effect>
+			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+		</effects>	
 	</skill>
 	<skill id="16599" toLevel="1" name="Piercing Bolt">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<castRange>900</castRange>
+		<affectLimit>10-25</affectLimit>
+		<hitTime>2500</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-52</effectPoint>
+		<isMagic>1</isMagic>
+		<fanRange>0;0;1100;120</fanRange>
+		<mpConsume>10</mpConsume>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN_PB</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>1500</power> <!-- TODO -->
+			</effect>
+		</effects>
 	</skill>
 </list>
