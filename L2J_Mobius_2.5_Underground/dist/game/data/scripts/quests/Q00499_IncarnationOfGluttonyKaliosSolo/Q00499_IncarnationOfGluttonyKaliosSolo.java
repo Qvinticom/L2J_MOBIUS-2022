@@ -90,7 +90,7 @@ public class Q00499_IncarnationOfGluttonyKaliosSolo extends Quest
 				{
 					if ((player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL))
 					{
-						htmltext = "33647-00a.htm";
+						htmltext = "33647-00a.html";
 					}
 					else
 					{
