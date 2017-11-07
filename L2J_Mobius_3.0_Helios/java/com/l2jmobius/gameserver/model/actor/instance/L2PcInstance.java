@@ -270,6 +270,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
+import com.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
 import com.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
@@ -753,6 +754,7 @@ public final class L2PcInstance extends L2Playable
 	
 	/** Skills queued because a skill is already in progress */
 	private SkillUseHolder _queuedSkill;
+	private boolean _alterSkillActive = false;
 	
 	private int _cursedWeaponEquippedId = 0;
 	private boolean _combatFlagEquippedId = false;
@@ -8306,6 +8308,13 @@ public final class L2PcInstance extends L2Playable
 			skill = attachedSkill;
 		}
 		
+		// Alter skills
+		if (_alterSkillActive)
+		{
+			sendPacket(new ExAlterSkillRequest(null, -1, -1, -1));
+			_alterSkillActive = false;
+		}
+		
 		// ************************************* Check Player State *******************************************
 		
 		// Abnormal effects(ex : Stun, Sleep...) are checked in L2Character useMagic()
@@ -11251,6 +11260,16 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		_queuedSkill = new SkillUseHolder(queuedSkill, item, ctrlPressed, shiftPressed);
+	}
+	
+	public boolean isAlterSkillActive()
+	{
+		return _alterSkillActive;
+	}
+	
+	public void setAlterSkillActive(boolean alterSkillActive)
+	{
+		_alterSkillActive = alterSkillActive;
 	}
 	
 	/**

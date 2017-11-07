@@ -168,6 +168,7 @@ public final class Config
 	public static boolean SUBCLASS_STORE_SKILL_COOLTIME;
 	public static boolean SUMMON_STORE_SKILL_COOLTIME;
 	public static long EFFECT_TICK_RATIO;
+	public static boolean ENABLE_ALTER_SKILLS;
 	public static boolean LIFE_CRYSTAL_NEEDED;
 	public static boolean ES_SP_BOOK_NEEDED;
 	public static boolean DIVINE_SP_BOOK_NEEDED;
@@ -1460,6 +1461,7 @@ public final class Config
 			SUBCLASS_STORE_SKILL_COOLTIME = Character.getBoolean("SubclassStoreSkillCooltime", false);
 			SUMMON_STORE_SKILL_COOLTIME = Character.getBoolean("SummonStoreSkillCooltime", true);
 			EFFECT_TICK_RATIO = Character.getLong("EffectTickRatio", 666);
+			ENABLE_ALTER_SKILLS = Character.getBoolean("EnableAlterSkills", true);
 			LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
 			ES_SP_BOOK_NEEDED = Character.getBoolean("EnchantSkillSpBookNeeded", true);
 			DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);

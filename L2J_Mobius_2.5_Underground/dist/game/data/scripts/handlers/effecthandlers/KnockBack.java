@@ -16,18 +16,27 @@
  */
 package handlers.effecthandlers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.enums.CategoryType;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
+import com.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
@@ -35,7 +44,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Check if this effect is not counted as being stunned.
- * @author UnAfraid
+ * @author UnAfraid, Mobius
  */
 public final class KnockBack extends AbstractEffect
 {
@@ -45,6 +54,45 @@ public final class KnockBack extends AbstractEffect
 	private final int _animationSpeed;
 	private final boolean _knockDown;
 	private final FlyType _type;
+	
+	// skill data
+	private static final Map<ClassId, Integer> _chainKnockSkills = new HashMap<>(36);
+	{
+		_chainKnockSkills.put(ClassId.SIGEL_PHOENIX_KNIGHT, 10250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.SIGEL_HELL_KNIGHT, 10250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.SIGEL_EVA_TEMPLAR, 10250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.SIGEL_SHILLIEN_TEMPLAR, 10250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.TYRR_DUELIST, 10500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.TYRR_DREADNOUGHT, 10500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.TYRR_TITAN, 10500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.TYRR_GRAND_KHAVATARI, 10500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.TYRR_MAESTRO, 10500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.TYRR_DOOMBRINGER, 10500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.OTHELL_ADVENTURER, 10750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.OTHELL_WIND_RIDER, 10750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.OTHELL_GHOST_HUNTER, 10750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.OTHELL_FORTUNE_SEEKER, 10750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.YUL_SAGITTARIUS, 11000); // Heavy Hit
+		_chainKnockSkills.put(ClassId.YUL_MOONLIGHT_SENTINEL, 11000); // Heavy Hit
+		_chainKnockSkills.put(ClassId.YUL_GHOST_SENTINEL, 11000); // Heavy Hit
+		_chainKnockSkills.put(ClassId.YUL_TRICKSTER, 11000); // Heavy Hit
+		_chainKnockSkills.put(ClassId.FEOH_ARCHMAGE, 11250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.FEOH_SOULTAKER, 11250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.FEOH_MYSTIC_MUSE, 11250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.FEOH_STORM_SCREAMER, 11250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.FEOH_SOUL_HOUND, 11250); // Heavy Hit
+		_chainKnockSkills.put(ClassId.ISS_HIEROPHANT, 11750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.ISS_SWORD_MUSE, 11750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.ISS_SPECTRAL_DANCER, 11750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.ISS_DOMINATOR, 11750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.ISS_DOOMCRYER, 11750); // Heavy Hit
+		_chainKnockSkills.put(ClassId.WYNN_ARCANA_LORD, 11500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.WYNN_ELEMENTAL_MASTER, 11500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.WYNN_SPECTRAL_MASTER, 11500); // Heavy Hit
+		_chainKnockSkills.put(ClassId.AEORE_CARDINAL, 12000); // Heavy Hit
+		_chainKnockSkills.put(ClassId.AEORE_EVA_SAINT, 12000); // Heavy Hit
+		_chainKnockSkills.put(ClassId.AEORE_SHILLIEN_SAINT, 12000); // Heavy Hit
+	}
 	
 	public KnockBack(StatsSet params)
 	{
@@ -118,5 +166,18 @@ public final class KnockBack extends AbstractEffect
 		effected.setXYZ(loc);
 		effected.broadcastPacket(new ValidateLocation(effected));
 		effected.revalidateZone(true);
+		
+		for (L2PcInstance nearbyPlayer : L2World.getInstance().getVisibleObjects(effected, L2PcInstance.class, 1200))
+		{
+			if (nearbyPlayer.getRace() == Race.ERTHEIA)
+			{
+				continue;
+			}
+			if ((nearbyPlayer.getTarget() == effected) && nearbyPlayer.isInCategory(CategoryType.AWAKEN_GROUP) && !nearbyPlayer.isAlterSkillActive())
+			{
+				final int chainSkill = _chainKnockSkills.get(nearbyPlayer.getClassId());
+				nearbyPlayer.sendPacket(new ExAlterSkillRequest(nearbyPlayer, chainSkill, chainSkill, 3));
+			}
+		}
 	}
 }
