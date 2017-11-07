@@ -156,6 +156,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("HealEffect", HealEffect::new);
 		EffectHandler.getInstance().registerHandler("HealOverTime", HealOverTime::new);
 		EffectHandler.getInstance().registerHandler("HealPercent", HealPercent::new);
+		EffectHandler.getInstance().registerHandler("HellBind", HellBind::new);
 		EffectHandler.getInstance().registerHandler("Hide", Hide::new);
 		EffectHandler.getInstance().registerHandler("HitNumber", HitNumber::new);
 		EffectHandler.getInstance().registerHandler("Hp", Hp::new);
