@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -39,35 +40,9 @@ public class FortressFlagpole implements ITargetTypeHandler
 	public L2Object getTarget(L2Character activeChar, L2Object selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		final L2Object target = activeChar.getTarget();
-		if (target != null)
+		if ((target != null) && activeChar.isInsideZone(ZoneId.HQ) && activeChar.isInsideZone(ZoneId.FORT) && !target.isPlayable() && target.getName().toLowerCase().contains("flagpole"))
 		{
-			switch (target.getId())
-			{
-				case 35657:
-				case 35688:
-				case 35726:
-				case 35757:
-				case 35795:
-				case 35826:
-				case 35857:
-				case 35895:
-				case 35926:
-				case 35964:
-				case 35002:
-				case 36033:
-				case 36071:
-				case 36109:
-				case 36140:
-				case 36171:
-				case 36209:
-				case 36247:
-				case 36285:
-				case 36316:
-				case 36354:
-				{
-					return target;
-				}
-			}
+			return target;
 		}
 		
 		if (sendMessage)
