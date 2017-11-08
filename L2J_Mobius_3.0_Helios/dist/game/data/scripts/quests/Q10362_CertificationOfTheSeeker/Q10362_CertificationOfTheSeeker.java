@@ -54,8 +54,8 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 		addStartNpc(LAKCIS);
 		addTalkId(LAKCIS, CHESHA, NAGEL);
 		addKillId(STALKER, CRAWLER);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33449-07.html");
-		addCondCompletedQuest(Q10330_ToTheRuinsOfYeSagira.class.getSimpleName(), "33449-07.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33449-05.html");
+		addCondCompletedQuest(Q10330_ToTheRuinsOfYeSagira.class.getSimpleName(), "33449-05.html");
 	}
 	
 	@Override
