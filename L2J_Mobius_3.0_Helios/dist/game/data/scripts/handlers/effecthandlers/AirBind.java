@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
 /**
  * @author Mobius
  */
-public final class HellBind extends AbstractEffect
+public final class AirBind extends AbstractEffect
 {
 	// skill data
 	private static final Map<ClassId, Integer> _chainedAirSkills = new HashMap<>(36);
@@ -60,11 +60,11 @@ public final class HellBind extends AbstractEffect
 		_chainedAirSkills.put(ClassId.YUL_MOONLIGHT_SENTINEL, 10999); // Heavy Hit
 		_chainedAirSkills.put(ClassId.YUL_GHOST_SENTINEL, 10999); // Heavy Hit
 		_chainedAirSkills.put(ClassId.YUL_TRICKSTER, 10999); // Heavy Hit
-		_chainedAirSkills.put(ClassId.FEOH_ARCHMAGE, 11247); // Heavy Hit
-		_chainedAirSkills.put(ClassId.FEOH_SOULTAKER, 11247); // Heavy Hit
-		_chainedAirSkills.put(ClassId.FEOH_MYSTIC_MUSE, 11247); // Heavy Hit
-		_chainedAirSkills.put(ClassId.FEOH_STORM_SCREAMER, 11247); // Heavy Hit
-		_chainedAirSkills.put(ClassId.FEOH_SOUL_HOUND, 11247); // Heavy Hit
+		_chainedAirSkills.put(ClassId.FEOH_ARCHMAGE, 11249); // Heavy Hit
+		_chainedAirSkills.put(ClassId.FEOH_SOULTAKER, 11249); // Heavy Hit
+		_chainedAirSkills.put(ClassId.FEOH_MYSTIC_MUSE, 11249); // Heavy Hit
+		_chainedAirSkills.put(ClassId.FEOH_STORM_SCREAMER, 11249); // Heavy Hit
+		_chainedAirSkills.put(ClassId.FEOH_SOUL_HOUND, 11249); // Heavy Hit
 		_chainedAirSkills.put(ClassId.ISS_HIEROPHANT, 11749); // Heavy Hit
 		_chainedAirSkills.put(ClassId.ISS_SWORD_MUSE, 11749); // Heavy Hit
 		_chainedAirSkills.put(ClassId.ISS_SPECTRAL_DANCER, 11749); // Heavy Hit
@@ -78,7 +78,7 @@ public final class HellBind extends AbstractEffect
 		_chainedAirSkills.put(ClassId.AEORE_SHILLIEN_SAINT, 11999); // Heavy Hit
 	}
 	
-	public HellBind(StatsSet params)
+	public AirBind(StatsSet params)
 	{
 	}
 	
@@ -97,7 +97,7 @@ public final class HellBind extends AbstractEffect
 	@Override
 	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		hellBind(effector, effected);
+		airBind(effector, effected);
 	}
 	
 	@Override
@@ -109,18 +109,18 @@ public final class HellBind extends AbstractEffect
 		}
 	}
 	
-	public void hellBind(L2Character effector, L2Character effected)
+	public void airBind(L2Character effector, L2Character effected)
 	{
 		for (L2PcInstance nearbyPlayer : L2World.getInstance().getVisibleObjects(effected, L2PcInstance.class, 1200))
 		{
-			if (nearbyPlayer.getRace() == Race.ERTHEIA)
-			{
-				continue;
-			}
-			if ((nearbyPlayer.getTarget() == effected) && nearbyPlayer.isInCategory(CategoryType.AWAKEN_GROUP) && !nearbyPlayer.isAlterSkillActive())
+			if ((nearbyPlayer.getRace() != Race.ERTHEIA) && (nearbyPlayer.getTarget() == effected) //
+				&& nearbyPlayer.isInCategory(CategoryType.AWAKEN_GROUP) && !nearbyPlayer.isAlterSkillActive())
 			{
 				final int chainSkill = _chainedAirSkills.get(nearbyPlayer.getClassId());
-				nearbyPlayer.sendPacket(new ExAlterSkillRequest(nearbyPlayer, chainSkill, chainSkill, 5));
+				if (nearbyPlayer.getSkillRemainingReuseTime(chainSkill) == -1)
+				{
+					nearbyPlayer.sendPacket(new ExAlterSkillRequest(nearbyPlayer, chainSkill, chainSkill, 5));
+				}
 			}
 		}
 	}

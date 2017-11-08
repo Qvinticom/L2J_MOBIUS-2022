@@ -1242,7 +1242,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="HellBind" />
+			<effect name="AirBind" />
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">147</value>
@@ -2178,6 +2178,7 @@
 			<condition name="OpCheckCrtEffect" />
 		</conditions>
 		<effects>
+			<effect name="AirBind" />
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>

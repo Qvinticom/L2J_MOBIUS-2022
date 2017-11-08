@@ -1280,6 +1280,9 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AirBind" />
+		</effects>
 	</skill>
 	<skill id="15356" toLevel="1" name="Slash Blast">
 		<!-- AUTO GENERATED SKILL -->
@@ -1375,6 +1378,9 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AirBind" />
+		</effects>
 	</skill>
 	<skill id="15360" toLevel="1" name="Tetanus">
 		<!-- AUTO GENERATED SKILL -->

@@ -1021,7 +1021,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="HellBind" />
+			<effect name="AirBind" />
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">158</value>
@@ -4113,6 +4113,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="AirBind" />
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
@@ -4197,6 +4198,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="AirBind" />
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
@@ -4278,6 +4280,7 @@
 			<condition name="OpCheckCrtEffect" />
 		</conditions>
 		<effects>
+			<effect name="AirBind" />
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
@@ -4406,6 +4409,7 @@
 			<condition name="OpCheckCrtEffect" />
 		</conditions>
 		<effects>
+			<effect name="AirBind" />
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>

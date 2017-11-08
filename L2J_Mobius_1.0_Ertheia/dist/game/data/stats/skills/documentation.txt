@@ -7,6 +7,7 @@ AbstractStatEffect: Abstract class for managing stats.
 Accuracy: P. Accuracy stat.
 AddHate: Instant effect that increases target's hate towards you.
 AddTeleportBookmarkSlot: Instant effect that increases the amount of My Teleport slots.
+AirBind: Used by airbind chain skills. (l2jmobius)
 AreaDamage: Topography (Danger Zone) resistance stat.
 AttackAttribute: Stat that increases specific attack attribute.
 AttackAttributeAdd: Stat that increases all attack attribute.
@@ -126,7 +127,6 @@ HealEffect: Increases the amount of HP received.
 Heal: Increases current HP by a given amount.
 HealOverTime: Increases current HP by a given amount over time.
 HealPercent: Increases current HP by a given percentage amount.
-HellBind: Used by hellbind chain skills. (l2jmobius)
 Hide: Hide effect.
 HitNumber: Polearm attack max hit creatures.
 HpByLevel: recovers certain amount of HP, but current implementation is wrong... final amount should be computed from skill power and character level difference
