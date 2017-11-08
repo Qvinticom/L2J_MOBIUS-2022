@@ -869,11 +869,6 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<alterSkill>
-			<item id="11500" level="1" chance="100" abnormalType="KNOCKDOWN" /> <!-- Heavy Hit -->
-			<item id="11499" level="1" chance="100" abnormalType="AIRBIND" /> <!-- Heavy Hit -->
-			<item id="14579" level="1" chance="100" abnormalType="EARTHWORM_DEBUFF" />
-		</alterSkill>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

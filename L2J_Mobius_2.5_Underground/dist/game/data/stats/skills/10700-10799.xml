@@ -1115,11 +1115,6 @@
 			<value level="11">0;0;700;50</value>
 		</fanRange>
 		<rideState>NONE</rideState>
-		<alterSkill>
-			<item id="11000" level="1" chance="100" abnormalType="KNOCKDOWN" /> <!-- Heavy Hit -->
-			<item id="10999" level="1" chance="100" abnormalType="AIRBIND" /> <!-- Heavy Hit -->
-			<item id="14579" level="1" chance="100" abnormalType="EARTHWORM_DEBUFF" />
-		</alterSkill>
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

@@ -358,11 +358,6 @@
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
-		<alterSkill>
-			<item id="11250" level="1" chance="100" abnormalType="KNOCKDOWN" /> <!-- Heavy Hit -->
-			<item id="11249" level="1" chance="100" abnormalType="AIRBIND" /> <!-- Heavy Hit -->
-			<item id="14579" level="1" chance="100" abnormalType="EARTHWORM_DEBUFF" />
-		</alterSkill>
 		<attachSkillList>
 			<item>
 				<requiredSkillId>11007</requiredSkillId> <!-- Fire Stance -->

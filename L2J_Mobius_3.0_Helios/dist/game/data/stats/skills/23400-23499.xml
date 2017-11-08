@@ -2138,11 +2138,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<alterSkill>
-			<item id="10750" level="1" chance="100" abnormalType="KNOCKDOWN" /> <!-- Heavy Hit -->
-			<item id="10749" level="1" chance="100" abnormalType="AIRBIND" /> <!-- Heavy Hit -->
-			<item id="14579" level="1" chance="100" abnormalType="EARTHWORM_DEBUFF" />
-		</alterSkill>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>

@@ -53,7 +53,6 @@ import com.l2jmobius.gameserver.model.cubic.CubicInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.holders.AlterSkillHolder;
 import com.l2jmobius.gameserver.model.holders.AttachSkillHolder;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -205,7 +204,6 @@ public final class Skill implements IIdentifiable
 	
 	private final int _toggleGroupId;
 	private final int _attachToggleGroupId;
-	private final List<AlterSkillHolder> _alterSkills;
 	private final List<AttachSkillHolder> _attachSkills;
 	private final Set<AbnormalType> _abnormalResists;
 	
@@ -414,7 +412,6 @@ public final class Skill implements IIdentifiable
 		
 		_toggleGroupId = set.getInt("toggleGroupId", -1);
 		_attachToggleGroupId = set.getInt("attachToggleGroupId", -1);
-		_alterSkills = set.getList("alterSkill", StatsSet.class, Collections.emptyList()).stream().map(AlterSkillHolder::fromStatsSet).collect(Collectors.toList());
 		_attachSkills = set.getList("attachSkillList", StatsSet.class, Collections.emptyList()).stream().map(AttachSkillHolder::fromStatsSet).collect(Collectors.toList());
 		
 		final String abnormalResist = set.getString("abnormalResists", null);
@@ -1831,11 +1828,6 @@ public final class Skill implements IIdentifiable
 	public int getAttachToggleGroupId()
 	{
 		return _attachToggleGroupId;
-	}
-	
-	public List<AlterSkillHolder> getAlterSkills()
-	{
-		return _alterSkills;
 	}
 	
 	public List<AttachSkillHolder> getAttachSkills()
