@@ -255,7 +255,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="40" />
 				<run ground="128" />
@@ -643,7 +643,7 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="80.17319" hpRegen="2" mp="69.6" mpRegen="0.9" />
+			<vitals hp="80" hpRegen="2" mp="69" mpRegen="0.9" />
 			<attack physical="12.34006" magical="8.42666" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="51.60553" magical="37.76269" />
 			<speed>
@@ -674,7 +674,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="80.17319" hpRegen="2" mp="69.6" mpRegen="0.9" />
+			<vitals hp="801731" hpRegen="2" mp="69" mpRegen="0.9" />
 			<attack physical="12.34006" magical="8.42666" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="51.60553" magical="37.76269" />
 			<speed>
@@ -803,7 +803,7 @@
 		<sex>MALE</sex>
 		<acquire exp="132" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="57.54874" hpRegen="2" mp="54.64" mpRegen="0.9" />
+			<vitals hp="57" hpRegen="2" mp="54" mpRegen="0.9" />
 			<attack physical="10.24492" magical="6.99595" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="47.91652" magical="35.06323" />
 			<speed>

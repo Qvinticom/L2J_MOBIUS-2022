@@ -5,10 +5,10 @@
 		<race>GIANT</race>
 		<acquire exp="547017485" sp="1312842" />
 		<stats>
-			<vitals hp="1325641" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="140" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -23,8 +23,8 @@
 			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="47.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -53,15 +53,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="56" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13" />
+			<height normal="55" />
 		</collision>
 	</npc>
 	<npc id="23802" level="99" type="L2Monster" name="">
@@ -70,15 +70,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="36" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13" />
+			<height normal="44" />
 		</collision>
 	</npc>
 	<npc id="23803" level="99" type="L2Monster" name="">
@@ -87,15 +87,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="49" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="10" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="23804" level="99" type="L2Monster" name="">
@@ -104,15 +104,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="10" />
+			<height normal="37.5" />
 		</collision>
 	</npc>
 	<npc id="23805" level="99" type="L2Monster" name="">
@@ -121,15 +121,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="65" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13" />
+			<height normal="39.6" />
 		</collision>
 	</npc>
 	<npc id="23806" level="99" type="L2Monster" name="">
@@ -138,15 +138,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="28.5" />
 		</collision>
 	</npc>
 	<npc id="23807" level="99" type="L2Monster" name="">
@@ -155,15 +155,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="88" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="25" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="23808" level="99" type="L2Monster" name="">
@@ -172,15 +172,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="26" />
 		</collision>
 	</npc>
 	<npc id="23809" level="99" type="L2Monster" name="">
@@ -189,15 +189,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="23810" level="99" type="L2Monster" name="">
@@ -206,15 +206,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="36" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="15" />
+			<height normal="24.5" />
 		</collision>
 	</npc>
 	<npc id="23811" level="99" type="L2Monster" name="Cantera Tanya">
@@ -223,7 +223,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
@@ -240,8 +240,8 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="45" />
+			<radius normal="28" />
+			<height normal="59" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -260,10 +260,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
-				<run ground="155" />
+				<run ground="160" />
 			</speed>
 			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
 			<defence physical="11721" magical="11775" />
@@ -277,8 +277,8 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="12" />
-			<height normal="40" />
+			<radius normal="16" />
+			<height normal="60" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -297,10 +297,10 @@
 		<race>ETC</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="13" />
-				<run ground="60" />
+				<run ground="160" />
 			</speed>
 			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
 			<defence physical="11721" magical="11775" />
@@ -314,8 +314,8 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="40" />
-			<height normal="46" />
+			<radius normal="38" />
+			<height normal="45" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -335,10 +335,10 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="38" />
-				<run ground="170" />
+				<run ground="160" />
 			</speed>
 			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
 			<defence physical="11721" magical="11775" />
@@ -352,8 +352,8 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="10" />
-			<height normal="34" />
+			<radius normal="13" />
+			<height normal="55" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -372,7 +372,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="20777923" sp="20778" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="46" />
 				<run ground="160" />

@@ -1,20 +1,20 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="34011" level="99" type="L2Npc" name="Dandy" title="Dreaming">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="34012" level="99" type="L2Npc" name="Dandy" title="Dreaming">
@@ -22,23 +22,23 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="34079" level="99" type="L2Merchant" name="Macken" title="Rarities Traider">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -46,31 +46,31 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="11" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="34080" level="99" type="L2Merchant" name="Pritty" title="Pretties Merchant">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="34081" level="99" type="L2Merchant" name="Soflie" title="Peddler">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -78,24 +78,24 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="6.5" />
+			<height normal="17.7" />
 		</collision>
 	</npc>
 	<npc id="34082" level="99" type="L2Npc" name="Tiko" title="Merry Fellow">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="19" />
 		</collision>
 	</npc>
 	<npc id="34083" level="99" type="L2Npc" name="Ilvan" title="Event Manager">
@@ -103,16 +103,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="150" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="22.25" />
 		</collision>
 	</npc>
 	<npc id="34084" level="99" type="L2Npc" name="Byo">
@@ -120,16 +120,16 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="34085" level="99" type="L2Npc" name="Ilevian" title="Party Souvenir Storage">
@@ -137,16 +137,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="95000000" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="54" />
+			<height normal="52.8" />
 		</collision>
 	</npc>
 	<npc id="34086" level="99" type="L2Npc" name="Ilevian">
@@ -154,16 +154,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="54" />
+			<height normal="110.4" />
 		</collision>
 	</npc>
 	<npc id="34087" level="99" type="L2Teleporter" name="Santa Claus" title="Collector of Letters">
@@ -171,7 +171,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="3290" hpRegen="7.5" mp="1674" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -179,8 +179,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="34088" level="99" type="L2Npc" name="Christmas Tree" title="Happy Holidays!">
@@ -188,16 +188,16 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="110" />
+			<height normal="140" />
 		</collision>
 	</npc>
 	<npc id="34089" level="99" type="L2Npc" name="Roa" title="Character Helper">
@@ -205,16 +205,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="50" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 </list>

@@ -4,7 +4,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="551936112" hpRegen="7.5" mp="47100" mpRegen="2.7" />
+			<vitals hp="231808530" hpRegen="7.5" mp="47100" mpRegen="2.7" />
 			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4347.718797982" magical="2100.4713645644" />
 			<attribute>
@@ -31,7 +31,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="175348" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="168928" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1872.4946037619" magical="1243.0937820887" />
 			<attribute>
@@ -55,7 +55,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="175348" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="168928" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1872.4946037619" magical="1243.0937820887" />
 			<attribute>
@@ -79,10 +79,10 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="589355368" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
+			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3888.88888888889" magical="2258.06451612903" />
@@ -106,14 +106,14 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="589355368" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
+			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3888.88888888889" magical="2258.06451612903" />
@@ -134,14 +134,14 @@
 		<sex>MALE</sex>
 		<acquire exp="6127016742000" sp="14704840180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="589355368" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
+			<vitals hp="247524303" hpRegen="1842.10526315789" mp="51696" mpRegen="1944.44444444444" />
 			<attribute>
 				<defence fire="300" water="300" wind="250" earth="350" holy="300" dark="300" />
 				<attack type="EARTH" value="430" />
 			</attribute>
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3888.88888888889" magical="2258.06451612903" />
@@ -251,15 +251,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="600826" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="1" />
+				<run ground="230" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="1" />
+			<height normal="249" />
 		</collision>
 	</npc>
 	<npc id="29307" level="99" type="L2Monster" name="">
@@ -268,15 +268,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="168928" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="10" />
+				<run ground="230" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="25" />
+			<height normal="33.5" />
 		</collision>
 	</npc>
 	<npc id="29308" level="99" type="L2Monster" name="">
@@ -285,15 +285,15 @@
 		<race>ETC</race>
 		<acquire exp="0" sp="0" />
 		<stats>
-			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<vitals hp="168928" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="10" />
+				<run ground="230" />
 			</speed>
 		</stats>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="25" />
+			<height normal="33.5" />
 		</collision>
 	</npc>
 	<npc id="29309" level="105" type="L2Monster" name="Leopold Origin" title="Ultimate Kamael">
@@ -323,7 +323,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="30" />
-			<height normal="35.50" />
+			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="29310" level="105" type="L2Monster" name="Enuma Elish Origin" title="Ultimate Kamael">
@@ -353,7 +353,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="30" />
-			<height normal="35.50" />
+			<height normal="35.5" />
 		</collision>
 	</npc>
 	<npc id="29311" level="105" type="L2Monster" name="Royal Templar Colonel" title="Emperor's Escort">
@@ -386,7 +386,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="24" />
-			<height normal="45.50" />
+			<height normal="45.5" />
 		</collision>
 	</npc>
 	<npc id="29312" level="105" type="L2Monster" name="Royal Sharpshooter" title="Emperor's Escort">
@@ -418,7 +418,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="24" />
-			<height normal="45.50" />
+			<height normal="45.5" />
 		</collision>
 	</npc>
 	<npc id="29313" level="105" type="L2Monster" name="Royal Archmage" title="Emperor's Escort">
@@ -451,7 +451,7 @@
 		<ai type="BALANCED" />
 		<collision>
 			<radius normal="24" />
-			<height normal="45.50" />
+			<height normal="45.5" />
 		</collision>
 	</npc>
 	<npc id="29314" level="105" type="L2Monster" name="Royal Gatekeeper" title="Emperor's Escort">
@@ -483,7 +483,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="24" />
-			<height normal="45.50" />
+			<height normal="45.5" />
 		</collision>
 	</npc>
 	<npc id="29315" level="105" type="L2Monster" name="Mimillion" title="Red Lightning Watchman">

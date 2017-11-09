@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="36721" level="99" type="L2Merchant" name="Leina" title="Clan Hall Manager">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -465,10 +465,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="60" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -478,8 +478,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="36784" level="99" type="L2Npc" name="Human Knight" title="Royal Guard">
@@ -487,10 +487,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="60" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -500,8 +500,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="36785" level="99" type="L2Npc" name="Human Knight" title="Royal Guard">
@@ -509,10 +509,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="60" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -522,8 +522,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="7.5" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="36786" level="99" type="L2Npc" name="Human Knight" title="Royal Guard">
@@ -531,10 +531,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="60" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -544,8 +544,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="7.5" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="36787" level="99" type="L2Npc" name="Shield" title="Gludio">
@@ -553,10 +553,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14629" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -566,8 +566,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="7" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="36788" level="99" type="L2Npc" name="Human Knight" title="Royal Guard">
@@ -575,10 +575,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -588,8 +588,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="36789" level="99" type="L2Npc" name="Human Knight" title="Royal Guard">
@@ -597,10 +597,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -610,8 +610,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="36790" level="99" type="L2Npc" name="Human Knight" title="Royal Guard">
@@ -619,10 +619,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -632,8 +632,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="7.5" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="36791" level="99" type="L2Npc" name="Human Knight" title="Royal Guard">
@@ -641,10 +641,10 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="14625" hpRegen="10.5" mp="2932" mpRegen="3.6" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -654,8 +654,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60" />
+			<radius normal="7.5" />
+			<height normal="23" />
 		</collision>
 	</npc>
 </list>

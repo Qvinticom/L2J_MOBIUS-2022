@@ -828,10 +828,10 @@
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="209461939" hpRegen="10.5" mp="47100.0" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
-				<run ground="270" />
+				<run ground="1" />
 			</speed>
 			<attack physical="63862.33880135" magical="11469.742130133" critical="4" attackSpeed="253" range="40" />
 			<defence physical="7772.0207253886" magical="3235.1068620499" />
@@ -863,9 +863,9 @@
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="209461939" hpRegen="10.5" mp="47100.0" mpRegen="3.6" />
+			<vitals hp="133921719" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<speed>
-				<walk ground="100" />
+				<walk ground="270" />
 				<run ground="270" />
 			</speed>
 			<attack physical="63862.33880135" magical="11469.742130133" critical="4" attackSpeed="253" range="40" />
@@ -1279,7 +1279,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="1" />
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
@@ -1296,8 +1296,8 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="15" />
-			<height normal="45" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19439" level="99" type="L2Monster" name="">
@@ -1308,7 +1308,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="1" />
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
@@ -1325,8 +1325,8 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="15" />
-			<height normal="45" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19440" level="99" type="L2Monster" name="">
@@ -1337,7 +1337,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="1" />
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
@@ -1354,8 +1354,8 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="15" />
-			<height normal="45" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19441" level="99" type="L2Monster" name="">

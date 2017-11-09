@@ -5,10 +5,10 @@
 		<race>PLANT</race>
 		<acquire exp="37812025" sp="90748" />
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="60447" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="58233" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="7606.89031824671" magical="1021.122892374432" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="948.680184461517" magical="950.138334234944" />
@@ -19,8 +19,8 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="30" />
+			<height normal="78" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -59,7 +59,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -95,8 +95,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -112,14 +112,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19606" level="85" type="L2Npc" name="Flame Flower">
@@ -129,14 +129,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="135143" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="12.0" />
-			<height normal="10.0" />
+			<radius normal="12" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="19607" level="85" type="L2Npc" name="Seal Tombstone">
@@ -146,13 +146,13 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1613128" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="30.0" />
+			<radius normal="30" />
 			<height normal="60.8" />
 		</collision>
 	</npc>
@@ -163,14 +163,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="160.0" />
-			<height normal="40.0" />
+			<radius normal="160" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19609" level="85" type="L2Npc" name="">
@@ -180,8 +180,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -197,14 +197,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="240.0" />
+				<walk ground="60" />
+				<run ground="240" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
-			<height normal="24.0" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19611" level="85" type="L2Npc" name="Insurgent Backup Soldier">
@@ -214,14 +214,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="168928" hpRegen="7.5" mp="108" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="100.0" />
+				<walk ground="60" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
-			<height normal="24.0" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19612" level="85" type="L2Npc" name="">
@@ -231,14 +231,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="15.0" />
-			<height normal="26.0" />
+			<radius normal="15" />
+			<height normal="26" />
 		</collision>
 	</npc>
 	<npc id="19613" level="85" type="L2Npc" name="">
@@ -248,14 +248,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="30.0" />
-			<height normal="45.0" />
+			<radius normal="30" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="19614" level="85" type="L2Npc" name="">
@@ -265,14 +265,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="15.0" />
-			<height normal="26.0" />
+			<radius normal="15" />
+			<height normal="26" />
 		</collision>
 	</npc>
 	<npc id="19615" level="85" type="L2Npc" name="">
@@ -282,14 +282,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="11.0" />
-			<height normal="20.0" />
+			<radius normal="11" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="19616" level="85" type="L2Npc" name="">
@@ -299,14 +299,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50.0" />
-				<run ground="1.0" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="13.0" />
-			<height normal="40.0" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="19617" level="85" type="L2Npc" name="Soul">
@@ -316,14 +316,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19618" level="85" type="L2Npc" name="Soul">
@@ -333,14 +333,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19619" level="85" type="L2Npc" name="Soul">
@@ -350,14 +350,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19620" level="85" type="L2Npc" name="Soul">
@@ -367,14 +367,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19621" level="85" type="L2Npc" name="Soul">
@@ -384,14 +384,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19622" level="85" type="L2Npc" name="Soul" title="Quest">
@@ -401,14 +401,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19623" level="85" type="L2Npc" name="">
@@ -418,8 +418,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -435,14 +435,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50.0" />
-				<run ground="120.0" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="34.0" />
-			<height normal="65.0" />
+			<radius normal="34" />
+			<height normal="65" />
 		</collision>
 	</npc>
 	<npc id="19625" level="85" type="L2Npc" name="Altar of Wind">
@@ -452,14 +452,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50.0" />
-				<run ground="120.0" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="34.0" />
-			<height normal="65.0" />
+			<radius normal="34" />
+			<height normal="65" />
 		</collision>
 	</npc>
 	<npc id="19626" level="85" type="L2Npc" name="">
@@ -469,8 +469,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1.0" />
-				<run ground="1.0" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -486,14 +486,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1" hpRegen="7.5" mp="1" mpRegen="2.7" />
 			<speed>
-				<walk ground="25.0" />
-				<run ground="1.0" />
+				<walk ground="25" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="24.0" />
-			<height normal="77.0" />
+			<radius normal="24" />
+			<height normal="77" />
 		</collision>
 	</npc>
 	<npc id="19628" level="85" type="L2Npc" name="Soul">
@@ -503,14 +503,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19629" level="85" type="L2Npc" name="Soul">
@@ -520,14 +520,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19630" level="85" type="L2Npc" name="Soul">
@@ -537,14 +537,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19631" level="85" type="L2Npc" name="Soul">
@@ -554,14 +554,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19632" level="85" type="L2Npc" name="Soul">
@@ -571,14 +571,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="1.0" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="6.0" />
-			<height normal="25.0" />
+			<radius normal="6" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="19633" level="85" type="L2Npc" name="">
@@ -588,14 +588,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="240.0" />
+				<walk ground="60" />
+				<run ground="240" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
-			<height normal="24.0" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="19634" level="85" type="L2Npc" name="Time Bomb" title="Deton">
@@ -605,8 +605,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
-				<walk ground="50.0" />
-				<run ground="180.0" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />

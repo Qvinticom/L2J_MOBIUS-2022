@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31842" level="70" type="L2Npc" name="Teleportation Cubic">
 		<parameters>
@@ -9,7 +9,7 @@
 		<sex>ETC</sex>
 		<acquire sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86" magical="470.4" random="30" critical="7" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
@@ -48,7 +48,7 @@
 		<sex>ETC</sex>
 		<acquire exp="490" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
@@ -88,7 +88,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="11761" sp="2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1421" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -131,7 +131,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="11761" sp="2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1421" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -175,7 +175,7 @@
 		<equipment rhand="291" /> <!-- Trident -->
 		<acquire exp="11761" sp="2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1421" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="POLE" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -217,7 +217,7 @@
 		<equipment rhand="291" /> <!-- Trident -->
 		<acquire exp="7680" sp="226" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1421" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="POLE" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -260,7 +260,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="11761" sp="2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1421" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -303,7 +303,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="11761" sp="2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1421" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="336.1" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -346,7 +346,7 @@
 		<sex>MALE</sex>
 		<acquire exp="11761" sp="2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1563.1" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="305.55" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -390,7 +390,7 @@
 		<sex>MALE</sex>
 		<acquire exp="11761" sp="2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1563.1" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="305.55" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -433,7 +433,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="3000" sp="226" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1563.1" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="1421" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="305.55" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -476,7 +476,7 @@
 		<sex>MALE</sex>
 		<acquire exp="11761" sp="2" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1563.1" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="49042" hpRegen="5.5" mp="23550" mpRegen="2.1" />
 			<attack physical="305.55" magical="208.65" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="200.24" magical="146.53" />
 			<speed>
@@ -514,7 +514,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
@@ -548,11 +548,11 @@
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -574,7 +574,7 @@
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="8" />
-			<height normal="24" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="31856" level="70" type="L2Npc" name="Event Manager">
@@ -582,7 +582,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
@@ -616,7 +616,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
@@ -650,7 +650,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
@@ -676,7 +676,7 @@
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="8" />
-			<height normal="24" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="31859" level="70" type="L2Npc" name="Teleportation Cubic">
@@ -688,7 +688,7 @@
 		<sex>ETC</sex>
 		<acquire exp="490" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
@@ -727,11 +727,11 @@
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="40" />
 				<run ground="120" />
 			</speed>
 			<hit_time>610</hit_time>
@@ -762,7 +762,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="313" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1724.7" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
+			<vitals hp="1724" hpRegen="6.5" mp="918" mpRegen="2.4" />
 			<attack physical="405.96" magical="277.22" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="228.4" magical="167.13" />
 			<speed>
@@ -792,8 +792,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="8" />
-			<height normal="25" />
+			<radius normal="13" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="31862" level="70" type="L2Npc" name="Angelic Vortex">
@@ -801,7 +801,7 @@
 		<sex>ETC</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
@@ -840,12 +840,12 @@
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
 			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -865,8 +865,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="16.5" />
+			<radius normal="13" />
+			<height normal="12" />
 		</collision>
 	</npc>
 </list>

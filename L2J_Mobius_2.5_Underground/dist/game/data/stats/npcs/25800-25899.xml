@@ -642,7 +642,7 @@
 		<acquire exp="502954" sp="120" />
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="274258" hpRegen="163.901363297288" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="274258" hpRegen="163.901363297288" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -933,7 +933,7 @@
 		<sex>MALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="68534" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="66024" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
@@ -971,7 +971,7 @@
 		<sex>MALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="68534" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="66024" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
@@ -1074,7 +1074,7 @@
 		<acquire exp="441282100" sp="105907" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="562311" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="236165" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1684,7 +1684,7 @@
 		<acquire exp="102758769" sp="24662" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="407030" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="170948" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1757,7 +1757,7 @@
 		<equipment rhand="75" lhand="103" /> <!-- Caliburs / Tower Shield -->
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1416943" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="595103" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="36" />
 				<run ground="255" />
@@ -1910,7 +1910,7 @@
 		<equipment rhand="78" /> <!-- Great Sword -->
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1402678" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="589112" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="40" />
 				<run ground="240" />
@@ -2142,7 +2142,7 @@
 		<acquire exp="224759808" sp="53942" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1416943" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="595103" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="43" />
 				<run ground="255" />
@@ -2226,7 +2226,7 @@
 		<acquire exp="328495104" sp="78838" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="723562" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="303889" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="45" />
 				<run ground="270" />
@@ -3301,7 +3301,7 @@
 		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3042201" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1277698" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
@@ -4842,8 +4842,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
-				<walk ground="140" />
-				<run ground="200" />
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="5" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
@@ -4873,7 +4873,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="15301" /> <!-- Transparent Pole (NPC) -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="209461939" hpRegen="10.5" mp="47100.0" mpRegen="3.6" />
+			<vitals hp="322249137" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="270" />
@@ -4900,8 +4900,8 @@
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="190" />
-			<height normal="390" />
+			<radius normal="350" />
+			<height normal="210" />
 		</collision>
 	</npc>
 </list>

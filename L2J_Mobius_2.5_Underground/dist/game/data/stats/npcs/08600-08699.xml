@@ -310,8 +310,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1673" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
-				<walk ground="80" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -470,8 +470,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
+			<radius normal="25.5" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="8625" level="85" type="L2Npc" name="Diana" title="Contest Participant">

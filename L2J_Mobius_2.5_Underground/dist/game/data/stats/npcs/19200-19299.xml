@@ -2208,7 +2208,7 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="80" int="79" dex="55" wit="78" con="73" men="78">
-			<vitals hp="65863" hpRegen="3" mp="56645458" mpRegen="3" />
+			<vitals hp="1" hpRegen="3" mp="1" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="60" />
@@ -2230,8 +2230,8 @@
 			</drop>
 		 </drop_lists>
 		<collision>
-			<radius normal="10" />
-			<height normal="27" />
+			<radius normal="8" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="19258" level="99" type="L2Monster" name="Large Draco Egg">
@@ -2239,7 +2239,7 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="103" int="79" dex="55" wit="78" con="108" men="78">
-			<vitals hp="65863" hpRegen="3" mp="56645458" mpRegen="3" />
+			<vitals hp="1" hpRegen="3" mp="1" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="60" />

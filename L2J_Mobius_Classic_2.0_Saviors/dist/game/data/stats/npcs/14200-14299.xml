@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="14200" level="80" type="L2Pet" name="Mew the Cat">
 		<parameters>
@@ -8,7 +8,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3010" hpRegen="8.5" mp="1803" mpRegen="3" />
 			<attack physical="954.22815" magical="735.9804506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
@@ -49,7 +49,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3016" hpRegen="8.5" mp="1812" mpRegen="3" />
 			<attack physical="958.5072" magical="742.5704702" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
@@ -90,7 +90,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3024" hpRegen="8.5" mp="1820" mpRegen="3" />
 			<attack physical="962.78625" magical="749.1604898" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
@@ -131,7 +131,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3032" hpRegen="8.5" mp="1829" mpRegen="3" />
 			<attack physical="967.0653" magical="755.7505094" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
@@ -172,7 +172,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<attack physical="971.34435" magical="762.340529" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
@@ -213,7 +213,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3056" hpRegen="8.5" mp="1858" mpRegen="3" />
 			<attack physical="975.6234" magical="768.9305486" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
@@ -254,7 +254,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3066" hpRegen="8.5" mp="1870" mpRegen="3" />
 			<attack physical="979.90245" magical="775.5205681" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
@@ -295,12 +295,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1260.979824" hpRegen="5.5" mp="531" mpRegen="2.1" />
+			<vitals hp="1050" hpRegen="5.5" mp="531" mpRegen="2.1" />
 			<attack physical="218.180501" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -335,12 +335,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1475.744136" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<vitals hp="1229" hpRegen="5.5" mp="637" mpRegen="2.1" />
 			<attack physical="272.85786" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="133.31739" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -375,12 +375,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1705.201236" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="1421" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="336.103966" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -415,12 +415,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1946.107416" hpRegen="6.5" mp="861" mpRegen="2.4" />
+			<vitals hp="1621" hpRegen="6.5" mp="861" mpRegen="2.4" />
 			<attack physical="407.757944" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="160.17851" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -455,12 +455,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2194.419192" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<attack physical="487.18912" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -495,12 +495,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2319.888528" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
 			<attack physical="529.480061" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -535,12 +535,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2445.372984" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
 			<attack physical="573.236301" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -575,12 +575,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2570.185524" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
 			<attack physical="618.225025" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -615,12 +615,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2693.61258" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="664.178933" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -655,12 +655,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2814.920376" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="710.797648" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -695,12 +695,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2933.361828" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="757.750103" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -735,12 +735,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3048.183972" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="804.677566" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -775,12 +775,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3158.635632" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="851.197578" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -815,12 +815,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3263.975424" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2719" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="896.908595" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -855,12 +855,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="941.391" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -895,12 +895,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
 			<attack physical="946.097955" magical="591.0000196" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -935,12 +935,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2822" hpRegen="8.5" mp="1624" mpRegen="3" />
 			<attack physical="950.80491" magical="597.5900392" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -975,12 +975,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2832" hpRegen="8.5" mp="1632" mpRegen="3" />
 			<attack physical="955.511865" magical="604.1800588" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1015,12 +1015,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2842" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="960.21882" magical="610.7700784" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1055,12 +1055,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2852" hpRegen="8.5" mp="1649" mpRegen="3" />
 			<attack physical="964.925775" magical="617.360098" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1095,12 +1095,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2862" hpRegen="8.5" mp="1657" mpRegen="3" />
 			<attack physical="969.63273" magical="623.9501175" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1135,12 +1135,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2871" hpRegen="8.5" mp="1666" mpRegen="3" />
 			<attack physical="974.339685" magical="630.5401371" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1175,12 +1175,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="979.04664" magical="637.1301567" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1215,12 +1215,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2889" hpRegen="8.5" mp="1683" mpRegen="3" />
 			<attack physical="983.753595" magical="643.7201763" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1255,12 +1255,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2899" hpRegen="8.5" mp="1691" mpRegen="3" />
 			<attack physical="988.46055" magical="650.3101959" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1295,12 +1295,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2908" hpRegen="8.5" mp="1700" mpRegen="3" />
 			<attack physical="993.167505" magical="656.9002155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1335,12 +1335,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2916" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="997.87446" magical="663.4902351" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1375,12 +1375,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2926" hpRegen="8.5" mp="1717" mpRegen="3" />
 			<attack physical="1002.581415" magical="670.0802547" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1415,12 +1415,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2935" hpRegen="8.5" mp="1725" mpRegen="3" />
 			<attack physical="1007.28837" magical="676.6702743" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1455,12 +1455,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2944" hpRegen="8.5" mp="1734" mpRegen="3" />
 			<attack physical="1011.995325" magical="683.2602939" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1495,12 +1495,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2951" hpRegen="8.5" mp="1743" mpRegen="3" />
 			<attack physical="1016.70228" magical="689.8503135" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1535,12 +1535,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2960" hpRegen="8.5" mp="1751" mpRegen="3" />
 			<attack physical="1021.409235" magical="696.440333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1575,12 +1575,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2969" hpRegen="8.5" mp="1760" mpRegen="3" />
 			<attack physical="1026.11619" magical="703.0303526" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1615,12 +1615,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2978" hpRegen="8.5" mp="1768" mpRegen="3" />
 			<attack physical="1030.823145" magical="709.6203722" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1655,12 +1655,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<attack physical="1035.5301" magical="716.2103918" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1695,12 +1695,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2993" hpRegen="8.5" mp="1786" mpRegen="3" />
 			<attack physical="1040.237055" magical="722.8004114" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1735,12 +1735,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3001" hpRegen="8.5" mp="1794" mpRegen="3" />
 			<attack physical="1044.94401" magical="729.390431" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1775,12 +1775,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3010" hpRegen="8.5" mp="1803" mpRegen="3" />
 			<attack physical="1049.650965" magical="735.9804506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1815,12 +1815,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3016" hpRegen="8.5" mp="1812" mpRegen="3" />
 			<attack physical="1054.35792" magical="742.5704702" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1856,12 +1856,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3024" hpRegen="8.5" mp="1820" mpRegen="3" />
 			<attack physical="1059.064875" magical="749.1604898" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1897,12 +1897,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3032" hpRegen="8.5" mp="1829" mpRegen="3" />
 			<attack physical="1063.77183" magical="755.7505094" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1938,12 +1938,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<attack physical="1068.478785" magical="762.340529" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1979,12 +1979,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3056" hpRegen="8.5" mp="1858" mpRegen="3" />
 			<attack physical="1073.18574" magical="768.9305486" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2020,12 +2020,12 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3066" hpRegen="8.5" mp="1870" mpRegen="3" />
 			<attack physical="1077.892695" magical="775.5205681" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="190" />
+				<run ground="180" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2068,12 +2068,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1828.68" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<attack physical="177.76" magical="302.44" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.99" magical="174.15" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2120,12 +2120,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1933.24" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
 			<attack physical="190.6" magical="328.7" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65" magical="181.22" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2172,12 +2172,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2037.81" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
 			<attack physical="203.62" magical="355.86" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34" magical="188.31" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2224,12 +2224,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2141.82" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
 			<attack physical="216.73" magical="383.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04" magical="195.41" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2276,12 +2276,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2244.68" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
 			<attack physical="229.83" magical="412.32" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.73" magical="202.5" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2328,12 +2328,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2345.77" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
 			<attack physical="242.83" magical="441.26" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.36" magical="209.55" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2380,12 +2380,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2444.47" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="255.62" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2432,12 +2432,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2540.15" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="268.07" magical="499.54" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.36" magical="223.45" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2484,12 +2484,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2632.2" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="280.09" magical="528.42" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.66" magical="230.25" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2536,12 +2536,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2719.98" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<vitals hp="2719" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="291.56" magical="556.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78" magical="236.93" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2588,12 +2588,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2640,12 +2640,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2692,12 +2692,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2822" hpRegen="8.5" mp="1624" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2744,12 +2744,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2832" hpRegen="8.5" mp="1632" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2796,12 +2796,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2842" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2848,12 +2848,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2852" hpRegen="8.5" mp="1649" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2900,12 +2900,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2862" hpRegen="8.5" mp="1657" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2952,12 +2952,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2871" hpRegen="8.5" mp="1666" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3004,12 +3004,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3056,12 +3056,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2889" hpRegen="8.5" mp="1683" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3108,12 +3108,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2899" hpRegen="8.5" mp="1691" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3160,12 +3160,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2908" hpRegen="8.5" mp="1700" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3212,12 +3212,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2916" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3264,12 +3264,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2926" hpRegen="8.5" mp="1717" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3316,12 +3316,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2935" hpRegen="8.5" mp="1725" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3368,12 +3368,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2944" hpRegen="8.5" mp="1734" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3420,12 +3420,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2951" hpRegen="8.5" mp="1743" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3472,12 +3472,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2960" hpRegen="8.5" mp="1751" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3524,12 +3524,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2969" hpRegen="8.5" mp="1760" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3576,12 +3576,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2978" hpRegen="8.5" mp="1768" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3628,12 +3628,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3680,12 +3680,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="2993" hpRegen="8.5" mp="1786" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3732,12 +3732,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3001" hpRegen="8.5" mp="1794" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3784,12 +3784,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3010" hpRegen="8.5" mp="1803" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3836,12 +3836,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3016" hpRegen="8.5" mp="1812" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3888,12 +3888,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3024" hpRegen="8.5" mp="1820" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3940,12 +3940,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3032" hpRegen="8.5" mp="1829" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3992,12 +3992,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4044,12 +4044,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3056" hpRegen="8.5" mp="1858" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4096,12 +4096,12 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<vitals hp="3066" hpRegen="8.5" mp="1870" mpRegen="3" />
 			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="180" />
+				<run ground="170" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4141,7 +4141,7 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="619.246048" hpRegen="3.5" mp="218.52" mpRegen="1.5" />
+			<vitals hp="387" hpRegen="3.5" mp="218" mpRegen="1.5" />
 			<attack physical="51.75278" magical="35.34044" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="92.65694" magical="67.80232" />
 			<speed>
@@ -4181,7 +4181,7 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1069.554112" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+			<vitals hp="515" hpRegen="4.5" mp="286" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="91.89199" />
 			<speed>
@@ -4221,7 +4221,7 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1681.306432" hpRegen="5.5" mp="531" mpRegen="2.1" />
+			<vitals hp="668" hpRegen="5.5" mp="358" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<speed>
@@ -4261,7 +4261,7 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2273.601648" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<vitals hp="847" hpRegen="5.5" mp="432" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<speed>
@@ -4301,7 +4301,7 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2925.892256" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<vitals hp="1050" hpRegen="6.5" mp="531" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>

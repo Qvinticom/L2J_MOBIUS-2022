@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="12774" level="1" type="L2Npc" name="Young Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="100" hpRegen="0.9" mp="0" mpRegen="0" />
+			<vitals hp="39" hpRegen="0.9" mp="40" mpRegen="0" />
 			<attack physical="4" magical="5.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="45.88" magical="33.57" />
 			<speed>
-				<walk ground="30" />
-				<run ground="80" />
+				<walk ground="50" />
+				<run ground="100" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -38,12 +38,12 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="130" hpRegen="0.9" mp="0" mpRegen="0" />
+			<vitals hp="39" hpRegen="0.9" mp="40" mpRegen="0" />
 			<attack physical="4" magical="5.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="45.88" magical="33.57" />
 			<speed>
-				<walk ground="30" />
-				<run ground="80" />
+				<walk ground="50" />
+				<run ground="100" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -64,20 +64,20 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" />
 		<collision>
-			<radius normal="20" />
-			<height normal="21" />
+			<radius normal="23" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="12776" level="1" type="L2Monster" name="Defective Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="130" hpRegen="0.9" mp="0" mpRegen="0" />
+			<vitals hp="39" hpRegen="0.9" mp="40" mpRegen="0" />
 			<attack physical="4" magical="5.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="45.88" magical="33.57" />
 			<speed>
-				<walk ground="30" />
-				<run ground="80" />
+				<walk ground="50" />
+				<run ground="100" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -106,12 +106,12 @@
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="100" hpRegen="0.9" mp="0" mpRegen="0" />
+			<vitals hp="39" hpRegen="0.9" mp="40" mpRegen="0" />
 			<attack physical="4" magical="5.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="45.88" magical="33.57" />
 			<speed>
-				<walk ground="30" />
-				<run ground="80" />
+				<walk ground="50" />
+				<run ground="100" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -132,20 +132,20 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" />
 		<collision>
-			<radius normal="20" />
-			<height normal="21" />
+			<radius normal="23" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="12778" level="1" type="L2Monster" name="High Quality Large Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="130" hpRegen="0.9" mp="0" mpRegen="0" />
+			<vitals hp="39" hpRegen="0.9" mp="40" mpRegen="0" />
 			<attack physical="4" magical="5.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="45.88" magical="33.57" />
 			<speed>
-				<walk ground="30" />
-				<run ground="80" />
+				<walk ground="50" />
+				<run ground="100" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -166,20 +166,20 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" />
 		<collision>
-			<radius normal="30" />
-			<height normal="31.5" />
+			<radius normal="34" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="12779" level="1" type="L2Monster" name="Defective Large Squash">
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="130" hpRegen="0.9" mp="0" mpRegen="0" />
+			<vitals hp="39" hpRegen="0.9" mp="40" mpRegen="0" />
 			<attack physical="4" magical="5.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="45.88" magical="33.57" />
 			<speed>
-				<walk ground="30" />
-				<run ground="80" />
+				<walk ground="50" />
+				<run ground="100" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -200,8 +200,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" />
 		<collision>
-			<radius normal="25" />
-			<height normal="26.5" />
+			<radius normal="28" />
+			<height normal="31" />
 		</collision>
 	</npc>
 </list>

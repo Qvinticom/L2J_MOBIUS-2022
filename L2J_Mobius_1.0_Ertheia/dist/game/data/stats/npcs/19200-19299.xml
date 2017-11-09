@@ -2001,7 +2001,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1379666" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="689833" hpRegen="8.5" mp="19524" mpRegen="30" />
 			<speed>
 				<walk ground="34" />
 				<run ground="200" />
@@ -2061,7 +2061,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2252481" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="750827" hpRegen="8.5" mp="21324" mpRegen="30" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -2123,7 +2123,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4101264" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<vitals hp="1025316" hpRegen="8.5" mp="23174" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2208,7 +2208,7 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="80" int="79" dex="55" wit="78" con="73" men="78">
-			<vitals hp="65863" hpRegen="3" mp="56645458" mpRegen="3" />
+			<vitals hp="1" hpRegen="3" mp="1" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="60" />
@@ -2230,8 +2230,8 @@
 			</drop>
 		 </drop_lists>
 		<collision>
-			<radius normal="10" />
-			<height normal="27" />
+			<radius normal="8" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="19258" level="99" type="L2Monster" name="Large Draco Egg">
@@ -2239,7 +2239,7 @@
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="103" int="79" dex="55" wit="78" con="108" men="78">
-			<vitals hp="65863" hpRegen="3" mp="56645458" mpRegen="3" />
+			<vitals hp="1" hpRegen="3" mp="1" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="60" />

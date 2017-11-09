@@ -336,16 +336,16 @@
 		<race>KAMAEL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="20" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="17" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="34218" level="100" type="L2Npc" name="Retbach" title="Giant's Minion">
@@ -353,16 +353,16 @@
 		<race>KAMAEL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="13" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="34219" level="100" type="L2Npc" name="Sthor">
@@ -373,14 +373,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="24" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="12" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="34220" level="100" type="L2Npc" name="Vetle">
@@ -391,14 +391,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="39" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="13" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="34221" level="85" type="L2Npc" name="Stena" title="Researcher">
@@ -406,32 +406,32 @@
 		<race>KAMAEL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6987" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="4039" hpRegen="7.5" mp="1812" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="36" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="56" />
-			<height normal="7" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="34222" level="85" type="L2Npc" name="Kekropus" title="Hierarch">
 		<race>KAMAEL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444.46819" hpRegen="9.5" mp="1345.8" mpRegen="3.3" />
+			<vitals hp="8446" hpRegen="9.5" mp="2355" mpRegen="3.3" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="20" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="18" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="34223" level="85" type="L2Npc" name="Giant Trackers Teleport Device">
@@ -440,14 +440,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="30" />
-			<height normal="40" />
+			<radius normal="14.5" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="34226" level="85" type="L2Npc" name="Relic Control Device">
@@ -456,14 +456,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="30" />
-			<height normal="40" />
+			<radius normal="14.5" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="34229" level="85" type="L2Npc" name="Ruine" title="Dimensional Seeker">
@@ -471,16 +471,16 @@
 		<race>ERTHEIA</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="64" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="9" />
+			<height normal="19.5" />
 		</collision>
 	</npc>
 	<npc id="34230" level="85" type="L2Npc" name="Sporcha" title="Commando Captain">
@@ -488,16 +488,16 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="34237" level="100" type="L2Npc" name="Krenaht" title="Giant Tracker Leader">
@@ -506,32 +506,32 @@
 		<sex>MALE</sex>
 		<equipment rhand="13458" /> <!-- Vesper Slasher -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="11" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="34243" level="100" type="L2Npc" name="Histie">
 		<race>KAMAEL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="9.5" mp="2355" mpRegen="3.3" />
+			<vitals hp="8446" hpRegen="9.5" mp="2355" mpRegen="3.3" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="40" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="34257" level="85" type="L2Npc" name="Masa">
@@ -539,16 +539,16 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="1" />
-				<run ground="1" />
+				<walk ground="60" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="110" />
-			<height normal="70" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 	</npc>
 </list>

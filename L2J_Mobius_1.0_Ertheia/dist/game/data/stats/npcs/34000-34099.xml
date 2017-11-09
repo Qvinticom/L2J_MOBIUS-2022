@@ -1,20 +1,20 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="34000" level="99" type="L2Npc" name="Ferin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="190" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="34001" level="85" type="L2Npc" name="Ferin">
@@ -22,32 +22,32 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7324" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="4234" hpRegen="7.5" mp="1846" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="190" />
 			</speed>
 		</stats>
 		<status attackable="false" talkable="false"/>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="34002" level="99" type="L2Npc" name="Dolkin" title="Maestro">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="34003" level="99" type="L2Npc" name="Victri">
@@ -55,16 +55,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="33.5" />
 		</collision>
 	</npc>
 	<npc id="34004" level="99" type="L2Npc" name="Sayha's Herald" title="Victorious">
@@ -72,7 +72,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -80,8 +80,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="34005" level="99" type="L2Npc" name="Dia">
@@ -89,16 +89,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="34006" level="99" type="L2Npc" name="">
@@ -106,16 +106,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" talkable="false" targetable="false" showName="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="34007" level="70" type="L2Npc" name="Nomi" title="Unlicensed Buff Manager">
@@ -123,48 +123,48 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4228" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="10" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="34008" level="99" type="L2Npc" name="Noelle" title="Event Manager">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="64" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="34009" level="99" type="L2Npc" name="Holiday Tree" title="Holiday Spirit">
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="68" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="39" hpRegen="7.5" mp="40" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="1" />
 				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="false" targetable="false" showName="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="110" />
+			<height normal="140" />
 		</collision>
 	</npc>
 	<npc id="34010" level="99" type="L2Npc" name="Galup" title="High Horse">
@@ -172,16 +172,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="41" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="14" />
 		</collision>
 	</npc>
 	<npc id="34011" level="99" type="L2Npc" name="Dandy" title="Dreaming">
@@ -189,16 +189,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="34012" level="99" type="L2Npc" name="Dandy" title="Dreaming">
@@ -206,16 +206,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="34013" level="99" type="L2Npc" name="Infinite Chest">
@@ -223,16 +223,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="22" />
+			<height normal="16" />
 		</collision>
 	</npc>
 	<npc id="34014" level="99" type="L2Npc" name="Harp Zu Hestui">
@@ -240,16 +240,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14612" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="8" />
+			<height normal="29" />
 		</collision>
 	</npc>
 	<npc id="34015" level="99" type="L2Npc" name="Bora" title="GM Helper">
@@ -257,7 +257,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -265,8 +265,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="20" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="34016" level="99" type="L2Npc" name="Goldeen" title="Event Manager">
@@ -274,16 +274,16 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8768" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="1" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="12" />
+			<height normal="27.5" />
 		</collision>
 	</npc>
 </list>

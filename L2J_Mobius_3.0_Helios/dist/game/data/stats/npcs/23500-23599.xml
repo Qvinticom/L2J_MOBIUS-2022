@@ -236,14 +236,14 @@
 		<equipment rhand="17421" />
 		<acquire exp="148977405" sp="357545" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -259,8 +259,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="29" />
-			<height normal="36" />
+			<radius normal="15" />
+			<height normal="30" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -285,14 +285,14 @@
 		<equipment rhand="17417" lhand="17435" />
 		<acquire exp="187575027" sp="450180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -312,8 +312,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="29" />
-			<height normal="36" />
+			<radius normal="16" />
+			<height normal="35.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -337,7 +337,7 @@
 		<equipment rhand="17329" />
 		<acquire exp="148977405" sp="357545" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
@@ -386,14 +386,14 @@
 		<equipment rhand="17325" lhand="17401" />
 		<acquire exp="187575027" sp="450180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -412,7 +412,7 @@
 		</ai>
 		<collision>
 			<radius normal="16" />
-			<height normal="13.25" />
+			<height normal="35.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -437,58 +437,7 @@
 		<sex>MALE</sex>
 		<acquire exp="229580271" sp="550992" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
-			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="5080" magical="5650" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<skill_list>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="16758" level="1" /> <!-- Embryo -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-		</skill_list>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
-			<clan_list>
-				<clan>ATELIA_CLAN</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="15" />
-			<height normal="30" />
-		</collision>
-		<drop_lists>
-			<drop>
-				<item id="57" min="24525" max="57134" chance="70" /> <!-- Adena -->
-				<item id="35344" min="1" max="1" chance="1.264" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
-				<item id="35468" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="36907" min="1" max="1" chance="0.03" /> <!-- Recipe: Adamantite Wire - Upgrade -->
-			</drop>
-			<spoil>
-				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-	</npc>
-	<npc id="23510" level="102" type="L2Monster" name="Atelia Flame Master">
-		<!-- Source: www.l2wiki.com (2015-04-08) -->
-		<race>HUMANOID</race>
-		<equipment rhand="17425" />
-		<sex>MALE</sex>
-		<acquire exp="229580271" sp="550992" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5080" magical="5650" />
 			<attribute>
@@ -514,7 +463,58 @@
 		</ai>
 		<collision>
 			<radius normal="11" />
-			<height normal="25.50" />
+			<height normal="25.5" />
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="24525" max="57134" chance="70" /> <!-- Adena -->
+				<item id="35344" min="1" max="1" chance="1.264" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
+				<item id="35468" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="36907" min="1" max="1" chance="0.03" /> <!-- Recipe: Adamantite Wire - Upgrade -->
+			</drop>
+			<spoil>
+				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="23510" level="102" type="L2Monster" name="Atelia Flame Master">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<equipment rhand="17425" />
+		<sex>MALE</sex>
+		<acquire exp="229580271" sp="550992" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5080" magical="5650" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skill_list>
+		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+			<clan_list>
+				<clan>ATELIA_CLAN</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="25.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -539,7 +539,7 @@
 		<sex>MALE</sex>
 		<acquire exp="267891659" sp="642940" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -592,7 +592,7 @@
 		<sex>MALE</sex>
 		<acquire exp="267891659" sp="642940" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -644,7 +644,7 @@
 		<sex>MALE</sex>
 		<acquire exp="187575027" sp="450180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -672,7 +672,7 @@
 		</ai>
 		<collision>
 			<radius normal="16" />
-			<height normal="35.50" />
+			<height normal="35.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -696,7 +696,7 @@
 		<sex>MALE</sex>
 		<acquire exp="187575027" sp="450180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -724,7 +724,7 @@
 		</ai>
 		<collision>
 			<radius normal="16" />
-			<height normal="35.50" />
+			<height normal="35.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -748,7 +748,7 @@
 		<sex>MALE</sex>
 		<acquire exp="267891659" sp="642940" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -800,7 +800,7 @@
 		<sex>MALE</sex>
 		<acquire exp="267891659" sp="642940" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -853,7 +853,7 @@
 		<equipment rhand="17325" lhand="17401" />
 		<acquire exp="187575027" sp="450180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -881,7 +881,7 @@
 		</ai>
 		<collision>
 			<radius normal="16" />
-			<height normal="35.50" />
+			<height normal="35.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -905,7 +905,7 @@
 		<sex>MALE</sex>
 		<acquire exp="267891659" sp="642940" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="512263" hpRegen="11.5" mp="25074" mpRegen="3.9" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -957,7 +957,7 @@
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1328146" hpRegen="11.5" mp="50920" mpRegen="3.9" />
+			<vitals hp="1328145" hpRegen="11.5" mp="50920" mpRegen="3.9" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -979,7 +979,7 @@
 		<race>BEAST</race>
 		<acquire exp="144017880" sp="345643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="3605" />
 			<attribute>
@@ -1025,7 +1025,7 @@
 		<race>BEAST</race>
 		<acquire exp="160274270" sp="384658" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
@@ -1074,7 +1074,7 @@
 		<race>BEAST</race>
 		<acquire exp="144017880" sp="345643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="3605" />
 			<attribute>
@@ -1122,7 +1122,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
@@ -1171,7 +1171,7 @@
 		<race>ANIMAL</race>
 		<acquire exp="17848068" sp="42835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="10561" magical="4115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2431" magical="2000" />
 			<attribute>
@@ -1195,7 +1195,7 @@
 		</ai>
 		<collision>
 			<radius normal="6" />
-			<height normal="10.50" />
+			<height normal="10.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1218,7 +1218,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
@@ -1252,7 +1252,7 @@
         <sex>FEMALE</sex>
 		<acquire exp="160274270" sp="384658" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
@@ -1301,7 +1301,7 @@
 		<race>BEAST</race>
 		<acquire exp="133866840" sp="321280" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
@@ -1345,7 +1345,7 @@
 		<race>BEAST</race>
 		<acquire exp="133866840" sp="321280" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
@@ -1390,7 +1390,7 @@
 		<race>BEAST</race>
 		<acquire exp="144017880" sp="345643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="3605" />
 			<attribute>
@@ -1437,7 +1437,7 @@
 		<race>BEAST</race>
 		<acquire exp="160274270" sp="384658" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
@@ -1485,7 +1485,7 @@
 		<race>BEAST</race>
 		<acquire exp="144017880" sp="345643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="3605" />
 			<attribute>
@@ -1531,7 +1531,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
@@ -1580,12 +1580,12 @@
 		<race>ANIMAL</race>
 		<acquire exp="17848068" sp="42835" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55815" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="10561" magical="4115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2431" magical="2000" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1600,8 +1600,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" />
-			<height normal="13.25" />
+			<radius normal="6" />
+			<height normal="10.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1624,7 +1624,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
@@ -1658,7 +1658,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="160274270" sp="384658" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
@@ -1707,7 +1707,7 @@
 		<race>BEAST</race>
 		<acquire exp="133866840" sp="321280" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
@@ -1752,14 +1752,14 @@
 		<race>BEAST</race>
 		<acquire exp="133866840" sp="321280" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -1796,7 +1796,7 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="27915360" sp="66996" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="209304" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3131" magical="2680" />	
 			<attribute>
@@ -1804,7 +1804,7 @@
 			</attribute>
 			<speed>
 				<walk ground="39" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1845,7 +1845,7 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="27915360" sp="66996" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="209304" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3131" magical="2680" />	
 			<attribute>
@@ -1853,7 +1853,7 @@
 			</attribute>
 			<speed>
 				<walk ground="39" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1894,7 +1894,7 @@
 		<race>BEAST</race>
 		<acquire exp="8595068607" sp="8595158" raidPoints="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418608" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="1360307" hpRegen="10.5" mp="48616" mpRegen="3.6" />
 			<attack physical="56121" magical="62961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
@@ -1925,7 +1925,7 @@
 		<race>BEAST</race>
 		<acquire exp="5177752173" sp="12426574" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1360308" hpRegen="11.5" mp="48616" mpRegen="3.9" />
+			<vitals hp="403282" hpRegen="11.5" mp="23928" mpRegen="3.9" />
 			<attack physical="56121" magical="62961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
@@ -1978,10 +1978,10 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4080923" hpRegen="11.5" mp="48616" mpRegen="3.9" />
+			<vitals hp="4080922" hpRegen="11.5" mp="48616" mpRegen="3.9" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -1989,8 +1989,8 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="16" />
-			<height normal="13.25" />
+			<radius normal="46" />
+			<height normal="50" />
 		</collision>
 	</npc>
 	<npc id="23564" level="100" type="L2Monster" name="Croa">
@@ -1998,10 +1998,10 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1507176" hpRegen="10.5" mp="47856" mpRegen="3.6" />
+			<vitals hp="1507175" hpRegen="10.5" mp="47856" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2009,8 +2009,8 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="16" />
-			<height normal="13.25" />
+			<radius normal="46" />
+			<height normal="50" />
 		</collision>
 		<drop_lists>
 		</drop_lists>
@@ -2020,10 +2020,10 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1507176" hpRegen="10.5" mp="47856" mpRegen="3.6" />
+			<vitals hp="1507175" hpRegen="10.5" mp="47856" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2031,8 +2031,8 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="16" />
-			<height normal="13.25" />
+			<radius normal="46" />
+			<height normal="50" />
 		</collision>
 		<drop_lists>
 		</drop_lists>
@@ -2852,7 +2852,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="5639744400" sp="13535386" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1360094" hpRegen="11.5" mp="50148" mpRegen="3.9" />
+			<vitals hp="1142455" hpRegen="11.5" mp="50148" mpRegen="3.9" />
 			<attack physical="59121" magical="64961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4321" magical="4105" />
 			<attribute>
@@ -2876,7 +2876,7 @@
 		</ai>
 		<collision>
 			<radius normal="18" />
-			<height normal="29.50" />
+			<height normal="29.5" />
 		</collision>
 	</npc>
 	<npc id="23587" level="104" type="L2Monster" name="Burnstein" title="Embryo Commander">
@@ -2884,7 +2884,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="18973578624" sp="45536588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3320431" hpRegen="11.5" mp="50920" mpRegen="3.9" />
+			<vitals hp="1713682" hpRegen="11.5" mp="50148" mpRegen="3.9" />
 			<attack physical="63121" magical="68961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5921" magical="5405" />
 			<attribute>
@@ -2978,7 +2978,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="3456666576" sp="8295999" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638515" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
 			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -3005,7 +3005,7 @@
 		<equipment rhand="17421" />
 		<acquire exp="60751239" sp="60797" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="113338" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -3041,14 +3041,14 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="856085" hpRegen="7.5" mp="25074" mpRegen="2.7" />
+			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
 			<attribute>
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 			<speed>
-				<walk ground="36" />
+				<walk ground="36.48" />
 				<run ground="190" />
 			</speed>
 			<hit_time>500</hit_time>
@@ -3067,15 +3067,15 @@
 		<race>ORC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="856085" hpRegen="7.5" mp="25074" mpRegen="2.7" />
+			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
 			<attribute>
 				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="40" />
+				<run ground="190" />
 			</speed>
 			<hit_time>500</hit_time>
 		</stats>
@@ -3085,7 +3085,7 @@
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="14.50" />
+			<radius normal="14.5" />
 			<height normal="30" />
 		</collision>
 	</npc>
@@ -3093,7 +3093,7 @@
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="856085" hpRegen="7.5" mp="25074" mpRegen="2.7" />
+			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
 			<attribute>
@@ -3112,14 +3112,14 @@
 		</skill_list>
 		<collision>
 			<radius normal="10" />
-			<height normal="23.50" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="23593" level="103" type="L2Npc" name="Elise" title="Brainwashed Aden Vanguard">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="856085" hpRegen="7.5" mp="25074" mpRegen="2.7" />
+			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
 			<attribute>
@@ -3139,14 +3139,14 @@
 		</skill_list>
 		<collision>
 			<radius normal="8" />
-			<height normal="23.50" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="23594" level="103" type="L2Npc" name="Eliyah" title="Brainwashed Aden Vanguard">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="856085" hpRegen="7.5" mp="25074" mpRegen="2.7" />
+			<vitals hp="512263" hpRegen="7.5" mp="25074" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
 			<attribute>
@@ -3166,7 +3166,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="9" />
-			<height normal="23.50" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="23595" level="101" type="L2Monster" name="Fortress Raider" usingServerSideTitle="true">
@@ -3175,7 +3175,7 @@
 		<equipment rhand="17421" />
 		<acquire exp="148977405" sp="357545" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="58233" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
@@ -3198,8 +3198,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="29" />
-			<height normal="36" />
+			<radius normal="15" />
+			<height normal="30" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -3224,7 +3224,7 @@
 		<equipment rhand="17417" lhand="17435" />
 		<acquire exp="187575027" sp="450180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="473004" hpRegen="7.5" mp="24690" mpRegen="2.7" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -3247,8 +3247,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="29" />
-			<height normal="36" />
+			<radius normal="16" />
+			<height normal="35.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -3272,7 +3272,7 @@
 		<equipment rhand="17329" />
 		<acquire exp="148977405" sp="357545" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="58233" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
@@ -3321,7 +3321,7 @@
 		<equipment rhand="17325" lhand="17401" />
 		<acquire exp="187575027" sp="450180" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="453352" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="473004" hpRegen="7.5" mp="24690" mpRegen="2.7" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -3345,7 +3345,7 @@
 		</ai>
 		<collision>
 			<radius normal="16" />
-			<height normal="35.50" />
+			<height normal="35.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -3370,7 +3370,7 @@
 		<sex>MALE</sex>
 		<acquire exp="229580271" sp="550992" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="490979" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="63066" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5080" magical="5650" />
 			<attribute>
@@ -3394,7 +3394,7 @@
 		</ai>
 		<collision>
 			<radius normal="11" />
-			<height normal="25.50" />
+			<height normal="25.5" />
 		</collision>
 		<drop_lists>
 			<drop>

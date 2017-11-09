@@ -1556,14 +1556,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="25.0" />
-				<run ground="140.0" />
+				<walk ground="25" />
+				<run ground="140" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="8.0" />
-			<height normal="15.0" />
+			<radius normal="8" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="13473" level="85" type="L2Monster" name="Blue Dynasty Unicorn">
@@ -1572,13 +1572,13 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="4234" hpRegen="7.5" mp="1846" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="30.0" />
+			<radius normal="30" />
 			<height normal="27.5" />
 		</collision>
 	</npc>

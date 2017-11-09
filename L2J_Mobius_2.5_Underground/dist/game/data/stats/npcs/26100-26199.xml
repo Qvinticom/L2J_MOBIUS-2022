@@ -61,7 +61,7 @@
 		<race>DRAGON</race>
 		<acquire exp="58137911944" sp="116275894" raidPoints="7" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7938542" hpRegen="1771.9298245614" mp="47100" mpRegen="1870.37037037037" />
+			<vitals hp="3334120" hpRegen="1771.9298245614" mp="47100" mpRegen="1870.37037037037" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -1322,7 +1322,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="15510435336" sp="31020949" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="21404421" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
+			<vitals hp="2996558" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
 			<speed>
 				<walk ground="45" />
 				<run ground="225" />
@@ -1422,7 +1422,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="12408348268" sp="24816720" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="23350277" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
+			<vitals hp="1225864" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
 			<speed>
 				<walk ground="45" />
 				<run ground="225" />
@@ -1488,7 +1488,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="18612522403" sp="37225080" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="23350281" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
+			<vitals hp="1634486" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
 			<speed>
 				<walk ground="45" />
 				<run ground="225" />
@@ -1604,7 +1604,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="15510435336" sp="31020949" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="21404421" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
+			<vitals hp="2996558" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
 			<speed>
 				<walk ground="45" />
 				<run ground="225" />
@@ -1720,7 +1720,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="12408348268" sp="24816720" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="23350277" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
+			<vitals hp="1225864" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
 			<speed>
 				<walk ground="45" />
 				<run ground="225" />
@@ -2006,7 +2006,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="18612522403" sp="37225080" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="23350281" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
+			<vitals hp="1634486" hpRegen="1736.84210526316" mp="22800" mpRegen="1833.33333333333" />
 			<speed>
 				<walk ground="45" />
 				<run ground="225" />
@@ -2308,15 +2308,15 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="33204288" hpRegen="1824.56140350877" mp="50920" mpRegen="1925.92592592593" />
+			<vitals hp="13945521" hpRegen="1824.56140350877" mp="50920" mpRegen="1925.92592592593" />
 			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3851.85185185185" magical="2236.55913978495" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370"/>
 			</attribute>
 			<speed>
-				<walk ground="80" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="270" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -2453,7 +2453,7 @@
 	<npc id="26126" level="102" type="L2Monster" name="Guardian Sinistra" title="Kelbim's Minion">
 		<race>UNDEAD</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3927834" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="1328145" hpRegen="11.5" mp="50920" mpRegen="3.9" />
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<attribute>
@@ -2482,7 +2482,7 @@
 	<npc id="26127" level="102" type="L2Monster" name="Guardian Destra" title="Kelbim's Minion">
 		<race>UNDEAD</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3927834" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="1328145" hpRegen="11.5" mp="50920" mpRegen="3.9" />
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<attribute>
@@ -2577,7 +2577,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="54225186393" sp="130140121" raidPoints="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="19433358" hpRegen="1771.9298245614" mp="48616" mpRegen="1870.37037037037" />
+			<vitals hp="8161846" hpRegen="1771.9298245614" mp="48616" mpRegen="1870.37037037037" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2672,7 +2672,7 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1507176" hpRegen="10.5" mp="47856" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2693,7 +2693,7 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1507176" hpRegen="10.5" mp="47856" mpRegen="3.6" />
+			<vitals hp="53771" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2716,7 +2716,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="381103201" sp="381202" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="540077" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="512263" hpRegen="11.5" mp="25074" mpRegen="3.9" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2756,7 +2756,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="35530389720" sp="71060779" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1360094" hpRegen="11.5" mp="50148" mpRegen="3.9" />
+			<vitals hp="571227" hpRegen="11.5" mp="50148" mpRegen="3.9" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2778,7 +2778,7 @@
 		<race>HUMANOID</race>
 		<acquire exp="88825974282" sp="177652042" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3320431" hpRegen="11.5" mp="50920" mpRegen="3.9" />
+			<vitals hp="1394552" hpRegen="11.5" mp="50920" mpRegen="3.9" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />

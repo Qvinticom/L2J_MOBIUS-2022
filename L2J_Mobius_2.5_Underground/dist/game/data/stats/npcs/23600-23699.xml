@@ -1388,8 +1388,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1398,8 +1398,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<collision>
-			<radius normal="15.0" />
-			<height normal="30.0" />
+			<radius normal="15" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="23678" level="85" type="L2Npc" name="Fortress Guardian Captain" title="Army Recruit">
@@ -1409,8 +1409,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="473004" hpRegen="7.5" mp="24690" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1419,7 +1419,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<collision>
-			<radius normal="16.0" />
+			<radius normal="16" />
 			<height normal="35.5" />
 		</collision>
 	</npc>
@@ -1430,8 +1430,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="58233" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1440,8 +1440,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<collision>
-			<radius normal="15.0" />
-			<height normal="30.0" />
+			<radius normal="15" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="23680" level="85" type="L2Npc" name="Flame Golem">
@@ -1451,8 +1451,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2511960" hpRegen="7.5" mp="47856" mpRegen="2.7" />
 			<speed>
-				<walk ground="13.0" />
-				<run ground="180.0" />
+				<walk ground="13" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1461,8 +1461,8 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<collision>
-			<radius normal="76.0" />
-			<height normal="93.0" />
+			<radius normal="76" />
+			<height normal="93" />
 		</collision>
 	</npc>
 	<npc id="23681" level="85" type="L2Npc" name="Flame Stakato">
@@ -1472,8 +1472,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
-				<walk ground="25.0" />
-				<run ground="180.0" />
+				<walk ground="25" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1482,8 +1482,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<collision>
-			<radius normal="13.0" />
-			<height normal="40.0" />
+			<radius normal="13" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="23682" level="85" type="L2Npc" name="Flame Scorpion">
@@ -1493,8 +1493,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="107542" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
-				<walk ground="37.0" />
-				<run ground="180.0" />
+				<walk ground="37" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1503,7 +1503,7 @@
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
 		<collision>
-			<radius normal="24.0" />
+			<radius normal="24" />
 			<height normal="52.8" />
 		</collision>
 	</npc>
@@ -1514,8 +1514,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2511960" hpRegen="7.5" mp="47856" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1524,8 +1524,8 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
 		<collision>
-			<radius normal="40.0" />
-			<height normal="76.0" />
+			<radius normal="40" />
+			<height normal="76" />
 		</collision>
 	</npc>
 	<npc id="23684" level="85" type="L2Npc" name="Seal Angel">
@@ -1535,8 +1535,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1545,7 +1545,7 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
 		<collision>
-			<radius normal="21.0" />
+			<radius normal="21" />
 			<height normal="37.5" />
 		</collision>
 	</npc>
@@ -1556,8 +1556,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1566,7 +1566,7 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
 		<collision>
-			<radius normal="21.0" />
+			<radius normal="21" />
 			<height normal="35.25" />
 		</collision>
 	</npc>
@@ -1577,8 +1577,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="403282" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1587,7 +1587,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<collision>
-			<radius normal="50.0" />
+			<radius normal="50" />
 			<height normal="47.5" />
 		</collision>
 	</npc>
@@ -1598,8 +1598,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="403282" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="180.0" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1608,7 +1608,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<collision>
-			<radius normal="75.0" />
+			<radius normal="75" />
 			<height normal="72.75" />
 		</collision>
 	</npc>
@@ -1619,8 +1619,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
-				<walk ground="36.0" />
-				<run ground="180.0" />
+				<walk ground="36" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1629,8 +1629,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<collision>
-			<radius normal="12.0" />
-			<height normal="25.0" />
+			<radius normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="23689" level="85" type="L2Npc" name="Freya">
@@ -1640,8 +1640,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2511960" hpRegen="7.5" mp="47856" mpRegen="2.7" />
 			<speed>
-				<walk ground="54.0" />
-				<run ground="180.0" />
+				<walk ground="54" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -1650,8 +1650,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<collision>
-			<radius normal="22.0" />
-			<height normal="55.0" />
+			<radius normal="22" />
+			<height normal="55" />
 		</collision>
 	</npc>
 	<npc id="23690" level="85" type="L2Npc" name="Kelbim" title="Dragonclaw Clan Leader">
@@ -1661,13 +1661,13 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2511960" hpRegen="7.5" mp="47856" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="12.0" />
+			<radius normal="12" />
 			<height normal="35.1" />
 		</collision>
 	</npc>
@@ -1678,14 +1678,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="837320" hpRegen="7.5" mp="47856" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="9.0" />
-			<height normal="23.0" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="23692" level="85" type="L2Npc" name="Fiora" title="Dragonclaw Knight Captain">
@@ -1695,13 +1695,13 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="837320" hpRegen="7.5" mp="47856" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="7.0" />
+			<radius normal="7" />
 			<height normal="23.5" />
 		</collision>
 	</npc>
@@ -1712,14 +1712,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2511960" hpRegen="7.5" mp="47856" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="11.0" />
-			<height normal="28.0" />
+			<radius normal="11" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="23694" level="85" type="L2Npc" name="Royal Guard Knight">
@@ -1729,14 +1729,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
-			<height normal="24.0" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="23695" level="85" type="L2Npc" name="Royal Guard Healer">
@@ -1746,14 +1746,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
-			<height normal="23.0" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="23696" level="85" type="L2Npc" name="Domithan" title="Dragonclaw Royal Guard">
@@ -1763,14 +1763,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="7.0" />
-			<height normal="27.0" />
+			<radius normal="7" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="23697" level="85" type="L2Npc" name="Knight Soldier">
@@ -1780,14 +1780,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="7.0" />
-			<height normal="27.0" />
+			<radius normal="7" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="23698" level="85" type="L2Npc" name="Knight Archer">
@@ -1797,14 +1797,14 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
-			<height normal="24.0" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="23699" level="85" type="L2Npc" name="Royal Guard Wizard">
@@ -1814,8 +1814,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
-				<walk ground="60.0" />
-				<run ground="200.0" />
+				<walk ground="60" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="false" />

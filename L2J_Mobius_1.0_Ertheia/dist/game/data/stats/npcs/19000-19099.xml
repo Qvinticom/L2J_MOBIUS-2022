@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="19000" level="88" type="L2Monster" name="Mutated Millipede">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -236,7 +236,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="37" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="950502" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<vitals hp="356012" hpRegen="8.5" mp="23174" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2426,7 +2426,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7915" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
 			<speed>
 				<walk ground="65" />
 				<run ground="220" />

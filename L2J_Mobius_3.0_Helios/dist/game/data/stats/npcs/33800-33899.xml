@@ -854,7 +854,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="103" int="79" dex="55" wit="78" con="108" men="78">
-			<vitals hp="6586364" hpRegen="3" mp="56645458" mpRegen="3" />
+			<vitals hp="6586364" hpRegen="3" mp="56645458" mpRegen="3" /> <!-- Custom stats for event -->
 			<speed>
 				<walk ground="50" />
 				<run ground="60" />
@@ -1552,7 +1552,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="1" />
@@ -1574,7 +1574,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="40" />
 				<run ground="1" />
@@ -1596,7 +1596,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="70" />
 				<run ground="1" />
