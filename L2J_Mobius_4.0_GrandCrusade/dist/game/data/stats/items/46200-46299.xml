@@ -336,7 +336,7 @@
 	</item>
 	<item id="46220" name="Membership Card - Market Eleven" additionalName="Event" type="EtcItem">
 		<!-- A membership card for the Eleven Market that was opened to celebrate Lineage 2's 11th anniversary. Will be deleted once the event ends. -->
-		<set name="icon" val="icon.etc_nobless_teleport_coupon_i00" />
+		<set name="icon" val="icon.ev_buff_11th" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -646,8 +646,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 	</item>
-	<item id="46244" name="L2 Anniversary Coin" additionalName="Event" type="EtcItem">
-		<!-- L2 Anniversary coin. Purchase various items at Market Eleven. Will be deleted once the event ends. -->
+	<item id="46244" name="11th Anniversary Coin" additionalName="Event" type="EtcItem">
+		<!-- 11th Anniversary coin. Purchase various items at Market Eleven. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -726,7 +726,7 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="bodypart" val="lrhand" />
-		<set name="weight" val="2530" />
+		<set name="weight" val="150" />
 		<stats>
 			<stat type="pAtk">8</stat>
 			<stat type="mAtk">6</stat>
@@ -906,7 +906,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46264" name="Freya's Art of Seduction" type="EtcItem">
-		<!-- For 30 min., Max HP/MP/CP + 30%, P./M. Def. + 30%, Speed + 20, P. Atk. + 10%, M. Atk. + 20%, Skill MP Consumption - 15%. Cannot be stacked with Art of Seduction. Cannot be used in the Olympiad. Can be used in the Ceremony of Chaos. Cooldown is 5 min. -->
+		<!-- Dimensional Item. When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30%, and Movement Speed by 20 MP Cost 15% for 30 minutes. Buff effect persists through death. Cooldown: 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -1000,7 +1000,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46274" name="Wind Vitality Tonic" type="EtcItem">
-		<!-- Vitality extract containing the power of the wind. Half of 1 bar on the vitality gauge is replenished. Cooldown is 10 minutes. Cannot be used in the Olympiad. -->
+		<!-- Water of Vitality containing the strength of the wind. Recovers half of a Vitality slot. Cooldown time is 1 minute. Cannot be used in the Olympiad. The 5 uses in 1 week limit does not apply. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="35000" name="Tauti's Two-handed Axe" type="Weapon">
-		<!-- Weapon augmented from Tauti's Fragment. When equipped, can use Tauti's Rage skill. When equipped, increases Atk. Spd. by about 15%, critical by 150, Max HP by 25%, and P. Atk. by 415. Increases damage inflicted during PvP. Enchantment, attribute, crystallization, augmentation or modification is impossible. Can bestow 1 Special Soul Crystal. -->
+	<item id="35000" name="Not in Use_Tauti Weapon" type="Weapon">
+		<!-- Weapon augmented from Tauti's Fragment. When equipped, can use Tauti's Rage skill. When equipped, increases Atk. Spd. by about 15%, critical by 150, Max HP by 25%, and P. Atk. by 415. Increases damage inflicted during PvP. Enchantment, attribute, and augmentation are not allowed. Crystallization, 1 Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_two_hand_pole_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -31,7 +31,7 @@
 		</stats>
 	</item>
 	<item id="35001" name="Tauti's Dual Axe" type="Weapon">
-		<!-- Weapon augmented from Tauti's Fragment. When equipped, PvP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. Can use Tauti's Rage skill. Enchantment, attribute, crystallization, augmentation or modification is impossible. Can bestow 1 Special Soul Crystal. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill �Tauti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 Special Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_dual_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

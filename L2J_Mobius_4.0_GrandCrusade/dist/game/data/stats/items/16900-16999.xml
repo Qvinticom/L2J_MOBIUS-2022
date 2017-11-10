@@ -2760,7 +2760,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16989" name="Bow of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 bows at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- When used, you acquire 6 arrows at S~D-grade. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2994,7 +2994,7 @@
 		</capsuled_items>
 	</item>
 	<item id="16998" name="Crossbow of Fortune Set" additionalName="90-day" type="EtcItem">
-		<!-- When used, you acquire 6 crossbows at S~D-grade s. Expires after 90 days if not used. -->
+		<!-- When used, you acquire 6 crossbows at S~D-grade s. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

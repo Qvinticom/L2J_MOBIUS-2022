@@ -983,9 +983,9 @@
 			<skill id="22521" level="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 		</skills>
 	</item>
-	<item id="22649" name="Blessed Three-headed Dragon's Egg" additionalName="1-day" type="EtcItem">
-		<!-- Using a Blessed Three-headed Dragon's Egg will give you great strength. -->
-		<set name="icon" val="BranchSys3.Icon.g_threehead_source" />
+	<item id="22649" name="Babayaga's Gift" additionalName="1-day" type="EtcItem">
+		<!-- Babayaga's special present. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />

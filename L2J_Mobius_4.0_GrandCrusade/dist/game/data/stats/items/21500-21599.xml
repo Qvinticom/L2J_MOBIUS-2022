@@ -1846,7 +1846,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="21595" name="Birthday Cake" type="EtcItem">
-		<!-- Sweet and tasty birthday cake. Summon a Birthday Cake for 5 minutes. Recover Vitality for party members at a set rate. -->
+		<!-- A sweet and delicious Birthday Cake. Summons a Birthday Cake that lasts for 5 minutes. At fixed intervals, the Birthday Cake recharges nearby party members' Vitality. Can be used from lv85. -->
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />

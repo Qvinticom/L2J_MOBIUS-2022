@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="47900" name="Angel's Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain 30 Shining Magic Baits. Either Archangel's Box of Grace or Nevit's Blessing Box is available to get with a random chance. -->
+		<set name="icon" val="icon.bm_sayha_silver_present" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47901" name="Archangel's Box of Grace" type="EtcItem">
+		<!-- If you double click on the box, you can obtain a rare item. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47902" name="Nevit's Blessing Box" type="EtcItem">
+		<!-- Double-click the box to obtain one of the very rare items at random. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47903" name="Shining Magic Bait (85)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47904" name="Shining Magic Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47905" name="Shining Magic Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47906" name="Shining Magic Bait (102)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47907" name="Shining Magic Bait (105)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift Fish, with a chance to obtain a Coin of light. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47908" name="Shining Magic Bait Exchange Coupon" type="EtcItem">
+		<!-- Fishing Guild Members in each village can exchange this for 1 of your desired Shining Magic Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47909" name="Angel's Gift Package" additionalName="Lv1" type="EtcItem">
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and one Scroll: Enchant Faint Elemental Shirt. -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47910" name="Angel's Gift Package" additionalName="Lv2" type="EtcItem">
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and one Scroll: Enchant Faint Elemental Shirt, and one Greater Vital Stone (30-day fixed period). -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47911" name="Angel's Gift Package" additionalName="Lv3" type="EtcItem">
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and two Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), and one Advanced RedandBlue Cat's Eye (30-day fixed period). -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47912" name="Angel's Gift Package" additionalName="Lv4" type="EtcItem">
+		<!-- Double click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced RedandBlue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit's Cloak of Light (30-day fixed period) box. -->
+		<set name="icon" val="icon.bm_nebit_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47913" name="Greater Transport Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="47914" name="Advanced RedandBlue Cat's Eye Treasure Chest" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term) and a Blue Cat's Eye (30-day fixed term). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="47915" name="Greater Tanzanite Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Tanzanite (30-day fixed term). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="47916" name="Nevit's Cloak of Light Box" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain Nevit's Cloak of Light (30-day fixed term). -->
+		<set name="icon" val="icon.bm_sayha_present" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="47917" name="Nevit's Cloak of Light" additionalName="30-day" type="Armor">
+		<!-- By Angel Nevit's strength, when equipped reduces received damage by -10%, and increases all stats by +3. -->
+		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="pDef">100</stat>
+		</stats>
+	</item>
+	<item id="47918" name="Nevit's Gold Hourglass" type="EtcItem">
+		<!-- When used, increases EXP/SP from hunting by 50%, and every 5 billion EXP, a Stand of Shining Growth is obtained for 30 minutes. Cannot be used with Fall of the Dragon, Dandy's Home Run Ball, and Agathion - EXP Bottle. Cooldown 5 minutes. -->
+		<set name="icon" val="icon.bm_nebit_bonus_time_up" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47919" name="Shining Scroll of Growth" type="EtcItem">
+		<!-- When used, 1 billion EXP obtained, is only 20% effective after Lv 99. Can be used above Lv 85. -->
+		<set name="icon" val="icon.bm_nebit_exp_book" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47920" name="Greater Vital Stone" additionalName="30-day" type="Armor">
+		<!-- Increases bonus EXP by 30% and decreases Vitality consumption by 15% when worn using Vitality. Additionally, acquired XP is increased by 10%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="47921" name="Greater Red Cat's Eye" additionalName="30-day" type="Armor">
+		<!-- Increases P. Critical Damage by 12%, P. Skill Critical Damage by 12%, and P. Skill Power by 5%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="47922" name="Greater Blue Cat's Eye" additionalName="30-day" type="Armor">
+		<!-- Increases Magic Critical Damage by 12%, M. Skill Power by 5%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="47923" name="Greater Tanzanite" additionalName="30-day" type="Armor">
+		<!-- When used, it creates a shield that absorbs 50,000 damage for 15 seconds and recovers 15% of maximum HP immediately after use. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
+		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="47924" name="Coin of Light" type="EtcItem">
+		<!-- A special coin obtained using Shiny Magic Bait. Can be used with the Dimensional Merchant. -->
+		<set name="icon" val="icon.bm_nebit_coin" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47925" name="Red Libra Request - Altar of Shilen" type="EtcItem">
+		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. A character of level 101 or over can receive the request by double-clicking the item. It will be deleted on Wednesday, September 28, 2016 after regular maintenance when the Red Libra merchants leave. Can be performed twice a day. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="default_action" val="START_QUEST" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="47926" name="Red Libra Request - Altar of Shilen" type="EtcItem">
+		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. It will be deleted on Wednesday, September 28, 2016 after regular maintenance when the Red Libra merchants leave. -->
+		<set name="icon" val="icon.red_comminssion_paper" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

@@ -196,7 +196,7 @@
 			<skill id="27586" level="1" /> <!-- Novice Adventurer's Circlet - Critical Rate -->
 		</skills>
 	</item>
-	<item id="27513" name="Novice Adventurer's Bracelet" type="EtcItem">
+	<item id="27513" name="Novice Adventurer's Bracelet" type="Armor">
 		<!-- Novice Adventurer's bracelet. MP + 60 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="default_action" val="EQUIP" />
@@ -336,7 +336,7 @@
 		</stats>
 	</item>
 	<item id="27520" name="Adventurer's Circlet" type="Armor">
-		<!-- Adventurer's circlet. Requires 2 hair accessory slots. P. Atk. + 3%, M. Atk. + 6% when equipped. -->
+		<!-- Adventurer's circlet. Requires 2 hair accessory slots. P. Atk. + 3%, M. Atk. + 5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -533,7 +533,7 @@
 	</item>
 	<item id="27535" name="+ 8 Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a + 8 enchanted Shiny Elemental Shirt. -->
-		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -546,7 +546,7 @@
 	</item>
 	<item id="27536" name="+ 8 Reflect Attack T-shirt Pack" type="EtcItem">
 		<!-- Double-click to get a + 8 enchanted Reflect Attack T-shirt. -->
-		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -559,7 +559,7 @@
 	</item>
 	<item id="27537" name="+ 8 Reflect Magic T-shirt Pack" type="EtcItem">
 		<!-- Double-click to get a + 8 enchanted Reflect Magic T-shirt. -->
-		<set name="icon" val="icon.event_big_july_seven_park_i00" />
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -768,7 +768,7 @@
 	</item>
 	<item id="27553" name="Agathion - Griffin" additionalName="Premium" type="Armor">
 		<!-- Can summon Griffin when equipped. -->
-		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="icon" val="BranchIcon.icon.Item_g_rbracelet_griffin" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1204,7 +1204,7 @@
 	<item id="27578" name="XP Rune III (Lv. 1-100+) 100% Pack (1-hour)" type="EtcItem">
 		<!-- Premium User Only. Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="weight" val="100" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1224,7 +1224,7 @@
 	<item id="27579" name="SP Rune 100% Pack (1-hour)" type="EtcItem">
 		<!-- Premium User Only. Wrapped Pack containing SP Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="weight" val="100" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1244,7 +1244,7 @@
 	<item id="27580" name="Prestige Rune 100% Pack" type="EtcItem">
 		<!-- Premium User Only. Wrapped Pack containing Prestige Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="weight" val="100" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />

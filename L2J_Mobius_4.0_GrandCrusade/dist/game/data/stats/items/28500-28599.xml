@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="28500" name="Noble Tears" type="EtcItem">
+		<!-- It contain's Frintezza's feelings. You get a buff and it changes the appearance of your weapon. -->
+		<set name="icon" val="BranchSys.icon.br_sevenlove_stone_i00" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="28501" name="Noble Compassion Chocolate" type="EtcItem">
+		<!-- Double-click to apply 'Compassion' effect to all party members. STR + 2, INT + 2, Attribute Resistance + 20. Can be stacked with 'Devotion' and 'Longing' effects. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28502" name="Noble Devotion Candy" type="EtcItem">
+		<!-- Double-click to apply 'Devotion' effect to all party members. STR + 2, INT + 2, DEX + 2, WIT + 2. Can be stacked with 'Compassion' and 'Longing' effects. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28503" name="Noble Longing Cookie" type="EtcItem">
+		<!-- Double-click to apply 'Longing' effect to all party members. STR + 2, INT + 2, CON + 2, MEN + 2. Can be stacked with 'Compassion' and 'Devotion' effects. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28504" name="Frintezza's Transformation Chocolate" type="EtcItem">
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transform into Snow Kung/Scarecrow Jack/Tin Golem/Makeshift Bat/Lady Tow/Heavy Tow/Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28505" name="Frintezza's Transformation Candy" type="EtcItem">
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transform in to Snow Kung/Scarecrow Jack/Tin Golem/Makeshift Bat/Lady Tow/Heavy Tow/Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28506" name="Frintezza's Transformation Cookie" type="EtcItem">
+		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transform in to Snow Kung/Scarecrow Jack/Tin Golem/Makeshift Bat/Lady Tow/Heavy Tow/Sleepy Tow. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28507" name="Frintezza's Friend Summon Chocolate" type="EtcItem">
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. -->
+		<set name="icon" val="icon.etc_whiteday_choco" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28508" name="Frintezza's Friend Summon Candy" type="EtcItem">
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. -->
+		<set name="icon" val="icon.etc_whiteday_candy" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28509" name="Frintezza's Friend Summon Cookie" type="EtcItem">
+		<!-- Contains Frintezza's limitless power. You can summon a friend every 30 minutes. -->
+		<set name="icon" val="icon.etc_whiteday_cookie" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28510" name="Red Noblesse Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Use to change the appearance of your upper or full-bod armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Outfit. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28511" name="School Uniform A Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of the entire armor into that of the School Uniform A. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform A. Appearance is restored through the use of a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28512" name="School Uniform B Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of the entire armor into that of the School Uniform B. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform B. Appearance is restored through the use of a Restoration Stone. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28513" name="Advanced RedandBlue Cat's Eye Treasure Chest" additionalName="30-day" type="EtcItem">
+		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term) and a Blue Cat's Eye (30-day fixed term). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28514" name="Mysterious Shaper 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Shaper (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28515" name="Mysterious Cutter 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Cutter (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28516" name="Mysterious Slasher 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Slasher (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28517" name="Mysterious Avenger 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Avenger (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28518" name="Mysterious Fighter 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Fighter (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28519" name="Mysterious Stormer 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Stormer (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28520" name="Mysterious Thrower 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Thrower (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28521" name="Mysterious Shooter 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Shooter (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28522" name="Mysterious Buster 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Buster (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28523" name="Mysterious Caster 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Caster (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28524" name="Mysterious Retributer 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Retributer (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28525" name="Mysterious Dualsword 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Dualsword (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28526" name="Mysterious Dual Dagger 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Dual Dagger (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28527" name="Mysterious Dual Blunt 7-day Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped pack containing a Mysterious Dual Blunt (7-day). -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28528" name="Passion Treasure Chest" type="EtcItem">
+		<!-- Treasure Chest with Pomona's gift. -->
+		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28529" name="Messiah's Castle's Lost Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain random lost treasures of Messiah's Castle. -->
+		<set name="icon" val="icon.bm_dragon_present" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28530" name="Top-grade Brooch Spirit Stone" additionalName="Rare-Type" type="EtcItem">
+		<!-- Top-grade Spirit Stone for La Vie En Rose's Brooch. Can only be augmented for Radiant Brooch (Rare-type). -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28531" name="Top-grade Returning Hero's Support Box" type="EtcItem">
+		<!-- Double-click to obtain the following: Assassin's Bamboo Hat (Vitality - 30-day), XP Rune III (Lv. 1-100+) 100% Pack (7-day), Feather of Blessing x5, Returning Hero's Health Potion x100, La Vie En Rose's Noble Brooch, Lv. 3 Ruby/Sapphire/Emerald/Vital Stone (30-day). Lv. 95 or above. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28532" name="Ruby Lv. 3" additionalName="30-day" type="Armor">
+		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
+		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28533" name="Sapphire Lv. 3" additionalName="30-day" type="Armor">
+		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
+		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28534" name="Emerald Lv. 3" additionalName="30-day" type="Armor">
+		<!-- When equipped, STR + 1, DEX + 1, CON + 1, INT + 1, WIT + 1, and MEN + 1. Effect does not stack with additional jewels of the same type. -->
+		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28535" name="Vital Stone Lv. 3" additionalName="30-day" type="Armor">
+		<!-- Increases Vitality Status Bonus EXP by 12%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
+		<set name="icon" val="icon.etc_bm_jewel_vital" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="28536" name="Complete Letter Set: TOGETHER" type="EtcItem">
+		<!-- Magic pouch that contains the letters of TOGETHER. Double-click to get all the letters in TOGETHER. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28537" name="Complete Letter Set: LINEAGE II" type="EtcItem">
+		<!-- Magic pouch that contains the letters of LINEAGE II. Double-click to get all the letters in LINEAGE II. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28538" name="Complete Letter Set: NCSOFT" type="EtcItem">
+		<!-- Magic pouch that contains the letters of NCSOFT. Double-click to get all the letters in NCSOFT. -->
+		<set name="icon" val="icon.etc_recipe_gold_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

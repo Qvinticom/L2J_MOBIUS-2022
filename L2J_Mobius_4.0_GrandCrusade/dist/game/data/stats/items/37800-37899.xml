@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37800" name="Potion of Protection: Aerial Yoke" type="EtcItem">
-		<!-- Increases aerial yoke resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37800" name="Potion of Protection: Aerial Yoke" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to Aerial Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
@@ -746,7 +746,7 @@
 	<item id="37867" name="Valiant Scroll" type="EtcItem">
 		<!-- For 30 minutes, P. Atk. + 10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_cave_page_i00" />
-		<set name="weight" val="0" />
+		<set name="weight" val="30" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
@@ -1276,7 +1276,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37894" name="Enhanced Warrior's Quick Healing Potion" type="EtcItem">
+	<item id="37894" name="Improved Warrior's Recovery Potion" type="EtcItem">
 		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />

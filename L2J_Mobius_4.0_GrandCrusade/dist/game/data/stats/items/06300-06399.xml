@@ -84,7 +84,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6307" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6307" name="Sword of Limit" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -116,7 +116,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6308" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6308" name="Sword of Limit" additionalName="Critical Drain" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -148,7 +148,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6309" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6309" name="Sword of Limit" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -180,7 +180,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6310" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6310" name="Sword of Whispering Death" additionalName="Empower" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -212,7 +212,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6311" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6311" name="Sword of Whispering Death" additionalName="M. Atk." type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -244,7 +244,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6312" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6312" name="Sword of Whispering Death" additionalName="Magic Silence" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -276,7 +276,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6313" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6313" name="Homunkulus' Sword" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -308,7 +308,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6314" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6314" name="Homunkulus' Sword" additionalName="Conversion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -340,7 +340,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6315" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6315" name="Homunkulus' Sword" additionalName="Magic Paralyze" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -840,7 +840,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6347" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6347" name="Berserker Blade" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -872,7 +872,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6348" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6348" name="Berserker Blade" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -904,7 +904,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6349" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6349" name="Berserker Blade" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -971,7 +971,7 @@
 	</item>
 	<item id="6353" name="Blue Gemstone" type="EtcItem">
 		<!-- Gemstone obtained from gremlins. Take it to a Newbie Helper. -->
-		<set name="icon" val="icon.etc_crystal_blue_i00" />
+		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="is_freightable" val="false" />
@@ -1042,7 +1042,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6356" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6356" name="Dark Elven Dagger" additionalName="Rsk. Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1074,7 +1074,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6357" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6357" name="Stiletto" additionalName="Rsk. Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_stiletto_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1106,7 +1106,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6358" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6358" name="Crystal Dagger" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1138,7 +1138,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6359" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="6359" name="Demon's Dagger" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_demons_sword_i01" />
 		<set name="default_action" val="EQUIP" />

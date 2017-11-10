@@ -94,7 +94,7 @@
 		</stats>
 	</item>
 	<item id="28304" name="Shilen's Ring" type="Armor">
-		<!-- M. Def. + 30%, Dark Resistance + 100, SRT/INT + 5, Critical Damage + 18%. Effect does not stack with additional rings. -->
+		<!-- A ring containing Shilen's strength. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -136,7 +136,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28308" name="Shilen's Necklace - Not Used" type="Armor">
-		<!-- M. Def. + 60%, Dark Resistance + 120, SRT/INT + 7, Physical/Mind attack success rate + 25. Effect does not stack with additional rings. -->
+		<!-- A necklace containing Shilen's strength. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -178,7 +178,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28312" name="Shilen's Earring" type="Armor">
-		<!-- M. Def. + 50%, Dark Resistance + 110, SRT/INT + 6, Physical/Mind Resistance + 30, Speed + 10. Effect does not stack with additional rings. -->
+		<!-- An earring containing Shilen's strength. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />

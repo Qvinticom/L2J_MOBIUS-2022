@@ -161,6 +161,121 @@
 			<item id="35933" min="1" max="1" chance="100" /> <!-- XP Rune II (7-day) -->
 		</capsuled_items>
 	</item>
+	<item id="28481" name="Low-Grade Forbidden Secret Book" type="EtcItem">
+		<!-- A low-grade spellbook that contains the Forbidden Secret. They say that NPC Rafforty is urgently looking for this to make an accessory containing the soul of a god. -->
+		<set name="icon" val="icon.weapon_scroll_of_wisdom_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28482" name="Intermediate Forbidden Secret Book" type="EtcItem">
+		<!-- An intermediate spellbook that contains the Forbidden Secret. They say that NPC Rafforty is urgently looking for this to make an accessory containing the soul of a god. -->
+		<set name="icon" val="icon.weapon_scroll_of_wisdom_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28483" name="High-grade Forbidden Secret Book" type="EtcItem">
+		<!-- A high-grade spellbook that contains the Forbidden Secret. They say that NPC Rafforty is urgently looking for this to make an accessory containing the soul of a god. -->
+		<set name="icon" val="icon.weapon_scroll_of_wisdom_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28484" name="Brooch Spirit Stone" type="EtcItem">
+		<!-- La Vie En Rose's Brooch, a Spirit Stone: Accessory. Brilliant Brook - can only be augmented for Enchant Types. Shadai at Heine can imbue the enhanced Elegant Brooch with a special power. -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28485" name="Brooch Spirit Stone" additionalName="Rare-Type" type="EtcItem">
+		<!-- La Vie En Rose's Brooch, a Spirit Stone: Accessory. Brilliant Brook - can only be augmented for Rare Types. -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28489" name="Brilliant Brooch Jewel" type="EtcItem">
+		<!-- A brilliant, shining jewel. Shadai at Heine can imbue the enhanced Brilliant Brooch with a special power. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28490" name="Frenzied Tauti's Small Fragment" type="EtcItem">
+		<!-- A fragment made with a small amount of Frenzied Tauti's Power. Collect 10 to exchange for Frenzied Tauti's Fragment. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_tauti_small_piece_high" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28491" name="Insane Kelbim's Small Fragment" type="EtcItem">
+		<!-- A fragment made with a small amount of Insane Kelbim's Power. Collect 10 to exchange for Insane Kelbim's Fragment. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_kelbim_small_piece_high" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28492" name="Freya's Luxury Shopping Bag" type="EtcItem">
+		<!-- Double-click the Luxury Shopping Bag to obtain 1 Freya's Wind Scroll, 1 Freya's Art of Seduction, and 1 Freya's Recovery Potion. There is also a chance to additionally obtain Freya's, Sirra's, or Snowman's Gift Box. -->
+		<set name="icon" val="icon.bm_freya_bag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28493" name="Freya's Gift Box" type="EtcItem">
+		<!-- Double click to obtain rare items such as rare accessories. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28494" name="Sirra's Gift Box" type="EtcItem">
+		<!-- Double click to receive a random enhancement item. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28495" name="Snow Man's Gift Box" type="EtcItem">
+		<!-- Double click to receive a random character growth item. -->
+		<set name="icon" val="icon.bm_freya_snowman_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28496" name="Prestige Rune 100% Pack (7-day)" additionalName="Event" type="EtcItem">
+		<!-- Open to acquire 1 Prestige Rune 100% (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28498" name="Royal Red Save Card (R99-grade)" additionalName="Event" type="EtcItem">
+		<!-- When using an R99-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 10%. Can only be used with 7 to 11 Enchantment Item. On success, Enchantment count increases by 1 to 3. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
+		<set name="icon" val="icon.royal_red_save_r99" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28499" name="God's Soul Treasure Chest" type="EtcItem">
+		<!-- A chest containing a god's soul. Double-click to obtain various random items. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="28412" name="+10 Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a + 10 Shiny Elemental Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
@@ -343,7 +458,7 @@
 	</item>
 	<item id="28433" name="Agathion - Babayaga" additionalName="Premium" type="Armor">
 		<!-- Can summon Babayaga when equipped. -->
-		<set name="icon" val="BranchIcon.icon.br_babayaga_i00" />
+		<set name="icon" val="BranchSys2.icon.br_aga_threehead_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
@@ -754,8 +869,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28468" name="Topaz (7-day)" additionalName="Lv. 5" type="Armor">
-		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 13275 power. Effect does not stack with additional jewels of the same type. 7-day. -->
+	<item id="28468" name="Topaz (7-day)" additionalName="Lv5" type="Armor">
+		<!-- A 7-day item. Disrupts the target from casting skills. Using it on a PC additionally ignores the target's CP and inflicts 13275 power at a fixed rate. When equipped with another jewel of the same type, only the effects of the jewel with the higher level is applied. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -768,7 +883,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28469" name="La Vie En Rose's Topaz Chest" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to acquire a Lv. 5 Topaz (7-day). -->
+		<!-- Double-click to obtain a Topaz Lv5 (7-day) item. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -832,7 +947,7 @@
 		</skills>
 	</item>
 	<item id="28473" name="Mount - Elk (Event)" additionalName="7-day" type="Armor">
-		<!-- Can mount an Elk when equipped. <Active Skill>. 1. Elk's Blessing: Maintain vitality for 1 hour. (Cooldown 12 hours). 2. Elk's Summoning: Can summon a party member. (Cooldown 10 minutes.) -->
+		<!-- Equip it to mount an elk. <Usable Skill>. 1. Elk's Blessing: Maintains Vitality for 1 hour. (Cooldown time is 12 hours). 2. Summon Elk: Can summon a party member. (Cooldown time is 10 minutes) -->
 		<set name="icon" val="BranchIcon.icon.tf_elk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -853,8 +968,8 @@
 			<skill id="27786" level="1" /> <!-- Ride Elk -->
 		</skills>
 	</item>
-	<item id="28474" name="Mount - Elk (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Elk (7-day) -->
+	<item id="28474" name="Mount - Elk Pack (7-day)" type="EtcItem">
+		<!-- Mount - Pack containing Elk (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -865,8 +980,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28475" name="Mount - Elk (30-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Elk (30-day) -->
+	<item id="28475" name="Mount - Elk Pack (30-day)" type="EtcItem">
+		<!-- Pack containing Mount - Elk (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -877,8 +992,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28476" name="Mount - Elk (Event 7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Mount - Elk (Event 7-day) -->
+	<item id="28476" name="Mount - Elk (Event) Pack (7-day)" type="EtcItem">
+		<!-- Pack containing Mount - Elk (Event) (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -889,37 +1004,37 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28477" name="Freya's Shopping Bag" type="EtcItem">
-		<!-- Wrapped pack containing Freya's Frozen Scroll, Freya's Art of Seduction, and Freya's Recovery Potion. Has a chance of obtaining one of the following items: Freya's Gift Box, Sirra's Gift Box, Snow Man's Gift Box. -->
+	<item id="28477" name="Freya's Luxury Shopping Bag" type="EtcItem">
+		<!-- Double-click the Luxury Shopping Bag to obtain 1 Freya's Wind Scroll, 1 Freya's Art of Seduction, and 1 Freya's Recovery Potion. There is also a chance to additionally obtain Freya's, Sirra's, or Snowman's Gift Box. -->
 		<set name="icon" val="icon.bm_freya_bag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28478" name="Freya's Gift Box" type="EtcItem">
-		<!-- Wrapped gift box containing 1 random item. -->
+		<!-- Double click to obtain rare items such as rare accessories. -->
 		<set name="icon" val="icon.bm_freya_gift_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28479" name="Sirra's Gift Box" type="EtcItem">
-		<!-- Wrapped gift box containing 1 random item. -->
+		<!-- Double click to receive a random enhancement item. -->
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28480" name="Snow Man's Gift Box" type="EtcItem">
-		<!-- Wrapped gift box containing 1 random item. -->
+		<!-- Double click to receive a random character growth item. -->
 		<set name="icon" val="icon.bm_freya_snowman_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28486" name="La Vie En Rose's Radiant Brooch" type="Armor">
-		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. -->
-		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<!-- Activates 6 Jewel Slots upon equipping. Increases inventory slots by + 12. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
@@ -935,8 +1050,8 @@
 		</stats>
 	</item>
 	<item id="28487" name="La Vie En Rose's Radiant Brooch" additionalName="Enchant Type" type="Armor">
-		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. CHA +1. -->
-		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<!-- Activates 6 Jewel Slots upon equipping. Increases inventory slots by 12. Increases CHA by 1. Can be augmented. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
@@ -951,9 +1066,9 @@
 			<stat type="mDef">114</stat>
 		</stats>
 	</item>
-	<item id="28488" name="La Vie En Rose's Radiant Brooch" additionalName="Rare Type" type="Armor">
-		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. All Basic Stats +2, Max CP +12%. -->
-		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+	<item id="28488" name="La Vie En Rose's Radiant Brooch" additionalName="Rare-Type" type="Armor">
+		<!-- Activates 6 Jewel Slots upon equipping. Increases inventory slots by 12. Increases All Basic Stats by 2. Increases Max. CP by + 12. Can be augmented. -->
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
@@ -968,8 +1083,9 @@
 			<stat type="mDef">114</stat>
 		</stats>
 	</item>
-	<item id="28497" name="Windy Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
-		<set name="icon" val="icon.ench_am_stone_i00" />
+	<item id="28497" name="Giant's Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
+		<!-- The Lucky Enchant Stone increases the chance of enchanting an R-grade weapon by 20% when using an Enchant Scroll. Can only be used on items that have been enchanted between + 3 and + 9. In case of Enchantment failure, the item is not Crystallized, but base Enchantment count is 0. -->
+		<set name="icon" val="icon.giant_ench_wp_stone_r_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

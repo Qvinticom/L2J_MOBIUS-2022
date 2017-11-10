@@ -383,7 +383,7 @@
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -396,7 +396,7 @@
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -409,7 +409,7 @@
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -422,7 +422,7 @@
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -435,7 +435,7 @@
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -449,7 +449,7 @@
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -463,7 +463,7 @@
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -477,7 +477,7 @@
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
-		<set name="weight" val="5" />
+		<set name="weight" val="150" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -726,7 +726,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23855" name="Golden Crate" type="EtcItem">
-		<!-- Has a chance of obtaining either a Dark Amaranthine Enhancement Stone, Bloody Amaranthine Enhancement Stone, Dark Eternal Enhancement Stone, Bloody Eternal Enhancement Stone, Kaliel's Energy - Desire, Kaliel's Energy - Hellfire, Kaliel's Energy - Annihilation, Blessed Giant's Lucky Enchant Stone: Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor (R-grade), 3 Top-grade Life Stones (R-grade), 8 Giant's Energy, 20 Energy of Destruction, Fire Crystal - Super, Water Crystal - Super, Wind Crystal - Super, Earth Crystal - Super, Holy Crystal - Super, Dark Crystal - Super, or 40 Gemstones (R-grade). -->
+		<!-- Has a chance of obtaining either a Dark Amaranthine Enhancement Stone, Bloody Amaranthine Enhancement Stone,  Dark Eternal Enhancement Stone, Bloody Eternal Enhancement Stone, Kaliel's Energy - Desire, Kaliel's Energy - Hellfire, Kaliel's Energy - Annihilation, Blessed Giant's Lucky Enchant Stone: Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor (R-grade), Top-grade Life Stone (R-grade), Giant's Energy, Energy of Destruction, Fire Crystal - Super, Water Crystal - Super, Wind Crystal - Super, Earth Crystal - Super, Holy Crystal - Super, Dark Crystal - Super, or Gemstone (R-grade). -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="true" />
@@ -867,7 +867,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23859" name="Change Clan Name" type="EtcItem">
-		<!-- To change your clan name:. 1. Request through your own account. 2. Send a request with the title "Change Clan Name". 3. Your character must be the clan leader, with the Change Clan Name item in the inventory. -->
+		<!-- To change your clan name:. 1. Request through your own account. 2. Send a request with the title Change Clan Name. 3. Your character must be the clan leader, with the Change Clan Name item in the inventory. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1281,7 +1281,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="23893" name="Life Stone Pack" type="EtcItem">
-		<!-- Wrapped Pack containing various Life Stones. Double-click to obtain either a Life Stone Instilled with Giants' Power, Top-grade Life Stone (R-grade), High-grade Life Stone (R-grade), Mid-grade Life Stone (R-grade), or Life Stone (R-grade). -->
+		<!-- Wrapped Pack containing various Life Stones. Double-click to obtain either a  Life Stone Instilled with Giants' Power, Top-grade Life Stone (R-grade), High-grade Life Stone (R-grade), Mid-grade Life Stone (R-grade), or Life Stone (R-grade). -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
@@ -1401,7 +1401,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23898" name="Pandora's Box" type="EtcItem">
-		<!-- Pandora's Box containing various high-grade items. Double-click to acquire one of the following: Life Stone Instilled with Giant's Power, Destruction Scroll: Enchant Weapon (R-grade), Destruction Scroll: Enchant Armor (R-grade), 100 Ziggo's Jewels, Transformation Scroll, Immortal Scroll, Kaliel's Energy, Dye, Elcyum, Attribute Crystal, Pendant, Hair Accessory,Potion, etc. -->
+		<!-- Pandora's Box containing various high-grade items. Double-click to acquire one of the following: Life Stone Instilled with Giant's Power, Destruction Scroll: Enchant Weapon (R-grade), Destruction Scroll: Enchant Armor (R-grade), 100 Ziggo's Jewels, Transformation Scroll, Immortal Scroll, Kaliel's Energy, Dye, Elcyum, Attribute Crystal, Pendant, Hair Accessory, Potion, etc. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="material" val="FISH" />
 		<set name="weight" val="10" />

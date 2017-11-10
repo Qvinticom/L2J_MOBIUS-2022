@@ -658,8 +658,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="45454" name="Power Scroll" additionalName="Event" type="EtcItem">
-		<!-- For 30 minutes, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def + 10%, MP Consumption - 10%. Cannot be stacked with Art of Seduction. -->
+	<item id="45454" name="Kokko's Love" additionalName="Event" type="EtcItem">
+		<!-- When used, increases Attack Attribute by 100, P. Atk. by 20%, M. Atk. by 30%, Atk. Spd./Casting Spd. by 10%, P. Accuracy by 4, M. Atk. by 4, Movement Speed by 10, Max HP/MP/CP by 10%, P. Def by 10%, M. Def by 10%, and reduces Skills MP cost by 10% for 30 minutes. Cannot be used with Art of Seduction. Due to be deleted on September 24, 2014 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -879,7 +879,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45473" name="Fresh Blue Mackerel" type="EtcItem">
-		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
@@ -887,7 +887,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45474" name="Fresh Minnow" type="EtcItem">
-		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
@@ -895,7 +895,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45475" name="Fresh Flatfish" type="EtcItem">
-		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i06" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
@@ -903,7 +903,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45476" name="Fresh Mandarin Fish" type="EtcItem">
-		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i05" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
@@ -911,7 +911,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45477" name="Fresh Rockfish" type="EtcItem">
-		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i08" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
@@ -919,49 +919,49 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45478" name="Fresh Goldfish" type="EtcItem">
-		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i07" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45479" name="Fresh Salmon" type="EtcItem">
-		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i10" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45480" name="Fresh Eel" type="EtcItem">
-		<!-- Double-click to get a Crafted Fish. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i09" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45481" name="Fresh Marlin" type="EtcItem">
-		<!-- Double-click to get a Fish Pearl. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i12" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45482" name="Fresh Catfish" type="EtcItem">
-		<!-- Double-click to get a Fish Pearl. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_small_i11" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45483" name="Fresh Tuna" type="EtcItem">
-		<!-- Double-click to get a Fish Pearl. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i14" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45484" name="Fresh Carp" type="EtcItem">
-		<!-- Double-click to get a Fish Pearl. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i13" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
@@ -969,7 +969,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45485" name="Fresh Whale" type="EtcItem">
-		<!-- Double-click to get a Fish Pearl or Fresh Whale Blubber. You can use this as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
+		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl or Fresh Whale Blubber item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_huge_i15" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1105,7 +1105,7 @@
 		</stats>
 	</item>
 	<item id="45495" name="Normal Bait" type="EtcItem">
-		<!-- Bait for fishing. Use to catch fresh fish. -->
+		<!-- Normal Bait that can no longer be used. It can be sold at the store. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="default_action" val="EQUIP" />
@@ -1118,7 +1118,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45496" name="Special Bait" type="EtcItem">
-		<!-- Special bait for fishing. Use to catch shiny fish. -->
+		<!-- Special Bait that can no longer be used. It can be sold at the store. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="bodypart" val="lhand" />
 		<set name="etcitem_type" val="LURE" />

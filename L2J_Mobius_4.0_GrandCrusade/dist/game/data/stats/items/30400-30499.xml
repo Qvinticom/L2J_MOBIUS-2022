@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="30400" name="Infinity Buster" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, M. Atk. by 25%, Casting Spd. by 15%, and M. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/MP/CP +30%, M. Skill Power +10%, Casting Spd. +15%, M. Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -36,7 +36,7 @@
 		</stats>
 	</item>
 	<item id="30401" name="Infinity Caster" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, M. Atk. by 25%, Casting Spd. by 15%, and M. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/MP/CP +30%, M. Skill Power +10%, Casting Spd. +15%, M. Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -72,7 +72,7 @@
 		</stats>
 	</item>
 	<item id="30402" name="Infinity Retributer" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, M. Atk. by 25%, Casting Spd. by 15%, and M. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/MP/CP +30%, M. Skill Power +10%, Atk./Casting Spd. +15%, M. Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -109,7 +109,7 @@
 		</stats>
 	</item>
 	<item id="30403" name="Infinity Dualsword" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/MP/CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -144,7 +144,7 @@
 		</stats>
 	</item>
 	<item id="30404" name="Infinity Dual Dagger" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/MP/CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -180,7 +180,7 @@
 		</stats>
 	</item>
 	<item id="30405" name="Infinity Dual Blunt Weapon" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/MP/CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

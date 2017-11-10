@@ -1351,7 +1351,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38751" name="Lara's Business Card" type="EtcItem">
-		<!-- After the event concludes, a random drawing of prizes will be given out to players that collect 12 or more of Lara's business cards. Temporary event item. -->
+		<!-- Prizes will be given out to players that collect 6 or more of Lara's business cards, depending on how many you have. Keep them just in case. -->
 		<set name="icon" val="icon.namecard_raracat" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1366,7 +1366,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38752" name="Lara's Gift" type="EtcItem">
-		<!-- A gift from Lara's! Seems a bit hastily thrown together, but hey, it's a gift. Temporary event item. -->
+		<!-- A gift from team leader Lara! Seems a bit hastily thrown together, but hey, it's a gift. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1374,7 +1374,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38753" name="Lara's Secret Gift" type="EtcItem">
-		<!-- A gift from Lara! A tremendous gift awaits if you're lucky. Temporary event item. -->
+		<!-- A gift from team leader Lara! A tremendous gift awaits if you're lucky. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />

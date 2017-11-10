@@ -352,7 +352,7 @@
 		</skills>
 	</item>
 	<item id="35929" name="Mysterious Ring" type="Armor">
-		<!-- Ring purchased at the Mysterious Mansion. 60 days. It summons the selected clan member to your location. Cooldown is 1 hour. Cannot be used in the Olympiad. -->
+		<!-- Ring purchased using Mark of Battle. Can be used for 60 days. It summons the selected clan member to your location. Cooldown is 1 hour. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_shiny_couple_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -372,8 +372,8 @@
 			<skill id="9522" level="1" /> <!-- Summon Clan Member -->
 		</skills>
 	</item>
-	<item id="35930" name="Healing Potion of Chaos" type="EtcItem">
-		<!-- Healing potion purchased at the Mysterious Mansion. Upon use, it restores 2500 HP and the remaining power restores CP. There is Instant effect with no duration. -->
+	<item id="35930" name="Chaos's Recovery Potion" type="EtcItem">
+		<!-- Recovery Potion purchased using Mark of Battle. Upon use, it restores 2500 HP and the remaining power restores CP. Instant effect with no duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -392,7 +392,7 @@
 		</skills>
 	</item>
 	<item id="35931" name="Mysterious Scroll" type="EtcItem">
-		<!-- Scroll purchased at the Mysterious Mansion. You can faintly feel the power of darkness. It can only be used on chaotic characters. Returns the selected Chaotic Character to the outside of the nearest town. Cooldown is 30 min. -->
+		<!-- Scroll purchased using Mark of Battle. You can faintly feel the power of darkness. It can only be used on chaotic characters. It makes the selected chaotic character Escape. Cooldown is 30 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1555,7 +1555,7 @@
 		</skills>
 	</item>
 	<item id="35982" name="Ruler's Consideration" type="EtcItem">
-		<!-- Pouch acquired by those who fought bravely in the Ceremony of Chaos but failed to win. Double-click to acquire a Spirit Stone and Scroll: Enchant Weapon (R-grade). You may acquire more than one, or you may acquire none. -->
+		<!-- A pouch given to those who fought bravely in the Ceremony of Chaos but were unable to succeed. When Double Clicked, a Victory or Scroll: Enchant Weapon (R-grade) can be obtained. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />

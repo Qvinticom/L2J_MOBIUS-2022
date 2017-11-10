@@ -1249,64 +1249,64 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="37792" name="Potion of Protection: Stun" type="EtcItem">
-		<!-- Increases Stun resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37792" name="Potion of Protection: Stun" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to Stun Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37793" name="Potion of Protection: Hold" type="EtcItem">
-		<!-- Increases hold resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37793" name="Potion of Protection: Hold" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to Hold Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37794" name="Potion of Protection: Bleed" type="EtcItem">
-		<!-- Increases Bleed Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37794" name="Potion of Protection: Bleed" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to Bleed Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37795" name="Potion of Protection: Paralyze" type="EtcItem">
-		<!-- Increases paralysis resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37795" name="Potion of Protection: Paralyze" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to Paralysis Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37796" name="Potion of Protection: Mental" type="EtcItem">
-		<!-- Increases Mental resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37796" name="Potion of Protection: Mental" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to MEN Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37797" name="Potion of Protection: Sleep" type="EtcItem">
-		<!-- Increases Sleep Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37797" name="Potion of Protection: Sleep" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to Sleep Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37798" name="Potion of Protection: Poison" type="EtcItem">
-		<!-- Increases Poison Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37798" name="Potion of Protection: Poison" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to Poison Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37799" name="Potion of Protection: Knock Back/ Knock Down" type="EtcItem">
-		<!-- Increases Knock Back / Knock Down resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
+	<item id="37799" name="Potion of Protection: Knock Back/ Knock Down" additionalName="Low-grade" type="EtcItem">
+		<!-- When used, increases Resistance to Knock back/Knock Down Attacks by 5%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />

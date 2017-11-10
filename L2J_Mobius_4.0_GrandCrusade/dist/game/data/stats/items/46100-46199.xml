@@ -398,7 +398,7 @@
 		<set name="icon" val="icon.etc_london_olympic_bronze" />
 	</item>
 	<item id="46141" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets. -->
+		<!-- A certificate that informs you that you are an honorary member of the Aden Vanguard. The Kingdom's Royal Guard recognition was not received, and can no longer be used. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -626,7 +626,7 @@
 		</skills>
 	</item>
 	<item id="46159" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets. -->
+		<!-- A certificate that informs you that you are an honorary member of the Aden Vanguard. The Kingdom's Royal Guard recognition was not received, and can no longer be used. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -641,7 +641,7 @@
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 	</item>
 	<item id="46160" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets. -->
+		<!-- A certificate that informs you that you are an honorary member of the Aden Vanguard. The Kingdom's Royal Guard recognition was not received, and can no longer be used. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -656,7 +656,7 @@
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 	</item>
 	<item id="46161" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets. -->
+		<!-- A certificate that informs you that you are an honorary member of the Aden Vanguard. The Kingdom's Royal Guard recognition was not received, and can no longer be used. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -671,7 +671,7 @@
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 	</item>
 	<item id="46162" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You've been recognized for being helpful, but they won't tell you their deepest secrets. -->
+		<!-- A certificate that informs you that you are an honorary member of the Aden Vanguard. The Kingdom's Royal Guard recognition was not received, and can no longer be used. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -686,7 +686,7 @@
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 	</item>
 	<item id="46163" name="High-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that proves that you are an honorary member of the Aden Vanguard. You are being trusted with various stories. -->
+		<!-- A certificate that informs you that you are an honorary member of the Aden Vanguard. The Kingdom's Royal Guard recognition was not received, and can no longer be used. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1073,7 +1073,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="46195" name="Shiny Elemental Shirt Pack" type="EtcItem">
+	<item id="46195" name="Shiny Elemental Shirt Bag" type="EtcItem">
 		<!-- Double-click to get 1 Shiny Elemental Shirt and 10 Elemental Shirt Enchant Scrolls. -->
 		<set name="icon" val="icon.ainharard_bac" />
 		<set name="is_freightable" val="false" />
@@ -1086,7 +1086,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46196" name="Physical Reflect Shirt Pack" type="EtcItem">
+	<item id="46196" name="Reflect Attack T-shirt Bag" type="EtcItem">
 		<!-- Double-click to get 1 Physical Reflect Shirt and 10 Elemental Shirt Enchant Scrolls. -->
 		<set name="icon" val="icon.reflect_attack_bac" />
 		<set name="is_freightable" val="false" />
@@ -1099,7 +1099,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46197" name="Magical Reflect Shirt Pack" type="EtcItem">
+	<item id="46197" name="Reflect Magic T-shirt Bag" type="EtcItem">
 		<!-- Double-click to get 1 Magical Reflect Shirt and 10 Elemental Shirt Enchant Scrolls. -->
 		<set name="icon" val="icon.reflect_magic_bac" />
 		<set name="is_freightable" val="false" />

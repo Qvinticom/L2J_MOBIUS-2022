@@ -306,7 +306,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47137" name="Fish Chilli Stew" additionalName="Int" type="EtcItem">
+	<item id="47137" name="Fish Chilli Stew" additionalName="INT" type="EtcItem">
 		<!-- Use to enable INT +3 and LUC +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -327,7 +327,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47140" name="Fish Chilli Stew" additionalName="Str" type="EtcItem">
+	<item id="47140" name="Fish Chilli Stew" additionalName="STR" type="EtcItem">
 		<!-- Use to enable STR +3 and LUC +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
 		<set name="icon" val="icon.fish_stew_residence_luc" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -348,7 +348,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47143" name="Fish Cream Stew" additionalName="Int" type="EtcItem">
+	<item id="47143" name="Fish Cream Stew" additionalName="INT" type="EtcItem">
 		<!-- Use to enable INT +3 and CHA +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -369,7 +369,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47146" name="Fish Cream Stew" additionalName="Str" type="EtcItem">
+	<item id="47146" name="Fish Cream Stew" additionalName="STR" type="EtcItem">
 		<!-- Use to enable STR +3 and CHA +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />

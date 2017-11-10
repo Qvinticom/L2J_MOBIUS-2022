@@ -463,6 +463,7 @@
 		</skills>
 	</item>
 	<item id="13722" name="Olympiad Token" type="EtcItem">
+		<!-- Marks of Battle can be exchanged through the Olympiad Manager Mysterious Butler located in each village. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -993,7 +994,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="13750" name="Warrior's Quick Healing Potion" type="EtcItem">
+	<item id="13750" name="Warrior's Recovery Potion" type="EtcItem">
 		<!-- Restores 5000 HP, and the remaining power restores CP. Instant effect with no duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

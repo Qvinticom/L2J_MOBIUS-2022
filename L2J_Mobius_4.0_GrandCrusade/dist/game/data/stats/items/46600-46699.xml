@@ -27,7 +27,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="weight" val="220" />		
+		<set name="weight" val="220" />
 		<set name="bodypart" val="back" />
 		<stats>
 			<stat type="pDef">50.0</stat>
@@ -67,7 +67,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="46607" name="Blue Dynasty Circlet" additionalName="Str" type="Armor">
+	<item id="46607" name="Blue Dynasty Circlet" additionalName="STR" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. STR + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -95,7 +95,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="46611" name="Blue Dynasty Circlet" additionalName="Int" type="Armor">
+	<item id="46611" name="Blue Dynasty Circlet" additionalName="INT" type="Armor">
 		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. INT + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />

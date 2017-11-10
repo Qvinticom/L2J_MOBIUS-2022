@@ -198,7 +198,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="40314" name="Santa Hat" additionalName="Str" type="Armor">
+	<item id="40314" name="Santa Hat" additionalName="STR" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. STR + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -230,7 +230,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40318" name="Santa Hat" additionalName="Int" type="Armor">
+	<item id="40318" name="Santa Hat" additionalName="INT" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. INT + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />

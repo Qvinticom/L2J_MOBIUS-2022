@@ -97,7 +97,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10408" name="Old Agathion" type="EtcItem">
-		<!-- Old Agathion with the spirit's seal unbound. Double-click to unlock items. -->
+		<!-- An Old Agathion with the Spirits Seal released. It cannot be used any more, but may be sold in the Store. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -611,7 +611,7 @@
 			<skill id="2486" level="1" /> <!-- Herb of Mana -->
 		</skills>
 	</item>
-	<item id="10434" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10434" name="Icarus Sawsword" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -644,7 +644,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10435" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10435" name="Icarus Sawsword" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -677,7 +677,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10436" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10436" name="Icarus Sawsword" additionalName="Light Armor" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -711,7 +711,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10437" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10437" name="Icarus Heavy Arms" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -744,7 +744,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10438" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10438" name="Icarus Heavy Arms" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -777,7 +777,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10439" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10439" name="Icarus Heavy Arms" additionalName="Light Armor" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -811,7 +811,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10440" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10440" name="Icarus Spirit" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -844,7 +844,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10441" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10441" name="Icarus Spirit" additionalName="Mana Up" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -877,7 +877,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10442" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10442" name="Icarus Spirit" additionalName="Conversion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -910,7 +910,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10443" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10443" name="Icarus Spitter" additionalName="Cheap Shot" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -947,7 +947,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10444" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10444" name="Icarus Spitter" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -983,7 +983,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10445" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10445" name="Icarus Spitter" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1019,7 +1019,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="10446" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10446" name="Icarus Disperser" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1052,7 +1052,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10447" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10447" name="Icarus Disperser" additionalName="Evasion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1086,7 +1086,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10448" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10448" name="Icarus Disperser" additionalName="Critical Damage" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1119,7 +1119,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10449" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10449" name="Icarus Trident" additionalName="Anger" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1152,7 +1152,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10450" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10450" name="Icarus Trident" additionalName="Critical Stun" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1186,7 +1186,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10451" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10451" name="Icarus Trident" additionalName="Light Armor" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1220,7 +1220,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="10452" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10452" name="Icarus Hammer" additionalName="Anger" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1253,7 +1253,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10453" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10453" name="Icarus Hammer" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1286,7 +1286,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10454" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10454" name="Icarus Hammer" additionalName="Rsk. Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1319,7 +1319,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10455" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10455" name="Icarus Hall" additionalName="Mana Up" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1353,7 +1353,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10456" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10456" name="Icarus Hall" additionalName="Conversion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1387,7 +1387,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10457" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10457" name="Icarus Hall" additionalName="Acumen" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1421,7 +1421,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10458" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10458" name="Icarus Hand" additionalName="Rsk. Evasion" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1455,7 +1455,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10459" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10459" name="Icarus Hand" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1488,7 +1488,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10460" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10460" name="Icarus Hand" additionalName="Haste" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1521,7 +1521,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10461" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10461" name="Icarus Stinger" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1559,7 +1559,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10462" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10462" name="Icarus Stinger" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1597,7 +1597,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10463" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10463" name="Icarus Stinger" additionalName="Light Armor" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1636,7 +1636,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10464" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10464" name="Icarus Wingblade" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1673,7 +1673,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10465" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10465" name="Icarus Wingblade" additionalName="Health" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1710,7 +1710,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10466" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10466" name="Icarus Wingblade" additionalName="Light Armor" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1748,7 +1748,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="10467" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10467" name="Icarus Shooter" additionalName="Cheap Shot" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1787,7 +1787,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10468" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10468" name="Icarus Shooter" additionalName="Guidance" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1825,7 +1825,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="10469" name="Not used" additionalName="Not used" type="Weapon">
+	<item id="10469" name="Icarus Shooter" additionalName="Focus" type="Weapon">
 		<!-- Not used -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />

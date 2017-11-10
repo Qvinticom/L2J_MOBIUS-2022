@@ -1118,14 +1118,14 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="47378" name="Red R99 Coupon" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-only Item. A proof given to those who carry out the missions given by the Red Libra merchants. Used when exchanging weapons with Artisan Black. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra-only Item. Craftsman Black no longer deals with this exchange, but the merchants of the continent of Aden, wondering about the weapon exchange ability of Craftsman Black, are buying the secrets of the exchange. You can get up to 50 million Adena when you sell it in the store. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_memo" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47379" name="Red Dark/Bloody Coupon" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-only Item. Used when exchanging Amaranthine Weapons with Artisan Black. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra-only Item. Craftsman Black exchanges this for Amaranthine Weapons. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_memo" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1155,7 +1155,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47383" name="Red Libra Supplies Lv. 5" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-only Item. A box given by the Bodyguard Blue in return for your help. Double click to obtain 1 random item. Deleted when the Red Libra merchants leave. -->
+		<!-- Red Libra-only Item. A box obtained with Bodyguard Blue's help. A random item can be obtained by double clicking it. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1175,7 +1175,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47385" name="Balthus Knight Mark" type="EtcItem">
-		<!-- Used to dress up as a member of the Balthus Knights for 1 hour. Only available for characters with Lv. 85 or higher. Buff deleted if Sub/Dual Class is changed. To be deleted when the event ends. Will be deleted when the Balthus Knights Event ends. -->
+		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 1 hour. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/Dual Class change. To be deleted on Wednesday June 15th, 2016 after regular maintenance. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -1185,7 +1185,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47386" name="Sibis' Letter" additionalName="Event" type="EtcItem">
-		<!-- A letter from the Supply Officer Sibis of the Balthus Knights. Will be deleted when the Balthus Knights Event ends. -->
+		<!-- Letter from the Vice-Chief of the Balthus Knights. Will be deleted on June 15, 2016, when the Balthus Knight event ends after regular maintenance. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1196,7 +1196,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47387" name="Balthus Knights Supply Items" type="EtcItem">
-		<!-- Double click to obtain Balthus Knight Mark x3(Only once a day). Exchange/Drop not possible, Cannot be sold in a private store. Can be stored in a private warehouse. Will be deleted when the Balthus Knights Event ends. -->
+		<!-- Double click to receive 3 Marks of the Balthus Knights. (Can be used once per day.) Cannot be exchanged/dropped/sold in a personal store, but can be kept in personal storage. Will be deleted on June 15th, 2016, when the Balthus Knight event ends after regular maintenance. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -1226,8 +1226,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47390" name="Insanity/Longing/Desire Talisman Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain a Insanity/Longing/Desire Talisman. Will be deleted when the event ends. -->
+	<item id="47390" name="Forever/Longing Talisman/Energy of Longing Supply Items" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Items. When used, a Forever Talisman/Longing Talisman/Energy of Longing can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1253,8 +1253,8 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47393" name="Dark Assassin/White Noblesse Suit Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain a Dark Assassin/White Noblesse Suit appearance stone. Will be deleted when the event ends. -->
+	<item id="47393" name="Dark Assassin/White Assassin Suit Supply Items" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Items. When used, a Dark Assassin/White Assassin Suit Appearance Stone can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1274,7 +1274,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain a Bottle of Antharas/Valakas/Baium's Soul. Will be deleted when the event ends. -->
+		<!-- Top-grade Balthus Knights Supply Items. When used, an Antharas/Valakas/Baium Soul Bottle can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1284,7 +1284,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47396" name="Nurka/Rydel/Gustav's Belt Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain Nurka/Rydel/Gustav's Belt. Will be deleted when the event ends. -->
+		<!-- Top-grade Balthus Knights Supply Items. When used, a Nurka/Lydia/Gustav's Belt can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1294,7 +1294,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain a Seven Signs/Anakim/Lilith Talisman. Will be deleted when the event ends. -->
+		<!-- Top-grade Balthus Knights Supply Items. When used, a Seven Signs/Anakim/Lilith's Talisman can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1304,7 +1304,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47398" name="Bloody Eternal Enhancement Stone - x2" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain Bloody Eternal Enhancement Stone x2. Will be deleted when the event ends. -->
+		<!-- Top-grade Balthus Knights Supply Items. When used, 2 Bloody Eternal Enhancement Stones can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1315,7 +1315,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47399" name="Sibis Coin Box" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain Sibis Coin x1500. Will be deleted when the event ends. -->
+		<!-- Top-grade Balthus Knights Supply Items. When used, 1500 Sibis Coins can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
