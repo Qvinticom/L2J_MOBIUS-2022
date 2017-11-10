@@ -1963,7 +1963,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="18548" level="45" type="L2Monster" name="Ancient Experiment">
+	<npc id="18548" level="45" type="L2Monster" name="Ancient Giants' Experiment">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2024,7 +2024,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="18549" level="45" type="L2Monster" name="Ancient Experiment">
+	<npc id="18549" level="45" type="L2Monster" name="Ancient Giants' Experiment">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2234,7 +2234,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<equipment rhand="6307" /> <!-- Ultimate Sword -->
+		<equipment rhand="132" /> <!-- Ultimate Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="17718" hpRegen="37.2348110463089" mp="747" mpRegen="2.1" />
 			<attack physical="792.065949923076" magical="540.878369181793" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2293,7 +2293,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<equipment rhand="6307" /> <!-- Ultimate Sword -->
+		<equipment rhand="132" /> <!-- Ultimate Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="17718" hpRegen="37.2348110463089" mp="747" mpRegen="2.1" />
 			<attack physical="792.065949923076" magical="540.878369181793" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2430,7 +2430,7 @@
 			<height normal="33.2" />
 		</collision>
 	</npc>
-	<npc id="18556" level="26" type="L2Monster" name="Follower of Ariosh">
+	<npc id="18556" level="26" type="L2Monster" name="Ariosh's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
@@ -2632,7 +2632,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="18560" level="36" type="L2Monster" name="Follower of Flouros">
+	<npc id="18560" level="36" type="L2Monster" name="Flouros' Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="50" />
@@ -2779,7 +2779,7 @@
 			<height normal="35.1" />
 		</collision>
 	</npc>
-	<npc id="18563" level="43" type="L2Monster" name="Follower of Otis">
+	<npc id="18563" level="43" type="L2Monster" name="Otis' Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="fake_heal" id="4065" level="1" />
@@ -2998,7 +2998,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18567" level="53" type="L2Monster" name="Follower of Abigore">
+	<npc id="18567" level="53" type="L2Monster" name="Abigore's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="skill_explosion" id="4614" level="6" />
@@ -3095,7 +3095,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="18569" level="56" type="L2Monster" name="Follower of Montagnar">
+	<npc id="18569" level="56" type="L2Monster" name="Montagnar's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3250,7 +3250,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="18572" level="63" type="L2Monster" name="Follower of Storace">
+	<npc id="18572" level="63" type="L2Monster" name="Storace's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
@@ -3355,7 +3355,7 @@
 			<height normal="48" />
 		</collision>
 	</npc>
-	<npc id="18574" level="66" type="L2Monster" name="Follower of Bilette">
+	<npc id="18574" level="66" type="L2Monster" name="Bilette's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="less_heal" id="4065" level="6" />
@@ -3461,7 +3461,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="18576" level="66" type="L2Monster" name="Follower of Tamuze">
+	<npc id="18576" level="66" type="L2Monster" name="Tamuze's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="self_explosion" id="4139" level="6" />
@@ -3560,7 +3560,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="18578" level="73" type="L2Monster" name="Follower of Allosce">
+	<npc id="18578" level="73" type="L2Monster" name="Allosce's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="soul_skill" id="5624" level="1" />

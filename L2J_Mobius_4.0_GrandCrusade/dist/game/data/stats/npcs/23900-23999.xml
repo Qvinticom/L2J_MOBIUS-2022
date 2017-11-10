@@ -1,844 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23800" level="102" type="L2Monster" name="Delta Kshana" title="Superion Scout">
-		<!-- NEED TO CHECK IF ITS THE SAME STATS AS NPC ID: 23776 -->
-		<race>GIANT</race>
-		<acquire exp="547017485" sp="1312842" />
-		<stats>
-			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
-			<speed>
-				<walk ground="55" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<skill_list>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
-			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
-			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="24" />
-			<height normal="47.5" />
-		</collision>
-		<drop_lists>
-			<drop>
-				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots -->
-				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield -->
-				<item id="57" min="30979" max="72169" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="14.65" /> <!-- Adamantite Wire -->
-				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
-				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
-				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
-				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
-				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
-			</drop>
-			<spoil>
-				<item id="36564" min="1" max="1" chance="1.059" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
-			</lucky_drop>
-		</drop_lists>
-	</npc>
-	<npc id="23801" level="99" type="L2Monster" name="Lillim Royal Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Lillim Royal Knight ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<equipment rhand="5800" lhand="5799" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
-			<speed>
-				<walk ground="56" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="13" />
-			<height normal="55" />
-		</collision>
-	</npc>
-	<npc id="23802" level="99" type="L2Monster" name="Lillim Slayer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Lillim Slayer ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="13" />
-			<height normal="44" />
-		</collision>
-	</npc>
-	<npc id="23803" level="99" type="L2Monster" name="Gigantic Healer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Gigantic Healer ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<equipment rhand="5793" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
-			<speed>
-				<walk ground="49" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="10" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="23804" level="99" type="L2Monster" name="Lillim Great Magus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Lillim Great Magus ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="10" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
-	<npc id="23805" level="99" type="L2Monster" name="Nephilim Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Nephilim Royal Guard ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
-			<speed>
-				<walk ground="65" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="13" />
-			<height normal="39.6" />
-		</collision>
-	</npc>
-	<npc id="23806" level="99" type="L2Monster" name="Wandering Dead of the Dimension" title="Attacker of the Rift">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Wandering Dead of the Dimension ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
-			<speed>
-				<walk ground="39" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="12" />
-			<height normal="28.5" />
-		</collision>
-	</npc>
-	<npc id="23807" level="99" type="L2Monster" name="Wandering Dimensional Spirit" title="Attacker of the Rift">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Wandering Dimensional Spirit ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
-			<speed>
-				<walk ground="88" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="23808" level="99" type="L2Monster" name="Lost Soul of the Dimension" title="Attacker of the Rift">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Lost Soul of the Dimension ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
-			<speed>
-				<walk ground="39" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="12" />
-			<height normal="26" />
-		</collision>
-	</npc>
-	<npc id="23809" level="99" type="L2Monster" name="Lost Dimensional Evil Thoughts" title="Attacker of the Rift">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Lost Dimensional Evil Thoughts ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24690" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="24" />
-			<height normal="45" />
-		</collision>
-	</npc>
-	<npc id="23810" level="99" type="L2Monster" name="Roaming Vengeance of the Dimension" title="Attacker of the Rift">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Roaming Vengeance of the Dimension ?? -->
-		<race>ETC</race>
-		<acquire exp="0" sp="0" />
-		<equipment rhand="10128" />
-		<stats>
-			<vitals hp="58233" hpRegen="10.5" mp="24308" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="15" />
-			<height normal="24.5" />
-		</collision>
-	</npc>
-	<npc id="23811" level="99" type="L2Monster" name="Cantera Tanya">
-		<!-- Source: www.l2wiki.com -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="20777923" sp="20778" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="28" />
-			<height normal="59" />
-		</collision>
-		<drop_lists>
-			<drop>
-				<item id="57" min="1713" max="3998" chance="20" /> <!-- Adena -->
-				<item id="37776" min="1" max="1" chance="0.075" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37773" min="1" max="1" chance="0.0075" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-	</npc>
-	<npc id="23812" level="99" type="L2Monster" name="Cantera Deathmoz">
-		<!-- Source: www.l2wiki.com -->
-		<race>DEMONIC</race>
-		<acquire exp="20777923" sp="20778" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<skill_list>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="16" />
-			<height normal="60" />
-		</collision>
-		<drop_lists>
-			<drop>
-				<item id="57" min="1713" max="3998" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37778" min="1" max="1" chance="0.003" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
-				<item id="37775" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-	</npc>
-	<npc id="23813" level="99" type="L2Monster" name="Cantera Floxis">
-		<!-- Source: www.l2wiki.com -->
-		<race>ETC</race>
-		<acquire exp="20777923" sp="20778" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="13" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<skill_list>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="38" />
-			<height normal="45" />
-		</collision>
-		<drop_lists>
-			<drop>
-				<item id="57" min="1713" max="3998" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37787" min="1" max="1" chance="0.0075" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
-				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
-				<item id="37784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-	</npc>
-	<npc id="23814" level="99" type="L2Monster" name="Cantera Belika">
-		<!-- Source: www.l2wiki.com -->
-		<race>ELEMENTAL</race>
-		<acquire exp="20777923" sp="20778" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="38" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<skill_list>
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="13" />
-			<height normal="55" />
-		</collision>
-		<drop_lists>
-			<drop>
-				<item id="57" min="1713" max="3998" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37778" min="1" max="1" chance="0.003" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
-				<item id="37775" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-	</npc>
-	<npc id="23815" level="99" type="L2Monster" name="Cantera Bridget">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<acquire exp="20777923" sp="20778" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="46" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<skill_list>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="35" />
-			<height normal="47.5" />
-		</collision>
-		<drop_lists>
-			<drop>
-				<item id="57" min="1713" max="3998" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37787" min="1" max="1" chance="0.0075" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
-				<item id="36919" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (High-grade) - Downgrade -->
-				<item id="37784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-	</npc>
-	<npc id="23820" level="85" type="L2Npc" name="Ketra Elite Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="23821" level="85" type="L2Npc" name="Ketra Commando">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="23822" level="85" type="L2Npc" name="Ketra Centurion" title="Ketra Orc Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="23823" level="85" type="L2Npc" name="Ketra Shaman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1127" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="23824" level="85" type="L2Npc" name="Ketra Commander" title="Ketra Orc Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="298" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="24" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="38.5" />
-		</collision>
-	</npc>
-	<npc id="23825" level="85" type="L2Npc" name="Kel Mahum Ranger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="26" />
-		</collision>
-	</npc>
-	<npc id="23826" level="85" type="L2Npc" name="Kel Mahum Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="23827" level="85" type="L2Npc" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="28" />
-		</collision>
-	</npc>
-	<npc id="23828" level="85" type="L2Npc" name="Kel Mahum Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1127" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="23829" level="85" type="L2Npc" name="Kel Mahum Commander" title="Kel Mahum Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="299" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="32" />
-		</collision>
-	</npc>
-	<npc id="23830" level="85" type="L2Npc" name="Molten Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="84" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="10" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="23831" level="85" type="L2Npc" name="Resurrected Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="946" lhand="945" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1188" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="28.5" />
-		</collision>
-	</npc>
-	<npc id="23832" level="85" type="L2Npc" name="Muddled Guardian Ghost" title="Undead Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="35" />
-			<height normal="32.5" />
-		</collision>
-	</npc>
-	<npc id="23833" level="85" type="L2Npc" name="Vindictive Guardian Ghost">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="32.5" />
-		</collision>
-	</npc>
-	<npc id="23834" level="85" type="L2Npc" name="Cursed Guardian Ghost" title="Undead Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="28" />
-			<height normal="39" />
-		</collision>
-	</npc>
-	<npc id="23835" level="85" type="L2Npc" name="Arena Saber Tooth">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="34" />
-			<height normal="28" />
-		</collision>
-	</npc>
-	<npc id="23836" level="85" type="L2Npc" name="Arena Grizzly">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1188" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="21" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="23837" level="85" type="L2Npc" name="Arena Predator" title="Beast King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="34" />
-			<height normal="32.5" />
-		</collision>
-	</npc>
-	<npc id="23838" level="85" type="L2Npc" name="Arena Basilisk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="34" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="23839" level="85" type="L2Npc" name="Arena Deadly Fang" title="Beast King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="26" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="33.5" />
-		</collision>
-	</npc>
-	<npc id="23840" level="85" type="L2Npc" name="Beetle of Terror">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="23841" level="85" type="L2Npc" name="Scorpion of Terror">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1282" mpRegen="3.6" />
-			<speed>
-				<walk ground="37" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="28" />
-			<height normal="66" />
-		</collision>
-	</npc>
-	<npc id="23842" level="85" type="L2Npc" name="Laikel of Terror" title="Leader of Creation">
+	<npc id="23900" level="85" type="L2Npc" name="Laikel of Terror" title="Leader of Creation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -857,7 +19,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="23843" level="85" type="L2Npc" name="Giant Spider of Terror">
+	<npc id="23901" level="85" type="L2Npc" name="Giant Spider of Terror">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -876,7 +38,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23844" level="85" type="L2Npc" name="Riba of Terror" title="Leader of Creation">
+	<npc id="23902" level="85" type="L2Npc" name="Riba of Terror" title="Leader of Creation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -895,7 +57,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="23845" level="85" type="L2Npc" name="Mansion Gatekeeper">
+	<npc id="23903" level="85" type="L2Npc" name="Mansion Gatekeeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -914,7 +76,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="23846" level="85" type="L2Npc" name="Mine Gatekeeper">
+	<npc id="23904" level="85" type="L2Npc" name="Mine Gatekeeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -933,7 +95,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="23847" level="85" type="L2Npc" name="Gatekeeper of Fire" title="Gatekeeper Leader">
+	<npc id="23905" level="85" type="L2Npc" name="Gatekeeper of Fire" title="Gatekeeper Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -952,7 +114,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="23848" level="85" type="L2Npc" name="Gatekeeper of Crystal">
+	<npc id="23906" level="85" type="L2Npc" name="Gatekeeper of Crystal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -971,7 +133,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23849" level="85" type="L2Npc" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
+	<npc id="23907" level="85" type="L2Npc" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -990,7 +152,7 @@
 			<height normal="463.765" />
 		</collision>
 	</npc>
-	<npc id="23850" level="85" type="L2Npc" name="Hell Assassin">
+	<npc id="23908" level="85" type="L2Npc" name="Hell Assassin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1009,7 +171,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23851" level="85" type="L2Npc" name="Hell Dark Wizard">
+	<npc id="23909" level="85" type="L2Npc" name="Hell Dark Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1028,7 +190,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="23852" level="85" type="L2Npc" name="Hell Armor" title="Devil's Advocate">
+	<npc id="23910" level="85" type="L2Npc" name="Hell Armor" title="Devil's Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1047,7 +209,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="23853" level="85" type="L2Npc" name="Hell Puppeteer">
+	<npc id="23911" level="85" type="L2Npc" name="Hell Puppeteer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1066,7 +228,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="23854" level="85" type="L2Npc" name="Hell Lord" title="Devil's Advocate">
+	<npc id="23912" level="85" type="L2Npc" name="Hell Lord" title="Devil's Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1085,7 +247,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23855" level="85" type="L2Npc" name="Heavenly Soldier">
+	<npc id="23913" level="85" type="L2Npc" name="Heavenly Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1104,7 +266,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23856" level="85" type="L2Npc" name="Heavenly Priest">
+	<npc id="23914" level="85" type="L2Npc" name="Heavenly Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1123,7 +285,7 @@
 			<height normal="38.5" />
 		</collision>
 	</npc>
-	<npc id="23857" level="85" type="L2Npc" name="Heavenly Judge" title="Angel's Advocate">
+	<npc id="23915" level="85" type="L2Npc" name="Heavenly Judge" title="Angel's Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1143,7 +305,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="23858" level="85" type="L2Npc" name="Heavenly Wings">
+	<npc id="23916" level="85" type="L2Npc" name="Heavenly Wings">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1163,7 +325,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="23859" level="85" type="L2Npc" name="Heavenly Guardian" title="Angel's Advocate">
+	<npc id="23917" level="85" type="L2Npc" name="Heavenly Guardian" title="Angel's Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1182,7 +344,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="23860" level="85" type="L2Npc" name="Drake">
+	<npc id="23918" level="85" type="L2Npc" name="Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1201,7 +363,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="23861" level="85" type="L2Npc" name="Mutated Drake">
+	<npc id="23919" level="85" type="L2Npc" name="Mutated Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1220,7 +382,7 @@
 			<height normal="53.5" />
 		</collision>
 	</npc>
-	<npc id="23862" level="85" type="L2Npc" name="Drak" title="Dragon's Advocate">
+	<npc id="23920" level="85" type="L2Npc" name="Drak" title="Dragon's Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1239,7 +401,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23863" level="85" type="L2Npc" name="Inferno Drake">
+	<npc id="23921" level="85" type="L2Npc" name="Inferno Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1258,7 +420,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="23864" level="85" type="L2Npc" name="Chaos Drake" title="Dragon's Advocate">
+	<npc id="23922" level="85" type="L2Npc" name="Chaos Drake" title="Dragon's Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1277,7 +439,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="23865" level="85" type="L2Npc" name="Velociraptor">
+	<npc id="23923" level="85" type="L2Npc" name="Velociraptor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1296,7 +458,7 @@
 			<height normal="47.2" />
 		</collision>
 	</npc>
-	<npc id="23866" level="85" type="L2Npc" name="Ornithomimus">
+	<npc id="23924" level="85" type="L2Npc" name="Ornithomimus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1315,7 +477,7 @@
 			<height normal="37.2" />
 		</collision>
 	</npc>
-	<npc id="23867" level="85" type="L2Npc" name="Pterosaur" title="Dominator of the Wild">
+	<npc id="23925" level="85" type="L2Npc" name="Pterosaur" title="Dominator of the Wild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1334,7 +496,7 @@
 			<height normal="43.7" />
 		</collision>
 	</npc>
-	<npc id="23868" level="85" type="L2Npc" name="Primeval Strider">
+	<npc id="23926" level="85" type="L2Npc" name="Primeval Strider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1353,7 +515,7 @@
 			<height normal="44.2" />
 		</collision>
 	</npc>
-	<npc id="23869" level="85" type="L2Npc" name="Tyrannosaurus" title="Dominator of the Wild">
+	<npc id="23927" level="85" type="L2Npc" name="Tyrannosaurus" title="Dominator of the Wild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1372,7 +534,7 @@
 			<height normal="89.7" />
 		</collision>
 	</npc>
-	<npc id="23870" level="85" type="L2Npc" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
+	<npc id="23928" level="85" type="L2Npc" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1391,7 +553,7 @@
 			<height normal="38.25" />
 		</collision>
 	</npc>
-	<npc id="23871" level="85" type="L2Npc" name="Dancing Bard" title="Intruding Challenger">
+	<npc id="23929" level="85" type="L2Npc" name="Dancing Bard" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1410,7 +572,7 @@
 			<height normal="61.5" />
 		</collision>
 	</npc>
-	<npc id="23872" level="85" type="L2Npc" name="Gatekeeper Roxxy" title="Intruding Challenger">
+	<npc id="23930" level="85" type="L2Npc" name="Gatekeeper Roxxy" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1429,7 +591,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="23873" level="85" type="L2Npc" name="Super Kat the Cat" title="Intruding Challenger">
+	<npc id="23931" level="85" type="L2Npc" name="Super Kat the Cat" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1448,7 +610,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23874" level="85" type="L2Npc" name="Super Mew the Cat" title="Intruding Challenger">
+	<npc id="23932" level="85" type="L2Npc" name="Super Mew the Cat" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1467,7 +629,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="23875" level="85" type="L2Npc" name="Super Queen the Cat" title="Intruding Challenger">
+	<npc id="23933" level="85" type="L2Npc" name="Super Queen the Cat" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1486,7 +648,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="23876" level="85" type="L2Npc" name="Roa" title="Intruding Challenger">
+	<npc id="23934" level="85" type="L2Npc" name="Roa" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1505,7 +667,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="23877" level="85" type="L2Npc" name="Golden Bat Dandy" title="Intruding Challenger">
+	<npc id="23935" level="85" type="L2Npc" name="Golden Bat Dandy" title="Intruding Challenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1524,7 +686,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23878" level="85" type="L2Npc" name="Ketra Elite Soldier">
+	<npc id="23936" level="85" type="L2Npc" name="Ketra Knight Recruit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1544,87 +706,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23879" level="85" type="L2Npc" name="Ketra Commando">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="23880" level="85" type="L2Npc" name="Ketra Centurion" title="Ketra Orc Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="23881" level="85" type="L2Npc" name="Ketra Shaman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1127" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="23882" level="85" type="L2Npc" name="Ketra Commander" title="Ketra Orc Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="298" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="24" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="38.5" />
-		</collision>
-	</npc>
-	<npc id="23883" level="85" type="L2Npc" name="Kel Mahum Ranger">
+	<npc id="23937" level="85" type="L2Npc" name="Kel Mahum Knight Recruit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1644,87 +726,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="23884" level="85" type="L2Npc" name="Kel Mahum Hunter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="23885" level="85" type="L2Npc" name="Kel Mahum Elite Leader" title="Kel Mahum Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="28" />
-		</collision>
-	</npc>
-	<npc id="23886" level="85" type="L2Npc" name="Kel Mahum Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1127" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="23887" level="85" type="L2Npc" name="Kel Mahum Commander" title="Kel Mahum Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="299" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="32" />
-		</collision>
-	</npc>
-	<npc id="23888" level="85" type="L2Npc" name="Molten Guardian">
+	<npc id="23938" level="85" type="L2Npc" name="Molten Guardian Knight Recruit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1744,84 +746,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23889" level="85" type="L2Npc" name="Resurrected Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="946" lhand="945" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1188" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="28.5" />
-		</collision>
-	</npc>
-	<npc id="23890" level="85" type="L2Npc" name="Muddled Guardian Ghost" title="Undead Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="35" />
-			<height normal="32.5" />
-		</collision>
-	</npc>
-	<npc id="23891" level="85" type="L2Npc" name="Vindictive Guardian Ghost">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="32.5" />
-		</collision>
-	</npc>
-	<npc id="23892" level="85" type="L2Npc" name="Cursed Guardian Ghost" title="Undead Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="28" />
-			<height normal="39" />
-		</collision>
-	</npc>
-	<npc id="23893" level="85" type="L2Npc" name="Arena Saber Tooth">
+	<npc id="23939" level="85" type="L2Npc" name="Arena Protector Tree">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1840,83 +765,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="23894" level="85" type="L2Npc" name="Arena Grizzly">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1188" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="21" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="23895" level="85" type="L2Npc" name="Arena Predator" title="Beast King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="34" />
-			<height normal="32.5" />
-		</collision>
-	</npc>
-	<npc id="23896" level="85" type="L2Npc" name="Arena Basilisk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="34" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="23897" level="85" type="L2Npc" name="Arena Deadly Fang" title="Beast King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="26" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="33.5" />
-		</collision>
-	</npc>
-	<npc id="23898" level="85" type="L2Npc" name="Beetle of Terror">
+	<npc id="23940" level="85" type="L2Npc" name="Protector Tree of Terror">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1935,14 +784,14 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="23899" level="85" type="L2Npc" name="Scorpion of Terror">
+	<npc id="23941" level="85" type="L2Npc" name="Gatekeeper Knight Recruit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1282" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
 			<speed>
-				<walk ground="37" />
+				<walk ground="140" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1950,8 +799,1115 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="28" />
-			<height normal="66" />
+			<radius normal="16" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="23942" level="85" type="L2Npc" name="Hell Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23943" level="85" type="L2Npc" name="Heavenly Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23944" level="85" type="L2Npc" name="Drake Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="100" />
+		</collision>
+	</npc>
+	<npc id="23945" level="85" type="L2Npc" name="Velociraptor Protector Tree">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23946" level="85" type="L2Npc" name="Ketra Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="160" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="23947" level="85" type="L2Npc" name="Kel Mahum Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="160" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="23948" level="85" type="L2Npc" name="Molten Guardian Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="84" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="23949" level="85" type="L2Npc" name="Arena Protector Tree">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="34" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23950" level="85" type="L2Npc" name="Protector Tree of Terror">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="23951" level="85" type="L2Npc" name="Gatekeeper Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="140" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="23952" level="85" type="L2Npc" name="Hell Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23953" level="85" type="L2Npc" name="Heavenly Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="23954" level="85" type="L2Npc" name="Drake Knight Recruit">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="100" />
+		</collision>
+	</npc>
+	<npc id="23955" level="85" type="L2Npc" name="Velociraptor Protector Tree">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23956" level="85" type="L2Npc" name="Veil Master" title="Aide of the Blood Queen">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23957" level="85" type="L2Npc" name="Tanta Healer" title="Commander's Medic">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23958" level="85" type="L2Npc" name="Young Poisonous Spider">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23959" level="85" type="L2Npc" name="Young Stakato">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23960" level="85" type="L2Npc" name="Angel" title="Judge's Aid">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1442" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23961" level="85" type="L2Npc" name="Banshee" title="Queen's Maid">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1442" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23962" level="85" type="L2Npc" name="Baby Golden Pig">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="23963" level="85" type="L2Npc" name="Small Bard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="15" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="18.5" />
+		</collision>
+	</npc>
+	<npc id="23964" level="85" type="L2Npc" name="Would-be Gatekeeper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="28" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="23965" level="85" type="L2Npc" name="Kat the Cat">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="23966" level="85" type="L2Npc" name="Mew the Cat">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23967" level="85" type="L2Npc" name="Queen the Cat">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23968" level="85" type="L2Npc" name="Roa Fan Club Human">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="23969" level="85" type="L2Npc" name="Roa Fan Club Dwarf">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="23970" level="85" type="L2Npc" name="Dandy's Dinosaur Friend">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23971" level="85" type="L2Npc" name="Veil Master" title="Aide of the Blood Queen">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23972" level="85" type="L2Npc" name="Tanta Healer" title="Commander's Medic">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23973" level="85" type="L2Npc" name="Young Poisonous Spider">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23974" level="85" type="L2Npc" name="Young Stakato">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23975" level="85" type="L2Npc" name="Angel" title="Judge's Aid">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1442" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="23976" level="85" type="L2Npc" name="Banshee" title="Queen's Maid">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1442" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23977" level="85" type="L2Npc" name="Baby Golden Pig">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="23978" level="85" type="L2Npc" name="Small Bard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="15" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="18.5" />
+		</collision>
+	</npc>
+	<npc id="23979" level="85" type="L2Npc" name="Would-be Gatekeeper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="28" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="23980" level="85" type="L2Npc" name="Kat the Cat">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="23981" level="85" type="L2Npc" name="Mew the Cat">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23982" level="85" type="L2Npc" name="Queen the Cat">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23983" level="85" type="L2Npc" name="Roa Fan Club Human">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="70" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="23984" level="85" type="L2Npc" name="Roa Fan Club Dwarf">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="23985" level="85" type="L2Npc" name="Dandy's Dinosaur Friend">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1475" mpRegen="3.6" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="47.2" />
+		</collision>
+	</npc>
+	<npc id="23986" level="85" type="L2Npc" name="Leona Blackbird" title="Dragon's Advocate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="1893" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="23987" level="85" type="L2Npc" name="Kain Van Halter" title="Prince of the Second Dimension">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="23988" level="85" type="L2Npc" name="Princess Ant" title="Successor in the Ant Nest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="45" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="23989" level="85" type="L2Npc" name="Escort Ant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23990" level="85" type="L2Npc" name="Royal Guard Ant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="23991" level="85" type="L2Npc" name="Urfen" title="Orfen Kin">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="31.5" />
+			<height normal="128.4" />
+		</collision>
+	</npc>
+	<npc id="23992" level="85" type="L2Npc" name="Laikel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="18.5" />
+			<height normal="30.5" />
+		</collision>
+	</npc>
+	<npc id="23993" level="85" type="L2Npc" name="Riba">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12.5" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="23994" level="85" type="L2Npc" name="Zaken" title="Unworldly Pirate King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="23995" level="85" type="L2Npc" name="Zaken" title="Unworldly Pirate King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="23996" level="85" type="L2Npc" name="Pirate Zombie Captain">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="14" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="17" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23997" level="85" type="L2Npc" name="Pirate Zombie">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="11" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="23998" level="85" type="L2Npc" name="Saium" title="Relative of the Emperor">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="26" />
+			<height normal="67.8" />
+		</collision>
+	</npc>
+	<npc id="23999" level="85" type="L2Npc" name="Traitor Angel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="97" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
 		</collision>
 	</npc>
 </list>

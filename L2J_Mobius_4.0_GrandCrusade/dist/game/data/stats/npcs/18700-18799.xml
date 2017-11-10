@@ -66,7 +66,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18702" level="80" type="L2Monster" name="Dimension Moving Device">
+	<npc id="18702" level="80" type="L2Monster" name="Dimensional Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -719,7 +719,7 @@
 				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="42.5" />
+				<walk ground="42" />
 				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3271,7 +3271,7 @@
 			<height normal="63" />
 		</collision>
 	</npc>
-	<npc id="18782" level="70" type="L2Monster" name="Zealot of Shilen">
+	<npc id="18782" level="70" type="L2Monster" name="Shilen's Zealot">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3419,7 +3419,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="18785" level="81" type="L2Monster" name="Defeated Troops White Dragon Leader">
+	<npc id="18785" level="81" type="L2Monster" name="Defeated Troops White Dragon Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -3531,7 +3531,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="18787" level="81" type="L2Monster" name="Defeated Troops Magic Leader">
+	<npc id="18787" level="81" type="L2Monster" name="Defeated Troops Wizard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -3588,7 +3588,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18788" level="81" type="L2Monster" name="Defeated Troops Magician">
+	<npc id="18788" level="81" type="L2Monster" name="Defeated Troops Wizard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
@@ -3645,7 +3645,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18789" level="80" type="L2Monster" name="Defeated Troops Magic Soldier">
+	<npc id="18789" level="80" type="L2Monster" name="Defeated Troops Wizard Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />

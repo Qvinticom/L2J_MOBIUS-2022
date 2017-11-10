@@ -2297,7 +2297,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="530201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="2081767" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2353,7 +2353,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="530201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="2081767" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2397,7 +2397,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25857" level="95" type="L2Monster" name="Corrupted Captain">
+	<npc id="25857" level="95" type="L2Monster" name="Corrupted Captain" title="Guardian of the Altar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2410,7 +2410,7 @@
 		<acquire exp="49522881" sp="11885" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="560294" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1705440" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
@@ -2447,7 +2447,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="25858" level="95" type="L2Monster" name="Corrupted High Priest">
+	<npc id="25858" level="95" type="L2Monster" name="Corrupted High Priest" title="Guardian of the Altar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2460,7 +2460,7 @@
 		<acquire exp="49522881" sp="11885" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="560294" hpRegen="8.5" mp="33087" mpRegen="30" />
+			<vitals hp="1705440" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
@@ -2494,355 +2494,6 @@
 		<collision>
 			<radius normal="18" />
 			<height normal="39" />
-		</collision>
-	</npc>
-	<npc id="25859" level="97" type="L2RaidBoss" name="Flynt" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="Skill01_Probablity" value="2000" />
-			<param name="Skill02_Probablity" value="500" />
-			<param name="Skill03_Probablity" value="1000" />
-			<param name="Party_Type" value="2" />
-			<minions name="Privates">
-				<npc id="25861" count="4" respawnTime="180" weightPoint="1" />
-			</minions>
-			<param name="MoveArounding" value="0" />
-			<skill name="Skill01_ID" id="14012" level="2" />
-			<skill name="Skill02_ID" id="14260" level="2" />
-			<skill name="Skill03_ID" id="14005" level="2" />
-			<param name="Attack_BoostValue" value="144" />
-		</parameters>
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="458933384" sp="110144" raidPoints="30" />
-		<mpReward value="62" type="DIFF" ticks="10" affects="SOLO" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1877539" hpRegen="8.5" mp="22800" mpRegen="30" />
-			<speed>
-				<walk ground="50" />
-				<run ground="200" />
-			</speed>
-			<attack physical="128810.835640155" magical="11368.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3537" magical="2031" />
-			<attribute>
-				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
-				<attack type="EARTH" value="430" />
-			</attribute>
-			<abnormalResist physical="230" magical="230" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skill_list>
-			<skill id="14710" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4191" level="1" /> <!-- Wind Strike -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
-				<clan>FLINT_BOSS</clan>
-			</clan_list>
-		</ai>
-		<drop_lists>
-			<drop>
-				<item id="17399" min="1" max="1" chance="1.95599999999998" /> <!-- Seraph Gauntlets Heavy Armor -->
-				<item id="17406" min="1" max="1" chance="1.95599999999998" /> <!-- Seraph Leather Boots Light Armor -->
-				<item id="17410" min="1" max="1" chance="1.889" /> <!-- Seraph Gloves Robe -->
-				<item id="17400" min="1" max="1" chance="1.85200000000005" /> <!-- Seraph Boots Heavy Armor -->
-				<item id="17402" min="1" max="1" chance="1.31299999999998" /> <!-- Seraph Leather Helmet Light Armor -->
-				<item id="17407" min="1" max="1" chance="1.21900000000002" /> <!-- Seraph Circlet Robe -->
-				<item id="30297" min="1" max="1" chance="23.8900000000001" /> <!-- Superior Giant's Codex -->
-				<item id="17526" min="1" max="1" chance="6.46799999999993" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="80" />
-			<height normal="60" />
-		</collision>
-	</npc>
-	<npc id="25860" level="96" type="L2Monster" name="Flynt's Disciple" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="Party_Type" value="1" />
-			<skill name="Skill01_ID" id="14258" level="2" />
-			<skill name="Skill02_ID" id="14372" level="1" />
-			<param name="Attack_BoostValue" value="146" />
-		</parameters>
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<mpReward value="62" type="DIFF" ticks="10" affects="SOLO" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="554356" hpRegen="8.5" mp="22428" mpRegen="30" />
-			<speed>
-				<walk ground="46" />
-				<run ground="200" />
-			</speed>
-			<attack physical="40918.7454632461" magical="7231.0886261522" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="495.379178440196" magical="283.008565712195" />
-			<attribute>
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-				<attack type="DARK" value="430" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4192" level="1" /> <!-- Vampiric Touch -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-		</skill_list>
-		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
-				<clan>FLINT_BOSS</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="21.12" />
-			<height normal="40.48" />
-		</collision>
-	</npc>
-	<npc id="25861" level="96" type="L2Monster" name="Flynt's Servant" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="Party_Type" value="1" />
-			<skill name="Skill01_ID" id="14257" level="2" />
-			<param name="Attack_BoostValue" value="146" />
-		</parameters>
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<mpReward value="62" type="DIFF" ticks="10" affects="SOLO" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="554356" hpRegen="8.5" mp="22428" mpRegen="30" />
-			<speed>
-				<walk ground="46" />
-				<run ground="200" />
-			</speed>
-			<attack physical="40918.7454632461" magical="7231.0886261522" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="495.379178440196" magical="283.008565712195" />
-			<attribute>
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-				<attack type="DARK" value="430" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4739" level="1" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-		</skill_list>
-		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
-				<clan>FLINT_BOSS</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="21.12" />
-			<height normal="40.48" />
-		</collision>
-	</npc>
-	<npc id="25862" level="97" type="L2RaidBoss" name="Harp" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="Skill01_Probablity" value="2000" />
-			<param name="Skill02_Probablity" value="500" />
-			<param name="Skill03_Probablity" value="1000" />
-			<param name="Party_Type" value="2" />
-			<minions name="Privates">
-				<npc id="25863" count="2" respawnTime="180" weightPoint="1" />
-				<npc id="25864" count="2" respawnTime="180" weightPoint="1" />
-			</minions>
-			<param name="MoveArounding" value="0" />
-			<skill name="Skill01_ID" id="14008" level="3" />
-			<skill name="Skill02_ID" id="14268" level="1" />
-			<skill name="Skill03_ID" id="14508" level="1" />
-			<param name="Attack_BoostValue" value="144" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="458933384" sp="110144" raidPoints="30" />
-		<mpReward value="62" type="DIFF" ticks="10" affects="SOLO" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1877539" hpRegen="8.5" mp="22800" mpRegen="30" />
-			<speed>
-				<walk ground="50" />
-				<run ground="200" />
-			</speed>
-			<attack physical="128810.835640155" magical="11368.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3537" magical="2031" />
-			<attribute>
-				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
-				<attack type="EARTH" value="430" />
-			</attribute>
-			<abnormalResist physical="230" magical="230" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skill_list>
-			<skill id="14711" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4192" level="1" /> <!-- Vampiric Touch -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
-				<clan>HALF_BOSS</clan>
-			</clan_list>
-		</ai>
-		<drop_lists>
-			<drop>
-				<item id="17411" min="1" max="2" chance="1.96400000000001" /> <!-- Seraph Shoes Robe -->
-				<item id="17405" min="1" max="2" chance="1.89599999999999" /> <!-- Seraph Leather Gloves Light Armor -->
-				<item id="17396" min="1" max="2" chance="1.252" /> <!-- Seraph Helmet Heavy Armor -->
-				<item id="30297" min="1" max="1" chance="21.9299999999999" /> <!-- Superior Giant's Codex -->
-				<item id="17526" min="1" max="1" chance="6.47700000000012" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-			</drop>
-			<lucky_drop>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="44" />
-			<height normal="78" />
-		</collision>
-	</npc>
-	<npc id="25863" level="96" type="L2Monster" name="Harp's Guard" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="Party_Type" value="1" />
-			<skill name="Skill01_ID" id="14256" level="2" />
-			<param name="Attack_BoostValue" value="146" />
-		</parameters>
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
-		<mpReward value="62" type="DIFF" ticks="10" affects="SOLO" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="554356" hpRegen="8.5" mp="22428" mpRegen="30" />
-			<speed>
-				<walk ground="45" />
-				<run ground="170" />
-			</speed>
-			<attack physical="40918.7454632461" magical="7231.0886261522" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
-			<defence physical="495.379178440196" magical="283.008565712195" />
-			<attribute>
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-				<attack type="DARK" value="430" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4739" level="1" /> <!-- Power Strike -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-		</skill_list>
-		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
-				<clan>HALF_BOSS</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="18" />
-			<height normal="27.5" />
-		</collision>
-	</npc>
-	<npc id="25864" level="96" type="L2Monster" name="Harp's Subordinate" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="Party_Type" value="1" />
-			<skill name="Skill01_ID" id="14258" level="2" />
-			<param name="Attack_BoostValue" value="146" />
-		</parameters>
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
-		<mpReward value="62" type="DIFF" ticks="10" affects="SOLO" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="554356" hpRegen="8.5" mp="22428" mpRegen="30" />
-			<speed>
-				<walk ground="55" />
-				<run ground="150" />
-			</speed>
-			<attack physical="40918.7454632461" magical="7231.0886261522" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
-			<defence physical="495.379178440196" magical="283.008565712195" />
-			<attribute>
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-				<attack type="DARK" value="430" />
-			</attribute>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="false" />
-		<skill_list>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4171" level="1" /> <!-- Spinning Slasher -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-		</skill_list>
-		<ai clanHelpRange="300" aggroRange="300">
-			<clan_list>
-				<clan>HALF_BOSS</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="20" />
-			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="25865" level="93" type="L2Monster" name="Apherus Subordinate">
@@ -3381,7 +3032,7 @@
 		<acquire exp="708857856" sp="170125" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="530201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="2081767" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -3437,7 +3088,7 @@
 		<acquire exp="708857856" sp="170125" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="530201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="2081767" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />

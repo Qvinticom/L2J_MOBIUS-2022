@@ -939,6 +939,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="5380749000" sp="8609198" raidPoints="30" />
+		<equipment rhand="15566" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="9669584" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<speed>
@@ -1010,6 +1011,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1867,6 +1869,7 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2969448174" sp="4751117" />
+		<equipment rhand="13982" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="26784112" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<speed>
@@ -1898,6 +1901,7 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2969448174" sp="4751117" />
+		<equipment rhand="13983" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="26784112" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<speed>
@@ -2827,6 +2831,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="13843" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1587160" hpRegen="10.5" mp="69522" mpRegen="3.6" />
 			<speed>
@@ -2884,6 +2889,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="13981" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1587160" hpRegen="10.5" mp="69522" mpRegen="3.6" />
 			<speed>
@@ -3516,6 +3522,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1587160" hpRegen="10.5" mp="69522" mpRegen="3.6" />
 			<speed>
@@ -4194,6 +4201,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6719" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1457924" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<speed>
@@ -4223,6 +4231,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="288" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1457924" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<speed>
@@ -4252,6 +4261,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="92" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1457924" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<speed>
@@ -4280,6 +4290,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="92" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1457924" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<speed>
@@ -4308,6 +4319,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="79" lhand="6919" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="355923" hpRegen="10.5" mp="22800" mpRegen="3.6" />
 			<speed>
@@ -4930,6 +4942,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1457924" hpRegen="10.5" mp="68400" mpRegen="3.6" />
 			<speed>
@@ -5333,10 +5346,11 @@
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="7998784284" sp="1919708" raidPoints="100" />
+		<equipment rhand="10278" lhand="10278" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="12805632" hpRegen="10.5" mp="63972" mpRegen="3.6" />
 			<speed>
-				<walk ground="29.8" />
+				<walk ground="29" />
 				<run ground="300" />
 			</speed>
 			<attack physical="35460.102756734" magical="6296.7972934013" critical="4" attackSpeed="253" range="40" />
@@ -5634,6 +5648,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1219584" hpRegen="10.5" mp="63972" mpRegen="3.6" />
 			<speed>

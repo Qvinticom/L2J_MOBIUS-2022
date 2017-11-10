@@ -281,7 +281,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="4885" hpRegen="8.5" mp="1952" mpRegen="3" />
 			<speed>
-				<walk ground="36.48" />
+				<walk ground="36" />
 				<run ground="190" />
 			</speed>
 			<attack physical="1327.04497248448" magical="906.199688900163" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -316,7 +316,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
 			<speed>
-				<walk ground="36.48" />
+				<walk ground="36" />
 				<run ground="190" />
 			</speed>
 			<attack physical="9315.75997708706" magical="1668.52760670088" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -714,7 +714,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6237" hpRegen="8.5" mp="2132" mpRegen="3" />
 			<speed>
-				<walk ground="36.48" />
+				<walk ground="36" />
 				<run ground="190" />
 			</speed>
 			<attack physical="1576.59650290572" magical="1076.61104243074" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -749,7 +749,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
 			<speed>
-				<walk ground="36.48" />
+				<walk ground="36" />
 				<run ground="190" />
 			</speed>
 			<attack physical="11819.9958080598" magical="2098.92127856138" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -1147,7 +1147,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8023" hpRegen="8.5" mp="2317" mpRegen="3" />
 			<speed>
-				<walk ground="36.48" />
+				<walk ground="36" />
 				<run ground="190" />
 			</speed>
 			<attack physical="1880.25676306848" magical="1283.97162612944" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -1182,7 +1182,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356012" hpRegen="8.5" mp="23174" mpRegen="30" />
 			<speed>
-				<walk ground="36.48" />
+				<walk ground="36" />
 				<run ground="190" />
 			</speed>
 			<attack physical="15009.136215459" magical="2644.46359515415" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -2988,7 +2988,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="33685" level="99" type="L2Npc" name="Mysterious Butler">
+	<npc id="33685" level="99" type="L2Npc" name="Mysterious Butler" title="Ceremony of Chaos">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

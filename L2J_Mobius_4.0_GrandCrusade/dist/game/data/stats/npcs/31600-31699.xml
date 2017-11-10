@@ -710,7 +710,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31617" level="70" type="L2Npc" name="Aria Firstmatter">
+	<npc id="31617" level="70" type="L2Npc" name="Aria Furstmater">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -794,7 +794,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="31619" level="70" type="L2Npc" name="Erica Ken Weber">
+	<npc id="31619" level="70" type="L2Npc" name="Erica Ken Weber" title="Wind Shadow">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -836,7 +836,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="31620" level="70" type="L2Npc" name="Verdure Elder Elikia">
+	<npc id="31620" level="70" type="L2Npc" name="Elikia" title="Verdure Elder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -844,7 +844,7 @@
 		</parameters>
 		<race>ELF</race>
 		<sex>MALE</sex>
-		<equipment rhand="6579" /> <!-- Arcana Mace -->
+		<equipment rhand="192" /> <!-- Arcana Mace -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -874,8 +874,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="7" />
-			<height normal="22.2" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="31621" level="70" type="L2Npc" name="Abyssal Saintess Elcadia">
@@ -1636,7 +1636,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<equipment rhand="2626" /> <!-- Samurai Long Sword*Samurai Long Sword -->
+		<equipment rhand="36218" /> <!-- Samurai Long Sword*Samurai Long Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2720,7 +2720,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="31665" level="70" type="L2Npc" name="Corpse of Dwarf">
+	<npc id="31665" level="70" type="L2Npc" name="Dwarf Corpse">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3402,7 +3402,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31681" level="99" type="L2Guard" name="Frontier Guard">
+	<npc id="31681" level="99" type="L2Guard" name="Border Outpost Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3445,7 +3445,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31682" level="99" type="L2Guard" name="Frontier Guard">
+	<npc id="31682" level="99" type="L2Guard" name="Border Outpost Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3706,7 +3706,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="31688" level="70" type="L2Npc" name="Grand Olympiad Manager">
+	<npc id="31688" level="70" type="L2Npc" name="Olympiad Manager" title="Olympiad">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

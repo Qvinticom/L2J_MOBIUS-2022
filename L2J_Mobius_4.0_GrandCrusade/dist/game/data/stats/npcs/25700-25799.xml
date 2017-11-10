@@ -132,7 +132,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25702" level="84" type="L2Monster" name="Guard of the Grail">
+	<npc id="25702" level="84" type="L2Monster" name="Guardian of the Grail">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6326" level="1" />
@@ -334,7 +334,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="25706" level="83" type="L2Monster" name="Lost Watcher">
+	<npc id="25706" level="83" type="L2Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -391,7 +391,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="25707" level="83" type="L2Monster" name="Lost Watcher">
+	<npc id="25707" level="83" type="L2Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -554,7 +554,7 @@
 			<height normal="57" />
 		</collision>
 	</npc>
-	<npc id="25710" level="83" type="L2RaidBoss" name="Lost Captain">
+	<npc id="25710" level="83" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -5203,7 +5203,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<equipment rhand="15280" lhand="6918" /> <!-- Transparent 1HS (NPC) / Monster Only (Shield of Silenos) -->
+		<equipment rhand="15280" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="184569" hpRegen="8.5" mp="19524" mpRegen="30" />

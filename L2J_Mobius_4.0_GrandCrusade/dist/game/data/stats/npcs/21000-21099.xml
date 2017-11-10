@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="21001" level="60" type="L2Monster" name="Wretched Archer">
+	<npc id="21001" level="60" type="L2Monster" name="Archer of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
@@ -166,7 +166,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21003" level="60" type="L2Monster" name="Grave Lich">
+	<npc id="21003" level="60" type="L2Monster" name="Graveyard Lich">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
@@ -339,7 +339,7 @@
 			<height normal="80" grown="96" />
 		</collision>
 	</npc>
-	<npc id="21005" level="61" type="L2Monster" name="Grave Predator">
+	<npc id="21005" level="61" type="L2Monster" name="Graveyard Predator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="82" />
@@ -848,7 +848,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21011" level="30" type="L2Monster" name="Ol Mahum Van Grunt">
+	<npc id="21011" level="30" type="L2Monster" name="Ol Mahum Van Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -1149,7 +1149,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="21015" level="34" type="L2Monster" name="Ol Mahum Van Leader">
+	<npc id="21015" level="34" type="L2Monster" name="Ol Mahum Van Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2481,7 +2481,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="21039" level="43" type="L2Monster" name="Snipe Cohort">
+	<npc id="21039" level="43" type="L2Monster" name="Snipe's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2652,7 +2652,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="21073" level="64" type="L2Monster" name="Guardian Warrior of Elmoreden">
+	<npc id="21073" level="64" type="L2Monster" name="Elmoreden's Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
@@ -2853,7 +2853,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21093" level="19" type="L2Monster" name="Ratman Sub Chieftain">
+	<npc id="21093" level="19" type="L2Monster" name="Ratman Chieftain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2912,7 +2912,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21094" level="20" type="L2Monster" name="Ratman Chieftain">
+	<npc id="21094" level="20" type="L2Monster" name="Ratman Chief">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />

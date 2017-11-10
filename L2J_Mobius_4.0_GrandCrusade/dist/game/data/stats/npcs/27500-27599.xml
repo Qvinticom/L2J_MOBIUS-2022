@@ -4,6 +4,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="80" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3290" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<speed>
@@ -54,6 +55,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="2500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3290" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<speed>
@@ -79,6 +81,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="2500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3290" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<speed>
@@ -623,7 +626,7 @@
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
 			<speed>
-				<walk ground="29.8" />
+				<walk ground="29" />
 				<run ground="128" />
 			</speed>
 			<attack physical="481.54362416107" magical="329.04456086602" critical="4" attackSpeed="253" range="40" />

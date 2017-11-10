@@ -1301,7 +1301,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23126" level="95" type="L2Monster" name="Elite Escort" title="Embryo">
+	<npc id="23126" level="95" type="L2Monster" name="Embryo Elite Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1313,7 +1313,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3551001" sp="852" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="35" />
 				<run ground="130" />
@@ -1362,7 +1362,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="23127" level="95" type="L2Monster" name="Elite Manhunter" title="Embryo">
+	<npc id="23127" level="95" type="L2Monster" name="Embryo Elite Chaser">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1375,7 +1375,7 @@
 		<acquire exp="2542693" sp="610" />
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -1423,7 +1423,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="23128" level="95" type="L2Monster" name="Elite Warrior" title="Embryo">
+	<npc id="23128" level="95" type="L2Monster" name="Embryo Elite Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1435,7 +1435,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2578796" sp="618" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="35" />
 				<run ground="130" />
@@ -1484,7 +1484,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="23129" level="95" type="L2Monster" name="Elite Alchemist" title="Embryo">
+	<npc id="23129" level="95" type="L2Monster" name="Embryo Elite Alchemist">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1496,7 +1496,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2640687" sp="633" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="33087" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="32" />
 				<run ground="136" />
@@ -1544,7 +1544,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="23130" level="95" type="L2Monster" name="Elite High Priest" title="Embryo">
+	<npc id="23130" level="95" type="L2Monster" name="Embryo Elite High Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1556,7 +1556,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2506588" sp="601" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="33087" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="32" />
 				<run ground="136" />
@@ -1604,7 +1604,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="23131" level="95" type="L2Monster" name="Executor Captain" title="Embryo">
+	<npc id="23131" level="95" type="L2Monster" name="Embryo Executor Captain" title="Watchman of the Altar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1617,9 +1617,9 @@
 		<acquire exp="8739270" sp="2097" />
 		<equipment rhand="13979" lhand="13980" /> <!-- Monster Only (Dragontroop Commando) / Monster Only (Dragontroop Defender) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
-				<walk ground="36.48" />
+				<walk ground="36" />
 				<run ground="160" />
 			</speed>
 			<attack physical="78039.9424340284" magical="13816.2445394298" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -1661,7 +1661,7 @@
 			<height normal="29.5" />
 		</collision>
 	</npc>
-	<npc id="23132" level="95" type="L2Monster" name="Shilen's Enchanter" title="Embryo">
+	<npc id="23132" level="95" type="L2Monster" name="Etina Gospel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1681,7 +1681,7 @@
 		<sex>MALE</sex>
 		<acquire exp="5795272" sp="1390" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -1725,7 +1725,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23133" level="95" type="L2Monster" name="Shilen's Priest" title="Embryo">
+	<npc id="23133" level="95" type="L2Monster" name="Etina Priests">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1745,7 +1745,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2506588" sp="601" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="33087" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
@@ -1789,7 +1789,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="23134" level="95" type="L2Monster" name="Shilen's Protector" title="Embryo">
+	<npc id="23134" level="95" type="L2Monster" name="Etina Protectors">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1809,7 +1809,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3551001" sp="852" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -1855,7 +1855,7 @@
 			<height normal="31.5" />
 		</collision>
 	</npc>
-	<npc id="23135" level="95" type="L2Monster" name="Shilen's Warrior" title="Embryo">
+	<npc id="23135" level="95" type="L2Monster" name="Etina Punishers">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1875,7 +1875,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2326074" sp="558" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -1916,7 +1916,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23136" level="95" type="L2Monster" name="Shilen's Mage" title="Embryo">
+	<npc id="23136" level="95" type="L2Monster" name="Etina Commination">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -1936,7 +1936,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2640687" sp="633" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="33087" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -1980,7 +1980,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23137" level="95" type="L2Monster" name="Shilen's Assassin" title="Embryo">
+	<npc id="23137" level="95" type="L2Monster" name="Etina Darkmongers">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2000,7 +2000,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2578796" sp="618" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -2045,7 +2045,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23138" level="95" type="L2Monster" name="Shilen's Bladers" title="Embryo">
+	<npc id="23138" level="95" type="L2Monster" name="Etina Bladesmen" title="Watchman of the Altar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2057,7 +2057,7 @@
 		<sex>MALE</sex>
 		<acquire exp="8739270" sp="2097" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1024526" hpRegen="8.5" mp="25074" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2102,7 +2102,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="23139" level="95" type="L2Monster" name="Researcher" title="Embryo">
+	<npc id="23139" level="95" type="L2Monster" name="Embryo Researcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2115,9 +2115,9 @@
 		<acquire exp="1792262" sp="430" />
 		<equipment rhand="10278" lhand="10278" /> <!-- Monster Only (Behamah Dual) / Monster Only (Behamah Dual) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="946008" hpRegen="8.5" mp="24690" mpRegen="30" />
 			<speed>
-				<walk ground="29.8" />
+				<walk ground="29" />
 				<run ground="160" />
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -2164,7 +2164,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="23140" level="95" type="L2Monster" name="Archer Recruit" title="Embryo">
+	<npc id="23140" level="95" type="L2Monster" name="Embryo Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2177,7 +2177,7 @@
 		<acquire exp="1774210" sp="425" />
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="946008" hpRegen="8.5" mp="24690" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -2225,7 +2225,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="23141" level="95" type="L2Monster" name="Soldier Recruit" title="Embryo">
+	<npc id="23141" level="95" type="L2Monster" name="Embryo Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2238,7 +2238,7 @@
 		<acquire exp="1820630" sp="436" />
 		<equipment rhand="10004" /> <!-- Dynasty Dualsword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="33087" mpRegen="30" />
+			<vitals hp="946008" hpRegen="8.5" mp="24690" mpRegen="30" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
@@ -2286,7 +2286,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23142" level="95" type="L2Monster" name="Knight Recruit" title="Embryo">
+	<npc id="23142" level="95" type="L2Monster" name="Embryo Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2299,7 +2299,7 @@
 		<acquire exp="1794842" sp="430" />
 		<equipment rhand="13979" lhand="13980" /> <!-- Monster Only (Dragontroop Commando) / Monster Only (Dragontroop Defender) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="946008" hpRegen="8.5" mp="24690" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -2865,7 +2865,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14890" hpRegen="8.5" mp="2242" mpRegen="3" />
 			<speed>
-				<walk ground="42.5" />
+				<walk ground="42" />
 				<run ground="180" />
 			</speed>
 			<attack physical="5845.53506617802" magical="1033.01266087889" critical="4" attackSpeed="253" range="80" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
@@ -4888,6 +4888,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="71576" sp="17" />
+		<equipment rhand="3939" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="2974" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<speed>
@@ -5240,6 +5241,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="76733" sp="18" />
+		<equipment rhand="15280" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<speed>

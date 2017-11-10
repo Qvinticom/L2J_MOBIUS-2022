@@ -1,137 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23400" level="99" type="L2Monster" name="Lavisys" title="Magical">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="4894979" sp="11747" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="139406" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="300" />
-			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="8810" max="20521" chance="100" /> <!-- Adena -->
-				<item id="37776" min="1" max="1" chance="2.36190476190476" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
-				<item id="37791" min="1" max="1" chance="2.36190476190476" /> <!-- Sealed Demonic Tome -->
-				<item id="37773" min="1" max="1" chance="0.236190476190476" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
-			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="50.15" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.117" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23401" level="99" type="L2Monster" name="Bridget" title="Fire Slave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<acquire exp="20395683" sp="48949" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="190100" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="46" />
-				<run ground="160" />
-			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" randomWalk="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="1932" max="4501" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="11.28" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.092" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="35" />
-			<height normal="47.5" />
-		</collision>
-	</npc>
-	<npc id="23402" level="99" type="L2Monster" name="Disorder Avatar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="2162357" sp="5189" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="9409" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="749" max="1749" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="4.358" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="0.3" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.03" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="25" />
-			<height normal="42" />
-		</collision>
-	</npc>
 	<npc id="23403" level="97" type="L2Monster" name="Suffering Fanatic">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
@@ -676,6 +544,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="7276" sp="1" />
+		<equipment rhand="78" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1183" hpRegen="4.5" mp="610" mpRegen="1.8" />
 			<speed>
@@ -703,6 +572,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="7276" sp="1" />
+		<equipment rhand="78" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1183" hpRegen="4.5" mp="610" mpRegen="1.8" />
 			<speed>
@@ -820,6 +690,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
+		<equipment rhand="13978" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="10385" hpRegen="8.5" mp="1708" mpRegen="3" />
@@ -858,7 +729,7 @@
 			</lucky_drop>
 		</drop_lists>
 		<collision>
-			<radius normal="28" />
+			<radius normal="30" />
 			<height normal="51" />
 		</collision>
 	</npc>
@@ -913,6 +784,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
+		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="11506" hpRegen="8.5" mp="1777" mpRegen="3" />
@@ -960,6 +832,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
+		<equipment rhand="13979" lhand="13980" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="11506" hpRegen="8.5" mp="1777" mpRegen="3" />
@@ -1189,6 +1062,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="440867" sp="105" />
+		<equipment rhand="35708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="11506" hpRegen="8.5" mp="1777" mpRegen="3" />
@@ -1329,6 +1203,7 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="269969" sp="64" />
+		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
@@ -1420,6 +1295,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="331748" sp="79" />
+		<equipment rhand="221" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="10385" hpRegen="8.5" mp="1708" mpRegen="3" />
@@ -1606,6 +1482,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="449407" sp="107" />
+		<equipment rhand="78" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<!-- L2 Wiki Update date: 2017-09-12 -->
 			<vitals hp="10930" hpRegen="8.5" mp="1743" mpRegen="3" />
@@ -1616,7 +1493,7 @@
 				<attack type="DARK" value="100" />
 			</attribute>
 			<speed>
-				<walk ground="42.5" />
+				<walk ground="42" />
 				<run ground="170" />
 			</speed>
 		</stats>
@@ -2419,8 +2296,9 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="83739744" sp="301463" />
+		<equipment rhand="38425" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="376398" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="454075" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="48" />
 				<run ground="150" />
@@ -2462,8 +2340,9 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
+		<equipment rhand="38426" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -2505,7 +2384,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2550,8 +2429,9 @@
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
+		<equipment rhand="160" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
 				<run ground="150" />
@@ -2594,7 +2474,7 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="526957" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="567594" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="64" />
 				<run ground="180" />
@@ -2632,7 +2512,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="20" />
 				<run ground="150" />
@@ -2677,7 +2557,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="83739744" sp="301463" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="376398" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="454075" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -2723,7 +2603,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="251219232" sp="904389" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1355033" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="2270376" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="63" />
 				<run ground="150" />
@@ -2771,7 +2651,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="83739744" sp="301463" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="376398" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="454075" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="150" />
@@ -2815,7 +2695,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -2860,7 +2740,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -2905,7 +2785,7 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="526957" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="567594" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
@@ -2943,7 +2823,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -2989,7 +2869,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="251219232" sp="904389" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1355033" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="2270376" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="150" />
@@ -3037,7 +2917,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
@@ -3081,7 +2961,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
@@ -3129,7 +3009,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="150" />
@@ -3172,7 +3052,7 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="526957" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="567594" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
@@ -3210,7 +3090,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
@@ -3256,7 +3136,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="38" />
 				<run ground="150" />
@@ -3300,8 +3180,9 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="251219232" sp="904389" />
+		<equipment rhand="39719" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1355033" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="2270376" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
@@ -3349,7 +3230,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="125609616" sp="452194" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="752796" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="851391" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
@@ -3960,8 +3841,8 @@
 			</lucky_drop>
 		</drop_lists>
 		<collision>
-			<radius normal="13" />
-			<height normal="25" />
+			<radius normal="19.6" />
+			<height normal="33.05" />
 		</collision>
 	</npc>
 	<npc id="23497" level="99" type="L2Monster" name="Blazing Saurus" title="Flaming Stigma">

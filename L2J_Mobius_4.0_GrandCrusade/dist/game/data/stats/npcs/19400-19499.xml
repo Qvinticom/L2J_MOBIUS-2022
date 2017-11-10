@@ -600,6 +600,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<equipment rhand="8683" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="4234" hpRegen="10.5" mp="1846" mpRegen="3.6" />
 			<speed>
@@ -2374,7 +2375,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19480" level="99" type="L2Npc" name="Dimensional War D￩cor Transparent 1">
+	<npc id="19480" level="99" type="L2Npc" name="Dimensional War D?cor Transparent 1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2396,7 +2397,7 @@
 			<height normal="1" />
 		</collision>
 	</npc>
-	<npc id="19481" level="99" type="L2Npc" name="Dimensional War D￩cor Transparent 2">
+	<npc id="19481" level="99" type="L2Npc" name="Dimensional War D?cor Transparent 2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2418,7 +2419,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19482" level="99" type="L2Npc" name="Dimensional War D￩cor Camp">
+	<npc id="19482" level="99" type="L2Npc" name="Dimensional War D?cor Camp">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2440,7 +2441,7 @@
 			<height normal="70" />
 		</collision>
 	</npc>
-	<npc id="19483" level="99" type="L2Npc" name="Dimensional War D￩cor Clan Hall">
+	<npc id="19483" level="99" type="L2Npc" name="Dimensional War D?cor Clan Hall">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2462,7 +2463,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="19484" level="99" type="L2Npc" name="Dimensional War D￩cor Flag">
+	<npc id="19484" level="99" type="L2Npc" name="Dimensional War D?cor Flag">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2484,7 +2485,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="19485" level="99" type="L2Npc" name="Dimensional War D￩cor Stake">
+	<npc id="19485" level="99" type="L2Npc" name="Dimensional War D?cor Stake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2506,7 +2507,7 @@
 			<height normal="97.5" />
 		</collision>
 	</npc>
-	<npc id="19486" level="99" type="L2Npc" name="Dimensional War D￩cor Relic 1">
+	<npc id="19486" level="99" type="L2Npc" name="Dimensional War D?cor Relic 1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2528,7 +2529,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="19487" level="99" type="L2Npc" name="Dimensional War D￩cor Relic 2">
+	<npc id="19487" level="99" type="L2Npc" name="Dimensional War D?cor Relic 2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2550,7 +2551,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="19488" level="99" type="L2Npc" name="Dimensional War D￩cor Ballista 1">
+	<npc id="19488" level="99" type="L2Npc" name="Dimensional War D?cor Ballista 1">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2572,7 +2573,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="19489" level="99" type="L2Npc" name="Dimensional War D￩cor Ballista 2">
+	<npc id="19489" level="99" type="L2Npc" name="Dimensional War D?cor Ballista 2">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2639,7 +2640,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="36.48" />
+				<walk ground="36" />
 				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -2725,44 +2726,6 @@
 		<collision>
 			<radius normal="25" />
 			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="19498" level="99" type="L2Npc" name="Bundle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="9" />
-		</collision>
-	</npc>
-	<npc id="19499" level="99" type="L2Npc" name="Bundle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="9" />
 		</collision>
 	</npc>
 </list>

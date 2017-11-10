@@ -652,6 +652,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="95996432" sp="153594" />
+		<equipment rhand="17325" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -695,6 +696,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="103650867" sp="165841" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -740,6 +742,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="124437219" sp="199099" />
+		<equipment rhand="17332" lhand="15588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -787,6 +790,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="111937319" sp="179099" />
+		<equipment rhand="8688" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -832,6 +836,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="104493556" sp="167189" />
+		<equipment rhand="15559" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -876,6 +881,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="88903791" sp="142246" />
+		<equipment rhand="15559" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1143,6 +1149,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1191,6 +1198,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
+		<equipment rhand="8688" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1239,6 +1247,7 @@
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30863520" sp="49381" />
+		<equipment rhand="17325" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1423,6 +1432,7 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="17315719" sp="27705" />
+		<equipment rhand="15280" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2221,51 +2231,6 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="23359" level="99" type="L2Monster" name="Blow Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="2162357" sp="5189" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="120" />
-			</speed>
-			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="4042" max="9416" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.26" /> <!-- Sealed Demonic Tome -->
-				<item id="36549" min="1" max="1" chance="0.065" /> <!-- Weapon Fragment (High-grade) -->
-			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="20.24" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.887" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="21" />
-			<height normal="27" />
-		</collision>
-	</npc>
 	<npc id="23360" level="99" type="L2Monster" name="Bizuard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
@@ -2701,6 +2666,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8649429" sp="20758" />
+		<equipment rhand="17330" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2736,50 +2702,6 @@
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
-		</collision>
-	</npc>
-	<npc id="23371" level="99" type="L2Monster" name="Blow Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="2162357" sp="5189" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="120" />
-			</speed>
-			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="9882" max="23017" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="46.79" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.784" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="21" />
-			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="23372" level="99" type="L2Monster" name="Bizuard">
@@ -2867,418 +2789,6 @@
 		<collision>
 			<radius normal="35" />
 			<height normal="33" />
-		</collision>
-	</npc>
-	<npc id="23374" level="99" type="L2Monster" name="Lavi" title="Disciplined">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="4079150" sp="9789" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="104555" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="300" />
-			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23375" level="99" type="L2Monster" name="Lavi" title="Magical">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="4079150" sp="9789" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="104555" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="300" />
-			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<collision>
-			<radius normal="10" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23376" level="99" type="L2Monster" name="Lavisys" title="Disciplined">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="4894979" sp="11747" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="139406" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="300" />
-			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="10572" max="24625" chance="50" /> <!-- Adena -->
-				<item id="37776" min="1" max="1" chance="0.25" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
-				<item id="37791" min="1" max="1" chance="0.25" /> <!-- Sealed Demonic Tome -->
-				<item id="37773" min="1" max="1" chance="0.025" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
-			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="49.71" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.15" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23377" level="99" type="L2Monster" name="Lavisys" title="Explosive">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="4894979" sp="11747" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="139406" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="300" />
-			</speed>
-			<attack physical="47220.241292647" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="10572" max="24625" chance="50" /> <!-- Adena -->
-				<item id="37785" min="1" max="1" chance="1.25109523809524" /> <!-- Scroll of Blessing Scraps: Armor (R-grade) -->
-				<item id="37782" min="1" max="1" chance="0.290952380952381" /> <!-- Recipe: Scroll of Blessing: Armor (R-grade) -->
-				<item id="37791" min="1" max="1" chance="0.290952380952381" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="50.92" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.103" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23378" level="99" type="L2Monster" name="Lavisys" title="Soothing">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="4894979" sp="11747" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="139406" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="300" />
-			</speed>
-			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="10572" max="24625" chance="50" /> <!-- Adena -->
-				<item id="37776" min="1" max="1" chance="1.22857142857143" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
-				<item id="37791" min="1" max="1" chance="0.285714285714286" /> <!-- Sealed Demonic Tome -->
-				<item id="37773" min="1" max="1" chance="0.285714285714286" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
-			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="52.13" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.033" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="12" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23379" level="99" type="L2Monster" name="Tanya" title="Berserk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="27194245" sp="65266" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="253467" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4225" level="2" /> <!-- Stun Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="98158" max="228649" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.749999999999995" /> <!-- Sealed Demonic Tome -->
-				<item id="37778" min="1" max="1" chance="0.300000000000002" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
-				<item id="37775" min="1" max="1" chance="0.0300000000000002" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
-				<item id="17423" min="1" max="1" chance="0.0025" /> <!-- Amaranthine Shooter -->
-			</drop>
-			<spoil>
-				<item id="40051" min="1" max="3" chance="91.995" /> <!-- Scroll: 100,000 SP -->
-				<item id="40052" min="1" max="1" chance="19.81" /> <!-- Scroll: 1,000,000 SP -->
-				<item id="40053" min="1" max="1" chance="1.89" /> <!-- Scroll: 10,000,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="45" />
-		</collision>
-	</npc>
-	<npc id="23380" level="99" type="L2Monster" name="Scarlett" title="Berserk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="27194245" sp="65266" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="253467" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4287" level="2" /> <!-- Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="65449" max="152457" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.750000000000001" /> <!-- Sealed Demonic Tome -->
-				<item id="37787" min="1" max="1" chance="0.300000000000003" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
-				<item id="37784" min="1" max="1" chance="0.0300000000000003" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
-				<item id="36921" min="1" max="1" chance="0.00300000000000003" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
-			</drop>
-			<spoil>
-				<item id="40051" min="1" max="3" chance="73.95" /> <!-- Scroll: 100,000 SP -->
-				<item id="40052" min="1" max="1" chance="15.69" /> <!-- Scroll: 1,000,000 SP -->
-				<item id="40053" min="1" max="1" chance="1.561" /> <!-- Scroll: 10,000,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="60" />
-		</collision>
-	</npc>
-	<npc id="23381" level="99" type="L2Monster" name="Tanya" title="Berserk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="27194245" sp="65266" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="253467" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
-			<skill id="4225" level="2" /> <!-- Stun Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="98158" max="228649" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.749999999999995" /> <!-- Sealed Demonic Tome -->
-				<item id="37778" min="1" max="1" chance="0.300000000000002" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
-				<item id="37775" min="1" max="1" chance="0.0300000000000002" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
-				<item id="17423" min="1" max="1" chance="0.0025" /> <!-- Amaranthine Shooter -->
-			</drop>
-			<spoil>
-				<item id="40051" min="1" max="3" chance="92.29" /> <!-- Scroll: 100,000 SP -->
-				<item id="40052" min="1" max="1" chance="18.86" /> <!-- Scroll: 1,000,000 SP -->
-				<item id="40053" min="1" max="1" chance="1.829" /> <!-- Scroll: 10,000,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="45" />
-		</collision>
-	</npc>
-	<npc id="23382" level="99" type="L2Monster" name="Scarlett" title="Berserk">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="27194245" sp="65266" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="253467" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
-			<skill id="4287" level="2" /> <!-- Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<drop_lists>
-			<drop>
-				<item id="57" min="65449" max="152457" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.750000000000001" /> <!-- Sealed Demonic Tome -->
-				<item id="37787" min="1" max="1" chance="0.300000000000003" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
-				<item id="37784" min="1" max="1" chance="0.0300000000000003" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
-				<item id="36919" min="1" max="1" chance="0.00300000000000003" /> <!-- Recipe: Weapon Fragment (High-grade) - Downgrade -->
-			</drop>
-			<spoil>
-				<item id="40051" min="1" max="3" chance="76.15" /> <!-- Scroll: 100,000 SP -->
-				<item id="40052" min="1" max="1" chance="15.77" /> <!-- Scroll: 1,000,000 SP -->
-				<item id="40053" min="1" max="1" chance="1.566" /> <!-- Scroll: 10,000,000 SP -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
-		<collision>
-			<radius normal="20" />
-			<height normal="60" />
-		</collision>
-	</npc>
-	<npc id="23383" level="99" type="L2Monster" name="Immortal Tanya" title="Immortal">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-			<attack physical="46490.165755271" magical="8304.8994625376" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skill_list>
-		<collision>
-			<radius normal="15" />
-			<height normal="38" />
 		</collision>
 	</npc>
 	<npc id="23384" level="99" type="L2Monster" name="Smaug">
@@ -3438,7 +2948,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="180" />
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />

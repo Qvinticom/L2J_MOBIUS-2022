@@ -1247,6 +1247,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="13789" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="69677529" hpRegen="10.5" mp="41920" mpRegen="3.6" />
 			<speed>
@@ -1275,6 +1276,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="11686549504" sp="2804771" />
+		<equipment rhand="13789" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="69677529" hpRegen="10.5" mp="41920" mpRegen="3.6" />
 			<speed>
@@ -1302,6 +1304,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="3" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="355923" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1644,6 +1647,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38434" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1205285" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<speed>
@@ -1674,6 +1678,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38437" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1205285" hpRegen="10.5" mp="47100" mpRegen="3.6" />
 			<speed>
@@ -1702,6 +1707,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="80" lhand="641" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2676" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
@@ -1853,7 +1859,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="8568" level="99" type="L2Monster" name="Katura Fire Altar">
+	<npc id="8568" level="99" type="L2Monster" name="Katura Altar of Fire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1875,7 +1881,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="8569" level="99" type="L2Monster" name="Katura Water Altar">
+	<npc id="8569" level="99" type="L2Monster" name="Katura Altar of Water">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1897,7 +1903,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="8570" level="99" type="L2Monster" name="Katura Dark Altar">
+	<npc id="8570" level="99" type="L2Monster" name="Katura Altar of Darkness">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -1919,7 +1925,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="8571" level="99" type="L2Monster" name="Katura Earth Altar">
+	<npc id="8571" level="99" type="L2Monster" name="Katura Altar of Earth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>

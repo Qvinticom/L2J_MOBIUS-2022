@@ -75,7 +75,7 @@
 			<height normal="11" />
 		</collision>
 	</npc>
-	<npc id="22002" level="26" type="L2Monster" name="Grim Grizzly">
+	<npc id="22002" level="26" type="L2Monster" name="Grim Bear">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1073,7 +1073,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="22025" level="38" type="L2Monster" name="Frozen Wasteland Werewolf">
+	<npc id="22025" level="38" type="L2Monster" name="Snow Werewolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -1383,70 +1383,6 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="22069" level="53" type="L2Monster" name="Horrifying Cannon Golem VI">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="80" />
-			<param name="MoveAroundSocial1" value="80" />
-			<param name="MoveAroundSocial2" value="93" />
-			<param name="AreaName1" value="22_14_pabel_D_01" />
-			<param name="AreaName2" value="22_14_pabel_D_02" />
-			<param name="AreaName3" value="22_14_pabel_D_03" />
-			<param name="AreaName4" value="22_14_pabel_D_04" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4032" level="6" />
-			<skill name="SelfRangePhysicalSpecial" id="4232" level="5" />
-		</parameters>
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<acquire exp="14904" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
-			<attack physical="353.71092" magical="241.5387" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="214.18326" magical="156.73001" />
-			<speed>
-				<walk ground="130" />
-				<run ground="180" />
-			</speed>
-			<hit_time>430</hit_time>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skill_list>
-			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4232" level="5" /> <!-- NPC AE Strike -->
-			<skill id="4273" level="1" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4417" level="10" /> <!-- Magic Creatures -->
-			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
-			<skill id="4457" level="2" /> <!-- Hand-to-hand Weapon Weak Point -->
-		</skill_list>
-		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
-				<clan>GOLEM</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="21" />
-			<height normal="30" />
-		</collision>
-	</npc>
 	<npc id="22079" level="53" type="L2Monster" name="Lost Bandersnatch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
@@ -1584,7 +1520,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22081" level="53" type="L2Monster" name="Lost Watcher">
+	<npc id="22081" level="53" type="L2Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -1664,7 +1600,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="22082" level="54" type="L2Monster" name="Elder Lost Watcher">
+	<npc id="22082" level="54" type="L2Monster" name="Lost Elder Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -2344,7 +2280,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="22091" level="58" type="L2Monster" name="Lost Iron Golem">
+	<npc id="22091" level="58" type="L2Monster" name="Lost Steel Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2416,7 +2352,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="22092" level="59" type="L2Monster" name="Frost Iron Golem">
+	<npc id="22092" level="59" type="L2Monster" name="Frost Steel Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

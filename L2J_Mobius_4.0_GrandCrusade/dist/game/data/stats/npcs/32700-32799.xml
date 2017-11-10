@@ -187,7 +187,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="32705" level="80" type="L2Npc" name="Zaken's Candle">
+	<npc id="32705" level="80" type="L2Npc" name="Orc Barrel">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -559,7 +559,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="32716" level="80" type="L2Npc" name="Lilith's Steward">
+	<npc id="32716" level="80" type="L2Npc" name="Lilith' Agent">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -597,7 +597,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="32717" level="80" type="L2Npc" name="Lilith's Elite">
+	<npc id="32717" level="80" type="L2Npc" name="Lilith' Escort">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -713,7 +713,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="32720" level="80" type="L2Npc" name="Anakim's Guard">
+	<npc id="32720" level="80" type="L2Npc" name="Anakim's Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -1103,7 +1103,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -1123,8 +1123,8 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="32732" level="80" type="L2Npc" name="6th Anniversary Party Manager" title="Event manager">
@@ -2353,7 +2353,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="32765" level="80" type="L2Npc" name="Box of Doubt">
+	<npc id="32765" level="80" type="L2Npc" name="Mysterious Box">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2872,7 +2872,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="32779" level="80" type="L2Npc" name="Airship Controller">
+	<npc id="32779" level="80" type="L2Npc" name="Flight Device">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
@@ -3066,7 +3066,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3095,7 +3095,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3123,7 +3123,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3150,7 +3150,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3179,7 +3179,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3207,7 +3207,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3235,7 +3235,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3263,7 +3263,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3454,7 +3454,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="37.5" />
+				<walk ground="37" />
 				<run ground="150" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3481,7 +3481,7 @@
 				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
 			</attribute>
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="100" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -3492,8 +3492,8 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 </list>

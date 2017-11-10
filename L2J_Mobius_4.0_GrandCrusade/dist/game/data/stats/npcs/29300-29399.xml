@@ -54,6 +54,7 @@
 	<npc id="29302" level="99" type="L2Monster" name="Minion Monishe">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="168928" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
@@ -245,7 +246,7 @@
 			</drop>
 		</drop_lists>
 	</npc>
-	<npc id="29306" level="99" type="L2Monster" name="">
+	<npc id="29306" level="99" type="L2Monster" name="Leopold" title="Superion Siege Cannon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Leopold - Title: Superion Siege Cannon ?? -->
 		<race>ETC</race>
@@ -262,7 +263,7 @@
 			<height normal="249" />
 		</collision>
 	</npc>
-	<npc id="29307" level="99" type="L2Monster" name="">
+	<npc id="29307" level="99" type="L2Monster" name="Helios' Red Lightning" title="Enuma Elish">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Helios Red Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
@@ -279,7 +280,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="29308" level="99" type="L2Monster" name="">
+	<npc id="29308" level="99" type="L2Monster" name="Helios' Blue Lightning" title="Enuma Elish">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Helios Blue Lightning - Title: Enuma Elish ?? -->
 		<race>ETC</race>
@@ -392,6 +393,7 @@
 	<npc id="29312" level="105" type="L2Monster" name="Royal Sharpshooter" title="Emperor's Escort">
 		<race>GIANT</race>
 		<sex>MALE</sex>
+		<equipment rhand="47163" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3004130" hpRegen="7.5" mp="25848" mpRegen="2.7" />
 			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="900" type="BOW" distance="10"/>
@@ -536,6 +538,25 @@
 		<collision>
 			<radius normal="32" />
 			<height normal="50.5" />
+		</collision>
+	</npc>
+	<npc id="29317" level="85" type="L2Npc" name="Lindvior" title="Wind Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="209461939" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+			<speed>
+				<walk ground="100" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="525" />
+			<height normal="316.5" />
 		</collision>
 	</npc>
 </list>

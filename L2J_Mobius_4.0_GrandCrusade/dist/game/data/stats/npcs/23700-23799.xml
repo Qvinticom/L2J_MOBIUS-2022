@@ -224,6 +224,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
@@ -568,6 +569,7 @@
 	<npc id="23728" level="100" type="L2Monster" name="Shaqrima Carcass">
 		<race>GIANT</race>
 		<acquire exp="401600520" sp="963841" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1088861" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -715,6 +717,7 @@
 	<npc id="23731" level="101" type="L2Monster" name="Om Carcass">
 		<race>GIANT</race>
 		<acquire exp="357545773" sp="858109" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="786157" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -805,6 +808,7 @@
 	<npc id="23733" level="100" type="L2Monster" name="Lesser Giant Warrior">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
+		<equipment rhand="46741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -848,6 +852,7 @@
 	<npc id="23734" level="100" type="L2Monster" name="Lesser Giant Wizard">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
+		<equipment rhand="46742" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -1062,7 +1067,7 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23739" level="101" type="L2Monster" name="Marka">
+	<npc id="23739" level="101" type="L2Monster" name="Marka" title="Halisha's Henchman">
 		<race>DEMONIC</race>
 		<acquire exp="238364881" sp="572075" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1108,7 +1113,7 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23740" level="101" type="L2Monster" name="Schlien">
+	<npc id="23740" level="101" type="L2Monster" name="Schlien" title="Halisha's Henchman">
 		<race>DEMONIC</race>
 		<acquire exp="238364881" sp="572075" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1154,7 +1159,7 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23741" level="101" type="L2Monster" name="Berimah">
+	<npc id="23741" level="101" type="L2Monster" name="Berimah" title="Halisha's Henchman">
 		<race>DEMONIC</race>
 		<acquire exp="238364881" sp="572075" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1200,7 +1205,7 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23742" level="101" type="L2Monster" name="Naia Bathus">
+	<npc id="23742" level="101" type="L2Monster" name="Naia Bathus" title="Demons Foreman">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1244,10 +1249,11 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23743" level="101" type="L2Monster" name="Naia Carcass">
+	<npc id="23743" level="101" type="L2Monster" name="Naia Karkus" title="Demons Foreman">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<acquire exp="247303557" sp="247374" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1289,7 +1295,7 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23744" level="101" type="L2Monster" name="Naia Kshana">
+	<npc id="23744" level="101" type="L2Monster" name="Naia Kshana" title="Demons Foreman">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1333,9 +1339,10 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23745" level="101" type="L2Monster" name="Naia Lucas">
+	<npc id="23745" level="101" type="L2Monster" name="Naia Lucas" title="Demons Foreman">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1380,6 +1387,7 @@
 	<npc id="23746" level="101" type="L2Monster" name="Recovering Lesser Giant Warrior">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
+		<equipment rhand="46741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1424,6 +1432,7 @@
 	<npc id="23747" level="101" type="L2Monster" name="Recovering Lesser Giant Wizard">
 		<race>GIANT</race>
 		<acquire exp="148978051" sp="357547" />
+		<equipment rhand="46742" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1467,6 +1476,7 @@
 	<npc id="23748" level="100" type="L2Monster" name="Lesser Giant Soldier">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
+		<equipment rhand="4028" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -1554,6 +1564,7 @@
 	<npc id="23750" level="100" type="L2Monster" name="Shaqrima Lucas">
 		<race>GIANT</race>
 		<acquire exp="401600520" sp="963841" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1088861" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -1604,6 +1615,7 @@
 	<npc id="23751" level="101" type="L2Monster" name="Om Lucas">
 		<race>GIANT</race>
 		<acquire exp="357545773" sp="858109" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="786157" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1651,6 +1663,7 @@
 	<npc id="23752" level="100" type="L2Monster" name="Lesser Giant Archer">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
+		<equipment rhand="4028" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -1694,6 +1707,7 @@
 	<npc id="23753" level="100" type="L2Monster" name="Lesser Giant Support Troop">
 		<race>GIANT</race>
 		<acquire exp="82101112" sp="197042" />
+		<equipment rhand="4028" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -1837,6 +1851,7 @@
 	<npc id="23759" level="97" type="L2Monster" name="Roaming Vengeance of the Dimension">
 		<race>HUMANOID</race>
 		<acquire exp="27916503" sp="66999" />
+		<equipment rhand="10128" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="156854" hpRegen="10.5" mp="2280" mpRegen="3.6" />
 			<attack physical="42937.022246666" magical="7578.7049610443" critical="4" attackSpeed="253" range="40" />
@@ -1862,7 +1877,7 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23760" level="98" type="L2Monster" name="Dimensional Vagabond">
+	<npc id="23760" level="98" type="L2Monster" name="Dimensional Vagabond" title="Lost">
 		<race>UNDEAD</race>
 		<acquire exp="119675444" sp="287221" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1890,7 +1905,7 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23761" level="98" type="L2Monster" name="Dimension Dissolver">
+	<npc id="23761" level="98" type="L2Monster" name="Dimension Dissolver" title="Master of the Rift">
 		<race>HUMANOID</race>
 		<acquire exp="1196792856" sp="2872302" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1917,6 +1932,234 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
 			</lucky_drop>
 		</drop_lists>
+	</npc>
+	<npc id="23762" level="85" type="L2Npc" name="Fairy Knight">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1952" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="23763" level="85" type="L2Npc" name="Fairy Knight" title="Enraged">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2023" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="23764" level="85" type="L2Npc" name="Fairy Rogue">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1952" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="23765" level="85" type="L2Npc" name="Fairy Rogue" title="Enraged">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2023" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="23766" level="85" type="L2Npc" name="Fairy Warrior">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="1952" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="23767" level="85" type="L2Npc" name="Fairy Warrior" title="Enraged">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2023" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="23768" level="85" type="L2Npc" name="Satyr Summoner">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2928" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23769" level="85" type="L2Npc" name="Satyr Summoner" title="Enraged">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="3035" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23770" level="85" type="L2Npc" name="Satyr Witch">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2928" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23771" level="85" type="L2Npc" name="Satyr Witch" title="Enraged">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="3035" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23772" level="85" type="L2Npc" name="Satyr Wizard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2928" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23773" level="85" type="L2Npc" name="Satyr Wizard" title="Enraged">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="3035" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="15" />
+			<height normal="28" />
+		</collision>
 	</npc>
 	<npc id="23774" level="102" type="L2Monster" name="Delta Bathus">
 		<parameters>
@@ -1985,6 +2228,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="908048947" sp="908061" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1277110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
@@ -2164,6 +2408,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="1111149422" sp="1111186" />
+		<equipment rhand="47163" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1383110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
@@ -2342,6 +2587,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="1111149422" sp="1111186" />
+		<equipment rhand="47163" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1383110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
 			<speed>
@@ -2501,6 +2747,7 @@
 	<npc id="23784" level="100" type="L2Monster" name="Dark Wizard of the Magic Circle">
 		<race>DEMONIC</race>
 		<acquire exp="27418833" sp="65805" />
+		<equipment rhand="17332" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="75279" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2569,11 +2816,11 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23786" level="100" type="L2Monster" name="Nymph Rose">
+	<npc id="23786" level="100" type="L2Monster" name="Nymph Rose" title="Contaminated">
 		<race>PLANT</race>
 		<acquire exp="24987295" sp="59969" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="94599" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="7495" magical="1956" />
 			<attribute>
@@ -2611,11 +2858,11 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23787" level="100" type="L2Monster" name="Nymph Lily">
+	<npc id="23787" level="100" type="L2Monster" name="Nymph Lily" title="Contaminated">
 		<race>PLANT</race>
 		<acquire exp="24987295" sp="59969" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="94599" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="7495" magical="1956" />
 			<attribute>
@@ -2653,11 +2900,11 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23788" level="100" type="L2Monster" name="Nymph Tulip">
+	<npc id="23788" level="100" type="L2Monster" name="Nymph Tulip" title="Contaminated">
 		<race>PLANT</race>
 		<acquire exp="24987295" sp="59969" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="94599" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="7495" magical="1956" />
 			<attribute>
@@ -2693,11 +2940,11 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23789" level="100" type="L2Monster" name="Nymph Cosmos">
+	<npc id="23789" level="100" type="L2Monster" name="Nymph Cosmos" title="Contaminated">
 		<race>PLANT</race>
 		<acquire exp="24987295" sp="59969" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="94599" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="7495" magical="1956" />
 			<attribute>
@@ -2733,11 +2980,11 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23790" level="102" type="L2Monster" name="Kimerian">
+	<npc id="23790" level="102" type="L2Monster" name="Kimerian's Shadows" title="Fairy Leader">
 		<race>FAIRY</race>
 		<acquire exp="82709042" sp="198501" />
 		<stats>
-			<vitals hp="189198" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="368820" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<speed>
@@ -2773,12 +3020,12 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23790" level="85" type="L2Npc" name="">
+	<npc id="23790" level="85" type="L2Npc" name="Kimerian's Shadows" title="Fairy Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="189198" hpRegen="7.5" mp="24690" mpRegen="2.7" />
+			<vitals hp="368820" hpRegen="7.5" mp="24690" mpRegen="2.7" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
@@ -2790,7 +3037,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>	
-	<npc id="23791" level="85" type="L2Npc" name="">
+	<npc id="23791" level="85" type="L2Npc" name="Bathus" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2807,10 +3054,11 @@
 			<height normal="46" />
 		</collision>
 	</npc>	
-	<npc id="23792" level="85" type="L2Npc" name="">
+	<npc id="23792" level="85" type="L2Npc" name="Carcass" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15304" />
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
 			<vitals hp="283012" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
@@ -2824,7 +3072,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="23793" level="85" type="L2Npc" name="">
+	<npc id="23793" level="85" type="L2Npc" name="Kshana" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2841,10 +3089,11 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>	
-	<npc id="23794" level="85" type="L2Npc" name="">
+	<npc id="23794" level="85" type="L2Npc" name="Lucas" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15304" />
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
 			<vitals hp="283012" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
@@ -2858,7 +3107,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>		
-	<npc id="23795" level="85" type="L2Npc" name="">
+	<npc id="23795" level="85" type="L2Npc" name="Viper Cherkia" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2875,7 +3124,7 @@
 			<height normal="97" />
 		</collision>
 	</npc>	
-	<npc id="23796" level="85" type="L2Npc" name="">
+	<npc id="23796" level="85" type="L2Npc" name="Viper Cherkia" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2892,7 +3141,7 @@
 			<height normal="97" />
 		</collision>
 	</npc>
-	<npc id="23797" level="85" type="L2Npc" name="">
+	<npc id="23797" level="85" type="L2Npc" name="El Fera">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -2960,6 +3209,7 @@
 	<npc id="23799" level="102" type="L2Monster" name="Delta Carcass" title="Superion Scout">
 		<race>GIANT</race>
 		<acquire exp="547017485" sp="1312842" />
+		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
