@@ -74,6 +74,10 @@ Helios:
 -Helios
 -Faction system
 
+Grand Crusade
+-Monster Book
+-Live world map information
+
 Events:
 -Birth of Draco
 -Character Birthday
