@@ -81,11 +81,10 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 			case "33450-03.htm":
 			{
 				qs.startQuest();
-				showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_2, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_2, ExShowScreenMessage.TOP_CENTER, 10000);
 				htmltext = event;
 				break;
 			}
-			
 			case "33451-02.html":
 			{
 				if (qs.isCond(2))
@@ -94,7 +93,6 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 					addExpAndSp(player, 70000, 13);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}
@@ -115,7 +113,6 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 				if (npc.getId() == NAGEL)
 				{
 					htmltext = "33450-01.htm";
-					break;
 				}
 				break;
 			}
@@ -123,30 +120,17 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 			{
 				if (npc.getId() == NAGEL)
 				{
-					switch (qs.getCond())
-					{
-						case 1:
-						case 2:
-						{
-							htmltext = "33450-04.html";
-							break;
-						}
-					}
-					break;
+					htmltext = "33450-04.html";
 				}
-				else if (npc.getId() == CELIN)
+				else if ((npc.getId() == CELIN) && qs.isCond(2))
 				{
-					if (qs.isCond(2))
-					{
-						htmltext = "33451-01.html";
-						break;
-					}
+					htmltext = "33451-01.html";
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == NAGEL ? "33450-07.html" : "33451-04.html";
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

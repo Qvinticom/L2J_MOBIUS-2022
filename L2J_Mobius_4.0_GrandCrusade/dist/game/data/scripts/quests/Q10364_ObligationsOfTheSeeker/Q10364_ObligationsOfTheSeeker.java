@@ -29,7 +29,7 @@ import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
 /**
  * Obligations of the Seeker (10364)
  * @URL https://l2wiki.com/Obligations_of_the_Seeker
- * @author Gladicek
+ * @author Stayway
  */
 public final class Q10364_ObligationsOfTheSeeker extends Quest
 {
@@ -37,6 +37,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 	private static final int CELIN = 33451;
 	private static final int WALTER = 33452;
 	private static final int DEP = 33453;
+	// Monsters
 	private static final int KRAPHER = 22996;
 	private static final int AVIAN = 22994;
 	// Items
@@ -44,7 +45,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 	private static final int LEATHER_SHOES = 37;
 	// Misc
 	private static final int MIN_LEVEL = 13;
-	private static final int MAX_LEVEL = 20;
+	private static final int MAX_LEVEL = 25;
 	
 	public Q10364_ObligationsOfTheSeeker()
 	{
@@ -81,7 +82,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 			case "33451-03.html":
 			{
 				qs.startQuest();
-				showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
 				htmltext = event;
 				break;
 			}
@@ -91,7 +92,6 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 				{
 					qs.setCond(2, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}
@@ -103,7 +103,6 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 					addExpAndSp(player, 114000, 14);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}
@@ -122,7 +121,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 			{
 				qs.setCond(0);
 				qs.setCond(3);
-				showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_4, ExShowScreenMessage.TOP_CENTER, 4500);
+				showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_4, ExShowScreenMessage.TOP_CENTER, 4500);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -141,7 +140,6 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 				if (npc.getId() == CELIN)
 				{
 					htmltext = "33451-01.htm";
-					break;
 				}
 				break;
 			}
@@ -153,9 +151,8 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
-							htmltext = "33451-06.html";
-							break;
+							showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
+							htmltext = "33451-05.html";
 						}
 						break;
 					}
@@ -186,33 +183,15 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 						if (qs.isCond(3))
 						{
 							htmltext = "33453-01.html";
-							break;
 						}
-					}
 						break;
+					}
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				switch (npc.getId())
-				{
-					case CELIN:
-					{
-						htmltext = "33451-05.html";
-						break;
-					}
-					case WALTER:
-					{
-						htmltext = "33452-07.html";
-						break;
-					}
-					case DEP:
-					{
-						htmltext = "33453-05.html";
-						break;
-					}
-				}
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

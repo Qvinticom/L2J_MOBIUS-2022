@@ -91,7 +91,7 @@ public class DailyMissionDataHolder
 	
 	public boolean isDisplayable(L2PcInstance player)
 	{
-		return (!_isOneTime || (getStatus(player) != DailyMissionStatus.COMPLETED.getClientId())) && (_classRestriction.isEmpty() || _classRestriction.contains(player.getClassId()));
+		return (!_isOneTime || getRecentlyCompleted(player) || (getStatus(player) != DailyMissionStatus.COMPLETED.getClientId())) && (_classRestriction.isEmpty() || _classRestriction.contains(player.getClassId()));
 	}
 	
 	public void requestReward(L2PcInstance player)
@@ -110,6 +110,11 @@ public class DailyMissionDataHolder
 	public int getProgress(L2PcInstance player)
 	{
 		return _handler != null ? _handler.getProgress(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
+	}
+	
+	public boolean getRecentlyCompleted(L2PcInstance player)
+	{
+		return (_handler != null) && _handler.getRecentlyCompleted(player);
 	}
 	
 	public void reset()

@@ -46,6 +46,7 @@ public class ExInzoneWaiting implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_INZONE_WAITING_INFO.writeId(packet);
 		
+		packet.writeC(0x00); // identify if this is a response to a passive request
 		packet.writeD(_currentTemplateId);
 		packet.writeD(_instanceTimes.size());
 		for (Entry<Integer, Long> entry : _instanceTimes.entrySet())

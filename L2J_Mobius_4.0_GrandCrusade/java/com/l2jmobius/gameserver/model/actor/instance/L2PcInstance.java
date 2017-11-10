@@ -66,6 +66,7 @@ import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.HennaData;
+import com.l2jmobius.gameserver.data.xml.impl.MonsterBookData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
@@ -211,6 +212,8 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPKi
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerReputationChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSubChange;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
+import com.l2jmobius.gameserver.model.holders.MonsterBookRewardHolder;
 import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
@@ -335,6 +338,9 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendStatus;
+import com.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBook;
+import com.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookCloseForce;
+import com.l2jmobius.gameserver.network.serverpackets.monsterbook.ExMonsterBookRewardIcon;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.EnumIntBitmask;
@@ -849,6 +855,10 @@ public final class L2PcInstance extends L2Playable
 	
 	// Character UI
 	private UIKeysSettings _uiKeySettings;
+	
+	// Monster Book variables
+	private final static String MONSTER_BOOK_KILLS_VAR = "MONSTER_BOOK_KILLS_";
+	private final static String MONSTER_BOOK_LEVEL_VAR = "MONSTER_BOOK_LEVEL_";
 	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;
@@ -14015,7 +14025,7 @@ public final class L2PcInstance extends L2Playable
 		if ((currentPoints + count) < faction.getPointsOfLevel(faction.getLevelCount() - 1))
 		{
 			getVariables().set(faction.toString(), currentPoints + count);
-			sendMessage("You obtained " + count + " Faction Points for " + faction.toString().toLowerCase().replace("_", " ") + ".");
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_FACTION_POINTS_FOR_S2).addInt(count).addFactionName(faction.getId()));
 		}
 		else
 		{
@@ -14024,7 +14034,46 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (oldLevel < getFactionLevel(faction))
 		{
-			sendMessage("The Faction Level of " + faction.toString().toLowerCase().replace("_", " ") + " has increased. Open the Factions window to check.");
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_FACTION_LEVEL_OF_S1_HAS_INCREASED_OPEN_THE_FACTIONS_WINDOW_TO_CHECK).addFactionName(faction.getId()));
+		}
+	}
+	
+	public int getMonsterBookKillCount(int cardId)
+	{
+		return getVariables().getInt(MONSTER_BOOK_KILLS_VAR + cardId, 0);
+	}
+	
+	public int getMonsterBookRewardLevel(int cardId)
+	{
+		return getVariables().getInt(MONSTER_BOOK_LEVEL_VAR + cardId, 0);
+	}
+	
+	public void updateMonsterBook(MonsterBookCardHolder card)
+	{
+		final int killCount = getMonsterBookKillCount(card.getId());
+		if (killCount < card.getReward(3).getKills()) // no point adding kills when player has reached max
+		{
+			getVariables().set(MONSTER_BOOK_KILLS_VAR + card.getId(), killCount + 1);
+			sendPacket(new ExMonsterBookCloseForce()); // in case it is open
+			final int rewardLevel = getMonsterBookRewardLevel(card.getId());
+			if ((getMonsterBookKillCount(card.getId()) >= card.getReward(rewardLevel).getKills()) && (rewardLevel < 4)) // make sure player can be rewarded
+			{
+				sendPacket(new ExMonsterBookRewardIcon());
+			}
+		}
+	}
+	
+	public void rewardMonsterBook(int cardId)
+	{
+		final int rewardLevel = getMonsterBookRewardLevel(cardId);
+		final MonsterBookCardHolder card = MonsterBookData.getInstance().getMonsterBookCardById(cardId);
+		final MonsterBookRewardHolder reward = card.getReward(rewardLevel);
+		if ((getMonsterBookKillCount(cardId) >= reward.getKills()) && (rewardLevel < 4)) // make sure player can be rewarded
+		{
+			getVariables().set(MONSTER_BOOK_LEVEL_VAR + cardId, rewardLevel + 1);
+			addExpAndSp(reward.getExp(), reward.getSp());
+			addFactionPoints(card.getFaction(), reward.getPoints());
+			sendPacket(new ExMonsterBook(this));
 		}
 	}
 	

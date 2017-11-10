@@ -109,6 +109,10 @@ public final class GrandBossManager implements IStorable
 	
 	public int getBossStatus(int bossId)
 	{
+		if (!_bossStatus.containsKey(bossId))
+		{
+			return -1;
+		}
 		return _bossStatus.get(bossId);
 	}
 	

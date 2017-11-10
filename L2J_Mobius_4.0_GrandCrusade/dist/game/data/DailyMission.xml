@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/DailyMission.xsd">
-	<reward id="26" reward_id="10" name="Reach Level (Lv. 4)">
+	<reward id="26" reward_id="10" name="Reach Level (Lv. 4)" requiredCompletion="4">
 		<handler name="level">
 			<param name="level">4</param>
 		</handler>
@@ -8,7 +8,7 @@
 			<item id="10650" count="5" />
 		</items>
 	</reward>
-	<reward id="28" reward_id="16" name="Reach Level (Lv. 6)">
+	<reward id="28" reward_id="16" name="Reach Level (Lv. 6)" requiredCompletion="6">
 		<classId>0</classId>
 		<classId>1</classId>
 		<classId>2</classId>
@@ -40,7 +40,7 @@
 			<item id="32226" count="10" />
 		</items>
 	</reward>
-	<reward id="28" reward_id="17" name="Reach Level (Lv. 6 Ertheia">
+	<reward id="28" reward_id="17" name="Reach Level (Lv. 6 Ertheia)" requiredCompletion="6">
 		<classId>182</classId>
 		<classId>183</classId>
 		<classId>184</classId>
@@ -56,7 +56,7 @@
 			<item id="40195" count="10" />
 		</items>
 	</reward>
-	<reward id="31" reward_id="25" name="Reach Level (Lv. 9)">
+	<reward id="31" reward_id="25" name="Reach Level (Lv. 9)" requiredCompletion="9">
 		<handler name="level">
 			<param name="level">9</param>
 		</handler>
@@ -64,7 +64,7 @@
 			<item id="22193" count="1" />
 		</items>
 	</reward>
-	<reward id="34" reward_id="34" name="Reach Level (Lv. 12)">
+	<reward id="34" reward_id="34" name="Reach Level (Lv. 12)" requiredCompletion="12">
 		<handler name="level">
 			<param name="level">12</param>
 		</handler>
@@ -72,7 +72,7 @@
 			<item id="20922" count="1" />
 		</items>
 	</reward>
-	<reward id="37" reward_id="43" name="Reach Level (Lv. 15)">
+	<reward id="37" reward_id="43" name="Reach Level (Lv. 15)" requiredCompletion="15">
 		<handler name="level">
 			<param name="level">15</param>
 		</handler>
@@ -80,7 +80,7 @@
 			<item id="27511" count="1" />
 		</items>
 	</reward>
-	<reward id="57" reward_id="103" name="Reach Level (Lv. 35)">
+	<reward id="57" reward_id="103" name="Reach Level (Lv. 35)" requiredCompletion="35">
 		<handler name="level">
 			<param name="level">35</param>
 		</handler>
@@ -88,7 +88,7 @@
 			<item id="33510" count="1" />
 		</items>
 	</reward>
-	<reward id="63" reward_id="121" name="Reach Level (Lv. 41)">
+	<reward id="63" reward_id="121" name="Reach Level (Lv. 41)" requiredCompletion="41">
 		<handler name="level">
 			<param name="level">41</param>
 		</handler>
@@ -98,7 +98,7 @@
 			<item id="28399" count="1" />
 		</items>
 	</reward>
-	<reward id="64" reward_id="124" name="Reach Level (Lv. 42)">
+	<reward id="64" reward_id="124" name="Reach Level (Lv. 42)" requiredCompletion="42">
 		<handler name="level">
 			<param name="level">42</param>
 		</handler>
@@ -106,7 +106,7 @@
 			<item id="38606" count="1" />
 		</items>
 	</reward>
-	<reward id="65" reward_id="127" name="Reach Level (Lv. 43)">
+	<reward id="65" reward_id="127" name="Reach Level (Lv. 43)" requiredCompletion="43">
 		<handler name="level">
 			<param name="level">43</param>
 		</handler>
@@ -114,7 +114,7 @@
 			<item id="38602" count="1" />
 		</items>
 	</reward>
-	<reward id="66" reward_id="130" name="Reach Level (Lv. 44 Heavy Armor)">
+	<reward id="66" reward_id="130" name="Reach Level (Lv. 44 Heavy Armor)" requiredCompletion="44">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -159,7 +159,7 @@
 			<item id="38603" count="1" />
 		</items>
 	</reward>
-	<reward id="66" reward_id="131" name="Reach Level (Lv. 44 Light Armor)">
+	<reward id="66" reward_id="131" name="Reach Level (Lv. 44 Light Armor)" requiredCompletion="44">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -207,7 +207,7 @@
 			<item id="38612" count="1" />
 		</items>
 	</reward>
-	<reward id="66" reward_id="132" name="Reach Level (Lv. 44 Robe)">
+	<reward id="66" reward_id="132" name="Reach Level (Lv. 44 Robe)" requiredCompletion="44">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -254,7 +254,7 @@
 			<item id="38608" count="1" />
 		</items>
 	</reward>
-	<reward id="67" reward_id="133" name="Reach Level (Lv. 45 Heavy Armor)">
+	<reward id="67" reward_id="133" name="Reach Level (Lv. 45 Heavy Armor)" requiredCompletion="45">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -299,7 +299,7 @@
 			<item id="38605" count="1" />
 		</items>
 	</reward>
-	<reward id="67" reward_id="134" name="Reach Level (Lv. 45 Light Armor)">
+	<reward id="67" reward_id="134" name="Reach Level (Lv. 45 Light Armor)" requiredCompletion="45">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -346,7 +346,7 @@
 			<item id="38614" count="1" />
 		</items>
 	</reward>
-	<reward id="67" reward_id="135" name="Reach Level (Lv. 45 Robe)">
+	<reward id="67" reward_id="135" name="Reach Level (Lv. 45 Robe)" requiredCompletion="45">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -392,7 +392,7 @@
 			<item id="38609" count="1" />
 		</items>
 	</reward>
-	<reward id="68" reward_id="136" name="Reach Level (Lv. 46 Heavy Armor)">
+	<reward id="68" reward_id="136" name="Reach Level (Lv. 46 Heavy Armor)" requiredCompletion="46">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -438,7 +438,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="68" reward_id="137" name="Reach Level (Lv. 46 Light Armor)">
+	<reward id="68" reward_id="137" name="Reach Level (Lv. 46 Light Armor)" requiredCompletion="46">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -486,7 +486,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="68" reward_id="138" name="Reach Level (Lv. 46 Robe)">
+	<reward id="68" reward_id="138" name="Reach Level (Lv. 46 Robe)" requiredCompletion="46">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -533,7 +533,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="69" reward_id="139" name="Reach Level (Lv. 47)">
+	<reward id="69" reward_id="139" name="Reach Level (Lv. 47)" requiredCompletion="47">
 		<handler name="level">
 			<param name="level">47</param>
 		</handler>
@@ -542,7 +542,7 @@
 			<item id="27513" count="1" />
 		</items>
 	</reward>
-	<reward id="70" reward_id="142" name="Reach Level (Lv. 48)">
+	<reward id="70" reward_id="142" name="Reach Level (Lv. 48)" requiredCompletion="48">
 		<handler name="level">
 			<param name="level">48</param>
 		</handler>
@@ -550,7 +550,7 @@
 			<item id="38676" count="1" />
 		</items>
 	</reward>
-	<reward id="71" reward_id="145" name="Reach Level (Lv. 49)">
+	<reward id="71" reward_id="145" name="Reach Level (Lv. 49)" requiredCompletion="49">
 		<handler name="level">
 			<param name="level">49</param>
 		</handler>
@@ -558,7 +558,7 @@
 			<item id="38675" count="1" />
 		</items>
 	</reward>
-	<reward id="72" reward_id="148" name="Reach Level (Lv. 50)">
+	<reward id="72" reward_id="148" name="Reach Level (Lv. 50)" requiredCompletion="50">
 		<handler name="level">
 			<param name="level">50</param>
 		</handler>
@@ -567,7 +567,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="73" reward_id="151" name="Reach Level (Lv. 51)">
+	<reward id="73" reward_id="151" name="Reach Level (Lv. 51)" requiredCompletion="51">
 		<handler name="level">
 			<param name="level">51</param>
 		</handler>
@@ -576,7 +576,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="75" reward_id="157" name="Reach Level (Lv. 53)">
+	<reward id="75" reward_id="157" name="Reach Level (Lv. 53)" requiredCompletion="53">
 		<handler name="level">
 			<param name="level">53</param>
 		</handler>
@@ -584,7 +584,7 @@
 			<item id="27566" count="1" />
 		</items>
 	</reward>
-	<reward id="76" reward_id="160" name="Reach Level (Lv. 54)">
+	<reward id="76" reward_id="160" name="Reach Level (Lv. 54)" requiredCompletion="54">
 		<handler name="level">
 			<param name="level">54</param>
 		</handler>
@@ -593,7 +593,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="77" reward_id="163" name="Reach Level (Lv. 55 Heavy Armor)">
+	<reward id="77" reward_id="163" name="Reach Level (Lv. 55 Heavy Armor)" requiredCompletion="55">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -639,7 +639,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="77" reward_id="164" name="Reach Level (Lv. 55 Light Armor)">
+	<reward id="77" reward_id="164" name="Reach Level (Lv. 55 Light Armor)" requiredCompletion="55">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -687,7 +687,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="77" reward_id="165" name="Reach Level (Lv. 55 Robe)">
+	<reward id="77" reward_id="165" name="Reach Level (Lv. 55 Robe)" requiredCompletion="55">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -734,7 +734,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="78" reward_id="166" name="Reach Level (Lv. 56 Heavy Armor)">
+	<reward id="78" reward_id="166" name="Reach Level (Lv. 56 Heavy Armor)" requiredCompletion="56">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -780,7 +780,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="78" reward_id="167" name="Reach Level (Lv. 56 Light Armor)">
+	<reward id="78" reward_id="167" name="Reach Level (Lv. 56 Light Armor)" requiredCompletion="56">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -828,7 +828,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="78" reward_id="168" name="Reach Level (Lv. 56 Robe)">
+	<reward id="78" reward_id="168" name="Reach Level (Lv. 56 Robe)" requiredCompletion="56">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -875,7 +875,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="79" reward_id="169" name="Reach Level (Lv. 57 Heavy Armor)">
+	<reward id="79" reward_id="169" name="Reach Level (Lv. 57 Heavy Armor)" requiredCompletion="57">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -921,7 +921,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="79" reward_id="170" name="Reach Level (Lv. 57 Light Armor)">
+	<reward id="79" reward_id="170" name="Reach Level (Lv. 57 Light Armor)" requiredCompletion="57">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -969,7 +969,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="79" reward_id="171" name="Reach Level (Lv. 57 Robe)">
+	<reward id="79" reward_id="171" name="Reach Level (Lv. 57 Robe)" requiredCompletion="57">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -1016,7 +1016,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="80" reward_id="172" name="Reach Level (Lv. 58 Heavy Armor)">
+	<reward id="80" reward_id="172" name="Reach Level (Lv. 58 Heavy Armor)" requiredCompletion="58">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -1061,7 +1061,7 @@
 			<item id="38617" count="1" />
 		</items>
 	</reward>
-	<reward id="80" reward_id="173" name="Reach Level (Lv. 58 Light Armor)">
+	<reward id="80" reward_id="173" name="Reach Level (Lv. 58 Light Armor)" requiredCompletion="58">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -1108,7 +1108,7 @@
 			<item id="38627" count="1" />
 		</items>
 	</reward>
-	<reward id="80" reward_id="174" name="Reach Level (Lv. 58 Robe)">
+	<reward id="80" reward_id="174" name="Reach Level (Lv. 58 Robe)" requiredCompletion="58">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -1154,7 +1154,7 @@
 			<item id="38623" count="1" />
 		</items>
 	</reward>
-	<reward id="81" reward_id="175" name="Reach Level (Lv. 59)">
+	<reward id="81" reward_id="175" name="Reach Level (Lv. 59)" requiredCompletion="59">
 		<handler name="level">
 			<param name="level">59</param>
 		</handler>
@@ -1162,7 +1162,7 @@
 			<item id="38677" count="1" />
 		</items>
 	</reward>
-	<reward id="82" reward_id="178" name="Reach Level (Lv. 60)">
+	<reward id="82" reward_id="178" name="Reach Level (Lv. 60)" requiredCompletion="60">
 		<handler name="level">
 			<param name="level">60</param>
 		</handler>
@@ -1171,7 +1171,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="83" reward_id="181" name="Reach Level (Lv. 61)">
+	<reward id="83" reward_id="181" name="Reach Level (Lv. 61)" requiredCompletion="61">
 		<handler name="level">
 			<param name="level">61</param>
 		</handler>
@@ -1181,7 +1181,7 @@
 			<item id="38679" count="1" />
 		</items>
 	</reward>
-	<reward id="84" reward_id="184" name="Reach Level (Lv. 62)">
+	<reward id="84" reward_id="184" name="Reach Level (Lv. 62)" requiredCompletion="62">
 		<handler name="level">
 			<param name="level">62</param>
 		</handler>
@@ -1189,7 +1189,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="85" reward_id="187" name="Reach Level (Lv. 63)">
+	<reward id="85" reward_id="187" name="Reach Level (Lv. 63)" requiredCompletion="63">
 		<handler name="level">
 			<param name="level">63</param>
 		</handler>
@@ -1198,7 +1198,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="86" reward_id="190" name="Reach Level (Lv. 64)">
+	<reward id="86" reward_id="190" name="Reach Level (Lv. 64)" requiredCompletion="64">
 		<handler name="level">
 			<param name="level">64</param>
 		</handler>
@@ -1207,7 +1207,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="87" reward_id="193" name="Reach Level (Lv. 65 Heavy Armor)">
+	<reward id="87" reward_id="193" name="Reach Level (Lv. 65 Heavy Armor)" requiredCompletion="65">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -1252,7 +1252,7 @@
 			<item id="38629" count="1" />
 		</items>
 	</reward>
-	<reward id="87" reward_id="194" name="Reach Level (Lv. 65 Light Armor)">
+	<reward id="87" reward_id="194" name="Reach Level (Lv. 65 Light Armor)" requiredCompletion="65">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -1299,7 +1299,7 @@
 			<item id="38634" count="1" />
 		</items>
 	</reward>
-	<reward id="87" reward_id="195" name="Reach Level (Lv. 65 Robe)">
+	<reward id="87" reward_id="195" name="Reach Level (Lv. 65 Robe)" requiredCompletion="65">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -1345,7 +1345,7 @@
 			<item id="38634" count="1" />
 		</items>
 	</reward>
-	<reward id="88" reward_id="196" name="Reach Level (Lv. 66 Heavy Armor)">
+	<reward id="88" reward_id="196" name="Reach Level (Lv. 66 Heavy Armor)" requiredCompletion="66">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -1391,7 +1391,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="88" reward_id="197" name="Reach Level (Lv. 66 Light Armor)">
+	<reward id="88" reward_id="197" name="Reach Level (Lv. 66 Light Armor)" requiredCompletion="66">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -1440,7 +1440,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="88" reward_id="198" name="Reach Level (Lv. 66 Robe)">
+	<reward id="88" reward_id="198" name="Reach Level (Lv. 66 Robe)" requiredCompletion="66">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -1487,7 +1487,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="89" reward_id="199" name="Reach Level (Lv. 67 Heavy Armor)">
+	<reward id="89" reward_id="199" name="Reach Level (Lv. 67 Heavy Armor)" requiredCompletion="67">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -1533,7 +1533,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="89" reward_id="200" name="Reach Level (Lv. 67 Light Armor)">
+	<reward id="89" reward_id="200" name="Reach Level (Lv. 67 Light Armor)" requiredCompletion="67">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -1581,7 +1581,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="89" reward_id="201" name="Reach Level (Lv. 67 Robe)">
+	<reward id="89" reward_id="201" name="Reach Level (Lv. 67 Robe)" requiredCompletion="67">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -1628,7 +1628,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="90" reward_id="202" name="Reach Level (Lv. 68 Heavy Armor)">
+	<reward id="90" reward_id="202" name="Reach Level (Lv. 68 Heavy Armor)" requiredCompletion="68">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -1674,7 +1674,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="90" reward_id="203" name="Reach Level (Lv. 68 Light Armor)">
+	<reward id="90" reward_id="203" name="Reach Level (Lv. 68 Light Armor)" requiredCompletion="68">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -1722,7 +1722,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="90" reward_id="204" name="Reach Level (Lv. 68 Robe)">
+	<reward id="90" reward_id="204" name="Reach Level (Lv. 68 Robe)" requiredCompletion="68">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -1769,7 +1769,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="91" reward_id="205" name="Reach Level (Lv. 69)">
+	<reward id="91" reward_id="205" name="Reach Level (Lv. 69)" requiredCompletion="69">
 		<handler name="level">
 			<param name="level">69</param>
 		</handler>
@@ -1778,7 +1778,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="92" reward_id="208" name="Reach Level (Lv. 70)">
+	<reward id="92" reward_id="208" name="Reach Level (Lv. 70)" requiredCompletion="70">
 		<handler name="level">
 			<param name="level">70</param>
 		</handler>
@@ -1787,7 +1787,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="93" reward_id="211" name="Reach Level (Lv. 71)">
+	<reward id="93" reward_id="211" name="Reach Level (Lv. 71)" requiredCompletion="71">
 		<handler name="level">
 			<param name="level">71</param>
 		</handler>
@@ -1796,7 +1796,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="94" reward_id="214" name="Reach Level (Lv. 72)">
+	<reward id="94" reward_id="214" name="Reach Level (Lv. 72)" requiredCompletion="72">
 		<handler name="level">
 			<param name="level">72</param>
 		</handler>
@@ -1805,7 +1805,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="95" reward_id="217" name="Reach Level (Lv. 73)">
+	<reward id="95" reward_id="217" name="Reach Level (Lv. 73)" requiredCompletion="73">
 		<handler name="level">
 			<param name="level">73</param>
 		</handler>
@@ -1814,7 +1814,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="96" reward_id="220" name="Reach Level (Lv. 74)">
+	<reward id="96" reward_id="220" name="Reach Level (Lv. 74)" requiredCompletion="74">
 		<handler name="level">
 			<param name="level">74</param>
 		</handler>
@@ -1826,7 +1826,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="97" reward_id="223" name="Reach Level (Lv. 75)">
+	<reward id="97" reward_id="223" name="Reach Level (Lv. 75)" requiredCompletion="75">
 		<handler name="level">
 			<param name="level">75</param>
 		</handler>
@@ -1834,7 +1834,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="98" reward_id="226" name="Reach Level (Lv. 76)">
+	<reward id="98" reward_id="226" name="Reach Level (Lv. 76)" requiredCompletion="76">
 		<handler name="level">
 			<param name="level">76</param>
 		</handler>
@@ -1842,7 +1842,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="99" reward_id="229" name="Reach Level (Lv. 77)">
+	<reward id="99" reward_id="229" name="Reach Level (Lv. 77)" requiredCompletion="77">
 		<handler name="level">
 			<param name="level">77</param>
 		</handler>
@@ -1851,7 +1851,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="100" reward_id="232" name="Reach Level (Lv. 78 Heavy Armor)">
+	<reward id="100" reward_id="232" name="Reach Level (Lv. 78 Heavy Armor)" requiredCompletion="78">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -1897,7 +1897,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="100" reward_id="233" name="Reach Level (Lv. 78 Light Armor)">
+	<reward id="100" reward_id="233" name="Reach Level (Lv. 78 Light Armor)" requiredCompletion="78">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -1944,7 +1944,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="100" reward_id="234" name="Reach Level (Lv. 78 Robe)">
+	<reward id="100" reward_id="234" name="Reach Level (Lv. 78 Robe)" requiredCompletion="78">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -1991,7 +1991,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="101" reward_id="235" name="Reach Level (Lv. 79 Heavy Armor)">
+	<reward id="101" reward_id="235" name="Reach Level (Lv. 79 Heavy Armor)" requiredCompletion="79">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -2039,7 +2039,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="101" reward_id="236" name="Reach Level (Lv. 79 Light Armor)">
+	<reward id="101" reward_id="236" name="Reach Level (Lv. 79 Light Armor)" requiredCompletion="79">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -2088,7 +2088,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="101" reward_id="237" name="Reach Level (Lv. 79 Robe)">
+	<reward id="101" reward_id="237" name="Reach Level (Lv. 79 Robe)" requiredCompletion="79">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -2136,7 +2136,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="102" reward_id="238" name="Reach Level (Lv. 80 Heavy Armor)">
+	<reward id="102" reward_id="238" name="Reach Level (Lv. 80 Heavy Armor)" requiredCompletion="80">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -2183,7 +2183,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="102" reward_id="239" name="Reach Level (Lv. 80 Light Armor)">
+	<reward id="102" reward_id="239" name="Reach Level (Lv. 80 Light Armor)" requiredCompletion="80">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -2232,7 +2232,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="102" reward_id="240" name="Reach Level (Lv. 80 Robe)">
+	<reward id="102" reward_id="240" name="Reach Level (Lv. 80 Robe)" requiredCompletion="80">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -2280,7 +2280,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="103" reward_id="241" name="Reach Level (Lv. 81)">
+	<reward id="103" reward_id="241" name="Reach Level (Lv. 81)" requiredCompletion="81">
 		<handler name="level">
 			<param name="level">81</param>
 		</handler>
@@ -2292,7 +2292,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="104" reward_id="244" name="Reach Level (Lv. 82 Heavy Armor)">
+	<reward id="104" reward_id="244" name="Reach Level (Lv. 82 Heavy Armor)" requiredCompletion="82">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -2338,7 +2338,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="104" reward_id="245" name="Reach Level (Lv. 82 Light Armor)">
+	<reward id="104" reward_id="245" name="Reach Level (Lv. 82 Light Armor)" requiredCompletion="82">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -2385,7 +2385,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="104" reward_id="246" name="Reach Level (Lv. 82 Robe)">
+	<reward id="104" reward_id="246" name="Reach Level (Lv. 82 Robe)" requiredCompletion="82">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -2432,7 +2432,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="105" reward_id="247" name="Reach Level (Lv. 83 Heavy Armor)">
+	<reward id="105" reward_id="247" name="Reach Level (Lv. 83 Heavy Armor)" requiredCompletion="83">
 		<classId>0</classId>
 		<classId>18</classId>
 		<classId>31</classId>
@@ -2482,7 +2482,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="105" reward_id="248" name="Reach Level (Lv. 83 Light Armor)">
+	<reward id="105" reward_id="248" name="Reach Level (Lv. 83 Light Armor)" requiredCompletion="83">
 		<classId>49</classId>
 		<classId>123</classId>
 		<classId>124</classId>
@@ -2534,7 +2534,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="105" reward_id="249" name="Reach Level (Lv. 83 Robe)">
+	<reward id="105" reward_id="249" name="Reach Level (Lv. 83 Robe)" requiredCompletion="83">
 		<classId>10</classId>
 		<classId>25</classId>
 		<classId>38</classId>
@@ -2585,7 +2585,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="106" reward_id="250" name="Reach Level (Lv. 84)">
+	<reward id="106" reward_id="250" name="Reach Level (Lv. 84)" requiredCompletion="84">
 		<handler name="level">
 			<param name="level">84</param>
 		</handler>
@@ -2596,7 +2596,7 @@
 			<item id="35987" count="1" />
 		</items>
 	</reward>
-	<reward id="107" reward_id="252" name="Reach Level (Lv. 85)">
+	<reward id="107" reward_id="252" name="Reach Level (Lv. 85)" requiredCompletion="85">
 		<handler name="level">
 			<param name="level">85</param>
 		</handler>
@@ -2604,42 +2604,45 @@
 			<item id="46919" count="1" />
 		</items>
 	</reward>
-	<reward id="187" reward_id="493" name="Reach Level (Dual Lv. 84)">
+	<!-- Dual Class
+	<reward id="187" reward_id="493" name="Reach Level (Dual Lv. 84)" requiredCompletion="84">
 		<handler name="level">
 			<param name="level">84</param>
-			<param name="dualclass">true</param>
 		</handler>
 		<items>
 			<item id="35987" count="10" />
 		</items>
 	</reward>
-	<reward id="224" reward_id="604" name="Login All Weekend" isOneTime="false">
+	-->
+	<reward id="224" reward_id="604" name="Login Once During the Weekend" requiredCompletion="1" isOneTime="false">
 		<items>
 			<item id="27593" count="4" />
 			<item id="27603" count="1" />
 		</items>
 	</reward>
-	<reward id="225" reward_id="605" name="Login All Month" isOneTime="false">
+	<!-- has issues - 2/1 
+	<reward id="225" reward_id="605" name="Login Once During the Month" requiredCompletion="1" isOneTime="false">
 		<items>
 			<item id="27593" count="15" />
 			<item id="27603" count="1" />
 		</items>
 	</reward>
-	<reward id="226" reward_id="606" name="Quest Mania" requiredCompletion="2" isOneTime="false">
+	-->
+	<reward id="226" reward_id="606" name="Complete Quests" requiredCompletion="2" isOneTime="false">
 		<handler name="quest" />
 		<items>
 			<item id="27593" count="1" />
 			<item id="27603" count="1" />
 		</items>
 	</reward>
-	<reward id="227" reward_id="607" name="Olympiad Warrior" requiredCompletion="2" isOneTime="false">
+	<reward id="227" reward_id="607" name="Participate in the Olympiad" requiredCompletion="2" isOneTime="false">
 		<handler name="olympiad" />
 		<items>
 			<item id="27593" count="4" />
 			<item id="27603" count="3" />
 		</items>
 	</reward>
-	<reward id="228" reward_id="608" name="Siege Ruler" isOneTime="false">
+	<reward id="228" reward_id="608" name="Sieges" requiredCompletion="1" isOneTime="false">
 		<handler name="siege" />
 		<items>
 			<item id="27593" count="50" />
@@ -2660,7 +2663,7 @@
 			<item id="27603" count="1" />
 		</items>
 	</reward>
-	<reward id="231" reward_id="611" name="Fisher" requiredCompletion="3" isOneTime="false">
+	<reward id="231" reward_id="611" name="Catch Fish" requiredCompletion="3" isOneTime="false">
 		<handler name="fishing" />
 		<items>
 			<item id="27593" count="1" />

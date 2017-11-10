@@ -298,7 +298,7 @@ public class PcStat extends PlayableStat
 		{
 			getActiveChar().sendPacket(new ExAcquireAPSkillList(getActiveChar()));
 		}
-		getActiveChar().sendPacket(new ExOneDayReceiveRewardList(getActiveChar()));
+		getActiveChar().sendPacket(new ExOneDayReceiveRewardList(getActiveChar(), true));
 		return levelIncreased;
 	}
 	

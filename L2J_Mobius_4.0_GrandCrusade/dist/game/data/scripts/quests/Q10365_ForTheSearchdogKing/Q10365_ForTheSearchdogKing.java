@@ -87,7 +87,6 @@ public final class Q10365_ForTheSearchdogKing extends Quest
 					addExpAndSp(player, 172000, 15);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}
@@ -99,7 +98,6 @@ public final class Q10365_ForTheSearchdogKing extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			if (giveItemRandomly(killer, npc, KINGS_TONIC, 1, 20, 0.5, true))
@@ -125,7 +123,6 @@ public final class Q10365_ForTheSearchdogKing extends Quest
 				if (npc.getId() == DEP)
 				{
 					htmltext = "33453-01.htm";
-					break;
 				}
 				break;
 			}
@@ -137,10 +134,10 @@ public final class Q10365_ForTheSearchdogKing extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_5, ExShowScreenMessage.TOP_CENTER, 10000);
 							htmltext = "33453-05.html";
-							break;
 						}
+						break;
 					}
 					case SEBION:
 					{
@@ -150,13 +147,12 @@ public final class Q10365_ForTheSearchdogKing extends Quest
 						}
 						break;
 					}
-					
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

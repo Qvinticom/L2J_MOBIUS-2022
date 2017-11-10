@@ -1,9 +1,9 @@
-L2J-Mobius Helios
+L2J-Mobius Grand Crusade
 
-Client: https://drive.google.com/uc?id=0B_wJFNF_2fcJTE5oVm96emtlSlE&export=download
-Mirror: https://mega.nz/#!Uo9TTCSQ!JDstscgcLFY3GeM3Q6j8nUq7jpixzqIV1Gl4z2ob0eA
+Client: https://drive.google.com/uc?id=0B2jZ65zOwt46SzFyd1c0S2ZSZXc&export=download
+Mirror: https://mega.nz/#!Iv5QnQjD!MQmL51g79MnQErNRiYsb6fRHHN1mypwn61PnWS97Xfk
 
-Geodata: http://www.mediafire.com/file/8eo7wtp0iv7wcr5/mobius_geodata_helios_l2d.zip
+Geodata: http://www.mediafire.com/file/sbiue13slxu3ceu/mobius_geodata_grand_crusade_l2d.zip
 
 
 Working features...

@@ -188,10 +188,8 @@ import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
-import quests.Q00904_DragonTrophyAntharas.Q00904_DragonTrophyAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
-import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
@@ -321,7 +319,6 @@ import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10460_ReturnOfTheAlligatorHunter.Q10460_ReturnOfTheAlligatorHunter;
-import quests.Q10461_TappingThePowerWithin.Q10461_TappingThePowerWithin;
 import quests.Q10462_TemperARustingBlade.Q10462_TemperARustingBlade;
 import quests.Q10465_SoulFrostSword.Q10465_SoulFrostSword;
 import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
@@ -608,10 +605,8 @@ public class QuestMasterHandler
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,
-		Q00904_DragonTrophyAntharas.class,
 		Q00905_RefinedDragonBlood.class,
 		Q00906_TheCallOfValakas.class,
-		Q00907_DragonTrophyValakas.class,
 		Q00937_ToReviveTheFishingGuild.class,
 		Q10273_GoodDayToFly.class,
 		Q10274_CollectingInTheAir.class,
@@ -741,7 +736,6 @@ public class QuestMasterHandler
 		Q10455_ElikiasLetter.class,
 		Q10459_ASickAmbition.class,
 		Q10460_ReturnOfTheAlligatorHunter.class,
-		Q10461_TappingThePowerWithin.class,
 		Q10462_TemperARustingBlade.class,
 		Q10465_SoulFrostSword.class,
 		Q10472_WindsOfFateEncroachingShadows.class,

@@ -36,5 +36,4 @@ public class ExConnectedTimeAndGettableReward implements IClientOutgoingPacket
 		}
 		return true;
 	}
-	
 }

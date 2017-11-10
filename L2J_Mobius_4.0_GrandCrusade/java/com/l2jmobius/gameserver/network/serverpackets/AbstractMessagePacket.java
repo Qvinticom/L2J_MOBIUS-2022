@@ -78,6 +78,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		}
 	}
 	
+	private static final byte TYPE_FACTION_NAME = 24; // c(short), faction id.
 	// id 22 d (shared with 1-3,17,22
 	// id 21 h
 	// id 20 c
@@ -346,6 +347,12 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		return (T) this;
 	}
 	
+	public final T addFactionName(int factionId)
+	{
+		append(new SMParam(TYPE_FACTION_NAME, factionId));
+		return (T) this;
+	}
+	
 	public final T addPopup(int target, int attacker, int damage)
 	{
 		append(new SMParam(TYPE_POPUP_ID, new int[]
@@ -397,6 +404,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 			{
 				case TYPE_ELEMENT_NAME:
 				case TYPE_BYTE:
+				case TYPE_FACTION_NAME:
 				{
 					packet.writeC(param.getIntValue());
 					break;

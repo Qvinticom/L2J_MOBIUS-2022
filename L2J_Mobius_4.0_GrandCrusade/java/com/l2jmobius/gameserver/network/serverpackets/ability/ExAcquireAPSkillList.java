@@ -21,7 +21,6 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -35,7 +34,7 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExAcquireAPSkillList implements IClientOutgoingPacket
 {
 	private final int _abilityPoints, _usedAbilityPoints;
-	private final long _price;
+	// private final long _price; Removed on Grand Crusade
 	private final boolean _enable;
 	private final List<Skill> _skills = new ArrayList<>();
 	
@@ -43,7 +42,7 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 	{
 		_abilityPoints = activeChar.getAbilityPoints();
 		_usedAbilityPoints = activeChar.getAbilityPointsUsed();
-		_price = AbilityPointsData.getInstance().getPrice(_abilityPoints);
+		// _price = AbilityPointsData.getInstance().getPrice(_abilityPoints); Removed on Grand Crusade
 		for (L2SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
 		{
 			final Skill knownSkill = activeChar.getKnownSkill(sk.getSkillId());
@@ -65,8 +64,8 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 		
 		packet.writeD(_enable ? 1 : 0);
 		packet.writeQ(Config.ABILITY_POINTS_RESET_ADENA);
-		packet.writeQ(_price);
-		packet.writeD(Config.ABILITY_MAX_POINTS);
+		// packet.writeQ(_price); Removed on Grand Crusade
+		// packet.writeD(Config.ABILITY_MAX_POINTS); Removed on Grand Crusade
 		packet.writeD(_abilityPoints);
 		packet.writeD(_usedAbilityPoints);
 		packet.writeD(_skills.size());

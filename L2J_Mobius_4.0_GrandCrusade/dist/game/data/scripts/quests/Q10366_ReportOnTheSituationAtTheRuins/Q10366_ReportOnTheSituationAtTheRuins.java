@@ -44,11 +44,10 @@ public final class Q10366_ReportOnTheSituationAtTheRuins extends Quest
 		22993, // Critter
 		22994, // Avian
 		22995, // Rider
-		23122
-		// Eyesaroch
+		23122 // Eyesaroch
 	};
 	// Misc
-	private static final int MIN_LEVEL = 16;
+	private static final int MIN_LEVEL = 17;
 	private static final int MAX_LEVEL = 25;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	

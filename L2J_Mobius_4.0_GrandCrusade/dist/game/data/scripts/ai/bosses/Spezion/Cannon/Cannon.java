@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
@@ -94,7 +93,7 @@ public final class Cannon extends AbstractNpcAI
 				{
 					takeItems(player, CANNONBALL, 1);
 					npc.setScriptValue(0);
-					npc.setTitleString(NpcStringId.CANNON_IS_LOADING);
+					npc.setTitle("Cannon is loading");
 					npc.broadcastInfo();
 					addSkillCastDesire(npc, npc, PRESENT_SKILL, 23);
 					startQuestTimer("CANNON_RECHARGE", 300000, npc, null);
@@ -104,7 +103,7 @@ public final class Cannon extends AbstractNpcAI
 			case "CANNON_RECHARGE":
 			{
 				npc.setScriptValue(1);
-				npc.setTitleString(NpcStringId.EMPTY_CANNON);
+				npc.setTitle("Empty Cannon");
 				npc.broadcastInfo();
 				break;
 			}
