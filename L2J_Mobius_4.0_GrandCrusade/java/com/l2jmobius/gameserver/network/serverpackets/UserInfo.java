@@ -206,7 +206,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeC(_activeChar.getMountType().ordinal());
 			packet.writeC(_activeChar.getPrivateStoreType().getId());
 			packet.writeC(_activeChar.hasDwarvenCraft() || (_activeChar.getSkillLevel(248) > 0) ? 1 : 0);
-			packet.writeC(_activeChar.getAbilityPointsUsed());
+			packet.writeC(_activeChar.getAbilityPoints() - _activeChar.getAbilityPointsUsed());
 		}
 		
 		if (containsMask(UserInfoType.STATS))
