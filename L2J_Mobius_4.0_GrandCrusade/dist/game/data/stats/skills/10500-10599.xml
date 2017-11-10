@@ -592,14 +592,6 @@
 			<effect name="Lethal">
 				<halfLethal>15</halfLethal>
 			</effect>
-			<effect name="Speed">
-				<amount>40</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-			</effect>
 		</effects>
 		<pveEffects>
 			<effect name="FatalBlow">
@@ -644,8 +636,15 @@
 				<overHit>true</overHit>
 			</effect>
 		</pvpEffects>
-		<!-- TODO : Move to effects after A3 skills rework -->
 		<selfEffects>
+			<effect name="Speed">
+				<amount>40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="CriticalDamagePosition">
 				<amount>30</amount>
 				<mode>PER</mode>
@@ -1651,14 +1650,13 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<!-- TODO : replace me with p_avoid_counter_skill -->
 			<effect name="SkillEvasion">
-				<magicType>0</magicType>
 				<amount>
 					<value level="1">70</value>
 					<value level="2">75</value>
 					<value level="3">80</value>
 				</amount>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="CounterPhysicalSkill">
 				<amount>
@@ -2178,7 +2176,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<!-- TODO Check TeleportToTarget, not in GDL files -->
 			<effect name="TeleportToTarget" />
 			<effect name="TargetCancel" />
 			<effect name="DeleteHateOfMe" />
@@ -2196,7 +2193,6 @@
 				<despawnDelay>30000</despawnDelay>
 			</effect>
 		</effects>
-		<!-- TODO Check endEffects, not in GDL files -->
 		<endEffects>
 			<effect name="CallSkill">
 				<!-- Illusion Hide -->
