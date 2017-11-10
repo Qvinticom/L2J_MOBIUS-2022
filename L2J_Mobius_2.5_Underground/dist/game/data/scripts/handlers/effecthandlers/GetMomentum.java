@@ -26,12 +26,21 @@ import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author Sdw
+ * @author Sdw, Mobius
  */
 public class GetMomentum extends AbstractEffect
 {
+	public static int _ticks;
+	
 	public GetMomentum(StatsSet params)
 	{
+		_ticks = params.getInt("ticks", 0);
+	}
+	
+	@Override
+	public int getTicks()
+	{
+		return _ticks;
 	}
 	
 	@Override
@@ -40,10 +49,10 @@ public class GetMomentum extends AbstractEffect
 		if (info.getEffected().isPlayer())
 		{
 			final L2PcInstance player = info.getEffected().getActingPlayer();
-			final int maxCharge = (int) info.getEffected().getStat().getValue(Stats.MAX_MOMENTUM, 0);
+			final int maxCharge = (int) player.getStat().getValue(Stats.MAX_MOMENTUM, 0);
 			final int newCharge = Math.min(player.getCharges() + 1, maxCharge);
 			
-			player.setCharges(maxCharge);
+			player.setCharges(newCharge);
 			
 			if (newCharge == maxCharge)
 			{
