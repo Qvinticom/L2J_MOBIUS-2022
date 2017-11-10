@@ -43,7 +43,6 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	private static final int[] MONSTERS =
 	{
 		19574,
-		23402,
 		23354,
 		23355,
 		23356,
@@ -58,7 +57,6 @@ public class EnchantedMegaliths extends AbstractNpcAI
 		23367,
 		23368,
 		23370,
-		23371,
 		23372,
 		23373
 	};
@@ -226,8 +224,8 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[10]).getNpcSpawnTemplate().getSpawnTemplate();
-					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[13]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[9]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[12]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal.despawnAll();
 				}
 				else
@@ -261,8 +259,8 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[10]).getNpcSpawnTemplate().getSpawnTemplate();
-					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[13]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[9]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[12]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal.despawnAll();
 				}
 				break;
@@ -291,8 +289,8 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[10]).getNpcSpawnTemplate().getSpawnTemplate();
-					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[13]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[9]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[12]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateNormal.despawnAll();
 				}
 				else
