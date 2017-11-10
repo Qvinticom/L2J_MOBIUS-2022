@@ -113,7 +113,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13906" toLevel="1" name="Red Libra Talisman - Restoration">
+	<skill id="13906" toLevel="1" name="Red Libra Talisman - Recovery">
 		<!-- Restores all party members' HP/MP/CP and has a chance of dispelling their debuffs. -->
 		<affectRange>1000</affectRange>
 		<magicLvl>85</magicLvl>
@@ -179,7 +179,7 @@
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
-	<skill id="13908" toLevel="1" name="Red Libra Talisman - Speed">
+	<skill id="13908" toLevel="1" name="Red Libra Talisman - Teleport">
 		<!-- Party's Speed + 70 for 10 seconds. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2316,5 +2316,70 @@
 				<stat>MEN</stat>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="13963" toLevel="1" name="Protector's Guardian Earrings">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13964" toLevel="1" name="Bracelet of the Conqueror - CON">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13965" toLevel="1" name="Bracelet of the Conqueror - MEN">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13966" toLevel="1" name="Bracelet of the Conqueror - DEX">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13967" toLevel="1" name="Bracelet of the Conqueror - WIT">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13968" toLevel="1" name="Bracelet of the Conqueror - STR">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13969" toLevel="1" name="Bracelet of the Conqueror - INT">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13970" toLevel="10" name="Sayha's Talisman">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13971" toLevel="4" name="Sayha's Trust">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13972" toLevel="4" name="Sayha's Benefaction">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13973" toLevel="4" name="Sayha's Encouragement">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13974" toLevel="4" name="Sayha's Anger">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13975" toLevel="1" name="Nevit??s Cloak of Light">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

@@ -222,7 +222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4407" toLevel="2" name="Enchant Type Monster">
+	<skill id="4407" toLevel="2" name="Ordinary Monster">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0000</value>
@@ -232,7 +232,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4408" toLevel="20" name="HP Increase (12x)">
+	<skill id="4408" toLevel="20" name="HP Increase (1x)">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0000</value>
@@ -312,7 +312,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4409" toLevel="20" name="MP Increase (12x)">
+	<skill id="4409" toLevel="20" name="MP Increase (1x)">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0000</value>
@@ -392,7 +392,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4410" toLevel="22" name="Ultra Strong P. Atk.">
+	<skill id="4410" toLevel="22" name="Extremely Weak P. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0141</value>
@@ -451,7 +451,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4411" toLevel="22" name="Ultra Strong M. Atk.">
+	<skill id="4411" toLevel="22" name="Extremely Weak M. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill4411_normal</value>
@@ -510,7 +510,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4412" toLevel="22" name="Ultra Strong P. Def.">
+	<skill id="4412" toLevel="22" name="Extremely Weak P. Def.">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0142</value>
@@ -569,7 +569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4413" toLevel="22" name="Ultra Strong M. Def.">
+	<skill id="4413" toLevel="22" name="Extremely Weak M. Def.">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill4413_normal</value>
@@ -628,7 +628,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4414" toLevel="3" name="Light Armor Type">
+	<skill id="4414" toLevel="3" name="Heavy Armor Type">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill4312</value>
@@ -657,7 +657,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4415" toLevel="26" name="Crossbow">
+	<skill id="4415" toLevel="26" name="Bare Hands">
 		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -727,7 +727,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4416" toLevel="27" name="Embryo">
+	<skill id="4416" toLevel="27" name="Undead">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<!-- Guessed -->
 		<icon>
@@ -1115,7 +1115,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4417" toLevel="38" name="Undead">
+	<skill id="4417" toLevel="38" name="Animals">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill4293</value>
@@ -1600,7 +1600,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4423" toLevel="5" name="Holy Attack">
+	<skill id="4423" toLevel="5" name="Holy">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_holy_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -1778,7 +1778,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4433" toLevel="5" name="Greater Holy Attack Resistance">
+	<skill id="4433" toLevel="5" name="High Holy Attribute Resistance">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill4433</icon>
 		<magicLvl>1</magicLvl>
@@ -1816,7 +1816,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4435" toLevel="5" name="Greater Stun Resistance">
+	<skill id="4435" toLevel="5" name="High Stun Attack Resistance">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill4435</icon>
 		<magicLvl>1</magicLvl>
@@ -3992,7 +3992,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4494" toLevel="2" name="Underground Prisoner">
+	<skill id="4494" toLevel="2" name="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>

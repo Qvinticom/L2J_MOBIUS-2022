@@ -1,583 +1,466 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="18700" toLevel="1" name="Freya's Art of Seduction">
+	<skill id="16900" toLevel="1" name="Kain Van Halter">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18701" toLevel="1" name="Freya's Art of Seduction">
+	<skill id="16901" toLevel="3" name="Martyrdom - Passion">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18702" toLevel="1" name="Pa'agrio's Blessing">
+	<skill id="16902" toLevel="3" name="Martyrdom - Faith">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18703" toLevel="1" name="Pa'agrio's Blessing">
+	<skill id="16903" toLevel="3" name="Martyrdom - Truth">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18704" toLevel="1" name="MOPP Combat Ration">
+	<skill id="16904" toLevel="3" name="Martyrdom - Dedication">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18705" toLevel="3" name="Low-grade Arena Loot">
+	<skill id="16905" toLevel="3" name="Martyrdom - Wish">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18706" toLevel="1" name="Player Commendation Points">
+	<skill id="16906" toLevel="3" name="Martyrdom - Sacrifice">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18710" toLevel="1" name="Formal Wear Appearance Stone">
+	<skill id="16907" toLevel="2" name="Vampire??s Sleep">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18711" toLevel="1" name="Blessing of Twilight">
+	<skill id="16908" toLevel="1" name="Hellmann Cursed Pierce">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18712" toLevel="1" name="Blessing of the Dawn">
+	<skill id="16909" toLevel="1" name="Hellmann Stun Blast">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18713" toLevel="6" name="Red Cat's Eye">
+	<skill id="16910" toLevel="1" name="Robust Chain Strike">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">4</value>
-					<value level="4">7</value>
-					<value level="5">12</value>
-					<value level="6">12</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="SkillCriticalDamage">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">4</value>
-					<value level="4">7</value>
-					<value level="5">12</value>
-					<value level="6">12</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalSkillPower" fromLevel="6" toLevel="6">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
+		<operateType>A1</operateType>
 	</skill>
-	<skill id="18714" toLevel="6" name="Blue Cat's Eye">
+	<skill id="16911" toLevel="1" name="Robust Shield Strike">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="MagicCriticalDamage">
-				<amount>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">4</value>
-					<value level="4">7</value>
-					<value level="5">12</value>
-					<value level="6">12</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalSkillPower" fromLevel="6" toLevel="6">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="18715" toLevel="1" name="Greater Ruby">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="18716" toLevel="1" name="Greater Ruby">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18717" toLevel="1" name="Ruby">
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="PAtk">
-				<amount>9</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="18718" toLevel="2" name="Greater Sapphire">
+	<skill id="16912" toLevel="1" name="Robust Challenge for Fate">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18719" toLevel="1" name="Sapphire">
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="MAtk">
-				<amount>13</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
+	<skill id="16913" toLevel="1" name="Mighty Fatal Strike">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
-	<skill id="18720" toLevel="1" name="Greater Obsidian - Cancel Target">
-		<!-- Cancels enemy's target on you. -->
-		<icon>icon.bm_jewel_pvpdef_high_lv1_lavianrose</icon>
+	<skill id="16914" toLevel="1" name="Mighty Sonic Storm">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<reuseDelay>15000</reuseDelay>
-		<staticReuse>true</staticReuse>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<rideState>NONE</rideState>
-		<targetConditions>
-			<condition name="OpTargetPc" />
-		</targetConditions>
-		<effects>
-			<effect name="TargetCancel" />
-		</effects>
 	</skill>
-	<skill id="18721" toLevel="1" name="Greater Garnet - Cancel Stun/Silence">
-		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
-		<operateType>A2</operateType>
-		<abnormalTime>1</abnormalTime>
-		<chance>100</chance>
-		<reuseDelay>15000</reuseDelay>
-		<staticReuse>true</staticReuse>
-		<isTriggeredSkill>true</isTriggeredSkill>
-		<rideState>NONE</rideState>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<targetConditions>
-			<condition name="OpTargetPc" />
-		</targetConditions>
-		<effects>
-			<effect name="DispelBySlot">
-				<dispel>
-					<value level="1">STUN,9;SILENCE,9;SILENCE_ALL,9;SILENCE_PHYSICAL,9;</value>
-				</dispel>
-			</effect>
-		</effects>
+	<skill id="16915" toLevel="1" name="Keen Lethal Shot">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
-	<skill id="18722" toLevel="1" name="Greater Garnet - Cancel Debuffs">
-		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
-		<operateType>A2</operateType>
-		<abnormalTime>7</abnormalTime>
-		<chance>100</chance>
-		<reuseDelay>15000</reuseDelay>
-		<staticReuse>true</staticReuse>
-		<rideState>NONE</rideState>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="DebuffBlock" fromLevel="1" toLevel="1"/>
-			<effect name="DispelByCategory">
-				<slot>DEBUFF</slot>
-				<rate>100</rate>
-				<max>10</max>
-			</effect>
-		</effects>
+	<skill id="16916" toLevel="1" name="Keen Flame Hawk">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
-	<skill id="18723" toLevel="4" name="Ultimate Jewelry Box">
+	<skill id="16917" toLevel="1" name="Highest Aura Bolt">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18724" toLevel="2" name="Red Cat's Eye Fortune Box">
+	<skill id="16918" toLevel="1" name="Highest Aura Blast">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18725" toLevel="1" name="Freya's Art of Seduction - Barrier">
+	<skill id="16919" toLevel="1" name="Highest Meteor">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18726" toLevel="1" name="Freya's Art of Seduction - EXP">
+	<skill id="16920" toLevel="1" name="Robust Judgment">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18727" toLevel="1" name="Pa??agrio??s Blessing - Might">
+	<skill id="16921" toLevel="1" name="Robust Plague">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18728" toLevel="1" name="Pa??agrio??s Blessing - EXP">
+	<skill id="16922" toLevel="1" name="Mighty Rush Impact">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18729" toLevel="1" name="Treat Wounded Soldier">
+	<skill id="16923" toLevel="1" name="Keen Multiple Shot">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18730" toLevel="1" name="Craft Protection Battery Parts">
+	<skill id="16924" toLevel="1" name="Atelia Power Crush">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18731" toLevel="1" name="Activate Protection Battery">
+	<skill id="16925" toLevel="1" name="Atelia Thunder Storm">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18732" toLevel="4" name="Low-grade Keucereus Defense Supply Box">
+	<skill id="16926" toLevel="1" name="Atelia Fear Blast">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18733" toLevel="1" name="Guardian Captain Isburg Elimination Commemorative Supply Items">
+	<skill id="16927" toLevel="1" name="Atelia Fatal Strike">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18734" toLevel="1" name="Balthus Knight Camouflage">
+	<skill id="16928" toLevel="1" name="Atelia Sonic Storm">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18735" toLevel="1" name="Balthus Knight Camouflage">
+	<skill id="16929" toLevel="1" name="Atelia Reverse">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18736" toLevel="1" name="Balthus Knight Camouflage">
+	<skill id="16930" toLevel="1" name="Atelia Blood Nail">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18737" toLevel="1" name="Balthus Knight Camouflage">
+	<skill id="16931" toLevel="1" name="Atelia Lethal Shot">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18738" toLevel="1" name="+10 Blessed Amaranthine Weapon Supply Items">
+	<skill id="16932" toLevel="1" name="Atelia Multiple Shot">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18739" toLevel="3" name="+8 Blessed Eternal Armor Heavy Capsule">
+	<skill id="16933" toLevel="1" name="Atelia Aura Bolt">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18740" toLevel="1" name="+8 Blessed Eternal Armor Supply Items">
+	<skill id="16934" toLevel="1" name="Atelia Aura Blast">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18741" toLevel="1" name="Freya's Art of Seduction - Barrier">
+	<skill id="16935" toLevel="1" name="Kain Sonic Slash">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18742" toLevel="1" name="Freya's Art of Seduction - EXP">
+	<skill id="16936" toLevel="1" name="Kain Sonic Storm">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18743" toLevel="1" name="Pa??agrio??s Blessing - Might">
+	<skill id="16937" toLevel="1" name="Kain Rush Impact">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18744" toLevel="1" name="Pa??agrio??s Blessing - EXP">
+	<skill id="16938" toLevel="1" name="Atelia Sonic Slash">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18745" toLevel="3" name="Dragon??s Treasure Chest">
+	<skill id="16939" toLevel="1" name="Atelia Sonic Storm">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18746" toLevel="1" name="Dragon??s Elemental Potion">
+	<skill id="16940" toLevel="1" name="Atelia Bomber Effect">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18747" toLevel="1" name="Dragon??s Elemental Potion - XP">
+	<skill id="16941" toLevel="1" name="Curse of Vampire - Slow">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18748" toLevel="4" name="Horn Melody of Red">
+	<skill id="16942" toLevel="1" name="Curse of Vampire - Fear">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18749" toLevel="4" name="Drum Melody of Red">
+	<skill id="16943" toLevel="1" name="Curse of Vampire - Trap">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18750" toLevel="4" name="Pipe Organ Melody of Red">
+	<skill id="16944" toLevel="1" name="Curse of Vampire - Bleed">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18751" toLevel="4" name="Guitar Melody of Red">
+	<skill id="16945" toLevel="1" name="Curse of Life">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18752" toLevel="4" name="Harp Melody of Red">
+	<skill id="16946" toLevel="1" name="Curse of Etis van Etina">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18753" toLevel="4" name="Lute Melody of Red">
+	<skill id="16947" toLevel="1" name="Dark Energy">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18754" toLevel="1" name="Prevailing Sonata of Red">
+	<skill id="16948" toLevel="1" name="Dark Energy">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18755" toLevel="1" name="Daring Sonata of Red">
+	<skill id="16949" toLevel="1" name="Stun">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18756" toLevel="1" name="Refreshing Sonata of Red">
+	<skill id="16950" toLevel="1" name="Power Shot">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18757" toLevel="1" name="Knight's Harmony of Red">
+	<skill id="16951" toLevel="1" name="Quick Throw">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18758" toLevel="1" name="Warrior's Harmony of Red">
+	<skill id="16952" toLevel="1" name="Berserker">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18759" toLevel="1" name="Wizard's Harmony of Red">
+	<skill id="16953" toLevel="1" name="Rain of Fire">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18760" toLevel="1" name="Mighty Prophecy of Red">
+	<skill id="16954" toLevel="1" name="Drain">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18761" toLevel="1" name="Pink??s Style Potion - Kelbim Light Armor">
+	<skill id="16955" toLevel="1" name="Counter Aggression">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18762" toLevel="1" name="Pink's Style Potion - Freya Robe">
+	<skill id="16956" toLevel="1" name="Punishment">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18763" toLevel="1" name="Pink's Style Potion - Blue Dynasty">
+	<skill id="16957" toLevel="1" name="Multi-Heal">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18764" toLevel="1" name="Pink's Style Potion - White Assassin">
+	<skill id="16958" toLevel="1" name="Blink">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18765" toLevel="1" name="Pink's Style Potion - Formal Wear">
+	<skill id="16959" toLevel="1" name="Chain of Hatred">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18766" toLevel="1" name="Pink's Style Potion - Vampiric">
+	<skill id="16960" toLevel="1" name="Critical Bash">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18767" toLevel="1" name="Pink's Style Potion - Green Archer">
+	<skill id="16961" toLevel="1" name="Air Bind">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18768" toLevel="1" name="Pink's Style Potion - Magician">
+	<skill id="16962" toLevel="1" name="Shillien Healing">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18769" toLevel="1" name="Scroll: Enchant Faint Elemental Shirt">
+	<skill id="16963" toLevel="1" name="Brave Charge">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18770" toLevel="1" name="Scroll: Enchant Brilliant Elemental Shirt">
+	<skill id="16964" toLevel="1" name="Prominence">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18771" toLevel="1" name="Einhasad??s Charisma Potion">
+	<skill id="16965" toLevel="1" name="Striking Shot">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18772" toLevel="4" name="Horn Melody">
+	<skill id="16966" toLevel="1" name="Power Blow">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18773" toLevel="4" name="Drum Melody">
+	<skill id="16967" toLevel="1" name="Super Strike">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18774" toLevel="4" name="Pipe Organ Melody">
+	<skill id="16968" toLevel="1" name="Mass Shot">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18775" toLevel="4" name="Guitar Melody">
+	<skill id="16969" toLevel="1" name="Long Strike">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18776" toLevel="4" name="Harp Melody">
+	<skill id="16970" toLevel="1" name="Sword Bash">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18777" toLevel="4" name="Lute Melody">
+	<skill id="16971" toLevel="1" name="Spinning Slasher">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18778" toLevel="1" name="Knight's Harmony">
+	<skill id="16972" toLevel="1" name="Aggression">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18779" toLevel="1" name="Warrior's Harmony">
+	<skill id="16973" toLevel="1" name="Hesitate Slash">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18780" toLevel="1" name="Wizard's Harmony">
+	<skill id="16974" toLevel="1" name="Healing Moonlight">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18781" toLevel="1" name="Prevailing Sonata">
+	<skill id="16975" toLevel="1" name="Night Canine">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18782" toLevel="1" name="Daring Sonata">
+	<skill id="16976" toLevel="1" name="Darken Fear">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18783" toLevel="1" name="Refreshing Sonata">
+	<skill id="16977" toLevel="1" name="Soul Link">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18784" toLevel="1" name="Elements Resistance">
+	<skill id="16978" toLevel="1" name="Ghost Blink">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18785" toLevel="1" name="Holy Attack Resistance">
+	<skill id="16979" toLevel="1" name="Hellfire">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18786" toLevel="1" name="Mental Attack Resistance">
+	<skill id="16980" toLevel="1" name="Infernal Icicles">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18787" toLevel="1" name="Angel Cat's Blessing">
+	<skill id="16981" toLevel="1" name="Fallen Execution">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18788" toLevel="2" name="Puss the Cat??s Blessing">
+	<skill id="16982" toLevel="1" name="Devil Horns of Shield">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18789" toLevel="1" name="Puss the Cat??s Gift">
+	<skill id="16983" toLevel="1" name="Embryo's Blessing">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18790" toLevel="1" name="Sweet Rice Cakes">
+	<skill id="16984" toLevel="1" name="Blind Spark">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18791" toLevel="1" name="Hanbok Outfit">
+	<skill id="16985" toLevel="1" name="Darkness Energy Bomb">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18792" toLevel="1" name="Test Adena Box">
+	<skill id="16986" toLevel="1" name="Bless of Etina">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18793" toLevel="2" name="Spellbook: Vitality of the Exalted Lv. 1">
+	<skill id="16987" toLevel="1" name="Bless of Blood">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18794" toLevel="2" name="Puss the Cat??s Blessing">
+	<skill id="16988" toLevel="1" name="Vampire??s Awakening">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18795" toLevel="1" name="Puss the Cat??s Gift">
+	<skill id="16989" toLevel="1" name="Death">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18796" toLevel="3" name="Angel??s Fortune Box">
+	<skill id="16990" toLevel="1" name="Dark Roar">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18797" toLevel="1" name="Nevit??s Gold Hourglass">
+	<skill id="16991" toLevel="1" name="Defense Cannon">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18798" toLevel="1" name="Shining Scroll of Growth">
+	<skill id="16992" toLevel="1" name="Overcharge Cannon">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>

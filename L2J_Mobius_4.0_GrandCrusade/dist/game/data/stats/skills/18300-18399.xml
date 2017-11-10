@@ -41,69 +41,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18346" toLevel="1" name="Spellbook: Dignity of the Exalted Lv. 2">
-		<icon>icon.skill0000</icon>
-		<hitTime>3000</hitTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>45923</itemConsumeId> <!-- Spellbook: Dignity of the Exalted Lv. 2 -->
-		<magicLvl>1</magicLvl>
-		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CheckLevel">
-				<minLevel>99</minLevel>
-				<maxLevel>105</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
-			<condition name="OpSkill">
-				<skillId>19222</skillId>
-				<skillLevel>2</skillLevel>
-				<skillLevel>3</skillLevel>
-				<hasLearned>false</hasLearned>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="SetSkill">
-				<skillId>19222</skillId>
-				<skillLvl>2</skillLvl>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="18347" toLevel="1" name="Spellbook: Dignity of the Exalted Lv. 3">
-		<icon>icon.skill0000</icon>
-		<hitTime>3000</hitTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>45924</itemConsumeId> <!-- Spellbook: Dignity of the Exalted Lv. 3 -->
-		<magicLvl>1</magicLvl>
-		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CheckLevel">
-				<minLevel>99</minLevel>
-				<maxLevel>105</maxLevel>
-				<affectType>CASTER</affectType>
-			</condition>
-			<condition name="OpSkill">
-				<skillId>19222</skillId>
-				<skillLevel>3</skillLevel>
-				<hasLearned>false</hasLearned>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="SetSkill">
-				<skillId>19222</skillId>
-				<skillLvl>3</skillLvl>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="18348" toLevel="1" name="Spellbook: Belief of the Exalted">
 		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
@@ -196,7 +133,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18351" toLevel="2" name="Spellbook: Favor of the Exalted Lv. 2">
+	<skill id="18351" toLevel="2" name="Spellbook: Favor of the Exalted Lv. 1">
 		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -547,7 +484,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="18380" toLevel="1" name="Mysterious Talisman - STR">
+	<skill id="18380" toLevel="1" name="Player Commendation - Talisman - STR">
 		<!-- STR + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -558,7 +495,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18381" toLevel="1" name="Mysterious Talisman - INT">
+	<skill id="18381" toLevel="1" name="Player Commendation - Talisman - INT">
 		<!-- INT + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -569,7 +506,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18382" toLevel="1" name="Mysterious Talisman - DEX">
+	<skill id="18382" toLevel="1" name="Player Commendation - Talisman - DEX">
 		<!-- DEX + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -580,7 +517,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18383" toLevel="1" name="Mysterious Talisman - WIT">
+	<skill id="18383" toLevel="1" name="Player Commendation - Talisman - WIT">
 		<!-- WIT + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -591,7 +528,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18384" toLevel="1" name="Mysterious Talisman - CON">
+	<skill id="18384" toLevel="1" name="Player Commendation - Talisman - CON">
 		<!-- CON + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -602,7 +539,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18385" toLevel="1" name="Mysterious Talisman - MEN">
+	<skill id="18385" toLevel="1" name="Player Commendation - Talisman - MEN">
 		<!-- MEN + 5 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -613,7 +550,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18386" toLevel="1" name="Mysterious Talisman - Attack Attribute">
+	<skill id="18386" toLevel="1" name="Player Commendation - Talisman - Attack Attribute">
 		<!-- Attack Attribute + 50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>

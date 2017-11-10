@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10700" toLevel="7" name="Mug">
+	<skill id="10700" toLevel="7" name="Wild Plunder">
 		<!-- Inflicts 11903 damage onto nearby enemies and steals their item. Requires a dagger or dual dagger. -->
 		<affectLimit>9-10</affectLimit>
 		<affectRange>250</affectRange>
@@ -63,7 +63,7 @@
 			<effect name="Plunder" />
 		</effects>
 	</skill>
-	<skill id="10701" toLevel="4" name="Superior Vitality">
+	<skill id="10701" toLevel="4" name="Great Luck">
 		<!-- Max HP and CP + 5%. P. Atk. + 5%. Increases damage inflicted on an NPC by 30%. -->
 		<icon>icon.skill0211</icon>
 		<magicLvl>
@@ -205,7 +205,7 @@
 			<effect name="Disarmor" />
 		</effects>
 	</skill>
-	<skill id="10704" toLevel="3" name="Mass Power Bluff">
+	<skill id="10704" toLevel="3" name="Grim Reaper Possession">
 		<!-- Reveals the enemy's back and inflicts Stun for 3 seconds. Requires dagger/dual dagger. Consumes 2 Soulstones. -->
 		<icon>icon.skill10704</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -252,7 +252,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="10705" toLevel="1" name="Shadow Walking">
+	<skill id="10705" toLevel="1" name="Easterly Wind Strike">
 		<!-- Updated to IO -->
 		<!-- Front Critical Rate - 10%, Side Critical Rate + 10%, Critical Damage + 10%, Rear Critical Rate + 20%, Critical Damage + 20%. -->
 		<icon>icon.skill10705</icon>

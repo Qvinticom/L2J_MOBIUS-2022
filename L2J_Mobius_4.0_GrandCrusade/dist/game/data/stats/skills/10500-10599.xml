@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10500" toLevel="1" name="Heavy Hit">
 		<!-- Glory Days confirmed -->
@@ -956,7 +956,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10513" toLevel="10" name="Razor Rain">
+	<skill id="10513" toLevel="10" name="Barrage of Nails">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Calls down a rain of blades to attack nearby enemies with 13649 Power added to P. Atk. and inflicts Bleed. Requires a dagger or dual dagger. Over-hit. Critical hit. -->
@@ -1056,7 +1056,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10514" toLevel="8" name="Dark Paralysis">
+	<skill id="10514" toLevel="8" name="Paralyzing Shadow">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Seals an enemy with the power of darkness. Causes the enemy's body to go completely rigid for 10 seconds and causes paralysis for 5 seconds. -->
@@ -1455,7 +1455,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10522" toLevel="9" name="Poison Zone">
+	<skill id="10522" toLevel="9" name="Poison Sworm">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Sprays poison onto nearby targets for 15 seconds. Decreases P. Atk., Speed, Shield Defense, P. Def., and M. Def. Inflicts Poison that blocks the use of magic. -->
@@ -1520,7 +1520,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10523" toLevel="9" name="Poisoned">
+	<skill id="10523" toLevel="9" name="Thrown Poison Swarm">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Poisoned by a toxin cloud. Decreases Speed, P. Atk., Shield Defense, P. Def., and M. Def., and blocks the use of magic. Decreases HP by 687 per second. -->
@@ -1614,7 +1614,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10524" toLevel="3" name="Evasive Counterstrike">
+	<skill id="10524" toLevel="3" name="Counter Stance">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- For 10 seconds, evades physical skill attacks and reflects part of the damage received. -->
@@ -2205,7 +2205,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="10534" toLevel="1" name="Toad Poison">
+	<skill id="10534" toLevel="1" name="Trace of Dagger">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- During normal attacks, has a chance of inflicting Poison on the enemy and blocking the use of magic skills. -->
@@ -2811,7 +2811,7 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="10546" toLevel="7" name="Uppercut">
+	<skill id="10546" toLevel="7" name="Jawbone Blow">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Delivers a powerful blow to Knock Down the target for 2 seconds. Requires a dagger or dual dagger to be equipped. -->
@@ -3061,7 +3061,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10550" toLevel="7" name="Illusion Strike">
+	<skill id="10550" toLevel="7" name="Illusion Step">
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful vital spot attack and decreases speed by 23% for 7 seconds. -->
 		<icon>icon.skill10550</icon>
@@ -3283,7 +3283,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10553" toLevel="8" name="Dagger Storm">
+	<skill id="10553" toLevel="8" name="Chance of Wind">
 		<!-- Glory Days confirmed -->
 		<!-- Attack nearby enemies with 6871 Power added to P. Atk. Over-hit. -->
 		<icon>icon.skill0005</icon>
@@ -3343,7 +3343,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10554" toLevel="7" name="Power Bluff">
+	<skill id="10554" toLevel="7" name="Flash Bluff">
 		<!-- Glory Days confirmed -->
 		<!-- For 3 sec., turns the enemy's back to you and Stuns them. Requires a dagger or dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
@@ -3640,7 +3640,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10561" toLevel="4" name="Superior Vitality">
+	<skill id="10561" toLevel="4" name="Superior Fitness">
 		<!-- Max HP and CP + 7%. Increases resistance to poison, bleed, and stun + 4. -->
 		<icon>icon.skill11864</icon>
 		<magicLvl>
@@ -3691,7 +3691,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10562" toLevel="1" name="Critical Adventures">
+	<skill id="10562" toLevel="1" name="Critical Tactics">
 		<!-- For 5 min., Critical Damage + 304 and vital spot attack success rate + 10%. Front Critical Damage - 30%, Side Critical Rate + 20% and Critical Damage + 20%. Rear Critical Rate + 40% and Critical Damage + 40%. Requires a dagger or dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>

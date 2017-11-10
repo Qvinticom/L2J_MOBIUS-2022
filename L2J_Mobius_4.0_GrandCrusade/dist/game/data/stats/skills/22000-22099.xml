@@ -1216,7 +1216,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22039" toLevel="2" name="XP Rune III (Lv. 1-100+) 50%">
+	<skill id="22039" toLevel="2" name="XP Rune III (Lv. 1-100+) 30%">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_3</value>
@@ -1235,7 +1235,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22040" toLevel="2" name="SP Rune 50%">
+	<skill id="22040" toLevel="2" name="SP Rune 30%">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_sp_buff_3</value>
@@ -1254,7 +1254,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22041" toLevel="2" name="Rune of Crystal (Lv. 5)">
+	<skill id="22041" toLevel="2" name="Rune of Crystal (Lv. 3)">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_rp_buff_3</value>
@@ -1293,7 +1293,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22043" fromLevel="2" toLevel="6" name="Elixir of CP (S-grade)">
+	<skill id="22043" fromLevel="2" toLevel="6" name="Elixir of CP (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1342,7 +1342,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22044" fromLevel="2" toLevel="7" name="Elixir of Life (Novice)">
+	<skill id="22044" fromLevel="2" toLevel="7" name="Elixir of Life (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1635,7 +1635,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22053" toLevel="19" name="Scroll of Escape: Town of Schuttgart">
+	<skill id="22053" toLevel="19" name="Scroll of Escape: Talking Island Village">
 		<!-- Confirmed CT2.5 -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>20000</hitTime>

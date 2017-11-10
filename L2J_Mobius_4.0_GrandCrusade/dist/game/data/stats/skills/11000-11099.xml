@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11000" toLevel="1" name="Heavy Hit">
 		<!-- Glory Days confirmed -->
@@ -833,7 +833,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11016" toLevel="11" name="Elemental Spike (4 Elements)">
+	<skill id="11016" toLevel="11" name="Elemental Spike (Holy)">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target with 133 Power added to attribute damage. In addition, decreases target's attribute resistance according to the Elemental Stance used. Over-hit. -->
@@ -1475,7 +1475,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11022" toLevel="11" name="Elemental Crash (4 Elements)">
+	<skill id="11022" toLevel="11" name="Elemental Crash (Holy)">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target with 158 Power added to attribute damage. In addition, Fire inflicts fear, Water decreases Speed, Wind causes Knock Back, and Earth inflicts hold. Double Casting inflicts stun. Over-hit. -->
@@ -1702,7 +1702,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11024" toLevel="11" name="Elemental Destruction (Fire)">
+	<skill id="11024" toLevel="11" name="Volcanic Destruction">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
@@ -1808,7 +1808,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11025" toLevel="11" name="Elemental Destruction (Water)">
+	<skill id="11025" toLevel="11" name="Icicle Destruction">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
@@ -1913,7 +1913,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11026" toLevel="11" name="Elemental Destruction (Wind)">
+	<skill id="11026" toLevel="11" name="Updraft Destruction">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
@@ -2018,7 +2018,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11027" toLevel="11" name="Elemental Destruction (Earth)">
+	<skill id="11027" toLevel="11" name="Lockshard Destruction">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
@@ -2123,7 +2123,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11028" toLevel="11" name="Elemental Destruction (4 Elements)">
+	<skill id="11028" toLevel="11" name="Void Destruction">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target with 431 power added to attribute damage. Over-hit. -->
@@ -3471,7 +3471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11044" toLevel="8" name="Elemental Storm (Earth)">
+	<skill id="11044" toLevel="8" name="Elemental Final Storm (Earth)">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
@@ -3566,7 +3566,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11045" toLevel="8" name="Elemental Storm (4 Elements)">
+	<skill id="11045" toLevel="8" name="Elemental Final Storm (Holy)">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
@@ -3749,7 +3749,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11047" toLevel="9" name="Devil's Curse">
+	<skill id="11047" toLevel="9" name="Ruin">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 157 Power. For 20 sec., target's M. Atk. and M. Def. - 30%, Casting Spd., P. Critical Rate, M. Critical Rate, P. Def. and Speed - 10%, and P. Evasion - 6. -->
@@ -3893,7 +3893,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11048" toLevel="9" name="Mass Devil's Curse">
+	<skill id="11048" toLevel="9" name="Mass Ruin">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target and surrounding enemies with 125 power and absorbs 25% of the damage inflicted as HP. Additionally, for 10 seconds, target's M. Atk. and M. Def. - 30%; P. Def., M. Atk., Casting Spd., M. Def., P. Critical Rate, M. Critical Rate, and Speed - 8%; and Accuracy - 12. -->
@@ -5077,7 +5077,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11066" toLevel="4" name="Unleash Hell">
+	<skill id="11066" toLevel="4" name="Arcane Comet Strike">
 		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts magical damage on target with 620 Power. Casts Fear and Burn and decreases target's Speed by 40%. Over-hit. -->
@@ -5168,7 +5168,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11067" toLevel="4" name="Death Mass Unleash Hell">
+	<skill id="11067" toLevel="4" name="Quadruple Elemental Blast">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts magical damage on target and nearby enemies with 620 Power. Casts Fear and Burn and decreases target's Speed by 20%. Over-hit. -->
@@ -5261,7 +5261,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11068" toLevel="4" name="Double Casting">
+	<skill id="11068" toLevel="4" name="Burst Casting">
 		<!-- Updated to IO -->
 		<!-- For 30 sec., you can cast elemental spells with both hands.ﾠDecreases MP Consumption by 50% and magic skill Cooldown by 5%.ﾠEliminates magic cancel during magic use. -->
 		<icon>icon.skill11068</icon>
@@ -5329,7 +5329,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11072" toLevel="1" name="Fire - Elemental Spike">
+	<skill id="11072" toLevel="1" name="Elemental Spike / Elemental Crash - Additional Effect">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- target's Fire resistance is decreased. -->
@@ -5434,7 +5434,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11077" toLevel="3" name="Decrease Fire Resistance">
+	<skill id="11077" toLevel="3" name="Elemental Spike - Decrease Fire Resistance">
 		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Fire resistance by 20 for 3 seconds. -->
@@ -5473,7 +5473,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11078" toLevel="3" name="Decrease Water Resistance">
+	<skill id="11078" toLevel="3" name="Elemental Spike - Decrease Water Resistance">
 		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Water resistance by 20 for 3 seconds. -->
@@ -5512,7 +5512,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11079" toLevel="3" name="Decrease Wind Resistance">
+	<skill id="11079" toLevel="3" name="Elemental Spike - Decrease Wind Resistance">
 		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Wind resistance by 20 for 3 seconds. -->
@@ -5551,7 +5551,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11080" toLevel="3" name="Decrease Earth Resistance">
+	<skill id="11080" toLevel="3" name="Elemental Spike - Decrease Earth Resistance">
 		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Earth resistance by 20 for 3 seconds. -->
@@ -5588,7 +5588,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11081" toLevel="3" name="Decrease Fire/Water/Wind/Earth Resistances">
+	<skill id="11081" toLevel="3" name="Elemental Spike - Decrease Holy Resistance">
 		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Fire/Water/Wind/Earth resistances by 20 for 3 seconds. -->
@@ -6154,7 +6154,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11096" toLevel="1" name="Elemental Destruction: Fire">
+	<skill id="11096" toLevel="1" name="Elemental Destruction - Additional Effect">
 		<!-- Updated to IO -->
 		<!-- Fire Attribute -->
 		<icon>icon.skill11017</icon>
