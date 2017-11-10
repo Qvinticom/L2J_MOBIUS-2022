@@ -577,7 +577,7 @@ public final class Config
 	public static boolean HBCE_FAIR_PLAY;
 	public static int PLAYER_MOVEMENT_BLOCK_TIME;
 	public static int ABILITY_MAX_POINTS;
-	public static long ABILITY_POINTS_RESET_ADENA;
+	public static long ABILITY_POINTS_RESET_SP;
 	public static int NORMAL_ENCHANT_COST_MULTIPLIER;
 	public static int SAFE_ENCHANT_COST_MULTIPLIER;
 	public static boolean BOTREPORT_ENABLE;
@@ -1695,7 +1695,7 @@ public final class Config
 			SHOW_GOD_VIDEO_INTRO = Character.getBoolean("GoDVideoIntro", true);
 			PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
 			ABILITY_MAX_POINTS = Character.getInt("AbilityMaxPoints", 16);
-			ABILITY_POINTS_RESET_ADENA = Character.getLong("AbilityPointsResetAdena", 10_000_000);
+			ABILITY_POINTS_RESET_SP = Character.getLong("AbilityPointsResetSP", 500000000);
 			
 			// Load Telnet config file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_CONFIG_FILE);

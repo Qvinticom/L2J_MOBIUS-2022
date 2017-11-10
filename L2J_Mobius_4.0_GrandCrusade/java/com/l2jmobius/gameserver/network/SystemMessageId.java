@@ -11890,8 +11890,8 @@ public final class SystemMessageId
 	@ClientString(id = 4194, message = "Ability Points: $s1")
 	public static SystemMessageId ABILITY_POINTS_S1;
 	
-	@ClientString(id = 4195, message = "Abilities can be used by Noblesse/Exalted Lv. 99 or above.")
-	public static SystemMessageId ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE;
+	@ClientString(id = 4195, message = "Reach level 85 to use the ability.")
+	public static SystemMessageId REACH_LEVEL_85_TO_USE_THE_ABILITY;
 	
 	@ClientString(id = 4196, message = "The requested operation has failed. Please try again.")
 	public static SystemMessageId THE_REQUESTED_OPERATION_HAS_FAILED_PLEASE_TRY_AGAIN;

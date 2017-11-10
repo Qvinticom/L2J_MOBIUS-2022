@@ -58,9 +58,9 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 		{
 			return;
 		}
-		else if ((activeChar.getLevel() < 99) || (activeChar.getNobleLevel() == 0))
+		else if (activeChar.getLevel() < 85)
 		{
-			client.sendPacket(SystemMessageId.ABILITIES_CAN_BE_USED_BY_NOBLESSE_EXALTED_LV_99_OR_ABOVE);
+			client.sendPacket(SystemMessageId.REACH_LEVEL_85_TO_USE_THE_ABILITY);
 			return;
 		}
 		else if (activeChar.isInOlympiadMode() || activeChar.isOnEvent(CeremonyOfChaosEvent.class))
@@ -83,24 +83,23 @@ public class RequestResetAbilityPoint implements IClientIncomingPacket
 			activeChar.sendMessage("You haven't used your ability points yet!");
 			return;
 		}
-		else if (activeChar.getAdena() < Config.ABILITY_POINTS_RESET_ADENA)
+		else if (activeChar.getSp() < Config.ABILITY_POINTS_RESET_SP)
 		{
-			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_FOR_THIS);
 			return;
 		}
+		activeChar.setSp(activeChar.getSp() - Config.ABILITY_POINTS_RESET_SP);
 		
-		if (activeChar.reduceAdena("AbilityPointsReset", Config.ABILITY_POINTS_RESET_ADENA, activeChar, true))
+		for (L2SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
 		{
-			for (L2SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
+			final Skill skill = activeChar.getKnownSkill(sk.getSkillId());
+			if (skill != null)
 			{
-				final Skill skill = activeChar.getKnownSkill(sk.getSkillId());
-				if (skill != null)
-				{
-					activeChar.removeSkill(skill);
-				}
+				activeChar.removeSkill(skill);
 			}
-			activeChar.setAbilityPointsUsed(0);
-			client.sendPacket(new ExAcquireAPSkillList(activeChar));
 		}
+		activeChar.setAbilityPointsUsed(0);
+		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
+		activeChar.broadcastUserInfo();
 	}
 }

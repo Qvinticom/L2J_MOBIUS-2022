@@ -54,7 +54,7 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 				}
 			}
 		}
-		_enable = (!activeChar.isSubClassActive() || activeChar.isDualClassActive()) && (activeChar.getLevel() >= 99) && (activeChar.getNobleLevel() > 0);
+		_enable = (!activeChar.isSubClassActive() || activeChar.isDualClassActive()) && (activeChar.getLevel() >= 85);
 	}
 	
 	@Override
@@ -63,7 +63,7 @@ public class ExAcquireAPSkillList implements IClientOutgoingPacket
 		OutgoingPackets.EX_ACQUIRE_AP_SKILL_LIST.writeId(packet);
 		
 		packet.writeD(_enable ? 1 : 0);
-		packet.writeQ(Config.ABILITY_POINTS_RESET_ADENA);
+		packet.writeQ(Config.ABILITY_POINTS_RESET_SP); // Changed to from Adena to SP on Grand Crusade
 		// packet.writeQ(_price); Removed on Grand Crusade
 		// packet.writeD(Config.ABILITY_MAX_POINTS); Removed on Grand Crusade
 		packet.writeD(_abilityPoints);
