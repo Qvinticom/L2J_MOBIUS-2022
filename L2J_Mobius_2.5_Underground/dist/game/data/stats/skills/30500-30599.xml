@@ -894,11 +894,13 @@
 				<skillId>30532</skillId> <!-- Inside Position -->
 				<skillLevel>1</skillLevel>
 				<castSkillId>30507</castSkillId> <!-- Left Sidestep -->
+				<targetType>SELF</targetType>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<skillId>30532</skillId> <!-- Inside Position -->
 				<skillLevel>1</skillLevel>
 				<castSkillId>30508</castSkillId> <!-- Right Sidestep -->
+				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 	</skill>

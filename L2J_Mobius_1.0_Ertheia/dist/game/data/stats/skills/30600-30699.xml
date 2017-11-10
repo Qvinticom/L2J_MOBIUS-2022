@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="30600" toLevel="1" name="Additional Hit">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful hit on target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -11,7 +10,6 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="30601" toLevel="1" name="Additional Hit">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful hit on target. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -56,6 +54,10 @@
 		<effectPoint>2</effectPoint>
 		<isMagic>3</isMagic>
 		<effects>
+			<effect name="SkillCriticalProbability">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30604" toLevel="1" name="Block Eviscerator Force">
@@ -110,7 +112,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="30608" toLevel="5" name="Fury of Eviscerator">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 5%. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
