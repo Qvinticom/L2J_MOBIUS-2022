@@ -52,7 +52,7 @@ Ertheia:
 -Ertheia Race
 -Alchemy
 -Brooch system
--Lucky drops
+-Luck system
 -Auto fishing
 
 Infinite Odyssey:
@@ -74,7 +74,7 @@ Helios:
 -Helios
 -Faction system
 
-Grand Crusade
+Grand Crusade:
 -Monster Book
 -Live world map information
 

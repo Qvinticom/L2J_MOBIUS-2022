@@ -52,7 +52,7 @@ Ertheia:
 -Ertheia Race
 -Alchemy
 -Brooch system
--Lucky drops
+-Luck system
 -Auto fishing
 
 Infinite Odyssey:
