@@ -49,7 +49,6 @@ public class EnchantedMegaliths extends AbstractNpcAI
 		23356,
 		23357,
 		23358,
-		23359,
 		23360,
 		23361,
 		23362,
@@ -227,8 +226,8 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[7]).getNpcSpawnTemplate().getSpawnTemplate();
-					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[14]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[10]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[13]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal.despawnAll();
 				}
 				else
@@ -262,8 +261,8 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[7]).getNpcSpawnTemplate().getSpawnTemplate();
-					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[14]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[10]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[13]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal.despawnAll();
 				}
 				break;
@@ -292,8 +291,8 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				
 				if (spawnTemplateNormal == null)
 				{
-					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[7]).getNpcSpawnTemplate().getSpawnTemplate();
-					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[14]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[10]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[13]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateNormal.despawnAll();
 				}
 				else

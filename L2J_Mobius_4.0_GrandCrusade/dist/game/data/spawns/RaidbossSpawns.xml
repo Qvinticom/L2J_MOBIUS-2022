@@ -485,29 +485,6 @@
 		</territories>
 		<npc id="25725" x="148482" y="117859" z="-3712" heading="36584" dbSave="true" dbName="dragon_beast" respawnTime="4hour" /> <!-- Drake Lord -->
 	</spawn>
-	<spawn name="aden06_mb2518_06m1" ai="DEFAULT_USE_DB_MAKER">
-		<territories>
-			<territory name="aden06_mb2518_06" minZ="-3648" maxZ="-3448">
-				<node x="192336" y="21528" />
-				<node x="193764" y="22140" />
-				<node x="193272" y="23296" />
-				<node x="191856" y="22692" />
-			</territory>
-		</territories>
-		<npc id="25862" x="192925" y="22447" z="-3624" heading="35077" dbSave="true" dbName="half_boss_silen_r" respawnTime="24hour" respawnRandom="12hour" /> <!-- Harp -->
-	</spawn>
-	<spawn name="aden06_mb2518_07m1" ai="DEFAULT_USE_DB_MAKER">
-		<territories>
-			<territory name="aden06_mb2518_07" minZ="-2796" maxZ="-1796">
-				<node x="189184" y="12836" />
-				<node x="189720" y="13240" />
-				<node x="189548" y="14144" />
-				<node x="188132" y="14172" />
-				<node x="188332" y="13068" />
-			</territory>
-		</territories>
-		<npc id="25859" dbSave="true" dbName="flint_boss_silen_r" respawnTime="24hour" respawnRandom="12hour" /> <!-- Flynt -->
-	</spawn>
 	<spawn name="aden06_mb2518_08m1" ai="DEFAULT_USE_DB_MAKER">
 		<territories>
 			<territory name="aden06_mb2518_08" minZ="-3205" maxZ="-3005">
