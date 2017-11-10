@@ -120,6 +120,8 @@
 		<hitTime>300</hitTime>
 		<effectPoint>500</effectPoint>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
 				<amount>
