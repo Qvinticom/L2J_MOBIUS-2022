@@ -133,7 +133,10 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		if (info == null)
 		{
 			// user or pass wrong
-			client.close(LoginFailReason.REASON_USER_OR_PASS_WRONG);
+			// client.close(LoginFailReason.REASON_SYSTEM_ERROR);
+			// above message crashes client
+			// REASON_ACCOUNT_INFO_INCORRECT_CONTACT_SUPPORT seems ok as well
+			client.close(LoginFailReason.REASON_ACCESS_FAILED);
 			return;
 		}
 		
