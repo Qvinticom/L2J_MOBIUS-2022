@@ -1694,7 +1694,7 @@ public final class Config
 			SILENCE_MODE_EXCLUDE = Character.getBoolean("SilenceModeExclude", false);
 			SHOW_GOD_VIDEO_INTRO = Character.getBoolean("GoDVideoIntro", true);
 			PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
-			ABILITY_MAX_POINTS = Character.getInt("AbilityMaxPoints", 16);
+			ABILITY_MAX_POINTS = Character.getInt("AbilityMaxPoints", 26);
 			ABILITY_POINTS_RESET_SP = Character.getLong("AbilityPointsResetSP", 500000000);
 			
 			// Load Telnet config file (if exists)
