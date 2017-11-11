@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -30,7 +31,7 @@ import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimi
 
 /**
  * Facing Sadness (10812)
- * @author Gladicek
+ * @author Stayway
  */
 public final class Q10812_FacingSadness extends Quest
 {
@@ -39,15 +40,16 @@ public final class Q10812_FacingSadness extends Quest
 	// Items
 	private static final int ELIKIA_CERTIFICATE = 45623;
 	private static final int PROOF_OF_DISPOSAL = 45871;
-	// Monsters (first group for one quest item, second for two quest items)
-	// TODO: Monsters from Raider's Crossroads
-	private static final int[] MONSTERS_1 =
+	private static final ItemHolder LIONEL_HUNTERS_LIST_PART_1 = new ItemHolder(45627, 1);
+	// Mobs
+	private static final int[] MONSTERS =
 	{
-		19503, // Bridget
-		19506, // Flox Golem
-		19509, // Edan
-		19512, // Deathmoz
-		19574, // Cowing
+		// Hellbound Mobs
+		23811, // Cantera Tanya
+		23812, // Cantera Deathmoz
+		23813, // Cantera Floxis
+		23814, // Cantera Belika
+		23815, // Cantera Bridget
 		23354, // Decay Hannibal
 		23355, // Armor Beast
 		23356, // Klein Soldier
@@ -60,23 +62,44 @@ public final class Q10812_FacingSadness extends Quest
 		23364, // Amos Master
 		23365, // Ailith Hunter
 		23366, // Durable Charger
-		23374, // Lavi
-		23375, // Lavi
-		23401, // Bridget
-	};
-	private static final int[] MONSTERS_2 =
-	{
+		23367, // Armor Beast
+		23368, // Klein Soldier
+		23369, // Disorder Warrior
+		23370, // Blow Archer
+		23372, // Bizuard
+		23373, // Mutated Fly
 		23384, // Smaug
 		23385, // Lunatikan
 		23386, // Jabberwok
 		23387, // Kanzaroth
 		23388, // Kandiloth
+		23393, // Slaver
+		23394, // Slaver
 		23395, // Garion
 		23396, // Garion Neti
 		23397, // Desert Wendigo
 		23398, // Koraza
 		23399, // Bend Beetle
+		23401, // Bridget
+		19574, // Cowing
+		// Raider's Crossroads Mobs
+		23314, // Nerva Orc Raider
+		23315, // Nerva Orc Archer
+		23316, // Nerva Orc Priest
+		23317, // Nerva Orc Wizard
+		23318, // Nerva Orc Assassin
+		23319, // Nerva Orc Ambusher
+		23320, // Nerva Orc Merchant
+		23321, // Nerva Orc Warrior
+		23322, // Nerva Orc Prefect
+		23323, // Nerva Orc Elite
+		23324, // Nerva Kaiser
+		29291, // Nerva Orc Raider
+		29292, // Nerva Orc Elite
+		29296, // Nerva Orc Assassin
+		29297, // Nerva Orc Ambusher
 	};
+	
 	// Misc
 	private static final int MIN_LEVEL = 99;
 	
@@ -85,8 +108,7 @@ public final class Q10812_FacingSadness extends Quest
 		super(10812);
 		addStartNpc(ELIKIA);
 		addTalkId(ELIKIA);
-		addKillId(MONSTERS_1);
-		addKillId(MONSTERS_2);
+		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "31620-09.htm");
 		addCondStartedQuest(Q10811_ExaltedOneWhoFacesTheLimit.class.getSimpleName(), "31620-06.htm");
 		registerQuestItems(PROOF_OF_DISPOSAL);
@@ -113,9 +135,12 @@ public final class Q10812_FacingSadness extends Quest
 			}
 			case "31620-04.html":
 			{
-				qs.startQuest();
-				htmltext = event;
-				break;
+				if (hasItem(player, LIONEL_HUNTERS_LIST_PART_1))
+				{
+					qs.startQuest();
+					htmltext = event;
+					break;
+				}
 			}
 			case "31620-08.html":
 			{
@@ -125,7 +150,7 @@ public final class Q10812_FacingSadness extends Quest
 					{
 						takeItems(player, PROOF_OF_DISPOSAL, -1);
 						giveItems(player, ELIKIA_CERTIFICATE, 1);
-						addExpAndSp(player, 0, 498_204_432);
+						addExpAndSp(player, 0, 498204432);
 						qs.exitQuest(false, true);
 						
 						final Quest mainQ = QuestManager.getInstance().getQuest(Q10811_ExaltedOneWhoFacesTheLimit.class.getSimpleName());
@@ -156,7 +181,14 @@ public final class Q10812_FacingSadness extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "31620-01.htm";
+				if (hasItem(player, LIONEL_HUNTERS_LIST_PART_1))
+				{
+					htmltext = "31620-01.htm";
+				}
+				else
+				{
+					htmltext = "noItem.html";
+				}
 				break;
 			}
 			case State.STARTED:
@@ -191,9 +223,9 @@ public final class Q10812_FacingSadness extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true))
+		if ((qs != null) && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true) && CommonUtil.contains(MONSTERS, npc.getId()))
 		{
-			giveItems(player, PROOF_OF_DISPOSAL, CommonUtil.contains(MONSTERS_1, npc.getId()) ? 1 : 2);
+			giveItems(player, PROOF_OF_DISPOSAL, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			
 			if (getQuestItemsCount(player, PROOF_OF_DISPOSAL) >= 8000)
