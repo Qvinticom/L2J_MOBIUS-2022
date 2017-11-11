@@ -36,7 +36,7 @@ public final class SeedTeleportDevice extends AbstractNpcAI
 	private static final Location SOI = new Location(-213699, 210686, 4408);
 	private static final Location SOH = new Location(-147354, 152581, -14048);
 	// Misc
-	private static final int SOH_MIN_LV = 97;
+	private static final int SOH_MIN_LV = 95;
 	
 	private SeedTeleportDevice()
 	{

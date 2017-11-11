@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Cavern of the Pirate Captain (Daydream-83) -->
+<!-- Cavern of the Pirate Captain (Daydream-90) -->
 <instance id="135" maxWorlds="20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/instance.xsd">
 	<time duration="60" empty="10" />
 	<locations>
@@ -30,7 +30,7 @@
 			<param name="limit" value="21" />
 		</condition>
 		<condition type="Level">
-			<param name="min" value="78" />
+			<param name="min" value="90" />
 		</condition>
 		<condition type="Distance" />
 		<condition type="Reenter" />

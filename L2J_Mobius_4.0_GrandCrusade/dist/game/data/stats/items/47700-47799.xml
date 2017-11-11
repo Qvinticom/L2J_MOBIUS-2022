@@ -281,7 +281,9 @@
 	<item id="47729" name="Low-grade Keucereus Defense Supply Box" type="EtcItem">
 		<!-- Compensation for participation in the Keucereus Union Base defense. Double-click to acquire an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -289,11 +291,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18732" level="1" /> <!-- Low-grade Keucereus Defense Supply Box -->
+		</skills>
 	</item>
 	<item id="47730" name="High-grade Keucereus Defense Supply Box" type="EtcItem">
 		<!-- Compensation for participation in the Keucereus Union Base defense. Double-click to acquire an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -301,11 +308,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18732" level="2" /> <!-- Low-grade Keucereus Defense Supply Box -->
+		</skills>
 	</item>
 	<item id="47731" name="Low-grade Keucereus Defense Success Reward Box" type="EtcItem">
 		<!-- Compensation for participation in the Keucereus Union Base defense. Double-click to acquire an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -313,11 +325,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18732" level="3" /> <!-- Low-grade Keucereus Defense Supply Box -->
+		</skills>
 	</item>
 	<item id="47732" name="High-grade Keucereus Defense Success Reward Box" type="EtcItem">
 		<!-- Compensation for participation in the Keucereus Union Base defense. Double-click to acquire an item. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -325,6 +342,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18732" level="4" /> <!-- Low-grade Keucereus Defense Supply Box -->
+		</skills>
 	</item>
 	<item id="47733" name="Guardian Captain Isberg Elimination Commemorative Supply Items" type="EtcItem">
 		<!-- A commemorative gift for defeating Isberg, the guardian guarding the fortress of Mesia. Double-click to acquire an item. Will be deleted on June 22, 2016 (Wed) after regular maintenance. -->

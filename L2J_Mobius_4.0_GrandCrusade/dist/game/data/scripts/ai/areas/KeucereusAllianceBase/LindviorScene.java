@@ -42,10 +42,12 @@ public final class LindviorScene extends AbstractNpcAI
 	private static final int RESET_HOUR = 18;
 	private static final int RESET_MIN = 58;
 	private static final int RESET_DAY_1 = Calendar.TUESDAY;
-	private static final int RESET_DAY_2 = Calendar.FRIDAY;
+	private static final int RESET_DAY_2 = Calendar.WEDNESDAY;
+	private static final int RESET_DAY_3 = Calendar.THURSDAY;
+	private static final int RESET_DAY_4 = Calendar.FRIDAY;
 	
 	private static boolean ALT_MODE = false;
-	private static int ALT_MODE_MIN = 60; // schedule delay in minutes if ALT_MODE enabled
+	private static int ALT_MODE_MIN = 120; // schedule delay in minutes if ALT_MODE enabled
 	
 	private L2Npc _lindviorCamera = null;
 	private L2Npc _tomaris = null;
@@ -103,7 +105,7 @@ public final class LindviorScene extends AbstractNpcAI
 	
 	public void scheduleNextLindviorVisit()
 	{
-		final long delay = (ALT_MODE) ? ALT_MODE_MIN * 60000 : scheduleNextLindviorDate();
+		final long delay = (ALT_MODE) ? ALT_MODE_MIN * 120000 : scheduleNextLindviorDate();
 		startQuestTimer("start", delay, null, null);
 	}
 	
@@ -125,6 +127,14 @@ public final class LindviorScene extends AbstractNpcAI
 		else if (dayOfWeek <= RESET_DAY_2)
 		{
 			date.add(Calendar.DAY_OF_WEEK, RESET_DAY_2 - dayOfWeek);
+		}
+		else if (dayOfWeek <= RESET_DAY_3)
+		{
+			date.add(Calendar.DAY_OF_WEEK, RESET_DAY_3 - dayOfWeek);
+		}
+		else if (dayOfWeek <= RESET_DAY_4)
+		{
+			date.add(Calendar.DAY_OF_WEEK, RESET_DAY_4 - dayOfWeek);
 		}
 		else
 		{
