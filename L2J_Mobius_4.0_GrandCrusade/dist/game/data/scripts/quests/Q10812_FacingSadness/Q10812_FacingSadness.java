@@ -80,7 +80,6 @@ public final class Q10812_FacingSadness extends Quest
 		23397, // Desert Wendigo
 		23398, // Koraza
 		23399, // Bend Beetle
-		23401, // Bridget
 		19574, // Cowing
 		// Raider's Crossroads Mobs
 		23314, // Nerva Orc Raider
