@@ -53,7 +53,7 @@ public final class Q10815_StepUp extends Quest
 	private static final int SIR_ERIC_RODEMAI_CERTIFICATE = 45626;
 	// Misc
 	private static final int MIN_LEVEL = 99;
-	private static final int WORLD_CHAT_COUNT = 30;
+	private static final int WORLD_CHAT_COUNT = 120;
 	private static final Map<Integer, Instant> REUSE = new ConcurrentHashMap<>();
 	
 	public Q10815_StepUp()
