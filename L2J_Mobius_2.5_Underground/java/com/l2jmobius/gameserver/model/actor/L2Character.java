@@ -1039,10 +1039,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// GeoData Los Check here (or dz > 1000)
 			if (!GeoEngine.getInstance().canSeeTarget(this, target))
 			{
-				sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
+				if (!target.isDoor() || (target.calculateDistance(this, false, false) > 200)) // fix for big door targeting
+				{
+					sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+					sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
 			}
 			
 			// BOW and CROSSBOW checks
