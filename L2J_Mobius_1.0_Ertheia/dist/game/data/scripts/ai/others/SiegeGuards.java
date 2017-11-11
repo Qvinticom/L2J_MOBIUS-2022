@@ -18,6 +18,7 @@ package ai.others;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -88,14 +89,44 @@ public class SiegeGuards extends AbstractNpcAI
 		addAttackId(FORT_GUARDS);
 		addAttackId(MERCENARIES);
 		addAttackId(STATIONARY_MERCENARIES);
-		addSeeCreatureId(CASTLE_GUARDS);
-		addSeeCreatureId(FORT_GUARDS);
-		addSeeCreatureId(MERCENARIES);
-		addSeeCreatureId(STATIONARY_MERCENARIES);
 		addSpawnId(CASTLE_GUARDS);
 		addSpawnId(FORT_GUARDS);
 		addSpawnId(MERCENARIES);
 		addSpawnId(STATIONARY_MERCENARIES);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("AGGRO_CHECK"))
+		{
+			if ((npc != null) && !npc.isDead())
+			{
+				if (!npc.isInCombat())
+				{
+					for (L2Character nearby : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
+					{
+						if (nearby.isPlayable() && (npc.calculateDirectionTo(nearby) < npc.getAggroRange()) && GeoEngine.getInstance().canSeeTarget(npc, nearby))
+						{
+							final L2Summon summon = nearby.isSummon() ? ((L2Summon) nearby) : null;
+							final L2PcInstance cha = summon == null ? (L2PcInstance) nearby : summon.getOwner();
+							final Castle castle = npc.getCastle();
+							final Fort fortress = npc.getFort();
+							final int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
+							if ((((cha.getSiegeState() != 2) || cha.isRegisteredOnThisSiegeField(activeSiegeId)) && (cha.getSiegeState() != 0)) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE))
+							{
+								if (!cha.isInvisible()) // skip invisible players
+								{
+									addAttackPlayerDesire(npc, cha);
+								}
+							}
+						}
+					}
+				}
+				startQuestTimer("AGGRO_CHECK", 2000, npc, null);
+			}
+		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -113,30 +144,10 @@ public class SiegeGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
-	{
-		if (creature.isPlayable() && (npc.calculateDirectionTo(creature) < npc.getAggroRange()) && GeoEngine.getInstance().canSeeTarget(npc, creature))
-		{
-			final L2Summon summon = isSummon ? creature.getServitors().values().stream().findFirst().orElse(creature.getPet()) : null;
-			final L2PcInstance cha = summon == null ? (L2PcInstance) creature : summon.getOwner();
-			final Castle castle = npc.getCastle();
-			final Fort fortress = npc.getFort();
-			final int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-			if ((((cha.getSiegeState() != 2) || cha.isRegisteredOnThisSiegeField(activeSiegeId)) && (cha.getSiegeState() != 0)) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE))
-			{
-				if (!cha.isInvisible()) // skip invisible players
-				{
-					addAttackPlayerDesire(npc, cha);
-				}
-			}
-		}
-		return super.onSeeCreature(npc, creature, isSummon);
-	}
-	
-	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		npc.setRandomWalking(false);
+		startQuestTimer("AGGRO_CHECK", 2000, npc, null);
 		return super.onSpawn(npc);
 	}
 	
