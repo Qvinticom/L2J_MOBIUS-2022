@@ -16,7 +16,6 @@
  */
 package quests.Q10811_ExaltedOneWhoFacesTheLimit;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -100,7 +99,7 @@ public final class Q10811_ExaltedOneWhoFacesTheLimit extends Quest
 			}
 			case "SUBQUEST_FINISHED_NOTIFY":
 			{
-				if (hasQuestItems(player, ELIKIA_CERTIFICATE, MYSTERIOUS_BUTLER_CERTIFICATE, SIR_ERIC_RODEMAI_CERTIFICATE, GALLADUCI_RODEMAI_CERTIFICATE) && (player.getAbilityPointsUsed() >= Config.ABILITY_MAX_POINTS))
+				if (hasQuestItems(player, ELIKIA_CERTIFICATE, MYSTERIOUS_BUTLER_CERTIFICATE, SIR_ERIC_RODEMAI_CERTIFICATE, GALLADUCI_RODEMAI_CERTIFICATE) && (player.getAbilityPointsUsed() >= 16))
 				{
 					qs.setCond(3, true);
 				}
