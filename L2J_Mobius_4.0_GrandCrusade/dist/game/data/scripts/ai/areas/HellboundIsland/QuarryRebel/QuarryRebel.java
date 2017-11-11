@@ -34,9 +34,9 @@ import ai.AbstractNpcAI;
 public class QuarryRebel extends AbstractNpcAI
 {
 	// Monsters
-	private static final int FIRE_SLAVE_BRIDGET = 19503;
-	private static final int FLOX_GOLEM = 19506;
-	private static final int EDAN = 19509;
+	private static final int CANTERA_BRIDGET = 23815;
+	private static final int CANTERA_FLOXIS = 23813;
+	private static final int CANTERA_BELIKA = 23814;
 	private static final int DISCIPLINED_DEATHMOZ = 19504;
 	private static final int MAGICAL_DEATHMOZ = 19505;
 	private static final int DISCIPLINED_FLOXIS = 19507;
@@ -54,8 +54,8 @@ public class QuarryRebel extends AbstractNpcAI
 	
 	private QuarryRebel()
 	{
-		addKillId(FIRE_SLAVE_BRIDGET, FLOX_GOLEM, EDAN);
-		addAttackId(FIRE_SLAVE_BRIDGET, FLOX_GOLEM, EDAN);
+		addKillId(CANTERA_BRIDGET, CANTERA_FLOXIS, CANTERA_BELIKA);
+		addAttackId(CANTERA_BRIDGET, CANTERA_FLOXIS, CANTERA_BELIKA);
 	}
 	
 	@Override
@@ -65,19 +65,19 @@ public class QuarryRebel extends AbstractNpcAI
 		{
 			switch (npc.getId())
 			{
-				case FIRE_SLAVE_BRIDGET:
+				case CANTERA_BRIDGET:
 				{
 					spawnNextMob(_lastMagicAttack ? MAGICAL_DEATHMOZ : DISCIPLINED_DEATHMOZ, player, npc.getLocation());
 					npc.deleteMe();
 					break;
 				}
-				case FLOX_GOLEM:
+				case CANTERA_FLOXIS:
 				{
 					spawnNextMob(_lastMagicAttack ? MAGICAL_FLOXIS : DISCIPLINED_FLOXIS, player, npc.getLocation());
 					npc.deleteMe();
 					break;
 				}
-				case EDAN:
+				case CANTERA_BELIKA:
 				{
 					spawnNextMob(_lastMagicAttack ? MAGICAL_BELIKA : DISCIPLINED_BELIKA, player, npc.getLocation());
 					npc.deleteMe();

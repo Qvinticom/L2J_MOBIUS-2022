@@ -2984,6 +2984,70 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="11174" toLevel="1" name="Shadow Snare Zone">
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>COMBINATION</abnormalType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<icon>icon.skill1469</icon>
+		<effectPoint>-709</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<activateRate>100</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>SHOCK</trait>
+		<isMagic>2</isMagic>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="11175" toLevel="6" name="Shadow Snare Zone">
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>COMBINATION</abnormalType>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<icon>icon.skill1469</icon>
+		<effectPoint>-709</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<activateRate>100</activateRate>
+		<magicLvl>97</magicLvl>
+		<trait>SHOCK</trait>
+		<isMagic>2</isMagic>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="11176" toLevel="4" name="Superior Mana of Spirit">
 		<!-- Player’s M. Atk increases by 5%, maximum MP, MP recovery speed +5%, and magic skill cooldown time decreases by 10%. -->
 		<icon>icon.skill0945</icon>
