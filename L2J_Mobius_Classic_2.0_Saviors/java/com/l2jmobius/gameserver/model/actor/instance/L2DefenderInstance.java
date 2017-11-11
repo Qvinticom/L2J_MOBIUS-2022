@@ -18,9 +18,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.ai.L2CharacterAI;
-import com.l2jmobius.gameserver.ai.L2SiegeGuardAI;
-import com.l2jmobius.gameserver.ai.L2SpecialSiegeGuardAI;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
@@ -43,16 +40,6 @@ public class L2DefenderInstance extends L2Attackable
 	{
 		super(template);
 		setInstanceType(InstanceType.L2DefenderInstance);
-	}
-	
-	@Override
-	protected L2CharacterAI initAI()
-	{
-		if (getCastle(10000) != null)
-		{
-			return new L2SiegeGuardAI(this);
-		}
-		return new L2SpecialSiegeGuardAI(this);
 	}
 	
 	@Override
@@ -187,6 +174,39 @@ public class L2DefenderInstance extends L2Attackable
 		}
 		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
+	}
+	
+	@Override
+	public void useMagic(Skill skill)
+	{
+		if (!skill.isBad())
+		{
+			L2Character target = this;
+			for (L2Character nearby : L2World.getInstance().getVisibleObjects(this, L2Character.class, skill.getCastRange()))
+			{
+				if (nearby == this)
+				{
+					continue;
+				}
+				if (nearby instanceof L2DefenderInstance)
+				{
+					target = nearby;
+				}
+				if (nearby.isPlayer())
+				{
+					final L2PcInstance player = (L2PcInstance) nearby;
+					final Castle castle = getCastle();
+					final Fort fortress = getFort();
+					final int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
+					if ((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId))
+					{
+						target = nearby;
+					}
+				}
+			}
+			setTarget(target);
+		}
+		super.useMagic(skill);
 	}
 	
 	@Override

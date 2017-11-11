@@ -42,6 +42,7 @@ import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
@@ -444,8 +445,8 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			return;
 		}
 		
-		// Check if the actor is a L2GuardInstance
-		if ((npc instanceof L2GuardInstance) && !npc.isWalker() && !npc.isRandomWalkingEnabled())
+		// Check if the actor is a guard
+		if (((npc instanceof L2GuardInstance) || (npc instanceof L2DefenderInstance)) && !npc.isWalker() && !npc.isRandomWalkingEnabled())
 		{
 			// Order to the L2GuardInstance to return to its home location because there's no target to attack
 			npc.returnHome();

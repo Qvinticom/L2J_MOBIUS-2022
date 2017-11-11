@@ -38,8 +38,6 @@ import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2AttackableAI;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
-import com.l2jmobius.gameserver.ai.L2FortSiegeGuardAI;
-import com.l2jmobius.gameserver.ai.L2SiegeGuardAI;
 import com.l2jmobius.gameserver.data.xml.impl.ExtendDropData;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.EventDroplist.DateDrop;
@@ -753,15 +751,6 @@ public class L2Attackable extends L2Npc
 	
 	public void reduceHate(L2Character target, int amount)
 	{
-		if ((getAI() instanceof L2SiegeGuardAI) || (getAI() instanceof L2FortSiegeGuardAI))
-		{
-			// TODO: this just prevents error until siege guards are handled properly
-			stopHating(target);
-			setTarget(null);
-			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			return;
-		}
-		
 		if (target == null) // whole aggrolist
 		{
 			final L2Character mostHated = getMostHated();
