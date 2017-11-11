@@ -75,6 +75,7 @@ import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
+import com.l2jmobius.gameserver.data.xml.impl.PetSkillData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerXpPercentLostData;
 import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
@@ -89,7 +90,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillLearnData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
-import com.l2jmobius.gameserver.data.xml.impl.PetSkillData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.data.xml.impl.UIData;
@@ -301,7 +301,7 @@ public class GameServer
 		CommissionManager.getInstance();
 		
 		printSection("Instance");
-		InstanceManager.getInstance();
+		InstanceManager.getInstance().load();
 		
 		printSection("Olympiad");
 		Olympiad.getInstance();
