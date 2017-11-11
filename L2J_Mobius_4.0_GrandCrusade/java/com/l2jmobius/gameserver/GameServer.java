@@ -39,7 +39,6 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
-import com.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jmobius.gameserver.data.xml.impl.ActionData;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.AlchemyData;
@@ -207,7 +206,6 @@ public class GameServer
 		ActionData.getInstance();
 		CategoryData.getInstance();
 		SecondaryAuthData.getInstance();
-		AbilityPointsData.getInstance();
 		SayuneData.getInstance();
 		ClanRewardData.getInstance();
 		DailyMissionHandler.getInstance().executeScript();

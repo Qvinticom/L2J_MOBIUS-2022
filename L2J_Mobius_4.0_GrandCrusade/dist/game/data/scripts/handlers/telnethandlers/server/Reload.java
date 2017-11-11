@@ -25,7 +25,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
-import com.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
@@ -221,11 +220,6 @@ public class Reload implements ITelnetCommand
 			{
 				ItemCrystalizationData.getInstance().load();
 				return AdminData.getInstance().broadcastMessageToGMs("Telnet Admin: Reloaded item crystalization data.");
-			}
-			case "ability":
-			{
-				AbilityPointsData.getInstance().load();
-				return AdminData.getInstance().broadcastMessageToGMs("Telnet Admin: Reloaded ability points data.");
 			}
 			case "appearance":
 			{

@@ -13475,16 +13475,8 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public int getAbilityPoints()
 	{
-		return getVariables().getInt(isDualClassActive() ? PlayerVariables.ABILITY_POINTS_DUAL_CLASS : PlayerVariables.ABILITY_POINTS_MAIN_CLASS, 0);
-	}
-	
-	/**
-	 * Sets the amount of ability points player can spend on learning skills.
-	 * @param points
-	 */
-	public void setAbilityPoints(int points)
-	{
-		getVariables().set(isDualClassActive() ? PlayerVariables.ABILITY_POINTS_DUAL_CLASS : PlayerVariables.ABILITY_POINTS_MAIN_CLASS, points);
+		// Grand Crusade: 1 point per level after 84
+		return getLevel() - 84;
 	}
 	
 	/**
