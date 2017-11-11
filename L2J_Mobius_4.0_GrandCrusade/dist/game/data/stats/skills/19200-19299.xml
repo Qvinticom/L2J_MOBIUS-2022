@@ -23,13 +23,13 @@
 	<skill id="19201" toLevel="1" name="Paladin's Protection">
 		<!-- TODO abnormalType -->
 		<!-- For 15 sec., all party members' P. Def. + 200%, P. Evastion + 8, Speed + 20. Consumes 5 Soulstones. -->
+		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>PALADIN_PROTECTION</abnormalVisualEffect>
 		<icon>icon.skill19201</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
-		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -928,7 +928,7 @@
 		<!-- Increases Dagger/Dual Dagger Resistance of all party members by 50% for 30 seconds. Consumes 5 Spirit Ores. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
-		<abnormalType>SONG_OF_THIEF</abnormalType> <!-- TODO: confirm -->
+		<abnormalType>SONG_OF_THIEF</abnormalType>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill19228</icon>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -982,7 +982,7 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
-		<abnormalType>SONG_OF_WISDOM</abnormalType> <!-- TODO: confirm -->
+		<abnormalType>SONG_OF_WISDOM</abnormalType>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill19231</icon>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -1016,7 +1016,7 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
-		<abnormalType>CRIPPLING_DANCE</abnormalType> <!-- TODO: confirm -->
+		<abnormalType>CRIPPLING_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill19232</icon>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -1041,313 +1041,1014 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19233" toLevel="3" name="Guardian Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19233" toLevel="3" name="Guardian's Shield">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19234" toLevel="3" name="Guardian Magic Barrier">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19234" toLevel="3" name="Guardian's Magic Barrier">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19235" toLevel="3" name="Guardian Body">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19235" toLevel="3" name="Guardian's Body">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">9</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19236" toLevel="3" name="Guardian Elemental Cover">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19236" toLevel="3" name="Guardian's Elemental Cover">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">25</value>
+					<value level="3">40</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">25</value>
+					<value level="3">40</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">25</value>
+					<value level="3">40</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">25</value>
+					<value level="3">40</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">25</value>
+					<value level="3">40</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">25</value>
+					<value level="3">40</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19237" toLevel="2" name="Guardian Armor Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19237" toLevel="2" name="Guardian's Armor Defense">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19238" toLevel="2" name="Guardian Leather Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19238" toLevel="2" name="Guardian's Leather Defense">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19239" toLevel="2" name="Guardian Tunic Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19239" toLevel="2" name="Guardian's Tunic Defense">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+				</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19240" toLevel="2" name="Guardian Resist">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19240" toLevel="2" name="Guardian's Resist">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-10</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19241" toLevel="4" name="Guardian Life">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19241" toLevel="4" name="Guardian's Life">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19242" toLevel="1" name="Guardian Block">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19242" toLevel="1" name="Guardian's Block">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ShieldDefence">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19243" toLevel="4" name="Guardian Armor">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19243" toLevel="4" name="Guardian's Armor">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">8</value>
+					<value level="4">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19244" toLevel="1" name="Guardian Guidance">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19244" toLevel="1" name="Guardian's Guidance">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- TODO: Revelation Skill Increase +12 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<amount>12</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>12</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ServitorShare">
+				<ACCURACY_COMBAT>12</ACCURACY_COMBAT>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19245" toLevel="2" name="Guardian Death Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19245" toLevel="2" name="Guardian's Death Shield">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19246" toLevel="2" name="Guardian Focus Shield">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19246" toLevel="2" name="Guardian's Focus Shield">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19247" toLevel="2" name="Guardian Mind Control">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19247" toLevel="2" name="Guardian's Mind Control">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19248" toLevel="2" name="Guardian Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19248" toLevel="2" name="Guardian's Blessing">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+					<value level="1">5</value>
+					<value level="2">10</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+					<value level="1">5</value>
+					<value level="2">10</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19249" toLevel="2" name="Guardian Binding Cover">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19249" toLevel="2" name="Guardian's Binding Cover">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- TODO: Recived Critical Damage When Immobile -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckAbnormal">
+				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<L2Character>caster</L2Character>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19250" toLevel="1" name="Guardian Spirit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19250" toLevel="1" name="Guardian's Spirit">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19251" toLevel="1" name="Guardian Potential">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19251" toLevel="1" name="Guardian's Potential">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalProbability">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19252" toLevel="2" name="Guardian Expert Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19252" toLevel="2" name="Guardian's Expert Potion">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19253" toLevel="1" name="Guardian Defense Master">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19253" toLevel="1" name="Guardian's Defense Master">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19254" toLevel="2" name="Berserker Haste">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19254" toLevel="2" name="Berserker's Haste">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19255" toLevel="4" name="Berserker Might">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19255" toLevel="4" name="Berserker's Might">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>					
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19256" toLevel="4" name="Berserker??s Elemental Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19256" toLevel="4" name="Berserker's Elemental Attack">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19257" toLevel="3" name="Berserker Craft Focus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19257" toLevel="3" name="Berserker's Craft Focus">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalProbability">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">10</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19258" toLevel="2" name="Berserker Backfire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19258" toLevel="2" name="Berserker's Backfire">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamagePosition">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>			
+				</amount>
+				<mode>PER</mode>
+				<position>BACK</position>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19259" toLevel="3" name="Berserker Focus">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19259" toLevel="3" name="Berserker's Focus">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>	
+					<value level="3">40</value>						
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19260" toLevel="1" name="Berserker Coast">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19260" toLevel="1" name="Berserker's Coast">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19261" toLevel="3" name="Berserker Craft Death">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19261" toLevel="3" name="Berserker's Craft Death">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19262" toLevel="2" name="Mortal Berserker">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19262" toLevel="2" name="Berserker's Mortal">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- TODO: Skill Mastery Rate -->		
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCritical">
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19263" toLevel="3" name="Berserker??s Death Whisper">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19263" toLevel="3" name="Berserker's Death Whisper">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">7</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19264" toLevel="1" name="Berserker Eagle">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19264" toLevel="1" name="Berserker's Eagle">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- TODO: Revelation Skill Increase +12 -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<amount>12</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>12</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ServitorShare">
+				<ACCURACY_COMBAT>12</ACCURACY_COMBAT>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19265" toLevel="2" name="Berserker Battle">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19265" toLevel="2" name="Berserker's Battle">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19266" toLevel="2" name="Berserker Fire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19266" toLevel="2" name="Berserker's Fire">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19267" toLevel="1" name="Berserker??s Skill Reduction">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19267" toLevel="1" name="Berserker's Skill Reduction">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19268" toLevel="2" name="Berserker??s Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19268" toLevel="2" name="Berserker's Blessing">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+					<value level="1">5</value>
+					<value level="2">10</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+					<value level="1">5</value>
+					<value level="2">10</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19269" toLevel="2" name="Berserker??s Binding Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19269" toLevel="2" name="Berserker's Binding Attack">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckAbnormal">
+				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<L2Object>target</L2Object>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19270" toLevel="2" name="Berserker??s Divine Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19270" toLevel="2" name="Berserker's Divine Attack">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">50</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19271" toLevel="2" name="Berserker??s Expert Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19271" toLevel="2" name="Berserker's Expert Potion">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19272" toLevel="1" name="Berserker Combat Master">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19272" toLevel="1" name="Berserker's Combat Master">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19273" toLevel="2" name="Wizard??s Acumen">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19273" toLevel="2" name="Wizard's Acumen">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19274" toLevel="3" name="Wizard??s Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19274" toLevel="3" name="Wizard's Empower">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+					<value level="3">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19275" toLevel="3" name="Wizard??s Elemental Shot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19275" toLevel="3" name="Wizard's Elemental Shot">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">40</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19276" toLevel="3" name="Wizard??s Wild Magic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19276" toLevel="3" name="Wizard's Wild Magic">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19277" toLevel="3" name="Wizard??s Condition">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19277" toLevel="3" name="Wizard's Condition">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">9</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">9</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19278" toLevel="1" name="Wizard??s Eva">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19278" toLevel="1" name="Wizard's Eva">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19279" toLevel="3" name="Wizard??s Mystic">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19279" toLevel="3" name="Wizard's Mystic">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19280" toLevel="2" name="Wizard??s Prominence">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19280" toLevel="2" name="Wizard's Prominence">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- TODO: Skill Mastery Rate -->		
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="SkillCritical">
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19281" toLevel="1" name="Wizard??s Sight">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19281" toLevel="1" name="Wizard's Sight">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<amount>12</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>12</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ServitorShare">
+				<ACCURACY_COMBAT>12</ACCURACY_COMBAT>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19282" toLevel="2" name="Wizard??s Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19282" toLevel="2" name="Wizard's Protection">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</SHOCK>
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</DERANGEMENT>
+				<AIRBIND>
+					<value level="1">5</value>
+					<value level="2">10</value>				
+				</AIRBIND>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19283" toLevel="2" name="Wizard??s Water">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19283" toLevel="2" name="Wizard's Water">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19284" toLevel="2" name="Wizard??s Magic Reduction">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19284" toLevel="2" name="Wizard's Magic Reduction">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19285" toLevel="2" name="Wizard??s Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19285" toLevel="2" name="Wizard's Blessing">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+					<value level="1">5</value>
+					<value level="2">10</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+					<value level="1">5</value>
+					<value level="2">10</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19286" toLevel="2" name="Wizard??s Binding Shot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19286" toLevel="2" name="Wizard's Binding Shot">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckAbnormal">
+				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<L2Object>target</L2Object>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19287" toLevel="2" name="Wizard??s Divine Shot">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19287" toLevel="2" name="Wizard's Divine Shot">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">25</value>
+					<value level="2">50</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19288" toLevel="2" name="Wizard??s Expert Potion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19288" toLevel="2" name="Wizard's Expert Potion">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">500</value>
+					<value level="2">1000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="19289" toLevel="1" name="Wizard??s Spellmaster">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="19289" toLevel="1" name="Wizard's Spellmaster">
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19290" toLevel="2" name="Vitality of the Exalted">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19296" toLevel="8" name="Counter Flip">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19297" toLevel="8" name="Counter Flip">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19298" toLevel="8" name="Flash Dagger">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19299" toLevel="7" name="Reverse Mana">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Updated to GRAND CRUSADE -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
