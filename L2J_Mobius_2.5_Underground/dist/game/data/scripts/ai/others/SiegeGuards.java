@@ -18,6 +18,7 @@ package ai.others;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -103,7 +104,8 @@ public class SiegeGuards extends AbstractNpcAI
 		{
 			if ((npc != null) && !npc.isDead())
 			{
-				if (!npc.isInCombat() || ((npc.getTarget() != null) && (npc.calculateDistance(npc.getTarget(), false, false) > npc.getAggroRange())))
+				final L2Object target = npc.getTarget();
+				if (!npc.isInCombat() || (target == null) || (npc.calculateDistance(target, false, false) > npc.getAggroRange()) || target.isInvul())
 				{
 					for (L2Character nearby : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
 					{
@@ -113,7 +115,7 @@ public class SiegeGuards extends AbstractNpcAI
 							final L2PcInstance pl = summon == null ? (L2PcInstance) nearby : summon.getOwner();
 							if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(npc.getScriptValue())) && ((pl.getSiegeState() != 0) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
 							{
-								if (!pl.isInvisible()) // skip invisible players
+								if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
 								{
 									addAttackPlayerDesire(npc, pl);
 								}
