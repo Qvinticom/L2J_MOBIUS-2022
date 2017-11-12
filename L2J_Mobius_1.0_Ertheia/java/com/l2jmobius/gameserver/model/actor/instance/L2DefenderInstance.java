@@ -182,25 +182,33 @@ public class L2DefenderInstance extends L2Attackable
 		if (!skill.isBad())
 		{
 			L2Character target = this;
+			double lowestHpValue = Double.MAX_VALUE;
 			for (L2Character nearby : L2World.getInstance().getVisibleObjects(this, L2Character.class, skill.getCastRange()))
 			{
-				if (nearby == this)
+				if ((nearby == null) || nearby.isDead())
 				{
 					continue;
 				}
 				if (nearby instanceof L2DefenderInstance)
 				{
-					target = nearby;
-				}
-				if (nearby.isPlayer())
-				{
-					final L2PcInstance player = (L2PcInstance) nearby;
-					final Castle castle = getCastle();
-					final Fort fortress = getFort();
-					final int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-					if ((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(activeSiegeId))
+					final double targetHp = nearby.getCurrentHp();
+					if (lowestHpValue > targetHp)
 					{
 						target = nearby;
+						lowestHpValue = targetHp;
+					}
+				}
+				else if (nearby.isPlayer())
+				{
+					final L2PcInstance player = (L2PcInstance) nearby;
+					if ((player.getSiegeState() == 2) && !player.isRegisteredOnThisSiegeField(getScriptValue()))
+					{
+						final double targetHp = nearby.getCurrentHp();
+						if (lowestHpValue > targetHp)
+						{
+							target = nearby;
+							lowestHpValue = targetHp;
+						}
 					}
 				}
 			}
