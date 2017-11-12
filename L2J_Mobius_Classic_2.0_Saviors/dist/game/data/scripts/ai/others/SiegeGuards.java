@@ -92,6 +92,7 @@ public class SiegeGuards extends AbstractNpcAI
 								if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
 								{
 									addAttackPlayerDesire(npc, pl);
+									break; // no need to search more
 								}
 							}
 						}
