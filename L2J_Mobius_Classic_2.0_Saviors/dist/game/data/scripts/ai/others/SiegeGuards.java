@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.model.items.type.WeaponType;
 
 import ai.AbstractNpcAI;
 
@@ -76,7 +77,7 @@ public class SiegeGuards extends AbstractNpcAI
 		{
 			if ((npc != null) && !npc.isDead())
 			{
-				if (!npc.isInCombat())
+				if (!npc.isInCombat() || ((npc.getTarget() != null) && (npc.calculateDistance(npc.getTarget(), false, false) > npc.getAggroRange())))
 				{
 					for (L2Character nearby : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
 					{
@@ -115,6 +116,10 @@ public class SiegeGuards extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		npc.setRandomWalking(false);
+		if ((npc.getTemplate().getBaseAttackType() != WeaponType.SWORD) && (npc.getTemplate().getBaseAttackType() != WeaponType.POLE))
+		{
+			npc.setIsImmobilized(true);
+		}
 		final Castle castle = npc.getCastle();
 		final Fort fortress = npc.getFort();
 		npc.setScriptValue(fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
