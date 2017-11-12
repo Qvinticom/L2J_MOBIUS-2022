@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -185,7 +186,7 @@ public class L2DefenderInstance extends L2Attackable
 			double lowestHpValue = Double.MAX_VALUE;
 			for (L2Character nearby : L2World.getInstance().getVisibleObjects(this, L2Character.class, skill.getCastRange()))
 			{
-				if ((nearby == null) || nearby.isDead())
+				if ((nearby == null) || nearby.isDead() || !GeoEngine.getInstance().canSeeTarget(this, nearby))
 				{
 					continue;
 				}
