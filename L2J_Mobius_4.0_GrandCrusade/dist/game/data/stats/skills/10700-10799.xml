@@ -252,11 +252,12 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="10705" toLevel="1" name="Easterly Wind Strike">
-		<!-- Updated to IO -->
-		<!-- Front Critical Rate - 10%, Side Critical Rate + 10%, Critical Damage + 10%, Rear Critical Rate + 20%, Critical Damage + 20%. -->
+	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- Changed to Active Skill, Adds effect that moves to left side of target, Powerful Sting Effect, Reduction Effect, Side + Rear Critical, Chance/Damage Increased -->
+		<!-- TODO: I WILL WORK SOON HERE -->
 		<icon>icon.skill10705</icon>
-		<operateType>T</operateType>
+		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>64</mpConsume>
