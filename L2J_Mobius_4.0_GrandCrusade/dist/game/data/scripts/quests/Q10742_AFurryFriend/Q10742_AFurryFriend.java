@@ -16,6 +16,7 @@
  */
 package quests.Q10742_AFurryFriend;
 
+import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
@@ -83,7 +84,9 @@ public final class Q10742_AFurryFriend extends Quest
 				qs.startQuest();
 				qs.set("cave", getRandom(3));
 				showOnScreenMsg(player, NpcStringId.FOLLOW_RICKY, ExShowScreenMessage.TOP_CENTER, 10000);
-				addSpawn(RICKY, RICKY_SPAWN, false, 180000);
+				final L2Npc ricky = addSpawn(RICKY, RICKY_SPAWN, false, 180000);
+				ricky.setSummoner(player);
+				ricky.setTitle(player.getName());
 				htmltext = event;
 				break;
 			}
@@ -106,7 +109,7 @@ public final class Q10742_AFurryFriend extends Quest
 						// Spawn Ricky
 						final L2Npc ricky = addSpawn(RICKY, player, true, 120000);
 						ricky.setSummoner(player);
-						ricky.setTitle(player.getAppearance().getVisibleName());
+						ricky.setTitle(player.getName());
 						ricky.setIsRunning(true);
 						ricky.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 						startQuestTimer("CHECK_RICKY_DISTANCE", 2500, ricky, player);
@@ -146,7 +149,7 @@ public final class Q10742_AFurryFriend extends Quest
 					}
 					else
 					{
-						final L2Npc leira = L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 125).stream().filter(n -> (n.getId() == LEIRA)).findAny().orElse(null);
+						final L2Npc leira = L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 300).stream().filter(n -> (n.getId() == LEIRA)).findAny().orElse(null);
 						if (leira != null)
 						{
 							qs.setCond(2, true);
@@ -225,6 +228,6 @@ public final class Q10742_AFurryFriend extends Quest
 	public void onRouteFinished(L2Npc npc)
 	{
 		WalkingManager.getInstance().cancelMoving(npc);
-		npc.deleteMe();
+		ThreadPoolManager.schedule(() -> npc.deleteMe(), 100);
 	}
 }

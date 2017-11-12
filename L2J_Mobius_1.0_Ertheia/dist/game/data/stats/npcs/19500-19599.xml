@@ -892,10 +892,9 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19552" level="20" type="L2Npc" name="Ricky">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="19552" level="20" type="FriendlyNpc" name="Ricky" usingServerSideTitle="true">
+		<race>BEAST</race>
+		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<speed>
