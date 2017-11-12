@@ -64,7 +64,7 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 		addTalkId(HERMIT, EYE_OF_ARGOS);
 		addKillId(MONSTERS);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
-		addCondRace(Race.ERTHEIA, "noErtheya.html");
+		addCondRace(Race.ERTHEIA, "noErtheia.html");
 	}
 	
 	@Override
@@ -157,10 +157,11 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(1))
 		{
-			int count = qs.getInt(KILL_COUNT_VAR);
-			qs.set(KILL_COUNT_VAR, ++count);
-			if (count >= 200)
+			int killCount = qs.getInt(KILL_COUNT_VAR);
+			qs.set(KILL_COUNT_VAR, ++killCount);
+			if (killCount >= 200)
 			{
+				qs.setCond(0);
 				qs.setCond(2, true);
 			}
 			else
@@ -182,7 +183,7 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 			if (killCount > 0)
 			{
 				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_BEASTS_OF_THE_VALLEY, killCount));
+				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_BEASTS_OF_THE_VALLEY3, killCount));
 				return holder;
 			}
 		}
