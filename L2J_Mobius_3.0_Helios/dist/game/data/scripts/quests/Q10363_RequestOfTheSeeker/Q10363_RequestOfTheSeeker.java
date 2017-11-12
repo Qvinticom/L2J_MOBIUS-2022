@@ -146,7 +146,10 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == NAGEL ? "33450-07.html" : "33451-04.html";
+				if (npc.getId() == CELIN)
+				{
+					htmltext = "33451-03.html";
+				}
 				break;
 			}
 		}
