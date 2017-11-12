@@ -24,11 +24,13 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
@@ -545,12 +547,9 @@ public class Siege implements Siegable
 		for (L2SiegeClan siegeClans : getDefenderClans())
 		{
 			final L2Clan clan = ClanTable.getInstance().getClan(siegeClans.getClanId());
-			for (L2PcInstance member : clan.getOnlineMembers(0))
+			if (clan != null)
 			{
-				if (member != null)
-				{
-					member.sendPacket(message);
-				}
+				clan.getOnlineMembers(0).forEach(message::sendTo);
 			}
 		}
 		
@@ -559,12 +558,9 @@ public class Siege implements Siegable
 			for (L2SiegeClan siegeClans : getAttackerClans())
 			{
 				final L2Clan clan = ClanTable.getInstance().getClan(siegeClans.getClanId());
-				for (L2PcInstance member : clan.getOnlineMembers(0))
+				if (clan != null)
 				{
-					if (member != null)
-					{
-						member.sendPacket(message);
-					}
+					clan.getOnlineMembers(0).forEach(message::sendTo);
 				}
 			}
 		}
@@ -583,11 +579,6 @@ public class Siege implements Siegable
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			for (L2PcInstance member : clan.getOnlineMembers(0))
 			{
-				if (member == null)
-				{
-					continue;
-				}
-				
 				if (clear)
 				{
 					member.setSiegeState((byte) 0);
@@ -648,11 +639,6 @@ public class Siege implements Siegable
 			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
 			for (L2PcInstance member : clan.getOnlineMembers(0))
 			{
-				if (member == null)
-				{
-					continue;
-				}
-				
 				if (clear)
 				{
 					member.setSiegeState((byte) 0);
@@ -820,25 +806,14 @@ public class Siege implements Siegable
 	@Override
 	public List<L2PcInstance> getAttackersInZone()
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
-		L2Clan clan;
-		for (L2SiegeClan siegeclan : getAttackerClans())
-		{
-			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			for (L2PcInstance player : clan.getOnlineMembers(0))
-			{
-				if (player == null)
-				{
-					continue;
-				}
-				
-				if (player.isInSiege())
-				{
-					players.add(player);
-				}
-			}
-		}
-		return players;
+		//@formatter:off
+		return getAttackerClans().stream()
+			.map(siegeclan -> ClanTable.getInstance().getClan(siegeclan.getClanId()))
+			.filter(Objects::nonNull)
+			.flatMap(clan -> clan.getOnlineMembers(0).stream())
+			.filter(L2PcInstance::isInSiege)
+			.collect(Collectors.toList());
+		//@formatter:on
 	}
 	
 	/**
@@ -854,29 +829,15 @@ public class Siege implements Siegable
 	 */
 	public List<L2PcInstance> getOwnersInZone()
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
-		L2Clan clan;
-		for (L2SiegeClan siegeclan : getDefenderClans())
-		{
-			clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-			if (clan.getId() != getCastle().getOwnerId())
-			{
-				continue;
-			}
-			for (L2PcInstance player : clan.getOnlineMembers(0))
-			{
-				if (player == null)
-				{
-					continue;
-				}
-				
-				if (player.isInSiege())
-				{
-					players.add(player);
-				}
-			}
-		}
-		return players;
+		//@formatter:off
+		return getDefenderClans().stream()
+			.filter(siegeclan -> siegeclan.getClanId() == _castle.getOwnerId())
+			.map(siegeclan -> ClanTable.getInstance().getClan(siegeclan.getClanId()))
+			.filter(Objects::nonNull)
+			.flatMap(clan -> clan.getOnlineMembers(0).stream())
+			.filter(L2PcInstance::isInSiege)
+			.collect(Collectors.toList());
+		//@formatter:on
 	}
 	
 	/**
@@ -884,21 +845,7 @@ public class Siege implements Siegable
 	 */
 	public List<L2PcInstance> getSpectatorsInZone()
 	{
-		final List<L2PcInstance> players = new ArrayList<>();
-		
-		for (L2PcInstance player : getCastle().getZone().getPlayersInside())
-		{
-			if (player == null)
-			{
-				continue;
-			}
-			
-			if (!player.isInSiege())
-			{
-				players.add(player);
-			}
-		}
-		return players;
+		return getCastle().getZone().getPlayersInside().stream().filter(p -> !p.isInSiege()).collect(Collectors.toList());
 	}
 	
 	/**
@@ -907,11 +854,7 @@ public class Siege implements Siegable
 	 */
 	public void killedCT(L2Npc ct)
 	{
-		_controlTowerCount--;
-		if (_controlTowerCount < 0)
-		{
-			_controlTowerCount = 0;
-		}
+		_controlTowerCount = Math.max(_controlTowerCount - 1, 0);
 	}
 	
 	/**
@@ -920,17 +863,7 @@ public class Siege implements Siegable
 	 */
 	public void killedFlag(L2Npc flag)
 	{
-		if (flag == null)
-		{
-			return;
-		}
-		for (L2SiegeClan clan : getAttackerClans())
-		{
-			if (clan.removeFlag(flag))
-			{
-				return;
-			}
-		}
+		getAttackerClans().forEach(siegeClan -> siegeClan.removeFlag(flag));
 	}
 	
 	/**
@@ -1538,18 +1471,18 @@ public class Siege implements Siegable
 	 */
 	private void spawnControlTower()
 	{
-		for (TowerSpawn ts : SiegeManager.getInstance().getControlTowers(getCastle().getResidenceId()))
+		try
 		{
-			try
+			for (TowerSpawn ts : SiegeManager.getInstance().getControlTowers(getCastle().getResidenceId()))
 			{
 				final L2Spawn spawn = new L2Spawn(ts.getId());
 				spawn.setLocation(ts.getLocation());
 				_controlTowers.add((L2ControlTowerInstance) spawn.doSpawn());
 			}
-			catch (Exception e)
-			{
-				_log.warning(getClass().getSimpleName() + ": Cannot spawn control tower! " + e);
-			}
+		}
+		catch (Exception e)
+		{
+			_log.warning(getClass().getSimpleName() + ": Cannot spawn control tower! " + e);
 		}
 		_controlTowerCount = _controlTowers.size();
 	}
@@ -1559,9 +1492,9 @@ public class Siege implements Siegable
 	 */
 	private void spawnFlameTower()
 	{
-		for (TowerSpawn ts : SiegeManager.getInstance().getFlameTowers(getCastle().getResidenceId()))
+		try
 		{
-			try
+			for (TowerSpawn ts : SiegeManager.getInstance().getFlameTowers(getCastle().getResidenceId()))
 			{
 				final L2Spawn spawn = new L2Spawn(ts.getId());
 				spawn.setLocation(ts.getLocation());
@@ -1570,10 +1503,10 @@ public class Siege implements Siegable
 				tower.setZoneList(ts.getZoneList());
 				_flameTowers.add(tower);
 			}
-			catch (Exception e)
-			{
-				_log.warning(getClass().getSimpleName() + ": Cannot spawn flame tower! " + e);
-			}
+		}
+		catch (Exception e)
+		{
+			_log.warning(getClass().getSimpleName() + ": Cannot spawn flame tower! " + e);
 		}
 	}
 	

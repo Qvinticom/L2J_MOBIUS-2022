@@ -24,6 +24,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -664,6 +665,7 @@ public class L2Clan implements IIdentifiable, INamable
 			.filter(member -> member.getObjectId() != exclude)
 			.filter(L2ClanMember::isOnline)
 			.map(L2ClanMember::getPlayerInstance)
+			.filter(Objects::nonNull)
 			.collect(Collectors.toList());
 		//@formatter:on
 	}
