@@ -80,7 +80,7 @@ public class SiegeGuards extends AbstractNpcAI
 				{
 					for (L2Character nearby : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
 					{
-						if (nearby.isPlayable() && (npc.calculateDirectionTo(nearby) < npc.getAggroRange()) && GeoEngine.getInstance().canSeeTarget(npc, nearby))
+						if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
 						{
 							final L2Summon summon = nearby.isSummon() ? ((L2Summon) nearby) : null;
 							final L2PcInstance cha = summon == null ? (L2PcInstance) nearby : summon.getOwner();
