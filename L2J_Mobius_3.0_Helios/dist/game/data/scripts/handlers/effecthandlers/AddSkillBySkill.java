@@ -16,10 +16,10 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -30,13 +30,13 @@ public class AddSkillBySkill extends AbstractEffect
 {
 	private final int _existingSkillId;
 	private final int _existingSkillLevel;
-	private final Skill _addedSkill;
+	private final SkillHolder _addedSkill;
 	
 	public AddSkillBySkill(StatsSet params)
 	{
 		_existingSkillId = params.getInt("existingSkillId");
 		_existingSkillLevel = params.getInt("existingSkillLevel");
-		_addedSkill = SkillData.getInstance().getSkill(params.getInt("addedSkillId"), params.getInt("addedSkillLevel"));
+		_addedSkill = new SkillHolder(params.getInt("addedSkillId"), params.getInt("addedSkillLevel"));
 	}
 	
 	@Override
@@ -48,12 +48,12 @@ public class AddSkillBySkill extends AbstractEffect
 	@Override
 	public void pump(L2Character effected, Skill skill)
 	{
-		effected.addSkill(_addedSkill);
+		effected.addSkill(_addedSkill.getSkill());
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		info.getEffected().removeSkill(_addedSkill, true);
+		info.getEffected().removeSkill(_addedSkill.getSkill(), true);
 	}
 }
