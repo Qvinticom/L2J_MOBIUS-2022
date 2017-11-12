@@ -21,7 +21,6 @@
 		</effects>
 	</skill>
 	<skill id="19201" toLevel="1" name="Paladin's Protection">
-		<!-- TODO abnormalType -->
 		<!-- For 15 sec., all party members' P. Def. + 200%, P. Evastion + 8, Speed + 20. Consumes 5 Soulstones. -->
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -54,7 +53,6 @@
 		</effects>
 	</skill>
 	<skill id="19202" toLevel="1" name="Sentinel's Protection">
-		<!-- TODO abnormalType -->
 		<!-- For 15 sec., all party members' M. Def. + 200%, M. Evastion + 8, Speed + 20. Consumes 5 Soulstones. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1281,7 +1279,6 @@
 	</skill>
 	<skill id="19244" toLevel="1" name="Guardian's Guidance">
 		<!-- Updated to GRAND CRUSADE -->
-		<!-- TODO: Revelation Skill Increase +12 -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1295,6 +1292,60 @@
 			</effect>
 			<effect name="ServitorShare">
 				<ACCURACY_COMBAT>12</ACCURACY_COMBAT>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1904</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1904</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1907</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1907</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1912</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1912</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1914</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1914</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1920</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1920</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1922</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1922</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1925</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1925</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1996</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1996</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1997</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1997</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1586,13 +1637,16 @@
 		</effects>
 	</skill>
 	<skill id="19262" toLevel="2" name="Berserker's Mortal">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- TODO: Skill Mastery Rate -->		
+		<!-- Updated to GRAND CRUSADE -->		
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="SkillCritical">
-				<stat>STR</stat>
+			<effect name="SkillCriticalProbability">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">60</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1613,7 +1667,6 @@
 	</skill>
 	<skill id="19264" toLevel="1" name="Berserker's Eagle">
 		<!-- Updated to GRAND CRUSADE -->
-		<!-- TODO: Revelation Skill Increase +12 -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1627,6 +1680,60 @@
 			</effect>
 			<effect name="ServitorShare">
 				<ACCURACY_COMBAT>12</ACCURACY_COMBAT>
+			</effect>
+				<effect name="AddSkillBySkill">
+				<existingSkillId>1904</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1904</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1907</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1907</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1912</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1912</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1914</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1914</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1920</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1920</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1922</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1922</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1925</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1925</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1996</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1996</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1997</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1997</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1868,13 +1975,16 @@
 		</effects>
 	</skill>
 	<skill id="19280" toLevel="2" name="Wizard's Prominence">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- TODO: Skill Mastery Rate -->		
+		<!-- Updated to GRAND CRUSADE -->		
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="SkillCritical">
-				<stat>INT</stat>
+			<effect name="SkillCriticalProbability">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">60</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1893,6 +2003,60 @@
 			</effect>
 			<effect name="ServitorShare">
 				<ACCURACY_COMBAT>12</ACCURACY_COMBAT>
+			</effect>
+				<effect name="AddSkillBySkill">
+				<existingSkillId>1904</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1904</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1907</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1907</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1912</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1912</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1914</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1914</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1920</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1920</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1922</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1922</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1925</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1925</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1996</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1996</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
+			</effect>
+			<effect name="AddSkillBySkill">
+				<existingSkillId>1997</existingSkillId>
+				<existingSkillLevel>1</existingSkillLevel>
+				<addedSkillId>1997</addedSkillId>
+				<addedSkillLevel>2</addedSkillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -2029,27 +2193,285 @@
 	</skill>
 	<skill id="19290" toLevel="2" name="Vitality of the Exalted">
 		<!-- Updated to GRAND CRUSADE -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.s_vitality_of_honors1</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effectPoint>100</effectPoint>
+		<!-- Level: 1 Increases bonus XP/SP by 30%. -->
+		<!-- Level: 2 Increases bonus XP/SP by 100%. -->
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19296" toLevel="8" name="Counter Flip">
 		<!-- Updated to GRAND CRUSADE -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- Dumps the target who hit you with a melee attack over your back to put it into the Knock Down state for 5 seconds. This cancels the Counter stance. Requires dagger/dual dagger. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="7">8</value>
+		</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>COUNTER_FLIP</abnormalType>
+		<abnormalVisualEffect>RO_COUNTER_TRASPIE</abnormalVisualEffect>
+		<icon>icon.skill19296</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+			<value level="4">94</value>
+			<value level="5">97</value>
+			<value level="6">101</value>
+			<value level="7">103</value>
+			<value level="8">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">42</value>
+			<value level="2">44</value>
+			<value level="3">46</value>
+			<value level="4">48</value>
+			<value level="5">50</value>
+			<value level="6">52</value>
+			<value level="7">54</value>
+			<value level="8">56</value>
+		</mpConsume>
+		<hitTime>100</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>707</effectPoint>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="TriggerSkillByDamage">
+				<attackerType>L2Character</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>110</maxAttackerLevel>
+				<chance>100</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>1</minDamage>
+				<skillId>19297</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+				</skillLevel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19297" toLevel="8" name="Counter Flip">
 		<!-- Updated to GRAND CRUSADE -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- Countering has knocked you down for 5sec. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="7">8</value>
+		</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<icon>icon.skill19296</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+			<value level="4">94</value>
+			<value level="5">97</value>
+			<value level="6">101</value>
+			<value level="7">103</value>
+			<value level="8">105</value>
+		</magicLvl>
+		<castRange>100</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<isDebuff>2</isDebuff>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>COUNTER_FLIP,-1</dispel>
+			</effect>
+			<effect name="TeleportToTarget" />
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>50</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>100</DERANGEMENT>
+				<SLEEP>100</SLEEP>
+				<CHANGEBODY>100</CHANGEBODY>
+				<SHOCK>100</SHOCK>
+				<HOLD>100</HOLD>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19298" toLevel="8" name="Flash Dagger">
 		<!-- Updated to GRAND CRUSADE -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- Reflects strong light against enemies in front to make them lose the sight, disabling them to not catch a target for 3sec. Requires dagger/dual dagger. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>CONFUSION</abnormalType>
+		<icon>icon.skill10527</icon>
+		<activateRate>80</activateRate>
+		<trait>DERANGEMENT</trait>
+		<icon>icon.skill19298</icon>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;300;150</fanRange>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<castRange>300</castRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">88</value>
+			<value level="3">91</value>
+			<value level="4">94</value>
+			<value level="5">97</value>
+			<value level="6">101</value>
+			<value level="7">103</value>
+			<value level="8">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">74</value>
+			<value level="2">77</value>
+			<value level="3">80</value>
+			<value level="4">83</value>
+			<value level="5">86</value>
+			<value level="6">89</value>
+			<value level="7">92</value>
+			<value level="8">95</value>
+		</mpConsume>
+		<hitTime>1200</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<isDebuff>3</isDebuff>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="DeleteHateOfMe">
+				<chance>80</chance>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="19299" toLevel="7" name="Reverse Mana">
 		<!-- Updated to GRAND CRUSADE -->
-		<icon>icon.skill0000</icon>
+		<!-- Attempts Deadly Attack with $s1 power added to P. Attack and recovers your MP by $s2. Half-kill is possible. Requires dagger/dual dagger. -->
+		<icon>icon.skill19299</icon>
 		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<castRange>40</castRange>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">90</value>
+			<value level="2">98</value>
+			<value level="3">106</value>
+			<value level="4">112</value>
+			<value level="5">118</value>
+			<value level="6">124</value>
+			<value level="7">130</value>
+		</mpConsume>
+		<hitTime>2030</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
+		<effectPoint>-709</effectPoint>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19300</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
+		<effects>
+			<effect name="FatalBlow">
+				<power>
+					<value level="1">36840</value>
+					<value level="2">43170</value>
+					<value level="3">49500</value>
+					<value level="4">54560</value>
+					<value level="5">58100</value>
+					<value level="6">60700</value>
+					<value level="7">63290</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<chanceBoost>300</chanceBoost>
+			</effect>
+			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
+				<halfLethal>15</halfLethal>
+			</effect>
+		</effects>
 	</skill>
 </list>

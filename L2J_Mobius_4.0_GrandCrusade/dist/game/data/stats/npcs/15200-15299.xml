@@ -200,77 +200,137 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="15207" level="85" type="L2Npc" name="Discarded Wizard's Soul">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="15207" level="99" type="L2Pet" name="Discarded Wizard's Soul" title="">
+		<!-- Updated to GRAND CRUSADE -->
+		<parameters>
+			<skill name="Skill01_ID" id="19406" level="1" /> <!-- Curse from Deadland -->
+		</parameters>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="26147" hpRegen="10.5" mp="2472" mpRegen="3.6" />
+			<vitals hp="26147.0" hpRegen="7.5" mp="2472.0" mpRegen="2.7" />
+			<attack physical="1596.9277" magical="758.9712" random="10" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1616.4895" magical="1074.714" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
-				<walk ground="45" />
-				<run ground="140" />
+				<walk ground="45.0" />
+				<run ground="140.0" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+			<skill id="19406" level="1" /> <!-- Curse from Deadland -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="22.4" />
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15208" level="85" type="L2Npc" name="Discarded Wizard's Soul">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="15208" level="101" type="L2Pet" name="Discarded Wizard's Soul" title="">
+		<!-- Updated to GRAND CRUSADE -->
+		<parameters>
+			<skill name="Skill01_ID" id="19406" level="2" /> <!-- Curse from Deadland -->
+		</parameters>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="28054" hpRegen="10.5" mp="2550" mpRegen="3.6" />
+			<vitals hp="28054.0" hpRegen="7.5" mp="2550.0" mpRegen="2.7" />
+			<attack physical="1800.81029" magical="808.9397" random="10" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1742.9294" magical="1772.844" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
-				<walk ground="45" />
-				<run ground="140" />
+				<walk ground="45.0" />
+				<run ground="140.0" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+			<skill id="19406" level="2" /> <!-- Curse from Deadland -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="22.4" />
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15209" level="85" type="L2Npc" name="Discarded Wizard's Soul">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="15209" level="103" type="L2Pet" name="Discarded Wizard's Soul" title="">
+		<!-- Updated to GRAND CRUSADE -->
+		<parameters>
+			<skill name="Skill01_ID" id="19406" level="3" /> <!-- Curse from Deadland -->
+		</parameters>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="28603" hpRegen="10.5" mp="2632" mpRegen="3.6" />
+			<vitals hp="28603.0" hpRegen="7.5" mp="2632.0" mpRegen="2.7" />
+			<attack physical="1931.9868" magical="858.9598" random="10" critical="12" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1831.7309" magical="1882.4576" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
-				<walk ground="45" />
-				<run ground="140" />
+				<walk ground="45.0" />
+				<run ground="140.0" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+			<skill id="19406" level="3" /> <!-- Curse from Deadland -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="22.4" />
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15210" level="85" type="L2Npc" name="Discarded Wizard's Soul">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="15210" level="105" type="L2Pet" name="Discarded Wizard's Soul" title="">
+		<!-- Updated to GRAND CRUSADE -->
+		<parameters>
+			<skill name="Skill01_ID" id="19406" level="4" /> <!-- Curse from Deadland -->
+		</parameters>
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="29167" hpRegen="10.5" mp="2713" mpRegen="3.6" />
+			<vitals hp="29167.0" hpRegen="7.5" mp="2713.0" mpRegen="2.7" />
+			<attack physical="2069.8309" magical="908.9098" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1925.6881" magical="1997.7594" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 			<speed>
-				<walk ground="45" />
-				<run ground="140" />
+				<walk ground="45.0" />
+				<run ground="140.0" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
+			<skill id="19406" level="4" /> <!-- Curse from Deadland -->
+		</skill_list>
+		<ex_crt_effect>false</ex_crt_effect>
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="22.4" />
 			<height normal="30.6" />
