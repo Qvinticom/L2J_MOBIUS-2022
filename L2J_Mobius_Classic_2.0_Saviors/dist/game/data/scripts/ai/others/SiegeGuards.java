@@ -82,16 +82,13 @@ public class SiegeGuards extends AbstractNpcAI
 					{
 						if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
 						{
-							final L2Summon summon = nearby.isSummon() ? ((L2Summon) nearby) : null;
-							final L2PcInstance cha = summon == null ? (L2PcInstance) nearby : summon.getOwner();
-							final Castle castle = npc.getCastle();
-							final Fort fortress = npc.getFort();
-							final int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-							if ((((cha.getSiegeState() != 2) || cha.isRegisteredOnThisSiegeField(activeSiegeId)) && (cha.getSiegeState() != 0)) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE))
+							final L2Summon summon = nearby.isSummon() ? (L2Summon) nearby : null;
+							final L2PcInstance pl = summon == null ? (L2PcInstance) nearby : summon.getOwner();
+							if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(npc.getScriptValue())) && ((pl.getSiegeState() != 0) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
 							{
-								if (!cha.isInvisible()) // skip invisible players
+								if (!pl.isInvisible()) // skip invisible players
 								{
-									addAttackPlayerDesire(npc, cha);
+									addAttackPlayerDesire(npc, pl);
 								}
 							}
 						}
@@ -106,10 +103,7 @@ public class SiegeGuards extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		final Castle castle = npc.getCastle();
-		final Fort fortress = npc.getFort();
-		final int activeSiegeId = (fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-		if ((((attacker.getSiegeState() == 2) && !attacker.isRegisteredOnThisSiegeField(activeSiegeId)) || (attacker.getSiegeState() == 0)) && (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
+		if ((attacker.getSiegeState() == 2) && !attacker.isRegisteredOnThisSiegeField(npc.getScriptValue()))
 		{
 			((L2Attackable) npc).stopHating(attacker);
 			return null;
@@ -121,6 +115,9 @@ public class SiegeGuards extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		npc.setRandomWalking(false);
+		final Castle castle = npc.getCastle();
+		final Fort fortress = npc.getFort();
+		npc.setScriptValue(fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
 		startQuestTimer("AGGRO_CHECK", 2000, npc, null);
 		return super.onSpawn(npc);
 	}
