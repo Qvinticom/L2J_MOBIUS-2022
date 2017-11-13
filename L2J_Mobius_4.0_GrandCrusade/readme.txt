@@ -105,6 +105,7 @@ Customs:
 -Community board
 -Faction system
 -Find PvP
+-NPC stat multipliers
 -Realtime offline trade
 -Password change
 -Pc Cafe
