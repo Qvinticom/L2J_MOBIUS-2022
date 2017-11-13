@@ -2,12 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/charTemplate.xsd">
 	<classId>170</classId>
 	<staticData>
-		<baseINT>43</baseINT>
-		<baseSTR>88</baseSTR>
-		<baseCON>80</baseCON>
-		<baseMEN>37</baseMEN>
-		<baseDEX>57</baseDEX>
-		<baseWIT>36</baseWIT>
+		<baseINT>82</baseINT>
+		<baseSTR>40</baseSTR>
+		<baseCON>38</baseCON>
+		<baseMEN>75</baseMEN>
+		<baseDEX>28</baseDEX>
+		<baseWIT>78</baseWIT>
 		<baseLUC>33</baseLUC>
 		<baseCHA>42</baseCHA>
 		<physicalAbnormalResist>10</physicalAbnormalResist>
@@ -64,8 +64,8 @@
 			<height>25.2</height>
 		</collisionMale>
 		<collisionFemale>
-			<radius>8.0</radius>
-			<height>25.2</height>
+			<radius>7.0</radius>
+			<height>22.6</height>
 		</collisionFemale>
 	</staticData>
 	<lvlUpgainData>
@@ -918,10 +918,42 @@
 			<cpRegen>8.5</cpRegen>
 		</level>
 		<level val="107">
-			<hp>5445.148003</hp>
-			<mp>2571.71672</mp>
-			<cp>6313.533247</cp>
+			<hp>8613.19</hp>
+			<mp>3994.5</mp>
+			<cp>11892.99</cp>
+			<hpRegen>12.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="108">
+			<hp>8697.29</hp>
+			<mp>4053.6</mp>
+			<cp>12009.07</cp>
 			<hpRegen>12.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="109">
+			<hp>8782.14</hp>
+			<mp>4113</mp>
+			<cp>12126.18</cp>
+			<hpRegen>12.3</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="110">
+			<hp>8867.74</hp>
+			<mp>4172.7</mp>
+			<cp>12244.32</cp>
+			<hpRegen>12.4</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="111">
+			<hp>8954.09</hp>
+			<mp>4232.7</mp>
+			<cp>12363.49</cp>
+			<hpRegen>12.5</hpRegen>
 			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>

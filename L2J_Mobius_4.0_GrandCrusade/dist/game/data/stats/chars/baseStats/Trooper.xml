@@ -64,8 +64,8 @@
 			<height>25.2</height>
 		</collisionMale>
 		<collisionFemale>
-			<radius>8.0</radius>
-			<height>25.2</height>
+			<radius>7.0</radius>
+			<height>22.6</height>
 		</collisionFemale>
 	</staticData>
 	<lvlUpgainData>
@@ -920,8 +920,40 @@
 		<level val="107">
 			<hp>4658.05</hp>
 			<mp>1345.26</mp>
-			<cp>2329.025</cp>
+			<cp>2329.03</cp>
 			<hpRegen>12.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="108">
+			<hp>4721.09</hp>
+			<mp>1362.99</mp>
+			<cp>2360.55</cp>
+			<hpRegen>12.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="109">
+			<hp>4784.45</hp>
+			<mp>1380.81</mp>
+			<cp>2392.23</cp>
+			<hpRegen>12.3</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="110">
+			<hp>4848.13</hp>
+			<mp>1398.72</mp>
+			<cp>2424.07</cp>
+			<hpRegen>12.4</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="111">
+			<hp>4912.13</hp>
+			<mp>1416.72</mp>
+			<cp>2456.07</cp>
+			<hpRegen>12.5</hpRegen>
 			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>

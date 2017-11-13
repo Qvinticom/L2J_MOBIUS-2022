@@ -60,12 +60,12 @@
 		<baseBreath>100</baseBreath>
 		<baseSafeFall>200</baseSafeFall>
 		<collisionMale>
-			<radius>7.5</radius>
-			<height>22.8</height>
+			<radius>9.0</radius>
+			<height>23</height>
 		</collisionMale>
 		<collisionFemale>
-			<radius>6.5</radius>
-			<height>22.5</height>
+			<radius>8.0</radius>
+			<height>23.5</height>
 		</collisionFemale>
 	</staticData>
 	<lvlUpgainData>
@@ -920,8 +920,40 @@
 		<level val="107">
 			<hp>8325.89</hp>
 			<mp>5326</mp>
-			<cp>11267.21</cp>
+			<cp>11266.76</cp>
 			<hpRegen>12.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="108">
+			<hp>8407.14</hp>
+			<mp>5404.8</mp>
+			<cp>11376.67</cp>
+			<hpRegen>12.3</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="109">
+			<hp>8489.11</hp>
+			<mp>5484</mp>
+			<cp>11487.55</cp>
+			<hpRegen>12.4</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="110">
+			<hp>8571.8</hp>
+			<mp>5563.6</mp>
+			<cp>11599.4</cp>
+			<hpRegen>12.5</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="111">
+			<hp>8655.21</hp>
+			<mp>5643.6</mp>
+			<cp>11712.22</cp>
+			<hpRegen>12.6</hpRegen>
 			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>

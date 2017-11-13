@@ -52,7 +52,7 @@
 		</baseDamRange>
 		<baseRndDam>10</baseRndDam>
 		<baseMoveSpd>
-			<walk>80</walk>
+			<walk>82</walk>
 			<run>132</run>
 			<slowSwim>50</slowSwim>
 			<fastSwim>50</fastSwim>
@@ -920,8 +920,40 @@
 		<level val="107">
 			<hp>3654.75</hp>
 			<mp>1341.99</mp>
-			<cp>1827.375</cp>
+			<cp>1827.56</cp>
 			<hpRegen>12.1</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="108">
+			<hp>3704</hp>
+			<mp>1359.72</mp>
+			<cp>1852.23</cp>
+			<hpRegen>12.2</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="109">
+			<hp>3753.5</hp>
+			<mp>1377.54</mp>
+			<cp>1877.03</cp>
+			<hpRegen>12.3</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="110">
+			<hp>3803.25</hp>
+			<mp>1395.45</mp>
+			<cp>1901.96</cp>
+			<hpRegen>12.4</hpRegen>
+			<mpRegen>3.0</mpRegen>
+			<cpRegen>8.5</cpRegen>
+		</level>
+		<level val="111">
+			<hp>3853.25</hp>
+			<mp>1413.45</mp>
+			<cp>1927.02</cp>
+			<hpRegen>12.5</hpRegen>
 			<mpRegen>3.0</mpRegen>
 			<cpRegen>8.5</cpRegen>
 		</level>
