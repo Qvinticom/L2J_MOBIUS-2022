@@ -428,212 +428,534 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17714" toLevel="1" name="Dancing Cat's Steps">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- For 1 hr., Max HP/MP/CP + 30%, P./M. Def. + 30%, Speed + 20, P. Atk. + 10%, and M. Atk. + 20%. Skill Cooldown - 10%, and Skill MP Consumption - 15%. (Same slot as Art of Seduction buff) -->
-		<icon>icon.skill_sing</icon>
-		<operateType>A2</operateType>
-		<castRange>900</castRange>
-		<effectPoint>100</effectPoint>
-		<isMagic>4</isMagic>
-	</skill>
-	<skill id="17715" toLevel="1" name="Spirit Hit Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts 3186 damage to a single target. -->
-		<icon>icon.skill3260</icon>
-		<operateType>A1</operateType>
-		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
-		<effectPoint>-1000</effectPoint>
-		<reuseDelay>30000</reuseDelay>
-	</skill>
-	<skill id="17716" toLevel="1" name="Spirit Hit Lv. 2">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts 3186 damage to a single target. -->
-		<icon>icon.skill3260</icon>
-		<operateType>A1</operateType>
-		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
-		<effectPoint>-1000</effectPoint>
-		<reuseDelay>30000</reuseDelay>
-	</skill>
-	<skill id="17717" toLevel="1" name="Spirit Hit Lv. 3">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts 3186 damage to a single target. -->
-		<icon>icon.skill3260</icon>
-		<operateType>A1</operateType>
-		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
-		<effectPoint>-1000</effectPoint>
-		<reuseDelay>30000</reuseDelay>
-	</skill>
 	<skill id="17718" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Antharas Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17719" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Sealed Antharas Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17720" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Sealed Antharas Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17721" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Sealed Antharas Buster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17722" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Antharas Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17723" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Antharas Stormer (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17724" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Antharas Fighter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17725" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Antharas Avenger (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17726" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Antharas Dual Blunt Weapon (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17727" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Antharas Dualsword (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17728" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Valakas Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17729" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Valakas Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17730" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Valakas Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17731" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Valakas Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17732" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Valakas Buster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17733" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Valakas Caster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17734" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Valakas Retributer (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17735" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Lindvior Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17736" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Lindvior Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17737" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Lindvior Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17738" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Lindvior Caster (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17739" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Lindvior Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17740" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Lindvior Shooter (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17741" toLevel="1" name="Dandy's Breath">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Can obtain Lindvior Dual Dagger (1-hour). (Need Dandy's Scroll: Release Seal) -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<reuseDelay>60000</reuseDelay>
+		<rideState>NONE</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+			<condition name="OpChangeWeapon" />
+		</conditions>
+		<effects>
+			<effect name="ConvertItem" />
+		</effects>
 	</skill>
 	<skill id="17742" toLevel="1" name="Dandy's Strength">
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->

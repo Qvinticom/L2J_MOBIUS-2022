@@ -163,14 +163,156 @@
 		</effects>
 	</skill>
 	<skill id="14804" toLevel="10" name="Damage Reflect Attack Resistance">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
-		<!-- Increases Damage Reflect Resistance by 10. -->
+		<!-- Slightly resistant to Damage Reflect attack. -->
 		<icon>icon.skill0350</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<effects>
 			<effect name="DamageShield">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">80</value>
+					<value level="9">90</value>
+					<value level="10">100</value>
+				</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14805" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 20. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14806" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 30. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>30</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14807" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 40. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>40</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14808" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 50. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>50</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14809" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 60. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>60</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14810" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 70. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>70</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14811" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 80. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>80</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14812" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 90. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>90</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14813" toLevel="1" name="Damage Reflect Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Increases Damage Reflect Resistance by 100. -->
+		<icon>icon.skill0350</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShield">
+				<amount>100</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="14814" toLevel="1" name="Instant Kill Attack Resistance">
+		<!-- Glory Days confirmed -->
+		<!-- Has slight resistance to half-kill and lethal strike. -->
+		<icon>icon.skill0263</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="InstantKillResist">
 				<amount>10</amount>
 			</effect>
 		</effects>

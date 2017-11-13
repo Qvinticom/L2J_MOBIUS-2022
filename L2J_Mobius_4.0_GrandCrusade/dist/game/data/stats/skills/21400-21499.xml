@@ -231,18 +231,46 @@
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="21409" toLevel="1" name="Release Agathion's Seal - Three-headed Dragon">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>1575</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21410" toLevel="1" name="Cloak of the Chosen: Blessed Escape">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- Can use Blessed Escape every hour. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicLvl>1</magicLvl>
 		<hitTime>200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21411" toLevel="1" name="Halloween Outfit Appearance Stone">
 		<!-- AUTO GENERATED SKILL -->
@@ -264,268 +292,664 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="21414" toLevel="1" name="Halloween: Outfit">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Decreases Damage by 3%, LUC +1, and all Attribute Resistance + 10. -->
 		<icon>[icon.ev_wp_halloween]</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21415" toLevel="1" name="Halloween: Weapon">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Increases Damage by 3%, LUC +1, and Attack Attribute + 30. -->
 		<icon>[icon.ev_wp_halloween]</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21416" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Debuff Reflect + 3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="ReflectSkill">
+				<amount>3</amount>
+				<type>PHYSICAL</type>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>3</amount>
+				<type>MAGIC</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21417" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Debuff Reflect + 5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="ReflectSkill">
+				<amount>5</amount>
+				<type>PHYSICAL</type>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>5</amount>
+				<type>MAGIC</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21418" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Debuff Reflect + 10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="ReflectSkill">
+				<amount>10</amount>
+				<type>PHYSICAL</type>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>10</amount>
+				<type>MAGIC</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21419" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Damage Reflect Resistance + 5. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>5</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21420" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Damage Reflect Resistance + 7. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>7</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21421" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Damage Reflect Resistance + 15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DamageShieldResist">
+				<amount>15</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21422" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bow/Crossbow Resistance + 3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>3</BOW>
+				<CROSSBOW>3</CROSSBOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21423" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bow/Crossbow Resistance + 5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>5</BOW>
+				<CROSSBOW>5</CROSSBOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21424" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Bow/Crossbow Resistance + 10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>10</BOW>
+				<CROSSBOW>10</CROSSBOW>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21425" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Visual Def. + 3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21426" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Visual Def. + 5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21427" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Visual Def. + 10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21428" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21429" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21430" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21431" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attribute Resistance + 5. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21432" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attribute Resistance + 7. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>7</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21433" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Attribute Resistance + 15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21434" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Received Heal Amount + 3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HealEffect">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21435" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Received Heal Amount + 7%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HealEffect">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21436" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Received Heal Amount + 15%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HealEffect">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21437" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. HP + 3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21438" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. HP + 7%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21439" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. HP + 15%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21440" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. MP + 3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxMp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21441" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. MP + 5%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21442" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. MP + 10%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21443" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. CP + 3%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21444" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. CP + 7%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21445" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. CP + 15%. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21446" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. Speed + 3. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="Speed">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21447" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. Speed + 7. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21448" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Max. Speed + 15. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="Speed">
+				<amount>15</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21449" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- HP Recovery Bonus + 5. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HpRegen">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21450" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- HP Recovery Bonus + 8. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HpRegen">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21451" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- HP Recovery Bonus + 16. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HpRegen">
+				<amount>16</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21452" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MP Recovery Bonus + 3. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MpRegen">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21453" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MP Recovery Bonus + 4. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MpRegen">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21454" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MP Recovery Bonus + 8. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MpRegen">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21455" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P./M. Evasion + 3. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>3</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21456" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P./M. Evasion + 4. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21457" toLevel="1" name="Visual Enchant Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P./M. Evasion + 8. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21458" toLevel="1" name="Visual Enchant Stone">
 		<!-- AUTO GENERATED SKILL -->

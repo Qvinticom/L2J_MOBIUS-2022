@@ -635,104 +635,128 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17387" toLevel="1" name="Fish Stew: WIT">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 30min./ WIT + 3. Effect does not stack. Cooldown is 5min. -->
-		<icon>icon.fish_stew_buff</icon>
-		<abnormalType>FISH_STEW</abnormalType>
-		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
+		<icon>icon.fish_stew_buff</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
-		<isMagic>2</isMagic> <!-- Static Skill -->
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38222</itemConsumeId>
 		<effects>
 			<effect name="StatUp">
-				<stat>WIT</stat>
 				<amount>3</amount>
+				<stat>WIT</stat>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17388" toLevel="1" name="Fish Stew: INT">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 30min./ INT + 3. Effect does not stack. Cooldown is 5min. -->
-		<icon>icon.fish_stew_buff</icon>
-		<abnormalType>FISH_STEW</abnormalType>
-		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
+		<icon>icon.fish_stew_buff</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
-		<isMagic>2</isMagic> <!-- Static Skill -->
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38223</itemConsumeId>
 		<effects>
 			<effect name="StatUp">
-				<stat>INT</stat>
 				<amount>3</amount>
+				<stat>INT</stat>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17389" toLevel="1" name="Fish Stew: MEN">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 30min./ MEN + 3. Effect does not stack. Cooldown is 5min. -->
-		<icon>icon.fish_stew_buff</icon>
-		<abnormalType>FISH_STEW</abnormalType>
-		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
+		<icon>icon.fish_stew_buff</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
-		<isMagic>2</isMagic> <!-- Static Skill -->
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38224</itemConsumeId>
 		<effects>
 			<effect name="StatUp">
-				<stat>MEN</stat>
 				<amount>3</amount>
+				<stat>MEN</stat>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17390" toLevel="1" name="Fish Stew: DEX">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 30min./ DEX + 3. Effect does not stack. Cooldown is 5min. -->
-		<icon>icon.fish_stew_buff</icon>
-		<abnormalType>FISH_STEW</abnormalType>
-		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
+		<icon>icon.fish_stew_buff</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
-		<isMagic>2</isMagic> <!-- Static Skill -->
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38225</itemConsumeId>
 		<effects>
 			<effect name="StatUp">
-				<stat>DEX</stat>
 				<amount>3</amount>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17391" toLevel="1" name="Fish Stew: STR">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 30min./ STR + 3. Effect does not stack. Cooldown is 5min. -->
-		<icon>icon.fish_stew_buff</icon>
-		<abnormalType>FISH_STEW</abnormalType>
-		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
+		<icon>icon.fish_stew_buff</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
-		<isMagic>2</isMagic> <!-- Static Skill -->
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38226</itemConsumeId>
 		<effects>
 			<effect name="StatUp">
-				<stat>STR</stat>
 				<amount>3</amount>
+				<stat>STR</stat>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="17392" toLevel="1" name="Fish Stew: CON">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 30min./ CON + 3. Effect does not stack. Cooldown is 5min. -->
-		<icon>icon.fish_stew_buff</icon>
-		<abnormalType>FISH_STEW</abnormalType>
-		<abnormalTime>1800</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>INSTANT_EV_BUFF2</abnormalType>
+		<icon>icon.fish_stew_buff</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>300000</reuseDelay>
 		<targetType>SELF</targetType>
-		<isMagic>2</isMagic> <!-- Static Skill -->
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>300000</reuseDelay>
+		<isMagic>4</isMagic>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>38227</itemConsumeId>
 		<effects>
 			<effect name="StatUp">
-				<stat>CON</stat>
 				<amount>3</amount>
+				<stat>CON</stat>
 			</effect>
 		</effects>
 	</skill>

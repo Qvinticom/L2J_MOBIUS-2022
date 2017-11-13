@@ -1965,19 +1965,19 @@
 		</effects>
 	</skill>
 	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
-		<!-- Tauti's Authority. Inflicts 371 damage and Knocks Down nearby enemies. -->
+		<!-- Relies on Tauti's Authority to attack nearby enemies with 42645 power added to P. Attack, inflicting Knock Down. Consumes 4 Spirit Ores. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<icon>icon.skill1181</icon>
+		<icon>icon.tauti_weapon_one_hand_axe_high</icon>
 		<operateType>A2</operateType>
 		<mpConsume>279</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>15000</reuseDelay>
-		<isMagic>1</isMagic>
 		<effectPoint>-687</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
@@ -1989,13 +1989,15 @@
 		<affectRange>125</affectRange>
 		<affectLimit>5-12</affectLimit>
 		<staticReuse>true</staticReuse>
-		<isDebuff>true</isDebuff>
+		<isDebuff>2</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<itemConsumeCount>4</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
-			<effect name="MagicalAttack">
-				<power>371</power>
+			<effect name="PhysicalAttack">
+				<power>42645</power>
 			</effect>
 			<effect name="KnockBack">
 				<distance>50</distance>

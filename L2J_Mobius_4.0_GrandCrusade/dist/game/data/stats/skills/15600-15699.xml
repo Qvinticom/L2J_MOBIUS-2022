@@ -461,16 +461,22 @@
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15642" toLevel="1" name="Horn Melody (Adventurer)">
+	<skill id="15642" toLevel="4" name="Horn Melody (Adventurer)">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 60 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
-		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
@@ -478,18 +484,28 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>IMPROVE_PA_PD_UP;PA_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
+				<dispel>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>IMPROVE_PA_PD_UP;PA_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
+				<slot>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
 			</effect>
-			<effect name="PAtk">
-				<amount>17</amount>
+			<effect name="PhysicalAttack">
+				<amount>
+					<value level="1">17</value>
+					<value level="2">19</value>
+					<value level="3">21</value>
+					<value level="4">23</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk">
-				<amount>79</amount>
+			<effect name="MagicalAttack">
+				<amount>
+					<value level="1">79</value>
+					<value level="2">83</value>
+					<value level="3">87</value>
+					<value level="4">91</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
@@ -502,32 +518,36 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15643" toLevel="1" name="Drum Melody (Adventurer)">
+	<skill id="15643" toLevel="4" name="Drum Melody (Adventurer)">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 60 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, Critical Damage in standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk./ Def. + 20%, Casting Spd. + 20%, and Debuff Resistance + 10%. Received Critical Damage - 30%, and Speed - 15%. Party members equipped with melee weapons/bows/crossbows have increased Critical Damage after receiving an amount of damage. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
-		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<effectPoint>687</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effects>
-			<effect name="TriggerSkillByAttack">
-				<!-- Guess: Same as clan hall one -->
+			<effect name="TriggerSkillByDamage">
 				<!-- Critical Damage Increase -->
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
-				<minDamage>300</minDamage>
+				<maxAttackerLevel>107</maxAttackerLevel>
 				<chance>80</chance>
-				<isCritical>true</isCritical>
-				<allowWeapons>SWORD,BLUNT,DAGGER,DUALDAGGER,DUAL,DUALFIST,POLE,ANCIENTSWORD,RAPIER,BOW,CROSSBOW</allowWeapons>
+				<targetType>SELF</targetType>
+				<minDamage>300</minDamage>
 				<skillId>11569</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -538,16 +558,20 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
 			</effect>
-			<effect name="PAtk">
+			<effect name="PhysicalAttack">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk">
+			<effect name="MagicalAttack">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>-15</amount>
+			<effect name="Speed" fromLevel="1" toLevel="3">
+				<amount>
+					<value level="1">-15</value>
+					<value level="2">-10</value>
+					<value level="3">-5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
@@ -592,16 +616,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15644" toLevel="1" name="Pipe Organ Melody (Adventurer)">
+	<skill id="15644" toLevel="4" name="Pipe Organ Melody (Adventurer)">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 60 min., Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
-		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
@@ -615,35 +645,55 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
 			</effect>
-			<effect name="MaxHp">
-				<amount>37</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MaxCp">
-				<amount>37</amount>
+				<amount>
+					<value level="1">37</value>
+					<value level="2">39</value>
+					<value level="3">41</value>
+					<value level="4">43</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxMp">
-				<amount>37</amount>
+				<amount>
+					<value level="1">37</value>
+					<value level="2">39</value>
+					<value level="3">41</value>
+					<value level="4">43</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="HpRegen">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">37</value>
+					<value level="2">39</value>
+					<value level="3">41</value>
+					<value level="4">43</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="15645" toLevel="1" name="Guitar Melody (Adventurer)">
+	<skill id="15645" toLevel="4" name="Guitar Melody (Adventurer)">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 60 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%. -->
-		<!-- TODO: Iss Enchanter's Enchant Skill MP Consumption - 20% Effect on skill -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
-		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
@@ -662,7 +712,12 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalRate">
-				<amount>32</amount>
+				<amount>
+					<value level="1">32</value>
+					<value level="2">34</value>
+					<value level="3">36</value>
+					<value level="4">38</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalRate">
@@ -691,16 +746,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15646" toLevel="1" name="Harp Melody (Adventurer)">
+	<skill id="15646" toLevel="4" name="Harp Melody (Adventurer)">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 60 min., P. Accuracy + 5, P./M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
-		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
@@ -715,19 +776,39 @@
 				<slot>IMPROVE_HIT_DEFENCE_CRT_RATE_UP;HIT_UP;T_CRT_DMG_DOWN;IMPROVE_SPEED_AVOID_UP;SPEED_UP;AVOID_UP</slot>
 			</effect>
 			<effect name="Speed">
-				<amount>34</amount>
+				<amount>
+					<value level="1">34</value>
+					<value level="2">35</value>
+					<value level="3">36</value>
+					<value level="4">37</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="Accuracy">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalEvasion">
-				<amount>5</amount>
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceCriticalDamage">
@@ -736,16 +817,22 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15647" toLevel="1" name="Lute Melody (Adventurer)">
+	<skill id="15647" toLevel="4" name="Lute Melody (Adventurer)">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- For 60 min., Atk. Spd. + 34%, Casting Spd. + 31%, and has a chance of applying 9% Vampiric Rage. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<castRange>400</castRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
-		<abnormalTime>3600</abnormalTime>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
@@ -757,18 +844,28 @@
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
+				<slot>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</slot>
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>9</amount>
-				<chance>30</chance>
+				<chance>80</chance>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>34</amount>
+				<amount>
+					<value level="1">34</value>
+					<value level="2">35</value>
+					<value level="3">36</value>
+					<value level="4">37</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>31</amount>
+				<amount>
+					<value level="1">31</value>
+					<value level="2">32</value>
+					<value level="3">33</value>
+					<value level="4">34</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

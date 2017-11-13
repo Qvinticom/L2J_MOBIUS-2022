@@ -971,37 +971,23 @@
 		<magicLvl>1</magicLvl>
 		<effects>
 			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">93</value>
-					<value level="2">93</value>
-					<value level="3">93</value>
-					<value level="4">93</value>
-					<value level="5">93</value>
-				</amount>
+				<amount>93</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
 				<type>SITTING</type>
-				<value>
-					<value level="1">32</value>
-					<value level="2">32</value>
-					<value level="3">32</value>
-					<value level="4">32</value>
-					<value level="5">32</value>
-				</value>
+				<value>32</value>
 			</effect>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
 				<type>STANDING</type>
-				<value>
-					<value level="1">32</value>
-					<value level="2">32</value>
-					<value level="3">32</value>
-					<value level="4">32</value>
-					<value level="5">32</value>
-				</value>
+				<value>32</value>
 			</effect>
-			<effect name="MagicMpCost">
+			<effect name="MagicMpCost" fromLevel="2" toLevel="5">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">-7</value>
@@ -1029,7 +1015,7 @@
 					<value level="2">0</value>
 					<value level="3">11</value>
 					<value level="4">11</value>
-					<value level="5">11</value>
+					<value level="5">21</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1037,22 +1023,22 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">5</value>
-					<value level="4">5</value>
-					<value level="5">5</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
 				</amount>
 			</effect>
 			<effect name="ReflectSkill">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">5</value>
-					<value level="4">5</value>
-					<value level="5">5</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
 				</amount>
 				<type>MAGIC</type>
 			</effect>
-			<effect name="AbsorbDamage">
+			<effect name="AbsorbDamage"> <!-- TODO: Need Real Damage Resist Effect -->
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1102,53 +1088,31 @@
 		<magicLvl>1</magicLvl>
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>
-					<value level="1">55</value>
-					<value level="2">55</value>
-					<value level="3">55</value>
-					<value level="4">55</value>
-					<value level="5">55</value>
-				</amount>
+				<amount>55</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">2</value>
-					<value level="3">2</value>
-					<value level="4">2</value>
-					<value level="5">2</value>
-				</amount>
+				<amount>2</amount>
+				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
 			</effect>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
 				<type>SITTING</type>
-				<value>
-					<value level="1">8</value>
-					<value level="2">8</value>
-					<value level="3">8</value>
-					<value level="4">8</value>
-					<value level="5">8</value>
-				</value>
+				<value>8</value>
 			</effect>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
 				<type>STANDING</type>
-				<value>
-					<value level="1">8</value>
-					<value level="2">8</value>
-					<value level="3">8</value>
-					<value level="4">8</value>
-					<value level="5">8</value>
-				</value>
+				<value>8</value>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>
-					<value level="1">-10</value>
-					<value level="2">-10</value>
-					<value level="3">-10</value>
-					<value level="4">-10</value>
-					<value level="5">-10</value>
-				</amount>
+				<amount>-10</amount>
 				<slot>DEBUFF</slot>
 			</effect>
 			<effect name="SkillCriticalProbability">
@@ -1161,7 +1125,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="VampiricAttack" fromLevel="2" toLevel="5">
+			<effect name="VampiricAttack">
 				<amount>
 					<value level="1">0</value>
 					<value level="2">4</value>
@@ -1169,7 +1133,7 @@
 					<value level="4">4</value>
 					<value level="5">4</value>
 				</amount>
-				<chance>100</chance>
+				<chance>30</chance>
 			</effect>
 			<effect name="Reuse">
 				<amount>
@@ -1193,17 +1157,6 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
-			<effect name="Reuse">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">-10</value>
-					<value level="4">-10</value>
-					<value level="5">-10</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
-			</effect>
 			<effect name="Speed">
 				<amount>
 					<value level="1">0</value>
@@ -1214,7 +1167,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="AbsorbDamage">
+			<effect name="AbsorbDamage"> <!-- TODO: Need Real Damage Resist Effect -->
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
@@ -1274,79 +1227,35 @@
 		<magicLvl>1</magicLvl>
 		<effects>
 			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">60</value>
-					<value level="2">60</value>
-					<value level="3">60</value>
-					<value level="4">60</value>
-					<value level="5">60</value>
-				</amount>
+				<amount>60</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
 			</effect>
 			<effect name="WeightLimit">
-				<amount>
-					<value level="1">-30</value>
-					<value level="2">-30</value>
-					<value level="3">-30</value>
-					<value level="4">-30</value>
-					<value level="5">-30</value>
-				</amount>
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>
-					<value level="1">-3</value>
-					<value level="2">-3</value>
-					<value level="3">-3</value>
-					<value level="4">-3</value>
-					<value level="5">-3</value>
-				</amount>
+				<amount>-3</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>
-					<value level="1">-3</value>
-					<value level="2">-3</value>
-					<value level="3">-3</value>
-					<value level="4">-3</value>
-					<value level="5">-3</value>
-				</amount>
+				<amount>-3</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
-			</effect>
-			<effect name="Reuse">
-				<amount>
-					<value level="1">-3</value>
-					<value level="2">-3</value>
-					<value level="3">-3</value>
-					<value level="4">-3</value>
-					<value level="5">-3</value>
-				</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
 			</effect>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
 				<type>SITTING</type>
-				<value>
-					<value level="1">8</value>
-					<value level="2">8</value>
-					<value level="3">8</value>
-					<value level="4">8</value>
-					<value level="5">8</value>
-				</value>
+				<value>8</value>
 			</effect>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
 				<type>STANDING</type>
-				<value>
-					<value level="1">8</value>
-					<value level="2">8</value>
-					<value level="3">8</value>
-					<value level="4">8</value>
-					<value level="5">8</value>
-				</value>
+				<value>8</value>
 			</effect>
 			<effect name="MaxHp">
 				<amount>
@@ -1362,9 +1271,9 @@
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">-11</value>
-					<value level="4">-11</value>
-					<value level="5">-11</value>
+					<value level="3">-10</value>
+					<value level="4">-10</value>
+					<value level="5">-10</value>
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
@@ -1398,7 +1307,7 @@
 					<value level="5">10</value>
 				</DUALDAGGER>
 			</effect>
-			<effect name="AbsorbDamage">
+			<effect name="AbsorbDamage"> <!-- TODO: Need Real Damage Resist Effect -->
 				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>

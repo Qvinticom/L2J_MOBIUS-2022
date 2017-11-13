@@ -30,7 +30,7 @@
 		</effects>
 	</skill>
 	<skill id="10501" toLevel="10" name="Superior Dagger Mastery">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- P. Atk. + 739, Atk. Spd. + 25%, Accuracy + 8, and vital spot attack success rate + 5%. STR +2. Depending on your STR, Cooldown can be reset or abnormal status duration increases + 2 times. -->
 		<icon>icon.skill10501</icon>
@@ -52,7 +52,14 @@
 			<effect name="SkillCritical">
 				<stat>STR</stat>
 			</effect>
-			<effect name="PAtk">
+			<effect name="PhysicalAttack">
+				<amount>25</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DAGGER</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttack">
 				<amount>
 					<value level="1">739</value>
 					<value level="2">856</value>
@@ -87,6 +94,9 @@
 			<effect name="FatalBlowRate">
 				<amount>5</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DAGGER</item>
+				</weaponType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -95,7 +105,7 @@
 		</effects>
 	</skill>
 	<skill id="10502" toLevel="10" name="Superior Dual Dagger Mastery">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- P. Atk. + 844, Atk. Spd. + 25%, Accuracy + 8, and vital spot attack success rate + 5%. STR + 2. -->
 		<icon>icon.skill10502</icon>
@@ -114,7 +124,14 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PAtk">
+			<effect name="PhysicalAttack">
+				<amount>25</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</effect>
+			<effect name="PhysicalAttack">
 				<amount>
 					<value level="1">844</value>
 					<value level="2">979</value>
@@ -149,6 +166,9 @@
 			<effect name="FatalBlowRate">
 				<amount>5</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>DUALDAGGER</item>
+				</weaponType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -385,7 +405,7 @@
 		</effects>
 	</skill>
 	<skill id="10508" toLevel="11" name="Blood Stab">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- Strike's the enemy's unprotected back with 32401 Power and additionally inflicts bleed. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. -->
 		<abnormalLvl>
@@ -470,6 +490,7 @@
 		<effects>
 			<effect name="AirBind" />
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>15</halfLethal>
 			</effect>
 			<effect name="DamOverTime">
@@ -480,49 +501,49 @@
 		<pveEffects>
 			<effect name="Backstab">
 				<power>
-					<value level="1">32401</value>
-					<value level="2">33521</value>
-					<value level="3">35765</value>
-					<value level="4">38007</value>
-					<value level="5">40251</value>
-					<value level="6">42495</value>
-					<value level="7">44737</value>
-					<value level="8">46983</value>
-					<value level="9">48511</value>
-					<value level="10">50491</value>
-					<value level="11">52471</value>
+					<value level="1">38880</value>
+					<value level="2">40220</value>
+					<value level="3">42910</value>
+					<value level="4">45600</value>
+					<value level="5">48300</value>
+					<value level="6">50990</value>
+					<value level="7">53680</value>
+					<value level="8">56370</value>
+					<value level="9">58210</value>
+					<value level="10">60580</value>
+					<value level="11">62960</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>30</criticalChance>
-				<chance>40</chance>
+				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pveEffects>
 		<pvpEffects>
 			<effect name="Backstab">
 				<power>
-					<value level="1">32401</value>
-					<value level="2">33521</value>
-					<value level="3">35765</value>
-					<value level="4">38007</value>
-					<value level="5">40251</value>
-					<value level="6">42495</value>
-					<value level="7">44737</value>
-					<value level="8">46983</value>
-					<value level="9">48511</value>
-					<value level="10">50491</value>
-					<value level="11">52471</value>
+					<value level="1">38880</value>
+					<value level="2">40220</value>
+					<value level="3">42910</value>
+					<value level="4">45600</value>
+					<value level="5">48300</value>
+					<value level="6">50990</value>
+					<value level="7">53680</value>
+					<value level="8">56370</value>
+					<value level="9">58210</value>
+					<value level="10">60580</value>
+					<value level="11">62960</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * (5 + subIndex)}</value>
 				</power>
 				<criticalChance>30</criticalChance>
-				<chance>40</chance>
+				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pvpEffects>
 	</skill>
 	<skill id="10509" toLevel="11" name="Heart Breaker">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- Stabs target's heart with 21344 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Spd. + 40, Evasion + 5, and Rear Critical Damage + 30%. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
@@ -588,55 +609,12 @@
 				</weaponType>
 			</condition>
 		</conditions>
-		<effects>
-			<effect name="Lethal">
-				<halfLethal>15</halfLethal>
-			</effect>
-		</effects>
-		<pveEffects>
-			<effect name="FatalBlow">
-				<power>
-					<value level="1">21344</value>
-					<value level="2">22083</value>
-					<value level="3">23560</value>
-					<value level="4">25039</value>
-					<value level="5">26516</value>
-					<value level="6">27993</value>
-					<value level="7">29472</value>
-					<value level="8">30949</value>
-					<value level="9">35304</value>
-					<value level="10">37026</value>
-					<value level="11">38748</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
-				</power>
-				<criticalChance>15</criticalChance>
-				<chance>36.5</chance>
-				<overHit>true</overHit>
-			</effect>
-		</pveEffects>
-		<pvpEffects>
-			<effect name="FatalBlow">
-				<power>
-					<value level="1">21344</value>
-					<value level="2">22083</value>
-					<value level="3">23560</value>
-					<value level="4">25039</value>
-					<value level="5">26516</value>
-					<value level="6">27993</value>
-					<value level="7">29472</value>
-					<value level="8">30949</value>
-					<value level="9">35304</value>
-					<value level="10">37026</value>
-					<value level="11">38748</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * (5 + subIndex)}</value>
-				</power>
-				<criticalChance>15</criticalChance>
-				<chance>36.5</chance>
-				<overHit>true</overHit>
-			</effect>
-		</pvpEffects>
 		<selfEffects>
+			<effect name="CriticalDamagePosition">
+				<amount>30</amount>
+				<mode>PER</mode>
+				<position>BACK</position>
+			</effect>
 			<effect name="Speed">
 				<amount>40</amount>
 				<mode>DIFF</mode>
@@ -645,15 +623,61 @@
 				<amount>5</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalDamagePosition">
-				<amount>30</amount>
-				<mode>PER</mode>
-				<position>BACK</position>
-			</effect>
 		</selfEffects>
+		<pveEffects>
+			<effect name="FatalBlow">
+				<power>
+					<value level="1">25610</value>
+					<value level="2">26490</value>
+					<value level="3">28270</value>
+					<value level="4">30040</value>
+					<value level="5">31810</value>
+					<value level="6">33590</value>
+					<value level="7">35360</value>
+					<value level="8">37130</value>
+					<value level="9">42360</value>
+					<value level="10">44430</value>
+					<value level="11">46490</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<chanceBoost>365</chanceBoost>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
+				<halfLethal>15</halfLethal>
+			</effect>
+		</pveEffects>
+		<pvpEffects>
+			<effect name="FatalBlow">
+				<power>
+					<value level="1">25610</value>
+					<value level="2">26490</value>
+					<value level="3">28270</value>
+					<value level="4">30040</value>
+					<value level="5">31810</value>
+					<value level="6">33590</value>
+					<value level="7">35360</value>
+					<value level="8">37130</value>
+					<value level="9">42360</value>
+					<value level="10">44430</value>
+					<value level="11">46490</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * (5 + subIndex)}</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<chanceBoost>365</chanceBoost>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
+				<halfLethal>15</halfLethal>
+			</effect>
+		</pvpEffects>
 	</skill>
 	<skill id="10510" toLevel="11" name="Chain Blow">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts damage with 22718 Power added to P. Atk. Additional Skill Power 20% to damage if used during bleed. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10510</icon>
@@ -717,29 +741,42 @@
 		</conditions>
 		<effects>
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>15</halfLethal>
 			</effect>
 		</effects>
 		<pveEffects>
 			<effect name="FatalBlow">
 				<power>
-					<value level="1">22718</value>
-					<value level="2">24289</value>
-					<value level="3">25861</value>
-					<value level="4">27431</value>
-					<value level="5">29003</value>
-					<value level="6">30574</value>
-					<value level="7">32146</value>
-					<value level="8">33717</value>
-					<value level="9">37332</value>
-					<value level="10">39152</value>
-					<value level="11">40972</value>
+					<value level="1">27260</value>
+					<value level="2">29140</value>
+					<value level="3">31030</value>
+					<value level="4">32910</value>
+					<value level="5">34800</value>
+					<value level="6">36680</value>
+					<value level="7">38570</value>
+					<value level="8">40460</value>
+					<value level="9">44790</value>
+					<value level="10">46980</value>
+					<value level="11">49160</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>20</criticalChance>
 				<abnormalType>BLEEDING</abnormalType>
-				<abnormalPower>4130</abnormalPower>
-				<chance>36.5</chance>
+				<abnormalPower>
+					<value level="1">5452</value>
+					<value level="2">5828</value>
+					<value level="3">6206</value>
+					<value level="4">6582</value>
+					<value level="5">6960</value>
+					<value level="6">7336</value>
+					<value level="7">7714</value>
+					<value level="8">8092</value>
+					<value level="9">8958</value>
+					<value level="10">9396</value>
+					<value level="11">9832</value>
+				</abnormalPower>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pveEffects>
@@ -763,7 +800,7 @@
 				<criticalChance>20</criticalChance>
 				<abnormalType>BLEEDING</abnormalType>
 				<abnormalPower>4130</abnormalPower>
-				<chance>36.5</chance>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pvpEffects>
@@ -956,9 +993,9 @@
 		</effects>
 	</skill>
 	<skill id="10513" toLevel="10" name="Barrage of Nails">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
-		<!-- Calls down a rain of blades to attack nearby enemies with 13649 Power added to P. Atk. and inflicts Bleed. Requires a dagger or dual dagger. Over-hit. Critical hit. -->
+		<!-- Attacks the enemies near you with 13649 power added to P. Attack. Additionally, decreases their speed by 100 and makes them unable to hide for 5 seconds. Requires dagger/dual dagger. -->
 		<icon>icon.skill10513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1013,7 +1050,7 @@
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
-		<isDebuff>true</isDebuff>
+		<isDebuff>1</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1053,10 +1090,17 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="Speed">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>HIDE</slot>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10514" toLevel="8" name="Paralyzing Shadow">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- Seals an enemy with the power of darkness. Causes the enemy's body to go completely rigid for 10 seconds and causes paralysis for 5 seconds. -->
 		<icon>icon.skill10514</icon>
@@ -1070,7 +1114,7 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 		</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="8">80</value>
@@ -1278,34 +1322,40 @@
 		</effects>
 	</skill>
 	<skill id="10517" toLevel="1" name="Shadow Hide">
-		<!-- Updated to HELIOS -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- You go into Hide state, cancel debuffs and Hold effects on you, increase HP Recovery Bonus, and eliminate enemy enmity toward you. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="1">50</value>
+			<value fromLevel="1" toLevel="1">20</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<icon>icon.skill10517</icon>
-		<operateType>A2</operateType>
+		<operateType>DA2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>38</mpConsume>
+		<castRange>250</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
 		<reuseDelay>180000</reuseDelay>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
-		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpBlink">
+				<direction>FRONT</direction>
+				<range>250</range>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="Hide" />
 			<effect name="DispelBySlot">
@@ -1326,12 +1376,12 @@
 		</effects>
 	</skill>
 	<skill id="10518" toLevel="1" name="Assassin's Reflex">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- Atk. Spd. + 20% for 10 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<abnormalType>MIGHT_MORTAL</abnormalType>
+		<abnormalType>ASSASSINS_REFLEX</abnormalType>
 		<icon>icon.skill10518</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
@@ -1614,7 +1664,7 @@
 		</effects>
 	</skill>
 	<skill id="10524" toLevel="3" name="Counter Stance">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- For 10 seconds, evades physical skill attacks and reflects part of the damage received. -->
 		<icon>icon.skill10524</icon>
@@ -1646,7 +1696,7 @@
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
-		<reuseDelay>150000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1733,7 +1783,7 @@
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
-		<reuseDelay>60000</reuseDelay>
+		<reuseDelay>40000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1868,12 +1918,12 @@
 		</effects>
 	</skill>
 	<skill id="10527" toLevel="4" name="Mass Trick">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- Cancels target of frontal enemies. Eliminates their aggression and prevent them from targeting anything for 3 seconds. -->
 		<icon>icon.skill10527</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
+		<abnormalTime>20</abnormalTime>
 		<abnormalType>CONFUSION</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="4">80</value>
@@ -1909,6 +1959,14 @@
 			</effect>
 			<effect name="TargetCancel" />
 			<effect name="DisableTargeting" />
+			<effect name="MagicalEvasion">
+				<amount>-10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
 					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
@@ -1938,19 +1996,18 @@
 		</effects>
 	</skill>
 	<skill id="10529" toLevel="4" name="Shadow Flash">
-		<!-- Updated to HELIOS -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- Teleports to the back of the target to increase the damage from P. Critical Attack by 30% for 10 seconds and prevents it from recovering HP by over 50%. Additionally, the target is unable to hide and this state cannot be canceled. -->
 		<icon>icon.skill10529</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<abnormalType>CRITICAL_SPECIAL</abnormalType>
-		<abnormalVisualEffect>DEATH_MARK</abnormalVisualEffect>
+		<abnormalType>SHADOW_FLASH</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="4">100</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<trait>NONE</trait>
+		<trait>SHOCK</trait>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1964,7 +2021,7 @@
 			<value fromLevel="1" toLevel="4">600</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</castRange>
-		<castRange>900</castRange>
+		<castRange>1100</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -1977,14 +2034,9 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<targetConditions>
-			<condition name="OpCheckFlag" />
-		</targetConditions>
+		<canBeDispelled>true</canBeDispelled>
 		<effects>
 			<effect name="TeleportToTarget" />
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>40</amount>
 				<mode>PER</mode>
@@ -1993,12 +2045,8 @@
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-100</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="TargetMeProbability">
-				<chance>100</chance>
+			<effect name="BlockAbnormalSlot">
+				<slot>HIDE</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -2044,9 +2092,9 @@
 		</effects>
 	</skill>
 	<skill id="10531" toLevel="2" name="Angel of Death">
-		<!-- Updated to HELIOS -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
-		<!-- For 30 seconds, Vital Spot Attack Rate +40%, P. Skill Power +10%, P. Accuracy +8, P. Evasion +40, and defends against debuff attacks 5 times. Can be used when Dagger/Dual Dagger is equipped. -->
+		<!-- Momentarily increases Speed by 30, P. Evasion by 40, skill Evasion by 75, Vital Spot Attack Rate by 40%, and Debuff Resistance by 80%. Casts Crippling Poison on enemies attacking you. Requires a dagger/dual dagger to be equipped. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2077,7 +2125,6 @@
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<isMagic>4</isMagic>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2090,14 +2137,29 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="TriggerSkillByDamage">
+				<!-- Crippling Poison -->
+				<attackerType>L2Playable</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>107</maxAttackerLevel>
+				<chance>80</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>1</minDamage>
+				<skillId>10545</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLevel>
+			</effect>
 			<effect name="FatalBlowRate">
-				<value level="1">40</value>
-				<value level="2">45</value>
+				<amount>
+					<value level="1">40</value>
+					<value level="2">45</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalSkillPower">
-				<value level="1">10</value>
-				<value level="2">15</value>
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Accuracy">
@@ -2109,12 +2171,9 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="AbnormalShield">
-				<times>
-					<value level="1">5</value>
-					<value level="2">7</value>
-				</times>
+				<times>5</times>
 			</effect>
-			<effect name="PAtk" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalAttack" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
 					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
 				</amount>
@@ -2123,7 +2182,7 @@
 		</effects>
 	</skill>
 	<skill id="10532" toLevel="7" name="Clone Attack">
-		<!-- Updated to IO -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
 		<!-- Melt into a target's shadow and summons clones to attack it. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill10532</icon>
@@ -2150,7 +2209,7 @@
 		<nextAction>ATTACK</nextAction>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<hitTime>3000</hitTime>
+		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-687</value>
@@ -2161,7 +2220,7 @@
 			<value level="6">-713</value>
 			<value level="7">-715</value>
 		</effectPoint>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<rideState>NONE</rideState>
 		<isMagic>4</isMagic>
 		<staticReuse>true</staticReuse>
@@ -2201,39 +2260,26 @@
 			</effect>
 		</endEffects>
 	</skill>
-	<skill id="10534" toLevel="1" name="Trace of Dagger">
-		<!-- Updated to IO -->
+	<skill id="10534" toLevel="3" name="Trace of Dagger">
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
-		<!-- During normal attacks, has a chance of inflicting Poison on the enemy and blocking the use of magic skills. -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>POISON</abnormalType>
+		<!-- Critical damage has been boosted by 100%. -->
+		<abnormalTime>3</abnormalTime>
 		<icon>icon.skill10534</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<mpConsume>75</mpConsume>
-		<hitTime>800</hitTime>
-		<coolTime>100</coolTime>
-		<effectPoint>711</effectPoint>
-		<reuseDelay>600000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isMagic>4</isMagic>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<effects>
-			<effect name="TriggerSkillByAttack">
-				<!-- Block Magic -->
-				<attackerType>L2Playable</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
-				<isCritical>false</isCritical>
-				<targetType>TARGET</targetType>
-				<chance>15</chance>
-				<allowWeapons>ALL</allowWeapons>
-				<skillId>10537</skillId>
-				<skillLevel>1</skillLevel>
+			<effect name="CriticalDamage">
+				<amount>100</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

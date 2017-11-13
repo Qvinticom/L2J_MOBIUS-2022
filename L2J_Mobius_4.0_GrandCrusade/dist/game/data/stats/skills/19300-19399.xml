@@ -260,6 +260,7 @@
 	<skill id="19305" toLevel="7" name="Shadow Reverse">
 		<!-- Updated to GRAND CRUSADE -->
 		<!-- Attempts Deadly Attack on the target with 38160 power added to P. Attack and moves backward. Additionally, decreases Accuracy by 5 for 3 seconds. Half-kill is possible. Requires dagger/dual dagger. -->
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<icon>icon.skill19305</icon>
 		<operateType>A2</operateType>
@@ -330,12 +331,30 @@
 		<!-- Updated to GRAND CRUSADE -->
 		<!-- Each party member will receive a random set of effects based on a coin flip: Increased P./M. Atk and P./M. Skill Power OR Increased Head size and P./M. Def. Consumes 7777 Adena. Requires dagger/dual dagger. -->
 		<icon>icon.skill19306</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
+		<itemConsumeCount>7777</itemConsumeCount>
+		<itemConsumeId>57</itemConsumeId> <!-- Adena -->
 		<mpConsume>36</mpConsume>
 		<hitTime>200</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
+		<castRange>-1</castRange>
+		<affectRange>600</affectRange>
+		<effectRange>600</effectRange>
 		<effectPoint>669</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallRandomSkill">
+				<skills>19307,1;19308,1</skills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19307" toLevel="2" name="Lucky Coin: Attack">
 		<!-- Updated to GRAND CRUSADE -->
@@ -343,6 +362,28 @@
 		<icon>icon.skill19307</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>14</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19308" toLevel="1" name="Lucky Coin: Defense">
 		<!-- Updated to GRAND CRUSADE -->
@@ -350,6 +391,22 @@
 		<icon>icon.skill19308</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
+		<abnormalType>BIG_HEAD</abnormalType>
+		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19309" toLevel="7" name="Reverse Plunder">
 		<!-- Updated to GRAND CRUSADE -->

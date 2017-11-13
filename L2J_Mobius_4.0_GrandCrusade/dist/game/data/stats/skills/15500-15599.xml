@@ -399,40 +399,100 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="15537" toLevel="2" name="Blood Sacrifice: Decrease Speed">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Restores 50% of enemy's HP and gives an abnormal status debuff. -->
+		<abnormalTime>10</abnormalTime>
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>1</isDebuff>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">50</value>
+					<value level="2">100</value>
+				</power>
+			</effect>
+			<effect name="Speed">
+				<amount>-40</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15538" toLevel="2" name="Blood Sacrifice: Decrease Accuracy">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Restores 50% of enemy's HP and gives an abnormal status debuff. -->
+		<abnormalTime>10</abnormalTime>
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>1</isDebuff>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">50</value>
+					<value level="2">100</value>
+				</power>
+			</effect>
+			<effect name="Accuracy">
+				<amount>-6</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15539" toLevel="2" name="Blood Sacrifice: Decrease P. Def.">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Restores 50% of enemy's HP and gives an abnormal status debuff. -->
+		<abnormalTime>10</abnormalTime>
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>1</isDebuff>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">50</value>
+					<value level="2">100</value>
+				</power>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15540" toLevel="2" name="Blood Sacrifice: Decrease M. Def.">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Restores 50% of enemy's HP and gives an abnormal status debuff. -->
+		<abnormalTime>10</abnormalTime>
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isDebuff>1</isDebuff>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">50</value>
+					<value level="2">100</value>
+				</power>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="15541" toLevel="1" name="Flame Pillar">
 		<!-- AUTO GENERATED SKILL -->

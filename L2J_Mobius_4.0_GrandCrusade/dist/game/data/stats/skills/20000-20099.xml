@@ -176,19 +176,19 @@
 		</effects>
 	</skill>
 	<skill id="20007" toLevel="1" name="Block Invincibility">
-		<!-- Updated to Ertheia -->
+		<!-- Updated to GRAND CRUSADE -->
 		<!-- Skill activates once Celestial Aegis wears off. -->
 		<!-- For 2 min., HP/MP Recovery Bonus increase, and Speed + 5. You cannot receive the Celestial Aegis, Celestial Protection, or the Celestial Party Protection effect. -->
 		<icon>icon.skill11560</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
-		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
+		<abnormalType>BLOCK_INVINCIBILITY</abnormalType>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>1</isMagic>
 		<effectPoint>1</effectPoint>
-		<isDebuff>true</isDebuff>
+		<isDebuff>1</isDebuff>
 		<canBeDispelled>false</canBeDispelled>
 		<effects>
 			<effect name="Speed">
@@ -202,6 +202,9 @@
 			<effect name="MpRegen">
 				<amount>1</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL;BLOCK_INVINCIBILITY</slot>
 			</effect>
 		</effects>
 	</skill>

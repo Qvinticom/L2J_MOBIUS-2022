@@ -252,8 +252,8 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
-		<!-- Updated to GRAND CRUSADE -->
+ 	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
+ 		<!-- Updated to GRAND CRUSADE -->
 		<!-- Moves to the left side of the target to attempt Deadly Attack with 56030 power added to P. Attack and decrease Speed by 50. Additionally, applies an effect on you to increase Critical Rate/Damage from the side and from behind for 10 seconds. Half-kill is possible. Requires dagger/dual dagger. -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -262,10 +262,10 @@
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<icon>icon.skill10705</icon>
+ 		<icon>icon.skill10705</icon>
 		<operateType>DA4</operateType>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+ 		<affectScope>SINGLE</affectScope>
 		<mpConsume>
 			<value level="1">77</value>
 			<value level="2">79</value>
@@ -296,7 +296,7 @@
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
-		<effects>
+ 		<effects>
 			<effect name="FatalBlow">
 				<power>
 					<value level="1">56030</value>
@@ -306,9 +306,9 @@
 				<criticalChance>15</criticalChance>
 				<chanceBoost>300</chanceBoost>
 				<overHit>true</overHit>
-			</effect>
-		</effects>
-	</skill>
+ 			</effect>
+ 		</effects>
+ 	</skill>
 	<skill id="10747" toLevel="1" name="Rogue - Individual Passive">
 		<!-- Glory Days confirmed -->
 		<icon>icon.skill0217</icon>

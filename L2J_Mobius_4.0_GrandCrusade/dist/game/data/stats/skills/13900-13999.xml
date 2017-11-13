@@ -2160,8 +2160,7 @@
 		</effects>
 	</skill>
 	<skill id="13957" toLevel="10" name="Activate.Silence">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<!-- Silence has temporarily restrained skills. Ignores debuff immunity. -->
+		<!-- Updated to Helios -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2318,68 +2317,211 @@
 		</effects>
 	</skill>
 	<skill id="13963" toLevel="1" name="Protector's Guardian Earrings">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Maximum MP +49, Maximum CP +10%%, Defense/Magical Resistance +3%%, Stun/Mental attack and defense success rate +30%%, Vampiric Rage +4%% -->
+		<icon>icon.accessory_earring_of_hero_i01</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="13964" toLevel="1" name="Bracelet of the Conqueror - CON">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Up to 5 Talismans can be equipped. Increases by up to 531 HP. CON +3 -->
+		<icon>icon.ertheia_bracelet_i01</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="13965" toLevel="1" name="Bracelet of the Conqueror - MEN">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Up to 5 Talismans can be equipped. Increases by up to 531 HP. MEN +3 -->
+		<icon>icon.ertheia_bracelet_i01</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="13966" toLevel="1" name="Bracelet of the Conqueror - DEX">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Up to 5 Talismans can be equipped. Increases by up to 531 HP. DEX +3 -->
+		<icon>icon.ertheia_bracelet_i01</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="13967" toLevel="1" name="Bracelet of the Conqueror - WIT">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Up to 5 Talismans can be equipped. Increases by up to 531 HP. WIT +3 -->
+		<icon>icon.ertheia_bracelet_i01</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="13968" toLevel="1" name="Bracelet of the Conqueror - STR">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Up to 5 Talismans can be equipped. Increases by up to 531 HP. STR +3 -->
+		<icon>icon.ertheia_bracelet_i01</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="13969" toLevel="1" name="Bracelet of the Conqueror - INT">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Up to 5 Talismans can be equipped. Increases by up to 531 HP. INT +3 -->
+		<icon>icon.ertheia_bracelet_i01</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="13970" toLevel="10" name="Sayha's Talisman">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Level: 1 Receives a boosting effect for P. Defense by 112, M. Defense by 74, and XP/SP by 1%. -->
+		<!-- Level: 2 Receives a boosting effect for P. Defense by 225, M. Defense by 147, and XP/SP by 2%. -->
+		<!-- Level: 3 Receives a boosting effect for P. Defense by 450, M. Defense by 294, and XP/SP by 3%. -->
+		<!-- Level: 4 Receives a boosting effect for P. Defense by 676, M. Defense by 441, and XP/SP by 5%. -->
+		<!-- Level: 5 Receives a boosting effect for P. Defense by 901, M. Defense by 589, and XP/SP by 7%. -->
+		<!-- Level: 6 Receives a boosting effect for P. Defense by 1126, M. Defense by 736, and XP/SP by 10%. -->
+		<!-- Level: 7 Receives a boosting effect for P. Defense by 1351, M. Defense by 833, and XP/SP by 15%. -->
+		<!-- Level: 8 Receives a boosting effect for P. Defense by 1576, M. Defense by 1030, and XP/SP by 20%. -->
+		<!-- Level: 9 Receives a boosting effect for Defense by 1801, M. Defense by 1178, XP/SP by 25% and Recovery Potion and Miracle Potion by 1000. -->
+		<!-- Level: 10 Receives a boosting effect for Defense by 2027, M. Defense by 1325, XP/SP by 30% and Recovery Potion and Miracle Potion by 2000. -->
+		<icon>icon.bm_sayhas_talisman</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>3</isMagic>
 	</skill>
 	<skill id="13971" toLevel="4" name="Sayha's Trust">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Level: 1 Receives the effect that increases skill power by 2% and decreases cooldown by 2%. -->
+		<!-- Level: 2 Receives the effect that increases skill power by 3% and decreases cooldown by 3%. -->
+		<!-- Level: 3 Receives the effect that increases skill power by 5% and decreases cooldown by 5%. -->
+		<!-- Level: 4 Receives the effect that increases skill power by 9% and decreases cooldown by 5%. -->
+		<icon>icon.bm_sayhas_talisman</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>3</isMagic>
 	</skill>
 	<skill id="13972" toLevel="4" name="Sayha's Benefaction">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Decreases damage received by 10% for 45 seconds. -->
+		<icon>
+			<value level="1">icon.sayhas_talisman_g_Lv1</value>
+			<value level="2">icon.sayhas_talisman_g_Lv2</value>
+			<value level="3">icon.sayhas_talisman_g_Lv3</value>
+			<value level="4">icon.sayhas_talisman_g_Lv4</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<castRange>900</castRange>
+		<hitTime>300</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">420000</value>
+			<value level="3">300000</value>
+			<value level="4">180000</value>
+		</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="13973" toLevel="4" name="Sayha's Encouragement">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases PVE damage by 8% for 45 seconds. -->
+		<icon>
+			<value level="1">icon.sayhas_talisman_pve_Lv1</value>
+			<value level="2">icon.sayhas_talisman_pve_Lv2</value>
+			<value level="3">icon.sayhas_talisman_pve_Lv3</value>
+			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<castRange>900</castRange>
+		<hitTime>300</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">420000</value>
+			<value level="3">300000</value>
+			<value level="4">180000</value>
+		</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="13974" toLevel="4" name="Sayha's Anger">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases PvP damage by 8% for 45 seconds. -->
+		<icon>
+			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
+			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
+			<value level="3">icon.sayhas_talisman_pvp_Lv3</value>
+			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<castRange>900</castRange>
+		<hitTime>300</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">420000</value>
+			<value level="3">300000</value>
+			<value level="4">180000</value>
+		</reuseDelay>
+		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="13975" toLevel="1" name="Nevit??s Cloak of Light">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<skill id="13975" toLevel="1" name="Nevit's Cloak of Light">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- Damage received -10%%, All basic stats +3 -->
+		<icon>BranchSys2.Icon.7anni_cloack_i02</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
 	</skill>
 </list>
