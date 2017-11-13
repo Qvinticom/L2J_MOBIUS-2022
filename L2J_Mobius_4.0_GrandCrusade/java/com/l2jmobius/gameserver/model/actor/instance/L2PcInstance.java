@@ -150,7 +150,6 @@ import com.l2jmobius.gameserver.model.TeleportBookmark;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.TimeStamp;
 import com.l2jmobius.gameserver.model.TradeList;
-import com.l2jmobius.gameserver.model.UIKeysSettings;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -852,9 +851,6 @@ public final class L2PcInstance extends L2Playable
 		
 		_PvPRegTask = null;
 	}
-	
-	// Character UI
-	private UIKeysSettings _uiKeySettings;
 	
 	// Monster Book variables
 	private final static String MONSTER_BOOK_KILLS_VAR = "MONSTER_BOOK_KILLS_";
@@ -6823,11 +6819,6 @@ public final class L2PcInstance extends L2Playable
 			
 			player.restoreFriendList();
 			
-			if (Config.STORE_UI_SETTINGS)
-			{
-				player.restoreUISettings();
-			}
-			
 			player.loadRecommendations();
 			player.startRecoGiveTask();
 			player.startOnlineTimeUpdateTask();
@@ -7104,10 +7095,6 @@ public final class L2PcInstance extends L2Playable
 		if (Config.STORE_RECIPE_SHOPLIST)
 		{
 			storeRecipeShopList();
-		}
-		if (Config.STORE_UI_SETTINGS)
-		{
-			storeUISettings();
 		}
 		
 		final PlayerVariables vars = getScript(PlayerVariables.class);
@@ -12701,29 +12688,6 @@ public final class L2PcInstance extends L2Playable
 	public boolean isMovementDisabled()
 	{
 		return super.isMovementDisabled() || (getMovieHolder() != null) || _fishing.isFishing();
-	}
-	
-	private void restoreUISettings()
-	{
-		_uiKeySettings = new UIKeysSettings(getObjectId());
-	}
-	
-	private void storeUISettings()
-	{
-		if (_uiKeySettings == null)
-		{
-			return;
-		}
-		
-		if (!_uiKeySettings.isSaved())
-		{
-			_uiKeySettings.saveInDB();
-		}
-	}
-	
-	public UIKeysSettings getUISettings()
-	{
-		return _uiKeySettings;
 	}
 	
 	public String getHtmlPrefix()

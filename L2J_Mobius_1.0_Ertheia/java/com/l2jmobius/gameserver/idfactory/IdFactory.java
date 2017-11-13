@@ -55,8 +55,6 @@ public abstract class IdFactory
 		"SELECT charId     FROM character_skills      WHERE charId >= ? AND charId < ?",
 		"SELECT charId     FROM character_skills_save WHERE charId >= ? AND charId < ?",
 		"SELECT charId     FROM character_subclasses  WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_ui_actions  WHERE charId >= ? AND charId < ?",
-		"SELECT charId     FROM character_ui_categories  WHERE charId >= ? AND charId < ?",
 		"SELECT charId      FROM characters            WHERE charId >= ?      AND charId < ?",
 		"SELECT clanid      FROM characters            WHERE clanid >= ?      AND clanid < ?",
 		"SELECT clan_id     FROM clan_data             WHERE clan_id >= ?     AND clan_id < ?",
@@ -192,8 +190,6 @@ public abstract class IdFactory
 			cleanCount += stmt.executeUpdate("DELETE FROM character_skills_save WHERE character_skills_save.charId NOT IN (SELECT charId FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM character_subclasses WHERE character_subclasses.charId NOT IN (SELECT charId FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM character_instance_time WHERE character_instance_time.charId NOT IN (SELECT charId FROM characters);");
-			cleanCount += stmt.executeUpdate("DELETE FROM character_ui_actions WHERE character_ui_actions.charId NOT IN (SELECT charId FROM characters);");
-			cleanCount += stmt.executeUpdate("DELETE FROM character_ui_categories WHERE character_ui_categories.charId NOT IN (SELECT charId FROM characters);");
 			
 			// Items
 			cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id NOT IN (SELECT charId FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data) AND items.owner_id != -1;");

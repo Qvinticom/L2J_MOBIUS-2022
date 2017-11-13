@@ -16,64 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.UIData;
-import com.l2jmobius.gameserver.model.ActionKey;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Request Save Key Mapping client packet.
- * @author mrTJO, Zoey76
+ * @author Mobius
  */
 public class RequestSaveKeyMapping implements IClientIncomingPacket
 {
-	private final Map<Integer, List<ActionKey>> _keyMap = new HashMap<>();
-	private final Map<Integer, List<Integer>> _catMap = new HashMap<>();
+	public static final String UI_KEY_MAPPING_VAR = "UI_KEY_MAPPING";
+	public static final String SPLIT_VAR = "	";
+	private byte[] _uiKeyMapping;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		int category = 0;
-		
-		packet.readD(); // Unknown
-		packet.readD(); // Unknown
-		final int _tabNum = packet.readD();
-		for (int i = 0; i < _tabNum; i++)
+		final int dataSize = packet.readD();
+		if (dataSize > 0)
 		{
-			final int cmd1Size = packet.readC();
-			for (int j = 0; j < cmd1Size; j++)
-			{
-				UIData.addCategory(_catMap, category, packet.readC());
-			}
-			category++;
-			
-			final int cmd2Size = packet.readC();
-			for (int j = 0; j < cmd2Size; j++)
-			{
-				UIData.addCategory(_catMap, category, packet.readC());
-			}
-			category++;
-			
-			final int cmdSize = packet.readD();
-			for (int j = 0; j < cmdSize; j++)
-			{
-				final int cmd = packet.readD();
-				final int key = packet.readD();
-				final int tgKey1 = packet.readD();
-				final int tgKey2 = packet.readD();
-				final int show = packet.readD();
-				UIData.addKey(_keyMap, i, new ActionKey(i, cmd, key, tgKey1, tgKey2, show));
-			}
+			_uiKeyMapping = packet.readB(dataSize);
 		}
-		packet.readD();
-		packet.readD();
 		return true;
 	}
 	
@@ -81,10 +47,19 @@ public class RequestSaveKeyMapping implements IClientIncomingPacket
 	public void run(L2GameClient client)
 	{
 		final L2PcInstance player = client.getActiveChar();
-		if (!Config.STORE_UI_SETTINGS || (player == null) || (client.getConnectionState() != ConnectionState.IN_GAME))
+		if (!Config.STORE_UI_SETTINGS || //
+			(player == null) || //
+			(_uiKeyMapping == null) || //
+			(client.getConnectionState() != ConnectionState.IN_GAME))
 		{
 			return;
 		}
-		player.getUISettings().storeAll(_catMap, _keyMap);
+		
+		String uiKeyMapping = "";
+		for (Byte b : _uiKeyMapping)
+		{
+			uiKeyMapping += b + SPLIT_VAR;
+		}
+		player.getVariables().set(UI_KEY_MAPPING_VAR, uiKeyMapping);
 	}
 }

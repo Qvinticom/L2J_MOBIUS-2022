@@ -92,7 +92,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
-import com.l2jmobius.gameserver.data.xml.impl.UIData;
 import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
@@ -313,7 +312,6 @@ public class GameServer
 		CrestTable.getInstance();
 		TeleportLocationTable.getInstance();
 		TeleportersData.getInstance();
-		UIData.getInstance();
 		MatchingRoomManager.getInstance();
 		PetitionManager.getInstance();
 		CursedWeaponsManager.getInstance();
