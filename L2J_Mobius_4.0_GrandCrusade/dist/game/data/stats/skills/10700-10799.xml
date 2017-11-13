@@ -254,38 +254,58 @@
 	</skill>
 	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
 		<!-- Updated to GRAND CRUSADE -->
-		<!-- Changed to Active Skill, Adds effect that moves to left side of target, Powerful Sting Effect, Reduction Effect, Side + Rear Critical, Chance/Damage Increased -->
-		<!-- TODO: I WILL WORK SOON HERE -->
+		<!-- Moves to the left side of the target to attempt Deadly Attack with 56030 power added to P. Attack and decrease Speed by 50. Additionally, applies an effect on you to increase Critical Rate/Damage from the side and from behind for 10 seconds. Half-kill is possible. Requires dagger/dual dagger. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
 		<icon>icon.skill10705</icon>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<operateType>DA4</operateType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<mpConsume>64</mpConsume>
+		<mpConsume>
+			<value level="1">77</value>
+			<value level="2">79</value>
+			<value level="3">81</value>
+		</mpConsume>
+		<castRange>40</castRange>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>50000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">101</value>
+			<value level="2">103</value>
+			<value level="3">105</value>
+		</magicLvl>
+		<nextAction>ATTACK</nextAction>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+					<item>DUALDAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19304</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
-			<effect name="CriticalDamagePosition">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<position>SIDE</position>
-			</effect>
-			<effect name="CriticalDamagePosition">
-				<amount>20</amount>
-				<mode>PER</mode>
-				<position>BACK</position>
-			</effect>
-			<effect name="CriticalRatePositionBonus">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<position>FRONT</position>
-			</effect>
-			<effect name="CriticalRatePositionBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<position>SIDE</position>
-			</effect>
-			<effect name="CriticalRatePositionBonus">
-				<amount>20</amount>
-				<mode>PER</mode>
-				<position>BACK</position>
+			<effect name="FatalBlow">
+				<power>
+					<value level="1">56030</value>
+					<value level="2">58530</value>
+					<value level="3">61030</value>
+				</power>
+				<criticalChance>15</criticalChance>
+				<chanceBoost>300</chanceBoost>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
@@ -2952,7 +2972,12 @@
 		</conditions>
 		<effects>
 			<effect name="SummonTrap">
-				<npcId>13326</npcId>
+				<npcId>
+					<value level="1">13326</value>
+					<value level="2">13461</value>
+					<value level="3">13462</value>
+					<value level="4">13463</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -2962,7 +2987,12 @@
 		<!-- TODO: Find npcId for additional level -->
 		<icon>icon.skill10792</icon>
 		<operateType>A1</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
 		<mpConsume>39</mpConsume>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
@@ -2983,7 +3013,12 @@
 		</conditions>
 		<effects>
 			<effect name="SummonTrap">
-				<npcId>13327</npcId>
+				<npcId>
+					<value level="1">13327</value>
+					<value level="2">13464</value>
+					<value level="3">13465</value>
+					<value level="4">13466</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>

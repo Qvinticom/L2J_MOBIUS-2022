@@ -362,7 +362,9 @@
 		<skill skillName="Throw Poison Needle" skillId="10541" skillLvl="7" getLevel="101" levelUpSp="211440000" />
 		<skill skillName="Counter Flip" skillId="19296" skillLvl="6" getLevel="101" levelUpSp="211440000" /> <!-- Update GRAND CRUSADE -->
 		<skill skillName="Flash Dagger" skillId="19298" skillLvl="6" getLevel="101" levelUpSp="211440000" /> <!-- Update GRAND CRUSADE -->
-		<skill skillName="Easterly Wind Strike" skillId="10705" skillLvl="1" getLevel="101" levelUpSp="211440000" /> <!-- Update GRAND CRUSADE -->
+		<skill skillName="Easterly Wind Strike" skillId="10705" skillLvl="1" getLevel="101" levelUpSp="211440000"> <!-- Update GRAND CRUSADE -->
+			<item id="39738" count="8" /> <!-- Rune Stone -->
+		</skill>
 		<skill skillName="Right Angle Reverse" skillId="19303" skillLvl="5" getLevel="101" levelUpSp="211440000" /> <!-- Update GRAND CRUSADE -->
 
 		<skill skillName="Superior Dagger Mastery" skillId="10501" skillLvl="6" getLevel="102" levelUpSp="507455418" />

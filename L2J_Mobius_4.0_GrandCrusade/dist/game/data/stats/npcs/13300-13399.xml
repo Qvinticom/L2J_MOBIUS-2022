@@ -843,10 +843,9 @@
 			<height normal="0.001" />
 		</collision>
 	</npc>
-	<npc id="13326" level="99" type="L2Monster" name="Severe Trap">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13326" level="85" type="L2Npc" name="Severe Trap">
 		<parameters>
-			<param name="trap_skill_type" value="0" />
+			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="10806" level="1" />
 		</parameters>
 		<race>ETC</race>
@@ -864,21 +863,18 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status targetable="false" attackable="false" undying="false" />
 		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="1627" level="1" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="10806" level="1" /> <!-- Frost Trap -->
 		</skill_list>
-		<shots soul="1" spirit="1" />
-		<ai aggroRange="80" />
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="100" />
 		<collision>
 			<radius normal="5" />
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="13327" level="99" type="L2Monster" name="Yoke Trap">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13327" level="85" type="L2Npc" name="Yoke Trap">
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="10807" level="1" />
@@ -898,14 +894,12 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status targetable="false" attackable="false" undying="false" />
 		<skill_list>
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="1627" level="1" /> <!-- Power Strike -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="10807" level="1" /> <!-- Yoke Trap -->
 		</skill_list>
-		<shots soul="1" spirit="1" />
-		<ai aggroRange="80" />
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="100" />
 		<collision>
 			<radius normal="5" />
 			<height normal="10" />
