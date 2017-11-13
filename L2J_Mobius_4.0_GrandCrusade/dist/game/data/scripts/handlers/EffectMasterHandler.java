@@ -68,6 +68,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("BuffBlock", BuffBlock::new);
 		EffectHandler.getInstance().registerHandler("CallParty", CallParty::new);
 		EffectHandler.getInstance().registerHandler("CallPc", CallPc::new);
+		EffectHandler.getInstance().registerHandler("CallRandomSkill", CallRandomSkill::new);
 		EffectHandler.getInstance().registerHandler("CallSkill", CallSkill::new);
 		EffectHandler.getInstance().registerHandler("CallSkillOnActionTime", CallSkillOnActionTime::new);
 		EffectHandler.getInstance().registerHandler("CallTargetParty", CallTargetParty::new);
