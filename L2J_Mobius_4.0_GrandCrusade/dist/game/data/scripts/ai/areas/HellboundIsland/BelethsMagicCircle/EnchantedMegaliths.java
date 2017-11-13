@@ -261,7 +261,14 @@ public class EnchantedMegaliths extends AbstractNpcAI
 				{
 					spawnTemplateNormal = SpawnTable.getInstance().getAnySpawn(MONSTERS[9]).getNpcSpawnTemplate().getSpawnTemplate();
 					spawnTemplateFinal = SpawnTable.getInstance().getAnySpawn(MONSTERS[12]).getNpcSpawnTemplate().getSpawnTemplate();
+					spawnTemplateNormal.despawnAll();
+					spawnTemplateNormal.spawnAll();
 					spawnTemplateFinal.despawnAll();
+				}
+				else
+				{
+					spawnTemplateNormal.despawnAll();
+					spawnTemplateNormal.spawnAll();
 				}
 				break;
 			}
