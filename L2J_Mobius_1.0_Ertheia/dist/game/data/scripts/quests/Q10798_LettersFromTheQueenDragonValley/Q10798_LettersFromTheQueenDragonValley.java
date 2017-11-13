@@ -40,7 +40,7 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 	private static final int SOE_TOWN_OF_GIRAN = 39586;
 	private static final int EWS = 959;
 	// Misc
-	private static final int MIN_LEVEL = 76;
+	private static final int MIN_LEVEL = 81;
 	private static final int MAX_LEVEL = 84;
 	// Teleport
 	private static final Location TELEPORT_LOC = new Location(86674, 148630, -3401);
