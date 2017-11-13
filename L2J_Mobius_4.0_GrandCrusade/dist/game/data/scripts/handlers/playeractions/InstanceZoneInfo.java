@@ -30,6 +30,6 @@ public final class InstanceZoneInfo implements IPlayerActionHandler
 	@Override
 	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		activeChar.sendPacket(new ExInzoneWaiting(activeChar));
+		activeChar.sendPacket(new ExInzoneWaiting(activeChar, false));
 	}
 }
