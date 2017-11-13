@@ -39,8 +39,8 @@ import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.TrapInfo;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
@@ -157,16 +157,6 @@ public final class L2TrapInstance extends L2Npc
 			return true;
 		}
 		return false;
-	}
-	
-	public boolean checkTarget(L2Character target)
-	{
-		if (!target.isInsideRadius(this, 300, false, false))
-		{
-			return false;
-		}
-		
-		return _skill.getSkill().getTarget(this, target, false, true, false) != null;
 	}
 	
 	@Override
@@ -287,7 +277,7 @@ public final class L2TrapInstance extends L2Npc
 	{
 		if (_isTriggered || canBeSeen(activeChar))
 		{
-			activeChar.sendPacket(new TrapInfo(this, activeChar));
+			activeChar.sendPacket(new NpcInfo(this));
 		}
 	}
 	
@@ -336,7 +326,7 @@ public final class L2TrapInstance extends L2Npc
 		}
 		
 		_isTriggered = true;
-		broadcastPacket(new TrapInfo(this, null));
+		broadcastPacket(new NpcInfo(this));
 		setTarget(target);
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, target, TrapAction.TRAP_TRIGGERED), this);

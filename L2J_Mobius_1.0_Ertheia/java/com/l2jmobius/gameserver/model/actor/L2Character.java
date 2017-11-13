@@ -77,6 +77,7 @@ import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.TimeStamp;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.actor.status.CharStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.character.HitTask;
@@ -2477,10 +2478,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final String getTitle()
 	{
+		// Champion titles
 		if (isChampion())
 		{
 			return Config.CHAMP_TITLE;
 		}
+		// Custom level titles
 		if (Config.SHOW_NPC_LVL && isMonster())
 		{
 			String t = "Lv " + getLevel() + (((L2MonsterInstance) this).isAggressive() ? "*" : "");
@@ -2489,6 +2492,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				t += " " + _title;
 			}
 			return t;
+		}
+		// Set trap title
+		if (isTrap() && (((L2TrapInstance) this).getOwner() != null))
+		{
+			_title = ((L2TrapInstance) this).getOwner().getName();
 		}
 		return _title != null ? _title : "";
 	}
