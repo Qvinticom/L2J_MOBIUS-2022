@@ -1912,7 +1912,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// Stop HP/MP/CP Regeneration task
 		getStatus().stopHpMpRegeneration();
 		
-		stopAllEffectsExceptThoseThatLastThroughDeath();
+		if (isMonster())
+		{
+			stopAllEffects();
+		}
+		else
+		{
+			stopAllEffectsExceptThoseThatLastThroughDeath();
+		}
 		
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
 		broadcastStatusUpdate();
