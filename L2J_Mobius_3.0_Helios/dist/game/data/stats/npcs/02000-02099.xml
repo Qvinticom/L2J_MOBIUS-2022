@@ -20,9 +20,9 @@
 			<skill name="Skill01_ID" id="4032" level="8" />
 			<skill name="Debuff" id="5719" level="1" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="12707" sp="3" />
+		<acquire exp="12708" sp="3" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3643" mp="1743" hpRegen="8.5" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
@@ -49,24 +49,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="1.1" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
-				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
-				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
-				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
-				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
-				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
-				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
-				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
-				<item id="10657" min="1" max="1" chance="0.66" /> <!-- Mysterious Herb -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</drop_lists>
 		<status undying="false" />
@@ -99,7 +92,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="12707" sp="3" />
+		<acquire exp="12708" sp="3" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3643" mp="1743" hpRegen="8.5" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
@@ -127,24 +120,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="1.1" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
-				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
-				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
-				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
-				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
-				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
-				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
-				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
-				<item id="10657" min="1" max="1" chance="0.66" /> <!-- Mysterious Herb -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</drop_lists>
 		<status undying="false" />
@@ -153,7 +139,7 @@
 			<height normal="31.5" />
 		</collision>
 	</npc>
-	<npc id="2083" level="83" type="L2Monster" name="Canabion of Plague" title="Void">
+	<npc id="2083" level="82" type="L2Monster" name="Canabion of Plague" title="Void">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
@@ -176,9 +162,9 @@
 			<skill name="Buff" id="4340" level="1" />
 			<skill name="Debuff" id="5719" level="1" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13020" sp="3" />
+		<acquire exp="12708" sp="3" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3835" mp="1777" hpRegen="8.5" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
@@ -207,24 +193,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="1.1" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
-				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Haste Herb -->
-				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
-				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of HP Drain -->
-				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
-				<item id="8607" min="1" max="1" chance="5" /> <!-- Herb of Magic -->
-				<item id="8609" min="1" max="1" chance="5" /> <!-- Herb of Casting Spd. -->
-				<item id="8612" min="1" max="1" chance="0.33" /> <!-- Herb of the Warrior -->
-				<item id="8613" min="1" max="1" chance="0.33" /> <!-- Wizard Herb -->
-				<item id="8614" min="1" max="1" chance="0.34" /> <!-- Herb of Recovery -->
-				<item id="8611" min="1" max="1" chance="10.34" /> <!-- Wind Walk Herb -->
-				<item id="10657" min="1" max="1" chance="0.66" /> <!-- Mysterious Herb -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</drop_lists>
 		<status undying="false" />

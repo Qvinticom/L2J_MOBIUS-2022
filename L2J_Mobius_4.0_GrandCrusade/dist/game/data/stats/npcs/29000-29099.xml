@@ -48,39 +48,49 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="396" min="1" max="2" chance="42.525" /> <!-- Salamander Skin Mail -->
-				<item id="438" min="1" max="2" chance="42.075" /> <!-- Sage's Rags -->
-				<item id="380" min="1" max="2" chance="37.41" /> <!-- Plate Gaiters -->
-				<item id="882" min="1" max="2" chance="36.29" /> <!-- Mithril Ring -->
-				<item id="353" min="1" max="2" chance="35.86" /> <!-- Half Plate Armor -->
-				<item id="851" min="1" max="2" chance="34.22" /> <!-- Onyx Beast's Eye Earring -->
-				<item id="914" min="1" max="2" chance="29.57" /> <!-- Dark Necklace -->
-				<item id="6660" min="1" max="1" chance="29.27" /> <!-- Queen Ant's Ring -->
-				<item id="607" min="1" max="3" chance="20.47" /> <!-- Ogre Power Gauntlets -->
-				<item id="1125" min="1" max="3" chance="20.25" /> <!-- Assault Boots -->
-				<item id="2412" min="1" max="3" chance="20.15" /> <!-- Plate Helmet -->
-				<item id="630" min="1" max="3" chance="19.23" /> <!-- Square Shield -->
-				<item id="2499" min="1" max="1" chance="5.954" /> <!-- Elven Long Sword -->
-				<item id="70" min="1" max="1" chance="5.943" /> <!-- Claymore -->
-				<item id="189" min="1" max="1" chance="5.568" /> <!-- Staff of Life -->
-				<item id="297" min="1" max="1" chance="5.546" /> <!-- Glaive -->
-				<item id="188" min="1" max="1" chance="5.505" /> <!-- Ghost Staff -->
-				<item id="159" min="1" max="1" chance="5.493" /> <!-- Bonebreaker -->
-				<item id="280" min="1" max="1" chance="5.487" /> <!-- Light Bow -->
-				<item id="225" min="1" max="1" chance="5.467" /> <!-- Mithril Dagger -->
-				<item id="262" min="1" max="1" chance="4.998" /> <!-- Scallop Jamadhr -->
+				<item id="396" min="1" max="2" chance="43.495" /> <!-- Salamander Skin Mail -->
+				<item id="438" min="1" max="2" chance="42.115" /> <!-- Sage's Rags -->
+				<item id="380" min="1" max="2" chance="37.45" /> <!-- Plate Gaiters -->
+				<item id="353" min="1" max="2" chance="36.92" /> <!-- Half Plate Armor -->
+				<item id="882" min="1" max="2" chance="35.87" /> <!-- Mithril Ring -->
+				<item id="851" min="1" max="2" chance="33.56" /> <!-- Onyx Beast's Eye Earring -->
+				<item id="6660" min="1" max="1" chance="31.46" /> <!-- Queen Ant's Ring -->
+				<item id="914" min="1" max="2" chance="31.4" /> <!-- Dark Necklace -->
+				<item id="607" min="1" max="3" chance="20.98" /> <!-- Ogre Power Gauntlets -->
+				<item id="2412" min="1" max="3" chance="20.44" /> <!-- Plate Helmet -->
+				<item id="1125" min="1" max="3" chance="20.08" /> <!-- Assault Boots -->
+				<item id="630" min="1" max="3" chance="19.82" /> <!-- Square Shield -->
+				<item id="70" min="1" max="1" chance="6.026" /> <!-- Claymore -->
+				<item id="2499" min="1" max="1" chance="5.945" /> <!-- Elven Long Sword -->
+				<item id="225" min="1" max="1" chance="5.568" /> <!-- Mithril Dagger -->
+				<item id="189" min="1" max="1" chance="5.566" /> <!-- Staff of Life -->
+				<item id="280" min="1" max="1" chance="5.551" /> <!-- Light Bow -->
+				<item id="188" min="1" max="1" chance="5.485" /> <!-- Ghost Staff -->
+				<item id="159" min="1" max="1" chance="5.464" /> <!-- Bonebreaker -->
+				<item id="297" min="1" max="1" chance="5.459" /> <!-- Glaive -->
+				<item id="262" min="1" max="1" chance="4.948" /> <!-- Scallop Jamadhr -->
 				<item id="57" min="140000" max="1170000" chance="100" /> <!-- Adena -->
 				<item id="36514" min="1" max="2" chance="100" /> <!-- Elcyum Crystal -->
-				<item id="36252" min="1" max="1" chance="68.51" /> <!-- Bottle of Queen Ant's Soul -->
-				<item id="955" min="1" max="3" chance="19.3" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="46504" min="1" max="1" chance="9.555" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="9.552" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46489" min="1" max="1" chance="9.448" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46444" min="1" max="1" chance="6.436" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46459" min="1" max="1" chance="6.364" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="36252" min="1" max="1" chance="69.17" /> <!-- Bottle of Queen Ant's Soul -->
+				<item id="955" min="1" max="3" chance="19.29" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="46474" min="1" max="1" chance="9.537" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="9.509" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="9.495" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="6.431" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="6.382" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="60.34" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="59.02" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -304,36 +314,46 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6662" min="1" max="1" chance="29.72" /> <!-- Ring of Core -->
-				<item id="107" min="1" max="1" chance="14.52" /> <!-- Compound Shield -->
-				<item id="2459" min="1" max="1" chance="14.25" /> <!-- Demon's Gloves -->
-				<item id="517" min="1" max="1" chance="14.12" /> <!-- Compound Helmet -->
-				<item id="2435" min="1" max="1" chance="13.98" /> <!-- Demon's Boots -->
-				<item id="441" min="1" max="1" chance="12.49" /> <!-- Demon's Tunic -->
-				<item id="472" min="1" max="1" chance="11.82" /> <!-- Demon's Stockings -->
-				<item id="400" min="1" max="1" chance="11.68" /> <!-- Theca Leather Armor -->
-				<item id="60" min="1" max="1" chance="11.57" /> <!-- Compound Armor -->
-				<item id="420" min="1" max="1" chance="11.45" /> <!-- Theca Leather Gaiters -->
-				<item id="283" min="1" max="1" chance="4.858" /> <!-- Akat Longbow -->
-				<item id="75" min="1" max="1" chance="4.855" /> <!-- Caliburs -->
-				<item id="301" min="1" max="1" chance="4.839" /> <!-- Scorpion -->
-				<item id="233" min="1" max="1" chance="4.835" /> <!-- Dark Screamer -->
-				<item id="162" min="1" max="1" chance="4.833" /> <!-- War Axe -->
-				<item id="174" min="1" max="1" chance="4.067" /> <!-- Nirvana Axe -->
-				<item id="265" min="1" max="1" chance="4.037" /> <!-- Fisted Blade -->
-				<item id="200" min="1" max="1" chance="4.011" /> <!-- Sage's Staff -->
-				<item id="84" min="1" max="1" chance="3.96" /> <!-- Homunkulus' Sword -->
+				<item id="6662" min="1" max="1" chance="29.29" /> <!-- Ring of Core -->
+				<item id="517" min="1" max="1" chance="14.65" /> <!-- Compound Helmet -->
+				<item id="2459" min="1" max="1" chance="13.66" /> <!-- Demon's Gloves -->
+				<item id="107" min="1" max="1" chance="13.36" /> <!-- Compound Shield -->
+				<item id="2435" min="1" max="1" chance="13.33" /> <!-- Demon's Boots -->
+				<item id="472" min="1" max="1" chance="12.46" /> <!-- Demon's Stockings -->
+				<item id="441" min="1" max="1" chance="12.37" /> <!-- Demon's Tunic -->
+				<item id="60" min="1" max="1" chance="12.25" /> <!-- Compound Armor -->
+				<item id="400" min="1" max="1" chance="11.75" /> <!-- Theca Leather Armor -->
+				<item id="420" min="1" max="1" chance="11.53" /> <!-- Theca Leather Gaiters -->
+				<item id="162" min="1" max="1" chance="4.856" /> <!-- War Axe -->
+				<item id="233" min="1" max="1" chance="4.854" /> <!-- Dark Screamer -->
+				<item id="301" min="1" max="1" chance="4.797" /> <!-- Scorpion -->
+				<item id="75" min="1" max="1" chance="4.779" /> <!-- Caliburs -->
+				<item id="283" min="1" max="1" chance="4.762" /> <!-- Akat Longbow -->
+				<item id="265" min="1" max="1" chance="4.044" /> <!-- Fisted Blade -->
+				<item id="174" min="1" max="1" chance="4.037" /> <!-- Nirvana Axe -->
+				<item id="200" min="1" max="1" chance="3.953" /> <!-- Sage's Staff -->
+				<item id="84" min="1" max="1" chance="3.945" /> <!-- Homunkulus' Sword -->
 				<item id="57" min="100000" max="750000" chance="100" /> <!-- Adena -->
-				<item id="45929" min="2" max="12" chance="44.44" /> <!-- Spirit Stone -->
-				<item id="951" min="1" max="1" chance="14.51" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="46489" min="1" max="1" chance="4.771" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="4.747" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="4.736" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46459" min="1" max="1" chance="3.233" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46444" min="1" max="1" chance="3.195" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="45929" min="2" max="12" chance="44.13" /> <!-- Spirit Stone -->
+				<item id="951" min="1" max="1" chance="13.63" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="46489" min="1" max="1" chance="4.763" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="4.717" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="4.712" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="3.248" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="3.185" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="68.52" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="70.32" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -723,46 +743,56 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6661" min="1" max="1" chance="50.62" /> <!-- Orfen's Earring -->
-				<item id="885" min="1" max="2" chance="36.39" /> <!-- Ring of Ages -->
-				<item id="854" min="1" max="2" chance="33.46" /> <!-- Earring of Seal -->
-				<item id="917" min="1" max="2" chance="30.33" /> <!-- Necklace of Mermaid -->
-				<item id="400" min="1" max="1" chance="10.052" /> <!-- Theca Leather Armor -->
-				<item id="64" min="1" max="2" chance="10.027" /> <!-- Compound Boots -->
-				<item id="517" min="1" max="2" chance="10.021" /> <!-- Compound Helmet -->
-				<item id="103" min="1" max="2" chance="10.006" /> <!-- Tower Shield -->
-				<item id="60" min="1" max="1" chance="10.005" /> <!-- Compound Armor -->
-				<item id="420" min="1" max="1" chance="10.004" /> <!-- Theca Leather Gaiters -->
-				<item id="608" min="1" max="2" chance="9.998" /> <!-- Mithril Gauntlets -->
-				<item id="472" min="1" max="1" chance="9.953" /> <!-- Demon's Stockings -->
-				<item id="441" min="1" max="1" chance="9.948" /> <!-- Demon's Tunic -->
-				<item id="303" min="1" max="1" chance="4.219" /> <!-- Widow Maker -->
-				<item id="231" min="1" max="1" chance="4.204" /> <!-- Grace Dagger -->
-				<item id="283" min="1" max="1" chance="4.202" /> <!-- Akat Longbow -->
-				<item id="162" min="1" max="1" chance="4.19" /> <!-- War Axe -->
-				<item id="76" min="1" max="1" chance="4.146" /> <!-- Sword of Delusion -->
-				<item id="201" min="1" max="1" chance="3.502" /> <!-- Club of Nature -->
-				<item id="265" min="1" max="1" chance="3.502" /> <!-- Fisted Blade -->
-				<item id="145" min="1" max="1" chance="3.474" /> <!-- Sword of Whispering Death -->
-				<item id="199" min="1" max="1" chance="3.435" /> <!-- Pa'agrio Hammer -->
+				<item id="6661" min="1" max="1" chance="50.19" /> <!-- Orfen's Earring -->
+				<item id="885" min="1" max="2" chance="34.51" /> <!-- Ring of Ages -->
+				<item id="854" min="1" max="2" chance="34.31" /> <!-- Earring of Seal -->
+				<item id="917" min="1" max="2" chance="31.45" /> <!-- Necklace of Mermaid -->
+				<item id="103" min="1" max="2" chance="10.058" /> <!-- Tower Shield -->
+				<item id="420" min="1" max="1" chance="10.04" /> <!-- Theca Leather Gaiters -->
+				<item id="60" min="1" max="1" chance="10.015" /> <!-- Compound Armor -->
+				<item id="64" min="1" max="2" chance="10.01" /> <!-- Compound Boots -->
+				<item id="400" min="1" max="1" chance="10.002" /> <!-- Theca Leather Armor -->
+				<item id="608" min="1" max="2" chance="9.969" /> <!-- Mithril Gauntlets -->
+				<item id="441" min="1" max="1" chance="9.959" /> <!-- Demon's Tunic -->
+				<item id="517" min="1" max="2" chance="9.956" /> <!-- Compound Helmet -->
+				<item id="472" min="1" max="1" chance="9.94" /> <!-- Demon's Stockings -->
+				<item id="231" min="1" max="1" chance="4.265" /> <!-- Grace Dagger -->
+				<item id="162" min="1" max="1" chance="4.232" /> <!-- War Axe -->
+				<item id="283" min="1" max="1" chance="4.194" /> <!-- Akat Longbow -->
+				<item id="303" min="1" max="1" chance="4.173" /> <!-- Widow Maker -->
+				<item id="76" min="1" max="1" chance="4.145" /> <!-- Sword of Delusion -->
+				<item id="145" min="1" max="1" chance="3.565" /> <!-- Sword of Whispering Death -->
+				<item id="201" min="1" max="1" chance="3.538" /> <!-- Club of Nature -->
+				<item id="265" min="1" max="1" chance="3.531" /> <!-- Fisted Blade -->
+				<item id="199" min="1" max="1" chance="3.455" /> <!-- Pa'agrio Hammer -->
 				<item id="57" min="110000" max="750000" chance="100" /> <!-- Adena -->
 				<item id="36514" min="1" max="2" chance="100" /> <!-- Elcyum Crystal -->
-				<item id="36253" min="1" max="1" chance="50.03" /> <!-- Bottle of Orfen's Soul -->
-				<item id="45929" min="2" max="12" chance="44.03" /> <!-- Spirit Stone -->
-				<item id="46489" min="1" max="1" chance="18.82" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="18.8" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="18.24" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46475" min="1" max="1" chance="15.07" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="14.82" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46505" min="1" max="1" chance="14.62" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="36253" min="1" max="1" chance="49.11" /> <!-- Bottle of Orfen's Soul -->
+				<item id="45929" min="2" max="12" chance="44.27" /> <!-- Spirit Stone -->
+				<item id="46504" min="1" max="1" chance="18.55" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="17.91" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="17.59" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="15.86" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="15.81" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="14.99" /> <!-- Leona's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="12.77" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46459" min="1" max="1" chance="12.57" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46460" min="1" max="1" chance="10.72" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46445" min="1" max="1" chance="10.66" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="951" min="1" max="2" chance="9.944" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="46459" min="1" max="1" chance="12.35" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46445" min="1" max="1" chance="10.38" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46460" min="1" max="1" chance="10.26" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="951" min="1" max="2" chance="10.052" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="80.27" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="81.4" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -999,7 +1029,7 @@
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="11090076" sp="2661" />
+		<acquire exp="11090077" sp="2661" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="53342293" hpRegen="750" mp="18000" mpRegen="99" />
 			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1033,47 +1063,57 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6658" min="1" max="1" chance="69.75" /> <!-- Baium's Ring -->
-				<item id="2504" min="1" max="1" chance="6.06" /> <!-- Meteor Shower -->
-				<item id="288" min="1" max="1" chance="6.059" /> <!-- Carnage Bow -->
-				<item id="98" min="1" max="1" chance="6.017" /> <!-- Halberd -->
-				<item id="269" min="1" max="1" chance="6.004" /> <!-- Blood Tornado -->
-				<item id="80" min="1" max="1" chance="6.001" /> <!-- Tallum Blade -->
-				<item id="150" min="1" max="1" chance="5.997" /> <!-- Elemental Sword -->
-				<item id="212" min="1" max="1" chance="5.987" /> <!-- Dasparion's Staff -->
-				<item id="235" min="1" max="1" chance="5.974" /> <!-- Bloody Orchid -->
-				<item id="6579" min="1" max="1" chance="1.249" /> <!-- Arcana Mace -->
-				<item id="6364" min="1" max="1" chance="1.247" /> <!-- Forgotten Blade -->
-				<item id="6371" min="1" max="1" chance="1.244" /> <!-- Demon Splinter -->
-				<item id="6365" min="1" max="1" chance="1.163" /> <!-- Basalt Battlehammer -->
-				<item id="6372" min="1" max="1" chance="1.161" /> <!-- Heaven's Divider -->
-				<item id="6366" min="1" max="1" chance="1.139" /> <!-- Imperial Staff -->
-				<item id="7575" min="1" max="1" chance="1.131" /> <!-- Draconic Bow -->
-				<item id="6370" min="1" max="1" chance="0.75" /> <!-- Saint Spear -->
+				<item id="6658" min="1" max="1" chance="69.66" /> <!-- Baium's Ring -->
+				<item id="98" min="1" max="1" chance="6.068" /> <!-- Halberd -->
+				<item id="2504" min="1" max="1" chance="6.039" /> <!-- Meteor Shower -->
+				<item id="150" min="1" max="1" chance="6.026" /> <!-- Elemental Sword -->
+				<item id="80" min="1" max="1" chance="5.994" /> <!-- Tallum Blade -->
+				<item id="269" min="1" max="1" chance="5.985" /> <!-- Blood Tornado -->
+				<item id="212" min="1" max="1" chance="5.977" /> <!-- Dasparion's Staff -->
+				<item id="288" min="1" max="1" chance="5.964" /> <!-- Carnage Bow -->
+				<item id="235" min="1" max="1" chance="5.964" /> <!-- Bloody Orchid -->
+				<item id="6371" min="1" max="1" chance="1.259" /> <!-- Demon Splinter -->
+				<item id="6365" min="1" max="1" chance="1.244" /> <!-- Basalt Battlehammer -->
+				<item id="6372" min="1" max="1" chance="1.233" /> <!-- Heaven's Divider -->
+				<item id="6366" min="1" max="1" chance="1.216" /> <!-- Imperial Staff -->
+				<item id="6364" min="1" max="1" chance="1.204" /> <!-- Forgotten Blade -->
+				<item id="7575" min="1" max="1" chance="1.194" /> <!-- Draconic Bow -->
+				<item id="6579" min="1" max="1" chance="1.17" /> <!-- Arcana Mace -->
 				<item id="6369" min="1" max="1" chance="0.75" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="0.75" /> <!-- Saint Spear -->
 				<item id="6367" min="1" max="1" chance="0.75" /> <!-- Angel Slayer -->
 				<item id="6580" min="1" max="1" chance="0.75" /> <!-- Tallum Blade*Dark Legion's Edge -->
 				<item id="36514" min="1" max="2" chance="100" /> <!-- Elcyum Crystal -->
-				<item id="45929" min="1" max="6" chance="44.46" /> <!-- Spirit Stone -->
-				<item id="37520" min="1" max="1" chance="28.5" /> <!-- Bottle of Baium's Soul -->
-				<item id="46489" min="1" max="1" chance="20.02" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="19.37" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="19.09" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46505" min="1" max="1" chance="17.12" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="17.08" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46475" min="1" max="1" chance="16.1" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46506" min="1" max="1" chance="14.85" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="46476" min="1" max="1" chance="14.13" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46491" min="1" max="1" chance="13.95" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46444" min="1" max="1" chance="13.84" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46459" min="1" max="1" chance="13.1" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46445" min="1" max="1" chance="11.72" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46460" min="1" max="1" chance="11.67" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46446" min="1" max="1" chance="9.671" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46461" min="1" max="1" chance="9.613" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="45929" min="1" max="6" chance="45.74" /> <!-- Spirit Stone -->
+				<item id="37520" min="1" max="1" chance="30.57" /> <!-- Bottle of Baium's Soul -->
+				<item id="46504" min="1" max="1" chance="20.98" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="20.89" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="20.11" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46475" min="1" max="1" chance="17.28" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46490" min="1" max="1" chance="16.53" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="16.07" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46476" min="1" max="1" chance="14.89" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46459" min="1" max="1" chance="13.88" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46506" min="1" max="1" chance="13.7" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="13.63" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46444" min="1" max="1" chance="13.24" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46445" min="1" max="1" chance="11.16" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46460" min="1" max="1" chance="10.91" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46461" min="1" max="1" chance="9.615" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="9.54" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="78.68" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="80.56" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -1382,7 +1422,7 @@
 		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="155833466880" sp="225935474" raidPoints="1000" />
+		<acquire exp="155833466880" sp="249333547" raidPoints="1000" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="689482245" hpRegen="1836" mp="2025740" mpRegen="1000" />
 			<attack physical="5686.34407" magical="382.21561" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1424,35 +1464,35 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6657" min="1" max="1" chance="20.96" /> <!-- Valakas' Necklace -->
-				<item id="17439" min="1" max="3" chance="19.72" /> <!-- Eternal Leather Gloves -->
-				<item id="17440" min="1" max="3" chance="19.43" /> <!-- Eternal Leather Boots -->
-				<item id="17438" min="1" max="3" chance="19.32" /> <!-- Eternal Leather Leggings -->
-				<item id="17437" min="1" max="3" chance="19.21" /> <!-- Eternal Leather Armor -->
-				<item id="17436" min="1" max="3" chance="19.18" /> <!-- Eternal Leather Helmet -->
-				<item id="17434" min="1" max="3" chance="17.46" /> <!-- Eternal Boots -->
-				<item id="17433" min="1" max="3" chance="17.41" /> <!-- Eternal Gauntlets -->
-				<item id="17442" min="1" max="3" chance="17.31" /> <!-- Eternal Tunic -->
-				<item id="17446" min="1" max="3" chance="17.305" /> <!-- Eternal Sigil -->
-				<item id="17432" min="1" max="3" chance="17.06" /> <!-- Eternal Gaiters -->
-				<item id="17443" min="1" max="3" chance="16.62" /> <!-- Eternal Stockings -->
-				<item id="17441" min="1" max="3" chance="16.61" /> <!-- Eternal Circlet -->
-				<item id="17444" min="1" max="3" chance="16.41" /> <!-- Eternal Gloves -->
-				<item id="17445" min="1" max="3" chance="16.36" /> <!-- Eternal Shoes -->
-				<item id="17435" min="1" max="3" chance="16.23" /> <!-- Eternal Shield -->
-				<item id="17431" min="1" max="3" chance="15.93" /> <!-- Eternal Breastplate -->
-				<item id="17430" min="1" max="3" chance="15.85" /> <!-- Eternal Helmet -->
-				<item id="17422" min="1" max="3" chance="9.16" /> <!-- Helios Thrower -->
-				<item id="17418" min="1" max="3" chance="9.151" /> <!-- Helios Slasher -->
-				<item id="17416" min="1" max="3" chance="9.133" /> <!-- Helios Shaper -->
-				<item id="17419" min="1" max="3" chance="9.116" /> <!-- Helios Avenger -->
-				<item id="17420" min="1" max="3" chance="9.107" /> <!-- Helios Fighter -->
-				<item id="17417" min="1" max="3" chance="9.107" /> <!-- Helios Cutter -->
-				<item id="17421" min="1" max="3" chance="9.1" /> <!-- Helios Stormer -->
-				<item id="17426" min="1" max="3" chance="9.09" /> <!-- Helios Retributer -->
-				<item id="17424" min="1" max="3" chance="9.068" /> <!-- Helios Buster -->
-				<item id="17423" min="1" max="3" chance="9.051" /> <!-- Helios Shooter -->
-				<item id="17425" min="1" max="3" chance="9.039" /> <!-- Helios Caster -->
+				<item id="6657" min="1" max="1" chance="20.47" /> <!-- Valakas' Necklace -->
+				<item id="17436" min="1" max="3" chance="19.97" /> <!-- Eternal Leather Helmet -->
+				<item id="17440" min="1" max="3" chance="19.61" /> <!-- Eternal Leather Boots -->
+				<item id="17439" min="1" max="3" chance="19.53" /> <!-- Eternal Leather Gloves -->
+				<item id="17438" min="1" max="3" chance="19.49" /> <!-- Eternal Leather Leggings -->
+				<item id="17437" min="1" max="3" chance="19.09" /> <!-- Eternal Leather Armor -->
+				<item id="17432" min="1" max="3" chance="17.46" /> <!-- Eternal Gaiters -->
+				<item id="17444" min="1" max="3" chance="17.34" /> <!-- Eternal Gloves -->
+				<item id="17431" min="1" max="3" chance="17.3" /> <!-- Eternal Breastplate -->
+				<item id="17433" min="1" max="3" chance="17.23" /> <!-- Eternal Gauntlets -->
+				<item id="17442" min="1" max="3" chance="17.14" /> <!-- Eternal Tunic -->
+				<item id="17441" min="1" max="3" chance="17.13" /> <!-- Eternal Circlet -->
+				<item id="17443" min="1" max="3" chance="16.72" /> <!-- Eternal Stockings -->
+				<item id="17434" min="1" max="3" chance="16.38" /> <!-- Eternal Boots -->
+				<item id="17430" min="1" max="3" chance="16.31" /> <!-- Eternal Helmet -->
+				<item id="17446" min="1" max="3" chance="16.2" /> <!-- Eternal Sigil -->
+				<item id="17445" min="1" max="3" chance="16.15" /> <!-- Eternal Shoes -->
+				<item id="17435" min="1" max="3" chance="16.09" /> <!-- Eternal Shield -->
+				<item id="17423" min="1" max="3" chance="9.158" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="3" chance="9.15" /> <!-- Helios Buster -->
+				<item id="17422" min="1" max="3" chance="9.135" /> <!-- Helios Thrower -->
+				<item id="17421" min="1" max="3" chance="9.135" /> <!-- Helios Stormer -->
+				<item id="17417" min="1" max="3" chance="9.129" /> <!-- Helios Cutter -->
+				<item id="17420" min="1" max="3" chance="9.124" /> <!-- Helios Fighter -->
+				<item id="17416" min="1" max="3" chance="9.091" /> <!-- Helios Shaper -->
+				<item id="17425" min="1" max="3" chance="9.068" /> <!-- Helios Caster -->
+				<item id="17419" min="1" max="3" chance="9.046" /> <!-- Helios Avenger -->
+				<item id="17426" min="1" max="3" chance="9.037" /> <!-- Helios Retributer -->
+				<item id="17418" min="1" max="3" chance="9.028" /> <!-- Helios Slasher -->
 				<item id="36432" min="1" max="1" chance="0.075" /> <!-- Valakas Caster (Fragment) -->
 				<item id="36431" min="1" max="1" chance="0.075" /> <!-- Valakas Buster (Fragment) -->
 				<item id="36430" min="1" max="1" chance="0.075" /> <!-- Valakas Thrower (Fragment) -->
@@ -1462,64 +1502,74 @@
 				<item id="36433" min="1" max="1" chance="0.075" /> <!-- Valakas Retributer (Fragment) -->
 				<item id="36414" min="1" max="1" chance="100" /> <!-- Dragon Claw -->
 				<item id="19466" min="2" max="2" chance="100" /> <!-- Bottle of Valakas' Soul -->
-				<item id="37781" min="1" max="1" chance="51.15" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
-				<item id="35568" min="1" max="1" chance="51.11" /> <!-- Bloody Helios Enhancement Stone -->
-				<item id="37772" min="1" max="1" chance="50.31" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
-				<item id="19448" min="10" max="10" chance="31.19" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="36389" min="10" max="10" chance="29.11" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-				<item id="46477" min="1" max="2" chance="23.81" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46507" min="1" max="2" chance="23.57" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46493" min="1" max="1" chance="23.14" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46508" min="1" max="1" chance="22.89" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46478" min="1" max="1" chance="22.66" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46492" min="1" max="2" chance="21.88" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="36386" min="10" max="10" chance="20.22" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="46509" min="1" max="1" chance="19.88" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="19447" min="10" max="10" chance="19.5" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="36162" min="1" max="1" chance="19.09" /> <!-- Scroll of Blessing: (R99-grade) -->
-				<item id="46494" min="1" max="1" chance="18.81" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46479" min="1" max="1" chance="18.78" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="17704" min="1" max="1" chance="17.36" /> <!-- Lv. 5 Ancient DEX Dye -->
-				<item id="17713" min="1" max="1" chance="17.31" /> <!-- Lv. 5 Legendary WIT Dye -->
-				<item id="17714" min="1" max="1" chance="17.23" /> <!-- Lv. 5 Legendary MEN Dye -->
-				<item id="17699" min="1" max="1" chance="17.21" /> <!-- Lv. 5 Giant CON Dye -->
-				<item id="17709" min="1" max="1" chance="17.19" /> <!-- Lv. 5 Legendary STR Dye -->
-				<item id="17702" min="1" max="1" chance="17.17" /> <!-- Lv. 5 Giant MEN Dye -->
-				<item id="39484" min="1" max="1" chance="17.05" /> <!-- Alchemic Tome: Life Stone -->
-				<item id="17697" min="1" max="1" chance="16.85" /> <!-- Lv. 5 Giant STR Dye -->
-				<item id="17700" min="1" max="1" chance="16.84" /> <!-- Lv. 5 Giant INT Dye -->
-				<item id="39483" min="1" max="1" chance="16.73" /> <!-- Alchemic Tome: Enchant Scroll -->
-				<item id="17698" min="1" max="1" chance="16.61" /> <!-- Lv. 5 Giant DEX Dye -->
-				<item id="17708" min="1" max="1" chance="16.54" /> <!-- Lv. 5 Ancient MEN Dye -->
-				<item id="17710" min="1" max="1" chance="16.46" /> <!-- Lv. 5 Legendary DEX Dye -->
-				<item id="17705" min="1" max="1" chance="16.46" /> <!-- Lv. 5 Ancient CON Dye -->
-				<item id="39485" min="1" max="1" chance="16.45" /> <!-- Alchemic Tome: Dye -->
-				<item id="17712" min="1" max="1" chance="16.32" /> <!-- Lv. 5 Legendary INT Dye -->
-				<item id="17711" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Legendary CON Dye -->
-				<item id="17701" min="1" max="1" chance="16.08" /> <!-- Lv. 5 Giant WIT Dye -->
-				<item id="17706" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Ancient INT Dye -->
-				<item id="17703" min="1" max="1" chance="16.05" /> <!-- Lv. 5 Ancient STR Dye -->
-				<item id="17707" min="1" max="1" chance="16" /> <!-- Lv. 5 Ancient WIT Dye -->
-				<item id="46463" min="1" max="1" chance="15.36" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="46462" min="1" max="2" chance="15.19" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46448" min="1" max="1" chance="15.09" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46447" min="1" max="2" chance="14.76" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46464" min="1" max="1" chance="12.28" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="12.28" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46495" min="1" max="1" chance="11.63" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="46510" min="1" max="1" chance="11.5" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46480" min="1" max="1" chance="11.03" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="7.743" /> <!-- Kain's Soul Crystal - Stage 7 -->
-				<item id="46496" min="1" max="1" chance="7.727" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
-				<item id="46465" min="1" max="1" chance="7.727" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46481" min="1" max="1" chance="7.616" /> <!-- Leona's Soul Crystal - Stage 8 -->
-				<item id="46511" min="1" max="1" chance="7.613" /> <!-- Lionel's Soul Crystal - Stage 8 -->
+				<item id="37772" min="1" max="1" chance="50.78" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
+				<item id="35568" min="1" max="1" chance="49.86" /> <!-- Bloody Helios Enhancement Stone -->
+				<item id="37781" min="1" max="1" chance="49.24" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
+				<item id="19448" min="10" max="10" chance="31.01" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36389" min="10" max="10" chance="29.05" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="46507" min="1" max="2" chance="23.97" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46477" min="1" max="2" chance="23.9" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="23.45" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="2" chance="22.97" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="22.01" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46493" min="1" max="1" chance="21.91" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="36162" min="1" max="1" chance="20.56" /> <!-- Scroll of Blessing: (R99-grade) -->
+				<item id="19447" min="10" max="10" chance="20.56" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="36386" min="10" max="10" chance="19.43" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="46494" min="1" max="1" chance="19.22" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46509" min="1" max="1" chance="19.12" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="18.37" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="17703" min="1" max="1" chance="17.49" /> <!-- Lv. 5 Ancient STR Dye -->
+				<item id="17699" min="1" max="1" chance="17.46" /> <!-- Lv. 5 Giant CON Dye -->
+				<item id="17708" min="1" max="1" chance="17.38" /> <!-- Lv. 5 Ancient MEN Dye -->
+				<item id="17709" min="1" max="1" chance="17.25" /> <!-- Lv. 5 Legendary STR Dye -->
+				<item id="17697" min="1" max="1" chance="17.13" /> <!-- Lv. 5 Giant STR Dye -->
+				<item id="17702" min="1" max="1" chance="17.12" /> <!-- Lv. 5 Giant MEN Dye -->
+				<item id="39483" min="1" max="1" chance="16.94" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39484" min="1" max="1" chance="16.89" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="17712" min="1" max="1" chance="16.81" /> <!-- Lv. 5 Legendary INT Dye -->
+				<item id="17704" min="1" max="1" chance="16.77" /> <!-- Lv. 5 Ancient DEX Dye -->
+				<item id="17698" min="1" max="1" chance="16.73" /> <!-- Lv. 5 Giant DEX Dye -->
+				<item id="17707" min="1" max="1" chance="16.63" /> <!-- Lv. 5 Ancient WIT Dye -->
+				<item id="17711" min="1" max="1" chance="16.62" /> <!-- Lv. 5 Legendary CON Dye -->
+				<item id="17714" min="1" max="1" chance="16.52" /> <!-- Lv. 5 Legendary MEN Dye -->
+				<item id="17700" min="1" max="1" chance="16.38" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="17705" min="1" max="1" chance="16.18" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="39485" min="1" max="1" chance="16.09" /> <!-- Alchemic Tome: Dye -->
+				<item id="17701" min="1" max="1" chance="15.99" /> <!-- Lv. 5 Giant WIT Dye -->
+				<item id="46462" min="1" max="2" chance="15.84" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="17710" min="1" max="1" chance="15.94" /> <!-- Lv. 5 Legendary DEX Dye -->
+				<item id="17713" min="1" max="1" chance="15.85" /> <!-- Lv. 5 Legendary WIT Dye -->
+				<item id="46448" min="1" max="1" chance="15.72" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="17706" min="1" max="1" chance="15.84" /> <!-- Lv. 5 Ancient INT Dye -->
+				<item id="46447" min="1" max="2" chance="15.59" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46463" min="1" max="1" chance="15.07" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46449" min="1" max="1" chance="13.34" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46464" min="1" max="1" chance="12.4" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="11.87" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="11.82" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="11.44" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="7.723" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46481" min="1" max="1" chance="7.711" /> <!-- Leona's Soul Crystal - Stage 8 -->
+				<item id="46465" min="1" max="1" chance="7.713" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46511" min="1" max="1" chance="7.666" /> <!-- Lionel's Soul Crystal - Stage 8 -->
+				<item id="46496" min="1" max="1" chance="7.633" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
 				<item id="46466" min="1" max="1" chance="5.195" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
-				<item id="46451" min="1" max="1" chance="5.118" /> <!-- Kain's Soul Crystal - Stage 8 -->
+				<item id="46451" min="1" max="1" chance="5.172" /> <!-- Kain's Soul Crystal - Stage 8 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-				<item id="40199" min="1" max="1" chance="5.022" /> <!-- Disassembly Recipe Pouch: Weapon -->
+				<item id="40199" min="1" max="1" chance="5.01" /> <!-- Disassembly Recipe Pouch: Weapon -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -1632,6 +1682,16 @@
 			<radius normal="21" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6652" min="2" max="6" chance="17.79" /> <!-- Amulet: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.437" /> <!-- Amulet: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.148" /> <!-- Amulet: Slay Valakas -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="90.245" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="29031" level="84" type="L2Monster" name="Kerinne's Ifrit">
 		<!-- Confirmed CT2.5 -->
@@ -1767,6 +1827,16 @@
 			<radius normal="21" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6652" min="2" max="6" chance="19.8" /> <!-- Amulet: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.514" /> <!-- Amulet: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.242" /> <!-- Amulet: Slay Valakas -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="89.01" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="29034" level="84" type="L2Monster" name="Freki's Ifrit">
 		<!-- Confirmed CT2.5 -->
@@ -1862,7 +1932,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="2466261" sp="591" />
+		<acquire exp="2466262" sp="591" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="214199" hpRegen="345.51" mp="1759" mpRegen="9.9" />
 			<attack physical="5351.94" magical="635.498613944512" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1904,6 +1974,16 @@
 			<radius normal="21" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6652" min="2" max="6" chance="19.35" /> <!-- Amulet: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.728" /> <!-- Amulet: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.307" /> <!-- Amulet: Slay Valakas -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="90.99" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="29037" level="84" type="L2RaidBoss" name="Fenril Hound Kinaz" title="Family of Valakas">
 		<!-- Confirmed CT2.5 -->
@@ -1959,6 +2039,16 @@
 			<radius normal="21" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6652" min="2" max="6" chance="19.31" /> <!-- Amulet: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.713" /> <!-- Amulet: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.422" /> <!-- Amulet: Slay Valakas -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="90.795" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="29038" level="84" type="L2Monster" name="Kinaz' Ifrit">
 		<!-- Confirmed CT2.5 -->
@@ -2107,12 +2197,22 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6652" min="2" max="6" chance="19.2899999999999" /> <!-- Amulet: Protection of Valakas -->
-				<item id="6654" min="18" max="54" chance="6.79500000000011" /> <!-- Amulet: Flames of Valakas -->
-				<item id="6655" min="14" max="42" chance="4.38399999999996" /> <!-- Amulet: Slay Valakas -->
+				<item id="6652" min="2" max="6" chance="18.97" /> <!-- Amulet: Protection of Valakas -->
+				<item id="6654" min="18" max="54" chance="6.863" /> <!-- Amulet: Flames of Valakas -->
+				<item id="6655" min="14" max="42" chance="4.376" /> <!-- Amulet: Slay Valakas -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="92.37" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="88.28" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -2343,7 +2443,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8204" /> <!-- Monster Only (Follower of Frintezza Calibur) -->
-		<acquire exp="130849002" sp="10028450" />
+		<acquire exp="130849003" sp="31403" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="19146585" hpRegen="248.43" mp="17588" mpRegen="109" />
 			<attack physical="3135.90530099925" magical="1442.51644402476" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2397,7 +2497,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8222" /> <!-- Monster Only (Follower of Frintezza Tran Calibur) -->
-		<acquire exp="130849002" sp="31403" />
+		<acquire exp="130849003" sp="31403" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="32632013" hpRegen="248.43" mp="36936" mpRegen="109" />
 			<attack physical="8890.29152833288" magical="8989.0725799934" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2747,15 +2847,25 @@
 		<ai aggroRange="1000" />
 		<drop_lists>
 			<drop>
-				<item id="6364" min="1" max="1" chance="0.750000000000008" /> <!-- Forgotten Blade -->
-				<item id="6372" min="1" max="1" chance="0.750000000000008" /> <!-- Heaven's Divider -->
-				<item id="6688" min="8" max="22" chance="27.5800000000001" /> <!-- Forgotten Blade Edge -->
-				<item id="6696" min="24" max="72" chance="8.79499999999992" /> <!-- Heaven's Divider Edge -->
-				<item id="6675" min="1" max="1" chance="2.82899999999997" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6674" min="1" max="1" chance="1.75100000000002" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6701" min="8" max="22" chance="46.4900000000003" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="6702" min="24" max="72" chance="18.1499999999999" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6675" min="1" max="1" chance="2.814" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="1.83" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6364" min="1" max="1" chance="0.75" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="0.75" /> <!-- Heaven's Divider -->
+				<item id="6701" min="8" max="22" chance="44.63" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6688" min="8" max="22" chance="27.68" /> <!-- Forgotten Blade Edge -->
+				<item id="6702" min="24" max="72" chance="18.39" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6696" min="24" max="72" chance="8.827" /> <!-- Heaven's Divider Edge -->
 				<item id="10297" min="1" max="1" chance="0.75" /> <!-- Transformation Sealbook: Venom -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2860,27 +2970,37 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="110" min="1" max="1" chance="3.549" /> <!-- Doom Shield -->
-				<item id="171" min="1" max="1" chance="0.300000000000001" /> <!-- Deadman's Glory -->
-				<item id="175" min="1" max="1" chance="0.300000000000001" /> <!-- Art of Battle Axe -->
-				<item id="210" min="1" max="1" chance="0.300000000000001" /> <!-- Staff of Evil Spirits -->
-				<item id="7893" min="1" max="1" chance="0.300000000000001" /> <!-- Kaim Vanul's Bones -->
-				<item id="7901" min="1" max="1" chance="0.300000000000001" /> <!-- Star Buster -->
-				<item id="8348" min="8" max="22" chance="18.7500000000001" /> <!-- Star Buster Head -->
-				<item id="4117" min="4" max="10" chance="8.49900000000001" /> <!-- Art of Battle Axe Blade -->
-				<item id="4118" min="4" max="12" chance="7.07500000000009" /> <!-- Evil Spirit Head -->
-				<item id="8180" min="1" max="1" chance="20.7199999999996" /> <!-- Circlet of Ice Fairy Sirra -->
-				<item id="2416" min="1" max="1" chance="2.47399999999996" /> <!-- Blue Wolf Helmet -->
-				<item id="2417" min="1" max="1" chance="2.46700000000001" /> <!-- Doom Helmet -->
-				<item id="4088" min="9" max="27" chance="30.4800000000003" /> <!-- Blue Wolf Helmet Design -->
-				<item id="4089" min="14" max="42" chance="20.7199999999996" /> <!-- Doom Helmet Pattern -->
-				<item id="4077" min="40" max="120" chance="8.45000000000001" /> <!-- Doom Shield Fragment -->
-				<item id="1343" min="100" max="200" chance="36.0200000000001" /> <!-- Silver Arrow -->
-				<item id="4116" min="3" max="9" chance="9.9110000000001" /> <!-- Deadman's Glory Stone -->
-				<item id="8340" min="36" max="108" chance="4.01499999999999" /> <!-- Bones Head of Kaim Vanul -->
+				<item id="8180" min="1" max="1" chance="19.78" /> <!-- Circlet of Ice Fairy Sirra -->
+				<item id="110" min="1" max="1" chance="3.631" /> <!-- Doom Shield -->
+				<item id="2417" min="1" max="1" chance="2.549" /> <!-- Doom Helmet -->
+				<item id="2416" min="1" max="1" chance="2.443" /> <!-- Blue Wolf Helmet -->
+				<item id="171" min="1" max="1" chance="0.3" /> <!-- Deadman's Glory -->
+				<item id="175" min="1" max="1" chance="0.3" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="0.3" /> <!-- Staff of Evil Spirits -->
+				<item id="7893" min="1" max="1" chance="0.3" /> <!-- Kaim Vanul's Bones -->
+				<item id="7901" min="1" max="1" chance="0.3" /> <!-- Star Buster -->
+				<item id="1343" min="100" max="200" chance="36.17" /> <!-- Silver Arrow -->
+				<item id="4088" min="9" max="27" chance="32" /> <!-- Blue Wolf Helmet Design -->
+				<item id="4089" min="14" max="42" chance="19.7" /> <!-- Doom Helmet Pattern -->
+				<item id="8348" min="8" max="22" chance="19.42" /> <!-- Star Buster Head -->
+				<item id="4116" min="3" max="9" chance="9.979" /> <!-- Deadman's Glory Stone -->
+				<item id="4117" min="4" max="10" chance="8.508" /> <!-- Art of Battle Axe Blade -->
+				<item id="4077" min="40" max="120" chance="8.48" /> <!-- Doom Shield Fragment -->
+				<item id="4118" min="4" max="12" chance="7.107" /> <!-- Evil Spirit Head -->
+				<item id="8340" min="36" max="108" chance="3.955" /> <!-- Bones Head of Kaim Vanul -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="79.27" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="78.97" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -3018,7 +3138,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="1749005" sp="419" />
+		<acquire exp="1749006" sp="419" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="66183" hpRegen="124.2191592" mp="1007" mpRegen="2.4" />
 			<attack physical="1063.76651" magical="313.7963651" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3058,18 +3178,28 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="287" min="1" max="1" chance="1.18799999999998" /> <!-- Bow of Peril -->
-				<item id="4121" min="3" max="9" chance="54.42" /> <!-- Bow of Peril Shaft -->
-				<item id="2391" min="1" max="1" chance="1.44400000000002" /> <!-- Blue Wolf Leather Armor -->
-				<item id="2392" min="1" max="1" chance="1.35200000000001" /> <!-- Leather Armor of Doom -->
-				<item id="4082" min="4" max="12" chance="33.65" /> <!-- Blue Wolf Leather Armor Texture -->
-				<item id="4083" min="8" max="22" chance="18.9699999999999" /> <!-- Leather Armor of Doom Design -->
-				<item id="4618" min="1" max="1" chance="44.8600000000003" /> <!-- Greater DEX Dye (Dex + 4 CON - 4) -->
-				<item id="4616" min="1" max="3" chance="22.3800000000003" /> <!-- Greater CON Dye (Con + 4 DEX - 4) -->
-				<item id="4617" min="2" max="4" chance="14.7100000000003" /> <!-- Greater DEX Dye (Dex + 4 Str - 4) -->
+				<item id="2392" min="1" max="1" chance="1.444" /> <!-- Leather Armor of Doom -->
+				<item id="2391" min="1" max="1" chance="1.398" /> <!-- Blue Wolf Leather Armor -->
+				<item id="287" min="1" max="1" chance="1.169" /> <!-- Bow of Peril -->
+				<item id="4121" min="3" max="9" chance="52.65" /> <!-- Bow of Peril Shaft -->
+				<item id="4618" min="1" max="1" chance="44.33" /> <!-- Greater DEX Dye (Dex  4 CON - 4) -->
+				<item id="4082" min="4" max="12" chance="33.94" /> <!-- Blue Wolf Leather Armor Texture -->
+				<item id="4616" min="1" max="3" chance="22.73" /> <!-- Greater CON Dye (Con  4 DEX - 4) -->
+				<item id="4083" min="8" max="22" chance="17.72" /> <!-- Leather Armor of Doom Design -->
+				<item id="4617" min="2" max="4" chance="14.29" /> <!-- Greater DEX Dye (Dex  4 Str - 4) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="70.92" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="69.67" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -3111,7 +3241,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29062" level="80" type="L2RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
+	<npc id="29062" level="99" type="L2RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3172,31 +3302,63 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="38052" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Caster Crafting Pack -->
-				<item id="38051" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Buster Crafting Pack -->
-				<item id="38050" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Shooter Crafting Pack -->
-				<item id="38049" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Thrower Crafting Pack -->
-				<item id="38048" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Stormer Crafting Pack -->
-				<item id="38047" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Fighter Crafting Pack -->
-				<item id="38046" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Avenger Crafting Pack -->
-				<item id="38045" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Slasher Crafting Pack -->
-				<item id="38044" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Cutter Crafting Pack -->
-				<item id="38043" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Shaper Crafting Pack -->
-				<item id="38053" min="1" max="1" chance="0.0750000000000001" /> <!-- Amaranthine Retributer Crafting Pack -->
-				<item id="36279" min="1" max="1" chance="1.69399999999999" /> <!-- Pagan Devil Circlet -->
-				<item id="36280" min="1" max="1" chance="1.639" /> <!-- Pagan Devil Circlet -->
-				<item id="36281" min="1" max="1" chance="1.61200000000001" /> <!-- Pagan Devil Circlet -->
-				<item id="36389" min="1" max="1" chance="32.221598653091" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-				<item id="36386" min="1" max="1" chance="7.9571875250541" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="17691" min="1" max="1" chance="6.8908843101098" /> <!-- Lv. 4 Legendary STR Dye STR + 5 / DEX - 1 / Fire Resistance + 20 -->
-				<item id="17692" min="1" max="1" chance="6.8026938186483" /> <!-- Lv. 4 Legendary DEX Dye DEX + 5 / CON - 1 / Earth Resistance + 20 -->
-				<item id="17696" min="1" max="1" chance="6.7906678425399" /> <!-- Lv. 4 Legendary MEN Dye MEN + 5 / INT - 1 / Holy Resistance + 20 -->
-				<item id="19467" min="1" max="1" chance="6.7505812555119" /> <!-- Yellow Soul Crystal Fragment (R99-grade) -->
-				<item id="17693" min="1" max="1" chance="6.7024773510783" /> <!-- Lv. 4 Legendary CON Dye CON + 5 / STR - 1 / Dark Resistance + 20 -->
-				<item id="17694" min="1" max="1" chance="6.5461396616692" /> <!-- Lv. 4 Legendary INT Dye INT + 5 / WIT - 1 / Water Resistance + 20 -->
-				<item id="19468" min="1" max="1" chance="6.510061733344" /> <!-- Teal Soul Crystal Fragment (R99-grade) -->
-				<item id="17695" min="1" max="1" chance="6.4579491702076" /> <!-- Lv. 4 Legendary WIT Dye WIT + 5 / MEN - 1 / Wind Resistance + 20 -->
-				<item id="19469" min="1" max="1" chance="6.3697586787461" /> <!-- Purple Soul Crystal Fragment (R99-grade) -->
+				<item id="36279" min="1" max="1" chance="1.687" /> <!-- Pagan Devil Circlet (1) -->
+				<item id="36281" min="1" max="1" chance="1.632" /> <!-- Pagan Devil Circlet (3) -->
+				<item id="36280" min="1" max="1" chance="1.606" /> <!-- Pagan Devil Circlet (2) -->
+				<item id="36389" min="1" max="1" chance="79.51" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="36386" min="1" max="1" chance="20.04" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="17692" min="1" max="1" chance="17.36" /> <!-- Lv. 4 Legendary DEX Dye -->
+				<item id="17691" min="1" max="1" chance="17.32" /> <!-- Lv. 4 Legendary STR Dye -->
+				<item id="17694" min="1" max="1" chance="16.85" /> <!-- Lv. 4 Legendary INT Dye -->
+				<item id="17693" min="1" max="1" chance="16.83" /> <!-- Lv. 4 Legendary CON Dye -->
+				<item id="17695" min="1" max="1" chance="16.34" /> <!-- Lv. 4 Legendary WIT Dye -->
+				<item id="17696" min="1" max="1" chance="16.25" /> <!-- Lv. 4 Legendary MEN Dye -->
+				<item id="46478" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="38047" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="46494" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="38046" min="1" max="1" chance="0.075" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.075" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="46509" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38044" min="1" max="1" chance="0.075" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.075" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.075" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.075" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.075" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="46479" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="38051" min="1" max="1" chance="0.075" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.075" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.075" /> <!-- Helios Caster Crafting Pack -->
+				<item id="46464" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46449" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3360,16 +3522,41 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<drop_lists>
 			<drop>
-				<item id="6367" min="1" max="1" chance="0.299999999999999" /> <!-- Angel Slayer -->
-				<item id="6691" min="3" max="9" chance="40.3899999999999" /> <!-- Angel Slayer Blade -->
-				<item id="6680" min="1" max="1" chance="0.749999999999994" /> <!-- Sealed Draconic Leather Armor -->
-				<item id="6707" min="3" max="9" chance="53.6" /> <!-- Sealed Draconic Leather Armor Part -->
-				<item id="960" min="1" max="1" chance="18.0499999999999" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="1.85400000000001" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.299999999999991" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="6680" min="1" max="1" chance="0.75" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6367" min="1" max="1" chance="0.3" /> <!-- Angel Slayer -->
+				<item id="6707" min="3" max="9" chance="52.02" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6691" min="3" max="9" chance="37.73" /> <!-- Angel Slayer Blade -->
+				<item id="960" min="1" max="1" chance="18.87" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="1.882" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="88.86" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="87.31" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -3515,35 +3702,35 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="17440" min="1" max="3" chance="20.84" /> <!-- Eternal Leather Boots -->
-				<item id="17436" min="1" max="3" chance="20.73" /> <!-- Eternal Leather Helmet -->
-				<item id="17438" min="1" max="3" chance="20.51" /> <!-- Eternal Leather Leggings -->
-				<item id="6656" min="1" max="1" chance="20.01" /> <!-- Antharas' Earring -->
-				<item id="17437" min="1" max="3" chance="19.57" /> <!-- Eternal Leather Armor -->
-				<item id="17439" min="1" max="3" chance="19.53" /> <!-- Eternal Leather Gloves -->
-				<item id="17430" min="1" max="3" chance="17.46" /> <!-- Eternal Helmet -->
-				<item id="17445" min="1" max="3" chance="17.44" /> <!-- Eternal Shoes -->
-				<item id="17443" min="1" max="3" chance="17.37" /> <!-- Eternal Stockings -->
-				<item id="17435" min="1" max="3" chance="17.3" /> <!-- Eternal Shield -->
-				<item id="17446" min="1" max="3" chance="17.125" /> <!-- Eternal Sigil -->
-				<item id="17433" min="1" max="3" chance="17.07" /> <!-- Eternal Gauntlets -->
-				<item id="17432" min="1" max="3" chance="17.05" /> <!-- Eternal Gaiters -->
-				<item id="17444" min="1" max="3" chance="16.9" /> <!-- Eternal Gloves -->
-				<item id="17431" min="1" max="3" chance="16.81" /> <!-- Eternal Breastplate -->
-				<item id="17441" min="1" max="3" chance="16.58" /> <!-- Eternal Circlet -->
-				<item id="17434" min="1" max="3" chance="16.55" /> <!-- Eternal Boots -->
-				<item id="17442" min="1" max="3" chance="15.84" /> <!-- Eternal Tunic -->
-				<item id="17417" min="1" max="3" chance="9.143" /> <!-- Helios Cutter -->
-				<item id="17424" min="1" max="3" chance="9.143" /> <!-- Helios Buster -->
-				<item id="17423" min="1" max="3" chance="9.142" /> <!-- Helios Shooter -->
-				<item id="17420" min="1" max="3" chance="9.133" /> <!-- Helios Fighter -->
-				<item id="17422" min="1" max="3" chance="9.126" /> <!-- Helios Thrower -->
-				<item id="17426" min="1" max="3" chance="9.123" /> <!-- Helios Retributer -->
-				<item id="17425" min="1" max="3" chance="9.107" /> <!-- Helios Caster -->
-				<item id="17416" min="1" max="3" chance="9.082" /> <!-- Helios Shaper -->
-				<item id="17418" min="1" max="3" chance="9.07" /> <!-- Helios Slasher -->
-				<item id="17421" min="1" max="3" chance="9.063" /> <!-- Helios Stormer -->
-				<item id="17419" min="1" max="3" chance="9.056" /> <!-- Helios Avenger -->
+				<item id="6656" min="1" max="1" chance="20.99" /> <!-- Antharas' Earring -->
+				<item id="17436" min="1" max="3" chance="20.84" /> <!-- Eternal Leather Helmet -->
+				<item id="17440" min="1" max="3" chance="20.74" /> <!-- Eternal Leather Boots -->
+				<item id="17438" min="1" max="3" chance="19.61" /> <!-- Eternal Leather Leggings -->
+				<item id="17439" min="1" max="3" chance="19.12" /> <!-- Eternal Leather Gloves -->
+				<item id="17437" min="1" max="3" chance="19.09" /> <!-- Eternal Leather Armor -->
+				<item id="17441" min="1" max="3" chance="17.48" /> <!-- Eternal Circlet -->
+				<item id="17433" min="1" max="3" chance="17.43" /> <!-- Eternal Gauntlets -->
+				<item id="17444" min="1" max="3" chance="17.28" /> <!-- Eternal Gloves -->
+				<item id="17434" min="1" max="3" chance="17.08" /> <!-- Eternal Boots -->
+				<item id="17432" min="1" max="3" chance="17.01" /> <!-- Eternal Gaiters -->
+				<item id="17443" min="1" max="3" chance="16.8" /> <!-- Eternal Stockings -->
+				<item id="17446" min="1" max="3" chance="16.715" /> <!-- Eternal Sigil -->
+				<item id="17430" min="1" max="3" chance="16.68" /> <!-- Eternal Helmet -->
+				<item id="17445" min="1" max="3" chance="16.63" /> <!-- Eternal Shoes -->
+				<item id="17431" min="1" max="3" chance="16.6" /> <!-- Eternal Breastplate -->
+				<item id="17442" min="1" max="3" chance="16.58" /> <!-- Eternal Tunic -->
+				<item id="17435" min="1" max="3" chance="16.02" /> <!-- Eternal Shield -->
+				<item id="17419" min="1" max="3" chance="9.158" /> <!-- Helios Avenger -->
+				<item id="17417" min="1" max="3" chance="9.127" /> <!-- Helios Cutter -->
+				<item id="17425" min="1" max="3" chance="9.125" /> <!-- Helios Caster -->
+				<item id="17416" min="1" max="3" chance="9.103" /> <!-- Helios Shaper -->
+				<item id="17426" min="1" max="3" chance="9.089" /> <!-- Helios Retributer -->
+				<item id="17420" min="1" max="3" chance="9.07" /> <!-- Helios Fighter -->
+				<item id="17422" min="1" max="3" chance="9.067" /> <!-- Helios Thrower -->
+				<item id="17424" min="1" max="3" chance="9.049" /> <!-- Helios Buster -->
+				<item id="17421" min="1" max="3" chance="9.044" /> <!-- Helios Stormer -->
+				<item id="17418" min="1" max="3" chance="9.044" /> <!-- Helios Slasher -->
+				<item id="17423" min="1" max="3" chance="9.038" /> <!-- Helios Shooter -->
 				<item id="36425" min="1" max="1" chance="0.03" /> <!-- Antharas Dual Blunt Weapon (Fragment) -->
 				<item id="36424" min="1" max="1" chance="0.03" /> <!-- Antharas Avenger (Fragment) -->
 				<item id="36423" min="1" max="1" chance="0.03" /> <!-- Antharas Fighter (Fragment) -->
@@ -3556,64 +3743,74 @@
 				<item id="36426" min="1" max="1" chance="0.03" /> <!-- Antharas Dualsword (Fragment) -->
 				<item id="36414" min="1" max="1" chance="100" /> <!-- Dragon Claw -->
 				<item id="19465" min="1" max="1" chance="100" /> <!-- Bottle of Antharas' Soul -->
-				<item id="35568" min="1" max="1" chance="50.19" /> <!-- Bloody Helios Enhancement Stone -->
-				<item id="37781" min="1" max="1" chance="49.11" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
-				<item id="37772" min="1" max="1" chance="48.83" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
-				<item id="36389" min="10" max="10" chance="29.92" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-				<item id="19448" min="10" max="10" chance="29.25" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="46478" min="1" max="1" chance="24.11" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46477" min="1" max="2" chance="23.88" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="2" chance="23.8" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46508" min="1" max="1" chance="23.79" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46493" min="1" max="1" chance="22.59" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46507" min="1" max="2" chance="22.39" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46479" min="1" max="1" chance="20.1" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="19447" min="10" max="10" chance="19.79" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="36162" min="1" max="1" chance="19.31" /> <!-- Scroll of Blessing: (R99-grade) -->
-				<item id="36386" min="10" max="10" chance="19.19" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="46494" min="1" max="1" chance="19.05" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46509" min="1" max="1" chance="18.98" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="17703" min="1" max="1" chance="17.29" /> <!-- Lv. 5 Ancient STR Dye -->
-				<item id="17714" min="1" max="1" chance="17.2" /> <!-- Lv. 5 Legendary MEN Dye -->
-				<item id="17705" min="1" max="1" chance="17.11" /> <!-- Lv. 5 Ancient CON Dye -->
-				<item id="17707" min="1" max="1" chance="16.92" /> <!-- Lv. 5 Ancient WIT Dye -->
-				<item id="17711" min="1" max="1" chance="16.84" /> <!-- Lv. 5 Legendary CON Dye -->
-				<item id="17709" min="1" max="1" chance="16.79" /> <!-- Lv. 5 Legendary STR Dye -->
-				<item id="17713" min="1" max="1" chance="16.69" /> <!-- Lv. 5 Legendary WIT Dye -->
-				<item id="17697" min="1" max="1" chance="16.63" /> <!-- Lv. 5 Giant STR Dye -->
-				<item id="17706" min="1" max="1" chance="16.54" /> <!-- Lv. 5 Ancient INT Dye -->
-				<item id="17710" min="1" max="1" chance="16.43" /> <!-- Lv. 5 Legendary DEX Dye -->
-				<item id="39485" min="1" max="1" chance="16.29" /> <!-- Alchemic Tome: Dye -->
-				<item id="46447" min="1" max="2" chance="16.16" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46448" min="1" max="1" chance="16.15" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="17701" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Giant WIT Dye -->
-				<item id="17708" min="1" max="1" chance="16.25" /> <!-- Lv. 5 Ancient MEN Dye -->
-				<item id="17700" min="1" max="1" chance="16.21" /> <!-- Lv. 5 Giant INT Dye -->
-				<item id="39484" min="1" max="1" chance="16.2" /> <!-- Alchemic Tome: Life Stone -->
-				<item id="17704" min="1" max="1" chance="16.14" /> <!-- Lv. 5 Ancient DEX Dye -->
-				<item id="17712" min="1" max="1" chance="15.98" /> <!-- Lv. 5 Legendary INT Dye -->
-				<item id="39483" min="1" max="1" chance="15.97" /> <!-- Alchemic Tome: Enchant Scroll -->
-				<item id="17702" min="1" max="1" chance="15.96" /> <!-- Lv. 5 Giant MEN Dye -->
-				<item id="17698" min="1" max="1" chance="15.95" /> <!-- Lv. 5 Giant DEX Dye -->
-				<item id="17699" min="1" max="1" chance="15.92" /> <!-- Lv. 5 Giant CON Dye -->
-				<item id="46462" min="1" max="2" chance="15.53" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46463" min="1" max="1" chance="14.81" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="46464" min="1" max="1" chance="13.23" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="12.75" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46480" min="1" max="1" chance="11.95" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46495" min="1" max="1" chance="11.8" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="46510" min="1" max="1" chance="11.54" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46465" min="1" max="1" chance="7.815" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="7.767" /> <!-- Kain's Soul Crystal - Stage 7 -->
-				<item id="46496" min="1" max="1" chance="7.636" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
-				<item id="46511" min="1" max="1" chance="7.622" /> <!-- Lionel's Soul Crystal - Stage 8 -->
-				<item id="46481" min="1" max="1" chance="7.598" /> <!-- Leona's Soul Crystal - Stage 8 -->
-				<item id="46451" min="1" max="1" chance="5.136" /> <!-- Kain's Soul Crystal - Stage 8 -->
-				<item id="46466" min="1" max="1" chance="5.108" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
+				<item id="37781" min="1" max="1" chance="51.16" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
+				<item id="35568" min="1" max="1" chance="50.23" /> <!-- Bloody Helios Enhancement Stone -->
+				<item id="37772" min="1" max="1" chance="49.13" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
+				<item id="36389" min="10" max="10" chance="31.08" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="10" max="10" chance="30.13" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="46492" min="1" max="2" chance="24.01" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="23.94" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46507" min="1" max="2" chance="23.93" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="23.51" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="22.81" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="2" chance="22.41" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46509" min="1" max="1" chance="19.88" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="36162" min="1" max="1" chance="19.84" /> <!-- Scroll of Blessing: (R99-grade) -->
+				<item id="19447" min="10" max="10" chance="19.43" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="46494" min="1" max="1" chance="19.29" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="36386" min="10" max="10" chance="19.2" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="46479" min="1" max="1" chance="18.67" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="17713" min="1" max="1" chance="17.44" /> <!-- Lv. 5 Legendary WIT Dye -->
+				<item id="17703" min="1" max="1" chance="17.41" /> <!-- Lv. 5 Ancient STR Dye -->
+				<item id="17712" min="1" max="1" chance="17.26" /> <!-- Lv. 5 Legendary INT Dye -->
+				<item id="39484" min="1" max="1" chance="17.25" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="17704" min="1" max="1" chance="17.22" /> <!-- Lv. 5 Ancient DEX Dye -->
+				<item id="17702" min="1" max="1" chance="17.03" /> <!-- Lv. 5 Giant MEN Dye -->
+				<item id="17711" min="1" max="1" chance="16.88" /> <!-- Lv. 5 Legendary CON Dye -->
+				<item id="17697" min="1" max="1" chance="16.82" /> <!-- Lv. 5 Giant STR Dye -->
+				<item id="39485" min="1" max="1" chance="16.54" /> <!-- Alchemic Tome: Dye -->
+				<item id="17705" min="1" max="1" chance="16.51" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="17698" min="1" max="1" chance="16.41" /> <!-- Lv. 5 Giant DEX Dye -->
+				<item id="17700" min="1" max="1" chance="16.32" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="17710" min="1" max="1" chance="16.26" /> <!-- Lv. 5 Legendary DEX Dye -->
+				<item id="39483" min="1" max="1" chance="16.25" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="17709" min="1" max="1" chance="16.19" /> <!-- Lv. 5 Legendary STR Dye -->
+				<item id="17701" min="1" max="1" chance="16.17" /> <!-- Lv. 5 Giant WIT Dye -->
+				<item id="17707" min="1" max="1" chance="16.11" /> <!-- Lv. 5 Ancient WIT Dye -->
+				<item id="17706" min="1" max="1" chance="16.04" /> <!-- Lv. 5 Ancient INT Dye -->
+				<item id="17714" min="1" max="1" chance="15.98" /> <!-- Lv. 5 Legendary MEN Dye -->
+				<item id="46447" min="1" max="2" chance="15.82" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="17699" min="1" max="1" chance="15.89" /> <!-- Lv. 5 Giant CON Dye -->
+				<item id="17708" min="1" max="1" chance="15.89" /> <!-- Lv. 5 Ancient MEN Dye -->
+				<item id="46463" min="1" max="1" chance="15.73" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46448" min="1" max="1" chance="15.02" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46462" min="1" max="2" chance="14.76" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46464" min="1" max="1" chance="13.26" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46449" min="1" max="1" chance="12.66" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="11.66" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="11.36" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="10.95" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46465" min="1" max="1" chance="7.803" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46481" min="1" max="1" chance="7.722" /> <!-- Leona's Soul Crystal - Stage 8 -->
+				<item id="46496" min="1" max="1" chance="7.717" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
+				<item id="46450" min="1" max="1" chance="7.714" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46511" min="1" max="1" chance="7.654" /> <!-- Lionel's Soul Crystal - Stage 8 -->
+				<item id="46466" min="1" max="1" chance="5.237" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
+				<item id="46451" min="1" max="1" chance="5.189" /> <!-- Kain's Soul Crystal - Stage 8 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-				<item id="40199" min="1" max="1" chance="5.018" /> <!-- Disassembly Recipe Pouch: Weapon -->
+				<item id="40199" min="1" max="1" chance="4.982" /> <!-- Disassembly Recipe Pouch: Weapon -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -4966,17 +5163,42 @@
 		<ai type="BALANCED" isAggressive="true" aggroRange="1000" />
 		<drop_lists>
 			<drop>
-				<item id="6371" min="1" max="1" chance="0.749999999999969" /> <!-- Demon Splinter -->
-				<item id="6695" min="3" max="9" chance="68.8700000000002" /> <!-- Demon Splinter Blade -->
-				<item id="6684" min="1" max="1" chance="1.289" /> <!-- Sealed Major Arcana Robe -->
-				<item id="6711" min="12" max="36" chance="23.3400000000001" /> <!-- Sealed Major Arcana Robe Part -->
-				<item id="960" min="1" max="1" chance="34.5600000000001" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="959" min="1" max="1" chance="3.28" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="6577" min="1" max="1" chance="0.750000000000019" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
-				<item id="10298" min="1" max="1" chance="0.750000000000019" /> <!-- Transformation Sealbook: Gordon -->
+				<item id="6684" min="1" max="1" chance="1.298" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6371" min="1" max="1" chance="0.75" /> <!-- Demon Splinter -->
+				<item id="6695" min="3" max="9" chance="71.35" /> <!-- Demon Splinter Blade -->
+				<item id="960" min="1" max="1" chance="31.46" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6711" min="12" max="36" chance="23.82" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="959" min="1" max="1" chance="3.302" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="6577" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="10298" min="1" max="1" chance="0.75" /> <!-- Transformation Sealbook: Gordon -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="90.055" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="92.315" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 		<collision>
@@ -4998,7 +5220,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="8214" /> <!-- Monster Only (Solina Priest Pole) -->
-		<acquire exp="9732346" sp="2118" />
+		<acquire exp="6653170" sp="1596" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="480890" hpRegen="147.845481058836" mp="2051" mpRegen="3.21" />
 			<attack physical="3064.77740579339" magical="1222.08861964511" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5038,6 +5260,53 @@
 			<radius normal="16" />
 			<height normal="41.8" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="15484" min="1" max="1" chance="4.549" /> <!-- Archangel Circlet -->
+				<item id="14114" min="1" max="1" chance="1.187" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14111" min="1" max="1" chance="1.163" /> <!-- Sealed Vesper Shield -->
+				<item id="14116" min="1" max="1" chance="1.166" /> <!-- Sealed Vesper Gloves -->
+				<item id="14117" min="1" max="1" chance="1.163" /> <!-- Sealed Vesper Shoes -->
+				<item id="13887" min="1" max="1" chance="1.123" /> <!-- Sealed Vesper Sigil -->
+				<item id="14109" min="1" max="1" chance="1.121" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14113" min="1" max="1" chance="1.118" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14110" min="1" max="1" chance="1.11" /> <!-- Sealed Vesper Boots -->
+				<item id="13145" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Circlet -->
+				<item id="13144" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13143" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Helmet -->
+				<item id="960" min="1" max="1" chance="15.37" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="959" min="1" max="1" chance="1.479" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="89.05" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="29097" level="80" type="L2Monster" name="Disciple of Splendor" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->

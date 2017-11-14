@@ -412,14 +412,14 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="19309" level="94" type="L2Npc" name="Golem of Repairs" title="Black Anvil Guild">
+	<npc id="19309" level="93" type="L2Monster" name="Golem of Repairs" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
 		</parameters>
 		<race>FRIEND</race>
 		<sex>MALE</sex>
-		<acquire exp="1185436" sp="284" />
+		<acquire exp="4784107" sp="4843" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14547" hpRegen="8.5" mp="2169" mpRegen="3" />
 			<speed>
@@ -451,6 +451,30 @@
 			<radius normal="20" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
+				<item id="57" min="1072" max="2504" chance="20" /> <!-- Adena -->
+				<item id="36841" min="1" max="1" chance="1.775" /> <!-- Twilight Shield Ingredient -->
+				<item id="36779" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Shield (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="22.75" /> <!-- Thin Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="19310" level="94" type="L2Monster" name="Drill Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -490,15 +514,39 @@
 			<radius normal="20" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17329" min="1" max="1" chance="0.003" /> <!-- Apocalypse Stormer -->
+				<item id="57" min="1104" max="2576" chance="20" /> <!-- Adena -->
+				<item id="36830" min="1" max="1" chance="0.3" /> <!-- Apocalypse Stormer Fragment -->
+				<item id="36768" min="1" max="1" chance="0.0075" /> <!-- Recipe: Apocalypse Stormer (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="23.01" /> <!-- Thin Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="19311" level="94" type="L2Npc" name="Drill Golem" title="Black Anvil Guild">
+	<npc id="19311" level="94" type="L2Monster" name="Drill Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
 		</parameters>
 		<race>FRIEND</race>
 		<sex>MALE</sex>
-		<acquire exp="1185436" sp="284" />
+		<acquire exp="4894525" sp="4948" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14547" hpRegen="8.5" mp="2169" mpRegen="3" />
 			<speed>
@@ -530,6 +578,30 @@
 			<radius normal="20" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17329" min="1" max="1" chance="0.003" /> <!-- Apocalypse Stormer -->
+				<item id="57" min="1104" max="2576" chance="20" /> <!-- Adena -->
+				<item id="36830" min="1" max="1" chance="0.3" /> <!-- Apocalypse Stormer Fragment -->
+				<item id="36768" min="1" max="1" chance="0.0075" /> <!-- Recipe: Apocalypse Stormer (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="23.01" /> <!-- Thin Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="19312" level="94" type="L2Monster" name="Excavator Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -648,15 +720,39 @@
 			<radius normal="21" />
 			<height normal="23" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1140" max="2660" chance="20" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="9.602" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36528" min="1" max="1" chance="7.528" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="19315" level="95" type="L2Npc" name="Pincer Golem" title="Black Anvil Guild">
+	<npc id="19315" level="95" type="L2Monster" name="Pincer Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
 		<race>FRIEND</race>
 		<sex>MALE</sex>
-		<acquire exp="1118929" sp="268" />
+		<acquire exp="4619897" sp="4693" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14806" hpRegen="8.5" mp="2205" mpRegen="3" />
 			<speed>
@@ -688,6 +784,30 @@
 			<radius normal="21" />
 			<height normal="23" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1140" max="2660" chance="20" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="9.602" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36528" min="1" max="1" chance="7.528" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="19316" level="94" type="L2Monster" name="Screw Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -727,15 +847,40 @@
 			<radius normal="18" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17327" min="1" max="1" chance="0.003" /> <!-- Apocalypse Avenger -->
+				<item id="57" min="1104" max="2576" chance="20" /> <!-- Adena -->
+				<item id="36828" min="1" max="1" chance="0.3" /> <!-- Apocalypse Avenger Fragment -->
+				<item id="36766" min="1" max="1" chance="0.0075" /> <!-- Recipe: Apocalypse Avenger (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="10.94" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.167" /> <!-- Synthetic Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="19317" level="94" type="L2Npc" name="Screw Golem" title="Black Anvil Guild">
+	<npc id="19317" level="94" type="L2Monster" name="Screw Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="142" />
 		</parameters>
 		<race>FRIEND</race>
 		<sex>MALE</sex>
-		<acquire exp="1185436" sp="284" />
+		<acquire exp="4894525" sp="4948" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14547" hpRegen="8.5" mp="2169" mpRegen="3" />
 			<speed>
@@ -767,6 +912,31 @@
 			<radius normal="18" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17327" min="1" max="1" chance="0.003" /> <!-- Apocalypse Avenger -->
+				<item id="57" min="1104" max="2576" chance="20" /> <!-- Adena -->
+				<item id="36828" min="1" max="1" chance="0.3" /> <!-- Apocalypse Avenger Fragment -->
+				<item id="36766" min="1" max="1" chance="0.0075" /> <!-- Recipe: Apocalypse Avenger (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="10.94" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.167" /> <!-- Synthetic Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="19318" level="94" type="L2Monster" name="Cannon Golem" title="Black Anvil Guild">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

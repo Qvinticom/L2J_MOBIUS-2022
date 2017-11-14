@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23700" level="85" type="L2Npc" name="Altar Guardian">
+	<npc id="23700" level="100" type="L2Npc" name="Altar Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -17,7 +17,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="23701" level="85" type="L2Npc" name="Knight Guard" title="Dragonclaw Clan">
+	<npc id="23701" level="100" type="L2Npc" name="Knight Guard" title="Dragonclaw Clan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -34,7 +34,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23702" level="85" type="L2Npc" name="Duran" title="Dragonclaw Royal Guard">
+	<npc id="23702" level="101" type="L2Npc" name="Duran" title="Dragonclaw Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -51,9 +51,9 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="23703" level="85" type="L2Npc" name="Ice Knight" title="Winter Omen">
+	<npc id="23703" level="101" type="L2Npc" name="Ice Knight" title="Winter Omen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="403282" hpRegen="7.5" mp="23928" mpRegen="2.7" />
@@ -72,9 +72,9 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23704" level="85" type="L2Npc" name="Ifrit" title="Master of Flames">
+	<npc id="23704" level="101" type="L2Npc" name="Ifrit" title="Master of Flames">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="418660" hpRegen="7.5" mp="47856" mpRegen="2.7" />
@@ -93,9 +93,9 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="23705" level="85" type="L2Npc" name="Arimanes" title="Master of Flames">
+	<npc id="23705" level="101" type="L2Npc" name="Arimanes" title="Master of Flames">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="418660" hpRegen="7.5" mp="47856" mpRegen="2.7" />
@@ -114,7 +114,7 @@
 			<height normal="57.75" grown="69" />
 		</collision>
 	</npc>
-	<npc id="23706" level="85" type="L2Npc" name="Kelbim's Follower">
+	<npc id="23706" level="100" type="L2Npc" name="Kelbim's Follower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -131,7 +131,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23707" level="85" type="L2Npc" name="Kelbim's Follower">
+	<npc id="23707" level="100" type="L2Npc" name="Kelbim's Follower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -148,7 +148,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23708" level="85" type="L2Npc" name="Kelbim's Follower">
+	<npc id="23708" level="100" type="L2Npc" name="Kelbim's Follower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -165,9 +165,9 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23709" level="85" type="L2Npc" name="Flame Scarab">
+	<npc id="23709" level="100" type="L2Npc" name="Flame Scarab">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="215084" hpRegen="7.5" mp="23928" mpRegen="2.7" />
@@ -186,7 +186,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="23710" level="85" type="L2Npc" name="Knight Guardian">
+	<npc id="23710" level="100" type="L2Npc" name="Knight Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -203,7 +203,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23711" level="85" type="L2Npc" name="Altar Guardian Soldier">
+	<npc id="23711" level="100" type="L2Npc" name="Altar Guardian Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -220,7 +220,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23712" level="85" type="L2Npc" name="Altar Guardian Archer">
+	<npc id="23712" level="100" type="L2Npc" name="Altar Guardian Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -238,7 +238,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23713" level="85" type="L2Npc" name="Altar Guardian Wizard">
+	<npc id="23713" level="100" type="L2Npc" name="Altar Guardian Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -289,7 +289,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23716" level="85" type="L2Npc" name="Wild Hog Cannon">
+	<npc id="23716" level="100" type="L2Npc" name="Wild Hog Cannon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -306,7 +306,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="23717" level="85" type="L2Npc" name="Siege Golem">
+	<npc id="23717" level="100" type="L2Npc" name="Siege Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -345,7 +345,7 @@
 			<height normal="37.4" />
 		</collision>
 	</npc>
-	<npc id="23719" level="85" type="L2Npc" name="Frozen Knight">
+	<npc id="23719" level="100" type="L2Npc" name="Frozen Knight">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -365,9 +365,9 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23720" level="85" type="L2Npc" name="Panthera">
+	<npc id="23720" level="56" type="L2Monster" name="Panthera">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
@@ -385,10 +385,24 @@
 			<radius normal="34" />
 			<height normal="28" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="2.179" /> <!-- Silver -->
+			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="32.68" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="23721" level="85" type="L2Npc" name="Maze Buffalo">
+	<npc id="23721" level="100" type="L2Npc" name="Maze Buffalo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
@@ -407,9 +421,9 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="23722" level="85" type="L2Npc" name="Frost Buffalo">
+	<npc id="23722" level="61" type="L2Monster" name="Frost Buffalo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
@@ -427,10 +441,36 @@
 			<radius normal="24" />
 			<height normal="34.7" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="96" max="225" chance="70" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="7.262" /> <!-- Synthetic Fiber -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="21.07" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="23723" level="85" type="L2Npc" name="Frost Ursus">
+	<npc id="23723" level="100" type="L2Npc" name="Frost Ursus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
@@ -449,9 +489,9 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23724" level="85" type="L2Npc" name="Buffalo">
+	<npc id="23724" level="70" type="L2Monster" name="Buffalo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
@@ -469,10 +509,33 @@
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="57" max="131" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
+				<item id="36862" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Leather - Upgrade -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="23725" level="85" type="L2Npc" name="Ursus">
+	<npc id="23725" level="62" type="L2Monster" name="Ursus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
@@ -490,10 +553,24 @@
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="105" max="245" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="1.413" /> <!-- Durable Leather -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="23726" level="85" type="L2Npc" name="Frost Glacier Golem">
+	<npc id="23726" level="100" type="L2Npc" name="Frost Glacier Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="524266" hpRegen="7.5" mp="23928" mpRegen="2.7" />
@@ -514,7 +591,7 @@
 	</npc>
 	<npc id="23727" level="100" type="L2Monster" name="Shaqrima Bathus">
 		<race>GIANT</race>
-		<acquire exp="401600520" sp="963841" />
+		<acquire exp="666656799" sp="666700" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"> 
 			<vitals hp="1088861" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -544,31 +621,31 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="17444" min="1" max="1" chance="0.03" /> <!-- Eternal Gloves -->
+				<item id="17444" min="1" max="1" chance="0.0075" /> <!-- Eternal Gloves -->
 				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings -->
 				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="57" min="24815" max="57853" chance="70" /> <!-- Adena -->
-				<item id="47249" min="1" max="1" chance="3.873" /> <!-- Giant Stone -->
-				<item id="36529" min="1" max="1" chance="3.376" /> <!-- Quality Fiber -->
+				<item id="57" min="23574" max="54960" chance="70" /> <!-- Adena -->
+				<item id="47249" min="1" max="1" chance="3.829" /> <!-- Giant Stone -->
+				<item id="36529" min="1" max="1" chance="2.727" /> <!-- Quality Fiber -->
 				<item id="35351" min="1" max="1" chance="0.3" /> <!-- Eternal Stocking Ingredient -->
 				<item id="35352" min="1" max="1" chance="0.3" /> <!-- Eternal Glove Ingredient -->
 				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
-				<item id="35476" min="1" max="1" chance="0.03" /> <!-- Recipe:&nbsp;Eternal Gloves (60%) -->
-				<item id="35475" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35475" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Stockings (60%) -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="5.976" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="5.029" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="46080" min="1" max="1" chance="0.3" /> <!-- Recipe: Mysterious Soulshot (R-grade) -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23728" level="100" type="L2Monster" name="Shaqrima Carcass">
 		<race>GIANT</race>
-		<acquire exp="401600520" sp="963841" />
+		<acquire exp="666656799" sp="666700" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1088861" hpRegen="10.5" mp="23928" mpRegen="3.6" />
@@ -599,25 +676,25 @@
 		<drop_lists>
 			<drop>
 				<item id="17445" min="1" max="1" chance="0.03" /> <!-- Eternal Shoes -->
-				<item id="57" min="24815" max="57853" chance="70" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="4.386" /> <!-- Quality Fiber -->
-				<item id="47249" min="1" max="1" chance="3.878" /> <!-- Giant Stone -->
-				<item id="35353" min="1" max="1" chance="0.03" /> <!-- Eternal Shoe Ingredient -->
+				<item id="57" min="23574" max="54960" chance="70" /> <!-- Adena -->
+				<item id="47249" min="1" max="1" chance="3.87" /> <!-- Giant Stone -->
+				<item id="36529" min="1" max="1" chance="3.626" /> <!-- Quality Fiber -->
+				<item id="35353" min="1" max="1" chance="0.75" /> <!-- Eternal Shoe Ingredient -->
 				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
-				<item id="35477" min="1" max="1" chance="0.03" /> <!-- Recipe:&nbsp;Eternal Shoes (60%) -->
+				<item id="35477" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="9.057" /> <!-- Orichalcum -->
-				<item id="36525" min="1" max="1" chance="0.75" /> <!-- Durandil -->
+				<item id="36524" min="1" max="1" chance="7.508" /> <!-- Orichalcum -->
+				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23729" level="100" type="L2Monster" name="Shaqrima Kshana">
 		<race>GIANT</race>
-		<acquire exp="401600520" sp="963841" />
+		<acquire exp="666656799" sp="666700" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1088861" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -648,25 +725,25 @@
 		<drop_lists>
 			<drop>
 				<item id="17441" min="1" max="1" chance="0.03" /> <!-- Eternal Circlet -->
-				<item id="57" min="24815" max="57853" chance="70" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="4.427" /> <!-- Quality Fiber -->
-				<item id="47249" min="1" max="1" chance="3.885" /> <!-- Giant Stone -->
+				<item id="57" min="23574" max="54960" chance="70" /> <!-- Adena -->
+				<item id="47249" min="1" max="1" chance="3.828" /> <!-- Giant Stone -->
+				<item id="36529" min="1" max="1" chance="3.66" /> <!-- Quality Fiber -->
 				<item id="35349" min="1" max="1" chance="0.75" /> <!-- Eternal Circlet Ingredient -->
 				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
-				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe:&nbsp;Eternal Circlet (60%) -->
+				<item id="35473" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Circlet (60%) -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="8.986" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="7.566" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23730" level="101" type="L2Monster" name="Om Bathus">
 		<race>GIANT</race>
-		<acquire exp="357545773" sp="858109" />
+		<acquire exp="593525905" sp="593596" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="786157" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -697,26 +774,26 @@
 		<drop_lists>
 			<drop>
 				<item id="17423" min="1" max="1" chance="0.003" /> <!-- Helios Shooter -->
-				<item id="57" min="17671" max="41298" chance="70" /> <!-- Adena -->
+				<item id="57" min="16787" max="39233" chance="70" /> <!-- Adena -->
 				<item id="35328" min="1" max="1" chance="0.3" /> <!-- Helios Cutter Fragment -->
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
-				<item id="36875" min="1" max="1" chance="0.03" /> <!-- Recipe: Metallic Fiber - Downgrade -->
+				<item id="36875" min="1" max="1" chance="0.0075" /> <!-- Recipe: Metallic Fiber - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="4.239" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="3.533" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="46080" min="1" max="1" chance="0.3" /> <!-- Recipe: Mysterious Soulshot (R-grade) -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23731" level="101" type="L2Monster" name="Om Carcass">
 		<race>GIANT</race>
-		<acquire exp="357545773" sp="858109" />
+		<acquire exp="593525905" sp="593596" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="786157" hpRegen="11.5" mp="24308" mpRegen="3.9" />
@@ -746,25 +823,25 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="17671" max="41298" chance="70" /> <!-- Adena -->
-				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Fragment -->
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="57" min="16787" max="39233" chance="70" /> <!-- Adena -->
+				<item id="35328" min="1" max="1" chance="0.3" /> <!-- Helios Cutter Fragment -->
 				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
 				<item id="36942" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Cokes - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="6.498" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="5.402" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23732" level="101" type="L2Monster" name="Om Kshana">
 		<race>GIANT</race>
-		<acquire exp="357545773" sp="858109" />
+		<acquire exp="593525905" sp="593596" />
 		<stats>
 			<vitals hp="786157" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -789,25 +866,25 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="17671" max="41298" chance="70" /> <!-- Adena -->
-				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="57" min="16787" max="39233" chance="70" /> <!-- Adena -->
+				<item id="35334" min="1" max="1" chance="0.3" /> <!-- Helios Shooter Fragment -->
 				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
 				<item id="36942" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Cokes - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="6.462" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="5.379" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23733" level="100" type="L2Monster" name="Lesser Giant Warrior">
 		<race>GIANT</race>
-		<acquire exp="82101112" sp="197042" />
+		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="46741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
@@ -834,24 +911,24 @@
 		<drop_lists>
 			<drop>
 				<item id="17439" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Gloves -->
-				<item id="57" min="2059" max="4801" chance="70" /> <!-- Adena -->
+				<item id="57" min="2441" max="5700" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="35347" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
+				<item id="35347" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
 				<item id="36560" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Top-grade) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23734" level="100" type="L2Monster" name="Lesser Giant Wizard">
 		<race>GIANT</race>
-		<acquire exp="82101112" sp="197042" />
+		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="46742" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
@@ -878,25 +955,25 @@
 		<drop_lists>
 			<drop>
 				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet -->
-				<item id="57" min="2059" max="4801" chance="70" /> <!-- Adena -->
+				<item id="57" min="2441" max="5700" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="35344" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
+				<item id="35344" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
 				<item id="36560" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Top-grade) -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
-				<item id="36389" min="1" max="1" chance="0.003" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="36389" min="1" max="1" chance="0.0075" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23735" level="100" type="L2Monster" name="Captive Familiar Spirit">
 		<race>DEMONIC</race>
-		<acquire exp="32126522" sp="77103" />
+		<acquire exp="53330000" sp="53400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="96787" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -921,26 +998,26 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2753" max="6419" chance="70" /> <!-- Adena -->
+				<item id="57" min="3264" max="7621" chance="20" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
-				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Leather Gloves (60%) -->
-				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Leather Helmet (60%) -->
+				<item id="35471" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
 				<item id="36389" min="1" max="1" chance="0.03" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23736" level="100" type="L2Monster" name="Captive Hell Demon">
 		<race>DEMONIC</race>
-		<acquire exp="32126522" sp="77103" />
+		<acquire exp="53330000" sp="53400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="96787" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -965,25 +1042,25 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2753" max="6419" chance="70" /> <!-- Adena -->
+				<item id="57" min="3264" max="7621" chance="20" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
-				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Leather Gloves (60%) -->
-				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Leather Helmet (60%) -->
+				<item id="35471" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23737" level="100" type="L2Monster" name="Captive Succubus">
 		<race>DEMONIC</race>
-		<acquire exp="32126522" sp="77103" />
+		<acquire exp="53330000" sp="53400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="96787" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -1008,25 +1085,25 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2753" max="6419" chance="70" /> <!-- Adena -->
+				<item id="57" min="3264" max="7621" chance="20" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
-				<item id="35478" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Sigil (60%) -->
-				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Leather Armor (60%) -->
+				<item id="35478" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23738" level="100" type="L2Monster" name="Captive Phantom">
 		<race>DEMONIC</race>
-		<acquire exp="32126522" sp="77103" />
+		<acquire exp="53330000" sp="53400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="96787" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -1051,25 +1128,25 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2753" max="6419" chance="70" /> <!-- Adena -->
+				<item id="57" min="3264" max="7621" chance="20" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
-				<item id="35478" min="1" max="1" chance="0.03" /> <!-- Recipe:&nbsp;Eternal Sigil (60%) -->
-				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Leather Armor (60%) -->
+				<item id="35478" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23739" level="101" type="L2Monster" name="Marka" title="Halisha's Henchman">
 		<race>DEMONIC</race>
-		<acquire exp="238364881" sp="572075" />
+		<acquire exp="395685670" sp="395696" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3144582" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1096,26 +1173,26 @@
 			<drop>
 				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
 				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
-				<item id="57" min="16806" max="39277" chance="70" /> <!-- Adena -->
+				<item id="57" min="19991" max="46630" chance="20" /> <!-- Adena -->
 				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36389" min="1" max="1" chance="0.03" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="1" max="1" chance="0.003" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 				<item id="37802" min="1" max="1" chance="0.0009" /> <!-- Dark Eternal Enhancement Stone Fragment -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23740" level="101" type="L2Monster" name="Schlien" title="Halisha's Henchman">
 		<race>DEMONIC</race>
-		<acquire exp="238364881" sp="572075" />
+		<acquire exp="395685670" sp="395696" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3144582" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1140,28 +1217,28 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="17436" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Helmet -->
+				<item id="17436" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Helmet -->
 				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
-				<item id="57" min="16806" max="39277" chance="70" /> <!-- Adena -->
+				<item id="57" min="19991" max="46630" chance="20" /> <!-- Adena -->
 				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36389" min="1" max="1" chance="0.03" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="1" max="1" chance="0.003" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 				<item id="37802" min="1" max="1" chance="0.0009" /> <!-- Dark Eternal Enhancement Stone Fragment -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23741" level="101" type="L2Monster" name="Berimah" title="Halisha's Henchman">
 		<race>DEMONIC</race>
-		<acquire exp="238364881" sp="572075" />
+		<acquire exp="395685670" sp="395696" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3144582" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1188,26 +1265,26 @@
 			<drop>
 				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
 				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor -->
-				<item id="57" min="16806" max="39277" chance="70" /> <!-- Adena -->
+				<item id="57" min="19991" max="46630" chance="20" /> <!-- Adena -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36389" min="1" max="1" chance="0.03" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36386" min="1" max="1" chance="0.003" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 				<item id="37802" min="1" max="1" chance="0.0009" /> <!-- Dark Eternal Enhancement Stone Fragment -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23742" level="101" type="L2Monster" name="Naia Bathus" title="Demons Foreman">
 		<race>GIANT</race>
-		<acquire exp="148978051" sp="357547" />
+		<acquire exp="247303557" sp="247374" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1232,20 +1309,20 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4201" max="9819" chance="70" /> <!-- Adena -->
+				<item id="57" min="4998" max="11658" chance="20" /> <!-- Adena -->
 				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36540" min="1" max="1" chance="0.003" /> <!-- Exquisite Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.0075" /> <!-- Exquisite Leather Braid -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -1297,7 +1374,7 @@
 	</npc>
 	<npc id="23744" level="101" type="L2Monster" name="Naia Kshana" title="Demons Foreman">
 		<race>GIANT</race>
-		<acquire exp="148978051" sp="357547" />
+		<acquire exp="247303557" sp="247374" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<speed>
@@ -1322,26 +1399,26 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4201" max="9819" chance="70" /> <!-- Adena -->
+				<item id="57" min="4998" max="11658" chance="20" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
+				<item id="35345" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36540" min="1" max="1" chance="0.003" /> <!-- Exquisite Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.0075" /> <!-- Exquisite Leather Braid -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23745" level="101" type="L2Monster" name="Naia Lucas" title="Demons Foreman">
 		<race>GIANT</race>
-		<acquire exp="148978051" sp="357547" />
+		<acquire exp="247303557" sp="247374" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
@@ -1367,26 +1444,26 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4201" max="9819" chance="70" /> <!-- Adena -->
+				<item id="57" min="4998" max="11658" chance="20" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
+				<item id="35345" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36540" min="1" max="1" chance="0.003" /> <!-- Exquisite Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.0075" /> <!-- Exquisite Leather Braid -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23746" level="101" type="L2Monster" name="Recovering Lesser Giant Warrior">
 		<race>GIANT</race>
-		<acquire exp="148978051" sp="357547" />
+		<acquire exp="247303557" sp="247374" />
 		<equipment rhand="46741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
@@ -1413,25 +1490,25 @@
 		<drop_lists>
 			<drop>
 				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="57" min="3860" max="9021" chance="70" /> <!-- Adena -->
+				<item id="57" min="4592" max="10710" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Helios Fighter Fragment -->
+				<item id="35331" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Fragment -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36878" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Fiber - Upgrade -->
 				<item id="36877" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Fiber - Downgrade -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23747" level="101" type="L2Monster" name="Recovering Lesser Giant Wizard">
 		<race>GIANT</race>
-		<acquire exp="148978051" sp="357547" />
+		<acquire exp="247303557" sp="247374" />
 		<equipment rhand="46742" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
@@ -1458,9 +1535,9 @@
 		<drop_lists>
 			<drop>
 				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
-				<item id="57" min="3860" max="9021" chance="70" /> <!-- Adena -->
+				<item id="57" min="4592" max="10710" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Helios Fighter Fragment -->
+				<item id="35331" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Fragment -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36878" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Fiber - Upgrade -->
 				<item id="36877" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Fiber - Downgrade -->
@@ -1469,13 +1546,13 @@
 				<item id="36389" min="1" max="1" chance="0.03" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23748" level="100" type="L2Monster" name="Lesser Giant Soldier">
 		<race>GIANT</race>
-		<acquire exp="82101112" sp="197042" />
+		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="4028" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
@@ -1502,9 +1579,9 @@
 		<drop_lists>
 			<drop>
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor -->
-				<item id="57" min="2059" max="4801" chance="70" /> <!-- Adena -->
+				<item id="57" min="2441" max="5700" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
 				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36560" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Top-grade) -->
 			</drop>
@@ -1513,13 +1590,13 @@
 				<item id="36386" min="1" max="1" chance="0.003" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23749" level="100" type="L2Monster" name="Root of the Lesser Giant">
 		<race>CONSTRUCT</race>
-		<acquire exp="39265749" sp="94237" />
+		<acquire exp="65181100" sp="65199" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="96787" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
@@ -1544,26 +1621,26 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2406" max="5610" chance="70" /> <!-- Adena -->
+				<item id="57" min="2853" max="6661" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Helios Fighter Fragment -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<item id="35331" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Fragment -->
+				<item id="36539" min="1" max="1" chance="0.075" /> <!-- Quality Leather Braid -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36540" min="1" max="1" chance="0.003" /> <!-- Exquisite Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.0075" /> <!-- Exquisite Leather Braid -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
 				<item id="36389" min="1" max="1" chance="0.03" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23750" level="100" type="L2Monster" name="Shaqrima Lucas">
 		<race>GIANT</race>
-		<acquire exp="401600520" sp="963841" />
+		<acquire exp="666656799" sp="666700" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1088861" hpRegen="10.5" mp="23928" mpRegen="3.6" />
@@ -1595,26 +1672,26 @@
 			<drop>
 				<item id="17446" min="1" max="1" chance="0.03" /> <!-- Eternal Sigil -->
 				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic -->
-				<item id="57" min="24815" max="57853" chance="70" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="4.396" /> <!-- Quality Fiber -->
-				<item id="47249" min="1" max="1" chance="3.943" /> <!-- Giant Stone -->
+				<item id="57" min="23574" max="54960" chance="70" /> <!-- Adena -->
+				<item id="47249" min="1" max="1" chance="3.932" /> <!-- Giant Stone -->
+				<item id="36529" min="1" max="1" chance="3.695" /> <!-- Quality Fiber -->
 				<item id="35350" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Ingredient -->
 				<item id="35354" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Ingredient -->
 				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
-				<item id="35474" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Tunic (60%) -->
+				<item id="35474" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Tunic (60%) -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="8.988" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="7.482" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23751" level="101" type="L2Monster" name="Om Lucas">
 		<race>GIANT</race>
-		<acquire exp="357545773" sp="858109" />
+		<acquire exp="593525905" sp="593596" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="786157" hpRegen="11.5" mp="24308" mpRegen="3.9" />
@@ -1644,25 +1721,25 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="17671" max="41298" chance="70" /> <!-- Adena -->
+				<item id="57" min="16787" max="39233" chance="70" /> <!-- Adena -->
 				<item id="35334" min="1" max="1" chance="0.3" /> <!-- Helios Shooter Fragment -->
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
-				<item id="36875" min="1" max="1" chance="0.03" /> <!-- Recipe: Metallic Fiber - Downgrade -->
+				<item id="36875" min="1" max="1" chance="0.0075" /> <!-- Recipe: Metallic Fiber - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="6.444" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="5.394" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23752" level="100" type="L2Monster" name="Lesser Giant Archer">
 		<race>GIANT</race>
-		<acquire exp="82101112" sp="197042" />
+		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="4028" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
@@ -1689,9 +1766,9 @@
 		<drop_lists>
 			<drop>
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor -->
-				<item id="57" min="2059" max="4801" chance="70" /> <!-- Adena -->
+				<item id="57" min="2441" max="5700" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
 				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36560" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Top-grade) -->
 			</drop>
@@ -1700,13 +1777,13 @@
 				<item id="36386" min="1" max="1" chance="0.003" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23753" level="100" type="L2Monster" name="Lesser Giant Support Troop">
 		<race>GIANT</race>
-		<acquire exp="82101112" sp="197042" />
+		<acquire exp="136287800" sp="136300" />
 		<equipment rhand="4028" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="193575" hpRegen="10.5" mp="23928" mpRegen="3.6" />
@@ -1733,9 +1810,9 @@
 		<drop_lists>
 			<drop>
 				<item id="17437" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Armor -->
-				<item id="57" min="2059" max="4801" chance="70" /> <!-- Adena -->
+				<item id="57" min="2441" max="5700" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="36559" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36559" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (High-grade) -->
 				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36560" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Top-grade) -->
 			</drop>
@@ -1744,13 +1821,13 @@
 				<item id="36386" min="1" max="1" chance="0.003" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23754" level="100" type="L2Monster" name="Essence of the Lesser Giant">
 		<race>CONSTRUCT</race>
-		<acquire exp="39265749" sp="94237" />
+		<acquire exp="65181100" sp="65199" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="96787" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1775,26 +1852,26 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2406" max="5610" chance="70" /> <!-- Adena -->
+				<item id="57" min="2853" max="6661" chance="20" /> <!-- Adena -->
 				<item id="47249" min="1" max="1" chance="0.3" /> <!-- Giant Stone -->
-				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Helios Fighter Fragment -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<item id="35331" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Fragment -->
+				<item id="36539" min="1" max="1" chance="0.075" /> <!-- Quality Leather Braid -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36540" min="1" max="1" chance="0.003" /> <!-- Exquisite Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.0075" /> <!-- Exquisite Leather Braid -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
 				<item id="36389" min="1" max="1" chance="0.03" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="36565" min="1" max="1" chance="0.003" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23755" level="97" type="L2Monster" name="Wandering Dead of the Dimension">
+	<npc id="23755" level="101" type="L2Monster" name="Wandering Dead of the Dimension">
 		<race>UNDEAD</race>
-		<acquire exp="27916503" sp="66999" />
+		<acquire exp="27926665" sp="27950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="156854" hpRegen="10.5" mp="2280" mpRegen="3.6" />
 			<attack physical="42937.022246666" magical="7578.7049610443" critical="4" attackSpeed="253" range="40" />
@@ -1816,13 +1893,13 @@
 		</collision>
 		<drop_lists>
 			<lucky_drop>
-					<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23757" level="97" type="L2Monster" name="Lost Soul of the Dimension">
+	<npc id="23757" level="101" type="L2Monster" name="Lost Soul of the Dimension">
 		<race>UNDEAD</race>
-		<acquire exp="27916503" sp="66999" />
+		<acquire exp="27926665" sp="27950" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="156854" hpRegen="10.5" mp="2280" mpRegen="3.6" />
 			<attack physical="42937.022246666" magical="7578.7049610443" critical="4" attackSpeed="253" range="40" />
@@ -1844,13 +1921,13 @@
 		</collision>
 		<drop_lists>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23759" level="97" type="L2Monster" name="Roaming Vengeance of the Dimension">
+	<npc id="23759" level="101" type="L2Monster" name="Roaming Vengeance of the Dimension">
 		<race>HUMANOID</race>
-		<acquire exp="27916503" sp="66999" />
+		<acquire exp="27926665" sp="27950" />
 		<equipment rhand="10128" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="156854" hpRegen="10.5" mp="2280" mpRegen="3.6" />
@@ -1873,13 +1950,13 @@
 		</collision>
 		<drop_lists>
 			<lucky_drop>
-					<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23760" level="98" type="L2Monster" name="Dimensional Vagabond" title="Lost">
 		<race>UNDEAD</race>
-		<acquire exp="119675444" sp="287221" />
+		<acquire exp="213022290" sp="213112" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="475251" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<attack physical="45027.610073614" magical="7933.4451512287" critical="4" attackSpeed="253" range="1100" />
@@ -1901,13 +1978,13 @@
 		</collision>
 		<drop_lists>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23761" level="98" type="L2Monster" name="Dimension Dissolver" title="Master of the Rift">
 		<race>HUMANOID</race>
-		<acquire exp="1196792856" sp="2872302" />
+		<acquire exp="2130291283" sp="2130359" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3168345" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<attack physical="45027.610073614" magical="7933.4451512287" critical="4" attackSpeed="253" range="1100" />
@@ -1929,7 +2006,7 @@
 		</collision>
 		<drop_lists>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2203,8 +2280,8 @@
 			<drop>
 				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet -->
 				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate -->
-				<item id="57" min="30979" max="72169" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="14.94" /> <!-- Adamantite Wire -->
+				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="11.64" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
 				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
 				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
@@ -2212,11 +2289,11 @@
 				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="1.033" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2261,21 +2338,21 @@
 		<drop_lists>
 			<drop>
 				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets -->
-				<item id="17432" min="1" max="1" chance="0.0075" /> <!-- Eternal Gaiters -->
-				<item id="57" min="30979" max="72169" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="13.92" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="1.412" /> <!-- Orichalcum Wire -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters -->
+				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="12.65" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="1.093" /> <!-- Orichalcum Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
 				<item id="35329" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Fragment -->
 				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
 				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="1.038" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2322,8 +2399,8 @@
 			<drop>
 				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots -->
 				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield -->
-				<item id="57" min="30979" max="72169" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="14.65" /> <!-- Adamantite Wire -->
+				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="12.26" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
 				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
 				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
@@ -2331,11 +2408,11 @@
 				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="1.059" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2382,19 +2459,19 @@
 			<drop>
 				<item id="17430" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet -->
 				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
-				<item id="57" min="32895" max="76696" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="7.814" /> <!-- Adamantite Wire -->
+				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="6.494" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
-				<item id="35462" min="1" max="1" chance="0.03" /> <!-- Recipe:Eternal Helmet (60%) -->
 				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
-				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe:Helios Stormer (60%) -->
+				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="1.176" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2441,19 +2518,19 @@
 		<drop_lists>
 			<drop>
 				<item id="17431" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate -->
-				<item id="57" min="32895" max="76696" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="7.790" /> <!-- Adamantite Wire -->
+				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="6.422" /> <!-- Adamantite Wire -->
 				<item id="36544" min="1" max="1" chance="0.75" /> <!-- Orichalcum Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
-				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe:&nbsp;Helios Stormer (60%) -->
-				<item id="35463" min="1" max="1" chance="0.003" /> <!-- Recipe:&nbsp;Eternal Breastplate (60%) -->
+				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35463" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="1.211" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2500,19 +2577,19 @@
 		<drop_lists>
 			<drop>
 				<item id="17432" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiters -->
-				<item id="57" min="32895" max="76696" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="7.739" /> <!-- Adamantite Wire -->
+				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="6.43" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
 				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
-				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe:&nbsp;Helios Stormer (60%) -->
-				<item id="35464" min="1" max="1" chance="0.0075" /> <!-- Recipe:&nbsp;Eternal Gaiters (60%) -->
+				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35464" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Gaiters (60%) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="1.123" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2559,12 +2636,12 @@
 			<drop>
 				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets -->
 				<item id="17421" min="1" max="1" chance="0.003" /> <!-- Helios Stormer -->
-				<item id="57" min="32895" max="76696" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="6.259" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="0.75" /> <!-- Orichalcum Wire -->
+				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="5.104" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
-				<item id="35465" min="1" max="1" chance="0.03" /> <!-- Recipe:&nbsp;Eternal Gauntlets (60%) -->
-				<item id="35453" min="1" max="1" chance="0.0075" /> <!-- Recipe:&nbsp;Helios Slasher (60%) -->
+				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
+				<item id="35465" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35453" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Slasher (60%) -->
 				<item id="37801" min="1" max="1" chance="0.003" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
 			</drop>
 			<spoil>
@@ -2573,7 +2650,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2620,12 +2697,12 @@
 		<drop_lists>
 			<drop>
 				<item id="17434" min="1" max="1" chance="0.075" /> <!-- Eternal Boots -->
-				<item id="57" min="32895" max="76696" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="7.688" /> <!-- Adamantite Wire -->
+				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="6.393" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
-				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe:&nbsp;Eternal Boots (60%) -->
+				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
 				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
-				<item id="35453" min="1" max="1" chance="0.0075" /> <!-- Recipe:&nbsp;Helios Slasher (60%) -->
+				<item id="35453" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Slasher (60%) -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
@@ -2633,7 +2710,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2682,12 +2759,12 @@
 			<drop>
 				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield -->
 				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
-				<item id="57" min="32895" max="76696" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="7.783" /> <!-- Adamantite Wire -->
+				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="6.441" /> <!-- Adamantite Wire -->
 				<item id="36544" min="1" max="1" chance="0.75" /> <!-- Orichalcum Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
-				<item id="35467" min="1" max="1" chance="0.03" /> <!-- Recipe:&nbsp;Eternal Shield (60%) -->
-				<item id="35453" min="1" max="1" chance="0.0075" /> <!-- Recipe:&nbsp;Helios Slasher (60%) -->
+				<item id="35467" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35453" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Slasher (60%) -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
@@ -2695,7 +2772,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -2740,13 +2817,13 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="47126" min="1" max="1" chance="49.02" /> <!-- Key Card to the Controller Room -->
+				<item id="47126" min="1" max="1" chance="51.01" /> <!-- Key Card to the Controller Room -->
 			</drop>
 		</drop_lists>
 	</npc>
 	<npc id="23784" level="100" type="L2Monster" name="Dark Wizard of the Magic Circle">
 		<race>DEMONIC</race>
-		<acquire exp="27418833" sp="65805" />
+		<acquire exp="48805500" sp="48900" />
 		<equipment rhand="17332" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="75279" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -2767,22 +2844,17 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4045" max="9424" chance="50" /> <!-- Adena -->
+				<item id="57" min="2913" max="6802" chance="20" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="19.68" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.967" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23785" level="100" type="L2Monster" name="Scorpion King">
 		<race>DEMONIC</race>
-		<acquire exp="231310406" sp="555145" />
+		<acquire exp="411732500" sp="411800" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="633668" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2816,9 +2888,9 @@
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23786" level="100" type="L2Monster" name="Nymph Rose" title="Contaminated">
+	<npc id="23786" level="102" type="L2Monster" name="Nymph Rose" title="Contaminated">
 		<race>PLANT</race>
-		<acquire exp="24987295" sp="59969" />
+		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2844,7 +2916,7 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8419" max="19632" chance="20" /> <!-- Adena -->
+				<item id="57" min="12174" max="28361" chance="20" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 				<item id="35352" min="1" max="1" chance="0.075" /> <!-- Eternal Glove Ingredient -->
 				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
@@ -2854,13 +2926,13 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23787" level="100" type="L2Monster" name="Nymph Lily" title="Contaminated">
+	<npc id="23787" level="102" type="L2Monster" name="Nymph Lily" title="Contaminated">
 		<race>PLANT</race>
-		<acquire exp="24987295" sp="59969" />
+		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2886,7 +2958,7 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8419" max="19632" chance="20" /> <!-- Adena -->
+				<item id="57" min="12174" max="28361" chance="20" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 				<item id="35353" min="1" max="1" chance="0.075" /> <!-- Eternal Shoe Ingredient -->
 				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
@@ -2896,13 +2968,13 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23788" level="100" type="L2Monster" name="Nymph Tulip" title="Contaminated">
+	<npc id="23788" level="102" type="L2Monster" name="Nymph Tulip" title="Contaminated">
 		<race>PLANT</race>
-		<acquire exp="24987295" sp="59969" />
+		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2928,7 +3000,7 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8419" max="19632" chance="20" /> <!-- Adena -->
+				<item id="57" min="12174" max="28361" chance="20" /> <!-- Adena -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="35351" min="1" max="1" chance="0.075" /> <!-- Eternal Stocking Ingredient -->
 			</drop>
@@ -2936,13 +3008,13 @@
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
-	<npc id="23789" level="100" type="L2Monster" name="Nymph Cosmos" title="Contaminated">
+	<npc id="23789" level="102" type="L2Monster" name="Nymph Cosmos" title="Contaminated">
 		<race>PLANT</race>
-		<acquire exp="24987295" sp="59969" />
+		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
 			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2968,15 +3040,15 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8419" max="19632" chance="20" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="1.230" /> <!-- Quality Fiber -->
+				<item id="57" min="12174" max="28361" chance="20" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="1.186" /> <!-- Quality Fiber -->
 				<item id="35350" min="1" max="1" chance="0.03" /> <!-- Eternal Tunic Ingredient -->
 			</drop>
 			<spoil>
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
@@ -3160,7 +3232,7 @@
 	</npc>
 	<npc id="23798" level="102" type="L2Monster" name="Delta Bathus" title="Superion Scout">
 		<race>GIANT</race>
-		<acquire exp="547017485" sp="1312842" />
+		<acquire exp="908048947" sp="908061" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
@@ -3189,8 +3261,8 @@
 			<drop>
 				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet -->
 				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate -->
-				<item id="57" min="30979" max="72169" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="14.94" /> <!-- Adamantite Wire -->
+				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="11.64" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
 				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
 				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
@@ -3198,17 +3270,17 @@
 				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="1.033" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>
 	<npc id="23799" level="102" type="L2Monster" name="Delta Carcass" title="Superion Scout">
 		<race>GIANT</race>
-		<acquire exp="547017485" sp="1312842" />
+		<acquire exp="908048947" sp="908061" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
@@ -3236,21 +3308,21 @@
 		<drop_lists>
 			<drop>
 				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets -->
-				<item id="17432" min="1" max="1" chance="0.0075" /> <!-- Eternal Gaiters -->
-				<item id="57" min="30979" max="72169" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="13.92" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="1.412" /> <!-- Orichalcum Wire -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters -->
+				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="12.65" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="1.093" /> <!-- Orichalcum Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
 				<item id="35329" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Fragment -->
 				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
 				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="1.038" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
 	</npc>

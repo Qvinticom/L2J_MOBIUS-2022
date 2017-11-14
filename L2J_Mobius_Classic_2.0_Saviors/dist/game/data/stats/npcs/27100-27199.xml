@@ -89,7 +89,7 @@
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
-		<race>ANIMAL</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="886" hpRegen="4.5" mp="447" mpRegen="1.8" />
@@ -121,7 +121,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="27103" level="38" type="L2Monster" name="Unicorn" title="Quest Monster">
+	<npc id="27103" level="54" type="L2Monster" name="Unicorn" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -158,6 +158,31 @@
 			<radius normal="11" />
 			<height normal="18" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="205" min="1" max="1" chance="0.003" /> <!-- Ghoul's Staff -->
+				<item id="206" min="1" max="1" chance="0.003" /> <!-- Demon's Staff -->
+				<item id="228" min="1" max="1" chance="0.003" /> <!-- Crystal Dagger -->
+				<item id="299" min="1" max="1" chance="0.003" /> <!-- Orcish Poleaxe -->
+				<item id="2503" min="1" max="1" chance="0.003" /> <!-- Yaksa Mace -->
+				<item id="57" min="946" max="2207" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="8.264" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="4.109" /> <!-- Mithril Ore -->
+				<item id="1875" min="1" max="1" chance="1.442" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="1.402" /> <!-- Oriharukon Ore -->
+				<item id="2969" min="1" max="1" chance="0.3" /> <!-- Yaksa Mace Head -->
+				<item id="2122" min="1" max="1" chance="0.3" /> <!-- Orcish Poleaxe Blade -->
+				<item id="2118" min="1" max="1" chance="0.3" /> <!-- Demon's Staff Head -->
+				<item id="2117" min="1" max="1" chance="0.3" /> <!-- Ghoul's Staff Head -->
+				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="4593" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX (Dex   2 Str - 2) -->
+				<item id="4594" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX (Dex   2 CON - 2) -->
+				<item id="49562" min="1" max="1" chance="0.075" /> <!-- Spellbook: Spirit Sharing -->
+			</drop>
+			<spoil>
+				<item id="4044" min="1" max="1" chance="44.59" /> <!-- Thons -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="27104" level="39" type="L2Monster" name="Shadow Turen" title="Quest Monster">
 		<parameters>
@@ -2658,7 +2683,7 @@
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1933" hpRegen="58.5" mp="1036" mpRegen="2.4" />
@@ -3698,7 +3723,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27190" level="26" type="L2Monster" name="Ol Mahum Support Troop" title="Quest Monster">
+	<npc id="27190" level="23" type="L2Monster" name="Ol Mahum Support Troop" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3742,6 +3767,23 @@
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
+				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
+				<item id="57" min="76" max="176" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="8.236" /> <!-- Thread -->
+				<item id="1930" min="1" max="1" chance="7.038" /> <!-- Boot Lining -->
+				<item id="1867" min="1" max="1" chance="5.5" /> <!-- Animal Skin -->
+				<item id="1866" min="1" max="1" chance="2.726" /> <!-- Suede -->
+				<item id="2151" min="1" max="1" chance="1.209" /> <!-- Recipe: Necklace of Devotion -->
+				<item id="5153" min="1" max="1" chance="0.3" /> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
+			</drop>
+			<spoil>
+				<item id="2151" min="1" max="1" chance="16.01" /> <!-- Recipe: Necklace of Devotion -->
+				<item id="1804" min="1" max="1" chance="2.33" /> <!-- Recipe: Soulshot (D-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="27191" level="25" type="L2Monster" name="Malcom" title="Quest Monster">
 		<parameters>
@@ -3911,7 +3953,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="27195" level="32" type="L2Monster" name="Noble Ant" title="Quest Monster">
+	<npc id="27195" level="37" type="L2Monster" name="Noble Ant" title="Quest Monster">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3944,6 +3986,41 @@
 			<radius normal="20" grown="24" />
 			<height normal="48" grown="57" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="606" min="1" max="1" chance="0.03" /> <!-- Rip Gauntlets -->
+				<item id="1124" min="1" max="1" chance="0.03" /> <!-- Boots of Strength -->
+				<item id="2424" min="1" max="1" chance="0.03" /> <!-- Manticore Skin Boots -->
+				<item id="2425" min="1" max="1" chance="0.03" /> <!-- Brigandine Boots -->
+				<item id="2426" min="1" max="1" chance="0.03" /> <!-- Elven Mithril Boots -->
+				<item id="2448" min="1" max="1" chance="0.03" /> <!-- Manticore Skin Gloves -->
+				<item id="2449" min="1" max="1" chance="0.03" /> <!-- Brigandine Gauntlets -->
+				<item id="2450" min="1" max="1" chance="0.03" /> <!-- Elven Mithril Gloves -->
+				<item id="57" min="352" max="820" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="11.94" /> <!-- Thread -->
+				<item id="1866" min="1" max="1" chance="4.08" /> <!-- Suede -->
+				<item id="1884" min="1" max="1" chance="3.785" /> <!-- Cord -->
+				<item id="1895" min="1" max="1" chance="1.755" /> <!-- Metallic Fiber -->
+				<item id="2924" min="1" max="1" chance="1.617" /> <!-- Brigandine Boot Design -->
+				<item id="2928" min="1" max="1" chance="1.59" /> <!-- Elven Mithril Glove Design -->
+				<item id="1946" min="1" max="1" chance="1.577" /> <!-- Rip Gauntlet Pattern -->
+				<item id="1948" min="1" max="1" chance="1.562" /> <!-- Boots of Strength Pattern -->
+				<item id="2926" min="1" max="1" chance="1.549" /> <!-- Manticore Skin Glove Lining -->
+				<item id="2927" min="1" max="1" chance="1.521" /> <!-- Brigandine Gauntlet Pattern -->
+				<item id="2925" min="1" max="1" chance="1.497" /> <!-- Elven Mithril Boot Design -->
+				<item id="2923" min="1" max="1" chance="1.497" /> <!-- Manticore Skin Boot Lining -->
+				<item id="1885" min="1" max="1" chance="0.75" /> <!-- High-grade Suede -->
+				<item id="2974" min="1" max="1" chance="0.3" /> <!-- Recipe: Elven Mithril Stockings -->
+				<item id="4469" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR   1 CON - 1) -->
+				<item id="4470" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR   1 DEX - 1) -->
+				<item id="4477" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men   1 Int - 1) -->
+				<item id="4478" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men   1 Wit - 1) -->
+			</drop>
+			<spoil>
+				<item id="1884" min="1" max="3" chance="66.35" /> <!-- Cord -->
+				<item id="2159" min="1" max="1" chance="12.69" /> <!-- Recipe: Dark Necklace -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="27196" level="40" type="L2Monster" name="Bluebacked Alligator" title="Quest Monster">
 		<parameters>

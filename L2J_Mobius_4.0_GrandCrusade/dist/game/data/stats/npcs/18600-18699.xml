@@ -1879,7 +1879,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18635" level="71" type="L2Monster" name="Varka Silenos Recruit">
+	<npc id="18635" level="77" type="L2Monster" name="Varka Silenos Recruit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -1893,7 +1893,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="47334" sp="11" />
+		<acquire exp="90202" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="7483" hpRegen="17" mp="1410" mpRegen="3" />
 			<attack physical="365.712" magical="124.8841975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1928,6 +1928,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="9529" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Shield -->
+				<item id="10120" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Sigil -->
+				<item id="6366" min="1" max="1" chance="0.0009" /> <!-- Imperial Staff -->
+				<item id="57" min="93" max="218" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.075" /> <!-- Adamantite Wire -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1938,13 +1944,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="18636" level="71" type="L2Monster" name="Varka Silenos Footman">
+	<npc id="18636" level="77" type="L2Monster" name="Varka Silenos Footman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -1957,7 +1972,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="47334" sp="11" />
+		<acquire exp="75070" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="7483" hpRegen="17" mp="1410" mpRegen="3" />
 			<attack physical="365.712" magical="124.8841975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1991,6 +2006,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="6683" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6724" min="1" max="1" chance="0.003" /> <!-- Sealed Tateossian Earring -->
+				<item id="9452" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Earring -->
+				<item id="57" min="77" max="181" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36549" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2001,13 +2023,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="18637" level="72" type="L2Monster" name="Grazing Antelope">
+	<npc id="18637" level="77" type="L2Monster" name="Grazing Antelope">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2018,7 +2049,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="6129" sp="1" />
+		<acquire exp="93567" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2051,6 +2082,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2061,13 +2096,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="18638" level="72" type="L2Monster" name="Varka Silenos Scout">
+	<npc id="18638" level="78" type="L2Monster" name="Varka Silenos Scout">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -2080,7 +2124,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="5009" sp="1" />
+		<acquire exp="82322" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="7577" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="365.712" magical="124.8841975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
@@ -2114,6 +2158,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="6683" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6724" min="1" max="1" chance="0.003" /> <!-- Sealed Tateossian Earring -->
+				<item id="9452" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Earring -->
+				<item id="57" min="86" max="199" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2124,13 +2176,20 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36562" min="1" max="1" chance="0.3" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="18639" level="72" type="L2Monster" name="Varka Silenos Hunter">
+	<npc id="18639" level="78" type="L2Monster" name="Varka Silenos Hunter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2144,7 +2203,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6917" /> <!-- Monster Only (Poison Sting) -->
-		<acquire exp="4356" sp="1" />
+		<acquire exp="85799" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -2177,6 +2236,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="6685" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Gloves -->
+				<item id="9527" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Gloves -->
+				<item id="6371" min="1" max="1" chance="0.0009" /> <!-- Demon Splinter -->
+				<item id="9450" min="1" max="1" chance="0.0009" /> <!-- Dynasty Bagh-Nakh -->
+				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
+				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2187,13 +2253,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="8" />
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="18640" level="72" type="L2Monster" name="Varka Silenos Shaman">
+	<npc id="18640" level="78" type="L2Monster" name="Varka Silenos Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -2208,7 +2283,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="4356" sp="1" />
+		<acquire exp="83438" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2242,6 +2317,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="6687" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="9526" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Circlet -->
+				<item id="10252" min="1" max="1" chance="0.0009" /> <!-- Dynasty Staff -->
+				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2252,13 +2336,20 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36517" min="1" max="1" chance="5.454" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="1.094" /> <!-- Durable Leather -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18641" level="72" type="L2Monster" name="Varka Silenos Priest">
+	<npc id="18641" level="79" type="L2Monster" name="Varka Silenos Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -2273,7 +2364,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="7201" sp="1" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2307,6 +2398,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5312" min="1" max="1" chance="0.003" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.003" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5317" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Circlet -->
+				<item id="57" min="56" max="131" chance="70" /> <!-- Adena -->
+				<item id="5495" min="1" max="1" chance="0.3" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5527" min="1" max="1" chance="0.3" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2317,13 +2420,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="18642" level="72" type="L2Monster" name="Varka Silenos Warrior">
+	<npc id="18642" level="78" type="L2Monster" name="Varka Silenos Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -2336,7 +2448,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
-		<acquire exp="5699" sp="1" />
+		<acquire exp="89275" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="7577" hpRegen="17" mp="1475" mpRegen="3" />
 			<attack physical="386.5" magical="132.104" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2370,6 +2482,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="9517" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Gauntlets -->
+				<item id="9442" min="1" max="1" chance="0.0009" /> <!-- Dynasty Sword -->
+				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2380,13 +2497,20 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36522" min="1" max="1" chance="2.306" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="18643" level="73" type="L2Monster" name="Grazing Antelope">
+	<npc id="18643" level="77" type="L2Monster" name="Grazing Antelope">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2397,7 +2521,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="6301" sp="1" />
+		<acquire exp="93567" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2430,6 +2554,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2440,13 +2568,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="18644" level="72" type="L2Monster" name="Varka Silenos Medium">
+	<npc id="18644" level="78" type="L2Monster" name="Varka Silenos Medium">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -2461,7 +2598,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="4356" sp="1" />
+		<acquire exp="122882" sp="29" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2495,6 +2632,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="9453" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Necklace -->
+				<item id="57" min="128" max="298" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2505,13 +2648,20 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36557" min="1" max="1" chance="1.189" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18645" level="73" type="L2Monster" name="Varka Silenos Magus">
+	<npc id="18645" level="78" type="L2Monster" name="Varka Silenos Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -2526,7 +2676,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" lhand="6918" /> <!-- Monster Only (Silenos Shaman) / Monster Only (Shield of Silenos) -->
-		<acquire exp="4881" sp="1" />
+		<acquire exp="78287" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2560,6 +2710,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
+				<item id="5522" min="1" max="1" chance="0.3" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2570,13 +2730,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="55.2" />
 		</collision>
 	</npc>
-	<npc id="18646" level="73" type="L2Monster" name="Varka Silenos Sergeant">
+	<npc id="18646" level="78" type="L2Monster" name="Varka Silenos Sergeant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2589,7 +2758,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="56434" sp="13" />
+		<acquire exp="89275" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6660" hpRegen="17" mp="1540" mpRegen="3" />
 			<attack physical="412.21" magical="140.74335" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2623,6 +2792,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5326" min="1" max="1" chance="0.003" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Robe -->
+				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
+				<item id="5487" min="1" max="1" chance="0.3" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="960" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2633,13 +2811,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="18647" level="74" type="L2Monster" name="Grazing Flava">
+	<npc id="18647" level="78" type="L2Monster" name="Grazing Flava">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -2650,7 +2837,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="6199" sp="1" />
+		<acquire exp="82751" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2683,6 +2870,21 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5313" min="1" max="1" chance="0.003" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.003" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="86" max="200" chance="70" /> <!-- Adena -->
+				<item id="5515" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5514" min="1" max="1" chance="0.3" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5503" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5502" min="1" max="1" chance="0.3" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="36518" min="1" max="1" chance="0.075" /> <!-- Durable Leather -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2693,13 +2895,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="18648" level="73" type="L2Monster" name="Varka Silenos Chief Priest">
+	<npc id="18648" level="79" type="L2Monster" name="Varka Silenos Chief Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -2714,7 +2925,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="4210" sp="1" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2748,6 +2959,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5312" min="1" max="1" chance="0.003" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.003" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5317" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Circlet -->
+				<item id="57" min="56" max="131" chance="70" /> <!-- Adena -->
+				<item id="5495" min="1" max="1" chance="0.3" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5527" min="1" max="1" chance="0.3" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2758,13 +2981,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18649" level="73" type="L2Monster" name="Varka Silenos Great Magus">
+	<npc id="18649" level="79" type="L2Monster" name="Varka Silenos Great Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -2777,7 +3009,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
-		<acquire exp="55634" sp="13" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9374" hpRegen="17" mp="1574" mpRegen="3" />
 			<attack physical="438.22" magical="146.209" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2811,6 +3043,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5320" min="1" max="1" chance="0.003" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="57" min="86" max="199" chance="70" /> <!-- Adena -->
+				<item id="5480" min="1" max="1" chance="0.3" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2821,13 +3063,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
 			<height normal="49.2" />
 		</collision>
 	</npc>
-	<npc id="18650" level="73" type="L2Monster" name="Varka Silenos Officer">
+	<npc id="18650" level="79" type="L2Monster" name="Varka Silenos Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2841,7 +3092,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
-		<acquire exp="55634" sp="13" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9374" hpRegen="17" mp="1574" mpRegen="3" />
 			<attack physical="438.22" magical="146.209" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2876,6 +3127,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5311" min="1" max="1" chance="0.0009" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="57" min="101" max="234" chance="70" /> <!-- Adena -->
+				<item id="5522" min="1" max="1" chance="0.3" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="6698" min="1" max="1" chance="0.3" /> <!-- Sealed Tateossian Earring Part -->
+				<item id="6699" min="1" max="1" chance="0.3" /> <!-- Sealed Tateossian Ring Gem -->
+				<item id="6700" min="1" max="1" chance="0.3" /> <!-- Sealed Tateossian Necklace Chain -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2886,13 +3147,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1.108" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="18651" level="74" type="L2Monster" name="Grazing Elder Antelope">
+	<npc id="18651" level="78" type="L2Monster" name="Grazing Elder Antelope">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2903,7 +3173,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="6199" sp="1" />
+		<acquire exp="95010" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2936,6 +3206,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="289" min="1" max="1" chance="0.0009" /> <!-- Soul Bow -->
+				<item id="57" min="49" max="113" chance="70" /> <!-- Adena -->
+				<item id="6710" min="1" max="1" chance="0.3" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+				<item id="6712" min="1" max="1" chance="0.3" /> <!-- Sealed Major Arcana Gloves fabric -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="5534" min="1" max="1" chance="0.03" /> <!-- Soul Bow Shaft -->
+				<item id="6711" min="1" max="1" chance="0.03" /> <!-- Sealed Major Arcana Robe Part -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2946,13 +3224,22 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="18652" level="74" type="L2Monster" name="Varka Silenos Grand Priest">
+	<npc id="18652" level="79" type="L2Monster" name="Varka Silenos Grand Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -2967,7 +3254,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="4326" sp="1" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3001,6 +3288,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="236" min="1" max="1" chance="0.003" /> <!-- Soul Separator -->
+				<item id="57" min="123" max="287" chance="70" /> <!-- Adena -->
+				<item id="5537" min="1" max="1" chance="0.3" /> <!-- Soul Separator Head -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3011,6 +3308,15 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1.254" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />
@@ -3061,19 +3367,6 @@
 				<clan>VARKA_SILENOS</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
@@ -3092,7 +3385,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
-		<acquire exp="54886" sp="13" />
+		<acquire exp="54887" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6656" hpRegen="17" mp="1507" mpRegen="3" />
 			<attack physical="397.12" magical="542.68324" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3124,25 +3417,12 @@
 				<clan>VARKA_SILENOS</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</drop_lists>
 		<collision>
 			<radius normal="22" />
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="18655" level="74" type="L2Monster" name="Varka's Chief Escort">
+	<npc id="18655" level="79" type="L2Monster" name="Varka's Chief Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -3155,7 +3435,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
-		<acquire exp="57168" sp="13" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="8619" hpRegen="17" mp="1574" mpRegen="3" />
 			<attack physical="428.243" magical="146.209" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3189,16 +3469,27 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="5326" min="1" max="1" chance="0.0009" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Robe -->
+				<item id="57" min="43" max="100" chance="70" /> <!-- Adena -->
+				<item id="5487" min="1" max="1" chance="0.3" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
@@ -3219,7 +3510,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="4326" sp="1" />
+		<acquire exp="4327" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3251,25 +3542,12 @@
 				<clan>VARKA_SILENOS</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</drop_lists>
 		<collision>
 			<radius normal="14" />
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18657" level="74" type="L2Monster" name="Prophet's Royal Guard">
+	<npc id="18657" level="78" type="L2Monster" name="Prophet's Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -3282,7 +3560,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="56347" sp="13" />
+		<acquire exp="85784" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="8619" hpRegen="17" mp="1607" mpRegen="3" />
 			<attack physical="445.25" magical="152.024" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3316,23 +3594,32 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="305" min="1" max="1" chance="0.0009" /> <!-- Tallum Glaive -->
+				<item id="57" min="44" max="102" chance="70" /> <!-- Adena -->
+				<item id="5541" min="1" max="1" chance="0.075" /> <!-- Tallum Glaive Edge -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="16" />
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="18658" level="74" type="L2Monster" name="Prophet's Disciple">
+	<npc id="18658" level="78" type="L2Monster" name="Prophet's Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -3346,7 +3633,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="4326" sp="1" />
+		<acquire exp="79574" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3380,16 +3667,25 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="5320" min="1" max="1" chance="0.0009" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="57" min="41" max="95" chance="70" /> <!-- Adena -->
+				<item id="5480" min="1" max="1" chance="0.075" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.075" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
@@ -3411,7 +3707,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="4326" sp="1" />
+		<acquire exp="4327" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3443,19 +3739,6 @@
 				<clan>VARKA_SILENOS</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</drop_lists>
 		<collision>
 			<radius normal="17" />
 			<height normal="47.5" />

@@ -313,7 +313,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4074" level="2" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
 		<acquire exp="5627" sp="168" />
@@ -358,17 +358,17 @@
 				<item id="353" min="1" max="1" chance="0.03" /> <!-- Half Plate Armor -->
 				<item id="380" min="1" max="1" chance="0.03" /> <!-- Plate Gaiters -->
 				<item id="57" min="404" max="943" chance="70" /> <!-- Adena -->
-				<item id="1864" min="1" max="1" chance="27.45" /> <!-- Stem -->
-				<item id="1866" min="1" max="1" chance="9.481" /> <!-- Suede -->
-				<item id="1878" min="1" max="1" chance="5.604" /> <!-- Durable Braid -->
-				<item id="1951" min="1" max="1" chance="2.563" /> <!-- Plate Gaiter Fragment -->
-				<item id="1950" min="1" max="1" chance="1.717" /> <!-- Half Plate Temper -->
-				<item id="2993" min="1" max="1" chance="1.116" /> <!-- Recipe: Dwarven Chain Boots -->
+				<item id="1864" min="1" max="1" chance="28.6" /> <!-- Stem -->
+				<item id="1866" min="1" max="1" chance="9.508" /> <!-- Suede -->
+				<item id="1878" min="1" max="1" chance="5.684" /> <!-- Durable Braid -->
+				<item id="1951" min="1" max="1" chance="2.541" /> <!-- Plate Gaiter Fragment -->
+				<item id="1950" min="1" max="1" chance="1.648" /> <!-- Half Plate Temper -->
+				<item id="2993" min="1" max="1" chance="1.118" /> <!-- Recipe: Dwarven Chain Boots -->
 				<item id="2301" min="1" max="1" chance="0.075" /> <!-- Recipe: Battle Axe -->
 			</drop>
 			<spoil>
-				<item id="1864" min="1" max="13" chance="84.72" /> <!-- Stem -->
-				<item id="2990" min="1" max="1" chance="23.13" /> <!-- Recipe: Chain Boots -->
+				<item id="1864" min="1" max="13" chance="83.61" /> <!-- Stem -->
+				<item id="2990" min="1" max="1" chance="22.11" /> <!-- Recipe: Chain Boots -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -384,7 +384,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4228" level="4" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5127" /> <!-- Dailaon Knife -->
 		<acquire exp="5916" sp="177" />
@@ -428,15 +428,15 @@
 			<drop>
 				<item id="280" min="1" max="1" chance="0.03" /> <!-- Light Crossbow -->
 				<item id="57" min="431" max="1009" chance="70" /> <!-- Adena -->
-				<item id="1864" min="1" max="3" chance="18.86" /> <!-- Stem -->
-				<item id="1866" min="1" max="1" chance="12.22" /> <!-- Suede -->
-				<item id="1878" min="1" max="1" chance="7.631" /> <!-- Durable Braid -->
+				<item id="1864" min="1" max="3" chance="19.24" /> <!-- Stem -->
+				<item id="1866" min="1" max="1" chance="12.38" /> <!-- Suede -->
+				<item id="1878" min="1" max="1" chance="7.623" /> <!-- Durable Braid -->
 				<item id="2054" min="1" max="1" chance="0.75" /> <!-- Light Crossbow Shaft -->
 				<item id="1805" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot (C-grade) -->
 			</drop>
 			<spoil>
-				<item id="2999" min="1" max="1" chance="20.84" /> <!-- Recipe: Plated Leather Gloves -->
-				<item id="1889" min="1" max="1" chance="19.72" /> <!-- Synthetic Braid -->
+				<item id="2999" min="1" max="1" chance="20.78" /> <!-- Recipe: Plated Leather Gloves -->
+				<item id="1889" min="1" max="1" chance="20.27" /> <!-- Synthetic Braid -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -452,7 +452,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4030" level="3" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
 		<acquire exp="6201" sp="186" />
@@ -497,16 +497,16 @@
 				<item id="396" min="1" max="1" chance="0.03" /> <!-- Salamander Skin Mail -->
 				<item id="262" min="1" max="1" chance="0.0075" /> <!-- Scallop Jamadhr -->
 				<item id="57" min="376" max="880" chance="70" /> <!-- Adena -->
-				<item id="1864" min="1" max="3" chance="15.81" /> <!-- Stem -->
-				<item id="1866" min="1" max="1" chance="11.08" /> <!-- Suede -->
-				<item id="1878" min="1" max="1" chance="6.637" /> <!-- Durable Braid -->
-				<item id="1952" min="1" max="1" chance="1.553" /> <!-- Salamander Skin Mail Texture -->
+				<item id="1864" min="1" max="3" chance="16.95" /> <!-- Stem -->
+				<item id="1866" min="1" max="1" chance="11.06" /> <!-- Suede -->
+				<item id="1878" min="1" max="1" chance="6.557" /> <!-- Durable Braid -->
+				<item id="1952" min="1" max="1" chance="1.529" /> <!-- Salamander Skin Mail Texture -->
 				<item id="2053" min="1" max="1" chance="0.3" /> <!-- Scallop Jamadhr Edge -->
 				<item id="2302" min="1" max="1" chance="0.075" /> <!-- Recipe: Silver Axe -->
 			</drop>
 			<spoil>
-				<item id="1950" min="1" max="1" chance="8.706" /> <!-- Half Plate Temper -->
-				<item id="2307" min="1" max="1" chance="1.144" /> <!-- Recipe: Heavy Doom Axe -->
+				<item id="1950" min="1" max="1" chance="8.715" /> <!-- Half Plate Temper -->
+				<item id="2307" min="1" max="1" chance="1.197" /> <!-- Recipe: Heavy Doom Axe -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -524,7 +524,7 @@
 			<skill name="W_ShortRangeDDMagic" id="4160" level="4" />
 			<skill name="MagicHeal" id="4065" level="4" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5131" /> <!-- Monster Only (Parhit Staff) -->
 		<acquire exp="6493" sp="194" />
@@ -571,17 +571,17 @@
 				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
 				<item id="72" min="1" max="1" chance="0.003" /> <!-- StormBringer -->
 				<item id="57" min="433" max="1014" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="1" chance="18.29" /> <!-- Varnish -->
-				<item id="1866" min="1" max="1" chance="12.37" /> <!-- Suede -->
-				<item id="1878" min="1" max="1" chance="7.634" /> <!-- Durable Braid -->
-				<item id="1864" min="3" max="9" chance="6.28" /> <!-- Stem -->
+				<item id="1865" min="1" max="1" chance="19.93" /> <!-- Varnish -->
+				<item id="1866" min="1" max="1" chance="12.2" /> <!-- Suede -->
+				<item id="1878" min="1" max="1" chance="7.673" /> <!-- Durable Braid -->
+				<item id="1864" min="3" max="9" chance="6.321" /> <!-- Stem -->
 				<item id="2059" min="1" max="1" chance="0.3" /> <!-- Flamberge Blade -->
 				<item id="2060" min="1" max="1" chance="0.3" /> <!-- StormBringer Blade -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="1" chance="62.25" /> <!-- Silver Nugget -->
-				<item id="2164" min="1" max="1" chance="12.06" /> <!-- Recipe: Ring of Protection -->
-				<item id="2221" min="1" max="1" chance="5.108" /> <!-- Recipe: Rind Leather Gaiters -->
+				<item id="1873" min="1" max="1" chance="63.03" /> <!-- Silver Nugget -->
+				<item id="2164" min="1" max="1" chance="11.3" /> <!-- Recipe: Ring of Protection -->
+				<item id="2221" min="1" max="1" chance="5.104" /> <!-- Recipe: Rind Leather Gaiters -->
 				<item id="2303" min="1" max="1" chance="0.75" /> <!-- Recipe: Skull Graver -->
 			</spoil>
 		</drop_lists>
@@ -598,7 +598,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4103" level="2" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" /> <!-- Knight's Sword -->
 		<acquire exp="6762" sp="202" />
@@ -647,17 +647,17 @@
 				<item id="298" min="1" max="1" chance="0.003" /> <!-- Orcish Glaive -->
 				<item id="302" min="1" max="1" chance="0.003" /> <!-- Body Slasher -->
 				<item id="57" min="453" max="1057" chance="70" /> <!-- Adena -->
-				<item id="1864" min="1" max="3" chance="16.13" /> <!-- Stem -->
-				<item id="2508" min="1" max="1" chance="12.77" /> <!-- Cursed Bone -->
-				<item id="1866" min="1" max="1" chance="10.84" /> <!-- Suede -->
-				<item id="1878" min="1" max="1" chance="6.295" /> <!-- Durable Braid -->
-				<item id="2209" min="1" max="1" chance="1.225" /> <!-- Recipe: Eldarake -->
+				<item id="1864" min="1" max="3" chance="15.86" /> <!-- Stem -->
+				<item id="2508" min="1" max="1" chance="13.14" /> <!-- Cursed Bone -->
+				<item id="1866" min="1" max="1" chance="10.97" /> <!-- Suede -->
+				<item id="1878" min="1" max="1" chance="6.318" /> <!-- Durable Braid -->
+				<item id="2209" min="1" max="1" chance="1.185" /> <!-- Recipe: Eldarake -->
 				<item id="2062" min="1" max="1" chance="0.3" /> <!-- Scythe Edge -->
 				<item id="2075" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive Blade -->
 				<item id="2076" min="1" max="1" chance="0.3" /> <!-- Body Slasher Blade -->
 			</drop>
 			<spoil>
-				<item id="2074" min="1" max="1" chance="2.316" /> <!-- Crystallized Ice Bow Shaft -->
+				<item id="2074" min="1" max="1" chance="2.35" /> <!-- Crystallized Ice Bow Shaft -->
 				<item id="2340" min="1" max="1" chance="0.75" /> <!-- Recipe: Pa'agrio Hammer -->
 			</spoil>
 		</drop_lists>
@@ -780,19 +780,19 @@
 			<drop>
 				<item id="135" min="1" max="1" chance="0.0075" /> <!-- Samurai Long Sword -->
 				<item id="57" min="1196" max="2795" chance="70" /> <!-- Adena -->
-				<item id="1869" min="1" max="3" chance="17.82" /> <!-- Iron Ore -->
-				<item id="1873" min="1" max="1" chance="14.36" /> <!-- Silver Nugget -->
-				<item id="2952" min="1" max="1" chance="12.65" /> <!-- Demon's Boot Fabric -->
-				<item id="2508" min="1" max="3" chance="9.747" /> <!-- Cursed Bone -->
-				<item id="1880" min="1" max="1" chance="3.51" /> <!-- Steel -->
-				<item id="3005" min="1" max="1" chance="1.371" /> <!-- Recipe: Demon's Boots -->
+				<item id="1869" min="1" max="3" chance="17.95" /> <!-- Iron Ore -->
+				<item id="1873" min="1" max="1" chance="14.38" /> <!-- Silver Nugget -->
+				<item id="2952" min="1" max="1" chance="12.48" /> <!-- Demon's Boot Fabric -->
+				<item id="2508" min="1" max="3" chance="9.671" /> <!-- Cursed Bone -->
+				<item id="1880" min="1" max="1" chance="3.425" /> <!-- Steel -->
+				<item id="3005" min="1" max="1" chance="1.483" /> <!-- Recipe: Demon's Boots -->
 				<item id="2115" min="1" max="1" chance="0.75" /> <!-- Samurai Long Sword Blade -->
 				<item id="2231" min="1" max="1" chance="0.3" /> <!-- Recipe: Full Plate Armor -->
 			</drop>
 			<spoil>
-				<item id="1874" min="1" max="1" chance="36.98" /> <!-- Oriharukon Ore -->
-				<item id="4039" min="1" max="1" chance="17.99" /> <!-- Mold Glue -->
-				<item id="4042" min="1" max="1" chance="9.4" /> <!-- Enria -->
+				<item id="1874" min="1" max="1" chance="37.86" /> <!-- Oriharukon Ore -->
+				<item id="4039" min="1" max="1" chance="18.75" /> <!-- Mold Glue -->
+				<item id="4042" min="1" max="1" chance="9.452" /> <!-- Enria -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1069,17 +1069,17 @@
 			<drop>
 				<item id="95" min="1" max="1" chance="0.03" /> <!-- Poleaxe -->
 				<item id="57" min="1811" max="4226" chance="70" /> <!-- Adena -->
-				<item id="1873" min="1" max="1" chance="25.46" /> <!-- Silver Nugget -->
-				<item id="1869" min="3" max="9" chance="10.09" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="6.365" /> <!-- Steel -->
-				<item id="2093" min="1" max="1" chance="3.057" /> <!-- Poleaxe Blade -->
+				<item id="1873" min="1" max="1" chance="24.4" /> <!-- Silver Nugget -->
+				<item id="1869" min="3" max="9" chance="11" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="6.347" /> <!-- Steel -->
+				<item id="2093" min="1" max="1" chance="2.947" /> <!-- Poleaxe Blade -->
 				<item id="2331" min="1" max="1" chance="0.3" /> <!-- Recipe: Poleaxe -->
 				<item id="2360" min="1" max="1" chance="0.3" /> <!-- Recipe: Orcish Poleaxe -->
 			</drop>
 			<spoil>
-				<item id="1874" min="1" max="1" chance="56.69" /> <!-- Oriharukon Ore -->
-				<item id="4039" min="1" max="1" chance="28.96" /> <!-- Mold Glue -->
-				<item id="4042" min="1" max="1" chance="14.03" /> <!-- Enria -->
+				<item id="1874" min="1" max="1" chance="55.95" /> <!-- Oriharukon Ore -->
+				<item id="4039" min="1" max="1" chance="29.24" /> <!-- Mold Glue -->
+				<item id="4042" min="1" max="1" chance="14.8" /> <!-- Enria -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1143,18 +1143,18 @@
 			<drop>
 				<item id="283" min="1" max="1" chance="0.03" /> <!-- Akat Longbow -->
 				<item id="57" min="1921" max="4490" chance="70" /> <!-- Adena -->
-				<item id="1869" min="1" max="3" chance="17.9" /> <!-- Iron Ore -->
-				<item id="1343" min="80" max="240" chance="10.15" /> <!-- Silver Arrow -->
-				<item id="1880" min="1" max="1" chance="5.621" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="4.454" /> <!-- Silver Nugget -->
-				<item id="2109" min="1" max="1" chance="3.265" /> <!-- Akat Longbow Shaft -->
+				<item id="1869" min="1" max="3" chance="19.44" /> <!-- Iron Ore -->
+				<item id="1343" min="80" max="240" chance="9.76" /> <!-- Silver Arrow -->
+				<item id="1880" min="1" max="1" chance="5.551" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="4.5" /> <!-- Silver Nugget -->
+				<item id="2109" min="1" max="1" chance="3.268" /> <!-- Akat Longbow Shaft -->
 				<item id="2347" min="1" max="1" chance="0.3" /> <!-- Recipe: Akat Longbow -->
 				<item id="2360" min="1" max="1" chance="0.075" /> <!-- Recipe: Orcish Poleaxe -->
 			</drop>
 			<spoil>
-				<item id="1874" min="1" max="1" chance="60.55" /> <!-- Oriharukon Ore -->
-				<item id="4039" min="1" max="1" chance="30.68" /> <!-- Mold Glue -->
-				<item id="4042" min="1" max="1" chance="15.57" /> <!-- Enria -->
+				<item id="1874" min="1" max="1" chance="59.54" /> <!-- Oriharukon Ore -->
+				<item id="4039" min="1" max="1" chance="30.92" /> <!-- Mold Glue -->
+				<item id="4042" min="1" max="1" chance="15.29" /> <!-- Enria -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1270,14 +1270,14 @@
 			<drop>
 				<item id="887" min="1" max="1" chance="0.3" /> <!-- Adamantite Ring -->
 				<item id="57" min="2078" max="4850" chance="70" /> <!-- Adena -->
-				<item id="1869" min="3" max="9" chance="15.72" /> <!-- Iron Ore -->
-				<item id="1873" min="2" max="6" chance="9.121" /> <!-- Silver Nugget -->
-				<item id="1880" min="1" max="1" chance="9.034" /> <!-- Steel -->
-				<item id="4050" min="3" max="9" chance="6.512" /> <!-- Adamantite Ring Wire -->
-				<item id="1874" min="1" max="1" chance="6.109" /> <!-- Oriharukon Ore -->
+				<item id="1869" min="3" max="9" chance="15.28" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="9.137" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="9.043" /> <!-- Silver Nugget -->
+				<item id="4050" min="3" max="9" chance="6.566" /> <!-- Adamantite Ring Wire -->
+				<item id="1874" min="1" max="1" chance="6.056" /> <!-- Oriharukon Ore -->
 			</drop>
 			<spoil>
-				<item id="4938" min="1" max="1" chance="73.46" /> <!-- Recipe: Adamantite Ring (70%) -->
+				<item id="4938" min="1" max="1" chance="73.85" /> <!-- Recipe: Adamantite Ring (70%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1396,14 +1396,14 @@
 			<drop>
 				<item id="856" min="1" max="1" chance="0.3" /> <!-- Adamantite Earring -->
 				<item id="57" min="2023" max="4720" chance="70" /> <!-- Adena -->
-				<item id="4049" min="1" max="3" chance="16.1" /> <!-- Adamantite Earring Gemstone -->
-				<item id="1869" min="3" max="9" chance="14.47" /> <!-- Iron Ore -->
-				<item id="1873" min="2" max="6" chance="8.9" /> <!-- Silver Nugget -->
-				<item id="1880" min="1" max="1" chance="8.891" /> <!-- Steel -->
-				<item id="1874" min="1" max="1" chance="5.865" /> <!-- Oriharukon Ore -->
+				<item id="4049" min="1" max="3" chance="16.16" /> <!-- Adamantite Earring Gemstone -->
+				<item id="1869" min="3" max="9" chance="14.67" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.878" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="8.855" /> <!-- Silver Nugget -->
+				<item id="1874" min="1" max="1" chance="5.89" /> <!-- Oriharukon Ore -->
 			</drop>
 			<spoil>
-				<item id="4937" min="1" max="1" chance="47.02" /> <!-- Recipe: Adamantite Earring (70%) -->
+				<item id="4937" min="1" max="1" chance="47.58" /> <!-- Recipe: Adamantite Earring (70%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1526,14 +1526,14 @@
 			<drop>
 				<item id="918" min="1" max="1" chance="0.3" /> <!-- Adamantite Necklace -->
 				<item id="57" min="2000" max="4667" chance="70" /> <!-- Adena -->
-				<item id="1869" min="3" max="9" chance="14.99" /> <!-- Iron Ore -->
-				<item id="4051" min="1" max="3" chance="11.52" /> <!-- Adamantite Necklace Chain -->
-				<item id="1873" min="2" max="6" chance="8.818" /> <!-- Silver Nugget -->
-				<item id="1880" min="1" max="1" chance="8.717" /> <!-- Steel -->
-				<item id="1874" min="1" max="1" chance="5.887" /> <!-- Oriharukon Ore -->
+				<item id="1869" min="3" max="9" chance="14.48" /> <!-- Iron Ore -->
+				<item id="4051" min="1" max="3" chance="12.19" /> <!-- Adamantite Necklace Chain -->
+				<item id="1880" min="1" max="1" chance="8.821" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="8.809" /> <!-- Silver Nugget -->
+				<item id="1874" min="1" max="1" chance="5.776" /> <!-- Oriharukon Ore -->
 			</drop>
 			<spoil>
-				<item id="4939" min="1" max="1" chance="35.64" /> <!-- Recipe: Adamantite Necklace (70%) -->
+				<item id="4939" min="1" max="1" chance="34.53" /> <!-- Recipe: Adamantite Necklace (70%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1592,15 +1592,15 @@
 			<drop>
 				<item id="895" min="1" max="1" chance="0.3" /> <!-- Black Ore Ring -->
 				<item id="57" min="2700" max="6306" chance="70" /> <!-- Adena -->
-				<item id="4053" min="1" max="3" chance="17.32" /> <!-- Black Ore Ring Gemstone -->
-				<item id="1866" min="2" max="6" chance="16.22" /> <!-- Suede -->
-				<item id="1870" min="5" max="15" chance="9.449" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="5.309" /> <!-- Charcoal -->
-				<item id="1895" min="3" max="9" chance="3.898" /> <!-- Metallic Fiber -->
-				<item id="1876" min="4" max="12" chance="2.324" /> <!-- Mithril Ore -->
+				<item id="4053" min="1" max="3" chance="18.42" /> <!-- Black Ore Ring Gemstone -->
+				<item id="1866" min="2" max="6" chance="16.21" /> <!-- Suede -->
+				<item id="1870" min="5" max="15" chance="9.486" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="5.217" /> <!-- Charcoal -->
+				<item id="1895" min="3" max="9" chance="3.918" /> <!-- Metallic Fiber -->
+				<item id="1876" min="4" max="12" chance="2.327" /> <!-- Mithril Ore -->
 			</drop>
 			<spoil>
-				<item id="4973" min="1" max="1" chance="42.13" /> <!-- Recipe: Black Ore Earring (70%) -->
+				<item id="4973" min="1" max="1" chance="41.34" /> <!-- Recipe: Black Ore Earring (70%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1663,21 +1663,21 @@
 				<item id="612" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Gauntlets -->
 				<item id="2464" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Gloves -->
 				<item id="57" min="2791" max="6513" chance="70" /> <!-- Adena -->
-				<item id="1343" min="80" max="240" chance="17.62" /> <!-- Silver Arrow -->
-				<item id="1880" min="1" max="1" chance="9.781" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="7.783" /> <!-- Silver Nugget -->
-				<item id="1874" min="1" max="1" chance="6.524" /> <!-- Oriharukon Ore -->
-				<item id="4098" min="1" max="3" chance="5.498" /> <!-- Sealed Avadon Boot Design -->
-				<item id="1869" min="9" max="27" chance="5.382" /> <!-- Iron Ore -->
-				<item id="4100" min="1" max="3" chance="3.685" /> <!-- Sealed Zubei's Gauntlet Fragment -->
-				<item id="4097" min="2" max="6" chance="2.791" /> <!-- Sealed Zubei's Boot Design -->
-				<item id="4073" min="2" max="6" chance="2.275" /> <!-- Sealed Avadon Glove Fragment -->
+				<item id="1343" min="80" max="240" chance="16.61" /> <!-- Silver Arrow -->
+				<item id="1880" min="1" max="1" chance="9.803" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="7.872" /> <!-- Silver Nugget -->
+				<item id="1874" min="1" max="1" chance="6.5" /> <!-- Oriharukon Ore -->
+				<item id="4098" min="1" max="3" chance="5.609" /> <!-- Sealed Avadon Boot Design -->
+				<item id="1869" min="9" max="27" chance="5.493" /> <!-- Iron Ore -->
+				<item id="4100" min="1" max="3" chance="3.682" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+				<item id="4097" min="2" max="6" chance="2.765" /> <!-- Sealed Zubei's Boot Design -->
+				<item id="4073" min="2" max="6" chance="2.27" /> <!-- Sealed Avadon Glove Fragment -->
 			</drop>
 			<spoil>
-				<item id="4958" min="1" max="1" chance="19.5" /> <!-- Recipe: Sealed Zubei's Boots (60%) -->
-				<item id="4959" min="1" max="1" chance="19.06" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
-				<item id="4960" min="1" max="1" chance="18.64" /> <!-- Recipe: Sealed Zubei's Gauntlets (60%) -->
-				<item id="4953" min="1" max="1" chance="18.44" /> <!-- Recipe: Sealed Avadon Gloves (60%) -->
+				<item id="4959" min="1" max="1" chance="19.76" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
+				<item id="4958" min="1" max="1" chance="19.01" /> <!-- Recipe: Sealed Zubei's Boots (60%) -->
+				<item id="4960" min="1" max="1" chance="18.97" /> <!-- Recipe: Sealed Zubei's Gauntlets (60%) -->
+				<item id="4953" min="1" max="1" chance="18.73" /> <!-- Recipe: Sealed Avadon Gloves (60%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1747,24 +1747,24 @@
 				<item id="2402" min="1" max="1" chance="0.03" /> <!-- Stockings of Zubei -->
 				<item id="2406" min="1" max="1" chance="0.03" /> <!-- Avadon Robe -->
 				<item id="57" min="2685" max="6272" chance="70" /> <!-- Adena -->
-				<item id="1880" min="1" max="1" chance="12.27" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="11.5" /> <!-- Silver Nugget -->
-				<item id="1874" min="1" max="1" chance="7.857" /> <!-- Oriharukon Ore -->
-				<item id="4067" min="1" max="1" chance="4.874" /> <!-- Zubei's Leather Gaiter Texture -->
-				<item id="1869" min="15" max="45" chance="3.94" /> <!-- Iron Ore -->
-				<item id="4066" min="1" max="1" chance="3.259" /> <!-- Zubei's Leather Shirt Fabric -->
-				<item id="4069" min="1" max="1" chance="3.192" /> <!-- Tunic of Zubei Fabric -->
-				<item id="4068" min="1" max="1" chance="2.501" /> <!-- Avadon Leather Armor Lining -->
-				<item id="4071" min="1" max="1" chance="2.441" /> <!-- Avadon Robe Fabric -->
-				<item id="4070" min="1" max="3" chance="2.43" /> <!-- Stockings of Zubei Fabric -->
+				<item id="1880" min="1" max="1" chance="12.12" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="11.59" /> <!-- Silver Nugget -->
+				<item id="1874" min="1" max="1" chance="7.853" /> <!-- Oriharukon Ore -->
+				<item id="4067" min="1" max="1" chance="4.847" /> <!-- Zubei's Leather Gaiter Texture -->
+				<item id="1869" min="15" max="45" chance="3.86" /> <!-- Iron Ore -->
+				<item id="4069" min="1" max="1" chance="3.25" /> <!-- Tunic of Zubei Fabric -->
+				<item id="4066" min="1" max="1" chance="3.186" /> <!-- Zubei's Leather Shirt Fabric -->
+				<item id="4068" min="1" max="1" chance="2.506" /> <!-- Avadon Leather Armor Lining -->
+				<item id="4070" min="1" max="3" chance="2.5" /> <!-- Stockings of Zubei Fabric -->
+				<item id="4071" min="1" max="1" chance="2.474" /> <!-- Avadon Robe Fabric -->
 			</drop>
 			<spoil>
-				<item id="4947" min="1" max="1" chance="6.518" /> <!-- Recipe: Zubei's Leather Gaiters (60%) -->
-				<item id="4950" min="1" max="1" chance="6.512" /> <!-- Recipe: Stockings of Zubei (60%) -->
-				<item id="4949" min="1" max="1" chance="4.05" /> <!-- Recipe: Tunic of Zubei (60%) -->
-				<item id="4946" min="1" max="1" chance="4.024" /> <!-- Recipe: Zubei's Leather Shirt (60%) -->
-				<item id="4951" min="1" max="1" chance="2.855" /> <!-- Recipe: Avadon Robe (60%) -->
-				<item id="4948" min="1" max="1" chance="2.744" /> <!-- Recipe: Avadon Leather Armor (60%) -->
+				<item id="4950" min="1" max="1" chance="6.577" /> <!-- Recipe: Stockings of Zubei (60%) -->
+				<item id="4947" min="1" max="1" chance="6.565" /> <!-- Recipe: Zubei's Leather Gaiters (60%) -->
+				<item id="4949" min="1" max="1" chance="4.145" /> <!-- Recipe: Tunic of Zubei (60%) -->
+				<item id="4946" min="1" max="1" chance="4.139" /> <!-- Recipe: Zubei's Leather Shirt (60%) -->
+				<item id="4951" min="1" max="1" chance="2.803" /> <!-- Recipe: Avadon Robe (60%) -->
+				<item id="4948" min="1" max="1" chance="2.755" /> <!-- Recipe: Avadon Leather Armor (60%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1887,15 +1887,15 @@
 			<drop>
 				<item id="864" min="1" max="1" chance="0.3" /> <!-- Black Ore Earring -->
 				<item id="57" min="2907" max="6788" chance="70" /> <!-- Adena -->
-				<item id="1866" min="2" max="6" chance="17.11" /> <!-- Suede -->
-				<item id="4052" min="1" max="3" chance="15.83" /> <!-- Black Ore Earring Piece -->
-				<item id="1870" min="5" max="15" chance="10.63" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="5.718" /> <!-- Charcoal -->
-				<item id="1895" min="3" max="9" chance="4.166" /> <!-- Metallic Fiber -->
-				<item id="1876" min="4" max="12" chance="2.603" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="16.77" /> <!-- Suede -->
+				<item id="4052" min="1" max="3" chance="14.98" /> <!-- Black Ore Earring Piece -->
+				<item id="1870" min="5" max="15" chance="9.82" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="5.657" /> <!-- Charcoal -->
+				<item id="1895" min="3" max="9" chance="4.109" /> <!-- Metallic Fiber -->
+				<item id="1876" min="4" max="12" chance="2.476" /> <!-- Mithril Ore -->
 			</drop>
 			<spoil>
-				<item id="4974" min="1" max="1" chance="66.24" /> <!-- Recipe: Black Ore Ring (70%) -->
+				<item id="4974" min="1" max="1" chance="65.76" /> <!-- Recipe: Black Ore Ring (70%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1963,16 +1963,16 @@
 			<drop>
 				<item id="926" min="1" max="1" chance="0.3" /> <!-- Black Ore Necklace -->
 				<item id="57" min="3097" max="7233" chance="70" /> <!-- Adena -->
-				<item id="4054" min="1" max="1" chance="18.39" /> <!-- Black Ore Necklace Beads -->
-				<item id="1866" min="2" max="6" chance="15.76" /> <!-- Suede -->
-				<item id="1870" min="5" max="15" chance="9.029" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="5.014" /> <!-- Charcoal -->
-				<item id="1895" min="3" max="9" chance="3.747" /> <!-- Metallic Fiber -->
-				<item id="1876" min="4" max="12" chance="2.24" /> <!-- Mithril Ore -->
+				<item id="4054" min="1" max="1" chance="18.77" /> <!-- Black Ore Necklace Beads -->
+				<item id="1866" min="2" max="6" chance="15.82" /> <!-- Suede -->
+				<item id="1870" min="5" max="15" chance="9.074" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="4.996" /> <!-- Charcoal -->
+				<item id="1895" min="3" max="9" chance="3.71" /> <!-- Metallic Fiber -->
+				<item id="1876" min="4" max="12" chance="2.242" /> <!-- Mithril Ore -->
 				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
-				<item id="4975" min="1" max="1" chance="37.05" /> <!-- Recipe: Black Ore Necklace (70%) -->
+				<item id="4975" min="1" max="1" chance="36.92" /> <!-- Recipe: Black Ore Necklace (70%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -2806,7 +2806,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4074" level="2" />
 		</parameters>
-		<race>UNDEAD</race>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="94263" sp="2827" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2853,12 +2853,12 @@
 				<item id="234" min="1" max="1" chance="0.003" /> <!-- Demon's Dagger -->
 				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
 				<item id="57" min="1438" max="3358" chance="70" /> <!-- Adena -->
-				<item id="1895" min="1" max="1" chance="12.3" /> <!-- Metallic Fiber -->
-				<item id="1876" min="1" max="1" chance="8.447" /> <!-- Mithril Ore -->
-				<item id="1866" min="2" max="6" chance="7.057" /> <!-- Suede -->
-				<item id="1879" min="1" max="1" chance="6.977" /> <!-- Cokes -->
-				<item id="1870" min="5" max="15" chance="4.145" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="2.306" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="12.58" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.351" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.982" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.937" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.228" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.274" /> <!-- Charcoal -->
 				<item id="4119" min="1" max="1" chance="0.75" /> <!-- Demon's Dagger Edge -->
 				<item id="4121" min="1" max="1" chance="0.75" /> <!-- Bow of Peril Shaft -->
 			</drop>
@@ -3350,17 +3350,17 @@
 				<item id="97" min="1" max="1" chance="0.0075" /> <!-- Lance -->
 				<item id="268" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus -->
 				<item id="57" min="2433" max="5685" chance="70" /> <!-- Adena -->
-				<item id="1887" min="1" max="1" chance="10.9" /> <!-- Varnish of Purity -->
-				<item id="4120" min="1" max="1" chance="1.668" /> <!-- Bellion Cestus Edge -->
-				<item id="4115" min="1" max="1" chance="1.567" /> <!-- Lance Blade -->
+				<item id="1887" min="1" max="1" chance="10.07" /> <!-- Varnish of Purity -->
+				<item id="4115" min="1" max="1" chance="1.689" /> <!-- Lance Blade -->
+				<item id="4120" min="1" max="1" chance="1.621" /> <!-- Bellion Cestus Edge -->
 			</drop>
 			<spoil>
-				<item id="948" min="1" max="1" chance="4.383" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="4.291" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20847" level="54" type="L2Monster" name="Veil Master">
+	<npc id="20847" level="74" type="L2Monster" name="Veil Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -3428,17 +3428,17 @@
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
 				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
-				<item id="1895" min="1" max="1" chance="12.02" /> <!-- Metallic Fiber -->
-				<item id="1876" min="1" max="1" chance="7.955" /> <!-- Mithril Ore -->
-				<item id="1866" min="2" max="6" chance="6.627" /> <!-- Suede -->
-				<item id="1879" min="1" max="1" chance="6.622" /> <!-- Cokes -->
-				<item id="1870" min="5" max="15" chance="4" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="2.221" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="11.72" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.039" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.721" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.667" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.008" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.214" /> <!-- Charcoal -->
 				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
 				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
 			</drop>
 			<spoil>
-				<item id="948" min="1" max="1" chance="2.465" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="2.451" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</spoil>
 		</drop_lists>
@@ -3751,21 +3751,21 @@
 		<drop_lists>
 			<drop>
 				<item id="503" min="1" max="1" chance="0.3" /> <!-- Sealed Zubei's Helmet -->
-				<item id="2615" min="1" max="1" chance="0.3" /> <!-- Sealed Avadon Circlet -->
+				<item id="2415" min="1" max="1" chance="0.3" /> <!-- Sealed Avadon Circlet -->
 				<item id="57" min="2539" max="5931" chance="70" /> <!-- Adena -->
-				<item id="4180" min="1" max="1" chance="9.983" /> <!-- Recipe: Silver Arrow -->
-				<item id="4072" min="1" max="3" chance="8.748" /> <!-- Sealed Avadon Circlet Pattern -->
-				<item id="4102" min="1" max="3" chance="5.891" /> <!-- Sealed Zubei's Helmet Design -->
-				<item id="4962" min="1" max="1" chance="1.149" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4952" min="1" max="1" chance="1.117" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+				<item id="4180" min="1" max="1" chance="9.825" /> <!-- Recipe: Silver Arrow -->
+				<item id="4072" min="1" max="3" chance="8.782" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="4102" min="1" max="3" chance="5.885" /> <!-- Sealed Zubei's Helmet Design -->
+				<item id="4952" min="1" max="1" chance="1.177" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="1.105" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
 				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
 				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="4952" min="1" max="1" chance="12.14" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="11.24" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="7.444" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="7.431" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+				<item id="4952" min="1" max="1" chance="11.53" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="11.28" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="7.464" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="7.418" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -4126,7 +4126,6 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
-		<acquire exp="87559" sp="2626" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2679" hpRegen="34" mp="1410" mpRegen="3" />
 			<attack physical="804.677566" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4201,7 +4200,6 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
-		<acquire exp="90889" sp="2726" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2728" hpRegen="42.5" mp="1442" mpRegen="3" />
 			<attack physical="684.3084364" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />

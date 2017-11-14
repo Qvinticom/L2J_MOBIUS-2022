@@ -528,7 +528,7 @@
 	</npc>
 	<npc id="8628" level="85" type="L2Npc" name="Frintezza" title="Enamored">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
@@ -544,5 +544,9 @@
 			<radius normal="15" />
 			<height normal="43" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+		</skill_list>
 	</npc>
 </list>

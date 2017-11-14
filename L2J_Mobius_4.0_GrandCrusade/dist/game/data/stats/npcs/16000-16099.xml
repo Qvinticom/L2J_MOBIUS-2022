@@ -4063,9 +4063,9 @@
 			<height normal="6" />
 		</collision>
 	</npc>
-	<npc id="16077" level="55" type="L2Monster" name="Antharas">
+	<npc id="16077" level="55" type="L2Npc" name="Antharas">
 		<!-- TODO: Must be confirmed -->
-		<race>CONSTRUCT</race>
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
 			<vitals hp="1673" mp="889" hpRegen="6.5" mpRegen="2.4" />

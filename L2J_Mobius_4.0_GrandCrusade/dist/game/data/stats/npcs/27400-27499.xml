@@ -340,7 +340,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="27408" level="80" type="L2Monster" name="Solina Savior">
+	<npc id="27408" level="83" type="L2Monster" name="Solina Savior">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -381,8 +381,33 @@
 			<radius normal="11" />
 			<height normal="25.4" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="77" max="179" chance="70" /> <!-- Adena -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27409" level="81" type="L2Monster" name="Solina Knight Captain">
+	<npc id="27409" level="83" type="L2Monster" name="Solina Knight Captain">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -421,8 +446,27 @@
 			<radius normal="14" />
 			<height normal="31.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="14109" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14110" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Boots -->
+				<item id="14113" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gloves -->
+				<item id="14117" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gauntlets Piece -->
+				<item id="15668" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15671" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15672" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27410" level="80" type="L2Monster" name="Solina Knights">
+	<npc id="27410" level="83" type="L2Monster" name="Solina Knights">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -465,8 +509,27 @@
 			<radius normal="12" />
 			<height normal="28.4" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="14109" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14110" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Boots -->
+				<item id="14113" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14114" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14116" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Gloves -->
+				<item id="14117" min="1" max="1" chance="0.0009" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gauntlets Piece -->
+				<item id="15668" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15671" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15672" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15674" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15675" min="1" max="1" chance="0.3" /> <!-- Sealed Vesper Shoes Piece -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27411" level="80" type="L2Monster" name="Divinity Manager">
+	<npc id="27411" level="84" type="L2Monster" name="Divinity Manager">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -505,8 +568,24 @@
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="437" max="1019" chance="70" /> <!-- Adena -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
+			</drop>
+			<spoil>
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27412" level="80" type="L2Monster" name="Divinity Supervisor">
+	<npc id="27412" level="84" type="L2Monster" name="Divinity Supervisor">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -544,8 +623,24 @@
 			<radius normal="13" />
 			<height normal="47" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="486" max="1135" chance="70" /> <!-- Adena -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
+			</drop>
+			<spoil>
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27413" level="80" type="L2Monster" name="Divinity Fighter">
+	<npc id="27413" level="84" type="L2Monster" name="Divinity Fighter">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -583,8 +678,24 @@
 			<radius normal="24" />
 			<height normal="49" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="844" max="1972" chance="70" /> <!-- Adena -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
+			</drop>
+			<spoil>
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27414" level="80" type="L2Monster" name="Divinity Magus">
+	<npc id="27414" level="84" type="L2Monster" name="Divinity Magus">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -623,8 +734,34 @@
 			<radius normal="18" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="905" max="2114" chance="70" /> <!-- Adena -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
+				<item id="9557" min="1" max="1" chance="0.03" /> <!-- Holy Crystal -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="9551" min="1" max="1" chance="1.071" /> <!-- Holy Stone -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27415" level="80" type="L2Monster" name="Solina Guide">
+	<npc id="27415" level="83" type="L2Monster" name="Solina Guide">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -663,6 +800,30 @@
 			<radius normal="9" />
 			<height normal="23.4" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="9557" min="1" max="1" chance="0.003" /> <!-- Holy Crystal -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27416" level="80" type="L2Monster" name="Relic Manager Golem">
 		<!-- TODO: Must be confirmed -->
@@ -1963,14 +2124,14 @@
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
 		</skill_list>
 	</npc>
-	<npc id="27444" level="85" type="L2Monster" name="Noctum" title="Watchman of the Seal">
+	<npc id="27444" level="87" type="L2Monster" name="Noctum" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="126" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="17039331" sp="490762" />
+		<acquire exp="3635163" sp="3708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6277" hpRegen="8.5" mp="2770" mpRegen="3" />
 			<speed>
@@ -1996,9 +2157,38 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
+				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
+				<item id="57" min="1218" max="2842" chance="20" /> <!-- Adena -->
+				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="9550" min="1" max="1" chance="0.03" /> <!-- Dark Stone -->
+				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
+				<item id="36876" min="1" max="1" chance="0.003" /> <!-- Recipe: Metallic Fiber - Upgrade -->
+				<item id="36934" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="36925" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Mid-grade) - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36557" min="1" max="1" chance="2.845" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="50" />
@@ -2076,7 +2266,7 @@
 			<skill id="4388" level="5" /> <!-- Paralysis Resistance -->
 		</skill_list>
 	</npc>
-	<npc id="27446" level="85" type="L2Monster" name="Demonic Bathus" title="Watchman of the Seal">
+	<npc id="27446" level="86" type="L2Monster" name="Demonic Bathus" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2108,8 +2298,26 @@
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="4.243" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
+				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
+			</drop>
+			<spoil>
+				<item id="40205" min="1" max="1" chance="14.69" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27447" level="85" type="L2Monster" name="Demonic Carcass" title="Watchman of the Seal">
+	<npc id="27447" level="86" type="L2Monster" name="Demonic Carcass" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2145,8 +2353,25 @@
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
+				<item id="36810" min="1" max="1" chance="5.397" /> <!-- Immortal Shield Ingredient -->
+				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="7.231" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.419" /> <!-- Synthetic Braid -->
+				<item id="19440" min="1" max="1" chance="0.075" /> <!-- Gemstone (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27448" level="85" type="L2Monster" name="Demonic Rakzan" title="Watchman of the Seal">
+	<npc id="27448" level="86" type="L2Monster" name="Demonic Rakzan" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -2178,6 +2403,25 @@
 			<radius normal="42" grown="48" />
 			<height normal="79" grown="93" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17292" min="1" max="1" chance="0.003" /> <!-- Requiem Slasher -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
+				<item id="36796" min="1" max="1" chance="0.3" /> <!-- Requiem Slasher Fragment -->
+				<item id="9547" min="1" max="1" chance="0.03" /> <!-- Water Stone -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="9553" min="1" max="1" chance="0.003" /> <!-- Water Crystal -->
+				<item id="36734" min="1" max="1" chance="0.003" /> <!-- Recipe: Requiem Slasher (60%) -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="40205" min="1" max="1" chance="14.16" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27449" level="85" type="L2Monster" name="Demonic Weiss Khan" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2214,8 +2458,24 @@
 			<radius normal="16" grown="18" />
 			<height normal="42.5" grown="46" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots -->
+				<item id="57" min="1025" max="2388" chance="20" /> <!-- Adena -->
+				<item id="36809" min="1" max="1" chance="3.898" /> <!-- Immortal Boot Ingredient -->
+				<item id="36747" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Boots (60%) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="10.94" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.011" /> <!-- Synthetic Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27450" level="85" type="L2Monster" name="Demonic Bamonti" title="Watchman of the Seal">
+	<npc id="27450" level="86" type="L2Monster" name="Demonic Bamonti" title="Watchman of the Seal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2250,6 +2510,25 @@
 			<radius normal="19" grown="14" />
 			<height normal="43" grown="50" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17323" min="1" max="1" chance="0.075" /> <!-- Immortal Ring -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
+				<item id="36824" min="1" max="1" chance="8.549" /> <!-- Immortal Ring Gem -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36762" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Ring (60%) -->
+				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
+				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
+			</drop>
+			<spoil>
+				<item id="36557" min="1" max="1" chance="4.944" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27451" level="29" type="L2Monster" name="Kanilov" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2634,7 +2913,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27462" level="85" type="L2Monster" name="Rakzan" title="Sigel Knight">
+	<npc id="27462" level="86" type="L2Monster" name="Rakzan" title="Sigel Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14673" level="1" />
@@ -2679,8 +2958,23 @@
 			<radius normal="65" grown="48" />
 			<height normal="79" grown="93" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17292" min="1" max="1" chance="0.003" /> <!-- Requiem Slasher -->
+				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
+				<item id="36796" min="1" max="1" chance="0.3" /> <!-- Requiem Slasher Fragment -->
+				<item id="36734" min="1" max="1" chance="0.03" /> <!-- Recipe: Requiem Slasher (60%) -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="9.197" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.782" /> <!-- Synthetic Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27463" level="85" type="L2Monster" name="Krakia Bathus" title="Tyrr Warrior">
+	<npc id="27463" level="86" type="L2Monster" name="Krakia Bathus" title="Tyrr Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14676" level="1" />
@@ -2725,8 +3019,25 @@
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
+				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
+				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
+				<item id="9549" min="1" max="1" chance="0.03" /> <!-- Wind Stone -->
+				<item id="9555" min="1" max="1" chance="0.0075" /> <!-- Wind Crystal -->
+				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
+			</drop>
+			<spoil>
+				<item id="40205" min="1" max="1" chance="12.57" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27464" level="85" type="L2Monster" name="Bamonti" title="Othell Rogue">
+	<npc id="27464" level="86" type="L2Monster" name="Bamonti" title="Othell Rogue">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14679" level="1" />
@@ -2770,8 +3081,26 @@
 			<radius normal="19" grown="14" />
 			<height normal="43" grown="50" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17323" min="1" max="1" chance="0.03" /> <!-- Immortal Ring -->
+				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
+				<item id="36824" min="1" max="1" chance="7.23" /> <!-- Immortal Ring Gem -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36762" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Ring (60%) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="36557" min="1" max="1" chance="4.254" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27465" level="85" type="L2Monster" name="Krakia Carcass" title="Yul Archer">
+	<npc id="27465" level="86" type="L2Monster" name="Krakia Carcass" title="Yul Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14682" level="1" />
@@ -2817,6 +3146,24 @@
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
+				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
+				<item id="36810" min="1" max="1" chance="4.661" /> <!-- Immortal Shield Ingredient -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36748" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Shield (60%) -->
+			</drop>
+			<spoil>
+				<item id="36557" min="1" max="1" chance="2.825" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="19440" min="1" max="1" chance="0.075" /> <!-- Gemstone (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27466" level="85" type="L2Monster" name="Weiss Khan" title="Feoh Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2864,6 +3211,23 @@
 			<radius normal="16" grown="18" />
 			<height normal="42.5" grown="46" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots -->
+				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
+				<item id="36809" min="1" max="1" chance="3.182" /> <!-- Immortal Boot Ingredient -->
+				<item id="36747" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Boots (60%) -->
+				<item id="9548" min="1" max="1" chance="0.03" /> <!-- Earth Stone -->
+				<item id="9554" min="1" max="1" chance="0.003" /> <!-- Earth Crystal -->
+			</drop>
+			<spoil>
+				<item id="40205" min="1" max="1" chance="12.64" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27467" level="85" type="L2Monster" name="Seknus" title="Iss Enchanter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2911,8 +3275,27 @@
 			<radius normal="21" />
 			<height normal="69" grown="76" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17310" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Helmet -->
+				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="2.599" /> <!-- Leather -->
+				<item id="36811" min="1" max="1" chance="2.244" /> <!-- Immortal Leather Helmet Ingredient -->
+				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
+				<item id="36749" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="36517" min="1" max="1" chance="17.72" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="3.493" /> <!-- Durable Leather -->
+				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="27468" level="85" type="L2Monster" name="Krakia Lotus" title="Wynn Summoner">
+	<npc id="27468" level="87" type="L2Monster" name="Krakia Lotus" title="Wynn Summoner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14688" level="2" />
@@ -2958,6 +3341,22 @@
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17307" min="1" max="1" chance="0.03" /> <!-- Immortal Gauntlets -->
+				<item id="57" min="916" max="2136" chance="20" /> <!-- Adena -->
+				<item id="36808" min="1" max="1" chance="4.826" /> <!-- Immortal Gauntlet Ingredient -->
+				<item id="36746" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Gauntlets (60%) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="40205" min="1" max="1" chance="12.9" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27469" level="85" type="L2Monster" name="Weiss Ele" title="Aeore Healer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2999,6 +3398,24 @@
 			<radius normal="18" grown="12" />
 			<height normal="35" grown="42" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17304" min="1" max="1" chance="0.03" /> <!-- Immortal Helmet -->
+				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="2.509" /> <!-- Leather -->
+				<item id="36805" min="1" max="1" chance="2.038" /> <!-- Immortal Helmet Ingredient -->
+				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
+				<item id="36743" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Helmet (60%) -->
+				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="40205" min="1" max="1" chance="12.04" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27470" level="70" type="L2Monster" name="Shilen's Messenger Cabrio" title="Quest Monster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3414,16 +3831,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<drop>
-				<item id="8600" min="1" max="1" chance="18.15" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="12.54" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2.31" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="4" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="5.2" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="0.8" /> <!-- Superior Herb of Mana -->
-			</drop>
-		</drop_lists>
 		<collision>
 			<radius normal="6" />
 			<height normal="12" />
@@ -3736,7 +4143,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="27492" level="85" type="L2Monster" name="Shilen's Messenger">
+	<npc id="27492" level="96" type="L2Monster" name="Shilen's Messenger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3765,6 +4172,37 @@
 			<radius normal="22.88" />
 			<height normal="41.6" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17415" min="1" max="1" chance="0.003" /> <!-- Seraph Ring -->
+				<item id="17391" min="1" max="1" chance="0.0009" /> <!-- Specter Caster -->
+				<item id="57" min="896" max="2091" chance="20" /> <!-- Adena -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="35326" min="1" max="1" chance="0.03" /> <!-- Seraph Ring Gem -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="35305" min="1" max="1" chance="0.0075" /> <!-- Specter Caster Fragment -->
+				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="35429" min="1" max="1" chance="0.0009" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35450" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Ring (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="40206" min="1" max="1" chance="6.312" /> <!-- Specter Fragment -->
+				<item id="40211" min="1" max="1" chance="9" /> <!-- Recipe: R95 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27493" level="85" type="L2Monster" name="Grotesque Bug">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3954,5 +4392,19 @@
 			<radius normal="21" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</drop_lists>
 	</npc>
 </list>

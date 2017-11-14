@@ -1127,7 +1127,7 @@
 			<height normal="30" grown="36.5" />
 		</collision>
 	</npc>
-	<npc id="27325" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
+	<npc id="27325" level="78" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1311,7 +1311,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="27329" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
+	<npc id="27329" level="78" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1451,7 +1451,7 @@
 			<height normal="25.4" />
 		</collision>
 	</npc>
-	<npc id="27334" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
+	<npc id="27334" level="78" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2347,7 +2347,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="27356" level="51" type="L2Monster" name="Lilim Marauder">
+	<npc id="27356" level="85" type="L2Monster" name="Lilim Marauder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2391,8 +2391,19 @@
 			<radius normal="11" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6034" max="14063" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="1.531" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="10.98" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="3.15" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27357" level="51" type="L2Monster" name="Lilim Priest">
+	<npc id="27357" level="86" type="L2Monster" name="Lilim Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2440,8 +2451,19 @@
 			<radius normal="8" />
 			<height normal="30.6" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="3431" max="7996" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="3.628" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.007" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27358" level="51" type="L2Monster" name="Lilim Knight">
+	<npc id="27358" level="87" type="L2Monster" name="Lilim Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2492,8 +2514,19 @@
 			<radius normal="11" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="7.127" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.153" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27359" level="51" type="L2Monster" name="Lilim Slayer">
+	<npc id="27359" level="87" type="L2Monster" name="Lilim Slayer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2537,8 +2570,19 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.286" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="7.148" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.043" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27360" level="51" type="L2Monster" name="Lilim Great Magus">
+	<npc id="27360" level="88" type="L2Monster" name="Lilim Great Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2586,8 +2630,19 @@
 			<radius normal="10" />
 			<height normal="37.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="6.167" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.838" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27361" level="51" type="L2Monster" name="Lilim Royal Knight">
+	<npc id="27361" level="89" type="L2Monster" name="Lilim Royal Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2638,6 +2693,17 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="4.793" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.383" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="27362" level="61" type="L2Monster" name="Lilim Butcher">
 		<!-- Confirmed CT2.5 -->
@@ -2785,7 +2851,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="27365" level="61" type="L2Monster" name="Lilim Marauder">
+	<npc id="27365" level="85" type="L2Monster" name="Lilim Marauder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2829,8 +2895,19 @@
 			<radius normal="11" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6034" max="14063" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="1.531" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.075" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="10.98" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="3.15" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27366" level="61" type="L2Monster" name="Lilim Priest">
+	<npc id="27366" level="86" type="L2Monster" name="Lilim Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2878,8 +2955,19 @@
 			<radius normal="8" />
 			<height normal="30.6" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="3431" max="7996" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="3.628" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.007" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27367" level="61" type="L2Monster" name="Lilim Knight">
+	<npc id="27367" level="87" type="L2Monster" name="Lilim Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2930,8 +3018,19 @@
 			<radius normal="11" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="7.127" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.153" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27368" level="61" type="L2Monster" name="Lilim Slayer">
+	<npc id="27368" level="87" type="L2Monster" name="Lilim Slayer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2975,8 +3074,19 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.286" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="7.148" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.043" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27369" level="61" type="L2Monster" name="Lilim Great Magus">
+	<npc id="27369" level="88" type="L2Monster" name="Lilim Great Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3024,8 +3134,19 @@
 			<radius normal="10" />
 			<height normal="37.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="6.167" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.838" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27370" level="61" type="L2Monster" name="Lilim Royal Knight">
+	<npc id="27370" level="89" type="L2Monster" name="Lilim Royal Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3076,6 +3197,17 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="4.793" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.383" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="27371" level="79" type="L2Monster" name="Lilim Butcher">
 		<!-- Confirmed CT2.5 -->
@@ -3339,7 +3471,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="27376" level="79" type="L2Monster" name="Lilim Knight">
+	<npc id="27376" level="87" type="L2Monster" name="Lilim Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3391,8 +3523,19 @@
 			<radius normal="11" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="1.233" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="7.127" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.153" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27377" level="79" type="L2Monster" name="Lilim Slayer">
+	<npc id="27377" level="87" type="L2Monster" name="Lilim Slayer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -3441,8 +3584,19 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6437" max="15020" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="2.286" /> <!-- Synthetic Cokes -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="7.148" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="2.043" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27378" level="79" type="L2Monster" name="Lilim Great Magus">
+	<npc id="27378" level="88" type="L2Monster" name="Lilim Great Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3497,8 +3651,19 @@
 			<radius normal="10" />
 			<height normal="37.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="5569" max="13008" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="1" chance="0.975" /> <!-- Gemstone (R-grade) -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="6.167" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.838" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27379" level="79" type="L2Monster" name="Lilim Royal Knight">
+	<npc id="27379" level="89" type="L2Monster" name="Lilim Royal Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3550,6 +3715,17 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="4516" max="10527" chance="70" /> <!-- Adena -->
+				<item id="37724" min="1" max="1" chance="0.3" /> <!-- Shilen's Energy -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="4.793" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="1.383" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="45930" min="1" max="1" chance="0.3" /> <!-- Mid-grade Spirit Stone -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="27380" level="76" type="L2Monster" name="Reckless Water Spirit" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
@@ -3801,7 +3977,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="27393" level="65" type="L2Monster" name="Headless Knight">
+	<npc id="27393" level="50" type="L2Monster" name="Headless Knight">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3838,6 +4014,20 @@
 			<radius normal="21" grown="24" />
 			<height normal="31" grown="38" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="16" max="36" chance="70" /> <!-- Adena -->
+				<item id="4609" min="1" max="1" chance="0.03" /> <!-- Greater MEN Dye (Men  3 Int - 3) -->
+				<item id="45929" min="1" max="4" chance="0.003" /> <!-- Spirit Stone -->
+			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="8.535" /> <!-- Thread -->
+				<item id="36880" min="1" max="1" chance="9" /> <!-- Recipe: Thread - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27394" level="51" type="L2Monster" name="Shilen's Evil Thoughts">
 		<!-- Confirmed CT2.5 -->

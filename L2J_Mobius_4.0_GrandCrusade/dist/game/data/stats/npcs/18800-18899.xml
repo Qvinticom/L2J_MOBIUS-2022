@@ -49,7 +49,7 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6680" min="1" max="1" chance="0.00549999999999998" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6680" min="1" max="1" chance="0.0075" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6707" min="1" max="1" chance="1.371" /> <!-- Sealed Draconic Leather Armor Part -->
 			</drop>
 			<lucky_drop>
@@ -171,10 +171,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6674" min="1" max="1" chance="0.00300000000000004" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6675" min="1" max="1" chance="0.00549999999999993" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6702" min="1" max="1" chance="1.35800000000001" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
-				<item id="6701" min="1" max="1" chance="0.75000000000001" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6675" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6702" min="1" max="1" chance="1.358" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -234,10 +234,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6674" min="1" max="1" chance="0.00300000000000009" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6675" min="1" max="1" chance="0.00549999999999993" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6702" min="1" max="1" chance="1.3" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
-				<item id="6701" min="1" max="1" chance="0.749999999999991" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6675" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6702" min="1" max="1" chance="1.285" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -354,7 +354,7 @@
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3957" sp="1" />
+		<acquire exp="3958" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -383,10 +383,10 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="5311" min="1" max="1" chance="0.000899999999999998" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5316" min="1" max="1" chance="0.000899999999999998" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5522" min="1" max="1" chance="0.0750000000000001" /> <!-- Sealed Armor of Nightmare Pattern -->
-				<item id="5523" min="1" max="1" chance="0.0750000000000001" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5311" min="1" max="1" chance="0.0009" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5522" min="1" max="1" chance="0.075" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.075" /> <!-- Sealed Majestic Plate Armor Pattern -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -402,7 +402,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="213499" sp="51" />
+		<acquire exp="213500" sp="51" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="21860" hpRegen="41.206725" mp="17430" mpRegen="50" />
 			<attack physical="492.298548642662" magical="720.623302603812" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -444,6 +444,24 @@
 			<radius normal="17" />
 			<height normal="46.2" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="3990" max="9317" chance="70" /> <!-- Adena -->
+				<item id="9550" min="1" max="1" chance="0.75" /> <!-- Dark Stone -->
+				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.75" /> <!-- Spirit Stone -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="18809" level="82" type="L2Monster" name="Varangka's Confidant">
 		<!-- Confirmed CT2.5 -->
@@ -1882,7 +1900,6 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="108799553" sp="12524212" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2388699" hpRegen="918.195504075765" mp="1846" mpRegen="3" />
 			<attack physical="1188.87259499001" magical="811.84586495282" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2074,9 +2091,9 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18852" level="85" type="L2Monster" name="Sirra">
+	<npc id="18852" level="100" type="L2Monster" name="Sirra">
 		<!-- Confirmed CT2.5 -->
-		<race>HUMAN</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
@@ -2190,7 +2207,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="18855" level="85" type="L2Monster" name="Ice Knight">
+	<npc id="18855" level="101" type="L2Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -2244,8 +2261,20 @@
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="30297" min="1" max="2" chance="86.48" /> <!-- Superior Giant's Codex -->
+				<item id="17527" min="2" max="3" chance="81.35" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="2" chance="19.4" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46150" min="1" max="1" chance="9.932" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="30298" min="1" max="1" chance="2.554" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="46151" min="1" max="1" chance="2.544" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="39738" min="1" max="1" chance="2.494" /> <!-- Rune Stone -->
+				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
+			</drop>
+		</drop_lists>
 	</npc>
-	<npc id="18856" level="88" type="L2Monster" name="Ice Knight">
+	<npc id="18856" level="101" type="L2Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -2303,6 +2332,18 @@
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="30297" min="1" max="2" chance="86.48" /> <!-- Superior Giant's Codex -->
+				<item id="17527" min="2" max="3" chance="81.35" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="2" chance="19.4" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46150" min="1" max="1" chance="9.932" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="30298" min="1" max="1" chance="2.554" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="46151" min="1" max="1" chance="2.544" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="39738" min="1" max="1" chance="2.494" /> <!-- Rune Stone -->
+				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="18857" level="1" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
@@ -2479,7 +2520,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="98" /> <!-- Halberd -->
-		<acquire exp="29423" sp="7" />
+		<acquire exp="29424" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3643" hpRegen="8.5" mp="1743" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -2572,14 +2613,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="273995" max="638664" chance="70" /> <!-- Adena -->
-				<item id="45929" min="1" max="12" chance="15.3599999999999" /> <!-- Spirit Stone -->
-				<item id="9554" min="1" max="1" chance="4.14600000000006" /> <!-- Earth Crystal -->
+				<item id="57" min="119585" max="279251" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="12" chance="15.51" /> <!-- Spirit Stone -->
+				<item id="9554" min="1" max="1" chance="4.027" /> <!-- Earth Crystal -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="9" chance="86.37" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="82.59" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="4.973" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36532" min="1" max="27" chance="90.175" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="5" chance="79.83" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="5.072" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.75" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 		</drop_lists>

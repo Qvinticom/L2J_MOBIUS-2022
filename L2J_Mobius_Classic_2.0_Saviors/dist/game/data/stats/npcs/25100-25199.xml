@@ -1741,7 +1741,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25140" level="65" type="L2RaidBoss" name="Hekaton Prime" title="Raid Boss">
+	<npc id="25140" level="78" type="L2RaidBoss" name="Hekaton Prime" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25141" count="1" respawnTime="360" weightPoint="1" />
@@ -1752,9 +1752,9 @@
 			<skill name="SelfRangeDebuff_a" id="4184" level="6" />
 			<skill name="SelfRangeDebuffAnother_a" id="4189" level="6" />
 		</parameters>
-		<race>CONSTRUCT</race>
+		<race>GIANT</race>
 		<sex>MALE</sex>
-		<acquire exp="4489691" sp="1077" />
+		<acquire exp="1444329" sp="43329" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="344100" hpRegen="110.823040573561" mp="1188" mpRegen="2.7" />
 			<attack physical="1815.50759772758" magical="606.309452565447" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1790,6 +1790,19 @@
 			<radius normal="20" grown="25" />
 			<height normal="35" grown="41.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="28325" max="66123" chance="70" /> <!-- Adena -->
+				<item id="90045" min="1" max="1" chance="4.938" /> <!-- Magical Tablet -->
+				<item id="730" min="1" max="1" chance="3.139" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="19" chance="85.57" /> <!-- Stone of Purity -->
+				<item id="5428" min="1" max="1" chance="37.46" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+				<item id="5426" min="1" max="1" chance="36.96" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="25141" level="64" type="L2Monster" name="Hekaton Cottus" title="Raid Fighter">
 		<parameters>
@@ -1829,7 +1842,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25142" level="64" type="L2Monster" name="Hekaton Chires" title="Raid Fighter">
+	<npc id="25142" level="77" type="L2Monster" name="Hekaton Chires" title="Raid Fighter">
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3937" /> <!-- Monster Only (Lesser Giant) -->
@@ -1863,6 +1876,29 @@
 			<radius normal="50" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6675" max="15590" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="23.15" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="15.99" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.212" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.643" /> <!-- Steel -->
+				<item id="8331" min="1" max="1" chance="2.85" /> <!-- Infernal Master Blade -->
+				<item id="8346" min="1" max="1" chance="2.813" /> <!-- Destroyer Hammer Piece -->
+				<item id="8342" min="1" max="1" chance="2.299" /> <!-- Flaming Dragon Skull Piece -->
+				<item id="5539" min="1" max="1" chance="0.75" /> <!-- Blood Tornado Edge -->
+				<item id="5532" min="1" max="1" chance="0.75" /> <!-- Meteor Shower Head -->
+				<item id="5536" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid Head -->
+				<item id="5538" min="1" max="1" chance="0.3" /> <!-- Dragon Grinder Edge -->
+				<item id="5541" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive Edge -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="21" chance="88.98" /> <!-- Silver Nugget -->
+				<item id="5446" min="1" max="1" chance="0.75" /> <!-- Recipe: Bloody Orchid (60%) -->
+				<item id="5452" min="1" max="1" chance="0.75" /> <!-- Recipe: Blood Tornado (60%) -->
+				<item id="5456" min="1" max="1" chance="0.3" /> <!-- Recipe: Tallum Glaive (60%) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="25143" level="78" type="L2RaidBoss" name="Fire of Wrath Shuriel" title="Raid Boss">
 		<parameters>

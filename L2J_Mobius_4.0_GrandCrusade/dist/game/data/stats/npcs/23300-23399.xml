@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2799199" sp="1791" />
+		<acquire exp="5480618" sp="5570" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
 			<speed>
@@ -30,17 +30,27 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="542" max="1263" chance="70" /> <!-- Adena -->
 				<item id="17448" min="1" max="1" chance="0.0009" /> <!-- Eternal Earring -->
-				<item id="35356" min="1" max="1" chance="0.0300000000000001" /> <!-- Eternal Earring Gem -->
-				<item id="35480" min="1" max="1" chance="0.000900000000000009" /> <!-- Recipe: Eternal Earring (60%) -->
-				<item id="9554" min="1" max="1" chance="0.00300000000000003" /> <!-- Earth Crystal -->
-				<item id="9556" min="1" max="1" chance="0.00300000000000003" /> <!-- Dark Crystal -->
-				<item id="19447" min="1" max="1" chance="0.000900000000000009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="19448" min="1" max="1" chance="0.000900000000000009" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="57" min="926" max="2162" chance="20" /> <!-- Adena -->
+				<item id="35356" min="1" max="1" chance="0.03" /> <!-- Eternal Earring Gem -->
+				<item id="9554" min="1" max="1" chance="0.003" /> <!-- Earth Crystal -->
+				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35480" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Earring (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="3.777" /> <!-- Synthetic Braid -->
+				<item id="36533" min="1" max="1" chance="3.687" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -55,7 +65,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="4120132" sp="988" />
+		<acquire exp="7333805" sp="7400" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14806" hpRegen="10.5" mp="2205" mpRegen="3.6" />
 			<speed>
@@ -79,14 +89,14 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="985" max="2298" chance="70" /> <!-- Adena -->
+				<item id="57" min="1683" max="3926" chance="20" /> <!-- Adena -->
+				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
 				<item id="35308" min="1" max="1" chance="0.03" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="9546" min="1" max="1" chance="0.300000000000001" /> <!-- Fire Stone -->
-				<item id="35432" min="1" max="1" chance="0.000900000000000008" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35432" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Breastplate (60%) -->
 			</drop>
 			<spoil>
-				<item id="40206" min="1" max="1" chance="12.55" /> <!-- Specter Fragment -->
-				<item id="40211" min="1" max="1" chance="0.0009" /> <!-- Recipe: R95 (100%) -->
+				<item id="40206" min="1" max="1" chance="11.8" /> <!-- Specter Fragment -->
+				<item id="40211" min="1" max="1" chance="9" /> <!-- Recipe: R95 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -101,7 +111,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="4365175" sp="1047" />
+		<acquire exp="7769936" sp="7775" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14547" hpRegen="10.5" mp="2169" mpRegen="3.6" />
 			<speed>
@@ -124,14 +134,14 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="953" max="2224" chance="70" /> <!-- Adena -->
-				<item id="9548" min="1" max="1" chance="0.300000000000002" /> <!-- Earth Stone -->
-				<item id="36563" min="1" max="1" chance="0.300000000000002" /> <!-- Synthetic Cokes -->
-				<item id="36564" min="1" max="1" chance="0.0300000000000002" /> <!-- Greater Synthetic Cokes -->
+				<item id="57" min="1630" max="3803" chance="20" /> <!-- Adena -->
+				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 			</drop>
 			<spoil>
-				<item id="40206" min="1" max="1" chance="11.93" /> <!-- Specter Fragment -->
-				<item id="40211" min="1" max="1" chance="0.0009" /> <!-- Recipe: R95 (100%) -->
+				<item id="40206" min="1" max="1" chance="11.53" /> <!-- Specter Fragment -->
+				<item id="40211" min="1" max="1" chance="9" /> <!-- Recipe: R95 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -146,7 +156,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1583690" sp="380" />
+		<acquire exp="4228379" sp="4241" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14547" hpRegen="10.5" mp="2169" mpRegen="3.6" />
 			<speed>
@@ -168,21 +178,31 @@
 		<ai aggroRange="1000" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="835" max="1949" chance="70" /> <!-- Adena -->
-				<item id="36528" min="1" max="1" chance="3.04299999999999" /> <!-- Metallic Fiber -->
-				<item id="36529" min="1" max="1" chance="0.300000000000001" /> <!-- Quality Fiber -->
-				<item id="36778" min="1" max="1" chance="0.0750000000000003" /> <!-- Recipe: Twilight Boots (60%) -->
-				<item id="36784" min="1" max="1" chance="0.0750000000000003" /> <!-- Recipe: Twilight Leather Boots (60%) -->
-				<item id="36789" min="1" max="1" chance="0.0750000000000003" /> <!-- Recipe: Twilight Shoes (60%) -->
-				<item id="36868" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Adamantite - Upgrade -->
-				<item id="36895" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Durable Leather Braid - Combination -->
-				<item id="36934" min="1" max="1" chance="0.00550000000000002" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
+				<item id="57" min="1428" max="3332" chance="20" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="3.076" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
+				<item id="36778" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Boots (60%) -->
+				<item id="36784" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Leather Boots (60%) -->
+				<item id="36789" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Shoes (60%) -->
+				<item id="36934" min="1" max="1" chance="0.0075" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
+				<item id="36868" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite - Upgrade -->
+				<item id="36895" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Leather Braid - Combination -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36528" min="1" max="1" chance="4.632" /> <!-- Metallic Fiber -->
+				<item id="36528" min="1" max="1" chance="4.75" /> <!-- Metallic Fiber -->
 				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
-				<item id="36884" min="1" max="1" chance="0.0055" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -197,7 +217,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6985683" sp="1676" />
+		<acquire exp="12434503" sp="12441" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14890" hpRegen="10.5" mp="2242" mpRegen="3.6" />
 			<speed>
@@ -220,13 +240,13 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="1100" max="2569" chance="70" /> <!-- Adena -->
 				<item id="17411" min="1" max="1" chance="0.003" /> <!-- Seraph Shoes -->
-				<item id="35322" min="1" max="1" chance="0.0749999999999997" /> <!-- Seraph Shoe Ingredient -->
-				<item id="36563" min="1" max="1" chance="0.0749999999999997" /> <!-- Synthetic Cokes -->
-				<item id="9552" min="1" max="1" chance="0.00550000000000006" /> <!-- Fire Crystal -->
-				<item id="35446" min="1" max="1" chance="0.00299999999999996" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="36564" min="1" max="1" chance="0.00550000000000006" /> <!-- Greater Synthetic Cokes -->
+				<item id="57" min="1883" max="4395" chance="20" /> <!-- Adena -->
+				<item id="35322" min="1" max="1" chance="0.075" /> <!-- Seraph Shoe Ingredient -->
+				<item id="36563" min="1" max="1" chance="0.075" /> <!-- Synthetic Cokes -->
+				<item id="9552" min="1" max="1" chance="0.0075" /> <!-- Fire Crystal -->
+				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
+				<item id="35446" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Shoes (60%) -->
 			</drop>
 			<spoil>
 				<item id="9554" min="1" max="1" chance="0.075" /> <!-- Earth Crystal -->
@@ -245,7 +265,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="31989" sp="7" />
+		<acquire exp="12796" sp="3" />
 		<equipment rhand="78" /> <!-- Great Sword -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
@@ -266,19 +286,29 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
+				<item id="7898" min="1" max="1" chance="0.003" /> <!-- Karik Horn -->
+				<item id="7882" min="1" max="1" chance="0.003" /> <!-- Pa'agrian Sword -->
+				<item id="200" min="1" max="1" chance="0.003" /> <!-- Sage's Staff -->
+				<item id="199" min="1" max="1" chance="0.003" /> <!-- Pa'agrio Hammer -->
+				<item id="198" min="1" max="1" chance="0.003" /> <!-- Inferno Staff -->
+				<item id="197" min="1" max="1" chance="0.003" /> <!-- Paradia Staff -->
+				<item id="195" min="1" max="1" chance="0.003" /> <!-- Cursed Staff -->
+				<item id="299" min="1" max="1" chance="0.0009" /> <!-- Orcish Poleaxe -->
+				<item id="5286" min="1" max="1" chance="0.0009" /> <!-- Berserker Blade -->
+				<item id="7883" min="1" max="1" chance="0.0009" /> <!-- Guardian's Sword -->
+				<item id="78" min="1" max="1" chance="0.0009" /> <!-- Great Sword -->
 				<item id="57" min="30" max="70" chance="70" /> <!-- Adena -->
-				<item id="7898" min="1" max="1" chance="0.00300000000000012" /> <!-- Karik Horn -->
-				<item id="7882" min="1" max="1" chance="0.00300000000000012" /> <!-- Pa'agrian Sword -->
-				<item id="200" min="1" max="1" chance="0.00300000000000012" /> <!-- Sage's Staff -->
-				<item id="199" min="1" max="1" chance="0.00300000000000012" /> <!-- Pa'agrio Hammer -->
-				<item id="198" min="1" max="1" chance="0.00300000000000012" /> <!-- Inferno Staff -->
-				<item id="197" min="1" max="1" chance="0.00300000000000012" /> <!-- Paradia Staff -->
-				<item id="195" min="1" max="1" chance="0.00300000000000012" /> <!-- Cursed Staff -->
-				<item id="299" min="1" max="1" chance="0.000900000000000011" /> <!-- Orcish Poleaxe -->
-				<item id="5286" min="1" max="1" chance="0.000900000000000011" /> <!-- Berserker Blade -->
-				<item id="7883" min="1" max="1" chance="0.000900000000000011" /> <!-- Guardian's Sword -->
-				<item id="78" min="1" max="1" chance="0.000900000000000011" /> <!-- Great Sword -->
 				<item id="36524" min="1" max="1" chance="0.003" /> <!-- Orichalcum -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
@@ -296,7 +326,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="34010" sp="8" />
+		<acquire exp="13604" sp="3" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
 			<speed>
@@ -316,14 +346,24 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
+				<item id="498" min="1" max="1" chance="0.03" /> <!-- Steel Plate Helmet -->
+				<item id="499" min="1" max="1" chance="0.03" /> <!-- Mithril Helmet -->
+				<item id="500" min="1" max="1" chance="0.03" /> <!-- Great Helmet -->
+				<item id="517" min="1" max="1" chance="0.03" /> <!-- Compound Helmet -->
+				<item id="1149" min="1" max="1" chance="0.03" /> <!-- Shining Circlet -->
+				<item id="2413" min="1" max="1" chance="0.03" /> <!-- Chain Hood -->
 				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
-				<item id="498" min="1" max="1" chance="0.0300000000000006" /> <!-- Steel Plate Helmet -->
-				<item id="499" min="1" max="1" chance="0.0300000000000006" /> <!-- Mithril Helmet -->
-				<item id="500" min="1" max="1" chance="0.0300000000000006" /> <!-- Great Helmet -->
-				<item id="517" min="1" max="1" chance="0.0300000000000006" /> <!-- Compound Helmet -->
-				<item id="1149" min="1" max="1" chance="0.0300000000000006" /> <!-- Shining Circlet -->
-				<item id="2413" min="1" max="1" chance="0.0300000000000006" /> <!-- Chain Hood -->
 				<item id="36549" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
@@ -340,9 +380,9 @@
 	</npc>
 	<npc id="23307" level="54" type="L2Monster" name="Corpse Spider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="30999" sp="7" />
+		<acquire exp="12400" sp="2" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1621" hpRegen="6.5" mp="861" mpRegen="2.4" />
 			<speed>
@@ -362,7 +402,6 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
 				<item id="64" min="1" max="1" chance="0.03" /> <!-- Compound Boots -->
 				<item id="2437" min="1" max="1" chance="0.03" /> <!-- Drake Leather Boots -->
 				<item id="2436" min="1" max="1" chance="0.03" /> <!-- Theca Leather Boots -->
@@ -373,9 +412,20 @@
 				<item id="1126" min="1" max="1" chance="0.03" /> <!-- Crimson Boots -->
 				<item id="603" min="1" max="1" chance="0.03" /> <!-- Divine Boots -->
 				<item id="2438" min="1" max="1" chance="0.03" /> <!-- Full Plate Boots -->
-				<item id="1539" min="1" max="1" chance="0.750000000000001" /> <!-- Major Healing Potion -->
-				<item id="8724" min="1" max="1" chance="0.300000000000003" /> <!-- Life Stone - Lv. 49 -->
-				<item id="36564" min="1" max="1" chance="0.000899999999999997" /> <!-- Greater Synthetic Cokes -->
+				<item id="57" min="29" max="68" chance="70" /> <!-- Adena -->
+				<item id="1539" min="1" max="1" chance="0.75" /> <!-- Major Healing Potion -->
+				<item id="45929" min="1" max="1" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="36564" min="1" max="1" chance="0.0009" /> <!-- Greater Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
@@ -392,9 +442,9 @@
 	</npc>
 	<npc id="23308" level="57" type="L2Monster" name="Explosive Spider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="34010" sp="8" />
+		<acquire exp="13604" sp="3" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
 			<speed>
@@ -414,15 +464,25 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
+				<item id="2432" min="1" max="1" chance="0.3" /> <!-- Dwarven Chain Boots -->
+				<item id="2433" min="1" max="1" chance="0.3" /> <!-- Boots of Seal -->
+				<item id="554" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Boots -->
 				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
-				<item id="2432" min="1" max="1" chance="0.299999999999997" /> <!-- Dwarven Chain Boots -->
-				<item id="2433" min="1" max="1" chance="0.299999999999997" /> <!-- Boots of Seal -->
-				<item id="554" min="1" max="1" chance="0.0299999999999997" /> <!-- Sealed Zubei's Boots -->
-				<item id="600" min="1" max="1" chance="0.0299999999999997" /> <!-- Sealed Avadon Boots -->
-				<item id="36518" min="1" max="1" chance="0.0299999999999998" /> <!-- Durable Leather -->
-				<item id="36528" min="1" max="1" chance="0.0299999999999998" /> <!-- Metallic Fiber -->
-				<item id="36553" min="1" max="1" chance="0.000900000000000031" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.000900000000000031" /> <!-- Synthetic Cokes -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
@@ -442,7 +502,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="34010" sp="8" />
+		<acquire exp="13604" sp="3" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
 			<speed>
@@ -462,7 +522,6 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
 				<item id="107" min="1" max="1" chance="0.03" /> <!-- Compound Shield -->
 				<item id="2463" min="1" max="1" chance="0.03" /> <!-- Divine Gloves -->
 				<item id="2462" min="1" max="1" chance="0.03" /> <!-- Full Plate Gauntlets -->
@@ -475,11 +534,22 @@
 				<item id="2455" min="1" max="1" chance="0.03" /> <!-- Plated Leather Gloves -->
 				<item id="2453" min="1" max="1" chance="0.03" /> <!-- Chain Gloves -->
 				<item id="608" min="1" max="1" chance="0.03" /> <!-- Mithril Gauntlets -->
-				<item id="2464" min="1" max="1" chance="0.00550000000000006" /> <!-- Sealed Avadon Gloves -->
-				<item id="948" min="1" max="1" chance="0.00550000000000007" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="36523" min="1" max="1" chance="0.00550000000000007" /> <!-- Adamantite -->
-				<item id="36548" min="1" max="1" chance="0.00299999999999993" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.00299999999999993" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="2464" min="1" max="1" chance="0.0075" /> <!-- Sealed Avadon Gloves -->
+				<item id="57" min="32" max="75" chance="70" /> <!-- Adena -->
+				<item id="948" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="36523" min="1" max="1" chance="0.0075" /> <!-- Adamantite -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
@@ -497,9 +567,9 @@
 	</npc>
 	<npc id="23310" level="58" type="L2Monster" name="Lesser Laikel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="41698" sp="10" />
+		<acquire exp="16679" sp="4" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<speed>
@@ -519,31 +589,41 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
+				<item id="2502" min="1" max="1" chance="0.003" /> <!-- Dwarven War Hammer -->
+				<item id="91" min="1" max="1" chance="0.0009" /> <!-- Heavy War Axe -->
+				<item id="206" min="1" max="1" chance="0.0009" /> <!-- Demon's Staff -->
+				<item id="210" min="1" max="1" chance="0.0009" /> <!-- Staff of Evil Spirits -->
+				<item id="2503" min="1" max="1" chance="0.0009" /> <!-- Yaksa Mace -->
+				<item id="7891" min="1" max="1" chance="0.0009" /> <!-- Ecliptic Axe -->
+				<item id="7892" min="1" max="1" chance="0.0009" /> <!-- Spell Breaker -->
+				<item id="7893" min="1" max="1" chance="0.0009" /> <!-- Kaim Vanul's Bones -->
+				<item id="7900" min="1" max="1" chance="0.0009" /> <!-- Ice Storm Hammer -->
+				<item id="205" min="1" max="1" chance="0.0009" /> <!-- Ghoul's Staff -->
+				<item id="204" min="1" max="1" chance="0.0009" /> <!-- Deadman's Staff -->
+				<item id="92" min="1" max="1" chance="0.0009" /> <!-- Spirit's Staff -->
+				<item id="171" min="1" max="1" chance="0.0009" /> <!-- Deadman's Glory -->
+				<item id="174" min="1" max="1" chance="0.0009" /> <!-- Nirvana Axe -->
+				<item id="175" min="1" max="1" chance="0.0009" /> <!-- Art of Battle Axe -->
+				<item id="196" min="1" max="1" chance="0.0009" /> <!-- Stick of Eternity -->
+				<item id="201" min="1" max="1" chance="0.0009" /> <!-- Club of Nature -->
+				<item id="202" min="1" max="1" chance="0.0009" /> <!-- Mace of Underworld -->
+				<item id="203" min="1" max="1" chance="0.0009" /> <!-- Pa'agrio Axe -->
+				<item id="7901" min="1" max="1" chance="0.0009" /> <!-- Star Buster -->
 				<item id="57" min="39" max="92" chance="70" /> <!-- Adena -->
-				<item id="2502" min="1" max="1" chance="0.00299999999999993" /> <!-- Dwarven War Hammer -->
-				<item id="91" min="1" max="1" chance="0.000899999999999998" /> <!-- Heavy War Axe -->
-				<item id="206" min="1" max="1" chance="0.000899999999999998" /> <!-- Demon's Staff -->
-				<item id="210" min="1" max="1" chance="0.000899999999999998" /> <!-- Staff of Evil Spirits -->
-				<item id="2503" min="1" max="1" chance="0.000899999999999998" /> <!-- Yaksa Mace -->
-				<item id="7891" min="1" max="1" chance="0.000899999999999998" /> <!-- Ecliptic Axe -->
-				<item id="7892" min="1" max="1" chance="0.000899999999999998" /> <!-- Spell Breaker -->
-				<item id="7893" min="1" max="1" chance="0.000899999999999998" /> <!-- Kaim Vanul's Bones -->
-				<item id="7900" min="1" max="1" chance="0.000899999999999998" /> <!-- Ice Storm Hammer -->
-				<item id="205" min="1" max="1" chance="0.000899999999999998" /> <!-- Ghoul's Staff -->
-				<item id="204" min="1" max="1" chance="0.000899999999999998" /> <!-- Deadman's Staff -->
-				<item id="92" min="1" max="1" chance="0.000899999999999998" /> <!-- Spirit's Staff -->
-				<item id="171" min="1" max="1" chance="0.000899999999999998" /> <!-- Deadman's Glory -->
-				<item id="174" min="1" max="1" chance="0.000899999999999998" /> <!-- Nirvana Axe -->
-				<item id="175" min="1" max="1" chance="0.000899999999999998" /> <!-- Art of Battle Axe -->
-				<item id="196" min="1" max="1" chance="0.000899999999999998" /> <!-- Stick of Eternity -->
-				<item id="201" min="1" max="1" chance="0.000899999999999998" /> <!-- Club of Nature -->
-				<item id="202" min="1" max="1" chance="0.000899999999999998" /> <!-- Mace of Underworld -->
-				<item id="203" min="1" max="1" chance="0.000899999999999998" /> <!-- Pa'agrio Axe -->
-				<item id="7901" min="1" max="1" chance="0.000899999999999998" /> <!-- Star Buster -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.0055" /> <!-- Durable Braid -->
+				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky_drop>
@@ -559,7 +639,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="61889" sp="14" />
+		<acquire exp="37134" sp="8" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<speed>
@@ -584,12 +664,28 @@
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="99" max="230" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
+				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="23312" level="73" type="L2Monster" name="Valley Grendel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="89707" sp="21" />
+		<acquire exp="53824" sp="12" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<speed>
@@ -614,12 +710,26 @@
 			<radius normal="15" grown="18" />
 			<height normal="39" grown="47.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="97" max="227" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="23313" level="76" type="L2Monster" name="Disciple of Protection">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="173094" sp="41" />
+		<acquire exp="104895" sp="25" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2758" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<speed>
@@ -646,12 +756,27 @@
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="114" max="265" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.075" /> <!-- Orichalcum -->
+			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="23314" level="99" type="L2Monster" name="Nerva Orc Raider">
+	<npc id="23314" level="98" type="L2Monster" name="Nerva Orc Raider">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="95996432" sp="153594" />
+		<acquire exp="171766099" sp="171815" />
 		<equipment rhand="17325" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -674,9 +799,9 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="19124" max="44549" chance="70" /> <!-- Adena -->
-				<item id="36560" min="1" max="1" chance="0.300000000000001" /> <!-- Accessory Gem (Top-grade) -->
-				<item id="36863" min="1" max="1" chance="0.00549999999999992" /> <!-- Recipe: Exquisite Leather - Upgrade -->
+				<item id="57" min="25865" max="60385" chance="70" /> <!-- Adena -->
+				<item id="36560" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Top-grade) -->
+				<item id="36863" min="1" max="1" chance="0.0075" /> <!-- Recipe: Exquisite Leather - Upgrade -->
 			</drop>
 			<spoil>
 				<item id="36560" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Top-grade) -->
@@ -691,11 +816,11 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="23315" level="99" type="L2Monster" name="Nerva Orc Archer">
+	<npc id="23315" level="98" type="L2Monster" name="Nerva Orc Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="103650867" sp="165841" />
+		<acquire exp="185462171" sp="185549" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -719,10 +844,9 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="19889" max="46330" chance="70" /> <!-- Adena -->
-				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
-				<item id="36565" min="1" max="1" chance="0.0300000000000001" /> <!-- Exquisite Synthetic Cokes -->
-				<item id="36871" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil - Upgrade -->
+				<item id="57" min="26899" max="62800" chance="70" /> <!-- Adena -->
+				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36871" min="1" max="1" chance="0.003" /> <!-- Recipe: Durandil - Upgrade -->
 			</drop>
 			<spoil>
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
@@ -739,9 +863,9 @@
 	</npc>
 	<npc id="23316" level="99" type="L2Monster" name="Nerva Orc Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="124437219" sp="199099" />
+		<acquire exp="227222267" sp="227285" />
 		<equipment rhand="17332" lhand="15588" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -767,8 +891,8 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="24458" max="56974" chance="70" /> <!-- Adena -->
-				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Amaranthine Retributer -->
+				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Helios Retributer -->
+				<item id="57" min="33741" max="78752" chance="70" /> <!-- Adena -->
 				<item id="36862" min="1" max="1" chance="0.03" /> <!-- Recipe: Quality Leather - Upgrade -->
 				<item id="36879" min="1" max="1" chance="0.003" /> <!-- Recipe: Exquisite Fiber - Upgrade -->
 			</drop>
@@ -785,11 +909,11 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23317" level="99" type="L2Monster" name="Nerva Orc Wizard">
+	<npc id="23317" level="98" type="L2Monster" name="Nerva Orc Wizard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="111937319" sp="179099" />
+		<acquire exp="200289115" sp="200339" />
 		<equipment rhand="8688" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -813,10 +937,9 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="20685" max="48183" chance="70" /> <!-- Adena -->
-				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Amaranthine Retributer -->
-				<item id="36870" min="1" max="1" chance="0.0055" /> <!-- Recipe: Orichalcum - Upgrade -->
-				<item id="36899" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Upgrade -->
+				<item id="57" min="27975" max="65312" chance="70" /> <!-- Adena -->
+				<item id="36870" min="1" max="1" chance="0.03" /> <!-- Recipe: Orichalcum - Upgrade -->
+				<item id="36899" min="1" max="1" chance="0.003" /> <!-- Recipe: Exquisite Leather Braid - Upgrade -->
 			</drop>
 			<spoil>
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
@@ -833,9 +956,9 @@
 	</npc>
 	<npc id="23318" level="99" type="L2Monster" name="Nerva Orc Assassin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="104493556" sp="167189" />
+		<acquire exp="190805181" sp="190825" />
 		<equipment rhand="15559" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -858,9 +981,9 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="22373" max="52115" chance="70" /> <!-- Adena -->
-				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shaper -->
-				<item id="36878" min="1" max="1" chance="0.0300000000000001" /> <!-- Recipe: Quality Fiber - Upgrade -->
+				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
+				<item id="57" min="30864" max="72036" chance="70" /> <!-- Adena -->
+				<item id="36878" min="1" max="1" chance="0.03" /> <!-- Recipe: Quality Fiber - Upgrade -->
 				<item id="36900" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Combination -->
 			</drop>
 			<spoil>
@@ -878,9 +1001,9 @@
 	</npc>
 	<npc id="23319" level="99" type="L2Monster" name="Nerva Orc Ambusher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="88903791" sp="142246" />
+		<acquire exp="162338275" sp="162402" />
 		<equipment rhand="15559" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -905,9 +1028,9 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="18389" max="42835" chance="70" /> <!-- Adena -->
-				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Amaranthine Shaper -->
-				<item id="36920" min="1" max="1" chance="0.0055" /> <!-- Recipe: Weapon Fragment (High-grade) - Upgrade -->
+				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
+				<item id="57" min="25368" max="59208" chance="70" /> <!-- Adena -->
+				<item id="36920" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (High-grade) - Upgrade -->
 				<item id="36912" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Upgrade -->
 			</drop>
 			<spoil>
@@ -925,9 +1048,9 @@
 	</npc>
 	<npc id="23320" level="99" type="L2Monster" name="Nerva Orc Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="120926011" sp="193481" />
+		<acquire exp="220810845" sp="220816" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -949,9 +1072,9 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="21512" max="50111" chance="70" /> <!-- Adena -->
-				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Amaranthine Thrower -->
-				<item id="36928" min="1" max="1" chance="0.0055" /> <!-- Recipe: Armor Fragment (High-grade) - Upgrade -->
+				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Helios Thrower -->
+				<item id="57" min="30595" max="71408" chance="70" /> <!-- Adena -->
+				<item id="36928" min="1" max="1" chance="0.003" /> <!-- Recipe: Armor Fragment (High-grade) - Upgrade -->
 				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
 			</drop>
 			<spoil>
@@ -969,9 +1092,9 @@
 	</npc>
 	<npc id="23321" level="99" type="L2Monster" name="Nerva Orc Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="215798859" sp="345278" />
+		<acquire exp="394048714" sp="394098" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -993,13 +1116,13 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="28899" max="67319" chance="70" /> <!-- Adena -->
-				<item id="17420" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Fighter -->
-				<item id="36936" min="1" max="1" chance="0.0300000000000001" /> <!-- Recipe: Accessory Gem (High-grade) - Upgrade -->
+				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
+				<item id="57" min="39868" max="93051" chance="70" /> <!-- Adena -->
+				<item id="36936" min="1" max="1" chance="0.03" /> <!-- Recipe: Accessory Gem (High-grade) - Upgrade -->
 				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36535" min="1" max="1" chance="0.75" /> <!-- Quality Braid -->
+				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
@@ -1013,9 +1136,9 @@
 	</npc>
 	<npc id="23322" level="99" type="L2Monster" name="Nerva Orc Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="272259087" sp="435614" />
+		<acquire exp="497145041" sp="497204" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1038,13 +1161,13 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="32531" max="75779" chance="70" /> <!-- Adena -->
-				<item id="17419" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Avenger -->
-				<item id="36944" min="1" max="1" chance="0.0055" /> <!-- Recipe: Greater Synthetic Cokes - Upgrade -->
+				<item id="17419" min="1" max="1" chance="0.0075" /> <!-- Helios Avenger -->
+				<item id="57" min="44878" max="104745" chance="70" /> <!-- Adena -->
+				<item id="36944" min="1" max="1" chance="0.0075" /> <!-- Recipe: Greater Synthetic Cokes - Upgrade -->
 				<item id="36929" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Top-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36535" min="1" max="1" chance="0.75" /> <!-- Quality Braid -->
+				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
@@ -1058,9 +1181,9 @@
 	</npc>
 	<npc id="23323" level="99" type="L2Monster" name="Nerva Orc Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="95996432" sp="153594" />
+		<acquire exp="175289414" sp="175339" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1082,13 +1205,13 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="19124" max="44549" chance="70" /> <!-- Adena -->
-				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Amaranthine Avenger -->
-				<item id="36519" min="1" max="1" chance="4.642" /> <!-- Quality Leather -->
-				<item id="36937" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Accessory Gem (Top-grade) - Upgrade -->
+				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Helios Avenger -->
+				<item id="57" min="26383" max="61577" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="3.713" /> <!-- Quality Leather -->
+				<item id="36937" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem (Top-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36519" min="1" max="1" chance="17.62" /> <!-- Quality Leather -->
+				<item id="36519" min="1" max="1" chance="15.15" /> <!-- Quality Leather -->
 				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
@@ -1100,11 +1223,11 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23324" level="99" type="L2Monster" name="Captain" title="Nerva Bloodlust">
+	<npc id="23324" level="83" type="L2Monster" name="Captain" title="Nerva Bloodlust">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="171101177" sp="273761" />
+		<acquire exp="440867" sp="105" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1126,14 +1249,14 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="24458" max="56974" chance="70" /> <!-- Adena -->
-				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Amaranthine Slasher -->
-				<item id="36524" min="1" max="1" chance="2.25499999999999" /> <!-- Orichalcum -->
-				<item id="36945" min="1" max="1" chance="0.000899999999999989" /> <!-- Recipe: Exquisite Synthetic Cokes - Upgrade -->
+				<item id="57" min="39" max="91" chance="70" /> <!-- Adena -->
+				<item id="9549" min="1" max="1" chance="0.0075" /> <!-- Wind Stone -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="8.909" /> <!-- Orichalcum -->
-				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
+				<item id="36532" min="1" max="1" chance="1.615" /> <!-- Thin Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1341,7 +1464,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="959958945" sp="1535934" />
+		<acquire exp="1752885033" sp="1752908" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1363,8 +1486,8 @@
 		<ai aggroRange="600" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="18389" max="42835" chance="70" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.966" /> <!-- Armor Fragment (High-grade) -->
+				<item id="57" min="25368" max="59208" chance="70" /> <!-- Adena -->
+				<item id="36554" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36545" min="1" max="1" chance="0.3" /> <!-- Durandil Wire -->
 			</drop>
 			<spoil>
@@ -1384,7 +1507,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17315719" sp="27705" />
+		<acquire exp="28744078" sp="28814" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1408,15 +1531,15 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1835" max="4276" chance="70" /> <!-- Adena -->
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Cutter -->
-				<item id="36563" min="1" max="1" chance="0.300000000000001" /> <!-- Synthetic Cokes -->
-				<item id="36564" min="1" max="1" chance="0.0300000000000001" /> <!-- Greater Synthetic Cokes -->
-				<item id="36863" min="1" max="1" chance="0.000899999999999997" /> <!-- Recipe: Exquisite Leather - Upgrade -->
+				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
+				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
+				<item id="36863" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="16.98" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="14.36" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1431,7 +1554,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17315719" sp="27705" />
+		<acquire exp="28744078" sp="28814" />
 		<equipment rhand="15280" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -1456,15 +1579,15 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1835" max="4276" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="0.299999999999999" /> <!-- Synthetic Cokes -->
-				<item id="36564" min="1" max="1" chance="0.0299999999999999" /> <!-- Greater Synthetic Cokes -->
+				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 				<item id="35569" min="1" max="1" chance="0.0009" /> <!-- Bloody Eternal Enhancement Stone -->
 				<item id="36879" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Fiber - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="18.22" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="14.75" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1479,7 +1602,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17315719" sp="27705" />
+		<acquire exp="28744078" sp="28814" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1503,13 +1626,13 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1835" max="4276" chance="70" /> <!-- Adena -->
-				<item id="36862" min="1" max="1" chance="0.0300000000000001" /> <!-- Recipe: Quality Leather - Upgrade -->
+				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
+				<item id="36862" min="1" max="1" chance="0.0075" /> <!-- Recipe: Quality Leather - Upgrade -->
 				<item id="36899" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="18.46" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="14.47" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1524,7 +1647,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17315719" sp="27705" />
+		<acquire exp="28744078" sp="28814" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1548,14 +1671,14 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1835" max="4276" chance="70" /> <!-- Adena -->
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Shooter -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
 				<item id="36900" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Combination -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="17.79" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="14.63" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1570,7 +1693,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17315719" sp="27705" />
+		<acquire exp="28744078" sp="28814" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1594,14 +1717,14 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1835" max="4276" chance="70" /> <!-- Adena -->
-				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Caster -->
+				<item id="17425" min="1" max="1" chance="0.0009" /> <!-- Helios Caster -->
+				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36878" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Fiber - Upgrade -->
-				<item id="36912" min="1" max="1" chance="0.000899999999999997" /> <!-- Recipe: Durandil Wire - Upgrade -->
+				<item id="36912" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="17.89" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="15.06" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1616,7 +1739,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17315719" sp="27705" />
+		<acquire exp="28744078" sp="28814" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1640,15 +1763,15 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1835" max="4276" chance="70" /> <!-- Adena -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Buster -->
-				<item id="35567" min="1" max="1" chance="0.000899999999999991" /> <!-- Dark Eternal Enhancement Stone -->
-				<item id="36913" min="1" max="1" chance="0.000899999999999991" /> <!-- Recipe: Durandil Wire - Combination -->
-				<item id="36920" min="1" max="1" chance="0.000899999999999991" /> <!-- Recipe: Weapon Fragment (High-grade) - Upgrade -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
+				<item id="35567" min="1" max="1" chance="0.0009" /> <!-- Dark Eternal Enhancement Stone -->
+				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
+				<item id="36920" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (High-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="17.76" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="15.45" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1663,7 +1786,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17315719" sp="27705" />
+		<acquire exp="28744078" sp="28814" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1687,14 +1810,14 @@
 		<ai aggroRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1835" max="4276" chance="70" /> <!-- Adena -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Stormer -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
 				<item id="36928" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (High-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="17.8" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="14.81" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1709,7 +1832,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17315719" sp="27705" />
+		<acquire exp="28744078" sp="28814" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -1729,14 +1852,14 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="1835" max="4276" chance="70" /> <!-- Adena -->
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Amaranthine Stormer -->
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
 				<item id="36936" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (High-grade) - Upgrade -->
-				<item id="36929" min="1" max="1" chance="0.000899999999999997" /> <!-- Recipe: Armor Fragment (Top-grade) - Upgrade -->
+				<item id="36929" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Top-grade) - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="17.24" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="15.3" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1756,7 +1879,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2042250" sp="490" />
+		<acquire exp="3635163" sp="3708" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13497" hpRegen="9.5" mp="1917" mpRegen="3.3" />
 			<speed>
@@ -1778,24 +1901,34 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="712" max="1660" chance="70" /> <!-- Adena -->
 				<item id="17312" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Leggings -->
-				<item id="17305" min="1" max="1" chance="0.00550000000000004" /> <!-- Immortal Breastplate -->
-				<item id="36557" min="1" max="1" chance="0.299999999999999" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.0750000000000009" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="9550" min="1" max="1" chance="0.0299999999999999" /> <!-- Dark Stone -->
-				<item id="9556" min="1" max="1" chance="0.00299999999999999" /> <!-- Dark Crystal -->
-				<item id="36876" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Metallic Fiber - Upgrade -->
-				<item id="36934" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
-				<item id="35456" min="1" max="1" chance="0.000900000000000002" /> <!-- Recipe: Amaranthine Stormer (60%) -->
-				<item id="35470" min="1" max="1" chance="0.000900000000000002" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="36925" min="1" max="1" chance="0.000900000000000002" /> <!-- Recipe: Armor Fragment (Mid-grade) - Downgrade -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
+				<item id="57" min="1218" max="2842" chance="20" /> <!-- Adena -->
+				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="9550" min="1" max="1" chance="0.03" /> <!-- Dark Stone -->
+				<item id="9556" min="1" max="1" chance="0.003" /> <!-- Dark Crystal -->
+				<item id="36876" min="1" max="1" chance="0.003" /> <!-- Recipe: Metallic Fiber - Upgrade -->
+				<item id="36934" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
+				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="36925" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Mid-grade) - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36557" min="1" max="1" chance="2.884" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="2.845" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1810,7 +1943,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="3123732" sp="749" />
+		<acquire exp="5560187" sp="5601" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13497" hpRegen="9.5" mp="1917" mpRegen="3.3" />
 			<speed>
@@ -1832,23 +1965,33 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="841" max="1961" chance="70" /> <!-- Adena -->
-				<item id="17305" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Breastplate -->
-				<item id="17312" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Leather Leggings -->
-				<item id="17316" min="1" max="1" chance="0.00549999999999995" /> <!-- Immortal Tunic -->
-				<item id="36810" min="1" max="1" chance="3.714" /> <!-- Immortal Shield Ingredient -->
-				<item id="36517" min="1" max="1" chance="2.49000000000001" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.300000000000007" /> <!-- Durable Leather -->
-				<item id="36759" min="1" max="1" chance="0.0300000000000007" /> <!-- Recipe: Immortal Sigil (60%) -->
-				<item id="36748" min="1" max="1" chance="0.0300000000000007" /> <!-- Recipe: Immortal Shield (60%) -->
-				<item id="9549" min="1" max="1" chance="0.0300000000000007" /> <!-- Wind Stone -->
-				<item id="9555" min="1" max="1" chance="0.00300000000000007" /> <!-- Wind Crystal -->
-				<item id="36867" min="1" max="1" chance="0.000899999999999991" /> <!-- Recipe: Adamantite - Downgrade -->
-				<item id="36907" min="1" max="1" chance="0.000899999999999991" /> <!-- Recipe: Adamantite Wire - Upgrade -->
-				<item id="36918" min="1" max="1" chance="0.000899999999999991" /> <!-- Recipe: Weapon Fragment (Mid-grade) - Upgrade -->
+				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate -->
+				<item id="17312" min="1" max="1" chance="0.0075" /> <!-- Immortal Leather Leggings -->
+				<item id="17316" min="1" max="1" chance="0.0075" /> <!-- Immortal Tunic -->
+				<item id="57" min="1439" max="3357" chance="20" /> <!-- Adena -->
+				<item id="36810" min="1" max="1" chance="3.755" /> <!-- Immortal Shield Ingredient -->
+				<item id="36517" min="1" max="1" chance="2.58" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
+				<item id="36759" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Sigil (60%) -->
+				<item id="36748" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Shield (60%) -->
+				<item id="9549" min="1" max="1" chance="0.03" /> <!-- Wind Stone -->
+				<item id="9555" min="1" max="1" chance="0.003" /> <!-- Wind Crystal -->
+				<item id="36867" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite - Downgrade -->
+				<item id="36907" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite Wire - Upgrade -->
+				<item id="36918" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Mid-grade) - Upgrade -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="19.96" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="19.46" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -1887,21 +2030,21 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="1109" max="2584" chance="70" /> <!-- Adena -->
-				<item id="36557" min="1" max="1" chance="2.52099999999999" /> <!-- Accessory Gem -->
-				<item id="36759" min="1" max="1" chance="0.299999999999999" /> <!-- Recipe: Immortal Sigil (60%) -->
-				<item id="36748" min="1" max="1" chance="0.299999999999999" /> <!-- Recipe: Immortal Shield (60%) -->
-				<item id="36558" min="1" max="1" chance="0.299999999999999" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="9549" min="1" max="1" chance="0.299999999999999" /> <!-- Wind Stone -->
-				<item id="9555" min="1" max="1" chance="0.0299999999999999" /> <!-- Wind Crystal -->
-				<item id="36907" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Adamantite Wire - Upgrade -->
-				<item id="36918" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Weapon Fragment (Mid-grade) - Upgrade -->
-				<item id="36867" min="1" max="1" chance="0.000900000000000005" /> <!-- Recipe: Adamantite - Downgrade -->
+				<item id="36557" min="1" max="1" chance="2.534" /> <!-- Accessory Gem -->
+				<item id="36759" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Sigil (60%) -->
+				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
+				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
+				<item id="9555" min="1" max="1" chance="0.03" /> <!-- Wind Crystal -->
+				<item id="36907" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Upgrade -->
+				<item id="36918" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (Mid-grade) - Upgrade -->
+				<item id="36867" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="29.98" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="5.745" /> <!-- Durable Leather -->
-				<item id="36884" min="1" max="1" chance="0.0055" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36517" min="1" max="1" chance="29.77" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="5.758" /> <!-- Durable Leather -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1939,7 +2082,7 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="1085" max="2529" chance="70" /> <!-- Adena -->
-				<item id="36557" min="1" max="1" chance="2.58999999999999" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="2.494" /> <!-- Accessory Gem -->
 				<item id="36759" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Sigil (60%) -->
 				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1947,13 +2090,13 @@
 				<item id="9555" min="1" max="1" chance="0.03" /> <!-- Wind Crystal -->
 				<item id="36907" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Upgrade -->
 				<item id="36918" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (Mid-grade) - Upgrade -->
-				<item id="36867" min="1" max="1" chance="0.000899999999999988" /> <!-- Recipe: Adamantite - Downgrade -->
+				<item id="36867" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="27.55" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="5.57" /> <!-- Durable Leather -->
-				<item id="36884" min="1" max="1" chance="0.0055" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36517" min="1" max="1" chance="28.57" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="5.533" /> <!-- Durable Leather -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1991,7 +2134,7 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="1109" max="2584" chance="70" /> <!-- Adena -->
-				<item id="36557" min="1" max="1" chance="2.62900000000002" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="2.631" /> <!-- Accessory Gem -->
 				<item id="36759" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Sigil (60%) -->
 				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1999,13 +2142,13 @@
 				<item id="9555" min="1" max="1" chance="0.03" /> <!-- Wind Crystal -->
 				<item id="36907" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Upgrade -->
 				<item id="36918" min="1" max="1" chance="0.003" /> <!-- Recipe: Weapon Fragment (Mid-grade) - Upgrade -->
-				<item id="36867" min="1" max="1" chance="0.000899999999999982" /> <!-- Recipe: Adamantite - Downgrade -->
+				<item id="36867" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="29.5" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="5.754" /> <!-- Durable Leather -->
-				<item id="36884" min="1" max="1" chance="0.0055" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36517" min="1" max="1" chance="30.7" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="5.632" /> <!-- Durable Leather -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2018,9 +2161,9 @@
 	</npc>
 	<npc id="23354" level="99" type="L2Monster" name="Decay Hannibal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>CONSTRUCT</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2041,15 +2184,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
-				<item id="37801" min="1" max="1" chance="0.0009" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="37801" min="1" max="1" chance="0.003" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="18.96" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.967" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2061,9 +2199,9 @@
 	</npc>
 	<npc id="23355" level="99" type="L2Monster" name="Armor Beast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DIVINE</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2085,14 +2223,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="19.36" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.958" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2106,7 +2239,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2128,15 +2261,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.44" /> <!-- Sealed Demonic Tome -->
-				<item id="36549" min="1" max="1" chance="0.11" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="18.79" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.914" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2150,7 +2278,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2172,14 +2300,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4042" max="9416" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.25" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3422" max="7987" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="20.01" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.954" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2192,7 +2315,7 @@
 	<npc id="23358" level="99" type="L2Monster" name="Blow Archer">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<equipment rhand="17330" /> <!-- Apocalypse Thrower -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -2214,14 +2337,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4048" max="9426" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.25" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="19.47" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.992" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2235,7 +2353,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2257,14 +2375,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4045" max="9424" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.25" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3424" max="7993" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="20.3" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="2.015" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2278,7 +2391,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2301,15 +2414,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4045" max="9424" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.26" /> <!-- Sealed Demonic Tome -->
-				<item id="36564" min="1" max="1" chance="0.065" /> <!-- Greater Synthetic Cokes -->
+				<item id="57" min="3424" max="7993" chance="20" /> <!-- Adena -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="19.68" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.941" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2321,9 +2429,9 @@
 	</npc>
 	<npc id="23362" level="99" type="L2Monster" name="Amos Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>GIANT</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2344,15 +2452,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="19.66" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.889" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2364,9 +2467,9 @@
 	</npc>
 	<npc id="23363" level="99" type="L2Monster" name="Amos Officer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>GIANT</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2387,14 +2490,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="20.44" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.963" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2406,9 +2504,9 @@
 	</npc>
 	<npc id="23364" level="99" type="L2Monster" name="Amos Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMANOID</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2430,15 +2528,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
 				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="19.16" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.903" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2452,7 +2545,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2474,15 +2567,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3372" max="7855" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
 				<item id="36911" min="1" max="1" chance="0.003" /> <!-- Recipe: Orichalcum Wire - Combination -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="19.64" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.894" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2494,7 +2582,7 @@
 	</npc>
 	<npc id="23366" level="99" type="L2Monster" name="Durable Charger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -2509,16 +2597,16 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2535" max="5905" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="2575" max="6011" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="15.08" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.523" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2530,9 +2618,9 @@
 	</npc>
 	<npc id="23367" level="99" type="L2Monster" name="Armor Beast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DIVINE</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2554,14 +2642,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="9892" max="23041" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="47.43" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.724" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2575,7 +2658,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2597,16 +2680,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="9892" max="23041" chance="50" /> <!-- Adena -->
-				<item id="37776" min="1" max="1" chance="0.273809523809524" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
-				<item id="37791" min="1" max="1" chance="0.273809523809524" /> <!-- Sealed Demonic Tome -->
-				<item id="37773" min="1" max="1" chance="0.0273809523809524" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="48.29" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.794" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2620,7 +2697,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2642,16 +2719,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="9882" max="23017" chance="50" /> <!-- Adena -->
-				<item id="37785" min="1" max="1" chance="0.75" /> <!-- Scroll of Blessing Scraps: Armor (R-grade) -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
-				<item id="37782" min="1" max="1" chance="0.075" /> <!-- Recipe: Scroll of Blessing: Armor (R-grade) -->
+				<item id="57" min="3422" max="7987" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="46.59" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.731" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2665,7 +2735,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<equipment rhand="17330" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
@@ -2687,14 +2757,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="9892" max="23041" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="48.57" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.724" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2708,7 +2773,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2730,14 +2795,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="9888" max="23034" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3424" max="7993" chance="20" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="47.52" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.77" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2751,7 +2811,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8649429" sp="20758" />
+		<acquire exp="23093802" sp="23130" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2774,14 +2834,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="9888" max="23034" chance="50" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="3424" max="7993" chance="20" /> <!-- Adena -->
+				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="47.44" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="4.699" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2795,7 +2851,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="71385190" sp="171324" />
+		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2823,14 +2879,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="16970" max="39529" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="58.19" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.813" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2844,7 +2895,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="71385190" sp="171324" />
+		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2873,14 +2924,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="16970" max="39529" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="60.15" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.865" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2894,7 +2940,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="71385190" sp="171324" />
+		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2922,15 +2968,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="64811" max="150969" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="1.809" /> <!-- Sealed Demonic Tome -->
-				<item id="36550" min="1" max="1" chance="0.0749999999999996" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="57" min="39503" max="92199" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
+				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="5" chance="75.96" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="22.94" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="2.221" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2944,7 +2985,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="71385190" sp="171324" />
+		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -2970,15 +3011,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="16970" max="39529" chance="30" /> <!-- Adena -->
+				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="57.55" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.893" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -2992,7 +3028,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="71385190" sp="171324" />
+		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3018,15 +3054,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="16970" max="39529" chance="30" /> <!-- Adena -->
+				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="60.25" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.905" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3040,7 +3071,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="142770186" sp="342648" />
+		<acquire exp="419261297" sp="419286" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3068,12 +3099,22 @@
 			<radius normal="30" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37802" min="1" max="1" chance="0.003" /> <!-- Dark Eternal Enhancement Stone Fragment -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="23390" level="99" type="L2Monster" name="Viper" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="142770186" sp="342648" />
+		<acquire exp="419261297" sp="419286" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3101,12 +3142,22 @@
 			<radius normal="30" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37802" min="1" max="1" chance="0.003" /> <!-- Dark Eternal Enhancement Stone Fragment -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="23391" level="99" type="L2Monster" name="Kefensis" title="Mirage Watcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="142770186" sp="342648" />
+		<acquire exp="419261297" sp="419286" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3132,16 +3183,11 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="27084" max="63090" chance="30" /> <!-- Adena -->
-				<item id="17423" min="1" max="1" chance="0.0025" /> <!-- Amaranthine Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0025" /> <!-- Amaranthine Buster -->
-				<item id="37791" min="1" max="1" chance="0.375" /> <!-- Sealed Demonic Tome -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40051" min="1" max="17" chance="91.15" /> <!-- Scroll: 100,000 SP -->
-				<item id="40052" min="1" max="1" chance="85.07" /> <!-- Scroll: 1,000,000 SP -->
-				<item id="40053" min="1" max="1" chance="8.251" /> <!-- Scroll: 10,000,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3155,7 +3201,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="142770186" sp="342648" />
+		<acquire exp="419261297" sp="419286" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3181,16 +3227,11 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="27084" max="63090" chance="30" /> <!-- Adena -->
-				<item id="17423" min="1" max="1" chance="0.0025" /> <!-- Amaranthine Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0025" /> <!-- Amaranthine Buster -->
-				<item id="37791" min="1" max="1" chance="0.375" /> <!-- Sealed Demonic Tome -->
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40051" min="1" max="17" chance="89.85" /> <!-- Scroll: 100,000 SP -->
-				<item id="40052" min="1" max="1" chance="83.11" /> <!-- Scroll: 1,000,000 SP -->
-				<item id="40053" min="1" max="1" chance="8.254" /> <!-- Scroll: 10,000,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3204,7 +3245,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="47590086" sp="114216" />
+		<acquire exp="138356208" sp="138390" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="158417" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3232,14 +3273,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="17911" max="41720" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.375" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="9097" max="21233" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="51.99" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.217" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3253,7 +3289,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="47590086" sp="114216" />
+		<acquire exp="138356208" sp="138390" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="174258" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3281,14 +3317,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="17911" max="41720" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.375" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="9097" max="21233" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="51.99" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.117" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3298,11 +3329,11 @@
 			<height normal="58.5" />
 		</collision>
 	</npc>
-	<npc id="23395" level="99" type="L2Monster" name="Garion">
+	<npc id="23395" level="100" type="L2Monster" name="Garion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="90421084" sp="217010" />
+		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3332,14 +3363,9 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="21793" max="50766" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="1.223" /> <!-- Sealed Demonic Tome -->
+				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="74.4" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="7.575" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3349,11 +3375,11 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23396" level="99" type="L2Monster" name="Garion Neti">
+	<npc id="23396" level="100" type="L2Monster" name="Garion Neti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="90421084" sp="217010" />
+		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3383,15 +3409,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="21793" max="50766" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.749999999999999" /> <!-- Sealed Demonic Tome -->
-				<item id="36943" min="1" max="1" chance="0.000900000000000011" /> <!-- Recipe: Greater Synthetic Cokes - Downgrade -->
+				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="36943" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Synthetic Cokes - Downgrade -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="76.43" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="7.598" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3401,11 +3422,11 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="23397" level="99" type="L2Monster" name="Desert Wendigo">
+	<npc id="23397" level="100" type="L2Monster" name="Desert Wendigo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BEAST</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="90421084" sp="217010" />
+		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3432,15 +3453,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="21793" max="50766" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.749999999999999" /> <!-- Sealed Demonic Tome -->
-				<item id="36550" min="1" max="1" chance="0.0299999999999996" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="77.23" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="7.516" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3450,11 +3466,11 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="23398" level="99" type="L2Monster" name="Koraza">
+	<npc id="23398" level="100" type="L2Monster" name="Koraza">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="90421084" sp="217010" />
+		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3481,15 +3497,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="21793" max="50766" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.749999999999999" /> <!-- Sealed Demonic Tome -->
-				<item id="36565" min="1" max="1" chance="0.0299999999999996" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="1" chance="77.09" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="7.547" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
@@ -3499,11 +3510,11 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="23399" level="99" type="L2Monster" name="Bend Beetle">
+	<npc id="23399" level="100" type="L2Monster" name="Bend Beetle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>BUG</race>
 		<sex>FEMALE</sex>
-		<acquire exp="90421084" sp="217010" />
+		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
 			<speed>
@@ -3534,15 +3545,10 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="30529" max="71118" chance="30" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.750000000000001" /> <!-- Sealed Demonic Tome -->
-				<item id="36550" min="1" max="1" chance="0.0750000000000001" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="57" min="12686" max="29576" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</drop>
-			<spoil>
-				<item id="40049" min="1" max="3" chance="51.8" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="10.27" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="1.112" /> <!-- Scroll: 100,000 SP -->
-			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>

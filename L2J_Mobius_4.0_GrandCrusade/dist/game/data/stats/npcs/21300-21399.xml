@@ -19,7 +19,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="84317" sp="20" />
+		<acquire exp="50591" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2492" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -59,7 +59,7 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.0055" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36549" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (High-grade) -->
 			</drop>
 			<spoil>
 				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
@@ -96,7 +96,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="101182" sp="24" />
+		<acquire exp="60709" sp="14" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2492" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -143,7 +143,7 @@
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -175,7 +175,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="81413" sp="19" />
+		<acquire exp="48848" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -250,7 +250,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="86982" sp="20" />
+		<acquire exp="52190" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -292,7 +292,7 @@
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="1" chance="1.386" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="1.434" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</spoil>
 			<lucky_drop>
@@ -325,7 +325,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="127770" sp="30" />
+		<acquire exp="76662" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -371,7 +371,7 @@
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -401,7 +401,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="89135" sp="21" />
+		<acquire exp="53481" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -446,7 +446,7 @@
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -474,7 +474,7 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
-		<acquire exp="174824" sp="41" />
+		<acquire exp="104895" sp="25" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2758" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -519,7 +519,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -548,7 +548,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="113078" sp="27" />
+		<acquire exp="67847" sp="16" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -593,7 +593,7 @@
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -621,7 +621,7 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
-		<acquire exp="162675" sp="39" />
+		<acquire exp="97605" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2856" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -665,17 +665,15 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="116" max="272" chance="70" /> <!-- Adena -->
-				<item id="8731" min="1" max="1" chance="0.749999999999996" /> <!-- Life Stone - Lv. 70 -->
-				<item id="8741" min="1" max="1" chance="0.299999999999999" /> <!-- Mid-grade Life Stone - Lv. 70 -->
-				<item id="8751" min="1" max="1" chance="0.0299999999999999" /> <!-- High-grade Life Stone - Lv. 70 -->
-				<item id="36539" min="1" max="1" chance="0.0299999999999999" /> <!-- Quality Leather Braid -->
-				<item id="8761" min="1" max="1" chance="0.00299999999999999" /> <!-- Top-grade Life Stone - Lv. 70 -->
+				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.003" /> <!-- Mid-grade Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -705,7 +703,7 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
-		<acquire exp="169546" sp="40" />
+		<acquire exp="97605" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2856" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -747,6 +745,23 @@
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="116" max="272" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.003" /> <!-- Mid-grade Spirit Stone -->
+			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="21310" level="78" type="L2Monster" name="Disciples of Authority">
 		<!-- Confirmed CT2.5 -->
@@ -765,7 +780,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
-		<acquire exp="166928" sp="40" />
+		<acquire exp="100157" sp="24" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2974" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -805,17 +820,15 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="113" max="262" chance="70" /> <!-- Adena -->
-				<item id="8732" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 76 -->
-				<item id="8742" min="1" max="1" chance="0.299999999999998" /> <!-- Mid-grade Life Stone - Lv. 76 -->
-				<item id="8752" min="1" max="1" chance="0.0299999999999998" /> <!-- High-grade Life Stone - Lv. 76 -->
-				<item id="959" min="1" max="1" chance="0.00299999999999998" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="36549" min="1" max="1" chance="0.00299999999999998" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -842,7 +855,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
-		<acquire exp="153909" sp="36" />
+		<acquire exp="100157" sp="24" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2974" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -881,6 +894,23 @@
 			<radius normal="11" grown="13" />
 			<height normal="38.5" grown="46.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="113" max="262" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
+			</drop>
+			<spoil>
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="21312" level="74" type="L2Monster" name="Eye of Ruler">
 		<!-- Confirmed CT2.5 -->
@@ -905,7 +935,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="126669" sp="30" />
+		<acquire exp="76002" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -953,7 +983,7 @@
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -981,7 +1011,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="121255" sp="29" />
+		<acquire exp="72753" sp="17" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1018,12 +1048,12 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="151" max="351" chance="70" /> <!-- Adena -->
-				<item id="36564" min="1" max="1" chance="0.0055" /> <!-- Greater Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1053,7 +1083,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="55787" sp="13" />
+		<acquire exp="33472" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1097,8 +1127,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="120" max="280" chance="70" /> <!-- Adena -->
 				<item id="8678" min="1" max="1" chance="0.003" /> <!-- Sirra's Blade -->
+				<item id="57" min="120" max="280" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1112,7 +1143,7 @@
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1140,7 +1171,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="58136" sp="13" />
+		<acquire exp="34882" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1182,8 +1213,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="125" max="292" chance="70" /> <!-- Adena -->
 				<item id="8679" min="1" max="1" chance="0.003" /> <!-- Sword of Ipos -->
+				<item id="57" min="125" max="292" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1195,9 +1227,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.008" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="0.965" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1226,7 +1258,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="68406" sp="16" />
+		<acquire exp="41044" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1271,8 +1303,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
 				<item id="8680" min="1" max="1" chance="0.003" /> <!-- Barakiel's Axe -->
+				<item id="57" min="131" max="305" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1284,9 +1317,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.057" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.02" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1316,7 +1349,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="57325" sp="13" />
+		<acquire exp="34395" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1360,8 +1393,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="124" max="288" chance="70" /> <!-- Adena -->
 				<item id="8681" min="1" max="1" chance="0.003" /> <!-- Behemoth' Tuning Fork -->
+				<item id="57" min="124" max="288" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1375,7 +1409,7 @@
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1403,7 +1437,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="59921" sp="14" />
+		<acquire exp="35952" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1445,8 +1479,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="130" max="301" chance="70" /> <!-- Adena -->
 				<item id="8682" min="1" max="1" chance="0.003" /> <!-- Naga Storm -->
+				<item id="57" min="130" max="301" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1458,9 +1493,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.097" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.036" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1490,7 +1525,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="75404" sp="18" />
+		<acquire exp="45243" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1536,8 +1571,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
 				<item id="8683" min="1" max="1" chance="0.003" /> <!-- Tiphon's Spear -->
+				<item id="57" min="146" max="340" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1549,9 +1585,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.169" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.146" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1579,7 +1615,7 @@
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<acquire exp="61365" sp="14" />
+		<acquire exp="36819" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1621,8 +1657,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="133" max="309" chance="70" /> <!-- Adena -->
 				<item id="8685" min="1" max="1" chance="0.003" /> <!-- Sobekk's Hurricane -->
+				<item id="57" min="133" max="309" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1634,9 +1671,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.096" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.05" /> <!-- Thin Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1661,7 +1698,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="72153" sp="17" />
+		<acquire exp="43292" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2758" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1704,8 +1741,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="116" max="270" chance="70" /> <!-- Adena -->
 				<item id="8686" min="1" max="1" chance="0.003" /> <!-- Themis' Tongue -->
+				<item id="57" min="116" max="270" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1720,7 +1758,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1745,7 +1783,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="72153" sp="17" />
+		<acquire exp="43292" sp="10" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2758" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1788,8 +1826,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="116" max="270" chance="70" /> <!-- Adena -->
 				<item id="8687" min="1" max="1" chance="0.003" /> <!-- Cabrio's Hand -->
+				<item id="57" min="116" max="270" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1804,7 +1843,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1827,7 +1866,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="63203" sp="15" />
+		<acquire exp="37922" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2758" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="824.422073095" magical="562.9734023" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1868,8 +1907,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="114" max="266" chance="70" /> <!-- Adena -->
 				<item id="8688" min="1" max="1" chance="0.003" /> <!-- Daimon Crystal -->
+				<item id="57" min="114" max="266" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1884,7 +1924,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1916,7 +1956,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
-		<acquire exp="140642" sp="33" />
+		<acquire exp="98449" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1954,10 +1994,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="92" max="214" chance="70" /> <!-- Adena -->
 				<item id="6364" min="1" max="1" chance="0.0009" /> <!-- Forgotten Blade -->
+				<item id="57" min="92" max="214" chance="70" /> <!-- Adena -->
 				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="36543" min="1" max="1" chance="0.03" /> <!-- Adamantite Wire -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1997,7 +2038,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="133931" sp="32" />
+		<acquire exp="93752" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2032,9 +2073,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="6726" min="1" max="1" chance="0.0075" /> <!-- Sealed Tateossian Necklace -->
 				<item id="57" min="87" max="204" chance="70" /> <!-- Adena -->
-				<item id="6726" min="1" max="1" chance="0.0055" /> <!-- Sealed Tateossian Necklace -->
 				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2049,7 +2091,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2075,7 +2117,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="130443" sp="31" />
+		<acquire exp="91310" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2110,9 +2152,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
 				<item id="6725" min="1" max="1" chance="0.03" /> <!-- Sealed Tateossian Ring -->
+				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2127,7 +2170,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2161,7 +2204,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" lhand="6919" /> <!-- Damascus Sword / Monster Only (Shield of Ketra Orc) -->
-		<acquire exp="142537" sp="34" />
+		<acquire exp="99776" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2202,11 +2245,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="6678" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="10121" min="1" max="1" chance="0.0075" /> <!-- Sealed Arcana Sigil -->
 				<item id="57" min="93" max="218" chance="70" /> <!-- Adena -->
-				<item id="6678" min="1" max="1" chance="0.0055" /> <!-- Sealed Imperial Crusader Shield -->
-				<item id="10121" min="1" max="1" chance="0.0055" /> <!-- Sealed Arcana Sigil -->
-				<item id="36519" min="1" max="1" chance="0.0300000000000001" /> <!-- Quality Leather -->
+				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
 				<item id="36554" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2221,7 +2265,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2251,7 +2295,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="288" /> <!-- Carnage Bow -->
-		<acquire exp="139676" sp="33" />
+		<acquire exp="97773" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -2287,10 +2331,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="92" max="213" chance="70" /> <!-- Adena -->
 				<item id="7575" min="1" max="1" chance="0.0009" /> <!-- Draconic Bow -->
-				<item id="36518" min="1" max="1" chance="0.300000000000001" /> <!-- Durable Leather -->
-				<item id="36553" min="1" max="1" chance="0.00549999999999992" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="57" min="92" max="213" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2338,7 +2383,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="92" /> <!-- Spirit's Staff -->
-		<acquire exp="144854" sp="34" />
+		<acquire exp="101398" sp="24" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2379,12 +2424,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="95" max="221" chance="70" /> <!-- Adena -->
 				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.0009" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.0009" /> <!-- Sealed Major Arcana Robe -->
-				<item id="36524" min="1" max="1" chance="0.00549999999999999" /> <!-- Orichalcum -->
-				<item id="36559" min="1" max="1" chance="0.00300000000000001" /> <!-- Accessory Gem (High-grade) -->
+				<item id="57" min="95" max="221" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.0075" /> <!-- Orichalcum -->
+				<item id="36559" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2399,7 +2445,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2425,7 +2471,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="132454" sp="31" />
+		<acquire exp="92718" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2463,6 +2509,7 @@
 				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2477,7 +2524,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2509,7 +2556,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" lhand="6919" /> <!-- Damascus Sword / Monster Only (Shield of Ketra Orc) -->
-		<acquire exp="129865" sp="31" />
+		<acquire exp="90905" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2547,10 +2594,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="6679" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Helmet -->
 				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
-				<item id="6679" min="1" max="1" chance="0.0055" /> <!-- Sealed Imperial Crusader Helmet -->
-				<item id="36529" min="1" max="1" chance="0.0300000000000001" /> <!-- Quality Fiber -->
+				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
 				<item id="36564" min="1" max="1" chance="0.0009" /> <!-- Greater Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2597,7 +2645,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="140289" sp="33" />
+		<acquire exp="98203" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2638,9 +2686,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="92" max="214" chance="70" /> <!-- Adena -->
 				<item id="6369" min="1" max="1" chance="0.0009" /> <!-- Dragon Hunter Axe -->
+				<item id="57" min="92" max="214" chance="70" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2655,7 +2704,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2681,7 +2730,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="132454" sp="31" />
+		<acquire exp="92718" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.721" mp="1607" mpRegen="3.0804" />
 			<attack physical="938.20801458" magical="656.66638089" random="20" critical="1" accuracy="12" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2717,8 +2766,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
-				<item id="36528" min="1" max="1" chance="1.114" /> <!-- Metallic Fiber -->
-				<item id="960" min="1" max="1" chance="0.0299999999999997" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36528" min="1" max="1" chance="1.125" /> <!-- Metallic Fiber -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2733,7 +2783,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2770,7 +2820,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="92" /> <!-- Spirit's Staff -->
-		<acquire exp="187234" sp="44" />
+		<acquire exp="131064" sp="31" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.721" mp="1607" mpRegen="3.0804" />
 			<attack physical="938.20801458" magical="656.66638089" random="20" critical="1" accuracy="12" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2812,9 +2862,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
 				<item id="6681" min="1" max="1" chance="0.03" /> <!-- Sealed Draconic Leather Gloves -->
+				<item id="57" min="123" max="286" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2859,7 +2910,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
-		<acquire exp="129865" sp="31" />
+		<acquire exp="90905" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.772" mp="1607" mpRegen="3.1008" />
 			<attack physical="961.93701102" magical="677.644106544" random="10" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2897,10 +2948,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
 				<item id="6676" min="1" max="1" chance="0.03" /> <!-- Sealed Imperial Crusader Gauntlets -->
-				<item id="36538" min="1" max="1" chance="0.0300000000000001" /> <!-- Durable Leather Braid -->
+				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
+				<item id="36538" min="1" max="1" chance="0.03" /> <!-- Durable Leather Braid -->
 				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2915,7 +2967,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2949,7 +3001,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<acquire exp="145262" sp="34" />
+		<acquire exp="101684" sp="24" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.772" mp="1607" mpRegen="3.1008" />
 			<attack physical="961.93701102" magical="677.644106544" random="10" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2992,7 +3044,8 @@
 			<drop>
 				<item id="57" min="95" max="222" chance="70" /> <!-- Adena -->
 				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
-				<item id="959" min="1" max="1" chance="0.00550000000000004" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3007,7 +3060,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3033,7 +3086,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="132454" sp="31" />
+		<acquire exp="92718" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.823" mp="1607" mpRegen="3.111" />
 			<attack physical="985.66600746" magical="699.2575207596" random="20" critical="1" accuracy="14" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3071,6 +3124,7 @@
 				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
 				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3093,7 +3147,7 @@
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="21338" level="78" type="L2Monster" name="Ketra Orc Priest">
+	<npc id="21338" level="79" type="L2Monster" name="Ketra Orc Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3118,7 +3172,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="213" /> <!-- Branch of the Mother Tree -->
-		<acquire exp="179943" sp="43" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.823" mp="1641" mpRegen="3.111" />
 			<attack physical="985.66600746" magical="699.2575207596" random="10" critical="4" accuracy="9.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3159,11 +3213,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="118" max="274" chance="70" /> <!-- Adena -->
-				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
+				<item id="57" min="118" max="274" chance="70" /> <!-- Adena -->
 				<item id="36549" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3178,7 +3233,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3189,7 +3244,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21339" level="78" type="L2Monster" name="Ketra Orc Officer">
+	<npc id="21339" level="79" type="L2Monster" name="Ketra Orc Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -3212,7 +3267,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="137495" sp="32" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.874" mp="1641" mpRegen="3.1314" />
 			<attack physical="1009.3950039" magical="719.599557852" random="20" critical="1" accuracy="15" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3253,9 +3308,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="90" max="210" chance="70" /> <!-- Adena -->
 				<item id="6369" min="1" max="1" chance="0.0009" /> <!-- Dragon Hunter Axe -->
+				<item id="57" min="90" max="210" chance="70" /> <!-- Adena -->
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3267,7 +3323,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="1" chance="2.125" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="2.115" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</spoil>
 			<lucky_drop>
@@ -3279,7 +3335,7 @@
 			<height normal="46.2" />
 		</collision>
 	</npc>
-	<npc id="21340" level="78" type="L2Monster" name="Ketra Orc Battalion Commander">
+	<npc id="21340" level="79" type="L2Monster" name="Ketra Orc Battalion Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3302,7 +3358,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" lhand="6919" /> <!-- Tallum Blade / Monster Only (Shield of Ketra Orc) -->
-		<acquire exp="142810" sp="34" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.874" mp="1641" mpRegen="3.1314" />
 			<attack physical="1009.3950039" magical="719.599557852" random="10" critical="4" accuracy="10.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3343,10 +3399,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="94" max="218" chance="70" /> <!-- Adena -->
-				<item id="6678" min="1" max="1" chance="0.0055" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6678" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Shield -->
 				<item id="6370" min="1" max="1" chance="0.0009" /> <!-- Saint Spear -->
+				<item id="57" min="94" max="218" chance="70" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3361,7 +3418,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3387,7 +3444,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="132454" sp="31" />
+		<acquire exp="92718" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.925" mp="1607" mpRegen="3.1518" />
 			<attack physical="1033.1240034" magical="740.577283506" random="10" critical="4" accuracy="11.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3423,8 +3480,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.0749999999999996" /> <!-- Quality Leather -->
-				<item id="36553" min="1" max="1" chance="0.0300000000000005" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36519" min="1" max="1" chance="0.075" /> <!-- Quality Leather -->
+				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3448,7 +3506,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="21342" level="78" type="L2Monster" name="Ketra Orc Grand Priest">
+	<npc id="21342" level="79" type="L2Monster" name="Ketra Orc Grand Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3474,7 +3532,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="213" /> <!-- Branch of the Mother Tree -->
-		<acquire exp="181987" sp="43" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.925" mp="1641" mpRegen="3.1518" />
 			<attack physical="1033.1240034" magical="740.577283506" random="20" critical="1" accuracy="16" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3516,12 +3574,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
-				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
+				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36559" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3535,8 +3594,8 @@
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3547,7 +3606,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21343" level="78" type="L2Monster" name="Ketra's Commander">
+	<npc id="21343" level="79" type="L2Monster" name="Ketra's Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -3571,7 +3630,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" lhand="6919" /> <!-- Tallum Blade / Monster Only (Shield of Ketra Orc) -->
-		<acquire exp="176606" sp="42" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.721" mp="1641" mpRegen="3.0804" />
 			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -3611,9 +3670,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="116" max="269" chance="70" /> <!-- Adena -->
-				<item id="6678" min="1" max="1" chance="0.0055" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6678" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Shield -->
 				<item id="6367" min="1" max="1" chance="0.0009" /> <!-- Angel Slayer -->
+				<item id="57" min="116" max="269" chance="70" /> <!-- Adena -->
 				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
 			</drop>
 			<spoil>
@@ -3647,7 +3706,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<acquire exp="124549" sp="29" />
+		<acquire exp="87185" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3684,12 +3743,12 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="82" max="190" chance="70" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="0.299999999999999" /> <!-- Adamantite -->
-				<item id="36558" min="1" max="1" chance="0.0750000000000006" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="959" min="1" max="1" chance="0.00299999999999999" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="1" chance="1.929" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="1.987" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</spoil>
 			<lucky_drop>
@@ -3701,7 +3760,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="21345" level="78" type="L2Monster" name="Ketra's Head Shaman">
+	<npc id="21345" level="80" type="L2Monster" name="Ketra's Head Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3725,7 +3784,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="210" /> <!-- Staff of Evil Spirits -->
-		<acquire exp="123051" sp="29" />
+		<acquire exp="184254" sp="44" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9870" hpRegen="8.925" mp="1674" mpRegen="3.1518" />
 			<attack physical="1033.1240034" magical="740.577283506" random="20" critical="1" accuracy="16" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3762,15 +3821,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="81" max="187" chance="70" /> <!-- Adena -->
 				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.0009" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.0009" /> <!-- Sealed Major Arcana Robe -->
-				<item id="36529" min="1" max="1" chance="0.0300000000000001" /> <!-- Quality Fiber -->
+				<item id="57" min="81" max="187" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.03" /> <!-- Quality Fiber -->
 				<item id="36564" min="1" max="1" chance="0.0009" /> <!-- Greater Synthetic Cokes -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="5.038" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="5.047" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</spoil>
 			<lucky_drop>
@@ -3782,7 +3841,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21346" level="78" type="L2Monster" name="Ketra's Head Royal Guard">
+	<npc id="21346" level="79" type="L2Monster" name="Ketra's Head Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -3801,7 +3860,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="124277" sp="29" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.874" mp="1641" mpRegen="3.1314" />
 			<attack physical="1009.3950039" magical="719.599557852" random="20" critical="1" accuracy="15" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3837,10 +3896,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
 				<item id="6369" min="1" max="1" chance="0.0009" /> <!-- Dragon Hunter Axe -->
-				<item id="36528" min="1" max="1" chance="0.300000000000001" /> <!-- Metallic Fiber -->
-				<item id="36563" min="1" max="1" chance="0.00549999999999992" /> <!-- Synthetic Cokes -->
+				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="36563" min="1" max="1" chance="0.0075" /> <!-- Synthetic Cokes -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (Mid-grade) -->
@@ -3854,7 +3913,7 @@
 			<height normal="38.5" grown="46.2" />
 		</collision>
 	</npc>
-	<npc id="21347" level="78" type="L2Monster" name="Ketra's Prophet">
+	<npc id="21347" level="80" type="L2Monster" name="Ketra's Prophet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3883,7 +3942,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="213" /> <!-- Branch of the Mother Tree -->
-		<acquire exp="181987" sp="43" />
+		<acquire exp="184254" sp="44" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9870" hpRegen="9.027" mp="1674" mpRegen="3.1824" />
 			<attack physical="1076.9313816" magical="781.2613576908" random="20" critical="1" accuracy="18" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3924,17 +3983,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
-				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Robe -->
+				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
+				<item id="57" min="119" max="277" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3964,7 +4023,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="129865" sp="31" />
+		<acquire exp="90905" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.976" mp="1607" mpRegen="3.16812" />
 			<attack physical="1055.0276874" magical="760.9193205984" random="20" critical="1" accuracy="17" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4000,13 +4059,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
 				<item id="6369" min="1" max="1" chance="0.0009" /> <!-- Dragon Hunter Axe -->
+				<item id="57" min="85" max="198" chance="70" /> <!-- Adena -->
 				<item id="36538" min="1" max="1" chance="0.075" /> <!-- Durable Leather Braid -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="5.349" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="1.028" /> <!-- Durable Leather -->
+				<item id="36517" min="1" max="1" chance="5.38" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="1.039" /> <!-- Durable Leather -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4039,7 +4098,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="210" /> <!-- Staff of Evil Spirits -->
-		<acquire exp="131909" sp="31" />
+		<acquire exp="92336" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.976" mp="1607" mpRegen="3.16812" />
 			<attack physical="1055.0276874" magical="760.9193205984" random="20" critical="1" accuracy="17" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4077,17 +4136,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="86" max="201" chance="70" /> <!-- Adena -->
 				<item id="6579" min="1" max="1" chance="0.0009" /> <!-- Arcana Mace -->
 				<item id="6680" min="1" max="1" chance="0.0009" /> <!-- Sealed Draconic Leather Armor -->
 				<item id="6684" min="1" max="1" chance="0.0009" /> <!-- Sealed Major Arcana Robe -->
-				<item id="36544" min="1" max="1" chance="0.0055" /> <!-- Orichalcum Wire -->
+				<item id="57" min="86" max="201" chance="70" /> <!-- Adena -->
+				<item id="36544" min="1" max="1" chance="0.0075" /> <!-- Orichalcum Wire -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4120,7 +4179,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="128859" sp="30" />
+		<acquire exp="90202" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4159,11 +4218,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="93" max="218" chance="70" /> <!-- Adena -->
 				<item id="9529" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Shield -->
-				<item id="6366" min="1" max="1" chance="0.000899999999999997" /> <!-- Imperial Staff -->
 				<item id="10120" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Sigil -->
+				<item id="6366" min="1" max="1" chance="0.0009" /> <!-- Imperial Staff -->
+				<item id="57" min="93" max="218" chance="70" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.075" /> <!-- Adamantite Wire -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4178,7 +4238,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4209,7 +4269,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="107242" sp="25" />
+		<acquire exp="75070" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4246,12 +4306,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="77" max="181" chance="70" /> <!-- Adena -->
 				<item id="6683" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Helmet -->
 				<item id="6724" min="1" max="1" chance="0.003" /> <!-- Sealed Tateossian Earring -->
 				<item id="9452" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Earring -->
-				<item id="36558" min="1" max="1" chance="0.0300000000000001" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="57" min="77" max="181" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36549" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (High-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4266,7 +4327,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4294,7 +4355,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="133667" sp="32" />
+		<acquire exp="93567" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4332,6 +4393,7 @@
 				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
 				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4344,9 +4406,9 @@
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.0055" /> <!-- Durable Braid -->
+				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4380,7 +4442,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
-		<acquire exp="117603" sp="28" />
+		<acquire exp="82322" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4422,13 +4484,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="86" max="199" chance="70" /> <!-- Adena -->
 				<item id="6683" min="1" max="1" chance="0.003" /> <!-- Sealed Draconic Leather Helmet -->
 				<item id="6724" min="1" max="1" chance="0.003" /> <!-- Sealed Tateossian Earring -->
 				<item id="9452" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Earring -->
+				<item id="57" min="86" max="199" chance="70" /> <!-- Adena -->
 				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36548" min="1" max="1" chance="0.00549999999999981" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="0.00549999999999981" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4472,7 +4535,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6917" /> <!-- Monster Only (Poison Sting) -->
-		<acquire exp="122569" sp="29" />
+		<acquire exp="85799" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -4509,12 +4572,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
-				<item id="6371" min="1" max="1" chance="0.0009" /> <!-- Demon Splinter -->
-				<item id="9450" min="1" max="1" chance="0.0009" /> <!-- Dynasty Bagh-Nakh -->
 				<item id="6685" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Gloves -->
 				<item id="9527" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Gloves -->
+				<item id="6371" min="1" max="1" chance="0.0009" /> <!-- Demon Splinter -->
+				<item id="9450" min="1" max="1" chance="0.0009" /> <!-- Dynasty Bagh-Nakh -->
+				<item id="57" min="89" max="208" chance="70" /> <!-- Adena -->
 				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4529,7 +4593,7 @@
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4564,7 +4628,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="119196" sp="28" />
+		<acquire exp="83438" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4606,14 +4670,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
-				<item id="10252" min="1" max="1" chance="0.0009" /> <!-- Dynasty Staff -->
 				<item id="6687" min="1" max="1" chance="0.003" /> <!-- Sealed Major Arcana Circlet -->
 				<item id="9526" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Circlet -->
+				<item id="10252" min="1" max="1" chance="0.0009" /> <!-- Dynasty Staff -->
+				<item id="57" min="87" max="202" chance="70" /> <!-- Adena -->
 				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36548" min="1" max="1" chance="0.0055000000000001" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
 				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
 				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4625,8 +4690,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="5.469" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="1.002" /> <!-- Durable Leather -->
+				<item id="36517" min="1" max="1" chance="5.454" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="1.094" /> <!-- Durable Leather -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4654,7 +4719,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="135728" sp="32" />
+		<acquire exp="95010" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4696,6 +4761,7 @@
 				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
 				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4707,7 +4773,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="3.003" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="3.002" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</spoil>
 			<lucky_drop>
@@ -4719,7 +4785,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="21357" level="78" type="L2Monster" name="Varka Silenos Priest">
+	<npc id="21357" level="79" type="L2Monster" name="Varka Silenos Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -4741,7 +4807,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="123304" sp="29" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4780,6 +4846,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5312" min="1" max="1" chance="0.003" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.003" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5317" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Circlet -->
+				<item id="57" min="56" max="131" chance="70" /> <!-- Adena -->
+				<item id="5495" min="1" max="1" chance="0.3" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5527" min="1" max="1" chance="0.3" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4790,6 +4868,15 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="9" />
@@ -4819,7 +4906,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
-		<acquire exp="127535" sp="30" />
+		<acquire exp="89275" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4861,10 +4948,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
-				<item id="9442" min="1" max="1" chance="0.0009" /> <!-- Dynasty Sword -->
 				<item id="9517" min="1" max="1" chance="0.003" /> <!-- Sealed Dynasty Gauntlets -->
+				<item id="9442" min="1" max="1" chance="0.0009" /> <!-- Dynasty Sword -->
+				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4876,7 +4964,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="1" chance="2.242" /> <!-- Silver -->
+				<item id="36522" min="1" max="1" chance="2.306" /> <!-- Silver -->
 				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
 			</spoil>
 			<lucky_drop>
@@ -4905,7 +4993,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="135728" sp="32" />
+		<acquire exp="95010" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4941,11 +5029,12 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="49" max="113" chance="70" /> <!-- Adena -->
-				<item id="36528" min="1" max="1" chance="0.299999999999999" /> <!-- Metallic Fiber -->
-				<item id="36523" min="1" max="1" chance="0.0749999999999987" /> <!-- Adamantite -->
-				<item id="36553" min="1" max="1" chance="0.0299999999999999" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.0299999999999999" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.0055000000000002" /> <!-- Synthetic Cokes -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="36523" min="1" max="1" chance="0.075" /> <!-- Adamantite -->
+				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.0075" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4958,9 +5047,9 @@
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.0055" /> <!-- Durable Braid -->
+				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4996,7 +5085,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="175546" sp="42" />
+		<acquire exp="122882" sp="29" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -5039,11 +5128,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="128" max="298" chance="70" /> <!-- Adena -->
 				<item id="9453" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Necklace -->
-				<item id="36548" min="1" max="1" chance="0.0299999999999998" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.0299999999999998" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="0.0055" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="57" min="128" max="298" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5055,7 +5145,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36557" min="1" max="1" chance="1.294" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="1.189" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
@@ -5089,7 +5179,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="111839" sp="26" />
+		<acquire exp="78287" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -5128,15 +5218,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
 				<item id="57" min="81" max="189" chance="70" /> <!-- Adena -->
-				<item id="5311" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5316" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5522" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Armor of Nightmare Pattern -->
-				<item id="5523" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5522" min="1" max="1" chance="0.3" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Plate Armor Pattern -->
 				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
 				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="959" min="1" max="1" chance="0.000899999999999999" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5151,7 +5242,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5185,7 +5276,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" /> <!-- Meteor Shower -->
-		<acquire exp="127535" sp="30" />
+		<acquire exp="89275" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -5227,14 +5318,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5326" min="1" max="1" chance="0.003" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Robe -->
 				<item id="57" min="93" max="216" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5329" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Majestic Robe -->
-				<item id="5487" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Robe of Nightmare Fabric -->
-				<item id="5488" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Majestic Robe Fabric -->
-				<item id="960" min="1" max="1" chance="0.00549999999999995" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="36548" min="1" max="1" chance="0.00549999999999995" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="0.00549999999999995" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="5487" min="1" max="1" chance="0.3" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="960" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5249,7 +5341,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5277,7 +5369,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="118215" sp="28" />
+		<acquire exp="82751" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5315,20 +5407,21 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5313" min="1" max="1" chance="0.003" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.003" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Boots -->
 				<item id="57" min="86" max="200" chance="70" /> <!-- Adena -->
-				<item id="5313" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5314" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5319" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Majestic Boots -->
-				<item id="5515" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Majestic Gauntlet Design -->
-				<item id="5514" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Gauntlets of Nightmare Design -->
-				<item id="5503" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Majestic Boot Lining -->
-				<item id="5502" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Boots of Nightmare Lining -->
-				<item id="36518" min="1" max="1" chance="0.0749999999999999" /> <!-- Durable Leather -->
-				<item id="36558" min="1" max="1" chance="0.0300000000000002" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36548" min="1" max="1" chance="0.00300000000000002" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.00300000000000002" /> <!-- Synthetic Cokes -->
-				<item id="959" min="1" max="1" chance="0.000899999999999995" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5515" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5514" min="1" max="1" chance="0.3" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5503" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5502" min="1" max="1" chance="0.3" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="36518" min="1" max="1" chance="0.075" /> <!-- Durable Leather -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5343,7 +5436,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5354,7 +5447,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21364" level="78" type="L2Monster" name="Varka Silenos Chief Priest">
+	<npc id="21364" level="79" type="L2Monster" name="Varka Silenos Chief Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5378,7 +5471,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="157652" sp="37" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -5419,17 +5512,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="56" max="131" chance="70" /> <!-- Adena -->
-				<item id="5315" min="1" max="1" chance="0.003" /> <!-- Sealed Shield of Nightmare -->
 				<item id="5312" min="1" max="1" chance="0.003" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.003" /> <!-- Sealed Shield of Nightmare -->
 				<item id="5317" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Circlet -->
+				<item id="57" min="56" max="131" chance="70" /> <!-- Adena -->
 				<item id="5495" min="1" max="1" chance="0.3" /> <!-- Sealed Shield of Nightmare Fragment -->
 				<item id="5527" min="1" max="1" chance="0.3" /> <!-- Sealed Helm of Nightmare Design -->
 				<item id="5528" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Circlet Design -->
 				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.0055000000000001" /> <!-- Accessory Gem (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5444,7 +5538,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5455,7 +5549,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21365" level="78" type="L2Monster" name="Varka Silenos Great Magus">
+	<npc id="21365" level="79" type="L2Monster" name="Varka Silenos Great Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5478,7 +5572,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
-		<acquire exp="117603" sp="28" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5521,15 +5615,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5320" min="1" max="1" chance="0.003" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="57" min="86" max="199" chance="70" /> <!-- Adena -->
-				<item id="5320" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5323" min="1" max="1" chance="0.00300000000000003" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="5480" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="5481" min="1" max="1" chance="0.300000000000003" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="36558" min="1" max="1" chance="0.0299999999999998" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36548" min="1" max="1" chance="0.00549999999999994" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="0.00299999999999998" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="959" min="1" max="1" chance="0.000900000000000015" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5480" min="1" max="1" chance="0.3" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5544,7 +5639,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5555,7 +5650,7 @@
 			<height normal="49.2" />
 		</collision>
 	</npc>
-	<npc id="21366" level="78" type="L2Monster" name="Varka Silenos Officer">
+	<npc id="21366" level="79" type="L2Monster" name="Varka Silenos Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5578,7 +5673,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
-		<acquire exp="137899" sp="33" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -5620,15 +5715,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5311" min="1" max="1" chance="0.0009" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Plate Armor -->
 				<item id="57" min="101" max="234" chance="70" /> <!-- Adena -->
-				<item id="5311" min="1" max="1" chance="0.000899999999999978" /> <!-- Sealed Armor of Nightmare -->
-				<item id="5316" min="1" max="1" chance="0.000899999999999978" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="5522" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Armor of Nightmare Pattern -->
-				<item id="5523" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Majestic Plate Armor Pattern -->
-				<item id="6698" min="1" max="1" chance="0.299999999999997" /> <!-- Sealed Tateossian Earring Part -->
-				<item id="6699" min="1" max="1" chance="0.299999999999997" /> <!-- Sealed Tateossian Ring Gem -->
-				<item id="6700" min="1" max="1" chance="0.299999999999997" /> <!-- Sealed Tateossian Necklace Chain -->
+				<item id="5522" min="1" max="1" chance="0.3" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="6698" min="1" max="1" chance="0.3" /> <!-- Sealed Tateossian Earring Part -->
+				<item id="6699" min="1" max="1" chance="0.3" /> <!-- Sealed Tateossian Ring Gem -->
+				<item id="6700" min="1" max="1" chance="0.3" /> <!-- Sealed Tateossian Necklace Chain -->
 				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5640,10 +5736,10 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.069" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.108" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5671,7 +5767,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="135728" sp="32" />
+		<acquire exp="95010" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5706,13 +5802,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="49" max="113" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.0009" /> <!-- Soul Bow -->
-				<item id="5534" min="1" max="1" chance="0.0300000000000001" /> <!-- Soul Bow Shaft -->
-				<item id="6711" min="1" max="1" chance="0.03" /> <!-- Sealed Major Arcana Robe Part -->
+				<item id="57" min="49" max="113" chance="70" /> <!-- Adena -->
 				<item id="6710" min="1" max="1" chance="0.3" /> <!-- Sealed Draconic Leather Helmet Pattern -->
 				<item id="6712" min="1" max="1" chance="0.3" /> <!-- Sealed Major Arcana Gloves fabric -->
 				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="5534" min="1" max="1" chance="0.03" /> <!-- Soul Bow Shaft -->
+				<item id="6711" min="1" max="1" chance="0.03" /> <!-- Sealed Major Arcana Robe Part -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5727,7 +5824,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5738,7 +5835,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="21368" level="78" type="L2Monster" name="Varka Silenos Grand Priest">
+	<npc id="21368" level="79" type="L2Monster" name="Varka Silenos Grand Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5763,7 +5860,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="169415" sp="40" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -5806,15 +5903,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="123" max="287" chance="70" /> <!-- Adena -->
 				<item id="236" min="1" max="1" chance="0.003" /> <!-- Soul Separator -->
+				<item id="57" min="123" max="287" chance="70" /> <!-- Adena -->
 				<item id="5537" min="1" max="1" chance="0.3" /> <!-- Soul Separator Head -->
-				<item id="36528" min="1" max="1" chance="0.300000000000001" /> <!-- Metallic Fiber -->
-				<item id="36523" min="1" max="1" chance="0.0300000000000001" /> <!-- Adamantite -->
-				<item id="36558" min="1" max="1" chance="0.0300000000000001" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="0.00300000000000001" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.00300000000000001" /> <!-- Synthetic Cokes -->
-				<item id="959" min="1" max="1" chance="0.000899999999999991" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5826,10 +5924,10 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.253" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.254" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5840,7 +5938,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21369" level="78" type="L2Monster" name="Varka's Commander">
+	<npc id="21369" level="72" type="L2Monster" name="Varka's Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5865,7 +5963,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
-		<acquire exp="149364" sp="35" />
+		<acquire exp="54887" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5909,7 +6007,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="21370" level="78" type="L2Monster" name="Varka's Elite Escort">
+	<npc id="21370" level="74" type="L2Monster" name="Varka's Elite Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
@@ -5928,7 +6026,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
-		<acquire exp="110489" sp="26" />
+		<acquire exp="58812" sp="14" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5968,7 +6066,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="21371" level="78" type="L2Monster" name="Varka's Chief Magus">
+	<npc id="21371" level="74" type="L2Monster" name="Varka's Chief Magus">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -5991,7 +6089,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="104604" sp="25" />
+		<acquire exp="4327" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -6032,7 +6130,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="21372" level="78" type="L2Monster" name="Varka's Chief Escort">
+	<npc id="21372" level="79" type="L2Monster" name="Varka's Chief Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
@@ -6051,7 +6149,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
-		<acquire exp="120520" sp="28" />
+		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -6087,23 +6185,23 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5326" min="1" max="1" chance="0.0009" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Robe -->
 				<item id="57" min="43" max="100" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.000899999999999978" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5329" min="1" max="1" chance="0.000899999999999978" /> <!-- Sealed Majestic Robe -->
-				<item id="5487" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Robe of Nightmare Fabric -->
-				<item id="5488" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Majestic Robe Fabric -->
-				<item id="36523" min="1" max="1" chance="0.0300000000000002" /> <!-- Adamantite -->
-				<item id="36528" min="1" max="1" chance="0.0300000000000002" /> <!-- Metallic Fiber -->
-				<item id="36553" min="1" max="1" chance="0.00300000000000002" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.00549999999999998" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.00300000000000002" /> <!-- Synthetic Cokes -->
-				<item id="959" min="1" max="1" chance="0.000899999999999976" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5487" min="1" max="1" chance="0.3" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -6114,7 +6212,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="21373" level="78" type="L2Monster" name="Varka's Prophet">
+	<npc id="21373" level="74" type="L2Monster" name="Varka's Prophet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
@@ -6141,7 +6239,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="152613" sp="36" />
+		<acquire exp="4327" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -6204,7 +6302,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
-		<acquire exp="122548" sp="29" />
+		<acquire exp="85784" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -6240,21 +6338,21 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="305" min="1" max="1" chance="0.0009" /> <!-- Tallum Glaive -->
 				<item id="57" min="44" max="102" chance="70" /> <!-- Adena -->
-				<item id="305" min="1" max="1" chance="0.000899999999999968" /> <!-- Tallum Glaive -->
-				<item id="5541" min="1" max="1" chance="0.0750000000000001" /> <!-- Tallum Glaive Edge -->
-				<item id="36523" min="1" max="1" chance="0.0300000000000001" /> <!-- Adamantite -->
-				<item id="36528" min="1" max="1" chance="0.0300000000000001" /> <!-- Metallic Fiber -->
-				<item id="960" min="1" max="1" chance="0.00300000000000001" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="36553" min="1" max="1" chance="0.00300000000000001" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.00550000000000002" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36563" min="1" max="1" chance="0.00300000000000001" /> <!-- Synthetic Cokes -->
+				<item id="5541" min="1" max="1" chance="0.075" /> <!-- Tallum Glaive Edge -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -6285,7 +6383,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="113677" sp="27" />
+		<acquire exp="79574" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -6322,21 +6420,21 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="5320" min="1" max="1" chance="0.0009" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.0009" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="57" min="41" max="95" chance="70" /> <!-- Adena -->
-				<item id="5320" min="1" max="1" chance="0.000899999999999998" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5323" min="1" max="1" chance="0.000899999999999998" /> <!-- Sealed Majestic Leather Armor -->
-				<item id="5480" min="1" max="1" chance="0.0750000000000001" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="5481" min="1" max="1" chance="0.0750000000000001" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="36548" min="1" max="1" chance="0.00300000000000003" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="36553" min="1" max="1" chance="0.00300000000000003" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.00549999999999995" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="959" min="1" max="1" chance="0.000899999999999996" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="5480" min="1" max="1" chance="0.075" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.075" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -6365,7 +6463,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="121514" sp="29" />
+		<acquire exp="93606" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3077" hpRegen="8.874" mp="1848" mpRegen="3.1314" />
 			<attack physical="1009.3950039" magical="719.599557852" random="10" critical="4" accuracy="10.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -6405,6 +6503,22 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="292" max="679" chance="70" /> <!-- Adena -->
+				<item id="1808" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="5282" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="3.068" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="21395" level="78" type="L2Monster" name="Elder Lavasaurus">
 		<!-- Confirmed CT2.5 -->

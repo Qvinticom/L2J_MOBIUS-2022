@@ -308,9 +308,9 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="24014" level="66" type="L2Npc" name="Vanor" title="Mercenary of Glory">
+	<npc id="24014" level="66" type="L2Monster" name="Vanor" title="Mercenary of Glory">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2367" hpRegen="10.5" mp="1219" mpRegen="3.6" />
@@ -336,19 +336,19 @@
 				<item id="2416" min="1" max="1" chance="0.0075" /> <!-- Sealed Blue Wolf Helmet -->
 				<item id="2417" min="1" max="1" chance="0.0075" /> <!-- Sealed Doom Helmet -->
 				<item id="57" min="672" max="1570" chance="70" /> <!-- Adena -->
-				<item id="1870" min="1" max="1" chance="29.14" /> <!-- Coal -->
-				<item id="4072" min="1" max="1" chance="2.368" /> <!-- Sealed Avadon Circlet Pattern -->
-				<item id="4102" min="1" max="1" chance="2.269" /> <!-- Sealed Zubei's Helmet Design -->
-				<item id="4089" min="1" max="1" chance="1.982" /> <!-- Sealed Doom Helmet Design -->
-				<item id="1874" min="1" max="1" chance="1.931" /> <!-- Oriharukon Ore -->
-				<item id="1875" min="1" max="1" chance="1.929" /> <!-- Stone of Purity -->
-				<item id="4088" min="1" max="1" chance="1.907" /> <!-- Sealed Blue Wolf Helmet Design -->
+				<item id="1870" min="1" max="1" chance="29.16" /> <!-- Coal -->
+				<item id="4072" min="1" max="1" chance="2.321" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="4102" min="1" max="1" chance="2.303" /> <!-- Sealed Zubei's Helmet Design -->
+				<item id="4089" min="1" max="1" chance="1.988" /> <!-- Sealed Doom Helmet Design -->
+				<item id="1875" min="1" max="1" chance="1.977" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="1.95" /> <!-- Oriharukon Ore -->
+				<item id="4088" min="1" max="1" chance="1.911" /> <!-- Sealed Blue Wolf Helmet Design -->
 				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
-				<item id="1870" min="1" max="7" chance="81.63" /> <!-- Coal -->
-				<item id="1875" min="1" max="1" chance="21.29" /> <!-- Stone of Purity -->
-				<item id="1874" min="1" max="1" chance="21.05" /> <!-- Oriharukon Ore -->
+				<item id="1870" min="1" max="7" chance="81.2" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="21.96" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="20.32" /> <!-- Stone of Purity -->
 			</spoil>
 		</drop_lists>
 	</npc>

@@ -396,9 +396,9 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="23918" level="99" type="L2Npc" name="Drake">
+	<npc id="23918" level="57" type="L2Monster" name="Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6" />
@@ -417,6 +417,24 @@
 			<radius normal="30" />
 			<height normal="100" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="135" min="1" max="1" chance="0.03" /> <!-- Samurai Long Sword -->
+				<item id="286" min="1" max="1" chance="0.03" /> <!-- Eminence Bow -->
+				<item id="57" min="2199" max="5130" chance="70" /> <!-- Adena -->
+				<item id="1864" min="4" max="12" chance="31.06" /> <!-- Stem -->
+				<item id="1867" min="7" max="21" chance="11.5" /> <!-- Animal Skin -->
+				<item id="952" min="1" max="1" chance="1.73" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="2121" min="1" max="1" chance="1.563" /> <!-- Eminence Bow Shaft -->
+				<item id="2115" min="1" max="1" chance="1.521" /> <!-- Samurai Long Sword Blade -->
+			</drop>
+			<spoil>
+				<item id="2961" min="1" max="1" chance="43.63" /> <!-- Full Plate Boot Fragment -->
+				<item id="2962" min="1" max="1" chance="43.42" /> <!-- Drake Leather Glove Design -->
+				<item id="1877" min="1" max="1" chance="30.88" /> <!-- Adamantite Nugget -->
+				<item id="1894" min="1" max="1" chance="26.94" /> <!-- Crafted Leather -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="23919" level="99" type="L2Npc" name="Mutated Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1232,9 +1250,9 @@
 			<height normal="47.2" />
 		</collision>
 	</npc>
-	<npc id="23956" level="99" type="L2Npc" name="Veil Master" title="Aide of the Blood Queen">
+	<npc id="23956" level="74" type="L2Monster" name="Veil Master" title="Aide of the Blood Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="14528" hpRegen="10.5" mp="1251" mpRegen="3.6" />
@@ -1253,6 +1271,25 @@
 			<radius normal="12" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
+				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="11.72" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.039" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.721" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.667" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.008" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.214" /> <!-- Charcoal -->
+				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
+				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="2.451" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="23957" level="99" type="L2Npc" name="Tanta Healer" title="u,Commander’s Medic">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1320,9 +1357,9 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="23960" level="99" type="L2Npc" name="Banshee" title="u,Queen’s Maid">
+	<npc id="23960" level="65" type="L2Monster" name="Banshee" title="u,Queen’s Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6" />
@@ -1341,6 +1378,26 @@
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="503" min="1" max="1" chance="0.3" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="0.3" /> <!-- Sealed Avadon Circlet -->
+				<item id="57" min="2539" max="5931" chance="70" /> <!-- Adena -->
+				<item id="4180" min="1" max="1" chance="9.825" /> <!-- Recipe: Silver Arrow -->
+				<item id="4072" min="1" max="3" chance="8.782" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="4102" min="1" max="3" chance="5.885" /> <!-- Sealed Zubei's Helmet Design -->
+				<item id="4952" min="1" max="1" chance="1.177" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="1.105" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="4952" min="1" max="1" chance="11.53" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="11.28" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="7.464" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="7.418" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="23961" level="99" type="L2Npc" name="Angel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1562,9 +1619,9 @@
 			<height normal="47.2" />
 		</collision>
 	</npc>
-	<npc id="23971" level="99" type="L2Npc" name="Veil Master" title="Aide of the Blood Queen">
+	<npc id="23971" level="74" type="L2Monster" name="Veil Master" title="Aide of the Blood Queen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="15471" hpRegen="10.5" mp="1251" mpRegen="3.6" />
@@ -1583,6 +1640,25 @@
 			<radius normal="12" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
+				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="11.72" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.039" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.721" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.667" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.008" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.214" /> <!-- Charcoal -->
+				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
+				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="2.451" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="23972" level="99" type="L2Npc" name="Tanta Healer" title="u,Commander’s Medic">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1650,9 +1726,9 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="23975" level="99" type="L2Npc" name="Banshee" title="u,Queen’s Maid">
+	<npc id="23975" level="65" type="L2Monster" name="Banshee" title="Queen’s Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6" />
@@ -1671,6 +1747,26 @@
 			<radius normal="14" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="503" min="1" max="1" chance="0.3" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="0.3" /> <!-- Sealed Avadon Circlet -->
+				<item id="57" min="2539" max="5931" chance="70" /> <!-- Adena -->
+				<item id="4180" min="1" max="1" chance="9.825" /> <!-- Recipe: Silver Arrow -->
+				<item id="4072" min="1" max="3" chance="8.782" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="4102" min="1" max="3" chance="5.885" /> <!-- Sealed Zubei's Helmet Design -->
+				<item id="4952" min="1" max="1" chance="1.177" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="1.105" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="4952" min="1" max="1" chance="11.53" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+				<item id="4962" min="1" max="1" chance="11.28" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+				<item id="4990" min="1" max="1" chance="7.464" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+				<item id="4991" min="1" max="1" chance="7.418" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="23976" level="99" type="L2Npc" name="Angel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

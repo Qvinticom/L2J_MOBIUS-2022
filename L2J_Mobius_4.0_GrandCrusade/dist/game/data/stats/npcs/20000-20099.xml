@@ -4,7 +4,7 @@
 		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="44" sp="2" />
+		<acquire exp="44" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="39" hpRegen="2" mp="40" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -83,7 +83,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="4" /> <!-- Club -->
-		<acquire exp="267" sp="5" />
+		<acquire exp="267" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="80" hpRegen="2" mp="69" mpRegen="0.9" />
 			<attack physical="12.34006" magical="8.42666" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -115,8 +115,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="112" min="1" max="1" chance="13.57" /> <!-- Apprentice's Earring -->
 				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
-				<item id="112" min="1" max="1" chance="13.04" /> <!-- Apprentice's Earring -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -128,7 +129,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="116" min="1" max="1" chance="11.78" /> <!-- Magic Ring -->
+				<item id="116" min="1" max="1" chance="11.41" /> <!-- Magic Ring -->
 				<item id="1786" min="1" max="1" chance="0.3" /> <!-- Recipe: Broadsword -->
 			</spoil>
 		</drop_lists>
@@ -146,7 +147,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="320" sp="6" />
+		<acquire exp="320" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="93" hpRegen="2" mp="77" mpRegen="0.9" />
 			<attack physical="13.52471" magical="9.23562" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -180,9 +181,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
 				<item id="1122" min="1" max="1" chance="0.75" /> <!-- Cotton Shoes -->
 				<item id="1129" min="1" max="1" chance="0.75" /> <!-- Crude Leather Shoes -->
+				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -212,7 +214,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="374" sp="8" />
+		<acquire exp="374" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="108" hpRegen="2" mp="84" mpRegen="0.9" />
 			<attack physical="14.80956" magical="10.11301" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -246,9 +248,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="19" min="1" max="1" chance="1.511" /> <!-- Small Shield -->
 				<item id="57" min="1" max="1" chance="70" /> <!-- Adena -->
-				<item id="19" min="1" max="1" chance="1.572" /> <!-- Small Shield -->
 				<item id="1789" min="1" max="1" chance="0.03" /> <!-- Recipe: Cedar Staff -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -260,7 +263,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1060" min="1" max="1" chance="2.195" /> <!-- Healing Potion -->
+				<item id="1060" min="1" max="1" chance="2.183" /> <!-- Healing Potion -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -338,7 +341,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="1" /> <!-- Short Sword -->
-		<acquire exp="747" sp="1" />
+		<acquire exp="149" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="230" hpRegen="2.5" mp="140" mpRegen="1.2" />
 			<attack physical="27.24646" magical="18.6058" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -371,9 +374,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36516" min="1" max="1" chance="3.841" /> <!-- Worn Leather -->
-				<item id="36536" min="1" max="1" chance="0.750000000000014" /> <!-- Worn Leather Braid -->
-				<item id="36546" min="1" max="1" chance="0.300000000000001" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36516" min="1" max="1" chance="3.978" /> <!-- Worn Leather -->
+				<item id="36536" min="1" max="1" chance="0.75" /> <!-- Worn Leather Braid -->
+				<item id="36546" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Low-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -385,7 +389,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.07" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.077" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -408,7 +412,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="156" /> <!-- Hand Axe -->
-		<acquire exp="747" sp="1" />
+		<acquire exp="149" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="230" hpRegen="2.5" mp="140" mpRegen="1.2" />
 			<attack physical="27.24646" magical="18.6058" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -441,9 +445,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="1831" min="1" max="1" chance="5.24799999999996" /> <!-- Antidote -->
-				<item id="36516" min="1" max="1" chance="3.91000000000004" /> <!-- Worn Leather -->
+				<item id="1831" min="1" max="1" chance="5.285" /> <!-- Antidote -->
+				<item id="36516" min="1" max="1" chance="3.876" /> <!-- Worn Leather -->
 				<item id="36858" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Upgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -476,7 +481,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
-		<acquire exp="801" sp="1" />
+		<acquire exp="160" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="246" hpRegen="2.5" mp="149" mpRegen="1.2" />
 			<attack physical="29.61691" magical="20.22451" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -509,8 +514,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="1833" min="1" max="1" chance="8.172" /> <!-- Bandage -->
-				<item id="36541" min="1" max="1" chance="1.03" /> <!-- Steel Wire -->
+				<item id="1833" min="1" max="1" chance="8.152" /> <!-- Bandage -->
+				<item id="36541" min="1" max="1" chance="1.131" /> <!-- Steel Wire -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -522,7 +528,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.275" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.297" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -545,7 +551,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="825" sp="1" />
+		<acquire exp="165" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="246" hpRegen="2.5" mp="149" mpRegen="1.2" />
 			<attack physical="29.61691" magical="20.22451" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -578,17 +584,8 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36521" min="1" max="1" chance="2.423" /> <!-- Iron Ore -->
-				<item id="36866" min="1" max="1" chance="0.00089999999999999" /> <!-- Recipe: Silver - Upgrade -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="36521" min="1" max="1" chance="2.43" /> <!-- Iron Ore -->
+				<item id="36866" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Upgrade -->
 			</drop>
 			<spoil>
 				<item id="36522" min="1" max="1" chance="0.3" /> <!-- Silver -->
@@ -611,7 +608,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="873" sp="1" />
+		<acquire exp="174" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="264" hpRegen="2.5" mp="157" mpRegen="1.2" />
 			<attack physical="32.16396" magical="21.96382" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -649,6 +646,7 @@
 				<item id="6035" min="1" max="1" chance="0.3" /> <!-- Magic Haste Potion -->
 				<item id="36546" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Low-grade) -->
 				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -660,7 +658,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.433" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.446" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -680,7 +678,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="693" sp="18" />
+		<acquire exp="138" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="214" hpRegen="2.5" mp="132" mpRegen="1.2" />
 			<attack physical="25.04271" magical="17.10092" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -715,7 +713,8 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="8" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="12.7" /> <!-- Fiber -->
+				<item id="36526" min="1" max="1" chance="11.86" /> <!-- Fiber -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -727,7 +726,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36526" min="1" max="1" chance="13.14" /> <!-- Fiber -->
+				<item id="36526" min="1" max="1" chance="13.48" /> <!-- Fiber -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -748,7 +747,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
-		<acquire exp="907" sp="1" />
+		<acquire exp="181" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="282" hpRegen="2.5" mp="166" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -782,9 +781,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="36521" min="1" max="1" chance="1.61799999999999" /> <!-- Iron Ore -->
-				<item id="36556" min="1" max="1" chance="0.749999999999996" /> <!-- Accessory Gem (Low-grade) -->
-				<item id="36551" min="1" max="1" chance="0.299999999999988" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36521" min="1" max="1" chance="1.626" /> <!-- Iron Ore -->
+				<item id="36556" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -796,7 +796,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.632" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.566" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -820,7 +820,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
-		<acquire exp="1551" sp="1" />
+		<acquire exp="310" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="387" hpRegen="3.5" mp="218" mpRegen="1.5" />
 			<attack physical="51.75278" magical="35.34044" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -853,9 +853,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="39" min="1" max="1" chance="0.75" /> <!-- Boots (item) -->
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
-				<item id="39" min="1" max="1" chance="0.75" /> <!-- Boots -->
-				<item id="955" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="955" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -867,7 +868,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.493" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.378" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -934,7 +935,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="747" sp="19" />
+		<acquire exp="149" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="230" hpRegen="2.5" mp="140" mpRegen="1.2" />
 			<attack physical="27.24646" magical="18.6058" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -969,7 +970,8 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36536" min="1" max="1" chance="2.877" /> <!-- Worn Leather Braid -->
+				<item id="36536" min="1" max="1" chance="2.908" /> <!-- Worn Leather Braid -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -981,7 +983,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.092" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.113" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1001,7 +1003,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="747" sp="1" />
+		<acquire exp="149" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="230" hpRegen="2.5" mp="140" mpRegen="1.2" />
 			<attack physical="27.24646" magical="18.6058" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1034,8 +1036,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="1060" min="1" max="1" chance="6.46399999999998" /> <!-- Healing Potion -->
-				<item id="36556" min="1" max="1" chance="0.750000000000021" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="1060" min="1" max="1" chance="6.496" /> <!-- Healing Potion -->
+				<item id="36556" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Low-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1047,7 +1050,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.075" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.073" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1067,7 +1070,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="801" sp="1" />
+		<acquire exp="160" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="246" hpRegen="2.5" mp="149" mpRegen="1.2" />
 			<attack physical="29.61691" magical="20.22451" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1100,19 +1103,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="1831" min="1" max="1" chance="4.07800000000003" /> <!-- Antidote -->
-				<item id="36516" min="1" max="1" chance="3.07900000000003" /> <!-- Worn Leather -->
-				<item id="735" min="1" max="1" chance="0.299999999999996" /> <!-- Haste Potion -->
-				<item id="36858" min="1" max="1" chance="0.000899999999999966" /> <!-- Recipe: Leather - Upgrade -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="1831" min="1" max="1" chance="4.075" /> <!-- Antidote -->
+				<item id="36516" min="1" max="1" chance="3.064" /> <!-- Worn Leather -->
+				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
+				<item id="36858" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Upgrade -->
 			</drop>
 			<spoil>
 				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
@@ -1136,7 +1130,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
-		<acquire exp="926" sp="1" />
+		<acquire exp="185" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="282" hpRegen="2.5" mp="166" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1170,9 +1164,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="734" min="1" max="1" chance="0.300000000000001" /> <!-- Wind Walk Potion -->
-				<item id="36517" min="1" max="1" chance="0.0750000000000001" /> <!-- Leather -->
-				<item id="36856" min="1" max="1" chance="0.000899999999999987" /> <!-- Recipe: Worn Leather - Downgrade -->
+				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
+				<item id="36517" min="1" max="1" chance="0.075" /> <!-- Leather -->
+				<item id="36856" min="1" max="1" chance="0.0009" /> <!-- Recipe: Worn Leather - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1184,7 +1179,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36516" min="1" max="1" chance="13.64" /> <!-- Worn Leather -->
+				<item id="36516" min="1" max="1" chance="14.37" /> <!-- Worn Leather -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1205,7 +1200,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="2901" sp="1" />
+		<acquire exp="580" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="435" hpRegen="3.5" mp="245" mpRegen="1.5" />
 			<attack physical="60.19687" magical="41.10666" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1240,9 +1235,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
 				<item id="604" min="1" max="1" chance="0.75" /> <!-- Quality Leather Gloves -->
+				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
 				<item id="956" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1255,7 +1251,7 @@
 			</drop>
 			<spoil>
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.0055" /> <!-- Greater Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
@@ -1277,7 +1273,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
-		<acquire exp="856" sp="1" />
+		<acquire exp="171" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="264" hpRegen="2.5" mp="157" mpRegen="1.2" />
 			<attack physical="32.16396" magical="21.96382" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1311,8 +1307,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="0.0750000000000001" /> <!-- Silver -->
-				<item id="36864" min="1" max="1" chance="0.000899999999999968" /> <!-- Recipe: Iron Ore - Downgrade -->
+				<item id="36522" min="1" max="1" chance="0.075" /> <!-- Silver -->
+				<item id="36864" min="1" max="1" chance="0.0009" /> <!-- Recipe: Iron Ore - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1324,7 +1321,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36521" min="1" max="1" chance="5.053" /> <!-- Iron Ore -->
+				<item id="36521" min="1" max="1" chance="5.022" /> <!-- Iron Ore -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1344,7 +1341,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="856" sp="1" />
+		<acquire exp="171" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="264" hpRegen="2.5" mp="157" mpRegen="1.2" />
 			<attack physical="32.16396" magical="21.96382" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1378,9 +1375,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="4.48999999999999" /> <!-- Fiber -->
-				<item id="734" min="1" max="1" chance="0.299999999999998" /> <!-- Wind Walk Potion -->
-				<item id="36874" min="1" max="1" chance="0.00089999999999999" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36526" min="1" max="1" chance="4.587" /> <!-- Fiber -->
+				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
+				<item id="36874" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1413,7 +1411,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="2956" sp="1" />
+		<acquire exp="591" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="460" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1449,10 +1447,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
+				<item id="45" min="1" max="1" chance="0.3" /> <!-- Bone Helmet -->
 				<item id="5285" min="1" max="1" chance="0.03" /> <!-- Heavy Sword -->
 				<item id="7880" min="1" max="1" chance="0.03" /> <!-- Steel Sword -->
-				<item id="45" min="1" max="1" chance="0.3" /> <!-- Bone Helmet -->
+				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1464,9 +1463,9 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36556" min="1" max="1" chance="1.325" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36556" min="1" max="1" chance="1.413" /> <!-- Accessory Gem (Low-grade) -->
 				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.0055" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1487,7 +1486,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="1" /> <!-- Short Sword -->
-		<acquire exp="1425" sp="1" />
+		<acquire exp="285" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1519,9 +1518,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
 				<item id="120" min="1" max="1" chance="0.075" /> <!-- Sword of Reflection -->
+				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
 				<item id="956" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1555,7 +1555,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="907" sp="1" />
+		<acquire exp="181" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="282" hpRegen="2.5" mp="166" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1590,9 +1590,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="36516" min="1" max="1" chance="4.27099999999999" /> <!-- Worn Leather -->
-				<item id="734" min="1" max="1" chance="0.300000000000002" /> <!-- Wind Walk Potion -->
-				<item id="36858" min="1" max="1" chance="0.000900000000000006" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36516" min="1" max="1" chance="4.382" /> <!-- Worn Leather -->
+				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
+				<item id="36858" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Upgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1625,7 +1626,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="757" sp="21" />
+		<acquire exp="757" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="282" hpRegen="2.5" mp="166" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1662,11 +1663,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
-				<item id="36521" min="1" max="1" chance="2.11599999999999" /> <!-- Iron Ore -->
-				<item id="5158" min="1" max="1" chance="0.0750000000000005" /> <!-- Recipe: Spiritshot Compressed Package (D-grade) -->
+				<item id="36521" min="1" max="1" chance="2.141" /> <!-- Iron Ore -->
+				<item id="5158" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot Compressed Package (D-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.858" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.866" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1686,7 +1687,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="2126" sp="1" />
+		<acquire exp="425" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="487" hpRegen="3.5" mp="273" mpRegen="1.5" />
 			<attack physical="69.75926" magical="47.63653" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -1720,9 +1721,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8" max="17" chance="70" /> <!-- Adena -->
 				<item id="313" min="1" max="1" chance="0.03" /> <!-- Temptation of Abyss -->
-				<item id="955" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="57" min="8" max="17" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1734,7 +1736,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.12" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.08" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -1756,7 +1758,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="978" sp="33" />
+		<acquire exp="195" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="301" hpRegen="2.5" mp="174" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1793,8 +1795,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="36541" min="1" max="1" chance="1.144" /> <!-- Steel Wire -->
-				<item id="735" min="1" max="1" chance="0.299999999999999" /> <!-- Haste Potion -->
+				<item id="36541" min="1" max="1" chance="1.196" /> <!-- Steel Wire -->
+				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1806,7 +1809,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.743" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.84" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1875,7 +1878,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="1056" sp="1" />
+		<acquire exp="211" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="301" hpRegen="2.5" mp="174" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1910,11 +1913,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
 				<item id="908" min="1" max="1" chance="0.75" /> <!-- Necklace of Wisdom -->
-				<item id="36516" min="1" max="1" chance="0.749999999999998" /> <!-- Worn Leather -->
-				<item id="36523" min="1" max="1" chance="0.00300000000000002" /> <!-- Adamantite -->
-				<item id="36528" min="1" max="1" chance="0.00300000000000002" /> <!-- Metallic Fiber -->
+				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
+				<item id="36516" min="1" max="1" chance="0.75" /> <!-- Worn Leather -->
+				<item id="36523" min="1" max="1" chance="0.003" /> <!-- Adamantite -->
+				<item id="36528" min="1" max="1" chance="0.003" /> <!-- Metallic Fiber -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1926,7 +1930,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="2.614" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="2.634" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -1948,7 +1952,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="12" /> <!-- Knife -->
-		<acquire exp="960" sp="28" />
+		<acquire exp="192" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="301" hpRegen="2.5" mp="174" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -1982,9 +1986,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="10" chance="70" /> <!-- Adena -->
-				<item id="735" min="1" max="1" chance="0.300000000000003" /> <!-- Haste Potion -->
-				<item id="36561" min="1" max="1" chance="0.300000000000003" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.00300000000000003" /> <!-- Greater Cokes -->
+				<item id="735" min="1" max="1" chance="0.3" /> <!-- Haste Potion -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.003" /> <!-- Greater Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1997,7 +2002,7 @@
 			</drop>
 			<spoil>
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.0055" /> <!-- Greater Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2018,7 +2023,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="216" /> <!-- Dirk -->
-		<acquire exp="799" sp="23" />
+		<acquire exp="800" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="301" hpRegen="2.5" mp="174" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -2055,7 +2060,7 @@
 				<item id="5158" min="1" max="1" chance="0.3" /> <!-- Recipe: Spiritshot Compressed Package (D-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.87" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.958" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2076,7 +2081,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="1141" sp="1" />
+		<acquire exp="228" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="321" hpRegen="2.5" mp="183" mpRegen="1.2" />
 			<attack physical="40.96915" magical="27.97662" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2111,11 +2116,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="907" min="1" max="1" chance="1.701" /> <!-- Necklace of Anguish -->
 				<item id="57" min="5" max="12" chance="70" /> <!-- Adena -->
-				<item id="907" min="1" max="1" chance="1.691" /> <!-- Necklace of Anguish -->
-				<item id="36526" min="1" max="1" chance="1.083" /> <!-- Fiber -->
-				<item id="36518" min="1" max="1" chance="0.00299999999999998" /> <!-- Durable Leather -->
-				<item id="36523" min="1" max="1" chance="0.00299999999999998" /> <!-- Adamantite -->
+				<item id="36526" min="1" max="1" chance="1.164" /> <!-- Fiber -->
+				<item id="36518" min="1" max="1" chance="0.003" /> <!-- Durable Leather -->
+				<item id="36523" min="1" max="1" chance="0.003" /> <!-- Adamantite -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2127,7 +2133,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="2.666" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="2.664" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -2150,7 +2156,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1036" sp="31" />
+		<acquire exp="207" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="321" hpRegen="2.5" mp="183" mpRegen="1.2" />
 			<attack physical="40.96915" magical="27.97662" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2188,10 +2194,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="11" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="3.82600000000004" /> <!-- Fiber -->
-				<item id="36516" min="1" max="1" chance="3.47899999999999" /> <!-- Worn Leather -->
-				<item id="36521" min="1" max="1" chance="1.36100000000001" /> <!-- Iron Ore -->
+				<item id="36526" min="1" max="1" chance="3.856" /> <!-- Fiber -->
+				<item id="36516" min="1" max="1" chance="3.506" /> <!-- Worn Leather -->
+				<item id="36521" min="1" max="1" chance="1.396" /> <!-- Iron Ore -->
 				<item id="36546" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Low-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2203,7 +2210,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.893" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5.013" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2223,7 +2230,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2114" sp="1" />
+		<acquire exp="423" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="515" hpRegen="3.5" mp="286" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -2257,8 +2264,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
 				<item id="273" min="1" max="1" chance="0.075" /> <!-- Compound Bow -->
+				<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2270,7 +2278,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.344" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.439" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -2292,7 +2300,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="216" /> <!-- Dirk -->
-		<acquire exp="863" sp="26" />
+		<acquire exp="864" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="321" hpRegen="2.5" mp="183" mpRegen="1.2" />
 			<attack physical="40.96915" magical="27.97662" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -2326,13 +2334,13 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="4" max="9" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="3.21500000000002" /> <!-- Fiber -->
-				<item id="734" min="1" max="1" chance="0.300000000000001" /> <!-- Wind Walk Potion -->
-				<item id="36546" min="1" max="1" chance="0.300000000000001" /> <!-- Weapon Fragment (Low-grade) -->
-				<item id="5273" min="1" max="1" chance="0.0300000000000001" /> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
+				<item id="36526" min="1" max="1" chance="3.245" /> <!-- Fiber -->
+				<item id="734" min="1" max="1" chance="0.3" /> <!-- Wind Walk Potion -->
+				<item id="36546" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="5273" min="1" max="1" chance="0.03" /> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.118" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.083" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2352,7 +2360,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1090" sp="32" />
+		<acquire exp="218" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2386,8 +2394,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="5" max="11" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.300000000000001" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.00549999999999992" /> <!-- Greater Cokes -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2400,7 +2409,7 @@
 			</drop>
 			<spoil>
 				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.0055" /> <!-- Greater Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2411,7 +2420,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="20050" level="20" type="L2Monster" name="Arachnid Predator">
+	<npc id="20050" level="25" type="L2Monster" name="Arachnid Predator">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2421,7 +2430,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="1199" sp="1" />
+		<acquire exp="182" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
 			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2456,6 +2465,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="57" min="4" max="8" chance="70" /> <!-- Adena -->
+				<item id="1831" min="1" max="1" chance="3.736" /> <!-- Antidote -->
+				<item id="1834" min="1" max="1" chance="1.618" /> <!-- Emergency Dressing -->
+				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36922" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (Low-grade) - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2466,6 +2481,12 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36552" min="1" max="1" chance="0.03" /> <!-- Armor Fragment -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="27" />
@@ -2481,7 +2502,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2005" sp="1" />
+		<acquire exp="401" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="515" hpRegen="3.5" mp="286" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -2515,8 +2536,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
 				<item id="276" min="1" max="1" chance="0.03" /> <!-- Elven Bow -->
+				<item id="57" min="8" max="19" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2528,7 +2550,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.398" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.355" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -2555,7 +2577,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="1416" sp="43" />
+		<acquire exp="1417" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="364" hpRegen="3.5" mp="205" mpRegen="1.5" />
 			<attack physical="47.91924" magical="32.72263" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -2589,8 +2611,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.300000000000001" /> <!-- Cokes -->
-				<item id="36938" min="1" max="1" chance="0.000900000000000008" /> <!-- Recipe: Cokes - Downgrade -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36938" min="1" max="1" chance="0.0009" /> <!-- Recipe: Cokes - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2628,7 +2651,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="73" /> <!-- Shamshir -->
-		<acquire exp="2445" sp="1" />
+		<acquire exp="489" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="543" hpRegen="3.5" mp="300" mpRegen="1.5" />
 			<attack physical="80.54056" magical="54.99876" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2662,9 +2685,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
 				<item id="123" min="1" max="1" chance="0.03" /> <!-- Saber -->
 				<item id="7885" min="1" max="1" chance="0.03" /> <!-- Priest Sword -->
+				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2676,7 +2700,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="5.347" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5.47" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -2704,7 +2728,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="1374" sp="1" />
+		<acquire exp="275" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="364" hpRegen="3.5" mp="205" mpRegen="1.5" />
 			<attack physical="47.91924" magical="32.72263" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2741,9 +2765,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
 				<item id="272" min="1" max="1" chance="0.075" /> <!-- Forest Bow -->
-				<item id="36523" min="1" max="1" chance="0.0055" /> <!-- Adamantite -->
+				<item id="57" min="6" max="13" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.0075" /> <!-- Adamantite -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2755,7 +2780,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.204" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.227" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -2782,7 +2807,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
-		<acquire exp="1478" sp="1" />
+		<acquire exp="295" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="387" hpRegen="3.5" mp="218" mpRegen="1.5" />
 			<attack physical="51.75278" magical="35.34044" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2816,8 +2841,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.300000000000001" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.00549999999999992" /> <!-- Greater Cokes -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2856,7 +2882,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="1478" sp="1" />
+		<acquire exp="295" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="387" hpRegen="3.5" mp="218" mpRegen="1.5" />
 			<attack physical="51.75278" magical="35.34044" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2893,9 +2919,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
 				<item id="273" min="1" max="1" chance="0.03" /> <!-- Compound Bow -->
+				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
 				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2908,7 +2935,7 @@
 			</drop>
 			<spoil>
 				<item id="36546" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Low-grade) -->
-				<item id="36547" min="1" max="1" chance="0.0055" /> <!-- Weapon Fragment -->
+				<item id="36547" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment -->
 				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
@@ -2935,7 +2962,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
-		<acquire exp="2441" sp="1" />
+		<acquire exp="488" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="543" hpRegen="3.5" mp="300" mpRegen="1.5" />
 			<attack physical="80.54056" magical="54.99876" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -2969,11 +2996,12 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="219" min="1" max="1" chance="0.03" /> <!-- Sword Breaker -->
+				<item id="221" min="1" max="1" chance="0.03" /> <!-- Assassin Knife -->
+				<item id="125" min="1" max="1" chance="0.0075" /> <!-- Spinebone Sword -->
 				<item id="57" min="10" max="24" chance="70" /> <!-- Adena -->
-				<item id="219" min="1" max="1" chance="0.0299999999999998" /> <!-- Sword Breaker -->
-				<item id="221" min="1" max="1" chance="0.0299999999999998" /> <!-- Assassin Knife -->
-				<item id="125" min="1" max="1" chance="0.0055" /> <!-- Spinebone Sword -->
 				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2985,7 +3013,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="5.52" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5.469" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -3012,7 +3040,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
-		<acquire exp="1611" sp="52" />
+		<acquire exp="1612" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="410" hpRegen="3.5" mp="231" mpRegen="1.5" />
 			<attack physical="55.84125" magical="38.13234" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3046,8 +3074,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="7" max="15" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.300000000000001" /> <!-- Cokes -->
-				<item id="36938" min="1" max="1" chance="0.000900000000000008" /> <!-- Recipe: Cokes - Downgrade -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36938" min="1" max="1" chance="0.0009" /> <!-- Recipe: Cokes - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3085,7 +3114,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="156" /> <!-- Hand Axe -->
-		<acquire exp="1580" sp="1" />
+		<acquire exp="316" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="410" hpRegen="3.5" mp="231" mpRegen="1.5" />
 			<attack physical="55.84125" magical="38.13234" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3118,9 +3147,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="6" max="15" chance="70" /> <!-- Adena -->
 				<item id="87" min="1" max="1" chance="0.03" /> <!-- Iron Hammer -->
+				<item id="57" min="6" max="15" chance="70" /> <!-- Adena -->
 				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3132,7 +3162,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36556" min="1" max="1" chance="1.059" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36556" min="1" max="1" chance="1.119" /> <!-- Accessory Gem (Low-grade) -->
 				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
@@ -3160,7 +3190,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="1734" sp="1" />
+		<acquire exp="346" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="435" hpRegen="3.5" mp="245" mpRegen="1.5" />
 			<attack physical="60.19687" magical="41.10666" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -3194,8 +3224,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.300000000000001" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.00549999999999992" /> <!-- Greater Cokes -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3269,7 +3300,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20066" level="25" type="L2Monster" name="Ol Mahum Officer">
+	<npc id="20066" level="29" type="L2Monster" name="Ol Mahum Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3285,7 +3316,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- Bastard Sword -->
-		<acquire exp="1894" sp="1" />
+		<acquire exp="832" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="460" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3319,9 +3350,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8" max="17" chance="70" /> <!-- Adena -->
-				<item id="36561" min="1" max="1" chance="0.300000000000001" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.00549999999999992" /> <!-- Greater Cokes -->
+				<item id="57" min="16" max="37" chance="70" /> <!-- Adena -->
+				<item id="36526" min="1" max="3" chance="26.9" /> <!-- Fiber -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3333,7 +3364,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36561" min="1" max="1" chance="0.75" /> <!-- Cokes -->
+				<item id="36531" min="1" max="1" chance="17.4" /> <!-- Thread -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3361,7 +3392,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="3303" sp="1" />
+		<acquire exp="660" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="736" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3398,8 +3429,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="13" max="31" chance="70" /> <!-- Adena -->
 				<item id="849" min="1" max="1" chance="0.3" /> <!-- Tiger's Eye -->
+				<item id="57" min="13" max="31" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3411,7 +3443,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="7.501" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="7.433" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -3440,7 +3472,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="1939" sp="1" />
+		<acquire exp="388" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="487" hpRegen="3.5" mp="273" mpRegen="1.5" />
 			<attack physical="69.75926" magical="47.63653" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3478,10 +3510,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
 				<item id="184" min="1" max="1" chance="0.03" /> <!-- Conjuror's Staff -->
+				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
 				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36548" min="1" max="1" chance="0.000899999999999997" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (Mid-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3493,7 +3526,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.17" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.248" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -3519,7 +3552,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3399" sp="1" />
+		<acquire exp="680" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="772" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3548,10 +3581,11 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
 				<item id="395" min="1" max="1" chance="0.075" /> <!-- Manticore Skin Shirt -->
 				<item id="417" min="1" max="1" chance="0.075" /> <!-- Manticore Skin Gaiters -->
+				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
 				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3563,7 +3597,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="7.892" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="7.916" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -3589,7 +3623,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3346" sp="1" />
+		<acquire exp="669" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="772" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3618,9 +3652,10 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
 				<item id="470" min="1" max="1" chance="0.3" /> <!-- Mithril Stockings -->
 				<item id="437" min="1" max="1" chance="0.075" /> <!-- Mithril Tunic -->
+				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3632,7 +3667,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="7.922" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="7.989" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
@@ -3659,7 +3694,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2050" sp="1" />
+		<acquire exp="410" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="573" hpRegen="3.5" mp="315" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3695,9 +3730,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="8" max="18" chance="70" /> <!-- Adena -->
-				<item id="1831" min="1" max="1" chance="11.06" /> <!-- Antidote -->
-				<item id="1061" min="1" max="1" chance="2.49499999999998" /> <!-- Major Healing Potion -->
-				<item id="955" min="1" max="1" chance="0.0300000000000002" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="1831" min="1" max="1" chance="10.67" /> <!-- Antidote -->
+				<item id="1061" min="1" max="1" chance="2.529" /> <!-- Major Healing Potion -->
+				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3709,7 +3745,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="2.949" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="2.934" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
@@ -3738,7 +3774,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- Bastard Sword -->
-		<acquire exp="2374" sp="85" />
+		<acquire exp="2374" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="573" hpRegen="3.5" mp="315" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3773,8 +3809,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="0.0300000000000001" /> <!-- Greater Cokes -->
+				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 				<item id="36940" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3812,7 +3849,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1506" sp="1" />
+		<acquire exp="301" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="435" hpRegen="3.5" mp="245" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3849,8 +3886,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="7" max="16" chance="70" /> <!-- Adena -->
-				<item id="36556" min="1" max="1" chance="1.555" /> <!-- Accessory Gem (Low-grade) -->
-				<item id="36932" min="1" max="1" chance="0.000899999999999997" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36556" min="1" max="1" chance="1.679" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3862,7 +3900,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36556" min="1" max="1" chance="3.447" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36556" min="1" max="1" chance="3.385" /> <!-- Accessory Gem (Low-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3887,7 +3925,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2356" sp="86" />
+		<acquire exp="471" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="604" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3921,16 +3959,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="9" max="21" chance="70" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
 			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="4.911" /> <!-- Thread -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="26" />
@@ -3951,7 +3989,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2565" sp="95" />
+		<acquire exp="513" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="635" hpRegen="4.5" mp="343" mpRegen="1.8" />
 			<attack physical="99.21986" magical="67.7543" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3985,16 +4023,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Mid-grade) -->
 			</drop>
+			<spoil>
+				<item id="36556" min="1" max="1" chance="1.635" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="26" />
@@ -4016,7 +4055,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="4321" sp="1" />
+		<acquire exp="864" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="668" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4053,8 +4092,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="16" max="38" chance="70" /> <!-- Adena -->
-				<item id="1061" min="1" max="1" chance="7.62300000000002" /> <!-- Major Healing Potion -->
-				<item id="955" min="1" max="1" chance="0.0750000000000001" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="1061" min="1" max="1" chance="7.632" /> <!-- Major Healing Potion -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4066,7 +4106,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="5.941" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="6.021" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
@@ -4094,7 +4134,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2613" sp="1" />
+		<acquire exp="522" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="702" hpRegen="4.5" mp="372" mpRegen="1.8" />
 			<attack physical="113.49065" magical="77.49941" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4130,8 +4170,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
-				<item id="1832" min="1" max="1" chance="8.46999999999997" /> <!-- Greater Antidote -->
-				<item id="955" min="1" max="1" chance="0.0300000000000001" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="1832" min="1" max="1" chance="8.491" /> <!-- Greater Antidote -->
+				<item id="955" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4143,7 +4184,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.568" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.587" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
@@ -4172,7 +4213,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="3001" sp="1" />
+		<acquire exp="600" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="736" hpRegen="4.5" mp="387" mpRegen="1.8" />
 			<attack physical="121.20802" magical="82.76936" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4209,6 +4250,7 @@
 			<drop>
 				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4220,7 +4262,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="4.086" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.146" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
@@ -4250,7 +4292,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2671" sp="1" />
+		<acquire exp="534" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="772" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4287,6 +4329,7 @@
 			<drop>
 				<item id="57" min="10" max="23" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4298,7 +4341,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.683" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.603" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
@@ -4311,7 +4354,7 @@
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="20087" level="35" type="L2Monster" name="Ant Soldier">
+	<npc id="20087" level="38" type="L2Monster" name="Ant Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -4326,7 +4369,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="6410" sp="1" />
+		<acquire exp="1015" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="772" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4362,6 +4405,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="57" min="19" max="43" chance="70" /> <!-- Adena -->
+				<item id="36553" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4372,13 +4419,21 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36546" min="1" max="1" chance="1.06" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="20088" level="36" type="L2Monster" name="Ant Warrior Captain">
+	<npc id="20088" level="39" type="L2Monster" name="Ant Warrior Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -4394,7 +4449,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="7143" sp="1" />
+		<acquire exp="1129" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="809" hpRegen="4.5" mp="417" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4430,6 +4485,9 @@
 		</ai>
 		<drop_lists>
 			<drop>
+				<item id="57" min="21" max="48" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.3" /> <!-- Metallic Fiber -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4440,6 +4498,14 @@
 				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36516" min="1" max="1" chance="21.82" /> <!-- Worn Leather -->
+				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="0.075" /> <!-- Durable Leather -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="35" grown="42" />
@@ -4460,7 +4526,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="2986" sp="1" />
+		<acquire exp="597" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="847" hpRegen="4.5" mp="432" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4496,6 +4562,7 @@
 			<drop>
 				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4507,7 +4574,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.99" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="4.036" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
@@ -4535,7 +4602,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="6587" sp="1" />
+		<acquire exp="1317" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="886" hpRegen="4.5" mp="447" mpRegen="1.8" />
 			<attack physical="156.22273" magical="106.67987" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4573,6 +4640,7 @@
 			<drop>
 				<item id="57" min="24" max="57" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4584,7 +4652,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="8.878" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="8.913" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>

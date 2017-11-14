@@ -1837,17 +1837,17 @@
 				<item id="217" min="1" max="1" chance="0.075" /> <!-- Shining Knife -->
 				<item id="218" min="1" max="1" chance="0.075" /> <!-- Throwing Knife -->
 				<item id="57" min="41" max="97" chance="70" /> <!-- Adena -->
-				<item id="1868" min="1" max="1" chance="6.507" /> <!-- Thread -->
-				<item id="1864" min="1" max="1" chance="6.434" /> <!-- Stem -->
-				<item id="1867" min="1" max="1" chance="4.28" /> <!-- Animal Skin -->
-				<item id="1871" min="1" max="1" chance="3.273" /> <!-- Charcoal -->
-				<item id="1869" min="1" max="1" chance="3.191" /> <!-- Iron Ore -->
-				<item id="1866" min="1" max="1" chance="2.124" /> <!-- Suede -->
+				<item id="1868" min="1" max="1" chance="6.465" /> <!-- Thread -->
+				<item id="1864" min="1" max="1" chance="6.455" /> <!-- Stem -->
+				<item id="1867" min="1" max="1" chance="4.32" /> <!-- Animal Skin -->
+				<item id="1869" min="1" max="1" chance="3.259" /> <!-- Iron Ore -->
+				<item id="1871" min="1" max="1" chance="3.254" /> <!-- Charcoal -->
+				<item id="1866" min="1" max="1" chance="2.197" /> <!-- Suede -->
 			</drop>
 			<spoil>
-				<item id="1868" min="1" max="1" chance="52.46" /> <!-- Thread -->
-				<item id="1897" min="1" max="1" chance="6.266" /> <!-- Necklace of Wisdom Chain -->
-				<item id="734" min="1" max="1" chance="4.401" /> <!-- Wind Walk Potion -->
+				<item id="1868" min="1" max="1" chance="51.5" /> <!-- Thread -->
+				<item id="1897" min="1" max="1" chance="6.226" /> <!-- Necklace of Wisdom Chain -->
+				<item id="734" min="1" max="1" chance="4.416" /> <!-- Wind Walk Potion -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1894,8 +1894,24 @@
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
+				<item id="57" min="587" max="1370" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="3" chance="26.17" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="3.469" /> <!-- Oriharukon Ore -->
+				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
+				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="5" chance="91.835" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="18.63" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="18.24" /> <!-- Stone of Purity -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="21259" level="72" type="L2Monster" name="Fallen Orc Shaman" title="Enhanced">
+	<npc id="21259" level="71" type="L2Monster" name="Fallen Orc Shaman" title="Enhanced">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -1907,9 +1923,9 @@
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="PhysicalSpecial" id="4073" level="5" />
 		</parameters>
-		<race>ANIMAL</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="20524" sp="615" />
+		<acquire exp="11299" sp="338" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1984" hpRegen="6.5" mp="1007" mpRegen="2.4" />
 			<attack physical="632.6356364" magical="502.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1943,6 +1959,22 @@
 			<radius normal="14.4" />
 			<height normal="29.4" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
+				<item id="57" min="587" max="1370" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="3" chance="26.17" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="3.469" /> <!-- Oriharukon Ore -->
+				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
+				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="5" chance="91.835" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="18.63" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="18.24" /> <!-- Stone of Purity -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="21260" level="50" type="L2Monster" name="Betrayer Orc Hero">
 		<parameters>

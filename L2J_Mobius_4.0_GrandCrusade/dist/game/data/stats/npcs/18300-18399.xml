@@ -1246,6 +1246,25 @@
 			<radius normal="16" />
 			<height normal="50" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="179" max="418" chance="70" /> <!-- Adena -->
+				<item id="36546" min="1" max="1" chance="4.77" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36517" min="1" max="1" chance="2.069" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
+				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
+				<item id="36562" min="1" max="1" chance="0.075" /> <!-- Greater Cokes -->
+			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="66.13" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1.413" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="18328" level="83" type="L2Monster" name="Hall Alarm">
 		<!-- Confirmed CT2.5 -->
@@ -2011,7 +2030,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="44" sp="2" />
+		<acquire exp="44" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="39" hpRegen="2" mp="40" mpRegen="0.9" />
 			<attack physical="8.47458" magical="5.78704" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2102,7 +2121,7 @@
 				<npc id="22197" count="3" respawnTime="0" weightPoint="1" />
 			</minions>
 		</parameters>
-		<race>ETC</race>
+		<race>NONE</race>
 		<sex>ETC</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="10" hpRegen="8.5" mp="1881" mpRegen="3" />
@@ -2177,7 +2196,7 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="711" max="1659" chance="70" /> <!-- Adena -->
-				<item id="8787" min="1" max="1" chance="17.71" /> <!-- Sprigant's Fruit -->
+				<item id="8787" min="1" max="1" chance="17.39" /> <!-- Sprigant's Fruit -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
@@ -2235,6 +2254,18 @@
 			<radius normal="45" />
 			<height normal="67" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="711" max="1659" chance="70" /> <!-- Adena -->
+				<item id="8787" min="1" max="1" chance="17.39" /> <!-- Sprigant's Fruit -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="18347" level="20" type="L2Monster" name="Garden Guard">
 		<!-- Confirmed CT2.5 -->
@@ -3198,7 +3229,7 @@
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="18365" level="80" type="L2Monster" name="Witch Warder">
+	<npc id="18365" level="79" type="L2Monster" name="Witch Warder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -3247,7 +3278,7 @@
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="18366" level="82" type="L2Monster" name="Witch Warder">
+	<npc id="18366" level="79" type="L2Monster" name="Witch Warder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />

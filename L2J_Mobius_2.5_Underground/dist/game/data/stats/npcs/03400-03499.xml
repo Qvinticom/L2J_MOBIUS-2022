@@ -110,7 +110,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="3404" level="23" type="L2Monster" name="Tracker Captain Sharuk" title="Lord of Destruction">
+	<npc id="3404" level="23" type="L2RaidBoss" name="Tracker Captain Sharuk" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -122,7 +122,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="4035175" sp="968" />
+		<acquire exp="538023" sp="129" />
 		<equipment rhand="291" /> <!-- Trident -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="40330" hpRegen="17.5347470979605" mp="231" mpRegen="1.5" />
@@ -150,6 +150,38 @@
 			<radius normal="12" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="468" min="1" max="1" chance="11.29" /> <!-- Wizard Stockings -->
+				<item id="433" min="1" max="1" chance="5.967" /> <!-- Elven Tunic -->
+				<item id="434" min="1" max="1" chance="4.905" /> <!-- White Tunic -->
+				<item id="183" min="1" max="1" chance="4.652" /> <!-- Mystic Staff -->
+				<item id="181" min="1" max="1" chance="4.647" /> <!-- Mace of Miracle -->
+				<item id="179" min="1" max="1" chance="4.644" /> <!-- Mace of Prayer -->
+				<item id="86" min="1" max="1" chance="4.593" /> <!-- Tomahawk -->
+				<item id="182" min="1" max="1" chance="4.568" /> <!-- Doom Hammer -->
+				<item id="180" min="1" max="1" chance="4.565" /> <!-- Mace of Judgment -->
+				<item id="185" min="1" max="1" chance="4.533" /> <!-- Staff of Mana -->
+				<item id="184" min="1" max="1" chance="4.526" /> <!-- Conjuror's Staff -->
+				<item id="435" min="1" max="1" chance="4.296" /> <!-- Wizard Tunic -->
+				<item id="466" min="1" max="1" chance="3.024" /> <!-- Elven Stockings -->
+				<item id="467" min="1" max="1" chance="1.782" /> <!-- Dark Stockings -->
+				<item id="955" min="1" max="1" chance="42.47" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="40.9" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3405" level="22" type="L2Monster" name="Sharuk's Tracker" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -213,7 +245,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="3407" level="21" type="L2Monster" name="Sukar Ratman Chief" title="Lord of Destruction">
+	<npc id="3407" level="21" type="L2RaidBoss" name="Sukar Ratman Chief" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -225,7 +257,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3969535" sp="952" />
+		<acquire exp="1452604" sp="348" />
 		<equipment rhand="216" /> <!-- Dirk -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="37886" hpRegen="16.8269664693931" mp="205" mpRegen="1.5" />
@@ -253,6 +285,29 @@
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="605" min="1" max="1" chance="8.073" /> <!-- Leather Gauntlets -->
+				<item id="1123" min="1" max="1" chance="3.751" /> <!-- Blue Buckskin Boots -->
+				<item id="222" min="1" max="1" chance="2.503" /> <!-- Poniard Dagger -->
+				<item id="6387" min="4" max="12" chance="17.01" /> <!-- Blessed Scroll of Resurrection (Pet) -->
+				<item id="955" min="1" max="1" chance="12.93" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="7" max="21" chance="7.415" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="39.53" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3408" level="20" type="L2Monster" name="Sukar Ratman Escort" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -323,7 +378,7 @@
 			<height normal="18.7" />
 		</collision>
 	</npc>
-	<npc id="3410" level="25" type="L2Monster" name="Ikuntai" title="Lord of Destruction">
+	<npc id="3410" level="25" type="L2RaidBoss" name="Ikuntai" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -335,7 +390,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="2383943" sp="572" />
+		<acquire exp="2615583" sp="627" />
 		<equipment rhand="150" /> <!-- Elemental Sword -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="56644" hpRegen="24.0862326352072" mp="259" mpRegen="1.5" />
@@ -366,6 +421,28 @@
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="880" min="1" max="1" chance="18.64" /> <!-- Black Pearl Ring -->
+				<item id="849" min="1" max="1" chance="12.9" /> <!-- Tiger's Eye -->
+				<item id="912" min="1" max="1" chance="9.412" /> <!-- Near Forest Necklace -->
+				<item id="157" min="1" max="1" chance="0.75" /> <!-- Spiked Club -->
+				<item id="186" min="1" max="1" chance="0.75" /> <!-- Staff of Magic -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="39.83" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3411" level="24" type="L2Monster" name="Ikuntai's Servitor" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -438,7 +515,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="3413" level="25" type="L2Monster" name="Zombie Lord Crowl" title="Lord of Destruction">
+	<npc id="3413" level="25" type="L2RaidBoss" name="Zombie Lord Crowl" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -450,7 +527,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3811518" sp="914" />
+		<acquire exp="2615583" sp="627" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="43316" hpRegen="18.4385313667577" mp="259" mpRegen="1.5" />
 			<speed>
@@ -480,6 +557,32 @@
 			<radius normal="30" />
 			<height normal="21.25" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="144" min="1" max="1" chance="7.604" /> <!-- Sword of Occult -->
+				<item id="436" min="1" max="1" chance="5.908" /> <!-- Tunic of Knowledge -->
+				<item id="124" min="1" max="1" chance="5.604" /> <!-- Two-handed Sword -->
+				<item id="130" min="1" max="1" chance="5.594" /> <!-- Elven Sword -->
+				<item id="127" min="1" max="1" chance="5.572" /> <!-- Crimson Sword -->
+				<item id="469" min="1" max="1" chance="1.996" /> <!-- Stockings of Knowledge -->
+				<item id="83" min="1" max="1" chance="0.75" /> <!-- Sword of Magic -->
+				<item id="6576" min="1" max="1" chance="23.18" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="2026" min="120" max="360" chance="1.034" /> <!-- Two-handed Sword Edge -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="39.3" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3414" level="24" type="L2Monster" name="Evil Spirit Archer" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -552,7 +655,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="3416" level="20" type="L2Monster" name="Zombie Lord Ferkel" title="Lord of Destruction">
+	<npc id="3416" level="20" type="L2RaidBoss" name="Zombie Lord Ferkel" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -564,7 +667,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="4562649" sp="1095" />
+		<acquire exp="1452604" sp="348" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="36847" hpRegen="16.5400323223535" mp="192" mpRegen="1.2" />
 			<speed>
@@ -596,6 +699,31 @@
 			<radius normal="12" />
 			<height normal="27.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="347" min="1" max="1" chance="6.386" /> <!-- Ring Breastplate -->
+				<item id="156" min="1" max="1" chance="3.213" /> <!-- Hand Axe -->
+				<item id="167" min="1" max="1" chance="2.75" /> <!-- Scalpel -->
+				<item id="178" min="1" max="1" chance="2.501" /> <!-- Bone Staff -->
+				<item id="376" min="1" max="1" chance="2.128" /> <!-- Iron Plate Gaiters -->
+				<item id="955" min="1" max="1" chance="14.27" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="6576" min="1" max="1" chance="6.907" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+				<item id="6575" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="41.95" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3417" level="19" type="L2Monster" name="Ferkel's Warrior" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -674,7 +802,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="3419" level="35" type="L2Monster" name="Execution Grounds Watchman Guillotine" title="Lord of Destruction">
+	<npc id="3419" level="97" type="L2Monster" name="Execution Grounds Watchman Guillotine" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
@@ -685,7 +813,6 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="2868590" sp="688" />
 		<equipment rhand="96" /> <!-- Scythe -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="138899" hpRegen="66.9859801832901" mp="402" mpRegen="1.8" />
@@ -718,7 +845,7 @@
 			<height normal="58" />
 		</collision>
 	</npc>
-	<npc id="3420" level="35" type="L2Monster" name="Flame Lord Shadar" title="Lord of Destruction">
+	<npc id="3420" level="35" type="L2RaidBoss" name="Flame Lord Shadar" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -732,7 +859,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="2868590" sp="688" />
+		<acquire exp="5476117" sp="1314" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="69449" hpRegen="26.794392073316" mp="402" mpRegen="1.8" />
 			<speed>
@@ -762,6 +889,31 @@
 			<radius normal="28" />
 			<height normal="75" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="262" min="1" max="1" chance="8.308" /> <!-- Scallop Jamadhr -->
+				<item id="438" min="1" max="1" chance="3.961" /> <!-- Sage's Rags -->
+				<item id="4594" min="1" max="1" chance="13" /> <!-- Greater DEX Dye (Dex  2 CON - 2) -->
+				<item id="4595" min="1" max="1" chance="12.48" /> <!-- Greater INT Dye (Int  2 Men - 2) -->
+				<item id="4596" min="1" max="1" chance="12.44" /> <!-- Greater INT Dye (Int  2 Wit - 2) -->
+				<item id="1953" min="105" max="315" chance="8.808" /> <!-- Sage's Rag Lining -->
+				<item id="2053" min="108" max="324" chance="2.247" /> <!-- Scallop Jamadhr Edge -->
+				<item id="6574" min="1" max="1" chance="2.222" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="49.8" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3421" level="34" type="L2Monster" name="Claws of Shadar" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1067,7 +1219,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="3429" level="59" type="L2Monster" name="Demon Kuri" title="Lord of Destruction">
+	<npc id="3429" level="59" type="L2RaidBoss" name="Demon Kuri" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1079,7 +1231,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="4026411" sp="966" />
+		<acquire exp="1342137" sp="322" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="215207" hpRegen="71.371053660127" mp="1007" mpRegen="2.4" />
 			<speed>
@@ -1109,6 +1261,31 @@
 			<radius normal="50" />
 			<height normal="180" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="5291" min="1" max="1" chance="5.372" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="4.054" /> <!-- Sealed Tallum Gloves -->
+				<item id="5296" min="1" max="1" chance="3.205" /> <!-- Sealed Tallum Boots -->
+				<item id="5290" min="1" max="1" chance="1.385" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="80" min="1" max="1" chance="1.003" /> <!-- Tallum Blade -->
+				<item id="150" min="1" max="1" chance="0.993" /> <!-- Elemental Sword -->
+				<item id="6570" min="1" max="1" chance="1.63" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="1.61" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="70.91" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3430" level="58" type="L2Monster" name="Kuri's Wife" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1218,7 +1395,7 @@
 			<height normal="150" />
 		</collision>
 	</npc>
-	<npc id="3433" level="50" type="L2Monster" name="Slaughter Lord Gato" title="Lord of Destruction">
+	<npc id="3433" level="50" type="L2RaidBoss" name="Slaughter Lord Gato" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1230,7 +1407,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3584650" sp="860" />
+		<acquire exp="7064466" sp="1695" />
 		<equipment rhand="71" /> <!-- Flamberge -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="155046" hpRegen="53.8546339421093" mp="747" mpRegen="2.1" />
@@ -1258,6 +1435,37 @@
 			<radius normal="30" />
 			<height normal="57" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="2406" min="1" max="1" chance="7.267" /> <!-- Avadon Robe -->
+				<item id="2397" min="1" max="1" chance="3.868" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="2.344" /> <!-- Stockings of Zubei -->
+				<item id="92" min="1" max="1" chance="2.07" /> <!-- Spirit's Staff -->
+				<item id="91" min="1" max="1" chance="2.053" /> <!-- Heavy War Axe -->
+				<item id="4611" min="1" max="1" chance="13.47" /> <!-- Greater WIT Dye (Wit  3 Int - 3) -->
+				<item id="4612" min="1" max="1" chance="13.21" /> <!-- Greater WIT Dye (Wit  3 Men - 3) -->
+				<item id="4610" min="1" max="1" chance="12.68" /> <!-- Greater MEN Dye (Men  3 Wit - 3) -->
+				<item id="6574" min="1" max="1" chance="3.414" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="68.46" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3434" level="49" type="L2Monster" name="Gato's Sniper" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1323,7 +1531,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="3436" level="49" type="L2Monster" name="Ketra's Commander Atis" title="Lord of Destruction">
+	<npc id="3436" level="49" type="L2RaidBoss" name="Ketra's Commander Atis" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1335,7 +1543,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3492102" sp="838" />
+		<acquire exp="6829345" sp="1639" />
 		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="148076" hpRegen="51.7193112926872" mp="720" mpRegen="2.1" />
@@ -1363,6 +1571,36 @@
 			<radius normal="12" />
 			<height normal="24" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="886" min="1" max="1" chance="8.21" /> <!-- Ring of Seal -->
+				<item id="286" min="1" max="1" chance="3.797" /> <!-- Eminence Bow -->
+				<item id="855" min="1" max="1" chance="3.016" /> <!-- Nassen's Earring -->
+				<item id="119" min="1" max="1" chance="1.542" /> <!-- Necklace of Seal -->
+				<item id="4608" min="1" max="1" chance="13.16" /> <!-- Greater INT Dye (Int  3 Wit - 3) -->
+				<item id="4609" min="1" max="1" chance="12.86" /> <!-- Greater MEN Dye (Men  3 Int - 3) -->
+				<item id="4607" min="1" max="1" chance="12.75" /> <!-- Greater INT Dye (Int  3 Men - 3) -->
+				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="6573" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="58.83" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3437" level="48" type="L2Monster" name="Ketra Marksman" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1428,7 +1666,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="3439" level="45" type="L2Monster" name="Beacon of Blue Sky" title="Lord of Destruction">
+	<npc id="3439" level="45" type="L2RaidBoss" name="Beacon of Blue Sky" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1440,7 +1678,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3128264" sp="750" />
+		<acquire exp="5918766" sp="1420" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="121183" hpRegen="43.342559280568" mp="610" mpRegen="2.1" />
 			<speed>
@@ -1467,6 +1705,35 @@
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="608" min="1" max="1" chance="5.507" /> <!-- Mithril Gauntlets -->
+				<item id="231" min="1" max="1" chance="4.594" /> <!-- Grace Dagger -->
+				<item id="233" min="1" max="1" chance="4.591" /> <!-- Dark Screamer -->
+				<item id="64" min="1" max="1" chance="1.719" /> <!-- Compound Boots -->
+				<item id="4604" min="1" max="1" chance="15.7" /> <!-- Greater CON Dye (Con  3 DEX - 3) -->
+				<item id="4605" min="1" max="1" chance="15.28" /> <!-- Greater DEX Dye (Dex  3 Str - 3) -->
+				<item id="4606" min="1" max="1" chance="14.7" /> <!-- Greater DEX Dye (Dex  3 CON - 3) -->
+				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="60.17" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3440" level="44" type="L2Monster" name="Beacon's Shooter" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1538,7 +1805,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="3442" level="43" type="L2Monster" name="Earth Protector Panathen" title="Lord of Destruction">
+	<npc id="3442" level="43" type="L2RaidBoss" name="Earth Protector Panathen" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1552,7 +1819,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="2965338" sp="711" />
+		<acquire exp="3818045" sp="916" />
 		<equipment rhand="183" /> <!-- Mystic Staff -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="108760" hpRegen="39.4112754681274" mp="557" mpRegen="2.1" />
@@ -1580,6 +1847,33 @@
 			<radius normal="16" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="325" min="1" max="1" chance="30.59" /> <!-- Horn of Glory -->
+				<item id="440" min="1" max="1" chance="14" /> <!-- Robe of Seal -->
+				<item id="1970" min="3" max="27" chance="34.31" /> <!-- Robe of Seal Fabric -->
+				<item id="2088" min="3" max="27" chance="11.25" /> <!-- Horn of Glory Fragment -->
+				<item id="6574" min="1" max="1" chance="9.94" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="61.06" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3443" level="42" type="L2Monster" name="Panathen's Knight" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1645,7 +1939,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="3445" level="25" type="L2Monster" name="Betrayer of Urutu Freki" title="Lord of Destruction">
+	<npc id="3445" level="25" type="L2RaidBoss" name="Betrayer of Urutu Freki" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1657,7 +1951,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3811518" sp="914" />
+		<acquire exp="2615583" sp="627" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="43316" hpRegen="18.4385313667577" mp="259" mpRegen="1.5" />
 			<speed>
@@ -1684,6 +1978,28 @@
 			<radius normal="11" />
 			<height normal="29.7" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="278" min="1" max="1" chance="11.32" /> <!-- Gastraphetes -->
+				<item id="628" min="1" max="1" chance="7.324" /> <!-- Hoplon -->
+				<item id="47" min="1" max="1" chance="3.604" /> <!-- Helmet -->
+				<item id="956" min="12" max="36" chance="14.99" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="2029" min="162" max="486" chance="1.541" /> <!-- Gastraphetes Shaft -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="40.47" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3446" level="24" type="L2Monster" name="Freki's Vampire Bat" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1751,7 +2067,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="3448" level="39" type="L2Monster" name="Nellis' Vengeful Spirit" title="Lord of Destruction">
+	<npc id="3448" level="39" type="L2RaidBoss" name="Nellis' Vengeful Spirit" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1762,7 +2078,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="2982675" sp="715" />
+		<acquire exp="5476117" sp="1314" />
 		<equipment rhand="8532" /> <!-- Monster Only (Spinebone Sword) -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="86871" hpRegen="32.4117473308651" mp="463" mpRegen="1.8" />
@@ -1793,6 +2109,38 @@
 			<radius normal="10" />
 			<height normal="28.1" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="2454" min="1" max="1" chance="43.28" /> <!-- Karmian Gloves -->
+				<item id="62" min="1" max="1" chance="22.96" /> <!-- Reinforced Mithril Boots -->
+				<item id="2429" min="1" max="1" chance="14.7" /> <!-- Chain Boots -->
+				<item id="2430" min="1" max="1" chance="11.12" /> <!-- Karmian Boots -->
+				<item id="2431" min="1" max="1" chance="8.868" /> <!-- Plated Leather Boots -->
+				<item id="2432" min="1" max="1" chance="7.279" /> <!-- Dwarven Chain Boots -->
+				<item id="2433" min="1" max="1" chance="6.331" /> <!-- Boots of Seal -->
+				<item id="2452" min="1" max="1" chance="5.496" /> <!-- Reinforced Mithril Gloves -->
+				<item id="2453" min="1" max="1" chance="4.855" /> <!-- Chain Gloves -->
+				<item id="298" min="1" max="1" chance="2.482" /> <!-- Orcish Glaive -->
+				<item id="302" min="1" max="1" chance="2.448" /> <!-- Body Slasher -->
+				<item id="96" min="1" max="1" chance="2.406" /> <!-- Scythe -->
+				<item id="952" min="1" max="3" chance="39.26" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="951" min="1" max="1" chance="10.48" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+				<item id="6573" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="50.92" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3449" level="38" type="L2Monster" name="Nellis' Follower" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1830,7 +2178,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="3450" level="37" type="L2Monster" name="Rayito the Looter" title="Lord of Destruction">
+	<npc id="3450" level="37" type="L2RaidBoss" name="Rayito the Looter" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1842,7 +2190,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="2898882" sp="695" />
+		<acquire exp="5476117" sp="1314" />
 		<equipment rhand="67" lhand="633" /> <!-- Orcish Sword / Zubei's Shield -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="77592" hpRegen="29.4232868171158" mp="432" mpRegen="1.8" />
@@ -1870,6 +2218,27 @@
 			<radius normal="16" />
 			<height normal="33.2" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="281" min="1" max="1" chance="8.87" /> <!-- Crystallized Ice Bow -->
+				<item id="397" min="1" max="1" chance="3.61" /> <!-- Reinforced Mithril Shirt -->
+				<item id="2387" min="1" max="1" chance="1.753" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="6574" min="1" max="1" chance="9.087" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="50.17" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3451" level="36" type="L2Monster" name="Rayito's Guard Captain" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1940,7 +2309,7 @@
 			<height normal="16.6" />
 		</collision>
 	</npc>
-	<npc id="3453" level="80" type="L2Monster" name="Ketra's Hero Hekaton" title="Lord of Destruction">
+	<npc id="3453" level="80" type="L2RaidBoss" name="Ketra's Hero Hekaton" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -1952,7 +2321,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="5663941" sp="1359" />
+		<acquire exp="1670060147" sp="400814" />
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="300327" hpRegen="92.3387631310317" mp="1674" mpRegen="3" />
@@ -1980,6 +2349,44 @@
 			<radius normal="17" />
 			<height normal="46.2" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6680" min="1" max="1" chance="1.604" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6367" min="1" max="1" chance="0.75" /> <!-- Angel Slayer -->
+				<item id="3936" min="1" max="1" chance="17.67" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="6707" min="15" max="45" chance="8.904" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6691" min="12" max="36" chance="3.987" /> <!-- Angel Slayer Blade -->
+				<item id="6578" min="1" max="1" chance="1.611" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="91.005" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3454" level="79" type="L2Monster" name="Hekaton's Scout" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2043,7 +2450,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="3456" level="80" type="L2Monster" name="Varka's Hero Shadith" title="Lord of Destruction">
+	<npc id="3456" level="80" type="L2RaidBoss" name="Varka's Hero Shadith" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -2057,7 +2464,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="5663941" sp="1359" />
+		<acquire exp="1670060147" sp="400814" />
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="300327" hpRegen="92.3387631310317" mp="1674" mpRegen="3" />
@@ -2085,6 +2492,47 @@
 			<radius normal="17" />
 			<height normal="47.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6675" min="1" max="1" chance="2.052" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="1.246" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6367" min="1" max="1" chance="0.3" /> <!-- Angel Slayer -->
+				<item id="960" min="1" max="1" chance="9.301" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="6702" min="28" max="84" chance="6.176" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="60" max="180" chance="1.837" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6691" min="27" max="81" chance="1.132" /> <!-- Angel Slayer Blade -->
+				<item id="959" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="6577" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="90.18" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3457" level="79" type="L2Monster" name="Shadith' Escort Captain" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2151,7 +2599,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="3459" level="72" type="L2Monster" name="Doom Blade Thanatos" title="Lord of Destruction">
+	<npc id="3459" level="72" type="L2RaidBoss" name="Doom Blade Thanatos" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -2163,7 +2611,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="7709481" sp="1850" />
+		<acquire exp="244058947" sp="58574" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="766919" hpRegen="299.92321639468" mp="1410" mpRegen="3" />
 			<speed>
@@ -2194,6 +2642,43 @@
 			<radius normal="15" />
 			<height normal="32.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="5312" min="1" max="1" chance="6.909" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="1" chance="5.212" /> <!-- Sealed Majestic Circlet -->
+				<item id="5315" min="1" max="1" chance="2.995" /> <!-- Sealed Shield of Nightmare -->
+				<item id="236" min="1" max="1" chance="2.058" /> <!-- Soul Separator -->
+				<item id="6578" min="1" max="1" chance="2.512" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46461" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="81.77" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3460" level="75" type="L2Monster" name="Kernon" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2323,7 +2808,6 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="6894717" sp="1654" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="373386" hpRegen="117.68436242886" mp="1345" mpRegen="2.7" />
 			<speed>
@@ -2422,7 +2906,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="3466" level="25" type="L2Monster" name="Mammon Collector Talos" title="Lord of Destruction">
+	<npc id="3466" level="25" type="L2RaidBoss" name="Mammon Collector Talos" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -2433,7 +2917,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="3811518" sp="914" />
+		<acquire exp="2615583" sp="627" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="43316" hpRegen="18.4385313667577" mp="259" mpRegen="1.5" />
 			<speed>
@@ -2463,6 +2947,32 @@
 			<radius normal="13" />
 			<height normal="37.5" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="239" min="1" max="1" chance="5.694" /> <!-- Mystic Knife -->
+				<item id="241" min="1" max="1" chance="5.644" /> <!-- Shilen Knife -->
+				<item id="238" min="1" max="1" chance="5.632" /> <!-- Dagger of Mana -->
+				<item id="223" min="1" max="1" chance="5.579" /> <!-- Kukuri -->
+				<item id="415" min="1" max="1" chance="4.796" /> <!-- Mithril Banded Gaiters -->
+				<item id="416" min="1" max="1" chance="2.791" /> <!-- Reinforced Leather Gaiters -->
+				<item id="393" min="1" max="1" chance="1.051" /> <!-- Mithril Banded Mail -->
+				<item id="394" min="1" max="1" chance="0.75" /> <!-- Reinforced Leather Shirt -->
+				<item id="6575" min="1" max="1" chance="2.495" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="41.57" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="3467" level="22" type="L2Monster" name="Talos' Pawn" title="Follower of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2734,7 +3244,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="207470592" sp="49792" />
+		<acquire exp="207470592" sp="49792" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="23604934" hpRegen="23103.5" mp="44856" mpRegen="30" />
@@ -2772,9 +3282,9 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="17404" min="1" max="1" chance="1.074" /> <!-- Seraph Leather Leggings -->
-				<item id="17398" min="1" max="1" chance="1.043" /> <!-- Seraph Gaiters -->
-				<item id="17409" min="1" max="1" chance="0.974" /> <!-- Seraph Stockings -->
+				<item id="17398" min="1" max="1" chance="1.048" /> <!-- Seraph Gaiters -->
+				<item id="17404" min="1" max="1" chance="1.027" /> <!-- Seraph Leather Leggings -->
+				<item id="17409" min="1" max="1" chance="0.977" /> <!-- Seraph Stockings -->
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
@@ -2789,38 +3299,48 @@
 				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
 				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
 				<item id="17382" min="1" max="1" chance="0.3" /> <!-- Specter Shaper -->
-				<item id="17526" min="1" max="1" chance="1.476" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35434" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35435" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35436" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35437" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35440" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35441" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35442" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35445" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35446" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35447" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35431" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35450" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Ring (60%) -->
-				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
-				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
-				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
-				<item id="35448" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Necklace (60%) -->
-				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
-				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Fighter (60%) -->
-				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Caster (60%) -->
-				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Buster (60%) -->
-				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Thrower (60%) -->
-				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="17526" min="1" max="1" chance="1.539" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35434" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Boots (60%) -->
+				<item id="35436" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Shield (60%) -->
+				<item id="35437" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Leather Helmet (60%) -->
+				<item id="35440" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Circlet (60%) -->
+				<item id="35445" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Sigil (60%) -->
+				<item id="35431" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Helmet (60%) -->
+				<item id="35450" min="1" max="1" chance="0.75" /> <!-- Recipe:Ξ’Β Seraph Ring (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Avenger (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Seraph Tunic (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Seraph Stockings (60%) -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Slasher (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Cutter (60%) -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Shaper (60%) -->
+				<item id="35448" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Seraph Necklace (60%) -->
+				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Seraph Earring (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Stormer (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Seraph Breastplate (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Seraph Gaiters (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Caster (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Buster (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Shooter (60%) -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Thrower (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Seraph Leather Leggings (60%) -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe:Ξ’Β Specter Retributer (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</drop_lists>
 	</npc>
@@ -2968,7 +3488,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="159805184" sp="38353" />
+		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="12808340" hpRegen="9827.1" mp="39048" mpRegen="30" />
@@ -3004,18 +3524,28 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="17308" min="1" max="1" chance="23.3" /> <!-- Immortal Boots -->
-				<item id="17318" min="1" max="1" chance="22.9" /> <!-- Immortal Gloves -->
-				<item id="17304" min="1" max="1" chance="16.58" /> <!-- Immortal Helmet -->
-				<item id="17310" min="1" max="1" chance="15.71" /> <!-- Immortal Leather Helmet -->
-				<item id="17313" min="1" max="3" chance="12.32" /> <!-- Immortal Leather Gloves -->
-				<item id="17319" min="2" max="4" chance="7.951" /> <!-- Immortal Shoes -->
-				<item id="17300" min="1" max="1" chance="1.546" /> <!-- Requiem Retributer -->
-				<item id="17290" min="1" max="1" chance="1.512" /> <!-- Requiem Shaper -->
-				<item id="17296" min="1" max="1" chance="1.503" /> <!-- Requiem Thrower -->
-				<item id="17291" min="1" max="1" chance="1.482" /> <!-- Requiem Cutter -->
-				<item id="17527" min="1" max="1" chance="46.38" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.604" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17318" min="1" max="1" chance="25.09" /> <!-- Immortal Gloves -->
+				<item id="17308" min="1" max="1" chance="22.95" /> <!-- Immortal Boots -->
+				<item id="17304" min="1" max="1" chance="15.91" /> <!-- Immortal Helmet -->
+				<item id="17310" min="1" max="1" chance="15.89" /> <!-- Immortal Leather Helmet -->
+				<item id="17313" min="1" max="3" chance="12.3" /> <!-- Immortal Leather Gloves -->
+				<item id="17319" min="2" max="4" chance="7.937" /> <!-- Immortal Shoes -->
+				<item id="17291" min="1" max="1" chance="1.494" /> <!-- Requiem Cutter -->
+				<item id="17296" min="1" max="1" chance="1.49" /> <!-- Requiem Thrower -->
+				<item id="17290" min="1" max="1" chance="1.468" /> <!-- Requiem Shaper -->
+				<item id="17300" min="1" max="1" chance="1.466" /> <!-- Requiem Retributer -->
+				<item id="17527" min="1" max="1" chance="47.48" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="3.648" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</drop_lists>
 	</npc>
@@ -3075,9 +3605,9 @@
 			<skill name="Skill02_ID" id="23550" level="1" />
 			<param name="Attack_BoostValue" value="6950" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="183127104" sp="43950" />
+		<acquire exp="183127104" sp="43950" raidPoints="30" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="14217624" hpRegen="10667.3" mp="41920" mpRegen="30" />
@@ -3113,13 +3643,23 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="17343" min="1" max="1" chance="66.6" /> <!-- Twilight Shield -->
-				<item id="17339" min="1" max="1" chance="17.44" /> <!-- Twilight Breastplate -->
-				<item id="17350" min="1" max="1" chance="16.67" /> <!-- Twilight Tunic -->
+				<item id="17343" min="1" max="1" chance="66.58" /> <!-- Twilight Shield -->
+				<item id="17339" min="1" max="1" chance="17.41" /> <!-- Twilight Breastplate -->
+				<item id="17350" min="1" max="1" chance="16.78" /> <!-- Twilight Tunic -->
 				<item id="17325" min="1" max="1" chance="0.75" /> <!-- Apocalypse Cutter -->
 				<item id="17330" min="1" max="1" chance="0.75" /> <!-- Apocalypse Thrower -->
-				<item id="17527" min="1" max="1" chance="46.65" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.631" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="46.47" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="3.622" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</drop_lists>
 	</npc>
@@ -3179,9 +3719,9 @@
 			<skill name="Skill02_ID" id="23556" level="1" />
 			<param name="Attack_BoostValue" value="7100" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="198916032" sp="47739" />
+		<acquire exp="198916032" sp="47739" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="82" men="149">
 			<vitals hp="14425282" hpRegen="10704.9" mp="43380" mpRegen="30" />
@@ -3217,11 +3757,21 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="17352" min="1" max="1" chance="91.435" /> <!-- Twilight Gloves -->
-				<item id="17347" min="1" max="1" chance="19.86" /> <!-- Twilight Leather Gloves -->
-				<item id="17330" min="1" max="1" chance="7.489" /> <!-- Apocalypse Thrower -->
-				<item id="17334" min="1" max="1" chance="1.587" /> <!-- Apocalypse Retributer -->
-				<item id="17526" min="1" max="1" chance="35.82" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17352" min="1" max="1" chance="91.475" /> <!-- Twilight Gloves -->
+				<item id="17347" min="1" max="1" chance="20.07" /> <!-- Twilight Leather Gloves -->
+				<item id="17330" min="1" max="1" chance="7.548" /> <!-- Apocalypse Thrower -->
+				<item id="17334" min="1" max="1" chance="1.532" /> <!-- Apocalypse Retributer -->
+				<item id="17526" min="1" max="1" chance="37" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</drop_lists>
 	</npc>

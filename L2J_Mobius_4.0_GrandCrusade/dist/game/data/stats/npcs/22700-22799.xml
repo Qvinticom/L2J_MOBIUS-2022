@@ -52,15 +52,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="156" max="365" chance="70" /> <!-- Adena -->
 				<item id="9445" min="1" max="1" chance="0.0009" /> <!-- Dynasty Bow -->
-				<item id="9530" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Breastplate Piece -->
-				<item id="9543" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Gloves Piece -->
-				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9619" min="1" max="1" chance="0.03" /> <!-- Dynasty Bow Piece -->
+				<item id="57" min="156" max="365" chance="70" /> <!-- Adena -->
+				<item id="9530" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Breastplate Piece -->
+				<item id="9543" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Gloves Piece -->
+				<item id="9619" min="1" max="1" chance="0.0075" /> <!-- Dynasty Bow Piece -->
 				<item id="5282" min="1" max="1" chance="0.003" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
-				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -72,10 +71,10 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.682" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.696" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -140,16 +139,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="134" max="312" chance="70" /> <!-- Adena -->
 				<item id="9446" min="1" max="1" chance="0.0009" /> <!-- Dynasty Knife -->
-				<item id="9530" min="1" max="1" chance="0.3" /> <!-- Sealed Dynasty Breastplate Piece -->
-				<item id="9573" min="1" max="1" chance="0.3" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.03" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9620" min="1" max="1" chance="0.03" /> <!-- Dynasty Knife Piece -->
-				<item id="9621" min="1" max="1" chance="0.03" /> <!-- Dynasty Halberd Piece -->
+				<item id="57" min="134" max="312" chance="70" /> <!-- Adena -->
+				<item id="9530" min="1" max="1" chance="0.03" /> <!-- Sealed Dynasty Breastplate Piece -->
 				<item id="1808" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot (S-grade) -->
 				<item id="5157" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-				<item id="9575" min="1" max="1" chance="0.003" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9620" min="1" max="1" chance="0.003" /> <!-- Dynasty Knife Piece -->
+				<item id="9621" min="1" max="1" chance="0.003" /> <!-- Dynasty Halberd Piece -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -161,10 +159,10 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.446" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.47" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -184,7 +182,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="135" /> <!-- Samurai Long Sword -->
-		<acquire exp="126983" sp="30" />
+		<acquire exp="126984" sp="30" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -225,11 +223,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="167" max="389" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.750000000000005" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.299999999999998" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="5162" min="1" max="1" chance="0.0299999999999998" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
-				<item id="9575" min="1" max="1" chance="0.0299999999999998" /> <!-- High-grade Life Stone - Lv. 80 -->
-				<item id="36548" min="1" max="1" chance="0.0299999999999998" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="5162" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
@@ -305,13 +301,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="207" max="483" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.75" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="1808" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (S-grade) -->
-				<item id="3036" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (S-grade) -->
-				<item id="5167" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
-				<item id="9575" min="1" max="1" chance="0.03" /> <!-- High-grade Life Stone - Lv. 80 -->
-				<item id="36548" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="3036" min="1" max="1" chance="0.3" /> <!-- Recipe: Spiritshot (S-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
+				<item id="1808" min="1" max="1" chance="0.003" /> <!-- Recipe: Soulshot (S-grade) -->
+				<item id="5167" min="1" max="1" chance="0.003" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
 			</drop>
 			<spoil>
 				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
@@ -336,7 +330,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="167544" sp="40" />
+		<acquire exp="167545" sp="40" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3643" hpRegen="8.5" mp="1743" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -386,10 +380,8 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="213" max="498" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.948000000000005" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.299999999999996" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="36548" min="1" max="1" chance="0.0749999999999997" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="9575" min="1" max="1" chance="0.0299999999999996" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
@@ -414,7 +406,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<acquire exp="181437" sp="43" />
+		<acquire exp="181438" sp="43" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3643" hpRegen="8.5" mp="1743" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -464,11 +456,9 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="228" max="534" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.749999999999996" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.300000000000006" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="36548" min="1" max="1" chance="0.0749999999999996" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="5157" min="1" max="1" chance="0.0300000000000006" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-				<item id="9575" min="1" max="1" chance="0.0300000000000006" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="5157" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36547" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment -->
@@ -493,7 +483,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="178576" sp="42" />
+		<acquire exp="178577" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3643" hpRegen="8.5" mp="1743" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -566,7 +556,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="134" lhand="6721" /> <!-- Sword of Nightmare / Monster Only (Shield of Imperial Warlord Zombie) -->
-		<acquire exp="156242" sp="37" />
+		<acquire exp="156243" sp="37" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -607,10 +597,10 @@
 				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.552" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.519" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -673,10 +663,10 @@
 				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.512" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.431" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -747,7 +737,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -767,7 +757,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- Dreadbane -->
-		<acquire exp="137430" sp="32" />
+		<acquire exp="137431" sp="32" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -810,10 +800,10 @@
 				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.354" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.397" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -832,7 +822,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="102432" sp="24" />
+		<acquire exp="102433" sp="24" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
@@ -878,7 +868,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -946,10 +936,10 @@
 				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.241" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.239" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -969,7 +959,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
-		<acquire exp="97385" sp="23" />
+		<acquire exp="97386" sp="23" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -1014,7 +1004,7 @@
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1033,7 +1023,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="156242" sp="37" />
+		<acquire exp="156243" sp="37" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1076,10 +1066,10 @@
 				<item id="9547" min="1" max="1" chance="0.3" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.462" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.552" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1098,7 +1088,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="38497" sp="9" />
+		<acquire exp="156243" sp="37" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1138,6 +1128,21 @@
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="142" max="332" chance="70" /> <!-- Adena -->
+				<item id="9547" min="1" max="1" chance="0.3" /> <!-- Water Stone -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="1.552" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22717" level="81" type="L2Monster" name="Invader Disciple of Nightmare">
 		<!-- Confirmed CT2.5 -->
@@ -1190,10 +1195,10 @@
 				<item id="9547" min="1" max="1" chance="0.3" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.662" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.574" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1213,7 +1218,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Great Sword -->
-		<acquire exp="183897" sp="44" />
+		<acquire exp="183898" sp="44" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1256,10 +1261,10 @@
 				<item id="9547" min="1" max="1" chance="0.3" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.658" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.716" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1319,7 +1324,7 @@
 				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.803" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2.741" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -1342,7 +1347,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="298781" sp="71" />
+		<acquire exp="298782" sp="71" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="65802" hpRegen="112.40520021868" mp="1743" mpRegen="3" />
 			<attack physical="5571.87244121247" magical="3804.86656104545" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1383,7 +1388,7 @@
 				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.695" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2.668" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -1409,7 +1414,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="164797" sp="39" />
+		<acquire exp="164798" sp="39" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="32946" hpRegen="112.558039826218" mp="1743" mpRegen="3" />
 			<attack physical="5793.32235492338" magical="3956.08814418738" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1452,10 +1457,10 @@
 				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.266" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.315" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1474,7 +1479,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="297936" sp="71" />
+		<acquire exp="297937" sp="71" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="65802" hpRegen="112.40520021868" mp="1743" mpRegen="3" />
 			<attack physical="5571.87244121247" magical="3804.86656104545" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
@@ -1514,7 +1519,7 @@
 				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.578" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2.663" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -1578,10 +1583,10 @@
 				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.322" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.279" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1605,7 +1610,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="299637" sp="71" />
+		<acquire exp="299638" sp="71" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="65802" hpRegen="112.40520021868" mp="1743" mpRegen="3" />
 			<attack physical="5571.87244121247" magical="3804.86656104545" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1645,13 +1650,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="251" max="586" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="1.13" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.299999999999999" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9549" min="1" max="1" chance="0.0749999999999997" /> <!-- Wind Stone -->
-				<item id="9575" min="1" max="1" chance="0.0299999999999999" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9549" min="1" max="1" chance="0.075" /> <!-- Wind Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.702" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2.696" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -1712,13 +1715,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="245" max="573" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="1.21" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.300000000000002" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9549" min="1" max="1" chance="0.0749999999999998" /> <!-- Wind Stone -->
-				<item id="9575" min="1" max="1" chance="0.0300000000000002" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9549" min="1" max="1" chance="0.075" /> <!-- Wind Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.638" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2.557" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -1740,7 +1741,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="297936" sp="71" />
+		<acquire exp="297937" sp="71" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="65802" hpRegen="112.40520021868" mp="1743" mpRegen="3" />
 			<attack physical="5571.87244121247" magical="3804.86656104545" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1778,13 +1779,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="249" max="583" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="1.125" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.300000000000001" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9550" min="1" max="1" chance="0.0749999999999996" /> <!-- Dark Stone -->
-				<item id="9575" min="1" max="1" chance="0.0300000000000002" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.574" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2.585" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -1806,7 +1805,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="59886" sp="14" />
+		<acquire exp="297937" sp="71" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="65802" hpRegen="112.40520021868" mp="1743" mpRegen="3" />
 			<attack physical="5571.87244121247" magical="3804.86656104545" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1846,6 +1845,22 @@
 			<radius normal="28" />
 			<height normal="41" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="249" max="583" chance="70" /> <!-- Adena -->
+				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="2.585" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22728" level="82" type="L2Monster" name="Nihil Invader Disciple">
 		<!-- Confirmed CT2.5 -->
@@ -1855,7 +1870,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="297936" sp="71" />
+		<acquire exp="297937" sp="71" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="65802" hpRegen="112.40520021868" mp="1743" mpRegen="3" />
 			<attack physical="5571.87244121247" magical="3804.86656104545" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1893,13 +1908,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="249" max="583" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="1.15500000000001" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.299999999999996" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9550" min="1" max="1" chance="0.0749999999999999" /> <!-- Dark Stone -->
-				<item id="9575" min="1" max="1" chance="0.0299999999999996" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.697" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="2.633" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -1921,7 +1934,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="558454" sp="134" />
+		<acquire exp="558455" sp="134" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="65802" hpRegen="112.40520021868" mp="1743" mpRegen="3" />
 			<attack physical="5571.87244121247" magical="3804.86656104545" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
@@ -1959,10 +1972,8 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="460" max="1074" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="2.17599999999999" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.749999999999985" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9550" min="1" max="1" chance="0.300000000000001" /> <!-- Dark Stone -->
-				<item id="9575" min="1" max="1" chance="0.0749999999999985" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9550" min="1" max="1" chance="0.3" /> <!-- Dark Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="4.887" /> <!-- Thin Braid -->
@@ -2026,16 +2037,14 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="915" max="2136" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="4.388" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="1.02099999999997" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9550" min="1" max="1" chance="0.300000000000002" /> <!-- Dark Stone -->
-				<item id="9575" min="1" max="1" chance="0.300000000000002" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9550" min="1" max="1" chance="0.3" /> <!-- Dark Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="9.626" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.813" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="9.648" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.935" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2055,7 +2064,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="607531" sp="145" />
+		<acquire exp="607532" sp="145" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="88724" hpRegen="149.808556478669" mp="1812" mpRegen="3" />
 			<attack physical="8783.04976717324" magical="6391.51800215611" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2093,16 +2102,14 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="863" max="2016" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="4.16599999999997" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="1.01900000000003" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9550" min="1" max="1" chance="0.299999999999999" /> <!-- Dark Stone -->
-				<item id="9575" min="1" max="1" chance="0.299999999999999" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9550" min="1" max="1" chance="0.3" /> <!-- Dark Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="9.158" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="9.087" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="1.741" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2125,7 +2132,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="609245" sp="146" />
+		<acquire exp="609246" sp="146" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="88724" hpRegen="149.808556478669" mp="1812" mpRegen="3" />
 			<attack physical="8783.04976717324" magical="6391.51800215611" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2165,16 +2172,14 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="866" max="2022" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="4.07700000000002" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="1.05100000000001" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9550" min="1" max="1" chance="0.300000000000002" /> <!-- Dark Stone -->
-				<item id="9575" min="1" max="1" chance="0.300000000000002" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9550" min="1" max="1" chance="0.3" /> <!-- Dark Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="9.194" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.78" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="9.199" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.704" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2193,7 +2198,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="641992" sp="154" />
+		<acquire exp="641993" sp="154" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="88724" hpRegen="149.808556478669" mp="1812" mpRegen="3" />
 			<attack physical="8783.04976717324" magical="6391.51800215611" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
@@ -2231,16 +2236,14 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="912" max="2130" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="4.32299999999999" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="1.15000000000001" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9551" min="1" max="1" chance="0.300000000000003" /> <!-- Holy Stone -->
-				<item id="9575" min="1" max="1" chance="0.300000000000003" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="9.573" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.805" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="9.665" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.854" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2259,7 +2262,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="300248" sp="72" />
+		<acquire exp="300249" sp="72" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="44397" hpRegen="149.927792364223" mp="1812" mpRegen="3" />
 			<attack physical="8983.48139484661" magical="6537.37421274753" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2298,13 +2301,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="419" max="978" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="2.029" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9551" min="1" max="1" chance="0.29999999999999" /> <!-- Holy Stone -->
-				<item id="9574" min="1" max="1" chance="0.29999999999999" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9575" min="1" max="1" chance="0.029999999999999" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="4.459" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="4.396" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -2331,7 +2332,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="609245" sp="146" />
+		<acquire exp="609246" sp="146" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="88724" hpRegen="149.808556478669" mp="1812" mpRegen="3" />
 			<attack physical="8783.04976717324" magical="6391.51800215611" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2371,16 +2372,14 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="866" max="2022" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="4.09900000000001" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="1.01000000000001" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9551" min="1" max="1" chance="0.299999999999998" /> <!-- Holy Stone -->
-				<item id="9575" min="1" max="1" chance="0.299999999999998" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="9.092" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.827" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="9.19" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.705" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2438,13 +2437,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="400" max="935" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="1.83799999999999" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9551" min="1" max="1" chance="0.299999999999996" /> <!-- Holy Stone -->
-				<item id="9574" min="1" max="1" chance="0.299999999999996" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9575" min="1" max="1" chance="0.0299999999999996" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="4.194" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="4.277" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -2504,16 +2501,14 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="861" max="2011" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="4.15100000000001" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="1.07500000000001" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9551" min="1" max="1" chance="0.300000000000001" /> <!-- Holy Stone -->
-				<item id="9575" min="1" max="1" chance="0.300000000000001" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="9.063" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.713" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="9.132" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.763" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2532,7 +2527,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="121758" sp="29" />
+		<acquire exp="605798" sp="145" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="88724" hpRegen="149.808556478669" mp="1812" mpRegen="3" />
 			<attack physical="8783.04976717324" magical="6391.51800215611" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2572,6 +2567,22 @@
 			<radius normal="28" />
 			<height normal="41" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="861" max="2011" chance="70" /> <!-- Adena -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="9.132" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.763" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22739" level="84" type="L2Monster" name="Mutant Disciple">
 		<!-- Confirmed CT2.5 -->
@@ -2581,7 +2592,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="1113438" sp="267" />
+		<acquire exp="1113439" sp="267" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="88724" hpRegen="149.808556478669" mp="1812" mpRegen="3" />
 			<attack physical="8783.04976717324" magical="6391.51800215611" random="10" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
@@ -2620,14 +2631,12 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="1557" max="3637" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="7.37800000000002" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="1.82799999999998" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9551" min="1" max="1" chance="0.300000000000001" /> <!-- Holy Stone -->
-				<item id="9575" min="1" max="1" chance="0.300000000000001" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="17.12" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="3.217" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="16.7" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="3.216" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -2687,14 +2696,12 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="1640" max="3830" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="7.80899999999996" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="1.99799999999998" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="9551" min="1" max="1" chance="0.300000000000001" /> <!-- Holy Stone -->
-				<item id="9575" min="1" max="1" chance="0.300000000000001" /> <!-- High-grade Life Stone - Lv. 80 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="18.12" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="3.36" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="17.53" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="3.346" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -2707,12 +2714,12 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22741" level="81" type="L2Monster" name="Grave Robber Warrior">
+	<npc id="22741" level="82" type="L2Monster" name="Grave Robber Warrior">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="12" /> <!-- Knife -->
-		<acquire exp="24392" sp="5" />
+		<acquire exp="54664" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -2749,16 +2756,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="86" max="200" chance="70" /> <!-- Adena -->
+				<item id="959" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="14" />
@@ -3047,7 +3056,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="1902456" sp="456" />
+		<acquire exp="1902457" sp="456" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
 			<attack physical="27947.2799312612" magical="5005.58282010264" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3090,17 +3099,17 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1767" max="4118" chance="70" /> <!-- Adena -->
 				<item id="17313" min="1" max="1" chance="0.075" /> <!-- Immortal Leather Gloves -->
-				<item id="36814" min="1" max="1" chance="16.6599999999998" /> <!-- Immortal Leather Glove Ingredient -->
-				<item id="36527" min="1" max="1" chance="13.1" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="1" chance="2.56600000000001" /> <!-- Metallic Fiber -->
-				<item id="36752" min="1" max="1" chance="0.300000000000001" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
-				<item id="17526" min="1" max="1" chance="0.00300000000000001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="3021" max="7050" chance="20" /> <!-- Adena -->
+				<item id="36814" min="1" max="1" chance="16.64" /> <!-- Immortal Leather Glove Ingredient -->
+				<item id="36527" min="1" max="1" chance="13.45" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="2.538" /> <!-- Metallic Fiber -->
+				<item id="36752" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="42.53" /> <!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.0055" /> <!-- Recipe: R (100%) -->
+				<item id="40205" min="1" max="1" chance="42.98" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.0075" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3171,13 +3180,13 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
 				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots -->
-				<item id="36815" min="1" max="3" chance="10.55" /> <!-- Immortal Leather Boot Ingredient -->
-				<item id="36753" min="1" max="1" chance="0.998999999999995" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+				<item id="57" min="4019" max="9377" chance="20" /> <!-- Adena -->
+				<item id="36815" min="1" max="3" chance="10.58" /> <!-- Immortal Leather Boot Ingredient -->
+				<item id="36753" min="1" max="1" chance="1.026" /> <!-- Recipe: Immortal Leather Boots (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="56.2" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="56.24" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3250,12 +3259,12 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
-				<item id="36812" min="1" max="1" chance="11.23" /> <!-- Immortal Leather Armor Ingredient -->
+				<item id="57" min="4019" max="9377" chance="20" /> <!-- Adena -->
+				<item id="36812" min="1" max="1" chance="10.89" /> <!-- Immortal Leather Armor Ingredient -->
 				<item id="36750" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="56.86" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="58.31" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3329,13 +3338,13 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
-				<item id="36813" min="1" max="1" chance="16.93" /> <!-- Immortal Leather Legging Ingredient -->
-				<item id="36751" min="1" max="1" chance="0.300000000000001" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
-				<item id="17526" min="1" max="1" chance="0.00549999999999992" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="4019" max="9377" chance="20" /> <!-- Adena -->
+				<item id="36813" min="1" max="1" chance="17.08" /> <!-- Immortal Leather Legging Ingredient -->
+				<item id="36751" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="56.54" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="56.67" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3412,18 +3421,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="1846" max="4303" chance="70" /> <!-- Adena -->
 				<item id="17313" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Gloves -->
-				<item id="36814" min="1" max="1" chance="16.6100000000001" /> <!-- Immortal Leather Glove Ingredient -->
-				<item id="36527" min="1" max="1" chance="10.4999999999999" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="1" chance="2.07800000000001" /> <!-- Metallic Fiber -->
-				<item id="36752" min="1" max="1" chance="0.300000000000014" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
-				<item id="9551" min="1" max="1" chance="0.0750000000000006" /> <!-- Holy Stone -->
-				<item id="9557" min="1" max="1" chance="0.0300000000000014" /> <!-- Holy Crystal -->
+				<item id="57" min="3156" max="7365" chance="20" /> <!-- Adena -->
+				<item id="36814" min="1" max="1" chance="16.13" /> <!-- Immortal Leather Glove Ingredient -->
+				<item id="36527" min="1" max="1" chance="11.34" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="2.075" /> <!-- Metallic Fiber -->
+				<item id="36752" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
+				<item id="9557" min="1" max="1" chance="0.03" /> <!-- Holy Crystal -->
 			</drop>
 			<spoil>
-				<item id="36527" min="1" max="1" chance="72.23" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="1" chance="13.41" /> <!-- Metallic Fiber -->
+				<item id="36527" min="1" max="1" chance="73.11" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="14.1" /> <!-- Metallic Fiber -->
 				<item id="36894" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Leather Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
@@ -3500,16 +3509,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
 				<item id="17314" min="1" max="1" chance="0.3" /> <!-- Immortal Leather Boots -->
-				<item id="36815" min="1" max="3" chance="14.98" /> <!-- Immortal Leather Boot Ingredient -->
-				<item id="9549" min="1" max="1" chance="0.299999999999996" /> <!-- Wind Stone -->
-				<item id="36753" min="1" max="1" chance="0.299999999999996" /> <!-- Recipe: Immortal Leather Boots (60%) -->
-				<item id="9555" min="1" max="1" chance="0.0299999999999996" /> <!-- Wind Crystal -->
+				<item id="57" min="5584" max="13029" chance="20" /> <!-- Adena -->
+				<item id="36815" min="1" max="3" chance="13.96" /> <!-- Immortal Leather Boot Ingredient -->
+				<item id="9549" min="1" max="1" chance="0.3" /> <!-- Wind Stone -->
+				<item id="36753" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+				<item id="9555" min="1" max="1" chance="0.03" /> <!-- Wind Crystal -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="57.48" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="10.96" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="56.51" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="11.23" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3586,8 +3595,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
-				<item id="36812" min="1" max="1" chance="15.16" /> <!-- Immortal Leather Armor Ingredient -->
+				<item id="57" min="5584" max="13029" chance="20" /> <!-- Adena -->
+				<item id="36812" min="1" max="1" chance="14.89" /> <!-- Immortal Leather Armor Ingredient -->
 				<item id="36750" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Armor (60%) -->
 				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
@@ -3670,14 +3679,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
-				<item id="36813" min="1" max="3" chance="11.75" /> <!-- Immortal Leather Legging Ingredient -->
+				<item id="57" min="5584" max="13029" chance="20" /> <!-- Adena -->
+				<item id="36813" min="1" max="3" chance="12.32" /> <!-- Immortal Leather Legging Ingredient -->
 				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="36751" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="59.18" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="11.71" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="57.37" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="10.94" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3751,15 +3760,15 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
-				<item id="36807" min="1" max="1" chance="15.75" /> <!-- Immortal Gaiter Ingredient -->
-				<item id="36562" min="1" max="1" chance="0.749999999999994" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.299999999999995" /> <!-- Synthetic Cokes -->
-				<item id="36745" min="1" max="1" chance="0.299999999999995" /> <!-- Recipe: Immortal Gaiters (60%) -->
-				<item id="17527" min="1" max="1" chance="0.0749999999999994" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="57" min="4019" max="9377" chance="20" /> <!-- Adena -->
+				<item id="36807" min="1" max="1" chance="15.85" /> <!-- Immortal Gaiter Ingredient -->
+				<item id="36562" min="1" max="1" chance="0.75" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36745" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Gaiters (60%) -->
+				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="58.49" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="57.55" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3832,14 +3841,14 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
-				<item id="17294" min="1" max="1" chance="0.0300000000000002" /> <!-- Requiem Fighter -->
-				<item id="36798" min="1" max="1" chance="1.67399999999999" /> <!-- Requiem Fighter Fragment -->
+				<item id="17294" min="1" max="1" chance="0.03" /> <!-- Requiem Fighter -->
+				<item id="57" min="4019" max="9377" chance="20" /> <!-- Adena -->
+				<item id="36798" min="1" max="1" chance="1.793" /> <!-- Requiem Fighter Fragment -->
 				<item id="36736" min="1" max="1" chance="0.03" /> <!-- Recipe: Requiem Fighter (60%) -->
-				<item id="17526" min="1" max="1" chance="0.00550000000000004" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="55.94" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="57.09" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3868,7 +3877,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="1902456" sp="456" />
+		<acquire exp="1902457" sp="456" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="287430" hpRegen="8.5" mp="29286" mpRegen="30" />
 			<attack physical="27947.2799312612" magical="10061.020775254" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3911,14 +3920,14 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1767" max="4118" chance="70" /> <!-- Adena -->
-				<item id="17320" min="1" max="1" chance="0.0749999999999993" /> <!-- Immortal Sigil -->
-				<item id="36821" min="1" max="1" chance="15.1" /> <!-- Immortal Sigil Ingredient -->
+				<item id="17320" min="1" max="1" chance="0.075" /> <!-- Immortal Sigil -->
+				<item id="57" min="3021" max="7050" chance="20" /> <!-- Adena -->
+				<item id="36821" min="1" max="1" chance="15.32" /> <!-- Immortal Sigil Ingredient -->
 				<item id="36759" min="1" max="1" chance="0.75" /> <!-- Recipe: Immortal Sigil (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="43.88" /> <!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.0055" /> <!-- Recipe: R (100%) -->
+				<item id="40205" min="1" max="1" chance="43.55" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.0075" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3997,18 +4006,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
-				<item id="36844" min="1" max="1" chance="8.701" /> <!-- Twilight Leather Legging Ingredient -->
-				<item id="36562" min="1" max="1" chance="0.749999999999995" /> <!-- Greater Cokes -->
-				<item id="9546" min="1" max="1" chance="0.299999999999995" /> <!-- Fire Stone -->
-				<item id="36563" min="1" max="1" chance="0.299999999999995" /> <!-- Synthetic Cokes -->
-				<item id="9552" min="1" max="1" chance="0.0299999999999995" /> <!-- Fire Crystal -->
-				<item id="30423" min="1" max="1" chance="0.0299999999999995" /> <!-- Recipe: Soulshot (R-grade) -->
-				<item id="36782" min="1" max="1" chance="0.0299999999999995" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
+				<item id="57" min="5584" max="13029" chance="20" /> <!-- Adena -->
+				<item id="36844" min="1" max="1" chance="8.747" /> <!-- Twilight Leather Legging Ingredient -->
+				<item id="36562" min="1" max="1" chance="0.75" /> <!-- Greater Cokes -->
+				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="9552" min="1" max="1" chance="0.03" /> <!-- Fire Crystal -->
+				<item id="30423" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (R-grade) -->
+				<item id="36782" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
 			</drop>
 			<spoil>
-				<item id="36562" min="1" max="1" chance="6.506" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="1.223" /> <!-- Synthetic Cokes -->
+				<item id="36562" min="1" max="1" chance="6.491" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="1.252" /> <!-- Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4084,15 +4093,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
-				<item id="17294" min="1" max="1" chance="0.0299999999999997" /> <!-- Requiem Fighter -->
-				<item id="36798" min="1" max="1" chance="2.44500000000001" /> <!-- Requiem Fighter Fragment -->
-				<item id="36736" min="1" max="1" chance="0.0749999999999996" /> <!-- Recipe: Requiem Fighter (60%) -->
-				<item id="17526" min="1" max="1" chance="0.0300000000000005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17294" min="1" max="1" chance="0.03" /> <!-- Requiem Fighter -->
+				<item id="57" min="5584" max="13029" chance="20" /> <!-- Adena -->
+				<item id="36798" min="1" max="1" chance="2.394" /> <!-- Requiem Fighter Fragment -->
+				<item id="36736" min="1" max="1" chance="0.075" /> <!-- Recipe: Requiem Fighter (60%) -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="57.93" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="11.23" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="57.06" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="10.76" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4168,16 +4177,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="1846" max="4303" chance="70" /> <!-- Adena -->
-				<item id="17320" min="1" max="1" chance="0.300000000000005" /> <!-- Immortal Sigil -->
-				<item id="36821" min="1" max="1" chance="16.9299999999999" /> <!-- Immortal Sigil Ingredient -->
+				<item id="17320" min="1" max="1" chance="0.3" /> <!-- Immortal Sigil -->
+				<item id="57" min="3156" max="7365" chance="20" /> <!-- Adena -->
+				<item id="36821" min="1" max="1" chance="16.39" /> <!-- Immortal Sigil Ingredient -->
 				<item id="9550" min="1" max="1" chance="0.3" /> <!-- Dark Stone -->
 				<item id="36759" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Sigil (60%) -->
 				<item id="9556" min="1" max="1" chance="0.03" /> <!-- Dark Crystal -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="33.03" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="31.78" /> <!-- Thin Braid -->
 				<item id="9556" min="1" max="1" chance="0.3" /> <!-- Dark Crystal -->
 			</spoil>
 			<lucky_drop>
@@ -4207,7 +4216,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="1902456" sp="456" />
+		<acquire exp="1902457" sp="456" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="287430" hpRegen="8.5" mp="29286" mpRegen="30" />
 			<attack physical="27947.2799312612" magical="10061.020775254" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4252,16 +4261,16 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="1767" max="4118" chance="70" /> <!-- Adena -->
-				<item id="36849" min="1" max="1" chance="4.715" /> <!-- Twilight Stocking Ingredient -->
-				<item id="36527" min="1" max="1" chance="12.9999999999999" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="1" chance="2.51199999999997" /> <!-- Metallic Fiber -->
-				<item id="17527" min="1" max="1" chance="0.0300000000000006" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36787" min="1" max="1" chance="0.0300000000000006" /> <!-- Recipe: Twilight Stockings (60%) -->
+				<item id="57" min="3021" max="7050" chance="20" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="12.95" /> <!-- Synthetic Fiber -->
+				<item id="36849" min="1" max="1" chance="4.622" /> <!-- Twilight Stocking Ingredient -->
+				<item id="36528" min="1" max="1" chance="2.596" /> <!-- Metallic Fiber -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36787" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Stockings (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="43.33" /> <!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.0055" /> <!-- Recipe: R (100%) -->
+				<item id="40205" min="1" max="1" chance="41.76" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.0075" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4332,13 +4341,13 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
-				<item id="17322" min="1" max="1" chance="0.299999999999994" /> <!-- Immortal Earring -->
-				<item id="36823" min="1" max="3" chance="11.21" /> <!-- Immortal Earring Gem -->
-				<item id="36761" min="1" max="1" chance="1.078" /> <!-- Recipe: Immortal Earring (60%) -->
+				<item id="17322" min="1" max="1" chance="0.3" /> <!-- Immortal Earring -->
+				<item id="57" min="4019" max="9377" chance="20" /> <!-- Adena -->
+				<item id="36823" min="1" max="3" chance="10.76" /> <!-- Immortal Earring Gem -->
+				<item id="36761" min="1" max="1" chance="1.127" /> <!-- Recipe: Immortal Earring (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="56.22" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="57.67" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -4411,13 +4420,13 @@
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2350" max="5478" chance="70" /> <!-- Adena -->
-				<item id="36822" min="1" max="3" chance="16.78" /> <!-- Immortal Necklace Gem -->
-				<item id="36760" min="1" max="1" chance="0.300000000000001" /> <!-- Recipe: Immortal Necklace (60%) -->
-				<item id="17526" min="1" max="1" chance="0.00549999999999992" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="4019" max="9377" chance="20" /> <!-- Adena -->
+				<item id="36822" min="1" max="3" chance="16.43" /> <!-- Immortal Necklace Gem -->
+				<item id="36760" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Necklace (60%) -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="55.99" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="57.23" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.03" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -4497,18 +4506,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2455" max="5723" chance="70" /> <!-- Adena -->
-				<item id="36848" min="1" max="1" chance="4.163" /> <!-- Twilight Tunic Ingredient -->
-				<item id="36527" min="1" max="1" chance="12.22" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="1" chance="2.30500000000006" /> <!-- Metallic Fiber -->
-				<item id="9547" min="1" max="1" chance="0.300000000000003" /> <!-- Water Stone -->
-				<item id="9553" min="1" max="1" chance="0.0300000000000003" /> <!-- Water Crystal -->
-				<item id="17527" min="1" max="1" chance="0.0300000000000003" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36786" min="1" max="1" chance="0.0300000000000003" /> <!-- Recipe: Twilight Tunic (60%) -->
+				<item id="57" min="4198" max="9796" chance="20" /> <!-- Adena -->
+				<item id="36527" min="1" max="1" chance="12.05" /> <!-- Synthetic Fiber -->
+				<item id="36848" min="1" max="1" chance="4.043" /> <!-- Twilight Tunic Ingredient -->
+				<item id="36528" min="1" max="1" chance="2.403" /> <!-- Metallic Fiber -->
+				<item id="9547" min="1" max="1" chance="0.3" /> <!-- Water Stone -->
+				<item id="9553" min="1" max="1" chance="0.03" /> <!-- Water Crystal -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36786" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Tunic (60%) -->
 			</drop>
 			<spoil>
-				<item id="36527" min="1" max="3" chance="71.51" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="1" chance="26.3" /> <!-- Metallic Fiber -->
+				<item id="36527" min="1" max="3" chance="69.92" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="1" chance="26.41" /> <!-- Metallic Fiber -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4584,15 +4593,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
-				<item id="17322" min="1" max="1" chance="0.300000000000005" /> <!-- Immortal Earring -->
-				<item id="36823" min="1" max="3" chance="14.58" /> <!-- Immortal Earring Gem -->
-				<item id="36761" min="1" max="1" chance="0.750000000000004" /> <!-- Recipe: Immortal Earring (60%) -->
-				<item id="17527" min="1" max="1" chance="0.300000000000004" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="30424" min="1" max="1" chance="0.0750000000000004" /> <!-- Recipe: Spiritshot (R-grade) -->
+				<item id="17322" min="1" max="1" chance="0.3" /> <!-- Immortal Earring -->
+				<item id="57" min="5584" max="13029" chance="20" /> <!-- Adena -->
+				<item id="36823" min="1" max="3" chance="15.54" /> <!-- Immortal Earring Gem -->
+				<item id="36761" min="1" max="1" chance="0.75" /> <!-- Recipe: Immortal Earring (60%) -->
+				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="30424" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="11.66" /> <!-- Synthetic Braid -->
+				<item id="36533" min="1" max="1" chance="10.84" /> <!-- Synthetic Braid -->
 				<item id="9554" min="1" max="1" chance="0.3" /> <!-- Earth Crystal -->
 			</spoil>
 			<lucky_drop>
@@ -4670,14 +4679,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3265" max="7612" chance="70" /> <!-- Adena -->
-				<item id="36822" min="3" max="9" chance="7.53" /> <!-- Immortal Necklace Gem -->
-				<item id="36760" min="1" max="1" chance="0.749999999999999" /> <!-- Recipe: Immortal Necklace (60%) -->
-				<item id="17526" min="1" max="1" chance="0.0299999999999996" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="5584" max="13029" chance="20" /> <!-- Adena -->
+				<item id="36822" min="3" max="9" chance="7.583" /> <!-- Immortal Necklace Gem -->
+				<item id="36760" min="1" max="1" chance="0.75" /> <!-- Recipe: Immortal Necklace (60%) -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="56.38" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="11.61" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="58.71" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="10.93" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4729,7 +4738,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="22767" level="85" type="L2Monster" name="Ice Knight">
+	<npc id="22767" level="101" type="L2Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -4737,7 +4746,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="57080" sp="13" />
+		<acquire exp="3117951155" sp="6235973" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<attack physical="1188.87259499001" magical="811.84586495282" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4769,6 +4778,18 @@
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="30297" min="1" max="2" chance="86.48" /> <!-- Superior Giant's Codex -->
+				<item id="17527" min="2" max="3" chance="81.35" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="2" chance="19.4" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46150" min="1" max="1" chance="9.932" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="30298" min="1" max="1" chance="2.554" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="46151" min="1" max="1" chance="2.544" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="39738" min="1" max="1" chance="2.494" /> <!-- Rune Stone -->
+				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="22768" level="82" type="L2Monster" name="Tanta Lizardman Scout">
 		<!-- Confirmed CT2.5 -->
@@ -4820,26 +4841,24 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="38" max="89" chance="70" /> <!-- Adena -->
 				<item id="10216" min="1" max="1" chance="0.0009" /> <!-- Icarus Disperser -->
 				<item id="10221" min="1" max="1" chance="0.0009" /> <!-- Icarus Hand -->
-				<item id="36528" min="1" max="1" chance="0.0299999999999998" /> <!-- Metallic Fiber -->
-				<item id="10483" min="1" max="1" chance="0.00299999999999998" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10484" min="1" max="1" chance="0.00299999999999998" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="36903" min="1" max="1" chance="0.000899999999999986" /> <!-- Recipe: Silver Wire - Downgrade -->
-				<item id="36866" min="1" max="1" chance="0.000899999999999986" /> <!-- Recipe: Silver - Upgrade -->
-				<item id="36865" min="1" max="1" chance="0.000899999999999986" /> <!-- Recipe: Silver - Downgrade -->
-				<item id="36553" min="1" max="1" chance="0.000899999999999986" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36548" min="1" max="1" chance="0.000899999999999986" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999986" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="959" min="1" max="1" chance="0.000899999999999986" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="36932" min="1" max="1" chance="0.000899999999999986" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="57" min="38" max="89" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
+				<item id="36932" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36866" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36865" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Downgrade -->
+				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36548" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="45929" min="1" max="3" chance="0.0009" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4899,27 +4918,25 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
+				<item id="10215" min="1" max="1" chance="0.0009" /> <!-- Icarus Sawsword -->
+				<item id="10217" min="1" max="1" chance="0.0009" /> <!-- Icarus Spirit -->
+				<item id="10218" min="1" max="1" chance="0.0009" /> <!-- Icarus Heavy Arms -->
 				<item id="57" min="51" max="119" chance="70" /> <!-- Adena -->
-				<item id="10215" min="1" max="1" chance="0.000899999999999991" /> <!-- Icarus Sawsword -->
-				<item id="10217" min="1" max="1" chance="0.000899999999999991" /> <!-- Icarus Spirit -->
-				<item id="10218" min="1" max="1" chance="0.000899999999999991" /> <!-- Icarus Heavy Arms -->
+				<item id="36537" min="1" max="1" chance="0.03" /> <!-- Leather Braid -->
+				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="36552" min="1" max="1" chance="0.003" /> <!-- Armor Fragment -->
-				<item id="36557" min="1" max="1" chance="0.0299999999999998" /> <!-- Accessory Gem -->
-				<item id="36537" min="1" max="1" chance="0.0299999999999998" /> <!-- Leather Braid -->
-				<item id="10484" min="1" max="1" chance="0.00299999999999998" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="10483" min="1" max="1" chance="0.00550000000000003" /> <!-- Life Stone - Lv. 82 -->
-				<item id="960" min="1" max="1" chance="0.00299999999999998" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="10485" min="1" max="1" chance="0.000900000000000008" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="36866" min="1" max="1" chance="0.000900000000000008" /> <!-- Recipe: Silver - Upgrade -->
-				<item id="36873" min="1" max="1" chance="0.000900000000000008" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
-				<item id="36904" min="1" max="1" chance="0.000900000000000008" /> <!-- Recipe: Silver Wire - Upgrade -->
-				<item id="36939" min="1" max="1" chance="0.000900000000000008" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<item id="36939" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<item id="36904" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Upgrade -->
+				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36866" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="45929" min="1" max="3" chance="0.0009" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4937,7 +4954,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="242336" sp="58" />
+		<acquire exp="242337" sp="58" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="12117" hpRegen="8.5" mp="1812" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4978,39 +4995,37 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
+				<item id="15694" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Circlet -->
+				<item id="15709" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Sigil -->
+				<item id="15710" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shield -->
 				<item id="57" min="167" max="390" chance="70" /> <!-- Adena -->
-				<item id="15710" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shield -->
-				<item id="15694" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Helmet -->
-				<item id="15695" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Leather Helmet -->
-				<item id="15696" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Circlet -->
-				<item id="15709" min="1" max="1" chance="0.000900000000000002" /> <!-- Sealed Moirai Sigil -->
-				<item id="15693" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Moirai Shield Fragment -->
-				<item id="15692" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Moirai Sigil Piece -->
-				<item id="15647" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15646" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15645" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="10483" min="1" max="1" chance="0.0299999999999997" /> <!-- Life Stone - Lv. 82 -->
-				<item id="36538" min="1" max="1" chance="0.0299999999999997" /> <!-- Durable Leather Braid -->
-				<item id="36553" min="1" max="1" chance="0.00299999999999997" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36558" min="1" max="1" chance="0.00549999999999997" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36874" min="1" max="1" chance="0.00299999999999997" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
-				<item id="15791" min="1" max="1" chance="0.00299999999999997" /> <!-- Recipe: Sealed Moirai Shield (60%) -->
-				<item id="15790" min="1" max="1" chance="0.00299999999999997" /> <!-- Recipe: Sealed Moirai Sigil (60%) -->
-				<item id="15777" min="1" max="1" chance="0.00299999999999997" /> <!-- Recipe: Sealed Moirai Circlet (60%) -->
-				<item id="15776" min="1" max="1" chance="0.00299999999999997" /> <!-- Recipe: Sealed Moirai Leather Helmet(60%) -->
-				<item id="15775" min="1" max="1" chance="0.00299999999999997" /> <!-- Recipe: Sealed Moirai Helmet (60%) -->
-				<item id="10484" min="1" max="1" chance="0.00299999999999997" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="10485" min="1" max="1" chance="0.000900000000000002" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="36873" min="1" max="1" chance="0.000900000000000002" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
-				<item id="9554" min="1" max="1" chance="0.000900000000000002" /> <!-- Earth Crystal -->
-				<item id="36905" min="1" max="1" chance="0.000900000000000002" /> <!-- Recipe: Silver Wire - Combination -->
-				<item id="36940" min="1" max="1" chance="0.000900000000000002" /> <!-- Recipe: Greater Cokes - Upgrade -->
+				<item id="15693" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Shield Fragment -->
+				<item id="15692" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Sigil Piece -->
+				<item id="15647" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="15646" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15645" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="36558" min="1" max="1" chance="0.0075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36538" min="1" max="1" chance="0.0075" /> <!-- Durable Leather Braid -->
+				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="15791" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Shield (60%) -->
+				<item id="15790" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Sigil (60%) -->
+				<item id="15777" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Circlet (60%) -->
+				<item id="15776" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Leather Helmet(60%) -->
+				<item id="15775" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Helmet (60%) -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="36873" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="36874" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
+				<item id="36905" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Combination -->
+				<item id="36940" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.73" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.8" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5069,33 +5084,31 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="172" max="402" chance="70" /> <!-- Adena -->
 				<item id="10220" min="1" max="1" chance="0.0009" /> <!-- Icarus Hammer -->
 				<item id="10222" min="1" max="1" chance="0.0009" /> <!-- Icarus Hall -->
-				<item id="15697" min="1" max="1" chance="0.000899999999999987" /> <!-- Sealed Moirai Breastplate -->
-				<item id="15700" min="1" max="1" chance="0.000899999999999987" /> <!-- Sealed Moirai Gaiters -->
-				<item id="15651" min="1" max="1" chance="0.299999999999998" /> <!-- Sealed Moirai Gaiters Piece -->
-				<item id="15648" min="1" max="1" chance="0.0749999999999996" /> <!-- Sealed Moirai Breastplate Piece -->
+				<item id="15697" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Breastplate -->
+				<item id="15700" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gaiters -->
+				<item id="57" min="172" max="402" chance="70" /> <!-- Adena -->
 				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
-				<item id="36542" min="1" max="1" chance="0.0749999999999987" /> <!-- Silver Wire -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="36562" min="1" max="1" chance="0.03" /> <!-- Greater Cokes -->
 				<item id="36557" min="1" max="1" chance="0.03" /> <!-- Accessory Gem -->
+				<item id="36542" min="1" max="1" chance="0.03" /> <!-- Silver Wire -->
+				<item id="15651" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Gaiters Piece -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<item id="15648" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Breastplate Piece -->
 				<item id="36874" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
-				<item id="15781" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Gaiters (60%) -->
-				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="15778" min="1" max="1" chance="0.000900000000000003" /> <!-- Recipe: Sealed Moirai Breastplate (60%) -->
-				<item id="10485" min="1" max="1" chance="0.000900000000000003" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="36857" min="1" max="1" chance="0.000900000000000003" /> <!-- Recipe: Leather - Downgrade -->
-				<item id="9554" min="1" max="1" chance="0.000900000000000003" /> <!-- Earth Crystal -->
-				<item id="36890" min="1" max="1" chance="0.000900000000000003" /> <!-- Recipe: Leather Braid - Downgrade -->
-				<item id="36915" min="1" max="1" chance="0.000900000000000003" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="9554" min="1" max="1" chance="0.0009" /> <!-- Earth Crystal -->
+				<item id="36857" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="15781" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Gaiters (60%) -->
+				<item id="36890" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36915" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="15778" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Breastplate (60%) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.863" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.777" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5114,7 +5127,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="149042" sp="35" />
+		<acquire exp="149043" sp="35" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="11506" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -5155,34 +5168,32 @@
 		<ai type="ARCHER" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="54" max="127" chance="70" /> <!-- Adena -->
+				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
 				<item id="10223" min="1" max="1" chance="0.0009" /> <!-- Icarus Spitter -->
-				<item id="15766" min="1" max="1" chance="0.000899999999999982" /> <!-- Sealed Moirai Ring -->
-				<item id="15767" min="1" max="1" chance="0.000899999999999982" /> <!-- Sealed Moirai Earring -->
-				<item id="15768" min="1" max="1" chance="0.000899999999999982" /> <!-- Sealed Moirai Necklace -->
-				<item id="15772" min="1" max="1" chance="0.299999999999998" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.0750000000000007" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.0750000000000007" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15813" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Sealed Moirai Earring (70%) -->
-				<item id="15812" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Sealed Moirai Ring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.000899999999999994" /> <!-- Recipe: Sealed Moirai Necklace (70%) -->
-				<item id="36518" min="1" max="1" chance="0.0299999999999998" /> <!-- Durable Leather -->
-				<item id="36558" min="1" max="1" chance="0.00299999999999998" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36543" min="1" max="1" chance="0.00299999999999998" /> <!-- Adamantite Wire -->
-				<item id="10484" min="1" max="1" chance="0.00299999999999998" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="10483" min="1" max="1" chance="0.00299999999999998" /> <!-- Life Stone - Lv. 82 -->
-				<item id="10485" min="1" max="1" chance="0.000899999999999994" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="959" min="1" max="1" chance="0.000899999999999994" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="36563" min="1" max="1" chance="0.000899999999999994" /> <!-- Synthetic Cokes -->
-				<item id="36890" min="1" max="1" chance="0.000899999999999994" /> <!-- Recipe: Leather Braid - Downgrade -->
-				<item id="36891" min="1" max="1" chance="0.000899999999999994" /> <!-- Recipe: Leather Braid - Upgrade -->
-				<item id="36916" min="1" max="1" chance="0.000899999999999994" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="15768" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Necklace -->
+				<item id="57" min="54" max="127" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="15772" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Necklace Gem -->
+				<item id="36558" min="1" max="1" chance="0.003" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36543" min="1" max="1" chance="0.003" /> <!-- Adamantite Wire -->
+				<item id="15812" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Ring (70%) -->
+				<item id="15814" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Necklace (70%) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="15813" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Earring (70%) -->
+				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
+				<item id="36890" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="36891" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36916" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment - Upgrade -->
+				<item id="45929" min="1" max="3" chance="0.0009" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5202,7 +5213,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
-		<acquire exp="147474" sp="35" />
+		<acquire exp="147475" sp="35" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="11506" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -5244,40 +5255,38 @@
 		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<drop_lists>
 			<drop>
+				<item id="15703" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gauntlets -->
+				<item id="15704" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Shoes -->
 				<item id="57" min="54" max="126" chance="70" /> <!-- Adena -->
-				<item id="15703" min="1" max="1" chance="0.000900000000000006" /> <!-- Sealed Moirai Gauntlets -->
-				<item id="15704" min="1" max="1" chance="0.000900000000000006" /> <!-- Sealed Moirai Leather Gloves -->
-				<item id="15705" min="1" max="1" chance="0.000900000000000006" /> <!-- Sealed Moirai Gloves -->
-				<item id="15706" min="1" max="1" chance="0.000900000000000006" /> <!-- Sealed Moirai Boots -->
-				<item id="15707" min="1" max="1" chance="0.000900000000000006" /> <!-- Sealed Moirai Leather Boots -->
-				<item id="15708" min="1" max="1" chance="0.000900000000000006" /> <!-- Sealed Moirai Shoes -->
-				<item id="15659" min="1" max="1" chance="0.0300000000000002" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="15658" min="1" max="1" chance="0.0300000000000002" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15657" min="1" max="1" chance="0.0300000000000002" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15656" min="1" max="1" chance="0.0300000000000002" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15655" min="1" max="1" chance="0.0300000000000002" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15654" min="1" max="1" chance="0.0300000000000002" /> <!-- Sealed Moirai Gauntlets Piece -->
-				<item id="36547" min="1" max="1" chance="0.00300000000000002" /> <!-- Weapon Fragment -->
 				<item id="36522" min="1" max="1" chance="0.03" /> <!-- Silver -->
-				<item id="10484" min="1" max="1" chance="0.003" /> <!-- Mid-grade Life Stone - Lv. 82 -->
+				<item id="15655" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15659" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="15654" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Gauntlets Piece -->
+				<item id="15658" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15657" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15656" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Gloves Piece -->
 				<item id="36562" min="1" max="1" chance="0.003" /> <!-- Greater Cokes -->
-				<item id="10483" min="1" max="1" chance="0.003" /> <!-- Life Stone - Lv. 82 -->
+				<item id="36547" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment -->
 				<item id="36892" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Combination -->
 				<item id="36857" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Downgrade -->
+				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
 				<item id="15789" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Shoes (60%) -->
 				<item id="15788" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Leather Boots (60%) -->
 				<item id="15787" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Boots (60%) -->
 				<item id="15786" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Gloves (60%) -->
 				<item id="15785" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Leather Gloves (60%) -->
 				<item id="15784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Sealed Moirai Gauntlets (60%) -->
-				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="36923" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Downgrade -->
+				<item id="45929" min="1" max="3" chance="0.0009" /> <!-- Spirit Stone -->
 			</drop>
 			<spoil>
 				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5339,35 +5348,33 @@
 		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
+				<item id="15701" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Leggings -->
+				<item id="15702" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Stockings -->
+				<item id="15698" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15699" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Tunic -->
 				<item id="57" min="188" max="440" chance="70" /> <!-- Adena -->
-				<item id="15698" min="1" max="1" chance="0.000900000000000025" /> <!-- Sealed Moirai Leather Breastplate -->
-				<item id="15699" min="1" max="1" chance="0.000900000000000025" /> <!-- Sealed Moirai Tunic -->
-				<item id="15701" min="1" max="1" chance="0.000900000000000025" /> <!-- Sealed Moirai Leather Leggings -->
-				<item id="15702" min="1" max="1" chance="0.000900000000000025" /> <!-- Sealed Moirai Stockings -->
-				<item id="15653" min="1" max="1" chance="0.299999999999998" /> <!-- Sealed Moirai Stockings Piece -->
-				<item id="15652" min="1" max="1" chance="0.299999999999998" /> <!-- Sealed Moirai Leather Leggings Piece -->
-				<item id="15650" min="1" max="1" chance="0.0750000000000003" /> <!-- Sealed Moirai Tunic Piece -->
-				<item id="15649" min="1" max="1" chance="0.0750000000000003" /> <!-- Sealed Moirai Leather Breastplate Piece -->
-				<item id="10483" min="1" max="1" chance="0.0300000000000002" /> <!-- Life Stone - Lv. 82 -->
-				<item id="36523" min="1" max="1" chance="0.0300000000000002" /> <!-- Adamantite -->
-				<item id="36563" min="1" max="1" chance="0.00300000000000002" /> <!-- Synthetic Cokes -->
-				<item id="36858" min="1" max="1" chance="0.00300000000000002" /> <!-- Recipe: Leather - Upgrade -->
-				<item id="36548" min="1" max="1" chance="0.00300000000000002" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="15783" min="1" max="1" chance="0.00300000000000002" /> <!-- Recipe: Sealed Moirai Stockings (60%) -->
-				<item id="15782" min="1" max="1" chance="0.00300000000000002" /> <!-- Recipe: Sealed Moirai Leather Leggings (60%) -->
-				<item id="15780" min="1" max="1" chance="0.00300000000000002" /> <!-- Recipe: Sealed Moirai Tunic (60%) -->
-				<item id="15779" min="1" max="1" chance="0.00300000000000002" /> <!-- Recipe: Sealed Moirai Leather Breastplate (60%) -->
-				<item id="10484" min="1" max="1" chance="0.00300000000000002" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="10485" min="1" max="1" chance="0.000900000000000024" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="36891" min="1" max="1" chance="0.000900000000000024" /> <!-- Recipe: Leather Braid - Upgrade -->
-				<item id="36903" min="1" max="1" chance="0.000900000000000024" /> <!-- Recipe: Silver Wire - Downgrade -->
-				<item id="36924" min="1" max="1" chance="0.000900000000000024" /> <!-- Recipe: Armor Fragment - Upgrade -->
+				<item id="15652" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Leather Leggings Piece -->
+				<item id="15653" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Stockings Piece -->
+				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
+				<item id="15649" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Leather Breastplate Piece -->
+				<item id="15650" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="36563" min="1" max="1" chance="0.003" /> <!-- Synthetic Cokes -->
+				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="15783" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Stockings (60%) -->
+				<item id="15782" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Leather Leggings (60%) -->
+				<item id="15780" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Tunic (60%) -->
+				<item id="15779" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Leather Breastplate (60%) -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="36858" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather - Upgrade -->
+				<item id="36891" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Upgrade -->
+				<item id="36903" min="1" max="1" chance="0.0009" /> <!-- Recipe: Silver Wire - Downgrade -->
+				<item id="36924" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="2.02" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.957" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -5476,7 +5483,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="144246" sp="34" />
+		<acquire exp="144247" sp="34" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6058" hpRegen="8.5" mp="1812" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5516,23 +5523,22 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
+				<item id="15701" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Leather Leggings -->
+				<item id="15698" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Breastplate -->
 				<item id="57" min="548" max="1280" chance="70" /> <!-- Adena -->
-				<item id="15698" min="1" max="1" chance="0.00300000000000001" /> <!-- Sealed Moirai Leather Breastplate -->
-				<item id="15701" min="1" max="1" chance="0.00300000000000001" /> <!-- Sealed Moirai Leather Leggings -->
-				<item id="15652" min="1" max="1" chance="0.749999999999997" /> <!-- Sealed Moirai Leather Leggings Piece -->
-				<item id="15649" min="1" max="1" chance="0.300000000000001" /> <!-- Sealed Moirai Leather Breastplate Piece -->
-				<item id="10483" min="1" max="1" chance="0.0749999999999997" /> <!-- Life Stone - Lv. 82 -->
-				<item id="36538" min="1" max="1" chance="0.0749999999999997" /> <!-- Durable Leather Braid -->
-				<item id="10484" min="1" max="1" chance="0.0299999999999999" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="36548" min="1" max="1" chance="0.0299999999999999" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="9552" min="1" max="1" chance="0.00299999999999999" /> <!-- Fire Crystal -->
-				<item id="36932" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Accessory Gem - Upgrade -->
-				<item id="36866" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Silver - Upgrade -->
-				<item id="15782" min="1" max="1" chance="0.0054999999999999" /> <!-- Recipe: Sealed Moirai Leather Leggings (60%) -->
-				<item id="15779" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Sealed Moirai Leather Breastplate (60%) -->
-				<item id="10485" min="1" max="1" chance="0.00299999999999999" /> <!-- High-grade Life Stone - Lv. 82 -->
-				<item id="959" min="1" max="1" chance="0.000899999999999997" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="36939" min="1" max="1" chance="0.000899999999999997" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<item id="15652" min="1" max="1" chance="0.075" /> <!-- Sealed Moirai Leather Leggings Piece -->
+				<item id="36538" min="1" max="1" chance="0.03" /> <!-- Durable Leather Braid -->
+				<item id="15649" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Leather Breastplate Piece -->
+				<item id="36548" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
+				<item id="15779" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Leather Breastplate (60%) -->
+				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
+				<item id="36866" min="1" max="1" chance="0.003" /> <!-- Recipe: Silver - Upgrade -->
+				<item id="36932" min="1" max="1" chance="0.003" /> <!-- Recipe: Accessory Gem - Upgrade -->
+				<item id="15782" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Leather Leggings (60%) -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="36939" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Cokes - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5544,8 +5550,8 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="5.839" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.116" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="5.744" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.055" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
@@ -5737,7 +5743,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="93958" sp="22" />
+		<acquire exp="93959" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6058" hpRegen="8.5" mp="1812" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -5777,33 +5783,32 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
+				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlets -->
+				<item id="15704" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shoes -->
 				<item id="57" min="349" max="814" chance="70" /> <!-- Adena -->
-				<item id="15703" min="1" max="1" chance="0.00299999999999996" /> <!-- Sealed Moirai Gauntlets -->
-				<item id="15704" min="1" max="1" chance="0.00299999999999996" /> <!-- Sealed Moirai Leather Gloves -->
-				<item id="15705" min="1" max="1" chance="0.00299999999999996" /> <!-- Sealed Moirai Gloves -->
-				<item id="15706" min="1" max="1" chance="0.00299999999999996" /> <!-- Sealed Moirai Boots -->
-				<item id="15707" min="1" max="1" chance="0.00299999999999996" /> <!-- Sealed Moirai Leather Boots -->
-				<item id="15708" min="1" max="1" chance="0.00299999999999996" /> <!-- Sealed Moirai Shoes -->
-				<item id="15659" min="1" max="1" chance="0.299999999999996" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="15658" min="1" max="1" chance="0.299999999999996" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15657" min="1" max="1" chance="0.299999999999996" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15656" min="1" max="1" chance="0.299999999999996" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15655" min="1" max="1" chance="0.299999999999996" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15654" min="1" max="1" chance="0.299999999999996" /> <!-- Sealed Moirai Gauntlets Piece -->
-				<item id="36547" min="1" max="1" chance="0.0299999999999996" /> <!-- Weapon Fragment -->
-				<item id="36517" min="1" max="1" chance="0.75" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="0.3" /> <!-- Leather -->
 				<item id="36557" min="1" max="1" chance="0.075" /> <!-- Accessory Gem -->
-				<item id="10483" min="1" max="1" chance="0.03" /> <!-- Life Stone - Lv. 82 -->
-				<item id="960" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="15789" min="1" max="1" chance="0.0055" /> <!-- Recipe: Sealed Moirai Shoes (60%) -->
-				<item id="15788" min="1" max="1" chance="0.0055" /> <!-- Recipe: Sealed Moirai Leather Boots (60%) -->
-				<item id="15787" min="1" max="1" chance="0.0055" /> <!-- Recipe: Sealed Moirai Boots (60%) -->
-				<item id="15786" min="1" max="1" chance="0.0055" /> <!-- Recipe: Sealed Moirai Gloves (60%) -->
-				<item id="15785" min="1" max="1" chance="0.0055" /> <!-- Recipe: Sealed Moirai Leather Gloves (60%) -->
-				<item id="15784" min="1" max="1" chance="0.0055" /> <!-- Recipe: Sealed Moirai Gauntlets (60%) -->
-				<item id="10484" min="1" max="1" chance="0.0055" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-				<item id="10485" min="1" max="1" chance="0.0009" /> <!-- High-grade Life Stone - Lv. 82 -->
+				<item id="36547" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment -->
+				<item id="15659" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="15658" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15657" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15656" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15655" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15654" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Gauntlets Piece -->
+				<item id="15789" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Shoes (60%) -->
+				<item id="15788" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Leather Boots (60%) -->
+				<item id="15787" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Boots (60%) -->
+				<item id="15786" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Gloves (60%) -->
+				<item id="15785" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Leather Gloves (60%) -->
+				<item id="15784" min="1" max="1" chance="0.003" /> <!-- Recipe: Sealed Moirai Gauntlets (60%) -->
+				<item id="960" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
 				<item id="36890" min="1" max="1" chance="0.0009" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5815,7 +5820,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="3.675" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="3.712" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
 				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
@@ -6672,11 +6677,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="0.0749999999999998" /> <!-- Life Stone - Lv. 84 -->
-				<item id="9551" min="1" max="1" chance="0.0300000000000002" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.0300000000000002" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="9557" min="1" max="1" chance="0.00300000000000002" /> <!-- Holy Crystal -->
-				<item id="14168" min="1" max="1" chance="0.00300000000000002" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="9557" min="1" max="1" chance="0.003" /> <!-- Holy Crystal -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -6708,7 +6712,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="8213" /> <!-- Monster Only (Solina Father Mace) -->
-		<acquire exp="48466" sp="11" />
+		<acquire exp="48467" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -6751,11 +6755,10 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="77" max="179" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="0.0749999999999998" /> <!-- Life Stone - Lv. 84 -->
-				<item id="9551" min="1" max="1" chance="0.0300000000000002" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.0300000000000002" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="9557" min="1" max="1" chance="0.00300000000000002" /> <!-- Holy Crystal -->
-				<item id="14168" min="1" max="1" chance="0.00300000000000002" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="9557" min="1" max="1" chance="0.003" /> <!-- Holy Crystal -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -6786,7 +6789,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="48466" sp="11" />
+		<acquire exp="48467" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -6829,12 +6832,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="77" max="179" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 84 -->
-				<item id="960" min="1" max="1" chance="0.0300000000000003" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9551" min="1" max="1" chance="0.0300000000000003" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.0300000000000003" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="959" min="1" max="1" chance="0.00300000000000003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="14168" min="1" max="1" chance="0.00300000000000003" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -6866,7 +6868,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<acquire exp="48915" sp="11" />
+		<acquire exp="48916" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -6908,14 +6910,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="28" max="66" chance="70" /> <!-- Adena -->
 				<item id="13467" min="1" max="1" chance="0.0009" /> <!-- Vesper Thrower -->
-				<item id="15644" min="1" max="1" chance="0.0055" /> <!-- Vesper Thrower Piece -->
-				<item id="9551" min="1" max="1" chance="0.00300000000000005" /> <!-- Holy Stone -->
-				<item id="14166" min="1" max="1" chance="0.00550000000000005" /> <!-- Life Stone - Lv. 84 -->
-				<item id="14167" min="1" max="1" chance="0.00300000000000005" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="959" min="1" max="1" chance="0.000900000000000002" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="14168" min="1" max="1" chance="0.000900000000000002" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="57" min="28" max="66" chance="70" /> <!-- Adena -->
+				<item id="9551" min="1" max="1" chance="0.003" /> <!-- Holy Stone -->
+				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="15644" min="1" max="1" chance="0.0009" /> <!-- Vesper Thrower Piece -->
+				<item id="45929" min="1" max="3" chance="0.0009" /> <!-- Spirit Stone -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -6928,7 +6929,7 @@
 			</drop>
 			<spoil>
 				<item id="15644" min="1" max="1" chance="0.03" /> <!-- Vesper Thrower Piece -->
-				<item id="15825" min="1" max="1" chance="0.0009" /> <!-- Recipe: Vesper Thrower (60%) -->
+				<item id="15825" min="1" max="1" chance="9" /> <!-- Recipe: Vesper Thrower (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -6944,7 +6945,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="8212" /> <!-- Monster Only (Solina Brother Mace) -->
-		<acquire exp="49556" sp="11" />
+		<acquire exp="49557" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -6986,12 +6987,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="79" max="184" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="0.075" /> <!-- Life Stone - Lv. 84 -->
-				<item id="960" min="1" max="1" chance="0.0300000000000003" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="9551" min="1" max="1" chance="0.0300000000000003" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.0300000000000003" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="959" min="1" max="1" chance="0.00300000000000003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="14168" min="1" max="1" chance="0.00300000000000003" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="960" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9551" min="1" max="1" chance="0.03" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="959" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -7067,15 +7067,13 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="420" max="980" chance="70" /> <!-- Adena -->
-				<item id="15540" min="1" max="1" chance="0.300000000000001" /> <!-- Unlit Torchlight -->
-				<item id="14166" min="1" max="1" chance="0.300000000000001" /> <!-- Life Stone - Lv. 84 -->
-				<item id="15690" min="1" max="1" chance="0.300000000000001" /> <!-- Secret Key -->
-				<item id="9551" min="1" max="1" chance="0.0749999999999996" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.0749999999999996" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<item id="14167" min="1" max="1" chance="0.0749999999999996" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="8056" min="1" max="1" chance="0.0300000000000001" /> <!-- Room of Splendor Key -->
-				<item id="14168" min="1" max="1" chance="0.00550000000000003" /> <!-- High-grade Life Stone - Lv. 84 -->
-				<item id="959" min="1" max="1" chance="0.00550000000000003" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="9551" min="1" max="1" chance="0.075" /> <!-- Holy Stone -->
+				<item id="45929" min="1" max="3" chance="0.075" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
+				<item id="959" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
@@ -7141,13 +7139,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="437" max="1019" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="0.750000000000002" /> <!-- Life Stone - Lv. 84 -->
-				<item id="9551" min="1" max="1" chance="0.299999999999993" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.299999999999993" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="15540" min="1" max="1" chance="0.299999999999993" /> <!-- Unlit Torchlight -->
-				<item id="15690" min="1" max="1" chance="0.299999999999993" /> <!-- Secret Key -->
-				<item id="8056" min="1" max="1" chance="0.0299999999999993" /> <!-- Room of Splendor Key -->
-				<item id="14168" min="1" max="1" chance="0.0299999999999993" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
@@ -7211,13 +7207,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="486" max="1135" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="0.750000000000002" /> <!-- Life Stone - Lv. 84 -->
-				<item id="9551" min="1" max="1" chance="0.299999999999993" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.299999999999993" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="15540" min="1" max="1" chance="0.299999999999993" /> <!-- Unlit Torchlight -->
-				<item id="15690" min="1" max="1" chance="0.299999999999993" /> <!-- Secret Key -->
-				<item id="8056" min="1" max="1" chance="0.0299999999999993" /> <!-- Room of Splendor Key -->
-				<item id="14168" min="1" max="1" chance="0.0299999999999993" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
@@ -7239,7 +7233,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="307497" sp="73" />
+		<acquire exp="307498" sp="73" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="32744" hpRegen="110.577296732991" mp="1812" mpRegen="3" />
 			<attack physical="5837.38675800657" magical="3986.17843618672" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -7280,13 +7274,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="449" max="1049" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="0.750000000000002" /> <!-- Life Stone - Lv. 84 -->
-				<item id="9551" min="1" max="1" chance="0.299999999999993" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.299999999999993" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="15540" min="1" max="1" chance="0.299999999999993" /> <!-- Unlit Torchlight -->
-				<item id="15690" min="1" max="1" chance="0.299999999999993" /> <!-- Secret Key -->
-				<item id="8056" min="1" max="1" chance="0.0299999999999993" /> <!-- Room of Splendor Key -->
-				<item id="14168" min="1" max="1" chance="0.0299999999999993" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
@@ -7312,7 +7304,6 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="586120" sp="140" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="32744" hpRegen="110.577296732991" mp="1812" mpRegen="3" />
 			<attack physical="5837.38675800657" magical="3986.17843618672" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -7357,21 +7348,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="843" max="1970" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="1.17600000000001" /> <!-- Life Stone - Lv. 84 -->
-				<item id="9551" min="1" max="1" chance="0.30000000000001" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.30000000000001" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="15540" min="1" max="1" chance="0.30000000000001" /> <!-- Unlit Torchlight -->
-				<item id="15690" min="1" max="1" chance="0.30000000000001" /> <!-- Secret Key -->
-				<item id="8056" min="1" max="1" chance="0.030000000000001" /> <!-- Room of Splendor Key -->
-				<item id="14168" min="1" max="1" chance="0.030000000000001" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="18" />
@@ -7387,7 +7374,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="586674" sp="140" />
+		<acquire exp="586675" sp="140" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="32744" hpRegen="110.577296732991" mp="1812" mpRegen="3" />
 			<attack physical="5837.38675800657" magical="3986.17843618672" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -7430,13 +7417,11 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="844" max="1972" chance="70" /> <!-- Adena -->
-				<item id="14166" min="1" max="1" chance="1.09600000000001" /> <!-- Life Stone - Lv. 84 -->
-				<item id="9551" min="1" max="1" chance="0.300000000000009" /> <!-- Holy Stone -->
-				<item id="14167" min="1" max="1" chance="0.300000000000009" /> <!-- Mid-grade Life Stone - Lv. 84 -->
-				<item id="15540" min="1" max="1" chance="0.300000000000009" /> <!-- Unlit Torchlight -->
-				<item id="15690" min="1" max="1" chance="0.300000000000009" /> <!-- Secret Key -->
-				<item id="8056" min="1" max="1" chance="0.0300000000000009" /> <!-- Room of Splendor Key -->
-				<item id="14168" min="1" max="1" chance="0.0300000000000009" /> <!-- High-grade Life Stone - Lv. 84 -->
+				<item id="9551" min="1" max="1" chance="0.3" /> <!-- Holy Stone -->
+				<item id="15540" min="1" max="1" chance="0.3" /> <!-- Unlit Torchlight -->
+				<item id="15690" min="1" max="1" chance="0.3" /> <!-- Secret Key -->
+				<item id="45929" min="1" max="3" chance="0.3" /> <!-- Spirit Stone -->
+				<item id="8056" min="1" max="1" chance="0.03" /> <!-- Room of Splendor Key -->
 			</drop>
 			<spoil>
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->

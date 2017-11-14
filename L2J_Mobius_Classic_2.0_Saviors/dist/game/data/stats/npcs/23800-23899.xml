@@ -286,9 +286,9 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23833" level="99" type="L2Npc" name="Veil Master">
+	<npc id="23833" level="74" type="L2Monster" name="Veil Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="34096" hpRegen="10.5" mp="1219" mpRegen="3.6" />
@@ -307,10 +307,29 @@
 			<radius normal="14.4" />
 			<height normal="49.8" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
+				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="11.72" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.039" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.721" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.667" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.008" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.214" /> <!-- Charcoal -->
+				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
+				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="2.451" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="23834" level="99" type="L2Npc" name="Blood Queen" title="Demon's Servant">
+	<npc id="23834" level="60" type="L2Monster" name="Blood Queen" title="Demon's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="43585" hpRegen="10.5" mp="1251" mpRegen="3.6" />
@@ -329,6 +348,28 @@
 			<radius normal="11" />
 			<height normal="34" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="612" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="2464" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Gloves -->
+				<item id="2475" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Gloves -->
+				<item id="2487" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Gloves -->
+				<item id="57" min="2534" max="5915" chance="70" /> <!-- Adena -->
+				<item id="1876" min="1" max="1" chance="23.18" /> <!-- Mithril Ore -->
+				<item id="4096" min="1" max="1" chance="8.693" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="1874" min="1" max="1" chance="7.411" /> <!-- Oriharukon Ore -->
+				<item id="1873" min="3" max="9" chance="7.383" /> <!-- Silver Nugget -->
+				<item id="4073" min="1" max="3" chance="5.023" /> <!-- Sealed Avadon Glove Fragment -->
+				<item id="4100" min="1" max="3" chance="3.402" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+				<item id="4091" min="2" max="6" chance="2.208" /> <!-- Sealed Doom Glove Fragment -->
+				<item id="952" min="1" max="1" chance="1.434" /> <!-- Scroll: Enchant Armor (C-grade) -->
+			</drop>
+			<spoil>
+				<item id="4938" min="1" max="1" chance="28.72" /> <!-- Recipe: Adamantite Ring (70%) -->
+				<item id="4937" min="1" max="1" chance="20.47" /> <!-- Recipe: Adamantite Earring (70%) -->
+				<item id="4939" min="1" max="1" chance="14.36" /> <!-- Recipe: Adamantite Necklace (70%) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="23835" level="99" type="L2Npc" name="Tanta Elite Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -880,9 +921,9 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="23860" level="99" type="L2Npc" name="Drake">
+	<npc id="23860" level="57" type="L2Monster" name="Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6" />
@@ -901,6 +942,24 @@
 			<radius normal="30" />
 			<height normal="100" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="135" min="1" max="1" chance="0.03" /> <!-- Samurai Long Sword -->
+				<item id="286" min="1" max="1" chance="0.03" /> <!-- Eminence Bow -->
+				<item id="57" min="2199" max="5130" chance="70" /> <!-- Adena -->
+				<item id="1864" min="4" max="12" chance="31.06" /> <!-- Stem -->
+				<item id="1867" min="7" max="21" chance="11.5" /> <!-- Animal Skin -->
+				<item id="952" min="1" max="1" chance="1.73" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="2121" min="1" max="1" chance="1.563" /> <!-- Eminence Bow Shaft -->
+				<item id="2115" min="1" max="1" chance="1.521" /> <!-- Samurai Long Sword Blade -->
+			</drop>
+			<spoil>
+				<item id="2961" min="1" max="1" chance="43.63" /> <!-- Full Plate Boot Fragment -->
+				<item id="2962" min="1" max="1" chance="43.42" /> <!-- Drake Leather Glove Design -->
+				<item id="1877" min="1" max="1" chance="30.88" /> <!-- Adamantite Nugget -->
+				<item id="1894" min="1" max="1" chance="26.94" /> <!-- Crafted Leather -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="23861" level="99" type="L2Npc" name="Mutated Drake">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1562,9 +1621,9 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="23891" level="99" type="L2Npc" name="Veil Master">
+	<npc id="23891" level="74" type="L2Monster" name="Veil Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="37131" hpRegen="10.5" mp="1345" mpRegen="3.6" />
@@ -1583,10 +1642,29 @@
 			<radius normal="14.4" />
 			<height normal="49.8" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
+				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
+				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="11.72" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.039" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.721" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.667" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.008" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.214" /> <!-- Charcoal -->
+				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
+				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
+			</drop>
+			<spoil>
+				<item id="948" min="1" max="1" chance="2.451" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="23892" level="99" type="L2Npc" name="Blood Queen" title="Demon's Servant">
+	<npc id="23892" level="60" type="L2Monster" name="Blood Queen" title="Demon's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="46413" hpRegen="10.5" mp="1345" mpRegen="3.6" />
@@ -1605,6 +1683,28 @@
 			<radius normal="11" />
 			<height normal="34" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="612" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="2464" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Gloves -->
+				<item id="2475" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Gloves -->
+				<item id="2487" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Gloves -->
+				<item id="57" min="2534" max="5915" chance="70" /> <!-- Adena -->
+				<item id="1876" min="1" max="1" chance="23.18" /> <!-- Mithril Ore -->
+				<item id="4096" min="1" max="1" chance="8.693" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="1874" min="1" max="1" chance="7.411" /> <!-- Oriharukon Ore -->
+				<item id="1873" min="3" max="9" chance="7.383" /> <!-- Silver Nugget -->
+				<item id="4073" min="1" max="3" chance="5.023" /> <!-- Sealed Avadon Glove Fragment -->
+				<item id="4100" min="1" max="3" chance="3.402" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+				<item id="4091" min="2" max="6" chance="2.208" /> <!-- Sealed Doom Glove Fragment -->
+				<item id="952" min="1" max="1" chance="1.434" /> <!-- Scroll: Enchant Armor (C-grade) -->
+			</drop>
+			<spoil>
+				<item id="4938" min="1" max="1" chance="28.72" /> <!-- Recipe: Adamantite Ring (70%) -->
+				<item id="4937" min="1" max="1" chance="20.47" /> <!-- Recipe: Adamantite Earring (70%) -->
+				<item id="4939" min="1" max="1" chance="14.36" /> <!-- Recipe: Adamantite Necklace (70%) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="23893" level="99" type="L2Npc" name="Tanta Elite Mercenary">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

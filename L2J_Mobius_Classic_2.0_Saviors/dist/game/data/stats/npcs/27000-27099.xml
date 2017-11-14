@@ -77,6 +77,24 @@
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="66" min="1" max="1" chance="0.3" /> <!-- Gladius -->
+				<item id="1333" min="1" max="1" chance="0.3" /> <!-- Brandish -->
+				<item id="57" min="39" max="92" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="5.82" /> <!-- Healing Potion -->
+				<item id="1864" min="1" max="1" chance="5.307" /> <!-- Stem -->
+				<item id="1868" min="1" max="1" chance="5.299" /> <!-- Thread -->
+				<item id="1867" min="1" max="1" chance="3.499" /> <!-- Animal Skin -->
+				<item id="1869" min="1" max="1" chance="2.628" /> <!-- Iron Ore -->
+				<item id="1871" min="1" max="1" chance="2.562" /> <!-- Charcoal -->
+				<item id="2010" min="1" max="1" chance="1.117" /> <!-- Brandish Blade -->
+				<item id="1792" min="1" max="1" chance="0.3" /> <!-- Recipe: Short Spear -->
+			</drop>
+			<spoil>
+				<item id="1867" min="1" max="3" chance="50.98" /> <!-- Animal Skin -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="27003" level="9" type="L2Monster" name="Spirit Of Mirrors" title="Quest Monster">
 		<parameters>
@@ -84,7 +102,7 @@
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 		</parameters>
-		<race>BEAST</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="143" hpRegen="2" mp="100" mpRegen="0.9" />
@@ -116,13 +134,13 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="27004" level="10" type="L2Monster" name="Spirit Of Mirrors" title="Quest Monster">
+	<npc id="27004" level="9" type="L2Monster" name="Spirit Of Mirrors" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
 			<param name="MoveAroundSocial2" value="75" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="163" hpRegen="2" mp="108" mpRegen="0.9" />
@@ -154,13 +172,13 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="27005" level="11" type="L2Monster" name="Spirit Of Mirrors" title="Quest Monster">
+	<npc id="27005" level="9" type="L2Monster" name="Spirit Of Mirrors" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
 			<param name="MoveAroundSocial2" value="72" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="185" hpRegen="2.5" mp="116" mpRegen="1.2" />
@@ -428,7 +446,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27018" level="10" type="L2Monster" name="Orc Lieutenant">
+	<npc id="27018" level="11" type="L2Monster" name="Orc Lieutenant">
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -465,8 +483,26 @@
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="37" min="1" max="1" chance="2.014" /> <!-- Leather Shoes -->
+				<item id="49" min="1" max="1" chance="2" /> <!-- Gloves (item) -->
+				<item id="57" min="37" max="87" chance="70" /> <!-- Adena -->
+				<item id="1921" min="1" max="3" chance="8.549" /> <!-- Leather Shoe Texture -->
+				<item id="1864" min="1" max="1" chance="5.893" /> <!-- Stem -->
+				<item id="1868" min="1" max="1" chance="5.797" /> <!-- Thread -->
+				<item id="1867" min="1" max="1" chance="3.968" /> <!-- Animal Skin -->
+				<item id="1869" min="1" max="1" chance="2.981" /> <!-- Iron Ore -->
+				<item id="1871" min="1" max="1" chance="2.944" /> <!-- Charcoal -->
+				<item id="1798" min="1" max="1" chance="2.893" /> <!-- Recipe: Leather Helmet -->
+			</drop>
+			<spoil>
+				<item id="1799" min="1" max="1" chance="52.23" /> <!-- Recipe: Leather Gloves -->
+				<item id="1921" min="1" max="1" chance="22.65" /> <!-- Leather Shoe Texture -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="27019" level="11" type="L2Monster" name="Orc Captain">
+	<npc id="27019" level="12" type="L2Monster" name="Orc Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -503,6 +539,24 @@
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="66" min="1" max="1" chance="0.3" /> <!-- Gladius -->
+				<item id="1333" min="1" max="1" chance="0.3" /> <!-- Brandish -->
+				<item id="57" min="39" max="92" chance="70" /> <!-- Adena -->
+				<item id="1060" min="1" max="1" chance="5.82" /> <!-- Healing Potion -->
+				<item id="1864" min="1" max="1" chance="5.307" /> <!-- Stem -->
+				<item id="1868" min="1" max="1" chance="5.299" /> <!-- Thread -->
+				<item id="1867" min="1" max="1" chance="3.499" /> <!-- Animal Skin -->
+				<item id="1869" min="1" max="1" chance="2.628" /> <!-- Iron Ore -->
+				<item id="1871" min="1" max="1" chance="2.562" /> <!-- Charcoal -->
+				<item id="2010" min="1" max="1" chance="1.117" /> <!-- Brandish Blade -->
+				<item id="1792" min="1" max="1" chance="0.3" /> <!-- Recipe: Short Spear -->
+			</drop>
+			<spoil>
+				<item id="1867" min="1" max="3" chance="50.98" /> <!-- Animal Skin -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="27020" level="20" type="L2Monster" name="Varool Foulclaw" title="Quest Monster">
 		<parameters>

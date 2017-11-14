@@ -735,7 +735,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="292" /> <!-- Pike -->
-		<acquire exp="1704" sp="1" />
+		<acquire exp="1704" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="460" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -769,7 +769,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.031" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.079" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -811,7 +812,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="5285" /> <!-- Heavy Sword -->
-		<acquire exp="1704" sp="1" />
+		<acquire exp="1704" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="460" hpRegen="3.5" mp="259" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
@@ -848,7 +849,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="0.985" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.079" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -865,7 +867,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="22454" level="27" type="L2Monster" name="White Skull Kanabion" title="Void">
+	<npc id="22454" level="25" type="L2Monster" name="White Skull Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -891,7 +893,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="236" /> <!-- Soul Separator -->
-		<acquire exp="2194" sp="1" />
+		<acquire exp="1704" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="515" hpRegen="3.5" mp="286" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -929,7 +931,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.179" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.079" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -969,7 +972,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="2248" sp="1" />
+		<acquire exp="2248" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="604" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1003,7 +1006,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.278" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.302" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1045,7 +1049,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="129" /> <!-- Sword of Revolution -->
-		<acquire exp="2248" sp="1" />
+		<acquire exp="2248" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="604" hpRegen="3.5" mp="329" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -1080,7 +1084,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.318" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.302" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1097,7 +1102,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="22457" level="32" type="L2Monster" name="Begrudged Kanabion" title="Void">
+	<npc id="22457" level="30" type="L2Monster" name="Begrudged Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1123,7 +1128,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7886" /> <!-- Sword of Magic Fog -->
-		<acquire exp="2823" sp="1" />
+		<acquire exp="2248" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="668" hpRegen="4.5" mp="358" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -1159,7 +1164,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.463" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.302" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1198,7 +1204,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3060" sp="1" />
+		<acquire exp="3060" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="772" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1232,7 +1238,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.757" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.648" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1273,7 +1280,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3060" sp="1" />
+		<acquire exp="3060" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="772" hpRegen="4.5" mp="402" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1308,7 +1315,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.72" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.648" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1325,7 +1333,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="22460" level="37" type="L2Monster" name="Rotten Kanabion" title="Void">
+	<npc id="22460" level="35" type="L2Monster" name="Rotten Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1350,7 +1358,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3775" sp="1" />
+		<acquire exp="3060" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="847" hpRegen="4.5" mp="432" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1385,7 +1393,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.922" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="1.648" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1425,7 +1434,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
-		<acquire exp="3997" sp="1" />
+		<acquire exp="3997" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1459,7 +1468,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.261" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="2.176" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1500,7 +1510,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3997" sp="1" />
+		<acquire exp="3997" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -1534,7 +1544,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.167" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="2.176" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1551,7 +1562,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="22463" level="42" type="L2Monster" name="Gluttonous Kanabion" title="Void">
+	<npc id="22463" level="40" type="L2Monster" name="Gluttonous Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1577,7 +1588,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5130" /> <!-- Nos Sword -->
-		<acquire exp="4864" sp="1" />
+		<acquire exp="3997" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1050" hpRegen="5.5" mp="531" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1613,7 +1624,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.415" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="956" min="1" max="1" chance="2.176" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1687,7 +1699,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.084" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.128" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1764,7 +1777,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.123" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.128" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1781,7 +1795,7 @@
 			<height normal="35" grown="42.2" />
 		</collision>
 	</npc>
-	<npc id="22466" level="47" type="L2Monster" name="Callous Kanabion" title="Void">
+	<npc id="22466" level="45" type="L2Monster" name="Callous Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1807,7 +1821,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="226" /> <!-- Cursed Dagger -->
-		<acquire exp="6090" sp="1" />
+		<acquire exp="5059" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1276" hpRegen="5.5" mp="665" mpRegen="2.1" />
 			<attack physical="261.69549" magical="178.7041" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -1843,7 +1857,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.251" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.128" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1917,7 +1932,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.406" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.421" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1994,7 +2010,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.335" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.421" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2011,7 +2028,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22469" level="52" type="L2Monster" name="Savage Kanabion" title="Void">
+	<npc id="22469" level="50" type="L2Monster" name="Savage Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2037,7 +2054,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
-		<acquire exp="7164" sp="1" />
+		<acquire exp="5976" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1520" hpRegen="6.5" mp="804" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2073,7 +2090,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.449" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="952" min="1" max="1" chance="1.421" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2148,6 +2166,7 @@
 		<drop_lists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2225,6 +2244,7 @@
 		<drop_lists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2241,7 +2261,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="22472" level="57" type="L2Monster" name="Peerless Kanabion" title="Void">
+	<npc id="22472" level="55" type="L2Monster" name="Peerless Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2267,7 +2287,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="135" /> <!-- Samurai Long Sword -->
-		<acquire exp="8607" sp="2" />
+		<acquire exp="7230" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
 			<attack physical="424.23295" magical="289.69611" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2304,6 +2324,7 @@
 		<drop_lists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2378,6 +2399,7 @@
 		<drop_lists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2455,6 +2477,7 @@
 		<drop_lists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2471,7 +2494,7 @@
 			<height normal="28" grown="34" />
 		</collision>
 	</npc>
-	<npc id="22475" level="62" type="L2Monster" name="Massive Kanabion" title="Void">
+	<npc id="22475" level="60" type="L2Monster" name="Massive Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2497,7 +2520,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
-		<acquire exp="10185" sp="2" />
+		<acquire exp="8605" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
 			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2534,6 +2557,7 @@
 		<drop_lists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2608,6 +2632,7 @@
 		<drop_lists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2684,6 +2709,7 @@
 		<drop_lists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2700,7 +2726,7 @@
 			<height normal="31.5" grown="38" />
 		</collision>
 	</npc>
-	<npc id="22478" level="67" type="L2Monster" name="Fervent Kanabion" title="Void">
+	<npc id="22478" level="65" type="L2Monster" name="Fervent Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2726,7 +2752,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8686" /> <!-- Themis' Tongue -->
-		<acquire exp="11894" sp="2" />
+		<acquire exp="10099" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2295" hpRegen="7.5" mp="1251" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2762,6 +2788,7 @@
 		<drop_lists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2800,7 +2827,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="11394" sp="2" />
+		<acquire exp="11395" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2835,6 +2862,7 @@
 		<drop_lists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2875,7 +2903,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="11394" sp="2" />
+		<acquire exp="11395" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2911,6 +2939,7 @@
 		<drop_lists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2927,7 +2956,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="22481" level="72" type="L2Monster" name="Ruptured Kanabion" title="Void">
+	<npc id="22481" level="70" type="L2Monster" name="Ruptured Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2952,7 +2981,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13397" sp="3" />
+		<acquire exp="11395" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2989,6 +3018,7 @@
 		<drop_lists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3027,7 +3057,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="13080" sp="3" />
+		<acquire exp="13081" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3062,6 +3092,7 @@
 		<drop_lists>
 			<drop>
 				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3102,7 +3133,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13080" sp="3" />
+		<acquire exp="13081" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -3138,6 +3169,7 @@
 		<drop_lists>
 			<drop>
 				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3154,7 +3186,7 @@
 			<height normal="49" />
 		</collision>
 	</npc>
-	<npc id="22484" level="77" type="L2Monster" name="Sword Kanabion" title="Void">
+	<npc id="22484" level="75" type="L2Monster" name="Sword Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
@@ -3179,7 +3211,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="18390" sp="4" />
+		<acquire exp="13081" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="2856" hpRegen="8.5" mp="1574" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -3217,7 +3249,8 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
+				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->

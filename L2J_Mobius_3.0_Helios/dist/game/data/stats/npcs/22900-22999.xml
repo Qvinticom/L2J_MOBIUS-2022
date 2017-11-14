@@ -924,7 +924,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="5328152" sp="1278" />
+		<acquire exp="8844680" sp="8934" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
 			<speed>
@@ -952,13 +952,13 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2997" max="6989" chance="70" /> <!-- Adena -->
+				<item id="57" min="5119" max="11940" chance="70" /> <!-- Adena -->
 				<item id="35297" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Fragment -->
 				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="36553" min="1" max="1" chance="0.299999999999999" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36554" min="1" max="1" chance="0.0299999999999999" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35421" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35439" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35421" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Cutter (60%) -->
+				<item id="35439" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Seraph Leather Leggings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
@@ -981,7 +981,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22912" level="96" type="L2Monster" name="Orbis' Victim">
+	<npc id="22912" level="95" type="L2Monster" name="Orbis' Victim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -997,7 +997,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6144815" sp="1474" />
+		<acquire exp="8844680" sp="8934" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="322511" hpRegen="8.5" mp="22428" mpRegen="30" />
 			<speed>
@@ -1026,14 +1026,13 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="3057" max="7140" chance="70" /> <!-- Adena -->
+				<item id="57" min="5119" max="11940" chance="70" /> <!-- Adena -->
 				<item id="35297" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Fragment -->
 				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
 				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35421" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35439" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35421" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Cutter (60%) -->
+				<item id="35439" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Seraph Leather Leggings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
@@ -1056,7 +1055,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22913" level="97" type="L2Monster" name="Orbis' Victim">
+	<npc id="22913" level="95" type="L2Monster" name="Orbis' Victim">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1072,7 +1071,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="14312153" sp="3434" />
+		<acquire exp="8844680" sp="8934" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
@@ -1101,19 +1100,18 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="4670" max="10901" chance="70" /> <!-- Adena -->
+				<item id="57" min="5119" max="11940" chance="70" /> <!-- Adena -->
 				<item id="35297" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Fragment -->
 				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="36553" min="1" max="1" chance="0.300000000000001" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36554" min="1" max="1" chance="0.0300000000000001" /> <!-- Armor Fragment (High-grade) -->
-				<item id="17526" min="1" max="1" chance="0.00549999999999988" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35421" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35439" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35421" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Cutter (60%) -->
+				<item id="35439" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Seraph Leather Leggings (60%) -->
 			</drop>
 			<spoil>
-				<item id="36553" min="1" max="1" chance="1.432" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="19440" min="1" max="1" chance="0.75" /> <!-- Gemstone (R-grade) -->
-				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1147,7 +1145,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="5328152" sp="1278" />
+		<acquire exp="8844680" sp="8934" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
 			<speed>
@@ -1175,12 +1173,12 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2997" max="6989" chance="70" /> <!-- Adena -->
-				<item id="17387" min="1" max="1" chance="0.000899999999999968" /> <!-- Specter Stormer -->
-				<item id="35301" min="1" max="1" chance="0.0750000000000001" /> <!-- Specter Stormer Fragment -->
+				<item id="17387" min="1" max="1" chance="0.0009" /> <!-- Specter Stormer -->
+				<item id="57" min="5119" max="11940" chance="70" /> <!-- Adena -->
+				<item id="35301" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Fragment -->
 				<item id="35309" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Stormer (60%) -->
+				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Seraph Gaiters (60%) -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.75" /> <!-- Durable Braid -->
@@ -1202,7 +1200,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22915" level="96" type="L2Monster" name="Orbis' Guard">
+	<npc id="22915" level="95" type="L2Monster" name="Orbis' Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1218,7 +1216,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6144815" sp="1474" />
+		<acquire exp="8844680" sp="8934" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="322511" hpRegen="8.5" mp="22428" mpRegen="30" />
 			<speed>
@@ -1247,12 +1245,12 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="3057" max="7140" chance="70" /> <!-- Adena -->
-				<item id="17387" min="1" max="1" chance="0.000899999999999968" /> <!-- Specter Stormer -->
-				<item id="35301" min="1" max="1" chance="0.0750000000000001" /> <!-- Specter Stormer Fragment -->
+				<item id="17387" min="1" max="1" chance="0.0009" /> <!-- Specter Stormer -->
+				<item id="57" min="5119" max="11940" chance="70" /> <!-- Adena -->
+				<item id="35301" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Fragment -->
 				<item id="35309" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Stormer (60%) -->
+				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Seraph Gaiters (60%) -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.75" /> <!-- Durable Braid -->
@@ -1274,7 +1272,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22916" level="97" type="L2Monster" name="Orbis' Guard">
+	<npc id="22916" level="95" type="L2Monster" name="Orbis' Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1290,7 +1288,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="14312153" sp="3434" />
+		<acquire exp="8844680" sp="8934" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
@@ -1319,16 +1317,16 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="4670" max="10901" chance="70" /> <!-- Adena -->
-				<item id="17387" min="1" max="1" chance="0.000900000000000008" /> <!-- Specter Stormer -->
-				<item id="35301" min="1" max="1" chance="0.300000000000001" /> <!-- Specter Stormer Fragment -->
-				<item id="35309" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="17387" min="1" max="1" chance="0.0009" /> <!-- Specter Stormer -->
+				<item id="57" min="5119" max="11940" chance="70" /> <!-- Adena -->
+				<item id="35301" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Fragment -->
+				<item id="35309" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35425" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Stormer (60%) -->
+				<item id="35433" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Seraph Gaiters (60%) -->
 			</drop>
 			<spoil>
-				<item id="36534" min="1" max="1" chance="1.546" /> <!-- Durable Braid -->
-				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36534" min="1" max="1" chance="0.75" /> <!-- Durable Braid -->
+				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1362,7 +1360,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1548455" sp="371" />
+		<acquire exp="2570410" sp="2617" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
 			<speed>
@@ -1392,14 +1390,14 @@
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2397" max="5591" chance="70" /> <!-- Adena -->
-				<item id="17389" min="1" max="1" chance="0.000899999999999968" /> <!-- Specter Shooter -->
-				<item id="35303" min="1" max="1" chance="0.0750000000000001" /> <!-- Specter Shooter Fragment -->
+				<item id="17389" min="1" max="1" chance="0.0009" /> <!-- Specter Shooter -->
+				<item id="57" min="4095" max="9552" chance="70" /> <!-- Adena -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="35303" min="1" max="1" chance="0.075" /> <!-- Specter Shooter Fragment -->
 				<item id="35314" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="36553" min="1" max="1" chance="0.299999999999999" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36554" min="1" max="1" chance="0.0299999999999999" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35427" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35438" min="1" max="1" chance="0.000899999999999996" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Shooter (60%) -->
+				<item id="35438" min="1" max="1" chance="0.0009" /> <!-- Recipe:Β Seraph Leather Armor (60%) -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
@@ -1422,7 +1420,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22918" level="96" type="L2Monster" name="Orbis' Thrower">
+	<npc id="22918" level="95" type="L2Monster" name="Orbis' Thrower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1438,7 +1436,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1587863" sp="381" />
+		<acquire exp="2570410" sp="2617" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="322511" hpRegen="8.5" mp="22428" mpRegen="30" />
 			<speed>
@@ -1468,14 +1466,14 @@
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2446" max="5712" chance="70" /> <!-- Adena -->
-				<item id="17389" min="1" max="1" chance="0.000899999999999968" /> <!-- Specter Shooter -->
-				<item id="35303" min="1" max="1" chance="0.0750000000000001" /> <!-- Specter Shooter Fragment -->
+				<item id="17389" min="1" max="1" chance="0.0009" /> <!-- Specter Shooter -->
+				<item id="57" min="4095" max="9552" chance="70" /> <!-- Adena -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="35303" min="1" max="1" chance="0.075" /> <!-- Specter Shooter Fragment -->
 				<item id="35314" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="36553" min="1" max="1" chance="0.299999999999999" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36554" min="1" max="1" chance="0.0299999999999999" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35427" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35438" min="1" max="1" chance="0.000899999999999996" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Shooter (60%) -->
+				<item id="35438" min="1" max="1" chance="0.0009" /> <!-- Recipe:Β Seraph Leather Armor (60%) -->
 			</drop>
 			<spoil>
 				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
@@ -1498,7 +1496,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22919" level="97" type="L2Monster" name="Orbis' Thrower">
+	<npc id="22919" level="95" type="L2Monster" name="Orbis' Thrower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1514,7 +1512,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="2912706" sp="699" />
+		<acquire exp="2570410" sp="2617" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
@@ -1545,20 +1543,19 @@
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="3736" max="8721" chance="70" /> <!-- Adena -->
-				<item id="17389" min="1" max="1" chance="0.000899999999999968" /> <!-- Specter Shooter -->
-				<item id="35303" min="1" max="1" chance="0.0750000000000001" /> <!-- Specter Shooter Fragment -->
-				<item id="35314" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="36553" min="1" max="1" chance="0.299999999999999" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="17527" min="1" max="1" chance="0.0750000000000018" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36554" min="1" max="1" chance="0.0299999999999999" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35427" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35438" min="1" max="1" chance="0.000900000000000013" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="17389" min="1" max="1" chance="0.0009" /> <!-- Specter Shooter -->
+				<item id="57" min="4095" max="9552" chance="70" /> <!-- Adena -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="35303" min="1" max="1" chance="0.075" /> <!-- Specter Shooter Fragment -->
+				<item id="35314" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Shooter (60%) -->
+				<item id="35438" min="1" max="1" chance="0.0009" /> <!-- Recipe:Β Seraph Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36553" min="1" max="1" chance="1.137" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
 				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1576,7 +1573,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22920" level="96" type="L2Monster" name="Orbis' Thrower" title="Scout">
+	<npc id="22920" level="95" type="L2Monster" name="Orbis' Thrower" title="Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1591,7 +1588,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="2775636" sp="666" />
+		<acquire exp="2570410" sp="2617" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="322511" hpRegen="8.5" mp="22428" mpRegen="30" />
 			<speed>
@@ -1622,19 +1619,23 @@
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2135" max="4986" chance="70" /> <!-- Adena -->
-				<item id="35304" min="1" max="1" chance="0.075" /> <!-- Specter Buster Fragment -->
-				<item id="35312" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Ingredient -->
-				<item id="35424" min="1" max="1" chance="0.003" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="17389" min="1" max="1" chance="0.0009" /> <!-- Specter Shooter -->
+				<item id="57" min="4095" max="9552" chance="70" /> <!-- Adena -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="35303" min="1" max="1" chance="0.075" /> <!-- Specter Shooter Fragment -->
+				<item id="35314" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Shooter (60%) -->
+				<item id="35438" min="1" max="1" chance="0.0009" /> <!-- Recipe:Β Seraph Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="2.44" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
-				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
-				<item id="36884" min="1" max="1" chance="0.0055" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
+				<item id="36553" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="35" />
@@ -1648,7 +1649,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22921" level="95" type="L2Monster" name="Orbis' Curator">
+	<npc id="22921" level="96" type="L2Monster" name="Orbis' Curator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1664,7 +1665,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="5328152" sp="1278" />
+		<acquire exp="671016" sp="737" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="321920" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
@@ -1692,17 +1693,21 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2997" max="6989" chance="70" /> <!-- Adena -->
-				<item id="35306" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Fragment -->
-				<item id="35430" min="1" max="1" chance="0.0055" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate -->
+				<item id="17404" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Leggings -->
+				<item id="17408" min="1" max="1" chance="0.003" /> <!-- Seraph Tunic -->
+				<item id="57" min="3237" max="7559" chance="70" /> <!-- Adena -->
+				<item id="9555" min="1" max="1" chance="0.075" /> <!-- Wind Crystal -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Shooter (60%) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="10.24" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.75" /> <!-- Durable Braid -->
+				<item id="36533" min="1" max="1" chance="3.66" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
+				<item id="36885" min="1" max="1" chance="9" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="30" />
@@ -1732,7 +1737,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="6144815" sp="1474" />
+		<acquire exp="671016" sp="737" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="322511" hpRegen="8.5" mp="33642" mpRegen="30" />
 			<speed>
@@ -1761,17 +1766,21 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="3057" max="7140" chance="70" /> <!-- Adena -->
-				<item id="35306" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Fragment -->
-				<item id="35430" min="1" max="1" chance="0.0055" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate -->
+				<item id="17404" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Leggings -->
+				<item id="17408" min="1" max="1" chance="0.003" /> <!-- Seraph Tunic -->
+				<item id="57" min="3237" max="7559" chance="70" /> <!-- Adena -->
+				<item id="9555" min="1" max="1" chance="0.075" /> <!-- Wind Crystal -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Shooter (60%) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="10.06" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.75" /> <!-- Durable Braid -->
+				<item id="36533" min="1" max="1" chance="3.66" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
+				<item id="36885" min="1" max="1" chance="9" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="30" />
@@ -1785,7 +1794,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22923" level="97" type="L2Monster" name="Orbis' Curator">
+	<npc id="22923" level="96" type="L2Monster" name="Orbis' Curator">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1801,7 +1810,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="14312153" sp="3434" />
+		<acquire exp="671016" sp="737" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="355923" hpRegen="8.5" mp="34200" mpRegen="30" />
 			<speed>
@@ -1830,17 +1839,21 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="4670" max="10901" chance="70" /> <!-- Adena -->
-				<item id="35306" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Fragment -->
-				<item id="35430" min="1" max="1" chance="0.0055" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="17397" min="1" max="1" chance="0.003" /> <!-- Seraph Breastplate -->
+				<item id="17404" min="1" max="1" chance="0.003" /> <!-- Seraph Leather Leggings -->
+				<item id="17408" min="1" max="1" chance="0.003" /> <!-- Seraph Tunic -->
+				<item id="57" min="3237" max="7559" chance="70" /> <!-- Adena -->
+				<item id="9555" min="1" max="1" chance="0.075" /> <!-- Wind Crystal -->
+				<item id="35427" min="1" max="1" chance="0.003" /> <!-- Recipe:Β Specter Shooter (60%) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="15.31" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="1.522" /> <!-- Durable Braid -->
+				<item id="36533" min="1" max="1" chance="3.66" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36883" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
+				<item id="36885" min="1" max="1" chance="9" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="30" />
@@ -1870,7 +1883,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="23221998" sp="5573" />
+		<acquire exp="671016" sp="737" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="322511" hpRegen="8.5" mp="22428" mpRegen="30" />
 			<speed>
@@ -1897,19 +1910,17 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="6390" max="14924" chance="70" /> <!-- Adena -->
-				<item id="17385" min="1" max="1" chance="0.003" /> <!-- Specter Avenger -->
-				<item id="35299" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Fragment -->
-				<item id="17527" min="1" max="1" chance="0.300000000000001" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="35423" min="1" max="1" chance="0.00549999999999992" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="17398" min="1" max="1" chance="0.0009" /> <!-- Seraph Gaiters -->
+				<item id="17403" min="1" max="1" chance="0.0009" /> <!-- Seraph Leather Armor -->
+				<item id="17409" min="1" max="1" chance="0.0009" /> <!-- Seraph Stockings -->
+				<item id="57" min="4109" max="9597" chance="70" /> <!-- Adena -->
+				<item id="35326" min="1" max="1" chance="0.3" /> <!-- Seraph Ring Gem -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="22.77" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="2.068" /> <!-- Durable Braid -->
+				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil -->
 			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="40" />
@@ -1923,7 +1934,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22925" level="97" type="L2Monster" name="Orbis' Ancient Hero">
+	<npc id="22925" level="96" type="L2Monster" name="Orbis' Ancient Hero">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1939,7 +1950,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="37386217" sp="8972" />
+		<acquire exp="671016" sp="737" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="355923" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
@@ -1967,20 +1978,17 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="7339" max="17132" chance="70" /> <!-- Adena -->
-				<item id="17385" min="1" max="1" chance="0.003" /> <!-- Specter Avenger -->
-				<item id="35299" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Fragment -->
-				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
-				<item id="35423" min="1" max="1" chance="0.00549999999999999" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="17398" min="1" max="1" chance="0.0009" /> <!-- Seraph Gaiters -->
+				<item id="17403" min="1" max="1" chance="0.0009" /> <!-- Seraph Leather Armor -->
+				<item id="17409" min="1" max="1" chance="0.0009" /> <!-- Seraph Stockings -->
+				<item id="57" min="4109" max="9597" chance="70" /> <!-- Adena -->
+				<item id="35326" min="1" max="1" chance="0.3" /> <!-- Seraph Ring Gem -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="17.58" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="1.536" /> <!-- Durable Braid -->
-				<item id="9557" min="1" max="1" chance="0.3" /> <!-- Holy Crystal -->
+				<item id="17412" min="1" max="1" chance="0.03" /> <!-- Seraph Sigil -->
 			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="40" />
@@ -2301,7 +2309,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1033874" sp="248" />
+		<acquire exp="1840272" sp="1849" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13256" hpRegen="8.5" mp="1881" mpRegen="30" />
 			<speed>
@@ -2329,15 +2337,15 @@
 		<ai aggroRange="300" isAggressive="false" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="520" max="1212" chance="70" /> <!-- Adena -->
 				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
+				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
 				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
 				<item id="9549" min="1" max="1" chance="0.03" /> <!-- Wind Stone -->
-				<item id="9555" min="1" max="1" chance="0.00549999999999981" /> <!-- Wind Crystal -->
-				<item id="36735" min="1" max="1" chance="0.00549999999999981" /> <!-- Recipe: Requiem Avenger (60%) -->
+				<item id="9555" min="1" max="1" chance="0.0075" /> <!-- Wind Crystal -->
+				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="12.85" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="12.57" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -2382,7 +2390,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1033874" sp="248" />
+		<acquire exp="1840272" sp="1849" />
 		<equipment rhand="15304" /> <!-- Transparent Crossbow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13256" hpRegen="8.5" mp="1881" mpRegen="30" />
@@ -2411,15 +2419,15 @@
 		<ai aggroRange="300" isAggressive="false" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="520" max="1212" chance="70" /> <!-- Adena -->
 				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
-				<item id="36810" min="1" max="1" chance="4.654" /> <!-- Immortal Shield Ingredient -->
-				<item id="36557" min="1" max="1" chance="0.750000000000004" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.300000000000004" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="36748" min="1" max="1" chance="0.0750000000000004" /> <!-- Recipe: Immortal Shield (60%) -->
+				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
+				<item id="36810" min="1" max="1" chance="4.661" /> <!-- Immortal Shield Ingredient -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36748" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Shield (60%) -->
 			</drop>
 			<spoil>
-				<item id="36557" min="1" max="1" chance="2.791" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="2.825" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 				<item id="19440" min="1" max="1" chance="0.075" /> <!-- Gemstone (R-grade) -->
 			</spoil>
@@ -2464,7 +2472,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1058403" sp="254" />
+		<acquire exp="1883924" sp="1892" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13497" hpRegen="9.5" mp="1917" mpRegen="3.3" />
 			<speed>
@@ -2493,14 +2501,14 @@
 		<ai aggroRange="300" isAggressive="false" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="535" max="1248" chance="70" /> <!-- Adena -->
 				<item id="17307" min="1" max="1" chance="0.03" /> <!-- Immortal Gauntlets -->
-				<item id="36808" min="1" max="1" chance="4.83500000000002" /> <!-- Immortal Gauntlet Ingredient -->
+				<item id="57" min="916" max="2136" chance="20" /> <!-- Adena -->
+				<item id="36808" min="1" max="1" chance="4.826" /> <!-- Immortal Gauntlet Ingredient -->
 				<item id="36746" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Gauntlets (60%) -->
 				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="12.35" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="12.9" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -2544,7 +2552,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1033874" sp="248" />
+		<acquire exp="1840272" sp="1849" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13256" hpRegen="8.5" mp="1881" mpRegen="30" />
 			<speed>
@@ -2573,14 +2581,14 @@
 		<ai aggroRange="300" isAggressive="false" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="520" max="1212" chance="70" /> <!-- Adena -->
 				<item id="17292" min="1" max="1" chance="0.003" /> <!-- Requiem Slasher -->
+				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
 				<item id="36796" min="1" max="1" chance="0.3" /> <!-- Requiem Slasher Fragment -->
 				<item id="36734" min="1" max="1" chance="0.03" /> <!-- Recipe: Requiem Slasher (60%) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="9.222" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.804" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="9.197" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.782" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2624,7 +2632,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1008723" sp="242" />
+		<acquire exp="1795484" sp="1806" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13188" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<speed>
@@ -2652,15 +2660,15 @@
 		<ai aggroRange="300" isAggressive="false" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="507" max="1182" chance="70" /> <!-- Adena -->
 				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots -->
-				<item id="36809" min="1" max="1" chance="3.23600000000001" /> <!-- Immortal Boot Ingredient -->
-				<item id="36747" min="1" max="1" chance="0.0750000000000008" /> <!-- Recipe: Immortal Boots (60%) -->
+				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
+				<item id="36809" min="1" max="1" chance="3.182" /> <!-- Immortal Boot Ingredient -->
+				<item id="36747" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Boots (60%) -->
 				<item id="9548" min="1" max="1" chance="0.03" /> <!-- Earth Stone -->
 				<item id="9554" min="1" max="1" chance="0.003" /> <!-- Earth Crystal -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="12.28" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="12.64" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -2704,7 +2712,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1008723" sp="242" />
+		<acquire exp="1795484" sp="1806" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13188" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<speed>
@@ -2733,16 +2741,16 @@
 		<ai aggroRange="300" isAggressive="false" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="507" max="1182" chance="70" /> <!-- Adena -->
-				<item id="17304" min="1" max="1" chance="0.0300000000000001" /> <!-- Immortal Helmet -->
-				<item id="36805" min="1" max="1" chance="2.048" /> <!-- Immortal Helmet Ingredient -->
-				<item id="36517" min="1" max="1" chance="2.60199999999999" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.300000000000006" /> <!-- Durable Leather -->
-				<item id="36743" min="1" max="1" chance="0.0300000000000006" /> <!-- Recipe: Immortal Helmet (60%) -->
-				<item id="17527" min="1" max="1" chance="0.00549999999999996" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17304" min="1" max="1" chance="0.03" /> <!-- Immortal Helmet -->
+				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="2.509" /> <!-- Leather -->
+				<item id="36805" min="1" max="1" chance="2.038" /> <!-- Immortal Helmet Ingredient -->
+				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
+				<item id="36743" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Helmet (60%) -->
+				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="12.78" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="12.04" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -2786,7 +2794,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1033874" sp="248" />
+		<acquire exp="1840272" sp="1849" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13256" hpRegen="8.5" mp="1881" mpRegen="30" />
 			<speed>
@@ -2814,16 +2822,16 @@
 		<ai aggroRange="300" isAggressive="false" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="520" max="1212" chance="70" /> <!-- Adena -->
-				<item id="17323" min="1" max="1" chance="0.0300000000000001" /> <!-- Immortal Ring -->
-				<item id="36824" min="1" max="1" chance="7.12899999999999" /> <!-- Immortal Ring Gem -->
-				<item id="36762" min="1" max="1" chance="0.0750000000000001" /> <!-- Recipe: Immortal Ring (60%) -->
-				<item id="36557" min="1" max="1" chance="0.750000000000001" /> <!-- Accessory Gem -->
+				<item id="17323" min="1" max="1" chance="0.03" /> <!-- Immortal Ring -->
+				<item id="57" min="889" max="2073" chance="20" /> <!-- Adena -->
+				<item id="36824" min="1" max="1" chance="7.23" /> <!-- Immortal Ring Gem -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36762" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Ring (60%) -->
 				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36557" min="1" max="1" chance="4.189" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="4.254" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
@@ -2867,7 +2875,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1008723" sp="242" />
+		<acquire exp="1795484" sp="1806" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13188" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<speed>
@@ -2895,17 +2903,17 @@
 		<ai aggroRange="300" isAggressive="false" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="507" max="1182" chance="70" /> <!-- Adena -->
-				<item id="17310" min="1" max="1" chance="0.0299999999999993" /> <!-- Immortal Leather Helmet -->
-				<item id="36811" min="1" max="1" chance="2.198" /> <!-- Immortal Leather Helmet Ingredient -->
-				<item id="36517" min="1" max="1" chance="2.49699999999999" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.300000000000013" /> <!-- Durable Leather -->
-				<item id="36749" min="1" max="1" chance="0.0300000000000013" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
-				<item id="17526" min="1" max="1" chance="0.00090000000000001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17310" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Helmet -->
+				<item id="57" min="867" max="2021" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="2.599" /> <!-- Leather -->
+				<item id="36811" min="1" max="1" chance="2.244" /> <!-- Immortal Leather Helmet Ingredient -->
+				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
+				<item id="36749" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="17.67" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="3.468" /> <!-- Durable Leather -->
+				<item id="36517" min="1" max="1" chance="17.72" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="3.493" /> <!-- Durable Leather -->
 				<item id="36884" min="1" max="1" chance="0.003" /> <!-- Recipe: Synthetic Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
@@ -2950,7 +2958,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1581445" sp="379" />
+		<acquire exp="2814917" sp="2884" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13256" hpRegen="9.5" mp="1881" mpRegen="3.3" />
 			<speed>
@@ -2982,16 +2990,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="615" max="1432" chance="70" /> <!-- Adena -->
 				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="4.243" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
-				<item id="36517" min="1" max="1" chance="4.16399999999998" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.74999999999999" /> <!-- Durable Leather -->
-				<item id="30424" min="1" max="1" chance="0.0300000000000001" /> <!-- Recipe: Spiritshot (R-grade) -->
-				<item id="36735" min="1" max="1" chance="0.00549999999999983" /> <!-- Recipe: Requiem Avenger (60%) -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="15.3" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="14.69" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3037,7 +3045,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1581445" sp="379" />
+		<acquire exp="2814917" sp="2884" />
 		<equipment rhand="15304" /> <!-- Transparent Crossbow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13256" hpRegen="9.5" mp="1881" mpRegen="3.3" />
@@ -3070,15 +3078,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="615" max="1432" chance="70" /> <!-- Adena -->
 				<item id="17309" min="1" max="1" chance="0.03" /> <!-- Immortal Shield -->
-				<item id="36810" min="1" max="1" chance="5.426" /> <!-- Immortal Shield Ingredient -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
+				<item id="36810" min="1" max="1" chance="5.397" /> <!-- Immortal Shield Ingredient -->
 				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="7.235" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="1.469" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="7.231" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="1.419" /> <!-- Synthetic Braid -->
 				<item id="19440" min="1" max="1" chance="0.075" /> <!-- Gemstone (R-grade) -->
 			</spoil>
 			<lucky_drop>
@@ -3123,7 +3131,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1618967" sp="388" />
+		<acquire exp="2881745" sp="2951" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13497" hpRegen="8.5" mp="1917" mpRegen="30" />
 			<speed>
@@ -3156,13 +3164,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="633" max="1475" chance="70" /> <!-- Adena -->
 				<item id="17307" min="1" max="1" chance="0.03" /> <!-- Immortal Gauntlets -->
-				<item id="36808" min="1" max="1" chance="5.72500000000001" /> <!-- Immortal Gauntlet Ingredient -->
+				<item id="57" min="1082" max="2524" chance="20" /> <!-- Adena -->
+				<item id="36808" min="1" max="1" chance="5.742" /> <!-- Immortal Gauntlet Ingredient -->
 				<item id="36746" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Gauntlets (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="15.71" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="15.65" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3207,7 +3215,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1581445" sp="379" />
+		<acquire exp="2814917" sp="2884" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13256" hpRegen="9.5" mp="1881" mpRegen="3.3" />
 			<speed>
@@ -3240,17 +3248,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="615" max="1432" chance="70" /> <!-- Adena -->
 				<item id="17292" min="1" max="1" chance="0.003" /> <!-- Requiem Slasher -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
 				<item id="36796" min="1" max="1" chance="0.3" /> <!-- Requiem Slasher Fragment -->
-				<item id="9547" min="1" max="1" chance="0.0299999999999998" /> <!-- Water Stone -->
-				<item id="17527" min="1" max="1" chance="0.0299999999999998" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="9553" min="1" max="1" chance="0.00299999999999998" /> <!-- Water Crystal -->
-				<item id="36734" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Requiem Slasher (60%) -->
-				<item id="17526" min="1" max="1" chance="0.000899999999999981" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="9547" min="1" max="1" chance="0.03" /> <!-- Water Stone -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="9553" min="1" max="1" chance="0.003" /> <!-- Water Crystal -->
+				<item id="36734" min="1" max="1" chance="0.003" /> <!-- Recipe: Requiem Slasher (60%) -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="14.85" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="14.16" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3296,7 +3304,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1542973" sp="370" />
+		<acquire exp="2746439" sp="2817" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13188" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<speed>
@@ -3328,15 +3336,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="599" max="1397" chance="70" /> <!-- Adena -->
 				<item id="17308" min="1" max="1" chance="0.03" /> <!-- Immortal Boots -->
-				<item id="36809" min="1" max="1" chance="3.86299999999999" /> <!-- Immortal Boot Ingredient -->
-				<item id="36747" min="1" max="1" chance="0.0749999999999986" /> <!-- Recipe: Immortal Boots (60%) -->
-				<item id="17527" min="1" max="1" chance="0.0299999999999998" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="57" min="1025" max="2388" chance="20" /> <!-- Adena -->
+				<item id="36809" min="1" max="1" chance="3.898" /> <!-- Immortal Boot Ingredient -->
+				<item id="36747" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Boots (60%) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="10.4" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="2.068" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="1" chance="10.94" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.011" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3380,7 +3388,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1542973" sp="370" />
+		<acquire exp="2746439" sp="2817" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13188" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<speed>
@@ -3412,15 +3420,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="599" max="1397" chance="70" /> <!-- Adena -->
-				<item id="17304" min="1" max="1" chance="0.0299999999999989" /> <!-- Immortal Helmet -->
-				<item id="36805" min="1" max="1" chance="2.33600000000001" /> <!-- Immortal Helmet Ingredient -->
-				<item id="36517" min="1" max="1" chance="3.97" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.750000000000022" /> <!-- Durable Leather -->
+				<item id="17304" min="1" max="1" chance="0.03" /> <!-- Immortal Helmet -->
+				<item id="57" min="1025" max="2388" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="3.968" /> <!-- Leather -->
+				<item id="36805" min="1" max="1" chance="2.441" /> <!-- Immortal Helmet Ingredient -->
+				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 				<item id="36743" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="14.98" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="14.2" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
 			<lucky_drop>
@@ -3465,7 +3473,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1581445" sp="379" />
+		<acquire exp="2814917" sp="2884" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13256" hpRegen="9.5" mp="1881" mpRegen="3.3" />
 			<speed>
@@ -3497,17 +3505,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="615" max="1432" chance="70" /> <!-- Adena -->
-				<item id="17323" min="1" max="1" chance="0.0749999999999998" /> <!-- Immortal Ring -->
-				<item id="36824" min="1" max="1" chance="8.45399999999999" /> <!-- Immortal Ring Gem -->
-				<item id="36762" min="1" max="1" chance="0.0749999999999999" /> <!-- Recipe: Immortal Ring (60%) -->
-				<item id="36557" min="1" max="1" chance="0.749999999999999" /> <!-- Accessory Gem -->
-				<item id="36558" min="1" max="1" chance="0.0749999999999999" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="9546" min="1" max="1" chance="0.0300000000000001" /> <!-- Fire Stone -->
-				<item id="9552" min="1" max="1" chance="0.00300000000000001" /> <!-- Fire Crystal -->
+				<item id="17323" min="1" max="1" chance="0.075" /> <!-- Immortal Ring -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
+				<item id="36824" min="1" max="1" chance="8.549" /> <!-- Immortal Ring Gem -->
+				<item id="36557" min="1" max="1" chance="0.75" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36762" min="1" max="1" chance="0.075" /> <!-- Recipe: Immortal Ring (60%) -->
+				<item id="9546" min="1" max="1" chance="0.03" /> <!-- Fire Stone -->
+				<item id="9552" min="1" max="1" chance="0.003" /> <!-- Fire Crystal -->
 			</drop>
 			<spoil>
-				<item id="36557" min="1" max="1" chance="5.071" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="4.944" /> <!-- Accessory Gem -->
 				<item id="36558" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
@@ -3552,7 +3560,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1542973" sp="370" />
+		<acquire exp="2746439" sp="2817" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="13188" hpRegen="9.5" mp="1846" mpRegen="3.3" />
 			<speed>
@@ -3584,18 +3592,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="599" max="1397" chance="70" /> <!-- Adena -->
-				<item id="17310" min="1" max="1" chance="0.0300000000000007" /> <!-- Immortal Leather Helmet -->
-				<item id="36811" min="1" max="1" chance="2.679" /> <!-- Immortal Leather Helmet Ingredient -->
-				<item id="36517" min="1" max="1" chance="3.04200000000001" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.749999999999997" /> <!-- Durable Leather -->
-				<item id="36749" min="1" max="1" chance="0.0299999999999999" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
-				<item id="17526" min="1" max="1" chance="0.000899999999999981" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17310" min="1" max="1" chance="0.03" /> <!-- Immortal Leather Helmet -->
+				<item id="57" min="1025" max="2388" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="3.064" /> <!-- Leather -->
+				<item id="36811" min="1" max="1" chance="2.68" /> <!-- Immortal Leather Helmet Ingredient -->
+				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
+				<item id="36749" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="4.147" /> <!-- Durable Leather -->
-				<item id="36884" min="1" max="1" chance="0.0055" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36897" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Leather Braid - Upgrade -->
+				<item id="36518" min="1" max="1" chance="4.078" /> <!-- Durable Leather -->
+				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36897" min="1" max="1" chance="9" /> <!-- Recipe: Quality Leather Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3788,13 +3796,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7875" max="18385" chance="70" /> <!-- Adena -->
-				<item id="36522" min="3" max="9" chance="33.4000000000002" /> <!-- Silver -->
-				<item id="36523" min="2" max="6" chance="9.9819999999998" /> <!-- Adamantite -->
+				<item id="57" min="8529" max="19911" chance="70" /> <!-- Adena -->
+				<item id="36522" min="3" max="9" chance="37.21" /> <!-- Silver -->
+				<item id="36523" min="2" max="6" chance="10.78" /> <!-- Adamantite -->
 			</drop>
 			<spoil>
-				<item id="36522" min="1" max="3" chance="78.48" /> <!-- Silver -->
-				<item id="36523" min="1" max="1" chance="32.05" /> <!-- Adamantite -->
+				<item id="36522" min="1" max="3" chance="87.52" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="34.34" /> <!-- Adamantite -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3853,13 +3861,13 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="10688" max="24952" chance="70" /> <!-- Adena -->
-				<item id="36527" min="15" max="45" chance="25.9" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="12" max="36" chance="6.38600000000002" /> <!-- Metallic Fiber -->
+				<item id="57" min="11576" max="27023" chance="70" /> <!-- Adena -->
+				<item id="36527" min="15" max="45" chance="27.88" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="12" max="36" chance="7.052" /> <!-- Metallic Fiber -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="3" chance="90.005" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="36.31" /> <!-- Synthetic Braid -->
+				<item id="36532" min="1" max="5" chance="68.36" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="40.88" /> <!-- Synthetic Braid -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3888,7 +3896,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="416098" sp="99" />
+		<acquire exp="416099" sp="99" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="295833" hpRegen="8.5" mp="20238" mpRegen="30" />
 			<speed>
@@ -3915,13 +3923,13 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="7524" max="17566" chance="70" /> <!-- Adena -->
-				<item id="36547" min="1" max="1" chance="25.52" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="5.066" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="57" min="8149" max="19024" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="27.32" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="5.527" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36547" min="1" max="1" chance="20.73" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="3.948" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36547" min="1" max="1" chance="22.26" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="4.295" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3951,7 +3959,7 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="419055" sp="100" />
+		<acquire exp="419056" sp="100" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="304477" hpRegen="8.5" mp="20960" mpRegen="30" />
 			<speed>
@@ -3977,13 +3985,13 @@
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="8036" max="18760" chance="70" /> <!-- Adena -->
-				<item id="36552" min="1" max="1" chance="25.32" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="4.783" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="57" min="8703" max="20317" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="27.52" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="5.126" /> <!-- Armor Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36552" min="1" max="1" chance="19.01" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="3.682" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36552" min="1" max="1" chance="20" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="3.99" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4113,13 +4121,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="11351" max="26486" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="27.5800000000001" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="5.67799999999992" /> <!-- Synthetic Cokes -->
+				<item id="57" min="12293" max="28684" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="32.57" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="6.126" /> <!-- Synthetic Cokes -->
 			</drop>
 			<spoil>
-				<item id="36562" min="1" max="1" chance="23.59" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="4.311" /> <!-- Synthetic Cokes -->
+				<item id="36562" min="1" max="1" chance="25.14" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="4.679" /> <!-- Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4185,13 +4193,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="11351" max="26486" chance="70" /> <!-- Adena -->
-				<item id="36517" min="15" max="45" chance="25.3900000000002" /> <!-- Leather -->
-				<item id="36518" min="12" max="36" chance="6.30899999999985" /> <!-- Durable Leather -->
+				<item id="57" min="12293" max="28684" chance="70" /> <!-- Adena -->
+				<item id="36517" min="15" max="45" chance="28.89" /> <!-- Leather -->
+				<item id="36518" min="12" max="36" chance="6.817" /> <!-- Durable Leather -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="13" chance="87.66" /> <!-- Leather -->
-				<item id="36518" min="1" max="3" chance="57.62" /> <!-- Durable Leather -->
+				<item id="36517" min="1" max="13" chance="91.6" /> <!-- Leather -->
+				<item id="36518" min="1" max="3" chance="64.09" /> <!-- Durable Leather -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4209,7 +4217,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22956" level="93" type="L2Monster" name="Garden Commander">
+	<npc id="22956" level="91" type="L2Monster" name="Garden Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="142" />
@@ -4226,7 +4234,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="789859" sp="189" />
+		<acquire exp="448966" sp="107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
 			<speed>
@@ -4254,13 +4262,13 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="11128" max="25929" chance="70" /> <!-- Adena -->
-				<item id="36527" min="15" max="45" chance="28.1300000000001" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="12" max="36" chance="6.67099999999986" /> <!-- Metallic Fiber -->
+				<item id="57" min="8529" max="19911" chance="70" /> <!-- Adena -->
+				<item id="36522" min="3" max="9" chance="37.21" /> <!-- Silver -->
+				<item id="36523" min="2" max="6" chance="10.78" /> <!-- Adamantite -->
 			</drop>
 			<spoil>
-				<item id="36527" min="1" max="13" chance="91.265" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="3" chance="62.5" /> <!-- Metallic Fiber -->
+				<item id="36522" min="1" max="3" chance="87.52" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="34.34" /> <!-- Adamantite -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4388,13 +4396,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="11351" max="26486" chance="70" /> <!-- Adena -->
-				<item id="36527" min="15" max="45" chance="29.5300000000001" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="12" max="36" chance="6.86999999999986" /> <!-- Metallic Fiber -->
+				<item id="57" min="12293" max="28684" chance="70" /> <!-- Adena -->
+				<item id="36527" min="15" max="45" chance="29.62" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="12" max="36" chance="7.382" /> <!-- Metallic Fiber -->
 			</drop>
 			<spoil>
-				<item id="36527" min="1" max="13" chance="90.045" /> <!-- Synthetic Fiber -->
-				<item id="36528" min="1" max="3" chance="64.47" /> <!-- Metallic Fiber -->
+				<item id="36527" min="1" max="15" chance="91.535" /> <!-- Synthetic Fiber -->
+				<item id="36528" min="1" max="3" chance="69.56" /> <!-- Metallic Fiber -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4428,7 +4436,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="90605" sp="21" />
+		<acquire exp="90606" sp="21" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="304477" hpRegen="8.5" mp="20960" mpRegen="30" />
 			<speed>
@@ -4460,13 +4468,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="4542" max="10604" chance="70" /> <!-- Adena -->
-				<item id="36547" min="1" max="1" chance="15.61" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="3.137" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="57" min="4919" max="11484" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="16.56" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="3.315" /> <!-- Weapon Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36547" min="1" max="1" chance="12.35" /> <!-- Weapon Fragment -->
-				<item id="36548" min="1" max="1" chance="2.414" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="36547" min="1" max="1" chance="13.72" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="2.575" /> <!-- Weapon Fragment (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4532,13 +4540,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="11351" max="26486" chance="70" /> <!-- Adena -->
-				<item id="36552" min="1" max="1" chance="34.06" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="6.733" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="57" min="12293" max="28684" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="36.25" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="7.314" /> <!-- Armor Fragment (Mid-grade) -->
 			</drop>
 			<spoil>
-				<item id="36552" min="1" max="1" chance="26.37" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="5.276" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36552" min="1" max="1" chance="28.25" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="5.636" /> <!-- Armor Fragment (Mid-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4622,7 +4630,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22962" level="93" type="L2Monster" name="Garden Commander">
+	<npc id="22962" level="91" type="L2Monster" name="Garden Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="142" />
@@ -4639,7 +4647,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="828576" sp="198" />
+		<acquire exp="448966" sp="107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
 			<speed>
@@ -4671,13 +4679,13 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="11128" max="25929" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="27.8399999999999" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="5.43000000000006" /> <!-- Synthetic Cokes -->
+				<item id="57" min="8529" max="19911" chance="70" /> <!-- Adena -->
+				<item id="36522" min="3" max="9" chance="37.21" /> <!-- Silver -->
+				<item id="36523" min="2" max="6" chance="10.78" /> <!-- Adamantite -->
 			</drop>
 			<spoil>
-				<item id="36562" min="1" max="1" chance="21.24" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="4.222" /> <!-- Synthetic Cokes -->
+				<item id="36522" min="1" max="3" chance="87.52" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="34.34" /> <!-- Adamantite -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4801,13 +4809,13 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="11128" max="25929" chance="70" /> <!-- Adena -->
-				<item id="36562" min="1" max="1" chance="27.0100000000002" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="5.55999999999984" /> <!-- Synthetic Cokes -->
+				<item id="57" min="12052" max="28081" chance="70" /> <!-- Adena -->
+				<item id="36562" min="1" max="1" chance="29.9" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="5.932" /> <!-- Synthetic Cokes -->
 			</drop>
 			<spoil>
-				<item id="36562" min="1" max="1" chance="22.9" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="4.291" /> <!-- Synthetic Cokes -->
+				<item id="36562" min="1" max="1" chance="23.21" /> <!-- Greater Cokes -->
+				<item id="36563" min="1" max="1" chance="4.652" /> <!-- Synthetic Cokes -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4904,7 +4912,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="823010" sp="197" />
+		<acquire exp="823011" sp="197" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="304477" hpRegen="8.5" mp="31440" mpRegen="30" />
 			<speed>
@@ -4931,12 +4939,12 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2014" max="4701" chance="70" /> <!-- Adena -->
 				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
-				<item id="17354" min="1" max="1" chance="0.0299999999999996" /> <!-- Twilight Sigil -->
-				<item id="36552" min="1" max="1" chance="0.749999999999999" /> <!-- Armor Fragment -->
-				<item id="17527" min="1" max="1" chance="0.0749999999999996" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36873" min="1" max="1" chance="0.0300000000000005" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
+				<item id="17354" min="1" max="1" chance="0.03" /> <!-- Twilight Sigil -->
+				<item id="57" min="3444" max="8035" chance="20" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="0.75" /> <!-- Armor Fragment -->
+				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36873" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
 			</drop>
 			<spoil>
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
@@ -5108,7 +5116,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="1804284" sp="433" />
+		<acquire exp="1804285" sp="433" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
 			<speed>
@@ -5135,10 +5143,10 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2789" max="6498" chance="70" /> <!-- Adena -->
 				<item id="17340" min="1" max="1" chance="0.03" /> <!-- Twilight Gaiters -->
 				<item id="17345" min="1" max="1" chance="0.03" /> <!-- Twilight Leather Armor -->
-				<item id="36889" min="1" max="1" chance="1.728" /> <!-- Recipe: Worn Leather Braid - Combination -->
+				<item id="57" min="4758" max="11117" chance="20" /> <!-- Adena -->
+				<item id="36889" min="1" max="1" chance="1.685" /> <!-- Recipe: Worn Leather Braid - Combination -->
 				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
 			</drop>
 			<spoil>
@@ -5173,7 +5181,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="1804284" sp="433" />
+		<acquire exp="1804285" sp="433" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="312844" hpRegen="8.5" mp="31986" mpRegen="30" />
 			<speed>
@@ -5200,12 +5208,12 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2789" max="6498" chance="70" /> <!-- Adena -->
 				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
 				<item id="17351" min="1" max="1" chance="0.03" /> <!-- Twilight Stockings -->
 				<item id="17354" min="1" max="1" chance="0.03" /> <!-- Twilight Sigil -->
-				<item id="17527" min="1" max="1" chance="0.300000000000001" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36890" min="1" max="1" chance="0.00549999999999992" /> <!-- Recipe: Leather Braid - Downgrade -->
+				<item id="57" min="4758" max="11117" chance="20" /> <!-- Adena -->
+				<item id="17527" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36890" min="1" max="1" chance="0.0075" /> <!-- Recipe: Leather Braid - Downgrade -->
 			</drop>
 			<spoil>
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
@@ -5266,14 +5274,14 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2845" max="6638" chance="70" /> <!-- Adena -->
-				<item id="17343" min="1" max="1" chance="0.0299999999999998" /> <!-- Twilight Shield -->
-				<item id="17325" min="1" max="1" chance="0.00299999999999998" /> <!-- Apocalypse Cutter -->
-				<item id="17326" min="1" max="1" chance="0.00299999999999998" /> <!-- Apocalypse Slasher -->
-				<item id="17328" min="1" max="1" chance="0.00299999999999998" /> <!-- Apocalypse Fighter -->
-				<item id="17330" min="1" max="1" chance="0.00299999999999998" /> <!-- Apocalypse Thrower -->
+				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
+				<item id="17325" min="1" max="1" chance="0.003" /> <!-- Apocalypse Cutter -->
+				<item id="17326" min="1" max="1" chance="0.003" /> <!-- Apocalypse Slasher -->
+				<item id="17328" min="1" max="1" chance="0.003" /> <!-- Apocalypse Fighter -->
+				<item id="17330" min="1" max="1" chance="0.003" /> <!-- Apocalypse Thrower -->
+				<item id="57" min="4864" max="11350" chance="20" /> <!-- Adena -->
 				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="36915" min="1" max="1" chance="0.00550000000000004" /> <!-- Recipe: Weapon Fragment - Downgrade -->
+				<item id="36915" min="1" max="1" chance="0.0075" /> <!-- Recipe: Weapon Fragment - Downgrade -->
 			</drop>
 			<spoil>
 				<item id="36884" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Braid - Upgrade -->
@@ -5327,10 +5335,10 @@
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="57" min="2845" max="6638" chance="70" /> <!-- Adena -->
-				<item id="17324" min="1" max="1" chance="0.00299999999999997" /> <!-- Apocalypse Shaper -->
-				<item id="17327" min="1" max="1" chance="0.00299999999999997" /> <!-- Apocalypse Avenger -->
-				<item id="17331" min="1" max="1" chance="0.00299999999999997" /> <!-- Apocalypse Shooter -->
+				<item id="17324" min="1" max="1" chance="0.003" /> <!-- Apocalypse Shaper -->
+				<item id="17327" min="1" max="1" chance="0.003" /> <!-- Apocalypse Avenger -->
+				<item id="17331" min="1" max="1" chance="0.003" /> <!-- Apocalypse Shooter -->
+				<item id="57" min="4864" max="11350" chance="20" /> <!-- Adena -->
 				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="36916" min="1" max="1" chance="0.03" /> <!-- Recipe: Weapon Fragment - Upgrade -->
 			</drop>
@@ -5535,7 +5543,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="10" sp="1" />
+		<acquire exp="10" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="163" hpRegen="2" mp="108" mpRegen="0.9" />
 			<speed>
@@ -5556,29 +5564,6 @@
 			<skill id="14158" level="1" /> <!-- Crawler Spear -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<drop>
-				<item id="57" min="2" max="5" chance="70" /> <!-- Adena -->
-				<item id="8" min="1" max="1" chance="0.3" /> <!-- Willow Staff -->
-				<item id="36548" min="1" max="1" chance="0.0009" /> <!-- Weapon Fragment (Mid-grade) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="1.269" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.0055" /> <!-- Synthetic Braid -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
 		<collision>
 			<radius normal="6.5" />
 			<height normal="18.5" />
@@ -5594,7 +5579,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<acquire exp="8" sp="1" />
+		<acquire exp="8" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="124" hpRegen="2" mp="92" mpRegen="0.9" />
 			<speed>
@@ -5616,29 +5601,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
-			<drop>
-				<item id="57" min="2" max="4" chance="70" /> <!-- Adena -->
-				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36561" min="1" max="1" chance="0.075" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.003" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
 		<collision>
 			<radius normal="9.4" />
 			<height normal="20" />
@@ -5654,7 +5616,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="16" sp="1" />
+		<acquire exp="16" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="264" hpRegen="2.5" mp="157" mpRegen="1.2" />
 			<speed>
@@ -5676,30 +5638,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="200" />
-		<drop_lists>
-			<drop>
-				<item id="57" min="1" max="2" chance="70" /> <!-- Adena -->
-				<item id="216" min="1" max="1" chance="0.03" /> <!-- Dirk -->
-				<item id="36558" min="1" max="1" chance="0.0009" /> <!-- Accessory Gem (Mid-grade) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36561" min="1" max="1" chance="0.03" /> <!-- Cokes -->
-				<item id="36562" min="1" max="1" chance="0.0009" /> <!-- Greater Cokes -->
-				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
 		<collision>
 			<radius normal="14.5" />
 			<height normal="18" />
@@ -5714,7 +5652,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="13" sp="1" />
+		<acquire exp="13" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="230" hpRegen="2.5" mp="140" mpRegen="1.2" />
 			<speed>
@@ -5735,30 +5673,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<drop>
-				<item id="57" min="3" max="7" chance="70" /> <!-- Adena -->
-				<item id="9" min="1" max="1" chance="0.075" /> <!-- Cedar Staff -->
-				<item id="36563" min="1" max="1" chance="0.0009" /> <!-- Synthetic Cokes -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36551" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Low-grade) -->
-				<item id="36552" min="1" max="1" chance="0.003" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.0009" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
 		<collision>
 			<radius normal="11" />
 			<height normal="16.5" />
@@ -5774,7 +5688,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<acquire exp="17" sp="1" />
+		<acquire exp="17" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="301" hpRegen="2.5" mp="174" mpRegen="1.2" />
 			<speed>
@@ -5796,27 +5710,6 @@
 			<skill id="14163" level="1" /> <!-- Howl -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<drop>
-				<item id="57" min="3" max="8" chance="70" /> <!-- Adena -->
-				<item id="9" min="1" max="1" chance="0.3" /> <!-- Cedar Staff -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
 		<collision>
 			<radius normal="31" />
 			<height normal="36.5" />
@@ -5833,7 +5726,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="13" sp="1" />
+		<acquire exp="13" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="230" hpRegen="2.5" mp="140" mpRegen="1.2" />
 			<speed>
@@ -5855,28 +5748,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="150" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
-			<drop>
-				<item id="57" min="3" max="6" chance="70" /> <!-- Adena -->
-				<item id="15" min="1" max="1" chance="0.03" /> <!-- Short Spear -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="1.562" /> <!-- Thread -->
-				<item id="36533" min="1" max="1" chance="0.0055" /> <!-- Synthetic Braid -->
-			</spoil>
-			<lucky_drop>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_drop>
-		</drop_lists>
 		<collision>
 			<radius normal="9" />
 			<height normal="22.5" />

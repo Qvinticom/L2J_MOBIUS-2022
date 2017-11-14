@@ -489,7 +489,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6374839" sp="1529" />
+		<acquire exp="2042796" sp="2095" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="13188" hpRegen="9.5" mp="2770" mpRegen="3.3" />
 			<speed>
@@ -518,9 +518,32 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<drop_lists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="4.37500000000001" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="0.299999999999998" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17298" min="1" max="1" chance="0.003" /> <!-- Requiem Buster -->
+				<item id="57" min="686" max="1600" chance="20" /> <!-- Adena -->
+				<item id="36802" min="1" max="1" chance="0.3" /> <!-- Requiem Buster Fragment -->
+				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36740" min="1" max="1" chance="0.003" /> <!-- Recipe: Requiem Buster (60%) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
+			<spoil>
+				<item id="36552" min="1" max="1" chance="0.75" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36886" min="1" max="1" chance="9" /> <!-- Recipe: Durable Braid - Upgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="20" />
@@ -3381,7 +3404,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19294" level="93" type="L2Monster" name="Cocoon Destroyer" title="Violent">
+	<npc id="19294" level="90" type="L2Monster" name="Cocoon Destroyer" title="Violent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3392,7 +3415,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="2594700" sp="622" />
+		<acquire exp="1458000" sp="349" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
 			<speed>
@@ -3425,7 +3448,7 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="17376" min="1" max="1" chance="4.961" /> <!-- Trace of Kimerian's Cavern -->
+				<item id="17375" min="1" max="1" chance="4.936" /> <!-- Kimerian's Trace -->
 			</drop>
 		</drop_lists>
 		<collision>

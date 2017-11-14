@@ -60,17 +60,17 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="205" max="477" chance="70" /> <!-- Adena -->
-				<item id="36516" min="3" max="9" chance="17.5399999999999" /> <!-- Worn Leather -->
-				<item id="36521" min="2" max="6" chance="9.71000000000002" /> <!-- Iron Ore -->
-				<item id="36536" min="2" max="6" chance="5.30600000000008" /> <!-- Worn Leather Braid -->
-				<item id="36551" min="1" max="1" chance="4.77399999999995" /> <!-- Armor Fragment (Low-grade) -->
-				<item id="36561" min="1" max="1" chance="3.954" /> <!-- Cokes -->
+				<item id="36516" min="3" max="9" chance="16.88" /> <!-- Worn Leather -->
+				<item id="36521" min="2" max="6" chance="10.05" /> <!-- Iron Ore -->
+				<item id="36536" min="2" max="6" chance="5.365" /> <!-- Worn Leather Braid -->
+				<item id="36551" min="1" max="1" chance="4.756" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36561" min="1" max="1" chance="4.012" /> <!-- Cokes -->
 				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="73.97" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="1.626" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="74.39" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1.608" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -96,7 +96,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="49712" sp="11" />
+		<acquire exp="49713" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -134,17 +134,17 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="179" max="418" chance="70" /> <!-- Adena -->
+				<item id="36546" min="1" max="1" chance="4.77" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36517" min="1" max="1" chance="2.069" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
 				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
-				<item id="36546" min="1" max="1" chance="4.707" /> <!-- Weapon Fragment (Low-grade) -->
-				<item id="36517" min="1" max="1" chance="2.07199999999996" /> <!-- Leather -->
-				<item id="36522" min="1" max="1" chance="0.750000000000002" /> <!-- Silver -->
-				<item id="36537" min="1" max="1" chance="0.750000000000002" /> <!-- Leather Braid -->
-				<item id="36562" min="1" max="1" chance="0.0750000000000002" /> <!-- Greater Cokes -->
+				<item id="36562" min="1" max="1" chance="0.075" /> <!-- Greater Cokes -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="64.37" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="1.473" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="66.13" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1.413" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -170,7 +170,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="49712" sp="11" />
+		<acquire exp="49713" sp="11" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -208,6 +208,25 @@
 			<radius normal="16" />
 			<height normal="50" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="179" max="418" chance="70" /> <!-- Adena -->
+				<item id="36546" min="1" max="1" chance="4.77" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36517" min="1" max="1" chance="2.069" /> <!-- Leather -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36537" min="1" max="1" chance="0.75" /> <!-- Leather Braid -->
+				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
+				<item id="36562" min="1" max="1" chance="0.075" /> <!-- Greater Cokes -->
+			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="66.13" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1.413" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22103" level="57" type="L2Monster" name="Freya's White Bear">
 		<!-- Confirmed CT2.5 -->
@@ -224,7 +243,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="50208" sp="12" />
+		<acquire exp="50209" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
 			<attack physical="424.23295" magical="289.69611" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -264,16 +283,16 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="181" max="421" chance="70" /> <!-- Adena -->
-				<item id="36551" min="1" max="1" chance="5.05100000000001" /> <!-- Armor Fragment (Low-grade) -->
-				<item id="36527" min="1" max="1" chance="2.71200000000001" /> <!-- Synthetic Fiber -->
-				<item id="36522" min="1" max="1" chance="0.750000000000002" /> <!-- Silver -->
-				<item id="36542" min="1" max="1" chance="0.300000000000001" /> <!-- Silver Wire -->
-				<item id="36557" min="1" max="1" chance="0.300000000000001" /> <!-- Accessory Gem -->
+				<item id="36551" min="1" max="1" chance="5.049" /> <!-- Armor Fragment (Low-grade) -->
+				<item id="36527" min="1" max="1" chance="2.666" /> <!-- Synthetic Fiber -->
+				<item id="36522" min="1" max="1" chance="0.75" /> <!-- Silver -->
+				<item id="36542" min="1" max="1" chance="0.3" /> <!-- Silver Wire -->
+				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="67.56" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="1.423" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="65.91" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1.485" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -302,7 +321,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="52348" sp="12" />
+		<acquire exp="52349" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -342,16 +361,16 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="189" max="440" chance="70" /> <!-- Adena -->
+				<item id="36526" min="3" max="9" chance="20.28" /> <!-- Fiber -->
+				<item id="36536" min="2" max="6" chance="7.378" /> <!-- Worn Leather Braid -->
+				<item id="36546" min="1" max="1" chance="6.047" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="36561" min="1" max="1" chance="4.408" /> <!-- Cokes -->
 				<item id="36552" min="1" max="1" chance="0.3" /> <!-- Armor Fragment -->
-				<item id="36526" min="3" max="9" chance="21.36" /> <!-- Fiber -->
-				<item id="36536" min="2" max="6" chance="7.36299999999992" /> <!-- Worn Leather Braid -->
-				<item id="36546" min="1" max="1" chance="6.05999999999982" /> <!-- Weapon Fragment (Low-grade) -->
-				<item id="36561" min="1" max="1" chance="4.37899999999983" /> <!-- Cokes -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="70.02" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="1.478" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36531" min="1" max="1" chance="68.27" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="1.525" /> <!-- Thin Braid -->
+				<item id="36880" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -917,7 +936,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="22132" level="78" type="L2Monster" name="Judge of Light">
+	<npc id="22132" level="66" type="L2Monster" name="Judge of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -928,7 +947,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="66893" sp="16" />
+		<acquire exp="12100" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3136" hpRegen="8.976" mp="1919" mpRegen="3.16812" />
 			<attack physical="1055.0276874" magical="760.9193205984" random="20" critical="1" accuracy="17" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -969,6 +988,20 @@
 			<radius normal="13" />
 			<height normal="47" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6327" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Earring -->
+				<item id="57" min="61" max="143" chance="70" /> <!-- Adena -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22133" level="78" type="L2Monster" name="Guardian of the Grail">
 		<!-- Confirmed CT2.5 -->
@@ -1346,7 +1379,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="4453839" sp="2850" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15761" hpRegen="8.5" mp="2317" mpRegen="3" />
 			<attack physical="6432.48694948244" magical="1133.34154078035" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1391,14 +1424,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="2.51599999999999" /> <!-- Adamantite -->
-				<item id="36524" min="1" max="1" chance="0.300000000000012" /> <!-- Orichalcum -->
-				<item id="17526" min="1" max="1" chance="0.00549999999999993" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="2.499" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="7.402" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="7.431" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1426,7 +1459,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="123" /> <!-- Saber -->
-		<acquire exp="4453839" sp="2850" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15761" hpRegen="8.5" mp="2317" mpRegen="3" />
 			<attack physical="6432.48694948244" magical="1133.34154078035" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1470,14 +1503,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="2.63799999999999" /> <!-- Adamantite -->
-				<item id="36524" min="1" max="1" chance="0.300000000000001" /> <!-- Orichalcum -->
-				<item id="17526" min="1" max="1" chance="0.00549999999999987" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="2.637" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="7.424" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="7.34" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1505,7 +1538,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="123" /> <!-- Saber -->
-		<acquire exp="4489385" sp="2873" />
+		<acquire exp="15102962" sp="15174" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15761" hpRegen="8.5" mp="2317" mpRegen="3" />
 			<attack physical="6432.48694948244" magical="1133.34154078035" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1549,17 +1582,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
 				<item id="17436" min="1" max="1" chance="0.0009" /> <!-- Eternal Leather Helmet -->
-				<item id="35344" min="1" max="1" chance="0.0300000000000001" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35344" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35468" min="1" max="1" chance="0.000899999999999999" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35468" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="7.364" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="7.439" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1598,7 +1631,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="4453839" sp="2850" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15761" hpRegen="8.5" mp="2317" mpRegen="3" />
 			<attack physical="6432.48694948244" magical="1133.34154078035" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1643,18 +1676,18 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
 				<item id="17433" min="1" max="1" chance="0.0009" /> <!-- Eternal Gauntlets -->
-				<item id="36523" min="1" max="1" chance="0.299999999999999" /> <!-- Adamantite -->
-				<item id="35341" min="1" max="1" chance="0.0299999999999999" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="36524" min="1" max="1" chance="0.0299999999999999" /> <!-- Orichalcum -->
-				<item id="17526" min="1" max="1" chance="0.00299999999999999" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35465" min="1" max="1" chance="0.000900000000000004" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="36523" min="1" max="1" chance="0.3" /> <!-- Adamantite -->
+				<item id="35341" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
 			</drop>
 			<spoil>
-				<item id="36523" min="1" max="1" chance="2.03" /> <!-- Adamantite -->
+				<item id="36523" min="1" max="1" chance="1.959" /> <!-- Adamantite -->
 				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
-				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="9" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1694,7 +1727,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="4593482" sp="2939" />
+		<acquire exp="15453220" sp="15462" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15761" hpRegen="8.5" mp="2317" mpRegen="3" />
 			<attack physical="6432.48694948244" magical="1133.34154078035" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -1740,10 +1773,10 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
 				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35462" min="1" max="1" chance="0.000899999999999997" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
 			</drop>
 			<spoil>
 				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
@@ -1774,7 +1807,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="4453839" sp="2850" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15761" hpRegen="8.5" mp="2317" mpRegen="3" />
 			<attack physical="6432.48694948244" magical="1133.34154078035" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1818,17 +1851,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
-				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Amaranthine Fighter Fragment -->
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Helios Fighter Fragment -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35455" min="1" max="1" chance="0.000899999999999999" /> <!-- Recipe: Amaranthine Fighter (60%) -->
+				<item id="35455" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Fighter (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
-				<item id="19448" min="1" max="1" chance="0.0055" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1856,7 +1889,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="4453839" sp="2850" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15761" hpRegen="8.5" mp="2317" mpRegen="3" />
 			<attack physical="6432.48694948244" magical="1133.34154078035" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -1899,17 +1932,17 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="763" max="1777" chance="70" /> <!-- Adena -->
-				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Amaranthine Thrower Fragment -->
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
-				<item id="35457" min="1" max="1" chance="0.000899999999999999" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
-				<item id="17526" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -1948,7 +1981,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="8776109" sp="14041" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -1994,15 +2027,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="17526" min="1" max="1" chance="0.00299999999999998" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19448" min="1" max="1" chance="0.00299999999999998" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35463" min="1" max="1" chance="0.00090000000000003" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="8.293" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2029,7 +2062,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="8812387" sp="14099" />
+		<acquire exp="16470188" sp="16563" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2074,15 +2107,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
-				<item id="17526" min="1" max="1" chance="0.00549999999999991" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19447" min="1" max="1" chance="0.000900000000000007" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="8.298" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="6.902" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2096,7 +2129,7 @@
 			<id>1</id>
 		</extend_drop>
 	</npc>
-	<npc id="22148" level="99" type="L2Monster" name="Triol's Believer">
+	<npc id="22148" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2111,7 +2144,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="8776109" sp="14041" />
+		<acquire exp="15453220" sp="15462" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -2162,6 +2195,21 @@
 		<extend_drop>
 			<id>1</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22149" level="99" type="L2Monster" name="Ritual Offering">
 		<!-- Confirmed CT2.5 -->
@@ -2177,7 +2225,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="8776109" sp="14041" />
+		<acquire exp="16470188" sp="16563" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2222,15 +2270,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
-				<item id="35327" min="1" max="1" chance="0.03" /> <!-- Amaranthine Shaper Fragment -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35451" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Shaper (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="8.332" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="6.902" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2244,7 +2292,7 @@
 			<id>1</id>
 		</extend_drop>
 	</npc>
-	<npc id="22150" level="99" type="L2Monster" name="Triol's Believer">
+	<npc id="22150" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2260,7 +2308,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="8799430" sp="14079" />
+		<acquire exp="15453220" sp="15462" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -2312,6 +2360,21 @@
 		<extend_drop>
 			<id>1</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22151" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -2339,7 +2402,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="8918625" sp="14269" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -2391,6 +2454,22 @@
 		<extend_drop>
 			<id>1</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22152" level="99" type="L2Monster" name="Temple Guard">
 		<!-- Confirmed CT2.5 -->
@@ -2406,7 +2485,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8215" /> <!-- Monster Only (Zombie Enlisted Man Sword) -->
-		<acquire exp="8812387" sp="14099" />
+		<acquire exp="16470188" sp="16563" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2451,15 +2530,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
 				<item id="35340" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="17526" min="1" max="1" chance="0.00299999999999998" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19448" min="1" max="1" chance="0.00299999999999998" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35464" min="1" max="1" chance="0.00090000000000003" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="8.299" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="6.907" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2488,7 +2567,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8215" /> <!-- Monster Only (Zombie Enlisted Man Sword) -->
-		<acquire exp="8776109" sp="14041" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2534,15 +2613,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="853" max="1986" chance="70" /> <!-- Adena -->
-				<item id="35329" min="1" max="1" chance="0.03" /> <!-- Amaranthine Slasher Fragment -->
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35329" min="1" max="1" chance="0.03" /> <!-- Helios Slasher Fragment -->
 				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Slasher (60%) -->
+				<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Slasher (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="8.251" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="6.903" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2556,7 +2635,7 @@
 			<id>1</id>
 		</extend_drop>
 	</npc>
-	<npc id="22154" level="99" type="L2Monster" name="Ritual Sacrifice">
+	<npc id="22154" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2570,7 +2649,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="8776109" sp="14041" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -2619,6 +2698,24 @@
 		<extend_drop>
 			<id>1</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22155" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -2641,7 +2738,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8206" lhand="8206" /> <!-- Monster Only (Heretic Priest Sword) / Monster Only (Heretic Priest Sword) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="11547636" sp="11565" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2687,16 +2784,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2813" max="6553" chance="70" /> <!-- Adena -->
-				<item id="17449" min="1" max="1" chance="0.00550000000000003" /> <!-- Eternal Ring -->
+				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
+				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
 				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
-				<item id="35481" min="1" max="1" chance="0.00299999999999997" /> <!-- Recipe: Eternal Ring (60%) -->
-				<item id="19448" min="1" max="1" chance="0.00549999999999997" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="19447" min="1" max="1" chance="0.000900000000000002" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="26.59" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -2727,7 +2824,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="7142125" sp="11427" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -2779,6 +2876,22 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22157" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -2793,7 +2906,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -2845,8 +2958,24 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="22158" level="99" type="L2Monster" name="Triol's Believer">
+	<npc id="22158" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2861,7 +2990,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="7142125" sp="11427" />
+		<acquire exp="15453220" sp="15462" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2915,6 +3044,21 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22159" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -2937,7 +3081,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8206" lhand="8206" /> <!-- Monster Only (Heretic Priest Sword) / Monster Only (Heretic Priest Sword) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="11547636" sp="11565" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2992,6 +3136,23 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
+				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
+				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22160" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3006,7 +3167,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="7142125" sp="11427" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3058,8 +3219,24 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="22161" level="99" type="L2Monster" name="Ritual Sacrifice">
+	<npc id="22161" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3072,7 +3249,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="8451406" sp="13522" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -3125,8 +3302,26 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="22162" level="99" type="L2Monster" name="Triol's Believer">
+	<npc id="22162" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3141,7 +3336,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="7142125" sp="11427" />
+		<acquire exp="15453220" sp="15462" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3195,6 +3390,21 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22163" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3220,7 +3430,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8208" /> <!-- Monster Only (Heretic Private Staff) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="11547636" sp="11565" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3277,8 +3487,25 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
+				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
+				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="22164" level="99" type="L2Monster" name="Triol's Believer">
+	<npc id="22164" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3291,7 +3518,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="7142125" sp="11427" />
+		<acquire exp="15453220" sp="15462" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3343,6 +3570,21 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22165" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3359,7 +3601,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -3413,8 +3655,24 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="22166" level="99" type="L2Monster" name="Triol's Believer">
+	<npc id="22166" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3428,7 +3686,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="15453220" sp="15462" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -3481,6 +3739,21 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22167" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3503,7 +3776,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8206" lhand="8206" /> <!-- Monster Only (Heretic Priest Sword) / Monster Only (Heretic Priest Sword) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="11547636" sp="11565" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3558,6 +3831,23 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
+				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
+				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22168" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3574,7 +3864,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -3628,8 +3918,24 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="22169" level="99" type="L2Monster" name="Ritual Sacrifice">
+	<npc id="22169" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3642,7 +3948,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="8451406" sp="13522" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -3695,8 +4001,26 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="22170" level="99" type="L2Monster" name="Triol's Believer">
+	<npc id="22170" level="98" type="L2Monster" name="Triol's Believer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3709,7 +4033,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8207" lhand="8207" /> <!-- Monster Only (Heretic Private Axe) / Monster Only (Heretic Private Axe) -->
-		<acquire exp="7142125" sp="11427" />
+		<acquire exp="15453220" sp="15462" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3761,6 +4085,21 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22171" level="99" type="L2Monster" name="Triol's High Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3786,7 +4125,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8208" /> <!-- Monster Only (Heretic Private Staff) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="11547636" sp="11565" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3843,8 +4182,25 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="17449" min="1" max="1" chance="0.003" /> <!-- Eternal Ring -->
+				<item id="57" min="4001" max="9338" chance="20" /> <!-- Adena -->
+				<item id="35357" min="1" max="1" chance="0.075" /> <!-- Eternal Ring Gem -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35481" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Ring (60%) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="23.23" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
-	<npc id="22172" level="99" type="L2Monster" name="Ritual Sacrifice">
+	<npc id="22172" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3857,7 +4213,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="8451406" sp="13522" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -3910,6 +4266,24 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22173" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3926,7 +4300,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="6487485" sp="10380" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -3980,6 +4354,22 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22174" level="99" type="L2Monster" name="Triol's Priest">
 		<!-- Confirmed CT2.5 -->
@@ -3996,7 +4386,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="7142125" sp="11427" />
+		<acquire exp="16402463" sp="16465" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="94440.4117579731" magical="16609.7702753578" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -4050,6 +4440,22 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1213" max="2830" chance="20" /> <!-- Adena -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="40207" min="1" max="1" chance="6.813" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22175" level="99" type="L2Monster" name="Andreas' Escort Captain">
 		<!-- Confirmed CT2.5 -->
@@ -4077,7 +4483,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8215" /> <!-- Monster Only (Zombie Enlisted Man Sword) -->
-		<acquire exp="19158050" sp="30652" />
+		<acquire exp="34101305" sp="34107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4122,16 +4528,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3749" max="8733" chance="70" /> <!-- Adena -->
-				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Amaranthine Caster Fragment -->
-				<item id="17526" min="1" max="1" chance="0.0055" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19448" min="1" max="1" chance="0.0055" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
+				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Helios Caster Fragment -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Caster (60%) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="37.37" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4163,7 +4569,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8215" /> <!-- Monster Only (Zombie Enlisted Man Sword) -->
-		<acquire exp="19158050" sp="30652" />
+		<acquire exp="34101305" sp="34107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4207,15 +4613,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3749" max="8733" chance="70" /> <!-- Adena -->
-				<item id="35353" min="1" max="1" chance="0.299999999999999" /> <!-- Eternal Shoe Ingredient -->
-				<item id="17526" min="1" max="1" chance="0.00550000000000001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19448" min="1" max="1" chance="0.00550000000000001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35477" min="1" max="1" chance="0.00299999999999999" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
+				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="40207" min="1" max="1" chance="37.2" /> <!-- Amaranthine Fragment -->
-				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4248,10 +4654,10 @@
 			<skill name="PhysicalSpecial2" id="15436" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8208" /> <!-- Monster Only (Heretic Private Staff) -->
-		<acquire exp="9576729" sp="15322" />
+		<acquire exp="34101305" sp="34107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4295,15 +4701,16 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3749" max="8733" chance="70" /> <!-- Adena -->
-				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Amaranthine Caster Fragment -->
+				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
+				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Helios Caster Fragment -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Caster (60%) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="8.587" /> <!-- Synthetic Braid -->
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="19447" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4331,10 +4738,10 @@
 			<skill name="PhysicalSpecial" id="15432" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="10035824" sp="16057" />
+		<acquire exp="34101305" sp="34107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4377,17 +4784,15 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="3749" max="8733" chance="70" /> <!-- Adena -->
-				<item id="36523" min="1" max="1" chance="1.92900000000001" /> <!-- Adamantite -->
-				<item id="35353" min="1" max="1" chance="0.299999999999996" /> <!-- Eternal Shoe Ingredient -->
-				<item id="36524" min="1" max="1" chance="0.299999999999996" /> <!-- Orichalcum -->
-				<item id="17526" min="1" max="1" chance="0.00550000000000009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35477" min="1" max="1" chance="0.00299999999999996" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
+				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="36523" min="1" max="1" chance="9.864" /> <!-- Adamantite -->
-				<item id="36524" min="1" max="1" chance="0.75" /> <!-- Orichalcum -->
-				<item id="19448" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -4405,7 +4810,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22190" level="99" type="L2Monster" name="Ritual Sacrifice">
+	<npc id="22190" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4418,7 +4823,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="10954015" sp="17526" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="47220.2058789866" magical="8304.88513767892" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -4471,6 +4876,24 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22191" level="99" type="L2Monster" name="Andreas' Escort Captain">
 		<!-- Confirmed CT2.5 -->
@@ -4484,10 +4907,10 @@
 			<skill name="DeBuff" id="15433" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8208" /> <!-- Monster Only (Heretic Private Staff) -->
-		<acquire exp="9576729" sp="15322" />
+		<acquire exp="34101305" sp="34107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4533,26 +4956,20 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="1912" max="4454" chance="70" /> <!-- Adena -->
-				<item id="35340" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35339" min="1" max="1" chance="0.00550000000000004" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35343" min="1" max="1" chance="0.03" /> <!-- Eternal Shield Ingredient -->
-				<item id="35338" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35342" min="1" max="1" chance="0.03" /> <!-- Eternal Boot Ingredient -->
-				<item id="35341" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35466" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35465" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="19447" min="1" max="1" chance="0.000900000000000001" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="35467" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
+				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Helios Caster Fragment -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
 			</drop>
 			<spoil>
-				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="40207" min="1" max="1" chance="31.66" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -4578,10 +4995,10 @@
 			<skill name="DeBuff" id="15433" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="9576729" sp="15322" />
+		<acquire exp="34101305" sp="34107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4625,15 +5042,19 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="2068" max="4816" chance="70" /> <!-- Adena -->
-				<item id="35348" min="1" max="1" chance="0.300000000000001" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="17526" min="1" max="1" chance="0.00549999999999993" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19448" min="1" max="1" chance="0.00300000000000001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35472" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
+				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -4658,10 +5079,10 @@
 			<skill name="W_LongRangeDDMagic" id="15434" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="8205" /> <!-- Monster Only (Heretic Priest Sigil) -->
-		<acquire exp="9576729" sp="15322" />
+		<acquire exp="34101305" sp="34107" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="356248" hpRegen="8.5" mp="23550" mpRegen="30" />
 			<attack physical="47220.2058789866" magical="8304.88513767892" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4704,15 +5125,19 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="1912" max="4454" chance="70" /> <!-- Adena -->
-				<item id="35347" min="1" max="1" chance="0.300000000000001" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="17526" min="1" max="1" chance="0.00300000000000001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="19448" min="1" max="1" chance="0.00300000000000001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="35471" min="1" max="1" chance="0.00300000000000001" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="57" min="5332" max="12445" chance="20" /> <!-- Adena -->
+				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.0075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="17526" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="40207" min="1" max="1" chance="30.99" /> <!-- Helios Fragment -->
+				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
 			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
 		</drop_lists>
 		<collision>
 			<radius normal="13" />
@@ -4792,7 +5217,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22195" level="99" type="L2Monster" name="Ritual Sacrifice">
+	<npc id="22195" level="98" type="L2Monster" name="Ritual Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -4806,7 +5231,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="2295277" sp="3672" />
+		<acquire exp="14983488" sp="15078" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="15841" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<attack physical="6745.74369699808" magical="1186.41216252556" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -4858,6 +5283,24 @@
 			<id>4</id>
 			<id>5</id>
 		</extend_drop>
+		<drop_lists>
+			<drop>
+				<item id="57" min="1303" max="3042" chance="20" /> <!-- Adena -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
+				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.003" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.003" /> <!-- Greater Synthetic Cokes -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="22196" level="80" type="L2Monster" name="Velociraptor">
 		<!-- Confirmed CT2.5 -->
@@ -5132,7 +5575,7 @@
 			<skill name="PhysicalSpecial1" id="5083" level="3" />
 			<skill name="PhysicalSpecial2" id="4244" level="10" />
 		</parameters>
-		<race>BEAST</race>
+		<race>NONE</race>
 		<sex>MALE</sex>
 		<acquire exp="100560" sp="24" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
@@ -5186,18 +5629,16 @@
 		<drop_lists>
 			<drop>
 				<item id="57" min="140" max="327" chance="70" /> <!-- Adena -->
-				<item id="9573" min="1" max="1" chance="0.300000000000002" /> <!-- Life Stone - Lv. 80 -->
-				<item id="9574" min="1" max="1" chance="0.300000000000002" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-				<item id="36538" min="1" max="1" chance="0.300000000000002" /> <!-- Durable Leather Braid -->
-				<item id="36543" min="1" max="1" chance="0.0750000000000001" /> <!-- Adamantite Wire -->
-				<item id="9575" min="1" max="1" chance="0.0300000000000002" /> <!-- High-grade Life Stone - Lv. 80 -->
-				<item id="9576" min="1" max="1" chance="0.00300000000000002" /> <!-- Top-grade Life Stone - Lv. 80 -->
+				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
+				<item id="36543" min="1" max="1" chance="0.075" /> <!-- Adamantite Wire -->
+				<item id="45929" min="1" max="3" chance="0.03" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.003" /> <!-- Mid-grade Spirit Stone -->
 			</drop>
 			<spoil>
-				<item id="36532" min="1" max="1" chance="1.5" /> <!-- Thin Braid -->
+				<item id="36532" min="1" max="1" chance="1.529" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="0.0075" /> <!-- Recipe: Thin Braid - Upgrade -->
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
 			</spoil>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->

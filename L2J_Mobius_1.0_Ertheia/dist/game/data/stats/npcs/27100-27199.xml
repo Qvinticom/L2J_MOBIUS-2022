@@ -3831,6 +3831,20 @@
 			<radius normal="21" grown="25" />
 			<height normal="40" grown="48" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="27185" level="55" type="L2Monster" name="Fairy Tree of Wind" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
@@ -4078,7 +4092,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27190" level="26" type="L2Monster" name="Ol Mahum Support Troop" title="Quest Monster">
+	<npc id="27190" level="23" type="L2Monster" name="Ol Mahum Support Troop" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -4126,6 +4140,30 @@
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6" max="15" chance="70" /> <!-- Adena -->
+				<item id="734" min="1" max="1" chance="0.75" /> <!-- Wind Walk Potion -->
+				<item id="36561" min="1" max="1" chance="0.3" /> <!-- Cokes -->
+				<item id="36562" min="1" max="1" chance="0.0075" /> <!-- Greater Cokes -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36561" min="1" max="1" chance="0.75" /> <!-- Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27191" level="25" type="L2Monster" name="Malcom" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
@@ -4313,7 +4351,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="27195" level="32" type="L2Monster" name="Noble Ant" title="Quest Monster">
+	<npc id="27195" level="37" type="L2Monster" name="Noble Ant" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
@@ -4350,6 +4388,30 @@
 			<radius normal="20" grown="24" />
 			<height normal="48" grown="57" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36531" min="1" max="1" chance="4.036" /> <!-- Thread -->
+				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="27196" level="40" type="L2Monster" name="Bluebacked Alligator" title="Quest Monster">
 		<!-- Confirmed CT2.5 -->

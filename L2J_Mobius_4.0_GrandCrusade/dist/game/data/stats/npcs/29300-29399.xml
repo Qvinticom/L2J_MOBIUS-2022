@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29300" level="99" type="L2Monster" name="Varkaron" title="Dimensional Invader">
+	<npc id="29300" level="97" type="L2RaidBoss" name="Varkaron" title="Dimensional Invader">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -26,6 +26,91 @@
 			<radius normal="38" />
 			<height normal="100" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17401" min="1" max="1" chance="0.75" /> <!-- Seraph Shield -->
+				<item id="17407" min="1" max="1" chance="0.75" /> <!-- Seraph Circlet -->
+				<item id="17410" min="1" max="1" chance="0.75" /> <!-- Seraph Gloves -->
+				<item id="17411" min="1" max="1" chance="0.75" /> <!-- Seraph Shoes -->
+				<item id="17412" min="1" max="1" chance="0.75" /> <!-- Seraph Sigil -->
+				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="47714" min="1" max="1" chance="100" /> <!-- Rare Accessory Spirit Stone -->
+				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17690" min="3" max="3" chance="17.41" /> <!-- Lv. 4 Ancient MEN Dye -->
+				<item id="17685" min="3" max="3" chance="16.14" /> <!-- Lv. 4 Ancient STR Dye -->
+				<item id="17689" min="3" max="3" chance="16.05" /> <!-- Lv. 4 Ancient WIT Dye -->
+				<item id="17686" min="3" max="3" chance="15.97" /> <!-- Lv. 4 Ancient DEX Dye -->
+				<item id="17688" min="3" max="3" chance="15.89" /> <!-- Lv. 4 Ancient INT Dye -->
+				<item id="17687" min="3" max="3" chance="15.84" /> <!-- Lv. 4 Ancient CON Dye -->
+				<item id="38574" min="1" max="1" chance="2.232" /> <!-- Apparition Stone (Lv. 98) -->
+				<item id="46504" min="1" max="1" chance="1.288" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="1.211" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.201" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="1.028" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46490" min="1" max="1" chance="1.027" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="1.008" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="38038" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="46493" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38030" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Crafting Pack -->
+				<item id="38029" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Crafting Pack -->
+				<item id="38027" min="1" max="1" chance="0.3" /> <!-- Seraph Boots Crafting Pack -->
+				<item id="38026" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets Crafting Pack -->
+				<item id="38024" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Crafting Pack -->
+				<item id="38023" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Crafting Pack -->
+				<item id="38022" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Crafting Pack -->
+				<item id="38021" min="1" max="1" chance="0.3" /> <!-- Specter Caster Crafting Pack -->
+				<item id="38031" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Crafting Pack -->
+				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack -->
+				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack -->
+				<item id="38025" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Crafting Pack -->
+				<item id="38028" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Crafting Pack -->
+				<item id="38018" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Crafting Pack -->
+				<item id="38039" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves Crafting Pack -->
+				<item id="38036" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38034" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38020" min="1" max="1" chance="0.3" /> <!-- Specter Buster Crafting Pack -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky_drop>
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
 	</npc>
 	<npc id="29301" level="99" type="L2Monster" name="Minion Monisac">
 		<race>HUMANOID</race>
@@ -250,7 +335,6 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<!-- Leopold - Title: Superion Siege Cannon ?? -->
 		<race>ETC</race>
-		<acquire exp="0" sp="0" />
 		<stats>
 			<vitals hp="600826" hpRegen="10.5" mp="25848" mpRegen="3.6" />
 			<speed>
