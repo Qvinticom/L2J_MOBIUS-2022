@@ -339,11 +339,11 @@
 			<effect name="DamageShield">
 				<amount>5</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
@@ -404,11 +404,11 @@
 			<effect name="DamageShield">
 				<amount>6</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>16</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>11</amount>
 				<mode>PER</mode>
 			</effect>
@@ -469,11 +469,11 @@
 			<effect name="DamageShield">
 				<amount>7</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>17</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>12</amount>
 				<mode>PER</mode>
 			</effect>
@@ -534,11 +534,11 @@
 			<effect name="DamageShield">
 				<amount>8</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>18</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>13</amount>
 				<mode>PER</mode>
 			</effect>
@@ -599,11 +599,11 @@
 			<effect name="DamageShield">
 				<amount>9</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>19</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>14</amount>
 				<mode>PER</mode>
 			</effect>
@@ -664,11 +664,11 @@
 			<effect name="DamageShield">
 				<amount>10</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -729,11 +729,11 @@
 			<effect name="DamageShield">
 				<amount>5</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -794,11 +794,11 @@
 			<effect name="DamageShield">
 				<amount>6</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>11</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>16</amount>
 				<mode>PER</mode>
 			</effect>
@@ -859,11 +859,11 @@
 			<effect name="DamageShield">
 				<amount>7</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>12</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>17</amount>
 				<mode>PER</mode>
 			</effect>
@@ -924,11 +924,11 @@
 			<effect name="DamageShield">
 				<amount>8</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>13</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>18</amount>
 				<mode>PER</mode>
 			</effect>
@@ -989,11 +989,11 @@
 			<effect name="DamageShield">
 				<amount>9</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>14</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>19</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1054,11 +1054,11 @@
 			<effect name="DamageShield">
 				<amount>10</amount>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3610,7 +3610,7 @@
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">1.1</value>
@@ -3621,7 +3621,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">2.2</value>
@@ -3646,7 +3646,7 @@
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">1.1</value>
@@ -3657,7 +3657,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">2.2</value>
@@ -3682,7 +3682,7 @@
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">1.1</value>
@@ -3693,7 +3693,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">2.2</value>

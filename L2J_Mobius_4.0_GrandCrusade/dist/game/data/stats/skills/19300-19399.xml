@@ -119,7 +119,7 @@
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>-23</amount>
 				<mode>PER</mode>
 			</effect>
@@ -708,7 +708,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">50</value>
 					<value level="2">60</value>

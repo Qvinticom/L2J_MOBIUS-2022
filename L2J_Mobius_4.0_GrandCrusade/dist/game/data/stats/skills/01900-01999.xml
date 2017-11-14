@@ -2468,11 +2468,11 @@
 		</conditions>
 		<effects>
 			<effect name="BlockEscape" />
-			<effect name="PhysicalAttack" fromLevel="2" toLevel="2">
+			<effect name="PAtk" fromLevel="2" toLevel="2">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack" fromLevel="2" toLevel="2">
+			<effect name="MAtk" fromLevel="2" toLevel="2">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>

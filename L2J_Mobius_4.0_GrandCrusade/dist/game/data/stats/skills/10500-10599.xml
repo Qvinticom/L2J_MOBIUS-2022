@@ -52,14 +52,14 @@
 			<effect name="SkillCritical">
 				<stat>STR</stat>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PhysicalAttackSpeed">
 				<amount>25</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DAGGER</item>
 				</weaponType>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>
 					<value level="1">739</value>
 					<value level="2">856</value>
@@ -124,14 +124,14 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PhysicalAttackSpeed">
 				<amount>25</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALDAGGER</item>
 				</weaponType>
 			</effect>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>
 					<value level="1">844</value>
 					<value level="2">979</value>
@@ -2173,7 +2173,7 @@
 			<effect name="AbnormalShield">
 				<times>5</times>
 			</effect>
-			<effect name="PhysicalAttack" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PAtk" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
 					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
 				</amount>

@@ -12,7 +12,7 @@
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">1.1</value>
@@ -23,7 +23,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">2.2</value>
@@ -48,7 +48,7 @@
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>
 					<value level="1">1</value>
 					<value level="2">1.1</value>
@@ -59,7 +59,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">2.2</value>

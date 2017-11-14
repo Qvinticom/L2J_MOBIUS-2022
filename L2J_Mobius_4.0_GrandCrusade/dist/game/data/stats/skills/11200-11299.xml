@@ -132,7 +132,7 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">12</value>
@@ -2598,7 +2598,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="PhysicalAttack" />
 			<effect name="Speed">
 				<amount>-100</amount>
 				<mode>DIFF</mode>
