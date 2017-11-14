@@ -2462,7 +2462,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2492,7 +2492,7 @@
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<abnormalTime>30</abnormalTime>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<magicLvl>-2</magicLvl>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<stayAfterDeath>true</stayAfterDeath>

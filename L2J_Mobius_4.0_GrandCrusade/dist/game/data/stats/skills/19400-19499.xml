@@ -19,7 +19,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -189,7 +189,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
@@ -279,7 +279,7 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>-50</amount>
@@ -411,7 +411,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockActions" />
 		</effects>
@@ -441,7 +441,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="KnockBack">
 				<speed>600</speed>
@@ -474,7 +474,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockMove" />
 		</effects>
@@ -504,7 +504,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockActions" />
 		</effects>
@@ -534,7 +534,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockActions" />
 		</effects>
@@ -560,7 +560,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockActions" />
 			<effect name="TargetCancel">
@@ -591,7 +591,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockControl" />
 			<effect name="KnockBack">
@@ -609,7 +609,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

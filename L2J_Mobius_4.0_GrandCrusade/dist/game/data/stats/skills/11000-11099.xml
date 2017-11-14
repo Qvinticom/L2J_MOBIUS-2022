@@ -1836,7 +1836,7 @@
 			<value level="10">-718</value>
 			<value level="11">-721</value>
 		</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1952,7 +1952,7 @@
 			<value level="10">-718</value>
 			<value level="11">-721</value>
 		</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -2074,7 +2074,7 @@
 			<value level="10">-718</value>
 			<value level="11">-721</value>
 		</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -2185,7 +2185,7 @@
 			<value level="10">-718</value>
 			<value level="11">-721</value>
 		</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -2321,7 +2321,7 @@
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -3959,7 +3959,7 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -4072,7 +4072,7 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -5223,7 +5223,7 @@
 		<effectPoint>-704</effectPoint>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -5314,7 +5314,7 @@
 		<effectPoint>-709</effectPoint>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -5654,7 +5654,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5693,7 +5693,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5732,7 +5732,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5769,7 +5769,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5806,7 +5806,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

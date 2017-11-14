@@ -1348,7 +1348,7 @@
 		<castRange>1100</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-438</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>100000</power>
@@ -1409,7 +1409,7 @@
 		<affectRange>300</affectRange>
 		<hitTime>1000</hitTime>
 		<effectPoint>-438</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -1430,7 +1430,7 @@
 		<affectRange>200</affectRange>
 		<hitTime>1000</hitTime>
 		<effectPoint>-438</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PullBack">
 				<speed>600</speed>
@@ -1496,7 +1496,7 @@
 		<castRange>1100</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-438</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>100000</power>
@@ -1560,7 +1560,7 @@
 		<hitTime>3000</hitTime>
 		<effectPoint>-438</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
@@ -1596,7 +1596,7 @@
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
 		<effectPoint>-438</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>100000</power>
@@ -1659,7 +1659,7 @@
 		<hitTime>1000</hitTime>
 		<effectPoint>-438</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="DamOverTime">
 				<power>400</power>
@@ -1716,7 +1716,7 @@
 		<hitTime>2000</hitTime>
 		<effectPoint>-438</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>1500</power>
@@ -1743,7 +1743,7 @@
 		<hitTime>3000</hitTime>
 		<effectPoint>-438</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>1000</power>
@@ -1808,7 +1808,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
@@ -1878,7 +1878,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2236,7 +2236,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>650</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -2270,7 +2270,7 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>650</effectPoint>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

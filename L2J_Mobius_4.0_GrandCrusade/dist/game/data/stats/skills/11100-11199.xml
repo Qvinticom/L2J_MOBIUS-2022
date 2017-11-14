@@ -137,7 +137,7 @@
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
@@ -250,7 +250,7 @@
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
@@ -348,7 +348,7 @@
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
@@ -828,7 +828,7 @@
 		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
@@ -2802,7 +2802,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="ManaDamOverTime">
 				<power>
@@ -3136,7 +3136,7 @@
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="MagicalSkillPower">
 				<power>
@@ -4001,7 +4001,7 @@
 		<affectScope>SINGLE</affectScope>
 		<isMagic>1</isMagic>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<isDebuff>1</isDebuff>
+		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="Speed">
 				<amount>
