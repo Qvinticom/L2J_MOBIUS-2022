@@ -547,6 +547,8 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="5" />
+			<skill id="21365" level="1" type="ON_EQUIP" /> 
+			<skill id="21373" level="1" type="ON_UNEQUIP" /> 
 		</skills>
 	</item>
 	<item id="26452" name="Talisman - Abundance" additionalName="Slaughterer" type="Armor">
@@ -560,6 +562,8 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="6" />
+			<skill id="21370" level="1" type="ON_EQUIP" />
+			<skill id="21374" level="1" type="ON_UNEQUIP" /> 
 		</skills>
 	</item>
 	<item id="26453" name="Talisman - Abundance" additionalName="Conquerer" type="Armor">
@@ -573,6 +577,8 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="7" />
+			<skill id="21371" level="1" type="ON_EQUIP" />
+			<skill id="21375" level="1" type="ON_UNEQUIP" /> 
 		</skills>
 	</item>
 	<item id="26454" name="Talisman - Abundance" additionalName="Outlaw" type="Armor">
@@ -586,6 +592,8 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="8" />
+			<skill id="21372" level="1" type="ON_EQUIP" />
+			<skill id="21376" level="1" type="ON_UNEQUIP" /> 
 		</skills>
 	</item>
 	<item id="26455" name="Talisman - Abundance Lv. 1 (High-grade)" type="Armor">

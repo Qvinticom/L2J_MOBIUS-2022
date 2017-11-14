@@ -1235,7 +1235,7 @@
 		<!-- Level 9 : Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<!-- Level 10: HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<!-- Level 11: Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
-		<!-- LEvel 12: HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Level 12: HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<icon>
 			<value level="1">BranchSys2.icon.g_giant_gem</value>
 			<value level="2">BranchSys2.icon.g_giant_gem</value>
@@ -1682,66 +1682,248 @@
 		</effects>
 	</skill>
 	<skill id="21365" toLevel="5" name="Talisman - Hunter">
-		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage -15%, Received Skill Damage during PVP - 15%. Extra defense against skill damage in PvP. Note: Equipping 2 will give the effect of 1. -->
+		<!-- Updated to Helios -->
 		<!-- The Talisman's effect has increased. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLvl>
+		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType>
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<magicLvl>55</magicLvl>
-		<operateType>P</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="MAtk">
-				<amount>271</amount>
+		<magicLvl>85</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE</rideState>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalTime>-1</abnormalTime>
+		<pvpEffects>			
+			<effect name="PAtk">
+				<amount>
+					<value level="1">23</value>
+					<value level="2">46</value>
+					<value level="3">69</value>
+					<value level="4">92</value>
+					<value level="5">116</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>231</amount>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">27</value>
+					<value level="2">54</value>
+					<value level="3">81</value>
+					<value level="4">108</value>
+					<value level="5">135</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>7</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalEvasion">
-				<amount>7</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
 				<attribute>WATER</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
 				<attribute>WIND</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>-13</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
 			<effect name="CriticalRate">
-				<amount>13</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceCriticalDamage">
-				<amount>-15</amount>
+				<amount>
+					<value level="1">-1</value>
+					<value level="2">-2.6</value>
+					<value level="3">-3.9</value>
+					<value level="4">-5.2</value>
+					<value level="5">-6.5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>-15</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>-15</amount>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-		</effects>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21365</skillId>
+				<skillLevel>2</skillLevel>
+				<chance>50</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21365</skillId>
+				<skillLevel>3</skillLevel>
+				<chance>30</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21365</skillId>
+				<skillLevel>4</skillLevel>
+				<chance>10</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21365</skillId>
+				<skillLevel>5</skillLevel>
+				<chance>5</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+		</pvpEffects>
 	</skill>
 	<skill id="21366" toLevel="1" name="Wondrous Hunt Dye">
 		<!-- When HP is 90% or above, P. Def. + 20% and Speed + 33 in the Olympiad and the Ceremony of Chaos. -->
@@ -1883,250 +2065,806 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="21370" toLevel="5" name="Talisman - Slaughterer">
+		<!-- Updated to Helios -->
 		<!-- The Talisman's effect has increased. -->
-		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7. Note: Equipping 2 will give the effect of 1. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLvl>
+		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType>
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<magicLvl>55</magicLvl>
-		<operateType>P</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
-			<effect name="MAtk">
-				<amount>271</amount>
-				<mode>DIFF</mode>
-			</effect>
+		<magicLvl>85</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE</rideState>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalTime>-1</abnormalTime>
+		<pvpEffects>
 			<effect name="PAtk">
-				<amount>231</amount>
+				<amount>
+					<value level="1">23</value>
+					<value level="2">46</value>
+					<value level="3">69</value>
+					<value level="4">92</value>
+					<value level="5">116</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="DefenceAttribute">
-				<amount>15</amount>
-				<attribute>FIRE</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>15</amount>
-				<attribute>WATER</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>15</amount>
-				<attribute>WIND</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>15</amount>
-				<attribute>EARTH</attribute>
-			</effect>
-			<effect name="ResistAbnormalByCategory">
-				<amount>-13</amount>
-				<slot>DEBUFF</slot>
-			</effect>
-			<effect name="DispelBySlotProbability">
-				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</dispel>
-				<rate>100</rate>
-			</effect>
-			<effect name="BlockAbnormalSlot">
-				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
-			</effect>
-			<effect name="MaxHp">
-				<amount>490</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MaxCp">
-				<amount>490</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MaxMp">
-				<amount>490</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>7</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>7</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CpRegen">
-				<amount>7</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="21371" toLevel="5" name="Talisman - Conquerer">
-		<!-- The Talisman's effect has increased. -->
-		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, P./M. Critical Rate + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7. Received Critical Damage -15%, Received Skill Damage during PVP - 15%. Note: Equipping 2 will give the effect of 1. -->
-		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<magicLvl>55</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
 			<effect name="MAtk">
-				<amount>271</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PAtk">
-				<amount>231</amount>
+				<amount>
+					<value level="1">27</value>
+					<value level="2">54</value>
+					<value level="3">81</value>
+					<value level="4">108</value>
+					<value level="5">135</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>7</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalEvasion">
-				<amount>7</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>13</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DispelBySlotProbability">
-				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</dispel>
-				<rate>100</rate>
-			</effect>
-			<effect name="BlockAbnormalSlot">
-				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
-			</effect>
-			<effect name="MaxHp">
-				<amount>490</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MaxCp">
-				<amount>490</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MaxMp">
-				<amount>490</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>7</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>7</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CpRegen">
-				<amount>7</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>-15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>-15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>-15</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="21372" toLevel="5" name="Talisman - Outlaw">
-		<!-- The Talisman's effect has increased. -->
-		<!-- Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7. Received Critical Damage -15%, Received Skill Damage during PVP - 15%. Note: Equipping 2 will give the effect of 1. -->
-		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<magicLvl>55</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effects>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
 				<attribute>FIRE</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
 				<attribute>WATER</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
 				<attribute>WIND</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>15</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
 				<attribute>EARTH</attribute>
 			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>-13</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>13</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DispelBySlotProbability">
-				<dispel>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</dispel>
-				<rate>100</rate>
-			</effect>
-			<effect name="BlockAbnormalSlot">
-				<slot>IMPROVE_HP_MP_UP;MAX_HP_UP;MAX_MP_UP;HP_REGEN_UP</slot>
-			</effect>
 			<effect name="MaxHp">
-				<amount>490</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MaxCp">
-				<amount>490</amount>
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MaxMp">
-				<amount>490</amount>
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="HpRegen">
-				<amount>7</amount>
-				<mode>PER</mode>
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MpRegen">
-				<amount>7</amount>
-				<mode>PER</mode>
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="CpRegen">
-				<amount>7</amount>
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21370</skillId>
+				<skillLevel>2</skillLevel>
+				<chance>50</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21370</skillId>
+				<skillLevel>3</skillLevel>
+				<chance>30</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21370</skillId>
+				<skillLevel>4</skillLevel>
+				<chance>10</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21370</skillId>
+				<skillLevel>5</skillLevel>
+				<chance>5</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+		</pvpEffects>
+	</skill>
+	<skill id="21371" toLevel="5" name="Talisman - Conquerer">
+		<!-- Updated to Helios -->
+		<!-- The Talisman's effect has increased. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLvl>
+		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType> <!-- TODO: find retail value -->
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE</rideState>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalTime>-1</abnormalTime>
+		<pvpEffects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">23</value>
+					<value level="2">46</value>
+					<value level="3">69</value>
+					<value level="4">92</value>
+					<value level="5">116</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">27</value>
+					<value level="2">54</value>
+					<value level="3">81</value>
+					<value level="4">108</value>
+					<value level="5">135</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="DefenceCriticalDamage">
-				<amount>-15</amount>
+				<amount>
+					<value level="1">-1.3</value>
+					<value level="2">-2.6</value>
+					<value level="3">-3.9</value>
+					<value level="4">-5.2</value>
+					<value level="5">-6.5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>-15</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>-15</amount>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21371</skillId>
+				<skillLevel>2</skillLevel>
+				<chance>50</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21371</skillId>
+				<skillLevel>3</skillLevel>
+				<chance>30</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21371</skillId>
+				<skillLevel>4</skillLevel>
+				<chance>10</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21371</skillId>
+				<skillLevel>5</skillLevel>
+				<chance>5</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+		</pvpEffects>
+	</skill>
+	<skill id="21372" toLevel="5" name="Talisman - Outlaw">
+		<!-- Updated to Helios -->
+		<!-- The Talisman's effect has increased. -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLvl>
+		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType> <!-- TODO: find retail value -->
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE</rideState>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalTime>-1</abnormalTime>
+		<pvpEffects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">6</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">80</value>
+					<value level="3">120</value>
+					<value level="4">160</value>
+					<value level="5">200</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>
+					<value level="1">0.7</value>
+					<value level="2">1.4</value>
+					<value level="3">2.1</value>
+					<value level="4">2.8</value>
+					<value level="5">3.5</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-1.3</value>
+					<value level="2">-2.6</value>
+					<value level="3">-3.9</value>
+					<value level="4">-5.2</value>
+					<value level="5">-6.5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21372</skillId>
+				<skillLevel>2</skillLevel>
+				<chance>50</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21372</skillId>
+				<skillLevel>3</skillLevel>
+				<chance>30</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21372</skillId>
+				<skillLevel>4</skillLevel>
+				<chance>10</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<!-- Talisman - Hunter -->
+				<minDamage>1</minDamage>
+				<skillId>21372</skillId>
+				<skillLevel>5</skillLevel>
+				<chance>5</chance>
+				<isCritical>false</isCritical>
+				<allowSkillAttack>true</allowSkillAttack>
+				<allowNormalAttack>false</allowNormalAttack>
+				<targetType>SELF</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
+		</pvpEffects>
+	</skill>
+	<skill id="21373" toLevel="1" name="Unequip Talisman - Hunter">
+		<!-- Updated to Helios -->
+		<!-- The Talisman's power fades. -->
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
+		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>TALISMAN_TRIGGER_SPECIAL,-1</dispel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21373" toLevel="1" name="Unequip Talisman - Hunter">
-		<!-- The Talisman's power fades. -->
-		<icon>BranchSys2.icon.g_twilight_gem</icon>
-		<operateType>P</operateType>
-		<effectPoint>1</effectPoint>
-	</skill>
 	<skill id="21374" toLevel="1" name="Unequip Talisman - Slaughterer">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- The Talisman's power fades. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>TALISMAN_TRIGGER_SPECIAL,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21375" toLevel="1" name="Unequip Talisman - Conquerer">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- The Talisman's power fades. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>TALISMAN_TRIGGER_SPECIAL,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21376" toLevel="1" name="Unequip Talisman - Outlaw">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to Helios -->
 		<!-- The Talisman's power fades. -->
 		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>TALISMAN_TRIGGER_SPECIAL,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21377" toLevel="3" name="Adenian Tattoo: Protection">
 		<!-- Active Skill: P./ M. Def. + 5%, Max HP/CP + 200. Lasts 1 min. Cooldown is 1 hr. Can be used in the Olympiad. -->

@@ -622,376 +622,439 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47867" name="Frenzied Tauti's One-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Rate and Attack Attribute by 150, and P. Skill Atk. by 5%. <Active Skill>. Frenzied Tauti's Authority. Enchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Rate and Attack Attribute by 150, and P. Skill Atk. by 5%.\n\n&lt;Active Skill&gt;\nFrenzied Tauti's Authority\n\nEnchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.tauti_weapon_one_hand_axe_high" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
-		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="8878" level="2" /> <!-- Frenzied Tauti's One-handed Axe -->
+			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Authority -->
+		</skills>
 		<stats>
-			<stat type="pAtk">833</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">10</stat>
+			<stat type="pAtk">833.0</stat>
+			<stat type="mAtk">363.0</stat>
+			<stat type="pAtkSpd">379.0</stat>
+			<stat type="rCrit">8.0</stat>
+			<stat type="accCombat">8.0</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="47868" name="Frenzied Tauti's Two-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate and Attack Attribute by 150, and P. Skill Atk. by 5%. <Active Skill>. Frenzied Tauti's Authority. Enchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate and Attack Attribute by 150, and P. Skill Atk. by 5%.\n\n&lt;Active Skill&gt;\nFrenzied Tauti's Authority\n\nEnchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.tauti_weapon_two_hand_axe_high" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="8878" level="2" /> <!-- Frenzied Tauti's Two-handed Axe -->
+			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Authority -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1013</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtk">1013.0</stat>
+			<stat type="mAtk">363.0</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="rCrit">8.0</stat>
+			<stat type="accCombat">8.0</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="47869" name="Frenzied Tauti's Dual Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Rate and Attack Attribute by 150, and P. Skill Atk. by 5%. <Active Skill>. Frenzied Tauti's Authority. Enchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Rate and Attack Attribute by 150, and P. Skill Atk. by 5%.\n\n&lt;Active Skill&gt;\nFrenzied Tauti's Authority\n\nEnchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.tauti_weapon_dual_axe_high" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1700" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="8878" level="2" /> <!-- Frenzied Tauti's Dual Axe -->
+			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Authority -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1013</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtk">1013.0</stat>
+			<stat type="mAtk">363.0</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="rCrit">8.0</stat>
+			<stat type="accCombat">8.0</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
 	<item id="47870" name="Insane Kelbim's Dagger" type="Weapon">
-		<!-- Kelbim's Dagger made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150. <Active Skill>. Spirit of Kelbim. Enchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- Kelbim's Dagger made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150.\n\n&lt;Active Skill&gt;\nSpirit of Kelbim\n\nEnchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.kelbim_weapon_cutter_high" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
-		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13816" level="2" /> <!-- Insane Kelbim's Dagger -->
+			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
+		</skills>
 		<stats>
-			<stat type="pAtk">773</stat>
-			<stat type="mAtk">384</stat>
-			<stat type="rCrit">12</stat>
+			<stat type="pAtk">773.0</stat>
+			<stat type="mAtk">384.0</stat>
+			<stat type="pAtkSpd">433.0</stat>
+			<stat type="rCrit">12.0</stat>
 			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">433</stat>
-			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="47871" name="Insane Kelbim's Dual Dagger" type="Weapon">
-		<!-- Kelbim's Dual Dagger made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150. <Active Skill>. Spirit of Kelbim. Enchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- Kelbim's Dual Dagger made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150.\n\n&lt;Active Skill&gt;\nSpirit of Kelbim\n\nEnchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.kelbim_weapon_dual_dagger_high" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13817" level="2" /> <!-- Insane Kelbim's Dual Dagger -->
+			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
+		</skills>
 		<stats>
-			<stat type="pAtk">884</stat>
-			<stat type="mAtk">384</stat>
-			<stat type="rCrit">12</stat>
+			<stat type="pAtk">884.0</stat>
+			<stat type="mAtk">384.0</stat>
+			<stat type="pAtkSpd">433.0</stat>
+			<stat type="rCrit">12.0</stat>
 			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">433</stat>
-			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="47872" name="Insane Kelbim's Bow" type="Weapon">
-		<!-- Kelbim's Bow made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150. <Active Skill>. Spirit of Kelbim. Enchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- Kelbim's Bow made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150.\n\n&lt;Active Skill&gt;\nSpirit of Kelbim\n\nEnchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.kelbim_weapon_bow_high" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="BOW" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13818" level="2" /> <!-- Insane Kelbim's Bow -->
+			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1740</stat>
-			<stat type="mAtk">384</stat>
-			<stat type="rCrit">12</stat>
+			<stat type="pAtk">1740.0</stat>
+			<stat type="mAtk">384.0</stat>
+			<stat type="rCrit">12.0</stat>
 			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">293</stat>
-			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkSpd">293.0</stat>
 		</stats>
 	</item>
 	<item id="47873" name="Insane Kelbim's Crossbow" type="Weapon">
-		<!-- Kelbim's Crossbow made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150. <Active Skill>. Spirit of Kelbim. Enchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
+		<!-- Kelbim's Crossbow made using Kelbim's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, P. Critical Damage by 15%, P. Skill Power by 5%, and Attack Attribute by 150.\n\n&lt;Active Skill&gt;\nSpirit of Kelbim\n\nEnchantment, Appearance Modification, Crystallization cannot be done. 1 Special Soul Crystal, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.kelbim_weapon_crossbow_high" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="CROSSBOW" />
 		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="CROSSBOW" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="element_enabled" val="true" />
+		<set name="isAppearanceable" val="false" />
+		<skills>
+			<skill id="13819" level="2" /> <!-- Insane Kelbim Crossbow -->
+			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1567</stat>
-			<stat type="mAtk">384</stat>
-			<stat type="rCrit">12</stat>
+			<stat type="pAtk">1567.0</stat>
+			<stat type="mAtk">384.0</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="rCrit">12.0</stat>
 			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="47874" name="Enhanced Shadow Shaper" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 50, P. Critical Damage 10%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 50, P. Critical Damage 10%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_dagger_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13842" level="13" /> <!-- Enhanced Shadow Shaper -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">728</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">433</stat>
+			<stat type="pAtk">728.0</stat>
+			<stat type="mAtk">363.0</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">40</stat>
+			<stat type="pAtkSpd">433.0</stat>
+			<stat type="rCrit">12.0</stat>
 		</stats>
 	</item>
 	<item id="47875" name="Enhanced Shadow Cutter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_onehand_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13837" level="13" /> <!-- Enhanced Shadow Cutter -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">833</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtk">833.0</stat>
+			<stat type="mAtk">363.0</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
+			<stat type="pAtkSpd">379.0</stat>
+			<stat type="rCrit">8.0</stat>
 		</stats>
 	</item>
 	<item id="47876" name="Enhanced Shadow Slasher" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_twohand_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13838" level="13" /> <!-- Enhanced Shadow Slasher -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1013</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtk">1013.0</stat>
+			<stat type="mAtk">363.0</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="rCrit">8.0</stat>
 		</stats>
 	</item>
 	<item id="47877" name="Enhanced Shadow Fighter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_fist_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13839" level="13" /> <!-- Enhanced Shadow Fighter -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1013</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">6</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtk">1013.0</stat>
+			<stat type="mAtk">363.0</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">40</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="accCombat">8.0</stat>
+			<stat type="rCrit">6.0</stat>
 		</stats>
 	</item>
 	<item id="47878" name="Enhanced Shadow Stormer" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_spear_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="BRONZE" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="13840" level="13" /> <!-- Enhanced Shadow Stormer -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
 		</skills>
 		<stats>
-			<stat type="pAtk">833</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtk">833.0</stat>
+			<stat type="mAtk">363.0</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="rCrit">8.0</stat>
 		</stats>
 	</item>
 	<item id="47879" name="Enhanced Shadow Thrower" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 50, P. Critical Damage 10%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 50, P. Critical Damage 10%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_bow_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13843" level="13" /> <!-- Enhanced Shadow Thrower -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1640</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">293</stat>
+			<stat type="pAtk">1640.0</stat>
+			<stat type="mAtk">363.0</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">500</stat>
+			<stat type="pAtkSpd">293.0</stat>
+			<stat type="rCrit">12.0</stat>
 		</stats>
 	</item>
 	<item id="47880" name="Enhanced Shadow Shooter" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 50, P. Critical Damage 10%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 50, P. Critical Damage 10%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_crossbow_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13844" level="13" /> <!-- Enhanced Shadow Shooter -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1476</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtk">1476.0</stat>
+			<stat type="mAtk">363.0</stat>
 			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">500</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="rCrit">12.0</stat>
 		</stats>
 	</item>
 	<item id="47881" name="Enhanced Shadow Buster" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 50, P. Critical Damage 10%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 50, P. Critical Damage 10%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_onehand_magic_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
+		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13845" level="13" /> <!-- Enhanced Shadow Buster -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">666</stat>
-			<stat type="mAtk">484</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">379</stat>
+			<stat type="pAtk">666.0</stat>
+			<stat type="mAtk">484.0</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
+			<stat type="pAtkSpd">379.0</stat>
+			<stat type="rCrit">8.0</stat>
 		</stats>
 	</item>
 	<item id="47882" name="Enhanced Shadow Retributer" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P./M. Atk. 10%, P./M. Critical Damage 10%, Atk./Magic Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P./M. Atk. 10%, P./M. Critical Damage 10%, Atk./Magic Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_twohand_magic_blunt_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="WOOD" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13846" level="13" /> <!-- Enhanced Shadow Retributer -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">811</stat>
-			<stat type="mAtk">532</stat>
-			<stat type="rCrit">6</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtk">811.0</stat>
+			<stat type="mAtk">532.0</stat>
 			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">40</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="accCombat">8.0</stat>
+			<stat type="accMagic">8.0</stat>
+			<stat type="rCrit">6.0</stat>
 		</stats>
 	</item>
 	<item id="47883" name="Enhanced Shadow Dualsword" type="Weapon">
-		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon. When equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. Enchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
+		<!-- Ashen Shadow Revolutionaries Weapon created through research by Shadai, Ishuma, and the Blacksmith of Mammon.\nWhen equipped, increases PVE Damage 10%, Max HP/MP 15%, P. Atk. 10%, P. Critical Rate 100, P. Critical Damage 5%, Atk. Spd. 15%, Attack Attribute 150. \n\nEnchantment, Crystallization, Appearance Modification cannot be used. Special Soul Crystal 1, Augment, Attribute Assignment can be used. -->
 		<set name="icon" val="icon.shadow_dual_sword_1_high" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
-		<set name="material" val="STEEL" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="13841" level="13" /> <!-- Enhanced Shadow Dualsword -->
+			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
+		</skills>
 		<stats>
-			<stat type="pAtk">1013</stat>
-			<stat type="mAtk">363</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtk">1013.0</stat>
+			<stat type="mAtk">363.0</stat>
 			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
+			<stat type="pAtkSpd">325.0</stat>
+			<stat type="rCrit">8.0</stat>
 		</stats>
 	</item>
 	<item id="47884" name="Frenzied Tauti's Fragment" type="EtcItem">
