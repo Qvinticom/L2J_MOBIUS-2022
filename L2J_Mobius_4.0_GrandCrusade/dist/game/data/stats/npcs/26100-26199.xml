@@ -1919,6 +1919,12 @@
 	</npc>
 	<npc id="26131" level="101" type="L2RaidBoss" name="Isabella" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="26132" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="26133" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="54225186393" sp="130140121" raidPoints="30" />
