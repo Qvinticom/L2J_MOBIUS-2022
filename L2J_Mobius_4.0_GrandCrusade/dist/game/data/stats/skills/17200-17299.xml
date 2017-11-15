@@ -472,11 +472,24 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17270" toLevel="1" name="Scroll: 1,000,000,000 SP">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>3000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37904</itemConsumeId> <!-- Scroll: 1,000,000,000 SP -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveSp">
+				<sp>1000000000</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17271" toLevel="1" name="Kat the Cat's Surprise Gift">
 		<!-- AUTO GENERATED SKILL -->

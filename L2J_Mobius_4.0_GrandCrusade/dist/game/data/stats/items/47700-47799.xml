@@ -452,6 +452,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13584" level="2" /> <!-- Advanced Aria's Bracelet CON -->
+		</skills>
 	</item>
 	<item id="47741" name="Advanced Aria's Bracelet" additionalName="MEN+4" type="Armor">
 		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 MEN+4 functions. -->
@@ -467,6 +470,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13585" level="2" /> <!-- Advanced Aria's Bracelet MEN -->
+		</skills>
 	</item>
 	<item id="47742" name="Advanced Aria's Bracelet" additionalName="DEX+4" type="Armor">
 		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 DEX+4 functions. -->
@@ -482,6 +488,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13586" level="2" /> <!-- Advanced Aria's Bracelet DEX -->
+		</skills>
 	</item>
 	<item id="47743" name="Advanced Aria's Bracelet" additionalName="WIT+4" type="Armor">
 		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 WIT+4 functions. -->
@@ -497,6 +506,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13587" level="2" /> <!-- Advanced Aria's Bracelet WIT -->
+		</skills>
 	</item>
 	<item id="47744" name="Advanced Aria's Bracelet" additionalName="STR+4" type="Armor">
 		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 STR+4 functions. -->
@@ -512,6 +524,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13588" level="2" /> <!-- Advanced Aria's Bracelet STR -->
+		</skills>
 	</item>
 	<item id="47745" name="Advanced Aria's Bracelet" additionalName="INT+4" type="Armor">
 		<!-- Advanced Aria's Bracelet. Activates 5 talisman slots when equipped. Has the HP+531 INT+4 functions. -->
@@ -527,6 +542,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13589" level="2" /> <!-- Advanced Aria's Bracelet INT -->
+		</skills>
 	</item>
 	<item id="47746" name="+10 Blessed Amaranthine Weapon Supply Items" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a +10 Blessed Amaranthine Weapon can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
@@ -706,6 +724,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="13524" level="2" /> <!-- Lindvior's Earring -->
+			<skill id="13542" level="2" /> <!-- Lindvior's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 			<stat type="maxMp">59</stat>
