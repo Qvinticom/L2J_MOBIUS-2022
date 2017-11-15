@@ -41,26 +41,15 @@ import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMove;
 import com.l2jmobius.gameserver.network.serverpackets.sayune.ExFlyMoveBroadcast;
 import com.l2jmobius.gameserver.util.Broadcast;
 
-/**
- * This class ...
- * @version $Revision: 1.11.2.4.2.4 $ $Date: 2005/03/27 15:29:30 $
- */
 public class MoveBackwardToLocation implements IClientIncomingPacket
 {
-	// cdddddd
 	private int _targetX;
 	private int _targetY;
 	private int _targetZ;
 	private int _originX;
 	private int _originY;
 	private int _originZ;
-	private int _moveMovement;
-	
-	// For geodata
-	private int _curX;
-	private int _curY;
-	@SuppressWarnings("unused")
-	private int _curZ;
+	private int _movementMode;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
@@ -71,7 +60,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		_originX = packet.readD();
 		_originY = packet.readD();
 		_originZ = packet.readD();
-		_moveMovement = packet.readD(); // is 0 if cursor keys are used 1 if mouse is used
+		_movementMode = packet.readD(); // is 0 if cursor keys are used 1 if mouse is used
 		return true;
 	}
 	
@@ -105,8 +94,9 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		// Validate position packets sends head level.
 		_targetZ += activeChar.getTemplate().getCollisionHeight();
 		
-		if (_moveMovement == 1)
+		if (_movementMode == 1)
 		{
+			activeChar.setCursorKeyMovement(false);
 			final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(activeChar, new Location(_targetX, _targetY, _targetZ)), activeChar, TerminateReturn.class);
 			if ((terminate != null) && terminate.terminate())
 			{
@@ -114,10 +104,10 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 				return;
 			}
 		}
-		
-		_curX = activeChar.getX();
-		_curY = activeChar.getY();
-		_curZ = activeChar.getZ();
+		else // 0
+		{
+			activeChar.setCursorKeyMovement(true);
+		}
 		
 		switch (activeChar.getTeleMode())
 		{
@@ -147,8 +137,8 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 			}
 			default:
 			{
-				final double dx = _targetX - _curX;
-				final double dy = _targetY - _curY;
+				final double dx = _targetX - activeChar.getX();
+				final double dy = _targetY - activeChar.getY();
 				// Can't move if character is confused, or trying to move a huge distance
 				if (activeChar.isControlBlocked() || (((dx * dx) + (dy * dy)) > 98010000)) // 9900*9900
 				{

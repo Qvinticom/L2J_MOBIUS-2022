@@ -30,23 +30,17 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.StopMove;
 import com.l2jmobius.gameserver.util.Util;
 
-/**
- * This class ...
- * @version $Revision: 1.11.2.4.2.4 $ $Date: 2005/03/27 15:29:30 $
- */
 public class MoveBackwardToLocation extends L2GameClientPacket
 {
 	private static final String _C__0F_MOVEBACKWARDTOLOC = "[C] 0F MoveBackwardToLoc";
 	
-	// cdddddd
 	private int _targetX;
 	private int _targetY;
 	private int _targetZ;
 	private int _originX;
 	private int _originY;
 	private int _originZ;
-	
-	private int _moveMovement;
+	private int _movementMode;
 	
 	@Override
 	protected void readImpl()
@@ -59,7 +53,7 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		_originZ = readD();
 		try
 		{
-			_moveMovement = readD(); // is 0 if cursor keys are used 1 if mouse is used
+			_movementMode = readD(); // is 0 if cursor keys are used 1 if mouse is used
 		}
 		catch (BufferUnderflowException e)
 		{
@@ -101,14 +95,19 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		// Validate position packets sends head level.
 		_targetZ += activeChar.getTemplate().getCollisionHeight();
 		
-		if (_moveMovement == 1)
+		if (_movementMode == 1)
 		{
+			activeChar.setCursorKeyMovement(false);
 			final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(activeChar, new Location(_targetX, _targetY, _targetZ)), activeChar, TerminateReturn.class);
 			if ((terminate != null) && terminate.terminate())
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
+		}
+		else // 0
+		{
+			activeChar.setCursorKeyMovement(true);
 		}
 		
 		if (activeChar.getTeleMode() > 0)

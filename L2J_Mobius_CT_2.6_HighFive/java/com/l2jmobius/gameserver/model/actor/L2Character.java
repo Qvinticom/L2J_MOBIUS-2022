@@ -249,6 +249,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	/** Movement data of this L2Character */
 	protected MoveData _move;
+	private boolean _cursorKeyMovement = false;
 	
 	/** This creature's target. */
 	private L2Object _target;
@@ -4389,7 +4390,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
 		
-		if (!isFlying() && !isInsideZone(ZoneId.WATER) && !isVehicle())
+		if (!isFlying() && !isInsideZone(ZoneId.WATER) && !isVehicle() && !_cursorKeyMovement)
 		{
 			final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
 			if (isInVehicle)
@@ -6878,5 +6879,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public int getMinShopDistance()
 	{
 		return 0;
+	}
+	
+	public void setCursorKeyMovement(boolean value)
+	{
+		_cursorKeyMovement = value;
 	}
 }
