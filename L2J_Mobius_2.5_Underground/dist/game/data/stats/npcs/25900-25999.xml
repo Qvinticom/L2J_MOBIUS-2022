@@ -1732,7 +1732,12 @@
 		</collision>
 	</npc>
 	<npc id="25937" level="95" type="L2RaidBoss" name="Spicula Negative" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25938" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="25939" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="4142475000" sp="994194" raidPoints="30" />
@@ -1748,7 +1753,6 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1805,6 +1809,11 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="600">
+			<clan_list>
+				<clan>SPICULA_NEGATIVE</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="20" />
 			<height normal="40" />
@@ -1831,6 +1840,11 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="600">
+			<clan_list>
+				<clan>SPICULA_NEGATIVE</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="26" />
@@ -1846,7 +1860,7 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="32229.993231701" magical="11022.423600014" critical="4" attackSpeed="253" range="40" />
+			<attack physical="32229.993231701" magical="11022.423600014" critical="4" attackSpeed="253" range="900" />
 			<defence physical="1739.1304347826" magical="1183.8140335773" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
@@ -1857,6 +1871,11 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
+		<ai type="BALANCED" clanHelpRange="1000" aggroRange="600">
+			<clan_list>
+				<clan>SPICULA_NEGATIVE</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
