@@ -143,7 +143,7 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 		if ((st != null) && st.isCond(1))
 		{
 			final int killedCount = st.getInt(Integer.toString(npc.getId()));
-			if (killedCount < 20)
+			if (killedCount < 50)
 			{
 				st.set(Integer.toString(npc.getId()), killedCount + 1);
 			}
@@ -154,7 +154,7 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 			final int killedMessenger = st.getInt(Integer.toString(SHILEN_MESSENGER));
 			final int killedHellish = st.getInt(Integer.toString(HELLISH_CREATURE));
 			
-			if ((killedLunatic == 20) && (killedRessurected == 20) && (killedUndead == 20) && (killedMessenger == 20) && (killedHellish == 20))
+			if ((killedLunatic == 50) && (killedRessurected == 50) && (killedUndead == 50) && (killedMessenger == 50) && (killedHellish == 50))
 			{
 				st.setCond(2, true);
 			}
