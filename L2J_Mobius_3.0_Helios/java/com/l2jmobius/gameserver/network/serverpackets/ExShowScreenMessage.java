@@ -75,6 +75,31 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 	}
 	
 	/**
+	 * Display a String on the screen for a given time.
+	 * @param text the text to display
+	 * @param position the position on the screen
+	 * @param time the display time
+	 * @param size the font size 0 - normal, 1 - small
+	 * @param fade the fade effect
+	 * @param showEffect upper effect
+	 */
+	public ExShowScreenMessage(String text, int position, int time, int size, boolean fade, boolean showEffect)
+	{
+		_type = 1;
+		_sysMessageId = -1;
+		_unk1 = 0;
+		_unk2 = 0;
+		_unk3 = 0;
+		_fade = fade;
+		_position = position;
+		_text = text;
+		_time = time;
+		_size = size;
+		_effect = showEffect;
+		_npcString = -1;
+	}
+	
+	/**
 	 * Display a NPC String on the screen for a given position and time.
 	 * @param npcString the NPC String Id
 	 * @param position the position on the screen
