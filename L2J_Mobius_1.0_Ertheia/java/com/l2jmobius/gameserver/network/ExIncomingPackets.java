@@ -65,6 +65,8 @@ import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchant
 import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
+import com.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
+import com.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
 import com.l2jmobius.gameserver.network.clientpackets.mentoring.ConfirmMenteeAdd;
 import com.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeAdd;
 import com.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeWaitingList;
@@ -322,8 +324,8 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_ABILITY_WND_OPEN(0xEE, RequestAbilityWndOpen::new, ConnectionState.IN_GAME),
 	REQUEST_ABILITY_WND_CLOSE(0xEF, RequestAbilityWndClose::new, ConnectionState.IN_GAME),
 	EX_PC_CAFE_REQUEST_OPEN_WINDOW_WITHOUT_NPC(0xF0, ExPCCafeRequestOpenWindowWithoutNPC::new, ConnectionState.IN_GAME),
-	REQUEST_LUCKY_GAME_START_INFO(0xF1, null, ConnectionState.IN_GAME),
-	REQUEST_LUCKY_GAME_PLAY(0xF2, null, ConnectionState.IN_GAME),
+	REQUEST_LUCKY_GAME_START_INFO(0xF1, RequestLuckyGameStartInfo::new, ConnectionState.IN_GAME),
+	REQUEST_LUCKY_GAME_PLAY(0xF2, RequestLuckyGamePlay::new, ConnectionState.IN_GAME),
 	NOTIFY_TRAINING_ROOM_END(0xF3, null, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_PUSH_ONE(0xF4, RequestNewEnchantPushOne::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_REMOVE_ONE(0xF5, RequestNewEnchantRemoveOne::new, ConnectionState.IN_GAME),

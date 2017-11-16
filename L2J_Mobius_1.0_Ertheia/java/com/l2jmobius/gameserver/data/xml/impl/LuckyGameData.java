@@ -17,25 +17,26 @@
 package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.holders.ItemPointHolder;
+import com.l2jmobius.gameserver.model.holders.LuckyGameDataHolder;
 
 /**
- * @author Mathael
+ * @author Sdw
  */
 public class LuckyGameData implements IGameXmlReader
 {
-	private static final List<ItemHolder> _fortuneReadingTicketRewards = new ArrayList<>();
-	private static final List<ItemHolder> _luxuryFortuneReadingTicketRewards = new ArrayList<>();
-	private static final List<ItemHolder> _rareLuxuryFortuneReadingTicketRewards = new ArrayList<>();
+	private final Map<Integer, LuckyGameDataHolder> _luckyGame = new HashMap<>();
+	
+	final AtomicInteger _serverPlay = new AtomicInteger();
 	
 	protected LuckyGameData()
 	{
@@ -45,112 +46,62 @@ public class LuckyGameData implements IGameXmlReader
 	@Override
 	public void load()
 	{
-		_fortuneReadingTicketRewards.clear();
-		_luxuryFortuneReadingTicketRewards.clear();
-		_rareLuxuryFortuneReadingTicketRewards.clear();
-		
+		_luckyGame.clear();
 		parseDatapackFile("data/LuckyGameData.xml");
-		
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _fortuneReadingTicketRewards.size() + " Normal item rewards.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _luxuryFortuneReadingTicketRewards.size() + " Luxury item rewards.");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _rareLuxuryFortuneReadingTicketRewards.size() + " Rare item rewards.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _luckyGame.size() + " lucky game data.");
 	}
 	
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
+		forEach(doc, "list", listNode -> forEach(listNode, "luckygame", rewardNode ->
 		{
-			if ("list".equalsIgnoreCase(n.getNodeName()))
+			final LuckyGameDataHolder holder = new LuckyGameDataHolder(new StatsSet(parseAttributes(rewardNode)));
+			
+			forEach(rewardNode, "common_reward", commonRewardNode -> forEach(commonRewardNode, "item", itemNode ->
 			{
-				final NamedNodeMap at = n.getAttributes();
-				final Node attribute = at.getNamedItem("enabled");
-				if ((attribute != null) && Boolean.parseBoolean(attribute.getNodeValue())) // <list enabled="true"
+				final StatsSet stats = new StatsSet(parseAttributes(itemNode));
+				holder.addCommonReward(new ItemChanceHolder(stats.getInt("id"), stats.getDouble("chance"), stats.getLong("count")));
+			}));
+			
+			forEach(rewardNode, "unique_reward", uniqueRewardNode -> forEach(uniqueRewardNode, "item", itemNode ->
+			{
+				holder.addUniqueReward(new ItemPointHolder(new StatsSet(parseAttributes(itemNode))));
+			}));
+			
+			forEach(rewardNode, "modify_reward", uniqueRewardNode ->
+			{
+				holder.setMinModifyRewardGame(parseInteger(uniqueRewardNode.getAttributes(), "min_game"));
+				holder.setMaxModifyRewardGame(parseInteger(uniqueRewardNode.getAttributes(), "max_game"));
+				forEach(uniqueRewardNode, "item", itemNode ->
 				{
-					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
-					{
-						if ("fortuneReadingTicketRewards".equalsIgnoreCase(d.getNodeName()))
-						{
-							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
-							{
-								if ("item".equalsIgnoreCase(b.getNodeName()))
-								{
-									final NamedNodeMap attrs = b.getAttributes();
-									
-									final int itemId = parseInteger(attrs, "id");
-									final int count = parseInteger(attrs, "count");
-									
-									if ((itemId == 0) || (count == 0))
-									{
-										LOGGER.severe(getClass().getSimpleName() + ": itemId: [" + itemId + "] count: [" + count + "] cannot be zero.");
-										return;
-									}
-									
-									_fortuneReadingTicketRewards.add(new ItemHolder(itemId, count));
-								}
-							}
-						}
-						else if ("luxuryFortuneReadingTicketRewards".equalsIgnoreCase(d.getNodeName()))
-						{
-							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
-							{
-								if ("item".equalsIgnoreCase(b.getNodeName()))
-								{
-									final NamedNodeMap attrs = b.getAttributes();
-									
-									final int itemId = parseInteger(attrs, "id");
-									final int count = parseInteger(attrs, "count");
-									
-									if ((itemId == 0) || (count == 0))
-									{
-										LOGGER.severe(getClass().getSimpleName() + ": itemId: [" + itemId + "] count: [" + count + "] cannot be zero.");
-										return;
-									}
-									
-									_luxuryFortuneReadingTicketRewards.add(new ItemHolder(itemId, count));
-								}
-							}
-						}
-						else if ("rareLuxuryFortuneReadingTicketRewards".equalsIgnoreCase(d.getNodeName()))
-						{
-							for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
-							{
-								if ("item".equalsIgnoreCase(b.getNodeName()))
-								{
-									final NamedNodeMap attrs = b.getAttributes();
-									
-									final int itemId = parseInteger(attrs, "id");
-									final int count = parseInteger(attrs, "count");
-									
-									if ((itemId == 0) || (count == 0))
-									{
-										LOGGER.severe(getClass().getSimpleName() + ": itemId: [" + itemId + "] count: [" + count + "] cannot be zero.");
-										return;
-									}
-									
-									_rareLuxuryFortuneReadingTicketRewards.add(new ItemHolder(itemId, count));
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+					final StatsSet stats = new StatsSet(parseAttributes(itemNode));
+					holder.addModifyReward(new ItemChanceHolder(stats.getInt("id"), stats.getDouble("chance"), stats.getLong("count")));
+				});
+			});
+			
+			_luckyGame.put(parseInteger(rewardNode.getAttributes(), "index"), holder);
+		}));
 	}
 	
-	public static ItemHolder getRandomNormalReward()
+	public int getLuckyGameCount()
 	{
-		return _fortuneReadingTicketRewards.get(Rnd.get(_fortuneReadingTicketRewards.size()));
+		return _luckyGame.size();
 	}
 	
-	public static ItemHolder getRandomLuxuryReward()
+	public LuckyGameDataHolder getLuckyGameDataByIndex(int index)
 	{
-		return _luxuryFortuneReadingTicketRewards.get(Rnd.get(_luxuryFortuneReadingTicketRewards.size()));
+		return _luckyGame.get(index);
 	}
 	
-	public static ItemHolder getRandomRareReward()
+	public int increaseGame()
 	{
-		return _rareLuxuryFortuneReadingTicketRewards.get(Rnd.get(_rareLuxuryFortuneReadingTicketRewards.size()));
+		return _serverPlay.incrementAndGet();
+	}
+	
+	public int getServerPlay()
+	{
+		return _serverPlay.get();
 	}
 	
 	public static LuckyGameData getInstance()

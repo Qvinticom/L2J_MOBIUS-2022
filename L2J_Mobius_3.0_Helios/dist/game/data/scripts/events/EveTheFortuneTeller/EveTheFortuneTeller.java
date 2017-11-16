@@ -17,6 +17,7 @@
 package events.EveTheFortuneTeller;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.LuckyGameType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -36,6 +37,9 @@ public final class EveTheFortuneTeller extends LongTimeEvent
 	// NPCs
 	private static final int EVE = 8542;
 	private static final int JAYCE = 8540;
+	// Items
+	private static final int FORTUNE_READING_TICKET = 23767;
+	private static final int LUXURY_FORTUNE_READING_TICKET = 23768;
 	// Misc
 	private static final Location JAYCE_SPAWN = new Location(148090, 26644, -2209, 16383);
 	private static final NpcStringId[] JAYCE_TEXT =
@@ -71,12 +75,12 @@ public final class EveTheFortuneTeller extends LongTimeEvent
 			}
 			case "FortuneReadingGame":
 			{
-				player.sendPacket(new ExStartLuckyGame(player, 1));
+				player.sendPacket(new ExStartLuckyGame(LuckyGameType.NORMAL, player.getInventory().getInventoryItemCount(FORTUNE_READING_TICKET, -1)));
 				break;
 			}
 			case "LuxuryFortuneReadingGame":
 			{
-				player.sendPacket(new ExStartLuckyGame(player, 2));
+				player.sendPacket(new ExStartLuckyGame(LuckyGameType.LUXURY, player.getInventory().getInventoryItemCount(LUXURY_FORTUNE_READING_TICKET, -1)));
 				break;
 			}
 			case "JAYCE_SHOUT":

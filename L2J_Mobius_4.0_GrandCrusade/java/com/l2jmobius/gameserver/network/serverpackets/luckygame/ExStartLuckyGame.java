@@ -17,32 +17,30 @@
 package com.l2jmobius.gameserver.network.serverpackets.luckygame;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.enums.LuckyGameType;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Mobius
+ * @author Sdw
  */
 public class ExStartLuckyGame implements IClientOutgoingPacket
 {
-	private static final int FORTUNE_READING_TICKET = 23767;
-	private static final int LUXURY_FORTUNE_READING_TICKET = 23768;
-	private int _type = 0;
-	private int _count = 0;
+	private final LuckyGameType _type;
+	private final int _ticketCount;
 	
-	public ExStartLuckyGame(L2PcInstance activeChar, int type)
+	public ExStartLuckyGame(LuckyGameType type, long ticketCount)
 	{
 		_type = type;
-		_count = (int) activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1);
+		_ticketCount = (int) ticketCount;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_START_LUCKY_GAME.writeId(packet);
-		packet.writeD(_type);
-		packet.writeD(_count);
+		packet.writeD(_type.ordinal());
+		packet.writeD(_ticketCount);
 		return true;
 	}
 }

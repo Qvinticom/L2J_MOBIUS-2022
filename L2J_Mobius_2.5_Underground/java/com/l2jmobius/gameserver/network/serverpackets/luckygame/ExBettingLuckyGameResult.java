@@ -16,120 +16,68 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets.luckygame;
 
-import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.List;
+import java.util.Map.Entry;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.LuckyGameData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.enums.LuckyGameItemType;
+import com.l2jmobius.gameserver.enums.LuckyGameResultType;
+import com.l2jmobius.gameserver.enums.LuckyGameType;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
-import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author Mobius
+ * @author Sdw
  */
 public class ExBettingLuckyGameResult implements IClientOutgoingPacket
 {
-	private static final int FORTUNE_READING_TICKET = 23767;
-	private static final int LUXURY_FORTUNE_READING_TICKET = 23768;
-	private int _count = 0;
-	private int _type = 0;
-	private final L2PcInstance _activeChar;
+	public static final ExBettingLuckyGameResult NORMAL_INVALID_ITEM_COUNT = new ExBettingLuckyGameResult(LuckyGameResultType.INVALID_ITEM_COUNT, LuckyGameType.NORMAL);
+	public static final ExBettingLuckyGameResult LUXURY_INVALID_ITEM_COUNT = new ExBettingLuckyGameResult(LuckyGameResultType.INVALID_ITEM_COUNT, LuckyGameType.LUXURY);
+	public static final ExBettingLuckyGameResult NORMAL_INVALID_CAPACITY = new ExBettingLuckyGameResult(LuckyGameResultType.INVALID_CAPACITY, LuckyGameType.NORMAL);
+	public static final ExBettingLuckyGameResult LUXURY_INVALID_CAPACITY = new ExBettingLuckyGameResult(LuckyGameResultType.INVALID_CAPACITY, LuckyGameType.LUXURY);
 	
-	public ExBettingLuckyGameResult(L2PcInstance activeChar, int type, int count)
+	private final LuckyGameResultType _result;
+	private final LuckyGameType _type;
+	private final EnumMap<LuckyGameItemType, List<ItemHolder>> _rewards;
+	private final int _ticketCount;
+	private final int _size;
+	
+	public ExBettingLuckyGameResult(LuckyGameResultType result, LuckyGameType type)
 	{
-		_count = count;
+		_result = result;
 		_type = type;
-		_activeChar = activeChar;
+		_rewards = new EnumMap<>(LuckyGameItemType.class);
+		_ticketCount = 0;
+		_size = 0;
+	}
+	
+	public ExBettingLuckyGameResult(LuckyGameResultType result, LuckyGameType type, EnumMap<LuckyGameItemType, List<ItemHolder>> rewards, int ticketCount)
+	{
+		_result = result;
+		_type = type;
+		_rewards = rewards;
+		_ticketCount = ticketCount;
+		_size = (int) rewards.values().stream().mapToLong(i -> i.stream().count()).sum();
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		// Calculate rewards
-		final List<ItemHolder> rewards = new ArrayList<>();
-		int totalWeight = 0;
-		for (int rewardCounter = 0; rewardCounter < _count; rewardCounter++)
-		{
-			if (Rnd.get(3) == 0) // 1 out of 3 chance
-			{
-				ItemHolder reward = null;
-				if (_type == 2)
-				{
-					if (_count >= 40)
-					{
-						reward = LuckyGameData.getRandomRareReward();
-					}
-					else
-					{
-						reward = LuckyGameData.getRandomLuxuryReward();
-					}
-				}
-				else
-				{
-					reward = LuckyGameData.getRandomNormalReward();
-				}
-				rewards.add(reward);
-				totalWeight += new L2ItemInstance(reward.getId()).getItem().getWeight() * reward.getCount();
-			}
-		}
-		
-		// Check inventory capacity
-		if ((rewards.size() > 0) && (!_activeChar.getInventory().validateCapacity(rewards.size()) || !_activeChar.getInventory().validateWeight(totalWeight)))
-		{
-			_activeChar.sendPacket(new ExStartLuckyGame(_activeChar, _type));
-			_activeChar.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_EITHER_FULL_OR_OVERWEIGHT);
-			return false;
-		}
-		
-		if (_activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1) < _count)
-		{
-			_activeChar.sendPacket(new ExStartLuckyGame(_activeChar, _type));
-			_activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_TICKETS);
-			return false;
-		}
-		
-		// Remove tickets
-		_activeChar.getInventory().destroyItemByItemId("FortuneTelling", _type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, _count, _activeChar, "FortuneTelling");
-		
 		OutgoingPackets.EX_BETTING_LUCKY_GAME_RESULT.writeId(packet);
-		packet.writeD(0x01); // 0 disabled, 1 enabled
-		packet.writeD(0x01); // ?
-		packet.writeD((int) _activeChar.getInventory().getInventoryItemCount(_type == 2 ? LUXURY_FORTUNE_READING_TICKET : FORTUNE_READING_TICKET, -1)); // Count remaining tickets
-		
-		if (rewards.size() > 0)
+		packet.writeD(_result.getClientId());
+		packet.writeD(_type.ordinal());
+		packet.writeD(_ticketCount);
+		packet.writeD(_size);
+		for (Entry<LuckyGameItemType, List<ItemHolder>> reward : _rewards.entrySet())
 		{
-			packet.writeD(rewards.size());
-			for (ItemHolder reward : rewards)
+			for (ItemHolder item : reward.getValue())
 			{
-				packet.writeD(0x02); // normal = 1, rare = 2 (forcing 2)
-				packet.writeD(reward.getId());
-				packet.writeD((int) reward.getCount());
-				final SystemMessage sm;
-				if (_type == 2)
-				{
-					_activeChar.addItem("LuxuryFortuneTelling", reward, _activeChar, false);
-					sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_IN_THE_LUXURY_FORTUNE_READING);
-				}
-				else
-				{
-					_activeChar.addItem("FortuneTelling", reward, _activeChar, false);
-					sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_HAS_OBTAINED_S2_OF_S3_THROUGH_FORTUNE_READING);
-				}
-				sm.addPcName(_activeChar);
-				sm.addLong(reward.getCount());
-				sm.addItemName(new L2ItemInstance(reward.getId()));
-				_activeChar.broadcastPacket(sm, 1000);
+				packet.writeD(reward.getKey().getClientId());
+				packet.writeD(item.getId());
+				packet.writeD((int) item.getCount());
 			}
-		}
-		else
-		{
-			packet.writeD(0x00);
 		}
 		return true;
 	}
