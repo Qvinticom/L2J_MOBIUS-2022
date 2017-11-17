@@ -24,14 +24,14 @@ import java.util.Map;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
+import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.enums.CastleSide;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2TeleportLocation;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
@@ -48,6 +48,7 @@ import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.teleporter.TeleportHolder;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowCropInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowCropSetting;
@@ -981,21 +982,33 @@ public final class CastleChamberlain extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = npc.getCastle().getName() + "-t" + castle.getCastleFunction(Castle.FUNC_TELEPORT).getLvl() + ".html";
+					final String listName = "tel" + castle.getCastleFunction(Castle.FUNC_TELEPORT).getLvl();
+					final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), listName);
+					if (holder != null)
+					{
+						holder.showTeleportList(player, npc, "Quest CastleChamberlain goto");
+					}
 				}
 				break;
 			}
-			case "goto":
+			case "goto": // goto listId locId
 			{
-				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
+				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS) && (st.countTokens() >= 2))
 				{
-					final int locId = Integer.parseInt(st.nextToken());
-					final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(locId);
-					if (list != null)
+					final CastleFunction func = castle.getCastleFunction(Castle.FUNC_TELEPORT);
+					if (func == null)
 					{
-						if (takeItems(player, list.getItemId(), list.getPrice()))
+						return "castlefuncdisabled.html";
+					}
+					
+					final String listId = st.nextToken();
+					final int funcLvl = (listId.length() >= 4) ? CommonUtil.parseInt(listId.substring(3), -1) : -1;
+					if (func.getLvl() == funcLvl)
+					{
+						final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), listId);
+						if (holder != null)
 						{
-							player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
+							holder.doTeleport(player, npc, CommonUtil.parseNextInt(st, -1));
 						}
 					}
 				}

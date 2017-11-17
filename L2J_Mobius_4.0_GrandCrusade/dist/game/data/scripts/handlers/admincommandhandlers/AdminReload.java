@@ -24,7 +24,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
@@ -172,7 +171,6 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "teleport":
 				{
-					TeleportLocationTable.getInstance().reloadAll();
 					TeleportersData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Teleports.");
 					break;

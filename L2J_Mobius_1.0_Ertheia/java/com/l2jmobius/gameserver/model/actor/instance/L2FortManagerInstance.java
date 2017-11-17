@@ -20,15 +20,17 @@ import java.text.SimpleDateFormat;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
-import com.l2jmobius.gameserver.model.L2TeleportLocation;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.model.entity.Fort.FortFunction;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.teleporter.TeleportHolder;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
@@ -938,10 +940,23 @@ public class L2FortManagerInstance extends L2MerchantInstance
 				sendHtmlMessage(player, html);
 				return;
 			}
-			else if (actualCommand.equalsIgnoreCase("goto"))
+			else if (actualCommand.equalsIgnoreCase("goto")) // goto listId locId
 			{
-				final int whereTo = Integer.parseInt(val);
-				doTeleport(player, whereTo);
+				final FortFunction func = getFort().getFortFunction(Fort.FUNC_TELEPORT);
+				if ((func == null) || !st.hasMoreTokens())
+				{
+					return;
+				}
+				
+				final int funcLvl = (val.length() >= 4) ? CommonUtil.parseInt(val.substring(3), -1) : -1;
+				if (func.getLvl() == funcLvl)
+				{
+					final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), val);
+					if (holder != null)
+					{
+						holder.doTeleport(player, this, CommonUtil.parseNextInt(st, -1));
+					}
+				}
 				return;
 			}
 			super.onBypassFeedback(player, command);
@@ -972,31 +987,6 @@ public class L2FortManagerInstance extends L2MerchantInstance
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
 		player.sendPacket(html);
-	}
-	
-	private void doTeleport(L2PcInstance player, int val)
-	{
-		if (Config.DEBUG)
-		{
-			_log.warning("doTeleport(L2PcInstance player, int val) is called");
-		}
-		final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
-		if (list != null)
-		{
-			if (player.destroyItemByItemId("Teleport", list.getItemId(), list.getPrice(), this, true))
-			{
-				if (Config.DEBUG)
-				{
-					_log.warning("Teleporting player " + player.getName() + " for Fortress to new location: " + list.getLocX() + ":" + list.getLocY() + ":" + list.getLocZ());
-				}
-				player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
-			}
-		}
-		else
-		{
-			_log.warning("No teleport destination with id:" + val);
-		}
-		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	protected int validateCondition(L2PcInstance player)

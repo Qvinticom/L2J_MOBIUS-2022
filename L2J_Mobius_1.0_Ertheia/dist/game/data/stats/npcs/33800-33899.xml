@@ -1077,6 +1077,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
+		<ai type="CORPSE" />
 		<collision>
 			<radius normal="22" />
 			<height normal="23.5" />
@@ -1412,7 +1413,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="33853" level="85" type="L2Npc" name="Hansen" title="Giant's Minion">
+	<npc id="33853" level="85" type="L2Teleporter" name="Hansen" title="Giant's Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

@@ -24,7 +24,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
@@ -146,7 +145,6 @@ public class Reload implements ITelnetCommand
 			}
 			case "teleport":
 			{
-				TeleportLocationTable.getInstance().reloadAll();
 				TeleportersData.getInstance().load();
 				return AdminData.getInstance().broadcastMessageToGMs("Telnet Admin: Reloaded Teleports.");
 			}

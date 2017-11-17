@@ -38,7 +38,6 @@ import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
-import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.AbilityPointsData;
 import com.l2jmobius.gameserver.data.xml.impl.ActionData;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
@@ -310,7 +309,6 @@ public class GameServer
 		printSection("Cache");
 		HtmCache.getInstance();
 		CrestTable.getInstance();
-		TeleportLocationTable.getInstance();
 		TeleportersData.getInstance();
 		MatchingRoomManager.getInstance();
 		PetitionManager.getInstance();

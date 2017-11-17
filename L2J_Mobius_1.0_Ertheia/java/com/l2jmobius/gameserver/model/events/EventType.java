@@ -54,6 +54,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillFinish
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSpawn;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcTeleport;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcTeleportRequest;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayableExpChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerAbilityPointsChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerAugment;
@@ -197,6 +198,7 @@ public enum EventType
 	ON_NPC_MANOR_BYPASS(OnNpcManorBypass.class, void.class),
 	ON_NPC_MENU_SELECT(OnNpcMenuSelect.class, void.class),
 	ON_NPC_DESPAWN(OnNpcDespawn.class, void.class),
+	ON_NPC_TELEPORT_REQUEST(OnNpcTeleportRequest.class, void.class, TerminateReturn.class),
 	
 	// Olympiad events
 	ON_OLYMPIAD_MATCH_RESULT(OnOlympiadMatchResult.class, void.class),

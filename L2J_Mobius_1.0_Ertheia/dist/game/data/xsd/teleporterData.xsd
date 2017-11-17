@@ -30,9 +30,17 @@
 												<xs:attribute type="xs:int" name="questZoneId" use="optional" />
 												<xs:attribute type="xs:int" name="feeId" use="optional" />
 												<xs:attribute type="xs:int" name="feeCount" use="optional" />
+												<xs:attribute name="castleId" use="optional">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:pattern value="\d+(;\d+)*" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
+									<xs:attribute name="name" type="xs:string" use="optional" />
 									<xs:attribute name="type">
 										<xs:simpleType>
 											<xs:restriction base="xs:token">
