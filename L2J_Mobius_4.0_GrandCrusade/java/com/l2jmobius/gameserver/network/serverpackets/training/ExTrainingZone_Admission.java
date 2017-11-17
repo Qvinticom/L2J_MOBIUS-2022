@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.network.serverpackets.training;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -32,14 +31,6 @@ public class ExTrainingZone_Admission implements IClientOutgoingPacket
 	private final long _timeRemaining;
 	private final double _maxExp;
 	private final double _maxSp;
-	
-	public ExTrainingZone_Admission(L2PcInstance player)
-	{
-		_timeElapsed = 0;
-		_timeRemaining = Config.TRAINING_CAMP_MAX_DURATION;
-		_maxExp = (ExperienceData.getInstance().getExpForLevel(player.getLevel()) * ExperienceData.getInstance().getTrainingRate(player.getLevel())) / Config.TRAINING_CAMP_MAX_DURATION;
-		_maxSp = _maxExp / 250d;
-	}
 	
 	public ExTrainingZone_Admission(int level, long timeElapsed, long timeRemaing)
 	{

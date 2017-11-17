@@ -114,15 +114,7 @@ public final class Recruiter extends AbstractNpcAI
 						// @Sdw: Here we are supposed to send ExUserInfoEquipSlot with a fake equip of a SLS, feels ugly to me, not doing it.
 						player.setTraingCampInfo(new TrainingHolder(player.getObjectId(), player.getClassIndex(), player.getLevel(), System.currentTimeMillis(), -1));
 						final long timeRemaining = Config.TRAINING_CAMP_MAX_DURATION - trainingCampDuration;
-						if (trainingCampDuration > 0)
-						{
-							player.sendPacket(new ExTrainingZone_Admission(player.getLevel(), 0L, timeRemaining));
-						}
-						else
-						{
-							player.sendPacket(new ExTrainingZone_Admission(player));
-						}
-						
+						player.sendPacket(new ExTrainingZone_Admission(player.getLevel(), 0L, timeRemaining));
 						startQuestTimer("finish", TimeUnit.SECONDS.toMillis(timeRemaining), npc, player);
 					}
 					else
@@ -147,10 +139,8 @@ public final class Recruiter extends AbstractNpcAI
 						final long trainingTime = Math.max(0, holder.getTrainingTime(TimeUnit.MINUTES));
 						if (trainingTime > 0)
 						{
-							long expGained = 0;
-							long spGained = 0;
-							expGained = (long) ((trainingTime * (ExperienceData.getInstance().getExpForLevel(holder.getLevel()) * ExperienceData.getInstance().getTrainingRate(holder.getLevel()))) / TrainingHolder.getTrainingDivider());
-							spGained = expGained / 250L;
+							final long expGained = (long) ((trainingTime * (ExperienceData.getInstance().getExpForLevel(holder.getLevel()) * ExperienceData.getInstance().getTrainingRate(holder.getLevel()))) / TrainingHolder.getTrainingDivider()) / 60;
+							final long spGained = expGained / 250L;
 							String html = getHtm(player.getHtmlPrefix(), "4378-04.htm");
 							html = html.replace("%training_level%", String.valueOf(holder.getLevel()));
 							html = html.replace("%training_time%", String.valueOf(trainingTime));
@@ -186,7 +176,7 @@ public final class Recruiter extends AbstractNpcAI
 						{
 							player.sendPacket(SystemMessageId.CALCULATING_XP_AND_SP_OBTAINED_FROM_TRAINING);
 							
-							final long expGained = (long) (trainingTime * (ExperienceData.getInstance().getExpForLevel(player.getLevel()) * ExperienceData.getInstance().getTrainingRate(player.getLevel()))) / TrainingHolder.getTrainingDivider();
+							final long expGained = (long) ((trainingTime * (ExperienceData.getInstance().getExpForLevel(player.getLevel()) * ExperienceData.getInstance().getTrainingRate(player.getLevel()))) / TrainingHolder.getTrainingDivider()) / 60;
 							final long spGained = expGained / 250;
 							player.addExpAndSp(expGained, spGained);
 							
@@ -215,6 +205,7 @@ public final class Recruiter extends AbstractNpcAI
 				if ((holder != null) && (holder.getObjectId() == player.getObjectId()))
 				{
 					holder.setEndTime(System.currentTimeMillis());
+					player.setTraingCampInfo(holder);
 					player.enableAllSkills();
 					player.setIsInvul(false);
 					player.setInvisible(false);

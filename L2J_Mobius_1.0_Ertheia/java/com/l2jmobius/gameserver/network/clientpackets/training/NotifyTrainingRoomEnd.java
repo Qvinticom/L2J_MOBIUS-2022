@@ -53,6 +53,7 @@ public class NotifyTrainingRoomEnd implements IClientIncomingPacket
 		if (holder.isTraining())
 		{
 			holder.setEndTime(System.currentTimeMillis());
+			activeChar.setTraingCampInfo(holder);
 			activeChar.enableAllSkills();
 			activeChar.setIsInvul(false);
 			activeChar.setInvisible(false);
