@@ -100,6 +100,7 @@ public final class Config
 	public static final String SERVER_CONFIG_FILE = "./config/Server.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
 	public static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
+	public static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
 	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
 	public static final String HEXID_FILE = "./config/hexid.txt";
 	public static final String IPCONFIG_FILE = "./config/ipconfig.xml";
@@ -851,6 +852,11 @@ public final class Config
 	public static String TELNET_HOSTNAME;
 	public static List<String> TELNET_HOSTS;
 	public static int TELNET_PORT;
+	public static boolean TRAINING_CAMP_ENABLE;
+	public static boolean TRAINING_CAMP_PREMIUM_ONLY;
+	public static int TRAINING_CAMP_MAX_DURATION;
+	public static int TRAINING_CAMP_MIN_LEVEL;
+	public static int TRAINING_CAMP_MAX_LEVEL;
 	public static boolean SHOW_LICENCE;
 	public static boolean SHOW_PI_AGREEMENT;
 	public static boolean ACCEPT_NEW_GAMESERVER;
@@ -1737,6 +1743,15 @@ public final class Config
 			TELNET_HOSTNAME = telnetSettings.getString("BindAddress", "127.0.0.1");
 			TELNET_PASSWORD = telnetSettings.getString("Password", "");
 			TELNET_HOSTS = Arrays.asList(telnetSettings.getString("ListOfHosts", "127.0.0.1,::1").split(","));
+			
+			// Load Training Camp config file (if exists)
+			final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);
+			
+			TRAINING_CAMP_ENABLE = trainingCampSettings.getBoolean("TrainingCampEnable", false);
+			TRAINING_CAMP_PREMIUM_ONLY = trainingCampSettings.getBoolean("TrainingCampPremiumOnly", false);
+			TRAINING_CAMP_MAX_DURATION = trainingCampSettings.getInt("TrainingCampDuration", 18000);
+			TRAINING_CAMP_MIN_LEVEL = trainingCampSettings.getInt("TrainingCampMinLevel", 18);
+			TRAINING_CAMP_MAX_LEVEL = trainingCampSettings.getInt("TrainingCampMaxLevel", 127);
 			
 			// MMO
 			final PropertiesParser mmoSettings = new PropertiesParser(MMO_CONFIG_FILE);

@@ -86,7 +86,7 @@ public class TeleportToPlayer extends AbstractEffect
 				return;
 			}
 			
-			if (target.isFlyingMounted() || target.isCombatFlagEquipped())
+			if (target.isFlyingMounted() || target.isCombatFlagEquipped() || target.isInTraingCamp())
 			{
 				effector.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
 				return;

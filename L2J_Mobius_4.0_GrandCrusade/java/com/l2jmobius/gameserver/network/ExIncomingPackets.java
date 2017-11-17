@@ -84,6 +84,7 @@ import com.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeB
 import com.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
 import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRBuyProduct;
 import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRGamePoint;
+import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRPresentBuyProduct;
 import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProductInfo;
 import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProductList;
 import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRRecentProductList;
@@ -95,6 +96,7 @@ import com.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreI
 import com.l2jmobius.gameserver.network.clientpackets.shuttle.MoveToLocationInShuttle;
 import com.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOff;
 import com.l2jmobius.gameserver.network.clientpackets.shuttle.RequestShuttleGetOn;
+import com.l2jmobius.gameserver.network.clientpackets.training.NotifyTrainingRoomEnd;
 
 /**
  * @author Sdw
@@ -276,7 +278,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	SEND_CHANGE_ATTRIBUTE_TARGET_ITEM(0xB0, SendChangeAttributeTargetItem::new, ConnectionState.IN_GAME),
 	REQUEST_CHANGE_ATTRIBUTE_ITEM(0xB1, RequestChangeAttributeItem::new, ConnectionState.IN_GAME),
 	REQUEST_CHANGE_ATTRIBUTE_CANCEL(0xB2, RequestChangeAttributeCancel::new, ConnectionState.IN_GAME),
-	REQUEST_BR_PRESENT_BUY_PRODUCT(0xB3, null, ConnectionState.IN_GAME),
+	REQUEST_BR_PRESENT_BUY_PRODUCT(0xB3, RequestBRPresentBuyProduct::new, ConnectionState.IN_GAME),
 	CONFIRM_MENTEE_ADD(0xB4, ConfirmMenteeAdd::new, ConnectionState.IN_GAME),
 	REQUEST_MENTOR_CANCEL(0xB5, RequestMentorCancel::new, ConnectionState.IN_GAME),
 	REQUEST_MENTOR_LIST(0xB6, RequestMentorList::new, ConnectionState.IN_GAME),
@@ -338,13 +340,14 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	EX_PC_CAFE_REQUEST_OPEN_WINDOW_WITHOUT_NPC(0xF0, ExPCCafeRequestOpenWindowWithoutNPC::new, ConnectionState.IN_GAME),
 	REQUEST_LUCKY_GAME_START_INFO(0xF1, RequestLuckyGameStartInfo::new, ConnectionState.IN_GAME),
 	REQUEST_LUCKY_GAME_PLAY(0xF2, RequestLuckyGamePlay::new, ConnectionState.IN_GAME),
-	NOTIFY_TRAINING_ROOM_END(0xF3, null, ConnectionState.IN_GAME),
+	NOTIFY_TRAINING_ROOM_END(0xF3, NotifyTrainingRoomEnd::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_PUSH_ONE(0xF4, RequestNewEnchantPushOne::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_REMOVE_ONE(0xF5, RequestNewEnchantRemoveOne::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_PUSH_TWO(0xF6, RequestNewEnchantPushTwo::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_REMOVE_TWO(0xF7, RequestNewEnchantRemoveTwo::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_CLOSE(0xF8, RequestNewEnchantClose::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_TRY(0xF9, RequestNewEnchantTry::new, ConnectionState.IN_GAME),
+	REQUEST_NEW_ENCHANT_RETRY_TO_PUT_ITEMS(0xFA, RequestNewEnchantRetryToPutItems::new, ConnectionState.IN_GAME),
 	EX_SEND_SELECTED_QUEST_ZONE_ID(0xFF, ExSendSelectedQuestZoneID::new, ConnectionState.IN_GAME),
 	REQUEST_ALCHEMY_SKILL_LIST(0x100, RequestAlchemySkillList::new, ConnectionState.IN_GAME),
 	REQUEST_ALCHEMY_TRY_MIX_CUBE(0x101, RequestAlchemyTryMixCube::new, ConnectionState.IN_GAME),
@@ -393,7 +396,16 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_ITEM_AUCTION_STATUS(0x12C, null, ConnectionState.IN_GAME),
 	REQUEST_MONSTER_BOOK_OPEN(0x12D, RequestMonsterBookOpen::new, ConnectionState.IN_GAME),
 	REQUEST_MONSTER_BOOK_CLOSE(0x12E, RequestMonsterBookClose::new, ConnectionState.IN_GAME),
-	REQUEST_MONSTER_BOOK_REWARD(0x12F, RequestMonsterBookReward::new, ConnectionState.IN_GAME);
+	REQUEST_MONSTER_BOOK_REWARD(0x12F, RequestMonsterBookReward::new, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP(0x130, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_ASK(0x131, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_ANSWER(0x132, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_WITHDRAW(0x133, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_OUST(0x134, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_CHANGE_MASTER(0x135, null, ConnectionState.IN_GAME),
+	REQUEST_BLOCK_LIST_FOR_AD(0x136, null, ConnectionState.IN_GAME),
+	REQUEST_UPGRADE_SYSTEM_RESULT(0x137, null, ConnectionState.IN_GAME),
+	REQUEST_USER_BAN_INFO(0x138, null, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	

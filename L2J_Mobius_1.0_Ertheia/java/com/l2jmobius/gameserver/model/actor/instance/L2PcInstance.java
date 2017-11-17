@@ -214,6 +214,7 @@ import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import com.l2jmobius.gameserver.model.holders.SkillUseHolder;
+import com.l2jmobius.gameserver.model.holders.TrainingHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -844,6 +845,10 @@ public final class L2PcInstance extends L2Playable
 		
 		_PvPRegTask = null;
 	}
+	
+	// Training Camp
+	private final static String TRAINING_CAMP_VAR = "TRAINING_CAMP";
+	private final static String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
 	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;
@@ -13968,5 +13973,41 @@ public final class L2PcInstance extends L2Playable
 			return true;
 		}
 		return false;
+	}
+	
+	public TrainingHolder getTraingCampInfo()
+	{
+		final String info = getAccountVariables().getString(TRAINING_CAMP_VAR, null);
+		if (info == null)
+		{
+			return null;
+		}
+		return new TrainingHolder(Integer.parseInt(info.split(";")[0]), Integer.parseInt(info.split(";")[1]), Integer.parseInt(info.split(";")[2]), Long.parseLong(info.split(";")[3]), Long.parseLong(info.split(";")[4]));
+	}
+	
+	public void setTraingCampInfo(TrainingHolder holder)
+	{
+		getAccountVariables().set(TRAINING_CAMP_VAR, holder.getObjectId() + ";" + holder.getClassIndex() + ";" + holder.getLevel() + ";" + holder.getStartTime() + ";" + holder.getEndTime());
+	}
+	
+	public void removeTraingCampInfo()
+	{
+		getAccountVariables().remove(TRAINING_CAMP_VAR);
+	}
+	
+	public long getTraingCampDuration()
+	{
+		return getAccountVariables().getLong(TRAINING_CAMP_DURATION, 0L);
+	}
+	
+	public void setTraingCampDuration(long duration)
+	{
+		getAccountVariables().set(TRAINING_CAMP_DURATION, duration);
+	}
+	
+	public boolean isInTraingCamp()
+	{
+		final TrainingHolder trainingHolder = getTraingCampInfo();
+		return (trainingHolder != null) && (trainingHolder.getEndTime() > 0);
 	}
 }

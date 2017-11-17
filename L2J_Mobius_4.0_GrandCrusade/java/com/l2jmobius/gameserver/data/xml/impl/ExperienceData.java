@@ -37,6 +37,7 @@ public final class ExperienceData implements IGameXmlReader
 	private static final Logger LOGGER = Logger.getLogger(ExperienceData.class.getName());
 	
 	private final Map<Integer, Long> _expTable = new HashMap<>();
+	private final Map<Integer, Double> _traningRateTable = new HashMap<>();
 	
 	private byte MAX_LEVEL;
 	private byte MAX_PET_LEVEL;
@@ -53,6 +54,7 @@ public final class ExperienceData implements IGameXmlReader
 	public void load()
 	{
 		_expTable.clear();
+		_traningRateTable.clear();
 		parseDatapackFile("data/stats/experience.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _expTable.size() + " levels.");
 		LOGGER.info(getClass().getSimpleName() + ": Max Player Level is: " + (MAX_LEVEL - 1));
@@ -89,6 +91,7 @@ public final class ExperienceData implements IGameXmlReader
 					break;
 				}
 				_expTable.put(maxLevel, parseLong(attrs, "tolevel"));
+				_traningRateTable.put(maxLevel, parseDouble(attrs, "trainingRate"));
 			}
 		}
 	}
@@ -105,6 +108,15 @@ public final class ExperienceData implements IGameXmlReader
 			level = Config.PLAYER_MAXIMUM_LEVEL;
 		}
 		return _expTable.get(level);
+	}
+	
+	public double getTrainingRate(int level)
+	{
+		if (level > Config.PLAYER_MAXIMUM_LEVEL)
+		{
+			level = Config.PLAYER_MAXIMUM_LEVEL;
+		}
+		return _traningRateTable.get(level);
 	}
 	
 	/**
