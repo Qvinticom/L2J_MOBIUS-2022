@@ -2604,8 +2604,7 @@
 			<item id="46919" count="1" />
 		</items>
 	</reward>
-	<!-- Dual Class
-	<reward id="187" reward_id="493" name="Reach Level (Dual Lv. 84)" requiredCompletion="84">
+	<reward id="187" reward_id="493" name="Reach Level (Dual Lv. 84)" requiredCompletion="84" isMainClassOnly="false" isDualClassOnly="true" isDisplayedWhenNotAvailable="false">
 		<handler name="level">
 			<param name="level">84</param>
 		</handler>
@@ -2613,57 +2612,56 @@
 			<item id="35987" count="10" />
 		</items>
 	</reward>
-	-->
-	<reward id="224" reward_id="604" name="Login Once During the Weekend" requiredCompletion="1" isOneTime="false">
+	<!--
+	<reward id="224" reward_id="604" name="Login Once During the Weekend" requiredCompletion="1" isMainClassOnly="false" isOneTime="false">
 		<items>
 			<item id="27593" count="4" />
 			<item id="27603" count="1" />
 		</items>
 	</reward>
-	<!-- has issues - 2/1 
-	<reward id="225" reward_id="605" name="Login Once During the Month" requiredCompletion="1" isOneTime="false">
+	<reward id="225" reward_id="605" name="Login Once During the Month" requiredCompletion="1" isMainClassOnly="false" isOneTime="false">
 		<items>
 			<item id="27593" count="15" />
 			<item id="27603" count="1" />
 		</items>
 	</reward>
 	-->
-	<reward id="226" reward_id="606" name="Complete Quests" requiredCompletion="2" isOneTime="false">
+	<reward id="226" reward_id="606" name="Complete Quests" isMainClassOnly="false" requiredCompletion="2" isOneTime="false">
 		<handler name="quest" />
 		<items>
 			<item id="27593" count="1" />
 			<item id="27603" count="1" />
 		</items>
 	</reward>
-	<reward id="227" reward_id="607" name="Participate in the Olympiad" requiredCompletion="2" isOneTime="false">
+	<reward id="227" reward_id="607" name="Participate in the Olympiad" isMainClassOnly="false" requiredCompletion="2" isOneTime="false">
 		<handler name="olympiad" />
 		<items>
 			<item id="27593" count="4" />
 			<item id="27603" count="3" />
 		</items>
 	</reward>
-	<reward id="228" reward_id="608" name="Sieges" requiredCompletion="1" isOneTime="false">
+	<reward id="228" reward_id="608" name="Sieges" requiredCompletion="1" isMainClassOnly="false" isOneTime="false">
 		<handler name="siege" />
 		<items>
 			<item id="27593" count="50" />
 			<item id="27603" count="15" />
 		</items>
 	</reward>
-	<reward id="229" reward_id="609" name="Ceremony of Chaos" requiredCompletion="2" isOneTime="false">
+	<reward id="229" reward_id="609" name="Ceremony of Chaos" isMainClassOnly="false" requiredCompletion="2" isOneTime="false">
 		<handler name="ceremonyofchaos" />
 		<items>
 			<item id="27593" count="2" />
 			<item id="27603" count="1" />
 		</items>
 	</reward>
-	<reward id="230" reward_id="610" name="Boss Master" requiredCompletion="2" isOneTime="false">
+	<reward id="230" reward_id="610" name="Boss Master" isMainClassOnly="false" requiredCompletion="2" isOneTime="false">
 		<handler name="boss" />
 		<items>
 			<item id="27593" count="1" />
 			<item id="27603" count="1" />
 		</items>
 	</reward>
-	<reward id="231" reward_id="611" name="Catch Fish" requiredCompletion="3" isOneTime="false">
+	<reward id="231" reward_id="611" name="Catch Fish" isMainClassOnly="false" requiredCompletion="3" isOneTime="false">
 		<handler name="fishing" />
 		<items>
 			<item id="27593" count="1" />

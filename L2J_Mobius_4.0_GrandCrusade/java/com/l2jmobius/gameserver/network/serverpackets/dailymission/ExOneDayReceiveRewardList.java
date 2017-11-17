@@ -17,8 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets.dailymission;
 
 import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.function.Function;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
@@ -26,6 +27,7 @@ import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import com.l2jmobius.gameserver.util.cron4j.Predictor;
 
 /**
  * @author Sdw
@@ -34,11 +36,19 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 {
 	final L2PcInstance _player;
 	private final Collection<DailyMissionDataHolder> _rewards;
+	private final static Function<String, Long> _remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - System.currentTimeMillis()) / 1000L;
 	
-	public ExOneDayReceiveRewardList(L2PcInstance player, boolean showAllLevels)
+	private final long _dayRemainTime;
+	private final long _weekRemainTime;
+	private final long _monthRemainTime;
+	
+	public ExOneDayReceiveRewardList(L2PcInstance player, boolean sendRewards)
 	{
 		_player = player;
-		_rewards = DailyMissionData.getInstance().getDailyMissionData(player);
+		_rewards = sendRewards ? DailyMissionData.getInstance().getDailyMissionData(player) : Collections.emptyList();
+		_dayRemainTime = _remainTime.apply("30 6 * * *");
+		_weekRemainTime = _remainTime.apply("30 6 * * 1");
+		_monthRemainTime = _remainTime.apply("30 6 1 * *");
 	}
 	
 	@Override
@@ -46,26 +56,9 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ONE_DAY_RECEIVE_REWARD_LIST.writeId(packet);
 		
-		Calendar calendar = Calendar.getInstance();
-		long currentTimeMillis = calendar.getTimeInMillis();
-		int timeRemaining = 0;
-		
-		calendar.add(Calendar.HOUR, 24);
-		calendar.set(Calendar.HOUR, 6);
-		calendar.set(Calendar.MINUTE, 30);
-		timeRemaining = (int) (((calendar.getTimeInMillis() - currentTimeMillis) / 1000) / 60); // minutes
-		packet.writeD(timeRemaining); // Until 06:30 UTC
-		
-		calendar.add(Calendar.WEEK_OF_MONTH, 1);
-		calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-		timeRemaining = (int) (((calendar.getTimeInMillis() - currentTimeMillis) / 1000) / 60); // minutes
-		packet.writeD(timeRemaining); // Until Monday 06:30 UTC
-		
-		calendar.add(Calendar.MONTH, 1);
-		calendar.set(Calendar.DAY_OF_MONTH, 1);
-		timeRemaining = (int) (((calendar.getTimeInMillis() - currentTimeMillis) / 1000) / 60); // minutes
-		packet.writeD(timeRemaining); // Until 1st of month 06:30 UTC
-		
+		packet.writeD((int) _dayRemainTime);
+		packet.writeD((int) _weekRemainTime);
+		packet.writeD((int) _monthRemainTime);
 		packet.writeC(0x17);
 		packet.writeD(_player.getClassId().getId());
 		packet.writeD(LocalDate.now().getDayOfWeek().ordinal()); // Day of week

@@ -38,6 +38,9 @@ public class DailyMissionDataHolder
 	private final int _requiredCompletions;
 	private final StatsSet _params;
 	private final boolean _isOneTime;
+	private final boolean _isMainClassOnly;
+	private final boolean _isDualClassOnly;
+	private final boolean _isDisplayedWhenNotAvailable;
 	private final AbstractDailyMissionHandler _handler;
 	
 	public DailyMissionDataHolder(StatsSet set)
@@ -51,6 +54,9 @@ public class DailyMissionDataHolder
 		_classRestriction = set.getList("classRestriction", ClassId.class);
 		_params = set.getObject("params", StatsSet.class);
 		_isOneTime = set.getBoolean("isOneTime", true);
+		_isMainClassOnly = set.getBoolean("isMainClassOnly", true);
+		_isDualClassOnly = set.getBoolean("isDualClassOnly", false);
+		_isDisplayedWhenNotAvailable = set.getBoolean("isDisplayedWhenNotAvailable", true);
 		_handler = handler != null ? handler.apply(this) : null;
 	}
 	
@@ -89,9 +95,49 @@ public class DailyMissionDataHolder
 		return _isOneTime;
 	}
 	
+	public boolean isMainClassOnly()
+	{
+		return _isMainClassOnly;
+	}
+	
+	public boolean isDualClassOnly()
+	{
+		return _isDualClassOnly;
+	}
+	
+	public boolean isDisplayedWhenNotAvailable()
+	{
+		return _isDisplayedWhenNotAvailable;
+	}
+	
 	public boolean isDisplayable(L2PcInstance player)
 	{
-		return (!_isOneTime || getRecentlyCompleted(player) || (getStatus(player) != DailyMissionStatus.COMPLETED.getClientId())) && (_classRestriction.isEmpty() || _classRestriction.contains(player.getClassId()));
+		// Check if its main class only
+		if (isMainClassOnly() && (player.isSubClassActive() || player.isDualClassActive()))
+		{
+			return false;
+		}
+		
+		// Check if its dual class only.
+		if (isDualClassOnly() && !player.isDualClassActive())
+		{
+			return false;
+		}
+		
+		// Check for specific class restrictions
+		if (!_classRestriction.isEmpty() && !_classRestriction.contains(player.getClassId()))
+		{
+			return false;
+		}
+		
+		final int status = getStatus(player);
+		if (!isDisplayedWhenNotAvailable() && (status == DailyMissionStatus.NOT_AVAILABLE.getClientId()))
+		{
+			return false;
+		}
+		
+		// Show only if its repeatable, recently completed or incompleted that has met the checks above.
+		return (!isOneTime() || getRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
 	}
 	
 	public void requestReward(L2PcInstance player)

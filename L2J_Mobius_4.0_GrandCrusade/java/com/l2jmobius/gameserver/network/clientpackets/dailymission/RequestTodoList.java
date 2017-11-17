@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayRecei
 public class RequestTodoList implements IClientIncomingPacket
 {
 	private int _tab;
+	@SuppressWarnings("unused")
 	private boolean _showAllLevels;
 	
 	@Override
@@ -59,9 +60,10 @@ public class RequestTodoList implements IClientIncomingPacket
 			// player.sendPacket(new ExTodoListInzone());
 			// break;
 			// }
-			case 9:
+			case 9: // Daily Rewards
 			{
-				player.sendPacket(new ExOneDayReceiveRewardList(player, _showAllLevels));
+				// Initial EW request should be false
+				player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 				break;
 			}
 		}
