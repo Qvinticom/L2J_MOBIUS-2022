@@ -37,6 +37,7 @@ public final class EnchantScroll extends AbstractEnchantItem
 	private final boolean _isWeapon;
 	private final boolean _isBlessed;
 	private final boolean _isSafe;
+	private final boolean _isGiant;
 	private final int _scrollGroupId;
 	private Set<Integer> _items;
 	
@@ -46,9 +47,10 @@ public final class EnchantScroll extends AbstractEnchantItem
 		_scrollGroupId = set.getInt("scrollGroupId", 0);
 		
 		final ItemType type = getItem().getItemType();
-		_isWeapon = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.BLESS_ENCHT_WP) || (type == EtcItemType.ENCHT_WP);
+		_isWeapon = (type == EtcItemType.ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP) || (type == EtcItemType.BLESS_ENCHT_WP) || (type == EtcItemType.ENCHT_WP) || (type == EtcItemType.GIANT_ENCHT_WP);
 		_isBlessed = (type == EtcItemType.BLESS_ENCHT_AM) || (type == EtcItemType.BLESS_ENCHT_WP);
 		_isSafe = (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_AM) || (type == EtcItemType.ENCHT_ATTR_CRYSTAL_ENCHANT_WP);
+		_isGiant = (type == EtcItemType.GIANT_ENCHT_AM) || (type == EtcItemType.GIANT_ENCHT_WP);
 	}
 	
 	@Override
@@ -71,6 +73,11 @@ public final class EnchantScroll extends AbstractEnchantItem
 	public boolean isSafe()
 	{
 		return _isSafe;
+	}
+	
+	public boolean isGiant()
+	{
+		return _isGiant;
 	}
 	
 	/**

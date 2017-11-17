@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
@@ -184,7 +185,14 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 					// Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
 					if (scrollTemplate.getChance(activeChar, item) > 0)
 					{
-						item.setEnchantLevel(item.getEnchantLevel() + 1);
+						if (scrollTemplate.isGiant())
+						{
+							item.setEnchantLevel(Math.min(item.getEnchantLevel() + 1 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
+						}
+						else
+						{
+							item.setEnchantLevel(item.getEnchantLevel() + 1);
+						}
 						item.updateDatabase();
 					}
 					client.sendPacket(new EnchantResult(EnchantResult.SUCCESS, item));

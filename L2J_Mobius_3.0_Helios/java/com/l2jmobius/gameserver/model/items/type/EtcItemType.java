@@ -42,6 +42,8 @@ public enum EtcItemType implements ItemType
 	MATURECROP,
 	ENCHT_WP,
 	ENCHT_AM,
+	GIANT_ENCHT_WP,
+	GIANT_ENCHT_AM,
 	BLESS_ENCHT_WP,
 	BLESS_ENCHT_AM,
 	COUPON,

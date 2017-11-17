@@ -42,6 +42,8 @@ public abstract class AbstractEnchantItem
 		EtcItemType.BLESS_ENCHT_WP,
 		EtcItemType.ENCHT_AM,
 		EtcItemType.ENCHT_WP,
+		EtcItemType.GIANT_ENCHT_AM,
+		EtcItemType.GIANT_ENCHT_WP,
 		EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_AM,
 		EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP,
 	};
