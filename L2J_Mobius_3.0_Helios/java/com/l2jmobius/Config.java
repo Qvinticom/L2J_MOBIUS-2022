@@ -858,6 +858,8 @@ public final class Config
 	public static int TRAINING_CAMP_MAX_DURATION;
 	public static int TRAINING_CAMP_MIN_LEVEL;
 	public static int TRAINING_CAMP_MAX_LEVEL;
+	public static double TRAINING_CAMP_EXP_MULTIPLIER;
+	public static double TRAINING_CAMP_SP_MULTIPLIER;
 	public static boolean SHOW_LICENCE;
 	public static boolean SHOW_PI_AGREEMENT;
 	public static boolean ACCEPT_NEW_GAMESERVER;
@@ -1754,6 +1756,8 @@ public final class Config
 			TRAINING_CAMP_MAX_DURATION = trainingCampSettings.getInt("TrainingCampDuration", 18000);
 			TRAINING_CAMP_MIN_LEVEL = trainingCampSettings.getInt("TrainingCampMinLevel", 18);
 			TRAINING_CAMP_MAX_LEVEL = trainingCampSettings.getInt("TrainingCampMaxLevel", 127);
+			TRAINING_CAMP_EXP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampExpMultiplier", 1.0);
+			TRAINING_CAMP_SP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampSpMultiplier", 1.0);
 			
 			// MMO
 			final PropertiesParser mmoSettings = new PropertiesParser(MMO_CONFIG_FILE);

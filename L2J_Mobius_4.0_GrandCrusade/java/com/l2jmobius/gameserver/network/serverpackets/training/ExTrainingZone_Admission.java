@@ -36,8 +36,8 @@ public class ExTrainingZone_Admission implements IClientOutgoingPacket
 	{
 		_timeElapsed = timeElapsed;
 		_timeRemaining = timeRemaing;
-		_maxExp = (ExperienceData.getInstance().getExpForLevel(level) * ExperienceData.getInstance().getTrainingRate(level)) / Config.TRAINING_CAMP_MAX_DURATION;
-		_maxSp = _maxExp / 250d;
+		_maxExp = Config.TRAINING_CAMP_EXP_MULTIPLIER * ((ExperienceData.getInstance().getExpForLevel(level) * ExperienceData.getInstance().getTrainingRate(level)) / Config.TRAINING_CAMP_MAX_DURATION);
+		_maxSp = Config.TRAINING_CAMP_SP_MULTIPLIER * (_maxExp / 250d);
 	}
 	
 	@Override

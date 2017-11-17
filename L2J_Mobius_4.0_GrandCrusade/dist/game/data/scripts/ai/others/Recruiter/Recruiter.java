@@ -139,8 +139,8 @@ public final class Recruiter extends AbstractNpcAI
 						final long trainingTime = Math.max(0, holder.getTrainingTime(TimeUnit.MINUTES));
 						if (trainingTime > 0)
 						{
-							final long expGained = (long) ((trainingTime * (ExperienceData.getInstance().getExpForLevel(holder.getLevel()) * ExperienceData.getInstance().getTrainingRate(holder.getLevel()))) / TrainingHolder.getTrainingDivider()) / 60;
-							final long spGained = expGained / 250L;
+							final long expGained = (long) ((Config.TRAINING_CAMP_EXP_MULTIPLIER * ((trainingTime * (ExperienceData.getInstance().getExpForLevel(holder.getLevel()) * ExperienceData.getInstance().getTrainingRate(holder.getLevel()))) / TrainingHolder.getTrainingDivider())) / 60);
+							final long spGained = (long) (Config.TRAINING_CAMP_SP_MULTIPLIER * (expGained / 250L));
 							String html = getHtm(player.getHtmlPrefix(), "4378-04.htm");
 							html = html.replace("%training_level%", String.valueOf(holder.getLevel()));
 							html = html.replace("%training_time%", String.valueOf(trainingTime));
@@ -176,8 +176,8 @@ public final class Recruiter extends AbstractNpcAI
 						{
 							player.sendPacket(SystemMessageId.CALCULATING_XP_AND_SP_OBTAINED_FROM_TRAINING);
 							
-							final long expGained = (long) ((trainingTime * (ExperienceData.getInstance().getExpForLevel(player.getLevel()) * ExperienceData.getInstance().getTrainingRate(player.getLevel()))) / TrainingHolder.getTrainingDivider()) / 60;
-							final long spGained = expGained / 250;
+							final long expGained = (long) ((Config.TRAINING_CAMP_EXP_MULTIPLIER * ((trainingTime * (ExperienceData.getInstance().getExpForLevel(holder.getLevel()) * ExperienceData.getInstance().getTrainingRate(holder.getLevel()))) / TrainingHolder.getTrainingDivider())) / 60);
+							final long spGained = (long) (Config.TRAINING_CAMP_SP_MULTIPLIER * (expGained / 250L));
 							player.addExpAndSp(expGained, spGained);
 							
 							final SystemMessage sysMsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_COMPLETED_TRAINING_IN_THE_ROYAL_TRAINING_CAMP_AND_OBTAINED_S1_XP_AND_S2_SP);
