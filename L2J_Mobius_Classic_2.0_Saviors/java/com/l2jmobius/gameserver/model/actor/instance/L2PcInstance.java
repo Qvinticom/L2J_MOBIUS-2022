@@ -13912,6 +13912,11 @@ public final class L2PcInstance extends L2Playable
 		getAccountVariables().set(TRAINING_CAMP_DURATION, duration);
 	}
 	
+	public void resetTraingCampDuration()
+	{
+		getAccountVariables().remove(TRAINING_CAMP_DURATION);
+	}
+	
 	public boolean isInTraingCamp()
 	{
 		final TrainingHolder trainingHolder = getTraingCampInfo();

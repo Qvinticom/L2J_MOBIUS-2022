@@ -68,6 +68,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		resetDailySkills();
 		resetRecommends();
 		resetWorldChatPoints();
+		resetTrainingCamp();
 	}
 	
 	@ScheduleTarget
@@ -245,6 +246,33 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			player.sendPacket(new ExVoteSystemInfo(player));
 			player.broadcastUserInfo();
 		});
+	}
+	
+	public void resetTrainingCamp()
+	{
+		if (Config.TRAINING_CAMP_ENABLE)
+		{
+			// Update data for offline players.
+			try (Connection con = DatabaseFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var = ?"))
+			{
+				ps.setString(1, "TRAINING_CAMP_DURATION");
+				ps.executeUpdate();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, "Could not reset Training Camp: ", e);
+			}
+			
+			// Update data for online players.
+			L2World.getInstance().getPlayers().stream().forEach(player ->
+			{
+				player.resetTraingCampDuration();
+				player.getAccountVariables().storeMe();
+			});
+			
+			LOGGER.info("Training Camp daily time has been resetted.");
+		}
 	}
 	
 	private void resetDailyMissionRewards()
