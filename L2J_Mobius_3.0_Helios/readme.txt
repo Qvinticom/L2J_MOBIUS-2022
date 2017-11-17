@@ -47,6 +47,7 @@ Goddess of Destruction:
 -Agent of Chaos
 -Attribute Crystals
 -Ability Points
+-Training Camp
 
 Ertheia:
 -Ertheia Race
