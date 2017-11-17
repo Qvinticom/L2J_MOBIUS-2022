@@ -22,6 +22,8 @@ import java.util.StringTokenizer;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.ResidenceFunctionsData;
+import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
+import com.l2jmobius.gameserver.enums.ClanHallGrade;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -29,13 +31,12 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.model.holders.ClanHallTeleportHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunction;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunctionTemplate;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
+import com.l2jmobius.gameserver.model.teleporter.TeleportHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AgitDecoInfo;
 
 import ai.AbstractNpcAI;
@@ -185,37 +186,21 @@ public final class ClanHallManager extends AbstractNpcAI
 									final int teleportLevel = clanHall.getFunctionLevel(ResidenceFunctionType.TELEPORT);
 									if (teleportLevel > 0)
 									{
-										if (!st.hasMoreTokens())
+										final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), "tel" + teleportLevel);
+										if (holder != null)
 										{
-											final StringBuilder sb = new StringBuilder();
-											htmltext = getHtm(player.getHtmlPrefix(), "ClanHallManager-funcTeleport.html");
-											// Generate teleport list
-											clanHall.getTeleportList(teleportLevel).forEach(teleport ->
+											if (!st.hasMoreTokens())
 											{
-												final String price = (teleport.getCost() > 0) ? (" - " + teleport.getCost() + " Adena") : "";
-												sb.append("<button align=left icon=\"teleport\" action=\"bypass -h Quest ClanHallManager useFunctions teleport " + teleport.getNpcStringId().getId() + "\" msg=\"811;F;" + teleport.getNpcStringId().getId() + "\"><fstring>" + teleport.getNpcStringId().getId() + "</fstring>" + price + "</button>");
-											});
-											htmltext = htmltext.replaceAll("%teleportList%", sb.toString());
-										}
-										else
-										{
-											final int destination = Integer.parseInt(st.nextToken());
-											final ClanHallTeleportHolder holder = clanHall.getTeleportList(teleportLevel).stream().filter(tel -> tel.getNpcStringId().getId() == destination).findFirst().orElse(null);
-											if (holder != null)
-											{
-												if (player.getAdena() >= holder.getCost())
-												{
-													player.reduceAdena("Clan Hall Teleport", holder.getCost(), npc, true);
-													player.teleToLocation(holder.getLocation());
-												}
-												else
-												{
-													player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-												}
+												holder.showTeleportList(player, npc, "Quest ClanHallManager useFunctions teleport");
 											}
-											else
+											else if (st.countTokens() >= 2)
 											{
-												htmltext = "ClanHallManager-noFunction.html";
+												final String listName = st.nextToken();
+												final int funcLvl = (listName.length() >= 4) ? CommonUtil.parseInt(listName.substring(3), -1) : -1;
+												if (teleportLevel == funcLvl)
+												{
+													holder.doTeleport(player, npc, CommonUtil.parseNextInt(st, -1));
+												}
 											}
 										}
 									}
@@ -313,7 +298,7 @@ public final class ClanHallManager extends AbstractNpcAI
 							{
 								case "recovery":
 								{
-									htmltext = getHtm(player.getHtmlPrefix(), "ClanHallManager-manageFuncRecovery.html");
+									htmltext = getHtm(player.getHtmlPrefix(), clanHall.getGrade() == ClanHallGrade.GRADE_S ? "ClanHallManager-manageFuncRecoverySGrade.html" : "ClanHallManager-manageFuncRecoveryBGrade.html");
 									htmltext = getFunctionInfo(clanHall.getFunction(ResidenceFunctionType.HP_REGEN), htmltext, "HP");
 									htmltext = getFunctionInfo(clanHall.getFunction(ResidenceFunctionType.MP_REGEN), htmltext, "MP");
 									htmltext = getFunctionInfo(clanHall.getFunction(ResidenceFunctionType.EXP_RESTORE), htmltext, "XP");
@@ -494,10 +479,10 @@ public final class ClanHallManager extends AbstractNpcAI
 	{
 		if (func != null)
 		{
-			htmltext = htmltext.replaceAll("%" + name + "recovery%", (int) func.getTemplate().getValue() + "%");
+			htmltext = htmltext.replaceAll("%" + name + "recovery%", String.valueOf((int) func.getTemplate().getValue()) + "%");
 			htmltext = htmltext.replaceAll("%" + name + "price%", "<fstring p1=\"" + func.getTemplate().getCost().getCount() + "\" p2=\"" + func.getTemplate().getDurationAsDays() + "\">" + NpcStringId.FONT_COLOR_FFAABB_S1_FONT_ADENA_S2_DAY_S.getId() + "</fstring>");
 			htmltext = htmltext.replace("%" + name + "expire%", "Withdraw the fee for the next time at " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(func.getExpiration())));
-			htmltext = htmltext.replaceAll("%" + name + "deactive%", "[<a action=\"bypass -h Quest ClanHallManager manageFunctions removeFunction confirm " + func.getType() + "\">Deactivate</a>]");
+			htmltext = htmltext.replaceAll("%" + name + "deactive%", "[<a action=\"bypass -h Quest ClanHallManager manageFunctions removeFunction confirm " + func.getType().toString() + "\">Deactivate</a>]");
 		}
 		else
 		{
