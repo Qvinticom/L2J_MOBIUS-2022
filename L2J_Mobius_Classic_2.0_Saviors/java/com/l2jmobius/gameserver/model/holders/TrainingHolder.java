@@ -83,14 +83,14 @@ public class TrainingHolder implements Serializable
 		return Config.TRAINING_CAMP_ENABLE && (player.getObjectId() == _objectId) && (player.getClassIndex() == _classIndex);
 	}
 	
-	public long getElapsedTime(long time, TimeUnit unit)
+	public long getElapsedTime()
 	{
-		return unit.convert(time - _startTime, TimeUnit.MILLISECONDS);
+		return TimeUnit.SECONDS.convert(System.currentTimeMillis() - _startTime, TimeUnit.MILLISECONDS);
 	}
 	
 	public long getRemainingTime()
 	{
-		return TimeUnit.SECONDS.toMinutes(Config.TRAINING_CAMP_MAX_DURATION - getElapsedTime(System.currentTimeMillis(), TimeUnit.SECONDS));
+		return TimeUnit.SECONDS.toMinutes(Config.TRAINING_CAMP_MAX_DURATION - getElapsedTime());
 	}
 	
 	public long getRemainingTime(long time)
