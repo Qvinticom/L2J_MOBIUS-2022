@@ -122,7 +122,7 @@
 		<nextAction>CAST</nextAction>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="28">6</value>
-			<value fromLevel="24" toLevel="28" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="24" toLevel="28" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -177,16 +177,6 @@
 					<value fromLevel="24" toLevel="28" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="24" toLevel="28" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="24" toLevel="28" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 				<debuffModifier>1.1</debuffModifier>
 			</effect>
@@ -284,7 +274,7 @@
 		</magicLvl>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="20">6</value>
-			<value fromLevel="16" toLevel="20" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="16" toLevel="20" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -336,16 +326,6 @@
 					<value fromLevel="16" toLevel="20" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="16" toLevel="20" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="16" toLevel="20" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="16" toLevel="20" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 				<debuffModifier>1.1</debuffModifier>
 			</effect>
@@ -363,7 +343,7 @@
 		<abnormalVisualEffect>WIND_STUN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="25">120</value>
-			<value fromLevel="21" toLevel="25" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="21" toLevel="25" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<icon>icon.skill30004</icon>
 		<operateType>A2</operateType>
@@ -484,24 +464,14 @@
 					<value fromLevel="21" toLevel="25" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="21" toLevel="25" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="21" toLevel="25" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="21" toLevel="25" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="MagicalDefence" fromLevel="21" toLevel="25" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="21" toLevel="25" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="21" toLevel="25" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -542,7 +512,7 @@
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">120</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>5-10</affectLimit> <!-- Unconfirmed -->
 		<affectRange>100</affectRange> <!-- Unconfirmed -->
@@ -586,7 +556,7 @@
 		<trait>KNOCKBACK</trait>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">6</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -629,16 +599,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 		</effects>
@@ -692,7 +652,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="15">6</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -739,16 +699,6 @@
 					<value fromLevel="11" toLevel="15" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="11" toLevel="15" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="11" toLevel="15" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlot">
@@ -888,15 +838,15 @@
 				<amount>100</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="9" toLevel="10" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="PhysicalDefence" fromLevel="9" toLevel="10" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="9" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="9" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="9" toLevel="10" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="MagicalDefence" fromLevel="9" toLevel="10" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="9" toLevel="10" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="9" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -909,7 +859,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">10</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalVisualEffect>WIND_HIDE</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
@@ -944,7 +894,7 @@
 				<power>10</power>
 				<ticks>5</ticks>
 			</effect>
-			<effect name="Heal" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="Heal" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<power>
 					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2001">1936</value>
 					<value fromLevel="1" toLevel="2" fromSubLevel="2002" toSubLevel="2002">2072</value>
@@ -966,16 +916,6 @@
 					<value fromLevel="1" toLevel="2" fromSubLevel="2018" toSubLevel="2018">4234</value>
 					<value fromLevel="1" toLevel="2" fromSubLevel="2019" toSubLevel="2019">4369</value>
 					<value fromLevel="1" toLevel="2" fromSubLevel="2020" toSubLevel="2020">4504</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2021" toSubLevel="2021">4594</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2022" toSubLevel="2022">4684</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2023" toSubLevel="2023">4774</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2024" toSubLevel="2024">4864</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2025" toSubLevel="2025">4955</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2026" toSubLevel="2026">5044</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2027" toSubLevel="2027">5135</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2028" toSubLevel="2028">5224</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2029" toSubLevel="2029">5315</value>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2030" toSubLevel="2030">5405</value>
 				</power>
 			</effect>
 		</effects>
@@ -1053,7 +993,7 @@
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="25">120</value>
-			<value fromLevel="21" toLevel="25" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="21" toLevel="25" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<operateType>DA2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1088,7 +1028,7 @@
 		<effectPoint>-696</effectPoint>
 		<castRange>
 			<value fromLevel="1" toLevel="25">900</value>
-			<value fromLevel="21" toLevel="25" fromSubLevel="3001" toSubLevel="3030">{base + 10 * subIndex}</value>
+			<value fromLevel="21" toLevel="25" fromSubLevel="3001" toSubLevel="3020">{base + 10 * subIndex}</value>
 		</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -1150,16 +1090,6 @@
 					<value fromLevel="21" toLevel="25" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="21" toLevel="25" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="21" toLevel="25" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="21" toLevel="25" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlot">
@@ -1211,7 +1141,7 @@
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="15">50</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<trait>PSYCHIC</trait> <!-- retail confirmed {trait_psychic} -->
@@ -1237,7 +1167,7 @@
 		</mpConsume>
 		<castRange>
 			<value fromLevel="1" toLevel="15">600</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3030">{base + 10 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3020">{base + 10 * subIndex}</value>
 		</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
@@ -1257,9 +1187,9 @@
 		<effects>
 			<effect name="Compelling" />
 			<effect name="BlockControl" />
-			<effect name="MagicalDefence" fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="MagicalDefence" fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1299,7 +1229,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<effectPoint>687</effectPoint>
 		<operateType>A2</operateType>
@@ -1342,9 +1272,9 @@
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
-			<effect name="MAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="MAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.4 + 0.6 * subIndex}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{0.4 + 0.6 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1422,15 +1352,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1482,7 +1412,7 @@
 		<abnormalTime>10</abnormalTime>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">80</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<effectPoint>-687</effectPoint>
 		<operateType>A2</operateType>
@@ -1560,16 +1490,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 				<debuffModifier>1.1</debuffModifier>
 			</effect>
@@ -1595,7 +1515,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalVisualEffect>SAYHA_FURY</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -1635,15 +1555,15 @@
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1657,7 +1577,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">30</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<effectPoint>687</effectPoint>
 		<operateType>A2</operateType>
@@ -1718,15 +1638,15 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PAtk" fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="PAtk" fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MAtk" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="MAtk" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">{0.4 + 0.6 * subIndex}</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">{0.4 + 0.6 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1801,7 +1721,7 @@
 		<abnormalTime>5</abnormalTime>
 		<activateRate>
 			<value fromLevel="1" toLevel="4">90</value>
-			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit> <!-- Unconfirmed -->
 		<affectRange>200</affectRange> <!-- Unconfirmed -->
@@ -1824,7 +1744,7 @@
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="4">6</value>
-			<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -1855,16 +1775,6 @@
 					<value fromLevel="1" toLevel="4" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="1" toLevel="4" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="1" toLevel="4" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 				<debuffModifier>1.1</debuffModifier>
 			</effect>

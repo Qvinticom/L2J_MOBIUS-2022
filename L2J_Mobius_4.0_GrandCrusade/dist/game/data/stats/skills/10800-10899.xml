@@ -95,7 +95,7 @@
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="8">100</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<icon>icon.skill10801</icon>
 		<operateType>A2</operateType>
@@ -194,15 +194,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Speed" fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -218,7 +218,7 @@
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="4">100</value>
-			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -254,15 +254,15 @@
 				<amount>-25</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Speed" fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -349,7 +349,7 @@
 			<value level="2">600</value>
 			<value level="3">700</value>
 			<value level="4">800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + 10 * subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + 10 * subIndex}</value>
 		</castRange>
 		<effectRange>
 			<value level="1">1000</value>
@@ -543,7 +543,7 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<effectPoint>687</effectPoint>
@@ -613,15 +613,15 @@
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -696,7 +696,7 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<icon>icon.skill11871</icon>
@@ -763,15 +763,15 @@
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

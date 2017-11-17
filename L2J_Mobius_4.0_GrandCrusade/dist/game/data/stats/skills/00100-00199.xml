@@ -1845,7 +1845,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="9">60</value>
 			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="8" toLevel="9" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>
@@ -1929,7 +1929,7 @@
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
-			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
 				<power>
 					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2001">1936</value>
 					<value fromLevel="8" toLevel="9" fromSubLevel="2002" toSubLevel="2002">2072</value>
@@ -1951,16 +1951,6 @@
 					<value fromLevel="8" toLevel="9" fromSubLevel="2018" toSubLevel="2018">4234</value>
 					<value fromLevel="8" toLevel="9" fromSubLevel="2019" toSubLevel="2019">4369</value>
 					<value fromLevel="8" toLevel="9" fromSubLevel="2020" toSubLevel="2020">4504</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2021" toSubLevel="2021">4594</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2022" toSubLevel="2022">4684</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2023" toSubLevel="2023">4774</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2024" toSubLevel="2024">4864</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2025" toSubLevel="2025">4955</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2026" toSubLevel="2026">5044</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2027" toSubLevel="2027">5135</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2028" toSubLevel="2028">5224</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2029" toSubLevel="2029">5315</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2030" toSubLevel="2030">5405</value>
 				</power>
 			</effect>
 		</effects>
@@ -2773,7 +2763,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="9">60</value>
 			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="8" toLevel="9" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>
@@ -2945,7 +2935,7 @@
 				<mode>DIFF</mode>
 				<hpPercent>30</hpPercent>
 			</effect>
-			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
 				<power>
 					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2001">1936</value>
 					<value fromLevel="8" toLevel="9" fromSubLevel="2002" toSubLevel="2002">2072</value>
@@ -2967,16 +2957,6 @@
 					<value fromLevel="8" toLevel="9" fromSubLevel="2018" toSubLevel="2018">4234</value>
 					<value fromLevel="8" toLevel="9" fromSubLevel="2019" toSubLevel="2019">4369</value>
 					<value fromLevel="8" toLevel="9" fromSubLevel="2020" toSubLevel="2020">4504</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2021" toSubLevel="2021">4594</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2022" toSubLevel="2022">4684</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2023" toSubLevel="2023">4774</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2024" toSubLevel="2024">4864</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2025" toSubLevel="2025">4955</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2026" toSubLevel="2026">5044</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2027" toSubLevel="2027">5135</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2028" toSubLevel="2028">5224</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2029" toSubLevel="2029">5315</value>
-					<value fromLevel="8" toLevel="9" fromSubLevel="2030" toSubLevel="2030">5405</value>
 				</power>
 			</effect>
 		</effects>

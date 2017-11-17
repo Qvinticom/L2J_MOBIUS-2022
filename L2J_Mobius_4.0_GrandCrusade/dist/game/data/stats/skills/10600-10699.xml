@@ -28,15 +28,15 @@
 				<magicType>0</magicType>
 				<amount>90</amount>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
 			</effect>
@@ -207,15 +207,15 @@
 			<effect name="CounterPhysicalSkill">
 				<amount>90</amount>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
 			</effect>

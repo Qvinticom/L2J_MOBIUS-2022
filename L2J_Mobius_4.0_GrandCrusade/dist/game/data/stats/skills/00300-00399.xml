@@ -1736,7 +1736,7 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
@@ -1811,7 +1811,7 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -1822,9 +1822,9 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Speed" fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1842,7 +1842,7 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<effectPoint>-709</effectPoint>
@@ -1917,14 +1917,14 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
 			</effect>
-			<effect name="Speed" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Speed" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2754,7 +2754,7 @@
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">40</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>

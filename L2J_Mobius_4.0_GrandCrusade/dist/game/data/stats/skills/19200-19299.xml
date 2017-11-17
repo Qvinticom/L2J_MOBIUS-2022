@@ -107,15 +107,15 @@
 				<BOW>-60</BOW>
 				<CROSSBOW>-60</CROSSBOW>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-2 * subIndex}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -127,7 +127,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_WEAPON</abnormalType> <!-- find proper name -->
 		<icon>icon.skill19204</icon>
@@ -176,7 +176,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_OF_ARCHERY</abnormalType>
 		<affectRange>1000</affectRange>
@@ -205,7 +205,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>DANCE_OF_SAGE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -234,7 +234,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_WEAPON</abnormalType> <!-- find proper name -->
 		<affectRange>1000</affectRange>
@@ -301,21 +301,21 @@
 			<effect name="BlockSkill">
 				<magicTypes>3</magicTypes>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
  				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{-0.6 - 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{-0.6 - 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
  				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
  				</amount>
  				<mode>DIFF</mode>
  			</effect>
@@ -333,7 +333,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalVisualEffect>DIVINITY</abnormalVisualEffect>
 		<targetType>SELF</targetType>
@@ -379,7 +379,7 @@
 				<npcId>15154</npcId>
 				<lifeTime>30</lifeTime>
 			</effect>
-			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
 				<power>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">532</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">570</value>
@@ -401,16 +401,6 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">1165</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">1202</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">1240</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">1264</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">1289</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">1314</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">1339</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">1363</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">1389</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">1413</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">1438</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">1463</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">1488</value>
 				</power>
 			</effect>
 		</effects>
@@ -443,7 +433,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SHILLIEN_PROTECTION</abnormalType>
 		<abnormalVisualEffect>SHILLIEN_PROTECTION</abnormalVisualEffect>
@@ -978,7 +968,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_OF_WISDOM</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1012,7 +1002,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>CRIPPLING_DANCE</abnormalType>
 		<affectRange>1000</affectRange>

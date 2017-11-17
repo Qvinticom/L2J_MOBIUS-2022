@@ -345,7 +345,7 @@
 		<abnormalType>LIMIT</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">60</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -441,15 +441,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">
  				<amount>
- 					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+ 					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
-			<effect name="MagicalDefence" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="MagicalDefence" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+ 					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -668,7 +668,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">30</value>
 			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="6" toLevel="7" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="6" toLevel="7" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<effectPoint>150</effectPoint>
@@ -743,9 +743,9 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PAtk" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PAtk" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
  				<amount>
- 					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>

@@ -4124,11 +4124,11 @@
 				<chargeConsume>4</chargeConsume>
 				<criticalChance>
 					<value fromLevel="1" toLevel="34">15</value>
-					<value fromLevel="30" toLevel="34" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="30" toLevel="34" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="34">1</value>
-					<value fromLevel="30" toLevel="34" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="30" toLevel="34" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 				<overHit>true</overHit>
 				<power>
@@ -4166,7 +4166,7 @@
 					<value level="32">38441</value>
 					<value level="33">40315</value>
 					<value level="34">42189</value>
-					<value fromLevel="30" toLevel="34" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="30" toLevel="34" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
@@ -5029,7 +5029,7 @@
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="17">40</value>
-			<value fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>400</castRange>
@@ -5125,7 +5125,7 @@
 					<value level="15">27108</value>
 					<value level="16">28354</value>
 					<value level="17">29600</value>
-					<value fromLevel="13" toLevel="17" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="13" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">
@@ -6044,9 +6044,9 @@
 					<value level="13">-30</value>
 				</POLE>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="11" toLevel="13" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="PhysicalDefence" fromLevel="11" toLevel="13" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="11" toLevel="13" fromSubLevel="1001" toSubLevel="1030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="11" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

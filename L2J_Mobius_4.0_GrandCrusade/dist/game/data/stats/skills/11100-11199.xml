@@ -140,7 +140,7 @@
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<attachSkillList>
 			<item>
@@ -195,16 +195,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -253,7 +243,7 @@
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -286,16 +276,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="CallSkill">
@@ -351,7 +331,7 @@
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -384,16 +364,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -481,7 +451,7 @@
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -514,16 +484,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -578,7 +538,7 @@
 		<effectPoint>-1009</effectPoint>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -611,16 +571,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -699,7 +649,7 @@
 		<effectPoint>-1009</effectPoint>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -732,16 +682,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -831,7 +771,7 @@
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -864,16 +804,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -927,7 +857,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<attachSkillList>
 			<item>
@@ -970,16 +900,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1030,7 +950,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -1063,16 +983,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1151,7 +1061,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -1184,16 +1094,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1268,7 +1168,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<attachSkillList>
 			<item>
@@ -1311,16 +1211,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1371,7 +1261,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -1404,16 +1294,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="CallSkill">
@@ -1465,7 +1345,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -1498,16 +1378,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="TeleportToTarget" />
@@ -1558,7 +1428,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<attachSkillList>
 			<item>
@@ -1601,16 +1471,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1658,7 +1518,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -1691,16 +1551,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1776,7 +1626,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -1809,16 +1659,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1872,7 +1712,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<attachSkillList>
 			<item>
@@ -1915,16 +1755,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -1972,7 +1802,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -2005,16 +1835,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -2090,7 +1910,7 @@
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -2123,16 +1943,6 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="DispelBySlotProbability">
@@ -2564,16 +2374,6 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="CallSkill">
@@ -2610,11 +2410,11 @@
 			<effect name="HpDrain">
 				<power>
 					<value fromLevel="1" toLevel="1">550</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<percentage>
 					<value fromLevel="1" toLevel="1">50</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</percentage>
 			</effect>
 			<effect name="CallSkill">
@@ -2668,16 +2468,6 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="CallSkill">
@@ -2728,16 +2518,6 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="CallSkill">
@@ -3133,7 +2913,7 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">5</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
@@ -3165,16 +2945,6 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 			<effect name="MagicalDefence">
@@ -3245,7 +3015,7 @@
 		<isMagic>1</isMagic>
 		<selfEffects>
 			<effect name="DebuffBlock" />
-			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
 				<power>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">1936</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">2072</value>
@@ -3267,19 +3037,9 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">4234</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">4369</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">4594</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">4684</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">4774</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">4864</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">4955</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">5044</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">5135</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">5224</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">5315</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">5405</value>
 				</power>
 			</effect>
-			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2001">532</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2002" toSubLevel="2002">570</value>
@@ -3301,20 +3061,10 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="2018" toSubLevel="2018">1165</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2019" toSubLevel="2019">1202</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2020" toSubLevel="2020">1240</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2021" toSubLevel="2021">1264</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2022" toSubLevel="2022">1289</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2023" toSubLevel="2023">1314</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2024" toSubLevel="2024">1339</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2025" toSubLevel="2025">1363</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2026" toSubLevel="2026">1389</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2027" toSubLevel="2027">1413</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2028" toSubLevel="2028">1438</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2029" toSubLevel="2029">1463</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2030" toSubLevel="2030">1488</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CpHeal" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="CpHeal" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3001">2421</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="3002" toSubLevel="3002">2590</value>
@@ -3336,16 +3086,6 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="3018" toSubLevel="3018">5293</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="3019" toSubLevel="3019">5462</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="3020" toSubLevel="3020">5631</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3021" toSubLevel="3021">5743</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3022" toSubLevel="3022">5856</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3023" toSubLevel="3023">5968</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3024" toSubLevel="3024">6081</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3025" toSubLevel="3025">6194</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3026" toSubLevel="3026">6306</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3027" toSubLevel="3027">6419</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3028" toSubLevel="3028">6531</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3029" toSubLevel="3029">6644</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3030" toSubLevel="3030">6757</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

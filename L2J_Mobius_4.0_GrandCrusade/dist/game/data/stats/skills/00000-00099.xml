@@ -934,16 +934,16 @@
 					<value level="42">23352</value>
 					<value level="43">24490</value>
 					<value level="44">25628</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
 					<value fromLevel="1" toLevel="44">15</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="44">1</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -3650,16 +3650,16 @@
 					<value level="42">23352</value>
 					<value level="43">24490</value>
 					<value level="44">25628</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
 					<value fromLevel="1" toLevel="44">15</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="44">1</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -4079,7 +4079,7 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="49">50</value>
-			<value fromLevel="45" toLevel="49" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="45" toLevel="49" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4309,12 +4309,12 @@
 					<value level="47">39349</value>
 					<value level="48">40997</value>
 					<value level="49">42645</value>
-					<value fromLevel="45" toLevel="49" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="45" toLevel="49" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>
 					<value fromLevel="1" toLevel="49">15</value>
-					<value fromLevel="45" toLevel="49" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="45" toLevel="49" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -5604,7 +5604,7 @@
 					<value level="35">2520</value>
 					<value level="36">2582</value>
 					<value level="37">2644</value>
-					<value fromLevel="33" toLevel="37" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="33" toLevel="37" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 		</effects>
@@ -6672,7 +6672,7 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">600</value>
-			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>235</effectPoint>
@@ -6759,9 +6759,9 @@
 					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
-			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

@@ -581,7 +581,7 @@
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="17">40</value>
-			<value fromLevel="13" toLevel="17" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="13" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
@@ -661,15 +661,15 @@
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalDefence" fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="MagicalDefence" fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1249,7 +1249,7 @@
 		</abnormalLvl>		
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">120</value>
-			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
 		</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
 		<effectPoint>
@@ -1313,7 +1313,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ManaHeal" fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="ManaHeal" fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2020">
 				<power>
 					<value fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2001">532</value>
 					<value fromLevel="7" toLevel="8" fromSubLevel="2002" toSubLevel="2002">570</value>
@@ -1335,16 +1335,6 @@
 					<value fromLevel="7" toLevel="8" fromSubLevel="2018" toSubLevel="2018">1165</value>
 					<value fromLevel="7" toLevel="8" fromSubLevel="2019" toSubLevel="2019">1202</value>
 					<value fromLevel="7" toLevel="8" fromSubLevel="2020" toSubLevel="2020">1240</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2021" toSubLevel="2021">1264</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2022" toSubLevel="2022">1289</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2023" toSubLevel="2023">1314</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2024" toSubLevel="2024">1339</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2025" toSubLevel="2025">1363</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2026" toSubLevel="2026">1389</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2027" toSubLevel="2027">1413</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2028" toSubLevel="2028">1438</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2029" toSubLevel="2029">1463</value>
-					<value fromLevel="7" toLevel="8" fromSubLevel="2030" toSubLevel="2030">1488</value>
 				</power>
 			</effect>
 		</effects>
@@ -2612,7 +2602,7 @@
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="10">60</value>
-			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
@@ -2654,7 +2644,7 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<effectPoint>673</effectPoint>
@@ -5204,7 +5194,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">30</value>
 			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="7" toLevel="8" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="7" toLevel="8" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<effectPoint>
@@ -5273,9 +5263,9 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PAtk" fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PAtk" fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2020">
  				<amount>
- 					<value fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 					<value fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
@@ -5318,7 +5308,7 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="19">70</value>
-			<value fromLevel="15" toLevel="19" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="15" toLevel="19" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
@@ -5405,15 +5395,15 @@
 				<amount>-40</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalDefence" fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3030">
+			<effect name="Speed" fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+					<value fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
