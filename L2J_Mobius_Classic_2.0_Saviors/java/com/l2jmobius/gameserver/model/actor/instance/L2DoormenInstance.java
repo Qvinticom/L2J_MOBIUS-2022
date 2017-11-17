@@ -18,12 +18,13 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.L2TeleportLocation;
+import com.l2jmobius.gameserver.enums.TeleportType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.teleporter.TeleportHolder;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -92,7 +93,12 @@ public class L2DoormenInstance extends L2NpcInstance
 		{
 			if (isOwnerClan(player))
 			{
-				doTeleport(player, command);
+				final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), TeleportType.OTHER.name());
+				if (holder != null)
+				{
+					final int locId = Integer.parseInt(command.substring(5).trim());
+					holder.doTeleport(player, this, locId);
+				}
 			}
 			return;
 		}
@@ -148,25 +154,6 @@ public class L2DoormenInstance extends L2NpcInstance
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(player.getHtmlPrefix(), "data/html/doormen/" + getTemplate().getId() + "-busy.htm");
 		player.sendPacket(html);
-	}
-	
-	protected void doTeleport(L2PcInstance player, String command)
-	{
-		final int whereTo = Integer.parseInt(command.substring(5).trim());
-		final L2TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(whereTo);
-		if (list != null)
-		{
-			if (!player.isAlikeDead())
-			{
-				player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
-			}
-		}
-		else
-		{
-			_log.warning("No teleport destination with id:" + whereTo);
-		}
-		
-		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
 	protected boolean isOwnerClan(L2PcInstance player)

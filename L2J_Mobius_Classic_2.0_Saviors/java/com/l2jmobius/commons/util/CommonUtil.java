@@ -511,6 +511,18 @@ public final class CommonUtil
 		}
 	}
 	
+	public static int parseInt(String value, int defaultValue)
+	{
+		try
+		{
+			return Integer.parseInt(value);
+		}
+		catch (Exception e)
+		{
+			return defaultValue;
+		}
+	}
+	
 	/**
 	 * @param str - the string whose first letter to capitalize
 	 * @return a string with the first letter of the {@code str} capitalized

@@ -16,6 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.teleporter;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -32,6 +36,7 @@ public class TeleportLocation extends Location
 	private final int _questZoneId;
 	private final int _feeId;
 	private final long _feeCount;
+	private final List<Integer> _castleId;
 	
 	public TeleportLocation(int id, StatsSet set)
 	{
@@ -42,6 +47,24 @@ public class TeleportLocation extends Location
 		_questZoneId = set.getInt("questZoneId", 0);
 		_feeId = set.getInt("feeId", Inventory.ADENA_ID);
 		_feeCount = set.getLong("feeCount", 0);
+		
+		final String castleIds = set.getString("castleId", "");
+		if (castleIds.isEmpty())
+		{
+			_castleId = Collections.emptyList();
+		}
+		else if (!castleIds.contains(";"))
+		{
+			_castleId = Collections.singletonList(Integer.parseInt(castleIds));
+		}
+		else
+		{
+			_castleId = new ArrayList<>();
+			for (String castleId : castleIds.split(";"))
+			{
+				_castleId.add(Integer.parseInt(castleId));
+			}
+		}
 	}
 	
 	public int getId()
@@ -72,5 +95,10 @@ public class TeleportLocation extends Location
 	public long getFeeCount()
 	{
 		return _feeCount;
+	}
+	
+	public List<Integer> getCastleId()
+	{
+		return _castleId;
 	}
 }
