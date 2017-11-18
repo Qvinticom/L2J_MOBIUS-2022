@@ -79,7 +79,7 @@ public final class Q10762_MarionetteSpirit extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveStoryQuestReward(player, 5);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 896996, 215);
 					qs.exitQuest(false, true);
 				}

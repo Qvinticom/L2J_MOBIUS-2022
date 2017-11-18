@@ -92,7 +92,7 @@ public final class Q10780_AWeakenedBarrier extends Quest
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_ARMOR_B, 5);
-					giveStoryQuestReward(player, 36);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 15108843, 914);
 					qs.exitQuest(false, true);
 				}

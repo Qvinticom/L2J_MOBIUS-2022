@@ -88,7 +88,7 @@ public final class Q10398_ASuspiciousBadge extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAB, 5);
-					giveStoryQuestReward(player, 36);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 6135787, 914);

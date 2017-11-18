@@ -94,7 +94,7 @@ public final class Q10402_NowhereToTurn extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAB, 5);
-					giveStoryQuestReward(player, 34);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 5_482_574, 1_315);

@@ -90,7 +90,7 @@ public final class Q10460_ReturnOfTheAlligatorHunter extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAC, 7);
-					giveStoryQuestReward(player, 26);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 2795688, 670);
 					htmltext = event;
 				}

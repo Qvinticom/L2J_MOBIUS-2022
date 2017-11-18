@@ -92,7 +92,7 @@ public final class Q10401_KekropusLetterDecodingTheBadge extends LetterQuest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAB, 5);
-					giveStoryQuestReward(player, 30);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 731_010, 175);

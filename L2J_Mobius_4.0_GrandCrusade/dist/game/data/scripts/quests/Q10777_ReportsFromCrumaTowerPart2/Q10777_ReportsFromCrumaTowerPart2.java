@@ -113,7 +113,7 @@ public final class Q10777_ReportsFromCrumaTowerPart2 extends Quest
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_ARMOR_C, 2);
-					giveStoryQuestReward(player, 4);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 151263, 36);
 					qs.exitQuest(false, true);
 				}

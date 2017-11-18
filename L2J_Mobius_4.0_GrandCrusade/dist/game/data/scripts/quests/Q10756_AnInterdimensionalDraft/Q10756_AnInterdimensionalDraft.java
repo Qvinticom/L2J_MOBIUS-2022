@@ -89,7 +89,7 @@ public final class Q10756_AnInterdimensionalDraft extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveStoryQuestReward(player, 8);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 174222, 41);
 					qs.exitQuest(false, true);
 				}

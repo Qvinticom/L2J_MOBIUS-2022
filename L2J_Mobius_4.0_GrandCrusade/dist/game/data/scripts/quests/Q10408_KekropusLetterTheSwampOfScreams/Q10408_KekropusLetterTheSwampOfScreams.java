@@ -93,7 +93,7 @@ public final class Q10408_KekropusLetterTheSwampOfScreams extends LetterQuest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EWA, 2);
-					giveStoryQuestReward(player, 91);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 942_690, 226);

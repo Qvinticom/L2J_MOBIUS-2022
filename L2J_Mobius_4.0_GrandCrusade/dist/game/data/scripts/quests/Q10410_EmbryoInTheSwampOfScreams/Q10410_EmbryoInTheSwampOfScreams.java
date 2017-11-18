@@ -104,7 +104,7 @@ public final class Q10410_EmbryoInTheSwampOfScreams extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 5);
-					giveStoryQuestReward(player, 63);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 161_046_201, 4072);

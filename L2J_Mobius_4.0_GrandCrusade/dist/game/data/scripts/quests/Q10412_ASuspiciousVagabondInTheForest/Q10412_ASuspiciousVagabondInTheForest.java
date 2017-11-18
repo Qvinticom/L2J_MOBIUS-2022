@@ -79,7 +79,7 @@ public final class Q10412_ASuspiciousVagabondInTheForest extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 3);
-					giveStoryQuestReward(player, 3);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 942_690, 226);

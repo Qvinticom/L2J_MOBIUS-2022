@@ -93,7 +93,7 @@ public final class Q10775_InSearchOfAnAncientGiant extends Quest
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_ARMOR_C, 9);
-					giveStoryQuestReward(player, 46);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 4443600, 1066);
 					qs.exitQuest(false, true);
 				}

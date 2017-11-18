@@ -91,7 +91,7 @@ public final class Q10784_TheBrokenDevice extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveStoryQuestReward(player, 40);
+					giveStoryQuestReward(npc, player);
 					giveAdena(player, 990_000, true);
 					giveItems(player, SOULSHOT, 6000);
 					giveItems(player, SPIRITSHOT, 6000);

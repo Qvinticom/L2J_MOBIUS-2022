@@ -91,7 +91,7 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 5);
-					giveStoryQuestReward(player, 26);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() > MIN_LEVEL)
 					{
 						addExpAndSp(player, 2_721_600, 653);

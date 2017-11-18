@@ -92,7 +92,7 @@ public final class Q10397_KekropusLetterASuspiciousBadge extends LetterQuest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EWB, 2);
-					giveStoryQuestReward(player, 20);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 635_250, 152);

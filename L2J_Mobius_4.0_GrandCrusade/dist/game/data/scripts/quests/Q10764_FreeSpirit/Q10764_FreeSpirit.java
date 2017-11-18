@@ -89,7 +89,7 @@ public final class Q10764_FreeSpirit extends Quest
 				if (qs.isCond(2))
 				{
 					addSpawn(SYLPH, SYLPH_LOCATION, false, 4000);
-					giveStoryQuestReward(player, 10);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 1312934, 315);
 					qs.exitQuest(false, true);
 				}

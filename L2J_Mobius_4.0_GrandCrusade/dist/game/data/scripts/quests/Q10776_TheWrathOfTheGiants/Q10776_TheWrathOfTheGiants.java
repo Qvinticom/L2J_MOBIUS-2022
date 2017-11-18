@@ -139,7 +139,7 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 				if (qs.isCond(4))
 				{
 					giveItems(player, ENCHANT_ARMOR_C, 4);
-					giveStoryQuestReward(player, 20);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 4838400, 1161);
 					qs.exitQuest(false, true);
 				}

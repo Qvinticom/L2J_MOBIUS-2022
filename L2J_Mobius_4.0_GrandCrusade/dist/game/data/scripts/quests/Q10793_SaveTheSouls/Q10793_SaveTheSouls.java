@@ -98,7 +98,7 @@ public final class Q10793_SaveTheSouls extends Quest
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_ARMOR_A, 3);
-					giveStoryQuestReward(player, 3);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 942690, 226);

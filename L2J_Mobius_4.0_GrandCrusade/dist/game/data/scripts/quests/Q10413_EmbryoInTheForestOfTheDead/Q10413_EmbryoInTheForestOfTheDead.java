@@ -133,7 +133,7 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 5);
-					giveStoryQuestReward(player, 63);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 16_968_420, 4072);

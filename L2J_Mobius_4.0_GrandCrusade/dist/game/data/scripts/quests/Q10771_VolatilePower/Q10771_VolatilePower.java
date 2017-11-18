@@ -89,7 +89,7 @@ public final class Q10771_VolatilePower extends Quest
 				if (qs.isCond(3))
 				{
 					giveItems(player, ENCHANT_ARMOR_C, 5);
-					giveStoryQuestReward(player, 20);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 2708350, 650);
 					qs.exitQuest(false, true);
 				}

@@ -96,7 +96,7 @@ public final class Q10405_KartiasSeed extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 5);
-					giveStoryQuestReward(player, 57);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 6_251_174, 1_500);

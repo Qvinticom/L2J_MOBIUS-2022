@@ -106,7 +106,7 @@ public final class Q10420_TheVarkaSilenosSupporters extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAS, 2);
-					giveStoryQuestReward(player, 89);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 22_997_520, 5519);

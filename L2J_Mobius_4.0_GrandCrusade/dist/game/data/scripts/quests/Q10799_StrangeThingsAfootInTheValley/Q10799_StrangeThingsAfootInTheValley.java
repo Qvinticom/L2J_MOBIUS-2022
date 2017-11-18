@@ -100,7 +100,7 @@ public class Q10799_StrangeThingsAfootInTheValley extends Quest
 				{
 					final int itemId = Integer.parseInt(event.replace("giveReward_", ""));
 					qs.exitQuest(false, true);
-					giveStoryQuestReward(player, 196);
+					giveStoryQuestReward(npc, player);
 					giveItems(player, EAS, 10);
 					giveItems(player, itemId, 30);
 					addExpAndSp(player, 76658400, 18398);

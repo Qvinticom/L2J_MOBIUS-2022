@@ -78,7 +78,7 @@ public class Q10797_CrossingFate extends Quest
 				if (qs.isCond(2))
 				{
 					addExpAndSp(player, 2721600, 653);
-					giveStoryQuestReward(player, 26);
+					giveStoryQuestReward(npc, player);
 					giveItems(player, EAA, 5);
 					qs.exitQuest(false, true);
 					break;

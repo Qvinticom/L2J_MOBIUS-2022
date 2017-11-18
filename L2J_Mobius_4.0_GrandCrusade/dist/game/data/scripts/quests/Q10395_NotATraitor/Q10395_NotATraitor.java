@@ -94,7 +94,7 @@ public final class Q10395_NotATraitor extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAC, 5);
-					giveStoryQuestReward(player, 32);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 3_781_574, 907);

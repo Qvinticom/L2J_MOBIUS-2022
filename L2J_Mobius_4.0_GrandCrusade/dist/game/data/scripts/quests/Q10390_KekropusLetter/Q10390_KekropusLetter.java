@@ -150,7 +150,7 @@ public final class Q10390_KekropusLetter extends Quest
 				if (st.isCond(4))
 				{
 					giveItems(player, EWC, 3);
-					giveStoryQuestReward(player, 21);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 370440, 88);
 					st.exitQuest(false, true);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_46, ExShowScreenMessage.TOP_CENTER, 6000);

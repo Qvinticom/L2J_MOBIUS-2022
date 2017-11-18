@@ -86,7 +86,7 @@ public final class Q10399_TheAlphabetOfTheGiants extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAB, 5);
-					giveStoryQuestReward(player, 37);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 8779765, 914);

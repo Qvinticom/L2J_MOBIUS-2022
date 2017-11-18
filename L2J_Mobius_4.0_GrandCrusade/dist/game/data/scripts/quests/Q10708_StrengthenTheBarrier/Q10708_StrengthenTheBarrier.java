@@ -101,7 +101,7 @@ public final class Q10708_StrengthenTheBarrier extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EWB, 1);
-					giveStoryQuestReward(player, 17);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 20881876, 152);

@@ -87,7 +87,7 @@ public final class Q10757_QuietingTheStorm extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveStoryQuestReward(player, 7);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 632051, 151);
 					qs.exitQuest(false, true);
 				}

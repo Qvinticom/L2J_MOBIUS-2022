@@ -89,7 +89,7 @@ public final class Q10758_TheOathOfTheWind extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveStoryQuestReward(player, 3);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 561645, 134);
 					qs.exitQuest(false, true);
 				}

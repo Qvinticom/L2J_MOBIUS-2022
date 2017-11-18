@@ -89,7 +89,7 @@ public final class Q10782_LettersFromTheQueenForsakenPlains extends LetterQuest
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_ARMOR_B, 10);
-					giveStoryQuestReward(player, 60);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 731010, 175);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_61, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);

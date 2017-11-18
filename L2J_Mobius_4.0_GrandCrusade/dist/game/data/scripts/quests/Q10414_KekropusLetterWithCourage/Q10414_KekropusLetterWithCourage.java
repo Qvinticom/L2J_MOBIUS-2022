@@ -93,7 +93,7 @@ public final class Q10414_KekropusLetterWithCourage extends LetterQuest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 5);
-					giveStoryQuestReward(player, 123);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 1_088_640, 261);

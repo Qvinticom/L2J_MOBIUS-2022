@@ -100,7 +100,7 @@ public class Q10791_TheManOfMystery extends Quest
 				if (qs.isCond(3))
 				{
 					addExpAndSp(player, 16968420, 4072);
-					giveStoryQuestReward(player, 63);
+					giveStoryQuestReward(npc, player);
 					giveItems(player, EAA, 2);
 					qs.exitQuest(false, true);
 					htmltext = "33847-07.html";

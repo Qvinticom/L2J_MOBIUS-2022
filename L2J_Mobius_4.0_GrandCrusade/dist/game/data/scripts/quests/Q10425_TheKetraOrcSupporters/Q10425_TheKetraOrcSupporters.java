@@ -109,7 +109,7 @@ public final class Q10425_TheKetraOrcSupporters extends Quest
 				{
 					qs.exitQuest(false, true);
 					giveItems(player, EAS, 2);
-					giveStoryQuestReward(player, 89);
+					giveStoryQuestReward(npc, player);
 					if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL))
 					{
 						addExpAndSp(player, 22_997_520, 5519);

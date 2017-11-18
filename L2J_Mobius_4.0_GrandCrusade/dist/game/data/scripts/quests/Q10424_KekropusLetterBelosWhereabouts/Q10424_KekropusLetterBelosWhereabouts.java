@@ -92,7 +92,7 @@ public final class Q10424_KekropusLetterBelosWhereabouts extends LetterQuest
 				{
 					qs.exitQuest(false, true);
 					giveItems(player, EWS, 1);
-					giveStoryQuestReward(player, 182);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 1_277_640, 306);

@@ -90,7 +90,7 @@ public final class Q10769_LettersFromTheQueenCrumaTowerPart1 extends LetterQuest
 				{
 					giveItems(player, ENCHANT_WEAPON_C, 1);
 					giveItems(player, ENCHANT_ARMOR_C, 1);
-					giveStoryQuestReward(player, 11);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 370440, 88);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_46, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);

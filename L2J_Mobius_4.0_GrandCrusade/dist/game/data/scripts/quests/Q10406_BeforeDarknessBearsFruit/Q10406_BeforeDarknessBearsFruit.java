@@ -86,7 +86,7 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 3);
-					giveStoryQuestReward(player, 10);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 3_125_586, 750);

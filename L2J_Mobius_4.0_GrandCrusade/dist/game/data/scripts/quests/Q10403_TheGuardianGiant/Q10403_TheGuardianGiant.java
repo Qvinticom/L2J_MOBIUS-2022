@@ -93,7 +93,7 @@ public final class Q10403_TheGuardianGiant extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAB, 5);
-					giveStoryQuestReward(player, 40);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 6_579_090, 1_578);

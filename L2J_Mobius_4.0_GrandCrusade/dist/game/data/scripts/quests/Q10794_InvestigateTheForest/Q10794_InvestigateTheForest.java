@@ -132,7 +132,7 @@ public final class Q10794_InvestigateTheForest extends Quest
 				{
 					takeItems(player, OLD_JEWELRY_BOX, -1);
 					giveItems(player, ENCHANT_ARMOR_A, 5);
-					giveStoryQuestReward(player, 63);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 16968420, 4072);

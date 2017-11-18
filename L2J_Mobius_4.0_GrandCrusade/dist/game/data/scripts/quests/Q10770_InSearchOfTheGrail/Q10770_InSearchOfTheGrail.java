@@ -99,7 +99,7 @@ public final class Q10770_InSearchOfTheGrail extends Quest
 				{
 					giveItems(player, ENCHANT_WEAPON_C, 2);
 					giveItems(player, ENCHANT_ARMOR_C, 5);
-					giveStoryQuestReward(player, 30);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 2342300, 562);
 					qs.exitQuest(false, true);
 				}

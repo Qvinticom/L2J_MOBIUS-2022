@@ -101,7 +101,7 @@ public class Q10790_AMercenaryHelper extends Quest
 				if (qs.isCond(2) && (player.getLevel() >= MIN_LEVEL))
 				{
 					qs.exitQuest(false, true);
-					giveStoryQuestReward(player, 3);
+					giveStoryQuestReward(npc, player);
 					giveItems(player, EAA, 3);
 					addExpAndSp(player, 942650, 226);
 					htmltext = "33847-07.html";

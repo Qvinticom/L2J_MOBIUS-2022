@@ -92,7 +92,7 @@ public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EWA, 1);
-					giveStoryQuestReward(player, 71);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 807_240, 193);

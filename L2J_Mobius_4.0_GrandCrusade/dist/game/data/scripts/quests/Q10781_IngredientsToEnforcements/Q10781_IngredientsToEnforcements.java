@@ -87,7 +87,7 @@ public final class Q10781_IngredientsToEnforcements extends Quest
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_ARMOR_B, 5);
-					giveStoryQuestReward(player, 37);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 19688585, 914);
 					qs.exitQuest(false, true);
 				}

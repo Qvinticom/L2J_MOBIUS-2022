@@ -103,7 +103,7 @@ public final class Q10783_TracesOfAnAmbush extends Quest
 			case "33866-08.html":
 			{
 				giveItems(player, ENCHANT_ARMOR_B, 5);
-				giveStoryQuestReward(player, 34);
+				giveStoryQuestReward(npc, player);
 				addExpAndSp(player, 5482574, 1315);
 				qs.exitQuest(false, true);
 				break;

@@ -114,7 +114,7 @@ public final class Q10710_LifeEnergyRepository extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 2);
-					giveStoryQuestReward(player, 19);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 3_125_586, 750);

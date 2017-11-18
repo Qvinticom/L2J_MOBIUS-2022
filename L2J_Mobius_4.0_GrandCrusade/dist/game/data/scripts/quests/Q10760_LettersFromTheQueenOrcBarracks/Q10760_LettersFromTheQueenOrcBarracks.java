@@ -86,7 +86,7 @@ public class Q10760_LettersFromTheQueenOrcBarracks extends LetterQuest
 			{
 				if (qs.isCond(2))
 				{
-					giveStoryQuestReward(player, 5);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 242760, 58);
 					showOnScreenMsg(player, NpcStringId.TRY_TALKING_TO_VORBOS_BY_THE_WELL_NYOU_CAN_RECEIVE_QUEEN_NAVARI_S_NEXT_LETTER_AT_LV_40, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);

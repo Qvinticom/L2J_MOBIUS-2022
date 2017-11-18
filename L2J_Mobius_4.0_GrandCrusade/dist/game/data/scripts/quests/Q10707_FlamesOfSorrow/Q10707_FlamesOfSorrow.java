@@ -92,7 +92,7 @@ public final class Q10707_FlamesOfSorrow extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAC, 2);
-					giveStoryQuestReward(player, 10);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 483_840, 116);

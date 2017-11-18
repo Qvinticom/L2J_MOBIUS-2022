@@ -71,6 +71,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
@@ -108,8 +109,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MINUTES = 30;
 	
-	private static final int STEEL_DOOR_COIN = 37045; // Steel Door Guild Coin
-	private static final SkillHolder STORY_QUEST_REWARD = new SkillHolder(27580, 1);
+	private static final SkillHolder STORY_QUEST_BUFF_REWARD = new SkillHolder(27580, 1);
 	
 	/**
 	 * @return the reset hour for a daily quest, could be overridden on a script.
@@ -3335,12 +3335,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 		
 	}
 	
-	public void giveStoryQuestReward(L2PcInstance player, int steelDoorCoinCount)
+	public void giveStoryQuestReward(L2Npc npc, L2PcInstance player)
 	{
-		giveItems(player, STEEL_DOOR_COIN, steelDoorCoinCount);
 		if (Config.ENABLE_STORY_QUEST_BUFF_REWARD)
 		{
-			STORY_QUEST_REWARD.getSkill().applyEffects(player, player);
+			SkillCaster.triggerCast(npc, player, STORY_QUEST_BUFF_REWARD.getSkill());
 		}
 	}
 }

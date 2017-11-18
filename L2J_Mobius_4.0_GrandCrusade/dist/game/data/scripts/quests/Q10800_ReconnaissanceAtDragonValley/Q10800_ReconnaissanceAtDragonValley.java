@@ -101,7 +101,7 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 				{
 					final int itemId = Integer.parseInt(event.replace("giveReward_", ""));
 					qs.exitQuest(false, true);
-					giveStoryQuestReward(player, 235);
+					giveStoryQuestReward(npc, player);
 					giveItems(player, EAS, 10);
 					giveItems(player, itemId, 30);
 					addExpAndSp(player, 84722400, 20333);

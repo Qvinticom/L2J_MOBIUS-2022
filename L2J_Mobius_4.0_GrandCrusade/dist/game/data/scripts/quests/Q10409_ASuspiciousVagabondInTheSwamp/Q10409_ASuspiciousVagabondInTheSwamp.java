@@ -79,7 +79,7 @@ public final class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAA, 3);
-					giveStoryQuestReward(player, 3);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 942_690, 226);

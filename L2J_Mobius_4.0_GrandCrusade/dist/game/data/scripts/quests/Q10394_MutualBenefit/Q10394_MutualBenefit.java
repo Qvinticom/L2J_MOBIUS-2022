@@ -85,7 +85,7 @@ public final class Q10394_MutualBenefit extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAC, 6);
-					giveStoryQuestReward(player, 26);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 3_151_312, 756);

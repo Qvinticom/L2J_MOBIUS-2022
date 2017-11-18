@@ -91,7 +91,7 @@ public final class Q10426_AssassinationOfTheKetraOrcCommander extends Quest
 					qs.exitQuest(false, true);
 					giveItems(player, stoneId, 15);
 					giveItems(player, EAS, 2);
-					giveStoryQuestReward(player, 30);
+					giveStoryQuestReward(npc, player);
 					if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL))
 					{
 						addExpAndSp(player, 7_665_840, 1839);

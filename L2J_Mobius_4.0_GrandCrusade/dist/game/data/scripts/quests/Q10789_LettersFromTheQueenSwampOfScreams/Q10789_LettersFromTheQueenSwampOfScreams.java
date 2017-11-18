@@ -89,7 +89,7 @@ public final class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_WEAPON_A, 2);
-					giveStoryQuestReward(player, 91);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 942690, 226);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_70, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);

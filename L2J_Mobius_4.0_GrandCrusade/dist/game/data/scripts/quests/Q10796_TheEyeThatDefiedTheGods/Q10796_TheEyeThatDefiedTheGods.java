@@ -96,7 +96,7 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 1088640, 261);
-						giveStoryQuestReward(player, 2);
+						giveStoryQuestReward(npc, player);
 						giveItems(player, EAA, 2);
 						qs.exitQuest(false, true);
 						htmltext = event;

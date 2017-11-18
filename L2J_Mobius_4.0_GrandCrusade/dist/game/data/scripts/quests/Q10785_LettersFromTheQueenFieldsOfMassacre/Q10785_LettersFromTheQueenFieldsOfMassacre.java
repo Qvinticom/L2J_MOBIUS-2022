@@ -89,7 +89,7 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_WEAPON_A, 1);
-					giveStoryQuestReward(player, 71);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 807240, 193);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_65, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);

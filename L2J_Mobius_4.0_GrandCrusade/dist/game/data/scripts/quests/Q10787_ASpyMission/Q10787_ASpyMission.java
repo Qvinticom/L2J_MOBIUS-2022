@@ -104,7 +104,7 @@ public final class Q10787_ASpyMission extends Quest
 				if (qs.isCond(2))
 				{
 					giveItems(player, ENCHANT_ARMOR_A, 5);
-					giveStoryQuestReward(player, 29);
+					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						addExpAndSp(player, 3125586, 750);

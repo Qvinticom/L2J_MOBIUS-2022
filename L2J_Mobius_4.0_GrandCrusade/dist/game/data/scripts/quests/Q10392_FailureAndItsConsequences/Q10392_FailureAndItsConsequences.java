@@ -100,7 +100,7 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 				{
 					st.exitQuest(false, true);
 					giveItems(player, EAC, 5);
-					giveStoryQuestReward(player, 17);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 2329740, 559);
 					htmltext = event;
 				}

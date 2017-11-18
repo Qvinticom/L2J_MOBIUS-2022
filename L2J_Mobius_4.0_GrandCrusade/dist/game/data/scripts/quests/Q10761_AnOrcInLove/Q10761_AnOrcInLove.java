@@ -91,7 +91,7 @@ public class Q10761_AnOrcInLove extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveStoryQuestReward(player, 20);
+					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 354546, 85);
 					qs.exitQuest(false, true);
 				}
