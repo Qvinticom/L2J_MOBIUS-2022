@@ -51,6 +51,8 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import ai.AbstractNpcAI;
 import quests.Q10385_RedThreadOfFate.Q10385_RedThreadOfFate;
@@ -417,6 +419,42 @@ public final class Raina extends AbstractNpcAI
 				}
 				html.replace("%dualclassList%", sb.toString());
 				player.sendPacket(html);
+				break;
+			}
+			case "upgradeSubClassToDualClass":
+			{
+				if (player.isTransformed())
+				{
+					htmltext = "noTransform.html";
+				}
+				else if (player.hasSummon())
+				{
+					htmltext = "noSummon.html";
+				}
+				else if (player.getRace() == Race.ERTHEIA)
+				{
+					htmltext = "noErtheia.html";
+				}
+				else if (!player.isInventoryUnder90(true) || (player.getWeightPenalty() >= 2))
+				{
+					htmltext = "inventoryLimit.html";
+				}
+				else if (player.hasDualClass() || !player.isSubClassActive() || (player.getLevel() < 80))
+				{
+					htmltext = "addDualClassWithoutQuestFailed.html";
+				}
+				else
+				{
+					player.getSubClasses().get(player.getClassIndex()).setIsDualClass(true);
+					
+					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.SUBCLASS_S1_HAS_BEEN_UPGRADED_TO_DUEL_CLASS_S2_CONGRATULATIONS);
+					msg.addClassId(player.getClassId().getId());
+					msg.addClassId(player.getClassId().getId());
+					player.sendPacket(msg);
+					
+					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+					player.broadcastSocialAction(SocialAction.LEVEL_UP);
+				}
 				break;
 			}
 		}
@@ -835,6 +873,16 @@ public final class Raina extends AbstractNpcAI
 			}
 		}
 		return subclasses;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		if (Config.ALT_GAME_DUALCLASS_WITHOUT_QUEST)
+		{
+			return "addDualClassWithoutQuest.html";
+		}
+		return "33491.html";
 	}
 	
 	private NpcHtmlMessage getNpcHtmlMessage(L2PcInstance player, L2Npc npc, String fileName)

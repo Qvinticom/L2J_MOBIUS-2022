@@ -175,6 +175,7 @@ public final class Config
 	public static boolean ES_SP_BOOK_NEEDED;
 	public static boolean DIVINE_SP_BOOK_NEEDED;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
+	public static boolean ALT_GAME_DUALCLASS_WITHOUT_QUEST;
 	public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
 	public static int FEE_DELETE_TRANSFER_SKILLS;
 	public static int FEE_DELETE_SUBCLASS_SKILLS;
@@ -1507,6 +1508,7 @@ public final class Config
 			ES_SP_BOOK_NEEDED = Character.getBoolean("EnchantSkillSpBookNeeded", true);
 			DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
 			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
+			ALT_GAME_DUALCLASS_WITHOUT_QUEST = Character.getBoolean("AltDualClassWithoutQuest", false);
 			RESTORE_SERVITOR_ON_RECONNECT = Character.getBoolean("RestoreServitorOnReconnect", true);
 			RESTORE_PET_ON_RECONNECT = Character.getBoolean("RestorePetOnReconnect", true);
 			ALLOW_TRANSFORM_WITHOUT_QUEST = Character.getBoolean("AltTransformationWithoutQuest", false);
