@@ -151,7 +151,7 @@ public class AdminPremium implements IAdminCommandHandler
 		
 		if (PremiumManager.getInstance().getPremiumExpiration(accountName) > 0)
 		{
-			PremiumManager.getInstance().removePremiumStatus(accountName);
+			PremiumManager.getInstance().removePremiumStatus(accountName, true);
 			admin.sendMessage("Account " + accountName + " has no longer premium status.");
 		}
 		else
