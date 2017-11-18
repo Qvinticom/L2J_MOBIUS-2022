@@ -269,7 +269,7 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		
-		if ((qs == null) && canStartQuest(player))
+		if ((qs == null) && canStartQuest(player) && !hasQuestItems(player, LADA_LETTER))
 		{
 			player.sendPacket(new TutorialShowQuestionMark(getId()));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
