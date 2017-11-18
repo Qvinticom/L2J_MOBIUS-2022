@@ -403,7 +403,7 @@ public class NpcViewMod implements IBypassHandler
 			
 			sb.append("</td></tr><tr><td width=48 align=right valign=top><font color=\"LEVEL\">Chance:</font></td>");
 			sb.append("<td width=247 align=center>");
-			sb.append(chanceFormat.format(Math.min((long) dropItem.getChance() * rateChance, 100)));
+			sb.append(chanceFormat.format(Math.min(dropItem.getChance() * rateChance, 100)));
 			sb.append("%</td></tr></table></td></tr><tr><td width=32></td><td width=300>&nbsp;</td></tr></table>");
 			
 			if ((sb.length() + rightSb.length() + leftSb.length()) < 16000) // limit of 32766?
