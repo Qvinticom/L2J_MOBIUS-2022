@@ -423,37 +423,40 @@ public final class Raina extends AbstractNpcAI
 			}
 			case "upgradeSubClassToDualClass":
 			{
-				if (player.isTransformed())
+				if (Config.ALT_GAME_DUALCLASS_WITHOUT_QUEST)
 				{
-					htmltext = "noTransform.html";
-				}
-				else if (player.hasSummon())
-				{
-					htmltext = "noSummon.html";
-				}
-				else if (player.getRace() == Race.ERTHEIA)
-				{
-					htmltext = "noErtheia.html";
-				}
-				else if (!player.isInventoryUnder90(true) || (player.getWeightPenalty() >= 2))
-				{
-					htmltext = "inventoryLimit.html";
-				}
-				else if (player.hasDualClass() || !player.isSubClassActive() || (player.getLevel() < 80))
-				{
-					htmltext = "addDualClassWithoutQuestFailed.html";
-				}
-				else
-				{
-					player.getSubClasses().get(player.getClassIndex()).setIsDualClass(true);
-					
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.SUBCLASS_S1_HAS_BEEN_UPGRADED_TO_DUEL_CLASS_S2_CONGRATULATIONS);
-					msg.addClassId(player.getClassId().getId());
-					msg.addClassId(player.getClassId().getId());
-					player.sendPacket(msg);
-					
-					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
-					player.broadcastSocialAction(SocialAction.LEVEL_UP);
+					if (player.isTransformed())
+					{
+						htmltext = "noTransform.html";
+					}
+					else if (player.hasSummon())
+					{
+						htmltext = "noSummon.html";
+					}
+					else if (player.getRace() == Race.ERTHEIA)
+					{
+						htmltext = "noErtheia.html";
+					}
+					else if (!player.isInventoryUnder90(true) || (player.getWeightPenalty() >= 2))
+					{
+						htmltext = "inventoryLimit.html";
+					}
+					else if (player.hasDualClass() || !player.isSubClassActive() || (player.getLevel() < 80))
+					{
+						htmltext = "addDualClassWithoutQuestFailed.html";
+					}
+					else
+					{
+						player.getSubClasses().get(player.getClassIndex()).setIsDualClass(true);
+						
+						final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.SUBCLASS_S1_HAS_BEEN_UPGRADED_TO_DUEL_CLASS_S2_CONGRATULATIONS);
+						msg.addClassId(player.getClassId().getId());
+						msg.addClassId(player.getClassId().getId());
+						player.sendPacket(msg);
+						
+						player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+						player.broadcastSocialAction(SocialAction.LEVEL_UP);
+					}
 				}
 				break;
 			}
