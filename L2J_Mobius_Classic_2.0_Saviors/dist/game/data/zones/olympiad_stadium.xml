@@ -2,7 +2,7 @@
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
 	<!-- Olympiad Stadium Zones -->
 	<zone name="olimpiad_stadium_h5_1" type="OlympiadStadiumZone" shape="Cuboid" minZ="-3500" maxZ="-2000">
-		<stat name="instanceTemplate" val="147" />
+		<stat name="instanceId" val="147" />
 		<node X="-90200" Y="-251085" />
 		<node X="-85825" Y="-254465" />
 		<!-- point1 -->
@@ -18,7 +18,7 @@
 	</zone>
 
 	<zone name="olimpiad_stadium_h5_2" type="OlympiadStadiumZone" shape="Cuboid" minZ="-8000" maxZ="-6500">
-		<stat name="instanceTemplate" val="148" />
+		<stat name="instanceId" val="148" />
 		<node X="-77302" Y="-250871" />
 		<node X="-73770" Y="-253917" />
 		<!-- point1 -->
@@ -34,7 +34,7 @@
 	</zone>
 
 	<zone name="olimpiad_stadium_h5_3" type="OlympiadStadiumZone" shape="Cuboid" minZ="-8600" maxZ="-7300">
-		<stat name="instanceTemplate" val="149" />
+		<stat name="instanceId" val="149" />
 		<node X="-89727" Y="-237729" />
 		<node X="-86464" Y="-240971" />
 		<!-- point1 -->
@@ -50,7 +50,7 @@
 	</zone>
 
 	<zone name="olimpiad_stadium_h5_4" type="OlympiadStadiumZone" shape="Cuboid" minZ="-8400" maxZ="-7100">
-		<stat name="instanceTemplate" val="150" />
+		<stat name="instanceId" val="150" />
 		<node X="-77066" Y="-237599" />
 		<node X="-73837" Y="-240764" />
 		<!-- point1 -->
