@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.quest.State;
 
 /**
  * To the Primeval Isle (110)
- * @author Adry_85
+ * @author Adry_85, Gladicek
  */
 public class Q00110_ToThePrimevalIsle extends Quest
 {
@@ -33,80 +33,109 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	private static final int MARQUEZ = 32113;
 	// Item
 	private static final int ANCIENT_BOOK = 8777;
+	// Misc
+	private static final int MIN_LEVEL = 75;
 	
 	public Q00110_ToThePrimevalIsle()
 	{
 		super(110);
 		addStartNpc(ANTON);
 		addTalkId(ANTON, MARQUEZ);
+		addCondMinLevel(MIN_LEVEL, "");
 		registerQuestItems(ANCIENT_BOOK);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
+		String htmltext = null;
+		
 		switch (event)
 		{
-			case "31338-1.html":
+			case "31338-03.htm":
+			case "31338-04.htm":
+			case "32113-02.html":
+			case "32113-03.html":
 			{
-				giveItems(player, ANCIENT_BOOK, 1);
-				qs.startQuest();
+				htmltext = event;
 				break;
 			}
-			case "32113-2.html":
-			case "32113-2a.html":
+			case "31338-05.html":
 			{
-				giveAdena(player, 191678, true);
-				addExpAndSp(player, 251602, 25245);
-				qs.exitQuest(false, true);
+				giveItems(player, ANCIENT_BOOK, 1);
+				st.startQuest();
+				break;
+			}
+			case "32113-04.html":
+			case "32113-05.html":
+			{
+				if (st.isCond(1))
+				{
+					if ((player.getLevel() >= MIN_LEVEL))
+					{
+						giveAdena(player, 189208, true);
+						addExpAndSp(player, 887732, 213);
+						st.exitQuest(false, true);
+					}
+					else
+					{
+						htmltext = getNoQuestLevelRewardMsg(player);
+					}
+					break;
+				}
 				break;
 			}
 		}
-		return event;
+		return htmltext;
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		
-		switch (npc.getId())
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
-			case ANTON:
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				switch (qs.getState())
+				if (npc.getId() == ANTON)
 				{
-					case State.CREATED:
+					htmltext = "31338-01.htm";
+				}
+				break;
+			}
+			case State.STARTED:
+			{
+				if (npc.getId() == ANTON)
+				{
+					if (st.isCond(1))
 					{
-						htmltext = (player.getLevel() < 75) ? "31338-0a.htm" : "31338-0b.htm";
-						break;
+						htmltext = "32113-06.html";
 					}
-					case State.STARTED:
+				}
+				else if (npc.getId() == MARQUEZ)
+				{
+					if (st.isCond(1))
 					{
-						htmltext = "31338-1a.html";
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
+						htmltext = "32113-01.html";
 					}
 				}
 				break;
 			}
-			case MARQUEZ:
+			case State.COMPLETED:
 			{
-				if (qs.isCond(1))
-				{
-					htmltext = "32113-1.html";
-				}
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

@@ -16,30 +16,42 @@
  */
 package quests.Q00061_LawEnforcement;
 
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Law Enforcement (61)
- * @author Adry_85
+ * @author Gladicek
  */
 public final class Q00061_LawEnforcement extends Quest
 {
 	// NPCs
 	private static final int LIANE = 32222;
+	private static final int PANTHEON = 32972;
 	private static final int KEKROPUS = 32138;
 	private static final int EINDBURGH = 32469;
+	// Location
+	private static final Location MUSEUM = new Location(-114711, 243911, -7968);
 	// Misc
 	private static final int MIN_LEVEL = 76;
+	private static final int JUDICATOR = 136;
 	
 	public Q00061_LawEnforcement()
 	{
 		super(61);
 		addStartNpc(LIANE);
-		addTalkId(LIANE, KEKROPUS, EINDBURGH);
+		addTalkId(LIANE, PANTHEON, KEKROPUS, EINDBURGH);
+		addCondMinLevel(MIN_LEVEL, "32222-03.htm");
+		addCondRace(Race.KAMAEL, "32222-02.htm");
+		addCondClassId(ClassId.INSPECTOR, "32222-03.htm");
 	}
 	
 	@Override
@@ -54,98 +66,74 @@ public final class Q00061_LawEnforcement extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32222-02.htm":
-			{
-				htmltext = event;
-				break;
-			}
-			case "32222-03.htm":
-			{
-				qs.setMemoState(1);
-				qs.startQuest();
-				htmltext = event;
-				break;
-			}
-			case "32138-01.html":
+			case "32222-04.htm":
 			case "32138-02.html":
-			{
-				if (qs.isMemoState(1))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32138-03.html":
-			{
-				if (qs.isMemoState(1))
-				{
-					qs.setMemoState(2);
-					htmltext = event;
-				}
-				break;
-			}
 			case "32138-04.html":
 			case "32138-05.html":
 			case "32138-06.html":
 			case "32138-07.html":
-			{
-				if (qs.isMemoState(2) || qs.isMemoState(3))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32138-08.html":
-			{
-				if (qs.isMemoState(2) || qs.isMemoState(3))
-				{
-					qs.setMemoState(4);
-					qs.setCond(2, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "32138-09.html":
-			{
-				if (qs.isMemoState(1))
-				{
-					qs.setMemoState(3);
-					htmltext = event;
-				}
-				break;
-			}
 			case "32469-02.html":
-			{
-				if (qs.isMemoState(4))
-				{
-					qs.setMemoState(5);
-					htmltext = event;
-				}
-				break;
-			}
 			case "32469-03.html":
 			case "32469-04.html":
 			case "32469-05.html":
 			case "32469-06.html":
 			case "32469-07.html":
 			{
-				if (qs.isMemoState(5))
+				htmltext = event;
+				break;
+			}
+			case "32222-05.html":
+			{
+				qs.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "teleport":
+			{
+				if (qs.isCond(1))
 				{
-					htmltext = event;
+					qs.setCond(2, true);
+					player.teleToLocation(MUSEUM);
+				}
+				break;
+			}
+			case "32138-09.html":
+			{
+				if (qs.isCond(2))
+				{
+					qs.setCond(3, true);
 				}
 				break;
 			}
 			case "32469-08.html":
 			case "32469-09.html":
 			{
-				if (qs.isMemoState(5))
+				if (qs.isCond(3))
 				{
-					player.setClassId(136);
-					// SystemMessage and cast skill is done by setClassId
-					player.broadcastUserInfo();
-					giveAdena(player, 26000, true);
-					qs.exitQuest(false, true);
-					htmltext = event;
+					if ((player.getLevel() >= MIN_LEVEL))
+					{
+						final ClassId newClassId = player.getClassId().getNextClassIds().stream().findFirst().orElse(null);
+						if (newClassId != null)
+						{
+							final ClassId currentClassId = player.getClassId();
+							
+							if (!newClassId.childOf(currentClassId))
+							{
+								Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to cheat class transfer for Judicator!", Config.DEFAULT_PUNISH);
+							}
+							player.setClassId(JUDICATOR);
+							player.broadcastUserInfo();
+							giveAdena(player, 26000, true);
+							qs.exitQuest(false, true);
+							htmltext = event;
+						}
+					}
+					else
+					{
+						htmltext = getNoQuestLevelRewardMsg(player);
+					}
 				}
 				break;
 			}
@@ -156,78 +144,66 @@ public final class Q00061_LawEnforcement extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCompleted() && (npc.getId() == LIANE))
+		
+		switch (qs.getState())
 		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
-		else if (qs.isCreated())
-		{
-			if (player.getLevel() >= MIN_LEVEL)
+			case State.CREATED:
 			{
-				if (player.getClassId() == ClassId.INSPECTOR)
+				if (npc.getId() == LIANE)
 				{
-					return getHtm(player.getHtmlPrefix(), "32222-01.htm").replace("%name%", player.getName());
+					htmltext = "32222-01.htm";
 				}
-				htmltext = "32222-04.htm";
+				break;
 			}
-			else
+			case State.STARTED:
 			{
-				htmltext = "32222-05.htm";
-			}
-		}
-		else if (qs.isStarted())
-		{
-			switch (npc.getId())
-			{
-				case LIANE:
+				switch (npc.getId())
 				{
-					if (qs.isMemoState(1))
+					case LIANE:
 					{
-						htmltext = "32222-06.html";
+						if (qs.isCond(1))
+						{
+							htmltext = "32222-06.html";
+						}
+						break;
 					}
-					break;
-				}
-				case KEKROPUS:
-				{
-					switch (qs.getMemoState())
+					case PANTHEON:
 					{
-						case 1:
+						if (qs.isCond(1))
+						{
+							htmltext = "32972-01.html";
+						}
+						break;
+					}
+					case KEKROPUS:
+					{
+						if (qs.isCond(2))
 						{
 							htmltext = "32138-01.html";
-							break;
 						}
-						case 2:
-						{
-							htmltext = "32138-03.html";
-							break;
-						}
-						case 3:
+						else if (qs.isCond(3))
 						{
 							htmltext = "32138-10.html";
-							break;
 						}
-						case 4:
+						break;
+					}
+					case EINDBURGH:
+					{
+						if (qs.isCond(3))
 						{
-							htmltext = "32138-10.html";
-							break;
+							htmltext = "32469-01.html";
 						}
+						break;
 					}
-					break;
 				}
-				case EINDBURGH:
-				{
-					if (qs.isMemoState(4))
-					{
-						return getHtm(player.getHtmlPrefix(), "32469-01.html").replace("%name%", player.getName());
-					}
-					if (qs.isMemoState(5))
-					{
-						htmltext = "32469-02.html";
-					}
-					break;
-				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;

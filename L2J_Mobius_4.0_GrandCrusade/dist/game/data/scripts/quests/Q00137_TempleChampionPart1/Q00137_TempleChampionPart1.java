@@ -21,10 +21,14 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+
+import quests.Q00134_TempleMissionary.Q00134_TempleMissionary;
+import quests.Q00135_TempleExecutor.Q00135_TempleExecutor;
 
 /**
  * Temple Champion - 1 (137)
- * @author nonom
+ * @author nonom, Gladicek
  */
 public class Q00137_TempleChampionPart1 extends Quest
 {
@@ -32,19 +36,20 @@ public class Q00137_TempleChampionPart1 extends Quest
 	private static final int SYLVAIN = 30070;
 	private static final int MOBS[] =
 	{
-		20147, // Hobgoblin
-		20203, // Dion Grizzly
-		20205, // Dire Wolf
-		20224, // Ol Mahum Ranger
-		20265, // Monster Eye Searcher
-		20266, // Monster Eye Gazer
-		20291, // Enku Orc Hero
-		20292, // Enku Orc Shaman
+		20083, // Granite Golem
+		20144, // Hangman Tree
+		20199, // Amber Basilisk
+		20200, // Strain
+		20201, // Ghoul
+		20202, // Dead Seeker
 	};
 	// Items
 	private static final int FRAGMENT = 10340;
 	private static final int EXECUTOR = 10334;
 	private static final int MISSIONARY = 10339;
+	// Misc
+	private static final int MIN_LEVEL = 35;
+	private static final int MAX_LEVEL = 41;
 	
 	public Q00137_TempleChampionPart1()
 	{
@@ -52,69 +57,84 @@ public class Q00137_TempleChampionPart1 extends Quest
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN);
 		addKillId(MOBS);
+		addCondMinLevel(MIN_LEVEL, "30070-17.html");
+		addCondCompletedQuest(Q00134_TempleMissionary.class.getSimpleName(), "30070-18.html");
+		addCondCompletedQuest(Q00135_TempleExecutor.class.getSimpleName(), "30070-18.html");
 		registerQuestItems(FRAGMENT);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = event;
 		switch (event)
 		{
 			case "30070-02.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				break;
 			}
 			case "30070-05.html":
 			{
-				qs.set("talk", "1");
+				st.set("talk", "1");
 				break;
 			}
 			case "30070-06.html":
 			{
-				qs.set("talk", "2");
+				st.set("talk", "2");
 				break;
 			}
 			case "30070-08.html":
 			{
-				qs.unset("talk");
-				qs.setCond(2, true);
+				if (st.isCond(1))
+				{
+					st.unset("talk");
+					st.setCond(2, true);
+				}
 				break;
 			}
 			case "30070-16.html":
 			{
-				if (qs.isCond(3) && hasQuestItems(player, EXECUTOR) && hasQuestItems(player, MISSIONARY))
+				if (st.isCond(3) && (hasQuestItems(player, EXECUTOR) && hasQuestItems(player, MISSIONARY)))
 				{
-					takeItems(player, EXECUTOR, -1);
-					takeItems(player, MISSIONARY, -1);
-					giveAdena(player, 69146, true);
-					if (player.getLevel() < 41)
+					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 219975, 13047);
+						takeItems(player, EXECUTOR, -1);
+						takeItems(player, MISSIONARY, -1);
+						giveAdena(player, 69146, true);
+						if (player.getLevel() < MAX_LEVEL)
+						{
+							addExpAndSp(player, 219975, 20);
+						}
+						st.exitQuest(false, true);
 					}
-					qs.exitQuest(false, true);
+					else
+					{
+						htmltext = getNoQuestLevelRewardMsg(player);
+					}
 				}
 				break;
 			}
 		}
-		return event;
+		return htmltext;
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isStarted() && qs.isCond(2) && (getQuestItemsCount(player, FRAGMENT) < 30))
+		final QuestState st = getQuestState(player, false);
+		if ((st != null) && st.isCond(2) && (getQuestItemsCount(player, FRAGMENT) < 30))
 		{
 			giveItems(player, FRAGMENT, 1);
 			if (getQuestItemsCount(player, FRAGMENT) >= 30)
 			{
-				qs.setCond(3, true);
+				st.setCond(3, true);
 			}
 			else
 			{
@@ -128,58 +148,70 @@ public class Q00137_TempleChampionPart1 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		
-		if (qs.isCompleted())
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
-			return getAlreadyCompletedMsg(player);
+			return htmltext;
 		}
-		switch (qs.getCond())
+		
+		switch (st.getState())
 		{
-			case 1:
+			case State.CREATED:
 			{
-				switch (qs.getInt("talk"))
+				htmltext = "30070-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
 				{
 					case 1:
 					{
-						htmltext = "30070-05.html";
+						switch (st.getInt("talk"))
+						{
+							case 1:
+							{
+								htmltext = "30070-05.html";
+								break;
+							}
+							case 2:
+							{
+								htmltext = "30070-06.html";
+								break;
+							}
+							default:
+							{
+								htmltext = "30070-03.html";
+								break;
+							}
+						}
 						break;
 					}
 					case 2:
 					{
-						htmltext = "30070-06.html";
+						htmltext = "30070-08.html";
 						break;
 					}
-					default:
+					case 3:
 					{
-						htmltext = "30070-03.html";
+						if (st.getInt("talk") == 1)
+						{
+							htmltext = "30070-10.html";
+						}
+						else if (getQuestItemsCount(player, FRAGMENT) >= 30)
+						{
+							st.set("talk", "1");
+							htmltext = "30070-09.html";
+							takeItems(player, FRAGMENT, -1);
+						}
 						break;
 					}
 				}
 				break;
 			}
-			case 2:
+			case State.COMPLETED:
 			{
-				htmltext = "30070-08.html";
-				break;
-			}
-			case 3:
-			{
-				if (qs.getInt("talk") == 1)
-				{
-					htmltext = "30070-10.html";
-				}
-				else if (getQuestItemsCount(player, FRAGMENT) >= 30)
-				{
-					qs.set("talk", "1");
-					htmltext = "30070-09.html";
-					takeItems(player, FRAGMENT, -1);
-				}
-				break;
-			}
-			default:
-			{
-				htmltext = ((player.getLevel() >= 35) && hasQuestItems(player, EXECUTOR, MISSIONARY)) ? "30070-01.htm" : "30070-00.html";
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

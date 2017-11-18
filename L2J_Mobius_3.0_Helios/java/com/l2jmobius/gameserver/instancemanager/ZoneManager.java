@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -488,6 +489,24 @@ public final class ZoneManager implements IGameXmlReader
 	}
 	
 	/**
+	 * Get zone by name.
+	 * @param name the zone name
+	 * @return the zone by name
+	 */
+	public L2ZoneType getZoneByName(String name)
+	{
+		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
+		{
+			final Optional<? extends L2ZoneType> zoneType = map.values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
+			if (zoneType.isPresent())
+			{
+				return zoneType.get();
+			}
+		}
+		return null;
+	}
+	
+	/**
 	 * Get zone by ID and zone class.
 	 * @param <T> the generic type
 	 * @param id the id
@@ -498,6 +517,24 @@ public final class ZoneManager implements IGameXmlReader
 	public <T extends L2ZoneType> T getZoneById(int id, Class<T> zoneType)
 	{
 		return (T) _classZones.get(zoneType).get(id);
+	}
+	
+	/**
+	 * Get zone by name.
+	 * @param <T> the generic type
+	 * @param name the zone name
+	 * @param zoneType the zone type
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	public <T extends L2ZoneType> T getZoneByName(String name, Class<T> zoneType)
+	{
+		final Optional<? extends L2ZoneType> zone = _classZones.get(zoneType).values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
+		if (zone.isPresent())
+		{
+			return (T) zone.get();
+		}
+		return null;
 	}
 	
 	/**

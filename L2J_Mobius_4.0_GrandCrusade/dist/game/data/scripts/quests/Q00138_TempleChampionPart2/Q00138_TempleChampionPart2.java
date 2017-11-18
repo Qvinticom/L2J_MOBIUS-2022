@@ -21,12 +21,13 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 
 import quests.Q00137_TempleChampionPart1.Q00137_TempleChampionPart1;
 
 /**
  * Temple Champion - 2 (138)
- * @author nonom
+ * @author nonom, Gladicek
  */
 public class Q00138_TempleChampionPart2 extends Quest
 {
@@ -47,6 +48,9 @@ public class Q00138_TempleChampionPart2 extends Quest
 	private static final int RELICS_OF_THE_DARK_ELF_TRAINEE = 10342;
 	private static final int ANGUS_RECOMMENDATION = 10343;
 	private static final int PUPINAS_RECOMMENDATION = 10344;
+	// Misc
+	private static final int MIN_LEVEL = 36;
+	private static final int MAX_LEVEL = 42;
 	
 	public Q00138_TempleChampionPart2()
 	{
@@ -54,61 +58,85 @@ public class Q00138_TempleChampionPart2 extends Quest
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN, PUPINA, ANGUS, SLA);
 		addKillId(MOBS);
+		addCondMinLevel(MIN_LEVEL, "30070-10.htm");
+		addCondCompletedQuest(Q00137_TempleChampionPart1.class.getSimpleName(), "30070-11.htm");
 		registerQuestItems(TEMPLE_MANIFESTO, RELICS_OF_THE_DARK_ELF_TRAINEE, ANGUS_RECOMMENDATION, PUPINAS_RECOMMENDATION);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return getNoQuestMsg(player);
 		}
+		
+		String htmltext = event;
+		
 		switch (event)
 		{
 			case "30070-02.htm":
 			{
-				qs.startQuest();
+				st.startQuest();
 				giveItems(player, TEMPLE_MANIFESTO, 1);
 				break;
 			}
 			case "30070-05.html":
 			{
-				giveAdena(player, 84593, true);
-				if (player.getLevel() < 42)
+				if (player.getLevel() >= MIN_LEVEL)
 				{
-					addExpAndSp(player, 187062, 11307);
+					giveAdena(player, 84593, true);
+					if ((player.getLevel() < MAX_LEVEL))
+					{
+						addExpAndSp(player, 187062, 20);
+					}
+					st.exitQuest(false, true);
 				}
-				qs.exitQuest(false, true);
+				else
+				{
+					htmltext = getNoQuestLevelRewardMsg(player);
+				}
 				break;
 			}
 			case "30070-03.html":
 			{
-				qs.setCond(2, true);
+				if (st.isCond(1))
+				{
+					st.setCond(2, true);
+				}
 				break;
 			}
 			case "30118-06.html":
 			{
-				qs.setCond(3, true);
+				if (st.isCond(2))
+				{
+					st.setCond(3, true);
+				}
 				break;
 			}
 			case "30118-09.html":
 			{
-				qs.setCond(6, true);
-				giveItems(player, PUPINAS_RECOMMENDATION, 1);
+				if (st.isCond(5))
+				{
+					st.setCond(6, true);
+					giveItems(player, PUPINAS_RECOMMENDATION, 1);
+				}
 				break;
 			}
 			case "30474-02.html":
 			{
-				qs.setCond(4, true);
+				if (st.isCond(3))
+				{
+					st.setCond(4, true);
+				}
 				break;
 			}
 			case "30666-02.html":
 			{
 				if (hasQuestItems(player, PUPINAS_RECOMMENDATION))
 				{
-					qs.set("talk", "1");
+					st.setMemoState(1);
 					takeItems(player, PUPINAS_RECOMMENDATION, -1);
 				}
 				break;
@@ -117,26 +145,29 @@ public class Q00138_TempleChampionPart2 extends Quest
 			{
 				if (hasQuestItems(player, TEMPLE_MANIFESTO))
 				{
-					qs.set("talk", "2");
+					st.setMemoState(2);
 					takeItems(player, TEMPLE_MANIFESTO, -1);
 				}
 				break;
 			}
 			case "30666-08.html":
 			{
-				qs.setCond(7, true);
-				qs.unset("talk");
+				if (st.isCond(6))
+				{
+					st.setCond(7, true);
+					st.setMemoState(0);
+				}
 				break;
 			}
 		}
-		return event;
+		return htmltext;
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isStarted() && qs.isCond(4) && (getQuestItemsCount(player, RELICS_OF_THE_DARK_ELF_TRAINEE) < 10))
+		final QuestState st = getQuestState(player, false);
+		if ((st != null) && st.isCond(4) && (getQuestItemsCount(player, RELICS_OF_THE_DARK_ELF_TRAINEE) < 10))
 		{
 			giveItems(player, RELICS_OF_THE_DARK_ELF_TRAINEE, 1);
 			if (getQuestItemsCount(player, RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
@@ -155,142 +186,132 @@ public class Q00138_TempleChampionPart2 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		
-		switch (npc.getId())
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
-			case SYLVAIN:
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				switch (qs.getCond())
+				if (npc.getId() == SYLVAIN)
 				{
-					case 1:
-					{
-						htmltext = "30070-02.htm";
-						break;
-					}
-					case 2:
-					case 3:
-					case 4:
-					case 5:
-					case 6:
-					{
-						htmltext = "30070-03.html";
-						break;
-					}
-					case 7:
-					{
-						htmltext = "30070-04.html";
-						break;
-					}
-					default:
-					{
-						if (qs.isCompleted())
-						{
-							return getAlreadyCompletedMsg(player);
-						}
-						final QuestState qst = player.getQuestState(Q00137_TempleChampionPart1.class.getSimpleName());
-						htmltext = (player.getLevel() >= 36) ? ((qst != null) && qst.isCompleted()) ? "30070-01.htm" : "30070-00a.htm" : "30070-00.htm";
-						break;
-					}
+					htmltext = "30070-01.htm";
 				}
 				break;
 			}
-			case PUPINA:
+			case State.STARTED:
 			{
-				switch (qs.getCond())
+				switch (npc.getId())
 				{
-					case 2:
+					case SYLVAIN:
 					{
-						htmltext = "30118-01.html";
-						break;
-					}
-					case 3:
-					case 4:
-					{
-						htmltext = "30118-07.html";
-						break;
-					}
-					case 5:
-					{
-						htmltext = "30118-08.html";
-						if (hasQuestItems(player, ANGUS_RECOMMENDATION))
-						{
-							takeItems(player, ANGUS_RECOMMENDATION, -1);
-						}
-						break;
-					}
-					case 6:
-					{
-						htmltext = "30118-10.html";
-						break;
-					}
-				}
-				break;
-			}
-			case ANGUS:
-			{
-				switch (qs.getCond())
-				{
-					case 3:
-					{
-						htmltext = "30474-01.html";
-						break;
-					}
-					case 4:
-					{
-						if (getQuestItemsCount(player, RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
-						{
-							takeItems(player, RELICS_OF_THE_DARK_ELF_TRAINEE, -1);
-							giveItems(player, ANGUS_RECOMMENDATION, 1);
-							qs.setCond(5, true);
-							htmltext = "30474-04.html";
-						}
-						else
-						{
-							htmltext = "30474-03.html";
-						}
-						break;
-					}
-					case 5:
-					{
-						htmltext = "30474-05.html";
-						break;
-					}
-				}
-				break;
-			}
-			case SLA:
-			{
-				switch (qs.getCond())
-				{
-					case 6:
-					{
-						switch (qs.getInt("talk"))
+						switch (st.getCond())
 						{
 							case 1:
-							{
-								htmltext = "30666-02.html";
+								htmltext = "30070-02.htm";
 								break;
-							}
 							case 2:
-							{
-								htmltext = "30666-03.html";
+							case 3:
+							case 4:
+							case 5:
+							case 6:
+								htmltext = "30070-03.html";
 								break;
-							}
-							default:
-							{
-								htmltext = "30666-01.html";
+							case 7:
+								htmltext = "30070-04.html";
 								break;
-							}
 						}
 						break;
 					}
-					case 7:
+					case PUPINA:
 					{
-						htmltext = "30666-09.html";
+						switch (st.getCond())
+						{
+							case 2:
+								htmltext = "30118-01.html";
+								break;
+							case 3:
+							case 4:
+								htmltext = "30118-07.html";
+								break;
+							case 5:
+							{
+								if (hasQuestItems(player, ANGUS_RECOMMENDATION))
+								{
+									takeItems(player, ANGUS_RECOMMENDATION, -1);
+									htmltext = "30118-08.html";
+								}
+								break;
+							}
+							case 6:
+								htmltext = "30118-10.html";
+								break;
+						}
+						break;
+					}
+					case ANGUS:
+					{
+						switch (st.getCond())
+						{
+							case 3:
+								htmltext = "30474-01.html";
+								break;
+							case 4:
+							{
+								if (getQuestItemsCount(player, RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
+								{
+									takeItems(player, RELICS_OF_THE_DARK_ELF_TRAINEE, -1);
+									giveItems(player, ANGUS_RECOMMENDATION, 1);
+									st.setCond(5, true);
+									htmltext = "30474-04.html";
+								}
+								else
+								{
+									htmltext = "30474-03.html";
+								}
+								break;
+							}
+							case 5:
+								htmltext = "30474-05.html";
+								break;
+						}
+						break;
+					}
+					case SLA:
+					{
+						switch (st.getCond())
+						{
+							case 6:
+							{
+								switch (st.getMemoState())
+								{
+									case 1:
+										htmltext = "30666-02.html";
+										break;
+									case 2:
+										htmltext = "30666-03.html";
+										break;
+									default:
+										htmltext = "30666-01.html";
+										break;
+								}
+								break;
+							}
+							case 7:
+								htmltext = "30666-09.html";
+								break;
+						}
 						break;
 					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

@@ -16,43 +16,39 @@
  */
 package quests.Q00144_PailakaInjuredDragon;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
 /**
- * @author Mathael
+ * @author Sdw
  */
 public class Q00144_PailakaInjuredDragon extends Quest
 {
 	// NPCs
 	private static final int KETRA_ORC_SHAMAN = 32499;
 	private static final int KETRA_ORC_SUPPORTER = 32502;
-	private static final int KETRA_ORC_SUPPORTER_END = 32512;
 	private static final int KETRA_ORC_INTELLIGENCE_OFFICIER = 32509;
-	// Monsters
+	private static final int KETRA_ORC_SUPPORTER_2 = 32512;
 	private static final int LATANA = 18660;
-	private static final int[] MONSTERS =
-	{
-		18635,
-		18636,
-		18642,
-		18646,
-		18649,
-		18650,
-		18653,
-		18654,
-		18655,
-		18657,
-		18659
-	};
-	// Buffs
+	// Items
+	private static final int SPEAR_OF_SILENOS = 13052;
+	private static final int SPEAR_OF_SILENOS_REINFORCED = 13053;
+	private static final int SPEAR_OF_SILENOS_COMPLETED = 13054;
+	private static final int WEAPON_UPGRADE_STAGE_1 = 13056;
+	private static final int WEAPON_UPGRADE_STAGE_2 = 13057;
+	private static final int PAILAKA_INSTANT_SHIELD = 13032;
+	private static final int QUICK_HEALING_POTION = 13033;
+	private static final int SCROLL_OF_ESCAPE = 736;
+	private static final ItemHolder PAILAKA_SHIRT = new ItemHolder(13296, 1);
+	// Skills
 	private static final SkillHolder[] BUFFS =
 	{
 		new SkillHolder(1086, 2),
@@ -68,61 +64,56 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		new SkillHolder(1268, 4),
 		new SkillHolder(1045, 6),
 	};
-	// Quest Items
-	private static final int SPEAR_OF_SILENOS = 13052;
-	private static final int SPEAR_OF_SILENOS_REINFORCED = 13053;
-	private static final int SPEAR_OF_SILENOS_COMPLETED = 13054;
-	private static final int WEAPON_UPGRADE_STAGE_1 = 13056;
-	private static final int WEAPON_UPGRADE_STAGE_2 = 13057;
-	// Usable Quest Items
-	private static final int SHIELD_POTION = 13032;
-	private static final int HEAL_POTION = 13033;
-	// Rewards
-	private static final long REWARD_EXP = 24570000;
-	private static final int REWARD_SP = 5896;
-	private static final int REWARD_PAILAKA_SHIRT = 13296;
-	private static final int REWARD_ADENA = 798840;
-	private static final int SCROLL_OF_ESCAPE = 736;
 	// Misc
 	private static final int MIN_LEVEL = 73;
 	private static final int MAX_LEVEL = 77;
-	private boolean WEAPON_UPGRADE_STAGE_1_DROPED = false;
-	private boolean WEAPON_UPGRADE_STAGE_2_DROPED = false;
-	private int BUFF_COUNT = 0;
 	
 	public Q00144_PailakaInjuredDragon()
 	{
 		super(144);
 		addStartNpc(KETRA_ORC_SHAMAN);
-		addFirstTalkId(KETRA_ORC_SUPPORTER_END);
-		addTalkId(KETRA_ORC_SHAMAN, KETRA_ORC_SUPPORTER, KETRA_ORC_INTELLIGENCE_OFFICIER, KETRA_ORC_SUPPORTER_END);
+		addFirstTalkId(KETRA_ORC_INTELLIGENCE_OFFICIER, KETRA_ORC_SUPPORTER_2);
+		addTalkId(KETRA_ORC_SHAMAN, KETRA_ORC_SUPPORTER, KETRA_ORC_INTELLIGENCE_OFFICIER);
 		addKillId(LATANA);
-		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "32499-03.html");
-		addCondMaxLevel(MAX_LEVEL, "32499-04z.html");
-		registerQuestItems(SPEAR_OF_SILENOS, SPEAR_OF_SILENOS_REINFORCED, SPEAR_OF_SILENOS_COMPLETED, WEAPON_UPGRADE_STAGE_1, WEAPON_UPGRADE_STAGE_2, HEAL_POTION, SHIELD_POTION);
+		addCondMinLevel(MAX_LEVEL, "32499-04.html");
+		registerQuestItems(SPEAR_OF_SILENOS, SPEAR_OF_SILENOS_REINFORCED, SPEAR_OF_SILENOS_COMPLETED, WEAPON_UPGRADE_STAGE_1, WEAPON_UPGRADE_STAGE_2, PAILAKA_INSTANT_SHIELD, QUICK_HEALING_POTION);
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		if (npc.getId() == KETRA_ORC_INTELLIGENCE_OFFICIER)
+		{
+			return "32509-01.html";
+		}
+		else if (npc.getId() == KETRA_ORC_SUPPORTER_2)
+		{
+			final QuestState qs = getQuestState(player, false);
+			if (qs != null)
+			{
+				return qs.isCompleted() ? "32512-02.html" : "32512-01.html";
+			}
+		}
+		return null;
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
-		final String request = event.contains(" ") ? event.substring(0, event.indexOf(" ")) : event;
-		switch (request)
+		String htmltext = null;
+		switch (event)
 		{
-			case "32499-04.htm":
-			case "32499-05.htm":
-			case "32499-06.htm":
-			case "32499-08a.html":
-			case "32499-08.htm":
-			case "32499-09.htm":
-			case "32502-01.html":
+			case "32499-05.html":
+			case "32499-06.html":
+			case "32499-07.html":
+			case "32499-11.html":
 			case "32502-02.html":
 			case "32502-03.html":
 			case "32502-04.html":
@@ -131,73 +122,54 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32499-07.htm":
-			{
-				qs.startQuest();
-				htmltext = event;
-				break;
-			}
 			case "32502-05.html":
 			{
 				if (qs.isCond(2))
 				{
 					qs.setCond(3, true);
-					giveItems(player, SPEAR_OF_SILENOS, 1, true);
+					giveItems(player, SPEAR_OF_SILENOS, 1);
 					htmltext = event;
 				}
 				break;
 			}
-			case "32512-02.html":
+			case "32499-08.html":
 			{
-				final Instance inst = InstanceManager.getInstance().getPlayerInstance(player, true);
-				if ((inst != null) && qs.isCond(4))
-				{
-					takeItems(player, SPEAR_OF_SILENOS_COMPLETED, -1);
-					rewardItems(player, 57, REWARD_ADENA);
-					rewardItems(player, REWARD_PAILAKA_SHIRT, 1);
-					addExpAndSp(player, REWARD_EXP, REWARD_SP);
-					giveItems(player, SCROLL_OF_ESCAPE, 1); // Not a reward.
-					qs.exitQuest(false, true);
-					inst.finishInstance();
-					htmltext = event;
-				}
+				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "upgrade_weapon":
 			{
-				if (qs.isCond(3) || qs.isCond(4))
+				if (hasQuestItems(player, SPEAR_OF_SILENOS_COMPLETED))
 				{
-					if (hasQuestItems(player, SPEAR_OF_SILENOS_COMPLETED))
+					htmltext = "32509-06.html";
+				}
+				else if (hasQuestItems(player, SPEAR_OF_SILENOS))
+				{
+					if (hasQuestItems(player, WEAPON_UPGRADE_STAGE_1))
 					{
-						htmltext = "32509-06.html";
+						takeItems(player, SPEAR_OF_SILENOS, -1);
+						takeItems(player, WEAPON_UPGRADE_STAGE_1, -1);
+						giveItems(player, SPEAR_OF_SILENOS_REINFORCED, 1, true);
+						htmltext = "32509-02.html";
 					}
-					else if (hasQuestItems(player, SPEAR_OF_SILENOS))
+					else
 					{
-						if (hasQuestItems(player, WEAPON_UPGRADE_STAGE_1))
-						{
-							takeItems(player, SPEAR_OF_SILENOS, -1);
-							takeItems(player, WEAPON_UPGRADE_STAGE_1, -1);
-							giveItems(player, SPEAR_OF_SILENOS_REINFORCED, 1, true);
-							htmltext = "32509-02.html";
-						}
-						else
-						{
-							htmltext = "32509-04.html";
-						}
+						htmltext = "32509-05.html";
 					}
-					else if (hasQuestItems(player, SPEAR_OF_SILENOS_REINFORCED))
+				}
+				else if (hasQuestItems(player, SPEAR_OF_SILENOS_REINFORCED))
+				{
+					if (hasQuestItems(player, WEAPON_UPGRADE_STAGE_2))
 					{
-						if (hasQuestItems(player, WEAPON_UPGRADE_STAGE_2))
-						{
-							takeItems(player, SPEAR_OF_SILENOS_REINFORCED, -1);
-							takeItems(player, WEAPON_UPGRADE_STAGE_2, -1);
-							giveItems(player, SPEAR_OF_SILENOS_COMPLETED, 1, true);
-							htmltext = "32509-08.html";
-						}
-						else
-						{
-							htmltext = "32509-04.html";
-						}
+						takeItems(player, SPEAR_OF_SILENOS_REINFORCED, -1);
+						takeItems(player, WEAPON_UPGRADE_STAGE_2, -1);
+						giveItems(player, SPEAR_OF_SILENOS_COMPLETED, 1, true);
+						htmltext = "32509-08.html";
+					}
+					else
+					{
+						htmltext = "32509-04.html";
 					}
 				}
 				else
@@ -206,141 +178,125 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				}
 				break;
 			}
-			case "enhancement_page":
+			case "ask_buff":
 			{
-				htmltext = BUFF_COUNT < 5 ? "32509-10.html" : "32509-07.html";
+				htmltext = npc.isScriptValue(1) ? "32509-07.html" : "32509-08.html";
 				break;
 			}
-			case "enhancement":
+			case "32512-03.html":
 			{
-				if (BUFF_COUNT < 5)
+				if (qs.isCond(4))
 				{
-					final int key = Integer.parseInt(event.substring(request.length() + 1)) - 1;
-					SkillCaster.triggerCast(npc, player, BUFFS[key].getSkill());
-					BUFF_COUNT++;
-					if (BUFF_COUNT < 5)
+					if (player.getLevel() >= MIN_LEVEL)
 					{
-						htmltext = "32509-09.html";
+						addExpAndSp(player, 24570000, 5896);
+						giveAdena(player, 798840, true);
+						giveItems(player, PAILAKA_SHIRT);
+						giveItems(player, SCROLL_OF_ESCAPE, 1); // Not a reward.
+						qs.exitQuest(false, true);
+						htmltext = event;
 					}
 					else
 					{
-						htmltext = "32509-08.html";
+						htmltext = getNoQuestLevelRewardMsg(player);
+					}
+					final Instance inst = InstanceManager.getInstance().getPlayerInstance(player, true);
+					if (inst != null)
+					{
+						inst.finishInstance();
+					}
+				}
+				break;
+			}
+		}
+		if (event.startsWith("buff"))
+		{
+			if (npc.isScriptValue(0))
+			{
+				final int currentBuffCount = npc.getVariables().getInt("buff_count");
+				if (currentBuffCount < 5)
+				{
+					final int buffOffset = CommonUtil.constrain(Integer.parseInt(event.substring(event.indexOf(" ") + 1)), 0, BUFFS.length);
+					npc.setTarget(player);
+					npc.doCast(BUFFS[buffOffset].getSkill());
+					npc.getVariables().set("buff_count", currentBuffCount + 1);
+					htmltext = "32509-10.html";
+					if ((currentBuffCount + 1) >= 5)
+					{
+						htmltext = "32509-09.html";
+						npc.setScriptValue(1);
 					}
 				}
 				else
 				{
 					htmltext = "32509-07.html";
+					npc.setScriptValue(1);
 				}
-				break;
 			}
 		}
-		
 		return htmltext;
+		
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(talker, true);
-		String htmltext = getNoQuestMsg(talker);
+		final QuestState qs = getQuestState(player, true);
+		String htmltext = null;
 		
-		switch (npc.getId())
+		switch (qs.getState())
 		{
-			case KETRA_ORC_SHAMAN:
+			case State.CREATED:
 			{
-				switch (qs.getState())
+				if (npc.getId() == KETRA_ORC_SHAMAN)
 				{
-					case State.CREATED:
+					htmltext = "32499-01.html";
+				}
+				break;
+			}
+			case State.STARTED:
+			{
+				if (npc.getId() == KETRA_ORC_SHAMAN)
+				{
+					if (qs.isCond(1))
 					{
-						htmltext = "32499-01.htm";
-						break;
+						htmltext = "32499-09.html";
 					}
-					case State.COMPLETED:
-					{
-						htmltext = "32499-02.html";
-						break;
-					}
-					case State.STARTED:
+					else
 					{
 						htmltext = "32499-10.html";
-						break;
 					}
 				}
-				break;
-			}
-			case KETRA_ORC_SUPPORTER:
-			{
-				switch (qs.getCond())
+				else if (npc.getId() == KETRA_ORC_SUPPORTER)
 				{
-					case 3:
-					{
-						htmltext = "32502-07.html";
-						break;
-					}
-					case 4:
-					{
-						htmltext = "32502-06.html";
-						break;
-					}
-					default:
+					if (qs.isCond(2))
 					{
 						htmltext = "32502-01.html";
-						break;
+					}
+					else
+					{
+						htmltext = "32502-06.html";
 					}
 				}
 				break;
 			}
-			case KETRA_ORC_INTELLIGENCE_OFFICIER:
+			case State.COMPLETED:
 			{
-				htmltext = !qs.isCond(3) && !qs.isCond(4) ? "32509-01a.html" : "32509-01.html";
+				htmltext = "32499-02.html";
 				break;
 			}
-			case KETRA_ORC_SUPPORTER_END:
-			{
-				htmltext = hasQuestItems(talker, SPEAR_OF_SILENOS_COMPLETED) ? "32512-01.html" : "32512-03.html";
-			}
 		}
+		
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		return qs.getState() == State.COMPLETED ? "32512-03.html" : "32512-01.html";
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final int npcId = npc.getId();
-		if (npcId != LATANA)
+		final QuestState qs = getQuestState(killer, false);
+		if (qs != null)
 		{
-			if (!WEAPON_UPGRADE_STAGE_1_DROPED && !hasQuestItems(killer, WEAPON_UPGRADE_STAGE_1) && hasQuestItems(killer, SPEAR_OF_SILENOS))
-			{
-				if (getRandom(1, 6) > 2)
-				{
-					giveItems(killer, WEAPON_UPGRADE_STAGE_1, 1, true);
-					WEAPON_UPGRADE_STAGE_1_DROPED = true;
-				}
-			}
-			if (!WEAPON_UPGRADE_STAGE_2_DROPED && !hasQuestItems(killer, WEAPON_UPGRADE_STAGE_2) && hasQuestItems(killer, SPEAR_OF_SILENOS_REINFORCED))
-			{
-				if (getRandom(1, 6) > 4)
-				{
-					giveItems(killer, WEAPON_UPGRADE_STAGE_2, 1, true);
-					WEAPON_UPGRADE_STAGE_2_DROPED = true;
-				}
-			}
-		}
-		else
-		{
-			final QuestState qs = getQuestState(killer, false);
-			if (qs != null)
+			if (qs.isCond(3) && (npc.calculateDistance(killer, false, false) <= 1500))
 			{
 				qs.setCond(4, true);
 			}

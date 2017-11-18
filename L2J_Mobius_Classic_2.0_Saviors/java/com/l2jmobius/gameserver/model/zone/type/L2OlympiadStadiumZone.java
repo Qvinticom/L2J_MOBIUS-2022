@@ -45,7 +45,6 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 	private final List<L2DoorInstance> _doors = new ArrayList<>(2);
 	private final List<L2Spawn> _buffers = new ArrayList<>(2);
 	private final List<Location> _spectatorLocations = new ArrayList<>(1);
-	private int _instanceTemplate = 0;
 	
 	public L2OlympiadStadiumZone(int id)
 	{
@@ -99,19 +98,6 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 		else
 		{
 			super.parseLoc(x, y, z, type);
-		}
-	}
-	
-	@Override
-	public void setParameter(String name, String value)
-	{
-		if (name.equals("instanceTemplate"))
-		{
-			_instanceTemplate = Integer.parseInt(value);
-		}
-		else
-		{
-			super.setParameter(name, value);
 		}
 	}
 	
@@ -210,14 +196,5 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 	public List<Location> getSpectatorSpawns()
 	{
 		return _spectatorLocations;
-	}
-	
-	/**
-	 * Returns zone instanceTemplate
-	 * @return
-	 */
-	public int getInstanceTemplateId()
-	{
-		return _instanceTemplate;
 	}
 }

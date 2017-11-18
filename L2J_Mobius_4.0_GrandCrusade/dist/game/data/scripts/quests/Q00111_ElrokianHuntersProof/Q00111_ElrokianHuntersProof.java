@@ -51,6 +51,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 	private static final int MIN_LEVEL = 75;
 	// Mobs
 	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
+	
 	static
 	{
 		MOBS_DROP_CHANCES.put(22196, new ItemChanceHolder(DIARY_FRAGMENT, 0.51, 4)); // velociraptor_leader
@@ -81,6 +82,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KIRIKACHIN);
 		addKillId(MOBS_DROP_CHANCES.keySet());
+		addCondMinLevel(MIN_LEVEL, "32113-06.htm");
 		registerQuestItems(DIARY_FRAGMENT, EXPEDITION_MEMBERS_LETTER, ORNITHOMINUS_CLAW, DEINONYCHUS_BONE, PACHYCEPHALOSAURUS_SKIN, PRACTICE_ELROKIAN_TRAP);
 	}
 	
@@ -200,13 +202,21 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 			{
 				if (qs.isMemoState(12) && hasQuestItems(player, PRACTICE_ELROKIAN_TRAP))
 				{
-					takeItems(player, PRACTICE_ELROKIAN_TRAP, -1);
-					giveItems(player, ELROKIAN_TRAP, 1);
-					giveItems(player, TRAP_STONE, 100);
-					giveAdena(player, 1071691, true);
-					addExpAndSp(player, 553524, 55538);
-					qs.exitQuest(false, true);
-					htmltext = event;
+					if ((player.getLevel() >= MIN_LEVEL))
+					{
+						takeItems(player, PRACTICE_ELROKIAN_TRAP, -1);
+						giveItems(player, ELROKIAN_TRAP, 1);
+						giveItems(player, TRAP_STONE, 100);
+						giveAdena(player, 1702800, true);
+						addExpAndSp(player, 19973970, 4793);
+						qs.exitQuest(false, true);
+						htmltext = event;
+					}
+					else
+					{
+						htmltext = getNoQuestLevelRewardMsg(player);
+					}
+					break;
 				}
 				break;
 			}
@@ -223,13 +233,22 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 			final ItemChanceHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 			if (item.getCount() == qs.getMemoState())
 			{
-				if (qs.isCond(4) && giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 50, item.getChance(), true))
+				if (qs.isCond(4))
 				{
-					qs.setCond(5);
+					if (giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 50, item.getChance(), true))
+					{
+						qs.setCond(5);
+					}
 				}
-				else if (qs.isCond(10) && giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 10, item.getChance(), true) && (getQuestItemsCount(qs.getPlayer(), ORNITHOMINUS_CLAW) >= 10) && (getQuestItemsCount(qs.getPlayer(), DEINONYCHUS_BONE) >= 10) && (getQuestItemsCount(qs.getPlayer(), PACHYCEPHALOSAURUS_SKIN) >= 10))
+				else if (qs.isCond(10))
 				{
-					qs.setCond(11);
+					if (giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, 10, item.getChance(), true) //
+						&& (getQuestItemsCount(qs.getPlayer(), ORNITHOMINUS_CLAW) >= 10) //
+						&& (getQuestItemsCount(qs.getPlayer(), DEINONYCHUS_BONE) >= 10) //
+						&& (getQuestItemsCount(qs.getPlayer(), PACHYCEPHALOSAURUS_SKIN) >= 10))
+					{
+						qs.setCond(11);
+					}
 				}
 			}
 		}
@@ -239,8 +258,12 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+		if (qs == null)
+		{
+			return htmltext;
+		}
 		
 		switch (qs.getState())
 		{
@@ -256,7 +279,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 			{
 				if (npc.getId() == MARQUEZ)
 				{
-					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32113-01.htm" : "32113-06.html";
+					htmltext = "32113-01.htm";
 				}
 				break;
 			}
