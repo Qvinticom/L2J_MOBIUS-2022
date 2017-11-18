@@ -327,6 +327,10 @@ import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
 import quests.Q10504_JewelOfAntharas.Q10504_JewelOfAntharas;
 import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
+import quests.Q10521_QueenNavarisLetterVarkaSilenosBarracks.Q10521_QueenNavarisLetterVarkaSilenosBarracks;
+import quests.Q10522_TheDarkSecretOfVarkaSilenos.Q10522_TheDarkSecretOfVarkaSilenos;
+import quests.Q10523_TheAssassinationOfTheVarkaSilenosCommander.Q10523_TheAssassinationOfTheVarkaSilenosCommander;
+import quests.Q10524_TheAssassinationOfTheVarkaSilenosCommanderChief.Q10524_TheAssassinationOfTheVarkaSilenosCommanderChief;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
@@ -744,6 +748,10 @@ public class QuestMasterHandler
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
 		Q10504_JewelOfAntharas.class,
 		Q10505_JewelOfValakas.class,
+		Q10521_QueenNavarisLetterVarkaSilenosBarracks.class,
+		Q10522_TheDarkSecretOfVarkaSilenos.class,
+		Q10523_TheAssassinationOfTheVarkaSilenosCommander.class,
+		Q10524_TheAssassinationOfTheVarkaSilenosCommanderChief.class,
 		Q10534_HatchlingResearch.class,
 		Q10541_TrainLikeTheRealThing.class,
 		Q10542_SearchingForNewPower.class,
