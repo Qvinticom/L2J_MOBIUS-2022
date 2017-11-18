@@ -429,6 +429,16 @@
 													<xs:sequence minOccurs="0">
 														<xs:element minOccurs="0" name="energy" type="xs:unsignedInt" />
 														<xs:element minOccurs="0" name="enegry" type="xs:unsignedShort" />
+														<xs:element minOccurs="0" name="minEnchant" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="maxEnchant" type="xs:unsignedByte" />
+														<xs:element minOccurs="0" name="itemType">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element maxOccurs="unbounded" name="item" type="xs:string" />
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+														<xs:element minOccurs="0" name="crystalType" type="xs:string" />
 														<xs:element minOccurs="0" name="time" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" name="summonPoints" type="xs:unsignedByte" />
 														<xs:element minOccurs="0" maxOccurs="unbounded" name="npcId" type="xs:unsignedShort" />
