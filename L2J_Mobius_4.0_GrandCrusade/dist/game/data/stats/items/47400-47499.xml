@@ -174,12 +174,17 @@
 	<item id="47415" name="Duo - Freya's Wind Cube" type="EtcItem">
 		<!-- Vitality +100% and XP/SP acquisition +100% while hunting. Remains after death. Duration is 10 min. Cooldown is 30 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Will be deleted when the event ends. -->
 		<set name="icon" val="icon.freya_cube_box" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18634" level="1" /> <!-- Duo - Freya's Wind -->
+		</skills>
 	</item>
 	<item id="47416" name="Sibis' Suspicious Supply Items" type="EtcItem">
 		<!-- Supply Items prepared by Sibis of the Balthus Knights. When used, an item can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -296,6 +301,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18126" level="2" /> <!-- Freya's Scroll of Storm -->
+		</skills>
 	</item>
 	<item id="47429" name="Freya's Bloody Rune (2 hours) Box" type="EtcItem">
 		<!-- Double click to obtain Freya's Bloody Rune (2 hours). -->
@@ -309,10 +319,21 @@
 	<item id="47430" name="Freya's Bloody Rune" additionalName="2-hour" type="EtcItem">
 		<!-- Damage dealt to NPCs is increased by 15% when having it in your inventory. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="18647" level="1" /> <!-- Freya's Bloody Rune -->
+		</skills>
 	</item>
 	<item id="47431" name="Freya's Rune (30-day) Box" type="EtcItem">
 		<!-- Double click to obtain Freya's Rune (30-day). -->
@@ -326,11 +347,21 @@
 	<item id="47432" name="Freya's Rune" additionalName="30-day" type="EtcItem">
 		<!-- Boosts STR/DEX/CON/INT/WIT/MEN by 1 and increases MEN/Paralysis Resistance by 10% when having it in your inventory. -->
 		<set name="icon" val="icon.bm_freya_rune" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="18648" level="1" /> <!-- Freya's Rune -->
+		</skills>
 	</item>
 	<item id="47433" name="Freya's Vital Rune (30 minutes) Box" type="EtcItem">
 		<!-- Double click to obtain Freya's Vital Rune (30 minutes). -->
@@ -344,9 +375,21 @@
 	<item id="47434" name="Freya's Vital Rune" additionalName="30-min" type="EtcItem">
 		<!-- Bonus XP gained in Vitality state is boosted by 50% when having it in your inventory (Does not apply to Boss Monsters) -->
 		<set name="icon" val="icon.bm_freya_vital_rune" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="30" />
+		<skills>
+			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
+		</skills>
 	</item>
 	<item id="47435" name="Mysterious Talisman - STR" additionalName="2-hour" type="Armor">
 		<!-- STR +5 when wearing the Talisman. Effect does not stack with identical ones. -->

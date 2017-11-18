@@ -975,24 +975,121 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18634" toLevel="1" name="Duo - Freya Wind">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Vitality +100% and XP/SP acquisition +100% while hunting. Remains after death. Duration is 10 min. Cooldown is 30 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Will be deleted when the event ends. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<itemConsumeId>36331</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18635" toLevel="1" name="Duo - Prophecy">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- For 5 min, all party members' P. Atk. and M. Atk. +$s2. Can be used by characters with Lv. 85 and above. -->
+		<icon>icon.skill0837</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<castRange>400</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>270000</reuseDelay>
+		<effectPoint>712</effectPoint>
+		<affectRange>600</affectRange>
+		<effectRange>600</effectRange>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="TargetMyParty">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="18636" toLevel="2" name="Duo - Energy of Blessing">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- For 3 hours, XP gained when hunting monsters increases by 30%. When the buff ends, the β€�Duo's Gift' item can be gained. Gift cannot be received when dead. Can be used by characters with Lv. 85 and above. -->
+		<icon>icon.skill10101</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10800</abnormalTime>
+		<hitTime>
+			<value level="1">100</value>
+			<value level="2">0</value>
+		</hitTime>
+		<reuseDelay>
+			<value level="1">36000000</value>
+			<value level="2">0</value>
+		</reuseDelay>
+		<effectPoint>
+			<value level="1">100</value>
+			<value level="2">1</value>
+		</effectPoint>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>		
+		</effects>
 	</skill>
 	<skill id="18637" toLevel="1" name="Duo Vital Compression Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- When used, bonus XP gained in Vitality Status is boosted by 20%. Cannot be used together with Dandy's Home Run Ball/Fall of the Dragon Buff/Nevit's Hourglass. -->
+		<icon>icon.etc_capture_stone_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<reuseDelay>300000</reuseDelay>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>		
+		</effects>
 	</skill>
 	<skill id="18638" toLevel="1" name="PC Cafe Points Coupon (200 points)">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -1040,19 +1137,67 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18647" toLevel="1" name="Freya's Bloody Rune">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- Damage dealt to NPCs is increased by 15% when having it in your inventory. -->
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="18648" toLevel="1" name="Freya's Rune">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Boosts STR/DEX/CON/INT/WIT/MEN by 1 and increases MEN/Paralysis Resistance by 10% when having it in your inventory. -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>		
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>	
+			<effect name="DefenceTrait">
+				<PARALYZE>10</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18649" toLevel="1" name="Freya's Vital Rune">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<!-- Bonus XP gained in Vitality state is boosted by 50% when having it in your inventory (Does not apply to Boss Monsters) -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>			
 	</skill>
 	<skill id="18650" toLevel="1" name="Mysterious Talisman - Attribute Defense">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

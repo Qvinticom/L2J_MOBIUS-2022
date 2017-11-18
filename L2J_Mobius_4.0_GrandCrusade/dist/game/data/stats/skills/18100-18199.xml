@@ -235,13 +235,44 @@
 		<icon>icon.freya_lamp</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18126" toLevel="1" name="Freya's Frozen Scroll">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="18126" toLevel="2" name="Freya's Frozen Scroll">
 		<!-- When hunting monsters, Vitality consumption x 2, and XP/SP gain + 100%. Remains after death. Lasts 10 min. Cooldown is 10 min. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<itemConsumeId>
+				<value level="1">40227</value>
+				<value level="2">47428</value>
+		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<reuseDelay>600000</reuseDelay>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">150</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">150</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">150</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="18127" toLevel="1" name="Freya's Wish Box">
 		<!-- AUTO GENERATED SKILL -->
@@ -262,12 +293,31 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18130" toLevel="1" name="Freya's Frozen Scroll">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- When hunting monsters, Vitality consumption x 2, and XP/SP gain + 100%. Remains after death. Lasts 10 min. Cooldown is 10 min. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<itemConsumeId>40231</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<reuseDelay>600000</reuseDelay>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="18131" toLevel="1" name="Freya's Lucky Enchant Stone: Weapon (R-grade)">
 		<!-- Updated to GRAND CRUSADE -->
@@ -472,9 +522,26 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18155" toLevel="1" name="Freya's Recovery Potion">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>40300</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>867</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpCpHeal">
+				<power>3500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18156" toLevel="1" name="Potion of Protection: Stun">
 		<!-- AUTO GENERATED SKILL -->

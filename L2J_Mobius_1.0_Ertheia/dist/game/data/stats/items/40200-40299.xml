@@ -335,6 +335,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18126" level="1" /> <!-- Freya's Frozen Scroll -->
+		</skills>
 	</item>
 	<item id="40228" name="Freya's Wish Box" type="EtcItem">
 		<!-- Double-click to obtain a very rare item at a random rate. -->
@@ -379,6 +385,12 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18130" level="1" /> <!-- Freya's Frozen Scroll -->
+		</skills>
 	</item>
 	<item id="40232" name="Freya's Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade) when using Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 15. If enchanting fails, the enchant value will drop by 1. -->

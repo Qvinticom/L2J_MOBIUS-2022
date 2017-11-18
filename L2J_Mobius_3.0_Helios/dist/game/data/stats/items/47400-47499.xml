@@ -174,12 +174,17 @@
 	<item id="47415" name="Duo - Freya's Wind Cube" type="EtcItem">
 		<!-- Vitality +100% and XP/SP acquisition +100% while hunting. Remains after death. Duration is 10 min. Cooldown is 30 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Will be deleted when the event ends. -->
 		<set name="icon" val="icon.freya_cube_box" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18634" level="1" /> <!-- Duo - Freya's Wind -->
+		</skills>
 	</item>
 	<item id="47416" name="Sibis' Suspicious Supply Items" type="EtcItem">
 		<!-- Supply Items prepared with care by Sibis for the Balthus Knights. Use to obtain items. Will be deleted when the event ends. -->
@@ -296,6 +301,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18126" level="2" /> <!-- Freya's Scroll of Storm -->
+		</skills>
 	</item>
 	<item id="47429" name="Freya's Bloody Rune (2 hours) Box" type="EtcItem">
 		<!-- Double click to obtain Freya's Bloody Rune (2 hours). -->
@@ -309,10 +319,21 @@
 	<item id="47430" name="Freya's Bloody Rune" additionalName="2-hour" type="EtcItem">
 		<!-- Damage dealt to NPCs is increased by 15% when having it in your inventory. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="18647" level="1" /> <!-- Freya's Bloody Rune -->
+		</skills>
 	</item>
 	<item id="47431" name="Freya's Rune (30-day) Box" type="EtcItem">
 		<!-- Double click to obtain Freya's Rune (30-day). -->
@@ -326,11 +347,21 @@
 	<item id="47432" name="Freya's Rune" additionalName="30-day" type="EtcItem">
 		<!-- Boosts STR/DEX/CON/INT/WIT/MEN by 1 and increases MEN/Paralysis Resistance by 10% when having it in your inventory. -->
 		<set name="icon" val="icon.bm_freya_rune" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="18648" level="1" /> <!-- Freya's Rune -->
+		</skills>
 	</item>
 	<item id="47433" name="Freya's Vital Rune (30 minutes) Box" type="EtcItem">
 		<!-- Double click to obtain Freya's Vital Rune (30 minutes). -->
@@ -344,9 +375,21 @@
 	<item id="47434" name="Freya's Vital Rune" additionalName="30-min" type="EtcItem">
 		<!-- Bonus XP gained in Vitality state is boosted by 50% when having it in your inventory (Does not apply to Boss Monsters) -->
 		<set name="icon" val="icon.bm_freya_vital_rune" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="30" />
+		<skills>
+			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
+		</skills>
 	</item>
 	<item id="47435" name="Mysterious Talisman - STR" additionalName="2-hour" type="Armor">
 		<!-- STR +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -633,6 +676,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1730000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13539" level="1" /> <!-- Baium's Soul Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
 			<stat type="maxMp">31</stat>
@@ -649,6 +695,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1730000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13539" level="1" /> <!-- Baium's Soul Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
 			<stat type="maxMp">31</stat>
@@ -665,6 +714,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1730000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13539" level="1" /> <!-- Baium's Soul Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
 			<stat type="maxMp">31</stat>
@@ -681,6 +733,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3450000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13540" level="1" /> <!-- Frintezza's Soul Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="maxMp">62</stat>
@@ -697,6 +752,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3450000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13540" level="1" /> <!-- Frintezza's Soul Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="maxMp">62</stat>
@@ -713,6 +771,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3450000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13540" level="1" /> <!-- Frintezza's Soul Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">158</stat>
 			<stat type="maxMp">62</stat>
@@ -729,6 +790,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13441" level="1" /> <!-- Queen Ant's Soul Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
 			<stat type="maxMp">31</stat>
@@ -745,6 +809,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13441" level="1" /> <!-- Queen Ant's Soul Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
 			<stat type="maxMp">31</stat>
@@ -761,6 +828,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13441" level="1" /> <!-- Queen Ant's Soul Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">79</stat>
 			<stat type="maxMp">31</stat>
@@ -777,6 +847,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13442" level="1" /> <!-- Orfen's Soul Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">118</stat>
 			<stat type="maxMp">46</stat>
@@ -793,6 +866,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13442" level="1" /> <!-- Orfen's Soul Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">118</stat>
 			<stat type="maxMp">46</stat>
@@ -809,6 +885,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="69466000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13442" level="1" /> <!-- Orfen's Soul Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">118</stat>
 			<stat type="maxMp">46</stat>
@@ -825,6 +904,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16748" level="2" /> <!-- Ruler's Ring of Authority -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 			<stat type="maxMp">46</stat>
@@ -841,6 +923,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16748" level="2" /> <!-- Ruler's Ring of Authority -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 			<stat type="maxMp">46</stat>
@@ -857,6 +942,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16748" level="2" /> <!-- Ruler's Ring of Authority -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 			<stat type="maxMp">46</stat>
@@ -873,6 +961,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16749" level="2" /> <!-- Ruler's Ring of the Truth-Seeker -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 			<stat type="maxMp">46</stat>
@@ -889,6 +980,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16749" level="2" /> <!-- Ruler's Ring of the Truth-Seeker -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 			<stat type="maxMp">46</stat>
@@ -905,6 +999,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16749" level="2" /> <!-- Ruler's Ring of the Truth-Seeker -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 			<stat type="maxMp">46</stat>
@@ -921,6 +1018,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3700000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
+			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 			<stat type="maxMp">59</stat>
@@ -937,6 +1038,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3700000" />
 		<set name="enchant_enabled" val="1" />
+			<skills>
+			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
+			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 			<stat type="maxMp">59</stat>
@@ -953,6 +1058,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="3700000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13313" level="1" /> <!-- Blessed Antharas' Earring -->
+			<skill id="13314" level="1" /> <!-- Blessed Antharas' Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 			<stat type="maxMp">59</stat>
@@ -969,6 +1078,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="4940000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
+			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">226</stat>
 			<stat type="maxMp">79</stat>
@@ -985,6 +1098,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="4940000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
+			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">226</stat>
 			<stat type="maxMp">79</stat>
@@ -1001,6 +1118,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="4940000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13315" level="1" /> <!-- Blessed Valakas' Necklace -->
+			<skill id="13316" level="1" /> <!-- Blessed Valakas' Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">226</stat>
 			<stat type="maxMp">79</stat>
@@ -1017,6 +1138,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 			<stat type="maxMp">59</stat>
@@ -1033,6 +1158,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 			<stat type="maxMp">59</stat>
@@ -1049,6 +1178,10 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13524" level="1" /> <!-- Lindvior's Earring -->
+			<skill id="13542" level="1" /> <!-- Lindvior's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">170</stat>
 			<stat type="maxMp">59</stat>
