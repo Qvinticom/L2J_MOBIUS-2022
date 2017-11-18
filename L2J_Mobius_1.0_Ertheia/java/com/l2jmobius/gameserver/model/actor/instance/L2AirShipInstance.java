@@ -145,8 +145,7 @@ public class L2AirShipInstance extends L2Vehicle
 		if (player.isOnline())
 		{
 			player.broadcastPacket(new ExGetOffAirShip(player, this, loc.getX(), loc.getY(), loc.getZ()));
-			player.setXYZ(loc.getX(), loc.getY(), loc.getZ());
-			player.revalidateZone(true);
+			player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
 		}
 		else
 		{
