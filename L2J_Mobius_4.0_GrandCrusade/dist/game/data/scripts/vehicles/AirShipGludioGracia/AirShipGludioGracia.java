@@ -63,9 +63,9 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 		new VehiclePathPoint(-172595, 247737, 398),
 		new VehiclePathPoint(-174538, 246185, 39),
 		new VehiclePathPoint(-179440, 243651, 1337),
-		new VehiclePathPoint(-182601, 243957, 2739),
-		new VehiclePathPoint(-184952, 245122, 2694),
-		new VehiclePathPoint(-186936, 244563, 2617)
+		new VehiclePathPoint(-182365, 245266, 2739), // Grand Crusade custom fix
+		new VehiclePathPoint(-185128, 245268, 2694), // Grand Crusade custom fix
+		new VehiclePathPoint(-186914, 244746, 2694) // Grand Crusade custom fix
 	};
 	
 	private static final VehiclePathPoint[] GRACIA_TO_WARPGATE =
