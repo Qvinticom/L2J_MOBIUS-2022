@@ -85,7 +85,7 @@ public class PremiumManager
 		{
 			startExpireTask(player, premiumExpiration - now);
 		}
-		else
+		else if (premiumExpiration > 0)
 		{
 			removePremiumStatus(accountName, false);
 		}
