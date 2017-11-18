@@ -155,4 +155,127 @@
 		<node X="108816" Y="-40776" />
 		<node X="107856" Y="-40652" />
 	</zone>
+	<zone name="26_20_orbis_enter" type="TeleportZone" shape="NPoly" minZ="-458" maxZ="-158">
+		<stat name="oustX" val="213983" />
+		<stat name="oustY" val="53250" />
+		<stat name="oustZ" val="-8136" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="197849" Y="90507" />
+		<node X="198285" Y="90504" />
+		<node X="198283" Y="90673" />
+		<node X="197847" Y="90676" />
+	</zone>
+	<zone name="26_19_orbis_to_lobby" type="TeleportZone" shape="NPoly" minZ="-8018" maxZ="-7718">
+		<stat name="oustX" val="198022" />
+		<stat name="oustY" val="90032" />
+		<stat name="oustZ" val="-192" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="214616" Y="52809" />
+		<node X="215270" Y="52810" />
+		<node X="215284" Y="53472" />
+		<node X="214612" Y="53477" />
+	</zone>
+	<zone name="26_19_orbis_to_2nd" type="TeleportZone" shape="NPoly" minZ="-8840" maxZ="-8540">
+		<stat name="oustX" val="213799" />
+		<stat name="oustY" val="53253" />
+		<stat name="oustZ" val="-14462" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="215023" Y="52075" />
+		<node X="215909" Y="52096" />
+		<node X="215925" Y="52422" />
+		<node X="215027" Y="52409" />
+	</zone>
+	<zone name="26_19_orbis_to_1nd" type="TeleportZone" shape="NPoly" minZ="-14218" maxZ="-14018">
+		<stat name="oustX" val="215056" />
+		<stat name="oustY" val="50467" />
+		<stat name="oustZ" val="-8416" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="214648" Y="52769" />
+		<node X="215304" Y="52755" />
+		<node X="215287" Y="53526" />
+		<node X="214637" Y="53528" />
+	</zone>
+	<zone name="26_19_orbis_to_3rd" type="TeleportZone" shape="NPoly" minZ="-15024" maxZ="-14724">
+		<stat name="oustX" val="211641" />
+		<stat name="oustY" val="115547" />
+		<stat name="oustZ" val="-12736" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="210137" Y="48579" />
+		<node X="211073" Y="48572" />
+		<node X="211077" Y="48976" />
+		<node X="210137" Y="48953" />
+	</zone>
+	<zone name="26_21_orbis_to_2nd" type="TeleportZone" shape="NPoly" minZ="-12737" maxZ="-12437">
+		<stat name="oustX" val="211137" />
+		<stat name="oustY" val="50501" />
+		<stat name="oustZ" val="-14624" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="211261" Y="114644" />
+		<node X="211778" Y="114638" />
+		<node X="211781" Y="115045" />
+		<node X="211273" Y="115064" />
+	</zone>
+	<zone name="20_14_gainak_to_underground_1" type="TeleportZone" shape="NPoly" minZ="-720" maxZ="-320">
+		<stat name="oustX" val="-49596" />
+		<stat name="oustY" val="-150715" />
+		<stat name="oustZ" val="-14472" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="18198" Y="-114259" />
+		<node X="18125" Y="-113964" />
+		<node X="18222" Y="-113962" />
+		<node X="18431" Y="-113875" />
+		<node X="18602" Y="-114104" />
+	</zone>
+	<zone name="20_14_underground_to_gainak_1" type="TeleportZone" shape="NPoly" minZ="-14488" maxZ="-14088">
+		<stat name="oustX" val="17600" />
+		<stat name="oustY" val="-113803" />
+		<stat name="oustZ" val="-312" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="-48697" Y="-150909" />
+		<node X="-48465" Y="-150209" />
+		<node X="-48097" Y="-150435" />
+		<node X="-48373" Y="-151019" />
+	</zone>
+	<zone name="20_14_gainak_to_underground_2" type="TeleportZone" shape="NPoly" minZ="-758" maxZ="-358">
+		<stat name="oustX" val="-55283" />
+		<stat name="oustY" val="-147410" />
+		<stat name="oustZ" val="-14728" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="17237" Y="-110907" />
+		<node X="17019" Y="-110729" />
+		<node X="16832" Y="-110925" />
+		<node X="16715" Y="-111273" />
+		<node X="17023" Y="-111300" />
+	</zone>
+	<zone name="20_14_underground_to_gainak_2" type="TeleportZone" shape="NPoly" minZ="-14825" maxZ="-14425">
+		<stat name="oustX" val="17008" />
+		<stat name="oustY" val="-111696" />
+		<stat name="oustZ" val="-320" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="-56023" Y="-147212" />
+		<node X="-55990" Y="-147732" />
+		<node X="-56245" Y="-147703" />
+		<node X="-56283" Y="-147171" />
+	</zone>
+	<zone name="20_14_gainak_to_underground_3" type="TeleportZone" shape="NPoly" minZ="-758" maxZ="-358">
+		<stat name="oustX" val="-46867" />
+		<stat name="oustY" val="-149309" />
+		<stat name="oustZ" val="-14216" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="19028" Y="-115849" />
+		<node X="18943" Y="-116143" />
+		<node X="19154" Y="-116249" />
+		<node X="19381" Y="-116257" />
+		<node X="19461" Y="-115978" />
+	</zone>
+	<zone name="20_14_underground_to_gainak_3" type="TeleportZone" shape="NPoly" minZ="-14431" maxZ="-14031">
+		<stat name="oustX" val="18784" />
+		<stat name="oustY" val="-115648" />
+		<stat name="oustZ" val="-248" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="-46533" Y="-150099" />
+		<node X="-47083" Y="-150158" />
+		<node X="-46913" Y="-150783" />
+		<node X="-46341" Y="-150683" />
+	</zone>
 </list>

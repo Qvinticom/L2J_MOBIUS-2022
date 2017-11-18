@@ -476,42 +476,6 @@
 		<node X="210952" Y="10366" />
 		<node X="210619" Y="10241" />
    	</zone>
-	<zone name="orbis_e_f1" id="12036" type="ScriptZone" shape="NPoly" minZ="-554" maxZ="-154">
-		<node X="198034" Y="90685" />
-		<node X="198276" Y="90684" />
-		<node X="198285" Y="90491" />
-		<node X="198043" Y="90490" />
-	</zone>
-	<zone name="orbis_f1_e" id="12037" type="ScriptZone" shape="NPoly" minZ="-8177" maxZ="-7777">
-		<node X="214890" Y="53031" />
-		<node X="215313" Y="53024" />
-		<node X="215279" Y="52739" />
-		<node X="214922" Y="52736" />
-	</zone>
-	<zone name="orbis_f1_f2" id="12038" type="ScriptZone" shape="NPoly" minZ="-9009" maxZ="-8609">
-		<node X="215530" Y="52069" />
-		<node X="215967" Y="52088" />
-		<node X="215950" Y="52444" />
-		<node X="215530" Y="52460" />
-	</zone>
-	<zone name="orbis_f2_f1" id="12039" type="ScriptZone" shape="NPoly" minZ="-14383" maxZ="-13983">
-		<node X="214893" Y="53016" />
-		<node X="214923" Y="52736" />
-		<node X="215281" Y="52738" />
-		<node X="215315" Y="53016" />
-	</zone>
-	<zone name="orbis_f2_f3" id="12040" type="ScriptZone" shape="NPoly" minZ="-15530" maxZ="-14970">
-		<node X="210516" Y="48942" />
-		<node X="210093" Y="48929" />
-		<node X="210090" Y="48569" />
-		<node X="210518" Y="48554" />
-	</zone>
-	<zone name="orbis_f3_f2" id="12041" type="ScriptZone" shape="NPoly" minZ="-12700" maxZ="-12500">
-		<node X="211276" Y="115088" />
-		<node X="211310" Y="114656" />
-		<node X="211729" Y="114683" />
-		<node X="211763" Y="115079" />
-	</zone>
 	<zone name="octavis_area_tel" id="12042" type="ScriptZone" shape="NPoly" minZ="-10033" maxZ="-9833">
 		<node X="208821" Y="120497" />
 		<node X="209346" Y="120497" />
@@ -567,63 +531,6 @@
 		<node X="-177186" Y="153237" />
 		<node X="-177186" Y="153437" />
 		<node X="-177386" Y="153437" />
-	</zone>
-	<!-- Pailaka Injured Dragon. No exit zones for mob walls -->
-	<zone name="Pailaka Injured Dragon 1" id="200001" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
-		<node X="117769" Y="-46202" />
-		<node X="117828" Y="-46590" />
-		<node X="121923" Y="-46364" />
-		<node X="121763" Y="-44674" />
-	</zone>
-	<zone name="Pailaka Injured Dragon 2" id="200002" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
-		<node X="115970" Y="-45694" />
-		<node X="115620" Y="-46220" />
-		<node X="115593" Y="-46683" />
-		<node X="116477" Y="-47716" />
-		<node X="115839" Y="-46610" />
-		<node X="115819" Y="-46203" />
-	</zone>
-	<zone name="Pailaka Injured Dragon 3" id="200003" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
-		<node X="116346" Y="-49927" />
-		<node X="115202" Y="-50560" />
-		<node X="115330" Y="-50608" />
-		<node X="116347" Y="-50083" />
-	</zone>
-	<zone name="Pailaka Injured Dragon 4" id="200004" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
-		<node X="117275" Y="-51185" />
-		<node X="116018" Y="-51776" />
-		<node X="116278" Y="-52213" />
-		<node X="117526" Y="-51052" />
-	</zone>
-	<zone name="Pailaka Injured Dragon 5" id="200005" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
-		<node X="111137" Y="-43445" />
-		<node X="111187" Y="-44394" />
-		<node X="111392" Y="-44275" />
-		<node X="111355" Y="-43370" />
-	</zone>
-	<zone name="Pailaka Injured Dragon 6" id="200006" type="ScriptZone" shape="NPoly" minZ="-3000" maxZ="-1500">
-		<node X="108768" Y="-45613" />
-		<node X="109882" Y="-47555" />
-		<node X="110229" Y="-47049" />
-		<node X="108917" Y="-45580" />
-	</zone>
-	<zone name="Pailaka Injured Dragon 7" id="200007" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
-		<node X="115979" Y="-55112" />
-		<node X="115753" Y="-56598" />
-		<node X="116242" Y="-56532" />
-		<node X="116211" Y="-55042" />
-	</zone>
-	<zone name="Pailaka Injured Dragon 8" id="200008" type="ScriptZone" shape="NPoly" minZ="-3500" maxZ="-2000">
-		<node X="108467" Y="-40835" />
-		<node X="108533" Y="-41590" />
-		<node X="108666" Y="-41584" />
-		<node X="108623" Y="-40839" />
-	</zone>
-	<zone name="Pailaka Injured Dragon 9" id="200009" type="ScriptZone" shape="NPoly" minZ="-2500" maxZ="-1500">
-		<node X="110456" Y="-39399" />
-		<node X="109835" Y="-39410" />
-		<node X="109830" Y="-39550" />
-		<node X="110457" Y="-39540" />
 	</zone>
 	<zone name="royal_rush_script_1" id="200221" type="ScriptZone" shape="NPoly" minZ="-7263" maxZ="-7063">
 		<node X="181198" Y="-86516" />

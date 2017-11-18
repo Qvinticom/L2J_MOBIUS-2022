@@ -155,4 +155,64 @@
 		<node X="108816" Y="-40776" />
 		<node X="107856" Y="-40652" />
 	</zone>
+	<zone name="26_20_orbis_enter" type="TeleportZone" shape="NPoly" minZ="-458" maxZ="-158">
+		<stat name="oustX" val="213983" />
+		<stat name="oustY" val="53250" />
+		<stat name="oustZ" val="-8136" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="197849" Y="90507" />
+		<node X="198285" Y="90504" />
+		<node X="198283" Y="90673" />
+		<node X="197847" Y="90676" />
+	</zone>
+	<zone name="26_19_orbis_to_lobby" type="TeleportZone" shape="NPoly" minZ="-8018" maxZ="-7718">
+		<stat name="oustX" val="198022" />
+		<stat name="oustY" val="90032" />
+		<stat name="oustZ" val="-192" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="214616" Y="52809" />
+		<node X="215270" Y="52810" />
+		<node X="215284" Y="53472" />
+		<node X="214612" Y="53477" />
+	</zone>
+	<zone name="26_19_orbis_to_2nd" type="TeleportZone" shape="NPoly" minZ="-8840" maxZ="-8540">
+		<stat name="oustX" val="213799" />
+		<stat name="oustY" val="53253" />
+		<stat name="oustZ" val="-14462" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="215023" Y="52075" />
+		<node X="215909" Y="52096" />
+		<node X="215925" Y="52422" />
+		<node X="215027" Y="52409" />
+	</zone>
+	<zone name="26_19_orbis_to_1nd" type="TeleportZone" shape="NPoly" minZ="-14218" maxZ="-14018">
+		<stat name="oustX" val="215056" />
+		<stat name="oustY" val="50467" />
+		<stat name="oustZ" val="-8416" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="214648" Y="52769" />
+		<node X="215304" Y="52755" />
+		<node X="215287" Y="53526" />
+		<node X="214637" Y="53528" />
+	</zone>
+	<zone name="26_19_orbis_to_3rd" type="TeleportZone" shape="NPoly" minZ="-15024" maxZ="-14724">
+		<stat name="oustX" val="211641" />
+		<stat name="oustY" val="115547" />
+		<stat name="oustZ" val="-12736" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="210137" Y="48579" />
+		<node X="211073" Y="48572" />
+		<node X="211077" Y="48976" />
+		<node X="210137" Y="48953" />
+	</zone>
+	<zone name="26_21_orbis_to_2nd" type="TeleportZone" shape="NPoly" minZ="-12737" maxZ="-12437">
+		<stat name="oustX" val="211137" />
+		<stat name="oustY" val="50501" />
+		<stat name="oustZ" val="-14624" />
+		<stat name="targetClass" val="L2PcInstance" />
+		<node X="211261" Y="114644" />
+		<node X="211778" Y="114638" />
+		<node X="211781" Y="115045" />
+		<node X="211273" Y="115064" />
+	</zone>
 </list>
