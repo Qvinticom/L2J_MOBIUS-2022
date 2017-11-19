@@ -1045,6 +1045,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="40363" min="7" max="63" chance="100" /> <!-- Carrot -->
+		</capsuled_items>
 	</item>
 	<item id="40365" name="Galup's Special Luck Pouch" type="EtcItem">
 		<!-- Double-click to obtain special rewards prepared by Galup. -->
