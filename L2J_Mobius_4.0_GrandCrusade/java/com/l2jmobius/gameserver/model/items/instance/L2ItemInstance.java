@@ -2398,7 +2398,15 @@ public final class L2ItemInstance extends L2Object
 			iu.addModifiedItem(this);
 			player.broadcastUserInfo(UserInfoType.APPAREANCE);
 			player.sendInventoryUpdate(iu);
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addItemName(this));
+			
+			if (isEnchanted())
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addInt(getEnchantLevel()).addItemName(this));
+			}
+			else
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addItemName(this));
+			}
 		}
 	}
 }

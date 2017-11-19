@@ -22,13 +22,8 @@ import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.ShapeShiftingItemRequest;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
-import com.l2jmobius.gameserver.model.items.appearance.AppearanceType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.ArmorType;
-import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -77,10 +72,17 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 			return;
 		}
 		
-		if (!targetItem.getItem().isAppearanceable())
+		if ((stone.getOwnerId() != player.getObjectId()) || (targetItem.getOwnerId() != player.getObjectId()))
 		{
 			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);
+			return;
+		}
+		
+		if (!targetItem.getItem().isAppearanceable())
+		{
+			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_MODIFIED_OR_RESTORED);
+			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
 			return;
 		}
 		
@@ -91,8 +93,7 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 			return;
 		}
 		
-		stone = inventory.getItemByObjectId(stone.getObjectId());
-		if (stone == null)
+		if ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null)
 		{
 			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);
@@ -107,158 +108,9 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 			return;
 		}
 		
-		if (((appearanceStone.getType() != AppearanceType.RESTORE) && (targetItem.getVisualId() > 0)) || ((appearanceStone.getType() == AppearanceType.RESTORE) && (targetItem.getVisualId() == 0)))
+		if (!appearanceStone.checkConditions(player, targetItem))
 		{
-			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
-		// TODO: Handle hair accessory!
-		// if (!targetItem.isEtcItem() && (targetItem.getItem().getCrystalType() == CrystalType.NONE))
-		{
-			// client.sendPacket(SystemMessageId.YOU_CANNOT_MODIFY_OR_RESTORE_NOGRADE_ITEMS);
-			// return;
-		}
-		
-		if (!appearanceStone.getTargetTypes().contains(AppearanceTargetType.ACCESSORY)) // accessory tempfix
-		{
-			if (!appearanceStone.getCrystalTypes().isEmpty() && !appearanceStone.getCrystalTypes().contains(targetItem.getItem().getCrystalType()))
-			{
-				client.sendPacket(SystemMessageId.ITEM_GRADES_DO_NOT_MATCH);
-				client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-			}
-		}
-		
-		if (appearanceStone.getTargetTypes().isEmpty())
-		{
-			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
-		}
-		
-		if (!appearanceStone.getTargetTypes().contains(AppearanceTargetType.ALL))
-		{
-			if (targetItem.isWeapon() && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.WEAPON))
-			{
-				client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-				client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-				
-			}
-			else if (targetItem.isArmor() && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.ARMOR) && !appearanceStone.getTargetTypes().contains(AppearanceTargetType.ACCESSORY))
-			{
-				client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-				client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-			}
-			else if (targetItem.isArmor() && !appearanceStone.getBodyParts().isEmpty() && !appearanceStone.getBodyParts().contains(targetItem.getItem().getBodyPart()))
-			{
-				client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-				client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				return;
-			}
-		}
-		
-		if (appearanceStone.getWeaponType() != WeaponType.NONE)
-		{
-			if (!targetItem.isWeapon() || (targetItem.getItemType() != appearanceStone.getWeaponType()))
-			{
-				client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-				player.removeRequest(ShapeShiftingItemRequest.class);
-				client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-				return;
-			}
-			
-			switch (appearanceStone.getHandType())
-			{
-				case ONE_HANDED:
-				{
-					if ((targetItem.getItem().getBodyPart() & L2Item.SLOT_R_HAND) != L2Item.SLOT_R_HAND)
-					{
-						client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-						player.removeRequest(ShapeShiftingItemRequest.class);
-						client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-						return;
-					}
-					break;
-				}
-				case TWO_HANDED:
-				{
-					if ((targetItem.getItem().getBodyPart() & L2Item.SLOT_LR_HAND) != L2Item.SLOT_LR_HAND)
-					{
-						client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-						player.removeRequest(ShapeShiftingItemRequest.class);
-						client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-						return;
-					}
-					break;
-				}
-			}
-			
-			switch (appearanceStone.getMagicType())
-			{
-				case MAGICAL:
-				{
-					if (!targetItem.getItem().isMagicWeapon())
-					{
-						client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-						player.removeRequest(ShapeShiftingItemRequest.class);
-						client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-						return;
-					}
-					break;
-				}
-				case PHYISICAL:
-				{
-					if (targetItem.getItem().isMagicWeapon())
-					{
-						client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-						player.removeRequest(ShapeShiftingItemRequest.class);
-						client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-						return;
-					}
-				}
-			}
-		}
-		
-		if (appearanceStone.getArmorType() != ArmorType.NONE)
-		{
-			switch (appearanceStone.getArmorType())
-			{
-				case SHIELD:
-				{
-					if (!targetItem.isArmor() || (targetItem.getItemType() != ArmorType.SHIELD))
-					{
-						client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-						player.removeRequest(ShapeShiftingItemRequest.class);
-						client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-						return;
-					}
-					break;
-				}
-				case SIGIL:
-				{
-					if (!targetItem.isArmor() || (targetItem.getItemType() != ArmorType.SIGIL))
-					{
-						client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-						player.removeRequest(ShapeShiftingItemRequest.class);
-						client.sendPacket(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
-						return;
-					}
-				}
-			}
-		}
-		
-		if (targetItem.getOwnerId() != player.getObjectId())
-		{
-			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
+			player.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
 			return;
 		}
 		

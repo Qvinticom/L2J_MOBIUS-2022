@@ -1,9 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27100" name="Rabbit Ears" additionalName="LUC + Critical Damage" type="Armor">
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -11,6 +16,11 @@
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -18,6 +28,11 @@
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -25,6 +40,11 @@
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -32,6 +52,11 @@
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -39,6 +64,11 @@
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -46,6 +76,11 @@
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -53,6 +88,11 @@
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -60,6 +100,11 @@
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -67,20 +112,35 @@
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27110" name="Rabbit Ears" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. +10% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27111" name="Rabbit Ears" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -88,6 +148,11 @@
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -95,6 +160,11 @@
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -102,6 +172,11 @@
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -109,6 +184,11 @@
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -116,6 +196,11 @@
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -123,6 +208,11 @@
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -130,6 +220,11 @@
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -137,6 +232,11 @@
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -144,6 +244,11 @@
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -151,6 +256,11 @@
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -158,6 +268,11 @@
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -165,6 +280,11 @@
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -172,6 +292,11 @@
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -179,20 +304,35 @@
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27126" name="Raccoon Ears" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27127" name="Raccoon Ears" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -200,6 +340,11 @@
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -207,6 +352,11 @@
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_racoon_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -214,6 +364,11 @@
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -221,6 +376,11 @@
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -228,6 +388,11 @@
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -235,6 +400,11 @@
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -242,6 +412,11 @@
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -249,6 +424,11 @@
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -256,6 +436,11 @@
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -263,6 +448,11 @@
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -270,6 +460,11 @@
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -277,6 +472,11 @@
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -284,6 +484,11 @@
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -291,20 +496,35 @@
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27142" name="Cat Ears" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27143" name="Cat Ears" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -312,6 +532,11 @@
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -319,6 +544,11 @@
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -326,6 +556,11 @@
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -333,6 +568,11 @@
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -340,6 +580,11 @@
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -347,6 +592,11 @@
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -354,6 +604,11 @@
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -361,6 +616,11 @@
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -368,6 +628,11 @@
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -375,6 +640,11 @@
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -382,6 +652,11 @@
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -389,6 +664,11 @@
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -396,6 +676,11 @@
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -403,20 +688,35 @@
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27158" name="Romantic Chapeau" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27159" name="Romantic Chapeau" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -424,6 +724,11 @@
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -431,6 +736,11 @@
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.accessory_romantic_chaperon_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -438,6 +748,11 @@
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -445,6 +760,11 @@
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -452,6 +772,11 @@
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -459,6 +784,11 @@
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -466,6 +796,11 @@
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -473,6 +808,11 @@
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -480,6 +820,11 @@
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -487,6 +832,11 @@
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -494,6 +844,11 @@
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -501,6 +856,11 @@
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -508,6 +868,11 @@
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -515,20 +880,35 @@
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27174" name="Angel Circlet" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27175" name="Angel Circlet" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -536,6 +916,11 @@
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -543,6 +928,11 @@
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -550,6 +940,11 @@
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -557,6 +952,11 @@
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -564,6 +964,11 @@
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -571,6 +976,11 @@
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -578,6 +988,11 @@
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -585,6 +1000,11 @@
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -592,6 +1012,11 @@
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -599,6 +1024,11 @@
 		<!-- CHA + 3 and M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -606,6 +1036,11 @@
 		<!-- LUC + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -613,6 +1048,11 @@
 		<!-- CHA + 3 and Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -620,6 +1060,11 @@
 		<!-- LUC + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -627,20 +1072,35 @@
 		<!-- CHA + 3 and P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27190" name="Demon Circlet" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="27191" name="Demon Circlet" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -648,6 +1108,11 @@
 		<!-- LUC + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -655,6 +1120,11 @@
 		<!-- CHA + 3 and Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -662,6 +1132,11 @@
 		<!-- LUC + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -669,6 +1144,11 @@
 		<!-- CHA + 3 and Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -676,6 +1156,11 @@
 		<!-- LUC + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -683,6 +1168,11 @@
 		<!-- CHA + 3, P. Critical Damage + 90, and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -690,6 +1180,11 @@
 		<!-- LUC + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
@@ -697,6 +1192,11 @@
 		<!-- CHA + 3 and P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>

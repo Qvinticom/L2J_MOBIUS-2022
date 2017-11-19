@@ -839,6 +839,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27560" name="Lineage II Baseball Cap Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the Lineage II Baseball Cap. Can only be used on hair accessories that use 2 slots. -->
@@ -848,6 +851,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27561" name="Ultimate Support Cube Box" type="EtcItem">
 		<!-- Obtain an Ultimate Support Cube (30-day). Cubes cannot be dropped or exchanged. -->

@@ -83,6 +83,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36605" name="Blessed Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -98,6 +99,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_HAIRACC" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36606" name="Scroll: Modify Weapon (R-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -113,6 +115,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36607" name="Scroll: Modify Weapon (S-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -128,6 +131,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36608" name="Scroll: Modify Weapon (A-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -143,6 +147,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36609" name="Scroll: Modify Weapon (B-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -158,6 +163,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36610" name="Scroll: Modify Weapon (C-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -173,6 +179,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36611" name="Scroll: Modify Weapon (D-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -188,6 +195,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36612" name="Blessed Scroll: Modify Weapon (R-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -202,6 +210,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36613" name="Blessed Scroll: Modify Weapon (S-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -216,6 +225,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36614" name="Blessed Scroll: Modify Weapon (A-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -230,6 +240,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36615" name="Blessed Scroll: Modify Weapon (B-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -244,6 +255,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36616" name="Blessed Scroll: Modify Weapon (C-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -258,6 +270,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36617" name="Blessed Scroll: Modify Weapon (D-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -272,6 +285,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_WP" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36618" name="Scroll: Modify Armor (R-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena. -->
@@ -287,6 +301,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36619" name="Scroll: Modify Armor (S-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 50,000 adena. -->
@@ -302,6 +317,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36620" name="Scroll: Modify Armor (A-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 24000 adena. -->
@@ -317,6 +333,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36621" name="Scroll: Modify Armor (B-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 8000 adena. -->
@@ -332,6 +349,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36622" name="Scroll: Modify Armor (C-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 1500 adena. -->
@@ -347,6 +365,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36623" name="Scroll: Modify Armor (D-grade)" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 600 adena. -->
@@ -362,6 +381,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36624" name="Blessed Scroll: Modify Armor (R-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -376,6 +396,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36625" name="Blessed Scroll: Modify Armor (S-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -390,6 +411,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36626" name="Blessed Scroll: Modify Armor (A-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -404,6 +426,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36627" name="Blessed Scroll: Modify Armor (B-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -418,6 +441,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36628" name="Blessed Scroll: Modify Armor (C-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -432,6 +456,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36629" name="Blessed Scroll: Modify Armor (D-grade)" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
@@ -446,6 +471,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_AM" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36630" name="Hair Accessory Appearance Stone" additionalName="15-day" type="EtcItem">
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -463,6 +489,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36631" name="Blessed Hair Accessory Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -479,6 +506,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="BLESS_SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36632" name="Emerald Weapon: One-handed Sword" type="Weapon">
 		<!-- Emerald Weapon. One-handed sword style. Initial Emerald Weapon Appearance Stone. -->
@@ -893,6 +921,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36649" name="Emerald Weapon Appearance Stone: Dagger" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of an Emerald dagger. 7-day. -->
@@ -909,6 +938,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36650" name="Emerald Weapon Appearance Stone: Two-handed Sword" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of an Emerald two-handed sword. 7-day. -->
@@ -925,6 +955,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36651" name="Emerald Weapon Appearance Stone: Fist Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of an Emerald fist weapon. 7-day. -->
@@ -941,6 +972,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36652" name="Emerald Weapon Appearance Stone: Spear" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of an Emerald spear. 7-day. -->
@@ -957,6 +989,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36653" name="Emerald Weapon Appearance Stone: Bow" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of an Emerald bow. 7-day. -->
@@ -973,6 +1006,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36654" name="Emerald Weapon Appearance Stone: Crossbow" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of an Emerald crossbow. 7-day. -->
@@ -989,6 +1023,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36655" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of an Emerald one-handed blunt. 7-day. -->
@@ -1005,6 +1040,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36656" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of an Emerald two-handed blunt. 7-day. -->
@@ -1021,6 +1057,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36657" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of an Emerald magic blunt. 7-day. -->
@@ -1037,6 +1074,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36658" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of an Emerald two-handed magic blunt. 7-day. -->
@@ -1053,6 +1091,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36659" name="Emerald Weapon Appearance Stone: Dualsword" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of an Emerald dualsword. 7-day. -->
@@ -1069,6 +1108,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36660" name="Emerald Weapon Appearance Stone: Dual Dagger" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of an Emerald dual dagger. 7-day. -->
@@ -1085,6 +1125,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36661" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of an Emerald dual blunt. 7-day. -->
@@ -1101,6 +1142,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36662" name="Emerald Weapon Appearance Stone: Shield" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of an Emerald shield. 7-day. -->
@@ -1117,6 +1159,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36663" name="Emerald Weapon Appearance Stone: Sigil" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of an Emerald sigil. 7-day. -->
@@ -1133,6 +1176,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36664" name="9th Anniversary Hat" type="Armor">
 		<!-- 9-year anniversary hair accessory. Enables emoticon skills. -->
@@ -1154,6 +1198,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="36666" name="Unidentified Suspicious Badge" type="EtcItem">
 		<!-- Suspicious badge from a dead monster in the Sea of Spores. Take it to Paterson's Disciple, Bacon, in the Sea of Spores to receive a reward. -->

@@ -629,33 +629,45 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47461" name="Red Pirate Garment Appearance Stone" type="EtcItem">
+	<item id="47461" name="Red Pirate Garment Appearance Stone" additionalName="None" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a Red Pirate Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Pirate Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47462" name="Pirate Shipmate Garment Appearance Stone" type="EtcItem">
+	<item id="47462" name="Pirate Shipmate Garment Appearance Stone" additionalName="None" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a Pirate Shipmate Garment. The stone modifies the appearance of all armor, and all armor appears as a Pirate Shipmate Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47463" name="Cowboy-Purple Garment Appearance Stone" type="EtcItem">
+	<item id="47463" name="Cowboy-Purple Garment Appearance Stone" additionalName="None" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a Cowboy-Purple Garment. The stone modifies the appearance of all armor, and all armor appears as a Cowboy-Purple Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47464" name="White Assassin Suit Appearance Stone" type="EtcItem">
+	<item id="47464" name="White Assassin Suit Appearance Stone" additionalName="None" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a White Assassin Suit. The stone modifies the appearance of all armor, and all armor appears as a White Assassin Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47465" name="Chaos Essence (Dual Class) Treasure Chest (Time limited)" type="EtcItem">
 		<!-- Double click to obtain Chaos Essence (Dual Class) 30-day. -->

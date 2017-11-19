@@ -22,13 +22,13 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.holders.AppearanceHolder;
 import com.l2jmobius.gameserver.model.items.appearance.AppearanceStone;
 import com.l2jmobius.gameserver.model.items.appearance.AppearanceTargetType;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
@@ -75,9 +75,6 @@ public class AppearanceItemData implements IGameXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		StatsSet set;
-		Node att;
-		NamedNodeMap attrs;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
@@ -86,15 +83,7 @@ public class AppearanceItemData implements IGameXmlReader
 				{
 					if ("appearance_stone".equalsIgnoreCase(d.getNodeName()))
 					{
-						attrs = d.getAttributes();
-						set = new StatsSet();
-						for (int i = 0; i < attrs.getLength(); i++)
-						{
-							att = attrs.item(i);
-							set.set(att.getNodeName(), att.getNodeValue());
-						}
-						
-						final AppearanceStone stone = new AppearanceStone(set);
+						final AppearanceStone stone = new AppearanceStone(new StatsSet(parseAttributes(d)));
 						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 						{
 							switch (c.getNodeName())
@@ -129,6 +118,10 @@ public class AppearanceItemData implements IGameXmlReader
 									stone.addRaceNot(raceNot);
 									break;
 								}
+								case "visual":
+								{
+									stone.addVisualId(new AppearanceHolder(new StatsSet(parseAttributes(c))));
+								}
 							}
 						}
 						if (ItemTable.getInstance().getTemplate(stone.getId()) != null)
@@ -143,6 +136,11 @@ public class AppearanceItemData implements IGameXmlReader
 				}
 			}
 		}
+	}
+	
+	public int getLoadedElementsCount()
+	{
+		return _stones.size();
 	}
 	
 	public AppearanceStone getStone(int stone)

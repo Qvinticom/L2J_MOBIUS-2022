@@ -980,6 +980,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23870" name="Angel Cat's Blessing" type="EtcItem">
 		<!-- For 60min., P. Atk. + 5%, M. Atk. + 20%, Atk. Spd. + 5%, Casting Spd. + 5%, and SP/XP gain through hunt + 30%. Does not stack with event buffs such as the Letter Collector's Gift. -->
@@ -995,6 +996,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23871" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- When possessed in the inventory while hunting, Adena gain, item drops, and item acquisition through spoils + 100%. -->
@@ -1047,6 +1049,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="60" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23875" name="Prestige Rune 100% Pack" additionalName="5-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (5-hour). -->
@@ -1057,6 +1060,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="300" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23876" name="Prestige Rune 100% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Prestige Rune 100% (7-day). -->
@@ -1067,6 +1071,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23877" name="Samurai Hair Accessory" type="Armor">
 		<!-- Samurai look. -->
@@ -1094,6 +1099,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23879" name="Samurai Outfit" type="Armor">
 		<!-- Samurai look. -->
@@ -1121,6 +1127,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23881" name="Anakim Outfit" type="Armor">
 		<!-- Anakim's look. -->
@@ -1148,6 +1155,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23883" name="Vampire Top" type="Armor">
 		<!-- Vampiric wear. -->
@@ -1223,6 +1231,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23889" name="Vampire Pants Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. All armor types. -->
@@ -1238,6 +1247,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23890" name="Vampire Gloves Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. -->
@@ -1253,6 +1263,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23891" name="Vampire Shoes Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Vampire Outfit. No change in stats. -->
@@ -1268,6 +1279,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23892" name="Vampire Hair Accessory Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of a hair accessory into that of a Vampire Outfit. Only for 2-slot hair accessories. -->
@@ -1283,6 +1295,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23893" name="Life Stone Pack" type="EtcItem">
 		<!-- Wrapped Pack containing various Life Stones. Double-click to obtain either a  Life Stone Instilled with Giants' Power, Top-grade Life Stone (R-grade), High-grade Life Stone (R-grade), Mid-grade Life Stone (R-grade), or Life Stone (R-grade). -->

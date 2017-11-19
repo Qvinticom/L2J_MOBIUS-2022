@@ -211,6 +211,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22452" level="1" /> <!-- Santa Girl's Gift Box -->
 		</skills>
@@ -224,6 +225,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22807" level="1" /> <!-- Monster Weapon Appearance Stone Pack -->
 		</skills>
@@ -456,7 +458,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22799" level="1" /> <!-- Vesper Noble Top Appearance Stone -->
 		</skills>
@@ -477,7 +478,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22800" level="1" /> <!-- Vesper Noble Pants Appearance Stone -->
 		</skills>
@@ -498,7 +498,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22801" level="1" /> <!-- Vesper Noble Gloves Appearance Stone -->
 		</skills>
@@ -519,7 +518,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22802" level="1" /> <!-- Vesper Noble Shoes Appearance Stone -->
 		</skills>
@@ -970,6 +968,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22803" level="1" /> <!-- Fantasy Top Appearance Stone Pack -->
 		</skills>
@@ -983,6 +982,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22804" level="1" /> <!-- Fantasy Pants Appearance Stone Pack -->
 		</skills>
@@ -996,6 +996,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22805" level="1" /> <!-- Fantasy Gloves Appearance Stone Pack -->
 		</skills>
@@ -1009,6 +1010,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22806" level="1" /> <!-- Fantasy Shoes Appearance Stone Pack -->
 		</skills>
@@ -1023,6 +1025,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22794" level="1" /> <!-- Shining Accessory Pack -->
 		</skills>
@@ -1141,7 +1144,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22831" level="1" /> <!-- Vorpal Top Appearance Stone -->
 		</skills>
@@ -1162,7 +1164,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22832" level="1" /> <!-- Vorpal Pants Appearance Stone -->
 		</skills>
@@ -1183,7 +1184,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22833" level="1" /> <!-- Vorpal Gloves Appearance Stone -->
 		</skills>
@@ -1204,7 +1204,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22834" level="1" /> <!-- Vorpal Shoes Appearance Stone -->
 		</skills>
@@ -1238,7 +1237,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22836" level="1" /> <!-- Hellblade Appearance Stone -->
 		</skills>
@@ -1258,7 +1256,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22837" level="1" /> <!-- Claw of Destruction Appearance Stone -->
 		</skills>
@@ -1278,7 +1275,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22838" level="1" /> <!-- Butcher Blades Appearance Stone -->
 		</skills>
@@ -1298,7 +1294,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22839" level="1" /> <!-- Blades of Delusion Appearance Stone -->
 		</skills>
@@ -1318,7 +1313,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22840" level="1" /> <!-- Blood Brother Appearance Stone -->
 		</skills>
@@ -1338,7 +1332,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="10080" />
 		<skills>
 			<skill id="22841" level="1" /> <!-- Mardil's Fan Appearance Stone -->
 		</skills>

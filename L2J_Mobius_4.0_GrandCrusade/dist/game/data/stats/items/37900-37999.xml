@@ -6,6 +6,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37901" name="SP Rune Pack (Low-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (Low-grade) (7-day). -->
@@ -13,6 +14,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37902" name="SP Rune Pack (Mid-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (Mid-grade) (7-day). -->
@@ -20,6 +22,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37903" name="SP Rune Pack (Top-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (High-grade) (7-day). -->
@@ -72,6 +75,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="37906" name="Kat the Cat's Box of Roses" type="EtcItem">
 		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. -->
@@ -80,6 +84,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37907" name="Pig Lollipop Appearance Stone: One-handed Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Pig Lollipop. -->
@@ -90,6 +95,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37908" name="Chrono Cithara Appearance Stone: One-handed Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -100,6 +106,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37909" name="Chrono Unitus Appearance Stone: Fist Weapon" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -110,6 +117,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37910" name="Chrono Campana Appearance Stone: Spear" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -120,6 +128,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37911" name="Chrono Darbuka Appearance Stone: Two-handed Blunt Weapon" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon into that of a Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -130,6 +139,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37912" name="Chrono Maracas Appearance Stone: Dualsword" type="EtcItem">
 		<!-- Changes the appearance of a dualsword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
@@ -140,6 +150,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37913" name="Pumpkin Dagger Appearance Stone: Dagger" type="EtcItem">
 		<!-- Changes the appearance of a dagger into that of a Pumpkin Dagger. -->
@@ -150,6 +161,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37914" name="Pumpkin Dual Dagger Appearance Stone: Dual Dagger" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Pumpkin Dual Dagger. -->
@@ -160,6 +172,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37915" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword into that of a Scarecrow Sword. -->
@@ -170,6 +183,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37916" name="Pumpkin Dagger" type="Weapon">
 		<!-- Cute, pumpkin-shaped dagger. -->
@@ -184,6 +198,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37917" name="Pumpkin Dual Dagger" type="Weapon">
@@ -203,6 +218,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37918" name="Scarecrow Sword" type="Weapon">
@@ -218,6 +234,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37919" name="Pig Lollipop Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
@@ -230,6 +247,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37920" name="Chrono Cithara Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -241,6 +259,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37921" name="Chrono Unitus Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -252,6 +271,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37922" name="Chrono Campana Appearance Stone: Spear" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -263,6 +283,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37923" name="Chrono Darbuka Appearance Stone: Two-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -274,6 +295,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37924" name="Chrono Maracas Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -285,6 +307,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37925" name="Pumpkin Dagger Appearance Stone: Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger into that of a Pumpkin Dagger. 15-day. -->
@@ -296,6 +319,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37926" name="Pumpkin Dual Dagger Appearance Stone: Dual Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Pumpkin Dual Dagger. 15-day. -->
@@ -307,6 +331,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37927" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword into that of a Scarecrow Sword. 15-day. -->
@@ -318,10 +343,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37928" name="Player Commendation - Art of Seduction" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30% for 30 minutes. Cooldown time is 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_blue_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -332,6 +361,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="26918" level="1" /> <!-- Elixir: Divine Protection -->
+		</skills>
 	</item>
 	<item id="37929" name="Awakened Warrior's Blade (7-day)" additionalName="Haste" type="Weapon">
 		<!-- Awakened warrior's weapon. One-handed sword. Increases Atk. Spd. 7-day. Cannot be used in the Olympiad. Kamaels can use the Change Weapon skill to turn this into a Rapier. Cannot be used by Chaotic characters. -->
@@ -348,7 +382,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -357,6 +390,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37930" name="Awakened Warrior's Cleaver (7-day)" additionalName="Haste" type="Weapon">
@@ -374,7 +408,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -383,6 +416,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37931" name="Awakened Warrior's Axe (7-day)" additionalName="Haste" type="Weapon">
@@ -400,7 +434,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -410,6 +443,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37932" name="Awakened Warrior's Rod (7-day)" additionalName="Acumen" type="Weapon">
@@ -427,7 +461,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -437,6 +470,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37933" name="Awakened Warrior's Crusher (7-day)" additionalName="Haste" type="Weapon">
@@ -454,7 +488,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -464,6 +497,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37934" name="Awakened Warrior's Scepter (7-day)" additionalName="Acumen" type="Weapon">
@@ -481,7 +515,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -491,6 +524,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37935" name="Awakened Warrior's Stinger (7-day)" additionalName="Haste" type="Weapon">
@@ -508,7 +542,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -518,6 +551,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37936" name="Awakened Warrior's Fang (7-day)" additionalName="Haste" type="Weapon">
@@ -535,7 +569,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -545,6 +578,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37937" name="Awakened Warrior's Bow (7-day)" additionalName="Haste" type="Weapon">
@@ -562,7 +596,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -572,6 +605,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37938" name="Awakened Warrior's Wing (7-day)" additionalName="Haste" type="Weapon">
@@ -589,7 +623,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -598,6 +631,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37939" name="Awakened Warrior's Spear (7-day)" additionalName="Haste" type="Weapon">
@@ -615,7 +649,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -625,6 +658,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37940" name="Awakened Warrior's Rapier (7-day)" additionalName="Haste" type="Weapon">
@@ -642,7 +676,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -652,6 +685,7 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">-1.5</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">40</stat>
 		</stats>
 	</item>
 	<item id="37941" name="Awakened Warrior's Sword (7-day)" additionalName="Haste" type="Weapon">
@@ -669,7 +703,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -679,6 +712,7 @@
 			<stat type="accCombat">2</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
 	<item id="37942" name="Awakened Warrior's Shooter (7-day)" additionalName="Haste" type="Weapon">
@@ -696,7 +730,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="time" val="10080" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1300" />
 		<stats>
@@ -706,6 +739,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37943" name="Awakened Warrior's Weapon Coupon (7-day)" type="EtcItem">
@@ -719,17 +753,28 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="10080" />
 	</item>
 	<item id="37944" name="Emperor's Cookie" type="EtcItem">
 		<!-- For 1 hr., Prevailing/ Combat/ Refreshing Sonata buffs are applied. Cooldown is 60min. Double-click to use. Buff remains even after death. -->
 		<set name="icon" val="icon.etc_bm_sonata_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="reuse_delay" val="3600000" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="17297" level="1" /> <!-- Emperor's Cookie: Prevailing Sonata -->
+			<skill id="17298" level="1" /> <!-- Emperor's Cookie: Daring Sonata -->
+			<skill id="17299" level="1" /> <!-- Emperor's Cookie: Refreshing Sonata -->
+		</skills>
 	</item>
 	<item id="37945" name="Chrono Cithara" type="Weapon">
 		<!-- Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
@@ -739,13 +784,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
-		<set name="time" val="21600" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37946" name="Chrono Unitus" type="Weapon">
@@ -756,7 +801,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
-		<set name="time" val="21600" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -764,6 +808,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37947" name="Chrono Campana" type="Weapon">
@@ -774,7 +819,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
-		<set name="time" val="21600" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -782,6 +826,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37948" name="Chrono Darbuka" type="Weapon">
@@ -791,7 +836,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
-		<set name="time" val="21600" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pAtk">1</stat>
@@ -800,6 +844,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37949" name="Chrono Maracas" type="Weapon">
@@ -810,19 +855,20 @@
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
-		<set name="time" val="21600" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="37950" name="Requiem Shaper Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -842,6 +888,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -860,6 +907,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -878,6 +926,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -897,6 +946,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -915,6 +965,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -934,6 +985,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -952,6 +1004,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -970,6 +1023,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -988,6 +1042,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1006,6 +1061,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1025,6 +1081,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1043,6 +1100,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
@@ -1062,6 +1120,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1080,6 +1139,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1098,6 +1158,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1116,6 +1177,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
@@ -1135,6 +1197,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1153,6 +1216,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
@@ -1172,6 +1236,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1190,6 +1255,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1208,6 +1274,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
@@ -1227,6 +1294,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1245,6 +1313,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1263,6 +1332,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1281,6 +1351,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
@@ -1300,6 +1371,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
@@ -1319,6 +1391,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SIGIL" />
@@ -1338,6 +1411,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1355,6 +1429,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1372,6 +1447,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1389,6 +1465,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -1408,6 +1485,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -1427,6 +1505,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
@@ -1446,6 +1525,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
@@ -1465,6 +1545,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
@@ -1484,6 +1565,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -1503,6 +1585,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BOW" />
@@ -1522,6 +1605,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1540,6 +1624,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
@@ -1559,6 +1644,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1578,6 +1664,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1596,6 +1683,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
@@ -1615,6 +1703,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
@@ -1634,6 +1723,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1652,6 +1742,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
@@ -1670,6 +1761,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
@@ -1689,6 +1781,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
@@ -1708,6 +1801,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
@@ -1727,6 +1821,7 @@
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />

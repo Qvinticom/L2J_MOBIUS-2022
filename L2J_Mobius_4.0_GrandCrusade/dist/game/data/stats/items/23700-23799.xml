@@ -474,6 +474,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23729" name="Erupting Vitality Replenishing Potion" type="EtcItem">
 		<!-- For 1 hr., Vitality Recovery + 100%. -->
@@ -487,6 +488,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23730" name="Erupting Vitality Conservation Potion" type="EtcItem">
 		<!-- For 1 hr., Vitality consumption upon XP gain - 50%. -->
@@ -500,6 +502,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23731" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
@@ -513,6 +516,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23732" name="Divine Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
@@ -526,6 +530,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23733" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
@@ -539,6 +544,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23734" name="Divine Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
@@ -552,6 +558,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23735" name="Divine Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
@@ -565,6 +572,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23736" name="Divine Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
@@ -578,6 +586,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23737" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (A-grade) + 4, and two-handed sword/blunt/fist, dagger, crossbow + 5. P. Atk. for bows + 8. M. Atk. for all weapons + 3. From +4, P. Atk./M. Atk. Increase twofold. -->
@@ -587,6 +596,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23738" name="Divine Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (S-grade) + 5, and two-handed sword/blunt/fist, dagger, crossbow + 6. P. Atk. for bows + 10. M. Atk. for all weapons + 4. From +4, P. Atk./M. Atk. Increase twofold. -->
@@ -596,6 +606,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23739" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. -->
@@ -605,6 +616,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23740" name="Divine Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (A-grade) + 1. Starting from + 4, P. Def. + 3. -->
@@ -614,6 +626,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23741" name="Divine Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (S-grade) + 1. Starting from + 4, P. Def. + 3, and HP gradually increases. -->
@@ -623,6 +636,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23742" name="Divine Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to + 4. When enchanted, P. Def. for armor and accessories (R-grade) + 2. Starting from +4, increases P. Def. greatly, and HP gradually increases. -->
@@ -632,6 +646,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23743" name="Prestige Rune 30%" additionalName="3-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%. -->
@@ -687,6 +702,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="180" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23747" name="Prestige Rune 30% Pack" additionalName="10-hour" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 30% (10-hour). -->
@@ -700,6 +716,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="600" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23748" name="Prestige Rune 30% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 30% (7-day. -->
@@ -713,6 +730,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23749" name="Prestige Rune 50%" additionalName="3-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.50%. -->
@@ -768,6 +786,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="180" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23753" name="Prestige Rune 50% Pack" additionalName="10-hour" type="EtcItem">
 		<!-- Pack containing Drop Rate Rune 50% (10-hour). -->
@@ -794,6 +813,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23755" name="Prestige Rune 100%" additionalName="3-hour" type="EtcItem">
 		<!-- When carried during a hunt, Adena / item drop rate / item acquisition through Spoil + 30%.100%. -->
@@ -849,6 +869,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="180" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23759" name="Prestige Rune 100% Pack" additionalName="10-hour" type="EtcItem">
 		<!-- Wrapped Pack containing Drop Rate Rune 100% (10-hour). -->
@@ -862,6 +883,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="600" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23760" name="Prestige Rune 100% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Wrapped Pack containing Drop Rate Rune 100% (7-day. -->
@@ -875,6 +897,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23761" name="Prestige Cube" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain either Dark/Bloody Eternal Enhancement Stone, Normal/Giant/Blessed Weapon Enchant Scroll (R-grade), Normal/Giant/Blessed Armor Enchant Scroll (R-grade), Gemstone (R-grade), or Giant's Energy. Once a day. Cannot be used in the Olympiad. -->
@@ -890,6 +913,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="time" val="40320" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23762" name="High-grade Elixir Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 5 each of High-grade Elixir of Life/Mind/CP. Cannot be used in the Olympiad. -->
@@ -899,6 +923,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="23763" name="Vitality Recovery Potion" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only. For 60 min., Vitality is restored upon XP gain. Cannot apply another buff with the same effect, and when applying a similar effect, the Vitaily Maintaining Potion's buff effect will disappear. -->
@@ -935,6 +960,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="time" val="1440" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23765" name="Feather of Blessing" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only. Can resurrect at the spot if stored in the inventory. -->
@@ -1460,5 +1486,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 </list>

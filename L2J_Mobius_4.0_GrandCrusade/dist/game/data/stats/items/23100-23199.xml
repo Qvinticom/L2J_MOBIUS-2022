@@ -382,6 +382,7 @@
 		<set name="time" val="129600" />
 		<stats>
 			<stat type="pDef">132</stat>
+			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
 	<item id="23113" name="Vorpal Gaiters of Fortune" additionalName="90-day" type="Armor">
@@ -448,6 +449,7 @@
 		<set name="time" val="129600" />
 		<stats>
 			<stat type="pDef">82</stat>
+			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
 	<item id="23116" name="Vorpal Gauntlets of Fortune" additionalName="90-day" type="Armor">
@@ -785,6 +787,7 @@
 		<set name="time" val="129600" />
 		<stats>
 			<stat type="mDef">65</stat>
+			<stat type="maxMp">26</stat>
 		</stats>
 	</item>
 	<item id="23131" name="Vorpal Earring of Fortune" additionalName="90-day" type="Armor">
@@ -806,6 +809,7 @@
 		<set name="time" val="129600" />
 		<stats>
 			<stat type="mDef">98</stat>
+			<stat type="maxMp">38</stat>
 		</stats>
 	</item>
 	<item id="23132" name="Vorpal Necklace of Fortune" additionalName="90-day" type="Armor">
@@ -827,6 +831,7 @@
 		<set name="time" val="129600" />
 		<stats>
 			<stat type="mDef">131</stat>
+			<stat type="maxMp">51</stat>
 		</stats>
 	</item>
 	<item id="23133" name="Gender Change Ticket" type="EtcItem">
@@ -1169,6 +1174,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22627" level="1" /> <!-- Exorcist's Gift -->
 		</skills>
@@ -1182,6 +1188,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22628" level="1" /> <!-- Einhasad's Gift -->
 		</skills>
@@ -1195,6 +1202,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22629" level="1" /> <!-- Shilen's Gift -->
 		</skills>
@@ -1650,6 +1658,7 @@
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="22633" level="1" /> <!-- Herina's Gift Box -->
 		</skills>

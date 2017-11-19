@@ -3,16 +3,16 @@
 	<item id="38400" name="Expertise Rune Pack" additionalName="C-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (C-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38399" min="1" max="1" chance="100" /> <!-- Expertise Rune (C-grade) -->
+			<item id="38399" min="1" max="1" chance="100" /> <!-- Expertise Rune (C-grade) (2-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="38401" name="Expertise Rune (B-grade)" additionalName="2-hour" type="EtcItem">
@@ -35,16 +35,16 @@
 	<item id="38402" name="Expertise Rune Pack" additionalName="B-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (B-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38401" min="1" max="1" chance="100" /> <!-- Expertise Rune (B-grade) -->
+			<item id="38401" min="1" max="1" chance="100" /> <!-- Expertise Rune (B-grade) (2-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="38403" name="Expertise Rune (A-grade)" additionalName="2-hour" type="EtcItem">
@@ -67,16 +67,16 @@
 	<item id="38404" name="Expertise Rune Pack" additionalName="A-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (A-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38403" min="1" max="1" chance="100" /> <!-- Expertise Rune (A-grade) -->
+			<item id="38403" min="1" max="1" chance="100" /> <!-- Expertise Rune (A-grade) (2-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="38405" name="Expertise Rune (S-grade)" additionalName="2-hour" type="EtcItem">
@@ -99,16 +99,16 @@
 	<item id="38406" name="Expertise Rune Pack" additionalName="S-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (S-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38405" min="1" max="1" chance="100" /> <!-- Expertise Rune (S-grade) -->
+			<item id="38405" min="1" max="1" chance="100" /> <!-- Expertise Rune (S-grade) (2-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="38407" name="Expertise Rune (S80-grade)" additionalName="2-hour" type="EtcItem">
@@ -131,16 +131,16 @@
 	<item id="38408" name="Expertise Rune Pack" additionalName="S80-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (S80-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38407" min="1" max="1" chance="100" /> <!-- Expertise Rune (S80-grade) -->
+			<item id="38407" min="1" max="1" chance="100" /> <!-- Expertise Rune (S80-grade) (2-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="38409" name="Expertise Rune (R-grade)" additionalName="2-hour" type="EtcItem">
@@ -163,16 +163,16 @@
 	<item id="38410" name="Expertise Rune Pack" additionalName="R-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38409" min="1" max="1" chance="100" /> <!-- Expertise Rune (R-grade) -->
+			<item id="38409" min="1" max="1" chance="100" /> <!-- Expertise Rune (R-grade) (2-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="38411" name="Expertise Rune (R95-grade)" additionalName="2-hour" type="EtcItem">
@@ -195,16 +195,16 @@
 	<item id="38412" name="Expertise Rune Pack" additionalName="R95-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R95-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38411" min="1" max="1" chance="100" /> <!-- Expertise Rune (R95-grade) -->
+			<item id="38411" min="1" max="1" chance="100" /> <!-- Expertise Rune (R95-grade) (2-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="38413" name="Expertise Rune (R99-grade)" additionalName="2-hour" type="EtcItem">
@@ -227,17 +227,16 @@
 	<item id="38414" name="Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
 		<!-- Wrapped Pack containing Expertise Rune (R99-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="120" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38413" min="1" max="1" chance="100" /> <!-- Expertise Rune (R99-grade) -->
+			<item id="38413" min="1" max="1" chance="100" /> <!-- Expertise Rune (R99-grade) (2-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="38415" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
@@ -249,6 +248,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38416" name="Trumpetfish Appearance Stone: Dual Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a dual dagger into that of a Trumpetfish. 30-day. -->
@@ -259,6 +259,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38417" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon" type="EtcItem">
 		<!-- Turns the appearance of a dual blunt weapon into that of a Blue Mackerel. -->
@@ -268,6 +269,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38418" name="Trumpetfish Appearance Stone: Dual Dagger" type="EtcItem">
 		<!-- Turns the appearance of a dual dagger into that of a Trumpetfish. -->
@@ -277,6 +279,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38419" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Turns the appearance of a one-handed blunt weapon into that of a Blue Mackerel. 30-day. -->
@@ -287,6 +290,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38420" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon" type="EtcItem">
 		<!-- Turns the appearance of a one-handed blunt weapon into that of a Blue Mackerel. -->
@@ -296,6 +300,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="38421" name="Blue Mackerel: One-handed Blunt Weapon" type="Weapon">
 		<!-- Blue Mackerel-shaped weapon. One-handed blunt weapon. -->
@@ -319,6 +324,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38422" name="Trumpetfish: Dual Dagger" type="Weapon">
@@ -344,6 +350,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38423" name="Blue Mackerel: Dual Blunt Weapon" type="Weapon">
@@ -368,6 +375,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38424" name="Monster Only: Amden Sword" type="Weapon">
@@ -392,6 +400,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38425" name="Monster Only: Amden Blunt Weapon" type="Weapon">
@@ -416,6 +425,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38426" name="Monster Only: Amden Bow" type="Weapon">
@@ -440,6 +450,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38427" name="Monster Only: Centaur Weapon" type="Weapon">
@@ -464,6 +475,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38428" name="Monster Only: Minotaur Dagger" type="Weapon">
@@ -488,6 +500,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38429" name="Monster Only: Tiger Sword" type="Weapon">
@@ -512,6 +525,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38430" name="Monster Only: Tiger Bow" type="Weapon">
@@ -536,6 +550,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38431" name="Monster Only: Tiger Dagger" type="Weapon">
@@ -560,6 +575,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38432" name="Monster Only: Tiger Jewel" type="Weapon">
@@ -580,6 +596,7 @@
 			<stat type="mAtk">54</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38433" name="Monster Only: Tiger Blunt Weapon" type="Weapon">
@@ -604,6 +621,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38434" name="Monster Only: Tiger Polearm" type="Weapon">
@@ -628,6 +646,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38435" name="Monster Only: Tiger Shield" type="Weapon">
@@ -647,7 +666,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="38436" name="Monster Only: Tiger Sigil" type="Armor">
+	<item id="38436" name="Monster Only: Tiger Sigil" type="Weapon">
 		<!-- Monster weapon. Shield -->
 		<set name="icon" val="icon.Summon_orc_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -686,6 +705,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38438" name="Agathion - Blessed Virgo Pack" type="EtcItem">
@@ -696,6 +716,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38439" name="Agathion - Twinkling Virgo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Twinkling Virgo -->
@@ -705,6 +726,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38440" name="Agathion - Radiant Virgo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Radiant Virgo -->
@@ -714,6 +736,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38441" name="Agathion - Virgo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Virgo. -->
@@ -723,6 +746,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38442" name="Agathion - Faint Virgo Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Faint Virgo. -->
@@ -732,6 +756,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38443" name="Monster Only: Centaur Axe" type="Weapon">
 		<!-- Monster weapon. One-handed Sword -->
@@ -755,6 +780,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38444" name="Monster Only: Centaur Shield" type="Weapon">
@@ -796,6 +822,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="38446" name="Monster Only: Centaur Throwing Blade" type="Weapon">
@@ -820,6 +847,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="38447" name="Monster Only: Miniotaur Polearm" type="Weapon">
@@ -844,6 +872,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38448" name="Monster Only: Minotaur Two-handed Axe" type="Weapon">
@@ -869,6 +898,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="38449" name="Agathion - Blessed Capricorn" type="Armor">
