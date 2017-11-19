@@ -1694,7 +1694,6 @@
 		</effects>
 	</skill>
 	<skill id="9569" toLevel="1" name="Heavenly P. Atk. Cookie">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Speed + 8. -->
 		<icon>icon.etc_bm_attack_cookie</icon>
 		<operateType>A2</operateType>
@@ -1710,12 +1709,41 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9570" toLevel="1" name="Heavenly P. Def. Cookie">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
@@ -1731,12 +1759,37 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>45</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9571" toLevel="1" name="Heavenly Magic Cookie">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Speed + 8, M. Def. + 14%, MP and Recovery Bonus + 20%. Magic Skill MP Consumption - 15%, P. Skill MP Consumption - 5%, and Skill Cooldown - 20%. -->
 		<icon>icon.etc_bm_magic_cookie</icon>
 		<operateType>A2</operateType>
@@ -1752,9 +1805,67 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>			
+			<effect name="PAtk">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>14</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9572" toLevel="1" name="Heavenly CP Cookie">
 		<!-- AUTO GENERATED SKILL -->

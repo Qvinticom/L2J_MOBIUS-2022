@@ -339,6 +339,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="23240" min="1" max="1" chance="100" />
+			<item id="37710" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="37720" name="Maphr's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.   Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
@@ -348,6 +355,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="23307" min="1" max="1" chance="100" />
+			<item id="37710" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="37721" name="Sayha's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.   Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
@@ -357,6 +368,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="23301" min="1" max="1" chance="100" />
+			<item id="37710" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="37722" name="Eva's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.   Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
@@ -366,6 +381,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="23304" min="1" max="1" chance="100" />
+			<item id="37710" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="37723" name="Shiny Elemental Shirt Exchange Stone" type="EtcItem">
 		<!-- Bring Pa'agrio's Shirt, Maphr's Shirt, Sayha's Shirt, or Eva's Shirt to the Fantasy Isle Paddy to exchange for a Shiny Elemental Shirt. -->

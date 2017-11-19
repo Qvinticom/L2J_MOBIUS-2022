@@ -1299,8 +1299,25 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="for_npc" val="true" />
+		<set name="reuse_delay" val="3000" />
+		<skills>
+			<skill id="22928" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22930" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22932" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22934" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22936" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22938" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="17297" level="1" /> <!-- Emperor Cookie -->
+			<skill id="17298" level="1" /> <!-- Emperor Cookie -->
+			<skill id="17299" level="1" /> <!-- Emperor Cookie -->
+			<skill id="9569" level="1" /> <!-- Heavenly Cookie -->
+		</skills>
 	</item>
 	<item id="38582" name="Emperor's Dessert Set (Magic Type)" type="EtcItem">
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly Magic Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
@@ -1310,8 +1327,25 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="for_npc" val="true" />
+		<set name="reuse_delay" val="3000" />
+		<skills>
+			<skill id="22928" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22930" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22932" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22934" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22936" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22938" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="17297" level="1" /> <!-- Emperor Cookie -->
+			<skill id="17298" level="1" /> <!-- Emperor Cookie -->
+			<skill id="17299" level="1" /> <!-- Emperor Cookie -->
+			<skill id="9571" level="1" /> <!-- Heavenly Cookie -->
+		</skills>
 	</item>
 	<item id="38583" name="Emperor's Dessert Set (Defense Type)" type="EtcItem">
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly P. Def. Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
@@ -1321,8 +1355,25 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="for_npc" val="true" />
+		<set name="reuse_delay" val="3000" />
+		<skills>
+			<skill id="22928" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22930" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22932" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22934" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22936" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="22938" level="2" /> <!-- Heavenly Cocktail -->
+			<skill id="17297" level="1" /> <!-- Emperor Cookie -->
+			<skill id="17298" level="1" /> <!-- Emperor Cookie -->
+			<skill id="17299" level="1" /> <!-- Emperor Cookie -->
+			<skill id="9570" level="1" /> <!-- Heavenly Cookie -->
+		</skills>
 	</item>
 	<item id="38584" name="Emperor's Dessert Set Pack (Attack Type)" type="EtcItem">
 		<!-- Double-click to obtain either Emperor's Dessert Set (Attack) x 10. Cannot be used in the Olympiad. -->
@@ -1332,6 +1383,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="38581" min="10" max="10" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38585" name="Emperor's Dessert Set Pack (Magic Type)" type="EtcItem">
 		<!-- Double-click to obtain either Emperor's Dessert Set (Magic) x 10. Cannot be used in the Olympiad. -->
@@ -1341,6 +1398,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="38582" min="10" max="10" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38586" name="Emperor's Dessert Set Pack (Defense Type)" type="EtcItem">
 		<!-- Double-click to obtain either Emperor's Dessert Set (Defense) x 10. Cannot be used in the Olympiad. -->
@@ -1350,6 +1413,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="38583" min="10" max="10" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="38587" name="Fish Hat" type="Armor">
 		<!-- Fish-shaped hair accessory. Uses 2 hair accessory slots. -->

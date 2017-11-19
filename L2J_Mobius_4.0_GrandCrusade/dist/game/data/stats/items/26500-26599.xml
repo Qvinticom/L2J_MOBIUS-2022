@@ -209,6 +209,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<capsuled_items>
+			<item id="26388" min="1" max="1" chance="100" />
+			<item id="46186" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="26512" name="Mysterious Wind Scroll Pack" type="EtcItem">
 		<!-- Double-click to get 1 Mysterious Wind Scroll. The scroll cannot be dropped or exchanged. -->
