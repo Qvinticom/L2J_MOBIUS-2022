@@ -512,6 +512,7 @@
 		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, Holy Resistance increase, CON +3, MEN +3. P. Def./M. Def. are increased. Can use the Stun canceling skill. Momentarily increases Stun resistance by 100%. Only one effect is applied even when the same two earrings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -534,6 +535,7 @@
 		<!-- HP +625, MP +79, Sleep Resistance 50% increase, Sleep Attack Rate 50% increase, physical/magic skill cooldown decrease, Wild Magic Effect, damage shield effect, fire resistance 30 increase, Dark Resistance 20 increase, STR +3, INT +3. P. Skill Atk. 5% increase, P. Atk. 10% increase, M. Atk. 20% increase, hold resistance skill use. Hold resistance 100% increase momentarily. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -556,6 +558,7 @@
 		<!-- Tauti's Ring. Fire/Dark Resistance 25 increase, MP 38 increase, Critical Damage 15% increase, skill attack 5% increase, damage inflicted during PvP 5% increase, paralysis/yoke/exile resistance 10 increase, damage reflect resistance 5 increase, HP drain resistance 5 increase, damage received during PvP 5% decrease. Critical 54 increase when equipped with a blunt. Only one effect is applied even when the same two rings are worn (excluding attributes/M. Def.) Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessary_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -580,6 +583,7 @@
 		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -603,6 +607,7 @@
 		<!-- MP +37, Bleed Resistance 30% increase, Bleed Attack Rate 30% increase, Heal Amount 15% increase, Vampiric Rage Effect, Stun/Mental resistance 30% increase, Stun/Mental attack rate 30% increase, Dark Resistance 15 increase. Only one effect is applied even when the same two earrings are worn. When equipped with a normal Zaken's Earring, only the effects of the Blessed Zaken's Earring are applied. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -626,6 +631,7 @@
 		<set name="icon" val="icon.belt_rulers_authority" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="waist" />
 		<set name="weight" val="440" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

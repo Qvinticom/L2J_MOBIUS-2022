@@ -528,7 +528,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="time" val="10080" />
@@ -543,7 +543,7 @@
 		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, Pulling Resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="time" val="10080" />
