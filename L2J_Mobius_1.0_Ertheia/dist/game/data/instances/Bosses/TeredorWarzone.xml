@@ -9,10 +9,15 @@
 		<exit type="ORIGIN" />
 	</locations>
 	<conditions>
-		<condition type="Party" />
-		<condition type="PartyLeader" />
-		<condition type="GroupMin">
-			<param name="limit" value="5" />
+		<condition type="Party" showMessageAndHtml="true">
+			<param name="html" value="condNoParty.html"/>
+		</condition>
+		<condition type="PartyLeader" showMessageAndHtml="true">
+			<param name="html" value="condNoPartyLeader.html"/>
+		</condition>
+		<condition type="GroupMin" showMessageAndHtml="true">
+			<param name="limit" value="5"/>
+			<param name="html" value="condMinLimit.html"/>
 		</condition>
 		<condition type="GroupMax">
 			<param name="limit" value="7" />

@@ -22,6 +22,7 @@ import java.util.Map;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -68,6 +69,7 @@ public final class TeredorWarzone extends AbstractInstance
 	private static final SkillHolder TEREDOR_CANCEL = new SkillHolder(5902, 1);
 	// Misc
 	private static final int TEMPLATE_ID = 160;
+	private static final int MIN_PLAYERS = 5;
 	//@formatter:off
 	private static final Map<Integer, String[]> WALKING_DATA = new HashMap<>();
 	static
@@ -88,7 +90,7 @@ public final class TeredorWarzone extends AbstractInstance
 		super(TEMPLATE_ID);
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR);
-		addSpawnId(BEETLE, POS_CHECKER, EGG_2, FAKE_TEREDOR, TEREDOR);
+		addSpawnId(BEETLE, POS_CHECKER, EGG_2, FAKE_TEREDOR, TEREDOR, TEREDOR_POISON);
 		addSpellFinishedId(BEETLE);
 		addEventReceivedId(EGG_2);
 		addAttackId(TEREDOR);
@@ -116,16 +118,13 @@ public final class TeredorWarzone extends AbstractInstance
 				}
 				case "FAKE_TEREDOR_POISON_TIMER":
 				{
-					final L2Npc minion = addSpawn(TEREDOR_POISON, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
-					
-					getTimers().addTimer("POISON_TIMER", 5000, minion, null);
-					getTimers().addTimer("POISON_TIMER", 10000, minion, null);
-					getTimers().addTimer("POISON_TIMER", 15000, minion, null);
-					getTimers().addTimer("POISON_TIMER", 20000, minion, null);
-					getTimers().addTimer("DELETE_ME", 22000, minion, null);
+					addSpawn(TEREDOR_POISON, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 					break;
 				}
-				case "POISON_TIMER":
+				case "POISON_TIMER_1":
+				case "POISON_TIMER_2":
+				case "POISON_TIMER_3":
+				case "POISON_TIMER_4":
 				{
 					addSkillCastDesire(npc, npc, POISON_SKILL, 23);
 					break;
@@ -160,7 +159,7 @@ public final class TeredorWarzone extends AbstractInstance
 					}
 					else
 					{
-						// myself->CreateOnePrivateEx(18998, "trajan_poison_dummy", 0, 0, gg->FloatToInt(myself->sm->x), gg->FloatToInt(myself->sm->y), gg->FloatToInt(myself->sm->z), 0, 0, 0, 0); //TODO:
+						addSpawn(TEREDOR_POISON, npc.getX(), npc.getY(), npc.getZ(), 0, false, 0, false, instance.getId());
 						getTimers().addTimer("TEREDOR_POISON_TIMER", 2000, npc, null);
 					}
 					break;
@@ -182,11 +181,47 @@ public final class TeredorWarzone extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("enterInstance"))
+		String htmltext = null;
+		
+		switch (event)
 		{
-			enterInstance(player, npc, TEMPLATE_ID);
+			case "enterInstance":
+			{
+				enterInstance(player, npc, TEMPLATE_ID);
+				break;
+			}
+			case "checkConditions":
+			{
+				final Instance playerInstance = getPlayerInstance(player);
+				final L2Party playerParty = player.getParty();
+				
+				if ((playerInstance != null) && (playerInstance.getTemplateId() == TEMPLATE_ID))
+				{
+					enterInstance(player, npc, TEMPLATE_ID);
+				}
+				else if (playerParty == null)
+				{
+					htmltext = "condNoParty.html";
+				}
+				else
+				{
+					if (playerParty.getLeader() == player)
+					{
+						htmltext = (playerParty.getMemberCount() >= MIN_PLAYERS ? "30535-01.html" : "condMinLimit.html");
+					}
+					else
+					{
+						htmltext = "condNoPartyLeader.html";
+					}
+				}
+				break;
+			}
+			case "30535-02.html":
+			{
+				htmltext = event;
+			}
 		}
-		return super.onAdvEvent(event, npc, player);
+		return htmltext;
 	}
 	
 	@Override
@@ -222,6 +257,15 @@ public final class TeredorWarzone extends AbstractInstance
 					npc.setRHandId(FAKE_TEREDOR_WEAPON);
 					npc.initSeenCreatures();
 					getTimers().addTimer("FAKE_TEREDOR_POISON_TIMER", 3000, npc, null);
+					break;
+				}
+				case TEREDOR_POISON:
+				{
+					getTimers().addTimer("POISON_TIMER_1", 5000, npc, null);
+					getTimers().addTimer("POISON_TIMER_2", 10000, npc, null);
+					getTimers().addTimer("POISON_TIMER_3", 15000, npc, null);
+					getTimers().addTimer("POISON_TIMER_4", 20000, npc, null);
+					getTimers().addTimer("DELETE_ME", 22000, npc, null);
 					break;
 				}
 				default:
@@ -429,7 +473,7 @@ public final class TeredorWarzone extends AbstractInstance
 					if ((npc.distFromMe(attacker) > 450) && (getRandom(100) < 5))
 					{
 						addSkillCastDesire(npc, attacker, TEREDOR_POISON_SKILL, 23);
-						// myself->CreateOnePrivateEx(18998, "trajan_poison_dummy", 0, 0, gg->FloatToInt(attacker->x), gg->FloatToInt(attacker->y), gg->FloatToInt(attacker->z), 0, 0, 0, 0);
+						addSpawn(TEREDOR_POISON, attacker.getX(), attacker.getY(), attacker.getZ(), 0, false, 0, false, instance.getId());
 					}
 					
 					if ((hpPer <= 80) && (hpPer >= 60))
@@ -454,7 +498,7 @@ public final class TeredorWarzone extends AbstractInstance
 						else if (getRandom(100) < 1)
 						{
 							addSkillCastDesire(npc, attacker, TEREDOR_POISON_SKILL, 23);
-							// myself->CreateOnePrivateEx(18998, "trajan_poison_dummy", 0, 0, gg->FloatToInt(attacker->x), gg->FloatToInt(attacker->y), gg->FloatToInt(attacker->z), 0, 0, 0, 0);
+							addSpawn(TEREDOR_POISON, attacker.getX(), attacker.getY(), attacker.getZ(), 0, false, 0, false, instance.getId());
 						}
 					}
 					else if ((hpPer <= 60) && (hpPer >= 40))
@@ -480,7 +524,7 @@ public final class TeredorWarzone extends AbstractInstance
 						else if (getRandom(100) < 3)
 						{
 							addSkillCastDesire(npc, attacker, TEREDOR_POISON_SKILL, 23);
-							// myself->CreateOnePrivateEx(18998, "trajan_poison_dummy", 0, 0, gg->FloatToInt(attacker->x), gg->FloatToInt(attacker->y), gg->FloatToInt(attacker->z), 0, 0, 0, 0);
+							addSpawn(TEREDOR_POISON, attacker.getX(), attacker.getY(), attacker.getZ(), 0, false, 0, false, instance.getId());
 						}
 					}
 					else if ((hpPer <= 40) && (hpPer >= 20))
@@ -519,7 +563,7 @@ public final class TeredorWarzone extends AbstractInstance
 						else if (getRandom(100) < 5)
 						{
 							addSkillCastDesire(npc, attacker, TEREDOR_POISON_SKILL, 23);
-							// myself->CreateOnePrivateEx(18998, "trajan_poison_dummy", 0, 0, gg->FloatToInt(attacker->x), gg->FloatToInt(attacker->y), gg->FloatToInt(attacker->z), 0, 0, 0, 0);
+							addSpawn(TEREDOR_POISON, attacker.getX(), attacker.getY(), attacker.getZ(), 0, false, 0, false, instance.getId());
 						}
 					}
 					else if (hpPer < 20)
@@ -560,7 +604,7 @@ public final class TeredorWarzone extends AbstractInstance
 						else if (getRandom(100) < 5)
 						{
 							addSkillCastDesire(npc, attacker, TEREDOR_POISON_SKILL_2, 23);
-							// myself->CreateOnePrivateEx(18998, "trajan_poison_dummy", 0, 0, gg->FloatToInt(attacker->x), gg->FloatToInt(attacker->y), gg->FloatToInt(attacker->z), 0, 0, 0, 0);
+							addSpawn(TEREDOR_POISON, attacker.getX(), attacker.getY(), attacker.getZ(), 0, false, 0, false, instance.getId());
 						}
 						else if (getRandom(100) < 5)
 						{

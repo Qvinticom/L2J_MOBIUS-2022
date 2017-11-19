@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 
 import instances.AbstractInstance;
 
@@ -84,6 +85,7 @@ public final class TautiWarzone extends AbstractInstance
 				{
 					takeItems(player, KEY_OF_DARKNESS, -1);
 					world.setStatus(3);
+					npc.broadcastPacket(new OnEventTrigger(15235001, true));
 					return "33678-3.htm";
 				}
 				return "33678-1.htm";
