@@ -1902,11 +1902,11 @@
 			<height normal="77" />
 		</collision>
 	</npc>
-	<npc id="29237" level="99" type="L2Monster" name="Tauti">
+	<npc id="29237" level="99" type="L2RaidBoss" name="Tauti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="16977958668" sp="27164733" />
+		<acquire exp="16977958668" sp="27164733" raidPoints="21" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="100042329" hpRegen="66707" mp="22800" mpRegen="30" />
