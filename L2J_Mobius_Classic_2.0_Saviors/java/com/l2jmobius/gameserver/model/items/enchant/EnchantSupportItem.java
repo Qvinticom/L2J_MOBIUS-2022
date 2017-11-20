@@ -25,16 +25,23 @@ import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 public final class EnchantSupportItem extends AbstractEnchantItem
 {
 	private final boolean _isWeapon;
+	private final boolean _isBlessed;
 	
 	public EnchantSupportItem(StatsSet set)
 	{
 		super(set);
-		_isWeapon = getItem().getItemType() == EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP;
+		_isWeapon = (getItem().getItemType() == EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP) || (getItem().getItemType() == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP);
+		_isBlessed = (getItem().getItemType() == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM) || (getItem().getItemType() == EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP);
 	}
 	
 	@Override
 	public boolean isWeapon()
 	{
 		return _isWeapon;
+	}
+	
+	public boolean isBlessed()
+	{
+		return _isBlessed;
 	}
 }

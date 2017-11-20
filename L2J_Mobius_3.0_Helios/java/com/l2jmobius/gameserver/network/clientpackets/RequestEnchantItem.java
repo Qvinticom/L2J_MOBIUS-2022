@@ -316,7 +316,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 							activeChar.broadcastUserInfo();
 						}
 						
-						if (scrollTemplate.isBlessed())
+						if (scrollTemplate.isBlessed() || ((supportTemplate != null) && supportTemplate.isBlessed()))
 						{
 							// blessed enchant - clear enchant value
 							client.sendPacket(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0);

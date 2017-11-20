@@ -46,6 +46,8 @@ public abstract class AbstractEnchantItem
 		EtcItemType.GIANT_ENCHT_WP,
 		EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_AM,
 		EtcItemType.ENCHT_ATTR_INC_PROP_ENCHT_WP,
+		EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM,
+		EtcItemType.BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP,
 	};
 	
 	private final int _id;
