@@ -62,7 +62,7 @@ public class L2PcTemplate extends L2CharTemplate
 		_baseMpReg = new double[ExperienceData.getInstance().getMaxLevel()];
 		_baseCpReg = new double[ExperienceData.getInstance().getMaxLevel()];
 		
-		_baseSlotDef = new HashMap<>(12);
+		_baseSlotDef = new HashMap<>(13);
 		_baseSlotDef.put(Inventory.PAPERDOLL_CHEST, set.getInt("basePDefchest", 0));
 		_baseSlotDef.put(Inventory.PAPERDOLL_LEGS, set.getInt("basePDeflegs", 0));
 		_baseSlotDef.put(Inventory.PAPERDOLL_HEAD, set.getInt("basePDefhead", 0));
@@ -75,6 +75,7 @@ public class L2PcTemplate extends L2CharTemplate
 		_baseSlotDef.put(Inventory.PAPERDOLL_RFINGER, set.getInt("baseMDefrfinger", 0));
 		_baseSlotDef.put(Inventory.PAPERDOLL_LFINGER, set.getInt("baseMDefrfinger", 0));
 		_baseSlotDef.put(Inventory.PAPERDOLL_NECK, set.getInt("baseMDefneck", 0));
+		_baseSlotDef.put(Inventory.PAPERDOLL_HAIR, set.getInt("basePDefhair", 0));
 		
 		_fCollisionRadiusFemale = set.getDouble("collisionFemaleradius");
 		_fCollisionHeightFemale = set.getDouble("collisionFemaleheight");
@@ -198,7 +199,7 @@ public class L2PcTemplate extends L2CharTemplate
 	
 	/**
 	 * @param slotId id of inventory slot to return value
-	 * @return defence value of charactert for EMPTY given slot
+	 * @return defense value of character for EMPTY given slot
 	 */
 	public int getBaseDefBySlot(int slotId)
 	{

@@ -114,44 +114,32 @@ public interface IStatsFunction
 		double value = 0;
 		for (L2ItemInstance item : creature.getInventory().getPaperdollItems(L2ItemInstance::isEquipped, L2ItemInstance::isEnchanted))
 		{
-			if (item.getItem().getStats(stat, 0) <= 0)
-			{
-				continue;
-			}
+			// Removed for hair accessory enchant bonus.
+			// Hair accessory base defence is zero.
+			// if (item.getItem().getStats(stat, 0) <= 0)
+			// {
+			// continue;
+			// }
 			
 			final double blessedBonus = item.getItem().isBlessed() ? 1.5 : 1;
-			int overEnchant = 0;
 			int enchant = item.getEnchantLevel();
-			if (enchant > 3)
-			{
-				overEnchant = enchant - 3;
-				enchant = 3;
-			}
 			
-			if (creature.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && ((enchant + overEnchant) > Config.ALT_OLY_ENCHANT_LIMIT))
+			if (creature.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ENCHANT_LIMIT))
 			{
-				if (Config.ALT_OLY_ENCHANT_LIMIT > 3)
-				{
-					overEnchant = Config.ALT_OLY_ENCHANT_LIMIT - 3;
-				}
-				else
-				{
-					overEnchant = 0;
-					enchant = Config.ALT_OLY_ENCHANT_LIMIT;
-				}
+				enchant = Config.ALT_OLY_ENCHANT_LIMIT;
 			}
 			
 			if ((stat == Stats.MAGICAL_DEFENCE) || (stat == Stats.PHYSICAL_DEFENCE))
 			{
-				value += calcEnchantDefBonus(item, blessedBonus, enchant, overEnchant);
+				value += calcEnchantDefBonus(item, blessedBonus, enchant);
 			}
 			else if (stat == Stats.MAGIC_ATTACK)
 			{
-				value += calcEnchantMatkBonus(item, blessedBonus, enchant, overEnchant);
+				value += calcEnchantMatkBonus(item, blessedBonus, enchant);
 			}
 			else if ((stat == Stats.PHYSICAL_ATTACK) && item.isWeapon())
 			{
-				value += calcEnchantedPAtkBonus(item, blessedBonus, enchant, overEnchant);
+				value += calcEnchantedPAtkBonus(item, blessedBonus, enchant);
 			}
 		}
 		return value;
@@ -161,127 +149,42 @@ public interface IStatsFunction
 	 * @param item
 	 * @param blessedBonus
 	 * @param enchant
-	 * @param overEnchant
 	 * @return
 	 */
-	static double calcEnchantDefBonus(L2ItemInstance item, double blessedBonus, int enchant, int overEnchant)
+	static double calcEnchantDefBonus(L2ItemInstance item, double blessedBonus, int enchant)
 	{
-		double value = 0;
 		switch (item.getItem().getCrystalTypePlus())
 		{
 			case R:
 			{
-				// Enchant 0-3 adding +2
-				// Enchant 3-6 adding +4
-				// Enchant 6-127 adding +6
-				switch (overEnchant)
-				{
-					case 1:
-					case 2:
-					case 3:
-					{
-						value += ((2 * blessedBonus * enchant) + (4 * blessedBonus * overEnchant));
-						break;
-					}
-					default:
-					{
-						value += (6 * blessedBonus * overEnchant);
-						break;
-					}
-				}
-				if (value == 0) // 1-3
-				{
-					value += ((2 * blessedBonus * enchant) + (4 * blessedBonus * overEnchant));
-				}
-				break;
+				return ((2 * blessedBonus * enchant) + (6 * blessedBonus * Math.max(0, enchant - 3)));
 			}
-			case S:
-			case A:
-			case B:
-			case C:
-			case D:
-			case NONE:
+			default:
 			{
-				value += enchant + (3 * overEnchant);
-				break;
+				return enchant + (3 * Math.max(0, enchant - 3));
 			}
 		}
-		return value;
 	}
 	
 	/**
 	 * @param item
 	 * @param blessedBonus
 	 * @param enchant
-	 * @param overEnchant
 	 * @return
 	 */
-	static double calcEnchantMatkBonus(L2ItemInstance item, double blessedBonus, int enchant, int overEnchant)
+	static double calcEnchantMatkBonus(L2ItemInstance item, double blessedBonus, int enchant)
 	{
-		double value = 0;
 		switch (item.getItem().getCrystalTypePlus())
 		{
 			case R:
 			{
-				//@formatter:off
-				/* M. Atk. increases by 5 for all weapons.
-				 * Starting at +4, M. Atk. bonus double.
-				 * 0-3 adding +5
-				 * 3-6 adding +10
-				 * 7-9 adding +15
-				 * 10-12 adding +20
-				 * 13-127 adding +25
-				 */
-				//@formatter:on
-				switch (overEnchant)
-				{
-					case 0:
-					{
-						break;
-					}
-					case 1:
-					case 2:
-					case 3:
-					{
-						value += ((5 * blessedBonus * enchant) + (10 * blessedBonus * overEnchant));
-						break;
-					}
-					case 4:
-					case 5:
-					case 6:
-					{
-						value += (15 * blessedBonus * overEnchant);
-						break;
-					}
-					case 7:
-					case 8:
-					case 9:
-					case 10:
-					case 11:
-					case 12:
-					case 13:
-					{
-						value += (20 * blessedBonus * (overEnchant - 1.5));
-						break;
-					}
-					default:
-					{
-						value += (25 * blessedBonus * (overEnchant - 3));
-						break;
-					}
-				}
-				if (value == 0) // 1-3
-				{
-					value += ((5 * blessedBonus * enchant) + (10 * blessedBonus * overEnchant));
-				}
-				break;
+				return ((5 * blessedBonus * enchant) + (10 * blessedBonus * Math.max(0, enchant - 3)));
 			}
 			case S:
 			{
 				// M. Atk. increases by 4 for all weapons.
 				// Starting at +4, M. Atk. bonus double.
-				value += (4 * enchant) + (8 * overEnchant);
-				break;
+				return (4 * enchant) + (8 * Math.max(0, enchant - 3));
 			}
 			case A:
 			case B:
@@ -289,31 +192,25 @@ public interface IStatsFunction
 			{
 				// M. Atk. increases by 3 for all weapons.
 				// Starting at +4, M. Atk. bonus double.
-				value += (3 * enchant) + (6 * overEnchant);
-				break;
+				return (3 * enchant) + (6 * Math.max(0, enchant - 3));
 			}
-			case D:
-			case NONE:
+			default:
 			{
 				// M. Atk. increases by 2 for all weapons. Starting at +4, M. Atk. bonus double.
 				// Starting at +4, M. Atk. bonus double.
-				value += (2 * enchant) + (4 * overEnchant);
-				break;
+				return (2 * enchant) + (4 * Math.max(0, enchant - 3));
 			}
 		}
-		return value;
 	}
 	
 	/**
 	 * @param item
 	 * @param blessedBonus
 	 * @param enchant
-	 * @param overEnchant
 	 * @return
 	 */
-	static double calcEnchantedPAtkBonus(L2ItemInstance item, double blessedBonus, int enchant, int overEnchant)
+	static double calcEnchantedPAtkBonus(L2ItemInstance item, double blessedBonus, int enchant)
 	{
-		double value = 0;
 		switch (item.getItem().getCrystalTypePlus())
 		{
 			case R:
@@ -322,165 +219,11 @@ public interface IStatsFunction
 				{
 					if (item.getWeaponItem().getItemType().isRanged())
 					{
-						//@formatter:off
-						/* P. Atk. increases by 12 for bows.
-						 * Starting at +4, P. Atk. bonus double.
-						 * 0-3 adding +12 
-						 * 4-6 adding +24 
-						 * 7-9 adding +36 
-						 * 10-12 adding +48 
-						 * 13-127 adding +60
-						 */
-						//@formatter:on
-						switch (overEnchant)
-						{
-							case 0:
-							{
-								break;
-							}
-							case 1:
-							case 2:
-							case 3:
-							{
-								value += ((12 * blessedBonus * enchant) + (24 * blessedBonus * overEnchant));
-								break;
-							}
-							case 4:
-							case 5:
-							case 6:
-							{
-								value += (36 * blessedBonus * overEnchant);
-								break;
-							}
-							case 7:
-							case 8:
-							case 9:
-							case 10:
-							case 11:
-							case 12:
-							{
-								value += (48 * blessedBonus * (overEnchant - 1.5));
-								break;
-							}
-							default:
-							{
-								value += (60 * blessedBonus * (overEnchant - 3));
-								break;
-							}
-						}
-						if (value == 0) // 1-3
-						{
-							value += ((12 * blessedBonus * enchant) + (24 * blessedBonus * overEnchant));
-						}
+						return (12 * blessedBonus * enchant) + (24 * blessedBonus * Math.max(0, enchant - 3));
 					}
-					else
-					{
-						//@formatter:off
-						/* P. Atk. increases by 7 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-						 * Starting at +4, P. Atk. bonus double.
-						 * 0-3 adding +7 
-						 * 4-6 adding +14 
-						 * 7-9 adding +21 
-						 * 10-12 adding +28 
-						 * 13-127 adding +35
-						 */
-						//@formatter:on
-						switch (overEnchant)
-						{
-							case 0:
-							{
-								break;
-							}
-							case 1:
-							case 2:
-							case 3:
-							{
-								value += ((7 * blessedBonus * enchant) + (14 * blessedBonus * overEnchant));
-								break;
-							}
-							case 4:
-							case 5:
-							case 6:
-							{
-								value += (21 * blessedBonus * overEnchant);
-								break;
-							}
-							case 7:
-							case 8:
-							case 9:
-							case 10:
-							case 11:
-							case 12:
-							{
-								value += (28 * blessedBonus * (overEnchant - 1.5));
-								break;
-							}
-							default:
-							{
-								value += (35 * blessedBonus * (overEnchant - 3));
-								break;
-							}
-						}
-						if (value == 0) // 1-3
-						{
-							value += ((7 * blessedBonus * enchant) + (14 * blessedBonus * overEnchant));
-						}
-					}
+					return (7 * blessedBonus * enchant) + (14 * blessedBonus * Math.max(0, enchant - 3));
 				}
-				else
-				{
-					//@formatter:off
-					/* P. Atk. increases by 6 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
-					 * Starting at +4, P. Atk. bonus double.
-					 * 0-3 adding +6 
-					 * 4-6 adding +12 
-					 * 7-9 adding +18 
-					 * 10-12 adding +24 
-					 * 13-127 adding +30
-					 */
-					//@formatter:on
-					switch (overEnchant)
-					{
-						case 0:
-						{
-							break;
-						}
-						case 1:
-						case 2:
-						case 3:
-						{
-							value += ((6 * blessedBonus * enchant) + (12 * blessedBonus * overEnchant));
-							break;
-						}
-						case 4:
-						case 5:
-						case 6:
-						{
-							value += (18 * blessedBonus * overEnchant);
-							break;
-						}
-						case 7:
-						case 8:
-						case 9:
-						case 10:
-						case 11:
-						case 12:
-						{
-							value += (24 * blessedBonus * (overEnchant - 1.5));
-							break;
-						}
-						default:
-						{
-							value += (30 * blessedBonus * (overEnchant - 3));
-							break;
-						}
-					}
-					if (value == 0) // 1-3
-					{
-						value += ((6 * blessedBonus * enchant) + (12 * blessedBonus * overEnchant));
-					}
-				}
-				break;
+				return (6 * blessedBonus * enchant) + (12 * blessedBonus * Math.max(0, enchant - 3));
 			}
 			case S:
 			{
@@ -490,22 +233,15 @@ public interface IStatsFunction
 					{
 						// P. Atk. increases by 10 for bows.
 						// Starting at +4, P. Atk. bonus double.
-						value += (10 * enchant) + (20 * overEnchant);
+						return (10 * enchant) + (20 * Math.max(0, enchant - 3));
 					}
-					else
-					{
-						// P. Atk. increases by 6 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-						// Starting at +4, P. Atk. bonus double.
-						value += (6 * enchant) + (12 * overEnchant);
-					}
-				}
-				else
-				{
-					// P. Atk. increases by 5 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
+					// P. Atk. increases by 6 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
 					// Starting at +4, P. Atk. bonus double.
-					value += (5 * enchant) + (10 * overEnchant);
+					return (6 * enchant) + (12 * Math.max(0, enchant - 3));
 				}
-				break;
+				// P. Atk. increases by 5 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
+				// Starting at +4, P. Atk. bonus double.
+				return (5 * enchant) + (10 * Math.max(0, enchant - 3));
 			}
 			case A:
 			{
@@ -515,22 +251,15 @@ public interface IStatsFunction
 					{
 						// P. Atk. increases by 8 for bows.
 						// Starting at +4, P. Atk. bonus double.
-						value += (8 * enchant) + (16 * overEnchant);
+						return (8 * enchant) + (16 * Math.max(0, enchant - 3));
 					}
-					else
-					{
-						// P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-						// Starting at +4, P. Atk. bonus double.
-						value += (5 * enchant) + (10 * overEnchant);
-					}
-				}
-				else
-				{
-					// P. Atk. increases by 4 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
+					// P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
 					// Starting at +4, P. Atk. bonus double.
-					value += (4 * enchant) + (8 * overEnchant);
+					return (5 * enchant) + (10 * Math.max(0, enchant - 3));
 				}
-				break;
+				// P. Atk. increases by 4 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
+				// Starting at +4, P. Atk. bonus double.
+				return (4 * enchant) + (8 * Math.max(0, enchant - 3));
 			}
 			case B:
 			case C:
@@ -541,42 +270,29 @@ public interface IStatsFunction
 					{
 						// P. Atk. increases by 6 for bows.
 						// Starting at +4, P. Atk. bonus double.
-						value += (6 * enchant) + (12 * overEnchant);
+						return (6 * enchant) + (12 * Math.max(0, enchant - 3));
 					}
-					else
-					{
-						// P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
-						// Starting at +4, P. Atk. bonus double.
-						value += (4 * enchant) + (8 * overEnchant);
-					}
-				}
-				else
-				{
-					// P. Atk. increases by 3 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
+					// P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons.
 					// Starting at +4, P. Atk. bonus double.
-					value += (3 * enchant) + (6 * overEnchant);
+					return (4 * enchant) + (8 * Math.max(0, enchant - 3));
 				}
-				break;
+				// P. Atk. increases by 3 for one-handed swords, one-handed blunts, daggers, spears, and other weapons.
+				// Starting at +4, P. Atk. bonus double.
+				return (3 * enchant) + (6 * Math.max(0, enchant - 3));
 			}
-			case D:
-			case NONE:
+			default:
 			{
 				if (item.getWeaponItem().getItemType().isRanged())
 				{
 					// Bows increase by 4.
 					// Starting at +4, P. Atk. bonus double.
-					value += (4 * enchant) + (8 * overEnchant);
+					return (4 * enchant) + (8 * Math.max(0, enchant - 3));
 				}
-				else
-				{
-					// P. Atk. increases by 2 for all weapons with the exception of bows.
-					// Starting at +4, P. Atk. bonus double.
-					value += (2 * enchant) + (4 * overEnchant);
-				}
-				break;
+				// P. Atk. increases by 2 for all weapons with the exception of bows.
+				// Starting at +4, P. Atk. bonus double.
+				return (2 * enchant) + (4 * Math.max(0, enchant - 3));
 			}
 		}
-		return value;
 	}
 	
 	default double validateValue(L2Character creature, double value, double minValue, double maxValue)

@@ -42,7 +42,8 @@ public class PDefenseFinalizer implements IStatsFunction
 		Inventory.PAPERDOLL_FEET,
 		Inventory.PAPERDOLL_GLOVES,
 		Inventory.PAPERDOLL_UNDER,
-		Inventory.PAPERDOLL_CLOAK
+		Inventory.PAPERDOLL_CLOAK,
+		Inventory.PAPERDOLL_HAIR
 	};
 	
 	@Override
@@ -70,7 +71,8 @@ public class PDefenseFinalizer implements IStatsFunction
 				final L2PcInstance player = creature.getActingPlayer();
 				for (int slot : SLOTS)
 				{
-					if (!inv.isPaperdollSlotEmpty(slot) || ((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR)))
+					if (!inv.isPaperdollSlotEmpty(slot) || //
+						((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR)))
 					{
 						final int defaultStatValue = player.getTemplate().getBaseDefBySlot(slot);
 						baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
