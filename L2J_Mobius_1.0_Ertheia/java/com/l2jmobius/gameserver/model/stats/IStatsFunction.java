@@ -112,17 +112,27 @@ public interface IStatsFunction
 		}
 		
 		double value = 0;
-		for (L2ItemInstance item : creature.getInventory().getPaperdollItems(L2ItemInstance::isEquipped, L2ItemInstance::isEnchanted))
+		for (L2ItemInstance equippedItem : creature.getInventory().getPaperdollItems(L2ItemInstance::isEquipped, L2ItemInstance::isEnchanted))
 		{
-			// Removed for hair accessory enchant bonus.
-			// Hair accessory base defence is zero.
-			// if (item.getItem().getStats(stat, 0) <= 0)
-			// {
-			// continue;
-			// }
+			final L2Item item = equippedItem.getItem();
+			final int bodypart = item.getBodyPart();
+			if ((bodypart == L2Item.SLOT_HAIR) || //
+				(bodypart == L2Item.SLOT_HAIR2) || //
+				(bodypart == L2Item.SLOT_HAIRALL))
+			{
+				// TODO: Item after enchant shows pDef, but scroll says mDef increase.
+				if (!stat.equals(Stats.PHYSICAL_DEFENCE) && !stat.equals(Stats.MAGICAL_DEFENCE))
+				{
+					continue;
+				}
+			}
+			else if (item.getStats(stat, 0) <= 0)
+			{
+				continue;
+			}
 			
-			final double blessedBonus = item.getItem().isBlessed() ? 1.5 : 1;
-			int enchant = item.getEnchantLevel();
+			final double blessedBonus = item.isBlessed() ? 1.5 : 1;
+			int enchant = equippedItem.getEnchantLevel();
 			
 			if (creature.getActingPlayer().isInOlympiadMode() && (Config.ALT_OLY_ENCHANT_LIMIT >= 0) && (enchant > Config.ALT_OLY_ENCHANT_LIMIT))
 			{
@@ -131,15 +141,15 @@ public interface IStatsFunction
 			
 			if ((stat == Stats.MAGICAL_DEFENCE) || (stat == Stats.PHYSICAL_DEFENCE))
 			{
-				value += calcEnchantDefBonus(item, blessedBonus, enchant);
+				value += calcEnchantDefBonus(equippedItem, blessedBonus, enchant);
 			}
 			else if (stat == Stats.MAGIC_ATTACK)
 			{
-				value += calcEnchantMatkBonus(item, blessedBonus, enchant);
+				value += calcEnchantMatkBonus(equippedItem, blessedBonus, enchant);
 			}
-			else if ((stat == Stats.PHYSICAL_ATTACK) && item.isWeapon())
+			else if ((stat == Stats.PHYSICAL_ATTACK) && equippedItem.isWeapon())
 			{
-				value += calcEnchantedPAtkBonus(item, blessedBonus, enchant);
+				value += calcEnchantedPAtkBonus(equippedItem, blessedBonus, enchant);
 			}
 		}
 		return value;
