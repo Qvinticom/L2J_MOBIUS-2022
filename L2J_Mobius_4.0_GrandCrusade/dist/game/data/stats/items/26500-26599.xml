@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="26513" name="Lv. 5 Legendary CHA Dye Pack" additionalName="" type="EtcItem">
+	<item id="26513" name="Lv. 5 Legendary CHA Dye Pack" type="EtcItem">
 		<!-- Double-click to get 1 of the following Lv. 5 Legendary Dyes: STR/DEX/CON/INT/WIT/MEN (CHA). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_freightable" val="false" />
@@ -237,7 +237,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
-	<item id="26514" name="Lv. 5 Legendary LUC Dye Pack" additionalName="" type="EtcItem">
+	<item id="26514" name="Lv. 5 Legendary LUC Dye Pack" type="EtcItem">
 		<!-- Double-click to get 1 of the following Lv. 5 Legendary Dyes: STR/DEX/CON/INT/WIT/MEN (LUC). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_freightable" val="false" />
@@ -246,7 +246,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
-	<item id="26515" name="Lv. 3 Legendary CHA Dye Pack" additionalName="" type="EtcItem">
+	<item id="26515" name="Lv. 3 Legendary CHA Dye Pack" type="EtcItem">
 		<!-- Double-click to get 1 of the following Lv. 3 Legendary Dyes: STR/DEX/CON/INT/WIT/MEN (CHA). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_freightable" val="false" />
@@ -255,7 +255,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
-	<item id="26516" name="Lv. 3 Legendary LUC Dye Pack" additionalName="" type="EtcItem">
+	<item id="26516" name="Lv. 3 Legendary LUC Dye Pack" type="EtcItem">
 		<!-- Double-click to get 1 of the following Lv. 3 Legendary Dyes: STR/DEX/CON/INT/WIT/MEN (LUC). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_freightable" val="false" />
@@ -264,14 +264,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
-	<item id="26517" name="Apparition Stone (All-purpose)" additionalName="" type="EtcItem">
+	<item id="26517" name="Apparition Stone (All-purpose)" type="EtcItem">
 		<!-- Made of a fake soul, this can summon Terakan, Cassius, or Ladar at the Altar of Souls near Faeron Village. -->
 		<set name="icon" val="icon.etc_life_stone_of_begining_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26518" name="Pirate Captain Outfit" additionalName="" type="Armor">
+	<item id="26518" name="Pirate Captain Outfit" type="Armor">
 		<!-- Pirate captain's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -282,7 +282,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
-	<item id="26519" name="Pirate Crew Outfit" additionalName="" type="Armor">
+	<item id="26519" name="Pirate Crew Outfit" type="Armor">
 		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_pirate_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -293,7 +293,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
-	<item id="26520" name="Pirate Captain Appeareance Stone" additionalName="" type="EtcItem">
+	<item id="26520" name="Pirate Captain Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Can use Pirate Captain skill after appearance modification. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -303,7 +303,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="26521" name="Pirate Crew Appeareance Stone" additionalName="" type="EtcItem">
+	<item id="26521" name="Pirate Crew Appeareance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Can use Pirate Crew skill after appearance modification. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />

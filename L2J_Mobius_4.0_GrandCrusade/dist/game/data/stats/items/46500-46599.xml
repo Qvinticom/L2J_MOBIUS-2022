@@ -672,7 +672,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
-	<item id="46564" name="Scroll of Escape: Mystic Tavern" additionalName="" type="EtcItem">
+	<item id="46564" name="Scroll of Escape: Mystic Tavern" type="EtcItem">
 		<!-- Teleports you to the Mystic Tavern. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -742,7 +742,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46571" name="For NPC_Left Hand Meat Plate" additionalName="" type="Weapon">
+	<item id="46571" name="For NPC_Left Hand Meat Plate" type="Weapon">
 		<!-- For NPC. -->
 		<set name="icon" val="icon.weapon_iron_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -771,7 +771,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46573" name="Tauti's Breastplate Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46573" name="Tauti's Breastplate Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of breastplates into Tauti's Breastplate. Changed items cannot be equipped by Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -782,7 +782,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46574" name="Tauti's Gaiters Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46574" name="Tauti's Gaiters Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of gaiters into Tauti's Gaiters. Changed items cannot be equipped by Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_freightable" val="false" />
@@ -793,7 +793,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46575" name="Tauti's Gauntlets Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46575" name="Tauti's Gauntlets Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of gauntlets into Tauti's Gauntlets. Changed items cannot be equipped by Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_freightable" val="false" />
@@ -804,7 +804,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46576" name="Tauti's Boots Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46576" name="Tauti's Boots Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of boots into Tauti's Boots. Changed items cannot be equipped by Ertheia. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_freightable" val="false" />
@@ -826,7 +826,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46578" name="Kelbim's Leather Armor Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46578" name="Kelbim's Leather Armor Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of leather armor into Kelbim's Leather Armor. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -837,7 +837,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46579" name="Kelbim's Leather Leggings Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46579" name="Kelbim's Leather Leggings Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of leather leggings into Kelbim's Leather Leggings. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_freightable" val="false" />
@@ -848,7 +848,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46580" name="Kelbim's Leather Gloves Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46580" name="Kelbim's Leather Gloves Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of leather gloves into Kelbim's Leather Gloves. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_freightable" val="false" />
@@ -859,7 +859,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46581" name="Kelbim's Leather Boots Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46581" name="Kelbim's Leather Boots Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of leather boots into Kelbim's Leather Boots. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_freightable" val="false" />
@@ -881,7 +881,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46583" name="Freya's Tunic Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46583" name="Freya's Tunic Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of tunics into Freya's Tunic. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -892,7 +892,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46584" name="Freya's Stockings Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46584" name="Freya's Stockings Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of stockings into Freya's Stockings. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="is_freightable" val="false" />
@@ -903,7 +903,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46585" name="Freya's Gloves Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46585" name="Freya's Gloves Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of gloves into Freya's Gloves. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="is_freightable" val="false" />
@@ -914,7 +914,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46586" name="Freya's Shoes Appearance Stone" additionalName="" type="EtcItem">
+	<item id="46586" name="Freya's Shoes Appearance Stone" type="EtcItem">
 		<!-- Can change the appearance of shoes into Freya's Shoes. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="is_freightable" val="false" />
@@ -925,7 +925,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="46587" name="Mystic Armor Piece" additionalName="" type="EtcItem">
+	<item id="46587" name="Mystic Armor Piece" type="EtcItem">
 		<!-- Go to Settlen to exchange for a Tauti/Kelbim/Freya Outfit Appearance Stone. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="is_freightable" val="false" />
@@ -992,7 +992,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46595" name="Blue Dynasty" additionalName="" type="Armor">
+	<item id="46595" name="Blue Dynasty" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1002,7 +1002,7 @@
 			<stat type="pDef">400.0</stat>
 		</stats>
 	</item>
-	<item id="46596" name="Blue Dynasty" additionalName="" type="Armor">
+	<item id="46596" name="Blue Dynasty" type="Armor">
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1012,7 +1012,7 @@
 			<stat type="pDef">400.0</stat>
 		</stats>
 	</item>
-	<item id="46597" name="Blue Dynasty" additionalName="" type="Armor">
+	<item id="46597" name="Blue Dynasty" type="Armor">
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1022,7 +1022,7 @@
 			<stat type="pDef">400.0</stat>
 		</stats>
 	</item>
-	<item id="46598" name="Red Zubei" additionalName="" type="Armor">
+	<item id="46598" name="Red Zubei" type="Armor">
 		<set name="icon" val="icon.armor_t64_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1032,7 +1032,7 @@
 			<stat type="pDef">400.0</stat>
 		</stats>
 	</item>
-	<item id="46599" name="Red Zubei" additionalName="" type="Armor">
+	<item id="46599" name="Red Zubei" type="Armor">
 		<set name="icon" val="icon.armor_t65_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />

@@ -967,33 +967,45 @@
 			<skill id="18621" level="1" /> <!-- Supply Box -->
 		</skills>
 	</item>
-	<item id="47363" name="Red Noblesse Appearance Stone" type="EtcItem">
+	<item id="47363" name="Red Noblesse Appearance Stone" additionalName="None" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-bod armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47364" name="White Noblesse Appearance Stone" type="EtcItem">
+	<item id="47364" name="White Noblesse Appearance Stone" additionalName="None" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-bod armor into a White Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a White Noblesse Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47365" name="Blue Musketeer Appearance Stone" type="EtcItem">
+	<item id="47365" name="Blue Musketeer Appearance Stone" additionalName="None" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-bod armor into a Blue Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Blue Musketeer Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47366" name="Red Musketeer Appearance Stone" type="EtcItem">
+	<item id="47366" name="Red Musketeer Appearance Stone" additionalName="None" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-bod armor into a Red Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Musketeer Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47367" name="Royal Save Ticket Box" type="EtcItem">
 		<!-- Double click to obtain an R~R99 Red or Blue Royal Save Ticket. -->

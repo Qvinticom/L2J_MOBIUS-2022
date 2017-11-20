@@ -27,8 +27,10 @@ public class ExShapeShiftingResult implements IClientOutgoingPacket
 {
 	public static int RESULT_FAILED = 0x00;
 	public static int RESULT_SUCCESS = 0x01;
+	public static int RESULT_CLOSE = 0x02;
 	
 	public static ExShapeShiftingResult FAILED = new ExShapeShiftingResult(RESULT_FAILED, 0, 0);
+	public static ExShapeShiftingResult CLOSE = new ExShapeShiftingResult(RESULT_CLOSE, 0, 0);
 	
 	private final int _result;
 	private final int _targetItemId;

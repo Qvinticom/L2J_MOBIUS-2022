@@ -7,7 +7,10 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="129600" />
+		<set name="time" val="7776000" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46201" name="Halloween Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a weapon into that of a Halloween weapon. -->
@@ -16,6 +19,9 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46202" name="Halloween Weapon Appearance Stone" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a weapon into that of a Halloween weapon. -->
@@ -23,7 +29,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="129600" />
+		<set name="time" val="7776000" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46203" name="Halloween Outfit" type="Armor">
 		<!-- Halloween appearance. -->
@@ -953,7 +962,10 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="time" val="129600" />
+		<set name="time" val="7776000" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46269" name="Automatic Appearance: Frozen Weapon" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Frozen Weapons of corresponding types. Can be used on shields and sigils. -->
@@ -971,6 +983,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46271" name="Ninja Outfit Appearance Stone" type="EtcItem">
 		<!-- Modifies the appearance of armor into that of a Ninja Outfit. Works on one-piece armor. It changes everything, making the appearance of all armor into that of a Ninja's outfit. -->
@@ -1199,6 +1214,13 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="13827" level="2" /> <!-- Christmas Talisman - ALL STAT (High) -->
+		</skills>
 	</item>
 	<item id="46292" name="Christmas Talisman" additionalName="ALL STAT +1" type="Armor">
 		<!-- Event item. All Stats + 1 when equipped. Effect does not stack with additional Talismans of the same type. -->
@@ -1207,6 +1229,13 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="150" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="13827" level="1" /> <!-- Christmas Talisman - ALL STAT (High) -->
+		</skills>
 	</item>
 	<item id="46293" name="Christmas Talisman: P. Skill Critical Damage" additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Skill Critical Damage + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1221,7 +1250,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="60" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="3600" />
+		<skills>
+			<skill id="13828" level="1" /> <!-- Christmas Talisman - P. Skill Critical Damage -->
+		</skills>
 	</item>
 	<item id="46294" name="Christmas Talisman: M. Skill Critical Damage" additionalName="1-hour" type="Armor">
 		<!-- Event item. M. Skill Critical Damage + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1236,7 +1272,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="60" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="3600" />
+		<skills>
+			<skill id="13829" level="1" /> <!-- Christmas Talisman - M. Skill Critical Damage -->
+		</skills>
 	</item>
 	<item id="46295" name="Christmas Talisman: Ultimate Defense" additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Atk. + 5000 and M. Def. + 5000 for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1251,7 +1294,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="60" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="3600" />
+		<skills>
+			<skill id="13830" level="1" /> <!-- Christmas Talisman - Ultimate Defense -->
+		</skills>
 	</item>
 	<item id="46296" name="Christmas Talisman: Debuff Resistance" additionalName="1-hour" type="Armor">
 		<!-- Event Item. Defends against Debuffs 5 times for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1266,7 +1316,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="60" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="3600" />
+		<skills>
+			<skill id="13831" level="1" /> <!-- Christmas Talisman - Debuff Resistance -->
+		</skills>
 	</item>
 	<item id="46297" name="Christmas Talisman: P. Atk." additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Atk. + 5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1281,7 +1338,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="60" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="3600" />
+		<skills>
+			<skill id="13832" level="1" /> <!-- Christmas Talisman - P. Atk -->
+		</skills>
 	</item>
 	<item id="46298" name="Christmas Talisman: M. Atk." additionalName="1-hour" type="Armor">
 		<!-- Event item. M. Atk. + 5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1296,7 +1360,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="60" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="3600" />
+		<skills>
+			<skill id="13833" level="1" /> <!-- Christmas Talisman - M. Atk -->
+		</skills>
 	</item>
 	<item id="46299" name="Christmas Talisman: P. Def." additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Def. + 7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
@@ -1311,6 +1382,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="time" val="60" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
+		<set name="time" val="3600" />
+		<skills>
+			<skill id="13834" level="1" /> <!-- Christmas Talisman - P. Def -->
+		</skills>
 	</item>
 </list>
