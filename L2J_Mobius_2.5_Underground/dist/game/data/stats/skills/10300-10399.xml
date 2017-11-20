@@ -916,8 +916,8 @@
 		<trait>SHOCK</trait>
 		<icon>icon.skll10321</icon>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
+		<targetType>TARGET</targetType>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<mpConsume>
 			<value level="1">122</value>
