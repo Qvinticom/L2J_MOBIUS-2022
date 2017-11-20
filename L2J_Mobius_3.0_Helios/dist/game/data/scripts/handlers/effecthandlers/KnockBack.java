@@ -173,7 +173,7 @@ public final class KnockBack extends AbstractEffect
 			{
 				continue;
 			}
-			if ((nearbyPlayer.getTarget() == effected) && nearbyPlayer.isInCategory(CategoryType.AWAKEN_GROUP) && !nearbyPlayer.isAlterSkillActive())
+			if ((nearbyPlayer.getTarget() == effected) && nearbyPlayer.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !nearbyPlayer.isAlterSkillActive())
 			{
 				final int chainSkill = _chainKnockSkills.get(nearbyPlayer.getClassId());
 				if (nearbyPlayer.getSkillRemainingReuseTime(chainSkill) == -1)

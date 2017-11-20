@@ -111,14 +111,14 @@ public final class Raina extends AbstractNpcAI
 	
 	private static final Map<CategoryType, Integer> classCloak = new HashMap<>();
 	{
-		classCloak.put(CategoryType.SIGEL_GROUP, 30310); // Abelius Cloak
-		classCloak.put(CategoryType.TYRR_GROUP, 30311); // Sapyros Cloak Grade
-		classCloak.put(CategoryType.OTHELL_GROUP, 30312); // Ashagen Cloak Grade
-		classCloak.put(CategoryType.YUL_GROUP, 30313); // Cranigg Cloak Grade
-		classCloak.put(CategoryType.FEOH_GROUP, 30314); // Soltkreig Cloak Grade
-		classCloak.put(CategoryType.WYNN_GROUP, 30315); // Naviarope Cloak Grade
-		classCloak.put(CategoryType.ISS_GROUP, 30316); // Leister Cloak Grade
-		classCloak.put(CategoryType.AEORE_GROUP, 30317); // Laksis Cloak Grade
+		classCloak.put(CategoryType.SIXTH_SIGEL_GROUP, 30310); // Abelius Cloak
+		classCloak.put(CategoryType.SIXTH_TIR_GROUP, 30311); // Sapyros Cloak Grade
+		classCloak.put(CategoryType.SIXTH_OTHEL_GROUP, 30312); // Ashagen Cloak Grade
+		classCloak.put(CategoryType.SIXTH_YR_GROUP, 30313); // Cranigg Cloak Grade
+		classCloak.put(CategoryType.SIXTH_FEOH_GROUP, 30314); // Soltkreig Cloak Grade
+		classCloak.put(CategoryType.SIXTH_WYNN_GROUP, 30315); // Naviarope Cloak Grade
+		classCloak.put(CategoryType.SIXTH_IS_GROUP, 30316); // Leister Cloak Grade
+		classCloak.put(CategoryType.SIXTH_EOLH_GROUP, 30317); // Laksis Cloak Grade
 	}
 	
 	private static final List<PlayerClass> dualClassList = new ArrayList<>();
@@ -290,7 +290,7 @@ public final class Raina extends AbstractNpcAI
 			case "ertheiaDualClass":
 			{
 				// TODO: Maybe html is different when you have 85lvl but you haven't completed quest
-				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.AWAKEN_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
+				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";
 				}
@@ -309,7 +309,7 @@ public final class Raina extends AbstractNpcAI
 			case "addDualClass_WYNN_GROUP":
 			case "addDualClass_AEORE_GROUP":
 			{
-				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.AWAKEN_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
+				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
 					htmltext = "addDualClassErtheiaFailed.html";
 					break;
@@ -659,31 +659,31 @@ public final class Raina extends AbstractNpcAI
 	private void addPowerItem(L2PcInstance player)
 	{
 		int itemId = ABELIUS_POWER; // Sigel
-		if (player.isInCategory(CategoryType.TYRR_GROUP))
+		if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
 		{
 			itemId = SAPYROS_POWER;
 		}
-		else if (player.isInCategory(CategoryType.OTHELL_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_OTHEL_GROUP))
 		{
 			itemId = ASHAGEN_POWER;
 		}
-		else if (player.isInCategory(CategoryType.YUL_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_YR_GROUP))
 		{
 			itemId = CRANIGG_POWER;
 		}
-		else if (player.isInCategory(CategoryType.FEOH_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_FEOH_GROUP))
 		{
 			itemId = SOLTKREIG_POWER;
 		}
-		else if (player.isInCategory(CategoryType.WYNN_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_WYNN_GROUP))
 		{
 			itemId = NAVIAROPE_POWER;
 		}
-		else if (player.isInCategory(CategoryType.ISS_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_IS_GROUP))
 		{
 			itemId = LEISTER_POWER;
 		}
-		else if (player.isInCategory(CategoryType.AEORE_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
 		{
 			itemId = LAKCIS_POWER;
 		}
@@ -905,37 +905,37 @@ public final class Raina extends AbstractNpcAI
 	{
 		CategoryType catType = null;
 		
-		if (player.isInCategory(CategoryType.SIGEL_GROUP))
+		if (player.isInCategory(CategoryType.SIXTH_SIGEL_GROUP))
 		{
-			catType = CategoryType.SIGEL_GROUP;
+			catType = CategoryType.SIXTH_SIGEL_GROUP;
 		}
-		else if (player.isInCategory(CategoryType.TYRR_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
 		{
-			catType = CategoryType.TYRR_GROUP;
+			catType = CategoryType.SIXTH_TIR_GROUP;
 		}
-		else if (player.isInCategory(CategoryType.OTHELL_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_OTHEL_GROUP))
 		{
-			catType = CategoryType.OTHELL_GROUP;
+			catType = CategoryType.SIXTH_OTHEL_GROUP;
 		}
-		else if (player.isInCategory(CategoryType.YUL_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_YR_GROUP))
 		{
-			catType = CategoryType.YUL_GROUP;
+			catType = CategoryType.SIXTH_YR_GROUP;
 		}
-		else if (player.isInCategory(CategoryType.FEOH_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_FEOH_GROUP))
 		{
-			catType = CategoryType.FEOH_GROUP;
+			catType = CategoryType.SIXTH_FEOH_GROUP;
 		}
-		else if (player.isInCategory(CategoryType.ISS_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_IS_GROUP))
 		{
-			catType = CategoryType.ISS_GROUP;
+			catType = CategoryType.SIXTH_IS_GROUP;
 		}
-		else if (player.isInCategory(CategoryType.WYNN_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_WYNN_GROUP))
 		{
-			catType = CategoryType.WYNN_GROUP;
+			catType = CategoryType.SIXTH_WYNN_GROUP;
 		}
-		else if (player.isInCategory(CategoryType.AEORE_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
 		{
-			catType = CategoryType.AEORE_GROUP;
+			catType = CategoryType.SIXTH_EOLH_GROUP;
 		}
 		return classCloak.get(catType);
 	}

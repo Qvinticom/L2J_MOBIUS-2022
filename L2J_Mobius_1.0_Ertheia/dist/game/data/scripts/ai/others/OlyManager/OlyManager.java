@@ -57,16 +57,15 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	private static final int MANAGER = 31688;
 	// Misc
 	private static final Map<CategoryType, Integer> EQUIPMENT_MULTISELL = new HashMap<>();
-	
 	{
-		EQUIPMENT_MULTISELL.put(CategoryType.SIGEL_GROUP, 917);
-		EQUIPMENT_MULTISELL.put(CategoryType.TYRR_GROUP, 918);
-		EQUIPMENT_MULTISELL.put(CategoryType.OTHELL_GROUP, 919);
-		EQUIPMENT_MULTISELL.put(CategoryType.YUL_GROUP, 920);
-		EQUIPMENT_MULTISELL.put(CategoryType.FEOH_GROUP, 921);
-		EQUIPMENT_MULTISELL.put(CategoryType.ISS_GROUP, 923);
-		EQUIPMENT_MULTISELL.put(CategoryType.WYNN_GROUP, 922);
-		EQUIPMENT_MULTISELL.put(CategoryType.AEORE_GROUP, 924);
+		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_SIGEL_GROUP, 917);
+		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_TIR_GROUP, 918);
+		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_OTHEL_GROUP, 919);
+		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_YR_GROUP, 920);
+		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_FEOH_GROUP, 921);
+		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_IS_GROUP, 923);
+		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_WYNN_GROUP, 922);
+		EQUIPMENT_MULTISELL.put(CategoryType.SIXTH_EOLH_GROUP, 924);
 	}
 	
 	private static final String[] BYPASSES =
@@ -144,7 +143,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					htmltext = "OlyManager-subclass.html";
 				}
-				else if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
+				else if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
 					htmltext = "OlyManager-awaken.html";
 				}

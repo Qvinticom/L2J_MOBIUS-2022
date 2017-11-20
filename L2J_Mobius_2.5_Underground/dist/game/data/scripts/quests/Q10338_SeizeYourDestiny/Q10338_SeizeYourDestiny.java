@@ -91,7 +91,7 @@ public final class Q10338_SeizeYourDestiny extends Quest
 			}
 			case "33477-03.html":
 			{
-				if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
+				if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
 					qs.setSimulated(false);
 					qs.setState(State.CREATED);
@@ -149,7 +149,7 @@ public final class Q10338_SeizeYourDestiny extends Quest
 				{
 					htmltext = "33477-06.html";
 				}
-				else if (player.isInCategory(CategoryType.AWAKEN_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
+				else if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
 					htmltext = "33477-05.html";
 				}
@@ -167,7 +167,7 @@ public final class Q10338_SeizeYourDestiny extends Quest
 			}
 			case HADEL:
 			{
-				if (player.isInCategory(CategoryType.AWAKEN_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
+				if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
 					htmltext = "33344-07.html";
 				}

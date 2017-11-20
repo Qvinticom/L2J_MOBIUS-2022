@@ -152,7 +152,7 @@ public final class KimerianCommon extends AbstractInstance
 					{
 						if (hasQuestItems(player, FLUTE))
 						{
-							if (player.isInCategory(CategoryType.AEORE_GROUP))
+							if (player.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
 							{
 								addSpawn(FAIRY_REBEL, player.getX() + 60, player.getY(), player.getZ(), 0, false, 0, false, instance.getId());
 								addSpawn(FAIRY_REBEL, player.getX() - 60, player.getY(), player.getZ(), 0, false, 0, false, instance.getId());

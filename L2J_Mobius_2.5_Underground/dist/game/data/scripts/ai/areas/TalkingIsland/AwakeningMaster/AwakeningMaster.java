@@ -68,17 +68,16 @@ public final class AwakeningMaster extends AbstractNpcAI
 	private static final int CHAOS_POMANDER = 37374;
 	private static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
 	private static final Map<CategoryType, Integer> AWAKE_POWER = new HashMap<>();
-	
 	static
 	{
-		AWAKE_POWER.put(CategoryType.SIGEL_GROUP, 32264);
-		AWAKE_POWER.put(CategoryType.TYRR_GROUP, 32265);
-		AWAKE_POWER.put(CategoryType.OTHELL_GROUP, 32266);
-		AWAKE_POWER.put(CategoryType.YUL_GROUP, 32267);
-		AWAKE_POWER.put(CategoryType.FEOH_GROUP, 32268);
-		AWAKE_POWER.put(CategoryType.ISS_GROUP, 32269);
-		AWAKE_POWER.put(CategoryType.WYNN_GROUP, 32270);
-		AWAKE_POWER.put(CategoryType.AEORE_GROUP, 32271);
+		AWAKE_POWER.put(CategoryType.SIXTH_SIGEL_GROUP, 32264);
+		AWAKE_POWER.put(CategoryType.SIXTH_TIR_GROUP, 32265);
+		AWAKE_POWER.put(CategoryType.SIXTH_OTHEL_GROUP, 32266);
+		AWAKE_POWER.put(CategoryType.SIXTH_YR_GROUP, 32267);
+		AWAKE_POWER.put(CategoryType.SIXTH_FEOH_GROUP, 32268);
+		AWAKE_POWER.put(CategoryType.SIXTH_WYNN_GROUP, 32269);
+		AWAKE_POWER.put(CategoryType.SIXTH_IS_GROUP, 32270);
+		AWAKE_POWER.put(CategoryType.SIXTH_EOLH_GROUP, 32271);
 	}
 	
 	// Skills
@@ -117,7 +116,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 					{
 						case SIGEL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.SIGEL_CANDIDATE))
+							if (!player.isInCategory(CategoryType.TANKER_CATEGORY))
 							{
 								return SIGEL_MASTER + "-no_class.htm";
 							}
@@ -125,7 +124,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case TYRR_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.TYRR_CANDIDATE))
+							if (!player.isInCategory(CategoryType.WARRIOR_CATEGORY))
 							{
 								return TYRR_MASTER + "-no_class.htm";
 							}
@@ -133,7 +132,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case OTHELL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.OTHELL_CANDIDATE))
+							if (!player.isInCategory(CategoryType.ROGUE_CATEGORY))
 							{
 								return OTHELL_MASTER + "-no_class.htm";
 							}
@@ -141,7 +140,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case YUL_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.YUL_CANDIDATE))
+							if (!player.isInCategory(CategoryType.ARCHER_CATEGORY))
 							{
 								return YUL_MASTER + "-no_class.htm";
 							}
@@ -149,7 +148,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case FEOH_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.FEOH_CANDIDATE))
+							if (!player.isInCategory(CategoryType.WIZARD_CATEGORY))
 							{
 								return FEOH_MASTER + "-no_class.htm";
 							}
@@ -157,7 +156,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case ISS_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.ISS_CANDIDATE))
+							if (!player.isInCategory(CategoryType.ENCHANTER_CATEGORY))
 							{
 								return ISS_MASTER + "-no_class.htm";
 							}
@@ -165,7 +164,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case WYNN_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.WYNN_CANDIDATE))
+							if (!player.isInCategory(CategoryType.SUMMONER_CATEGORY))
 							{
 								return WYNN_MASTER + "-no_class.htm";
 							}
@@ -173,7 +172,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 						}
 						case AEORE_MASTER:
 						{
-							if (!player.isInCategory(CategoryType.AEORE_CANDIDATE))
+							if (!player.isInCategory(CategoryType.HEALER_CATEGORY))
 							{
 								return AEORE_MASTER + "-no_class.htm";
 							}

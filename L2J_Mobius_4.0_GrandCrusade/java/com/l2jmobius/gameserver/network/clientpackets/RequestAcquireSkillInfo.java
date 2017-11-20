@@ -150,7 +150,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 			}
 			case REVELATION:
 			{
-				if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.AWAKEN_GROUP))
+				if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
 					return;
 				}

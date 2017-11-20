@@ -369,7 +369,7 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 		
 		handleMenteeSkills(player);
 		
-		if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+		if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			handleGraduateMentee(player);
 		}

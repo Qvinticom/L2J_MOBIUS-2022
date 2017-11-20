@@ -53,6 +53,9 @@ public final class AdventurersGuide extends AbstractNpcAI
 		new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
 		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
 	};
+	// Misc
+	private static int MAX_LEVEL_BUFFS = 94;
+	private static int MIN_LEVEL_PROTECTION = 40;
 	
 	private AdventurersGuide()
 	{
@@ -115,7 +118,7 @@ public final class AdventurersGuide extends AbstractNpcAI
 	
 	private String applyBuffs(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		if (player.getLevel() > 94)
+		if (player.getLevel() > MAX_LEVEL_BUFFS)
 		{
 			return "guide-noBuffs.html";
 		}
@@ -126,7 +129,7 @@ public final class AdventurersGuide extends AbstractNpcAI
 		}
 		SkillCaster.triggerCast(npc, player, skill);
 		
-		if ((player.getLevel() < 40) && (player.getClassId().level() <= 1))
+		if ((player.getLevel() < MIN_LEVEL_PROTECTION) && (player.getClassId().level() <= 1))
 		{
 			SkillCaster.triggerCast(npc, player, BLESS_PROTECTION.getSkill());
 		}

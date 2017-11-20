@@ -40,7 +40,7 @@ public class ListMenteeWaiting implements IClientOutgoingPacket
 		_page = page;
 		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
-			if ((player.getLevel() >= minLevel) && (player.getLevel() <= maxLevel) && !player.isMentee() && !player.isMentor() && !player.isInCategory(CategoryType.AWAKEN_GROUP))
+			if ((player.getLevel() >= minLevel) && (player.getLevel() <= maxLevel) && !player.isMentee() && !player.isMentor() && !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
 				_possibleCandiates.add(player);
 			}

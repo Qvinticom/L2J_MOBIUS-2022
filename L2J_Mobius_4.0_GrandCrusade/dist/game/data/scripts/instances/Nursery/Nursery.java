@@ -363,27 +363,27 @@ public final class Nursery extends AbstractInstance
 			{
 				int pointsCount = getRandom(6) + 3;
 				
-				if (killer.isInCategory(CategoryType.SIGEL_GROUP) || killer.isInCategory(CategoryType.AEORE_GROUP))
+				if (killer.isInCategory(CategoryType.SIXTH_SIGEL_GROUP) || killer.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
 				{
 					pointsCount += 6;
 				}
-				else if (killer.isInCategory(CategoryType.TYRR_GROUP))
+				else if (killer.isInCategory(CategoryType.SIXTH_TIR_GROUP))
 				{
 					pointsCount -= 1;
 				}
-				else if (killer.isInCategory(CategoryType.OTHELL_GROUP))
+				else if (killer.isInCategory(CategoryType.SIXTH_OTHEL_GROUP))
 				{
 					pointsCount += 2;
 				}
-				else if (killer.isInCategory(CategoryType.YUL_GROUP))
+				else if (killer.isInCategory(CategoryType.SIXTH_YR_GROUP))
 				{
 					pointsCount += 1;
 				}
-				else if (killer.isInCategory(CategoryType.FEOH_GROUP) || killer.isInCategory(CategoryType.ISS_GROUP))
+				else if (killer.isInCategory(CategoryType.SIXTH_FEOH_GROUP) || killer.isInCategory(CategoryType.SIXTH_IS_GROUP))
 				{
 					pointsCount += 0;
 				}
-				else if (killer.isInCategory(CategoryType.WYNN_GROUP))
+				else if (killer.isInCategory(CategoryType.SIXTH_WYNN_GROUP))
 				{
 					pointsCount += 3;
 				}

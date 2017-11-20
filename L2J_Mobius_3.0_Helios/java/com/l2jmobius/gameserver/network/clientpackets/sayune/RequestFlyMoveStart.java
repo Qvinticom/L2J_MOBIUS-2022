@@ -44,7 +44,7 @@ public class RequestFlyMoveStart implements IClientIncomingPacket
 	public void run(L2GameClient client)
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || !activeChar.isInsideZone(ZoneId.SAYUNE) || activeChar.hasRequest(SayuneRequest.class) || !activeChar.isInCategory(CategoryType.AWAKEN_GROUP))
+		if ((activeChar == null) || !activeChar.isInsideZone(ZoneId.SAYUNE) || activeChar.hasRequest(SayuneRequest.class) || !activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			return;
 		}

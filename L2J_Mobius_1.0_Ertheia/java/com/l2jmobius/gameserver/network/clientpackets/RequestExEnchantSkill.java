@@ -87,7 +87,7 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
+		if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			return;
 		}

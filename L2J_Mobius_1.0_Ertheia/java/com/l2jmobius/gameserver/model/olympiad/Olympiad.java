@@ -80,7 +80,7 @@ public class Olympiad extends ListenersContainer
 	private static final String OLYMPIAD_MONTH_CLEAR = "TRUNCATE olympiad_nobles_eom";
 	private static final String OLYMPIAD_MONTH_CREATE = "INSERT INTO olympiad_nobles_eom SELECT charId, class_id, olympiad_points, competitions_done, competitions_won, competitions_lost, competitions_drawn FROM olympiad_nobles";
 	
-	private static final Set<Integer> HERO_IDS = CategoryData.getInstance().getCategoryByType(CategoryType.AWAKEN_GROUP);
+	private static final Set<Integer> HERO_IDS = CategoryData.getInstance().getCategoryByType(CategoryType.SIXTH_CLASS_GROUP);
 	
 	private static final int COMP_START = Config.ALT_OLY_START_TIME; // 6PM
 	private static final int COMP_MIN = Config.ALT_OLY_MIN; // 00 mins

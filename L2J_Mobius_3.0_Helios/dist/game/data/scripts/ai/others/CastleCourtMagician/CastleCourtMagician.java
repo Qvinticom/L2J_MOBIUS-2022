@@ -121,14 +121,14 @@ public final class CastleCourtMagician extends AbstractNpcAI
 	// Misc
 	private static final CategoryType[] AWAKENED_CT =
 	{
-		CategoryType.SIGEL_GROUP,
-		CategoryType.TYRR_GROUP,
-		CategoryType.OTHELL_GROUP,
-		CategoryType.YUL_GROUP,
-		CategoryType.FEOH_GROUP,
-		CategoryType.ISS_GROUP,
-		CategoryType.WYNN_GROUP,
-		CategoryType.AEORE_GROUP,
+		CategoryType.SIXTH_SIGEL_GROUP,
+		CategoryType.SIXTH_TIR_GROUP,
+		CategoryType.SIXTH_OTHEL_GROUP,
+		CategoryType.SIXTH_YR_GROUP,
+		CategoryType.SIXTH_FEOH_GROUP,
+		CategoryType.SIXTH_IS_GROUP,
+		CategoryType.SIXTH_WYNN_GROUP,
+		CategoryType.SIXTH_EOLH_GROUP,
 	};
 	
 	private CastleCourtMagician()
@@ -266,7 +266,7 @@ public final class CastleCourtMagician extends AbstractNpcAI
 			}
 			case "giveTalismanR":
 			{
-				htmltext = player.isInCategory(CategoryType.AWAKEN_GROUP) ? "courtmagician-09.html" : "courtmagician-10.html";
+				htmltext = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) ? "courtmagician-09.html" : "courtmagician-10.html";
 				break;
 			}
 			case "giveTalismanR_classSpecific":

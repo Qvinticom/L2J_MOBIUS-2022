@@ -148,7 +148,7 @@ public class PaulinasSupportBox implements IItemHandler
 					}
 					case ORC:
 					{
-						if (player.isMageClass() || CategoryData.getInstance().isInCategory(CategoryType.TYRR_CANDIDATE, classId.getId()))
+						if (player.isMageClass() || CategoryData.getInstance().isInCategory(CategoryType.WARRIOR_CATEGORY, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_C_LIGHT, 1, player, true);
 						}
@@ -203,7 +203,7 @@ public class PaulinasSupportBox implements IItemHandler
 					}
 					case ORC:
 					{
-						if (player.isMageClass() || CategoryData.getInstance().isInCategory(CategoryType.TYRR_CANDIDATE, classId.getId()))
+						if (player.isMageClass() || CategoryData.getInstance().isInCategory(CategoryType.WARRIOR_CATEGORY, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_A_LIGHT, 1, player, true);
 						}
@@ -258,7 +258,7 @@ public class PaulinasSupportBox implements IItemHandler
 					}
 					case ORC:
 					{
-						if (player.isMageClass() || CategoryData.getInstance().isInCategory(CategoryType.TYRR_CANDIDATE, classId.getId()))
+						if (player.isMageClass() || CategoryData.getInstance().isInCategory(CategoryType.WARRIOR_CATEGORY, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_S_LIGHT, 1, player, true);
 						}
@@ -301,7 +301,7 @@ public class PaulinasSupportBox implements IItemHandler
 						{
 							player.addItem(getClass().getSimpleName(), BOX_R_ROBE, 1, player, true);
 						}
-						else if (CategoryData.getInstance().isInCategory(CategoryType.OTHELL_GROUP, classId.getId()) || CategoryData.getInstance().isInCategory(CategoryType.YUL_GROUP, classId.getId()))
+						else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_OTHEL_GROUP, classId.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
 						}

@@ -115,7 +115,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 			mentor.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			return false;
 		}
-		else if (!mentor.isInCategory(CategoryType.AWAKEN_GROUP))
+		else if (!mentor.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			mentor.sendPacket(SystemMessageId.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR);
 			return false;

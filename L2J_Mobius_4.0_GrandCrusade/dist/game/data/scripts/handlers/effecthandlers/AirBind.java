@@ -114,7 +114,7 @@ public final class AirBind extends AbstractEffect
 		for (L2PcInstance nearbyPlayer : L2World.getInstance().getVisibleObjects(effected, L2PcInstance.class, 1200))
 		{
 			if ((nearbyPlayer.getRace() != Race.ERTHEIA) && (nearbyPlayer.getTarget() == effected) //
-				&& nearbyPlayer.isInCategory(CategoryType.AWAKEN_GROUP) && !nearbyPlayer.isAlterSkillActive())
+				&& nearbyPlayer.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !nearbyPlayer.isAlterSkillActive())
 			{
 				final int chainSkill = _chainedAirSkills.get(nearbyPlayer.getClassId());
 				if (nearbyPlayer.getSkillRemainingReuseTime(chainSkill) == -1)

@@ -78,7 +78,7 @@ public final class MonkOfChaos extends AbstractNpcAI
 			}
 			case "LearnRevelationSkills":
 			{
-				if ((player.getLevel() < MIN_LEVEL) || !player.isInCategory(CategoryType.AWAKEN_GROUP))
+				if ((player.getLevel() < MIN_LEVEL) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
 					htmltext = "no-learn.html";
 					break;
@@ -139,7 +139,7 @@ public final class MonkOfChaos extends AbstractNpcAI
 					}
 				}
 				
-				if ((player.getLevel() < MIN_LEVEL) || !player.isInCategory(CategoryType.AWAKEN_GROUP) || (count == 0))
+				if ((player.getLevel() < MIN_LEVEL) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || (count == 0))
 				{
 					htmltext = "no-cancel.html";
 					break;

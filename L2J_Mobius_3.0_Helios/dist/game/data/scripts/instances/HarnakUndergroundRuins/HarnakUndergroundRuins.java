@@ -79,17 +79,16 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	private static final int DOOR_ONE = 16240100;
 	private static final int DOOR_TWO = 16240102;
 	private static final Map<CategoryType, Integer> MOB_CATEGORY = new HashMap<>();
-	
 	static
 	{
-		MOB_CATEGORY.put(CategoryType.SIGEL_CANDIDATE, RAKZAN);
-		MOB_CATEGORY.put(CategoryType.TYRR_CANDIDATE, KRAKIA_BATHUS);
-		MOB_CATEGORY.put(CategoryType.OTHELL_CANDIDATE, BAMONTI);
-		MOB_CATEGORY.put(CategoryType.YUL_CANDIDATE, KRAKIA_CARCASS);
-		MOB_CATEGORY.put(CategoryType.FEOH_CANDIDATE, WEISS_KHAN);
-		MOB_CATEGORY.put(CategoryType.ISS_CANDIDATE, SEKNUS);
-		MOB_CATEGORY.put(CategoryType.WYNN_CANDIDATE, KRAKIA_LOTUS);
-		MOB_CATEGORY.put(CategoryType.AEORE_CANDIDATE, WEISS_ELE);
+		MOB_CATEGORY.put(CategoryType.SIXTH_SIGEL_GROUP, RAKZAN);
+		MOB_CATEGORY.put(CategoryType.SIXTH_TIR_GROUP, KRAKIA_BATHUS);
+		MOB_CATEGORY.put(CategoryType.SIXTH_OTHEL_GROUP, BAMONTI);
+		MOB_CATEGORY.put(CategoryType.SIXTH_YR_GROUP, KRAKIA_CARCASS);
+		MOB_CATEGORY.put(CategoryType.SIXTH_FEOH_GROUP, WEISS_KHAN);
+		MOB_CATEGORY.put(CategoryType.SIXTH_IS_GROUP, SEKNUS);
+		MOB_CATEGORY.put(CategoryType.SIXTH_WYNN_GROUP, KRAKIA_LOTUS);
+		MOB_CATEGORY.put(CategoryType.SIXTH_EOLH_GROUP, WEISS_ELE);
 	}
 	
 	public HarnakUndergroundRuins()

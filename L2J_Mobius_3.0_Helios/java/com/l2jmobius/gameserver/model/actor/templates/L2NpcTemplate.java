@@ -84,6 +84,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private boolean _hasSummoner;
 	private boolean _canBeSown;
 	private boolean _canBeCrt;
+	private boolean _isDeathPenalty;
 	private int _corpseTime;
 	private AIType _aiType;
 	private int _aggroRange;
@@ -162,6 +163,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_hasSummoner = set.getBoolean("hasSummoner", false);
 		_canBeSown = set.getBoolean("canBeSown", false);
 		_canBeCrt = set.getBoolean("ex_crt_effect", true);
+		_isDeathPenalty = set.getBoolean("isDeathPenalty", false);
 		
 		_corpseTime = set.getInt("corpseTime", Config.DEFAULT_CORPSE_TIME);
 		
@@ -416,6 +418,11 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	public boolean canBeCrt()
 	{
 		return _canBeCrt;
+	}
+	
+	public boolean isDeathPenalty()
+	{
+		return _isDeathPenalty;
 	}
 	
 	public int getCorpseTime()

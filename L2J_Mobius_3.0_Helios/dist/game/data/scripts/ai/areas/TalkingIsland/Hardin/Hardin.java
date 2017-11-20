@@ -183,7 +183,7 @@ public final class Hardin extends AbstractNpcAI
 				return "33870-02.html";
 			}
 		}
-		if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
+		if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			return "33870-no.html";
 		}

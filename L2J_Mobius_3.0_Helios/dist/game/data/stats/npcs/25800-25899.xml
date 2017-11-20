@@ -57,7 +57,7 @@
 			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
 		</skill_list>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
-		<status undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />
@@ -109,7 +109,7 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<status targetable="false" showName="false" undying="false" />
+		<status targetable="false" showName="false" undying="false" isDeathPenalty="true" />
 		<collision>
 			<radius normal="90" />
 			<height normal="190" />
@@ -1027,7 +1027,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
@@ -1087,6 +1087,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1616,6 +1617,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14729" level="1" /> <!-- Raid Boss (Lv. 92) -->
@@ -1697,6 +1699,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14733" level="1" /> <!-- Raid Boss (Lv. 93) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1770,6 +1773,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14734" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -1846,6 +1850,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14730" level="1" /> <!-- Raid Boss (Lv. 94) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -1923,6 +1928,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14731" level="1" /> <!-- Raid Boss (Lv. 95) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -2005,7 +2011,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -2046,7 +2052,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14732" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -2100,7 +2106,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14732" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -2155,6 +2161,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14732" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
@@ -2239,6 +2246,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14735" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -2310,7 +2318,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14713" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -2366,7 +2374,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14712" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -2956,7 +2964,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -3012,7 +3020,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14722" level="1" /> <!-- Raid Boss (Lv. 98) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3065,7 +3073,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14722" level="1" /> <!-- Raid Boss (Lv. 98) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3394,7 +3402,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14713" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3450,7 +3458,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="14712" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3637,7 +3645,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -4708,7 +4716,7 @@
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->

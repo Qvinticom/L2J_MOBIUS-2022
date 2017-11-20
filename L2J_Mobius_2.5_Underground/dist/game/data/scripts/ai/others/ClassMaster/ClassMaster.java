@@ -297,7 +297,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 				{
 					htmltext = "test_server_helper011.html";
 				}
-				else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+				else if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
 					htmltext = "test_server_helper011a.html";
 				}
@@ -319,7 +319,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 						htmltext = "test_server_helper021.html";
 					}
 				}
-				else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+				else if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
 					htmltext = "test_server_helper011a.html";
 				}
@@ -352,7 +352,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 				}
 				else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85)) // 9
 				{
-					canChange = CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, classId); // 11
+					canChange = CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, classId); // 11
 				}
 				
 				if (canChange)
@@ -422,7 +422,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
-					if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+					if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 					{
 						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 						for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
@@ -450,7 +450,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			case "learnskills":
 			{
 				// Retail class master only lets you learn all third class skills.
-				if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+				if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
 					htmltext = "test_server_helper001_failed.html";
 				}
@@ -578,7 +578,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		{
 			htmltext = "test_server_helper011.html";
 		}
-		else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			htmltext = "test_server_helper011a.html";
 		}
@@ -762,7 +762,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		{
 			htmltext = "test_server_helper011.html";
 		}
-		else if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+		else if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			htmltext = "test_server_helper011a.html";
 		}
@@ -853,7 +853,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+			if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
 				SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 				for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))

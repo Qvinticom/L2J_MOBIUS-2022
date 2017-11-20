@@ -5325,7 +5325,7 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
-		<status undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="81" />
@@ -5662,7 +5662,7 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
-		<status undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<collision>
 			<radius normal="90" />
 			<height normal="190" />
@@ -6398,7 +6398,7 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
-		<status undying="false" />
+		<status undying="false" isDeathPenalty="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -6462,6 +6462,7 @@
 			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
 		</skill_list>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
+		<status undying="false" isDeathPenalty="true" />
 		<drop_lists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="78.09" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -6557,7 +6558,6 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
-		<status undying="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -6667,6 +6667,7 @@
 			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
 		</skill_list>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
+		<status undying="false" isDeathPenalty="true" />
 		<drop_lists>
 			<drop>
 				<item id="17527" min="1" max="1" chance="78.22" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -6762,7 +6763,6 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
-		<status undying="false" />
 		<collision>
 			<radius normal="15" />
 			<height normal="32" />

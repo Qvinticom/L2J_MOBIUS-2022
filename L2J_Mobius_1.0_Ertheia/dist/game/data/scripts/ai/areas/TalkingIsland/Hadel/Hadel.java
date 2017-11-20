@@ -62,7 +62,7 @@ public final class Hadel extends AbstractNpcAI
 			}
 			case "teleportToHarnak":
 			{
-				if ((!player.isInCategory(CategoryType.AWAKEN_GROUP)) || (player.getLevel() < 85))
+				if ((!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) || (player.getLevel() < 85))
 				{
 					htmltext = "33344-noClass.html";
 					break;

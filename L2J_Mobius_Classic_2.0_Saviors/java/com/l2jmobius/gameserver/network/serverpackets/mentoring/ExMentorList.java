@@ -48,7 +48,7 @@ public class ExMentorList implements IClientOutgoingPacket
 			_type = 0x02;
 			_mentees = Arrays.asList(MentorManager.getInstance().getMentor(activeChar.getObjectId()));
 		}
-		else if (activeChar.isInCategory(CategoryType.AWAKEN_GROUP)) // Not a mentor, Not a mentee, so can be a mentor
+		else if (activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) // Not a mentor, Not a mentee, so can be a mentor
 		{
 			_mentees = Collections.emptyList();
 			_type = 0x01;

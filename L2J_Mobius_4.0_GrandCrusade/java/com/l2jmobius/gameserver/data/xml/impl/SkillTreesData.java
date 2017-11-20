@@ -689,7 +689,7 @@ public final class SkillTreesData implements IGameXmlReader
 			return result;
 		}
 		
-		final boolean isAwaken = player.isInCategory(CategoryType.AWAKEN_GROUP) && ((player.getRace() != Race.ERTHEIA) || player.isDualClassActive());
+		final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && ((player.getRace() != Race.ERTHEIA) || player.isDualClassActive());
 		
 		for (Entry<Long, L2SkillLearn> entry : skills.entrySet())
 		{
@@ -803,7 +803,7 @@ public final class SkillTreesData implements IGameXmlReader
 		}
 		
 		final Race race = player.getRace();
-		final boolean isAwaken = player.isInCategory(CategoryType.AWAKEN_GROUP);
+		final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP);
 		
 		// Race skills
 		if (isAwaken)

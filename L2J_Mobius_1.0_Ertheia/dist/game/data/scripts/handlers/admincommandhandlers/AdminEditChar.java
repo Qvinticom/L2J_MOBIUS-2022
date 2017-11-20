@@ -416,7 +416,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
-					if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+					if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 					{
 						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 						for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))

@@ -61,7 +61,7 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!activeChar.isInCategory(CategoryType.AWAKEN_GROUP))
+		if (!activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 		{
 			return;
 		}

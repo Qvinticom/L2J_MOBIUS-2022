@@ -97,7 +97,7 @@ public final class HermuncusMinion extends AbstractNpcAI
 		
 		if (event.equals("teleportList"))
 		{
-			if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
+			if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
 				htmltext = "HermuncusMinion-no.html";
 			}
@@ -155,7 +155,7 @@ public final class HermuncusMinion extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return player.isInCategory(CategoryType.AWAKEN_GROUP) ? "HermuncusMinion.html" : "HermuncusMinion-no.html";
+		return player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) ? "HermuncusMinion.html" : "HermuncusMinion-no.html";
 	}
 	
 	private String generateButton(Integer locationId)

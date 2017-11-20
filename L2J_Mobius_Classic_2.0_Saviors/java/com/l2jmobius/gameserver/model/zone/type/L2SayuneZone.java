@@ -56,7 +56,7 @@ public class L2SayuneZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (character.isPlayer() && (character.isInCategory(CategoryType.AWAKEN_GROUP) || Config.FREE_JUMPS_FOR_ALL) && !character.getActingPlayer().isMounted() && !character.isTransformed())
+		if (character.isPlayer() && (character.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || Config.FREE_JUMPS_FOR_ALL) && !character.getActingPlayer().isMounted() && !character.isTransformed())
 		{
 			character.setInsideZone(ZoneId.SAYUNE, true);
 			ThreadPoolManager.execute(new FlyMoveStartTask(this, character.getActingPlayer()));

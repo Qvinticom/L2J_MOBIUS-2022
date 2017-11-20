@@ -8034,7 +8034,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public boolean hasBasicPropertyResist()
 	{
-		return isInCategory(CategoryType.AWAKEN_GROUP);
+		return isInCategory(CategoryType.SIXTH_CLASS_GROUP);
 	}
 	
 	/**
@@ -11380,7 +11380,7 @@ public final class L2PcInstance extends L2Playable
 			percent *= getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_PVP, 1);
 		}
 		
-		if (killer.isInCategory(CategoryType.SHILENS_FOLLOWERS) || (Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent)))
+		if ((killer.isNpc() && ((L2Npc) killer).getTemplate().isDeathPenalty()) || (Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent)))
 		{
 			if (!killer.isPlayable() || (getReputation() < 0))
 			{
