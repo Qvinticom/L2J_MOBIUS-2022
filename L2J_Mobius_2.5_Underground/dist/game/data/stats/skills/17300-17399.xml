@@ -803,9 +803,15 @@
 		</effects>
 	</skill>
 	<skill id="17399" toLevel="1" name="Lady's Hairpin: Critical Rate">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Critical Rate + 50. -->
 		<icon>icon.accessory_hairpin_i00</icon>
 		<operateType>P</operateType>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

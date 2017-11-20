@@ -565,17 +565,47 @@
 		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%. Additionally, Damage Reduction + 10%, All Attributes Defense + 100. Buff remains in place after death. Cooldown is 5 minutes. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18700" level="1" /> <!-- Freya's Art of Seduction -->
+		</skills>
 	</item>
 	<item id="47664" name="Freya's Art of Seduction" additionalName="EXP" type="EtcItem">
 		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%. Additionally, XP Gain + 30%, Vitality Bonus + 12. Buff remains in place after death. Cooldown is 5 minutes. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18701" level="1" /> <!-- Freya's Art of Seduction -->
+		</skills>
 	</item>
 	<item id="47665" name="Pa'agrio's Blessing" additionalName="Might" type="EtcItem">
 		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 10%, P. Atk. + 20%, M. Atk. + 30%, P./M. Def + 10%, P. Accuracy+ 4, M. Accuracy + 4, Atk./Casting Spd. + 10%, Speed + 10, Attack Attribute + 100, Skill MP Consumption - 10%. Additionally, Damage + 10%, Skill Power + 10. Buff remains in place after death. Cooldown is 5 minutes. Cannot be stacked with Art of Seduction. Cannot be used in Olympiad. -->
@@ -657,25 +687,47 @@
 		<!-- When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30%, and Movement Speed by 20, and reduces Skill MP Consumption by 15% for 30 minutes. Additionally reduces damage taken by 10%, and increases all property Defense by 100. Buff effect persists through death. Cooldown: 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18725" level="1" /> <!-- Art of Seduction -->
+		</skills>
 	</item>
 	<item id="47674" name="Freya's Art of Seduction - EXP" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30%, and Movement Speed by 20, and reduces Skill MP Consumption by 15% for 30 minutes. Additionally Increases XP by 30%, and grants 12% bonus Vitality. Buff effect persists through death. Cooldown: 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18726" level="1" /> <!-- Art of Seduction -->
+		</skills>
 	</item>
 	<item id="47675" name="Pa'agrio's Blessing - Might" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk./Casting Spd. by 10%, Movement Speed by 10, Attack Attribute by 100, and reduces Skill MP Consumption by 10% for 30 minutes. Additionally Increases Damage by 10%, and grants 10% Skill Power. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
