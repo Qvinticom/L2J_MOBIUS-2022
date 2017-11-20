@@ -96,7 +96,7 @@ public final class MultisellData implements IGameXmlReader
 				if ("list".equalsIgnoreCase(n.getNodeName()))
 				{
 					list.setApplyTaxes(parseBoolean(n.getAttributes(), "applyTaxes", false));
-					list.setNewMultisell(parseBoolean(n.getAttributes(), "isNewMultisell", false));
+					list.setIsChanceMultisell(parseBoolean(n.getAttributes(), "isChanceMultisell", false));
 					list.setMaintainEnchantment(parseBoolean(n.getAttributes(), "maintainEnchantment", false));
 					
 					att = n.getAttributes().getNamedItem("useRate");

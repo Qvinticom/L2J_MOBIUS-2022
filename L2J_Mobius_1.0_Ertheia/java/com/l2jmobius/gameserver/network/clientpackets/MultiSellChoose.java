@@ -368,7 +368,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				// Generate the appropriate items
 				for (Ingredient e : entry.getProducts())
 				{
-					if (list.isNewMultisell())
+					if (list.isChanceMultisell())
 					{
 						// Skip first entry.
 						if (e.getChance() < 1)

@@ -27,7 +27,7 @@ import java.util.Set;
 public class ListContainer
 {
 	private final int _listId;
-	private boolean _isNewMultisell;
+	private boolean _isChanceMultisell;
 	private boolean _applyTaxes = false;
 	private boolean _maintainEnchantment = false;
 	private double _useRate = 1.0;
@@ -43,7 +43,7 @@ public class ListContainer
 	public ListContainer(ListContainer container)
 	{
 		_listId = container.getListId();
-		_isNewMultisell = container.isNewMultisell();
+		_isChanceMultisell = container.isChanceMultisell();
 		_maintainEnchantment = container.getMaintainEnchantment();
 	}
 	
@@ -57,14 +57,14 @@ public class ListContainer
 		return _listId;
 	}
 	
-	public boolean isNewMultisell()
+	public boolean isChanceMultisell()
 	{
-		return _isNewMultisell;
+		return _isChanceMultisell;
 	}
 	
-	public void setNewMultisell(boolean val)
+	public void setIsChanceMultisell(boolean val)
 	{
-		_isNewMultisell = val;
+		_isChanceMultisell = val;
 	}
 	
 	public final void setApplyTaxes(boolean applyTaxes)

@@ -61,7 +61,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 		packet.writeD(_finished ? 0x01 : 0x00); // finished
 		packet.writeD(PAGE_SIZE); // size of pages
 		packet.writeD(_size); // list length
-		packet.writeC(_list.isNewMultisell() ? 0x01 : 0x00); // new multisell window
+		packet.writeC(_list.isChanceMultisell() ? 0x01 : 0x00); // new multisell window
 		packet.writeD(0x20); // Always 32 oO
 		
 		Entry ent;
@@ -114,7 +114,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 				{
 					final ItemInfo item = ing.getItemInfo();
 					packet.writeH(item.getEnchantLevel()); // enchant level
-					packet.writeD(_list.isNewMultisell() ? ing.getChance() : item.getAugmentId()); // augment id
+					packet.writeD((int) (_list.isChanceMultisell() ? ing.getChance() : item.getAugmentId())); // augment id
 					packet.writeD(0x00); // mana
 					packet.writeD(0x00); // time ?
 					packet.writeH(item.getElementId()); // attack element
@@ -141,7 +141,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 				else
 				{
 					packet.writeH(ing.getEnchantLevel()); // enchant level
-					packet.writeD(ing.getChance()); // augment id
+					packet.writeD((int) ing.getChance()); // augment id
 					packet.writeD(0x00); // mana
 					packet.writeD(0x00); // time ?
 					packet.writeH(0x00); // attack element
@@ -175,7 +175,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 				{
 					final ItemInfo item = ing.getItemInfo();
 					packet.writeH(item.getEnchantLevel()); // enchant level
-					packet.writeD(_list.isNewMultisell() ? ing.getChance() : item.getAugmentId()); // augment id
+					packet.writeD((int) (_list.isChanceMultisell() ? ing.getChance() : item.getAugmentId())); // augment id
 					packet.writeD(0x00); // mana
 					packet.writeH(item.getElementId()); // attack element
 					packet.writeH(item.getElementPower()); // element power
@@ -199,7 +199,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 				else
 				{
 					packet.writeH(ing.getEnchantLevel()); // enchant level
-					packet.writeD(ing.getChance()); // augment id
+					packet.writeD((int) ing.getChance()); // augment id
 					packet.writeD(0x00); // mana
 					packet.writeH(0x00); // attack element
 					packet.writeH(0x00); // element power

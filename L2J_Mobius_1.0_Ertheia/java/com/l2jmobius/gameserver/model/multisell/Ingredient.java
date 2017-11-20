@@ -35,14 +35,14 @@ public class Ingredient
 	private boolean _maintainIngredient;
 	private L2Item _template = null;
 	private ItemInfo _itemInfo = null;
-	private final int _chance;
+	private final double _chance;
 	
 	public Ingredient(StatsSet set)
 	{
-		this(set.getInt("id"), set.getLong("count"), set.getInt("enchantmentLevel", 0), set.getInt("chance", 0), set.getBoolean("isTaxIngredient", false), set.getBoolean("maintainIngredient", false));
+		this(set.getInt("id"), set.getLong("count"), set.getInt("enchantmentLevel", 0), set.getDouble("chance", 0), set.getBoolean("isTaxIngredient", false), set.getBoolean("maintainIngredient", false));
 	}
 	
-	public Ingredient(int itemId, long itemCount, int enchantmentLevel, int chance, boolean isTaxIngredient, boolean maintainIngredient)
+	public Ingredient(int itemId, long itemCount, int enchantmentLevel, double chance, boolean isTaxIngredient, boolean maintainIngredient)
 	{
 		_itemId = itemId;
 		_itemCount = itemCount;
@@ -109,7 +109,7 @@ public class Ingredient
 		return _itemCount;
 	}
 	
-	public int getChance()
+	public double getChance()
 	{
 		return _chance;
 	}
