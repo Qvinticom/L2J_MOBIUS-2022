@@ -943,16 +943,26 @@
 	<item id="46185" name="Agathion - Anakim Holy Barrier" type="Armor">
 		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims. <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP + 3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
+		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17552" level="1" /> <!-- Attribute Enchant -->
+			<skill id="18442" level="1" /> <!-- Anakim Blessing -->
+			<skill id="18443" level="1" /> <!-- Release Agathion's Seal - Anakaim Holy Barrier -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
 		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims. <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP + 3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -963,25 +973,44 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="17551" level="1" /> <!-- Balanced Power -->
+			<skill id="17552" level="1" /> <!-- Attribute Enchant -->
+			<skill id="18442" level="1" /> <!-- Anakim Blessing -->
+			<skill id="18443" level="1" /> <!-- Release Agathion's Seal - Anakaim Holy Barrier -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Anakim Holy Barrier (30-day). -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46186" min="1" max="1" chance="100" /> <!-- Agathion - Anakim Holy Barrier (30-day) -->
+		</capsuled_items>
 	</item>
 	<item id="46188" name="Agathion - Anakim Holy Barrier Pack" type="EtcItem">
 		<!-- Wrapped Pack containing an Agathion - Anakim Holy Barrier (30-day) or an Agathion - Anakim Holy Barrier. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="18438" level="1" /> <!-- Agathion - Anakim Holy Barrier Pack -->
+		</skills>
 	</item>
 	<item id="46189" name="Vampiric Style Appearance Stone" type="EtcItem">
 		<!-- Changes the appearace of your armor into that of a Vampiric Style. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->

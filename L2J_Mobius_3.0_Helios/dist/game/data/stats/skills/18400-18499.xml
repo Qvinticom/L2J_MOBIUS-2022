@@ -214,9 +214,35 @@
 		<reuseDelay>3600000</reuseDelay>
 	</skill>
 	<skill id="18438" toLevel="1" name="Agathion - Anakim Holy Barrier Pack">
-		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<itemConsumeId>46188</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50.0">
+						<item id="46185" count="1" /> <!-- Agathion - Anakim Holy Barrier -->
+					</item>
+					<item chance="50.0">
+						<item id="46186" count="1" /> <!-- Agathion - Anakim Holy Barrier (30-day) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18439" toLevel="1" name="Vampiric Style Appearance Stone Pack">
 		<!-- AUTO GENERATED SKILL -->
@@ -234,17 +260,34 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18442" toLevel="1" name="Anakim Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- XP/SP + 3% when equipped. -->
 		<icon>icon.bracelet_tersi_agathion</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>3</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>3</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18443" toLevel="1" name="Release Agathion's Seal - Anakaim Holy Barrier">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Releases Agathion's Seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>8550</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18444" toLevel="6" name="Physical Reflect Shirt Enchant Effect">
 		<!-- P. Def. + 5%. -->
