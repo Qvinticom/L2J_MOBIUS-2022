@@ -10344,12 +10344,12 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	@Override
-	public void addExpAndSp(long addToExp, long addToSp)
+	public void addExpAndSp(double addToExp, double addToSp)
 	{
 		getStat().addExpAndSp(addToExp, addToSp, false);
 	}
 	
-	public void addExpAndSp(long addToExp, long addToSp, boolean useVitality)
+	public void addExpAndSp(double addToExp, double addToSp, boolean useVitality)
 	{
 		getStat().addExpAndSp(addToExp, addToSp, useVitality);
 	}

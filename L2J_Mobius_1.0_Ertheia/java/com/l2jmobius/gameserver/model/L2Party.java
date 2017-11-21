@@ -834,7 +834,7 @@ public class L2Party extends AbstractPlayerGroup
 	 * @param partyDmg
 	 * @param target
 	 */
-	public void distributeXpAndSp(long xpReward, int spReward, List<L2PcInstance> rewardedMembers, int topLvl, int partyDmg, L2Attackable target)
+	public void distributeXpAndSp(double xpReward, double spReward, List<L2PcInstance> rewardedMembers, int topLvl, int partyDmg, L2Attackable target)
 	{
 		final List<L2PcInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
 		
@@ -870,24 +870,24 @@ public class L2Party extends AbstractPlayerGroup
 				final double preCalculation = (sqLevel / sqLevelSum) * penalty;
 				
 				// Add the XP/SP points to the requested party member
-				long addexp = Math.round(member.getStat().getValue(Stats.EXPSP_RATE, xpReward * preCalculation));
-				final int addsp = (int) member.getStat().getValue(Stats.EXPSP_RATE, spReward * preCalculation);
+				double exp = member.getStat().getValue(Stats.EXPSP_RATE, xpReward * preCalculation);
+				double sp = member.getStat().getValue(Stats.EXPSP_RATE, spReward * preCalculation);
 				
-				addexp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, addexp, addsp, target.useVitalityRate());
-				if (addexp > 0)
+				exp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, exp, sp, target.useVitalityRate());
+				if (exp > 0)
 				{
 					final L2Clan clan = member.getClan();
 					if (clan != null)
 					{
-						long finalExp = addexp;
+						double finalExp = exp;
 						if (target.useVitalityRate())
 						{
 							finalExp *= member.getStat().getExpBonusMultiplier();
 						}
 						clan.addHuntingPoints(member, target, finalExp);
 					}
-					member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), addexp, target.isRaid()), true, false);
-					PcCafePointsManager.getInstance().givePcCafePoint(member, addexp);
+					member.updateVitalityPoints(target.getVitalityPoints(member.getLevel(), exp, target.isRaid()), true, false);
+					PcCafePointsManager.getInstance().givePcCafePoint(member, exp);
 				}
 			}
 			else
@@ -897,10 +897,10 @@ public class L2Party extends AbstractPlayerGroup
 		}
 	}
 	
-	private long calculateExpSpPartyCutoff(L2PcInstance player, int topLvl, long addExp, int addSp, boolean vit)
+	private double calculateExpSpPartyCutoff(L2PcInstance player, int topLvl, double addExp, double addSp, boolean vit)
 	{
-		long xp = addExp;
-		int sp = addSp;
+		double xp = addExp;
+		double sp = addSp;
 		if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive"))
 		{
 			int i = 0;

@@ -93,7 +93,7 @@ public class L2PetInstance extends L2Summon
 	private L2PetLevelData _leveldata;
 	
 	/** The Experience before the last Death Penalty */
-	private long _expBeforeDeath = 0;
+	private double _expBeforeDeath = 0;
 	private int _curWeightPenalty = 0;
 	
 	public final L2PetLevelData getPetLevelData()
@@ -1185,15 +1185,15 @@ public class L2PetInstance extends L2Summon
 	}
 	
 	@Override
-	public void addExpAndSp(long addToExp, long addToSp)
+	public void addExpAndSp(double addToExp, double addToSp)
 	{
-		if (getId() == 12564)
+		if (getId() == 12564) // TODO: Remove this stupid hardcode.
 		{
-			getStat().addExpAndSp(Math.round(addToExp * Config.SINEATER_XP_RATE), addToSp);
+			getStat().addExpAndSp(addToExp * Config.SINEATER_XP_RATE, addToSp);
 		}
 		else
 		{
-			getStat().addExpAndSp(Math.round(addToExp * Config.PET_XP_RATE), addToSp);
+			getStat().addExpAndSp(addToExp * Config.PET_XP_RATE, addToSp);
 		}
 	}
 	

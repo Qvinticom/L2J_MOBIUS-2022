@@ -468,9 +468,9 @@ public class L2Attackable extends L2Npc
 						// Calculate Exp and SP rewards
 						if (isInSurroundingRegion(attacker))
 						{
-							final int[] expSp = calculateExpAndSp(attacker.getLevel(), damage, totalDamage);
-							long exp = expSp[0];
-							int sp = expSp[1];
+							final double[] expSp = calculateExpAndSp(attacker.getLevel(), damage, totalDamage);
+							double exp = expSp[0];
+							double sp = expSp[1];
 							
 							if (Config.CHAMPION_ENABLE && isChampion())
 							{
@@ -491,24 +491,24 @@ public class L2Attackable extends L2Npc
 							// Distribute the Exp and SP between the L2PcInstance and its L2Summon
 							if (!attacker.isDead())
 							{
-								final long addexp = Math.round(attacker.getStat().getValue(Stats.EXPSP_RATE, exp));
-								final int addsp = (int) attacker.getStat().getValue(Stats.EXPSP_RATE, sp);
+								exp = attacker.getStat().getValue(Stats.EXPSP_RATE, exp);
+								sp = attacker.getStat().getValue(Stats.EXPSP_RATE, sp);
 								
-								attacker.addExpAndSp(addexp, addsp, useVitalityRate());
-								if (addexp > 0)
+								attacker.addExpAndSp(exp, sp, useVitalityRate());
+								if (exp > 0)
 								{
 									final L2Clan clan = attacker.getClan();
 									if (clan != null)
 									{
-										long finalExp = addexp;
+										double finalExp = exp;
 										if (useVitalityRate())
 										{
 											finalExp *= attacker.getStat().getExpBonusMultiplier();
 										}
 										clan.addHuntingPoints(attacker, this, finalExp);
 									}
-									attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), addexp, isRaid()), true, false);
-									PcCafePointsManager.getInstance().givePcCafePoint(attacker, addexp);
+									attacker.updateVitalityPoints(getVitalityPoints(attacker.getLevel(), exp, isRaid()), true, false);
+									PcCafePointsManager.getInstance().givePcCafePoint(attacker, exp);
 								}
 							}
 						}
@@ -517,7 +517,7 @@ public class L2Attackable extends L2Npc
 					{
 						// share with party members
 						int partyDmg = 0;
-						float partyMul = 1;
+						double partyMul = 1;
 						int partyLvl = 0;
 						
 						// Get all L2Character that can be rewarded in the party
@@ -576,13 +576,13 @@ public class L2Attackable extends L2Npc
 						// If the party didn't killed this L2Attackable alone
 						if (partyDmg < totalDamage)
 						{
-							partyMul = ((float) partyDmg / totalDamage);
+							partyMul = ((double) partyDmg / totalDamage);
 						}
 						
 						// Calculate Exp and SP rewards
-						final int[] expSp = calculateExpAndSp(partyLvl, partyDmg, totalDamage);
-						long exp = expSp[0];
-						int sp = expSp[1];
+						final double[] expSp = calculateExpAndSp(partyLvl, partyDmg, totalDamage);
+						double exp = expSp[0];
+						double sp = expSp[1];
 						
 						if (Config.CHAMPION_ENABLE && isChampion())
 						{
@@ -1254,11 +1254,11 @@ public class L2Attackable extends L2Npc
 	 * @param totalDamage The total damage done
 	 * @return
 	 */
-	private int[] calculateExpAndSp(int charLevel, int damage, long totalDamage)
+	private double[] calculateExpAndSp(int charLevel, int damage, long totalDamage)
 	{
 		final int levelDiff = Math.abs(charLevel - getLevel());
-		double xp = Math.max(0, ((double) getExpReward() * damage) / totalDamage);
-		double sp = Math.max(0, ((double) getSpReward() * damage) / totalDamage);
+		double xp = Math.max(0, (getExpReward() * damage) / totalDamage);
+		double sp = Math.max(0, (getSpReward() * damage) / totalDamage);
 		double mul;
 		switch (levelDiff)
 		{
@@ -1318,14 +1318,14 @@ public class L2Attackable extends L2Npc
 		xp *= mul;
 		sp *= mul;
 		
-		return new int[]
+		return new double[]
 		{
-			(int) xp,
-			(int) sp
+			xp,
+			sp
 		};
 	}
 	
-	public long calculateOverhitExp(long normalExp)
+	public double calculateOverhitExp(double exp)
 	{
 		// Get the percentage based on the total of extra (over-hit) damage done relative to the total (maximum) ammount of HP on the L2Attackable
 		double overhitPercentage = ((getOverhitDamage() * 100) / getMaxHp());
@@ -1338,10 +1338,7 @@ public class L2Attackable extends L2Npc
 		
 		// Get the overhit exp bonus according to the above over-hit damage percentage
 		// (1/1 basis - 13% of over-hit damage, 13% of extra exp is given, and so on...)
-		final double overhitExp = ((overhitPercentage / 100) * normalExp);
-		
-		// Return the rounded amount of exp points to be added to the player's normal exp reward
-		return Math.round(overhitExp);
+		return (overhitPercentage / 100) * exp;
 	}
 	
 	/**
@@ -1594,7 +1591,7 @@ public class L2Attackable extends L2Npc
 	/*
 	 * Return vitality points decrease (if positive) or increase (if negative) based on damage. Maximum for damage = maxHp.
 	 */
-	public int getVitalityPoints(int level, long exp, boolean isBoss)
+	public int getVitalityPoints(int level, double exp, boolean isBoss)
 	{
 		if ((getLevel() <= 0) || (getExpReward() <= 0))
 		{
@@ -1604,11 +1601,11 @@ public class L2Attackable extends L2Npc
 		int points;
 		if (level < 85)
 		{
-			points = (int) ((exp / 1000) * Math.max(level - getLevel(), 1));
+			points = Math.max((int) ((exp / 1000) * Math.max(level - getLevel(), 1)), 1);
 		}
 		else
 		{
-			points = (int) ((exp / (isBoss ? Config.VITALITY_CONSUME_BY_BOSS : Config.VITALITY_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1));
+			points = Math.max((int) ((exp / (isBoss ? Config.VITALITY_CONSUME_BY_BOSS : Config.VITALITY_CONSUME_BY_MOB)) * Math.max(level - getLevel(), 1)), 1);
 		}
 		
 		return -points;

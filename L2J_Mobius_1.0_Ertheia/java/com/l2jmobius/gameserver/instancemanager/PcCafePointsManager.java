@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class PcCafePointsManager
 {
-	public void givePcCafePoint(L2PcInstance player, long exp)
+	public void givePcCafePoint(L2PcInstance player, double exp)
 	{
 		if (!Config.PC_CAFE_ENABLED || player.isInsideZone(ZoneId.PEACE) || player.isInsideZone(ZoneId.PVP) || player.isInsideZone(ZoneId.SIEGE) || (player.isOnlineInt() == 0) || player.isJailed())
 		{

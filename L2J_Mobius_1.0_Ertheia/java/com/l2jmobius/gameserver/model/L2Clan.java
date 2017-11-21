@@ -3109,7 +3109,7 @@ public class L2Clan implements IIdentifiable, INamable
 	 * @param target
 	 * @param value
 	 */
-	public synchronized void addHuntingPoints(L2PcInstance activeChar, L2Npc target, long value)
+	public synchronized void addHuntingPoints(L2PcInstance activeChar, L2Npc target, double value)
 	{
 		// TODO: Figure out the retail formula
 		final int points = (int) value / 29600;

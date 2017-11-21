@@ -73,7 +73,7 @@ public class PcStat extends PlayableStat
 		final L2PcInstance activeChar = getActiveChar();
 		
 		// Allowed to gain exp?
-		if (!getActiveChar().getAccessLevel().canGainExp())
+		if (!activeChar.getAccessLevel().canGainExp())
 		{
 			return false;
 		}
@@ -98,7 +98,7 @@ public class PcStat extends PlayableStat
 		return true;
 	}
 	
-	public void addExpAndSp(long addToExp, long addToSp, boolean useBonuses)
+	public void addExpAndSp(double addToExp, double addToSp, boolean useBonuses)
 	{
 		final L2PcInstance activeChar = getActiveChar();
 		
@@ -108,8 +108,8 @@ public class PcStat extends PlayableStat
 			return;
 		}
 		
-		final long baseExp = addToExp;
-		final long baseSp = addToSp;
+		final double baseExp = addToExp;
+		final double baseSp = addToSp;
 		
 		double bonusExp = 1.;
 		double bonusSp = 1.;
@@ -142,7 +142,7 @@ public class PcStat extends PlayableStat
 		addToExp *= bonusExp;
 		addToSp *= bonusSp;
 		
-		float ratioTakenByPlayer = 0;
+		double ratioTakenByPlayer = 0;
 		
 		// if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
 		final L2Summon sPet = activeChar.getPet();
@@ -160,42 +160,37 @@ public class PcStat extends PlayableStat
 			
 			if (!pet.isDead())
 			{
-				pet.addExpAndSp((long) (addToExp * (1 - ratioTakenByPlayer)), (int) (addToSp * (1 - ratioTakenByPlayer)));
+				pet.addExpAndSp(addToExp * (1 - ratioTakenByPlayer), addToSp * (1 - ratioTakenByPlayer));
 			}
 			
 			// now adjust the max ratio to avoid the owner earning negative exp/sp
-			addToExp = (long) (addToExp * ratioTakenByPlayer);
-			addToSp = (int) (addToSp * ratioTakenByPlayer);
+			addToExp *= ratioTakenByPlayer;
+			addToSp *= ratioTakenByPlayer;
 		}
 		
-		if (!addExp(addToExp))
-		{
-			addToExp = 0;
-		}
-		
-		if (!addSp(addToSp))
-		{
-			addToSp = 0;
-		}
+		final long finalExp = Math.round(addToExp);
+		final long finalSp = Math.round(addToSp);
+		final boolean expAdded = addExp(finalExp);
+		final boolean spAdded = addSp(finalSp);
 		
 		SystemMessage sm = null;
-		if ((addToExp == 0) && (addToSp != 0))
+		if (!expAdded && spAdded)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_SP);
-			sm.addLong(addToSp);
+			sm.addLong(finalSp);
 		}
-		else if ((addToSp == 0) && (addToExp != 0))
+		else if (expAdded && !spAdded)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP);
-			sm.addLong(addToExp);
+			sm.addLong(finalExp);
 		}
 		else
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
-			sm.addLong(addToExp);
-			sm.addLong(addToExp - baseExp);
-			sm.addLong(addToSp);
-			sm.addLong(addToSp - baseSp);
+			sm.addLong(finalExp);
+			sm.addLong(Math.round(addToExp - baseExp));
+			sm.addLong(finalSp);
+			sm.addLong(Math.round(addToSp - baseSp));
 		}
 		activeChar.sendPacket(sm);
 	}
@@ -309,6 +304,7 @@ public class PcStat extends PlayableStat
 		{
 			return false;
 		}
+		
 		final UserInfo ui = new UserInfo(getActiveChar(), false);
 		ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
 		getActiveChar().sendPacket(ui);

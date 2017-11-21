@@ -3793,7 +3793,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param addToExp
 	 * @param addToSp
 	 */
-	public void addExpAndSp(long addToExp, long addToSp)
+	public void addExpAndSp(double addToExp, double addToSp)
 	{
 		// Dummy method (overridden by players and pets)
 	}

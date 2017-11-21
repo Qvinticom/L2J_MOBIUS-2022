@@ -1232,17 +1232,17 @@ public final class Formulas
 	/**
 	 * Calculates karma lost upon death.
 	 * @param player
-	 * @param exp
+	 * @param finalExp
 	 * @return the amount of karma player has loosed.
 	 */
-	public static int calculateKarmaLost(L2PcInstance player, long exp)
+	public static int calculateKarmaLost(L2PcInstance player, double finalExp)
 	{
 		final double karmaLooseMul = KarmaData.getInstance().getMultiplier(player.getLevel());
-		if (exp > 0) // Received exp
+		if (finalExp > 0) // Received exp
 		{
-			exp /= Config.RATE_KARMA_LOST;
+			finalExp /= Config.RATE_KARMA_LOST;
 		}
-		return (int) ((Math.abs(exp) / karmaLooseMul) / 30);
+		return (int) ((Math.abs(finalExp) / karmaLooseMul) / 30);
 	}
 	
 	/**
