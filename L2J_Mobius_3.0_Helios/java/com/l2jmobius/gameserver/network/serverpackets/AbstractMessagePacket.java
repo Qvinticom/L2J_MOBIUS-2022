@@ -295,20 +295,21 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		{
 			return addString(skill.getName());
 		}
-		return addSkillName(skill.getId(), skill.getLevel());
+		return addSkillName(skill.getId(), skill.getLevel(), skill.getSubLevel());
 	}
 	
 	public final T addSkillName(int id)
 	{
-		return addSkillName(id, 1);
+		return addSkillName(id, 1, 0);
 	}
 	
-	public final T addSkillName(int id, int lvl)
+	public final T addSkillName(int id, int lvl, int subLvl)
 	{
 		append(new SMParam(TYPE_SKILL_NAME, new int[]
 		{
 			id,
-			lvl
+			lvl,
+			subLvl
 		}));
 		return (T) this;
 	}
@@ -438,7 +439,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 					final int[] array = param.getIntArrayValue();
 					packet.writeD(array[0]); // skill id
 					packet.writeH(array[1]); // skill level
-					packet.writeH(0x00); // skill sub level
+					packet.writeH(array[2]); // skill sub level
 					break;
 				}
 				
@@ -507,6 +508,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 					final int[] array = param.getIntArrayValue();
 					out.println(array[0]); // SkillId
 					out.println(array[1]); // SkillLevel
+					out.println(array[2]); // SkillSubLevel
 					break;
 				}
 				
