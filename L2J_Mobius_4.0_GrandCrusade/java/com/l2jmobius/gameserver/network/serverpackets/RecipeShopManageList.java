@@ -16,44 +16,39 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map.Entry;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
-import com.l2jmobius.gameserver.model.L2RecipeList;
+import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.RecipeHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopManageList implements IClientOutgoingPacket
 {
 	private final L2PcInstance _seller;
 	private final boolean _isDwarven;
-	private L2RecipeList[] _recipes;
+	private final Collection<RecipeHolder> _recipes;
+	private List<Entry<Integer, Long>> _manufacture;
 	
 	public RecipeShopManageList(L2PcInstance seller, boolean isDwarven)
 	{
 		_seller = seller;
 		_isDwarven = isDwarven;
-		
-		if (_isDwarven && _seller.hasDwarvenCraft())
-		{
-			_recipes = _seller.getDwarvenRecipeBook();
-		}
-		else
-		{
-			_recipes = _seller.getCommonRecipeBook();
-		}
+		_recipes = (isDwarven && (_seller.getCreateItemLevel() > 0)) ? _seller.getDwarvenRecipeBook() : _seller.getCommonRecipeBook();
 		
 		if (_seller.hasManufactureShop())
 		{
-			final Iterator<L2ManufactureItem> it = _seller.getManufactureItems().values().iterator();
-			L2ManufactureItem item;
-			while (it.hasNext())
+			_manufacture = new ArrayList<>();
+			for (Entry<Integer, Long> item : _seller.getManufactureItems().entrySet())
 			{
-				item = it.next();
-				if ((item.isDwarven() != _isDwarven) || !seller.hasRecipeList(item.getRecipeId()))
+				final RecipeHolder recipe = RecipeData.getInstance().getRecipe(item.getKey());
+				if (((recipe != null) && (recipe.isDwarvenRecipe() == _isDwarven)) && seller.hasRecipeList(recipe.getId()))
 				{
-					it.remove();
+					_manufacture.add(item);
 				}
 			}
 		}
@@ -68,34 +63,34 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		packet.writeD((int) _seller.getAdena());
 		packet.writeD(_isDwarven ? 0x00 : 0x01);
 		
-		if (_recipes == null)
+		if ((_recipes == null) || _recipes.isEmpty())
 		{
 			packet.writeD(0);
 		}
 		else
 		{
-			packet.writeD(_recipes.length); // number of items in recipe book
+			packet.writeD(_recipes.size());// number of items in recipe book
 			
-			for (int i = 0; i < _recipes.length; i++)
+			int i = 1;
+			for (RecipeHolder recipe : _recipes)
 			{
-				final L2RecipeList temp = _recipes[i];
-				packet.writeD(temp.getId());
-				packet.writeD(i + 1);
+				packet.writeD(recipe.getId());
+				packet.writeD(i++);
 			}
 		}
 		
-		if (!_seller.hasManufactureShop())
+		if ((_manufacture == null) || _manufacture.isEmpty())
 		{
 			packet.writeD(0x00);
 		}
 		else
 		{
-			packet.writeD(_seller.getManufactureItems().size());
-			for (L2ManufactureItem item : _seller.getManufactureItems().values())
+			packet.writeD(_manufacture.size());
+			for (Entry<Integer, Long> item : _manufacture)
 			{
-				packet.writeD(item.getRecipeId());
-				packet.writeD(0x00);
-				packet.writeQ(item.getCost());
+				packet.writeD(item.getKey());
+				packet.writeD(0x00); // CanCraft?
+				packet.writeQ(item.getValue());
 			}
 		}
 		return true;

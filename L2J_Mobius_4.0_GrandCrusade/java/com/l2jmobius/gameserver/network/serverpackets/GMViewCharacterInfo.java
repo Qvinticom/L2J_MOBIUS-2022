@@ -137,7 +137,7 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_activeChar.getAllyId()); // ally id
 		packet.writeC(_activeChar.getMountType().ordinal()); // mount type
 		packet.writeC(_activeChar.getPrivateStoreType().getId());
-		packet.writeC(_activeChar.hasDwarvenCraft() ? 1 : 0);
+		packet.writeC(_activeChar.getCreateItemLevel() > 0 ? 1 : 0);
 		packet.writeD(_activeChar.getPkKills());
 		packet.writeD(_activeChar.getPvpKills());
 		

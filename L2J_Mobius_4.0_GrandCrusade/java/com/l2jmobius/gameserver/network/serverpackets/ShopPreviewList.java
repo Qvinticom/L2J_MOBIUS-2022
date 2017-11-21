@@ -23,6 +23,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ShopPreviewList implements IClientOutgoingPacket
@@ -30,14 +31,14 @@ public class ShopPreviewList implements IClientOutgoingPacket
 	private final int _listId;
 	private final Collection<Product> _list;
 	private final long _money;
-	private int _expertise;
+	private CrystalType _expertise;
 	
-	public ShopPreviewList(L2BuyList list, long currentMoney, int expertiseIndex)
+	public ShopPreviewList(L2BuyList list, long currentMoney, CrystalType expertise)
 	{
 		_listId = list.getListId();
 		_list = list.getProducts();
 		_money = currentMoney;
-		_expertise = expertiseIndex;
+		_expertise = expertise;
 	}
 	
 	public ShopPreviewList(Collection<Product> lst, int listId, long currentMoney)
@@ -59,7 +60,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 		int newlength = 0;
 		for (Product product : _list)
 		{
-			if ((product.getItem().getCrystalType().getId() <= _expertise) && product.getItem().isEquipable())
+			if (!product.getItem().getCrystalType().isGreater(_expertise) && product.getItem().isEquipable())
 			{
 				newlength++;
 			}
@@ -68,7 +69,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 		
 		for (Product product : _list)
 		{
-			if ((product.getItem().getCrystalType().getId() <= _expertise) && product.getItem().isEquipable())
+			if (!product.getItem().getCrystalType().isGreater(_expertise) && product.getItem().isEquipable())
 			{
 				packet.writeD(product.getItemId());
 				packet.writeH(product.getItem().getType2()); // item type2

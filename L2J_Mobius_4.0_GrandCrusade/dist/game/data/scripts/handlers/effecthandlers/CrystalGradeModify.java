@@ -29,11 +29,11 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public final class CrystalGradeModify extends AbstractEffect
 {
-	private final int _grade;
+	private final int _amount;
 	
 	public CrystalGradeModify(StatsSet params)
 	{
-		_grade = params.getInt("grade", 0);
+		_amount = params.getInt("_amount", 0);
 	}
 	
 	@Override
@@ -45,7 +45,7 @@ public final class CrystalGradeModify extends AbstractEffect
 	@Override
 	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		effected.getActingPlayer().setExpertisePenaltyBonus(_grade);
+		effected.getActingPlayer().setExpertisePenaltyBonus(_amount);
 	}
 	
 	@Override

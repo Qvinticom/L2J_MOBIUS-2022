@@ -17,8 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.RecipeHolder;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 
 public final class RequestRecipeItemMakeInfo implements IClientIncomingPacket
@@ -41,6 +44,13 @@ public final class RequestRecipeItemMakeInfo implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new RecipeItemMakeInfo(_id, player));
+		final RecipeHolder recipe = RecipeData.getInstance().getRecipe(_id);
+		if (recipe == null)
+		{
+			player.sendPacket(SystemMessageId.THE_RECIPE_IS_INCORRECT);
+			return;
+		}
+		
+		client.sendPacket(new RecipeItemMakeInfo(_id, player, recipe.getMaxOffering()));
 	}
 }

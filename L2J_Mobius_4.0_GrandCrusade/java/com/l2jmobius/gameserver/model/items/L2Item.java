@@ -134,7 +134,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private int _time;
 	private int _autoDestroyTime;
 	private int _bodyPart;
-	private int _referencePrice;
+	private long _referencePrice;
 	private int _crystalCount;
 	private boolean _sellable;
 	private boolean _dropable;
@@ -200,7 +200,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_time = set.getInt("time", -1);
 		_autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
 		_bodyPart = ItemTable.SLOTS.get(set.getString("bodypart", "none"));
-		_referencePrice = set.getInt("price", 0);
+		_referencePrice = set.getLong("price", 0);
 		_crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
 		_crystalCount = set.getInt("crystal_count", 0);
 		
@@ -538,7 +538,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the price of reference of the item.
 	 */
-	public final int getReferencePrice()
+	public final long getReferencePrice()
 	{
 		return _referencePrice;
 	}

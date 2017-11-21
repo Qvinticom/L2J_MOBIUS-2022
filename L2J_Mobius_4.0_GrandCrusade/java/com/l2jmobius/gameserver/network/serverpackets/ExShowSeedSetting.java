@@ -75,9 +75,9 @@ public class ExShowSeedSetting implements IClientOutgoingPacket
 			packet.writeC(1);
 			packet.writeD(s.getReward(2)); // reward 2 id
 			packet.writeD(s.getSeedLimit()); // next sale limit
-			packet.writeD(s.getSeedReferencePrice()); // price for castle to produce 1
-			packet.writeD(s.getSeedMinPrice()); // min seed price
-			packet.writeD(s.getSeedMaxPrice()); // max seed price
+			packet.writeD((int) s.getSeedReferencePrice()); // price for castle to produce 1
+			packet.writeD((int) s.getSeedMinPrice()); // min seed price
+			packet.writeD((int) s.getSeedMaxPrice()); // max seed price
 			// Current period
 			if (_current.containsKey(s.getSeedId()))
 			{

@@ -18,35 +18,33 @@ package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.L2RecipeInstance;
-import com.l2jmobius.gameserver.model.L2RecipeList;
-import com.l2jmobius.gameserver.model.L2RecipeStatInstance;
+import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.RecipeHolder;
 
 /**
- * The Class RecipeData.
- * @author Zoey76
+ * @author Nik
  */
 public class RecipeData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(RecipeData.class.getName());
 	
-	private final Map<Integer, L2RecipeList> _recipes = new HashMap<>();
+	private final Map<Integer, RecipeHolder> _recipes = new HashMap<>();
 	
-	/**
-	 * Instantiates a new recipe data.
-	 */
 	protected RecipeData()
 	{
 		load();
@@ -63,205 +61,108 @@ public class RecipeData implements IGameXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		// TODO: Cleanup checks enforced by XSD.
-		final List<L2RecipeInstance> recipePartList = new ArrayList<>();
-		final List<L2RecipeStatInstance> recipeStatUseList = new ArrayList<>();
-		final List<L2RecipeStatInstance> recipeAltStatChangeList = new ArrayList<>();
+		StatsSet set;
+		Node att;
+		NamedNodeMap attrs;
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				RECIPES_FILE: for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					if ("item".equalsIgnoreCase(d.getNodeName()))
+					if ("recipe".equalsIgnoreCase(d.getNodeName()))
 					{
-						recipePartList.clear();
-						recipeStatUseList.clear();
-						recipeAltStatChangeList.clear();
-						final NamedNodeMap attrs = d.getAttributes();
-						Node att;
-						int id = -1;
-						boolean haveRare = false;
-						final StatsSet set = new StatsSet();
-						
-						att = attrs.getNamedItem("id");
-						if (att == null)
+						attrs = d.getAttributes();
+						set = new StatsSet();
+						for (int i = 0; i < attrs.getLength(); i++)
 						{
-							LOGGER.severe(getClass().getSimpleName() + ": Missing id for recipe item, skipping");
-							continue;
+							att = attrs.item(i);
+							set.set(att.getNodeName(), att.getNodeValue());
 						}
-						id = Integer.parseInt(att.getNodeValue());
-						set.set("id", id);
 						
-						att = attrs.getNamedItem("recipeId");
-						if (att == null)
-						{
-							LOGGER.severe(getClass().getSimpleName() + ": Missing recipeId for recipe item id: " + id + ", skipping");
-							continue;
-						}
-						set.set("recipeId", Integer.parseInt(att.getNodeValue()));
-						
-						att = attrs.getNamedItem("name");
-						if (att == null)
-						{
-							LOGGER.severe(getClass().getSimpleName() + ": Missing name for recipe item id: " + id + ", skipping");
-							continue;
-						}
-						set.set("recipeName", att.getNodeValue());
-						
-						att = attrs.getNamedItem("craftLevel");
-						if (att == null)
-						{
-							LOGGER.severe(getClass().getSimpleName() + ": Missing level for recipe item id: " + id + ", skipping");
-							continue;
-						}
-						set.set("craftLevel", Integer.parseInt(att.getNodeValue()));
-						
-						att = attrs.getNamedItem("type");
-						if (att == null)
-						{
-							LOGGER.severe(getClass().getSimpleName() + ": Missing type for recipe item id: " + id + ", skipping");
-							continue;
-						}
-						set.set("isDwarvenRecipe", att.getNodeValue().equalsIgnoreCase("dwarven"));
-						
-						att = attrs.getNamedItem("successRate");
-						if (att == null)
-						{
-							LOGGER.severe(getClass().getSimpleName() + ": Missing successRate for recipe item id: " + id + ", skipping");
-							continue;
-						}
-						set.set("successRate", Integer.parseInt(att.getNodeValue()));
+						final int recipeId = set.getInt("id");
+						List<ItemHolder> materials = Collections.emptyList();
+						List<ItemChanceHolder> productGroup = Collections.emptyList();
+						List<ItemHolder> npcFee = Collections.emptyList();
+						final Map<StatusUpdateType, Double> statUse = new HashMap<>();
 						
 						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 						{
-							if ("statUse".equalsIgnoreCase(c.getNodeName()))
+							if ("materials".equalsIgnoreCase(c.getNodeName()))
 							{
-								final String statName = c.getAttributes().getNamedItem("name").getNodeValue();
-								final int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
-								try
-								{
-									recipeStatUseList.add(new L2RecipeStatInstance(statName, value));
-								}
-								catch (Exception e)
-								{
-									LOGGER.severe(getClass().getSimpleName() + ": Error in StatUse parameter for recipe item id: " + id + ", skipping");
-									continue RECIPES_FILE;
-								}
+								materials = getItemList(c);
 							}
-							else if ("altStatChange".equalsIgnoreCase(c.getNodeName()))
+							else if ("product".equalsIgnoreCase(c.getNodeName()))
 							{
-								final String statName = c.getAttributes().getNamedItem("name").getNodeValue();
-								final int value = Integer.parseInt(c.getAttributes().getNamedItem("value").getNodeValue());
-								try
+								productGroup = getItemList(c).stream().map(ItemChanceHolder.class::cast).collect(Collectors.toList());
+							}
+							else if ("npcFee".equalsIgnoreCase(c.getNodeName()))
+							{
+								npcFee = getItemList(c);
+							}
+							else if ("statUse".equalsIgnoreCase(c.getNodeName()))
+							{
+								for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
 								{
-									recipeAltStatChangeList.add(new L2RecipeStatInstance(statName, value));
+									if ("stat".equalsIgnoreCase(b.getNodeName()))
+									{
+										StatusUpdateType stat = StatusUpdateType.valueOf(b.getAttributes().getNamedItem("name").getNodeValue());
+										double value = Double.parseDouble(b.getAttributes().getNamedItem("val").getNodeValue());
+										statUse.put(stat, value);
+									}
 								}
-								catch (Exception e)
-								{
-									LOGGER.severe(getClass().getSimpleName() + ": Error in AltStatChange parameter for recipe item id: " + id + ", skipping");
-									continue RECIPES_FILE;
-								}
-							}
-							else if ("ingredient".equalsIgnoreCase(c.getNodeName()))
-							{
-								final int ingId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
-								final int ingCount = Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue());
-								recipePartList.add(new L2RecipeInstance(ingId, ingCount));
-							}
-							else if ("production".equalsIgnoreCase(c.getNodeName()))
-							{
-								set.set("itemId", Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue()));
-								set.set("count", Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue()));
-							}
-							else if ("productionRare".equalsIgnoreCase(c.getNodeName()))
-							{
-								set.set("rareItemId", Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue()));
-								set.set("rareCount", Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue()));
-								set.set("rarity", Integer.parseInt(c.getAttributes().getNamedItem("rarity").getNodeValue()));
-								haveRare = true;
 							}
 						}
 						
-						final L2RecipeList recipeList = new L2RecipeList(set, haveRare);
-						for (L2RecipeInstance recipePart : recipePartList)
-						{
-							recipeList.addRecipe(recipePart);
-						}
-						for (L2RecipeStatInstance recipeStatUse : recipeStatUseList)
-						{
-							recipeList.addStatUse(recipeStatUse);
-						}
-						for (L2RecipeStatInstance recipeAltStatChange : recipeAltStatChangeList)
-						{
-							recipeList.addAltStatChange(recipeAltStatChange);
-						}
-						
-						_recipes.put(id, recipeList);
+						_recipes.put(recipeId, new RecipeHolder(set, materials, productGroup, npcFee, statUse));
 					}
 				}
 			}
 		}
 	}
 	
-	/**
-	 * Gets the recipe list.
-	 * @param listId the list id
-	 * @return the recipe list
-	 */
-	public L2RecipeList getRecipeList(int listId)
+	private List<ItemHolder> getItemList(Node c)
 	{
-		return _recipes.get(listId);
-	}
-	
-	/**
-	 * Gets the recipe by item id.
-	 * @param itemId the item id
-	 * @return the recipe by item id
-	 */
-	public L2RecipeList getRecipeByItemId(int itemId)
-	{
-		for (L2RecipeList find : _recipes.values())
+		final List<ItemHolder> items = new ArrayList<>();
+		for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
 		{
-			if (find.getRecipeId() == itemId)
+			if ("item".equalsIgnoreCase(b.getNodeName()))
 			{
-				return find;
+				int itemId = Integer.parseInt(b.getAttributes().getNamedItem("id").getNodeValue());
+				long itemCount = Long.parseLong(b.getAttributes().getNamedItem("count").getNodeValue());
+				
+				if (b.getAttributes().getNamedItem("chance") != null)
+				{
+					double chance = Double.parseDouble(b.getAttributes().getNamedItem("chance").getNodeValue());
+					items.add(new ItemChanceHolder(itemId, chance, itemCount));
+				}
+				else
+				{
+					items.add(new ItemHolder(itemId, itemCount));
+				}
 			}
 		}
-		return null;
+		
+		return items;
 	}
 	
 	/**
-	 * Gets the all item ids.
-	 * @return the all item ids
+	 * Gets the recipe by recipe item id.
+	 * @param itemId the recipe's item id
+	 * @return {@code RecipeHolder} for the given recipe item id {@code null} if there is no recipe data connected with this recipe item id.
 	 */
-	public int[] getAllItemIds()
+	public RecipeHolder getRecipeByRecipeItemId(int itemId)
 	{
-		final int[] idList = new int[_recipes.size()];
-		int i = 0;
-		for (L2RecipeList rec : _recipes.values())
-		{
-			idList[i++] = rec.getRecipeId();
-		}
-		return idList;
+		return _recipes.values().stream().filter(r -> r.getItemId() == itemId).findAny().orElse(null);
 	}
 	
 	/**
-	 * Gets the valid recipe list.
-	 * @param player the player
-	 * @param id the recipe list id
-	 * @return the valid recipe list
+	 * @param recipeId the id of the recipe, NOT the recipe item id.
+	 * @return {@code RecipeHolder} containing all the info necessary for crafting a recipe or {@code null} if there is no data for this recipeId.
 	 */
-	public L2RecipeList getValidRecipeList(L2PcInstance player, int id)
+	public RecipeHolder getRecipe(int recipeId)
 	{
-		final L2RecipeList recipeList = _recipes.get(id);
-		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
-		{
-			player.sendMessage("No recipe for: " + id);
-			player.isInCraftMode(false);
-			return null;
-		}
-		return recipeList;
+		return _recipes.get(recipeId);
 	}
 	
 	/**

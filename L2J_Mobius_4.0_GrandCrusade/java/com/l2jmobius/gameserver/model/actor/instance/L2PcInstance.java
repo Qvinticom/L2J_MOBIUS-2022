@@ -27,7 +27,6 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -46,11 +45,11 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ItemsAutoDestroy;
 import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.RecipeController;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
@@ -63,6 +62,7 @@ import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
+import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.HennaData;
@@ -85,6 +85,7 @@ import com.l2jmobius.gameserver.enums.GroupType;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.enums.ItemGrade;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.enums.NextActionType;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
@@ -116,6 +117,7 @@ import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
+import com.l2jmobius.gameserver.instancemanager.SellBuffsManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
@@ -128,7 +130,6 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2ContactList;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2Party.MessageType;
@@ -136,7 +137,6 @@ import com.l2jmobius.gameserver.model.L2PetData;
 import com.l2jmobius.gameserver.model.L2PetLevelData;
 import com.l2jmobius.gameserver.model.L2PremiumItem;
 import com.l2jmobius.gameserver.model.L2Radar;
-import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.L2Request;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.L2World;
@@ -163,7 +163,6 @@ import com.l2jmobius.gameserver.model.actor.stat.PcStat;
 import com.l2jmobius.gameserver.model.actor.status.PcStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.player.DismountTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.FameTask;
-import com.l2jmobius.gameserver.model.actor.tasks.player.GameGuardCheckTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.HennaDurationTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.InventoryEnableTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.PetFeedTask;
@@ -180,8 +179,6 @@ import com.l2jmobius.gameserver.model.actor.tasks.player.WaterTask;
 import com.l2jmobius.gameserver.model.actor.templates.L2PcTemplate;
 import com.l2jmobius.gameserver.model.actor.transform.Transform;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.base.ClassLevel;
-import com.l2jmobius.gameserver.model.base.PlayerClass;
 import com.l2jmobius.gameserver.model.base.SubClass;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.cubic.CubicInstance;
@@ -215,6 +212,7 @@ import com.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 import com.l2jmobius.gameserver.model.holders.MonsterBookRewardHolder;
 import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
+import com.l2jmobius.gameserver.model.holders.RecipeHolder;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import com.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import com.l2jmobius.gameserver.model.holders.TrainingHolder;
@@ -235,6 +233,7 @@ import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
+import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
@@ -293,7 +292,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
-import com.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import com.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -523,13 +521,13 @@ public final class L2PcInstance extends L2Playable
 	private AdminTeleportType _teleportType = AdminTeleportType.NORMAL;
 	
 	private boolean _inCrystallize;
-	private boolean _inCraftMode;
+	private volatile boolean _isCrafting;
 	
 	private long _offlineShopStart = 0;
 	
 	/** The table containing all L2RecipeList of the L2PcInstance */
-	private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new ConcurrentSkipListMap<>();
-	private final Map<Integer, L2RecipeList> _commonRecipeBook = new ConcurrentSkipListMap<>();
+	private final Map<Integer, RecipeHolder> _dwarvenRecipeBook = new ConcurrentSkipListMap<>();
+	private final Map<Integer, RecipeHolder> _commonRecipeBook = new ConcurrentSkipListMap<>();
 	
 	/** Premium Items */
 	private final Map<Integer, L2PremiumItem> _premiumItems = new ConcurrentSkipListMap<>();
@@ -564,7 +562,7 @@ public final class L2PcInstance extends L2Playable
 	
 	private TradeList _activeTradeList;
 	private ItemContainer _activeWarehouse;
-	private volatile Map<Integer, L2ManufactureItem> _manufactureItems;
+	private volatile Map<Integer, Long> _manufactureItems;
 	private String _storeName = "";
 	private TradeList _sellList;
 	private TradeList _buyList;
@@ -618,8 +616,6 @@ public final class L2PcInstance extends L2Playable
 	// apparently, a L2PcInstance CAN have both a summon AND a tamed beast at the same time!!
 	// after Freya players can control more than one tamed beast
 	private volatile Set<L2TamedBeastInstance> _tamedBeast = null;
-	
-	private boolean _minimapAllowed = false;
 	
 	// client radar
 	// TODO: This needs to be better integrated and saved/loaded
@@ -712,6 +708,10 @@ public final class L2PcInstance extends L2Playable
 	
 	// private byte _updateKnownCounter = 0;
 	
+	private int _createItemLevel;
+	private int _createCommonItemLevel;
+	private ItemGrade _crystallizeGrade = ItemGrade.NONE;
+	private CrystalType _expertiseLevel = CrystalType.NONE;
 	private int _expertiseArmorPenalty = 0;
 	private int _expertiseWeaponPenalty = 0;
 	private int _expertisePenaltyBonus = 0;
@@ -1259,14 +1259,14 @@ public final class L2PcInstance extends L2Playable
 		return getPrivateStoreType() != PrivateStoreType.NONE;
 	}
 	
-	public boolean isInCraftMode()
+	public boolean isCrafting()
 	{
-		return _inCraftMode;
+		return _isCrafting;
 	}
 	
-	public void isInCraftMode(boolean b)
+	public void setIsCrafting(boolean isCrafting)
 	{
-		_inCraftMode = b;
+		_isCrafting = isCrafting;
 	}
 	
 	/**
@@ -1304,17 +1304,17 @@ public final class L2PcInstance extends L2Playable
 	/**
 	 * @return a table containing all Common L2RecipeList of the L2PcInstance.
 	 */
-	public L2RecipeList[] getCommonRecipeBook()
+	public Collection<RecipeHolder> getCommonRecipeBook()
 	{
-		return _commonRecipeBook.values().toArray(new L2RecipeList[_commonRecipeBook.values().size()]);
+		return _commonRecipeBook.values();
 	}
 	
 	/**
 	 * @return a table containing all Dwarf L2RecipeList of the L2PcInstance.
 	 */
-	public L2RecipeList[] getDwarvenRecipeBook()
+	public Collection<RecipeHolder> getDwarvenRecipeBook()
 	{
-		return _dwarvenRecipeBook.values().toArray(new L2RecipeList[_dwarvenRecipeBook.values().size()]);
+		return _dwarvenRecipeBook.values();
 	}
 	
 	/**
@@ -1322,7 +1322,7 @@ public final class L2PcInstance extends L2Playable
 	 * @param recipe The L2RecipeList to add to the _recipebook
 	 * @param saveToDb
 	 */
-	public void registerCommonRecipeList(L2RecipeList recipe, boolean saveToDb)
+	public void registerCommonRecipeList(RecipeHolder recipe, boolean saveToDb)
 	{
 		_commonRecipeBook.put(recipe.getId(), recipe);
 		
@@ -1337,7 +1337,7 @@ public final class L2PcInstance extends L2Playable
 	 * @param recipe The L2RecipeList to add to the _recipebook
 	 * @param saveToDb
 	 */
-	public void registerDwarvenRecipeList(L2RecipeList recipe, boolean saveToDb)
+	public void registerDwarvenRecipeList(RecipeHolder recipe, boolean saveToDb)
 	{
 		_dwarvenRecipeBook.put(recipe.getId(), recipe);
 		
@@ -1867,29 +1867,39 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * @return True if the L2PcInstance can Craft Dwarven Recipes.
+	 * @return the maximum dwarven recipe level this character can craft.
 	 */
-	public boolean hasDwarvenCraft()
+	public int getCreateItemLevel()
 	{
-		return getSkillLevel(CommonSkill.CREATE_DWARVEN.getId()) >= 1;
+		return _createItemLevel;
 	}
 	
-	public int getDwarvenCraft()
+	public void setCreateItemLevel(int createItemLevel)
 	{
-		return getSkillLevel(CommonSkill.CREATE_DWARVEN.getId());
+		_createItemLevel = createItemLevel;
 	}
 	
 	/**
-	 * @return True if the L2PcInstance can Craft Dwarven Recipes.
+	 * @return the maximum common recipe level this character can craft.
 	 */
-	public boolean hasCommonCraft()
+	public int getCreateCommonItemLevel()
 	{
-		return getSkillLevel(CommonSkill.CREATE_COMMON.getId()) >= 1;
+		return _createCommonItemLevel;
 	}
 	
-	public int getCommonCraft()
+	public void setCreateCommonItemLevel(int createCommonItemLevel)
 	{
-		return getSkillLevel(CommonSkill.CREATE_COMMON.getId());
+		_createCommonItemLevel = createCommonItemLevel;
+	}
+	
+	public ItemGrade getCrystallizeGrade()
+	{
+		return _crystallizeGrade;
+	}
+	
+	public void setCrystallizeGrade(ItemGrade crystallizeGrade)
+	{
+		_crystallizeGrade = crystallizeGrade != null ? crystallizeGrade : ItemGrade.NONE;
 	}
 	
 	/**
@@ -2073,11 +2083,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public int getWeightPenalty()
 	{
-		if (_dietMode)
-		{
-			return 0;
-		}
-		return _curWeightPenalty;
+		return _dietMode ? 0 : _curWeightPenalty;
 	}
 	
 	/**
@@ -2141,37 +2147,26 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		
-		final int expertiseLevel = getExpertiseLevel();
+		final CrystalType expertiseLevel = getExpertiseLevel().plusLevel(getExpertisePenaltyBonus());
 		
 		int armorPenalty = 0;
 		int weaponPenalty = 0;
-		int crystaltype;
 		
-		for (L2ItemInstance item : getInventory().getItems())
+		for (L2ItemInstance item : getInventory().getPaperdollItems(item -> (item != null) && ((item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT)) && item.getItem().getCrystalType().isGreater(expertiseLevel)))
 		{
-			if ((item != null) && item.isEquipped() && ((item.getItemType() != EtcItemType.ARROW) && (item.getItemType() != EtcItemType.BOLT)))
+			if (item.isArmor())
 			{
-				crystaltype = item.getItem().getCrystalType().getId();
-				if (crystaltype > expertiseLevel)
-				{
-					if (item.isWeapon() && (crystaltype > weaponPenalty))
-					{
-						weaponPenalty = crystaltype;
-					}
-					else if (crystaltype > armorPenalty)
-					{
-						armorPenalty = crystaltype;
-					}
-				}
+				// Armor penalty level increases depending on amount of penalty armors equipped, not grade level difference.
+				armorPenalty = CommonUtil.constrain(armorPenalty + 1, 0, 4);
+			}
+			else
+			{
+				// Weapon penalty level increases based on grade difference.
+				weaponPenalty = CommonUtil.constrain(item.getItem().getCrystalType().getLevel() - expertiseLevel.getLevel(), 0, 4);
 			}
 		}
 		
 		boolean changed = false;
-		final int bonus = getExpertisePenaltyBonus();
-		
-		// calc weapon penalty
-		weaponPenalty = weaponPenalty - expertiseLevel - bonus;
-		weaponPenalty = Math.min(Math.max(weaponPenalty, 0), 4);
 		
 		if ((getExpertiseWeaponPenalty() != weaponPenalty) || (getSkillLevel(CommonSkill.WEAPON_GRADE_PENALTY.getId()) != weaponPenalty))
 		{
@@ -2182,14 +2177,10 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				removeSkill(getKnownSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId()), false, true);
+				removeSkill(CommonSkill.WEAPON_GRADE_PENALTY.getId(), true);
 			}
 			changed = true;
 		}
-		
-		// calc armor penalty
-		armorPenalty = armorPenalty - expertiseLevel - bonus;
-		armorPenalty = Math.min(Math.max(armorPenalty, 0), 4);
 		
 		if ((getExpertiseArmorPenalty() != armorPenalty) || (getSkillLevel(CommonSkill.ARMOR_GRADE_PENALTY.getId()) != armorPenalty))
 		{
@@ -2200,13 +2191,14 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				removeSkill(getKnownSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId()), false, true);
+				removeSkill(CommonSkill.ARMOR_GRADE_PENALTY.getId(), true);
 			}
 			changed = true;
 		}
 		
 		if (changed)
 		{
+			sendSkillList(); // Update expertise penalty icon in skill list.
 			sendPacket(new EtcStatusUpdate(this));
 		}
 	}
@@ -2383,7 +2375,7 @@ public final class L2PcInstance extends L2Playable
 		
 		try
 		{
-			if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[Id].getLevel() == ClassLevel.THIRD))
+			if ((getLvlJoinedAcademy() != 0) && (_clan != null) && CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, Id))
 			{
 				if (getLvlJoinedAcademy() <= 16)
 				{
@@ -2416,7 +2408,7 @@ public final class L2PcInstance extends L2Playable
 			setTarget(this);
 			broadcastPacket(new MagicSkillUse(this, 5103, 1, 1000, 0));
 			setClassTemplate(Id);
-			if (getClassId().level() == 3)
+			if (isInCategory(CategoryType.FOURTH_CLASS_GROUP))
 			{
 				sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_YOUR_THIRD_CLASS_TRANSFER_QUEST);
 			}
@@ -2708,18 +2700,6 @@ public final class L2PcInstance extends L2Playable
 	public L2Radar getRadar()
 	{
 		return _radar;
-	}
-	
-	/* Return true if Hellbound minimap allowed */
-	public boolean isMinimapAllowed()
-	{
-		return _minimapAllowed;
-	}
-	
-	/* Enable or disable minimap on Hellbound */
-	public void setMinimapAllowed(boolean b)
-	{
-		_minimapAllowed = b;
 	}
 	
 	/**
@@ -4355,6 +4335,8 @@ public final class L2PcInstance extends L2Playable
 		return getClan().getAllyCrestId();
 	}
 	
+	//@formatter:off
+	/*
 	public void queryGameGuard()
 	{
 		if (getClient() != null)
@@ -4364,9 +4346,10 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (Config.GAMEGUARD_ENFORCE)
 		{
-			ThreadPoolManager.schedule(new GameGuardCheckTask(this), 30 * 1000);
+			ThreadPool.scheduleGeneral(new GameGuardCheckTask(this), 30 * 1000);
 		}
-	}
+	}*/
+	//@formatter:on
 	
 	/**
 	 * Send a Server->Client packet StatusUpdate to the L2PcInstance.
@@ -4404,22 +4387,28 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (target instanceof L2PcInstance)
 		{
-			final L2PcInstance temp = (L2PcInstance) target;
+			final L2PcInstance targetPlayer = (L2PcInstance) target;
 			sendPacket(ActionFailed.STATIC_PACKET);
 			
-			if ((temp.getPrivateStoreType() == PrivateStoreType.SELL) || (temp.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL))
+			if ((targetPlayer.getPrivateStoreType() == PrivateStoreType.SELL) || (targetPlayer.getPrivateStoreType() == PrivateStoreType.PACKAGE_SELL))
 			{
-				sendPacket(new PrivateStoreListSell(this, temp));
+				if (isSellingBuffs())
+				{
+					SellBuffsManager.getInstance().sendBuffMenu(this, targetPlayer, 0);
+				}
+				else
+				{
+					sendPacket(new PrivateStoreListSell(this, targetPlayer));
+				}
 			}
-			else if (temp.getPrivateStoreType() == PrivateStoreType.BUY)
+			else if (targetPlayer.getPrivateStoreType() == PrivateStoreType.BUY)
 			{
-				sendPacket(new PrivateStoreListBuy(this, temp));
+				sendPacket(new PrivateStoreListBuy(this, targetPlayer));
 			}
-			else if (temp.getPrivateStoreType() == PrivateStoreType.MANUFACTURE)
+			else if (targetPlayer.getPrivateStoreType() == PrivateStoreType.MANUFACTURE)
 			{
-				sendPacket(new RecipeShopSellList(this, temp));
+				sendPacket(new RecipeShopSellList(this, targetPlayer));
 			}
-			
 		}
 		else if (target != null) // _interactTarget=null should never happen but one never knows ^^;
 		{
@@ -5057,6 +5046,9 @@ public final class L2PcInstance extends L2Playable
 			// Clear resurrect xp calculation
 			setExpBeforeDeath(0);
 			
+			// Calculate Shilen's Breath debuff level. It must happen right before death, because buffs aren't applied on dead characters.
+			calculateShilensBreathDebuffLevel(killer);
+			
 			// Kill the L2PcInstance
 			if (!super.doDie(killer))
 			{
@@ -5109,9 +5101,6 @@ public final class L2PcInstance extends L2Playable
 				}
 			}
 		}
-		
-		// calculate Shilen's Breath debuff level
-		calculateShilensBreathDebuffLevel(killer);
 		
 		if (isMounted())
 		{
@@ -5778,19 +5767,19 @@ public final class L2PcInstance extends L2Playable
 	 * Get the manufacture items map of this player.
 	 * @return the the manufacture items map
 	 */
-	public Map<Integer, L2ManufactureItem> getManufactureItems()
+	public Map<Integer, Long> getManufactureItems()
 	{
 		if (_manufactureItems == null)
 		{
-			synchronized (this)
-			{
-				if (_manufactureItems == null)
-				{
-					_manufactureItems = Collections.synchronizedMap(new LinkedHashMap<>());
-				}
-			}
+			return Collections.emptyMap();
 		}
+		
 		return _manufactureItems;
+	}
+	
+	public void setManufactureItems(Map<Integer, Long> manufactureItems)
+	{
+		_manufactureItems = manufactureItems;
 	}
 	
 	/**
@@ -6524,7 +6513,7 @@ public final class L2PcInstance extends L2Playable
 			statement.setInt(23, getRace().ordinal());
 			statement.setInt(24, getClassId().getId());
 			statement.setLong(25, getDeleteTimer());
-			statement.setInt(26, hasDwarvenCraft() ? 1 : 0);
+			statement.setInt(26, getCreateItemLevel() > 0 ? 1 : 0);
 			statement.setString(27, getTitle());
 			statement.setInt(28, getAppearance().getTitleColor());
 			statement.setInt(29, isOnlineInt());
@@ -6994,11 +6983,11 @@ public final class L2PcInstance extends L2Playable
 			{
 				_dwarvenRecipeBook.clear();
 				
-				L2RecipeList recipe;
-				final RecipeData rd = RecipeData.getInstance();
+				RecipeHolder recipe;
+				RecipeData rd = RecipeData.getInstance();
 				while (rset.next())
 				{
-					recipe = rd.getRecipeList(rset.getInt("id"));
+					recipe = rd.getRecipe(rset.getInt("id"));
 					if (loadCommon)
 					{
 						if (rset.getInt(2) == 1)
@@ -8770,7 +8759,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		for (int itemId : _activeSoulShots)
 		{
-			if (ItemTable.getInstance().getTemplate(itemId).getCrystalType().getId() == crystalType)
+			if (ItemTable.getInstance().getTemplate(itemId).getCrystalType().getLevel() == crystalType)
 			{
 				disableAutoShot(itemId);
 			}
@@ -10290,17 +10279,17 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * Expertise of the L2PcInstance (None=0, D=1, C=2, B=3, A=4, S=5, S80=6, S84=7)
-	 * @return int Expertise skill level.
+	 * Expertise of the L2PcInstance (None=0, D=1, C=2, B=3, A=4, S=5, S80=6, S84=7, R=8, R95=9, R99=10)
+	 * @return CrystalTyperepresenting expertise level..
 	 */
-	public int getExpertiseLevel()
+	public CrystalType getExpertiseLevel()
 	{
-		int level = getSkillLevel(239);
-		if (level < 0)
-		{
-			level = 0;
-		}
-		return level;
+		return _expertiseLevel;
+	}
+	
+	public void setExpertiseLevel(CrystalType crystalType)
+	{
+		_expertiseLevel = crystalType != null ? crystalType : CrystalType.NONE;
 	}
 	
 	@Override
@@ -10858,16 +10847,6 @@ public final class L2PcInstance extends L2Playable
 		try
 		{
 			setIsTeleporting(false);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.SEVERE, "deleteMe()", e);
-		}
-		
-		// Stop crafting, if in progress
-		try
-		{
-			RecipeController.getInstance().requestMakeItemAbort(this);
 		}
 		catch (Exception e)
 		{
@@ -12501,11 +12480,11 @@ public final class L2PcInstance extends L2Playable
 				{
 					final AtomicInteger slot = new AtomicInteger(1);
 					con.setAutoCommit(false);
-					for (L2ManufactureItem item : _manufactureItems.values())
+					for (Entry<Integer, Long> entry : _manufactureItems.entrySet())
 					{
 						st.setInt(1, getObjectId());
-						st.setInt(2, item.getRecipeId());
-						st.setLong(3, item.getCost());
+						st.setInt(2, entry.getKey());
+						st.setLong(3, entry.getValue());
 						st.setInt(4, slot.getAndIncrement());
 						st.addBatch();
 					}
@@ -12522,10 +12501,7 @@ public final class L2PcInstance extends L2Playable
 	
 	private void restoreRecipeShopList()
 	{
-		if (_manufactureItems != null)
-		{
-			_manufactureItems.clear();
-		}
+		final Map<Integer, Long> manufactureItems = new HashMap<>();
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(RESTORE_CHAR_RECIPE_SHOP))
@@ -12535,7 +12511,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				while (rset.next())
 				{
-					getManufactureItems().put(rset.getInt("recipeId"), new L2ManufactureItem(rset.getInt("recipeId"), rset.getLong("price")));
+					manufactureItems.put(rset.getInt("recipeId"), rset.getLong("price"));
 				}
 			}
 		}
@@ -12543,6 +12519,8 @@ public final class L2PcInstance extends L2Playable
 		{
 			_log.log(Level.SEVERE, "Could not restore recipe shop list data for playerId: " + getObjectId(), e);
 		}
+		
+		_manufactureItems = manufactureItems;
 	}
 	
 	@Override

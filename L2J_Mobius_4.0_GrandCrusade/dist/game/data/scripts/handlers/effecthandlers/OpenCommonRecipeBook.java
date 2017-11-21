@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.RecipeController;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -25,6 +24,7 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
 /**
  * Open Common Recipe Book effect implementation.
@@ -45,18 +45,24 @@ public final class OpenCommonRecipeBook extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!effector.isPlayer())
+		final L2PcInstance casterPlayer = effector.getActingPlayer();
+		if (casterPlayer == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = effector.getActingPlayer();
-		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
+		if (casterPlayer.getPrivateStoreType() == PrivateStoreType.MANUFACTURE)
 		{
-			player.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
+			casterPlayer.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return;
 		}
 		
-		RecipeController.getInstance().requestBookOpen(player, false);
+		if (casterPlayer.isProcessingTransaction())
+		{
+			casterPlayer.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
+			return;
+		}
+		
+		casterPlayer.sendPacket(new RecipeBookItemList(casterPlayer, false));
 	}
 }

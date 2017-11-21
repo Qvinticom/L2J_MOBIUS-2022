@@ -19,9 +19,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
+import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 public final class RequestRecipeShopManageList implements IClientIncomingPacket
 {
@@ -37,6 +40,38 @@ public final class RequestRecipeShopManageList implements IClientIncomingPacket
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
+			return;
+		}
+		
+		if (player.getCommonRecipeBook().isEmpty() && player.getDwarvenRecipeBook().isEmpty())
+		{
+			player.sendPacket(SystemMessageId.NO_RECIPES_HAVE_BEEN_REGISTERED);
+			return;
+		}
+		
+		if (player.isCastingNow())
+		{
+			player.sendPacket(SystemMessageId.A_PRIVATE_STORE_MAY_NOT_BE_OPENED_WHILE_USING_A_SKILL);
+			return;
+		}
+		
+		if (player.isCrafting())
+		{
+			player.sendPacket(SystemMessageId.CURRENTLY_CRAFTING_AN_ITEM_PLEASE_WAIT);
+			return;
+		}
+		
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || player.isInDuel())
+		{
+			client.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (player.isInsideZone(ZoneId.NO_STORE))
+		{
+			client.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_WORKSHOP_HERE);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

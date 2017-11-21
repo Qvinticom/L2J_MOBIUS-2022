@@ -182,7 +182,7 @@ public class Fishing
 			return;
 		}
 		
-		if (_player.isInCraftMode() || _player.isInStoreMode())
+		if (_player.isCrafting() || _player.isInStoreMode())
 		{
 			_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_WORKSHOP_OR_PRIVATE_STORE);
 			_player.sendPacket(ActionFailed.STATIC_PACKET);

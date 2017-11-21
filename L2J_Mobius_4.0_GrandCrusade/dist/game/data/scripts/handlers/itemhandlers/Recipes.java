@@ -18,9 +18,9 @@ package handlers.itemhandlers;
 
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.handler.IItemHandler;
-import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.RecipeHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -40,15 +40,16 @@ public class Recipes implements IItemHandler
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
-		if (activeChar.isInCraftMode())
+		if (activeChar.isCrafting())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return false;
 		}
 		
-		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getId());
+		final RecipeHolder rp = RecipeData.getInstance().getRecipeByRecipeItemId(item.getId());
 		if (rp == null)
 		{
+			activeChar.sendPacket(SystemMessageId.THE_RECIPE_IS_INCORRECT);
 			return false;
 		}
 		
@@ -63,15 +64,15 @@ public class Recipes implements IItemHandler
 		boolean recipeLimit = false;
 		if (rp.isDwarvenRecipe())
 		{
-			canCraft = activeChar.hasDwarvenCraft();
-			recipeLevel = (rp.getLevel() > activeChar.getDwarvenCraft());
-			recipeLimit = (activeChar.getDwarvenRecipeBook().length >= activeChar.getDwarfRecipeLimit());
+			canCraft = activeChar.getCreateItemLevel() > 0;
+			recipeLevel = (rp.getLevel() > activeChar.getCreateItemLevel());
+			recipeLimit = (activeChar.getDwarvenRecipeBook().size() >= activeChar.getDwarfRecipeLimit());
 		}
 		else
 		{
-			canCraft = activeChar.hasCommonCraft();
-			recipeLevel = (rp.getLevel() > activeChar.getCommonCraft());
-			recipeLimit = (activeChar.getCommonRecipeBook().length >= activeChar.getCommonRecipeLimit());
+			canCraft = activeChar.getCreateCommonItemLevel() > 0;
+			recipeLevel = (rp.getLevel() > activeChar.getCreateCommonItemLevel());
+			recipeLimit = (activeChar.getCommonRecipeBook().size() >= activeChar.getCommonRecipeLimit());
 		}
 		
 		if (!canCraft)

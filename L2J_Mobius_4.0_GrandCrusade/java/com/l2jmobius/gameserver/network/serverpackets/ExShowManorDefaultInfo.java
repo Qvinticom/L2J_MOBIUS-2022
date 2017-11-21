@@ -48,8 +48,8 @@ public final class ExShowManorDefaultInfo implements IClientOutgoingPacket
 		{
 			packet.writeD(crop.getCropId()); // crop Id
 			packet.writeD(crop.getLevel()); // level
-			packet.writeD(crop.getSeedReferencePrice()); // seed price
-			packet.writeD(crop.getCropReferencePrice()); // crop price
+			packet.writeD((int) crop.getSeedReferencePrice()); // seed price
+			packet.writeD((int) crop.getCropReferencePrice()); // crop price
 			packet.writeC(1); // Reward 1 type
 			packet.writeD(crop.getReward(1)); // Reward 1 itemId
 			packet.writeC(1); // Reward 2 type

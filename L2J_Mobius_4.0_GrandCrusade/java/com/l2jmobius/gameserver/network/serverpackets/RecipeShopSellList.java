@@ -16,8 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Map.Entry;
+
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -47,11 +48,11 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 		else
 		{
 			packet.writeD(_manufacturer.getManufactureItems().size());
-			for (L2ManufactureItem temp : _manufacturer.getManufactureItems().values())
+			for (Entry<Integer, Long> item : _manufacturer.getManufactureItems().entrySet())
 			{
-				packet.writeD(temp.getRecipeId());
-				packet.writeD(0x00); // unknown
-				packet.writeQ(temp.getCost());
+				packet.writeD(item.getKey());
+				packet.writeD(0x00); // CanCreate?
+				packet.writeQ(item.getValue());
 			}
 		}
 		return true;

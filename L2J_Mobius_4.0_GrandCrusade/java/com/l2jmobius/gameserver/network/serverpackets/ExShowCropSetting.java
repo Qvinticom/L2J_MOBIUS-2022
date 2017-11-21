@@ -77,7 +77,7 @@ public class ExShowCropSetting implements IClientOutgoingPacket
 			packet.writeD(s.getCropLimit()); // next sale limit
 			packet.writeD(0); // ???
 			packet.writeD(s.getCropMinPrice()); // min crop price
-			packet.writeD(s.getCropMaxPrice()); // max crop price
+			packet.writeD((int) s.getCropMaxPrice()); // max crop price
 			// Current period
 			if (_current.containsKey(s.getCropId()))
 			{

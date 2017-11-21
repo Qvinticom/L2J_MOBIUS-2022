@@ -17,10 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.RecipeController;
+import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
 public final class RequestRecipeBookOpen implements IClientIncomingPacket
 {
@@ -48,12 +49,19 @@ public final class RequestRecipeBookOpen implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.getActiveRequester() != null)
+		if (activeChar.getPrivateStoreType() == PrivateStoreType.MANUFACTURE)
 		{
-			activeChar.sendMessage("You may not alter your recipe book while trading.");
+			client.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return;
 		}
 		
-		RecipeController.getInstance().requestBookOpen(activeChar, _isDwarvenCraft);
+		if (activeChar.isProcessingTransaction())
+		{
+			client.sendPacket(SystemMessageId.ITEM_CREATION_IS_NOT_POSSIBLE_WHILE_ENGAGED_IN_A_TRADE);
+			return;
+		}
+		
+		final RecipeBookItemList response = new RecipeBookItemList(activeChar, _isDwarvenCraft);
+		activeChar.sendPacket(response);
 	}
 }

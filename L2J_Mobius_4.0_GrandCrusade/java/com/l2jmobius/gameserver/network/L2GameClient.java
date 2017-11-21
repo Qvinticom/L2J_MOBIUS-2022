@@ -790,7 +790,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			}
 			default:
 			{
-				canSetShop = Config.OFFLINE_CRAFT_ENABLE && player.isInCraftMode();
+				canSetShop = Config.OFFLINE_CRAFT_ENABLE && player.isCrafting();
 				break;
 			}
 		}

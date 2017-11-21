@@ -401,7 +401,7 @@ public abstract class Inventory extends ItemContainer
 			final L2PcInstance player = (L2PcInstance) inventory.getOwner();
 			
 			// Any items equipped that result in expertise penalty do not give any skills at all.
-			if (item.getItem().getCrystalType().getId() > player.getExpertiseLevel())
+			if (item.getItem().getCrystalType().isGreater(player.getExpertiseLevel()))
 			{
 				return;
 			}

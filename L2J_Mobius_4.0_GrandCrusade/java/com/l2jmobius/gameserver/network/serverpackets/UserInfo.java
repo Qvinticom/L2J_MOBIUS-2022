@@ -20,6 +20,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.enums.AttributeType;
+import com.l2jmobius.gameserver.enums.ItemGrade;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -205,7 +206,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(6);
 			packet.writeC(_activeChar.getMountType().ordinal());
 			packet.writeC(_activeChar.getPrivateStoreType().getId());
-			packet.writeC(_activeChar.hasDwarvenCraft() || (_activeChar.getSkillLevel(248) > 0) ? 1 : 0);
+			packet.writeC(_activeChar.getCrystallizeGrade() != ItemGrade.NONE ? 1 : 0);
 			packet.writeC(_activeChar.getAbilityPoints() - _activeChar.getAbilityPointsUsed());
 		}
 		

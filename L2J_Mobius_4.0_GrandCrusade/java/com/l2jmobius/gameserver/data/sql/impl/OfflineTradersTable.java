@@ -21,6 +21,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -28,7 +31,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.L2ManufactureItem;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -133,12 +135,12 @@ public class OfflineTradersTable
 									continue;
 								}
 								title = pc.getStoreName();
-								for (L2ManufactureItem i : pc.getManufactureItems().values())
+								for (Entry<Integer, Long> entry : pc.getManufactureItems().entrySet())
 								{
 									stm_items.setInt(1, pc.getObjectId());
-									stm_items.setInt(2, i.getRecipeId());
+									stm_items.setInt(2, entry.getKey());
 									stm_items.setLong(3, 0);
-									stm_items.setLong(4, i.getCost());
+									stm_items.setLong(4, entry.getValue());
 									stm_items.executeUpdate();
 									stm_items.clearParameters();
 								}
@@ -274,10 +276,12 @@ public class OfflineTradersTable
 								}
 								case MANUFACTURE:
 								{
+									final Map<Integer, Long> manufactureItems = new HashMap<>();
 									while (items.next())
 									{
-										player.getManufactureItems().put(items.getInt(2), new L2ManufactureItem(items.getInt(2), items.getLong(4)));
+										manufactureItems.put(items.getInt(2), items.getLong(4));
 									}
+									player.setManufactureItems(manufactureItems);
 									player.setStoreName(rs.getString("title"));
 									break;
 								}
@@ -407,12 +411,12 @@ public class OfflineTradersTable
 								{
 									title = trader.getStoreName();
 								}
-								for (L2ManufactureItem i : trader.getManufactureItems().values())
+								for (Entry<Integer, Long> entry : trader.getManufactureItems().entrySet())
 								{
 									stm3.setInt(1, trader.getObjectId());
-									stm3.setInt(2, i.getRecipeId());
+									stm3.setInt(2, entry.getKey());
 									stm3.setLong(3, 0);
-									stm3.setLong(4, i.getCost());
+									stm3.setLong(4, entry.getValue());
 									stm3.executeUpdate();
 									stm3.clearParameters();
 								}

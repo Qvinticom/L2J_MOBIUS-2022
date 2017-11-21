@@ -59,12 +59,16 @@ CpHealOverTime: Increases current CP by a given amount over time.
 CpHealPercent: Increases current CP by a given percentage amount.
 Cp: Increases current CP by a static amount.
 CpRegen: CP Regeneration stat.
+CraftingCritical: Crafting critical stat.
+CreateCommonItem: Allows the player to create common recipe items up to a certain level.
+CreateItem: Allows the player to create dwarven recipe items up to a certain level.
 CreateItemRandom: Creates an item randomly from a given list. All extractable items with chances to get different items are using this effect.
 CriticalDamage: Critical Damage stat.
 CriticalDamagePosition: Critical Damage depending on position stat.
 CriticalRate: Critical Rate stat.
 CriticalRatePositionBonus: Critical Rate depending on position stat. Ignores the critical rate cap of 500.
 CrystalGradeModify: Sets your Expertise Grade level. With this effect you can make lv. 40 player (C Grade) to wear S grade.
+Crystallize: Allows the player to crystallize items up to a certain grade.
 CubicMastery: Max cubics stat.
 DamageBlock: Blocks Hp or Mp damage/heal.
 DamageShield: Reflect damage percentage stat.
@@ -233,6 +237,7 @@ ReflectMagic: Deflects magical damage back to the attacker.
 ReflectSkill: Deflects physical/magical debuffs back to the attacker.
 RefuelAirship: Increases Airship's fuel.
 Relax: Sits down and increases HP regeneration until full.
+RemoveEquipPenalty: Removes equipment grade penalty. Its the base effect for the grade penalty mechanics.
 ResetInstanceEntry: Resets instance re-entry time. (l2jmobius)
 ResistAbnormalByCategory: Buff/debuff resist stat.
 ResistDDMagic: Magic resist stat (magic attack 50% effective or 1 damage)

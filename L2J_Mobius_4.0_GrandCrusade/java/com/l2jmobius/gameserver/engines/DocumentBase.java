@@ -74,7 +74,6 @@ import com.l2jmobius.gameserver.model.conditions.ConditionPlayerCloakStatus;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerCp;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerDualclass;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerFlyMounted;
-import com.l2jmobius.gameserver.model.conditions.ConditionPlayerGrade;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasCastle;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasClanHall;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerHasFort;
@@ -509,12 +508,6 @@ public abstract class DocumentBase
 				{
 					final int cp = Integer.decode(getValue(a.getNodeValue(), template));
 					cond = joinAnd(cond, new ConditionPlayerCp(cp));
-					break;
-				}
-				case "grade":
-				{
-					final int expIndex = Integer.decode(getValue(a.getNodeValue(), template));
-					cond = joinAnd(cond, new ConditionPlayerGrade(expIndex));
 					break;
 				}
 				case "pkcount":

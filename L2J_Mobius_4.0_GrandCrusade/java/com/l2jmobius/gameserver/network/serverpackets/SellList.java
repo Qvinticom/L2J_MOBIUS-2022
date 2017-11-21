@@ -76,7 +76,7 @@ public class SellList implements IClientOutgoingPacket
 		
 		for (L2ItemInstance item : _sellList)
 		{
-			int price = item.getItem().getReferencePrice() / 2;
+			long price = item.getItem().getReferencePrice() / 2;
 			if (_merchant != null)
 			{
 				price -= (price * _merchant.getTotalTaxRate(TaxType.SELL));

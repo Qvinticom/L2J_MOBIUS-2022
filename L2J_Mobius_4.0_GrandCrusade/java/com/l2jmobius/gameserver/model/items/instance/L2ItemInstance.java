@@ -731,7 +731,7 @@ public final class L2ItemInstance extends L2Object
 	/**
 	 * @return the reference price of the item.
 	 */
-	public int getReferencePrice()
+	public long getReferencePrice()
 	{
 		return _item.getReferencePrice();
 	}

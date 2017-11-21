@@ -509,10 +509,25 @@
 		</effects>
 	</skill>
 	<skill id="10312" toLevel="4" name="Crafting Mastery">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- There is a small chance that the item quantity will double upon crafting. Critical level 1. -->
 		<icon>icon.skill10312</icon>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="CraftingCritical">
+				<amount>
+					<value level="1">2.4</value>
+					<value level="2">3.8</value>
+					<value level="3">4.2</value>
+					<value level="4">5.4</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10313" toLevel="4" name="Infinite Rush">
 		<!-- Rush toward the frontal enemies to inflict Shock for 9 sec. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
