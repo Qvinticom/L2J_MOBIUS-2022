@@ -56,7 +56,7 @@ public final class ExEnchantSkillInfo implements IClientOutgoingPacket
 			final int currentRouteId = _skillSubLevel / 1000;
 			final int subLevel = _currentSubLevel > 0 ? (route + (_currentSubLevel % 1000)) - 1 : route;
 			packet.writeH(_skillLevel);
-			packet.writeH(currentRouteId != routeId ? subLevel : subLevel + 1);
+			packet.writeH(currentRouteId != routeId ? subLevel : Math.min(subLevel + 1, route + (EnchantSkillGroupsData.MAX_ENCHANT_LEVEL - 1)));
 		});
 		return true;
 	}
