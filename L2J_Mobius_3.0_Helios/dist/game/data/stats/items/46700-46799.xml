@@ -455,6 +455,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="18582" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
+		</skills>
 	</item>
 	<item id="46730" name="Scroll of Escape: Varka Silenos Barracks" type="EtcItem">
 		<!-- Teleports to Varka Silenos Barracks. -->
@@ -466,6 +476,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="18582" level="2" /> <!-- Scroll of Escape: Varka Silenos Barracks -->
+		</skills>
 	</item>
 	<item id="46731" name="Scroll of Escape: Town of Goddard" type="EtcItem">
 		<!-- Teleports near the High Priest Gregory in the Town of Goddard. -->
@@ -477,6 +497,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="18582" level="4" /> <!-- Scroll of Escape: Town of Goddard -->
+		</skills>
 	</item>
 	<item id="46732" name="Scroll of Escape: Ketra Orc Outpost" type="EtcItem">
 		<!-- Teleports to Ketra Orc Outpost. -->
@@ -488,6 +518,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="18582" level="3" /> <!-- Scroll of Escape: Ketra Orc Outpost -->
+		</skills>
 	</item>
 	<item id="46733" name="Scroll of Escape: Town of Giran" type="EtcItem">
 		<!-- Teleports to Town of Giran. -->
@@ -499,6 +539,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="18582" level="5" /> <!-- Scroll of Escape: Town of Giran -->
+		</skills>
 	</item>
 	<item id="46734" name="Scroll of Escape: Dragon Valley" type="EtcItem">
 		<!-- Use to teleport to Dragon Valley. -->
@@ -510,6 +560,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="18582" level="6" /> <!-- Scroll of Escape: Dragon Valley -->
+		</skills>
 	</item>
 	<item id="46735" name="Hatchling Flesh" type="EtcItem">
 		<!-- The article the Researcher Stena asked you to collected. Can be gained by defeating Dragon Hatchlings or Leopard Dragons that appear in the Dragon Valley area. Collect these and take them to the Researcher Stena at the entrance to Dragon Valley. -->
@@ -842,6 +902,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="18582" level="7" /> <!-- Scroll of Escape: Giant's Cave -->
+		</skills>
 	</item>
 	<item id="46764" name="Shadai's Good Fortune Jewelry Box" type="EtcItem">
 		<!-- Double click to obtain one of the Good Fortune Jewelry Boxes -->

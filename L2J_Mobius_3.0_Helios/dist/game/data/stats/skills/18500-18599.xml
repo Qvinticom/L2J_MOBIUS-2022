@@ -860,10 +860,70 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18582" toLevel="7" name="Teleport to the Giant's Cave">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+	<skill id="18582" toLevel="7" name="Teleport to the Town of Goddard">
 		<icon>icon.skill0000</icon>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeId>
+				<value level="1">46729</value>
+				<value level="2">46730</value>
+				<value level="3">46732</value>
+				<value level="4">46731</value>
+				<value level="5">46733</value>
+				<value level="6">46734</value>
+				<value level="7">46763</value>
+		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport" fromLevel="1" toLevel="1">
+				<x>147491</x>
+				<y>-56633</y>
+				<z>-2776</z>
+			</effect>
+			<effect name="Teleport" fromLevel="2" toLevel="2">
+				<x>125740</x>
+				<y>-40864</y>
+				<z>-3736</z>
+			</effect>
+			<effect name="Teleport" fromLevel="3" toLevel="3">
+				<x>146718</x>
+				<y>-67185</y>
+				<z>-3652</z>
+			</effect>
+			<effect name="Teleport" fromLevel="4" toLevel="4">
+				<x>147491</x>
+				<y>-56633</y>
+				<z>-2776</z>
+			</effect>
+			<effect name="Teleport" fromLevel="5" toLevel="5">
+				<x>83378</x>
+				<y>147999</y>
+				<z>-3400</z>
+			</effect>
+			<effect name="Teleport" fromLevel="6" toLevel="6">
+				<x>72090</x>
+				<y>116824</y>
+				<z>-3688</z>
+			</effect>
+			<effect name="Teleport" fromLevel="7" toLevel="7">
+				<x>181737</x>
+				<y>46469</y>
+				<z>-4271</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18583" toLevel="1" name="Inject Shine Energy">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
