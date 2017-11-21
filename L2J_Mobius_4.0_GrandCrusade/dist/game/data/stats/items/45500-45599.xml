@@ -1655,6 +1655,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="45536" min="1" max="1" chance="100" /> <!-- Agathion Summon Bracelet: -->
 		</capsuled_items>
@@ -1670,6 +1673,9 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="45537" min="1" max="1" chance="100" /> <!-- Agathion Summon Bracelet: -->
 		</capsuled_items>
@@ -1685,6 +1691,9 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18259" level="1" /> <!-- Twinkling Zodiac Agathion Pack (30-day) -->
 		</skills>
@@ -1700,6 +1709,9 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18260" level="1" /> <!-- Special Bait -->
 		</skills>
@@ -1715,6 +1727,9 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18261" level="1" /> <!-- SP Scroll Pack -->
 		</skills>
@@ -1730,6 +1745,9 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18262" level="1" /> <!-- Zodiac Agathion Pack (15-day) -->
 		</skills>

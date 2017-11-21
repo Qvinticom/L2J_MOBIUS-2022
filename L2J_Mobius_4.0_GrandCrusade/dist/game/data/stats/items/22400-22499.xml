@@ -512,9 +512,9 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_sellable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -522,7 +522,7 @@
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22440" level="1" /> <!-- Divine Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -572,9 +572,9 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
-		<set name="is_sellable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -582,7 +582,7 @@
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="22443" level="1" /> <!-- Divine Scroll: Enchant Armor (R-grade) -->
 		</skills>

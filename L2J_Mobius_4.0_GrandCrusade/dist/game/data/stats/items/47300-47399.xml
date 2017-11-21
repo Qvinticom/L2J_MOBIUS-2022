@@ -14,6 +14,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="10" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -32,6 +33,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="1" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -50,6 +52,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="2" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -68,6 +71,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="3" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -86,6 +90,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="4" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -104,6 +109,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="5" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -122,6 +128,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="6" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -140,6 +147,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="7" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -158,6 +166,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="8" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -176,6 +185,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="9" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -194,6 +204,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16739" level="10" /> <!-- Inherent Abilities - Giant Trackers Talisman -->
 		</skills>
@@ -759,6 +770,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47347" name="+8 Bloody Eternal Set Pack" additionalName="Assassin Type / Light Armor" type="EtcItem">
 		<!-- Double click to obtain a +8 enchanted Bloody Eternal Assassin Type Light Armor Set. -->
@@ -770,6 +782,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47348" name="+8 Bloody Eternal Set Pack" additionalName="Magic Type / Robe" type="EtcItem">
 		<!-- Double click to obtain a +8 enchanted Bloody Eternal Magic Type Robe Set. -->
@@ -781,6 +794,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47349" name="+8 Bloody Eternal Set Pack" additionalName="Defense Type / Heavy Armor" type="EtcItem">
 		<!-- Double click to obtain a +8 enchanted Bloody Eternal Defense Type Heavy Armor Set. -->
@@ -792,6 +806,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47350" name="+8 Bloody Eternal Set Pack" additionalName="Enchant Type / Light Armor" type="EtcItem">
 		<!-- Double click to obtain a +8 enchanted Bloody Eternal Enchant Type Light Armor Set. -->
@@ -803,6 +818,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47351" name="+8 Bloody Eternal Set Pack" additionalName="Recovery Type / Robe" type="EtcItem">
 		<!-- Double click to obtain a +8 enchanted Bloody Eternal Recovery Type Robe Set. -->
@@ -814,6 +830,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47352" name="+8 Bloody Eternal Pack" type="EtcItem">
 		<!-- Double click to obtain a +8 Eternal Enchant Type Set Pack. -->
@@ -824,6 +841,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47353" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double click to obtain the Blessed Lindvior's Earring, Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
@@ -834,6 +852,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47354" name="Emperor Shunaiman's Weapon Set Pack" type="EtcItem">
 		<!-- Double click to obtain Emperor Shunaiman's weapons. -->
@@ -844,6 +863,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47355" name="Superion Support Box" type="EtcItem">
 		<!-- Double click to obtain Emperor Shunaiman's Weapon Set Pack x1, +8 Bloody Eternal Pack x1, 2,000,000,000 Adena, Rare Accessory Pack x1, Talisman - Longing x1, Enhanced Tauti's Bracelet x1, Refined Romantic Chapeau containing the GM's Blessing x3, Old Elemental Shirt x1, Nurka's Belt x1, Lv. 5 Legendary Dye Pack x1, Mysterious No-grade Soulshot x20,000, and Mysterious Blessed No-grade Spiritshot x20,000. -->
@@ -854,6 +874,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47356" name="Basic Supply Box" additionalName="Blackbird Clan" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Phantasmal Ridge's Magic Circle area. Double click to view the item. -->
@@ -967,7 +988,7 @@
 			<skill id="18621" level="1" /> <!-- Supply Box -->
 		</skills>
 	</item>
-	<item id="47363" name="Red Noblesse Appearance Stone" additionalName="None" type="EtcItem">
+	<item id="47363" name="Red Noblesse Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-bod armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -977,7 +998,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47364" name="White Noblesse Appearance Stone" additionalName="None" type="EtcItem">
+	<item id="47364" name="White Noblesse Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-bod armor into a White Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a White Noblesse Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -987,7 +1008,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47365" name="Blue Musketeer Appearance Stone" additionalName="None" type="EtcItem">
+	<item id="47365" name="Blue Musketeer Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-bod armor into a Blue Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Blue Musketeer Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -997,7 +1018,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47366" name="Red Musketeer Appearance Stone" additionalName="None" type="EtcItem">
+	<item id="47366" name="Red Musketeer Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-bod armor into a Red Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Musketeer Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1175,6 +1196,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47384" name="Express Bus Pass Card" type="EtcItem">
 		<!-- A bus card that can be used to get on the Express Bus. Use to acquire 100,000,000,000 EXP and 240,000,000 SP. Characters with Lv. 99 or higher only. -->
@@ -1185,6 +1207,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47385" name="Balthus Knight Mark" type="EtcItem">
 		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 1 hour. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/Dual Class change. To be deleted on Wednesday June 15th, 2016 after regular maintenance. -->
@@ -1195,6 +1218,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47386" name="Sibis' Letter" additionalName="Event" type="EtcItem">
 		<!-- Letter from the Vice-Chief of the Balthus Knights. Will be deleted on June 15, 2016, when the Balthus Knight event ends after regular maintenance. -->
@@ -1206,6 +1230,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47387" name="Balthus Knights Supply Items" type="EtcItem">
 		<!-- Double click to receive 3 Marks of the Balthus Knights. (Can be used once per day.) Cannot be exchanged/dropped/sold in a personal store, but can be kept in personal storage. Will be deleted on June 15th, 2016, when the Balthus Knight event ends after regular maintenance. -->
@@ -1217,6 +1242,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47388" name="12th Anniversary Souvenir" type="EtcItem">
 		<!-- A special item created to commemorate the 12th Anniversary of Lineage II. Sell to a store to obtain a massive amount of Adena. -->
@@ -1226,6 +1252,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47389" name="12th Anniversary Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knight Supply Item. Use to obtain 12th Anniversary Souvenir x10. Will be deleted when the event ends. -->
@@ -1237,6 +1264,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47390" name="Forever/Longing Talisman/Energy of Longing Supply Items" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a Forever Talisman/Longing Talisman/Energy of Longing can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -1247,6 +1275,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47391" name="Venir Stage 11/12/13 Talisman Supply Items" type="EtcItem">
 		<!-- Top-grade Balthus Knight Supply Item. Use to obtain a Venir Talisman Stage 11/12/13. Will be deleted when the event ends. -->
@@ -1257,6 +1286,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47392" name="Shining Scroll: Enchant Elemental Shirt" type="EtcItem">
 		<!-- Shirt Enchantment-only Scroll. The enchant level is maintained when enchantment fails. Cannot be used on Shirts of +9 or higher. -->
@@ -1274,6 +1304,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47394" name="Scroll of Blessing R99/R95/R(2) Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knight Supply Item. Use to obtain an R99/R95/R(2) Grade Scroll of Blessing. Will be deleted when the event ends. -->
@@ -1284,6 +1315,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, an Antharas/Valakas/Baium Soul Bottle can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -1294,6 +1326,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47396" name="Nurka/Rydel/Gustav's Belt Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a Nurka/Lydia/Gustav's Belt can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -1304,6 +1337,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a Seven Signs/Anakim/Lilith's Talisman can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -1314,6 +1348,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47398" name="Bloody Eternal Enhancement Stone - x2" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, 2 Bloody Eternal Enhancement Stones can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -1325,6 +1360,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47399" name="Sibis Coin Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, 1500 Sibis Coins can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -1336,5 +1372,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 </list>

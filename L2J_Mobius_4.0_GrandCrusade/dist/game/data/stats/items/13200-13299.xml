@@ -1282,6 +1282,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13240" name="Feline Queen Hat" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like Feline Queen. 7-day. -->
@@ -1301,6 +1302,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13241" name="Monster Eye Hat" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like a Monster Eye. 7-day. -->
@@ -1320,6 +1322,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13242" name="Brown Bear Hat" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like Brown Bear. 7-day. -->
@@ -1339,6 +1342,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13243" name="Fungus Hat" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like Fungus. 7-day. -->
@@ -1358,6 +1362,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13244" name="Skull Hat" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like a Skull. 7-day. -->
@@ -1377,6 +1382,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13245" name="Ornithomimus Hat" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like a Ornithomimus. 7-day. -->
@@ -1396,6 +1402,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13246" name="Feline King Hat" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like Feline King. 7-day. -->
@@ -1415,6 +1422,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13247" name="Kai the Cat Hat" additionalName="7-day" type="Armor">
 		<!-- Hat that looks like Kai the Cat. 7-day. -->
@@ -1434,6 +1442,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="13248" name="O Stick" additionalName="7-day" type="Weapon">
 		<!-- O-type stick. 7-day. -->
@@ -1454,6 +1463,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -1482,6 +1492,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -1510,6 +1521,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -1538,6 +1550,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -1566,6 +1579,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -1594,6 +1608,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8246" level="1" /> <!-- Transform Pumpkin Ghost -->
@@ -1625,6 +1640,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="5763" level="1" /> <!-- Wink -->
 			<skill id="8245" level="1" /> <!-- Release Agathion's Seal - Love -->

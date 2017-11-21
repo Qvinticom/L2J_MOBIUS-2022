@@ -12,6 +12,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48203" name="Noble Circlet of Authority" type="Armor">
 		<!-- Noble Circlet of Authority. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Circlet of Authority. Can be augmented. -->
@@ -45,6 +46,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48206" name="Noble Circlet of Foresight" type="Armor">
 		<!-- Noble Circlet of Foresight. <Upgrade Requirement>. Enchant to +5 to upgrade to a Rdiant Circlet of Foresight. Can be augmented. -->
@@ -78,6 +80,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48209" name="Noble Circlet of Grace" type="Armor">
 		<!-- Noble Circlet of Grace. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Circlet of Grace. Can be augmented. -->
@@ -156,6 +159,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48218" name="Veteran Duo Bracelet Pack" additionalName="Event" type="EtcItem">
 		<!-- Contains 1 Veteran Duo Bracelet. -->
@@ -168,6 +172,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48219" name="Returned Duo Bracelet Pack" additionalName="Event" type="EtcItem">
 		<!-- Contains 1 Returned Duo Bracelet. -->
@@ -180,6 +185,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48220" name="NoItemName" type="EtcItem">
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
@@ -190,5 +196,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 </list>

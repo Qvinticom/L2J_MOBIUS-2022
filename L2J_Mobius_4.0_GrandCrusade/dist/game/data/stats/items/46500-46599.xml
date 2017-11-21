@@ -233,6 +233,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="46528" name="Server Keeper's Magic Pencil" type="Weapon">
 		<!-- Magic pencil with a sharp tip. Provided to and only used by Server Keepers. -->
@@ -937,6 +938,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="2" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46589" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-10 to absorb the soul. -->

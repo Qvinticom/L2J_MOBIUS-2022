@@ -72,6 +72,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8262" level="1" /> <!-- Ride Gold Maned Lion -->
@@ -119,6 +120,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8262" level="1" /> <!-- Ride Gold Maned Lion -->
@@ -317,6 +319,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="21171" level="1" /> <!-- Ride Jet Bike -->
@@ -366,6 +369,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="21171" level="1" /> <!-- Ride Jet Bike -->
@@ -607,6 +611,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21430" name="Brown Bear Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Hat that looks like a Brown Bear. 7-day. Uses 2 hair accessory slots. -->
@@ -646,6 +651,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21432" name="Brown Bear Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat that looks like a Brown Bear. 30-day. Uses 2 hair accessory slots. -->
@@ -837,6 +843,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21442" name="Chicken Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Hat that looks like a chicken. 7-day. Uses 2 hair accessory slots. -->
@@ -876,6 +883,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21444" name="Chicken Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat that looks like a chicken. 30-day. Uses 2 hair accessory slots. -->
@@ -1064,6 +1072,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21454" name="Coronet" additionalName="7-day (Event)" type="Armor">
 		<!-- Wedding hall bride's hair accessory (7-day). Females only. Uses 2 hair accessory slots. -->
@@ -1103,6 +1112,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21456" name="Coronet" additionalName="30-day (Event)" type="Armor">
 		<!-- Wedding hall bride's hair accessory (30-day). Females only. Uses 2 hair accessory slots. -->
@@ -1291,6 +1301,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21466" name="White Sheep Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Hat that looks like a white sheep. 7-day. Uses 2 hair accessory slots. -->
@@ -1330,6 +1341,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21468" name="White Sheep Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat that looks like a white sheep. 30-day. Uses 2 hair accessory slots. -->
@@ -1521,6 +1533,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21478" name="Frog Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Hat that looks like a frog. 7-day. Uses 2 hair accessory slots. -->
@@ -1560,6 +1573,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21480" name="Frog Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat that looks like a frog. 30-day. Uses 2 hair accessory slots. -->
@@ -1751,6 +1765,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21490" name="Kat the Cat Hat" additionalName="7-day (Event)" type="Armor">
 		<!-- Hat that looks like Kat the Cat. 7-day. Uses 2 hair accessory slots. -->
@@ -1790,6 +1805,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="21492" name="Kat the Cat Hat" additionalName="30-day (Event)" type="Armor">
 		<!-- Hat that looks like Kat the Cat. 30-day. Uses 2 hair accessory slots. -->

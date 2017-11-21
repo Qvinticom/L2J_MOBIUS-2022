@@ -496,6 +496,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="2329" level="2" /> <!-- Fire Crystal -->
 		</skills>
@@ -515,6 +516,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="2330" level="2" /> <!-- Water Crystal -->
 		</skills>
@@ -534,6 +536,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="2332" level="2" /> <!-- Earth Crystal -->
 		</skills>
@@ -553,6 +556,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="2331" level="2" /> <!-- Wind Crystal -->
 		</skills>
@@ -572,6 +576,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="2334" level="2" /> <!-- Dark Crystal -->
 		</skills>
@@ -591,6 +596,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="2333" level="2" /> <!-- Holy Crystal -->
 		</skills>

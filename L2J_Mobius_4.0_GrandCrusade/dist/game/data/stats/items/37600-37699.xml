@@ -489,7 +489,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37628" name="Cupid's Arrow" type="Weapon">
-		<!-- Throws a love-filled heart. Can use the active skill 'Heart Shot.' \nWarning: When using on a monster, you can receive another player's attack. -->
+		<!-- Throws a love-filled heart. Can use the active skill Heart Shot.. Warning: When using on a monster, you can receive another player's attack. -->
 		<set name="icon" val="icon.bm_krono_bow" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1451,6 +1451,10 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1798,6 +1802,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="37682" name="Theamo's Rune" additionalName="Not in Use" type="EtcItem">
 		<!-- Test Item -->
@@ -1811,6 +1816,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="37683" name="Demonic Sword Zariche" additionalName="Appearance Modification" type="Weapon">
 		<!-- Demonic Sword Zariche skin. -->

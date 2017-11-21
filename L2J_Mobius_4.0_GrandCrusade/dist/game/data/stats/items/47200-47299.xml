@@ -8,6 +8,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47201" name="Flower Bud Sample" type="EtcItem">
 		<!-- A sample of Flower Bud. The Mother Tree Guardians need this sample. -->
@@ -17,6 +18,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47202" name="Material for Giants Deterioration Protection Potion" type="EtcItem">
 		<!-- A material necessary for the production of the Giants Deterioration Protection Potion. -->
@@ -46,6 +48,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47206" name="Academy Dye of CON (Con+1)" type="EtcItem">
 		<!-- An ingredient of the Academy CON Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
@@ -55,6 +58,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47207" name="Academy Dye of DEX (Dex+1)" type="EtcItem">
 		<!-- An ingredient of the Academy DEX Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
@@ -64,6 +68,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47208" name="Academy Dye of INT (Int+1)" type="EtcItem">
 		<!-- An ingredient of the Academy INT Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
@@ -73,6 +78,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47209" name="Academy Dye of MEN (Men+1)" type="EtcItem">
 		<!-- An ingredient of the Academy MEN Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
@@ -82,6 +88,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47210" name="Academy Dye of WIT (Wit+1)" type="EtcItem">
 		<!-- An ingredient of the Academy WIT Symbol. Collect and take 1 unit of this magical dye to the Symbol Maker in town and you will receive a symbol that boosts your abilities. Can be used by all classes. -->
@@ -91,6 +98,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47211" name="Academy Circlet" additionalName="Growth - 30-day" type="Armor">
 		<!-- When equipped, XP gained through hunting +10%, STR, DEX, CON, INT, WIT, MEN, LUC, CHA +1 each. -->
@@ -104,6 +112,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47212" name="Old Box" type="EtcItem">
 		<!-- A box found on the lower level of the Giant's Cave. There is a chance it contains the Giants' treasure, but it is so old that it cannot be opened. -->
@@ -113,6 +122,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47213" name="Histie's Reward Box" type="EtcItem">
 		<!-- A reward received after helping Histie to defeat the Giants at Superion. Double click to use. -->
@@ -124,6 +134,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47214" name="Ring of Creation" type="Armor">
 		<!-- MP +42, Stun/Paralysis/Knock Back Atk. Rate +15%, Stun/Paralysis/Knock Back Resistance +15%, Additional Damage to the Giants +5%, P./M. Critical Damage +15%, P./M. Atk. +3%. Effect does not stack with identical ones. -->
@@ -583,6 +594,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47252" name="Supply Box - Kingdom's Royal Guard" type="EtcItem">
 		<!-- Receive a Supply Box - Kingdom's Royal Guard as a reward. Complete a quest with high level to increase your chances of obtaining an Advanced Supply Box. -->
@@ -592,6 +604,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47253" name="Supply Box - Mother Tree Guardians" type="EtcItem">
 		<!-- Receive a Supply Box - Mother Tree Guardians as a reward. Complete a quest with high level to increase your chances of obtaining an Advanced Supply Box. -->
@@ -601,6 +614,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47254" name="Supply Box - Unworldly Visitors" type="EtcItem">
 		<!-- Receive a Supply Box - Unworldly Visitors as a reward. Complete a quest with high level to increase your chances of obtaining an Advanced Supply Box. -->
@@ -610,6 +624,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47255" name="Supply Box - Giant Trackers" type="EtcItem">
 		<!-- Receive a Supply Box - Giant Trackers as a reward. Complete a quest with high level to increase your chances of obtaining an Advanced Supply Box. -->
@@ -619,6 +634,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47256" name="Demon Crystal" type="EtcItem">
 		<!-- An item required for the production and enhancement of the Blackbird Clan Talisman. -->
@@ -628,6 +644,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47257" name="Life Crystal" type="EtcItem">
 		<!-- An item required for the production and enhancement of the Mother Tree Guardians Talisman. -->
@@ -637,6 +654,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47258" name="Blood Crystal" type="EtcItem">
 		<!-- An item required for the production and enhancement of the Kingdom's Royal Guard Talisman. -->
@@ -646,6 +664,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47259" name="Wind Crystal" type="EtcItem">
 		<!-- An item required for the production and enhancement of the Unworldly Visitors Talisman. -->
@@ -655,6 +674,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47260" name="Giant Crystal" type="EtcItem">
 		<!-- An item required for the production and enhancement of the Giant Trackers Talisman. -->
@@ -664,6 +684,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47261" name="Blackbird Clan Talisman Stage 1" type="Armor">
 		<!-- A Talisman that can be worn only by those who have gained acceptance from the Blackbird Clan. When equipped, damage received from Demons -1%. -->
@@ -679,6 +700,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="1" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -697,6 +719,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="2" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -715,6 +738,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="3" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -733,6 +757,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="4" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -751,6 +776,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="5" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -769,6 +795,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="6" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -787,6 +814,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="7" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -805,6 +833,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="8" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -823,6 +852,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="9" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -841,6 +871,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16735" level="10" /> <!-- Inherent Abilities - Blackbird Clan Talisman -->
 		</skills>
@@ -859,6 +890,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="1" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -877,6 +909,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="2" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -895,6 +928,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="3" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -913,6 +947,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="4" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -931,6 +966,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="5" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -949,6 +985,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="6" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -967,6 +1004,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="7" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -985,6 +1023,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="8" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -1003,6 +1042,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="9" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -1021,6 +1061,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16736" level="10" /> <!-- Inherent Abilities - Mother Tree Guardians Talisman -->
 		</skills>
@@ -1039,6 +1080,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="1" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1057,6 +1099,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="2" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1075,6 +1118,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="3" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1093,6 +1137,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="4" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1111,6 +1156,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="5" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1129,6 +1175,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="6" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1147,6 +1194,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="7" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1165,6 +1213,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="8" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1183,6 +1232,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="9" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1201,6 +1251,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16737" level="10" /> <!-- Inherent Abilities - Kingdom's Royal Guard Talisman -->
 		</skills>
@@ -1219,6 +1270,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="1" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -1237,6 +1289,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="2" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -1255,6 +1308,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="3" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -1273,6 +1327,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="4" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -1291,6 +1346,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="5" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -1309,6 +1365,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="6" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -1327,6 +1384,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="7" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -1345,6 +1403,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="8" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>
@@ -1363,6 +1422,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="16738" level="9" /> <!-- Inherent Abilities - Unworldly Visitors Talisman -->
 		</skills>

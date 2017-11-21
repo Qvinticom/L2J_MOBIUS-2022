@@ -105,7 +105,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="28305" name="Shilen's Ring - Not Used" additionalName="Stage 2" type="Armor">
+	<item id="28305" name="Shilen's Ring - Not Used" type="Armor">
 		<set name="icon" val="BranchIcon.Icon.ring_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -116,7 +116,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="28306" name="Shilen's Ring" additionalName="Stage 3" type="Armor">
+	<item id="28306" name="Shilen's Ring" type="Armor">
 		<set name="icon" val="BranchIcon.Icon.ring_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -147,7 +147,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="28309" name="Shilen's Necklace - Not Used" additionalName="Stage 2" type="Armor">
+	<item id="28309" name="Shilen's Necklace - Not Used" type="Armor">
 		<set name="icon" val="BranchIcon.Icon.necklace_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -158,7 +158,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="28310" name="Shilen's Necklace - Not Used" additionalName="Stage 3" type="Armor">
+	<item id="28310" name="Shilen's Necklace - Not Used" type="Armor">
 		<set name="icon" val="BranchIcon.Icon.necklace_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -189,7 +189,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="28313" name="Shilen's Earring - Not Used" additionalName="Stage 2" type="Armor">
+	<item id="28313" name="Shilen's Earring - Not Used" type="Armor">
 		<set name="icon" val="BranchIcon.Icon.earring_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -200,7 +200,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="28314" name="Shilen's Earring - Not Used" additionalName="Stage 3" type="Armor">
+	<item id="28314" name="Shilen's Earring - Not Used" type="Armor">
 		<set name="icon" val="BranchIcon.Icon.earring_of_shilen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -243,7 +243,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28319" name="Gran Kain's Necklace" additionalName="Stage 1" type="EtcItem">
+	<item id="28319" name="Gran Kain's Necklace - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
@@ -251,7 +251,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28320" name="Gran Kain's Necklace" additionalName="Stage 2" type="EtcItem">
+	<item id="28320" name="Gran Kain's Necklace - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
@@ -259,7 +259,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28321" name="Gran Kain's Necklace" additionalName="Stage 3" type="EtcItem">
+	<item id="28321" name="Gran Kain's Necklace - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
@@ -267,7 +267,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28322" name="Gran Kain's Necklace" additionalName="Stage 4" type="EtcItem">
+	<item id="28322" name="Gran Kain's Necklace - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
@@ -275,7 +275,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28323" name="Gran Kain's Necklace" additionalName="Stage 5" type="EtcItem">
+	<item id="28323" name="Gran Kain's Necklace - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
@@ -283,7 +283,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28324" name="Gran Kain's Necklace" additionalName="Stage 6" type="EtcItem">
+	<item id="28324" name="Gran Kain's Necklace - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
@@ -291,7 +291,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28325" name="Einhasad's Necklace" additionalName="Stage 1" type="EtcItem">
+	<item id="28325" name="Einhasad's Necklace - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
@@ -299,7 +299,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28326" name="Einhasad's Necklace" additionalName="Stage 2" type="EtcItem">
+	<item id="28326" name="Einhasad's Necklace - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
@@ -307,7 +307,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28327" name="Einhasad's Necklace" additionalName="Stage 3" type="EtcItem">
+	<item id="28327" name="Einhasad's Necklace - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
@@ -315,7 +315,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28328" name="Einhasad's Necklace" additionalName="Stage 4" type="EtcItem">
+	<item id="28328" name="Einhasad's Necklace - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
@@ -323,7 +323,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28329" name="Einhasad's Necklace" additionalName="Stage 5" type="EtcItem">
+	<item id="28329" name="Einhasad's Necklace - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
@@ -331,7 +331,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28330" name="Einhasad's Necklace" additionalName="Stage 6" type="EtcItem">
+	<item id="28330" name="Einhasad's Necklace - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
@@ -339,7 +339,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28331" name="Pa'agrio's Earring" additionalName="Stage 1" type="EtcItem">
+	<item id="28331" name="Pa'agrio's Earring - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
@@ -347,7 +347,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28332" name="Pa'agrio's Earring" additionalName="Stage 2" type="EtcItem">
+	<item id="28332" name="Pa'agrio's Earring - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
@@ -355,7 +355,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28333" name="Pa'agrio's Earring" additionalName="Stage 3" type="EtcItem">
+	<item id="28333" name="Pa'agrio's Earring - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
@@ -363,7 +363,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28334" name="Pa'agrio's Earring" additionalName="Stage 4" type="EtcItem">
+	<item id="28334" name="Pa'agrio's Earring - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
@@ -371,7 +371,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28335" name="Pa'agrio's Earring" additionalName="Stage 5" type="EtcItem">
+	<item id="28335" name="Pa'agrio's Earring - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
@@ -379,7 +379,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28336" name="Pa'agrio's Earring" additionalName="Stage 6" type="EtcItem">
+	<item id="28336" name="Pa'agrio's Earring - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
@@ -387,7 +387,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28337" name="Eva's Earring" additionalName="Stage 1" type="EtcItem">
+	<item id="28337" name="Eva's Earring - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
@@ -395,7 +395,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28338" name="Eva's Earring" additionalName="Stage 2" type="EtcItem">
+	<item id="28338" name="Eva's Earring - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
@@ -403,7 +403,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28339" name="Eva's Earring" additionalName="Stage 3" type="EtcItem">
+	<item id="28339" name="Eva's Earring - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
@@ -411,7 +411,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28340" name="Eva's Earring" additionalName="Stage 4" type="EtcItem">
+	<item id="28340" name="Eva's Earring - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
@@ -419,7 +419,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28341" name="Eva's Earring" additionalName="Stage 5" type="EtcItem">
+	<item id="28341" name="Eva's Earring - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
@@ -427,7 +427,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28342" name="Eva's Earring" additionalName="Stage 6" type="EtcItem">
+	<item id="28342" name="Eva's Earring - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
@@ -435,7 +435,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28343" name="Sayha's Ring" additionalName="Stage 1" type="EtcItem">
+	<item id="28343" name="Sayha's Ring - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
@@ -443,7 +443,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28344" name="Sayha's Ring" additionalName="Stage 2" type="EtcItem">
+	<item id="28344" name="Sayha's Ring - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
@@ -451,7 +451,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28345" name="Sayha's Ring" additionalName="Stage 3" type="EtcItem">
+	<item id="28345" name="Sayha's Ring - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
@@ -459,7 +459,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28346" name="Sayha's Ring" additionalName="Stage 4" type="EtcItem">
+	<item id="28346" name="Sayha's Ring - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
@@ -467,7 +467,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28347" name="Sayha's Ring" additionalName="Stage 5" type="EtcItem">
+	<item id="28347" name="Sayha's Ring - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
@@ -475,7 +475,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28348" name="Sayha's Ring" additionalName="Stage 6" type="EtcItem">
+	<item id="28348" name="Sayha's Ring - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
@@ -483,7 +483,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28349" name="Maphr's Ring" additionalName="Stage 1" type="EtcItem">
+	<item id="28349" name="Maphr's Ring - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
@@ -491,7 +491,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28350" name="Maphr's Ring" additionalName="Stage 2" type="EtcItem">
+	<item id="28350" name="Maphr's Ring - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
@@ -499,7 +499,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28351" name="Maphr's Ring" additionalName="Stage 3" type="EtcItem">
+	<item id="28351" name="Maphr's Ring - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
@@ -507,7 +507,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28352" name="Maphr's Ring" additionalName="Stage 4" type="EtcItem">
+	<item id="28352" name="Maphr's Ring - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
@@ -515,7 +515,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28353" name="Maphr's Ring" additionalName="Stage 5" type="EtcItem">
+	<item id="28353" name="Maphr's Ring - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
@@ -523,7 +523,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28354" name="Maphr's Ring" additionalName="Stage 6" type="EtcItem">
+	<item id="28354" name="Maphr's Ring - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
@@ -828,6 +828,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28386" name="Race Change Ticket" type="EtcItem">
 		<!-- After purchasing a Race Change ticket, you can contact support at, support.lineage2.com, with the subject title of Character Race Change. \\Only characters that have reached at least level 85 and who have completed the 4th Class transfer can request a race change.  Note that the following race and class restrictions apply to the race change service. 1.) Ertheia and Kamael classes cannot change to a different race. 2.) Human/Elf/Dark Elf/Orc/Dwarf races cannot change to the Ertheia or Kamael race. 3.) Orc Overlord/Dominator/Iss Dominator as a Mainclass/Dualclass/Sublcass cannot change to a different race. 4.) Dwarven Warsmith/Maestro/Tyrr Maestro as a Mainclass/Dualclass/Sublcass cannot change to a different race. 5.) If switching from a Dwarven race to Human/Elf/Dark Elf/Orc, the character will lose the Dwarven inventory/warehouse/private shop bonus slots. -->
@@ -840,6 +841,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28387" name="Agathion - Unlimited Vitality Pack" type="EtcItem">
 		<!-- Wrapped pack containing Agathion - Unlimited Vitality. -->
@@ -852,6 +854,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28388" name="Agathion - Unlimited Vitality" type="Armor">
 		<!-- Summons Unlimited Vitality Agathion. -->
@@ -865,6 +868,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28389" name="Heine Exclusive Bait (85-89)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 85 - 89. -->
@@ -876,6 +880,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28390" name="Heine Exclusive Bait (90-94)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 90 - 94. -->
@@ -887,6 +892,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28391" name="Heine Exclusive Bait (95-98)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 95 - 98. -->
@@ -898,6 +904,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28392" name="Heine Exclusive Bait (99-)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Lv. 99 or above. -->
@@ -909,6 +916,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28393" name="Heine Exclusive Bait Coupon" type="EtcItem">
 		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
@@ -953,6 +961,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28398" name="Today''s To-do Soulshot Box" type="EtcItem">
 		<!-- Double-click to obtain 10,000 Grade C-R Soulshots. -->
@@ -964,6 +973,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="33776" min="10000" max="10000" chance="100" /> <!-- Soulshot (C-grade) -->
 			<item id="33777" min="10000" max="10000" chance="100" /> <!-- Soulshot (B-grade) -->
@@ -982,6 +992,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="33790" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (C-grade) -->
 			<item id="33791" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (B-grade) -->

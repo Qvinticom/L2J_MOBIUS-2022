@@ -31,6 +31,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="3326" level="1" /> <!-- Jewelry Bracelet -->
 			<skill id="13962" level="1" /> <!-- Duo's Bracelet -->
@@ -51,6 +52,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47403" name="Emperor's Dessert Set (Magic Type)" type="EtcItem">
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly Magic Attack, and Emperor's Cookie. Cannot be used in the Olympiad. -->
@@ -62,6 +64,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47404" name="Emperor's Dessert Set (Defense Type)" type="EtcItem">
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly Defense Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
@@ -73,6 +76,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47405" name="Scroll of Experience - Lv1 (Main Class)" type="EtcItem">
 		<!-- Use to gain 31 billion EXP and 40 million SP. Can be used by characters with Lv. 94 or above. -->
@@ -83,6 +87,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47406" name="Scroll of Experience - Lv2 (Main Class)" type="EtcItem">
 		<!-- Use to gain 230 billion EXP and 550 million SP. Can be used by characters with Lv. 97 or above. -->
@@ -93,6 +98,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47407" name="Scroll of Experience (Dual Class)" type="EtcItem">
 		<!-- Use to gain 380 billion EXP and 910 million SP. Can be used by characters between Lv. 85-99. Can only be used in Dual Class state. -->
@@ -103,6 +109,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47408" name="+6 Amaranthine Weapon Capsule Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Amazing Duo Event. Can be exchanged with a Amaranthine Weapon (30-day) through the Fantasy Isle Keeper NPC. Will be deleted when the event ends. -->
@@ -112,6 +119,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47409" name="+6 Eternal Armor Set Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Amazing Duo Event. Can be exchanged with an Eternal Armor Set (30-day) through the Fantasy Isle Keeper NPC. Will be deleted when the event ends. -->
@@ -121,6 +129,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47410" name="Duo Growth Rune 30% - 30 days" type="EtcItem">
 		<!-- Increases XP and SP gained through hunting by 30% while having it in your inventory. -->
@@ -130,6 +139,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47411" name="Duo Growth Rune 30% - 30 day Box" type="EtcItem">
 		<!-- Double click the box to obtain Duo Growth Rune 30% - 30 days x1. Will be deleted when the event ends. -->
@@ -149,6 +159,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47413" name="PC Cafe Points Coupon (200 points)" type="EtcItem">
 		<!-- Double click to obtain 200 PC Cafe Points. -->
@@ -160,6 +171,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47414" name="Duo's Gift" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain one of the following: Duo Vital Compression Stone/Vitality Replenishing Star Candy/PC Cafe Points (200 points). Will be deleted when the event ends. -->
@@ -170,6 +182,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47415" name="Duo - Freya's Wind Cube" type="EtcItem">
 		<!-- Vitality +100% and XP/SP acquisition +100% while hunting. Remains after death. Duration is 10 min. Cooldown is 30 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Will be deleted when the event ends. -->
@@ -182,6 +195,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18634" level="1" /> <!-- Duo - Freya's Wind -->
 		</skills>
@@ -195,6 +209,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47417" name="Dandy's Elemental Shirt" additionalName="2-hour" type="Armor">
 		<!-- A shiny magic shirt laden with Einhasad's Energy. <Item Skill>. M. Def. +17. Movement Speed +7.  Max HP +547. Max MP +547. Skill MP Consumption -3%. Damage Reflection Resistance +5. Vampiric Rage +5%. Skill Cooldown -3%. Damage Received -3%. Water/Fire/Wind/Earth/Divine/Dark Attribute Resistance +36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4. <Active Skill>. Einhasad's Wrath/Einhasad's Protection/Einhasad's Silence/Einhasad's Salvation. Will be deleted when the event ends. Enchantment not possible. -->
@@ -208,6 +223,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
@@ -224,6 +240,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">52</stat>
 		</stats>
@@ -240,6 +257,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47420" name="Energy of Longing" type="EtcItem">
 		<!-- Compounding the Energy of Longing with Talisman - Longing gives a certain probability of the production of a Talisman - Insanity. If production fails, the Talisman - Longing is not destroyed, and only the Energy of Longing is lost. -->
@@ -387,6 +405,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="30" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="18649" level="1" /> <!-- Freya's Vital Rune -->
 		</skills>
@@ -403,6 +422,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47436" name="Mysterious Talisman - INT" additionalName="2-hour" type="Armor">
 		<!-- INT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -416,6 +436,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47437" name="Mysterious Talisman - DEX" additionalName="2-hour" type="Armor">
 		<!-- DEX +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -429,6 +450,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47438" name="Mysterious Talisman - WIT" additionalName="2-hour" type="Armor">
 		<!-- WIT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -442,6 +464,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47439" name="Mysterious Talisman - CON" additionalName="2-hour" type="Armor">
 		<!-- CON +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -455,6 +478,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47440" name="Mysterious Talisman - MEN" additionalName="2-hour" type="Armor">
 		<!-- MEN +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -468,6 +492,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47441" name="Mysterious Talisman - Attack Attribute" additionalName="2-hour" type="Armor">
 		<!-- Attack Attribute Bonus +50 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -481,6 +506,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47442" name="Mysterious Talisman - Attribute Defense" additionalName="2-hour" type="Armor">
 		<!-- Attribute Defense +50 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -494,6 +520,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47443" name="Mysterious Talisman - STR 2 Hour Box" type="EtcItem">
 		<!-- Gift Box containing one Mysterious Talisman - STR (2-hour). -->
@@ -629,7 +656,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47461" name="Red Pirate Garment Appearance Stone" additionalName="None" type="EtcItem">
+	<item id="47461" name="Red Pirate Garment Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a Red Pirate Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Pirate Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -639,7 +666,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47462" name="Pirate Shipmate Garment Appearance Stone" additionalName="None" type="EtcItem">
+	<item id="47462" name="Pirate Shipmate Garment Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a Pirate Shipmate Garment. The stone modifies the appearance of all armor, and all armor appears as a Pirate Shipmate Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -649,7 +676,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47463" name="Cowboy-Purple Garment Appearance Stone" additionalName="None" type="EtcItem">
+	<item id="47463" name="Cowboy-Purple Garment Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a Cowboy-Purple Garment. The stone modifies the appearance of all armor, and all armor appears as a Cowboy-Purple Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -659,7 +686,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47464" name="White Assassin Suit Appearance Stone" additionalName="None" type="EtcItem">
+	<item id="47464" name="White Assassin Suit Appearance Stone" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a White Assassin Suit. The stone modifies the appearance of all armor, and all armor appears as a White Assassin Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />

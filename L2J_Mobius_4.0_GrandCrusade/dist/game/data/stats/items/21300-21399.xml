@@ -625,6 +625,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="8255" level="1" /> <!-- Release Agathion's Seal - Griffin -->
 			<skill id="23252" level="1" /> <!-- Agathion Cute Trick - Griffin -->
@@ -674,6 +675,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="8255" level="1" /> <!-- Release Agathion's Seal - Griffin -->
 			<skill id="23252" level="1" /> <!-- Agathion Cute Trick - Griffin -->
@@ -881,6 +883,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="21239" level="1" /> <!-- Release Agathion's Seal - Cow -->
 			<skill id="23250" level="1" /> <!-- Agathion Cute Trick - Cow -->
@@ -930,6 +933,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="21239" level="1" /> <!-- Release Agathion's Seal - Cow -->
 			<skill id="23250" level="1" /> <!-- Agathion Cute Trick - Cow -->
@@ -1137,6 +1141,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="21240" level="1" /> <!-- Release Agathion's Seal - Makeshift Bat -->
 			<skill id="23251" level="1" /> <!-- Agathion Cute Trick - Makeshift Bat -->
@@ -1186,6 +1191,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="21240" level="1" /> <!-- Release Agathion's Seal - Makeshift Bat -->
 			<skill id="23251" level="1" /> <!-- Agathion Cute Trick - Makeshift Bat -->
@@ -1394,6 +1400,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="2994" level="1" /> <!-- Transformation Harp: Aqua Elf -->
@@ -1459,6 +1466,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="2994" level="1" /> <!-- Transformation Harp: Aqua Elf -->
@@ -1697,6 +1705,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8247" level="1" /> <!-- Ride Darkmane Pacer -->
@@ -1746,6 +1755,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8247" level="1" /> <!-- Ride Darkmane Pacer -->
@@ -1948,6 +1958,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8261" level="1" /> <!-- Ride Steam Beetle -->
@@ -1995,6 +2006,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<!-- Guess. -->
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8261" level="1" /> <!-- Ride Steam Beetle -->

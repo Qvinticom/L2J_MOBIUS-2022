@@ -1508,6 +1508,9 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="17081" level="1" /> <!-- Lyn Draco -->
 		</skills>

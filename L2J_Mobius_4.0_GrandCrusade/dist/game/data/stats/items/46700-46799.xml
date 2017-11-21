@@ -16,6 +16,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1406</stat>
 			<stat type="mAtk">409</stat>
@@ -42,6 +43,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">683</stat>
 			<stat type="mAtk">513</stat>
@@ -67,6 +69,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">683</stat>
 			<stat type="mAtk">513</stat>
@@ -93,6 +96,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">832</stat>
 			<stat type="mAtk">555</stat>
@@ -119,6 +123,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1007</stat>
 			<stat type="mAtk">409</stat>
@@ -144,6 +149,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">851</stat>
 			<stat type="mAtk">409</stat>
@@ -170,6 +176,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1007</stat>
 			<stat type="mAtk">409</stat>
@@ -191,6 +198,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46708" name="Entrance Pass: Nightmare Kamaloka" type="EtcItem">
 		<!-- Dimensional Item. Extra Pass for Daily Instanced Zone Dungeon. Double click to reset the instance timer for the Nightmare Kamaloka dungeon. Usable once a day outside instances while on a cooldown. -->
@@ -222,6 +230,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="mDef">170</stat>
 			<stat type="maxMp">59</stat>
@@ -237,6 +246,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46712" name="Blessed Antharas' Earring 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Blessed Antharas' Earring (30-day). -->
@@ -248,6 +258,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46713" name="Blessed Valakas' Necklace 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Blessed Valakas' Necklace (30-day). -->
@@ -259,6 +270,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46714" name="Tauti's Ring 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Tauti's Ring (30-day). -->
@@ -270,6 +282,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46715" name="Earth Wyrm Heart Ring 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Earth Wyrm Heart Ring (30-day). -->
@@ -281,6 +294,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46716" name="Refined Black Romantic Chapeau" type="Armor">
 		<!-- Dimensional Item. Refined Black Romantic Chapeau. Occupies 2 hair accessory slots. -->
@@ -294,6 +308,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46717" name="Mysterious Talisman - STR" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. STR +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -308,6 +323,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46718" name="Mysterious Talisman - INT" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. INT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -322,6 +338,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46719" name="Mysterious Talisman - DEX" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. DEX +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -336,6 +353,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46720" name="Mysterious Talisman - WIT" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. WIT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -350,6 +368,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46721" name="Mysterious Talisman - CON" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. CON +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -364,6 +383,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46722" name="Mysterious Talisman - MEN" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MEN +5 when wearing the Talisman. Effect does not stack with identical ones. -->
@@ -378,6 +398,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46723" name="Mysterious Talisman - STR 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - STR (30-day). -->
@@ -389,6 +410,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46724" name="Mysterious Talisman - INT 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - INT (30-day). -->
@@ -400,6 +422,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46725" name="Mysterious Talisman - DEX 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - DEX (30-day). -->
@@ -411,6 +434,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46726" name="Mysterious Talisman - WIT 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - WIT (30-day). -->
@@ -422,6 +446,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46727" name="Mysterious Talisman - CON 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - CON (30-day). -->
@@ -433,6 +458,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46728" name="Mysterious Talisman - MEN 30-day pack" type="EtcItem">
 		<!-- Dimensional Item. Gift Box containing one Mysterious Talisman - MEN (30-day). -->
@@ -444,6 +470,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46729" name="Scroll of Escape: Town of Goddard" type="EtcItem">
 		<!-- Teleports near the High Priest Gregory in the Town of Goddard. -->
@@ -455,6 +482,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46730" name="Scroll of Escape: Varka Silenos Barracks" type="EtcItem">
 		<!-- Teleports to Varka Silenos Barracks. -->
@@ -466,6 +494,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46731" name="Scroll of Escape: Town of Goddard" type="EtcItem">
 		<!-- Teleports near the High Priest Gregory in the Town of Goddard. -->
@@ -477,6 +506,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46732" name="Scroll of Escape: Ketra Orc Outpost" type="EtcItem">
 		<!-- Teleports to Ketra Orc Outpost. -->
@@ -488,6 +518,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46733" name="Scroll of Escape: Town of Giran" type="EtcItem">
 		<!-- Teleports to Town of Giran. -->
@@ -499,6 +530,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46734" name="Scroll of Escape: Dragon Valley" type="EtcItem">
 		<!-- Use to teleport to Dragon Valley. -->
@@ -510,6 +542,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46735" name="Hatchling Flesh" type="EtcItem">
 		<!-- The article the Researcher Stena asked you to collected. Can be gained by defeating Dragon Hatchlings or Leopard Dragons that appear in the Dragon Valley area. Collect these and take them to the Researcher Stena at the entrance to Dragon Valley. -->
@@ -519,6 +552,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46736" name="Practice Fish" type="EtcItem">
 		<!-- A small fish that has been caught for fishing practice. Its impatient character means it is an easy catch, but it has no real product value. -->
@@ -529,6 +563,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46737" name="Practice Bait" type="EtcItem">
 		<!-- Bait used to catch practice fish. Ineffective in catching other types of fish. -->
@@ -543,6 +578,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46738" name="Practice Fishing Rod" type="Weapon">
 		<!-- A shoddy fishing rod that has been given to you for practice. It's fine for practice, though. -->
@@ -557,6 +593,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -577,6 +614,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="46740" min="1" max="1" chance="100" /> <!-- Reward Fishing Rod -->
 		</capsuled_items>
@@ -595,6 +633,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -663,6 +702,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46744" name="Varka's Badge: General" type="EtcItem">
 		<!-- Badge of Silenos Generals at Varka Silenos Barracks. Take it to Giant's Minion Hansen at Varka Silenos Barracks to receive a reward. -->
@@ -672,6 +712,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46745" name="Ketra's Badge: Soldier" type="EtcItem">
 		<!-- Badge of Orc Soldiers at Ketra Orc Outpost. Take it to Giant's Minion Lugonnes at Ketra Orc Outpost to receive a reward. -->
@@ -681,6 +722,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46746" name="Ketra's Badge: General" type="EtcItem">
 		<!-- Badge of Orc Generals at Ketra Orc Outpost. Take it to Giant's Minion Lugonnes at Ketra Orc Outpost to receive a reward. -->
@@ -690,6 +732,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46747" name="Shinedust" type="EtcItem">
 		<!-- Dust from a Shine Stone. Collect a certain amount and purify to gain the same effects as a Shine Stone. -->
@@ -699,6 +742,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46748" name="Minion's Shine Stone" type="EtcItem">
 		<!-- A Shine Stone that the Giant's Minion Retbach created by collecting Shinedust. This can be used on the Root of the Lesser Giant to induce evolution. -->
@@ -709,6 +753,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46749" name="Resistance Mark" type="EtcItem">
 		<!-- A Mark obtained as a reward for working hard for the safety of Kamael and all races in the Giant's Cave. Collect a certain number of these and take them to Kekropus to be recognized as a member of the Resistance. -->
@@ -718,6 +763,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46750" name="Resistance Mark Stage 1" type="EtcItem">
 		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. Collect 40 Marks of Resistance and go to Kekropus to trade with a Stage 2 Mark. -->
@@ -726,6 +772,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46751" name="Resistance Mark Stage 2" type="EtcItem">
 		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. Marks will be deleted when the event ends. -->
@@ -734,6 +781,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46752" name="Resistance Mark Stage 3" type="EtcItem">
 		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. Marks will be deleted when the event ends. -->
@@ -742,6 +790,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46753" name="Resistance Mark Stage 4" type="EtcItem">
 		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. Marks will be deleted when the event ends. -->
@@ -750,6 +799,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46754" name="Resistance Mark Stage 5" type="EtcItem">
 		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. Marks will be deleted when the event ends. -->
@@ -758,6 +808,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46755" name="Demon's Trace" type="EtcItem">
 		<!-- Traces indicating that the demons attempted to use the Lesser Giants. Collect these and take them to the Giant's Minion Retbach at the Giant's Cave. -->
@@ -767,6 +818,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46756" name="Minion's Report" type="EtcItem">
 		<!-- A report sent by the Giant's Minion Retbach to Hermuncus. -->
@@ -776,6 +828,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46757" name="Giants' Relic Key" type="EtcItem">
 		<!-- Key that can be used to open the 7 doors concealing the Giant's Relics on the lower level of the Giants's Cave. -->
@@ -791,6 +844,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46759" name="Steel Apocalypse Weapon Coupon" type="EtcItem">
 		<!-- Can be exchanged for an Apocalypse Weapon through the Adventurers' Guide in each village. -->
@@ -800,6 +854,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46760" name="Steel Armor Pack" type="EtcItem">
 		<!-- Double click to obtain either Immortal or Twilight Armor. -->
@@ -811,6 +866,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46761" name="Schumadriba's Reward Treasure Chest" type="EtcItem">
 		<!-- A reward box received from Schumadriba for thwarting the evolution of the Giants. You did this by collecting the Shinedust that Giants need to evolve in the upper level of the Giant's Cave. Double click to view the item. -->
@@ -821,6 +877,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46762" name="Schumadriba's Advanced Reward Treasure Chest" type="EtcItem">
 		<!-- A reward box received from Schumadriba for defeating the successfully evolved Giants in the lower level of the Giant's Cave. Double click to view the item. -->
@@ -831,6 +888,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46763" name="Scroll of Escape: Giant's Cave" type="EtcItem">
 		<!-- Teleports to Kekropus in the Giant's Cave. -->
@@ -842,6 +900,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46764" name="Shadai's Good Fortune Jewelry Box" type="EtcItem">
 		<!-- Double click to obtain one of the Good Fortune Jewelry Boxes -->
@@ -943,6 +1002,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46778" name="Special Bait Coupon of Quest Pride" additionalName="Event" type="EtcItem">
 		<!-- Exchange for 1 Heine Special Bait of your choice through a fishing guild member. Will be deleted when the event ends. -->
@@ -952,6 +1012,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46779" name="Equipment Enchantment Chest of Quest Pride" additionalName="Event" type="EtcItem">
 		<!-- Double click the chest to receive 1 random item relating to equipment enchantment. Will be deleted when the event ends. -->
@@ -962,6 +1023,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46780" name="Skill Enchantment Chest of Quest Pride" additionalName="Event" type="EtcItem">
 		<!-- Double click the chest to receive 1 random item relating to skill enchantment. Will be deleted when the event ends. -->
@@ -972,6 +1034,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46781" name="Good Fortune Chest of Quest Pride" additionalName="Event" type="EtcItem">
 		<!-- Double click the chest to receive 1 random item. Will be deleted when the event ends. -->
@@ -982,6 +1045,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46782" name="Graduation Gift" type="EtcItem">
 		<!-- A Mentee Graduation Gift. Use to obtain Soulshot (R-grade), Blessed Spiritshot (R-grade), Player Commendation - Enhanced Rosy Seduction, Blessed Scroll of Resurrection, Blessed Scroll of Escape. -->
@@ -992,6 +1056,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46783" name="Blue Dynasty Transformation Potion" type="EtcItem">
 		<!-- Equips the Blue Dynasty for 1 hour. Will be deleted when the event ends. -->
@@ -1003,6 +1068,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46784" name="Red Zubei Transformation Potion" type="EtcItem">
 		<!-- Equips the Red Zubei for 1 hour. Will be deleted when the event ends. -->
@@ -1014,6 +1080,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46785" name="Spirit Fragment" type="EtcItem">
 		<!-- A fragment of the Spirit Realm, received from the Distorted Spirits inside the Dimensional Crack. -->
@@ -1024,6 +1091,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46786" name="Key to the Dimension Dissolver's Prison" type="EtcItem">
 		<!-- The key that opens the door to the Dimension Dissolver's Prison, sealed deep within the Dimensional Crack. -->
@@ -1033,6 +1101,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46787" name="Remnant of the Rift" type="EtcItem">
 		<!-- A Remnant of the Rift gained after completing daily explorations of the Dimensional Crack. This is a mark indicating how many times you have participated in daily explorations. -->
@@ -1043,6 +1112,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46788" name="Ten-day Log" type="EtcItem">
 		<!-- A log of your experiences during the ten-day adventure with the bard. Tells you how much progress you have made on the ten-day adventure. -->
@@ -1053,6 +1123,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46789" name="Fairy Blood" type="EtcItem">
 		<!-- Blood of the Reckless Fairy. Required to create a potion to calm the reckless energy of Fairies and Satyrs. Collect these and take them to a Fairy Citizen to receive a reward. -->
@@ -1063,6 +1134,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46790" name="Satyr Blood" type="EtcItem">
 		<!-- Blood of the Reckless Satyr. Required to create a potion to calm the reckless energy of Fairies and Satyrs. Collect these and take them to a Fairy Citizen to receive a reward. -->
@@ -1073,6 +1145,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46791" name="Paulina's Sword of Revolution" type="Weapon">
 		<!-- A Sword of Revolution imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
@@ -1089,6 +1162,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1116,6 +1190,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1143,6 +1218,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1171,6 +1247,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1200,6 +1277,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1228,6 +1306,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1257,6 +1336,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13930" level="1" /> <!-- Paulina's Magic Enhancement Blessing -->
 		</skills>
@@ -1285,6 +1365,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
@@ -1313,6 +1394,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13929" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>

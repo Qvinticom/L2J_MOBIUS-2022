@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27200" name="Pirate's Eyepatch" additionalName="LUC + M. Def." type="Armor">
 		<!-- LUC + 3 and M. Def. + 5% when equipped. -->
@@ -73,7 +73,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27206" name="Pirate's Eyepatch" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -85,7 +85,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27207" name="Pirate's Eyepatch" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -265,7 +265,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27222" name="Outlaw's Eyepatch" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -277,7 +277,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27223" name="Outlaw's Eyepatch" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -457,7 +457,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27238" name="Eyepatch" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.Accessary_one_eye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -469,7 +469,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27239" name="Eyepatch" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.Accessary_one_eye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -649,7 +649,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27254" name="Party Hat" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -661,7 +661,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27255" name="Party Hat" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_party_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -841,7 +841,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27270" name="Refined Angel Ring" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -853,7 +853,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27271" name="Refined Angel Ring" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_angel_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1033,7 +1033,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27286" name="Refined Devil Horn" additionalName="LUC + M. Atk." type="Armor">
-		<!-- LUC + 3 and M. Atk. + 5% when equipped. -->
+		<!-- LUC + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1045,7 +1045,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27287" name="Refined Devil Horn" additionalName="CHA + M. Atk." type="Armor">
-		<!-- CHA + 3 and M. Atk. + 5% when equipped. -->
+		<!-- CHA + 3 and M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.accessory_devil_horn_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1081,6 +1081,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="27290" name="Pirate Captain Outfit" additionalName="Low-grade / Debuff Reflect" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Debuff Reflect + 3%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1095,6 +1096,7 @@
 		</skills>
 	</item>
 	<item id="27291" name="Pirate Captain Outfit" additionalName="Low-grade / Damage Reflect Resistance" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Damage Reflect Resistance + 5%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1109,6 +1111,7 @@
 		</skills>
 	</item>
 	<item id="27292" name="Pirate Captain Outfit" additionalName="Low-grade / Ranged Resistance" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Bow/Crossbow Resistance + 3%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1123,6 +1126,7 @@
 		</skills>
 	</item>
 	<item id="27293" name="Pirate Captain Outfit" additionalName="Low-grade / P. Def. Increase" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, P. Def. + 3%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1137,6 +1141,7 @@
 		</skills>
 	</item>
 	<item id="27294" name="Pirate Captain Outfit" additionalName="Low-grade / M. Def. Increase" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, M. Def. + 3%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1151,6 +1156,7 @@
 		</skills>
 	</item>
 	<item id="27295" name="Pirate Captain Outfit" additionalName="Low-grade / Attribute Resistance" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Attribute Resistance + 5. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1165,6 +1171,7 @@
 		</skills>
 	</item>
 	<item id="27296" name="Pirate Captain Outfit" additionalName="Low-grade / Received Heal Amount Increase" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Received Heal Amount + 3%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1179,6 +1186,7 @@
 		</skills>
 	</item>
 	<item id="27297" name="Pirate Captain Outfit" additionalName="Low-grade / Max. HP Increase" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Max HP + 3%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1193,6 +1201,7 @@
 		</skills>
 	</item>
 	<item id="27298" name="Pirate Captain Outfit" additionalName="Low-grade / Max. MP Increase" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Max MP + 3%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1207,6 +1216,7 @@
 		</skills>
 	</item>
 	<item id="27299" name="Pirate Captain Outfit" additionalName="Low-grade / Max CP Increase" type="Armor">
+		<!-- Pirate Captain's outfit. When equipped, armor is unequipped and cannot be used. Hair accessories, weapons, and magic armor remain equipped. When modified, Max CP + 3%. -->
 		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

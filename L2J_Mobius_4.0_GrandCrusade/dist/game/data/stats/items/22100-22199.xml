@@ -1702,6 +1702,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_freightable" val="false" />
+		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="22187" name="Birthday Present Pack" type="EtcItem">
 		<!-- Birthday present received from Alegria on the character's birthday. When used, you can obtain (3) Birthday Vitality Potion(s), a birthday cake, and a Birthday Hat. -->
@@ -1809,6 +1810,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="21258" level="1" /> <!-- Ride Rocking Horse -->
@@ -1832,6 +1834,7 @@
 		<set name="time" val="43200" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="21258" level="1" /> <!-- Ride Rocking Horse -->

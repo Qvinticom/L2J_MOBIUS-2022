@@ -9,6 +9,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47502" name="Superior Giant's Codex Chapter 1 - Fragment" type="EtcItem">
 		<!-- A single page from the Superior Giant's Codex Chapter 1. Collect 10 and take them to Lias in the Dimensional Rift to exchange for the Superior Giant's Codex Chapter 1. -->
@@ -19,6 +20,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47503" name="High-grade Spirit Stone" type="EtcItem">
 		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters with Lv. 95 or above. -->
@@ -29,6 +31,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47504" name="Lias Supply Items" type="EtcItem">
 		<!-- Supplies given by Lias to agents having completed Dimensional Rift - 100-day Subjugation Operation. -->
@@ -39,6 +42,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47505" name="Bracelet of the Conqueror - CON" type="Armor">
 		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 CON +3. -->
@@ -54,6 +58,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13584" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
 		</skills>
@@ -72,6 +77,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13585" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
 		</skills>
@@ -90,6 +96,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13586" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
 		</skills>
@@ -108,6 +115,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13587" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
 		</skills>
@@ -126,6 +134,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13588" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
 		</skills>
@@ -144,6 +153,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13589" level="1" /> <!-- NOT RETAIL SKILL - But uses the same status -->
 		</skills>
@@ -157,6 +167,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47512" name="Attacker's Soul" type="EtcItem">
 		<!-- The soul of the Attacker that attempts to attack through the Dimensional Rift. Collect these and take them to the Dimensional Researcher Lias. -->
@@ -167,6 +178,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47513" name="Request - Altar of Evil" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland and the Altar of Evil. The request can be accepted by characters between Lv. 85-93. Double-click to receive the request -->
@@ -178,6 +190,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47514" name="Request - Gludio Territory" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gludio Territory. The request can be accepted by characters between Lv. 85-93. Double-click to receive the request -->
@@ -189,6 +202,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47515" name="Request - Turek Orc Campsite" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Turek Orc Campsite. The request can be accepted by characters between Lv. 87-97. Double-click to receive the request -->
@@ -200,6 +214,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47516" name="Request - Elven Forest" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Elven Forest and the Shadow of the Mother Tree. The request can be accepted by characters between Lv. 88-98. Double-click to receive the request -->
@@ -211,6 +226,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47517" name="Request - Fairy Settlement" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Fairy Settlement. The request can be accepted by characters between Lv. 88-98. Double-click to receive the request -->
@@ -222,6 +238,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47518" name="Request - Garden of Beasts" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Beasts. The request can be accepted by characters between Lv. 89-99. Double-click to receive the request -->
@@ -233,6 +250,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47519" name="Request - North of the Town of Giran" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gorgon Flower Garden and the Breka's Stronghold. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
@@ -244,6 +262,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47520" name="Request - Cruma Marshlands" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
@@ -255,6 +274,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47521" name="Request - The Fields" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Field of Silence and the Field of Whispers. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
@@ -266,6 +286,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47522" name="Request - The Immortal Plateau" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Immortal Plateau. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
@@ -277,6 +298,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47523" name="Request - Isle of Souls" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Isle of Souls. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
@@ -288,6 +310,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47524" name="Request - Cemetery" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Seal of Shilen and the Cemetery. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
@@ -299,6 +322,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47525" name="Request - Valley of Saints" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Valley of Saints. The request can be accepted by characters between Lv. 93-103. Double-click to receive the request -->
@@ -310,6 +334,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47526" name="Request - Southern Region, Isle of Prayer" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the southern region of Isle of Prayer. The request can be accepted by characters between Lv. 96-106. Double-click to receive the request -->
@@ -321,6 +346,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47527" name="Request - Northern Region, Isle of Prayer" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the northern region of Isle of Prayer. The request can be accepted by characters between Lv. 96-106. Double-click to receive the request -->
@@ -332,6 +358,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47528" name="Request - Garden of Spirits" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Spirits. The request can be accepted by characters between Lv. 98-108. Double-click to receive the request -->
@@ -343,6 +370,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47529" name="Request - Atelia Fortress" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Atelia Fortress. The request can be accepted by characters between Lv. 98-108. Double-click to receive the request -->
@@ -354,6 +382,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47530" name="Request - Altar of Evil" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland and the Altar of Evil. -->
@@ -363,6 +392,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47531" name="Request - Gludio Territory" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gludio Territory. -->
@@ -372,6 +402,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47532" name="Request - Turek Orc Campsite" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Turek Orc Campsite. -->
@@ -381,6 +412,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47533" name="Request - Elven Forest" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Elven Forest and the Shadow of the Mother Tree. -->
@@ -390,6 +422,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47534" name="Request - Fairy Settlement" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Fairy Settlement. -->
@@ -399,6 +432,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47535" name="Request - Garden of Beasts" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Beasts. -->
@@ -408,6 +442,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47536" name="Request - North of the Town of Giran" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Gorgon Flower Garden and the Breka's Stronghold. -->
@@ -417,6 +452,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47537" name="Request - Cruma Marshlands" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Bloody Swampland. -->
@@ -426,6 +462,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47538" name="Request - The Fields" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Field of Silence and the Field of Whispers. -->
@@ -435,6 +472,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47539" name="Request - The Immortal Plateau" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Immortal Plateau. -->
@@ -444,6 +482,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47540" name="Request - Isle of Souls" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Isle of Souls. -->
@@ -453,6 +492,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47541" name="Request - Cemetery" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Seal of Shilen and the Cemetery. -->
@@ -462,6 +502,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47542" name="Request - Valley of Saints" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Valley of Saints. -->
@@ -471,6 +512,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47543" name="Request - Southern Region, Isle of Prayer" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the southern region of Isle of Prayer. -->
@@ -480,6 +522,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47544" name="Request - Northern Region, Isle of Prayer" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the northern region of Isle of Prayer. -->
@@ -489,6 +532,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47545" name="Request - Garden of Spirits" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Garden of Spirits. -->
@@ -498,6 +542,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47546" name="Request - Atelia Fortress" type="EtcItem">
 		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Atelia Fortress. -->
@@ -507,6 +552,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47547" name="Bait" type="EtcItem">
 		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Standard Fishing Bait. Fish using this bait to catch a Blueish Box with low probability. -->
@@ -542,6 +588,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47550" name="Ugly Fish" type="EtcItem">
 		<!-- Can be exchanged for a Fish Stew item through a Fishing Guild member. -->
@@ -573,6 +620,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
+		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="45494" min="1" max="1" chance="100" /> <!-- Sturdy Fishing Rod -->
 			<item id="38154" min="50" max="50" chance="100" /> <!-- Fishing Shot -->
@@ -588,6 +636,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47555" name="Purplish Box" type="EtcItem">
 		<!-- Double click to obtain the item. -->
@@ -599,6 +648,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47556" name="Stardust" type="EtcItem">
 		<!-- Ingredient used to produce the Zodiac Agathion -->
@@ -620,6 +670,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -642,6 +693,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -664,6 +716,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -686,6 +739,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -708,6 +762,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -726,6 +781,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47563" name="Zodiac Agathion Box" type="EtcItem">
 		<!-- Double click to obtain one of the 12 types of Zodiac Agathion Stage 1. -->
@@ -745,6 +801,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47565" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -756,6 +813,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47566" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -767,6 +825,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47567" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -778,6 +837,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47568" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -789,6 +849,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47569" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -800,6 +861,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47570" name="Reward for Defeating the Giant Monsters" type="EtcItem">
 		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
@@ -811,6 +873,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47571" name="Basic Supply Box" additionalName="Fishing Guild" type="EtcItem">
 		<!-- A supply box given by Santiago, head of the Fishing Guild, for your hard work in reviving the Fishing Guild. Double click to obtain the item. -->
@@ -864,6 +927,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47574" name="PC Cafe Treasure Chest" type="EtcItem">
 		<!-- Double click to obtain the item. -->
@@ -875,6 +939,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47575" name="Royal White Save Ticket (R)" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
@@ -920,6 +985,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="60" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>

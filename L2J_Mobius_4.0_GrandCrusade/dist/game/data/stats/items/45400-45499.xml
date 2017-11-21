@@ -533,7 +533,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />		
+		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="POTION" />		
 		<skills>
 			<skill id="18214" level="1" /> <!-- L2B2 -->
@@ -677,6 +677,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45455" name="Appearance Stone: Zorro Hat" additionalName="90-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Zorro Hat (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->

@@ -438,6 +438,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8247" level="1" /> <!-- Ride Darkmane Pacer -->
@@ -461,6 +462,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="5763" level="1" /> <!-- Wink -->
 			<skill id="8245" level="1" /> <!-- Release Agathion's Seal - Love -->
@@ -485,6 +487,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="8257" level="1" /> <!-- Release Agathion's Seal - Angry Devil -->
 			<skill id="5956" level="1" /> <!-- Agathion Cute Trick - Angry Devil -->
@@ -509,6 +512,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="8256" level="1" /> <!-- Release Agathion's Seal - Joy -->
 			<skill id="5955" level="1" /> <!-- Agathion Cute Trick - Joy -->
@@ -533,6 +537,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="8258" level="1" /> <!-- Release Agathion's Seal - Sorrow -->
 			<skill id="5957" level="1" /> <!-- Agathion Cute Trick - Sorrow -->
@@ -557,6 +562,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="2606" level="1" /> <!-- Gran Kain's Gift Box -->
 		</skills>
@@ -800,6 +806,7 @@
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_questitem" val="true" />
+		<set name="is_destroyable" val="false" />
 		<skills>
 			<skill id="2150" level="1" /> <!-- Soulshot (D-grade) -->
 		</skills>
@@ -1040,6 +1047,7 @@
 		<set name="crystal_type" val="C" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_questitem" val="true" />
+		<set name="is_destroyable" val="false" />
 		<cond addName="1" msgId="113">
 			<player instanceId="43,44,45" />
 		</cond>
@@ -1331,6 +1339,7 @@
 		<set name="crystal_type" val="A" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_questitem" val="true" />
+		<set name="is_destroyable" val="false" />
 		<cond addName="1" msgId="113">
 			<player instanceId="43,44,45" />
 		</cond>
