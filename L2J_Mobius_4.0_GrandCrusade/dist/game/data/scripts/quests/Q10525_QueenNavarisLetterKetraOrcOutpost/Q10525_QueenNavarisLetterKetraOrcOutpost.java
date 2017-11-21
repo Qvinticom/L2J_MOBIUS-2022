@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10521_QueenNavarisLetterVarkaSilenosBarracks;
+package quests.Q10525_QueenNavarisLetterKetraOrcOutpost;
 
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.Location;
@@ -28,18 +28,17 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import quests.LetterQuest;
 
 /**
- * Queen Navari's Letter: Varka Silenos Barracks (10521)
- * @URL https://l2wiki.com/Queen_Navari%27s_Letter:_Varka_Silenos_Barracks
- * @author Gigi
- * @date 2017-11-14 - [22:13:27]
+ * Queen Navari's Letter, Ketra Orc Outpost (10521)
+ * @URL https://l2wiki.com/Queen_Navari%27s_Letter,_Ketra_Orc_Outpost
+ * @author Mobius
  */
-public class Q10521_QueenNavarisLetterVarkaSilenosBarracks extends LetterQuest
+public class Q10525_QueenNavarisLetterKetraOrcOutpost extends LetterQuest
 {
 	// NPCs
 	private static final int GREGORY = 31279;
-	private static final int HANSEN = 33853;
+	private static final int LUGONNES = 33852;
 	// Items
-	private static final int VARKA_SILENOS_BARRAKS = 46730;
+	private static final int KETRA_ORC_OUTPOST = 46732;
 	private static final int SOE_TOWN_OF_GODDARD = 46731;
 	// Misc
 	private static final int MIN_LEVEL = 76;
@@ -47,15 +46,15 @@ public class Q10521_QueenNavarisLetterVarkaSilenosBarracks extends LetterQuest
 	// Teleport
 	private static final Location TELEPORT_LOC = new Location(147711, -52920, -2728);
 	
-	public Q10521_QueenNavarisLetterVarkaSilenosBarracks()
+	public Q10525_QueenNavarisLetterKetraOrcOutpost()
 	{
 		super(10521);
-		addTalkId(GREGORY, HANSEN);
+		addTalkId(GREGORY, LUGONNES);
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_TOWN_OF_GODDARD, TELEPORT_LOC);
 		setStartQuestSound("Npcdialog1.serenia_quest_13");
-		registerQuestItems(SOE_TOWN_OF_GODDARD, VARKA_SILENOS_BARRAKS);
+		registerQuestItems(SOE_TOWN_OF_GODDARD, KETRA_ORC_OUTPOST);
 	}
 	
 	@Override
@@ -80,12 +79,12 @@ public class Q10521_QueenNavarisLetterVarkaSilenosBarracks extends LetterQuest
 				if (qs.isCond(2))
 				{
 					qs.setCond(3, true);
-					giveItems(player, VARKA_SILENOS_BARRAKS, 1);
+					giveItems(player, KETRA_ORC_OUTPOST, 1);
 					htmltext = event;
 				}
 				break;
 			}
-			case "33853-02.htm":
+			case "33852-02.htm":
 			{
 				if (qs.isCond(3))
 				{
@@ -122,7 +121,7 @@ public class Q10521_QueenNavarisLetterVarkaSilenosBarracks extends LetterQuest
 			}
 			else if (qs.isCond(3))
 			{
-				htmltext = "33853-01.html";
+				htmltext = "33852-01.html";
 			}
 		}
 		return htmltext;
@@ -131,6 +130,6 @@ public class Q10521_QueenNavarisLetterVarkaSilenosBarracks extends LetterQuest
 	@Override
 	public boolean canShowTutorialMark(L2PcInstance player)
 	{
-		return player.getClassId() == ClassId.RIPPER;
+		return player.getClassId() == ClassId.STRATOMANCER;
 	}
 }

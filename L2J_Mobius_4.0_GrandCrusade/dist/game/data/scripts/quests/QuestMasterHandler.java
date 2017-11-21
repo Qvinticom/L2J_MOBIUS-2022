@@ -331,6 +331,7 @@ import quests.Q10521_QueenNavarisLetterVarkaSilenosBarracks.Q10521_QueenNavarisL
 import quests.Q10522_TheDarkSecretOfVarkaSilenos.Q10522_TheDarkSecretOfVarkaSilenos;
 import quests.Q10523_TheAssassinationOfTheVarkaSilenosCommander.Q10523_TheAssassinationOfTheVarkaSilenosCommander;
 import quests.Q10524_TheAssassinationOfTheVarkaSilenosCommanderChief.Q10524_TheAssassinationOfTheVarkaSilenosCommanderChief;
+import quests.Q10525_QueenNavarisLetterKetraOrcOutpost.Q10525_QueenNavarisLetterKetraOrcOutpost;
 import quests.Q10526_TheDarkSecretOfTheKetraOrcs.Q10526_TheDarkSecretOfTheKetraOrcs;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
@@ -753,6 +754,7 @@ public class QuestMasterHandler
 		Q10522_TheDarkSecretOfVarkaSilenos.class,
 		Q10523_TheAssassinationOfTheVarkaSilenosCommander.class,
 		Q10524_TheAssassinationOfTheVarkaSilenosCommanderChief.class,
+		Q10525_QueenNavarisLetterKetraOrcOutpost.class,
 		Q10526_TheDarkSecretOfTheKetraOrcs.class,
 		Q10534_HatchlingResearch.class,
 		Q10541_TrainLikeTheRealThing.class,
