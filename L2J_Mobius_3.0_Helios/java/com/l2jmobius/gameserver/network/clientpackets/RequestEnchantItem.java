@@ -187,7 +187,14 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 					{
 						if (scrollTemplate.isGiant())
 						{
-							item.setEnchantLevel(Math.min(item.getEnchantLevel() + 1 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
+							if (((supportTemplate != null) && (supportTemplate.getId() == 23785)) || ((supportTemplate != null) && (supportTemplate.getId() == 23786))) // Lesser Giant's Lucky Enchant Stones. Increase from +2 to +4
+							{
+								item.setEnchantLevel(Math.min(item.getEnchantLevel() + 2 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
+							}
+							else
+							{
+								item.setEnchantLevel(Math.min(item.getEnchantLevel() + 1 + Rnd.get(3), scrollTemplate.getMaxEnchantLevel()));
+							}
 						}
 						else
 						{

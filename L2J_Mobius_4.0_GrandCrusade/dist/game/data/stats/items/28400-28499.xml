@@ -1118,7 +1118,7 @@
 	<item id="28497" name="Giant's Lucky Enchant Stone: Weapon (R-grade)" additionalName="Event" type="EtcItem">
 		<!-- The Lucky Enchant Stone increases the chance of enchanting an R-grade weapon by 20% when using an Enchant Scroll. Can only be used on items that have been enchanted between + 3 and + 9. In case of Enchantment failure, the item is not Crystallized, but base Enchantment count is 0. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
-		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
+		<set name="etcitem_type" val="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

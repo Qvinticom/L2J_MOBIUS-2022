@@ -119,6 +119,10 @@ public final class EnchantScroll extends AbstractEnchantItem
 			{
 				return false;
 			}
+			else if ((isGiant() && !supportItem.isGiant()) || (!isGiant() && supportItem.isGiant()))
+			{
+				return false;
+			}
 			else if (!supportItem.isValid(itemToEnchant, supportItem))
 			{
 				return false;
