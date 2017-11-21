@@ -69,13 +69,19 @@ public final class TautiWarzone extends AbstractInstance
 			case "enterEasyInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				startQuestTimer("WORLD_STATUS_CHECK", 5000, null, player, false);
+				if (player.getInstanceWorld() != null)
+				{
+					startQuestTimer("WORLD_STATUS_CHECK", 5000, player.getInstanceWorld().getNpc(FINARIA), null);
+				}
 				break;
 			}
 			case "enterExtremeInstance":
 			{
 				enterInstance(player, npc, EXTREME_TEMPLATE_ID);
-				startQuestTimer("WORLD_STATUS_CHECK", 5000, null, player, false);
+				if (player.getInstanceWorld() != null)
+				{
+					startQuestTimer("WORLD_STATUS_CHECK", 5000, player.getInstanceWorld().getNpc(FINARIA), null);
+				}
 				break;
 			}
 			case "useKey":
@@ -124,11 +130,11 @@ public final class TautiWarzone extends AbstractInstance
 			}
 			case "WORLD_STATUS_CHECK":
 			{
-				if ((player == null) || (player.getInstanceId() == 0))
+				final Instance world = npc.getInstanceWorld();
+				if (world == null)
 				{
 					return null;
 				}
-				final Instance world = player.getInstanceWorld();
 				if (world.isStatus(0))
 				{
 					world.setStatus(1);
@@ -138,7 +144,7 @@ public final class TautiWarzone extends AbstractInstance
 					{
 						takeItems(member, KEY_OF_DARKNESS, -1);
 					}
-					startQuestTimer("WORLD_STATUS_CHECK", 5000, null, player, false);
+					startQuestTimer("WORLD_STATUS_CHECK", 5000, npc, null);
 				}
 				else if (world.isStatus(1))
 				{
@@ -151,7 +157,7 @@ public final class TautiWarzone extends AbstractInstance
 							monster.setRandomWalking(false);
 						}
 					}
-					startQuestTimer("WORLD_STATUS_CHECK", 5000, null, player, false);
+					startQuestTimer("WORLD_STATUS_CHECK", 5000, npc, null);
 				}
 				return null;
 			}
