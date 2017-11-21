@@ -93,7 +93,7 @@ public class L2PetInstance extends L2Summon
 	private L2PetLevelData _leveldata;
 	
 	/** The Experience before the last Death Penalty */
-	private double _expBeforeDeath = 0;
+	private long _expBeforeDeath = 0;
 	private int _curWeightPenalty = 0;
 	
 	public final L2PetLevelData getPetLevelData()
