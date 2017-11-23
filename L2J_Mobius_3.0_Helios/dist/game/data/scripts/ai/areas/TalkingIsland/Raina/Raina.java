@@ -300,14 +300,14 @@ public final class Raina extends AbstractNpcAI
 				}
 				break;
 			}
-			case "addDualClass_SIGEL_GROUP":
-			case "addDualClass_TYRR_GROUP":
-			case "addDualClass_OTHELL_GROUP":
-			case "addDualClass_YUL_GROUP":
-			case "addDualClass_FEOH_GROUP":
-			case "addDualClass_ISS_GROUP":
-			case "addDualClass_WYNN_GROUP":
-			case "addDualClass_AEORE_GROUP":
+			case "addDualClass_SIXTH_SIGEL_GROUP":
+			case "addDualClass_SIXTH_TIR_GROUP":
+			case "addDualClass_SIXTH_OTHEL_GROUP":
+			case "addDualClass_SIXTH_YR_GROUP":
+			case "addDualClass_SIXTH_FEOH_GROUP":
+			case "addDualClass_SIXTH_IS_GROUP":
+			case "addDualClass_SIXTH_WYNN_GROUP":
+			case "addDualClass_SIXTH_EOLH_GROUP":
 			{
 				if ((player.getRace() != Race.ERTHEIA) || (player.getLevel() < 85) || !player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || player.hasDualClass() || !haveDoneQuest(player, true))
 				{
@@ -336,7 +336,7 @@ public final class Raina extends AbstractNpcAI
 				player.sendPacket(html);
 				break;
 			}
-			case "reawekenDualclass":
+			case "reawakenDualclass":
 			{
 				if (player.isTransformed())
 				{
@@ -391,14 +391,14 @@ public final class Raina extends AbstractNpcAI
 				}
 				break;
 			}
-			case "reawaken_SIGEL_GROUP":
-			case "reawaken_TYRR_GROUP":
-			case "reawaken_OTHELL_GROUP":
-			case "reawaken_YUL_GROUP":
-			case "reawaken_FEOH_GROUP":
-			case "reawaken_ISS_GROUP":
-			case "reawaken_WYNN_GROUP":
-			case "reawaken_AEORE_GROUP":
+			case "reawaken_SIXTH_SIGEL_GROUP":
+			case "reawaken_SIXTH_TIR_GROUP":
+			case "reawaken_SIXTH_OTHEL_GROUP":
+			case "reawaken_SIXTH_YR_GROUP":
+			case "reawaken_SIXTH_FEOH_GROUP":
+			case "reawaken_SIXTH_IS_GROUP":
+			case "reawaken_SIXTH_WYNN_GROUP":
+			case "reawaken_SIXTH_EOLH_GROUP":
 			{
 				final CategoryType cType = CategoryType.valueOf(event.replace("reawaken_", ""));
 				
