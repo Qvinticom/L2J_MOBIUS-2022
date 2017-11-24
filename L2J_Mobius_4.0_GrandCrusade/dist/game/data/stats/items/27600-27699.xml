@@ -6,7 +6,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -20,7 +19,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -31,7 +29,6 @@
 	<item id="27602" name="Abundance Box" type="EtcItem">
 		<!-- Get 1 of the following:  1 type of Talisman - Abundance, Seven Signs' Energy, Antharas' Earring, Talisman - Lilith, Talisman - Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bottle of Queen Ant's Soul, Istina's Earring, Queen Ant's Ring, Istina's Necklace, Bottle of Orfen's Soul, Octavis' Earring, Istina's Earring, Octavis' Necklace, Immortal Scroll Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum x2, Superior Giant's Codex - Discipline Chapter 1, Giant's Energy x10, Orfen's Earring, Elcyum Crystal x8, Tempest Stone, Gemstone (R-grade) x40, 1 of 5 Fortune Pocket - Stage 5. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -41,7 +38,6 @@
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -58,7 +54,6 @@
 	<item id="27604" name="Amaranthine Double Crystal Enhancement Box" type="EtcItem">
 		<!-- Double-click to obtain ingredients needed for Double Crystal Enhancement of R99 weapons. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -69,13 +64,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27606" name="Blessed Amaranthine Pack (Magical)" type="EtcItem">
@@ -84,13 +75,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27607" name="Blessed Amaranthine Pack (Dual Weapons)" type="EtcItem">
@@ -99,13 +86,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27608" name="Card Pouch" additionalName="Event" type="EtcItem">
@@ -294,7 +277,6 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -329,7 +311,6 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -364,7 +345,6 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -577,8 +557,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -586,9 +564,7 @@
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
 			<item id="38941" min="55" max="30" chance="100" />
 			<item id="38943" min="1" max="1" chance="100" />
@@ -610,7 +586,6 @@
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
@@ -748,7 +723,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -770,7 +744,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -792,7 +765,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -814,7 +786,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -836,7 +807,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -858,7 +828,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -880,7 +849,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -902,7 +870,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -924,7 +891,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -946,7 +912,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -968,7 +933,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -990,7 +954,6 @@
 		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
@@ -1012,7 +975,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1034,7 +996,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1056,7 +1017,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1078,7 +1038,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1100,7 +1059,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1122,7 +1080,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1144,7 +1101,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1166,7 +1122,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1188,7 +1143,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />
@@ -1210,7 +1164,6 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="EARRING" />

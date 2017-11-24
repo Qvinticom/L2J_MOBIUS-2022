@@ -1072,7 +1072,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 		<skills>
 			<skill id="27832" level="1" /> <!-- La Vie En Rose's Radiant Brooch -->
@@ -1089,7 +1088,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 		<skills>
 			<skill id="27832" level="2" /> <!-- La Vie En Rose's Radiant Brooch -->
@@ -1106,7 +1104,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="is_sellable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 		<skills>
 			<skill id="27832" level="3" /> <!-- La Vie En Rose's Radiant Brooch -->
@@ -1128,7 +1125,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>

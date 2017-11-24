@@ -179,7 +179,6 @@
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -250,7 +249,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -290,7 +288,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_beerfestival_beer_barrel" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -303,7 +300,6 @@
 		<!-- If stored in the inventory, STR + 7 permanently, and has a 5% chance of Stunning all enemies within 200 grids for 3 sec. during a standard attack. 3-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -322,7 +318,6 @@
 		<!-- If stored in the inventory, INT + 7 permanently, and has a 10% chance of decreasing all enemies' M. Def. by 20% for 10 sec. within 400 grids during a magic attack. 3-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -341,7 +336,6 @@
 		<!-- If stored in the inventory, CON + 7 permanently, and has a 5% chance of becoming invincible for 5 sec when attacked. 3-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -360,7 +354,6 @@
 		<!-- If stored in the inventory, STR + 7 permanently, and has a 5% chance of inflicting 20% additional damage when using a skill attack. 3-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -379,7 +372,6 @@
 		<!-- If stored in the inventory, DEX + 7 permanently, and has a 5% chance of increasing Critical Rate and Critical Damage by 20% for 10 sec. 3-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -398,7 +390,6 @@
 		<!-- If stored in the inventory, INT + 7 permanently, and has a 10% chance of not consuming MP for healing skills. 3-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -417,7 +408,6 @@
 		<!-- If stored in the inventory, STR + 7 permanently, and has a 5% chance of Stunning all enemies within 200 grids for 3 sec. during a standard attack. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -435,7 +425,6 @@
 		<!-- If stored in the inventory, INT + 7 permanently, and has a 10% chance of decreasing all enemies' M. Def. by 20% for 10 sec. within 400 grids during a magic attack. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -453,7 +442,6 @@
 		<!-- If stored in the inventory, CON + 7 permanently, and has a 5% chance of becoming invincible for 5 sec. when attacked. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -471,7 +459,6 @@
 		<!-- If stored in the inventory, STR + 7 permanently, and has a 5% chance of inflicting 20% additional damage when using a skill attack. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -489,7 +476,6 @@
 		<!-- If stored in the inventory, DEX + 7 permanently, and has a 5% chance of increasing Critical Rate and Critical Damage by 20% for 10 sec. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -507,7 +493,6 @@
 		<!-- If stored in the inventory, INT + 7 permanently, and has a 10% chance of not consuming MP for healing skills. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1449,7 +1434,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1472,7 +1456,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_threehead_source" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1548,7 +1531,6 @@
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1566,7 +1548,6 @@
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

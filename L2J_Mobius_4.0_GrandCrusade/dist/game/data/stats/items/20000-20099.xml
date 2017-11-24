@@ -12,7 +12,6 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="22000" level="1" /> <!-- Spicy Kimchi -->
 		</skills>
@@ -29,7 +28,6 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="22001" level="1" /> <!-- Spicy Kimchi -->
 		</skills>
@@ -46,7 +44,6 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="22002" level="1" /> <!-- Spicy Kimchi -->
 		</skills>
@@ -63,7 +60,6 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="22003" level="1" /> <!-- Sweet-and-Sour White Kimchi -->
 		</skills>
@@ -80,7 +76,6 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="22004" level="1" /> <!-- Vitality Ginseng -->
 		</skills>
@@ -96,7 +91,6 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="22005" level="1" /> <!-- Vitality Red Ginseng -->
 		</skills>
@@ -181,7 +175,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -207,7 +200,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -233,7 +225,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -280,7 +271,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -306,7 +296,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -332,7 +321,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -581,7 +569,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -633,7 +620,6 @@
 		<set name="icon" val="BranchSys.br_hallowinday_candy_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="LIQUID" />
 		<set name="shared_reuse_group" val="106" />
 		<set name="is_tradable" val="false" />
@@ -1227,7 +1213,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
@@ -1252,7 +1237,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
@@ -1277,7 +1261,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="21600" />
@@ -1428,7 +1411,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
@@ -1451,7 +1433,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
@@ -1474,7 +1455,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
@@ -1497,7 +1477,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
@@ -1607,7 +1586,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="180" />
@@ -1630,7 +1608,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
@@ -1653,7 +1630,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -1676,7 +1652,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="180" />
@@ -1699,7 +1674,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
@@ -1722,7 +1696,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -1745,7 +1718,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="180" />
@@ -1768,7 +1740,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
@@ -1791,7 +1762,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -1856,7 +1826,6 @@
 		<set name="is_premium" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="43200" />
@@ -1900,7 +1869,6 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
@@ -1921,7 +1889,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1942,7 +1909,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="60" />
@@ -1961,7 +1927,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />

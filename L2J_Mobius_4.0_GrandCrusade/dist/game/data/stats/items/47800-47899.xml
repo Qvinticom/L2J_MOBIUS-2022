@@ -620,7 +620,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -641,7 +640,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -699,12 +697,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
-		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="8878" level="2" /> <!-- Frenzied Tauti's One-handed Axe -->
 			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Authority -->
@@ -730,12 +725,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
-		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="8878" level="2" /> <!-- Frenzied Tauti's Two-handed Axe -->
 			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Authority -->
@@ -761,12 +753,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
-		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="8878" level="2" /> <!-- Frenzied Tauti's Dual Axe -->
 			<skill id="9460" level="1" /> <!-- Frenzied Tauti's Authority -->
@@ -792,11 +781,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
-		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13816" level="2" /> <!-- Insane Kelbim's Dagger -->
 			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
@@ -822,11 +808,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="damage_range" val="0;0;44;120" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
-		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13817" level="2" /> <!-- Insane Kelbim's Dual Dagger -->
 			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
@@ -852,11 +835,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="damage_range" val="0;0;10;0" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
-		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13818" level="2" /> <!-- Insane Kelbim's Bow -->
 			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->
@@ -882,11 +862,8 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="damage_range" val="0;0;40;120" />
-		<set name="is_freightable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="element_enabled" val="true" />
-		<set name="isAppearanceable" val="false" />
 		<skills>
 			<skill id="13819" level="2" /> <!-- Insane Kelbim Crossbow -->
 			<skill id="13820" level="1" /> <!-- Spirit of Kelbim -->

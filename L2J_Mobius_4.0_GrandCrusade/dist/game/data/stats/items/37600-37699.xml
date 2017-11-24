@@ -3,42 +3,36 @@
 	<item id="37600" name="Weapon Coupon (A-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain a weapon (A-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37601" name="Armor Coupon (R-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37602" name="Armor Coupon (R95-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R95-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37603" name="Armor Coupon (R99-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (R99-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37604" name="Armor Coupon (S-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (S-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37605" name="Armor Coupon (A-grade)" type="EtcItem">
 		<!-- Take this to Snake in town to obtain armor (A-grade) for a small fee. Temporary event item. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -60,7 +54,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
@@ -80,7 +73,6 @@
 		<!-- Double-click to obtain a hair accessory on which you can add a pendant. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -107,7 +99,6 @@
 		<!-- Double-click to obtain a pendant. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -136,7 +127,6 @@
 		<!-- Double-click to obtain an Enchant Scroll (S or R-grade), or have a low chance of receiving a Blessed Enchant Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -159,7 +149,6 @@
 		<!-- Double-click to obtain either an attribute stone or crystal. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -186,7 +175,6 @@
 		<!-- Double-click to obtain either an Energy of Destruction or a crafting ingredient. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -215,7 +203,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
@@ -241,7 +228,6 @@
 		<!-- Double-click to obtain a Lucky Enchant Stone (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -260,7 +246,6 @@
 		<!-- Double-click to obtain a Giant's Enchant Scroll (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -279,7 +264,6 @@
 		<!-- Double-click to obtain a Blessed Enchant Scroll (S or R-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -298,7 +282,6 @@
 		<!-- Double-click to obtain an Unbind Scroll (R, R95, or R99-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -316,7 +299,6 @@
 		<!-- Double-click to obtain an attribute crystal, or either a Super 60 or Super 150 attribute Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -349,7 +331,6 @@
 		<!-- Double-click to obtain a random Scroll: PK. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -368,7 +349,6 @@
 		<!-- Double-click to obtain a random Scroll: Reputation. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -387,7 +367,6 @@
 		<!-- Double-click to obtain either a Mysterious Soulshot or a Mysterious Blessed Spiritshot. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -404,7 +383,6 @@
 		<!-- Double-click to obtain one of Kaliel's Energies. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -422,7 +400,6 @@
 		<!-- Double-click to obtain either a Bottle of Antharas' Soul, or a Bottle of Valakas' Soul. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -439,7 +416,6 @@
 		<!-- Double-click to obtain either a Spirit Stone, or a Life Stone Instilled with Giants' Power. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -455,7 +431,6 @@
 	</item>
 	<item id="37625" name="Legendary Card: Frintezza" type="EtcItem">
 		<set name="icon" val="icon.card_devil_frintessa" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="CARD_EVENT" />
 		<set name="is_stackable" val="true" />
@@ -544,7 +519,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -576,7 +550,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -607,7 +580,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -638,7 +610,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -670,7 +641,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -702,7 +672,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -734,7 +703,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -766,7 +734,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -797,7 +764,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -828,7 +794,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -859,7 +824,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -892,7 +856,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -923,7 +886,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -954,7 +916,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -986,7 +947,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1018,7 +978,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1049,7 +1008,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1080,7 +1038,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1112,7 +1069,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1144,7 +1100,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1176,7 +1131,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1208,7 +1162,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1239,7 +1192,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1270,7 +1222,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1302,7 +1253,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1335,7 +1285,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1366,7 +1315,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1398,7 +1346,6 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1448,7 +1395,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="for_npc" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="is_tradable" val="false" />
@@ -1571,7 +1517,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1595,7 +1540,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1619,7 +1563,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1643,7 +1586,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1678,7 +1620,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1703,7 +1644,6 @@
 		<!-- Scroll that modifies the appearance of a two-handed sword to that of the Demonic Sword Zariche. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_zariche_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -1713,7 +1653,6 @@
 		<!-- Scroll that modifies the appearance of a dualsword to that of the Blood Sword Akamanah. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_aka_manaf_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -1724,7 +1663,6 @@
 		<set name="icon" val="icon.int_coin_gm_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1738,7 +1676,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1754,7 +1691,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1770,7 +1706,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1784,7 +1719,6 @@
 		<!-- Can change into the appearance of a Tow for 30 minutes. Please note that a Tow is extremely cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1795,12 +1729,9 @@
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_destroyable" val="false" />
 	</item>
@@ -1808,12 +1739,9 @@
 		<!-- Test Item -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_destroyable" val="false" />
@@ -1827,7 +1755,6 @@
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1856,7 +1783,6 @@
 		<set name="soulshots" val="3" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1876,7 +1802,6 @@
 		<!-- Can change into the appearance of a Lady Tow for 30 minutes. Please note that a Tow is extremely cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1886,7 +1811,6 @@
 		<!-- Can change into the appearance of a Angry Tow for 30 minutes. Please note that a Tow is extremely cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1896,7 +1820,6 @@
 		<!-- Can change into the appearance of a Sleepy Tow for 30 minutes. Please note that a Tow is extremely cute. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1909,7 +1832,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1936,7 +1858,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1962,7 +1883,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1988,7 +1908,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2015,7 +1934,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2042,7 +1960,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2069,7 +1986,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2096,7 +2012,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2122,7 +2037,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2148,7 +2062,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2175,7 +2088,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2202,7 +2114,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

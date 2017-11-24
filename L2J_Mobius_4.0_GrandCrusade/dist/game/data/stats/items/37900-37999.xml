@@ -3,7 +3,6 @@
 	<item id="37900" name="SP Rune Pack (Top-grade) (1-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (High-grade) (1-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -11,7 +10,6 @@
 	<item id="37901" name="SP Rune Pack (Low-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (Low-grade) (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -19,7 +17,6 @@
 	<item id="37902" name="SP Rune Pack (Mid-grade) (7-day)" type="EtcItem">
 		<!-- Double-click to obtain an SP Rune (Mid-grade) (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -30,15 +27,12 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_clan_depositable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="37897" min="1" max="1" chance="100" /> <!-- SP Rune (High-grade) -->
 		</capsuled_items>
@@ -49,7 +43,6 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -80,7 +73,6 @@
 	<item id="37906" name="Kat the Cat's Box of Roses" type="EtcItem">
 		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -91,7 +83,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -102,7 +93,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -113,7 +103,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -124,7 +113,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -135,7 +123,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -146,7 +133,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -157,7 +143,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -168,7 +153,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -179,7 +163,6 @@
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="handler" val="Appearance" />
@@ -189,7 +172,6 @@
 		<!-- Cute, pumpkin-shaped dagger. -->
 		<set name="icon" val="icon.weapon_pumpkin_stick_i00" />
 		<set name="weapon_type" val="DAGGER" />
-		<set name="is_freightable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
@@ -208,7 +190,6 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="crystal_type" val="S80" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="price" val="121780000" />
@@ -225,7 +206,6 @@
 		<!-- Cute, scarecrow-shaped one-handed magic sword. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="weapon_type" val="SWORD" />
-		<set name="is_freightable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
@@ -243,7 +223,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -255,7 +234,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -267,7 +245,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -279,7 +256,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -291,7 +267,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -303,7 +278,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -315,7 +289,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -327,7 +300,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -339,7 +311,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
@@ -354,7 +325,6 @@
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -374,7 +344,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -400,7 +369,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -426,7 +394,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -453,7 +420,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -480,7 +446,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -507,7 +472,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -534,7 +498,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -561,7 +524,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -588,7 +550,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -615,7 +576,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -641,7 +601,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -668,7 +627,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -695,7 +653,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -722,7 +679,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -758,7 +714,6 @@
 		<!-- For 1 hr., Prevailing/ Combat/ Refreshing Sonata buffs are applied. Cooldown is 60min. Double-click to use. Buff remains even after death. -->
 		<set name="icon" val="icon.etc_bm_sonata_cookie" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -780,7 +735,6 @@
 		<!-- Chrono Cithara. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_cithara_i00" />
 		<set name="weapon_type" val="SWORD" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="rhand" />
 		<set name="default_action" val="EQUIP" />
@@ -797,7 +751,6 @@
 		<!-- Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_tambourine_i00" />
 		<set name="weapon_type" val="DUALFIST" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
@@ -815,7 +768,6 @@
 		<!-- Chrono Campana. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="weapon_type" val="POLE" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
@@ -833,7 +785,6 @@
 		<!-- Chrono Darbuka. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_darbuka_i00" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
@@ -851,7 +802,6 @@
 		<!-- Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="icon.weapon_chrono_maracas_i00" />
 		<set name="weapon_type" val="DUAL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
@@ -869,7 +819,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="handler" val="ExtractableItems" />
@@ -887,7 +836,6 @@
 	<item id="37951" name="Requiem Cutter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -906,7 +854,6 @@
 	<item id="37952" name="Requiem Slasher Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -927,7 +874,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
@@ -945,7 +891,6 @@
 	<item id="37954" name="Requiem Fighter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -966,7 +911,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="handler" val="ExtractableItems" />
@@ -984,7 +928,6 @@
 	<item id="37956" name="Requiem Thrower Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1003,7 +946,6 @@
 	<item id="37957" name="Requiem Shooter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1022,7 +964,6 @@
 	<item id="37958" name="Requiem Buster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1041,7 +982,6 @@
 	<item id="37959" name="Requiem Caster Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1062,7 +1002,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
@@ -1080,7 +1019,6 @@
 	<item id="37961" name="Immortal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1101,7 +1039,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
@@ -1119,7 +1056,6 @@
 	<item id="37963" name="Immortal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1138,7 +1074,6 @@
 	<item id="37964" name="Immortal Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1157,7 +1092,6 @@
 	<item id="37965" name="Immortal Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1178,7 +1112,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="handler" val="ExtractableItems" />
@@ -1196,7 +1129,6 @@
 	<item id="37967" name="Immortal Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1217,7 +1149,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
@@ -1235,7 +1166,6 @@
 	<item id="37969" name="Immortal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1254,7 +1184,6 @@
 	<item id="37970" name="Immortal Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1275,7 +1204,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1293,7 +1221,6 @@
 	<item id="37972" name="Immortal Circlet Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1312,7 +1239,6 @@
 	<item id="37973" name="Immortal Tunic Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1331,7 +1257,6 @@
 	<item id="37974" name="Immortal Stockings Crafting Pack" additionalName="Robe" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1352,7 +1277,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="handler" val="ExtractableItems" />
@@ -1372,7 +1296,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1392,7 +1315,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="handler" val="ExtractableItems" />
@@ -1410,7 +1332,6 @@
 	<item id="37978" name="Immortal Necklace Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1428,7 +1349,6 @@
 	<item id="37979" name="Immortal Earring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1446,7 +1366,6 @@
 	<item id="37980" name="Immortal Ring Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1466,7 +1385,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="handler" val="ExtractableItems" />
@@ -1486,7 +1404,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="handler" val="ExtractableItems" />
@@ -1506,7 +1423,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="handler" val="ExtractableItems" />
@@ -1526,7 +1442,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
@@ -1546,7 +1461,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
@@ -1566,7 +1480,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="handler" val="ExtractableItems" />
@@ -1586,7 +1499,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="handler" val="ExtractableItems" />
@@ -1604,7 +1516,6 @@
 	<item id="37988" name="Apocalypse Shooter Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1625,7 +1536,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="handler" val="ExtractableItems" />
@@ -1645,7 +1555,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="handler" val="ExtractableItems" />
@@ -1663,7 +1572,6 @@
 	<item id="37991" name="Apocalypse Retributer Crafting Pack" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1684,7 +1592,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1704,7 +1611,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />
@@ -1722,7 +1628,6 @@
 	<item id="37994" name="Twilight Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gaiter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1741,7 +1646,6 @@
 	<item id="37995" name="Twilight Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1762,7 +1666,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1782,7 +1685,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="handler" val="ExtractableItems" />
@@ -1802,7 +1704,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="handler" val="ExtractableItems" />
@@ -1822,7 +1723,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="handler" val="ExtractableItems" />

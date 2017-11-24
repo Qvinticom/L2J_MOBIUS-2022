@@ -139,7 +139,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -195,7 +194,6 @@
 	<item id="23532" name="Contender's Mark" additionalName="Event" type="EtcItem">
 		<!-- Mark with which you can participate in monster duels in the Fantasy Isle Festival. Take it to a Contender to fight with him. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sponsor_token" />
-		<set name="is_freightable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
@@ -205,7 +203,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -219,7 +216,6 @@
 	<item id="23534" name="Monster Weapon Appearance Stone Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Appearance Stone for either Hellblade, Claw of Destruction, Butcher Blade, Blades of Delusion, Blood Brother, or Mardil's Fan. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -237,7 +233,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -256,7 +251,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -275,7 +269,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -294,7 +287,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -313,7 +305,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -332,7 +323,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -349,7 +339,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
@@ -369,7 +358,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -389,7 +377,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -409,7 +396,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -429,7 +415,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -450,7 +435,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -470,7 +454,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -490,7 +473,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -510,7 +492,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -526,7 +507,6 @@
 		<!-- Pack that contains 500 Mysterious Soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="100" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -542,7 +522,6 @@
 		<!-- Pack that contains 500 Mysterious Spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="100" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -559,7 +538,6 @@
 		<set name="icon" val="icon.soulshot_r_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -580,7 +558,6 @@
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -962,7 +939,6 @@
 	<item id="23575" name="Fantasy Top Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing either Vesper Noble Light Armor Top Appearance Stone (7-day) or Vorpal Light Armor Top Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -976,7 +952,6 @@
 	<item id="23576" name="Fantasy Pants Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing either Vesper Noble Light Armor Pants Appearance Stone (7-day) or Vorpal Light Armor Pants Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -990,7 +965,6 @@
 	<item id="23577" name="Fantasy Gloves Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing either Vesper Noble Light Armor Gloves Appearance Stone (7-day) or Vorpal Light Armor Gloves Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -1004,7 +978,6 @@
 	<item id="23578" name="Fantasy Shoes Appearance Stone Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing either Vesper Noble Light Armor Shoes Appearance Stone (7-day) or Vorpal Light Armor Shoes Appearance Stone (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -1018,7 +991,6 @@
 	<item id="23579" name="Shining Accessory Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing either Istina's Earring, Baium's Ring or Octavis' Necklace. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -1035,7 +1007,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
@@ -1055,7 +1026,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1075,7 +1045,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1095,7 +1064,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1115,7 +1083,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1136,7 +1103,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1156,7 +1122,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1176,7 +1141,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1196,7 +1160,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1213,7 +1176,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
@@ -1230,7 +1192,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1249,7 +1210,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1268,7 +1228,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1287,7 +1246,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1306,7 +1264,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1325,7 +1282,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1340,7 +1296,6 @@
 		<!-- When enchanted, P. Atk. for one-handed sword/blunt, dagger, spear, etc. (R-grade) + 6, and two-handed sword/blunt/fist, dagger, crossbow + 7. P. Atk. for bows + 12. M. Atk. for all weapons + 5. When enchanted to +4 or above, P. Atk. and M. Atk. Increase greatly. Blessed weapons have greater increases than standard weapons. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -1358,7 +1313,6 @@
 		<!-- When enchanted, P. Def. for armor/accessories (R-grade) + 2. When enchanted to + 4 or above, P. Def. Increases greatly. Can be safely enchanted up to + 3. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -1376,7 +1330,6 @@
 		<!-- Enchant success rate + 10% for weapons (R-grade).Only for items enchanted between + 3 and + 9. -->
 		<set name="icon" val="icon.ench_wp_potion_violet_i00" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="WEAPON_ENCHANT_STONE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />

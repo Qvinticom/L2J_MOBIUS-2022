@@ -1076,7 +1076,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1096,7 +1095,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1116,7 +1114,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1154,7 +1151,6 @@
 		<!-- Red Libra-only Item. Craftsman Black no longer deals with this exchange, but the merchants of the continent of Aden, wondering about the weapon exchange ability of Craftsman Black, are buying the secrets of the exchange. You can get up to 50 million Adena when you sell it in the store. It will be deleted after the regular maintenance on Wednesday, March 9, 2016 when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_memo" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47379" name="Red Dark/Bloody Coupon" additionalName="Event" type="EtcItem">

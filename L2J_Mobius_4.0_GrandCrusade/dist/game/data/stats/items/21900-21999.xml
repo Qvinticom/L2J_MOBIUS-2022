@@ -5,13 +5,11 @@
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_questitem" val="true" />
 		<cond addName="1" msgId="113">
@@ -26,13 +24,11 @@
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_questitem" val="true" />
 		<cond addName="1" msgId="113">
@@ -47,13 +43,11 @@
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="is_questitem" val="true" />
 		<cond addName="1" msgId="113">
@@ -68,7 +62,6 @@
 		<set name="icon" val="BranchSys2.icon.refined_red_blood_of_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="shared_reuse_group" val="-1" />
@@ -76,7 +69,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="POTION" />
 		<set name="is_questitem" val="true" />
 		<cond addName="1" msgId="113">
@@ -91,7 +83,6 @@
 		<set name="icon" val="BranchSys2.icon.refined_blue_blood_of_dragon" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
-		<set name="immediate_effect" val="false" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="shared_reuse_group" val="-1" />
@@ -99,7 +90,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="POTION" />
 		<cond addName="1" msgId="113">
@@ -121,7 +111,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -138,7 +127,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -155,7 +143,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -172,7 +159,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -189,7 +175,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -206,7 +191,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -223,7 +207,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -240,7 +223,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -257,7 +239,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -274,7 +255,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -285,7 +265,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="immediate_effect" val="true" />
@@ -299,7 +278,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -320,7 +298,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -341,7 +318,6 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -373,7 +349,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21252" level="1" /> <!-- Hellblade -->
 		</skills>
@@ -405,7 +380,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21252" level="1" /> <!-- Hellblade -->
 			<skill id="3564" level="3" /> <!-- Special Ability: Haste -->
@@ -438,7 +412,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21252" level="1" /> <!-- Hellblade -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -471,7 +444,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21252" level="1" /> <!-- Hellblade -->
 			<skill id="3566" level="3" /> <!-- Special Ability: Focus -->
@@ -502,11 +474,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -541,11 +511,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -581,11 +549,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -621,11 +587,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -663,7 +627,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21252" level="1" /> <!-- Hellblade -->
 			<skill id="3828" level="1" /> <!-- Sword of Critical Chance -->
@@ -696,7 +659,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3828" level="1" /> <!-- Sword of Critical Chance -->
 			<skill id="21252" level="1" /> <!-- Hellblade -->
@@ -730,7 +692,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3828" level="1" /> <!-- Sword of Critical Chance -->
 			<skill id="21252" level="1" /> <!-- Hellblade -->
@@ -764,7 +725,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3828" level="1" /> <!-- Sword of Critical Chance -->
 			<skill id="21252" level="1" /> <!-- Hellblade -->
@@ -796,11 +756,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -836,11 +794,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -877,11 +833,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -918,11 +872,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -959,7 +911,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<cond msgId="1518">
@@ -1000,11 +951,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1050,7 +999,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<and>
 				<player level="81" />
@@ -1090,11 +1038,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1141,7 +1087,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21254" level="1" /> <!-- Claw of Destruction -->
 		</skills>
@@ -1174,7 +1119,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21254" level="1" /> <!-- Claw of Destruction -->
 			<skill id="3568" level="2" /> <!-- Special Ability: HP Drain -->
@@ -1208,7 +1152,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21254" level="1" /> <!-- Claw of Destruction -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1242,7 +1185,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21254" level="1" /> <!-- Claw of Destruction -->
 			<skill id="3569" level="2" /> <!-- Special Ability: HP Regeneration -->
@@ -1274,11 +1216,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1314,11 +1254,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1355,11 +1293,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1396,11 +1332,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1439,7 +1373,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21254" level="1" /> <!-- Claw of Destruction -->
 			<skill id="3885" level="2" /> <!-- Blunt Weapon of Stun -->
@@ -1473,7 +1406,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3885" level="2" /> <!-- Blunt Weapon of Stun -->
 			<skill id="21254" level="1" /> <!-- Claw of Destruction -->
@@ -1508,7 +1440,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3885" level="2" /> <!-- Blunt Weapon of Stun -->
 			<skill id="21254" level="1" /> <!-- Claw of Destruction -->
@@ -1543,7 +1474,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3885" level="2" /> <!-- Blunt Weapon of Stun -->
 			<skill id="21254" level="1" /> <!-- Claw of Destruction -->
@@ -1576,11 +1506,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1617,11 +1545,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1659,11 +1585,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1701,11 +1625,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1745,7 +1667,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="21255" level="1" /> <!-- Blades of Delusion -->
@@ -1777,11 +1698,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -1819,7 +1738,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3836" level="2" /> <!-- Dual-blade Weapon of Boost HP -->
@@ -1850,11 +1768,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
@@ -1895,7 +1811,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21256" level="1" /> <!-- Blood Brother -->
 		</skills>
@@ -1927,7 +1842,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21256" level="1" /> <!-- Blood Brother -->
 			<skill id="3566" level="2" /> <!-- Special Ability: Focus -->
@@ -1960,7 +1874,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21256" level="1" /> <!-- Blood Brother -->
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
@@ -1993,7 +1906,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="21256" level="1" /> <!-- Blood Brother -->
@@ -2025,11 +1937,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -2065,11 +1975,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -2105,11 +2013,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -2147,7 +2053,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21256" level="1" /> <!-- Blood Brother -->
 			<skill id="3840" level="2" /> <!-- Two-handed Sword of Haste -->
@@ -2180,7 +2085,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3840" level="2" /> <!-- Two-handed Sword of Haste -->
 			<skill id="21256" level="1" /> <!-- Blood Brother -->
@@ -2214,7 +2118,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3840" level="2" /> <!-- Two-handed Sword of Haste -->
 			<skill id="21256" level="1" /> <!-- Blood Brother -->
@@ -2248,7 +2151,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="3840" level="2" /> <!-- Two-handed Sword of Haste -->
@@ -2281,11 +2183,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -2322,11 +2222,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -2363,11 +2261,9 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="element_enabled" val="false" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -2405,7 +2301,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21257" level="1" /> <!-- Mardil -->
 		</skills>
@@ -2437,7 +2332,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21257" level="1" /> <!-- Mardil -->
 			<skill id="3073" level="2" /> <!-- Special Ability: M. Atk. -->
@@ -2470,7 +2364,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 			<skill id="21257" level="1" /> <!-- Mardil -->
@@ -2504,7 +2397,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21257" level="1" /> <!-- Mardil -->
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
@@ -2537,7 +2429,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="21257" level="1" /> <!-- Mardil -->
 			<skill id="3856" level="1" /> <!-- Sword of Divine Power -->
@@ -2570,7 +2461,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3856" level="1" /> <!-- Sword of Divine Power -->
 			<skill id="21257" level="1" /> <!-- Mardil -->
@@ -2604,7 +2494,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 			<skill id="3856" level="1" /> <!-- Sword of Divine Power -->
@@ -2639,7 +2528,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3856" level="1" /> <!-- Sword of Divine Power -->
 			<skill id="21257" level="1" /> <!-- Mardil -->
@@ -2665,7 +2553,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="7" />
@@ -2684,7 +2571,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="7" />
@@ -2703,7 +2589,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="7" />
@@ -2722,7 +2607,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="7" />
@@ -2741,7 +2625,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="7" />
@@ -2761,7 +2644,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -2783,7 +2665,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="enchant_enabled" val="7" />
@@ -2806,7 +2687,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -2825,7 +2705,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -2848,7 +2727,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -2874,7 +2752,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2891,7 +2768,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2908,7 +2784,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -2985,7 +2860,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -3002,7 +2876,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -3019,7 +2892,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

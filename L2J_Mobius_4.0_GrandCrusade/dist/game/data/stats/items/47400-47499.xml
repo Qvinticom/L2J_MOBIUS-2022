@@ -339,7 +339,6 @@
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -367,7 +366,6 @@
 		<set name="icon" val="icon.bm_freya_rune" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -395,12 +393,9 @@
 		<set name="icon" val="icon.bm_freya_vital_rune" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />

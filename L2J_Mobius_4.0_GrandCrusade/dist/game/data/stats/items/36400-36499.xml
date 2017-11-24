@@ -24,7 +24,6 @@
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -37,7 +36,6 @@
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -50,7 +48,6 @@
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -63,7 +60,6 @@
 		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -81,7 +77,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -93,7 +88,6 @@
 		<!-- Double-click for one of the following items: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -101,7 +95,6 @@
 		<!-- Double-click to get 1 unidentified Amaranthine weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -109,7 +102,6 @@
 		<!-- Double-click to get 1 of the following: R, R95 or R99 weapon/armor Unbind Scroll -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -121,7 +113,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -145,7 +136,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -169,7 +159,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -192,7 +181,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -218,7 +206,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -230,7 +217,6 @@
 		<!-- Material for making a dragon weapon. -->
 		<set name="icon" val="icon.etc_toenail_dragon" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -238,7 +224,6 @@
 		<!-- Item consumed when using a skill of a dragon weapon. -->
 		<set name="icon" val="icon.etc_blood_gragon" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -246,7 +231,6 @@
 		<!-- Item consumed when using a skill of a dragon weapon. -->
 		<set name="icon" val="icon.etc_tooth_gragon" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -255,7 +239,6 @@
 		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -275,7 +258,6 @@
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -294,7 +276,6 @@
 		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -315,7 +296,6 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -334,7 +314,6 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -353,7 +332,6 @@
 		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -376,7 +354,6 @@
 		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -396,7 +373,6 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -416,7 +392,6 @@
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -436,7 +411,6 @@
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -455,7 +429,6 @@
 		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -475,7 +448,6 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -494,7 +466,6 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -513,7 +484,6 @@
 		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -534,7 +504,6 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -553,7 +522,6 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -573,7 +541,6 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -594,7 +561,6 @@
 		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -614,7 +580,6 @@
 		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -635,7 +600,6 @@
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -654,7 +618,6 @@
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -673,7 +636,6 @@
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -692,7 +654,6 @@
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
@@ -712,7 +673,6 @@
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -738,7 +698,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -764,7 +723,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -791,7 +749,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -818,7 +775,6 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -843,7 +799,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -869,7 +824,6 @@
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -895,7 +849,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -921,7 +874,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -947,7 +899,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -973,7 +924,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -999,7 +949,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1025,7 +974,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1050,7 +998,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1077,7 +1024,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1104,7 +1050,6 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1130,7 +1075,6 @@
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1156,7 +1100,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1183,7 +1126,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1211,7 +1153,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1237,7 +1178,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1263,7 +1203,6 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1289,7 +1228,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1315,7 +1253,6 @@
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1342,7 +1279,6 @@
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
@@ -1367,7 +1303,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1394,7 +1329,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1422,7 +1356,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1450,7 +1383,6 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1476,7 +1408,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1503,7 +1434,6 @@
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1530,7 +1460,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1557,7 +1486,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1584,7 +1512,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1611,7 +1538,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1638,7 +1564,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1665,7 +1590,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1691,7 +1615,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1719,7 +1642,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1747,7 +1669,6 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1774,7 +1695,6 @@
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1801,7 +1721,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1829,7 +1748,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1858,7 +1776,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1885,7 +1802,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1912,7 +1828,6 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8902" level="1" /> <!-- Dragon Mage -->
@@ -1939,7 +1854,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1966,7 +1880,6 @@
 		<set name="weight" val="1580" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1350" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
@@ -1994,7 +1907,6 @@
 		<set name="weight" val="2050" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
@@ -2020,7 +1932,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2049,7 +1960,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2079,7 +1989,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="6" />
-		<set name="is_freightable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2109,7 +2018,6 @@
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_magic_weapon" val="true" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2137,7 +2045,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2166,7 +2073,6 @@
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2195,7 +2101,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2224,7 +2129,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2253,7 +2157,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2282,7 +2185,6 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
@@ -2311,7 +2213,6 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="spiritshots" val="1" />
 		<skills>
 			<skill id="8896" level="1" /> <!-- Valakas' Breath -->

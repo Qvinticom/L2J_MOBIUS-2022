@@ -3,7 +3,6 @@
 	<item id="26400" name="Sealed Shadow Thrower" type="EtcItem">
 		<!-- Double-click to get a Shadow Thrower. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_bow" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -11,7 +10,6 @@
 	<item id="26401" name="Sealed Shadow Shooter" type="EtcItem">
 		<!-- Double-click to get a Shadow Shooter. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_crossbow" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -19,7 +17,6 @@
 	<item id="26402" name="Sealed Shadow Buster" type="EtcItem">
 		<!-- Double-click to get a Shadow Buster. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_magic_sword" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -27,7 +24,6 @@
 	<item id="26403" name="Sealed Shadow Retributer" type="EtcItem">
 		<!-- Double-click to get a Shadow Retributer. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_magic_blunt" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -35,7 +31,6 @@
 	<item id="26404" name="Sealed Shadow Dualsword" type="EtcItem">
 		<!-- Double-click to get a Shadow Dualsword. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -44,7 +39,6 @@
 		<!-- Double-click to get an Energy of Destruction or one of the ingredients. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -52,7 +46,6 @@
 		<!-- Wrapped Pack containing XP Rune IV (Lv. 1-99) 100% (1-hr). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -75,7 +68,6 @@
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -90,7 +82,6 @@
 		<!-- Wrapped Pack containing XP Rune IV (Lv. 1-99) 100% (1-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -114,7 +105,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -129,7 +119,6 @@
 		<!-- Wrapped Pack containing XP Rune IV (Lv. 1-99) 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -153,7 +142,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -168,7 +156,6 @@
 		<!-- Wrapped Pack containing XP Rune IV (Lv. 1-99) 100% (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -192,7 +179,6 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -213,7 +199,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5004" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26419" name="Recipe: Talisman - Abundance Lv. 2 (High-grade)" type="EtcItem">
@@ -226,7 +211,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5005" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26420" name="Recipe: Talisman - Abundance Lv. 3 (High-grade)" type="EtcItem">
@@ -239,7 +223,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5006" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26421" name="Recipe: Talisman - Abundance Lv. 4 (High-grade)" type="EtcItem">
@@ -252,14 +235,12 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5007" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26422" name="Luck Box 1" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Recipe: Talisman - Abundance Lv. 1-4 (High-grade), Hunter/Slaughterer/Conqueror/Outlaw Talisman, Valakas' Necklace, Istina's Necklace, Octavis' Necklace, Antharas' Earring, Istina's Earring, Octavis' Earring,  Baiu's Ring, Queen Ant's Ring, Istina's Ring, Octavis' Ring, Lilith/Anakim Talisman, Orfen's Earring, Elcyum Crystal x5, Elcyum x2, Giant's Energy x10, Tempest Stone, Lv. 5 Legendary Dye Pack, Fortune Pocket - Stage 5, Gemstone (R-grade) x30. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -267,7 +248,6 @@
 		<!-- Get 1 of the following: Seven Signs' Energy, Freya's Lucky Enchant Stone: Armor/Weapon (R-grade), Windy Lucky Enchant Stone: Armor/Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor/Weapon Pack (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Blessed Lucky Enchant Stone: Armor/Weapon Pack (R-grade), Blessed High-grade Lucky Enchant Stone: Armor/Weapon (R-grade), Lesser Giant's Lucky Enchant Stone: Armor/Weapon Pack (R-grade),  Bottle of Antharas/Valakas/Queen Ant/Orfen/Baium's Soul, Blessed Scroll: Enchant Armor/Weapon (R-grade), High-grade Lucky Enchant Stone: Weapon (R-grade), Blessed High-grade Lucky Enchant Stone: Armor (R-grade), Giant's Scroll: Enchant Armor (R-grade), Scroll: Enchant Weapon Pack (R-grade), Scroll: Enchant Armor (R-grade) x3, Lucky Box 1. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -275,7 +255,6 @@
 		<!-- Get 1 of the following: Talisman - Annihilation Crafting Pack, Hellfire/Desire/Longing/Insanity Talisman Upgrade Pack,  XP Rune III 100% Pack (30-day), Prestige Rune 100% Pack (30-day), Pa'agrio's Warm Breeze (1-hour) Pack, Ghost Potion, Emperor's Growth Scroll x2, Feather of Blessing Pack x3, Letter Collector's Gift x2, Gemstone (R-grade) x10, Heavenly Recovery Potion x30, Life Stone Instilled with Giants' Power, Immortal Scroll/Chapter 1/Chapter 2, Elcyum Powder, Lucky Box 1, Luck Box 2. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -343,7 +322,6 @@
 		<!-- Enchants a skill +1~+10 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -352,7 +330,6 @@
 		<!-- Enchants a skill between + 11~+ 20 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -361,7 +338,6 @@
 		<!-- Enchants a skill between + 21~+ 30 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -372,7 +348,6 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -385,7 +360,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -399,14 +373,12 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="price" val="3556000" />
 	</item>
 	<item id="26436" name="Test Card - Rune" type="EtcItem">
 		<set name="icon" val="icon.card2_event_giyotine" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -417,70 +389,60 @@
 	<item id="26437" name="Shadow Shaper Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Shaper. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26438" name="Shadow Cutter Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Cutter. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26439" name="Shadow Slasher Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Slasher. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26440" name="Shadow Fighter Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Fighter. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26441" name="Shadow Stormer Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Stormer. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26442" name="Shadow Thrower Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Thrower. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26443" name="Shadow Shooter Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Shooter. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26444" name="Shadow Buster Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Buster. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26445" name="Shadow Retributer Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Retributer. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26446" name="Shadow Dualsword Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Dualsword. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -490,9 +452,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="1" />
 		</skills>
@@ -503,9 +463,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="2" />
 		</skills>
@@ -516,9 +474,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="3" />
 		</skills>
@@ -529,9 +485,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="4" />
 		</skills>
@@ -542,9 +496,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="5" />
 			<skill id="21365" level="1" type="ON_EQUIP" /> 
@@ -557,9 +509,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="6" />
 			<skill id="21370" level="1" type="ON_EQUIP" />
@@ -572,9 +522,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="7" />
 			<skill id="21371" level="1" type="ON_EQUIP" />
@@ -587,9 +535,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="8" />
 			<skill id="21372" level="1" type="ON_EQUIP" />
@@ -602,9 +548,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="9" />
 			<skill id="21477" level="1" />
@@ -616,9 +560,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="10" />
 			<skill id="21477" level="2" />
@@ -630,9 +572,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="11" />
 			<skill id="21477" level="3" />
@@ -644,9 +584,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="12" />
 			<skill id="21477" level="4" />
@@ -662,7 +600,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5008" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26460" name="Recipe: Talisman - Abundance Lv. 2 (High-grade)" type="EtcItem">
@@ -675,7 +612,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5009" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26461" name="Recipe: Talisman - Abundance Lv. 3 (High-grade)" type="EtcItem">
@@ -688,7 +624,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5010" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26462" name="Recipe: Talisman - Abundance Lv. 4 (High-grade)" type="EtcItem">
@@ -701,7 +636,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5011" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26463" name="Recipe: Talisman - Abundance Lv. 1 (High-grade)" type="EtcItem">
@@ -714,7 +648,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5012" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26464" name="Recipe: Talisman - Abundance Lv. 2 (High-grade)" type="EtcItem">
@@ -727,7 +660,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5013" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26465" name="Recipe: Talisman - Abundance Lv. 3 (High-grade)" type="EtcItem">
@@ -740,7 +672,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5014" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26466" name="Recipe: Talisman - Abundance Lv. 4 (High-grade)" type="EtcItem">
@@ -753,13 +684,11 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5015" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26467" name="Abundance Box" type="EtcItem">
 		<!-- Get 1 of the following:  1 type of Talisman - Abundance, Seven Signs' Energy, Antharas' Earring, Talisman - Lilith, Talisman - Anakim, Baium's Soul Ring, Valakas' Necklace, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Baium's Ring, Octavis' Ring, Bottle of Queen Ant's Soul, Istina's Earring, Queen Ant's Ring, Istina's Necklace, Bottle of Orfen's Soul, Octavis' Earring, Istina's Earring, Octavis' Necklace, Immortal Scroll Chapter 1, Superior Giant's Codex - Mastery Chapter 1, Superior Giant's Codex Chapter 1, Lv. 5 Legendary Dye Pack, Elcyum x2, Superior Giant's Codex - Discipline Chapter 1, Giant's Energy x10, Orfen's Earring, Elcyum Crystal x5, Tempest Stone, Gemstone (R-grade) x30, 1 of 2 Fortune Pocket - Stage 5. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -771,7 +700,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -796,7 +724,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -821,7 +748,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -846,7 +772,6 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -880,7 +805,6 @@
 		<!-- Get 1 of the following: Lindvior's Earring (3-day, 7-day, 15-day, or 30-day). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="4320" />
@@ -892,7 +816,6 @@
 		<set name="bodypart" val="brooch" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -910,7 +833,6 @@
 	<item id="26475" name="Radiant Gemstone Fragment" type="EtcItem">
 		<!-- Main ingredient for making a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -924,7 +846,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -944,7 +865,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -964,7 +884,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -985,7 +904,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1006,12 +924,9 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="5" />
 		<skills>
 			<skill id="18568" level="5" /> <!-- Vital Stone -->
@@ -1027,7 +942,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1047,7 +961,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1067,7 +980,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1087,7 +999,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1105,7 +1016,6 @@
 		<set name="compoundChance" val="100" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
@@ -1123,7 +1033,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1143,7 +1052,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1163,7 +1071,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1183,7 +1090,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1201,7 +1107,6 @@
 		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
@@ -1215,8 +1120,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -1224,9 +1127,7 @@
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
 			<item id="26476" min="1" max="1" chance="100" />
 		</capsuled_items>
@@ -1237,8 +1138,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -1246,9 +1145,7 @@
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
 			<item id="26481" min="1" max="1" chance="100" />
 		</capsuled_items>
@@ -1259,8 +1156,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -1268,9 +1163,7 @@
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
 			<item id="26486" min="1" max="1" chance="100" />
 		</capsuled_items>
@@ -1281,8 +1174,6 @@
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
-		<set name="is_tradable" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
@@ -1290,9 +1181,7 @@
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="is_destroyable" val="true" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
 		<capsuled_items>
 			<item id="26474" min="1" max="1" chance="100" />
 		</capsuled_items>
@@ -1300,7 +1189,6 @@
 	<item id="26495" name="Shadai's Jewelry Box" type="EtcItem">
 		<!-- Double-click to acquire 1 of the La Vie En Rose's Jewelry Boxes. Has a very low chance of obtaining a Radiant Gemstone Fragment or a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1308,7 +1196,6 @@
 	<item id="26496" name="Shiny Gemstone Fragment" type="EtcItem">
 		<!-- Main ingredient for making a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_piece" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1322,7 +1209,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1342,7 +1228,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1362,7 +1247,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

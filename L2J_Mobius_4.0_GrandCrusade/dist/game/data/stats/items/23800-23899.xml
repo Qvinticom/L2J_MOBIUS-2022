@@ -59,7 +59,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -72,7 +71,6 @@
 		<!-- Can transform into Pirate Captain Uthanka. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -81,7 +79,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -95,7 +92,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -109,7 +105,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -163,7 +158,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -201,7 +195,6 @@
 		<!-- Pirate Captain Uthanka's treasure. Double-click for a chance to obtain one of many items. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -210,7 +203,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="RING" />
 	</item>
@@ -221,7 +213,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -233,7 +224,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="10080" />
@@ -241,7 +231,6 @@
 	<item id="23820" name="Scroll of Escape: Uthanka's Tomb" type="EtcItem">
 		<!-- Return to Uthanka's Tomb. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -249,7 +238,6 @@
 	<item id="23821" name="Agathion - Pirate Captain Uthanka" type="Armor">
 		<!-- Summon Uthanka Agathion. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -260,7 +248,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -273,7 +260,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="10080" />
@@ -282,7 +268,6 @@
 		<!-- Resurrects a dead person and restores their XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -384,9 +369,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="1" />
 		</skills>
@@ -397,9 +380,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="2" />
 		</skills>
@@ -410,9 +391,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="3" />
 		</skills>
@@ -423,9 +402,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="4" />
 		</skills>
@@ -436,9 +413,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="5" />
 			<skill id="21365" level="1" type="ON_EQUIP" /> 
@@ -451,9 +426,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="6" />
 			<skill id="21370" level="1" type="ON_EQUIP" />
@@ -466,9 +439,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="7" />
 			<skill id="21371" level="1" type="ON_EQUIP" />
@@ -481,9 +452,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21364" level="8" />
 			<skill id="21372" level="1" type="ON_EQUIP" />
@@ -494,15 +463,11 @@
 		<!-- Has a chance of obtaining either Talisman - Abundance: War, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Breeze Pack (1-hour), XP Rune I (Lv. 1-85) 100% Pack (1-hour), Prestige Rune 100% Pack, or XP Rune II (Lv. 1-95) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
-		<set name="is_sellable" val="true" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -526,15 +491,11 @@
 		<!-- Has a chance of obtaining either Talisman - Abundance: Tactics, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Breeze Pack (1-hour), XP Rune I (Lv. 1-85) 100% Pack (1-hour), Prestige Rune 100% Pack, or XP Rune II (Lv. 1-95) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
-		<set name="is_sellable" val="true" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -558,15 +519,11 @@
 		<!-- Has a chance of obtaining either Talisman - Abundance: Morale, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Breeze Pack (1-hour), XP Rune I (Lv. 1-85) 100% Pack (1-hour), Prestige Rune 100% Pack, or XP Rune II (Lv. 1-95) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
-		<set name="is_sellable" val="true" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -590,15 +547,11 @@
 		<!-- Has a chance of obtaining either Talisman - Abundance: Physique, Blessed Scroll: Enchant Weapon/ Armor (R-grade), Lucky Enchant Stone: Weapon/ Armor (R-grade), Scroll: Enchant Weapon/ Armor (R-grade), Elcyum Powder, Divine Protection Elixir, Pa'agrio's Warm Breeze Pack (1-hour), XP Rune I (Lv. 1-85) 100% Pack (1-hour), Prestige Rune 100% Pack, or XP Rune II (Lv. 1-95) 100% Pack (1-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
-		<set name="is_sellable" val="true" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -719,15 +672,12 @@
 		<!-- Wrapped Pack containing XP Rune II (Lv. 1-95) 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -738,12 +688,10 @@
 		<!-- Has a chance of obtaining either a Dark Amaranthine Enhancement Stone, Bloody Amaranthine Enhancement Stone,  Dark Eternal Enhancement Stone, Bloody Eternal Enhancement Stone, Kaliel's Energy - Desire, Kaliel's Energy - Hellfire, Kaliel's Energy - Annihilation, Blessed Giant's Lucky Enchant Stone: Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor (R-grade), Top-grade Life Stone (R-grade), Giant's Energy, Energy of Destruction, Fire Crystal - Super, Water Crystal - Super, Wind Crystal - Super, Earth Crystal - Super, Holy Crystal - Super, Dark Crystal - Super, or Gemstone (R-grade). -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
@@ -777,12 +725,10 @@
 		<!-- Has a chance of obtaining either a Scroll of Blessing: (R99-grade), Scroll of Blessing: (R95-grade), Scroll of Blessing: (R2-grade), Scroll of Blessing: (R1-grade), Lv. 5 Legendary Dye Pack, Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Blessed Scroll: Enchant Armor (R-grade), High-grade Lucky Enchant Stone: Weapon (R-grade), High-grade Lucky Enchant Stone: Armor (R-grade), Giant's Scroll: Enchant Armor (R-grade), Life Stone: Hair Accessory, Scroll: Enchant Hair Accessory, Fire Stone (+ 150), Water Stone (+ 150), Earth Stone (+ 150), Wind Stone (+ 150), Dark Stone (+ 150), or Holy Stone (+ 150). -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
@@ -816,12 +762,10 @@
 		<!-- Has a chance of obtaining 1 of the following items: Enhanced Power Shirt (+ 7) Pack, Prestige Rune (100%) Pack (7-day), Weapon Appearance/Restoration Stone Pack (R-grade), Armor Appearance/Restoration Stone Pack (R-grade), Hair Accessory Appearance/Restoration Stone Pack, Superior Minion Coupon Pack, Top-grade Life Stone (R-grade), Super Healthy Juice Pack (CP)/(HP), Letter Collector's Gift, Blessed Scroll: Enchant Power Shirt, Feather of Blessing Pack, Fire/Water/Earth/Wind/Dark/Holy Stone (+ 60). -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
@@ -853,12 +797,10 @@
 		<!-- Has a chance of obtaining either a Talisman (R-grade) - Knock Back Resistance (Passive), Talisman (R-grade) - Knock Down Resistance (Passive), Talisman (R-grade) - Binding Resistance (Passive), Talisman (R-grade) - Pulling Resistance (Passive), Talisman (R-grade) - Banishment Resistance (Passive), Talisman (R-grade) - Mutation Resistance (Passive), Talisman (R-grade) - Lethal Strike Resistance, Talisman (R-grade) - Damage Reflect Resistance, Special Talisman - M. Def., Special Talisman - Ranged Attack Resistance, Special Talisman (R-grade) - Decrease MP Consumption, or Talisman (R-grade) - Cancel Debuff (Active). -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
@@ -885,7 +827,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -898,15 +839,12 @@
 		<!-- Double-click to obtain either a Bottle of Orfen's Soul, a Bottle of Frintezza's Soul, a Bottle of Queen Ant's Soul, or a Bottle of Baium's Soul. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_stackable" val="true" />
 		<capsuled_items>
@@ -921,49 +859,42 @@
 		<!-- Bottle Fragment of Valakas' Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Valakas' Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_valakas_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23862" name="Bottle Fragment of Antharas' Soul" type="EtcItem">
 		<!-- Bottle Fragment of Antharas' Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Antharas' Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_antaras_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23863" name="Bottle Fragment of Baium's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Baium's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Baium's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_baium_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23864" name="Bottle Fragment of Orfen's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Orfen's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Orfen's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_orfen_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23865" name="Bottle Fragment of Queen Ant's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Queen Ant's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Queen Ant's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_queen_ant_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23866" name="Bottle Fragment of Frintezza's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Frintezza's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Frintezza's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_frintessa_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23867" name="Bottle Fragment of Freya's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Freya's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Freya's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_freya_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23868" name="Agathion - Van Halter's Memory" type="Armor">
@@ -998,7 +929,6 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1013,7 +943,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1027,7 +956,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1041,7 +969,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

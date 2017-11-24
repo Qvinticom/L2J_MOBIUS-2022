@@ -5,7 +5,6 @@
 		<set name="price" val="300000" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -19,7 +18,6 @@
 		<set name="price" val="300000" />
 		<set name="is_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -31,7 +29,6 @@
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -44,7 +41,6 @@
 		<set name="price" val="300000" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -57,7 +53,6 @@
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="is_clan_depositable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -70,7 +65,6 @@
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
 		<set name="is_depositable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -81,7 +75,6 @@
 	<item id="45406" name="Auto Tooltip Check" additionalName="Test" type="EtcItem">
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="price" val="300000" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -174,7 +167,6 @@
 		<set name="icon" val="icon.ev_dinos_baseball" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -188,7 +180,6 @@
 		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.blue_save_r" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -198,7 +189,6 @@
 		<!-- Enchant success rate + 10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.blue_save_r95" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -208,7 +198,6 @@
 		<!-- Enchant success rate + 10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.blue_save_r99" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -218,7 +207,6 @@
 		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.red_save_r" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -228,7 +216,6 @@
 		<!-- Enchant success rate + 10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.red_save_r95" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -238,7 +225,6 @@
 		<!-- Enchant success rate + 10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 3 instead of crystallizing. -->
 		<set name="icon" val="icon.red_save_r99" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -248,7 +234,6 @@
 		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_blue_save_r" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -258,7 +243,6 @@
 		<!-- Enchant success rate + 10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_blue_save_r95" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -268,7 +252,6 @@
 		<!-- Enchant success rate + 10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_blue_save_r99" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -278,7 +261,6 @@
 		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_red_save_r" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -288,7 +270,6 @@
 		<!-- Enchant success rate + 10% for weapons (R95-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_red_save_r95" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -298,7 +279,6 @@
 		<!-- Enchant success rate + 10% for weapons (R99-grade) with a normal enchant scroll. Only for items enchanted between + 7 and + 11. A successful enchant raises the enchant level by 1-3. A failed enchant drops the enchant level by 1 instead of crystallizing. -->
 		<set name="icon" val="icon.royal_red_save_r99" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_WP" />
@@ -309,7 +289,6 @@
 		<set name="icon" val="icon.etc_oricalcum_quiver_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -325,7 +304,6 @@
 		<set name="icon" val="icon.etc_oricalcum_bolt_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -341,7 +319,6 @@
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="weight" val="5" />
 		<set name="price" val="12660421" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -352,7 +329,6 @@
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="weight" val="5" />
 		<set name="price" val="13112579" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -363,7 +339,6 @@
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="weight" val="5" />
 		<set name="price" val="13112579" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -376,7 +351,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -391,7 +365,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -407,7 +380,6 @@
 		<set name="handler" val="Appearance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -422,7 +394,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -440,7 +411,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -458,7 +428,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -473,7 +442,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -488,7 +456,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -502,7 +469,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -514,7 +480,6 @@
 		<!-- Restores 3000 HP and remaining power restores CP. No duration. -->
 		<set name="icon" val="icon.etc_ev_draco_purple_bottle" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
@@ -532,7 +497,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="POTION" />		
 		<skills>
@@ -545,7 +509,6 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -560,7 +523,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="45446" name="Visitation Scroll: Hellbound" additionalName="30-min" type="EtcItem">
@@ -570,7 +532,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -584,7 +545,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="time" val="90" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="45448" name="Visitation Scroll: Hellbound" additionalName="90-min" type="EtcItem">
@@ -594,7 +554,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -608,7 +567,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -624,7 +582,6 @@
 		<set name="price" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -639,7 +596,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -653,7 +609,6 @@
 		<set name="icon" val="icon.etc_flower_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -664,7 +619,6 @@
 	<item id="45453" name="Cool Hat Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing either a Napoleon Hat Appearance Stone (1-day), Zorro Hat Appearance Stone (1-day), or a Ruthless Tribe Mask Appearance Stone (1-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -672,7 +626,6 @@
 	<item id="45454" name="Kokko's Love" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Attack Attribute by 100, P. Atk. by 20%, M. Atk. by 30%, Atk. Spd./Casting Spd. by 10%, P. Accuracy by 4, M. Atk. by 4, Movement Speed by 10, Max HP/MP/CP by 10%, P. Def by 10%, M. Def by 10%, and reduces Skills MP cost by 10% for 30 minutes. Cannot be used with Art of Seduction. Due to be deleted on September 24, 2014 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.event_altair_enchant_scroll_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -685,7 +638,6 @@
 		<!-- Changes the appearance of a hair accessory into that of a Zorro Hat (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
@@ -695,7 +647,6 @@
 		<!-- Changes the appearance of a hair accessory into that of a Top Hat (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
@@ -705,7 +656,6 @@
 		<!-- Changes the appearance of a hair accessory into that of a Napoleon Hat (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
@@ -715,7 +665,6 @@
 		<!-- Changes the appearance of a hair accessory into that of a Ruthless Tribe Mask (90-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
@@ -725,7 +674,6 @@
 		<!-- Changes the appearance of a hair accessory into that of a Zorro Hat (1-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
@@ -735,7 +683,6 @@
 		<!-- Changes the appearance of a hair accessory into that of a Top Hat (1-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
@@ -745,7 +692,6 @@
 		<!-- Changes the appearance of a hair accessory into that of a Napoleon Hat (1-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
@@ -755,7 +701,6 @@
 		<!-- Changes the appearance of a hair accessory into that of a Ruthless Tribe Mask (1-day). Works for item with the same number of slots. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
@@ -767,7 +712,6 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -783,7 +727,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -797,7 +740,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -810,7 +752,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -823,7 +764,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -836,7 +776,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -849,7 +788,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -862,7 +800,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -875,7 +812,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -888,7 +824,6 @@
 		<set name="icon" val="icon.etc_small_ultra_bomb_i00" />
 		<set name="weight" val="100" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -897,7 +832,6 @@
 		<set name="icon" val="icon.fish_normal_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45474" name="Fresh Minnow" type="EtcItem">
@@ -905,7 +839,6 @@
 		<set name="icon" val="icon.fish_normal_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45475" name="Fresh Flatfish" type="EtcItem">
@@ -913,7 +846,6 @@
 		<set name="icon" val="icon.fish_normal_i06" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45476" name="Fresh Mandarin Fish" type="EtcItem">
@@ -921,7 +853,6 @@
 		<set name="icon" val="icon.fish_normal_i05" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45477" name="Fresh Rockfish" type="EtcItem">
@@ -929,49 +860,42 @@
 		<set name="icon" val="icon.fish_normal_i08" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45478" name="Fresh Goldfish" type="EtcItem">
 		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i07" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45479" name="Fresh Salmon" type="EtcItem">
 		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i10" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45480" name="Fresh Eel" type="EtcItem">
 		<!-- An extinct fish. It can no longer be caught. When double clicked, a processed fish item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i09" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45481" name="Fresh Marlin" type="EtcItem">
 		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i12" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45482" name="Fresh Catfish" type="EtcItem">
 		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_small_i11" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45483" name="Fresh Tuna" type="EtcItem">
 		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_normal_i14" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45484" name="Fresh Carp" type="EtcItem">
@@ -979,14 +903,12 @@
 		<set name="icon" val="icon.fish_normal_i13" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45485" name="Fresh Whale" type="EtcItem">
 		<!-- An extinct fish. It can no longer be caught. When double clicked, a Fish Pearl or Fresh Whale Blubber item can be obtained. The changed item can be used as crafting material or exchanged by a Fishing Guild Member for a cosmetic item. -->
 		<set name="icon" val="icon.fish_huge_i15" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45486" name="Wooden Treasure Chest" type="EtcItem">
@@ -994,7 +916,6 @@
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="weight" val="10" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1009,7 +930,6 @@
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1024,7 +944,6 @@
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="10" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1039,7 +958,6 @@
 		<set name="icon" val="icon.etc_fish_scale_i01" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
@@ -1048,7 +966,6 @@
 		<set name="icon" val="icon.etc_giran_fish_scale_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
@@ -1057,7 +974,6 @@
 		<set name="icon" val="icon.etc_fish_oil_i02" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
@@ -1069,7 +985,6 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1092,7 +1007,6 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="price" val="5000000" />
 		<set name="weight" val="100" />
@@ -1107,7 +1021,6 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="1000" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
 		<stats>
@@ -1128,7 +1041,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="price" val="6000" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45496" name="Special Bait" type="EtcItem">
@@ -1140,7 +1052,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="is_stackable" val="true" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="45497" name="Fishing Shot (Not in Use)" type="EtcItem">
@@ -1148,7 +1059,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i00" />
 		<set name="weight" val="3" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1158,7 +1068,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1171,7 +1080,6 @@
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
