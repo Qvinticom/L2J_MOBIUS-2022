@@ -29,6 +29,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47602" name="Weapon Supply Box" type="EtcItem">
 		<!-- A weapon supply box that the Weapon Merchant Lector has asked you to take to the Administrative Offices -->
@@ -38,6 +39,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47603" name="Armor Supply Box" type="EtcItem">
 		<!-- An armor supply box that the Weapon Merchant Lector has asked you to take to the Administrative Offices -->
@@ -47,6 +49,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47604" name="Grocery Supply Box" type="EtcItem">
 		<!-- A grocery supply box that the Grocer Katerina has asked you to take to the Administrative Offices -->
@@ -56,6 +59,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47605" name="Accessory Supply Box" type="EtcItem">
 		<!-- An accessory supply box that the Accessory Merchant Trevor has asked you to take to the Administrative Offices -->
@@ -65,6 +69,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47606" name="Husk Distribution Report" type="EtcItem">
 		<!-- An Exploration Area 2 Husk Distribution Report that was misplaced in Area 2 by Nagel while retreating to Area 1. Collect and take to Celin who is in Area 2 for the meantime, instead of Nagel. -->
@@ -74,6 +79,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47607" name="King's Tonic" type="EtcItem">
 		<!-- A tonic that the Searchdog King takes for health. Due to the King's habit of hiding his possessions here and there, the tonic lies scattered throughout Exploration Area 4. The Husks sometimes unearth the tonic that the King has hidden, and carry them around. Collect the King's Tonic from the Husks, and take them to Sebion. -->
@@ -83,6 +89,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47608" name="Monkey Bait" additionalName="R" type="EtcItem">
 		<!-- Fishing Time: 75 seconds. Standby Time: 15 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Ugly Fish, Nimble Fish, Powerful Fish, and Chef Monkey's Treasure Chest. Can be used by characters between Lv. 85-94. Will be deleted when the event ends. -->
@@ -321,12 +328,9 @@
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -344,12 +348,9 @@
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -388,6 +389,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18713" level="1" />
 		</skills>
@@ -406,6 +408,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18713" level="2" />
 		</skills>
@@ -424,6 +427,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18713" level="3" />
 		</skills>
@@ -442,6 +446,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18713" level="4" />
 		</skills>
@@ -475,6 +480,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18714" level="1" />
 		</skills>
@@ -493,6 +499,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18714" level="2" />
 		</skills>
@@ -511,6 +518,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18714" level="3" />
 		</skills>
@@ -529,6 +537,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="18714" level="4" />
 		</skills>

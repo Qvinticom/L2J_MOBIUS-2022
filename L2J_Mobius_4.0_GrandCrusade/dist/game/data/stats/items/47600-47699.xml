@@ -694,10 +694,21 @@
 	<item id="47672" name="Formal Wear Appearance Stone" type="EtcItem">
 		<!-- An Appearance Stone to change your appearance to Formal Wear. Can be used for Upper Armor and Full-body. All armor takes the appearance of Formal Wear. Effect can be removed using an appearance restoration scroll. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18710" level="1" /> <!-- Formal Wear Appearance Stone -->
+		</skills>
 	</item>
 	<item id="47673" name="Freya's Art of Seduction - Barrier" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/M. Def 30%, and Movement Speed by 20, and reduces Skill MP Consumption by 15% for 30 minutes. Additionally reduces damage taken by 10%, and increases all property Defense by 100. Buff effect persists through death. Cooldown: 5 minutes. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->

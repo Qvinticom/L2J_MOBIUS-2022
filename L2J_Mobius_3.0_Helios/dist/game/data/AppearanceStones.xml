@@ -243,7 +243,6 @@
 		<targetType>ARMOR</targetType>
 	</appearance_stone>
 
-	<!-- Fixed -->
 	<!-- Metal Suit -->
 	<appearance_stone id="23493" targetType="ARMOR" type="FIXED" visualId="23448"> <!-- Metal Top Appearance Stone -->
 		<bodyPart>chest</bodyPart>
@@ -3535,6 +3534,14 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>
+	<appearance_stone id="46271" targetType="ARMOR" type="FIXED" visualId="46261"> <!-- Ninja Outfit Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46272" targetType="ARMOR" type="FIXED" visualId="46262"> <!-- Metal Suit Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
 
 	<appearance_stone id="23513" targetType="ARMOR" type="FIXED" visualId="23458"> <!-- Maid Appearance Stone -->
 		<bodyPart>chest</bodyPart>
@@ -3650,6 +3657,96 @@
 		<visual id="46391" armorType="SHIELD" /> <!-- Frozen Shield -->
 		<visual id="46392" armorType="SIGIL" /> <!-- Frozen Sigil -->
 	</appearance_stone>
+	
+	<appearance_stone id="46108" targetType="ALL" type="FIXED" lifeTime="30days"> <!-- Drake Maul Appearance Stone -->
+		<visual id="22775" weaponType="DUALBLUNT" />
+	</appearance_stone>
+	<appearance_stone id="46109" targetType="ALL" type="FIXED" lifeTime="30days"> <!-- Freya's Staff Appearance Stone -->
+		<visual id="22791" weaponType="DUALBLUNT" handType="TWO_HANDED" magicType="MAGICAL" />
+	</appearance_stone>
+	<appearance_stone id="46110" targetType="ALL" type="FIXED" lifeTime="30days"> <!-- Spezion's Claw Appearance Stone -->
+		<visual id="22807" weaponType="DUALFIST" />
+	</appearance_stone>
+	<appearance_stone id="46111" targetType="ALL" type="FIXED" lifeTime="30days"> <!-- Maliss Stormer Appearance Stone -->
+		<visual id="22814" weaponType="POLE" />
+	</appearance_stone>
+	<appearance_stone id="46112" targetType="ALL" type="FIXED" lifeTime="30days"> <!-- Steregos' Dagger Appearance Stone -->
+		<visual id="22821" weaponType="DAGGER" />
+	</appearance_stone>
+	<appearance_stone id="46113" targetType="ALL" type="FIXED" lifeTime="30days"> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
+		<visual id="22828" weaponType="DUALBLUNT" />
+	</appearance_stone>
+	<appearance_stone id="46114" targetType="ALL" type="FIXED"> <!-- Drake Maul Appearance Stone -->
+		<visual id="22775" weaponType="DUALBLUNT" />
+	</appearance_stone>
+	<appearance_stone id="46115" targetType="ALL" type="FIXED"> <!-- Freya's Staff Appearance Stone -->
+		<visual id="22791" weaponType="DUALBLUNT" handType="TWO_HANDED" magicType="MAGICAL" />
+	</appearance_stone>
+	<appearance_stone id="46116" targetType="ALL" type="FIXED"> <!-- Spezion's Claw Appearance Stone -->
+		<visual id="22807" weaponType="DUALFIST" />
+	</appearance_stone>
+	<appearance_stone id="46117" targetType="ALL" type="FIXED"> <!-- Maliss Stormer Appearance Stone -->
+		<visual id="22814" weaponType="POLE" />
+	</appearance_stone>
+	<appearance_stone id="46118" targetType="ALL" type="FIXED"> <!-- Steregos' Dagger Appearance Stone -->
+		<visual id="22821" weaponType="DAGGER" />
+	</appearance_stone>
+	<appearance_stone id="46119" targetType="ALL" type="FIXED"> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
+		<visual id="22828" weaponType="DUALBLUNT" />
+	</appearance_stone>
+
+	<appearance_stone id="46120" targetType="ACCESSORY" type="FIXED" visualId="22169" lifeTime="30days"> <!-- Little Girls' Hat Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46121" targetType="ACCESSORY" type="FIXED" visualId="22169" lifeTime="30days"> <!-- Little Boy's Hat Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46122" targetType="ACCESSORY" type="FIXED" visualId="22169"> <!-- Little Girls' Hat Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46123" targetType="ACCESSORY" type="FIXED" visualId="22169"> <!-- Little Boy's Hat Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<appearance_stone id="46124" targetType="ACCESSORY" type="FIXED" visualId="20020" lifeTime="30days"> <!-- Uniform Hat Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46125" targetType="ACCESSORY" type="FIXED" visualId="20424" lifeTime="30days"> <!-- Afro - Gold Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46126" targetType="ACCESSORY" type="FIXED" visualId="20425" lifeTime="30days"> <!-- Afro - Pink Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<appearance_stone id="46127" targetType="ACCESSORY" type="FIXED" visualId="20020"> <!-- Uniform Hat Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46128" targetType="ACCESSORY" type="FIXED" visualId="20424"> <!-- Afro - Gold Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46129" targetType="ACCESSORY" type="FIXED" visualId="20425"> <!-- Afro - Pink Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
 
 	<appearance_stone id="46173" targetType="ARMOR" type="FIXED" visualId="46179" lifeTime="30days"> <!-- Male Swimsuit No.1 Appearance Stone -->
 		<bodyPart>chest</bodyPart>
@@ -3667,4 +3764,143 @@
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
 	</appearance_stone>	
+	
+	<appearance_stone id="46189" targetType="ARMOR" type="FIXED" visualId="46192" raceNot="ERTHEIA"> <!-- Vampiric Style Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46190" targetType="ARMOR" type="FIXED" visualId="46192" lifeTime="30days"> <!-- Vampiric Style Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+
+	<appearance_stone id="46278" targetType="ACCESSORY" type="FIXED" visualId="46192" raceNot="ERTHEIA"> <!-- Vampiric Style Appearance Stone -->
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46279" targetType="ACCESSORY" type="FIXED" visualId="46261"> <!-- Ninja Hair Accessory Appearance Stone -->
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="46280" targetType="ACCESSORY" type="FIXED" visualId="46262"> <!-- Metal Suit Hair Accessory Appearance Stone -->
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<appearance_stone id="47591" targetType="ALL" type="FIXED" race="ERTHEIA"> <!-- Cat Fighter Appearance Stone - Ertheia Only -->
+		<visual id="39717" weaponType="DUALFIST"/>
+	</appearance_stone>
+	<appearance_stone id="47593" targetType="ALL" type="FIXED" race="ERTHEIA"> <!-- Boxing Glove Appearance Stone -->
+		<visual id="39718" weaponType="DUALFIST"/>
+	</appearance_stone>
+	<appearance_stone id="47592" targetType="ALL" type="FIXED"> <!-- Warm Bear Paws Appearance Stone -->
+		<visual id="47600" weaponType="DUALFIST"/>
+	</appearance_stone>
+	<appearance_stone id="47594" targetType="ALL" type="FIXED"> <!-- Cupid's Arrow Appearance Stone -->
+		<visual id="47597" weaponType="BOW"/>
+	</appearance_stone>
+	<appearance_stone id="47595" targetType="ALL" type="FIXED"> <!-- Wedding Bouquet Appearance Stone -->
+		<visual id="47598" weaponType="BLUNT" handType="ONE_HANDED"/>
+	</appearance_stone>
+	<appearance_stone id="47596" targetType="ALL" type="FIXED"> <!-- Pig Lollipop Appearance Stone -->
+		<visual id="47599" weaponType="DAGGER"/>
+	</appearance_stone>
+
+	<!-- Vampire Suit -->
+	<appearance_stone id="23979" targetType="ARMOR" type="FIXED" visualId="23883" raceNot="ERTHEIA"> <!-- Vampire Top Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="23980" targetType="ARMOR" type="FIXED" visualId="23884" bodyPart="legs" raceNot="ERTHEIA" /> <!-- Vampire Pants Appearance Stone -->
+	<appearance_stone id="23981" targetType="ARMOR" type="FIXED" visualId="23885" bodyPart="gloves" raceNot="ERTHEIA" /> <!-- Vampire Gloves Appearance Stone -->
+	<appearance_stone id="23982" targetType="ARMOR" type="FIXED" visualId="23886" bodyPart="feet" raceNot="ERTHEIA" /> <!-- Vampire Shoes Appearance Stone -->
+	<appearance_stone id="23983" targetType="ACCESSORY" type="FIXED" visualId="23887" raceNot="ERTHEIA"> <!-- Vampire Hair Accessory Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<!-- Vampire Suit 30days -->
+	<appearance_stone id="26383" targetType="ARMOR" type="FIXED" visualId="23883" raceNot="ERTHEIA" lifeTime="30days"> <!-- Vampire Top Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="26384" targetType="ARMOR" type="FIXED" visualId="23884" bodyPart="legs" raceNot="ERTHEIA"  lifeTime="30days"/> <!-- Vampire Pants Appearance Stone -->
+	<appearance_stone id="26385" targetType="ARMOR" type="FIXED" visualId="23885" bodyPart="gloves" raceNot="ERTHEIA"  lifeTime="30days"/> <!-- Vampire Gloves Appearance Stone -->
+	<appearance_stone id="26386" targetType="ARMOR" type="FIXED" visualId="23886" bodyPart="feet" raceNot="ERTHEIA"  lifeTime="30days"/> <!-- Vampire Shoes Appearance Stone -->
+	<appearance_stone id="26387" targetType="ACCESSORY" type="FIXED" visualId="23887" raceNot="ERTHEIA" lifeTime="30days"> <!-- Vampire Hair Accessory Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<appearance_stone id="26388" targetType="ARMOR" type="FIXED" visualId="23881" raceNot="ERTHEIA" lifeTime="30days"> <!-- Anakim Outfit Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+
+	<!-- Metal Suit 30days -->
+	<appearance_stone id="26362" targetType="ARMOR" type="FIXED" visualId="23448" lifeTime="30days"> <!-- Metal Top Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="26363" targetType="ARMOR" type="FIXED" visualId="23449" bodyPart="legs" lifeTime="30days"/> <!-- Metal Pants Appearance Stone -->
+	<appearance_stone id="26364" targetType="ARMOR" type="FIXED" visualId="23450" bodyPart="gloves" lifeTime="30days"/> <!-- Metal Gloves Appearance Stone -->
+	<appearance_stone id="26365" targetType="ARMOR" type="FIXED" visualId="23451" bodyPart="feet" lifeTime="30days"/> <!-- Metal Shoes Appearance Stone -->
+	<appearance_stone id="26361" targetType="ACCESSORY" type="FIXED" visualId="23452" lifeTime="30days"> <!-- Metal Hair Accessory Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<!-- Ninja Suit 30days -->
+	<appearance_stone id="26367" targetType="ARMOR" type="FIXED" visualId="23554" lifeTime="30days"> <!-- Ninja Top Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="26368" targetType="ARMOR" type="FIXED" visualId="23555" bodyPart="legs" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Ninja Pants Appearance Stone -->
+	<appearance_stone id="26369" targetType="ARMOR" type="FIXED" visualId="23556" bodyPart="gloves" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Ninja Gloves Appearance Stone -->
+	<appearance_stone id="26370" targetType="ARMOR" type="FIXED" visualId="23557" bodyPart="feet" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Ninja Shoes Appearance Stone -->
+	<appearance_stone id="26366" targetType="ACCESSORY" type="FIXED" visualId="23558" raceNot="ERTHEIA" lifeTime="30days"> <!-- Ninja Hair Accessory Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<!-- Tribal Warrior 30days -->
+	<appearance_stone id="26372" targetType="ARMOR" type="FIXED" visualId="23184" lifeTime="30days"> <!-- Ninja Top Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="26373" targetType="ARMOR" type="FIXED" visualId="23185" bodyPart="legs" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Ninja Pants Appearance Stone -->
+	<appearance_stone id="26374" targetType="ARMOR" type="FIXED" visualId="23186" bodyPart="gloves" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Ninja Gloves Appearance Stone -->
+	<appearance_stone id="26375" targetType="ARMOR" type="FIXED" visualId="23187" bodyPart="feet" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Ninja Shoes Appearance Stone -->
+	<appearance_stone id="26371" targetType="ACCESSORY" type="FIXED" visualId="23188" raceNot="ERTHEIA" lifeTime="30days"> <!-- Ninja Hair Accessory Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<!-- Military Suit 30days -->
+	<appearance_stone id="26377" targetType="ARMOR" type="FIXED" visualId="23453" raceNot="ERTHEIA" lifeTime="30days"> <!-- Military Top Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="26378" targetType="ARMOR" type="FIXED" visualId="23454" bodyPart="legs" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Military Pants Appearance Stone -->
+	<appearance_stone id="26379" targetType="ARMOR" type="FIXED" visualId="23455" bodyPart="gloves" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Military Gloves Appearance Stone -->
+	<appearance_stone id="26380" targetType="ARMOR" type="FIXED" visualId="23456" bodyPart="feet" raceNot="ERTHEIA" lifeTime="30days" /> <!-- Military Shoes Appearance Stone -->
+	<appearance_stone id="26376" targetType="ACCESSORY" type="FIXED" visualId="23457" raceNot="ERTHEIA" lifeTime="30days"> <!-- Military Hair Accessory Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
+	<!-- Samurai Outfit 30days -->
+	<appearance_stone id="26382" targetType="ARMOR" type="FIXED" visualId="23879" lifeTime="30days"> <!-- Samurai Outfit Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
+	<appearance_stone id="26381" targetType="ACCESSORY" type="FIXED" visualId="23877" lifeTime="30days"> <!-- Samurai Hair Accessory Appearance Stone -->
+		<bodyPart>hair</bodyPart>
+		<bodyPart>hair2</bodyPart>
+		<bodyPart>hairall</bodyPart>
+	</appearance_stone>
+
 </list>

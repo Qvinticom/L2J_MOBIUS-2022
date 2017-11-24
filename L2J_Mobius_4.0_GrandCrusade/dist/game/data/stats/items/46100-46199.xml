@@ -65,145 +65,420 @@
 	<item id="46108" name="Drake Maul Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
-		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18404" level="1" /> <!-- Drake Maul Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46109" name="Freya's Staff Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
-		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18405" level="1" /> <!-- Freya's Staff Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46110" name="Spezion's Claw Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
-		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18406" level="1" /> <!-- Spezion's Claw Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46111" name="Maliss Stormer Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
-		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18407" level="1" /> <!-- Maliss Stormer Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46112" name="Steregos' Dagger Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
-		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18408" level="1" /> <!-- Steregos' Dagger Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46113" name="Ron's Dual Blunt Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
-		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18409" level="1" /> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46114" name="Drake Maul Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul's. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18420" level="1" /> <!-- Drake Maul Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46115" name="Freya's Staff Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18421" level="1" /> <!-- Freya's Staff Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46116" name="Spezion's Claw Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18422" level="1" /> <!-- Spezion's Claw Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46117" name="Maliss Stormer Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18423" level="1" /> <!-- Maliss Stormer Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46118" name="Steregos' Dagger Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18424" level="1" /> <!-- Steregos' Dagger Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46119" name="Ron's Dual Blunt Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18425" level="1" /> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46120" name="Little Girls' Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18410" level="1" /> <!-- Little Girls' Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46121" name="Little Boy's Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Male only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18411" level="1" /> <!-- Little Boy's Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46122" name="Little Girls' Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. Can be used only on hair accessories that take up 2 slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18412" level="1" /> <!-- Little Girls' Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46123" name="Little Boy's Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. Can be used only on hair accessories that take up 2 slots. Male only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18413" level="1" /> <!-- Little Boy's Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46124" name="Uniform Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18414" level="1" /> <!-- Uniform Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46125" name="Afro - Gold Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18415" level="1" /> <!-- Afro - Gold Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46126" name="Afro - Pink Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18416" level="1" /> <!-- Afro - Pink Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46127" name="Uniform Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18417" level="1" /> <!-- Uniform Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46128" name="Afro - Gold Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18418" level="1" /> <!-- Afro - Gold Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46129" name="Afro - Pink Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18419" level="1" /> <!-- Afro - Pink Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46130" name="Spirit Evil Thought Piece" type="EtcItem">
 		<!-- A piece of El Floato's evil thoughts. Use it to open the door to get to Harpe in the Garden of Spirits. -->
@@ -962,19 +1237,40 @@
 	<item id="46189" name="Vampiric Style Appearance Stone" type="EtcItem">
 		<!-- Changes the appearace of your armor into that of a Vampiric Style. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18440" level="1" /> <!-- Vampiric Style Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46190" name="Vampiric Style Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of your armor into that of a Vampiric Style. 30-day. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18441" level="1" /> <!-- Vampiric Style Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46191" name="Vampiric Style Appearance Stone Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Vampiric Style Appearance Stone (30-day) or a Vampiric Style Appearance Stone. -->

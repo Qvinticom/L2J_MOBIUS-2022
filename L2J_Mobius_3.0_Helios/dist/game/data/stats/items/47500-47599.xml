@@ -1002,38 +1002,116 @@
 	<item id="47591" name="Cat Fighter Appearance Stone - Ertheia Only" type="EtcItem">
 		<!-- An appearance stone that changes the appearance of your fist weapons into that of a Cat Fighter. <Caution> Items whose appearance has been changed can be equipped on by Ertheia. Remember this when extracting appearances. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18683" level="1" /> <!-- Cat Fighter Appearance Stone - Ertheia Only -->
+		</skills>
 	</item>
 	<item id="47592" name="Warm Bear Paws Appearance Stone" type="EtcItem">
 		<!-- An appearance stone that changes the appearance of your fist weapons in to that of Warm Bear Paws. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18684" level="1" /> <!-- Warm Bear Paws Appearance Stone -->
+		</skills>
 	</item>
 	<item id="47593" name="Boxing Glove Appearance Stone - Ertheia Only" type="EtcItem">
 		<!-- An appearance stone that changes the appearance of your fist weapons into that of Boxing Gloves. <Caution> Items whose appearance has been changed can be equipped on by Ertheia. Remember this when extracting appearances. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18685" level="1" /> <!-- Boxing Glove Appearance Stone -->
+		</skills>
 	</item>
 	<item id="47594" name="Cupid's Arrow Appearance Stone" type="EtcItem">
 		<!-- An appearance stone that changes the appearance of your bow into Cupid's Bow. -->
 		<set name="icon" val="icon.shape_shifting_bow_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18686" level="1" /> <!-- Cupid's Arrow Appearance Stone -->
+		</skills>
 	</item>
 	<item id="47595" name="Wedding Bouquet Appearance Stone" type="EtcItem">
 		<!-- An appearance stone that changes the appearance of your one-handed Blunt Weapon into that of a Wedding Bouquet. -->
 		<set name="icon" val="icon.shape_shifting_blunt_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18687" level="1" /> <!-- Wedding Bouquet Appearance Stone -->
+		</skills>
 	</item>
 	<item id="47596" name="Pig Lollipop Appearance Stone" type="EtcItem">
 		<!-- An appearance stone that changes the appearance of your one-handed Dagger into that of a Pig Lollipop. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18688" level="1" /> <!-- Pig Lollipop Appearance Stone -->
+		</skills>
 	</item>
 	<item id="47597" name="Wedding Bouquet" type="Weapon">
 		<set name="icon" val="BranchSys2.icon.br_wedding_bouquet_i00" />

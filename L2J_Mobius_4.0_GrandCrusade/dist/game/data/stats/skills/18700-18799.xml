@@ -206,9 +206,15 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18710" toLevel="1" name="Formal Wear Appearance Stone">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18711" toLevel="1" name="Blessing of Twilight">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

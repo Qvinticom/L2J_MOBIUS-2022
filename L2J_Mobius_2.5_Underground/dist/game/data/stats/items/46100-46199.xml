@@ -6,7 +6,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -20,7 +19,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -31,216 +29,462 @@
 	<item id="46102" name="Zaken's Treasure Chest" type="EtcItem">
 		<!-- Zaken's treasure chest. Double-click to get an item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46103" name="Leona Blackbird's Treasure Chest" type="EtcItem">
 		<!-- Leona Blackbird's treasure chest. Double-click to get an item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46104" name="Beora's Treasure Chest" type="EtcItem">
 		<!-- Beora's treasure chest. Double-click to get an item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46105" name="Gladiator's Treasure Chest" type="EtcItem">
 		<!-- Gladiator's treasure chest. Double-click to get an item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46106" name="Raymond's Treasure Chest" type="EtcItem">
 		<!-- Raymond's treasure chest. Double-click to get an item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46107" name="Turek Orc's Treasure Chest" type="EtcItem">
 		<!-- Turek Orc's treasure chest. Double-click to get an item. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46108" name="Drake Maul Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18404" level="1" /> <!-- Drake Maul Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46109" name="Freya's Staff Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18405" level="1" /> <!-- Freya's Staff Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46110" name="Spezion's Claw Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18406" level="1" /> <!-- Spezion's Claw Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46111" name="Maliss Stormer Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18407" level="1" /> <!-- Maliss Stormer Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46112" name="Steregos' Dagger Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18408" level="1" /> <!-- Steregos' Dagger Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46113" name="Ron's Dual Blunt Weapon Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18409" level="1" /> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46114" name="Drake Maul Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt into that of Drake Maul's. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_blunt" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18420" level="1" /> <!-- Drake Maul Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46115" name="Freya's Staff Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt into that of Freya's Staff. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18421" level="1" /> <!-- Freya's Staff Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46116" name="Spezion's Claw Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed fist weapon into that of Spezion's Claw. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18422" level="1" /> <!-- Spezion's Claw Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46117" name="Maliss Stormer Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a spear into that of a Maliss Stormer. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_pole" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18423" level="1" /> <!-- Maliss Stormer Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46118" name="Steregos' Dagger Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a one handed dagger into that of Steregos' Dagger. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dagger" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18424" level="1" /> <!-- Steregos' Dagger Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46119" name="Ron's Dual Blunt Weapon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt into that of Ron's Dual Blunt Weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualblunt" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18425" level="1" /> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46120" name="Little Girls' Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18410" level="1" /> <!-- Little Girls' Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46121" name="Little Boy's Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. 30-day. Can be used only on hair accessories that take up 2 slots. Male only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18411" level="1" /> <!-- Little Boy's Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46122" name="Little Girls' Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Girl's Hat. Can be used only on hair accessories that take up 2 slots. Female only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18412" level="1" /> <!-- Little Girls' Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46123" name="Little Boy's Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Little Boy's Hat. Can be used only on hair accessories that take up 2 slots. Male only. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18413" level="1" /> <!-- Little Boy's Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46124" name="Uniform Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18414" level="1" /> <!-- Uniform Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46125" name="Afro - Gold Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18415" level="1" /> <!-- Afro - Gold Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46126" name="Afro - Pink Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. 30-day. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="time" val="43200" />
+		<skills>
+			<skill id="18416" level="1" /> <!-- Afro - Pink Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46127" name="Uniform Hat Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Uniform Hat. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18417" level="1" /> <!-- Uniform Hat Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46128" name="Afro - Gold Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Gold Afro. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18418" level="1" /> <!-- Afro - Gold Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46129" name="Afro - Pink Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory into that of a Pink Afro. Can be used only on hair accessories that take up 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18419" level="1" /> <!-- Afro - Pink Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46130" name="Spirit Evil Thought Piece" type="EtcItem">
 		<!-- A piece of El Floato's evil thoughts. Use it to open the door to get to Harpe in the Garden of Spirits. -->
 		<set name="icon" val="icon.etc_ertheia_prophecy_device_piece" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -253,7 +497,6 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="D" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="bodypart" val="lrhand" />
@@ -271,7 +514,6 @@
 		<!-- Seal that proves that one is a member of the Blackbird Clan. The seal proves that one is a member of the clan or is someone trusted by the clan. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -286,7 +528,6 @@
 		<set name="icon" val="icon.etc_potion_yellow_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -300,7 +541,6 @@
 		<!-- Glenkinchie's report to Elikia. It says stuff about the Embryo. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -314,7 +554,6 @@
 		<!-- Hurak's report to Elikia. It says stuff about the Embryo. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -328,7 +567,6 @@
 		<!-- Laffian's report to Elikia. It says stuff about the Embryo. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -342,7 +580,6 @@
 		<!-- Sherry's report to Elikia. It says stuff about the Embryo. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -357,7 +594,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -372,7 +608,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -387,7 +622,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -402,7 +636,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -417,7 +650,6 @@
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -431,7 +663,6 @@
 		<!-- Tools to repair the stronghold. Take it to the Aden Stronghold. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -445,7 +676,6 @@
 		<!-- A piece of the armor that Kelbim was wearing. Kaysia needs it in order to find out what the Embryo are using the Atelia for. Take it to Kaysia in the Town of Oren. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -459,7 +689,6 @@
 		<!-- Powder from the Giant Atelia that turned black. It will be useful in finding out how it's different from the Atelia of the Wind Spirit Realm. Take it to Kaysia in the Town of Oren. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -474,7 +703,6 @@
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -489,7 +717,6 @@
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -504,7 +731,6 @@
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -519,7 +745,6 @@
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -533,7 +758,6 @@
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 11~+ 20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -541,7 +765,6 @@
 		<!-- Superior Giant's Codex. Rare item needed for enchanting blessed skills between + 11~+ 20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -549,7 +772,6 @@
 		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between + 11~+ 20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -559,7 +781,6 @@
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -572,7 +793,6 @@
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between + 21~+ 30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -580,7 +800,6 @@
 		<!-- Superior Giant's Codex. Rare item needed for enchanting blessed skills between + 21~+ 30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -588,7 +807,6 @@
 		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between + 21~+ 30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -598,7 +816,6 @@
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -617,7 +834,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<set name="is_freightable" val="false" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -630,7 +846,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -645,7 +860,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -660,7 +874,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -675,7 +888,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -690,7 +902,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -705,7 +916,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -718,7 +928,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -730,7 +939,6 @@
 		<!-- A letter from the first stronghold's Barton to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -743,7 +951,6 @@
 		<!-- A letter from the second stronghold's Hayuk to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -756,7 +963,6 @@
 		<!-- A letter from the third stronghold's Elise to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -769,7 +975,6 @@
 		<!-- A letter from the fourth stronghold's Elliyah to the Aden Vanguard Captain Adolph. Take it to Adolph in the Blackbird Campsite. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -783,7 +988,6 @@
 		<set name="icon" val="BranchSys.br_bright_gold_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -796,7 +1000,6 @@
 		<set name="icon" val="BranchSys.br_gold_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -809,7 +1012,6 @@
 		<set name="icon" val="BranchSys.br_silver_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -825,10 +1027,8 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -844,10 +1044,8 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -863,10 +1061,8 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -882,10 +1078,8 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
@@ -896,7 +1090,6 @@
 	<item id="46177" name="Soul Bottle Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 1 bottle containing Antharas, Valakas, Queen Ant, Orfen, Frintezza, or Baium's soul. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -906,7 +1099,6 @@
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -920,7 +1112,6 @@
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
@@ -929,7 +1120,6 @@
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
@@ -938,7 +1128,6 @@
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
@@ -947,7 +1136,6 @@
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
@@ -957,7 +1145,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -971,7 +1158,6 @@
 		<set name="weight" val="80" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -986,7 +1172,6 @@
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
@@ -1006,7 +1191,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1028,7 +1212,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1042,7 +1225,6 @@
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1055,27 +1237,45 @@
 	<item id="46189" name="Vampiric Style Appearance Stone" type="EtcItem">
 		<!-- Changes the appearace of your armor into that of a Vampiric Style. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18440" level="1" /> <!-- Vampiric Style Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46190" name="Vampiric Style Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of your armor into that of a Vampiric Style. 30-day. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Vampiric Style. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
-		<set name="time" val="43200" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18441" level="1" /> <!-- Vampiric Style Appearance Stone -->
+		</skills>
 	</item>
 	<item id="46191" name="Vampiric Style Appearance Stone Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Vampiric Style Appearance Stone (30-day) or a Vampiric Style Appearance Stone. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1083,7 +1283,6 @@
 	<item id="46192" name="Vampiric Outfit" type="Armor">
 		<!-- Vampiric outfit. -->
 		<set name="icon" val="BranchSys3.iconArmar.g_co_vampiric_u_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -1095,7 +1294,6 @@
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1122,7 +1320,6 @@
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1145,7 +1342,6 @@
 	<item id="46195" name="Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Double-click to get 1 Shiny Elemental Shirt and 10 Elemental Shirt Enchant Scrolls. -->
 		<set name="icon" val="icon.ainharard_bac" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1158,7 +1354,6 @@
 	<item id="46196" name="Physical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to get 1 Physical Reflect Shirt and 10 Elemental Shirt Enchant Scrolls. -->
 		<set name="icon" val="icon.reflect_attack_bac" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1171,7 +1366,6 @@
 	<item id="46197" name="Magical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to get 1 Magical Reflect Shirt and 10 Elemental Shirt Enchant Scrolls. -->
 		<set name="icon" val="icon.reflect_magic_bac" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1185,7 +1379,6 @@
 		<!-- A shiny gold medal. Sell it at the shop for a lot of money. -->
 		<set name="icon" val="icon.etc_event_medal_i00" />
 		<set name="price" val="2000000000" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1195,7 +1388,6 @@
 		<!-- Changes the appearance of a top armor or a one-piece into that of a Halloween outfit. It changes everything, making the appearance of all armor into that of the Halloween outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="10080" />
