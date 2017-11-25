@@ -1363,7 +1363,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<targetType>OTHERS</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<conditions>
 			<condition name="OpCallPc" />
 			<condition name="TargetMyParty">
@@ -1371,10 +1372,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CallPc">
-				<itemId>8615</itemId>
-				<itemCount>1</itemCount>
-			</effect>
+			<effect name="CallPc" />
 		</effects>
 	</skill>
 	<skill id="11266" toLevel="4" name="Summon Death Gate">

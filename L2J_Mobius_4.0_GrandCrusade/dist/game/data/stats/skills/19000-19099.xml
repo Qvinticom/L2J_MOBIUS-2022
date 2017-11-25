@@ -191,17 +191,20 @@
 		<magicLvl>85</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>1800000</reuseDelay>
-		<targetType>OTHERS</targetType>
-		<affectScope>SINGLE</affectScope>
 		<famePointConsume>900</famePointConsume>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<targetType>OTHERS</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<conditions>
 			<condition name="OpCallPc" />
-			<condition name="TargetMyPledge" />
+			<condition name="TargetMyPledge">
+				<includeMe>false</includeMe>
+			</condition>
 		</conditions>
         <effects>
-            <effect name="CallTargetParty" />
+			<effect name="CallPc" />
         </effects>
 	</skill>
 	<skill id="19008" toLevel="1" name="Clan Guardian">
