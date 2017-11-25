@@ -852,21 +852,21 @@ public class L2Npc extends L2Character
 	/**
 	 * @return the Exp Reward of this L2Npc (modified by RATE_XP).
 	 */
-	public long getExpReward()
+	public double getExpReward()
 	{
 		final Instance instance = getInstanceWorld();
 		final float rateMul = instance != null ? instance.getExpRate() : Config.RATE_XP;
-		return (long) (getTemplate().getExp() * rateMul);
+		return getTemplate().getExp() * rateMul;
 	}
 	
 	/**
 	 * @return the SP Reward of this L2Npc (modified by RATE_SP).
 	 */
-	public int getSpReward()
+	public double getSpReward()
 	{
 		final Instance instance = getInstanceWorld();
 		final float rateMul = instance != null ? instance.getSPRate() : Config.RATE_SP;
-		return (int) (getTemplate().getSP() * rateMul);
+		return getTemplate().getSP() * rateMul;
 	}
 	
 	/**
