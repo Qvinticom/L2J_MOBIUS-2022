@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
@@ -414,6 +415,12 @@ public class AdminSpawn implements IAdminCommandHandler
 			template1 = NpcData.getInstance().getTemplateByName(monsterId);
 		}
 		
+		if (!Config.FAKE_PLAYERS_ENABLED && template1.isFakePlayer())
+		{
+			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
+			return;
+		}
+		
 		try
 		{
 			final L2Spawn spawn = new L2Spawn(template1);
@@ -455,6 +462,12 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		
 		final L2NpcTemplate template1 = NpcData.getInstance().getTemplate(id);
+		
+		if (!Config.FAKE_PLAYERS_ENABLED && template1.isFakePlayer())
+		{
+			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
+			return;
+		}
 		
 		try
 		{
