@@ -10,4 +10,5 @@ CREATE TABLE IF NOT EXISTS `announcements` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO announcements (`type`, `author`, `content`) VALUES 
-(0, 'Mobius', 'Server powered by L2J-Mobius project.');
+(0, 'L2jMobius', 'Thanks for using L2jMobius!'),
+(0, 'L2jMobius', '[=http://www.l2jmobius.com/=]');
