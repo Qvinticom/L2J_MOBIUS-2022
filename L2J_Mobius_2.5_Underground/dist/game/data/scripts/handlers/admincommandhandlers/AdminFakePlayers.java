@@ -65,6 +65,7 @@ public class AdminFakePlayers implements IAdminCommandHandler
 				message += (words[i] + " ");
 			}
 			FakePlayerChatManager.getInstance().sendChat(player, fpcName, message);
+			activeChar.sendMessage("Your message has been sent.");
 		}
 		return true;
 	}
