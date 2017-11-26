@@ -214,7 +214,7 @@ public class PcStatus extends PlayableStatus
 						}
 					}
 					
-					if (attacker.isPlayable() && (caster.getCurrentCp() > 0))
+					if ((attacker.isPlayable() || attacker.isFakePlayer()) && (caster.getCurrentCp() > 0))
 					{
 						if (caster.getCurrentCp() > transferDmg)
 						{
@@ -236,7 +236,7 @@ public class PcStatus extends PlayableStatus
 				}
 			}
 			
-			if (!ignoreCP && attacker.isPlayable())
+			if (!ignoreCP && (attacker.isPlayable() || attacker.isFakePlayer()))
 			{
 				if (getCurrentCp() >= value)
 				{
@@ -255,7 +255,7 @@ public class PcStatus extends PlayableStatus
 				// Send a System Message to the L2PcInstance
 				SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
 				smsg.addString(getActiveChar().getName());
-				smsg.addCharName(attacker);
+				smsg.addString(attacker.getName());
 				smsg.addInt(fullValue);
 				getActiveChar().sendPacket(smsg);
 				

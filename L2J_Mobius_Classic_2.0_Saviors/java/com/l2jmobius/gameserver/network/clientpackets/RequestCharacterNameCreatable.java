@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import com.l2jmobius.gameserver.util.Util;
@@ -54,6 +55,10 @@ public class RequestCharacterNameCreatable implements IClientIncomingPacket
 			result = INVALID_NAME;
 		}
 		else if (charId > 0)
+		{
+			result = NAME_ALREADY_EXISTS;
+		}
+		else if (FakePlayerData.getInstance().getProperName(_name) != null)
 		{
 			result = NAME_ALREADY_EXISTS;
 		}

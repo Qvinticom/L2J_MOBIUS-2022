@@ -69,6 +69,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAggr
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -275,7 +276,7 @@ public class L2Attackable extends L2Npc
 	
 	public synchronized boolean getMustRewardExpSP()
 	{
-		return _mustGiveExpSp;
+		return _mustGiveExpSp && !isFakePlayer();
 	}
 	
 	/**
@@ -954,6 +955,39 @@ public class L2Attackable extends L2Npc
 		// Don't drop anything if the last attacker or owner isn't L2PcInstance
 		if (player == null)
 		{
+			// unless its a fake player and they can drop items
+			if (mainDamageDealer.isFakePlayer() && Config.FAKE_PLAYER_CAN_DROP_ITEMS)
+			{
+				final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropType.DROP, this, mainDamageDealer);
+				if (deathItems != null)
+				{
+					for (ItemHolder drop : deathItems)
+					{
+						final L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
+						// Check if the autoLoot mode is active
+						if (isFlying() || (!item.hasExImmediateEffect() && ((!isRaid() && Config.AUTO_LOOT) || (isRaid() && Config.AUTO_LOOT_RAIDS))))
+						{
+							// do nothing
+						}
+						else if (Config.AUTO_LOOT_HERBS && item.hasExImmediateEffect())
+						{
+							for (SkillHolder skillHolder : item.getAllSkills())
+							{
+								SkillCaster.triggerCast(mainDamageDealer, null, skillHolder.getSkill(), null, false);
+							}
+							mainDamageDealer.broadcastInfo(); // ? check if this is necessary
+						}
+						else
+						{
+							final L2ItemInstance droppedItem = dropItem(mainDamageDealer, drop); // drop the item on the ground
+							if (Config.FAKE_PLAYER_CAN_PICKUP)
+							{
+								mainDamageDealer.getFakePlayerDrops().add(droppedItem);
+							}
+						}
+					}
+				}
+			}
 			return;
 		}
 		
@@ -1041,7 +1075,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public void doEventDrop(L2Character lastAttacker)
 	{
-		if (lastAttacker == null)
+		if ((lastAttacker == null) || isFakePlayer())
 		{
 			return;
 		}
@@ -1364,6 +1398,15 @@ public class L2Attackable extends L2Npc
 		// Clear Harvester reward
 		_harvestItem.set(null);
 		_sweepItems.set(null);
+		
+		// fake players
+		if (isFakePlayer())
+		{
+			getFakePlayerDrops().clear(); // Clear existing fake player drops
+			setReputation(0); // reset reputation
+			setScriptValue(0); // remove pvp flag
+			setRunning(); // don't walk
+		}
 		
 		// Clear mod Seeded stat
 		_seeded = false;

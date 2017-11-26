@@ -18,6 +18,8 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -48,17 +50,49 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		return true;
 	}
 	
+	private void scheduleDeny(L2PcInstance player)
+	{
+		if (player != null)
+		{
+			if (player.getParty() == null)
+			{
+				player.sendPacket(SystemMessageId.THE_PARTY_HAS_DISPERSED);
+			}
+			else
+			{
+				player.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+			}
+			player.onTransactionResponse();
+		}
+	}
+	
 	@Override
 	public void run(L2GameClient client)
 	{
 		final L2PcInstance requestor = client.getActiveChar();
-		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
-		
 		if (requestor == null)
 		{
 			return;
 		}
 		
+		if (FakePlayerData.getInstance().isTalkable(_name))
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
+			sm.addString(FakePlayerData.getInstance().getProperName(_name));
+			requestor.sendPacket(sm);
+			if (!requestor.isProcessingRequest())
+			{
+				ThreadPoolManager.schedule(() -> scheduleDeny(requestor), 10000);
+				requestor.blockRequest();
+			}
+			else
+			{
+				requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
+			}
+			return;
+		}
+		
+		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
 		if (target == null)
 		{
 			requestor.sendPacket(SystemMessageId.YOU_MUST_FIRST_SELECT_A_USER_TO_INVITE_TO_YOUR_PARTY);

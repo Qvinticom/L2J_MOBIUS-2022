@@ -250,6 +250,11 @@ public class SpawnsData implements IGameXmlReader
 			return;
 		}
 		
+		if (!Config.FAKE_PLAYERS_ENABLED && template.isFakePlayer())
+		{
+			return;
+		}
+		
 		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if ("parameters".equalsIgnoreCase(d.getNodeName()))

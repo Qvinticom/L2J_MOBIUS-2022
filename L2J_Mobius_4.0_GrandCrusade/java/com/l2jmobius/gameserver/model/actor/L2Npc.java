@@ -35,6 +35,7 @@ import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.Team;
+import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.handler.BypassHandler;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -79,6 +80,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
+import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.variables.NpcVariables;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -86,6 +88,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowChannelingEffect;
+import com.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -93,6 +96,8 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcInfoAbnormalVisualEffec
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import com.l2jmobius.gameserver.util.Broadcast;
 
@@ -125,6 +130,7 @@ public class L2Npc extends L2Character
 	private boolean _isRandomAnimationEnabled = true;
 	private boolean _isRandomWalkingEnabled = true;
 	private boolean _isTalkable = getTemplate().isTalkable();
+	private final boolean _isFakePlayer = getTemplate().isFakePlayer();
 	
 	protected RandomAnimationTask _rAniTask;
 	private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
@@ -364,7 +370,11 @@ public class L2Npc extends L2Character
 				return;
 			}
 			
-			if (getRunSpeed() == 0)
+			if (isFakePlayer())
+			{
+				player.sendPacket(new FakePlayerInfo(this));
+			}
+			else if (getRunSpeed() == 0)
 			{
 				player.sendPacket(new ServerObjectInfo(this, player));
 			}
@@ -901,6 +911,78 @@ public class L2Npc extends L2Character
 		final L2Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
 		_killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
 		
+		if (isFakePlayer() && (killer != null) && killer.isPlayable())
+		{
+			final L2PcInstance player = killer.getActingPlayer();
+			if (isScriptValue(0) && (getReputation() >= 0))
+			{
+				if (Config.FAKE_PLAYER_KILL_KARMA)
+				{
+					player.setReputation(player.getReputation() - Formulas.calculateKarmaGain(player.getPkKills(), killer.isSummon()));
+					player.setPkKills(player.getPkKills() + 1);
+					final UserInfo ui = new UserInfo(player, false);
+					ui.addComponentType(UserInfoType.SOCIAL);
+					player.sendPacket(ui);
+					player.checkItemRestriction();
+					// pk item rewards
+					if (Config.REWARD_PK_ITEM)
+					{
+						if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
+							!(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP)))
+						{
+							player.addItem("PK Item Reward", Config.REWARD_PK_ITEM_ID, Config.REWARD_PK_ITEM_AMOUNT, this, Config.REWARD_PK_ITEM_MESSAGE);
+						}
+					}
+					// announce pk
+					if (Config.ANNOUNCE_PK_PVP && !player.isGM())
+					{
+						final String msg = Config.ANNOUNCE_PK_MSG.replace("$killer", player.getName()).replace("$target", getName());
+						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
+						{
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S13);
+							sm.addString(msg);
+							Broadcast.toAllOnlinePlayers(sm);
+						}
+						else
+						{
+							Broadcast.toAllOnlinePlayers(msg, false);
+						}
+					}
+				}
+			}
+			else if (Config.FAKE_PLAYER_KILL_PVP)
+			{
+				player.setPvpKills(player.getPvpKills() + 1);
+				final UserInfo ui = new UserInfo(player, false);
+				ui.addComponentType(UserInfoType.SOCIAL);
+				player.sendPacket(ui);
+				// pvp item rewards
+				if (Config.REWARD_PVP_ITEM)
+				{
+					if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
+						!(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP)))
+					{
+						player.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
+					}
+				}
+				// announce pvp
+				if (Config.ANNOUNCE_PK_PVP && !player.isGM())
+				{
+					final String msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", player.getName()).replace("$target", getName());
+					if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
+					{
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S13);
+						sm.addString(msg);
+						Broadcast.toAllOnlinePlayers(sm);
+					}
+					else
+					{
+						Broadcast.toAllOnlinePlayers(msg, false);
+					}
+				}
+			}
+		}
+		
 		DecayTaskManager.getInstance().add(this);
 		
 		final L2Spawn spawn = getSpawn();
@@ -1210,7 +1292,11 @@ public class L2Npc extends L2Character
 				activeChar.sendMessage("Added NPC: " + getName());
 			}
 			
-			if (getRunSpeed() == 0)
+			if (isFakePlayer())
+			{
+				activeChar.sendPacket(new FakePlayerInfo(this));
+			}
+			else if (getRunSpeed() == 0)
 			{
 				activeChar.sendPacket(new ServerObjectInfo(this, activeChar));
 			}
@@ -1301,26 +1387,41 @@ public class L2Npc extends L2Character
 	@Override
 	public void rechargeShots(boolean physical, boolean magic, boolean fish)
 	{
-		if (physical && (_soulshotamount > 0))
+		if (isFakePlayer() && Config.FAKE_PLAYER_USE_SHOTS)
 		{
-			if (Rnd.get(100) > getTemplate().getSoulShotChance())
+			if (physical)
 			{
-				return;
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 9193, 1, 0, 0), 600);
+				chargeShot(ShotType.SOULSHOTS);
 			}
-			_soulshotamount--;
-			Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
-			chargeShot(ShotType.SOULSHOTS);
+			if (magic)
+			{
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 9195, 1, 0, 0), 600);
+				chargeShot(ShotType.SPIRITSHOTS);
+			}
 		}
-		
-		if (magic && (_spiritshotamount > 0))
+		else
 		{
-			if (Rnd.get(100) > getTemplate().getSpiritShotChance())
+			if (physical && (_soulshotamount > 0))
 			{
-				return;
+				if (Rnd.get(100) > getTemplate().getSoulShotChance())
+				{
+					return;
+				}
+				_soulshotamount--;
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
+				chargeShot(ShotType.SOULSHOTS);
 			}
-			_spiritshotamount--;
-			Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
-			chargeShot(ShotType.SPIRITSHOTS);
+			if (magic && (_spiritshotamount > 0))
+			{
+				if (Rnd.get(100) > getTemplate().getSpiritShotChance())
+				{
+					return;
+				}
+				_spiritshotamount--;
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
+				chargeShot(ShotType.SPIRITSHOTS);
+			}
 		}
 	}
 	
@@ -1435,12 +1536,12 @@ public class L2Npc extends L2Character
 	
 	/**
 	 * Drops an item.
-	 * @param player the last attacker or main damage dealer
+	 * @param character the last attacker or main damage dealer
 	 * @param itemId the item ID
 	 * @param itemCount the item count
 	 * @return the dropped item
 	 */
-	public L2ItemInstance dropItem(L2PcInstance player, int itemId, long itemCount)
+	public L2ItemInstance dropItem(L2Character character, int itemId, long itemCount)
 	{
 		L2ItemInstance item = null;
 		for (int i = 0; i < itemCount; i++)
@@ -1456,15 +1557,15 @@ public class L2Npc extends L2Character
 				return null;
 			}
 			
-			item = ItemTable.getInstance().createItem("Loot", itemId, itemCount, player, this);
+			item = ItemTable.getInstance().createItem("Loot", itemId, itemCount, character, this);
 			if (item == null)
 			{
 				return null;
 			}
 			
-			if (player != null)
+			if (character != null)
 			{
-				item.getDropProtection().protect(player);
+				item.getDropProtection().protect(character);
 			}
 			
 			item.dropMe(this, newX, newY, newZ);
@@ -1489,14 +1590,14 @@ public class L2Npc extends L2Character
 	}
 	
 	/**
-	 * Method overload for {@link L2Attackable#dropItem(L2PcInstance, int, long)}
-	 * @param player the last attacker or main damage dealer
+	 * Method overload for {@link L2Attackable#dropItem(L2Character, int, long)}
+	 * @param character the last attacker or main damage dealer
 	 * @param item the item holder
 	 * @return the dropped item
 	 */
-	public L2ItemInstance dropItem(L2PcInstance player, ItemHolder item)
+	public L2ItemInstance dropItem(L2Character character, ItemHolder item)
 	{
-		return dropItem(player, item.getId(), item.getCount());
+		return dropItem(character, item.getId(), item.getCount());
 	}
 	
 	@Override
@@ -1558,6 +1659,12 @@ public class L2Npc extends L2Character
 	public int getMinShopDistance()
 	{
 		return Config.SHOP_MIN_RANGE_FROM_NPC;
+	}
+	
+	@Override
+	public boolean isFakePlayer()
+	{
+		return _isFakePlayer;
 	}
 	
 	/**

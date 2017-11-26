@@ -32,6 +32,7 @@ import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.data.xml.impl.FishingData;
 import com.l2jmobius.gameserver.data.xml.impl.ItemCrystalizationData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
@@ -45,9 +46,12 @@ import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import com.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import com.l2jmobius.gameserver.util.Util;
@@ -299,6 +303,25 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					FishingData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fishing data.");
+					break;
+				}
+				case "fakeplayers":
+				{
+					FakePlayerData.getInstance().load();
+					for (L2Object obj : L2World.getInstance().getVisibleObjects())
+					{
+						if (obj.isFakePlayer())
+						{
+							obj.broadcastInfo();
+						}
+					}
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fake Player data.");
+					break;
+				}
+				case "fakeplayerchat":
+				{
+					FakePlayerChatManager.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fake Player Chat data.");
 					break;
 				}
 				default:

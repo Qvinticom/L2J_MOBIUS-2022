@@ -277,16 +277,16 @@ public final class L2ItemInstance extends L2Object
 	 * <BR>
 	 * <li>Do Pickup Item : PCInstance and Pet</li><BR>
 	 * <BR>
-	 * @param player Player that pick up the item
+	 * @param character Character that pick up the item
 	 */
-	public final void pickupMe(L2Character player)
+	public final void pickupMe(L2Character character)
 	{
 		assert getWorldRegion() != null;
 		
 		final L2WorldRegion oldregion = getWorldRegion();
 		
 		// Create a server->client GetItem packet to pick up the L2ItemInstance
-		player.broadcastPacket(new GetItem(this, player.getObjectId()));
+		character.broadcastPacket(new GetItem(this, character.getObjectId()));
 		
 		synchronized (this)
 		{
@@ -305,10 +305,10 @@ public final class L2ItemInstance extends L2Object
 		// Remove the L2ItemInstance from the world
 		L2World.getInstance().removeVisibleObject(this, oldregion);
 		
-		if (player.isPlayer())
+		if (character.isPlayer())
 		{
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemPickup(player.getActingPlayer(), this), getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemPickup(character.getActingPlayer(), this), getItem());
 		}
 	}
 	

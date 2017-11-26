@@ -17,12 +17,15 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * This class ...
@@ -41,6 +44,17 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 		return true;
 	}
 	
+	private void scheduleDeny(L2PcInstance player, String name)
+	{
+		if (player != null)
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DID_NOT_RESPOND_INVITATION_TO_THE_CLAN_HAS_BEEN_CANCELLED);
+			sm.addString(name);
+			player.sendPacket(sm);
+			player.onTransactionResponse();
+		}
+	}
+	
 	@Override
 	public void run(L2GameClient client)
 	{
@@ -53,6 +67,29 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 		final L2Clan clan = activeChar.getClan();
 		if (clan == null)
 		{
+			return;
+		}
+		
+		if ((activeChar.getTarget() != null) && (FakePlayerData.getInstance().isTalkable(activeChar.getTarget().getName())))
+		{
+			if (FakePlayerData.getInstance().getInfo(activeChar.getTarget().getId()).getClanId() > 0)
+			{
+				activeChar.sendPacket(SystemMessageId.THAT_PLAYER_ALREADY_BELONGS_TO_ANOTHER_CLAN);
+			}
+			else
+			{
+				if (!activeChar.isProcessingRequest())
+				{
+					ThreadPoolManager.schedule(() -> scheduleDeny(activeChar, activeChar.getTarget().getName()), 10000);
+					activeChar.blockRequest();
+				}
+				else
+				{
+					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+					msg.addString(activeChar.getTarget().getName());
+					activeChar.sendPacket(msg);
+				}
+			}
 			return;
 		}
 		

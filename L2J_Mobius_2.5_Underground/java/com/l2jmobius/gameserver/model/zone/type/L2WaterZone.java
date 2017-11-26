@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 
@@ -54,7 +55,11 @@ public class L2WaterZone extends L2ZoneType
 		{
 			L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
 			{
-				if (character.getRunSpeed() == 0)
+				if (character.isFakePlayer())
+				{
+					player.sendPacket(new FakePlayerInfo((L2Npc) character));
+				}
+				else if (character.getRunSpeed() == 0)
 				{
 					player.sendPacket(new ServerObjectInfo((L2Npc) character, player));
 				}
@@ -80,7 +85,11 @@ public class L2WaterZone extends L2ZoneType
 		{
 			L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
 			{
-				if (character.getRunSpeed() == 0)
+				if (character.isFakePlayer())
+				{
+					player.sendPacket(new FakePlayerInfo((L2Npc) character));
+				}
+				else if (character.getRunSpeed() == 0)
 				{
 					player.sendPacket(new ServerObjectInfo((L2Npc) character, player));
 				}

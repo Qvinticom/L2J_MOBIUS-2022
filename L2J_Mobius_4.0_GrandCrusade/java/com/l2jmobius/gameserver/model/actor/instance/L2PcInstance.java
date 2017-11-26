@@ -450,9 +450,6 @@ public final class L2PcInstance extends L2Playable
 	/** The Experience of the L2PcInstance before the last Death Penalty */
 	private long _expBeforeDeath;
 	
-	/** The Reputation of the L2PcInstance */
-	private int _reputation;
-	
 	/** The number of player killed during a PvP (the player killed was PvP Flagged) */
 	private int _pvpKills;
 	
@@ -2013,24 +2010,16 @@ public final class L2PcInstance extends L2Playable
 		return _expBeforeDeath;
 	}
 	
-	/**
-	 * @return the reputation of the PlayerInstance.
-	 */
-	@Override
-	public int getReputation()
-	{
-		return _reputation;
-	}
-	
 	public void setInitialReputation(int reputation)
 	{
-		_reputation = reputation;
+		super.setReputation(reputation);
 	}
 	
 	/**
 	 * Set the reputation of the PlayerInstance and send a Server->Client packet StatusUpdate (broadcast).
 	 * @param reputation
 	 */
+	@Override
 	public void setReputation(int reputation)
 	{
 		// Notify to scripts.
@@ -2056,7 +2045,9 @@ public final class L2PcInstance extends L2Playable
 				}
 			});
 		}
-		_reputation = reputation;
+		
+		super.setReputation(reputation);
+		
 		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1).addInt(getReputation()));
 		broadcastReputation();
 	}
@@ -4655,6 +4646,10 @@ public final class L2PcInstance extends L2Playable
 	{
 		super.doAttack(target);
 		setRecentFakeDeath(false);
+		if (target.isFakePlayer())
+		{
+			updatePvPStatus();
+		}
 	}
 	
 	@Override
@@ -4982,22 +4977,42 @@ public final class L2PcInstance extends L2Playable
 		if (killer != null)
 		{
 			final L2PcInstance pk = killer.getActingPlayer();
-			if (pk != null)
+			final boolean fpcKill = killer.isFakePlayer();
+			if ((pk != null) || fpcKill)
 			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
-				
-				if (L2Event.isParticipant(pk))
+				if (pk != null)
 				{
-					pk.getEventStatus().addKill(this);
+					EventDispatcher.getInstance().notifyEventAsync(new OnPlayerPvPKill(pk, this), this);
+					
+					if (L2Event.isParticipant(pk))
+					{
+						pk.getEventStatus().addKill(this);
+					}
+					
+					// pvp/pk item rewards
+					if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
+						!(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP)))
+					{
+						// pvp
+						if (Config.REWARD_PVP_ITEM && (getPvpFlag() != 0))
+						{
+							pk.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
+						}
+						// pk
+						if (Config.REWARD_PK_ITEM && (getPvpFlag() == 0))
+						{
+							pk.addItem("PK Item Reward", Config.REWARD_PK_ITEM_ID, Config.REWARD_PK_ITEM_AMOUNT, this, Config.REWARD_PK_ITEM_MESSAGE);
+						}
+					}
 				}
 				
 				// announce pvp/pk
-				if (Config.ANNOUNCE_PK_PVP && !pk.isGM())
+				if (Config.ANNOUNCE_PK_PVP && (((pk != null) && !pk.isGM()) || fpcKill))
 				{
 					String msg = "";
 					if (getPvpFlag() == 0)
 					{
-						msg = Config.ANNOUNCE_PK_MSG.replace("$killer", pk.getName()).replace("$target", getName());
+						msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
 						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
 						{
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S13);
@@ -5011,7 +5026,7 @@ public final class L2PcInstance extends L2Playable
 					}
 					else if (getPvpFlag() != 0)
 					{
-						msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", pk.getName()).replace("$target", getName());
+						msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", killer.getName()).replace("$target", getName());
 						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
 						{
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S13);
@@ -5025,20 +5040,9 @@ public final class L2PcInstance extends L2Playable
 					}
 				}
 				
-				// pvp/pk item rewards
-				if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
-					!(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP)))
+				if (fpcKill && Config.FAKE_PLAYER_KILL_KARMA && (getPvpFlag() == 0) && (getReputation() >= 0))
 				{
-					// pvp
-					if (Config.REWARD_PVP_ITEM && (getPvpFlag() != 0))
-					{
-						pk.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
-					}
-					// pk
-					if (Config.REWARD_PK_ITEM && (getPvpFlag() == 0))
-					{
-						pk.addItem("PK Item Reward", Config.REWARD_PK_ITEM_ID, Config.REWARD_PK_ITEM_AMOUNT, this, Config.REWARD_PK_ITEM_MESSAGE);
-					}
+					killer.setReputation(killer.getReputation() - 150);
 				}
 			}
 			
@@ -5629,6 +5633,14 @@ public final class L2PcInstance extends L2Playable
 	public boolean isProcessingTransaction()
 	{
 		return (getActiveRequester() != null) || (_activeTradeList != null) || (_requestExpireTime > GameTimeController.getInstance().getGameTicks());
+	}
+	
+	/**
+	 * Used by fake players to emulate proper behavior.
+	 */
+	public void blockRequest()
+	{
+		_requestExpireTime = GameTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
 	}
 	
 	/**
@@ -11568,7 +11580,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4);
 			sm.addPcName(this);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			sm.addInt(damage);
 			sm.addPopup(target.getObjectId(), getObjectId(), -damage);
 		}

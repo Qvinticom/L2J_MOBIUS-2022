@@ -18,9 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExDuelAskStart;
@@ -43,15 +47,67 @@ public final class RequestDuelStart implements IClientIncomingPacket
 		return true;
 	}
 	
+	private void scheduleDeny(L2PcInstance player, String name)
+	{
+		if (player != null)
+		{
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_DUEL);
+			sm.addString(name);
+			player.sendPacket(sm);
+			player.onTransactionResponse();
+		}
+	}
+	
 	@Override
 	public void run(L2GameClient client)
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
-		final L2PcInstance targetChar = L2World.getInstance().getPlayer(_player);
 		if (activeChar == null)
 		{
 			return;
 		}
+		
+		if (FakePlayerData.getInstance().isTalkable(_player))
+		{
+			final String name = FakePlayerData.getInstance().getProperName(_player);
+			if (activeChar.isInsideZone(ZoneId.PVP) || activeChar.isInsideZone(ZoneId.PEACE) || activeChar.isInsideZone(ZoneId.SIEGE))
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_MAKE_A_CHALLENGE_TO_A_DUEL_BECAUSE_C1_IS_CURRENTLY_IN_A_DUEL_PROHIBITED_AREA_PEACEFUL_ZONE_BATTLE_ZONE_NEAR_WATER_RESTART_PROHIBITED_AREA);
+				sm.addString(name);
+				activeChar.sendPacket(sm);
+				return;
+			}
+			boolean npcInRange = false;
+			for (L2Npc npc : L2World.getInstance().getVisibleObjects(activeChar, L2Npc.class, 250))
+			{
+				if (npc.getName().equals(name))
+				{
+					npcInRange = true;
+				}
+			}
+			if (!npcInRange)
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
+				sm.addString(name);
+				activeChar.sendPacket(sm);
+				return;
+			}
+			if (activeChar.isProcessingRequest())
+			{
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+				msg.addString(name);
+				activeChar.sendPacket(msg);
+				return;
+			}
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
+			sm.addString(name);
+			activeChar.sendPacket(sm);
+			ThreadPoolManager.schedule(() -> scheduleDeny(activeChar, name), 10000);
+			activeChar.blockRequest();
+			return;
+		}
+		
+		final L2PcInstance targetChar = L2World.getInstance().getPlayer(_player);
 		if (targetChar == null)
 		{
 			activeChar.sendPacket(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);

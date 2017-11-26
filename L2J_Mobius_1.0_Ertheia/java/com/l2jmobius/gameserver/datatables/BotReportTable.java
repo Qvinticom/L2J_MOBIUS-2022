@@ -41,6 +41,8 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -210,15 +212,14 @@ public final class BotReportTable
 	public boolean reportBot(L2PcInstance reporter)
 	{
 		final L2Object target = reporter.getTarget();
-		
 		if (target == null)
 		{
 			return false;
 		}
 		
-		final L2PcInstance bot = target.getActingPlayer();
+		final L2Character bot = ((L2Character) target);
 		
-		if ((bot == null) || (target.getObjectId() == reporter.getObjectId()))
+		if ((!bot.isPlayer() && !bot.isFakePlayer()) || (bot.isFakePlayer() && !((L2Npc) bot).getTemplate().isFakePlayerTalkable()) || (target.getObjectId() == reporter.getObjectId()))
 		{
 			return false;
 		}
@@ -229,7 +230,7 @@ public final class BotReportTable
 			return false;
 		}
 		
-		if (bot.isInOlympiadMode())
+		if (bot.isPlayer() && bot.getActingPlayer().isInOlympiadMode())
 		{
 			reporter.sendPacket(SystemMessageId.THIS_CHARACTER_CANNOT_MAKE_A_REPORT_YOU_CANNOT_MAKE_A_REPORT_WHILE_LOCATED_INSIDE_A_PEACE_ZONE_OR_A_BATTLEGROUND_WHILE_YOU_ARE_AN_OPPOSING_CLAN_MEMBER_DURING_A_CLAN_WAR_OR_WHILE_PARTICIPATING_IN_THE_OLYMPIAD);
 			return false;
@@ -241,7 +242,7 @@ public final class BotReportTable
 			return false;
 		}
 		
-		if (bot.getExp() == bot.getStat().getStartingExp())
+		if (bot.isPlayer() && (bot.getActingPlayer().getExp() == bot.getActingPlayer().getStat().getStartingExp()))
 		{
 			reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_WHO_HAS_NOT_ACQUIRED_ANY_XP_AFTER_CONNECTING);
 			return false;
@@ -320,15 +321,18 @@ public final class BotReportTable
 		}
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_REPORTED_AS_A_BOT);
-		sm.addCharName(bot);
+		sm.addString(bot.getName());
 		reporter.sendPacket(sm);
 		
 		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_USED_A_REPORT_POINT_ON_C1_YOU_HAVE_S2_POINTS_REMAINING_ON_THIS_ACCOUNT);
-		sm.addCharName(bot);
+		sm.addString(bot.getName());
 		sm.addInt(rcdRep.getPointsLeft());
 		reporter.sendPacket(sm);
 		
-		handleReport(bot, rcd);
+		if (bot.isPlayer())
+		{
+			handleReport(bot.getActingPlayer(), rcd);
+		}
 		
 		return true;
 	}

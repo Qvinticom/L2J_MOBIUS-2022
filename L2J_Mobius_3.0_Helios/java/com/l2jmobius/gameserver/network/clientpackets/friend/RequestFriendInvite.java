@@ -17,6 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets.friend;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -38,12 +40,40 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 		return true;
 	}
 	
+	private void scheduleDeny(L2PcInstance player)
+	{
+		if (player != null)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST));
+			player.onTransactionResponse();
+		}
+	}
+	
 	@Override
 	public void run(L2GameClient client)
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
+			return;
+		}
+		
+		if (FakePlayerData.getInstance().isTalkable(_name))
+		{
+			if (!activeChar.isProcessingRequest())
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
+				sm.addString(_name);
+				activeChar.sendPacket(sm);
+				ThreadPoolManager.schedule(() -> scheduleDeny(activeChar), 10000);
+				activeChar.blockRequest();
+			}
+			else
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
+				sm.addString(_name);
+				activeChar.sendPacket(sm);
+			}
 			return;
 		}
 		

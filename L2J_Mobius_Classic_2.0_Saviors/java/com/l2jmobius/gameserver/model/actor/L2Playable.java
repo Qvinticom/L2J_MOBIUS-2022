@@ -304,8 +304,6 @@ public abstract class L2Playable extends L2Character
 	
 	public abstract void doPickupItem(L2Object object);
 	
-	public abstract int getReputation();
-	
 	public abstract boolean useMagic(Skill skill, L2ItemInstance item, boolean forceUse, boolean dontMove);
 	
 	public abstract void storeMe();

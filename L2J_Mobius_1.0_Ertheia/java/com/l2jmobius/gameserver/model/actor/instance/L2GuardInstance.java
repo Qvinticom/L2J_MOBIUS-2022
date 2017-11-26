@@ -57,7 +57,7 @@ public class L2GuardInstance extends L2Attackable
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		if (attacker.isMonster())
+		if (attacker.isMonster() && !attacker.isFakePlayer())
 		{
 			return true;
 		}
@@ -148,6 +148,13 @@ public class L2GuardInstance extends L2Attackable
 		}
 		
 		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
+		{
+			interact = false;
+			// TODO: Fix normal targeting
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
+		}
+		
+		if (isFakePlayer() && isInCombat())
 		{
 			interact = false;
 			// TODO: Fix normal targeting

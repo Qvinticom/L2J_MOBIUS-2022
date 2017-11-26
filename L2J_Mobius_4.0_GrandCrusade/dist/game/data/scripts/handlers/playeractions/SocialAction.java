@@ -16,9 +16,11 @@
  */
 package handlers.playeractions;
 
+import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.NextAction;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -97,6 +99,15 @@ public final class SocialAction implements IPlayerActionHandler
 		return true;
 	}
 	
+	private void scheduleDeny(L2PcInstance player)
+	{
+		if (player != null)
+		{
+			player.sendPacket(SystemMessageId.THE_COUPLE_ACTION_WAS_DENIED);
+			player.onTransactionResponse();
+		}
+	}
+	
 	private void useCoupleSocial(L2PcInstance player, int id)
 	{
 		if (player == null)
@@ -105,7 +116,26 @@ public final class SocialAction implements IPlayerActionHandler
 		}
 		
 		final L2Object target = player.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null))
+		{
+			player.sendPacket(SystemMessageId.INVALID_TARGET);
+			return;
+		}
+		
+		if (FakePlayerData.getInstance().isTalkable(target.getName()))
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1);
+			sm.addString(target.getName());
+			player.sendPacket(sm);
+			if (!player.isProcessingRequest())
+			{
+				ThreadPoolManager.schedule(() -> scheduleDeny(player), 10000);
+				player.blockRequest();
+			}
+			return;
+		}
+		
+		if (!target.isPlayer())
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;

@@ -178,6 +178,7 @@ public final class L2TrapInstance extends L2Npc
 		return null;
 	}
 	
+	@Override
 	public int getReputation()
 	{
 		return _owner != null ? _owner.getReputation() : 0;
@@ -265,7 +266,7 @@ public final class L2TrapInstance extends L2Npc
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4);
 			sm.addCharName(this);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			sm.addInt(damage);
 			sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
 			_owner.sendPacket(sm);

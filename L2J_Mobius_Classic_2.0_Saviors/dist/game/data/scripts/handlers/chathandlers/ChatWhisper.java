@@ -17,8 +17,10 @@
 package handlers.chathandlers;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.IChatHandler;
+import com.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.PcCondOverride;
@@ -56,6 +58,28 @@ public final class ChatWhisper implements IChatHandler
 		// Return if no target is set
 		if (target == null)
 		{
+			return;
+		}
+		
+		if (Config.FAKE_PLAYERS_ENABLED && (FakePlayerData.getInstance().getProperName(target) != null))
+		{
+			if (FakePlayerData.getInstance().isTalkable(target))
+			{
+				if (Config.FAKE_PLAYER_CHAT)
+				{
+					final String name = FakePlayerData.getInstance().getProperName(target);
+					activeChar.sendPacket(new CreatureSay(activeChar, null, "->" + name, type, text));
+					FakePlayerChatManager.getInstance().manageChat(activeChar, name, text);
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
+				}
+			}
+			else
+			{
+				activeChar.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
+			}
 			return;
 		}
 		

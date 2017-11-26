@@ -216,11 +216,14 @@ public class Q10766_ANewCraft extends Quest
 	@Id(WINDY_HEALING_POTION_1)
 	public void onItemCreate(OnItemCreate event)
 	{
-		final L2PcInstance player = event.getActiveChar();
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && (qs.isCond(3)) && (getQuestItemsCount(qs.getPlayer(), AIR_STONE) >= 1) && (getQuestItemsCount(qs.getPlayer(), WINDY_HEALING_POTION_1) >= 1))
+		final L2PcInstance player = event.getActiveChar().getActingPlayer();
+		if (player != null)
 		{
-			qs.setCond(4, true);
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && (qs.isCond(3)) && (getQuestItemsCount(qs.getPlayer(), AIR_STONE) >= 1) && (getQuestItemsCount(qs.getPlayer(), WINDY_HEALING_POTION_1) >= 1))
+			{
+				qs.setCond(4, true);
+			}
 		}
 	}
 }

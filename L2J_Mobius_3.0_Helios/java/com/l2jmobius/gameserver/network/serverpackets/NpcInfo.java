@@ -149,6 +149,11 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.TITLE_NPCSTRINGID);
 		}
 		
+		if (_npc.getReputation() != 0)
+		{
+			addComponentType(NpcInfoType.REPUTATION);
+		}
+		
 		if (!_abnormalVisualEffects.isEmpty() || npc.isInvisible())
 		{
 			addComponentType(NpcInfoType.ABNORMALS);
@@ -402,7 +407,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		}
 		if (containsMask(NpcInfoType.REPUTATION))
 		{
-			packet.writeD(0x00); // Name color
+			packet.writeD(_npc.getReputation()); // Reputation
 		}
 		if (containsMask(NpcInfoType.CLAN))
 		{

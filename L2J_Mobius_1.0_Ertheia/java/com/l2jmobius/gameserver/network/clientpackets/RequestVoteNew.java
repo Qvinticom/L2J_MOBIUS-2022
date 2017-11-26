@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -46,12 +47,28 @@ public final class RequestVoteNew implements IClientIncomingPacket
 		}
 		
 		final L2Object object = activeChar.getTarget();
-		
 		if (!(object instanceof L2PcInstance))
 		{
 			if (object == null)
 			{
 				client.sendPacket(SystemMessageId.SELECT_TARGET);
+			}
+			else if (object.isFakePlayer() && FakePlayerData.getInstance().isTalkable(object.getName()))
+			{
+				if (activeChar.getRecomLeft() <= 0)
+				{
+					client.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
+					return;
+				}
+				
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
+				sm.addString(FakePlayerData.getInstance().getProperName(object.getName()));
+				sm.addInt(activeChar.getRecomLeft());
+				client.sendPacket(sm);
+				
+				activeChar.setRecomLeft(activeChar.getRecomLeft() - 1);
+				client.sendPacket(new UserInfo(activeChar));
+				client.sendPacket(new ExVoteSystemInfo(activeChar));
 			}
 			else
 			{

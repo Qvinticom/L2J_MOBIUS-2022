@@ -29,6 +29,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -61,6 +62,7 @@ import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.TimersManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.CharEffectList;
@@ -136,6 +138,7 @@ import com.l2jmobius.gameserver.network.serverpackets.Attack;
 import com.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import com.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import com.l2jmobius.gameserver.network.serverpackets.ExTeleportToLocationActivate;
+import com.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
@@ -201,6 +204,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	private double _hpUpdateIncCheck = .0;
 	private double _hpUpdateDecCheck = .0;
 	private double _hpUpdateInterval = .0;
+	
+	private int _reputation = 0;
 	
 	/** Map containing all skills of this character. */
 	private final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<>();
@@ -269,6 +274,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	/** A map holding info about basic property mesmerizing system. */
 	private volatile Map<BasicProperty, BasicPropertyResist> _basicPropertyResists;
+	
+	/** A list containing the dropped items of this fake player. */
+	private final List<L2ItemInstance> _fakePlayerDrops = new CopyOnWriteArrayList<>();
 	
 	/**
 	 * Creates a creature.
@@ -1205,6 +1213,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			if (attack.hasHits())
 			{
 				broadcastPacket(attack);
+			}
+			
+			if (isFakePlayer() && (target.isPlayable() || target.isFakePlayer()))
+			{
+				final L2Npc npc = ((L2Npc) this);
+				if (!npc.isScriptValue(1))
+				{
+					npc.setScriptValue(1); // in combat
+					broadcastInfo(); // update flag status
+					QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
+				}
 			}
 			
 			// Notify AI with EVT_READY_TO_ACT
@@ -2317,7 +2336,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					return;
 				}
 				
-				if (getRunSpeed() == 0)
+				if (isFakePlayer())
+				{
+					player.sendPacket(new FakePlayerInfo((L2Npc) this));
+				}
+				else if (getRunSpeed() == 0)
 				{
 					player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
 				}
@@ -2945,7 +2968,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 							return;
 						}
 						
-						if (getRunSpeed() == 0)
+						if (isFakePlayer())
+						{
+							player.sendPacket(new FakePlayerInfo((L2Npc) this));
+						}
+						else if (getRunSpeed() == 0)
 						{
 							player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
 						}
@@ -4127,7 +4154,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public boolean isInsidePeaceZone(L2Object attacker, L2Object target)
 	{
 		final Instance instanceWorld = getInstanceWorld();
-		if ((target == null) || !(target.isPlayable() && attacker.isPlayable()) || ((instanceWorld != null) && instanceWorld.isPvP()))
+		if ((target == null) || !((target.isPlayable() || target.isFakePlayer()) && attacker.isPlayable()) || ((instanceWorld != null) && instanceWorld.isPvP()))
 		{
 			return false;
 		}
@@ -5535,6 +5562,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return _basicPropertyResists.computeIfAbsent(basicProperty, k -> new BasicPropertyResist());
 	}
 	
+	public int getReputation()
+	{
+		return _reputation;
+	}
+	
+	public void setReputation(int reputation)
+	{
+		_reputation = reputation;
+	}
+	
 	/**
 	 * Gets the distance to target.
 	 * @param target the target
@@ -5548,5 +5585,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void setCursorKeyMovement(boolean value)
 	{
 		_cursorKeyMovement = value;
+	}
+	
+	public List<L2ItemInstance> getFakePlayerDrops()
+	{
+		return _fakePlayerDrops;
 	}
 }

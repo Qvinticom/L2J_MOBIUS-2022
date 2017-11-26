@@ -141,11 +141,14 @@ public class Q10767_AWholeNewLevelOfAlchemy extends Quest
 	@Id(HIGH_GRADE_LOVE_POTION)
 	public void onItemCreate(OnItemCreate event)
 	{
-		final L2PcInstance player = event.getActiveChar();
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && (qs.isCond(1)) && (getQuestItemsCount(qs.getPlayer(), SUPERIOR_WINDY_HEALING_POTION) >= 1000) && (getQuestItemsCount(qs.getPlayer(), SUPERIOR_WINDY_QUIK_HEALING_POTION) >= 1000) && (getQuestItemsCount(qs.getPlayer(), HIGH_GRADE_LOVE_POTION) >= 1000))
+		final L2PcInstance player = event.getActiveChar().getActingPlayer();
+		if (player != null)
 		{
-			qs.setCond(2, true);
+			final QuestState qs = getQuestState(player, false);
+			if ((qs != null) && (qs.isCond(1)) && (getQuestItemsCount(qs.getPlayer(), SUPERIOR_WINDY_HEALING_POTION) >= 1000) && (getQuestItemsCount(qs.getPlayer(), SUPERIOR_WINDY_QUIK_HEALING_POTION) >= 1000) && (getQuestItemsCount(qs.getPlayer(), HIGH_GRADE_LOVE_POTION) >= 1000))
+			{
+				qs.setCond(2, true);
+			}
 		}
 	}
 }

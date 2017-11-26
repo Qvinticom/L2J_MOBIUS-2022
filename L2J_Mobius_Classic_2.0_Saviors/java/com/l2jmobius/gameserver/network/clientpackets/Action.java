@@ -143,7 +143,7 @@ public final class Action implements IClientIncomingPacket
 			}
 			case 1:
 			{
-				if (!activeChar.isGM() && !(obj.isNpc() && Config.ALT_GAME_VIEWNPC))
+				if (!activeChar.isGM() && (!(obj.isNpc() && Config.ALT_GAME_VIEWNPC) || obj.isFakePlayer()))
 				{
 					obj.onAction(activeChar, false);
 				}

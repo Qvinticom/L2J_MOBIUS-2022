@@ -2402,4 +2402,44 @@
 		<point X="42630" Y="-48231" Z="-792" delay="0" run="true" />
 		<point X="45069" Y="-48034" Z="-792" delay="0" run="true" />
 	</route>
+	<route name="FPC_Giran_Evi" repeat="true" repeatStyle="cycle">
+		<target id="80000" spawnX="83485" spawnY="147998" spawnZ="-3407" />
+		<point X="83485" Y="147998" Z="-3407" delay="10" run="true" /> <!-- Gatekeeper -->
+		<point X="83575" Y="147722" Z="-3405" delay="32" run="true" /> <!-- Buffer -->
+		<point X="82117" Y="147642" Z="-3469" delay="0" run="true" />
+		<point X="82152" Y="147580" Z="-3469" delay="36" run="true" /> <!-- Olympiad Statue-->
+		<point X="82084" Y="147569" Z="-3469" delay="12" run="true" /> <!-- Olympiad Manager -->
+		<point X="81532" Y="147578" Z="-3469" delay="0" run="true" />
+		<point X="81593" Y="146626" Z="-3533" delay="3" run="true" />
+		<point X="81932" Y="146566" Z="-3533" delay="0" run="true" />
+		<point X="82651" Y="146714" Z="-3466" delay="20" run="true" /> <!-- Dimesional Merchant -->
+		<point X="82807" Y="146649" Z="-3465" delay="0" run="true" />
+		<point X="83216" Y="146672" Z="-3465" delay="28" run="true" /> <!-- Warehouse -->
+		<point X="83211" Y="146724" Z="-3467" delay="88" run="true" /> <!-- Warehouse 2 -->
+		<point X="81659" Y="146555" Z="-3533" delay="3" run="true" />
+		<point X="81283" Y="145519" Z="-3533" delay="0" run="true" />
+		<point X="80424" Y="145487" Z="-3533" delay="28" run="true" /> <!-- Pochi -->
+		<point X="80283" Y="145826" Z="-3533" delay="0" run="true" />
+		<point X="79952" Y="145840" Z="-3496" delay="0" run="true" />
+		<point X="79781" Y="145546" Z="-3496" delay="0" run="true" />
+		<point X="79736" Y="145518" Z="-3495" delay="0" run="true" />
+		<point X="79663" Y="145529" Z="-3496" delay="40" run="true" /> <!-- Galladucci -->
+		<point X="79661" Y="145429" Z="-3495" delay="80" run="true" /> <!-- Alexandria -->
+		<point X="79999" Y="145152" Z="-3496" delay="0" run="true" />
+		<point X="80393" Y="145136" Z="-3533" delay="0" run="true" />
+		<point X="81068" Y="145845" Z="-3533" delay="36" run="true" /> <!-- Pet Manager -->
+		<point X="81061" Y="145563" Z="-3533" delay="0" run="true" />
+		<point X="81563" Y="145532" Z="-3533" delay="3" run="true" />
+		<point X="81692" Y="147231" Z="-3533" delay="32" run="true" /> <!-- Kiki -->
+		<point X="81370" Y="147213" Z="-3533" delay="64" run="true" /> <!-- Plani -->
+		<point X="81517" Y="147231" Z="-3533" delay="1" run="true" />
+		<point X="81542" Y="147570" Z="-3469" delay="0" run="true" />
+		<point X="81109" Y="147770" Z="-3469" delay="99" run="true" /> <!-- Moe -->
+		<point X="81108" Y="149415" Z="-3469" delay="99" run="true" /> <!-- Auction House -->
+		<point X="81413" Y="149700" Z="-3469" delay="52" run="true" /> <!-- Clan Hall Managers -->
+		<point X="81718" Y="149626" Z="-3469" delay="60" run="true" /> <!-- Beauty Shop -->
+		<point X="82815" Y="148840" Z="-3469" delay="3" run="true" />
+		<point X="83482" Y="149278" Z="-3405" delay="16" run="true" /> <!-- Kekropus -->
+		<point X="83307" Y="148431" Z="-3405" delay="21" run="true" /> <!-- Training Camp Manager -->
+	</route>
 </routes>

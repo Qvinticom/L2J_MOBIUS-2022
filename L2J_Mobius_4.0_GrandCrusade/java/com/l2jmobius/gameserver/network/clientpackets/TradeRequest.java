@@ -18,11 +18,14 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -45,6 +48,17 @@ public final class TradeRequest implements IClientIncomingPacket
 	{
 		_objectId = packet.readD();
 		return true;
+	}
+	
+	private void scheduleDeny(L2PcInstance player, String name)
+	{
+		if (player != null)
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE);
+			sm.addString(name);
+			player.sendPacket(sm);
+			player.onTransactionResponse();
+		}
 	}
 	
 	@Override
@@ -91,6 +105,37 @@ public final class TradeRequest implements IClientIncomingPacket
 		if (target.getObjectId() == player.getObjectId())
 		{
 			client.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
+			return;
+		}
+		
+		if (FakePlayerData.getInstance().isTalkable(target.getName()))
+		{
+			final String name = FakePlayerData.getInstance().getProperName(target.getName());
+			boolean npcInRange = false;
+			for (L2Npc npc : L2World.getInstance().getVisibleObjects(player, L2Npc.class, 150))
+			{
+				if (npc.getName().equals(name))
+				{
+					npcInRange = true;
+				}
+			}
+			if (!npcInRange)
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
+				return;
+			}
+			if (!player.isProcessingRequest())
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);
+				sm.addString(name);
+				player.sendPacket(sm);
+				ThreadPoolManager.schedule(() -> scheduleDeny(player, name), 10000);
+				player.blockRequest();
+			}
+			else
+			{
+				player.sendPacket(SystemMessageId.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE);
+			}
 			return;
 		}
 		

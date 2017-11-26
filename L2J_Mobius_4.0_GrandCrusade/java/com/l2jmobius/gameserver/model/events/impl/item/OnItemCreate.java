@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.events.impl.item;
 
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -28,10 +28,10 @@ public class OnItemCreate implements IBaseEvent
 {
 	private final String _process;
 	private final L2ItemInstance _item;
-	private final L2PcInstance _activeChar;
+	private final L2Character _activeChar;
 	private final Object _reference;
 	
-	public OnItemCreate(String process, L2ItemInstance item, L2PcInstance actor, Object reference)
+	public OnItemCreate(String process, L2ItemInstance item, L2Character actor, Object reference)
 	{
 		_process = process;
 		_item = item;
@@ -49,7 +49,7 @@ public class OnItemCreate implements IBaseEvent
 		return _item;
 	}
 	
-	public L2PcInstance getActiveChar()
+	public L2Character getActiveChar()
 	{
 		return _activeChar;
 	}

@@ -88,7 +88,7 @@ public final class Wisp extends AbstractNpcAI
 		final L2Character creature = event.getSeen();
 		final L2Npc npc = (L2Npc) event.getSeer();
 		
-		if (creature.isPlayer())
+		if (creature.isPlayer() || creature.isFakePlayer())
 		{
 			npc.setTarget(creature);
 			npc.doCast(npc.getId() == WISP ? WISP_HEAL.getSkill() : LARGE_WISP_HEAL.getSkill());

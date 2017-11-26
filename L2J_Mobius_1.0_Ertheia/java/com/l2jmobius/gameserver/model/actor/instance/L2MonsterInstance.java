@@ -69,6 +69,11 @@ public class L2MonsterInstance extends L2Attackable
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
+		if (isFakePlayer())
+		{
+			return isInCombat() || attacker.isMonster() || (getScriptValue() > 0);
+		}
+		
 		// Check if the L2MonsterInstance target is aggressive
 		if (Config.GUARD_ATTACK_AGGRO_MOB && isAggressive() && (attacker instanceof L2GuardInstance))
 		{
@@ -77,7 +82,7 @@ public class L2MonsterInstance extends L2Attackable
 		
 		if (attacker.isMonster())
 		{
-			return false;
+			return attacker.isFakePlayer();
 		}
 		
 		// Anything considers monsters friendly except Players, Attackables (Guards, Friendly NPC), Traps and EffectPoints.

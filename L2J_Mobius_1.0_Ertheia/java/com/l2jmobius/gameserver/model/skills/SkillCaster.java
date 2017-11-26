@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.NextActionType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -159,7 +160,7 @@ public class SkillCaster implements Runnable
 		}
 		
 		// You should not heal/buff monsters without pressing the ctrl button.
-		if (caster.isPlayer() && target.isMonster() && (skill.getEffectPoint() > 0) && !ctrlPressed)
+		if (caster.isPlayer() && (target.isMonster() && !target.isFakePlayer()) && (skill.getEffectPoint() > 0) && !ctrlPressed)
 		{
 			caster.sendPacket(SystemMessageId.INVALID_TARGET);
 			return null;
@@ -609,6 +610,10 @@ public class SkillCaster implements Runnable
 							// Add hate to the attackable, and put it in the attack list.
 							((L2Attackable) obj).addDamageHate(caster, 0, -skill.getEffectPoint());
 							((L2Character) obj).addAttackerToAttackByList(caster);
+							if (obj.isFakePlayer())
+							{
+								player.updatePvPStatus();
+							}
 						}
 						
 						// notify target AI about the attack
@@ -617,10 +622,19 @@ public class SkillCaster implements Runnable
 							((L2Character) obj).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
 						}
 					}
-					else if (((skill.getEffectPoint() > 0) && obj.isMonster()) || (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) || (obj.getActingPlayer().getReputation() < 0))))
+					else if (((skill.getEffectPoint() > 0) && obj.isMonster()) //
+						|| (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) //
+							|| (((L2Character) obj).getReputation() < 0) //
+						)))
 					{
 						// Supporting players or monsters result in pvpflag.
-						player.updatePvPStatus();
+						if (!obj.isFakePlayer() //
+							|| (obj.isFakePlayer() //
+								&& (!((L2Npc) obj).isScriptValue(0) //
+									|| (((L2Npc) obj).getReputation() < 0))))
+						{
+							player.updatePvPStatus();
+						}
 					}
 				}
 				
@@ -630,7 +644,7 @@ public class SkillCaster implements Runnable
 					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new L2Object[0])), npcMob);
 					
 					// On Skill See logic
-					if (npcMob.isAttackable())
+					if (npcMob.isAttackable() && !npcMob.isFakePlayer())
 					{
 						final L2Attackable attackable = (L2Attackable) npcMob;
 						
@@ -651,6 +665,19 @@ public class SkillCaster implements Runnable
 						}
 					}
 				});
+			}
+			else if (caster.isFakePlayer()) // fake player attacks player
+			{
+				if (target.isPlayable() || target.isFakePlayer())
+				{
+					final L2Npc npc = ((L2Npc) caster);
+					if (!npc.isScriptValue(1))
+					{
+						npc.setScriptValue(1); // in combat
+						npc.broadcastInfo(); // update flag status
+						QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
+					}
+				}
 			}
 		}
 		catch (Exception e)
@@ -1022,7 +1049,6 @@ public class SkillCaster implements Runnable
 				return false;
 			}
 		}
-		
 		return true;
 	}
 	

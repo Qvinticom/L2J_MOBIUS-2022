@@ -725,7 +725,7 @@ public abstract class L2Summon extends L2Playable
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4);
 				sm.addNpcName(this);
-				sm.addCharName(target);
+				sm.addString(target.getName());
 				sm.addInt(damage);
 				sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
 			}
@@ -743,7 +743,7 @@ public abstract class L2Summon extends L2Playable
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2);
 			sm.addNpcName(this);
-			sm.addCharName(attacker);
+			sm.addString(attacker.getName());
 			sm.addInt((int) damage);
 			sendPacket(sm);
 		}
@@ -905,6 +905,10 @@ public abstract class L2Summon extends L2Playable
 			{
 				setTarget(target);
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				if (target.isFakePlayer())
+				{
+					getOwner().updatePvPStatus();
+				}
 			}
 		}
 	}

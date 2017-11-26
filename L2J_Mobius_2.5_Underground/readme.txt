@@ -94,6 +94,7 @@ Customs:
 -Classmaster
 -Community board
 -Faction system
+-Fake players
 -Find PvP
 -NPC stat multipliers
 -Realtime offline trade

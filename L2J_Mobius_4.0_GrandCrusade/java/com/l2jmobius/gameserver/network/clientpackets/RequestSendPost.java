@@ -23,6 +23,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.BlockList;
@@ -193,6 +194,14 @@ public final class RequestSendPost implements IClientIncomingPacket
 				activeChar.sendPacket(SystemMessageId.IT_S_A_PAYMENT_REQUEST_TRANSACTION_PLEASE_ATTACH_THE_ITEM);
 				return;
 			}
+		}
+		
+		if (FakePlayerData.getInstance().isTalkable(_receiver))
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1);
+			sm.addString(FakePlayerData.getInstance().getProperName(_receiver));
+			activeChar.sendPacket(sm);
+			return;
 		}
 		
 		final int receiverId = CharNameTable.getInstance().getIdByName(_receiver);

@@ -40,5 +40,4 @@ public class PlayerLevelCondition implements ICondition
 	{
 		return creature.isPlayer() && (creature.getLevel() >= _minLevel) && (creature.getLevel() < _maxLevel);
 	}
-	
 }

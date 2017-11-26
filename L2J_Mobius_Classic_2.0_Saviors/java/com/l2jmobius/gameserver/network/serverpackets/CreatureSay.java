@@ -22,6 +22,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -53,21 +54,24 @@ public final class CreatureSay implements IClientOutgoingPacket
 		_charLevel = sender.getLevel();
 		_textType = messageType;
 		_text = text;
-		if (receiver.getFriendList().contains(sender.getObjectId()))
+		if (receiver != null)
 		{
-			_mask |= 0x01;
-		}
-		if ((receiver.getClanId() > 0) && (receiver.getClanId() == sender.getClanId()))
-		{
-			_mask |= 0x02;
-		}
-		if ((MentorManager.getInstance().getMentee(receiver.getObjectId(), sender.getObjectId()) != null) || (MentorManager.getInstance().getMentee(sender.getObjectId(), receiver.getObjectId()) != null))
-		{
-			_mask |= 0x04;
-		}
-		if ((receiver.getAllyId() > 0) && (receiver.getAllyId() == sender.getAllyId()))
-		{
-			_mask |= 0x08;
+			if (receiver.getFriendList().contains(sender.getObjectId()))
+			{
+				_mask |= 0x01;
+			}
+			if ((receiver.getClanId() > 0) && (receiver.getClanId() == sender.getClanId()))
+			{
+				_mask |= 0x02;
+			}
+			if ((MentorManager.getInstance().getMentee(receiver.getObjectId(), sender.getObjectId()) != null) || (MentorManager.getInstance().getMentee(sender.getObjectId(), receiver.getObjectId()) != null))
+			{
+				_mask |= 0x04;
+			}
+			if ((receiver.getAllyId() > 0) && (receiver.getAllyId() == sender.getAllyId()))
+			{
+				_mask |= 0x08;
+			}
 		}
 		
 		// Does not shows level
@@ -75,6 +79,23 @@ public final class CreatureSay implements IClientOutgoingPacket
 		{
 			_mask |= 0x10;
 		}
+	}
+	
+	/**
+	 * Used by fake players.
+	 * @param sender
+	 * @param receiver
+	 * @param name
+	 * @param messageType
+	 * @param text
+	 */
+	public CreatureSay(L2Npc sender, L2PcInstance receiver, String name, ChatType messageType, String text)
+	{
+		_objectId = sender.getObjectId();
+		_charName = name;
+		_charLevel = sender.getLevel();
+		_textType = messageType;
+		_text = text;
 	}
 	
 	/**

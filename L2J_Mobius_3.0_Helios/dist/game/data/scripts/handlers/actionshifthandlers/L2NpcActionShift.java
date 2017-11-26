@@ -192,7 +192,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 		}
 		else if (Config.ALT_GAME_VIEWNPC)
 		{
-			if (!target.isNpc())
+			if (!target.isNpc() || target.isFakePlayer())
 			{
 				return false;
 			}
