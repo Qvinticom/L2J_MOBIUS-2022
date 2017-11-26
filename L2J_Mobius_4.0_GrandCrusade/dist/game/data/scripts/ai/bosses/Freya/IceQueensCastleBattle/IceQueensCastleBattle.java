@@ -382,7 +382,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						if (npc.getVariables().getInt("FREYA_MOVE") == 0)
 						{
 							controller.getVariables().set("FREYA_MOVE", 1);
-							freya.setIsRunning(true);
+							freya.setRunning();
 							freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
 						}
 						break;
@@ -431,14 +431,14 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						manageScreenMsg(world, NpcStringId.BEGIN_STAGE_4);
 						
 						final FriendlyNpcInstance jinia = (FriendlyNpcInstance) addSpawn(SUPP_JINIA, SUPP_JINIA_SPAWN, false, 0, true, world.getId());
-						jinia.setIsRunning(true);
+						jinia.setRunning();
 						jinia.setIsInvul(true);
 						jinia.setCanReturnToSpawnPoint(false);
 						jinia.reduceCurrentHp(1, freya, null); // TODO: Find better way for attack
 						freya.reduceCurrentHp(1, jinia, null);
 						
 						final FriendlyNpcInstance kegor = (FriendlyNpcInstance) addSpawn(SUPP_KEGOR, SUPP_KEGOR_SPAWN, false, 0, true, world.getId());
-						kegor.setIsRunning(true);
+						kegor.setRunning();
 						kegor.setIsInvul(true);
 						kegor.setCanReturnToSpawnPoint(false);
 						kegor.reduceCurrentHp(1, freya, null); // TODO: Find better way for attack
@@ -673,7 +673,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 									for (int i = 0; i < 3; i++)
 									{
 										final L2Attackable breath = (L2Attackable) addSpawn(BREATH, npc.getLocation(), true, 0, false, world.getId());
-										breath.setIsRunning(true);
+										breath.setRunning();
 										breath.addDamageHate(mob.getMostHated(), 0, 999);
 										breath.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, mob.getMostHated());
 										startQuestTimer("BLIZZARD", 20000, breath, null);
@@ -751,7 +751,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					{
 						controller.getVariables().set("FREYA_MOVE", 1);
 						manageScreenMsg(world, NpcStringId.FREYA_HAS_STARTED_TO_MOVE);
-						freya.setIsRunning(true);
+						freya.setRunning();
 						freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
 					}
 					
@@ -825,7 +825,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					if (controller.getVariables().getInt("FREYA_MOVE") == 0)
 					{
 						controller.getVariables().set("FREYA_MOVE", 1);
-						freya.setIsRunning(true);
+						freya.setRunning();
 						freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
 					}
 					
@@ -1042,7 +1042,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 							final L2Attackable breath = (L2Attackable) addSpawn(BREATH, npc.getLocation(), false, 0, false, world.getId());
 							if (player != null)
 							{
-								breath.setIsRunning(true);
+								breath.setRunning();
 								breath.addDamageHate(player, 0, 999);
 								breath.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 							}
@@ -1116,7 +1116,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						manageScreenMsg(world, NpcStringId.FREYA_HAS_STARTED_TO_MOVE);
 						
 						final L2Npc freya = params.getObject("freya", L2Npc.class);
-						freya.setIsRunning(true);
+						freya.setRunning();
 						freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
 					}
 					
@@ -1173,7 +1173,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 		if (target != null)
 		{
 			((L2Attackable) mob).addDamageHate(target, 0, 999);
-			mob.setIsRunning(true);
+			mob.setRunning();
 			mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
 		else

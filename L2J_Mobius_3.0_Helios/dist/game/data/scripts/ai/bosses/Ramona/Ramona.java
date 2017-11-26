@@ -153,7 +153,7 @@ public class Ramona extends AbstractNpcAI
 				for (int i = 0; i < 7; i++)
 				{
 					final L2Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
-					minion.setIsRunning(true);
+					minion.setRunning();
 					((L2Attackable) minion).setIsRaidMinion(true);
 					addAttackPlayerDesire(minion, player);
 					_minions.add(minion);
@@ -179,7 +179,7 @@ public class Ramona extends AbstractNpcAI
 				for (int i = 0; i < 7; i++)
 				{
 					final L2Npc minion = addSpawn(MINION_LIST[Rnd.get(MINION_LIST.length)], npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ(), npc.getHeading(), false, 600000);
-					minion.setIsRunning(true);
+					minion.setRunning();
 					((L2Attackable) minion).setIsRaidMinion(true);
 					addAttackPlayerDesire(minion, player);
 					_minions.add(minion);

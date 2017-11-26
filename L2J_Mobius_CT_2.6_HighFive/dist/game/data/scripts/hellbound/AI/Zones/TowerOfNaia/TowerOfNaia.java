@@ -744,7 +744,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		else if (((npcId == SPORE_BASIC) || ((npcId >= SPORE_FIRE) && (npcId <= SPORE_EARTH))) && (_challengeState == STATE_SPORE_CHALLENGE_IN_PROGRESS))
 		{
 			_sporeSpawn.add(npc);
-			npc.setIsRunning(false);
+			npc.setWalking();
 			final int[] coord = SPORES_MOVE_POINTS[getRandom(SPORES_MOVE_POINTS.length)];
 			npc.getSpawn().setX(coord[0]);
 			npc.getSpawn().setY(coord[1]);
@@ -833,7 +833,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			final double distance = npc.calculateDistance(coords[0], coords[1], coords[2], true, false);
 			final int heading = Util.calculateHeadingFrom(npc.getX(), npc.getY(), coords[0], coords[1]);
 			time = (int) ((distance / npc.getWalkSpeed()) * 1000);
-			npc.setIsRunning(false);
+			npc.setWalking();
 			npc.disableCoreAI(true);
 			npc.setIsNoRndWalk(true);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(coords[0], coords[1], coords[2], heading));

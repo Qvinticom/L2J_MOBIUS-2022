@@ -140,7 +140,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 			case "fire_arrived":
 			{
 				// myself.i_quest0 = 1;
-				npc.setIsRunning(false);
+				npc.setWalking();
 				npc.setTarget(npc);
 				
 				if (npc.isNoRndWalk())
@@ -165,7 +165,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 			case "remove_effects":
 			{
 				// myself.i_quest0 = 0;
-				npc.setIsRunning(true);
+				npc.setRunning();
 				npc.setDisplayEffect(MAHUM_EFFECT_NONE);
 				break;
 			}
@@ -237,7 +237,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 				if (!receiver.isNoRndWalk() && !receiver.isDead() && (receiver.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK) && Util.contains(SQUAD_LEADERS, receiver.getId()))
 				{
 					receiver.setIsNoRndWalk(true); // Moving to fire - i_ai0 = 1
-					receiver.setIsRunning(true);
+					receiver.setRunning();
 					final Location loc = sender.getPointInRange(100, 200);
 					loc.setHeading(receiver.getHeading());
 					receiver.stopMove(null);
@@ -272,7 +272,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 					}
 					receiver.setIsNoRndWalk(true); // Moving to fire - i_ai0 = 1
 					receiver.getVariables().set("BUSY_STATE", 1); // Eating - i_ai3 = 1
-					receiver.setIsRunning(true);
+					receiver.setRunning();
 					receiver.broadcastSay(ChatType.NPC_GENERAL, (getRandom(3) < 1) ? NpcStringId.LOOKS_DELICIOUS : NpcStringId.LET_S_GO_EAT);
 					final Location loc = sender.getPointInRange(100, 200);
 					loc.setHeading(receiver.getHeading());
@@ -379,7 +379,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 			cancelQuestTimer("chef_set_invul", npc, null);
 			npc.getVariables().remove("BUSY_STATE");
 			npc.getVariables().remove("INVUL_REMOVE_TIMER_STARTED");
-			npc.setIsRunning(false);
+			npc.setWalking();
 		}
 	}
 	

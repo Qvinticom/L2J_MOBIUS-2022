@@ -82,7 +82,7 @@ public final class MuseumDungeon extends AbstractInstance
 			desk.getVariables().set("book", true);
 			
 			// Set Toyron
-			toyron.setIsRunning(true);
+			toyron.setRunning();
 			toyron.setCanReturnToSpawnPoint(false);
 		}
 		
@@ -128,7 +128,7 @@ public final class MuseumDungeon extends AbstractInstance
 						final List<L2Npc> thiefs = world.spawnGroup("thiefs");
 						for (L2Npc thief : thiefs)
 						{
-							thief.setIsRunning(true);
+							thief.setRunning();
 							addAttackPlayerDesire(thief, player);
 							thief.broadcastSay(ChatType.NPC_GENERAL, THIEF_SHOUT[getRandom(2)]);
 						}
@@ -143,7 +143,7 @@ public final class MuseumDungeon extends AbstractInstance
 						final List<L2Npc> thiefs = world.spawnGroup("thiefs");
 						for (L2Npc thief : thiefs)
 						{
-							thief.setIsRunning(true);
+							thief.setRunning();
 						}
 						break;
 					}

@@ -84,7 +84,7 @@ public final class MithrilMine extends AbstractInstance
 					for (L2Npc n : npcs)
 					{
 						n.setScriptValue(1);
-						n.setIsRunning(true);
+						n.setRunning();
 						n.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc);
 						((L2Attackable) n).addDamageHate(npc, 0, 999999);
 					}

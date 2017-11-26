@@ -352,7 +352,7 @@ public final class Nursery extends AbstractInstance
 			if (getRandom(100) < 4)
 			{
 				final L2Npc maguen = addSpawn(MAGUEN, npc, false, 0, false, instance.getId());
-				maguen.setIsRunning(true);
+				maguen.setRunning();
 				maguen.getAI().startFollow(killer);
 				showOnScreenMsg(instance, NpcStringId.MAGUEN_APPEARANCE, ExShowScreenMessage.MIDDLE_CENTER, 4000);
 				getTimers().addTimer("MAGUEN_WAIT_TIMER", 4000, maguen, killer);

@@ -103,7 +103,7 @@ public final class KimerianCommon extends AbstractInstance
 						}
 						else if (!npc.isAttackingNow() && (distance > 250))
 						{
-							npc.setIsRunning(true);
+							npc.setRunning();
 							addMoveToDesire(npc, new Location(player.getX() + getRandom(-100, 100), player.getY() + getRandom(-100, 100), player.getZ() + 50), 23);
 						}
 						else if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
@@ -270,7 +270,7 @@ public final class KimerianCommon extends AbstractInstance
 					getTimers().addTimer("KIMERIAN_CHAT_1", 5000, t -> kimerian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_COME_BACK_ALIVE_WITH_ROTTING_AURA));
 					getTimers().addTimer("KIMERIAN_RUN", 6000, t ->
 					{
-						kimerian.setIsRunning(true);
+						kimerian.setRunning();
 						addMoveToDesire(kimerian, loc, 23);
 						kimerian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HA_HA_HA_HA);
 					});
@@ -309,7 +309,7 @@ public final class KimerianCommon extends AbstractInstance
 				case NEOMI_KASHERON:
 				{
 					npc.initSeenCreatures();
-					npc.setIsRunning(true);
+					npc.setRunning();
 					break;
 				}
 				case INVISIBLE_NPC:

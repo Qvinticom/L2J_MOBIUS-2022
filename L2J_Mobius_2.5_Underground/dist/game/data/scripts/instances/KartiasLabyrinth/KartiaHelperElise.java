@@ -227,7 +227,7 @@ public final class KartiaHelperElise extends AbstractNpcAI
 					}
 					else
 					{
-						npc.setIsRunning(true);
+						npc.setRunning();
 						addMoveToDesire(npc, loc, 23);
 					}
 				}

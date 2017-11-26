@@ -737,7 +737,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 		{
 			startQuestTimer("DESPAWN_5", 5000, npc, null);
 			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.DRATS_HOW_COULD_I_BE_SO_WRONG));
-			npc.setIsRunning(true);
+			npc.setRunning();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO);
 		}
 		else if (npc.getId() == GUARDIAN_ANGEL)

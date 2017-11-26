@@ -84,7 +84,7 @@ public final class TurekOrcs extends AbstractNpcAI
 			// Say and flee
 			npc.broadcastSay(ChatType.GENERAL, NpcStringId.getNpcStringId(getRandom(1000007, 1000027)));
 			npc.disableCoreAI(true); // to avoid attacking behaviour, while flee
-			npc.setIsRunning(true);
+			npc.setRunning();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getAIValue("fleeX"), npc.getAIValue("fleeY"), npc.getAIValue("fleeZ")));
 			npc.getVariables().set("state", 1);
 			npc.getVariables().set("attacker", attacker.getObjectId());
@@ -98,7 +98,7 @@ public final class TurekOrcs extends AbstractNpcAI
 		if (eventName.equals("WARNING") && !receiver.isDead() && (receiver.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK) && (reference != null) && (reference.getActingPlayer() != null) && !reference.getActingPlayer().isDead())
 		{
 			receiver.getVariables().set("state", 3);
-			receiver.setIsRunning(true);
+			receiver.setRunning();
 			((L2Attackable) receiver).addDamageHate(reference.getActingPlayer(), 0, 99999);
 			receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, reference.getActingPlayer());
 		}

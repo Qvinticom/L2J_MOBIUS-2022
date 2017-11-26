@@ -226,7 +226,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 				case "ATTACK1":
 				case "ATTACK2":
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					((L2Attackable) npc).setCanReturnToSpawnPoint(false);
 					((L2Attackable) npc).setCanStopAttackByTime(false);
 					if (npc.isScriptValue(0) && world.getAliveNpcs(L2MonsterInstance.class).isEmpty())

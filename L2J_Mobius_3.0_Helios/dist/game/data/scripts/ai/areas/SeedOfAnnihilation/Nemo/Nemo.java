@@ -85,7 +85,7 @@ public final class Nemo extends AbstractNpcAI
 					maguen.getVariables().set("TEST_MAGUEN", 1);
 					player.getVariables().set("TEST_MAGUEN", 1);
 					maguen.setTitle(player.getName());
-					maguen.setIsRunning(true);
+					maguen.setRunning();
 					maguen.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					maguen.broadcastStatusUpdate();
 					showOnScreenMsg(player, NpcStringId.MAGUEN_APPEARANCE, 2, 4000);

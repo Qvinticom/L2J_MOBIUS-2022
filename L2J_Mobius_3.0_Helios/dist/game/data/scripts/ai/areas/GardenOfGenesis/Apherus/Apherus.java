@@ -175,7 +175,7 @@ public final class Apherus extends AbstractNpcAI
 				for (int i = 0; i < 4; i++)
 				{
 					final L2MonsterInstance protector = (L2MonsterInstance) addSpawn(APHERUS_DOOR_GUARD[getRandom(APHERUS_DOOR_GUARD.length)], player.getX() + getRandom(10, 30), player.getY() + getRandom(10, 30), player.getZ(), 0, false, 600000, false);
-					protector.setIsRunning(true);
+					protector.setRunning();
 					protector.setTarget(player);
 					addAttackPlayerDesire(protector, player);
 				}

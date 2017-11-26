@@ -3199,7 +3199,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		{
 			((L2Attackable) npc).addDamageHate(target, 0, desire);
 		}
-		npc.setIsRunning(true);
+		npc.setRunning();
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 	}
 	
@@ -3210,7 +3210,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	protected void addAttackDesire(L2Npc npc, L2Character target)
 	{
-		npc.setIsRunning(true);
+		npc.setRunning();
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 	}
 	

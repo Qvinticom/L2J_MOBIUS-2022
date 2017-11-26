@@ -140,14 +140,14 @@ public class Vortex extends AbstractNpcAI
 			{
 				attackRandomTarget(npc);
 				npc.setRandomWalking(true);
-				npc.setIsRunning(true);
+				npc.setRunning();
 				break;
 			}
 			case BIG_VORTEX:
 			{
 				attackRandomTarget(npc);
 				npc.setRandomWalking(true);
-				npc.setIsRunning(true);
+				npc.setRunning();
 				break;
 			}
 		}

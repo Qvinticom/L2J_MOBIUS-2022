@@ -2875,7 +2875,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return _isRunning;
 	}
 	
-	public final void setIsRunning(boolean value)
+	private final void setIsRunning(boolean value)
 	{
 		if (_isRunning == value)
 		{
@@ -2919,10 +2919,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/** Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance. */
 	public final void setRunning()
 	{
-		if (!isRunning())
-		{
-			setIsRunning(true);
-		}
+		setIsRunning(true);
 	}
 	
 	public final boolean isSleeping()
@@ -3088,10 +3085,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final void setWalking()
 	{
-		if (isRunning())
-		{
-			setIsRunning(false);
-		}
+		setIsRunning(false);
 	}
 	
 	/**

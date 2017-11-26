@@ -194,7 +194,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					{
 						return null;
 					}
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.getAI().startFollow(player);
 					if (player.isInCombat())
 					{

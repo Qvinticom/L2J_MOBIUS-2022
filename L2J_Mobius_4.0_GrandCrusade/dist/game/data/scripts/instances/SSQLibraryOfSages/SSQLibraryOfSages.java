@@ -87,7 +87,7 @@ public final class SSQLibraryOfSages extends AbstractInstance
 				}
 				case "FOLLOW":
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.getAI().startFollow(player);
 					npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
 					startQuestTimer("FOLLOW", 10000, npc, player);

@@ -153,7 +153,7 @@ public final class BalokWarzone extends AbstractInstance
 					L2Npc minion = minionList.get(Rnd.get(minionList.size()));
 					if (minion != null)
 					{
-						minion.setIsRunning(true);
+						minion.setRunning();
 						((L2Attackable) minion).setCanReturnToSpawnPoint(false);
 						currentMinion = minion;
 						getTimers().addTimer("stage_last_minion_walk", 2000, minion, player);

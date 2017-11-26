@@ -270,7 +270,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 				}
 				case "FOLLOW":
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.getAI().startFollow(player);
 					if (player.isInCombat())
 					{
@@ -398,7 +398,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 					for (Location LOC : SLAVE_SPAWN_1_LOC)
 					{
 						L2Attackable mob = (L2Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
-						mob.setIsRunning(true);
+						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 					}
@@ -408,7 +408,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 					for (Location LOC : SLAVE_SPAWN_2_LOC)
 					{
 						L2Attackable mob = (L2Attackable) addSpawn(TRAINEE_OF_REST, LOC, false, 0, false, world.getInstanceId());
-						mob.setIsRunning(true);
+						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 					}
@@ -418,7 +418,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 					for (Location LOC : SLAVE_SPAWN_3_LOC)
 					{
 						L2Attackable mob = (L2Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
-						mob.setIsRunning(true);
+						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 					}
@@ -428,7 +428,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 					for (Location LOC : SLAVE_SPAWN_4_LOC)
 					{
 						L2Attackable mob = (L2Attackable) addSpawn(SUPPLICANT_OF_REST, LOC, false, 0, false, world.getInstanceId());
-						mob.setIsRunning(true);
+						mob.setRunning();
 						mob.addDamageHate(player, 0, 999);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 					}

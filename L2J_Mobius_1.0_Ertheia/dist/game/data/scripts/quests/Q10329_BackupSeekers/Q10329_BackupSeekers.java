@@ -188,7 +188,7 @@ public final class Q10329_BackupSeekers extends Quest
 				if (qs.isMemoState(1))
 				{
 					npc.setSummoner(player);
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.broadcastInfo();
 					addMoveToDesire(npc, BART_LOC_1[0], 0);
 					npc.getVariables().set("MOVE_INDEX", 0);
@@ -199,7 +199,7 @@ public final class Q10329_BackupSeekers extends Quest
 				else if (qs.isMemoState(2))
 				{
 					npc.setSummoner(player);
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.broadcastInfo();
 					addMoveToDesire(npc, BART_LOC_2[0], 0);
 					npc.getVariables().set("MOVE_INDEX", 0);

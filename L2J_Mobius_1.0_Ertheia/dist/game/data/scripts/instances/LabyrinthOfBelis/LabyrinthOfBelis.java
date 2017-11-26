@@ -445,7 +445,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	public String onSpawn(L2Npc npc)
 	{
 		final L2Attackable officer = (L2Attackable) npc;
-		officer.setIsRunning(true);
+		officer.setRunning();
 		officer.setCanReturnToSpawnPoint(false);
 		getTimers().addRepeatingTimer("MESSAGE", 6000, npc, null);
 		return super.onSpawn(npc);
@@ -499,7 +499,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 						
 						showOnScreenMsg(player, (getRandomBoolean() ? NpcStringId.IF_TERAIN_DIES_THE_MISSION_WILL_FAIL : NpcStringId.BEHIND_YOU_THE_ENEMY_IS_AMBUSHING_YOU), ExShowScreenMessage.TOP_CENTER, 4500);
 						final L2Attackable mob = (L2Attackable) addSpawn((getRandomBoolean() ? OPERATIVE : HANDYMAN), SPAWN_ATTACKERS, false, 0, true, world.getId());
-						mob.setIsRunning(true);
+						mob.setRunning();
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, ATTACKER_SPOT);
 						mob.broadcastSay(ChatType.NPC_GENERAL, (getRandomBoolean() ? NpcStringId.KILL_THE_GUY_MESSING_WITH_THE_ELECTRIC_DEVICE : NpcStringId.FOCUS_ON_ATTACKING_THE_GUY_IN_THE_ROOM));
 						mob.addDamageHate(npc, 0, 9999);

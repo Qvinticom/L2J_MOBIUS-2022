@@ -203,7 +203,7 @@ public final class Q10365_SeekerEscort extends Quest
 			{
 				if (qs.isMemoState(1))
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.broadcastInfo();
 					addMoveToDesire(npc, BLOODHOUND_LOC_1[0], 0);
 					npc.getVariables().set("MOVE_INDEX", 0);
@@ -211,7 +211,7 @@ public final class Q10365_SeekerEscort extends Quest
 				}
 				else if (qs.isMemoState(2))
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.broadcastInfo();
 					addMoveToDesire(npc, BLOODHOUND_LOC_2[0], 0);
 					npc.getVariables().set("MOVE_INDEX", 0);

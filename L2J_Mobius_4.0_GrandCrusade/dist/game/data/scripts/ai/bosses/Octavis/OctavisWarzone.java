@@ -187,7 +187,7 @@ public final class OctavisWarzone extends AbstractInstance
 						((L2Attackable) beasts).setCanReturnToSpawnPoint(false);
 						final L2Npc octavis = addSpawn((!isExtremeMode(world) ? OCTAVIS_STAGE_1[0] : OCTAVIS_STAGE_1[1]), OCTAVIS_SPAWN_LOC, false, 0, false, world.getId());
 						octavis.disableCoreAI(true);
-						octavis.setIsRunning(true);
+						octavis.setRunning();
 						octavis.sendChannelingEffect(beasts, 1);
 						octavis.setTargetable(false);
 						((L2Attackable) octavis).setCanReturnToSpawnPoint(false);
@@ -286,7 +286,7 @@ public final class OctavisWarzone extends AbstractInstance
 					
 					if ((moveX != 0) && (moveY != 0))
 					{
-						npc.setIsRunning(true);
+						npc.setRunning();
 						addMoveToDesire(npc, new Location(moveX, moveY, -10008), 23);
 					}
 					break;
@@ -299,7 +299,7 @@ public final class OctavisWarzone extends AbstractInstance
 					for (int i = 0; i < count; i++)
 					{
 						final L2Npc beast = addSpawn((!isExtremeMode(world) ? BEASTS_MINIONS[0] : BEASTS_MINIONS[1]), loc, false, 0, false, world.getId());
-						beast.setIsRunning(true);
+						beast.setRunning();
 						((L2Attackable) beast).setCanReturnToSpawnPoint(false);
 						addMoveToDesire(beast, Util.getRandomPosition(BEASTS_RANDOM_POINT, 500, 500), 23);
 					}

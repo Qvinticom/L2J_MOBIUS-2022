@@ -119,7 +119,7 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 						
 						if (!npc.isInsideRadius(loc, 50, true, true))
 						{
-							npc.setIsRunning(true);
+							npc.setRunning();
 							addMoveToDesire(npc, loc, 23);
 						}
 					}

@@ -683,7 +683,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 			case OL_MAHUM_BETRAYER:
 			{
 				startQuestTimer("DESPAWN", 5000, npc, null, true);
-				npc.setIsRunning(true);
+				npc.setRunning();
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO);
 				npc.getVariables().set("SPAWNED", 0);
 				break;

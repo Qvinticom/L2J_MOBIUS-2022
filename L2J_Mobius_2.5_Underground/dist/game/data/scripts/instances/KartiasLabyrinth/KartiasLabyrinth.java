@@ -284,7 +284,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 						{
 							final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom1");
 							final Location moveTo = new Location(loc.getX() + getRandom(-100, 100), loc.getY() + getRandom(-100, 100), loc.getZ());
-							npc.setIsRunning(true);
+							npc.setRunning();
 							addMoveToDesire(npc, moveTo, 6);
 							getTimers().addTimer("START_MOVE", 15000, npc, null);
 						}
@@ -292,7 +292,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 						{
 							final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom3");
 							final Location moveTo = new Location(loc.getX() + getRandom(-200, 200), loc.getY() + getRandom(-200, 200), loc.getZ());
-							npc.setIsRunning(true);
+							npc.setRunning();
 							addMoveToDesire(npc, moveTo, 23);
 						}
 					}

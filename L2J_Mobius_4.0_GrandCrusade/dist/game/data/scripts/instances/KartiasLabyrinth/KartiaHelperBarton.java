@@ -88,7 +88,7 @@ public final class KartiaHelperBarton extends AbstractNpcAI
 					}
 					else
 					{
-						npc.setIsRunning(true);
+						npc.setRunning();
 						addMoveToDesire(npc, loc, 23);
 					}
 				}

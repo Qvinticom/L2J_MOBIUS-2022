@@ -2780,7 +2780,7 @@ public abstract class AbstractScript extends ManagedScript
 		{
 			((L2Attackable) npc).addDamageHate(target, 0, desire);
 		}
-		npc.setIsRunning(true);
+		npc.setRunning();
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 	}
 	

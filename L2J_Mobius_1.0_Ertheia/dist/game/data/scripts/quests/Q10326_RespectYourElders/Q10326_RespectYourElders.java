@@ -153,7 +153,7 @@ public final class Q10326_RespectYourElders extends Quest
 			{
 				npc.getVariables().set("OWNER", player);
 				npc.setTitle(player.getName());
-				npc.setIsRunning(true);
+				npc.setRunning();
 				npc.broadcastInfo();
 				addMoveToDesire(npc, HANDERMONKEY_LOC[0], 0);
 				npc.getVariables().set("MOVE_INDEX", 0);

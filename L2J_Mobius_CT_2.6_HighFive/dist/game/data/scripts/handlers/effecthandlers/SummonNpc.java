@@ -173,7 +173,7 @@ public final class SummonNpc extends AbstractEffect
 				{
 					npc.scheduleDespawn(_despawnDelay);
 				}
-				npc.setIsRunning(false); // TODO: Fix broadcast info.
+				npc.setWalking(); // TODO: Fix broadcast info.
 			}
 		}
 	}

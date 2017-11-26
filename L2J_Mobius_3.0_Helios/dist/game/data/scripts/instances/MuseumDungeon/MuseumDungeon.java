@@ -94,7 +94,7 @@ public final class MuseumDungeon extends AbstractInstance
 			desk.getVariables().set("book", true);
 			
 			// Set Toyron
-			toyron.setIsRunning(true);
+			toyron.setRunning();
 			toyron.setCanReturnToSpawnPoint(false);
 		}
 		
@@ -120,7 +120,7 @@ public final class MuseumDungeon extends AbstractInstance
 					
 					if (instance.getNpcs(THIEF).isEmpty())
 					{
-						instance.spawnGroup("thiefs").forEach(npc -> npc.setIsRunning(true));
+						instance.spawnGroup("thiefs").forEach(npc -> npc.setRunning());
 					}
 				}
 			}
@@ -172,14 +172,14 @@ public final class MuseumDungeon extends AbstractInstance
 				case "TOYRON_FOLLOW":
 				{
 					toyron.getAI().startFollow(player);
-					toyron.setIsRunning(true);
+					toyron.setRunning();
 					break;
 				}
 				case "SPAWN_THIEFS_STAGE_1":
 				{
 					instance.spawnGroup("thiefs").forEach(thief ->
 					{
-						thief.setIsRunning(true);
+						thief.setRunning();
 						addAttackPlayerDesire(thief, player);
 						thief.broadcastSay(ChatType.NPC_GENERAL, THIEF_SHOUT[getRandom(2)]);
 					});

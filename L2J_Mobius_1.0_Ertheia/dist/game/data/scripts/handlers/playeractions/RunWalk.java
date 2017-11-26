@@ -22,13 +22,20 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Run/Walk player action handler.
- * @author UnAfraid
+ * @author Mobius
  */
 public final class RunWalk implements IPlayerActionHandler
 {
 	@Override
 	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		activeChar.setIsRunning(!activeChar.isRunning());
+		if (activeChar.isRunning())
+		{
+			activeChar.setWalking();
+		}
+		else
+		{
+			activeChar.setRunning();
+		}
 	}
 }

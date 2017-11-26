@@ -269,7 +269,14 @@ public final class WalkingManager implements IXmlReader
 					}
 					
 					npc.sendDebugMessage("Starting to move at route '" + routeName + "'");
-					npc.setIsRunning(node.runToLocation());
+					if (node.runToLocation())
+					{
+						npc.setRunning();
+					}
+					else
+					{
+						npc.setWalking();
+					}
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
 					walk.setWalkCheckTask(ThreadPoolManager.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
 					
@@ -302,7 +309,14 @@ public final class WalkingManager implements IXmlReader
 				walk.setBlocked(true);
 				final L2NpcWalkerNode node = walk.getCurrentNode();
 				npc.sendDebugMessage("Route '" + routeName + "', continuing to node " + walk.getCurrentNodeId());
-				npc.setIsRunning(node.runToLocation());
+				if (node.runToLocation())
+				{
+					npc.setRunning();
+				}
+				else
+				{
+					npc.setWalking();
+				}
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
 				walk.setBlocked(false);
 				walk.setStoppedByAttack(false);

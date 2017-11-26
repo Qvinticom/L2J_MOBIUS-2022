@@ -58,7 +58,7 @@ public final class Anais extends AbstractNpcAI
 	{
 		final L2Npc npc = _divineBurners.get(pot);
 		npc.setDisplayEffect(1);
-		npc.setIsRunning(false);
+		npc.setWalking();
 		if (pot < 4)
 		{
 			_current = npc;
@@ -92,10 +92,10 @@ public final class Anais extends AbstractNpcAI
 					final L2Npc b = _divineBurners.get(_pot);
 					_pot = _pot + 1;
 					b.setDisplayEffect(1);
-					b.setIsRunning(false);
+					b.setWalking();
 					final L2Npc ward = addSpawn(GRAIL_WARD, new Location(b.getX(), b.getY(), b.getZ()), true, 0);
 					((L2Attackable) ward).addDamageHate(_nextTarget, 0, 999);
-					ward.setIsRunning(true);
+					ward.setRunning();
 					ward.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _nextTarget, null);
 					startQuestTimer("GUARD_ATTACK", 1000, ward, _nextTarget, true);
 					startQuestTimer("SUICIDE", 20000, ward, null);
@@ -127,7 +127,7 @@ public final class Anais extends AbstractNpcAI
 				if (_current != null)
 				{
 					_current.setDisplayEffect(2);
-					_current.setIsRunning(false);
+					_current.setWalking();
 					_current = null;
 				}
 				npc.doDie(null);
@@ -175,7 +175,7 @@ public final class Anais extends AbstractNpcAI
 		if (_current != null)
 		{
 			_current.setDisplayEffect(2);
-			_current.setIsRunning(false);
+			_current.setWalking();
 			_current = null;
 		}
 		return super.onKill(npc, killer, isSummon);

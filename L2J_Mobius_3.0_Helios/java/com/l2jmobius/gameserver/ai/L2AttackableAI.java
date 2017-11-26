@@ -676,7 +676,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			// Set the AI Intention to AI_INTENTION_ACTIVE
 			setIntention(AI_INTENTION_ACTIVE);
 			
-			npc.setWalking();
+			if (!_actor.isFakePlayer())
+			{
+				npc.setWalking();
+			}
 			return;
 		}
 		

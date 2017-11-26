@@ -825,7 +825,7 @@ public class L2CharacterAI extends AbstractAI
 		// Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die (broadcast)
 		clientNotifyDead();
 		
-		if (!_actor.isPlayable())
+		if (!_actor.isPlayable() && !_actor.isFakePlayer())
 		{
 			_actor.setWalking();
 		}

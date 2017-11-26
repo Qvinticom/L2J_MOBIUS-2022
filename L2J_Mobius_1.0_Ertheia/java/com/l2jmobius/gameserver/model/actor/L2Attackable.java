@@ -772,7 +772,10 @@ public class L2Attackable extends L2Npc
 				((L2AttackableAI) getAI()).setGlobalAggro(-25);
 				clearAggroList();
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				setWalking();
+				if (!isFakePlayer())
+				{
+					setWalking();
+				}
 			}
 			return;
 		}
@@ -790,7 +793,10 @@ public class L2Attackable extends L2Npc
 			((L2AttackableAI) getAI()).setGlobalAggro(-25);
 			clearAggroList();
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-			setWalking();
+			if (!isFakePlayer())
+			{
+				setWalking();
+			}
 		}
 	}
 	
@@ -1461,13 +1467,15 @@ public class L2Attackable extends L2Npc
 			setScriptValue(0); // remove pvp flag
 			setRunning(); // don't walk
 		}
+		else
+		{
+			setWalking();
+		}
 		
 		// Clear mod Seeded stat
 		_seeded = false;
 		_seed = null;
 		_seederObjId = 0;
-		
-		setWalking();
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
 		// if (!isInActiveRegion())
@@ -1799,7 +1807,10 @@ public class L2Attackable extends L2Npc
 				{
 					((L2AttackableAI) getAI()).setGlobalAggro(-25);
 				}
-				setWalking();
+				if (!isFakePlayer())
+				{
+					setWalking();
+				}
 				clearAggroList();
 			}
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);

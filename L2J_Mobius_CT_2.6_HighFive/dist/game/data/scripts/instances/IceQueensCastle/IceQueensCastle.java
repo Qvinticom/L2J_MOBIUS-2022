@@ -84,7 +84,7 @@ public final class IceQueensCastle extends AbstractInstance
 				{
 					if ((character.getId() == ARCHERY_KNIGHT) && !character.isDead() && !((L2Attackable) character).isDecayed())
 					{
-						npc.setIsRunning(true);
+						npc.setRunning();
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character);
 						((L2Attackable) npc).addDamageHate(character, 0, 999999);
 					}
@@ -145,7 +145,7 @@ public final class IceQueensCastle extends AbstractInstance
 			{
 				if ((character.getId() == ARCHERY_KNIGHT) && !character.isDead() && !((L2Attackable) character).isDecayed())
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character);
 					((L2Attackable) npc).addDamageHate(character, 0, 999999);
 					npc.setScriptValue(1);

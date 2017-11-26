@@ -74,7 +74,7 @@ public final class BoyAndGirl extends AbstractNpcAI
 	{
 		startQuestTimer("NPC_CHANGEWEAP", 15000 + (getRandom(5) * 1000), npc, null);
 		startQuestTimer("NPC_SHOUT", 10000 + (getRandom(5) * 1000), npc, null);
-		npc.setIsRunning(true);
+		npc.setRunning();
 		final Location randomLoc = Util.getRandomPosition(npc.getSpawn().getLocation(), 200, 600);
 		addMoveToDesire(npc, GeoEngine.getInstance().canMoveToTargetLoc(npc.getLocation().getX(), npc.getLocation().getY(), npc.getLocation().getZ(), randomLoc.getX(), randomLoc.getY(), randomLoc.getZ(), npc.getInstanceWorld()), 23);
 		return super.onSpawn(npc);

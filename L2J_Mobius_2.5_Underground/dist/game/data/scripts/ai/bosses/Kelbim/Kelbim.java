@@ -201,14 +201,14 @@ public class Kelbim extends AbstractNpcAI
 				for (int i = 0; i < Rnd.get((_bossStage * 5) / 2, _bossStage * 5); i++)
 				{
 					L2Npc minion = addSpawn(KELBIM_GUARD, _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
-					minion.setIsRunning(true);
+					minion.setRunning();
 					((L2Attackable) minion).setIsRaidMinion(true);
 					_minions.add(minion);
 				}
 				for (int i = 0; i < Rnd.get((_bossStage * 2) / 2, _bossStage * 2); i++)
 				{
 					L2Npc minion = addSpawn(KELBIM_GUARDIANS[Rnd.get(KELBIM_GUARDIANS.length)], _kelbimBoss.getX(), _kelbimBoss.getY(), _kelbimBoss.getZ(), 0, true, 0, true, 0);
-					minion.setIsRunning(true);
+					minion.setRunning();
 					((L2Attackable) minion).setIsRaidMinion(true);
 					_minions.add(minion);
 				}

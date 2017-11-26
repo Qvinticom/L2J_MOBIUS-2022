@@ -283,7 +283,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 						case "AWAKENING_GUIDE":
 						{
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, AWAKENING_GUIDE_MOVE_1);
-							npc.setIsRunning(true);
+							npc.setRunning();
 							break;
 						}
 						default:
@@ -323,13 +323,13 @@ public final class MemoryOfDisaster extends AbstractInstance
 				}
 				case WIRPHY:
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					addMoveToDesire(npc, WIRPHY_MOVE, 23);
 					break;
 				}
 				case SILVERA:
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					addMoveToDesire(npc, SILVERA_MOVE, 23);
 					break;
 				}
@@ -470,7 +470,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 				player.getInstanceWorld().spawnGroup("ROGIN").forEach(n ->
 				{
 					addMoveToDesire(n, ROGIN_MOVE, 23);
-					n.setIsRunning(true);
+					n.setRunning();
 				});
 				break;
 			}
@@ -583,7 +583,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			{
 				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n ->
 				{
-					n.setIsRunning(true);
+					n.setRunning();
 					n.broadcastSay(ChatType.NPC_GENERAL, SHOUT_RUN[Rnd.get(SHOUT_RUN.length)]);
 					n.getAI().moveTo(DWARVES_MOVE_1);
 				});
@@ -915,7 +915,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			{
 				if (skill.getId() == SIEGE_GOLEM_SKILL_1.getSkillId())
 				{
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.getAI().moveTo(GOLEM_MOVE);
 				}
 				break;

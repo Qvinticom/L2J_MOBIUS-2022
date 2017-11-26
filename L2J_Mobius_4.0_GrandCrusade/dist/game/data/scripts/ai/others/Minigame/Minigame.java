@@ -110,14 +110,14 @@ public final class Minigame extends AbstractNpcAI
 				if (npc.getId() == BURNER)
 				{
 					npc.setDisplayEffect(2);
-					npc.setIsRunning(false);
+					npc.setWalking();
 				}
 				else
 				{
 					for (L2Npc burner : room.getBurners())
 					{
 						burner.setDisplayEffect(2);
-						burner.setIsRunning(false);
+						burner.setWalking();
 					}
 				}
 				break;
@@ -145,7 +145,7 @@ public final class Minigame extends AbstractNpcAI
 				{
 					final L2Npc b = room.getBurners()[room.getOrder()[room.getCurrentPot()]];
 					b.setDisplayEffect(1);
-					b.setIsRunning(false);
+					b.setWalking();
 					startQuestTimer("off", 2000, b, null); // Stopping burning each pot 2s after
 					startQuestTimer("timer", TIMER_INTERVAL * 1000, npc, null);
 					room.setCurrentPot(room.getCurrentPot() + 1);
@@ -276,7 +276,7 @@ public final class Minigame extends AbstractNpcAI
 						if (room.getCurrentPot() < 8)
 						{
 							npc.setDisplayEffect(1);
-							npc.setIsRunning(false);
+							npc.setWalking();
 							startQuestTimer("off", 2000, npc, null);
 							room.setCurrentPot(room.getCurrentPot() + 1);
 						}
@@ -419,7 +419,7 @@ public final class Minigame extends AbstractNpcAI
 			for (L2Npc burner : _burners)
 			{
 				burner.setDisplayEffect(1);
-				burner.setIsRunning(false);
+				burner.setWalking();
 			}
 		}
 		

@@ -142,7 +142,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 					if ((target != null))
 					{
 						npc.setTarget(target);
-						mob.setIsRunning(true);
+						mob.setRunning();
 						mob.addDamageHate(target, 0, 555);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					}
@@ -156,7 +156,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 					if ((target != null))
 					{
 						npc.setTarget(target);
-						mob.setIsRunning(true);
+						mob.setRunning();
 						mob.addDamageHate(target, 0, 555);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					}
@@ -167,7 +167,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 					if ((target != null))
 					{
 						npc.setTarget(target);
-						mob.setIsRunning(true);
+						mob.setRunning();
 						mob.addDamageHate(target, 0, 555);
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					}
@@ -297,7 +297,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 		{
 			npc.setTarget(creature);
 			npc.doCast(CREW_SKILL.getSkill());
-			npc.setIsRunning(true);
+			npc.setRunning();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, creature);
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
@@ -424,7 +424,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 				{
 					npc.getVariables().set("SELFBUFF_USED", 1);
 					npc.doCast(selfRangeBuff1.getSkill());
-					npc.setIsRunning(true);
+					npc.setRunning();
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
 			}

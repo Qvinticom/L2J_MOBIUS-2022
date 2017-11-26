@@ -94,7 +94,7 @@ public final class Maguen extends AbstractNpcAI
 				final L2Npc maguen = addSpawn(MAGUEN, npc.getLocation(), true, 60000, true);
 				maguen.getVariables().set("SUMMON_PLAYER", player);
 				maguen.setTitle(player.getName());
-				maguen.setIsRunning(true);
+				maguen.setRunning();
 				maguen.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 				maguen.broadcastStatusUpdate();
 				showOnScreenMsg(player, NpcStringId.MAGUEN_APPEARANCE, 2, 4000);

@@ -358,7 +358,7 @@ public final class Baium extends AbstractNpcAI
 								{
 									mob.clearAggroList();
 								}
-								mob.setIsRunning(true);
+								mob.setRunning();
 								mob.addDamageHate(_baium, 0, 999);
 								mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, _baium);
 							}

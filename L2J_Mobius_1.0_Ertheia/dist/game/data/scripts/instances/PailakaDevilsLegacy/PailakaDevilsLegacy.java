@@ -184,7 +184,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 					{
 						npc.disableCoreAI(true);
 						npc.setScriptValue(1);
-						npc.setIsRunning(true);
+						npc.setRunning();
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, LEMATAN_PORT_POINT);
 					}
 					break;

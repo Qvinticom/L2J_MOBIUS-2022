@@ -110,7 +110,7 @@ public final class Q10742_AFurryFriend extends Quest
 						final L2Npc ricky = addSpawn(RICKY, player, true, 120000);
 						ricky.setSummoner(player);
 						ricky.setTitle(player.getName());
-						ricky.setIsRunning(true);
+						ricky.setRunning();
 						ricky.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 						startQuestTimer("CHECK_RICKY_DISTANCE", 2500, ricky, player);
 					}

@@ -250,7 +250,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 						}
 						receiver.disableCoreAI(true);
 						receiver.getVariables().set("BUSY_STATE", 1);
-						receiver.setIsRunning(true);
+						receiver.setRunning();
 						receiver.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location((receiver.getX() + getRandom(-800, 800)), (receiver.getY() + getRandom(-800, 800)), receiver.getZ(), receiver.getHeading()));
 						startQuestTimer("reset_busy_state", 5000, receiver, null);
 					}

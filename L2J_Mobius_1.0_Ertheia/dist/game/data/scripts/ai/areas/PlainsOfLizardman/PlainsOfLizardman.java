@@ -147,7 +147,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 					{
 						if ((monster.getId() == TANTA_MAGICIAN) || (monster.getId() == TANTA_SCOUT))
 						{
-							monster.setIsRunning(true);
+							monster.setRunning();
 							monster.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getX(), npc.getY(), npc.getZ(), 0));
 						}
 					});
