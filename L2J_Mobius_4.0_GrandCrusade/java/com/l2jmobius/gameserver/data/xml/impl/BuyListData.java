@@ -28,15 +28,14 @@ import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.model.buylist.Product;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.items.L2Item;
 
 /**
@@ -47,7 +46,7 @@ public final class BuyListData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
 	
-	private final Map<Integer, L2BuyList> _buyLists = new HashMap<>();
+	private final Map<Integer, ProductList> _buyLists = new HashMap<>();
 	private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 	
 	protected BuyListData()
@@ -77,7 +76,7 @@ public final class BuyListData implements IGameXmlReader
 				final int itemId = rs.getInt("item_id");
 				final long count = rs.getLong("count");
 				final long nextRestockTime = rs.getLong("next_restock_time");
-				final L2BuyList buyList = getBuyList(buyListId);
+				final ProductList buyList = getBuyList(buyListId);
 				if (buyList == null)
 				{
 					LOGGER.warning("BuyList found in database but not loaded from xml! BuyListId: " + buyListId);
@@ -108,71 +107,44 @@ public final class BuyListData implements IGameXmlReader
 		try
 		{
 			final int buyListId = Integer.parseInt(f.getName().replaceAll(".xml", ""));
-			
-			for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
+			forEach(doc, "list", (list) ->
 			{
-				if ("list".equalsIgnoreCase(node.getNodeName()))
+				final int defaultBaseTax = parseInteger(list.getAttributes(), "baseTax", 0);
+				final ProductList buyList = new ProductList(buyListId);
+				forEach(list, (node) ->
 				{
-					final L2BuyList buyList = new L2BuyList(buyListId);
-					for (Node list_node = node.getFirstChild(); list_node != null; list_node = list_node.getNextSibling())
+					switch (node.getNodeName())
 					{
-						if ("item".equalsIgnoreCase(list_node.getNodeName()))
+						case "item":
 						{
-							int itemId = -1;
-							long price = -1;
-							long restockDelay = -1;
-							long count = -1;
-							final NamedNodeMap attrs = list_node.getAttributes();
-							Node attr = attrs.getNamedItem("id");
-							itemId = Integer.parseInt(attr.getNodeValue());
-							attr = attrs.getNamedItem("price");
-							if (attr != null)
-							{
-								price = Long.parseLong(attr.getNodeValue());
-							}
-							attr = attrs.getNamedItem("restock_delay");
-							if (attr != null)
-							{
-								restockDelay = Long.parseLong(attr.getNodeValue());
-							}
-							attr = attrs.getNamedItem("count");
-							if (attr != null)
-							{
-								count = Long.parseLong(attr.getNodeValue());
-							}
+							final NamedNodeMap attrs = node.getAttributes();
+							
+							final int itemId = parseInteger(attrs, "id");
 							final L2Item item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
 							{
-								if ((price > -1) && (item.getReferencePrice() > price) && (buyList.getNpcsAllowed() != null))
-								{
-									LOGGER.warning("Item price is too low. BuyList:" + buyList.getListId() + " ItemID:" + itemId + " File:" + f.getName());
-									LOGGER.warning("Setting price to reference price " + item.getReferencePrice() + " instead of " + price + ".");
-									buyList.addProduct(new Product(buyList.getListId(), item, item.getReferencePrice(), restockDelay, count));
-								}
-								else
-								{
-									buyList.addProduct(new Product(buyList.getListId(), item, price, restockDelay, count));
-								}
+								final long price = parseLong(attrs, "price", -1L);
+								final long restockDelay = parseLong(attrs, "restock_delay", -1L);
+								final long count = parseLong(attrs, "count", -1L);
+								final int baseTax = parseInteger(attrs, "baseTax", defaultBaseTax);
+								
+								buyList.addProduct(new Product(buyListId, item, price, restockDelay, count, baseTax));
 							}
 							else
 							{
-								LOGGER.warning("Item not found. BuyList:" + buyList.getListId() + " ItemID:" + itemId + " File:" + f.getName());
+								LOGGER.warning("Item not found. BuyList:" + buyListId + " ItemID:" + itemId + " File:" + f);
 							}
+							break;
 						}
-						else if ("npcs".equalsIgnoreCase(list_node.getNodeName()))
+						case "npcs":
 						{
-							for (Node npcs_node = list_node.getFirstChild(); npcs_node != null; npcs_node = npcs_node.getNextSibling())
-							{
-								if ("npc".equalsIgnoreCase(npcs_node.getNodeName()))
-								{
-									buyList.addAllowedNpc(Integer.parseInt(npcs_node.getTextContent()));
-								}
-							}
+							forEach(node, "npc", (npcNode) -> buyList.addAllowedNpc(Integer.parseInt(npcNode.getTextContent())));
+							break;
 						}
 					}
-					_buyLists.put(buyList.getListId(), buyList);
-				}
-			}
+				});
+				_buyLists.put(buyListId, buyList);
+			});
 		}
 		catch (Exception e)
 		{
@@ -186,7 +158,7 @@ public final class BuyListData implements IGameXmlReader
 		return NUMERIC_FILTER;
 	}
 	
-	public L2BuyList getBuyList(int listId)
+	public ProductList getBuyList(int listId)
 	{
 		return _buyLists.get(listId);
 	}

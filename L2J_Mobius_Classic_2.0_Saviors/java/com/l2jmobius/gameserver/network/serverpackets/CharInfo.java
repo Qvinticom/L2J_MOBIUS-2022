@@ -21,6 +21,7 @@ import java.util.Set;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.actor.instance.L2DecoyInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
@@ -133,7 +134,9 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		for (int slot : getPaperdollOrderAugument())
 		{
-			packet.writeQ(_activeChar.getInventory().getPaperdollAugmentationId(slot)); // Confirmed
+			final Augmentation augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
+			packet.writeD(augment != null ? augment.getOptionId(0) : 0); // Confirmed
+			packet.writeD(augment != null ? augment.getOptionId(1) : 0); // Confirmed
 		}
 		
 		packet.writeC(_armorEnchant);

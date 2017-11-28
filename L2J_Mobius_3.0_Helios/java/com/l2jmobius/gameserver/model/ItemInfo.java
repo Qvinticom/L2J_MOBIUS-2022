@@ -39,10 +39,10 @@ public class ItemInfo
 	private L2Item _item;
 	
 	/** The level of enchant on the L2ItemInstance */
-	private int _enchant;
+	private int _enchantLevel;
 	
 	/** The augmentation of the item */
-	private int _augmentation;
+	private Augmentation _augmentation;
 	
 	/** The quantity of L2ItemInstance */
 	private long _count;
@@ -68,7 +68,7 @@ public class ItemInfo
 	
 	private byte _elemAtkType = -2;
 	private int _elemAtkPower = 0;
-	private final int[] _elemDefAttr =
+	private final int[] _attributeDefence =
 	{
 		0,
 		0,
@@ -99,17 +99,10 @@ public class ItemInfo
 		_item = item.getItem();
 		
 		// Get the enchant level of the L2ItemInstance
-		_enchant = item.getEnchantLevel();
+		_enchantLevel = item.getEnchantLevel();
 		
-		// Get the augmentation boni
-		if (item.isAugmented())
-		{
-			_augmentation = item.getAugmentation().getId();
-		}
-		else
-		{
-			_augmentation = 0;
-		}
+		// Get the augmentation bonus
+		_augmentation = item.getAugmentation();
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -150,7 +143,7 @@ public class ItemInfo
 		_elemAtkPower = item.getAttackAttributePower();
 		for (AttributeType type : AttributeType.ATTRIBUTE_TYPES)
 		{
-			_elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
+			_attributeDefence[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_option = item.getEnchantOptions();
 		_soulCrystalOptions = item.getSpecialAbilities();
@@ -179,10 +172,10 @@ public class ItemInfo
 		_item = item.getItem();
 		
 		// Get the enchant level of the L2ItemInstance
-		_enchant = item.getEnchant();
+		_enchantLevel = item.getEnchant();
 		
 		// Get the augmentation bonus
-		_augmentation = item.getAugmentId();
+		_augmentation = item.getAugmentation();
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -207,7 +200,7 @@ public class ItemInfo
 		_elemAtkPower = item.getAttackElementPower();
 		for (byte i = 0; i < 6; i++)
 		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
+			_attributeDefence[i] = item.getElementDefAttr(i);
 		}
 		
 		_option = item.getEnchantOptions();
@@ -230,10 +223,10 @@ public class ItemInfo
 		_item = item.getItem();
 		
 		// Get the enchant level of the L2ItemInstance
-		_enchant = 0;
+		_enchantLevel = 0;
 		
-		// Get the augmentation boni
-		_augmentation = 0;
+		// Get the augmentation bonus
+		_augmentation = null;
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -272,17 +265,10 @@ public class ItemInfo
 		_item = item.getItem();
 		
 		// Get the enchant level of the L2ItemInstance
-		_enchant = item.getEnchantLevel();
+		_enchantLevel = item.getEnchantLevel();
 		
-		// Get the augmentation boni
-		if (item.isAugmented())
-		{
-			_augmentation = item.getAugmentationId();
-		}
-		else
-		{
-			_augmentation = 0;
-		}
+		// Get the augmentation bonus
+		_augmentation = item.getAugmentation();
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -303,7 +289,7 @@ public class ItemInfo
 		_elemAtkPower = item.getAttackElementPower();
 		for (byte i = 0; i < 6; i++)
 		{
-			_elemDefAttr[i] = item.getElementDefAttr(i);
+			_attributeDefence[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
 		_soulCrystalOptions = item.getSoulCrystalOptions();
@@ -320,24 +306,14 @@ public class ItemInfo
 		return _item;
 	}
 	
-	public int getEnchant()
+	public int getEnchantLevel()
 	{
-		return _enchant;
+		return _enchantLevel;
 	}
 	
-	public int getAugmentationBonus()
+	public Augmentation getAugmentation()
 	{
 		return _augmentation;
-	}
-	
-	public int get1stAugmentationId()
-	{
-		return 0x0000FFFF & getAugmentationBonus();
-	}
-	
-	public int get2ndAugmentationId()
-	{
-		return getAugmentationBonus() >> 16;
 	}
 	
 	public long getCount()
@@ -395,9 +371,9 @@ public class ItemInfo
 		return _elemAtkPower;
 	}
 	
-	public int getElementDefAttr(byte i)
+	public int getAttributeDefence(AttributeType attribute)
 	{
-		return _elemDefAttr[i];
+		return _attributeDefence[attribute.getClientId()];
 	}
 	
 	public int[] getEnchantOptions()
@@ -412,12 +388,12 @@ public class ItemInfo
 	
 	public Collection<EnsoulOption> getSoulCrystalOptions()
 	{
-		return _soulCrystalOptions;
+		return _soulCrystalOptions != null ? _soulCrystalOptions : Collections.emptyList();
 	}
 	
 	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
 	{
-		return _soulCrystalSpecialOptions;
+		return _soulCrystalSpecialOptions != null ? _soulCrystalSpecialOptions : Collections.emptyList();
 	}
 	
 	public long getVisualExpiration()

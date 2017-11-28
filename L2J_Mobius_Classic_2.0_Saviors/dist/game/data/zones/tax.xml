@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Require Support -->
-<list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
 	<!-- Tax Zones -->
 	<zone name="gludio_1621_001" type="TaxZone" shape="NPoly" minZ="-5036" maxZ="964">
 		<stat name="domainId" val="1" />
@@ -313,7 +312,7 @@
 		<node X="-32918" Y="86639" />
 		<node X="-65420" Y="93116" />
 	</zone>
-	<zone name="oren_1820_002" type="TaxZone" shape="NPoly" minZ="3612" maxZ="1388">
+	<zone name="oren_1820_002" type="TaxZone" shape="NPoly" minZ="1388" maxZ="3612">
 		<stat name="domainId" val="4" />
 		<node X="-50272" Y="84060" />
 		<node X="-39573" Y="83914" />

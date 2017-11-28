@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.datatables.AugmentationData;
-import com.l2jmobius.gameserver.model.L2Augmentation;
+import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -118,12 +118,10 @@ public final class RequestRefine extends AbstractRefinePacket
 			return;
 		}
 		
-		final L2Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade, targetItem.getItem().getBodyPart(), refinerItem.getId(), targetItem);
-		targetItem.setAugmentation(aug);
+		final Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade, targetItem.getItem().getBodyPart(), refinerItem.getId(), targetItem);
+		targetItem.setAugmentation(aug, true);
 		
-		final int stat12 = 0x0000FFFF & aug.getId();
-		final int stat34 = aug.getId() >> 16;
-		activeChar.sendPacket(new ExVariationResult(stat12, stat34, 1));
+		activeChar.sendPacket(new ExVariationResult(aug.getOptionId(0), aug.getOptionId(1), 1));
 		
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);

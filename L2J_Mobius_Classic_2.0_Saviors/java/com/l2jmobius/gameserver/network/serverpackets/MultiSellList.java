@@ -19,21 +19,22 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import static com.l2jmobius.gameserver.data.xml.impl.MultisellData.PAGE_SIZE;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
-import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.multisell.Entry;
-import com.l2jmobius.gameserver.model.multisell.Ingredient;
-import com.l2jmobius.gameserver.model.multisell.ItemInfo;
-import com.l2jmobius.gameserver.model.multisell.ListContainer;
+import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.model.ItemInfo;
+import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
+import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
+import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class MultiSellList implements IClientOutgoingPacket
+public final class MultiSellList extends AbstractItemPacket
 {
 	private int _size, _index;
-	private final ListContainer _list;
+	private final PreparedMultisellListHolder _list;
 	private final boolean _finished;
 	
-	public MultiSellList(ListContainer list, int index)
+	public MultiSellList(PreparedMultisellListHolder list, int index)
 	{
 		_list = list;
 		_index = index;
@@ -54,173 +55,69 @@ public final class MultiSellList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.MULTI_SELL_LIST.writeId(packet);
 		
-		packet.writeC(0x00);
-		packet.writeD(_list.getListId()); // list id
+		packet.writeC(0x00); // Helios
+		packet.writeD(_list.getId()); // list id
 		packet.writeC(0x00); // GOD Unknown
 		packet.writeD(1 + (_index / PAGE_SIZE)); // page started from 1
 		packet.writeD(_finished ? 0x01 : 0x00); // finished
 		packet.writeD(PAGE_SIZE); // size of pages
 		packet.writeD(_size); // list length
 		packet.writeC(_list.isChanceMultisell() ? 0x01 : 0x00); // new multisell window
-		packet.writeD(0x20); // Always 32 oO
+		packet.writeD(0x20); // Helios - Always 32
 		
-		Entry ent;
 		while (_size-- > 0)
 		{
-			ent = _list.getEntries().get(_index++);
-			packet.writeD(ent.getEntryId());
-			packet.writeC(ent.isStackable() ? 1 : 0);
-			packet.writeH(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeC(0); // Size of regular soul crystal options.
-			// for (EnsoulOption option : item.getSoulCrystalOptions())
-			// {
-			// packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-			// }
+			final ItemInfo itemEnchantment = _list.getItemEnchantment(_index);
+			final MultisellEntryHolder entry = _list.getEntries().get(_index++);
 			
-			packet.writeC(0); // Size of special soul crystal options.
-			// for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-			// {
-			// packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-			// }
+			packet.writeD(_index); // Entry ID. Start from 1.
+			packet.writeC(entry.isStackable() ? 1 : 0);
 			
-			packet.writeH(ent.getProducts().size());
-			packet.writeH(ent.getIngredients().size());
+			// Those values will be passed down to MultiSellChoose packet.
+			packet.writeH(itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0); // enchant level
+			writeItemAugment(packet, itemEnchantment);
+			writeItemElemental(packet, itemEnchantment);
+			writeItemEnsoulOptions(packet, itemEnchantment);
 			
-			for (Ingredient ing : ent.getProducts())
+			packet.writeH(entry.getProducts().size());
+			packet.writeH(entry.getIngredients().size());
+			
+			for (ItemChanceHolder product : entry.getProducts())
 			{
-				packet.writeD(ing.getItemId());
-				if (ing.getTemplate() != null)
+				final L2Item template = ItemTable.getInstance().getTemplate(product.getId());
+				final ItemInfo displayItemEnchantment = (_list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass())) ? itemEnchantment : null;
+				
+				packet.writeD(product.getId());
+				if (template != null)
 				{
-					packet.writeQ(ing.getTemplate().getBodyPart());
-					packet.writeH(ing.getTemplate().getType2());
+					packet.writeQ(template.getBodyPart());
+					packet.writeH(template.getType2());
 				}
 				else
 				{
 					packet.writeQ(0);
 					packet.writeH(65535);
 				}
-				packet.writeQ(ing.getItemCount());
-				if (ing.getItemInfo() != null)
-				{
-					final ItemInfo item = ing.getItemInfo();
-					packet.writeH(item.getEnchantLevel()); // enchant level
-					packet.writeD((int) (_list.isChanceMultisell() ? ing.getChance() : item.getAugmentId())); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeD(0x00); // time ?
-					packet.writeH(item.getElementId()); // attack element
-					packet.writeH(item.getElementPower()); // element power
-					
-					for (int i = 0; i < 6; i++)
-					{
-						final AttributeHolder holder = item.getElementals()[i];
-						packet.writeH(holder != null ? holder.getValue() : 0);
-					}
-					
-					packet.writeC(item.getSpecialAbilities().size()); // Size of regular soul crystal options.
-					for (EnsoulOption option : item.getSpecialAbilities())
-					{
-						packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-					}
-					
-					packet.writeC(item.getAdditionalSpecialAbilities().size()); // Size of special soul crystal options.
-					for (EnsoulOption option : item.getAdditionalSpecialAbilities())
-					{
-						packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-					}
-				}
-				else
-				{
-					packet.writeH(ing.getEnchantLevel()); // enchant level
-					packet.writeD((int) ing.getChance()); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeD(0x00); // time ?
-					packet.writeH(0x00); // attack element
-					packet.writeH(0x00); // element power
-					packet.writeH(0x00); // fire
-					packet.writeH(0x00); // water
-					packet.writeH(0x00); // wind
-					packet.writeH(0x00); // earth
-					packet.writeH(0x00); // holy
-					packet.writeH(0x00); // dark
-					packet.writeC(0); // Size of regular soul crystal options.
-					// for (EnsoulOption option : item.getSoulCrystalOptions())
-					// {
-					// packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-					// }
-					
-					packet.writeC(0); // Size of special soul crystal options.
-					// for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-					// {
-					// packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-					// }
-				}
+				packet.writeQ(_list.getProductCount(product));
+				packet.writeH(displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
+				packet.writeD((int) Math.ceil(product.getChance())); // chance
+				writeItemAugment(packet, displayItemEnchantment);
+				writeItemElemental(packet, displayItemEnchantment);
+				writeItemEnsoulOptions(packet, displayItemEnchantment);
 			}
 			
-			for (Ingredient ing : ent.getIngredients())
+			for (ItemHolder ingredient : entry.getIngredients())
 			{
-				packet.writeD(ing.getItemId());
-				packet.writeH(ing.getTemplate() != null ? ing.getTemplate().getType2() : 65535);
-				packet.writeQ(ing.getItemCount());
-				if (ing.getItemInfo() != null)
-				{
-					final ItemInfo item = ing.getItemInfo();
-					packet.writeH(item.getEnchantLevel()); // enchant level
-					packet.writeD((int) (_list.isChanceMultisell() ? ing.getChance() : item.getAugmentId())); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeH(item.getElementId()); // attack element
-					packet.writeH(item.getElementPower()); // element power
-					for (int i = 0; i < 6; i++)
-					{
-						final AttributeHolder holder = item.getElementals()[i];
-						packet.writeH(holder != null ? holder.getValue() : 0);
-					}
-					packet.writeC(item.getSpecialAbilities().size()); // Size of regular soul crystal options.
-					for (EnsoulOption option : item.getSpecialAbilities())
-					{
-						packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-					}
-					
-					packet.writeC(item.getAdditionalSpecialAbilities().size()); // Size of special soul crystal options.
-					for (EnsoulOption option : item.getAdditionalSpecialAbilities())
-					{
-						packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-					}
-				}
-				else
-				{
-					packet.writeH(ing.getEnchantLevel()); // enchant level
-					packet.writeD((int) ing.getChance()); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeH(0x00); // attack element
-					packet.writeH(0x00); // element power
-					packet.writeH(0x00); // fire
-					packet.writeH(0x00); // water
-					packet.writeH(0x00); // wind
-					packet.writeH(0x00); // earth
-					packet.writeH(0x00); // holy
-					packet.writeH(0x00); // dark
-					packet.writeC(0); // Size of regular soul crystal options.
-					// for (EnsoulOption option : item.getSoulCrystalOptions())
-					// {
-					// packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-					// }
-					
-					packet.writeC(0); // Size of special soul crystal options.
-					// for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-					// {
-					// packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-					// }
-				}
+				final L2Item template = ItemTable.getInstance().getTemplate(ingredient.getId());
+				final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) ? itemEnchantment : null;
+				
+				packet.writeD(ingredient.getId());
+				packet.writeH(template != null ? template.getType2() : 65535);
+				packet.writeQ(_list.getIngredientCount(ingredient));
+				packet.writeH(displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
+				writeItemAugment(packet, displayItemEnchantment);
+				writeItemElemental(packet, displayItemEnchantment);
+				writeItemEnsoulOptions(packet, displayItemEnchantment);
 			}
 		}
 		return true;

@@ -19,9 +19,10 @@ package handlers.admincommandhandlers;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.BuyList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
@@ -40,7 +41,9 @@ public class AdminShop implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_buy",
-		"admin_gmshop"
+		"admin_gmshop",
+		"admin_multisell",
+		"admin_exc_multisell"
 	};
 	
 	@Override
@@ -60,6 +63,30 @@ public class AdminShop implements IAdminCommandHandler
 		else if (command.equals("admin_gmshop"))
 		{
 			AdminHtml.showAdminHtml(activeChar, "gmshops.htm");
+		}
+		else if (command.startsWith("admin_multisell"))
+		{
+			try
+			{
+				int listId = Integer.parseInt(command.substring(16).trim());
+				MultisellData.getInstance().separateAndSend(listId, activeChar, null, false);
+			}
+			catch (NumberFormatException | IndexOutOfBoundsException e)
+			{
+				activeChar.sendMessage("Please specify multisell list ID.");
+			}
+		}
+		else if (command.toLowerCase().startsWith("admin_exc_multisell"))
+		{
+			try
+			{
+				int listId = Integer.parseInt(command.substring(20).trim());
+				MultisellData.getInstance().separateAndSend(listId, activeChar, null, true);
+			}
+			catch (NumberFormatException | IndexOutOfBoundsException e)
+			{
+				activeChar.sendMessage("Please specify multisell list ID.");
+			}
 		}
 		return true;
 	}
@@ -82,17 +109,16 @@ public class AdminShop implements IAdminCommandHandler
 			_log.warning("admin buylist failed:" + command);
 		}
 		
-		final L2BuyList buyList = BuyListData.getInstance().getBuyList(val);
-		
+		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
 		if (buyList != null)
 		{
-			activeChar.sendPacket(new BuyList(buyList, activeChar.getAdena(), 0));
+			activeChar.sendPacket(new BuyList(buyList, activeChar, 0));
 			activeChar.sendPacket(new ExBuySellList(activeChar, false));
 		}
 		else
 		{
 			_log.warning("no buylist with id:" + val);
+			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 		}
-		activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 }

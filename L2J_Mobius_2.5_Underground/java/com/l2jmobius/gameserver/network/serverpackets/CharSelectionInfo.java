@@ -29,6 +29,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.entity.Hero;
@@ -190,7 +191,8 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(i == _activeId ? 1 : 0);
 			
 			packet.writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
-			packet.writeQ(charInfoPackage.getAugmentationId());
+			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOptionId(0) : 0);
+			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOptionId(1) : 0);
 			
 			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
 			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
@@ -364,7 +366,10 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 					if (result.next())
 					{
 						final int augment = result.getInt("augAttributes");
-						charInfopackage.setAugmentationId(augment == -1 ? 0 : augment);
+						if (augment > 0)
+						{
+							charInfopackage.setAugmentation(AugmentationData.getInstance().getAugmentation(augment));
+						}
 					}
 				}
 			}

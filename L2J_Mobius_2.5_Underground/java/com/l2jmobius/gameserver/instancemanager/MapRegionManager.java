@@ -74,7 +74,6 @@ public final class MapRegionManager implements IGameXmlReader
 		String name;
 		String town;
 		int locId;
-		int castle;
 		int bbs;
 		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -89,10 +88,9 @@ public final class MapRegionManager implements IGameXmlReader
 						name = attrs.getNamedItem("name").getNodeValue();
 						town = attrs.getNamedItem("town").getNodeValue();
 						locId = parseInteger(attrs, "locId");
-						castle = parseInteger(attrs, "castle");
 						bbs = parseInteger(attrs, "bbs");
 						
-						final L2MapRegion region = new L2MapRegion(name, town, locId, castle, bbs);
+						final L2MapRegion region = new L2MapRegion(name, town, locId, bbs);
 						for (Node c = d.getFirstChild(); c != null; c = c.getNextSibling())
 						{
 							attrs = c.getAttributes();
@@ -222,22 +220,6 @@ public final class MapRegionManager implements IGameXmlReader
 		}
 		
 		return region.getTown();
-	}
-	
-	/**
-	 * @param activeChar
-	 * @return
-	 */
-	public int getAreaCastle(L2Character activeChar)
-	{
-		final L2MapRegion region = getMapRegion(activeChar);
-		
-		if (region == null)
-		{
-			return 0;
-		}
-		
-		return region.getCastle();
 	}
 	
 	/**

@@ -49,4 +49,10 @@ public class EnsoulOption extends SkillHolder
 	{
 		return _desc;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "Ensoul Id: " + _id + " Name: " + _name + " Desc: " + _desc;
+	}
 }

@@ -20,7 +20,7 @@ import java.util.Collection;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
@@ -33,7 +33,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 	private final long _money;
 	private CrystalType _expertise;
 	
-	public ShopPreviewList(L2BuyList list, long currentMoney, CrystalType expertise)
+	public ShopPreviewList(ProductList list, long currentMoney, CrystalType expertise)
 	{
 		_listId = list.getListId();
 		_list = list.getProducts();

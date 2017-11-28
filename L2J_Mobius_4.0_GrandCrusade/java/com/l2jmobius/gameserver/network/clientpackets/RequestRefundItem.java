@@ -21,11 +21,10 @@ import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -79,13 +78,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (_items == null)
-		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (!player.hasRefund())
+		if ((_items == null) || !player.hasRefund())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -109,7 +102,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2BuyList buyList = BuyListData.getInstance().getBuyList(_listId);
+		final ProductList buyList = BuyListData.getInstance().getBuyList(_listId);
 		if (buyList == null)
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
@@ -164,12 +157,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 			
 			final long count = item.getCount();
 			weight += count * template.getWeight();
-			long price = item.getReferencePrice() / 2;
-			if (merchant != null)
-			{
-				price -= (price * merchant.getTotalTaxRate(TaxType.SELL));
-			}
-			adena += price * count;
+			adena += (count * template.getReferencePrice()) / 2;
 			if (!template.isStackable())
 			{
 				slots += count;
@@ -213,6 +201,6 @@ public final class RequestRefundItem implements IClientIncomingPacket
 		
 		// Update current load status on player
 		client.sendPacket(new ExUserInfoInvenWeight(player));
-		client.sendPacket(new ExBuySellList(player, true, merchant != null ? merchant.getTotalTaxRate(TaxType.SELL) : 0));
+		client.sendPacket(new ExBuySellList(player, true));
 	}
 }

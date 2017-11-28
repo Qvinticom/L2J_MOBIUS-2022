@@ -139,7 +139,7 @@ public final class ConvertItem extends AbstractEffect
 		
 		if (elementals != null)
 		{
-			newItem.setAttribute(elementals);
+			newItem.setAttribute(elementals, true);
 		}
 		newItem.setEnchantLevel(enchantLevel);
 		player.getInventory().equipItem(newItem);

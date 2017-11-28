@@ -33,7 +33,6 @@ public class L2MapRegion
 	private final String _name;
 	private final String _town;
 	private final int _locId;
-	private final int _castle;
 	private final int _bbs;
 	private List<int[]> _maps = null;
 	
@@ -44,12 +43,11 @@ public class L2MapRegion
 	
 	private final Map<Race, String> _bannedRace = new HashMap<>();
 	
-	public L2MapRegion(String name, String town, int locId, int castle, int bbs)
+	public L2MapRegion(String name, String town, int locId, int bbs)
 	{
 		_name = name;
 		_town = town;
 		_locId = locId;
-		_castle = castle;
 		_bbs = bbs;
 	}
 	
@@ -66,11 +64,6 @@ public class L2MapRegion
 	public final int getLocId()
 	{
 		return _locId;
-	}
-	
-	public final int getCastle()
-	{
-		return _castle;
 	}
 	
 	public final int getBbs()

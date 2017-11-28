@@ -18,6 +18,7 @@ package handlers.communityboard;
 
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IWriteBoardHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -64,7 +65,7 @@ public class RegionBoard implements IWriteBoardHandler
 				link = link.replace("%region_name%", String.valueOf(REGIONS[i]));
 				link = link.replace("%region_owning_clan%", (clan != null ? clan.getName() : "NPC"));
 				link = link.replace("%region_owning_clan_alliance%", ((clan != null) && (clan.getAllyName() != null) ? clan.getAllyName() : ""));
-				link = link.replace("%region_tax_rate%", (castle.getTaxRate() * 100) + "%");
+				link = link.replace("%region_tax_rate%", castle.getTaxPercent(TaxType.BUY) + "%");
 				sb.append(link);
 			}
 			

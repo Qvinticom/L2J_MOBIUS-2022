@@ -29,8 +29,8 @@ import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.model.buylist.Product;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -110,7 +110,7 @@ public final class RequestBuyItem implements IClientIncomingPacket
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			merchant = (L2MerchantInstance) target;
+			merchant = (L2MerchantInstance) target; // FIXME: Doesn't work for GMs.
 		}
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
@@ -119,7 +119,7 @@ public final class RequestBuyItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2BuyList buyList = BuyListData.getInstance().getBuyList(_listId);
+		final ProductList buyList = BuyListData.getInstance().getBuyList(_listId);
 		if (buyList == null)
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
@@ -134,7 +134,7 @@ public final class RequestBuyItem implements IClientIncomingPacket
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			castleTaxRate = merchant.getTotalTaxRate(TaxType.BUY);
+			castleTaxRate = merchant.getCastleTaxRate(TaxType.BUY);
 		}
 		
 		long subTotal = 0;
@@ -159,11 +159,6 @@ public final class RequestBuyItem implements IClientIncomingPacket
 			}
 			
 			long price = product.getPrice();
-			if ((product.getItemId() >= 3960) && (product.getItemId() <= 4026))
-			{
-				price *= Config.RATE_SIEGE_GUARDS_PRICE;
-			}
-			
 			if (price < 0)
 			{
 				_log.warning("ERROR, no price found .. wrong buylist ??");
@@ -194,7 +189,7 @@ public final class RequestBuyItem implements IClientIncomingPacket
 				return;
 			}
 			// first calculate price per item with tax, then multiply by count
-			price = (long) (price * (1 + castleTaxRate));
+			price = (long) (price * (1 + castleTaxRate + product.getBaseTaxRate()));
 			subTotal += i.getCount() * price;
 			if (subTotal > MAX_ADENA)
 			{
@@ -257,7 +252,7 @@ public final class RequestBuyItem implements IClientIncomingPacket
 		// add to castle treasury
 		if (merchant != null)
 		{
-			merchant.getCastle().addToTreasury((long) (subTotal * castleTaxRate));
+			merchant.handleTaxPayment((long) (subTotal * castleTaxRate));
 		}
 		
 		client.sendPacket(new ExUserInfoInvenWeight(player));

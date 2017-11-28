@@ -162,7 +162,7 @@ public class AdminElement implements IAdminCommandHandler
 			}
 			else
 			{
-				itemInstance.setAttribute(new AttributeHolder(type, value));
+				itemInstance.setAttribute(new AttributeHolder(type, value), true);
 			}
 			player.getInventory().equipItem(itemInstance);
 			

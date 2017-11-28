@@ -29,9 +29,11 @@
 						<xs:attribute name="price" type="xs:nonNegativeInteger" />
 						<xs:attribute name="restock_delay" type="xs:positiveInteger" />
 						<xs:attribute name="count" type="xs:positiveInteger" />
+						<xs:attribute name="baseTax" type="xs:positiveInteger" use="optional" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
+			<xs:attribute name="baseTax" type="xs:positiveInteger" use="optional" />
 		</xs:complexType>
 	</xs:element>
 </xs:schema>

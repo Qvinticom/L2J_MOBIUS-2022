@@ -160,50 +160,6 @@ public class PcInventory extends Inventory
 	}
 	
 	/**
-	 * Returns the list of items in inventory available for transaction Allows an item to appear twice if and only if there is a difference in enchantment level.
-	 * @param allowAdena
-	 * @param allowAncientAdena
-	 * @return L2ItemInstance : items in inventory
-	 */
-	public Collection<L2ItemInstance> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena)
-	{
-		return getUniqueItemsByEnchantLevel(allowAdena, allowAncientAdena, true);
-	}
-	
-	public Collection<L2ItemInstance> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
-	{
-		final Collection<L2ItemInstance> list = new LinkedList<>();
-		for (L2ItemInstance item : _items.values())
-		{
-			if (!allowAdena && (item.getId() == ADENA_ID))
-			{
-				continue;
-			}
-			if (!allowAncientAdena && (item.getId() == ANCIENT_ADENA_ID))
-			{
-				continue;
-			}
-			
-			boolean isDuplicate = false;
-			for (L2ItemInstance litem : list)
-			{
-				if ((litem.getId() == item.getId()) && (litem.getEnchantLevel() == item.getEnchantLevel()))
-				{
-					isDuplicate = true;
-					break;
-				}
-			}
-			
-			if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(getOwner(), false, false))))
-			{
-				list.add(item);
-			}
-		}
-		
-		return list;
-	}
-	
-	/**
 	 * @param itemId
 	 * @return
 	 */

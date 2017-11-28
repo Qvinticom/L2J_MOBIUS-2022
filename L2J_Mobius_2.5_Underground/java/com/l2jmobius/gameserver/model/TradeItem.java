@@ -51,7 +51,7 @@ public class TradeItem
 	private final Collection<EnsoulOption> _soulCrystalOptions;
 	private final Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	private int _visualId;
-	private int _augmentId;
+	private Augmentation _augmentation;
 	
 	public TradeItem(L2ItemInstance item, long count, long price)
 	{
@@ -74,7 +74,7 @@ public class TradeItem
 		_soulCrystalOptions = item.getSpecialAbilities();
 		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
-		_augmentId = item.isAugmented() ? item.getAugmentation().getId() : 0;
+		_augmentation = item.getAugmentation();
 	}
 	
 	public TradeItem(L2Item item, long count, long price)
@@ -215,9 +215,9 @@ public class TradeItem
 		return _soulCrystalSpecialOptions;
 	}
 	
-	public int getAugmentId()
+	public Augmentation getAugmentation()
 	{
-		return _augmentId;
+		return _augmentation;
 	}
 	
 	public int getVisualId()

@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.buylist.Product;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class BuyList extends AbstractItemPacket
@@ -29,14 +29,16 @@ public final class BuyList extends AbstractItemPacket
 	private final int _listId;
 	private final Collection<Product> _list;
 	private final long _money;
-	private double _taxRate = 0;
+	private final int _inventorySlots;
+	private final double _castleTaxRate;
 	
-	public BuyList(L2BuyList list, long currentMoney, double taxRate)
+	public BuyList(ProductList list, L2PcInstance player, double castleTaxRate)
 	{
 		_listId = list.getListId();
 		_list = list.getProducts();
-		_money = currentMoney;
-		_taxRate = taxRate;
+		_money = player.getAdena();
+		_inventorySlots = player.getInventory().getItems((item) -> !item.isQuestItem()).size();
+		_castleTaxRate = castleTaxRate;
 	}
 	
 	@Override
@@ -47,23 +49,14 @@ public final class BuyList extends AbstractItemPacket
 		packet.writeD(0x00); // Type BUY
 		packet.writeQ(_money); // current money
 		packet.writeD(_listId);
-		packet.writeD(0x00); // TODO: inventory count
+		packet.writeD(_inventorySlots);
 		packet.writeH(_list.size());
-		
 		for (Product product : _list)
 		{
 			if ((product.getCount() > 0) || !product.hasLimitedStock())
 			{
 				writeItem(packet, product);
-				
-				if ((product.getItemId() >= 3960) && (product.getItemId() <= 4026))
-				{
-					packet.writeQ((long) (product.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE * (1 + _taxRate)));
-				}
-				else
-				{
-					packet.writeQ((long) (product.getPrice() * (1 + _taxRate)));
-				}
+				packet.writeQ((long) (product.getPrice() * (1.0 + _castleTaxRate + product.getBaseTaxRate())));
 			}
 		}
 		return true;

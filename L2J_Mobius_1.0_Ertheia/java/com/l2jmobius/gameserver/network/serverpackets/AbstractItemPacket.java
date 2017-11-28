@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.ItemListType;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.TradeItem;
@@ -61,21 +62,6 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		writeItem(packet, new ItemInfo(item));
 	}
 	
-	protected void writeTradeItem(PacketWriter packet, TradeItem item)
-	{
-		packet.writeH(item.getItem().getType1());
-		packet.writeD(item.getObjectId()); // ObjectId
-		packet.writeD(item.getItem().getDisplayId()); // ItemId
-		packet.writeQ(item.getCount()); // Quantity
-		packet.writeC(item.getItem().getType2()); // Item Type 2 : 00-weapon, 01-shield/armor, 02-ring/earring/necklace, 03-questitem, 04-adena, 05-item
-		packet.writeC(item.getCustomType1()); // Filler (always 0)
-		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		packet.writeH(item.getEnchant()); // Enchant level (pet level shown in control item)
-		packet.writeH(0x00); // Equipped : 00-No, 01-yes
-		packet.writeH(item.getCustomType2());
-		writeItemElementalAndEnchant(packet, new ItemInfo(item));
-	}
-	
 	protected void writeItem(PacketWriter packet, ItemInfo item)
 	{
 		final int mask = calculateMask(item);
@@ -89,13 +75,13 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeC(item.getCustomType1()); // Filler (always 0)
 		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
 		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		packet.writeH(item.getEnchant()); // Enchant level (pet level shown in control item)
+		packet.writeH(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
 		packet.writeD(item.getMana());
 		packet.writeD(item.getTime());
 		packet.writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
-			packet.writeD(item.getAugmentationBonus());
+			writeItemAugment(packet, item);
 		}
 		if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE))
 		{
@@ -114,25 +100,14 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	protected static int calculateMask(ItemInfo item)
 	{
 		int mask = 0;
-		if (item.getAugmentationBonus() > 0)
+		if (item.getAugmentation() != null)
 		{
 			mask |= ItemListType.AUGMENT_BONUS.getMask();
 		}
 		
-		if (item.getAttackElementType() >= 0)
+		if ((item.getAttackElementType() >= 0) || (item.getAttributeDefence(AttributeType.FIRE) > 0) || (item.getAttributeDefence(AttributeType.WATER) > 0) || (item.getAttributeDefence(AttributeType.WIND) > 0) || (item.getAttributeDefence(AttributeType.EARTH) > 0) || (item.getAttributeDefence(AttributeType.HOLY) > 0) || (item.getAttributeDefence(AttributeType.DARK) > 0))
 		{
 			mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
-		}
-		else
-		{
-			for (byte i = 0; i < 6; i++)
-			{
-				if (item.getElementDefAttr(i) >= 0)
-				{
-					mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
-					break;
-				}
-			}
 		}
 		
 		if (item.getEnchantOptions() != null)
@@ -154,6 +129,28 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		return mask;
 	}
 	
+	protected void writeItemAugment(PacketWriter packet, ItemInfo item)
+	{
+		if ((item != null) && (item.getAugmentation() != null))
+		{
+			if (item.getAugmentation().getOptionId(0) != 0)
+			{
+				packet.writeH(item.getAugmentation().getOptionId(0));
+				packet.writeH(item.getAugmentation().getOptionId(1));
+			}
+			else
+			{
+				packet.writeD(item.getAugmentation().getOptionId(0));
+				packet.writeD(item.getAugmentation().getOptionId(1));
+			}
+		}
+		else
+		{
+			packet.writeD(0);
+			packet.writeD(0);
+		}
+	}
+	
 	protected void writeItemElementalAndEnchant(PacketWriter packet, ItemInfo item)
 	{
 		writeItemElemental(packet, item);
@@ -162,11 +159,27 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	
 	protected void writeItemElemental(PacketWriter packet, ItemInfo item)
 	{
-		packet.writeH(item.getAttackElementType());
-		packet.writeH(item.getAttackElementPower());
-		for (byte i = 0; i < 6; i++)
+		if (item != null)
 		{
-			packet.writeH(item.getElementDefAttr(i));
+			packet.writeH(item.getAttackElementType());
+			packet.writeH(item.getAttackElementPower());
+			packet.writeH(item.getAttributeDefence(AttributeType.FIRE));
+			packet.writeH(item.getAttributeDefence(AttributeType.WATER));
+			packet.writeH(item.getAttributeDefence(AttributeType.WIND));
+			packet.writeH(item.getAttributeDefence(AttributeType.EARTH));
+			packet.writeH(item.getAttributeDefence(AttributeType.HOLY));
+			packet.writeH(item.getAttributeDefence(AttributeType.DARK));
+		}
+		else
+		{
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
 		}
 	}
 	
@@ -194,18 +207,5 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		{
 			packet.writeH(0x00);
 		}
-	}
-	
-	protected void writeCommissionItem(PacketWriter packet, ItemInfo item)
-	{
-		packet.writeD(0); // Always 0
-		packet.writeD(item.getItem().getId());
-		packet.writeQ(item.getCount());
-		packet.writeH(item.getItem().getType2());
-		packet.writeQ(item.getItem().getBodyPart());
-		packet.writeH(item.getEnchant());
-		packet.writeH(item.getCustomType2());
-		writeItemElementalAndEnchant(packet, item);
-		packet.writeD(item.getVisualId());
 	}
 }

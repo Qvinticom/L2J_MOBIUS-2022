@@ -162,7 +162,6 @@ import com.l2jmobius.gameserver.model.actor.stat.PcStat;
 import com.l2jmobius.gameserver.model.actor.status.PcStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.player.DismountTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.FameTask;
-import com.l2jmobius.gameserver.model.actor.tasks.player.GameGuardCheckTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.HennaDurationTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.InventoryEnableTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.PetFeedTask;
@@ -212,6 +211,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSubCh
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
+import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import com.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import com.l2jmobius.gameserver.model.holders.TrainingHolder;
@@ -235,7 +235,6 @@ import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
-import com.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -289,7 +288,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
-import com.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import com.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -560,7 +558,7 @@ public final class L2PcInstance extends L2Playable
 	private TradeList _buyList;
 	
 	// Multisell
-	private PreparedListContainer _currentMultiSell = null;
+	private PreparedMultisellListHolder _currentMultiSell = null;
 	
 	private boolean _noble = false;
 	private boolean _hero = false;
@@ -4335,6 +4333,8 @@ public final class L2PcInstance extends L2Playable
 		return getClan().getAllyCrestId();
 	}
 	
+	//@formatter:off
+	/*
 	public void queryGameGuard()
 	{
 		if (getClient() != null)
@@ -4344,9 +4344,10 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (Config.GAMEGUARD_ENFORCE)
 		{
-			ThreadPoolManager.schedule(new GameGuardCheckTask(this), 30 * 1000);
+			ThreadPoolManager.scheduleGeneral(new GameGuardCheckTask(this), 30 * 1000);
 		}
-	}
+	}*/
+	//@formatter:on
 	
 	/**
 	 * Send a Server->Client packet StatusUpdate to the L2PcInstance.
@@ -4711,12 +4712,12 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	public final PreparedListContainer getMultiSell()
+	public final PreparedMultisellListHolder getMultiSell()
 	{
 		return _currentMultiSell;
 	}
 	
-	public final void setMultiSell(PreparedListContainer list)
+	public final void setMultiSell(PreparedMultisellListHolder list)
 	{
 		_currentMultiSell = list;
 	}

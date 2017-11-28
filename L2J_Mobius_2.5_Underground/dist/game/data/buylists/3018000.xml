@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/buylist.xsd">
+<list baseTax="15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/buylist.xsd">
 	<npcs>
 		<npc>30180</npc> <!-- Sara -->
 	</npcs>
@@ -9,11 +9,13 @@
 	<item id="1464" /> <!-- Soulshot (C-grade) -->
 	<item id="1465" /> <!-- Soulshot (B-grade) -->
 	<item id="1466" /> <!-- Soulshot (A-grade) -->
+	<item id="1467" /> <!-- Soulshot (S-grade) -->
 	<item id="3947" /> <!-- Blessed Spiritshot (No-grade) -->
 	<item id="3948" /> <!-- Blessed Spiritshot (D-grade) -->
 	<item id="3949" /> <!-- Blessed Spiritshot (C-grade) -->
 	<item id="3950" /> <!-- Blessed Spiritshot (B-grade) -->
 	<item id="3951" /> <!-- Blessed Spiritshot (A-grade) -->
+	<item id="3952" /> <!-- Blessed Spiritshot (S-grade) -->
 	<item id="5146" /> <!-- Blessed Spiritshot Compressed Package (No-grade) -->
 	<item id="5140" /> <!-- Spiritshot Compressed Package (No-grade) -->
 	<item id="5134" /> <!-- Soulshot Compressed Package (No-grade) -->
@@ -46,7 +48,12 @@
 	<item id="3031" /> <!-- Spirit Ore -->
 	<item id="1785" /> <!-- Soulstone -->
 	<item id="5589" /> <!-- Momentum Stone -->
-	<item id="1661" /> <!-- Thief Key -->
+	<item id="8873" /> <!-- Phoenix Blood -->
+	<item id="8874" /> <!-- Einhasad's Holy Water -->
+	<item id="8875" /> <!-- Battle Symbol -->
+	<item id="8876" /> <!-- Magic Symbol -->
+	<item id="10112" /> <!-- Dark Seed -->	
+	<item id="5589" /> <!-- Momentum Stone -->
 	<item id="5192" /> <!-- Magic Rope (D-grade) -->
 	<item id="5193" /> <!-- Magic Rope (C-grade) -->
 	<item id="5194" /> <!-- Magic Rope (B-grade) -->
@@ -76,7 +83,6 @@
 	<item id="8615" /> <!-- Summoning Crystal -->
 	<item id="8658" /> <!-- Mysterious Solvent -->
 	<item id="8871" /> <!-- Strategy Guide -->
-	<item id="10409" /> <!-- A Bottle of Souls -->
 	<item id="4625" /> <!-- Dice (Heart) -->
 	<item id="4626" /> <!-- Dice (Spade) -->
 	<item id="4627" /> <!-- Dice (Clover) -->
@@ -97,7 +103,6 @@
 	<item id="32260" /> <!-- Infinite Mithril Bolt Container -->
 	<item id="32261" /> <!-- Infinite Light Bolt Container -->
 	<item id="32262" /> <!-- Infinite Orichalcum Bolt Container -->
-	<item id="21746" /> <!-- Maestro's Key -->
 	<item id="5126" /> <!-- Dual Weapon Crafting Stamp -->
 	<item id="30408" /> <!-- Dual Weapon Crafting Stamp (R-grade) -->
 	<item id="36598" /> <!-- Scroll: Restore Equipment (R-grade) -->

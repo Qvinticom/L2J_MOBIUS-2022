@@ -32,12 +32,10 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 public class Options
 {
 	private final int _id;
-	private final List<AbstractEffect> _effects = new ArrayList<>();
-	
-	private SkillHolder _activeSkill = null;
-	private SkillHolder _passiveSkill = null;
-	
-	private final List<OptionsSkillHolder> _activationSkills = new ArrayList<>();
+	private List<AbstractEffect> _effects = null;
+	private List<SkillHolder> _activeSkill = null;
+	private List<SkillHolder> _passiveSkill = null;
+	private List<OptionsSkillHolder> _activationSkills = null;
 	
 	/**
 	 * @param id
@@ -54,6 +52,10 @@ public class Options
 	
 	public void addEffect(AbstractEffect effect)
 	{
+		if (_effects == null)
+		{
+			_effects = new ArrayList<>();
+		}
 		_effects.add(effect);
 	}
 	
@@ -64,51 +66,62 @@ public class Options
 	
 	public boolean hasEffects()
 	{
-		return !_effects.isEmpty();
+		return _effects != null;
 	}
 	
-	public boolean hasActiveSkill()
+	public boolean hasActiveSkills()
 	{
 		return _activeSkill != null;
 	}
 	
-	public SkillHolder getActiveSkill()
+	public List<SkillHolder> getActiveSkills()
 	{
 		return _activeSkill;
 	}
 	
-	public void setActiveSkill(SkillHolder holder)
+	public void addActiveSkill(SkillHolder holder)
 	{
-		_activeSkill = holder;
+		if (_activeSkill == null)
+		{
+			_activeSkill = new ArrayList<>();
+		}
+		_activeSkill.add(holder);
 	}
 	
-	public boolean hasPassiveSkill()
+	public boolean hasPassiveSkills()
 	{
 		return _passiveSkill != null;
 	}
 	
-	public SkillHolder getPassiveSkill()
+	public List<SkillHolder> getPassiveSkills()
 	{
 		return _passiveSkill;
 	}
 	
-	public void setPassiveSkill(SkillHolder holder)
+	public void addPassiveSkill(SkillHolder holder)
 	{
-		_passiveSkill = holder;
+		if (_passiveSkill == null)
+		{
+			_passiveSkill = new ArrayList<>();
+		}
+		_passiveSkill.add(holder);
 	}
 	
 	public boolean hasActivationSkills()
 	{
-		return !_activationSkills.isEmpty();
+		return _activationSkills != null;
 	}
 	
 	public boolean hasActivationSkills(OptionsSkillType type)
 	{
-		for (OptionsSkillHolder holder : _activationSkills)
+		if (_activationSkills != null)
 		{
-			if (holder.getSkillType() == type)
+			for (OptionsSkillHolder holder : _activationSkills)
 			{
-				return true;
+				if (holder.getSkillType() == type)
+				{
+					return true;
+				}
 			}
 		}
 		return false;
@@ -121,12 +134,15 @@ public class Options
 	
 	public List<OptionsSkillHolder> getActivationsSkills(OptionsSkillType type)
 	{
-		final List<OptionsSkillHolder> temp = new ArrayList<>();
-		for (OptionsSkillHolder holder : _activationSkills)
+		List<OptionsSkillHolder> temp = new ArrayList<>();
+		if (_activationSkills != null)
 		{
-			if (holder.getSkillType() == type)
+			for (OptionsSkillHolder holder : _activationSkills)
 			{
-				temp.add(holder);
+				if (holder.getSkillType() == type)
+				{
+					temp.add(holder);
+				}
 			}
 		}
 		return temp;
@@ -134,6 +150,10 @@ public class Options
 	
 	public void addActivationSkill(OptionsSkillHolder holder)
 	{
+		if (_activationSkills == null)
+		{
+			_activationSkills = new ArrayList<>();
+		}
 		_activationSkills.add(holder);
 	}
 	
@@ -171,15 +191,21 @@ public class Options
 				player.getEffectList().add(info);
 			}
 		}
-		if (hasActiveSkill())
+		if (hasActiveSkills())
 		{
-			addSkill(player, getActiveSkill().getSkill());
-			player.sendDebugMessage("Adding active skill: " + getActiveSkill());
+			for (SkillHolder holder : getActiveSkills())
+			{
+				addSkill(player, holder.getSkill());
+				player.sendDebugMessage("Adding active skill: " + getActiveSkills());
+			}
 		}
-		if (hasPassiveSkill())
+		if (hasPassiveSkills())
 		{
-			addSkill(player, getPassiveSkill().getSkill());
-			player.sendDebugMessage("Adding passive skill: " + getPassiveSkill());
+			for (SkillHolder holder : getPassiveSkills())
+			{
+				addSkill(player, holder.getSkill());
+				player.sendDebugMessage("Adding passive skill: " + getPassiveSkills());
+			}
 		}
 		if (hasActivationSkills())
 		{
@@ -208,15 +234,21 @@ public class Options
 				}
 			}
 		}
-		if (hasActiveSkill())
+		if (hasActiveSkills())
 		{
-			player.removeSkill(getActiveSkill().getSkill(), false, false);
-			player.sendDebugMessage("Removing active skill: " + getActiveSkill());
+			for (SkillHolder holder : getActiveSkills())
+			{
+				player.removeSkill(holder.getSkill(), false, false);
+				player.sendDebugMessage("Removing active skill: " + getActiveSkills());
+			}
 		}
-		if (hasPassiveSkill())
+		if (hasPassiveSkills())
 		{
-			player.removeSkill(getPassiveSkill().getSkill(), false, true);
-			player.sendDebugMessage("Removing passive skill: " + getPassiveSkill());
+			for (SkillHolder holder : getPassiveSkills())
+			{
+				player.removeSkill(holder.getSkill(), false, true);
+				player.sendDebugMessage("Removing passive skill: " + getPassiveSkills());
+			}
 		}
 		if (hasActivationSkills())
 		{

@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.ItemListType;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.TradeItem;
@@ -75,15 +76,14 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeC(item.getCustomType1()); // Filler (always 0)
 		packet.writeH(item.getEquipped()); // Equipped : 00-No, 01-yes
 		packet.writeQ(item.getItem().getBodyPart()); // Slot : 0006-lr.ear, 0008-neck, 0030-lr.finger, 0040-head, 0100-l.hand, 0200-gloves, 0400-chest, 0800-pants, 1000-feet, 4000-r.hand, 8000-r.hand
-		packet.writeC(item.getEnchant()); // Enchant level (pet level shown in control item)
+		packet.writeC(item.getEnchantLevel()); // Enchant level (pet level shown in control item)
 		packet.writeC(0x01); // TODO : Find me
 		packet.writeD(item.getMana());
 		packet.writeD(item.getTime());
 		packet.writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
-			packet.writeD(item.get1stAugmentationId());
-			packet.writeD(item.get2ndAugmentationId());
+			writeItemAugment(packet, item);
 		}
 		if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE))
 		{
@@ -99,42 +99,21 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		}
 		if (containsMask(mask, ItemListType.SOUL_CRYSTAL))
 		{
-			packet.writeC(item.getSoulCrystalOptions().size()); // Size of regular soul crystal options.
-			for (EnsoulOption option : item.getSoulCrystalOptions())
-			{
-				packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-			}
-			
-			packet.writeC(item.getSoulCrystalSpecialOptions().size()); // Size of special soul crystal options.
-			for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-			{
-				packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-			}
+			writeItemEnsoulOptions(packet, item);
 		}
 	}
 	
 	protected static int calculateMask(ItemInfo item)
 	{
 		int mask = 0;
-		if (item.getAugmentationBonus() > 0)
+		if (item.getAugmentation() != null)
 		{
 			mask |= ItemListType.AUGMENT_BONUS.getMask();
 		}
 		
-		if (item.getAttackElementType() >= 0)
+		if ((item.getAttackElementType() >= 0) || (item.getAttributeDefence(AttributeType.FIRE) > 0) || (item.getAttributeDefence(AttributeType.WATER) > 0) || (item.getAttributeDefence(AttributeType.WIND) > 0) || (item.getAttributeDefence(AttributeType.EARTH) > 0) || (item.getAttributeDefence(AttributeType.HOLY) > 0) || (item.getAttributeDefence(AttributeType.DARK) > 0))
 		{
 			mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
-		}
-		else
-		{
-			for (byte i = 0; i < 6; i++)
-			{
-				if (item.getElementDefAttr(i) > 0)
-				{
-					mask |= ItemListType.ELEMENTAL_ATTRIBUTE.getMask();
-					break;
-				}
-			}
 		}
 		
 		if (item.getEnchantOptions() != null)
@@ -162,6 +141,20 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		return mask;
 	}
 	
+	protected void writeItemAugment(PacketWriter packet, ItemInfo item)
+	{
+		if ((item != null) && (item.getAugmentation() != null))
+		{
+			packet.writeD(item.getAugmentation().getOptionId(0));
+			packet.writeD(item.getAugmentation().getOptionId(1));
+		}
+		else
+		{
+			packet.writeD(0);
+			packet.writeD(0);
+		}
+	}
+	
 	protected void writeItemElementalAndEnchant(PacketWriter packet, ItemInfo item)
 	{
 		writeItemElemental(packet, item);
@@ -170,11 +163,27 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	
 	protected void writeItemElemental(PacketWriter packet, ItemInfo item)
 	{
-		packet.writeH(item.getAttackElementType());
-		packet.writeH(item.getAttackElementPower());
-		for (byte i = 0; i < 6; i++)
+		if (item != null)
 		{
-			packet.writeH(item.getElementDefAttr(i));
+			packet.writeH(item.getAttackElementType());
+			packet.writeH(item.getAttackElementPower());
+			packet.writeH(item.getAttributeDefence(AttributeType.FIRE));
+			packet.writeH(item.getAttributeDefence(AttributeType.WATER));
+			packet.writeH(item.getAttributeDefence(AttributeType.WIND));
+			packet.writeH(item.getAttributeDefence(AttributeType.EARTH));
+			packet.writeH(item.getAttributeDefence(AttributeType.HOLY));
+			packet.writeH(item.getAttributeDefence(AttributeType.DARK));
+		}
+		else
+		{
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
+			packet.writeH(0);
 		}
 	}
 	
@@ -184,6 +193,29 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		for (int op : item.getEnchantOptions())
 		{
 			packet.writeD(op);
+		}
+	}
+	
+	protected void writeItemEnsoulOptions(PacketWriter packet, ItemInfo item)
+	{
+		if (item != null)
+		{
+			packet.writeC(item.getSoulCrystalOptions().size()); // Size of regular soul crystal options.
+			for (EnsoulOption option : item.getSoulCrystalOptions())
+			{
+				packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
+			}
+			
+			packet.writeC(item.getSoulCrystalSpecialOptions().size()); // Size of special soul crystal options.
+			for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
+			{
+				packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
+			}
+		}
+		else
+		{
+			packet.writeC(0); // Size of regular soul crystal options.
+			packet.writeC(0); // Size of special soul crystal options.
 		}
 	}
 	

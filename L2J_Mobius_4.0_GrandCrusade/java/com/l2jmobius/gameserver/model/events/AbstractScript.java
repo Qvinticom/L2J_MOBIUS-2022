@@ -2701,7 +2701,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 		// set enchant level for item if that item is not adena
 		if ((attributeType != null) && (attributeValue > 0))
 		{
-			item.setAttribute(new AttributeHolder(attributeType, attributeValue));
+			item.setAttribute(new AttributeHolder(attributeType, attributeValue), true);
 			if (item.isEquipped())
 			{
 				// Recalculate all stats

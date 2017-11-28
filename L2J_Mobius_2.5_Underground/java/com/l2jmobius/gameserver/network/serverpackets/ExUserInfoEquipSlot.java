@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.InventorySlot;
+import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -73,10 +74,12 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 		{
 			if (containsMask(slot))
 			{
+				final Augmentation augment = inventory.getPaperdollAugmentation(slot.getSlot());
 				packet.writeH(22); // 10 + 4 * 3
 				packet.writeD(inventory.getPaperdollObjectId(slot.getSlot()));
 				packet.writeD(inventory.getPaperdollItemId(slot.getSlot()));
-				packet.writeQ(inventory.getPaperdollAugmentationId(slot.getSlot()));
+				packet.writeD(augment != null ? augment.getOptionId(0) : 0);
+				packet.writeD(augment != null ? augment.getOptionId(1) : 0);
 				packet.writeD(inventory.getPaperdollItemVisualId(slot.getSlot()));
 			}
 		}

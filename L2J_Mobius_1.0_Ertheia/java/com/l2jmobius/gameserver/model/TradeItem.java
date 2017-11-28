@@ -46,7 +46,7 @@ public class TradeItem
 	};
 	private final int[] _enchantOptions;
 	private int _visualId;
-	private int _augmentId;
+	private Augmentation _augmentation;
 	
 	public TradeItem(L2ItemInstance item, long count, long price)
 	{
@@ -67,7 +67,7 @@ public class TradeItem
 		}
 		_enchantOptions = item.getEnchantOptions();
 		_visualId = item.getVisualId();
-		_augmentId = item.isAugmented() ? item.getAugmentation().getAugmentationId() : 0;
+		_augmentation = item.getAugmentation();
 	}
 	
 	public TradeItem(L2Item item, long count, long price)
@@ -194,9 +194,9 @@ public class TradeItem
 		return _enchantOptions;
 	}
 	
-	public int getAugmentId()
+	public Augmentation getAugmentation()
 	{
-		return _augmentId;
+		return _augmentation;
 	}
 	
 	public int getVisualId()

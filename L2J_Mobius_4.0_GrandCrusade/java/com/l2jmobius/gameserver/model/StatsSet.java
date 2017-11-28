@@ -711,6 +711,20 @@ public class StatsSet implements IParserAdvUtils
 		return (A) obj;
 	}
 	
+	@SuppressWarnings("unchecked")
+	public final <A> A getObject(String name, Class<A> type, A defaultValue)
+	{
+		Objects.requireNonNull(name);
+		Objects.requireNonNull(type);
+		final Object obj = _set.get(name);
+		if ((obj == null) || !type.isAssignableFrom(obj.getClass()))
+		{
+			return defaultValue;
+		}
+		
+		return (A) obj;
+	}
+	
 	public SkillHolder getSkillHolder(String key)
 	{
 		Objects.requireNonNull(key);

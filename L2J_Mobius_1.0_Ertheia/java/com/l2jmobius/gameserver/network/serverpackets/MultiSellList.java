@@ -19,20 +19,22 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import static com.l2jmobius.gameserver.data.xml.impl.MultisellData.PAGE_SIZE;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
-import com.l2jmobius.gameserver.model.multisell.Entry;
-import com.l2jmobius.gameserver.model.multisell.Ingredient;
-import com.l2jmobius.gameserver.model.multisell.ItemInfo;
-import com.l2jmobius.gameserver.model.multisell.ListContainer;
+import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.model.ItemInfo;
+import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
+import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
+import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class MultiSellList implements IClientOutgoingPacket
+public final class MultiSellList extends AbstractItemPacket
 {
 	private int _size, _index;
-	private final ListContainer _list;
+	private final PreparedMultisellListHolder _list;
 	private final boolean _finished;
 	
-	public MultiSellList(ListContainer list, int index)
+	public MultiSellList(PreparedMultisellListHolder list, int index)
 	{
 		_list = list;
 		_index = index;
@@ -53,7 +55,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.MULTI_SELL_LIST.writeId(packet);
 		
-		packet.writeD(_list.getListId()); // list id
+		packet.writeD(_list.getId()); // list id
 		packet.writeC(0x00); // GOD Unknown
 		packet.writeD(1 + (_index / PAGE_SIZE)); // page started from 1
 		packet.writeD(_finished ? 0x01 : 0x00); // finished
@@ -61,107 +63,56 @@ public final class MultiSellList implements IClientOutgoingPacket
 		packet.writeD(_size); // list length
 		packet.writeC(_list.isChanceMultisell() ? 0x01 : 0x00); // new multisell window
 		
-		Entry ent;
 		while (_size-- > 0)
 		{
-			ent = _list.getEntries().get(_index++);
-			packet.writeD(ent.getEntryId());
-			packet.writeC(ent.isStackable() ? 1 : 0);
-			packet.writeH(0x00);
-			packet.writeD(0x00);
-			packet.writeD(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
+			final ItemInfo itemEnchantment = _list.getItemEnchantment(_index);
+			final MultisellEntryHolder entry = _list.getEntries().get(_index++);
 			
-			packet.writeH(ent.getProducts().size());
-			packet.writeH(ent.getIngredients().size());
+			packet.writeD(_index); // Entry ID. Start from 1.
+			packet.writeC(entry.isStackable() ? 1 : 0);
 			
-			for (Ingredient ing : ent.getProducts())
+			// Those values will be passed down to MultiSellChoose packet.
+			packet.writeH(itemEnchantment != null ? itemEnchantment.getEnchantLevel() : 0); // enchant level
+			writeItemAugment(packet, itemEnchantment);
+			writeItemElemental(packet, itemEnchantment);
+			
+			packet.writeH(entry.getProducts().size());
+			packet.writeH(entry.getIngredients().size());
+			
+			for (ItemChanceHolder product : entry.getProducts())
 			{
-				packet.writeD(ing.getItemId());
-				if (ing.getTemplate() != null)
+				final L2Item template = ItemTable.getInstance().getTemplate(product.getId());
+				final ItemInfo displayItemEnchantment = (_list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass())) ? itemEnchantment : null;
+				
+				packet.writeD(product.getId());
+				if (template != null)
 				{
-					packet.writeQ(ing.getTemplate().getBodyPart());
-					packet.writeH(ing.getTemplate().getType2());
+					packet.writeQ(template.getBodyPart());
+					packet.writeH(template.getType2());
 				}
 				else
 				{
 					packet.writeQ(0);
 					packet.writeH(65535);
 				}
-				packet.writeQ(ing.getItemCount());
-				if (ing.getItemInfo() != null)
-				{
-					final ItemInfo item = ing.getItemInfo();
-					packet.writeH(item.getEnchantLevel()); // enchant level
-					packet.writeD((int) (_list.isChanceMultisell() ? ing.getChance() : item.getAugmentId())); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeD(0x00); // time ?
-					packet.writeH(item.getElementId()); // attack element
-					packet.writeH(item.getElementPower()); // element power
-					
-					for (int i = 0; i < 6; i++)
-					{
-						final AttributeHolder holder = item.getElementals()[i];
-						packet.writeH(holder != null ? holder.getValue() : 0);
-					}
-				}
-				else
-				{
-					packet.writeH(ing.getEnchantLevel()); // enchant level
-					packet.writeD((int) ing.getChance()); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeD(0x00); // time ?
-					packet.writeH(0x00); // attack element
-					packet.writeH(0x00); // element power
-					packet.writeH(0x00); // fire
-					packet.writeH(0x00); // water
-					packet.writeH(0x00); // wind
-					packet.writeH(0x00); // earth
-					packet.writeH(0x00); // holy
-					packet.writeH(0x00); // dark
-				}
+				packet.writeQ(_list.getProductCount(product));
+				packet.writeH(displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
+				packet.writeD((int) Math.ceil(product.getChance())); // chance
+				writeItemAugment(packet, displayItemEnchantment);
+				writeItemElemental(packet, displayItemEnchantment);
 			}
 			
-			for (Ingredient ing : ent.getIngredients())
+			for (ItemHolder ingredient : entry.getIngredients())
 			{
-				packet.writeD(ing.getItemId());
-				packet.writeH(ing.getTemplate() != null ? ing.getTemplate().getType2() : 65535);
-				packet.writeQ(ing.getItemCount());
-				if (ing.getItemInfo() != null)
-				{
-					final ItemInfo item = ing.getItemInfo();
-					packet.writeH(item.getEnchantLevel()); // enchant level
-					packet.writeD((int) (_list.isChanceMultisell() ? ing.getChance() : item.getAugmentId())); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeH(item.getElementId()); // attack element
-					packet.writeH(item.getElementPower()); // element power
-					for (int i = 0; i < 6; i++)
-					{
-						final AttributeHolder holder = item.getElementals()[i];
-						packet.writeH(holder != null ? holder.getValue() : 0);
-					}
-				}
-				else
-				{
-					packet.writeH(ing.getEnchantLevel()); // enchant level
-					packet.writeD((int) ing.getChance()); // augment id
-					packet.writeD(0x00); // mana
-					packet.writeH(0x00); // attack element
-					packet.writeH(0x00); // element power
-					packet.writeH(0x00); // fire
-					packet.writeH(0x00); // water
-					packet.writeH(0x00); // wind
-					packet.writeH(0x00); // earth
-					packet.writeH(0x00); // holy
-					packet.writeH(0x00); // dark
-				}
+				final L2Item template = ItemTable.getInstance().getTemplate(ingredient.getId());
+				final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) ? itemEnchantment : null;
+				
+				packet.writeD(ingredient.getId());
+				packet.writeH(template != null ? template.getType2() : 65535);
+				packet.writeQ(_list.getIngredientCount(ingredient));
+				packet.writeH(displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
+				writeItemAugment(packet, displayItemEnchantment);
+				writeItemElemental(packet, displayItemEnchantment);
 			}
 		}
 		return true;

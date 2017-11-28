@@ -78,7 +78,6 @@ public final class Castle extends AbstractResidence
 	private boolean _isTimeRegistrationOver = true; // true if Castle Lords set the time, or 24h is elapsed after the siege
 	private Calendar _siegeTimeRegistrationEndDate; // last siege end date + 1 day
 	private CastleSide _castleSide = null;
-	private double _taxRate;
 	private long _treasury = 0;
 	private boolean _showNpcCrest = false;
 	private L2SiegeZone _zone = null;
@@ -301,7 +300,7 @@ public final class Castle extends AbstractResidence
 				final Castle rune = CastleManager.getInstance().getCastle("rune");
 				if (rune != null)
 				{
-					final long runeTax = (long) (amount * rune.getTaxRate());
+					final long runeTax = (long) (amount * rune.getTaxRate(TaxType.BUY));
 					if (rune.getOwnerId() > 0)
 					{
 						rune.addToTreasury(runeTax);
@@ -319,7 +318,7 @@ public final class Castle extends AbstractResidence
 				final Castle aden = CastleManager.getInstance().getCastle("aden");
 				if (aden != null)
 				{
-					final long adenTax = (long) (amount * aden.getTaxRate()); // Find out what Aden gets from the current castle instance's income
+					final long adenTax = (long) (amount * aden.getTaxRate(TaxType.BUY)); // Find out what Aden gets from the current castle instance's income
 					if (aden.getOwnerId() > 0)
 					{
 						aden.addToTreasury(adenTax); // Only bother to really add the tax to the treasury if not npc owned
@@ -673,7 +672,6 @@ public final class Castle extends AbstractResidence
 				}
 			}
 			
-			setTaxRate(getTaxPercent(TaxType.BUY) / 100);
 			ps2.setInt(1, getResidenceId());
 			try (ResultSet rs = ps2.executeQuery())
 			{
@@ -980,14 +978,9 @@ public final class Castle extends AbstractResidence
 		return taxPercent;
 	}
 	
-	public void setTaxRate(double taxRate)
+	public final double getTaxRate(TaxType taxType)
 	{
-		_taxRate = taxRate;
-	}
-	
-	public final double getTaxRate()
-	{
-		return _taxRate;
+		return getTaxPercent(taxType) / 100.0;
 	}
 	
 	public final long getTreasury()
@@ -1229,7 +1222,6 @@ public final class Castle extends AbstractResidence
 			_log.log(Level.WARNING, e.getMessage(), e);
 		}
 		_castleSide = side;
-		setTaxRate(getTaxPercent(TaxType.BUY) / 100);
 		Broadcast.toAllOnlinePlayers(new ExCastleState(this));
 		spawnSideNpcs();
 	}

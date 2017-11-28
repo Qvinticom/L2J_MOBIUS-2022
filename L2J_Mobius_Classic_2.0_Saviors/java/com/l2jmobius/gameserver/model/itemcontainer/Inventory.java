@@ -42,6 +42,7 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.L2ArmorSet;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.PcCondOverride;
@@ -1021,10 +1022,10 @@ public abstract class Inventory extends ItemContainer
 		return (item != null) ? item.getVisualId() : 0;
 	}
 	
-	public int getPaperdollAugmentationId(int slot)
+	public Augmentation getPaperdollAugmentation(int slot)
 	{
 		final L2ItemInstance item = _paperdoll[slot];
-		return ((item != null) && (item.getAugmentation() != null)) ? item.getAugmentation().getId() : 0;
+		return (item != null) ? item.getAugmentation() : null;
 	}
 	
 	/**

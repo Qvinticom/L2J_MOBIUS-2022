@@ -202,6 +202,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			}
 		}
 		
+		item.updateItemElementals();
 		player.destroyItem("AttrEnchant", stone, usedStones, player, true);
 		final AttributeHolder newElement = item.getAttribute(elementToAdd);
 		final int newValue = newElement != null ? newElement.getValue() : 0;
@@ -350,7 +351,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		
 		if (success)
 		{
-			item.setAttribute(new AttributeHolder(elementToAdd, newPower));
+			item.setAttribute(new AttributeHolder(elementToAdd, newPower), false);
 		}
 		
 		return success ? 1 : 0;

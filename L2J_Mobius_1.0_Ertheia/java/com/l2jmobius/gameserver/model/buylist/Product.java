@@ -25,9 +25,11 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 
 /**
  * @author NosBit
@@ -41,26 +43,23 @@ public final class Product
 	private final long _price;
 	private final long _restockDelay;
 	private final long _maxCount;
+	private final double _baseTax;
 	private AtomicLong _count = null;
 	private ScheduledFuture<?> _restockTask = null;
 	
-	public Product(int buyListId, L2Item item, long price, long restockDelay, long maxCount)
+	public Product(int buyListId, L2Item item, long price, long restockDelay, long maxCount, int baseTax)
 	{
 		Objects.requireNonNull(item);
 		_buyListId = buyListId;
 		_item = item;
-		_price = price;
+		_price = (price < 0) ? item.getReferencePrice() : price;
 		_restockDelay = restockDelay * 60000;
 		_maxCount = maxCount;
+		_baseTax = baseTax / 100.0;
 		if (hasLimitedStock())
 		{
 			_count = new AtomicLong(maxCount);
 		}
-	}
-	
-	public int getBuyListId()
-	{
-		return _buyListId;
 	}
 	
 	public L2Item getItem()
@@ -75,11 +74,17 @@ public final class Product
 	
 	public long getPrice()
 	{
-		if (_price < 0)
+		long price = _price;
+		if (_item.getItemType().equals(EtcItemType.CASTLE_GUARD))
 		{
-			return getItem().getReferencePrice();
+			price *= Config.RATE_SIEGE_GUARDS_PRICE;
 		}
-		return _price;
+		return price;
+	}
+	
+	public double getBaseTaxRate()
+	{
+		return _baseTax;
 	}
 	
 	public long getRestockDelay()
@@ -155,7 +160,7 @@ public final class Product
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
 		{
-			statement.setInt(1, getBuyListId());
+			statement.setInt(1, _buyListId);
 			statement.setInt(2, getItemId());
 			statement.setLong(3, getCount());
 			statement.setLong(5, getCount());
@@ -174,7 +179,7 @@ public final class Product
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Failed to save Product buylist_id:" + getBuyListId() + " item_id:" + getItemId(), e);
+			_log.log(Level.WARNING, "Failed to save Product buylist_id:" + _buyListId + " item_id:" + getItemId(), e);
 		}
 	}
 }

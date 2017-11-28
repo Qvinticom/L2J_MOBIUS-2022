@@ -212,6 +212,7 @@ import com.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;
 import com.l2jmobius.gameserver.model.holders.MonsterBookRewardHolder;
 import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
+import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import com.l2jmobius.gameserver.model.holders.RecipeHolder;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import com.l2jmobius.gameserver.model.holders.SkillUseHolder;
@@ -237,7 +238,6 @@ import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
-import com.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -565,7 +565,7 @@ public final class L2PcInstance extends L2Playable
 	private TradeList _buyList;
 	
 	// Multisell
-	private PreparedListContainer _currentMultiSell = null;
+	private PreparedMultisellListHolder _currentMultiSell = null;
 	
 	private int _nobleLevel = 0;
 	private boolean _hero = false;
@@ -4337,7 +4337,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (Config.GAMEGUARD_ENFORCE)
 		{
-			ThreadPool.scheduleGeneral(new GameGuardCheckTask(this), 30 * 1000);
+			ThreadPoolManager.scheduleGeneral(new GameGuardCheckTask(this), 30 * 1000);
 		}
 	}*/
 	//@formatter:on
@@ -4711,12 +4711,12 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	public final PreparedListContainer getMultiSell()
+	public final PreparedMultisellListHolder getMultiSell()
 	{
 		return _currentMultiSell;
 	}
 	
-	public final void setMultiSell(PreparedListContainer list)
+	public final void setMultiSell(PreparedMultisellListHolder list)
 	{
 		_currentMultiSell = list;
 	}

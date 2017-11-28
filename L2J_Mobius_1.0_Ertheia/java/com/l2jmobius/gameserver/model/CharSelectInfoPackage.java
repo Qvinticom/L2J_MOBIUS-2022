@@ -50,7 +50,7 @@ public class CharSelectInfoPackage
 	private int _reputation = 0;
 	private int _pkKills = 0;
 	private int _pvpKills = 0;
-	private int _augmentationId = 0;
+	private Augmentation _augmentation;
 	private int _x = 0;
 	private int _y = 0;
 	private int _z = 0;
@@ -336,14 +336,14 @@ public class CharSelectInfoPackage
 		return _reputation;
 	}
 	
-	public void setAugmentationId(int augmentationId)
+	public void setAugmentation(Augmentation augmentation)
 	{
-		_augmentationId = augmentationId;
+		_augmentation = augmentation;
 	}
 	
-	public int getAugmentationId()
+	public Augmentation getAugmentation()
 	{
-		return _augmentationId;
+		return _augmentation;
 	}
 	
 	public void setPkKills(int PkKills)

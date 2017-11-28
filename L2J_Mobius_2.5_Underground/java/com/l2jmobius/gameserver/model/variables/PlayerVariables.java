@@ -59,6 +59,7 @@ public class PlayerVariables extends AbstractVariables
 	public static final String EXTEND_DROP = "EXTEND_DROP";
 	public static final String FORTUNE_TELLING_VARIABLE = "FortuneTelling";
 	public static final String FORTUNE_TELLING_BLACK_CAT_VARIABLE = "FortuneTellingBlackCat";
+	public static final String DELUSION_RETURN = "DELUSION_RETURN";
 	
 	private final int _objectId;
 	

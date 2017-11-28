@@ -19,11 +19,10 @@ package ai.others.DelusionTeleport;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.instancemanager.TownManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
+import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 
 import ai.AbstractNpcAI;
 
@@ -50,20 +49,18 @@ public final class DelusionTeleport extends AbstractNpcAI
 		new Location(-114597, -152501, -6750),
 		new Location(-114589, -154162, -6750)
 	};
-	// Player Variables
-	private static final String DELUSION_RETURN = "DELUSION_RETURN";
 	
 	private static final Map<Integer, Location> RETURN_LOCATIONS = new HashMap<>();
 	
 	static
 	{
 		RETURN_LOCATIONS.put(0, new Location(43835, -47749, -792)); // Undefined origin, return to Rune
-		RETURN_LOCATIONS.put(7, new Location(-14023, 123677, -3112)); // Gludio
-		RETURN_LOCATIONS.put(8, new Location(18101, 145936, -3088)); // Dion
-		RETURN_LOCATIONS.put(10, new Location(80905, 56361, -1552)); // Oren
-		RETURN_LOCATIONS.put(14, new Location(42772, -48062, -792)); // Rune
-		RETURN_LOCATIONS.put(15, new Location(108469, 221690, -3592)); // Heine
-		RETURN_LOCATIONS.put(17, new Location(85991, -142234, -1336)); // Schuttgart
+		RETURN_LOCATIONS.put(20, new Location(-14023, 123677, -3112)); // Gludio
+		RETURN_LOCATIONS.put(30, new Location(18101, 145936, -3088)); // Dion
+		RETURN_LOCATIONS.put(40, new Location(80905, 56361, -1552)); // Heine
+		RETURN_LOCATIONS.put(50, new Location(108469, 221690, -3592)); // Oren
+		RETURN_LOCATIONS.put(60, new Location(85991, -142234, -1336)); // Schuttgart
+		RETURN_LOCATIONS.put(70, new Location(42772, -48062, -792)); // Rune
 	}
 	
 	private DelusionTeleport()
@@ -77,16 +74,15 @@ public final class DelusionTeleport extends AbstractNpcAI
 	{
 		if (npc.getId() == NPCS[0]) // Pathfinder Worker
 		{
-			final L2TownZone town = TownManager.getTown(npc.getX(), npc.getY(), npc.getZ());
-			final int townId = ((town == null) ? 0 : town.getTownId());
-			player.getVariables().set(DELUSION_RETURN, townId);
+			final int locId = npc.getParameters().getInt("Level", -1);
+			player.getVariables().set(PlayerVariables.DELUSION_RETURN, RETURN_LOCATIONS.containsKey(locId) ? locId : 0);
 			player.teleToLocation(HALL_LOCATIONS[getRandom(HALL_LOCATIONS.length)], false);
 		}
 		else
 		{
-			final int townId = player.getVariables().getInt(DELUSION_RETURN, 0);
+			final int townId = player.getVariables().getInt(PlayerVariables.DELUSION_RETURN, 0);
 			player.teleToLocation(RETURN_LOCATIONS.get(townId), true);
-			player.getVariables().remove(DELUSION_RETURN);
+			player.getVariables().remove(PlayerVariables.DELUSION_RETURN);
 		}
 		return super.onTalk(npc, player);
 	}

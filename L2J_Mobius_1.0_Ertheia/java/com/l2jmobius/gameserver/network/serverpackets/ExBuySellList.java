@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -28,14 +29,17 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBuySellList extends AbstractItemPacket
 {
-	private Collection<L2ItemInstance> _sellList = null;
+	private Collection<L2ItemInstance> _sellList;
 	private Collection<L2ItemInstance> _refundList = null;
 	private final boolean _done;
-	private double _taxRate = 1;
+	private final int _inventorySlots;
+	private double _castleTaxRate = 1;
 	
 	public ExBuySellList(L2PcInstance player, boolean done)
 	{
-		_sellList = player.getInventory().getAvailableItems(false, false, false);
+		final L2Summon pet = player.getPet();
+		_sellList = player.getInventory().getItems(item -> !item.isEquipped() && item.isSellable() && ((pet == null) || (item.getObjectId() != pet.getControlObjectId())));
+		_inventorySlots = player.getInventory().getItems((item) -> !item.isQuestItem()).size();
 		if (player.hasRefund())
 		{
 			_refundList = player.getRefund().getItems();
@@ -43,10 +47,10 @@ public class ExBuySellList extends AbstractItemPacket
 		_done = done;
 	}
 	
-	public ExBuySellList(L2PcInstance player, boolean done, double taxRate)
+	public ExBuySellList(L2PcInstance player, boolean done, double castleTaxRate)
 	{
 		this(player, done);
-		_taxRate = 1 - taxRate;
+		_castleTaxRate = 1 - castleTaxRate;
 	}
 	
 	@Override
@@ -55,7 +59,7 @@ public class ExBuySellList extends AbstractItemPacket
 		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
 		
 		packet.writeD(0x01); // Type SELL
-		packet.writeD(0x00); // TODO: inventory count
+		packet.writeD(_inventorySlots);
 		
 		if ((_sellList != null))
 		{
@@ -63,15 +67,15 @@ public class ExBuySellList extends AbstractItemPacket
 			for (L2ItemInstance item : _sellList)
 			{
 				writeItem(packet, item);
-				packet.writeQ((long) ((item.getItem().getReferencePrice() / 2) * _taxRate));
+				packet.writeQ((long) ((item.getItem().getReferencePrice() / 2) * _castleTaxRate));
 			}
-		}
+		} 
 		else
 		{
 			packet.writeH(0x00);
 		}
 		
-		if ((_refundList != null) && !_refundList.isEmpty())
+		if ((_refundList != null) && !_refundList.isEmpty()) 
 		{
 			packet.writeH(_refundList.size());
 			int i = 0;
@@ -79,7 +83,7 @@ public class ExBuySellList extends AbstractItemPacket
 			{
 				writeItem(packet, item);
 				packet.writeD(i++);
-				packet.writeQ((long) ((item.getItem().getReferencePrice() / 2) * _taxRate));
+				packet.writeQ((item.getItem().getReferencePrice() / 2) * item.getCount());
 			}
 		}
 		else

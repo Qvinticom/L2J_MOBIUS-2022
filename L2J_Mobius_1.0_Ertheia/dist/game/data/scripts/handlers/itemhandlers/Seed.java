@@ -22,13 +22,13 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
-import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Seed;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -81,7 +81,9 @@ public class Seed implements IItemHandler
 		{
 			return false;
 		}
-		else if (seed.getCastleId() != MapRegionManager.getInstance().getAreaCastle(playable)) // TODO: replace me with tax zone
+		
+		final Castle taxCastle = target.getTaxCastle();
+		if ((taxCastle == null) || (seed.getCastleId() != taxCastle.getResidenceId()))
 		{
 			playable.sendPacket(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
 			return false;

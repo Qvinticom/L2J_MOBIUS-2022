@@ -42,6 +42,7 @@ import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
 import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
+import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -53,8 +54,8 @@ import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
+import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.DropProtection;
-import com.l2jmobius.gameserver.model.L2Augmentation;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
@@ -135,7 +136,7 @@ public final class L2ItemInstance extends L2Object
 	private boolean _wear;
 	
 	/** Augmented Item */
-	private L2Augmentation _augmentation = null;
+	private Augmentation _augmentation = null;
 	
 	/** Shadow item */
 	private int _mana = -1;
@@ -948,7 +949,7 @@ public final class L2ItemInstance extends L2Object
 	 * Returns the augmentation object for this item
 	 * @return augmentation
 	 */
-	public L2Augmentation getAugmentation()
+	public Augmentation getAugmentation()
 	{
 		return _augmentation;
 	}
@@ -956,9 +957,10 @@ public final class L2ItemInstance extends L2Object
 	/**
 	 * Sets a new augmentation
 	 * @param augmentation
+	 * @param updateDatabase
 	 * @return return true if successfully
 	 */
-	public boolean setAugmentation(L2Augmentation augmentation)
+	public boolean setAugmentation(Augmentation augmentation, boolean updateDatabase)
 	{
 		// there shall be no previous augmentation..
 		if (_augmentation != null)
@@ -968,13 +970,9 @@ public final class L2ItemInstance extends L2Object
 		}
 		
 		_augmentation = augmentation;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		if (updateDatabase)
 		{
-			updateItemAttributes(con);
-		}
-		catch (SQLException e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not update atributes for item: " + this + " from DB:", e);
+			updateItemOptions();
 		}
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augmentation, true), getItem());
 		return true;
@@ -991,7 +989,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		
 		// Copy augmentation before removing it.
-		final L2Augmentation augment = _augmentation;
+		final Augmentation augment = _augmentation;
 		_augmentation = null;
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -1023,7 +1021,7 @@ public final class L2ItemInstance extends L2Object
 					final int aug_attributes = rs.getInt(1);
 					if (aug_attributes != -1)
 					{
-						_augmentation = new L2Augmentation(rs.getInt("augAttributes"));
+						_augmentation = AugmentationData.getInstance().getAugmentation(rs.getInt("augAttributes"));
 					}
 				}
 			}
@@ -1048,7 +1046,19 @@ public final class L2ItemInstance extends L2Object
 		}
 	}
 	
-	private void updateItemAttributes(Connection con)
+	public void updateItemOptions()
+	{
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		{
+			updateItemOptions(con);
+		}
+		catch (SQLException e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not update atributes for item: " + toString() + " from DB:", e);
+		}
+	}
+	
+	private void updateItemOptions(Connection con)
 	{
 		try (PreparedStatement ps = con.prepareStatement("REPLACE INTO item_attributes VALUES(?,?)"))
 		{
@@ -1059,6 +1069,18 @@ public final class L2ItemInstance extends L2Object
 		catch (SQLException e)
 		{
 			LOGGER.log(Level.SEVERE, "Could not update atributes for item: " + toString() + " from DB: ", e);
+		}
+	}
+	
+	public void updateItemElementals()
+	{
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		{
+			updateItemElements(con);
+		}
+		catch (SQLException e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not update elementals for item: " + toString() + " from DB: ", e);
 		}
 	}
 	
@@ -1187,17 +1209,14 @@ public final class L2ItemInstance extends L2Object
 	/**
 	 * Add elemental attribute to item and save to db
 	 * @param holder
+	 * @param updateDatabase
 	 */
-	public void setAttribute(AttributeHolder holder)
+	public void setAttribute(AttributeHolder holder, boolean updateDatabase)
 	{
 		applyAttribute(holder);
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		if (updateDatabase)
 		{
-			updateItemElements(con);
-		}
-		catch (SQLException e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not update elementals for item: " + this + " from DB:", e);
+			updateItemElementals();
 		}
 	}
 	
@@ -1646,11 +1665,15 @@ public final class L2ItemInstance extends L2Object
 			
 			if (_augmentation != null)
 			{
-				updateItemAttributes(con);
+				updateItemOptions(con);
 			}
 			if (_elementals != null)
 			{
 				updateItemElements(con);
+			}
+			if ((_ensoulOptions != null) || (_ensoulSpecialOptions != null))
+			{
+				updateSpecialAbilities(con);
 			}
 		}
 		catch (Exception e)
@@ -2217,10 +2240,21 @@ public final class L2ItemInstance extends L2Object
 		}
 	}
 	
-	private void updateSpecialAbilities()
+	public void updateSpecialAbilities()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO item_special_abilities (`objectId`, `type`, `optionId`, `position`) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE type = ?, optionId = ?, position = ?"))
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		{
+			updateSpecialAbilities(con);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Couldn't update item special abilities", e);
+		}
+	}
+	
+	private void updateSpecialAbilities(Connection con)
+	{
+		try (PreparedStatement ps = con.prepareStatement("INSERT INTO item_special_abilities (`objectId`, `type`, `optionId`, `position`) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE type = ?, optionId = ?, position = ?"))
 		{
 			ps.setInt(1, getObjectId());
 			for (Entry<Integer, EnsoulOption> entry : _ensoulOptions.entrySet())

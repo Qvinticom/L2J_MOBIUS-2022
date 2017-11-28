@@ -34,6 +34,7 @@ import com.l2jmobius.gameserver.enums.MpRewardAffectType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.ShotType;
+import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.handler.BypassHandler;
@@ -42,7 +43,6 @@ import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager.DBStatusType;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.instancemanager.TownManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -83,6 +83,7 @@ import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.variables.NpcVariables;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.model.zone.type.L2TaxZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -153,6 +154,9 @@ public class L2Npc extends L2Character
 	
 	private StatsSet _params;
 	private DBSpawnManager.DBStatusType _raidStatus;
+	
+	/** Contains information about local tax payments. */
+	private L2TaxZone _taxZone = null;
 	
 	/**
 	 * Constructor of L2NpcInstance (use L2Character constructor).<br>
@@ -520,6 +524,48 @@ public class L2Npc extends L2Character
 	}
 	
 	/**
+	 * Set another tax zone which will be used for tax payments.
+	 * @param zone newly entered tax zone
+	 */
+	public final void setTaxZone(L2TaxZone zone)
+	{
+		_taxZone = ((zone != null) && !isInInstance()) ? zone : null;
+	}
+	
+	/**
+	 * Gets castle for tax payments.
+	 * @return instance of {@link Castle} when NPC is inside {@link L2TaxZone} otherwise {@code null}
+	 */
+	public final Castle getTaxCastle()
+	{
+		return (_taxZone != null) ? _taxZone.getCastle() : null;
+	}
+	
+	/**
+	 * Gets castle tax rate
+	 * @param type type of tax
+	 * @return tax rate when NPC is inside tax zone otherwise {@code 0}
+	 */
+	public final double getCastleTaxRate(TaxType type)
+	{
+		final Castle castle = getTaxCastle();
+		return (castle != null) ? (castle.getTaxPercent(type) / 100.0) : 0;
+	}
+	
+	/**
+	 * Increase castle vault by specified tax amount.
+	 * @param amount tax amount
+	 */
+	public final void handleTaxPayment(long amount)
+	{
+		final Castle taxCastle = getTaxCastle();
+		if (taxCastle != null)
+		{
+			taxCastle.addToTreasury(amount);
+		}
+	}
+	
+	/**
 	 * @return the nearest L2Castle this L2NpcInstance belongs to. Otherwise null.
 	 */
 	public final Castle getCastle()
@@ -558,11 +604,6 @@ public class L2Npc extends L2Character
 	public final Fort getFort(long maxDistance)
 	{
 		return FortManager.getInstance().findNearestFort(this, maxDistance);
-	}
-	
-	public final boolean isInTown()
-	{
-		return TownManager.getTown(getX(), getY(), getZ()) != null;
 	}
 	
 	/**
@@ -1063,14 +1104,9 @@ public class L2Npc extends L2Character
 			WalkingManager.getInstance().onSpawn(this);
 		}
 		
-		// Display clan flag
-		if (isInsideZone(ZoneId.TOWN) && (getCastle() != null) && (Config.SHOW_CREST_WITHOUT_QUEST || getCastle().getShowNpcCrest()) && (getCastle().getOwnerId() != 0))
+		if (isInsideZone(ZoneId.TAX) && (getCastle() != null) && (Config.SHOW_CREST_WITHOUT_QUEST || getCastle().getShowNpcCrest()) && (getCastle().getOwnerId() != 0))
 		{
-			final int townId = TownManager.getTown(getX(), getY(), getZ()).getTownId();
-			if ((townId != 33) && (townId != 22))
-			{
-				setClanId(getCastle().getOwnerId());
-			}
+			setClanId(getCastle().getOwnerId());
 		}
 	}
 	
@@ -1079,11 +1115,11 @@ public class L2Npc extends L2Character
 	 */
 	public void onRespawn()
 	{
-		// Stop all effects and recalculate stats without broadcasting.
-		getEffectList().stopAllEffects(false);
-		
 		// Make it alive
 		setIsDead(false);
+		
+		// Stop all effects and recalculate stats without broadcasting.
+		getEffectList().stopAllEffects(false);
 		
 		// Reset decay info
 		setDecayed(false);
@@ -1827,11 +1863,17 @@ public class L2Npc extends L2Character
 		initSeenCreatures(getTemplate().getAggroRange());
 	}
 	
+	/**
+	 * @return the NpcStringId for name
+	 */
 	public NpcStringId getNameString()
 	{
 		return _nameString;
 	}
 	
+	/**
+	 * @return the NpcStringId for title
+	 */
 	public NpcStringId getTitleString()
 	{
 		return _titleString;

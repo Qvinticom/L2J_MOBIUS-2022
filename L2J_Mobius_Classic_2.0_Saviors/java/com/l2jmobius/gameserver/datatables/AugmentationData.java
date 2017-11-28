@@ -33,8 +33,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
-import com.l2jmobius.gameserver.model.L2Augmentation;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.options.Options;
@@ -86,11 +85,10 @@ public class AugmentationData
 	private final List<List<Integer>> _redSkills = new ArrayList<>();
 	private final List<List<Integer>> _yellowSkills = new ArrayList<>();
 	
+	private final Map<Integer, Augmentation> _augmentations = new HashMap<>();
 	private final List<AugmentationChance> _augmentationChances = new ArrayList<>();
 	private final List<augmentationChanceAcc> _augmentationChancesAcc = new ArrayList<>();
 	private final List<Integer> _augmentationStones = new ArrayList<>();
-	
-	private final Map<Integer, SkillHolder> _allSkills = new HashMap<>();
 	
 	protected AugmentationData()
 	{
@@ -298,8 +296,6 @@ public class AugmentationData
 								{
 									_redSkills.get(k).add(augmentationId);
 								}
-								
-								_allSkills.put(augmentationId, new SkillHolder(skillId, skillLvL));
 							}
 						}
 					}
@@ -424,7 +420,7 @@ public class AugmentationData
 			}
 		}
 		// Accessories disabled for Classic.
-		/*
+		/**
 		 * if (Config.RETAIL_LIKE_AUGMENTATION_ACCESSORY) { final DocumentBuilderFactory factory3 = DocumentBuilderFactory.newInstance(); factory3.setValidating(false); factory3.setIgnoringComments(true); final File aFile3 = new File(Config.DATAPACK_ROOT +
 		 * "/data/stats/augmentation/retailchances_accessory.xml"); if (aFile3.exists()) { Document aDoc = null; try { aDoc = factory3.newDocumentBuilder().parse(aFile3); } catch (Exception e) { e.printStackTrace(); return; } String aWeaponType = null; int aStoneId = 0; int aVariationId = 0; int
 		 * aCategoryChance = 0; int aAugmentId = 0; float aAugmentChance = 0; for (Node l = aDoc.getFirstChild(); l != null; l = l.getNextSibling()) { if (l.getNodeName().equals("list")) { NamedNodeMap aNodeAttributes = null; for (Node n = l.getFirstChild(); n != null; n = n.getNextSibling()) { if
@@ -437,6 +433,11 @@ public class AugmentationData
 		 */
 	}
 	
+	public Augmentation getAugmentation(int id)
+	{
+		return _augmentations.computeIfAbsent(id, k -> new Augmentation(k));
+	}
+	
 	/**
 	 * Generate a new random augmentation
 	 * @param lifeStoneLevel
@@ -446,7 +447,7 @@ public class AugmentationData
 	 * @param targetItem
 	 * @return
 	 */
-	public L2Augmentation generateRandomAugmentation(int lifeStoneLevel, int lifeStoneGrade, int bodyPart, int lifeStoneId, L2ItemInstance targetItem)
+	public Augmentation generateRandomAugmentation(int lifeStoneLevel, int lifeStoneGrade, int bodyPart, int lifeStoneId, L2ItemInstance targetItem)
 	{
 		switch (bodyPart)
 		{
@@ -463,7 +464,7 @@ public class AugmentationData
 		}
 	}
 	
-	private L2Augmentation generateRandomWeaponAugmentation(int lifeStoneLevel, int lifeStoneGrade, int lifeStoneId, L2ItemInstance item)
+	private Augmentation generateRandomWeaponAugmentation(int lifeStoneLevel, int lifeStoneGrade, int lifeStoneId, L2ItemInstance item)
 	{
 		int stat12 = 0;
 		int stat34 = 0;
@@ -656,7 +657,8 @@ public class AugmentationData
 					}
 				}
 			}
-			return new L2Augmentation(((stat34 << 16) + stat12));
+			final int augmentationId = ((stat34 << 16) + stat12);
+			return getAugmentation(augmentationId);
 		}
 		boolean generateSkill = false;
 		boolean generateGlow = false;
@@ -833,10 +835,10 @@ public class AugmentationData
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Augmentation success: stat12=" + stat12 + "; stat34=" + stat34 + "; resultColor=" + resultColor + "; level=" + lifeStoneLevel + "; grade=" + lifeStoneGrade);
 		}
-		return new L2Augmentation(((stat34 << 16) + stat12));
+		return new Augmentation(((stat34 << 16) + stat12));
 	}
 	
-	private L2Augmentation generateRandomAccessoryAugmentation(int lifeStoneLevel, int bodyPart, int lifeStoneId)
+	private Augmentation generateRandomAccessoryAugmentation(int lifeStoneLevel, int bodyPart, int lifeStoneId)
 	{
 		int stat12 = 0;
 		int stat34 = 0;
@@ -904,7 +906,8 @@ public class AugmentationData
 				}
 			}
 			
-			return new L2Augmentation(((stat34 << 16) + stat12));
+			final int augmentationId = ((stat34 << 16) + stat12);
+			return getAugmentation(augmentationId);
 		}
 		lifeStoneLevel = Math.min(lifeStoneLevel, 9);
 		int base = 0;
@@ -948,7 +951,7 @@ public class AugmentationData
 			op = OptionData.getInstance().getOptions(stat34);
 		}
 		
-		if ((op == null) || (!op.hasActiveSkill() && !op.hasPassiveSkill() && !op.hasActivationSkills()))
+		if ((op == null) || (!op.hasActiveSkills() && !op.hasPassiveSkills() && !op.hasActivationSkills()))
 		{
 			// second augmentation (stats)
 			// calculating any different from stat12 value inside sub-block
@@ -965,7 +968,8 @@ public class AugmentationData
 		{
 			LOGGER.info(getClass().getSimpleName() + ": Accessory augmentation success: stat12=" + stat12 + "; stat34=" + stat34 + "; level=" + lifeStoneLevel);
 		}
-		return new L2Augmentation(((stat34 << 16) + stat12));
+		final int augmentationId = ((stat34 << 16) + stat12);
+		return getAugmentation(augmentationId);
 	}
 	
 	public boolean isAugmentaionStoneValid(int stoneId)

@@ -323,6 +323,12 @@ public class TradeList
 			return null;
 		}
 		
+		if (count < 0)
+		{
+			_log.warning(_owner.getName() + ": Attempt to remove " + count + " items from TradeList!");
+			return null;
+		}
+		
 		for (TradeItem titem : _items)
 		{
 			if ((titem.getObjectId() == objectId) || (titem.getItem().getId() == itemId))
@@ -881,10 +887,10 @@ public class TradeList
 	/**
 	 * Sell items to this PrivateStore list
 	 * @param player
-	 * @param items
+	 * @param requestedItems
 	 * @return : boolean true if success
 	 */
-	public synchronized boolean privateStoreSell(L2PcInstance player, ItemRequest[] items)
+	public synchronized boolean privateStoreSell(L2PcInstance player, ItemRequest[] requestedItems)
 	{
 		if (_locked)
 		{
@@ -907,12 +913,14 @@ public class TradeList
 		
 		long totalPrice = 0;
 		
-		for (ItemRequest item : items)
+		final TradeItem[] sellerItems = _items.toArray(new TradeItem[0]);
+		
+		for (ItemRequest item : requestedItems)
 		{
 			// searching item in tradelist using itemId
 			boolean found = false;
 			
-			for (TradeItem ti : _items)
+			for (TradeItem ti : sellerItems)
 			{
 				if (ti.getItem().getId() == item.getItemId())
 				{
@@ -956,8 +964,19 @@ public class TradeList
 				continue;
 			}
 			
+			if ((item.getObjectId() < 1) || (item.getObjectId() > sellerItems.length))
+			{
+				continue;
+			}
+			
+			final TradeItem tradeItem = sellerItems[item.getObjectId() - 1];
+			if ((tradeItem == null) || (tradeItem.getItem().getId() != item.getItemId()))
+			{
+				continue;
+			}
+			
 			// Check if requested item is available for manipulation
-			int objectId = item.getObjectId();
+			int objectId = tradeItem.getObjectId();
 			L2ItemInstance oldItem = player.checkItemManipulation(objectId, item.getCount(), "sell");
 			// private store - buy use same objectId for buying several non-stackable items
 			if (oldItem == null)

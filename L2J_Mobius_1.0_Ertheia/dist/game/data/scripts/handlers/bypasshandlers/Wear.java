@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ShopPreviewList;
 
@@ -70,7 +70,7 @@ public class Wear implements IBypassHandler
 	
 	private static void showWearWindow(L2PcInstance player, int val)
 	{
-		final L2BuyList buyList = BuyListData.getInstance().getBuyList(val);
+		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
 		if (buyList == null)
 		{
 			_log.warning("BuyList not found! BuyListId:" + val);

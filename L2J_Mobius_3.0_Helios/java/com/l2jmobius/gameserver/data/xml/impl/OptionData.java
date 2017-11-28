@@ -83,12 +83,12 @@ public class OptionData implements IGameXmlReader
 					}
 					case "active_skill":
 					{
-						option.setActiveSkill(new SkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level")));
+						option.addActiveSkill(new SkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level")));
 						break;
 					}
 					case "passive_skill":
 					{
-						option.setPassiveSkill(new SkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level")));
+						option.addPassiveSkill(new SkillHolder(parseInteger(innerNode.getAttributes(), "id"), parseInteger(innerNode.getAttributes(), "level")));
 						break;
 					}
 					case "attack_skill":

@@ -237,7 +237,6 @@ public final class Config
 	public static double ALT_GAME_CREATION_XP_RATE;
 	public static double ALT_GAME_CREATION_RARE_XPSP_RATE;
 	public static double ALT_GAME_CREATION_SP_RATE;
-	public static boolean ALT_BLACKSMITH_USE_RECIPES;
 	public static boolean ALT_CLAN_LEADER_INSTANT_ACTIVATION;
 	public static int ALT_CLAN_JOIN_DAYS;
 	public static int ALT_CLAN_CREATE_DAYS;
@@ -1651,7 +1650,6 @@ public final class Config
 			ALT_GAME_CREATION_XP_RATE = Character.getDouble("AltGameCreationXpRate", 1);
 			ALT_GAME_CREATION_SP_RATE = Character.getDouble("AltGameCreationSpRate", 1);
 			ALT_GAME_CREATION_RARE_XPSP_RATE = Character.getDouble("AltGameCreationRareXpSpRate", 2);
-			ALT_BLACKSMITH_USE_RECIPES = Character.getBoolean("AltBlacksmithUseRecipes", true);
 			ALT_CLAN_LEADER_INSTANT_ACTIVATION = Character.getBoolean("AltClanLeaderInstantActivation", false);
 			ALT_CLAN_JOIN_DAYS = Character.getInt("DaysBeforeJoinAClan", 1);
 			ALT_CLAN_CREATE_DAYS = Character.getInt("DaysBeforeCreateAClan", 10);

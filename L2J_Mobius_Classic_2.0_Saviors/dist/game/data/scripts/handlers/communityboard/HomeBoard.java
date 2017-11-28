@@ -154,7 +154,7 @@ public final class HomeBoard implements IParseBoardHandler
 		{
 			final String page = command.replace("_bbssell;", "");
 			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
-			activeChar.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), activeChar.getAdena(), 0));
+			activeChar.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), activeChar, 0));
 			activeChar.sendPacket(new ExBuySellList(activeChar, false));
 		}
 		else if (command.startsWith("_bbsteleport"))

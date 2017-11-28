@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
+import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
@@ -44,8 +45,7 @@ public class L2WarehouseItem
 	private final int _locationSlot;
 	private final int _enchant;
 	private final CrystalType _grade;
-	private boolean _isAugmented;
-	private int _augmentationId;
+	private final Augmentation _augmentation;
 	private final int _customType1;
 	private final int _customType2;
 	private final int _mana;
@@ -81,15 +81,7 @@ public class L2WarehouseItem
 		_customType1 = item.getCustomType1();
 		_customType2 = item.getCustomType2();
 		_grade = item.getItem().getCrystalType();
-		if (item.isAugmented())
-		{
-			_isAugmented = true;
-			_augmentationId = item.getAugmentation().getId();
-		}
-		else
-		{
-			_isAugmented = false;
-		}
+		_augmentation = item.getAugmentation();
 		_mana = item.getMana();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1;
 		
@@ -233,19 +225,11 @@ public class L2WarehouseItem
 	}
 	
 	/**
-	 * @return {@code true} if the item is augmented, {@code false} otherwise.
-	 */
-	public boolean isAugmented()
-	{
-		return _isAugmented;
-	}
-	
-	/**
 	 * @return the augmentation If.
 	 */
-	public int getAugmentationId()
+	public Augmentation getAugmentation()
 	{
-		return _augmentationId;
+		return _augmentation;
 	}
 	
 	/**

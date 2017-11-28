@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.L2BuyList;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.holders.UniqueItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -129,7 +129,7 @@ public final class RequestSellItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final L2BuyList buyList = BuyListData.getInstance().getBuyList(_listId);
+		final ProductList buyList = BuyListData.getInstance().getBuyList(_listId);
 		if (buyList == null)
 		{
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " sent a false BuyList list_id " + _listId, Config.DEFAULT_PUNISH);
@@ -153,10 +153,6 @@ public final class RequestSellItem implements IClientIncomingPacket
 			}
 			
 			long price = item.getReferencePrice() / 2;
-			if (merchant != null)
-			{
-				price -= (price * merchant.getTotalTaxRate(TaxType.SELL));
-			}
 			totalPrice += price * i.getCount();
 			if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA))
 			{
@@ -166,25 +162,27 @@ public final class RequestSellItem implements IClientIncomingPacket
 			
 			if (Config.ALLOW_REFUND)
 			{
-				item = player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
+				player.getInventory().transferItem("Sell", i.getObjectId(), i.getCount(), player.getRefund(), player, merchant);
 			}
 			else
 			{
-				item = player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, merchant);
+				player.getInventory().destroyItem("Sell", i.getObjectId(), i.getCount(), player, merchant);
 			}
+		}
+		
+		// add to castle treasury
+		if (merchant != null)
+		{
+			// Keep here same formula as in {@link ExBuySellList} to produce same result.
+			final long profit = (long) (totalPrice * (1.0 - merchant.getCastleTaxRate(TaxType.SELL)));
+			merchant.handleTaxPayment(totalPrice - profit);
+			totalPrice = profit;
 		}
 		
 		player.addAdena("Sell", totalPrice, merchant, false);
 		
-		// add to castle treasury?
-		if (merchant != null)
-		{
-			final long taxCollection = (long) (totalPrice * (1.0 - merchant.getTotalTaxRate(TaxType.SELL)));
-			merchant.getCastle().addToTreasury(taxCollection);
-		}
-		
 		// Update current load as well
 		client.sendPacket(new ExUserInfoInvenWeight(player));
-		client.sendPacket(new ExBuySellList(player, true, merchant != null ? merchant.getTotalTaxRate(TaxType.SELL) : 0));
+		client.sendPacket(new ExBuySellList(player, true));
 	}
 }
