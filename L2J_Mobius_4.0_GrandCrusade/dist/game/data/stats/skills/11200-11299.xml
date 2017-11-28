@@ -3473,6 +3473,7 @@
 		<coolTime>200</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>398</effectPoint>
+		<isSharedWithSummon>true</isSharedWithSummon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
@@ -3486,11 +3487,11 @@
 		</abnormalTime>
 		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
 		<isMagic>1</isMagic>
-		<targetType>SELF</targetType>
-		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
+		<targetType>SUMMON</targetType>
+		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="RebalanceHP" />
+			<effect name="RebalanceHPSummon" />
 			<effect name="HealOverTime">
 				<power>333</power>
 				<ticks>1</ticks>
@@ -3509,7 +3510,6 @@
 			</effect>
 		</effects>
 		<selfEffects>
-			<effect name="RebalanceHP" />
 			<effect name="HealOverTime">
 				<power>333</power>
 				<ticks>1</ticks>
