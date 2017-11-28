@@ -3355,12 +3355,11 @@
 		</collision>
 	</npc>
 	<npc id="23487" level="98" type="L2Monster" name="Magma Ailith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="13775689" sp="13829" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="196331" hpRegen="10.5" mp="2317" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
@@ -3374,13 +3373,12 @@
 		</stats>
 		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3404,12 +3402,11 @@
 		</collision>
 	</npc>
 	<npc id="23488" level="98" type="L2Monster" name="Magma Apophis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="25582270" sp="25642" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="196331" hpRegen="10.5" mp="2317" mpRegen="3.6" />
 			<speed>
 				<walk ground="25" />
 				<run ground="170" />
@@ -3421,16 +3418,14 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3514,12 +3509,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23490" level="98" type="L2Monster" name="Lava Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12447936" sp="12485" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="196331" hpRegen="10.5" mp="2317" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="70" />
@@ -3531,14 +3525,12 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3562,12 +3554,11 @@
 		</collision>
 	</npc>
 	<npc id="23491" level="98" type="L2Monster" name="Lava Wendigo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12447936" sp="12485" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="196331" hpRegen="10.5" mp="2317" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="70" />
@@ -3579,14 +3570,12 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3662,12 +3651,11 @@
 		</drop_lists>
 	</npc>
 	<npc id="23493" level="98" type="L2Monster" name="Lava Leviah">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12447936" sp="12485" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="196331" hpRegen="10.5" mp="2317" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
@@ -3679,14 +3667,12 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3709,12 +3695,11 @@
 		</collision>
 	</npc>
 	<npc id="23494" level="99" type="L2Monster" name="Magma Salamander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="14059142" sp="14113" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="170" />
@@ -3726,15 +3711,13 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3758,12 +3741,11 @@
 		</collision>
 	</npc>
 	<npc id="23495" level="99" type="L2Monster" name="Magma Dre Vanul">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="13017688" sp="13035" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
@@ -3775,14 +3757,12 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3806,12 +3786,11 @@
 		</collision>
 	</npc>
 	<npc id="23496" level="99" type="L2Monster" name="Magma Ifrit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="26108589" sp="26168" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="170" />
@@ -3823,16 +3802,14 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3858,12 +3835,11 @@
 		</collision>
 	</npc>
 	<npc id="23497" level="99" type="L2Monster" name="Blazing Saurus" title="Flaming Stigma">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30125333" sp="30187" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
@@ -3875,16 +3851,14 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3911,12 +3885,11 @@
 		</collision>
 	</npc>
 	<npc id="23498" level="99" type="L2Monster" name="Blazing Wizard" title="Flaming Stigma">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<acquire exp="30125333" sp="30187" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
@@ -3928,16 +3901,14 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<drop_lists>
 			<drop>
@@ -3964,12 +3935,11 @@
 		</collision>
 	</npc>
 	<npc id="23499" level="99" type="L2Monster" name="Flame Preta">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12703958" sp="12741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="130" />
 				<run ground="70" />
@@ -3981,14 +3951,12 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<drop_lists>
 			<drop>

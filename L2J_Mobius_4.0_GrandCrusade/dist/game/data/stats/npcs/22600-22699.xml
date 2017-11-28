@@ -2955,7 +2955,7 @@
 		<sex>MALE</sex>
 		<acquire exp="87285" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2974" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="11900" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -2965,21 +2965,13 @@
 			<hit_time>410</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4047" level="9" /> <!-- Hold -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4591" level="9" /> <!-- Decrease Speed -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>5</s_npc_prop_hp_rate>

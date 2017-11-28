@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23500" level="99" type="L2Monster" name="Flame Crow">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6488346" sp="10381" />
+		<acquire exp="12703958" sp="12741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="70" />
@@ -18,26 +17,24 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
-				<item id="35328" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Cutter Fragment -->
-				<item id="36543" min="1" max="1" chance="0.749999999999998" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.0749999999999998" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.0749999999999998" /> <!-- Orichalcum Wire -->
-				<item id="35469" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Helios Cutter Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36543" min="1" max="1" chance="1.334" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="1.364" /> <!-- Adamantite Wire -->
 				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
 			</spoil>
 			<lucky_drop>
@@ -50,12 +47,12 @@
 		</collision>
 	</npc>
 	<npc id="23501" level="99" type="L2Monster" name="Flame Rael">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<acquire exp="6030482" sp="9648" />
+		<sex>MALE</sex>
+		<acquire exp="11807558" sp="11859" />
+		<equipment rhand="38559" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="31" />
 				<run ground="170" />
@@ -67,26 +64,24 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
-				<item id="35332" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Stormer Fragment -->
-				<item id="36543" min="1" max="1" chance="0.750000000000004" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.0750000000000004" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.0750000000000004" /> <!-- Orichalcum Wire -->
-				<item id="35471" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35332" min="1" max="1" chance="0.03" /> <!-- Helios Stormer Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
 			</drop>
 			<spoil>
-				<item id="36538" min="1" max="1" chance="1.92" /> <!-- Durable Leather Braid -->
+				<item id="36538" min="1" max="1" chance="1.888" /> <!-- Durable Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</spoil>
 			<lucky_drop>
@@ -99,12 +94,11 @@
 		</collision>
 	</npc>
 	<npc id="23502" level="99" type="L2Monster" name="Flame Salamander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6488346" sp="10381" />
+		<acquire exp="12703958" sp="12741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="39" />
 				<run ground="70" />
@@ -116,26 +110,24 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
-				<item id="35335" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Buster Fragment -->
-				<item id="36543" min="1" max="1" chance="0.750000000000004" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.0750000000000004" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.0750000000000004" /> <!-- Orichalcum Wire -->
-				<item id="35472" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35472" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Boots (60%) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.512" /> <!-- Durable Leather -->
+				<item id="36518" min="1" max="1" chance="7.489" /> <!-- Durable Leather -->
 				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 			</spoil>
 			<lucky_drop>
@@ -148,12 +140,11 @@
 		</collision>
 	</npc>
 	<npc id="23503" level="99" type="L2Monster" name="Flame Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6488346" sp="10381" />
+		<acquire exp="12703958" sp="12741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="70" />
 				<run ground="70" />
@@ -165,26 +156,24 @@
 				<attack type="FIRE" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
-				<item id="35336" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Caster Fragment -->
-				<item id="36543" min="1" max="1" chance="0.750000000000004" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.0750000000000004" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.0750000000000004" /> <!-- Orichalcum Wire -->
-				<item id="35477" min="1" max="1" chance="0.00299999999999998" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35477" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="36543" min="1" max="1" chance="1.331" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="1.366" /> <!-- Adamantite Wire -->
 				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
 			</spoil>
 			<lucky_drop>
@@ -197,12 +186,11 @@
 		</collision>
 	</npc>
 	<npc id="23504" level="99" type="L2Monster" name="Flame Votis">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6488346" sp="10381" />
+		<acquire exp="12703958" sp="12741" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="197328" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="35" />
 				<run ground="70" />
@@ -214,26 +202,24 @@
 				<attack type="EARTH" value="330" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="57" min="726" max="1692" chance="70" /> <!-- Adena -->
-				<item id="35328" min="1" max="1" chance="0.0055" /> <!-- Amaranthine Cutter Fragment -->
-				<item id="36543" min="1" max="1" chance="0.749999999999998" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.0749999999999998" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.0749999999999998" /> <!-- Orichalcum Wire -->
-				<item id="35469" min="1" max="1" chance="0.000900000000000001" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Helios Cutter Fragment -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36538" min="1" max="1" chance="1.835" /> <!-- Durable Leather Braid -->
+				<item id="36538" min="1" max="1" chance="1.858" /> <!-- Durable Leather Braid -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</spoil>
 			<lucky_drop>
