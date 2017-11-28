@@ -2508,7 +2508,7 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A1</operateType>
 		<targetType>GROUND</targetType>
-		<affectScope>POINT_BLANK</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>
 			<value level="1">137</value>
@@ -2516,6 +2516,7 @@
 			<value level="3">137</value>
 		</mpConsume>
 		<castRange>900</castRange>
+		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>400000</reuseDelay>

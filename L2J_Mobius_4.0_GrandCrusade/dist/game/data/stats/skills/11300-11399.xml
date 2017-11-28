@@ -2627,7 +2627,7 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A1</operateType>
 		<targetType>GROUND</targetType>
-		<affectScope>POINT_BLANK</affectScope>
+		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>
 			<value level="1">137</value>
@@ -2635,6 +2635,7 @@
 			<value level="3">137</value>
 		</mpConsume>
 		<castRange>900</castRange>
+		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>400000</reuseDelay>
@@ -4123,13 +4124,156 @@
 		</effects>
 	</skill>
 	<skill id="11394" toLevel="4" name="Surrender to the Elemental">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- Updated to Helios -->
+		<!-- Level: 1 Attacks the target with M. Atk. +249. For 10 seconds, all Attribute Def. -50. Consumes 1 Spirit Ore(s). -->
+		<!-- Level: 2 Attacks the target with M. Atk. +256. For 10 seconds, all Attribute Def. -50. Consumes 1 Spirit Ore(s). -->
+		<!-- Level: 3 Attacks the target with M. Atk. +264. For 10 seconds, all Attribute Def. -50. Consumes 1 Spirit Ore(s). -->
+		<!-- Level: 4 Attacks the target with M. Atk. +272. For 10 seconds, all Attribute Def. -50. Consumes 1 Spirit Ore(s). -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
+		<abnormalTime>10</abnormalTime>
+		<activateRate>
+			<value fromLevel="1" toLevel="4">80</value> <!-- Guessed -->
+			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+		</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<icon>icon.skill11394</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A2</operateType>
+		<magicLvl>
+			<value level="1">99</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">86</value>
+			<value level="2">88</value>
+			<value level="3">90</value>
+			<value level="4">92</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<hitTime>2780</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-328</effectPoint>
+		<isMagic>1</isMagic>
+		<isDebuff>1</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">249</value>
+					<value level="2">256</value>
+					<value level="3">264</value>
+					<value level="4">272</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+				</power>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3020">
+				<amount>
+					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="11395" toLevel="4" name="Curse Exposure">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<!-- Updated to Helios -->
+		<!-- Level: 1 Attacks the target with M. Atk. +249. For 30 seconds, Deadly Attack Def. -30%. Consumes 1 Spirit Ore(s). -->
+		<!-- Level: 2 Attacks the target with M. Atk. +256. For 30 seconds, Deadly Attack Def. -30%. Consumes 1 Spirit Ore(s). -->
+		<!-- Level: 3 Attacks the target with M. Atk. +264. For 30 seconds, Deadly Attack Def. -30%. Consumes 1 Spirit Ore(s). -->
+		<!-- Level: 4 Attacks the target with M. Atk. +272. For 30 seconds, Deadly Attack Def. -30%. Consumes 1 Spirit Ore(s). -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalType>CURSE_EXPOSURE</abnormalType>
+		<abnormalTime>30</abnormalTime>
+		<activateRate>
+			<value fromLevel="1" toLevel="4">80</value> <!-- Guessed -->
+			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+		</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<icon>icon.skill11395</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<operateType>A2</operateType>
+		<magicLvl>
+			<value level="1">99</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">86</value>
+			<value level="2">88</value>
+			<value level="3">90</value>
+			<value level="4">92</value>
+		</mpConsume>
+		<castRange>1100</castRange>
+		<hitTime>2780</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-671</effectPoint>
+		<isMagic>1</isMagic>
+		<isDebuff>1</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">249</value>
+					<value level="2">256</value>
+					<value level="3">264</value>
+					<value level="4">272</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+				</power>
+			</effect>
+			<effect name="InstantKillResist">
+				<amount>-30</amount>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3020">
+				<amount>
+					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

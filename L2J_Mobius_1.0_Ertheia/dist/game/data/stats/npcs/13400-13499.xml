@@ -513,7 +513,6 @@
 		</collision>
 	</npc>
 	<npc id="13423" level="95" type="L2Npc" name="Protection Stone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -525,14 +524,13 @@
 			<attack physical="1690.0602700873" magical="1153.8640438614" critical="4" attackSpeed="253" range="40" />
 			<defence physical="395.65217391304" magical="289.49634093844" />
 		</stats>
-		<status attackable="true" hasSummoner="true" />
+		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="13424" level="97" type="L2Npc" name="Protection Stone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -544,14 +542,13 @@
 			<attack physical="1813.768861044" magical="1238.6677384381" critical="4" attackSpeed="253" range="40" />
 			<defence physical="401.0752688172" magical="293.48096099933" />
 		</stats>
-		<status attackable="true" hasSummoner="true" />
+		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="20" />
 		</collision>
 	</npc>
 	<npc id="13425" level="99" type="L2Npc" name="Protection Stone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -563,7 +560,7 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="true" hasSummoner="true" />
+		<status attackable="false" hasSummoner="true" targetable="false" showName="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="20" />

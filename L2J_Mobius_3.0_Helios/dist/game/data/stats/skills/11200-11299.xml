@@ -1405,6 +1405,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>GROUND</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="SummonNpc">
 				<npcId>
