@@ -45,7 +45,6 @@ import com.l2jmobius.gameserver.model.holders.MultisellListHolder;
 import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.network.serverpackets.MultiSellList;
-import com.l2jmobius.gameserver.util.Util;
 
 public final class MultisellData implements IGameXmlReader
 {
@@ -149,7 +148,7 @@ public final class MultisellData implements IGameXmlReader
 					{
 						// Initialize NPCs with the size of child nodes.
 						final Set<Integer> allowNpc = new HashSet<>(itemNode.getChildNodes().getLength());
-						forEach(itemNode, n -> "npc".equalsIgnoreCase(n.getNodeName()) && Util.isDigit(n.getTextContent()), n -> allowNpc.add(Integer.parseInt(n.getTextContent())));
+						forEach(itemNode, n -> "npc".equalsIgnoreCase(n.getNodeName()), n -> allowNpc.add(Integer.parseInt(n.getTextContent())));
 						
 						// Add npcs to stats set.
 						set.set("allowNpc", allowNpc);
@@ -212,7 +211,7 @@ public final class MultisellData implements IGameXmlReader
 			return;
 		}
 		
-		if (((npc != null) && !template.isNpcAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly()))
+		if (!template.isNpcAllowed(-1) && (((npc != null) && !template.isNpcAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly())))
 		{
 			if (player.isGM())
 			{
