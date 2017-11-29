@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
@@ -75,16 +76,36 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		
 		while (set.size() > 1)
 		{
-			playerOneObjectId = getRandomPlayerId(set);
-			set.remove(playerOneObjectId);
+			int random = Rnd.nextInt(set.size());
+			Iterator<Integer> iter = set.iterator();
+			while (iter.hasNext())
+			{
+				playerOneObjectId = iter.next();
+				if (--random < 0)
+				{
+					iter.remove();
+					break;
+				}
+			}
+			
 			playerOne = L2World.getInstance().getPlayer(playerOneObjectId);
 			if ((playerOne == null) || !playerOne.isOnline())
 			{
 				continue;
 			}
 			
-			playerTwoObjectId = getRandomPlayerId(set);
-			set.remove(playerTwoObjectId);
+			random = Rnd.nextInt(set.size());
+			iter = set.iterator();
+			while (iter.hasNext())
+			{
+				playerTwoObjectId = iter.next();
+				if (--random < 0)
+				{
+					iter.remove();
+					break;
+				}
+			}
+			
 			playerTwo = L2World.getInstance().getPlayer(playerTwoObjectId);
 			if ((playerTwo == null) || !playerTwo.isOnline())
 			{
@@ -99,21 +120,6 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			return result;
 		}
 		return null;
-	}
-	
-	private static int getRandomPlayerId(Set<Integer> set)
-	{
-		final int rnd = Rnd.nextInt(set.size());
-		int counter = 0;
-		for (int id : set)
-		{
-			if (counter == rnd)
-			{
-				return id;
-			}
-			counter++;
-		}
-		return 0;
 	}
 	
 	@Override
