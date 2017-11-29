@@ -68,6 +68,7 @@ public final class HomeBoard implements IParseBoardHandler
 	private static final String[] CUSTOM_COMMANDS =
 	{
 		Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED ? "_bbspremium" : null,
+		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbsexcmultisell" : null,
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbsmultisell" : null,
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbssell" : null,
 		Config.COMMUNITYBOARD_ENABLE_TELEPORTS ? "_bbsteleport" : null,
@@ -149,6 +150,15 @@ public final class HomeBoard implements IParseBoardHandler
 			final String page = buypassOptions[1];
 			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
+		}
+		else if (command.startsWith("_bbsexcmultisell"))
+		{
+			final String fullBypass = command.replace("_bbsexcmultisell;", "");
+			final String[] buypassOptions = fullBypass.split(",");
+			final int multisellId = Integer.parseInt(buypassOptions[0]);
+			final String page = buypassOptions[1];
+			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, true);
 		}
 		else if (command.startsWith("_bbssell"))
 		{
