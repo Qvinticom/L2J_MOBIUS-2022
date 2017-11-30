@@ -166,6 +166,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="13975" level="1" /> <!-- Nevit's Cloak of Light -->
+		</skills>
 		<stats>
 			<stat type="mDef">80</stat>
 			<stat type="pDef">100</stat>
