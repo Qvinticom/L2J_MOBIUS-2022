@@ -446,11 +446,7 @@ public final class CharEffectList
 	 */
 	public void stopSkillEffects(boolean removed, Skill skill)
 	{
-		// Check for existing abnormal type of the skill to make things quicker. None abnormal type should also work.
-		if ((skill != null) && hasAbnormalType(skill.getAbnormalType()))
-		{
-			stopSkillEffects(removed, skill.getId());
-		}
+		stopSkillEffects(removed, skill.getId());
 	}
 	
 	/**
