@@ -4234,6 +4234,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// If an old skill has been replaced, remove all its Func objects
 			if (oldSkill != null)
 			{
+				// Stop all effects of that skill
+				if (oldSkill.isPassive())
+				{
+					getEffectList().stopSkillEffects(true, oldSkill);
+				}
+				
 				getStat().recalculateStats(true);
 			}
 			
