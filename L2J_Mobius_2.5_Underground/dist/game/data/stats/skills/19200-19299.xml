@@ -804,6 +804,8 @@
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
+		<affectRange>1000</affectRange>
+		<affectLimit>0-0</affectLimit>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>40</itemConsumeCount>
@@ -811,8 +813,9 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>MY_PARTY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="NoblesseBless" />
 		</effects>
