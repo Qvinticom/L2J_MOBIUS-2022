@@ -257,6 +257,26 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		_lifeStones.put(45934, new LifeStone(GRADE_ACC, 13));
 		_lifeStones.put(45935, new LifeStone(GRADE_ACC, 14));
 		_lifeStones.put(45936, new LifeStone(GRADE_ACC, 15));
+		
+		_lifeStones.put(18567, new LifeStone(GRADE_TOP, 13)); // Legendary Life Stone (R-grade)
+		_lifeStones.put(18572, new LifeStone(GRADE_TOP, 14)); // Legendary Life Stone (R95-grade)
+		_lifeStones.put(18577, new LifeStone(GRADE_TOP, 15)); // Legendary Life Stone (R99-grade)
+		
+		_lifeStones.put(19166, new LifeStone(GRADE_ACC, 13)); // Life Stone: Accessory (R-grade)
+		_lifeStones.put(19167, new LifeStone(GRADE_ACC, 14)); // Life Stone: Accessory (R95-grade)
+		_lifeStones.put(19168, new LifeStone(GRADE_ACC, 15)); // Life Stone: Accessory (R99-grade)
+		
+		_lifeStones.put(22629, new LifeStone(GRADE_HIGH, 13)); // High-grade Life Stone (R-grade)
+		_lifeStones.put(22630, new LifeStone(GRADE_TOP, 13)); // Top-grade Life Stone (R-grade)
+		_lifeStones.put(22631, new LifeStone(GRADE_HIGH, 14)); // High-grade Life Stone (R95-grade)
+		_lifeStones.put(22632, new LifeStone(GRADE_TOP, 14)); // Top-grade Life Stone (R95-grade)
+		_lifeStones.put(22633, new LifeStone(GRADE_HIGH, 15)); // High-grade Life Stone (R99-grade)
+		_lifeStones.put(22634, new LifeStone(GRADE_TOP, 15)); // Top-grade Life Stone (R99-grade)
+		
+		_lifeStones.put(34001, new LifeStone(GRADE_HIGH, 13)); // High-grade Life Stone (R-grade) Event
+		_lifeStones.put(34002, new LifeStone(GRADE_TOP, 13)); // Top-grade Life Stone (R-grade) Event
+		_lifeStones.put(34003, new LifeStone(GRADE_HIGH, 14)); // High-grade Life Stone (R95-grade) Event
+		_lifeStones.put(34004, new LifeStone(GRADE_TOP, 14)); // Top-grade Life Stone (R95-grade) Event
 	}
 	
 	protected static LifeStone getLifeStone(int itemId)
