@@ -476,4 +476,572 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="28539" name="Brooch Spirit Stone" type="EtcItem">
+		<!-- La Vie En Rose's Brooch, a Spirit Stone: Accessory. Brilliant Brook - can only be augmented for Enchant Types. Shadai at Heine can imbue the enhanced Elegant Brooch with a special power. -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28540" name="Brooch Spirit Stone" additionalName="Rare-Type" type="EtcItem">
+		<!-- La Vie En Rose's Brooch, a Spirit Stone: Accessory. Brilliant Brook - can only be augmented for Rare Types. -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28541" name="Secret Embryo Bait (85)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28542" name="Secret Embryo Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28543" name="Secret Embryo Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28544" name="Secret Embryo Bait (102)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28545" name="Secret Embryo Bait (105)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28546" name="Secret Embryo Bait Coupon" type="EtcItem">
+		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28547" name="Embryo Reward Box" type="EtcItem">
+		<!-- Embryo Reward Box. Double-click to receive a random item. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28548" name="Smuggled Embryo Chest" type="EtcItem">
+		<!-- Smuggled Embryo Chest. Double-click to receive a Heine Fishing Coin. There is a small chance to receive an Embryo Reward Box. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28549" name="Secret Embryo Bait (85)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28550" name="Secret Embryo Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28551" name="Secret Embryo Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28552" name="Secret Embryo Bait (102)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28553" name="Secret Embryo Bait (105)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28554" name="Secret Embryo Bait Coupon" type="EtcItem">
+		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28555" name="Embryo Reward Box" type="EtcItem">
+		<!-- Embryo Reward Box. Double-click to receive a random item. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28556" name="Smuggled Embryo Chest" type="EtcItem">
+		<!-- Smuggled Embryo Chest. Double-click to receive a Heine Fishing Coin. There is a small chance to receive an Embryo Reward Box. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28557" name="Galup's Special Gift" type="EtcItem">
+		<!-- A special gift form Galup. Double-click to receive a good reward prepared specially by Galup. -->
+		<set name="icon" val="icon.card_event_luck_pocket" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28558" name="Bloody Amaranthine Ingredient Set" type="EtcItem">
+		<!-- Double-click to obtain the ingredients for crafting Bloody Amaranthine. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28559" name="Bloody Eternal Ingredient Set" type="EtcItem">
+		<!-- Double-click to obtain the ingredients for crafting Bloody Eternal. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28560" name="Dark Amaranthine Ingredient Set" type="EtcItem">
+		<!-- Double-click to obtain the ingredients for crafting Dark Amaranthine. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28561" name="Dark Eternal Ingredient Set" type="EtcItem">
+		<!-- Double-click to obtain the ingredients for crafting Dark Eternal. -->
+		<set name="icon" val="icon.etc_treasure_box_i05" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28562" name="Storm Scroll and Miraculous Medicine Set" type="EtcItem">
+		<!-- Double-click to obtain Freya's Scroll of Storm and Gran Kain's Miraculous Medicine -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28563" name="Ultimate Fortune Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain 1 of the Fortune Jewelry Boxes. -->
+		<set name="icon" val="icon.bm_sayha_blessed_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28564" name="Cat's Eye Fortune Box" type="EtcItem">
+		<!-- Double-click to obtain 1 Cat's Eye Lv. 1-5. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_catseye_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28565" name="Vital Stone Treasure Chest of Good Fortune" type="EtcItem">
+		<!-- Double click to obtain one of Level 1-5 Vital Stones. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28566" name="Tanzanite Treasure Chest of Good Fortune" type="EtcItem">
+		<!-- Double click to obtain one of Level 1-5 Tanzanites. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28567" name="Amethyst Treasure Chest of Good Fortune" type="EtcItem">
+		<!-- Double click to obtain one of Level 1-5 Amethysts. -->
+		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_amethyst_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28568" name="Garnet Treasure Chest of Good Fortune" type="EtcItem">
+		<!-- Double click to obtain one of Level 1-5 Garnets. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28569" name="Secret Embryo Bait (85)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28570" name="Secret Embryo Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28571" name="Secret Embryo Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28572" name="Secret Embryo Bait (102)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28573" name="Secret Embryo Bait (105)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28574" name="Secret Embryo Bait Coupon" type="EtcItem">
+		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28575" name="Embryo Reward Box" type="EtcItem">
+		<!-- Embryo Reward Box. Double-click to receive a random item. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28576" name="Smuggled Embryo Chest" type="EtcItem">
+		<!-- Smuggled Embryo Chest. Double-click to receive a Heine Fishing Coin. There is a small chance to receive an Embryo Reward Box. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28577" name="Secret Embryo Bait (85)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 85. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28578" name="Secret Embryo Bait (95)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 95. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28579" name="Secret Embryo Bait (99)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 99. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28580" name="Secret Embryo Bait (102)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 102. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28581" name="Secret Embryo Bait (105)" type="EtcItem">
+		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire Smuggled Embryo Chests. Can be used only above level 105. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28582" name="Secret Embryo Bait Coupon" type="EtcItem">
+		<!-- Can be exchanged at NPC Peeves in Heine for an Embryo Bait. -->
+		<set name="icon" val="icon.etc_bm_lure_ticket2" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28583" name="Embryo Reward Box" type="EtcItem">
+		<!-- Embryo Reward Box. Double-click to receive a random item. -->
+		<set name="icon" val="icon.bm_nebit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28584" name="Smuggled Embryo Chest" type="EtcItem">
+		<!-- Smuggled Embryo Chest. Double-click to receive a Heine Fishing Coin. There is a small chance to receive an Embryo Reward Box. -->
+		<set name="icon" val="icon.bm_nebit_angel_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28585" name="Elmoreden Cloak" type="Armor">
+		<!-- Cloak with the crest of the ancient Elmoreden Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="28586" name="Aden Cloak" type="Armor">
+		<!-- Cloak with the crest of the ancient Aden Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="28587" name="Elmore Cloak" type="Armor">
+		<!-- Cloak with the crest of the ancient Elmore Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="28588" name="Ferios Cloak" type="Armor">
+		<!-- Cloak with the crest of the ancient Ferios Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="28589" name="Elmoreden Cloak - Legendary" type="Armor">
+		<!-- Legendary cloak with the crest of the ancient Elmoreden Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level. Use Spirit Stone - Ancient Empire at +10 to bestow an additional effect, and use Spirit Stone - Elmoreden at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="28590" name="Aden Cloak - Legendary" type="Armor">
+		<!-- Legendary cloak with the crest of the ancient Aden Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Aden at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="28591" name="Elmore Cloak - Legendary" type="Armor">
+		<!-- Legendary cloak with the crest of the ancient Elmore Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level. Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Elmore at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="28592" name="Ferios Cloak - Legendary" type="Armor">
+		<!-- Legendary cloak with the crest of the ancient Ferios Kingdom. Can be enchanted up to +10 with the Scroll: Enchant Cloak and from +10 to +20 with the Scroll: Enchant Cloak - Legendary, and different effects are applied depending on the level. +10 Use Spirit Stone - Ancient Kingdom at +10 to bestow an additional effect, and use Spirit Stone - Ferios at +15 to add a second effect. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="28593" name="Scroll: Enchant Cloak" type="EtcItem">
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted up to +10. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28594" name="Scroll: Enchant Cloak - Legendary" type="EtcItem">
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +10, up to +20. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28595" name="Scroll: Ancient Cloak - Legendary" type="EtcItem">
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +7, up to +20. Success rate is 10% better than normal Cloak Scrolls. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28596" name="Legendary Scroll" type="EtcItem">
+		<!-- Exchange a Elmoreden/Aden/Elmore/Ferios Cloak for a legendary cloak through the Dimensional Merchant. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_legend_scroll" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28597" name="Spirit Stone - Ancient Kingdom" type="EtcItem">
+		<!-- Spirit Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28598" name="Spirit Stone - Elmoreden" type="EtcItem">
+		<!-- Legendary Spirit Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="28599" name="Spirit Stone - Aden" type="EtcItem">
+		<!-- Legendary Spirit Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
+		<set name="material" val="LEATHER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 </list>
