@@ -1,7 +1,7 @@
 L2J-Mobius Grand Crusade
 
-Client: https://drive.google.com/uc?id=0B2jZ65zOwt46SzFyd1c0S2ZSZXc&export=download
-Mirror: https://mega.nz/#!Iv5QnQjD!MQmL51g79MnQErNRiYsb6fRHHN1mypwn61PnWS97Xfk
+Client: https://drive.google.com/uc?id=1MA8eTpTZHblC9Iki4xXdWWbS4HGednDq&export=download
+Mirror: https://mega.nz/#!0eB0RIZS!RGm506vctH72n7H9tCNpepWfIfs1AvFB5NkcsNcMYA4
 
 Geodata: http://www.mediafire.com/file/sbiue13slxu3ceu/mobius_geodata_grand_crusade_l2d.zip
 
