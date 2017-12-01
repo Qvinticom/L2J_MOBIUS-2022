@@ -130,6 +130,7 @@ public enum AbnormalType
 	MARK_OF_PLAGUE(-1),
 	MARK_OF_TRICK(-1),
 	MAX_HP_UP_K(-1),
+	MD_DOWN_AWAKEN(-1),
 	MORALE_UP(-1),
 	MOTION_OF_DEFENCE(-1),
 	MOVEMENT(-1),
