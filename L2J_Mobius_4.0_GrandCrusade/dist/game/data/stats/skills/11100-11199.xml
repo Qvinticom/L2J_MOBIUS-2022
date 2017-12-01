@@ -134,7 +134,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -212,8 +211,11 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -237,7 +239,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -281,6 +282,7 @@
 			<effect name="CallSkill">
 				<skillId>11139</skillId>
 				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<!-- Detonates Elemental Destruction -->
@@ -325,7 +327,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -401,102 +402,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11108" toLevel="7" name="Elemental Burst: Water">
-		<!-- Updated to IO -->
-		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%. -->
-		<icon>icon.skill11865</icon>
-		<abnormalTime>
-			<value level="1">15</value>
-			<value level="2">20</value>
-			<value level="3">25</value>
-			<value level="4">30</value>
-			<value level="5">30</value>
-			<value level="6">30</value>
-			<value level="7">30</value>
-		</abnormalTime>
-		<activateRate>80</activateRate> <!-- Guessed -->
-		<affectRange>200</affectRange> <!-- Guessed -->
-		<reuseDelayGroup>11106</reuseDelayGroup>
-		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
-		<operateType>A2</operateType>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<magicLvl>
-			<value level="1">85</value>
-			<value level="2">90</value>
-			<value level="3">95</value>
-			<value level="4">99</value>
-			<value level="5">101</value>
-			<value level="6">103</value>
-			<value level="7">105</value>
-		</magicLvl>
-		<mpConsume>
-			<value level="1">137</value>
-			<value level="2">154</value>
-			<value level="3">166</value>
-			<value level="4">179</value>
-			<value level="5">192</value>
-			<value level="6">205</value>
-			<value level="7">218</value>
-		</mpConsume>
-		<castRange>1100</castRange>
-		<effectRange>1400</effectRange>
-		<hitTime>6080</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>6700</reuseDelay>
-		<isMagic>1</isMagic>
-		<effectPoint>-1009</effectPoint>
-		<isDebuff>true</isDebuff>
-		<magicCriticalRate>
-			<value fromLevel="1" toLevel="7">6</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
-		</magicCriticalRate>
-		<conditions>
-			<condition name="OpCheckAbnormal">
-				<type>BODY_DESTRUCTION</type>
-				<level>1</level>
-				<hasAbnormal>true</hasAbnormal>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="MagicalAttack">
-				<power>
-					<value level="1">569</value>
-					<value level="2">618</value>
-					<value level="3">649</value>
-					<value level="4">683</value>
-					<value level="5">705</value>
-					<value level="6">723</value>
-					<value level="7">741</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1005">{base + base / 100 * (1 + 0.4 * (subIndex - 1))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1006" toSubLevel="1006">{base + base / 100 * (2 + 0.8 * (subIndex - 5))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1007" toSubLevel="1007">{base + base / 100 * (3 + 0.3 * (subIndex - 6))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1008" toSubLevel="1008">{base + base / 100 * (3 + 0.3 * (subIndex - 7))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1009" toSubLevel="1011">{base + base / 100 * (4 + 0.4 * (subIndex - 8))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1012" toSubLevel="1012">{base + base / 100 * (5 + 0.1 * (subIndex - 11))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1013" toSubLevel="1013">{base + base / 100 * (5 + 0.5 * (subIndex - 12))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1014" toSubLevel="1014">{base + base / 100 * (5 + 0.9 * (subIndex - 13))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1015" toSubLevel="1015">{base + base / 100 * (6 + 0.2 * (subIndex - 14))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1016" toSubLevel="1016">{base + base / 100 * (6 + 0.6 * (subIndex - 15))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1017" toSubLevel="1017">{base + base / 100 * (7 * (subIndex - 16))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
-				</power>
-			</effect>
-			<effect name="DispelBySlotProbability">
-				<!-- Detonates Elemental Destruction -->
-				<dispel>BODY_DESTRUCTION</dispel>
-				<rate>100</rate>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>-20</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="11109" toLevel="7" name="Elemental Burst: Wind">
 		<!-- Updated to GRAND CRUSADE -->
 		<!-- Explodes Destruction cast on the target to deal M. Attack of $s1 power on the target and the enemies near it. Effect: Fire-Ignite, Water-Frozen on a single target, Wind-Knock Back, Earth-Hold. -->
@@ -533,7 +438,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
 		<magicCriticalRate>
@@ -644,7 +548,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
 		<magicCriticalRate>
@@ -764,8 +667,6 @@
 		<effectRange>1400</effectRange>
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-1009</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -852,7 +753,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -945,7 +845,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1056,7 +955,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1138,8 +1036,11 @@
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1163,7 +1064,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1256,7 +1156,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1299,6 +1198,7 @@
 			<effect name="CallSkill">
 				<skillId>11139</skillId>
 				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 			<effect name="DispelBySlotProbability">
 				<!-- Detonates Elemental Destruction -->
@@ -1315,8 +1215,11 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue> <!-- Dark -->
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1340,7 +1243,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1398,8 +1300,11 @@
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1422,8 +1327,6 @@
 		<effectRange>1400</effectRange>
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1488,8 +1391,11 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue> <!-- Wind -->
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1513,7 +1419,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1596,8 +1501,11 @@
 		<attributeType>DARK</attributeType> <!-- Dark -->
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1621,7 +1529,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1707,7 +1614,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1772,8 +1678,11 @@
 		<attributeType>EARTH</attributeType> <!-- Earth -->
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1797,7 +1706,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -1879,9 +1787,12 @@
 		<reuseDelayGroup>11121</reuseDelayGroup>
 		<attributeType>DARK</attributeType> <!-- Dark -->
 		<attributeValue>20</attributeValue>
-		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<operateType>A1</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1905,7 +1816,6 @@
 		<hitTime>6080</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6700</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<effectPoint>-1009</effectPoint>
 		<isMagic>1</isMagic>
 		<magicCriticalRate>
@@ -2380,7 +2290,7 @@
 				<!-- Ignite -->
 				<skillId>11139</skillId>
 				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</channelingEffects>
 	</skill>
@@ -2584,7 +2494,7 @@
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="ManaDamOverTime">
+			<effect name="MagicalDamOverTime">
 				<power>
 					<value level="1">85</value>
 					<value level="2">105</value>

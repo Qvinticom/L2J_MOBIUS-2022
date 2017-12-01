@@ -395,6 +395,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -409,7 +410,6 @@
 			<value level="11">-712</value>
 		</effectPoint>
 		<rideState>NONE</rideState>
-		<nextAction>CAST</nextAction>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">6</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -516,6 +516,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -530,7 +531,6 @@
 			<value level="11">-712</value>
 		</effectPoint>
 		<rideState>NONE</rideState>
-		<nextAction>CAST</nextAction>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">6</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -609,6 +609,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -623,7 +624,6 @@
 			<value level="11">-712</value>
 		</effectPoint>
 		<rideState>NONE</rideState>
-		<nextAction>CAST</nextAction>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">6</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -702,6 +702,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -716,7 +717,6 @@
 			<value level="11">-712</value>
 		</effectPoint>
 		<rideState>NONE</rideState>
-		<nextAction>CAST</nextAction>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">6</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -795,6 +795,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -809,7 +810,6 @@
 			<value level="11">-712</value>
 		</effectPoint>
 		<rideState>NONE</rideState>
-		<nextAction>CAST</nextAction>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">6</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -884,6 +884,7 @@
 		<effectRange>1400</effectRange>
 		<hitTime>2280</hitTime>
 		<coolTime>300</coolTime>
+		<nextAction>CAST</nextAction>
 		<effectPoint>
 			<value level="1">-687</value>
 			<value level="2">-694</value>
@@ -898,7 +899,6 @@
 			<value level="11">-712</value>
 		</effectPoint>
 		<rideState>NONE</rideState>
-		<nextAction>CAST</nextAction>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">6</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -1652,7 +1652,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<fanRange>0;0;900;50</fanRange> <!-- Guessed -->
+		<fanRange>0;0;1100;50</fanRange> <!-- Guessed -->
 		<affectLimit>5-12</affectLimit>
 		<reuseDelayGroup>11023</reuseDelayGroup>
 		<magicLvl>
@@ -1744,6 +1744,7 @@
 			<effect name="CallSkill">
 				<skillId>11139</skillId>
 				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
 			</effect>
 		</effects>
 	</skill>
@@ -5176,6 +5177,7 @@
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>11018</castSkillId> <!-- Elemental Crash (Fire) -->
 				<skillId>11139</skillId> <!-- Ignite -->
+				<skillLevelScaleTo>5</skillLevelScaleTo>
 				<skillLevel>1</skillLevel>
 				<chance>60</chance>
 				<targetType>ENEMY</targetType>
