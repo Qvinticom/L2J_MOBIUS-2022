@@ -728,6 +728,8 @@ public final class L2PcInstance extends L2Playable
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
 	
+	private ScheduledFuture<?> _skillListRefreshTask;
+	
 	/** Last Html Npcs, 0 = last html was not bound to an npc */
 	private final int[] _htmlActionOriginObjectIds = new int[HtmlActionScope.values().length];
 	/**
@@ -9433,7 +9435,14 @@ public final class L2PcInstance extends L2Playable
 	
 	public void sendSkillList()
 	{
-		sendSkillList(0);
+		if (_skillListRefreshTask == null)
+		{
+			_skillListRefreshTask = ThreadPoolManager.schedule(() ->
+			{
+				sendSkillList(0);
+				_skillListRefreshTask = null;
+			}, 1000);
+		}
 	}
 	
 	public void sendSkillList(int lastLearnedSkillId)
