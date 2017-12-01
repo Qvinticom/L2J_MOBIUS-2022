@@ -16,11 +16,11 @@
  */
 package ai.others.OlyBuffer;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
 import ai.AbstractNpcAI;
 
@@ -33,17 +33,17 @@ public final class OlyBuffer extends AbstractNpcAI
 	// NPC
 	private static final int OLYMPIAD_BUFFER = 36402;
 	// Skills
-	private static final int[] ALLOWED_BUFFS =
+	private static final SkillHolder KNIGHT = new SkillHolder(14744, 1); // Olympiad - Knight's Harmony
+	private static final SkillHolder WARRIOR = new SkillHolder(14745, 1); // Olympiad - Warrior's Harmony
+	private static final SkillHolder WIZARD = new SkillHolder(14746, 1); // Olympiad - Wizard's Harmony
+	private static final SkillHolder[] BUFFS =
 	{
-		14738, // Olympiad - Horn Melody
-		14739, // Olympiad - Drum Melody
-		14740, // Olympiad - Pipe Organ Melody
-		14741, // Olympiad - Guitar Melody
-		14742, // Olympiad - Harp Melody
-		14743, // Olympiad - Lute Melody
-		14744, // Olympiad - Knight's Harmony
-		14745, // Olympiad - Warrior's Harmony
-		14746, // Olympiad - Wizard's Harmony
+		new SkillHolder(14738, 1), // Olympiad - Horn Melody
+		new SkillHolder(14739, 1), // Olympiad - Drum Melody
+		new SkillHolder(14740, 1), // Olympiad - Pipe Organ Melody
+		new SkillHolder(14741, 1), // Olympiad - Guitar Melody
+		new SkillHolder(14742, 1), // Olympiad - Harp Melody
+		new SkillHolder(14743, 1), // Olympiad - Lute Melody
 	};
 	
 	private OlyBuffer()
@@ -57,9 +57,10 @@ public final class OlyBuffer extends AbstractNpcAI
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		if (npc.getScriptValue() < 5)
+		
+		if (npc.isScriptValue(0))
 		{
-			htmltext = "OlyBuffer-index.html";
+			htmltext = "olympiad_master001.htm";
 		}
 		return htmltext;
 	}
@@ -68,31 +69,40 @@ public final class OlyBuffer extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		if (event.startsWith("giveBuff;") && (npc.getScriptValue() < 5))
+		
+		switch (event)
 		{
-			final int buffId = Integer.parseInt(event.replace("giveBuff;", ""));
-			if (CommonUtil.contains(ALLOWED_BUFFS, buffId))
+			case "guardian":
 			{
-				final Skill buff = SkillData.getInstance().getSkill(buffId, 1);
-				if (buff != null)
-				{
-					npc.setScriptValue(npc.getScriptValue() + 1);
-					addSkillCastDesire(npc, player, buff, 23);
-					htmltext = "OlyBuffer-afterBuff.html";
-				}
-				
-				if (npc.getScriptValue() >= 5)
-				{
-					htmltext = "OlyBuffer-noMore.html";
-					startQuestTimer("DELETE_ME", 5000, npc, null);
-				}
+				htmltext = applyBuffs(npc, player, KNIGHT.getSkill());
+				break;
+			}
+			case "berserker":
+			{
+				htmltext = applyBuffs(npc, player, WARRIOR.getSkill());
+				break;
+			}
+			case "magician":
+			{
+				htmltext = applyBuffs(npc, player, WIZARD.getSkill());
+				break;
 			}
 		}
-		else if (event.equals("DELETE_ME") && (npc != null))
-		{
-			npc.deleteMe();
-		}
+		npc.setScriptValue(1);
+		htmltext = "olympiad_master003.htm";
+		getTimers().addTimer("DELETE_ME", 5000, evnt -> npc.deleteMe());
+		
 		return htmltext;
+	}
+	
+	private String applyBuffs(L2Npc npc, L2PcInstance player, Skill skill)
+	{
+		for (SkillHolder holder : BUFFS)
+		{
+			SkillCaster.triggerCast(npc, player, holder.getSkill());
+		}
+		SkillCaster.triggerCast(npc, player, skill);
+		return null;
 	}
 	
 	public static void main(String[] args)
