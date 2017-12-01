@@ -229,6 +229,7 @@ public final class Config
 	public static boolean AUTO_LOOT_RAIDS;
 	public static int LOOT_RAIDS_PRIVILEGE_INTERVAL;
 	public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
+	public static List<Integer> AUTO_LOOT_ITEM_IDS;
 	public static int UNSTUCK_INTERVAL;
 	public static int TELEPORT_WATCHDOG_TIMEOUT;
 	public static int PLAYER_SPAWN_PROTECTION;
@@ -1696,6 +1697,23 @@ public final class Config
 			AUTO_LOOT_RAIDS = character.getBoolean("AutoLootRaids", false);
 			LOOT_RAIDS_PRIVILEGE_INTERVAL = character.getInt("RaidLootRightsInterval", 900) * 1000;
 			LOOT_RAIDS_PRIVILEGE_CC_SIZE = character.getInt("RaidLootRightsCCSize", 45);
+			final String[] autoLootItemIds = character.getString("AutoLootItemIds", "0").split(",");
+			AUTO_LOOT_ITEM_IDS = new ArrayList<>(autoLootItemIds.length);
+			for (String item : autoLootItemIds)
+			{
+				try
+				{
+					if (!item.isEmpty())
+					{
+						AUTO_LOOT_ITEM_IDS.add(Integer.parseInt(item));
+					}
+				}
+				catch (NumberFormatException nfe)
+				{
+					_log.warning("Auto loot item ids: Wrong ItemId passed: " + item);
+					_log.warning(nfe.getMessage());
+				}
+			}
 			UNSTUCK_INTERVAL = character.getInt("UnstuckInterval", 300);
 			TELEPORT_WATCHDOG_TIMEOUT = character.getInt("TeleportWatchdogTimeout", 0);
 			PLAYER_SPAWN_PROTECTION = character.getInt("PlayerSpawnProtection", 0);

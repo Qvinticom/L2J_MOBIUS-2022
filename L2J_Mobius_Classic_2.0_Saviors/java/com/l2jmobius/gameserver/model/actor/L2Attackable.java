@@ -971,7 +971,7 @@ public class L2Attackable extends L2Npc
 					{
 						final L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
 						// Check if the autoLoot mode is active
-						if (isFlying() || (!item.hasExImmediateEffect() && ((!isRaid() && Config.AUTO_LOOT) || (isRaid() && Config.AUTO_LOOT_RAIDS))))
+						if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!isRaid() && Config.AUTO_LOOT) || (isRaid() && Config.AUTO_LOOT_RAIDS))))
 						{
 							// do nothing
 						}
@@ -1013,7 +1013,7 @@ public class L2Attackable extends L2Npc
 			{
 				final L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
 				// Check if the autoLoot mode is active
-				if (isFlying() || (!item.hasExImmediateEffect() && ((!isRaid() && Config.AUTO_LOOT) || (isRaid() && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS))
+				if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!isRaid() && Config.AUTO_LOOT) || (isRaid() && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS))
 				{
 					player.doAutoLoot(this, drop); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
 				}
@@ -1042,7 +1042,7 @@ public class L2Attackable extends L2Npc
 			
 			if ((player.getLevel() <= getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
 			{
-				if (Config.AUTO_LOOT || isFlying())
+				if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || Config.AUTO_LOOT || isFlying())
 				{
 					player.addItem("ChampionLoot", item.getId(), item.getCount(), this, true); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
 				}
@@ -1053,7 +1053,7 @@ public class L2Attackable extends L2Npc
 			}
 			else if ((player.getLevel() > getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
 			{
-				if (Config.AUTO_LOOT || isFlying())
+				if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || Config.AUTO_LOOT || isFlying())
 				{
 					player.addItem("ChampionLoot", item.getId(), item.getCount(), this, true); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
 				}
@@ -1106,7 +1106,7 @@ public class L2Attackable extends L2Npc
 			{
 				final int itemId = drop.getEventDrop().getItemIdList()[Rnd.get(drop.getEventDrop().getItemIdList().length)];
 				final long itemCount = Rnd.get(drop.getEventDrop().getMinCount(), drop.getEventDrop().getMaxCount());
-				if (Config.AUTO_LOOT || isFlying())
+				if (Config.AUTO_LOOT_ITEM_IDS.contains(itemId) || Config.AUTO_LOOT || isFlying())
 				{
 					player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
 				}

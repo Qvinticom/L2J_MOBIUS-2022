@@ -210,7 +210,7 @@ public class ItemTable
 		// Create and Init the L2ItemInstance corresponding to the Item Identifier
 		final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
 		
-		if (process.equalsIgnoreCase("loot"))
+		if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId))
 		{
 			ScheduledFuture<?> itemLootShedule;
 			if ((reference instanceof L2Attackable) && ((L2Attackable) reference).isRaid()) // loot privilege for raids
