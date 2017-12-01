@@ -828,18 +828,6 @@ public class L2Npc extends L2Character
 				}
 				break;
 			}
-			case 36402:
-			{
-				if (player.getOlympiadBuffCount() > 0)
-				{
-					filename = (player.getOlympiadBuffCount() == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
-				}
-				else
-				{
-					filename = Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm";
-				}
-				break;
-			}
 			case 30298: // Blacksmith Pinter
 			{
 				if (player.isAcademyMember())
