@@ -502,7 +502,6 @@ public final class Config
 	public static Duration WORLD_CHAT_INTERVAL;
 	public static int ALT_OLY_START_TIME;
 	public static int ALT_OLY_MIN;
-	public static int ALT_OLY_MAX_BUFFS;
 	public static long ALT_OLY_CPERIOD;
 	public static long ALT_OLY_BATTLE;
 	public static long ALT_OLY_WPERIOD;
@@ -2212,7 +2211,6 @@ public final class Config
 			
 			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 18);
 			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
-			ALT_OLY_MAX_BUFFS = Olympiad.getInt("AltOlyMaxBuffs", 5);
 			ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 21600000);
 			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
 			ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);

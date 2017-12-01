@@ -181,7 +181,6 @@ public abstract class AbstractOlympiadGame
 			player.setIsInOlympiadMode(true);
 			player.setIsOlympiadStart(false);
 			player.setOlympiadSide(par.getSide());
-			player.setOlympiadBuffCount(Config.ALT_OLY_MAX_BUFFS);
 			player.teleToLocation(loc, instance);
 			player.sendPacket(new ExOlympiadMode(2));
 		}
