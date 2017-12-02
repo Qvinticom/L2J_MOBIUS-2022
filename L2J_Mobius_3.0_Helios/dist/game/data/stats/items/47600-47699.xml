@@ -578,8 +578,9 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18715" level="1" />
-			<skill id="18717" level="1" />
+			<skill id="18715" level="1" /> <!-- Greater Ruby -->
+			<skill id="18716" level="1" /> <!-- Greater Ruby -->
+			<skill id="18717" level="1" /> <!-- Greater Ruby -->
 		</skills>
 	</item>
 	<item id="47689" name="Greater Sapphire" type="Armor">
@@ -591,8 +592,9 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="17821" level="2" />
-			<skill id="18719" level="1" />
+			<skill id="18718" level="1" /> <!-- Greater Sapphire -->
+			<skill id="18718" level="2" /> <!-- Greater Sapphire -->
+			<skill id="18719" level="1" /> <!-- Greater Sapphire -->
 		</skills>
 	</item>
 	<item id="47690" name="Greater Obsidian" type="Armor">
@@ -701,19 +703,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="27549" level="6" />
-		</skills>
-	</item>
-	<item id="47698" name="Greater Tanzanite" type="Armor">
-		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds, and recovers 15% of Max HP immediately. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
-		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="5" />
-		<set name="is_sellable" val="false" />
-		<skills>
-			<skill id="27549" level="6" />
+			<skill id="18565" level="6" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
 	<item id="47699" name="Greater Red Cat's Eye" type="Armor">

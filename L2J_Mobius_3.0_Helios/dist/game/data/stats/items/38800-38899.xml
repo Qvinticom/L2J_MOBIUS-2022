@@ -1653,10 +1653,13 @@
 		<set name="compoundItem" val="38861" />
 		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="brooch_jewel" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="5" />
+		<skills>
+			<skill id="17702" level="1" /> <!-- Jewel: Quick Recovery -->
+		</skills>
 	</item>
 	<item id="38861" name="Emergency Recovery Jewel Lv. 2" type="Armor">
 		<!-- Recovers 3000 HP/CP. -->
@@ -1666,9 +1669,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17702" level="2" /> <!-- Jewel: Quick Recovery -->
+		</skills>
 	</item>
 	<item id="38862" name="Emergency Recovery Jewel Lv. 3" type="Armor">
 		<!-- Recovers 6000 HP/CP. -->
@@ -1678,9 +1683,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17702" level="3" /> <!-- Jewel: Quick Recovery -->
+		</skills>
 	</item>
 	<item id="38863" name="Emergency Recovery Jewel Lv. 4" type="Armor">
 		<!-- Recovers 8000 HP/CP. -->
@@ -1690,9 +1697,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17702" level="4" /> <!-- Jewel: Quick Recovery -->
+		</skills>
 	</item>
 	<item id="38864" name="Emergency Recovery Jewel Lv. 5" type="Armor">
 		<!-- Recovers 13000 HP/CP. -->
@@ -1700,9 +1709,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17702" level="5" /> <!-- Jewel: Quick Recovery -->
+		</skills>
 	</item>
 	<item id="38865" name="Heal Boost Jewel Lv. 1" type="Armor">
 		<!-- Received Heal Amount + 3%. -->
@@ -1712,9 +1723,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17703" level="1" /> <!-- Jewel: Heal Boost -->
+		</skills>
 	</item>
 	<item id="38866" name="Heal Boost Jewel Lv. 2" type="Armor">
 		<!-- Received Heal Amount + 6%. -->
@@ -1724,9 +1737,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17703" level="2" /> <!-- Jewel: Heal Boost -->
+		</skills>
 	</item>
 	<item id="38867" name="Heal Boost Jewel Lv. 3" type="Armor">
 		<!-- Received Heal Amount + 9%. -->
@@ -1736,9 +1751,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17703" level="3" /> <!-- Jewel: Heal Boost -->
+		</skills>
 	</item>
 	<item id="38868" name="Heal Boost Jewel Lv. 4" type="Armor">
 		<!-- Received Heal Amount + 13%. -->
@@ -1748,9 +1765,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17703" level="4" /> <!-- Jewel: Heal Boost -->
+		</skills>
 	</item>
 	<item id="38869" name="Heal Boost Jewel Lv. 5" type="Armor">
 		<!-- Received Heal Amount + 21%. -->
@@ -1758,9 +1777,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="17703" level="5" /> <!-- Jewel: Heal Boost -->
+		</skills>
 	</item>
 	<item id="38870" name="Obsidian" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 1%. Effect does not stack with additional jewels of the same type. -->
