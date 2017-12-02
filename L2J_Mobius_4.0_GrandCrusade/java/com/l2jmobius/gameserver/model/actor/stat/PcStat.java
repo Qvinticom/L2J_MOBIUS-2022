@@ -455,14 +455,14 @@ public class PcStat extends PlayableStat
 	{
 		if (getActiveChar().isSubClassActive())
 		{
-			return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getVitalityPoints();
+			return Math.min(MAX_VITALITY_POINTS, getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getVitalityPoints());
 		}
-		return _vitalityPoints;
+		return Math.min(MAX_VITALITY_POINTS, _vitalityPoints);
 	}
 	
 	public int getBaseVitalityPoints()
 	{
-		return _vitalityPoints;
+		return Math.min(MAX_VITALITY_POINTS, _vitalityPoints);
 	}
 	
 	public double getVitalityExpBonus()
@@ -474,10 +474,10 @@ public class PcStat extends PlayableStat
 	{
 		if (getActiveChar().isSubClassActive())
 		{
-			getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).setVitalityPoints(value);
+			getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).setVitalityPoints(Math.min(MAX_VITALITY_POINTS, value));
 			return;
 		}
-		_vitalityPoints = value;
+		_vitalityPoints = Math.min(MAX_VITALITY_POINTS, value);
 	}
 	
 	/*
