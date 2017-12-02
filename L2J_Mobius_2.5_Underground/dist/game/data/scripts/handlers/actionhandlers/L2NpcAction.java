@@ -20,6 +20,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -83,7 +84,7 @@ public class L2NpcAction implements IActionHandler
 			if (target.isAutoAttackable(activeChar) && !((L2Character) target).isAlikeDead())
 			{
 				// Check the height difference
-				if (Math.abs(activeChar.getZ() - target.getZ()) < 400) // this max heigth difference might need some tweaking
+				if (Math.abs(activeChar.getZ() - target.getZ()) < 400) // this max height difference might need some tweaking
 				{
 					// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
@@ -135,6 +136,10 @@ public class L2NpcAction implements IActionHandler
 					if (Config.PLAYER_MOVEMENT_BLOCK_TIME > 0)
 					{
 						activeChar.updateNotMoveUntil();
+					}
+					if (npc.isFakePlayer() && GeoEngine.getInstance().canSeeTarget(activeChar, npc))
+					{
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, npc);
 					}
 				}
 			}
