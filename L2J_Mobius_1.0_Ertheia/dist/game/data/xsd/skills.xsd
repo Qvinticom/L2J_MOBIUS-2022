@@ -2322,7 +2322,7 @@
 														<xs:element minOccurs="0" name="npcIds">
 															<xs:complexType>
 																<xs:sequence>
-																	<xs:element name="item" type="xs:unsignedShort" />
+																	<xs:element maxOccurs="unbounded" name="item" type="xs:unsignedInt" />
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>

@@ -872,13 +872,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
-		<targetConditions>
-			<condition name="OpTargetNpc">
-				<npcIds>
-					<item>13097</item>
-				</npcIds>
-			</condition>
-		</targetConditions>
 	</skill>
 	<skill id="630" toLevel="1" name="Rabbit Tornado">
 		<!-- Confirmed CT2.5 -->
@@ -893,11 +886,16 @@
 		<reuseDelay>60000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>DOOR_TREASURE</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpUnlock" />
-		</conditions>
+		<targetConditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>13098</item>
+					<item>900102</item>
+				</npcIds>
+			</condition>
+		</targetConditions>
 	</skill>
 	<skill id="631" toLevel="6" name="Emergent Ability: Attack">
 		<!-- CT2.5 retail confirmed -->

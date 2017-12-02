@@ -178,8 +178,11 @@ public final class Rabbits extends Event
 				{
 					player.untransform();
 				}
-				
-				RABBIT_TRANSFORMATION.getSkill().applyEffects(npc, player);
+				if (player.isSitting())
+				{
+					player.standUp();
+				}
+				RABBIT_TRANSFORMATION.getSkill().applyEffects(player, player);
 				_players.add(player);
 				break;
 			}

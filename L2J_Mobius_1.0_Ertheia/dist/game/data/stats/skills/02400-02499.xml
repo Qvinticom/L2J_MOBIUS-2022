@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2400" levels="1" name="Coral Treasure Chest Key">
+	<skill id="2400" toLevel="1" name="Coral Treasure Chest Key">
 		<!-- Confirmed CT2.5 -->
 		<!-- set name="giveContribution" val="10" / -->
 		<castRange>40</castRange>
@@ -28,7 +28,7 @@
 			<effect name="OpenChest" />
 		</effects>
 	</skill>
-	<skill id="2401" levels="1" name="Mana Recovery Potion (Battleground)">
+	<skill id="2401" toLevel="1" name="Mana Recovery Potion (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -53,7 +53,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2402" levels="1" name="CP Recovery Potion (Battleground)">
+	<skill id="2402" toLevel="1" name="CP Recovery Potion (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -78,7 +78,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2403" levels="1" name="Hot Springs CP Potion">
+	<skill id="2403" toLevel="1" name="Hot Springs CP Potion">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -96,7 +96,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2404" levels="1" name="Might">
+	<skill id="2404" toLevel="1" name="Might">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -118,7 +118,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2405" levels="1" name="Shield">
+	<skill id="2405" toLevel="1" name="Shield">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -140,7 +140,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2406" levels="1" name="Wind Walk">
+	<skill id="2406" toLevel="1" name="Wind Walk">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -162,7 +162,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2407" levels="1" name="Focus">
+	<skill id="2407" toLevel="1" name="Focus">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -184,7 +184,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2408" levels="1" name="Death Whisper">
+	<skill id="2408" toLevel="1" name="Death Whisper">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -206,7 +206,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2409" levels="1" name="Guidance">
+	<skill id="2409" toLevel="1" name="Guidance">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -228,7 +228,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2410" levels="1" name="Blessed Shield">
+	<skill id="2410" toLevel="1" name="Blessed Shield">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -250,7 +250,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2411" levels="1" name="Blessed Body">
+	<skill id="2411" toLevel="1" name="Blessed Body">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -272,7 +272,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2412" levels="1" name="Haste">
+	<skill id="2412" toLevel="1" name="Haste">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -294,7 +294,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2413" levels="1" name="Vampiric Rage">
+	<skill id="2413" toLevel="1" name="Vampiric Rage">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -316,7 +316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2414" levels="1" name="Berserker Spirit">
+	<skill id="2414" toLevel="1" name="Berserker Spirit">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -366,7 +366,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2415" levels="1" name="Magic Barrier">
+	<skill id="2415" toLevel="1" name="Magic Barrier">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -388,7 +388,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2416" levels="1" name="Blessed Soul">
+	<skill id="2416" toLevel="1" name="Blessed Soul">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -410,7 +410,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2417" levels="1" name="Empower">
+	<skill id="2417" toLevel="1" name="Empower">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -432,7 +432,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2418" levels="1" name="Acumen">
+	<skill id="2418" toLevel="1" name="Acumen">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -454,7 +454,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2419" levels="1" name="Clarity">
+	<skill id="2419" toLevel="1" name="Clarity">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -487,7 +487,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2420" levels="1" name="White Seed of Evil Lump">
+	<skill id="2420" toLevel="1" name="White Seed of Evil Lump">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -510,7 +510,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2421" levels="1" name="Black Seed of Evil Lump">
+	<skill id="2421" toLevel="1" name="Black Seed of Evil Lump">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -533,7 +533,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2422" levels="1" name="1st Place Treasure Sack">
+	<skill id="2422" toLevel="1" name="1st Place Treasure Sack">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -879,7 +879,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2428" levels="1" name="Transformation Scroll: Rabbit">
+	<skill id="2428" toLevel="1" name="Transformation Scroll: Rabbit">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -909,7 +909,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2429" levels="1" name="Haste Potion">
+	<skill id="2429" toLevel="1" name="Haste Potion">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -933,7 +933,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2430" levels="1" name="Accuracy Juice">
+	<skill id="2430" toLevel="1" name="Accuracy Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -957,7 +957,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2431" levels="1" name="Critical Damage Juice">
+	<skill id="2431" toLevel="1" name="Critical Damage Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -981,7 +981,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2432" levels="1" name="Critical Rate Juice">
+	<skill id="2432" toLevel="1" name="Critical Rate Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1005,7 +1005,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2433" levels="1" name="Casting Spd. Juice">
+	<skill id="2433" toLevel="1" name="Casting Spd. Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1029,7 +1029,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2434" levels="1" name="Evasion Juice">
+	<skill id="2434" toLevel="1" name="Evasion Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1053,7 +1053,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2435" levels="1" name="M. Atk. Juice">
+	<skill id="2435" toLevel="1" name="M. Atk. Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1077,7 +1077,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2436" levels="1" name="P. Atk. Potion">
+	<skill id="2436" toLevel="1" name="P. Atk. Potion">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1101,7 +1101,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2437" levels="1" name="Wind Walk Juice">
+	<skill id="2437" toLevel="1" name="Wind Walk Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1125,7 +1125,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2438" levels="1" name="P. Def. Juice">
+	<skill id="2438" toLevel="1" name="P. Def. Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1149,7 +1149,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2439" levels="1" name="MP Consumption Juice">
+	<skill id="2439" toLevel="1" name="MP Consumption Juice">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1184,7 +1184,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2440" levels="1" name="Ancient Tome of the Demon">
+	<skill id="2440" toLevel="1" name="Ancient Tome of the Demon">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -1216,7 +1216,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2441" levels="1" name="Protection of Rune">
+	<skill id="2441" toLevel="1" name="Protection of Rune">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1247,7 +1247,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2442" levels="1" name="Protection of Elemental">
+	<skill id="2442" toLevel="1" name="Protection of Elemental">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1278,7 +1278,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2443" levels="1" name="Protection of Alignment">
+	<skill id="2443" toLevel="1" name="Protection of Alignment">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1309,7 +1309,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2444" levels="1" name="Fighter's Will">
+	<skill id="2444" toLevel="1" name="Fighter's Will">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1365,7 +1365,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2445" levels="1" name="Archer's Will">
+	<skill id="2445" toLevel="1" name="Archer's Will">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1421,7 +1421,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2446" levels="1" name="Anti Magic Armor">
+	<skill id="2446" toLevel="1" name="Anti Magic Armor">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1462,7 +1462,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2447" levels="1" name="Seed of Revenge">
+	<skill id="2447" toLevel="1" name="Seed of Revenge">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1502,7 +1502,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2448" levels="1" name="Hell Scream">
+	<skill id="2448" toLevel="1" name="Hell Scream">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1538,7 +1538,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2449" levels="1" name="Song of Windstorm">
+	<skill id="2449" toLevel="1" name="Song of Windstorm">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1574,7 +1574,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2450" levels="1" name="Blade Storm">
+	<skill id="2450" toLevel="1" name="Blade Storm">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1610,7 +1610,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2451" levels="1" name="Sixth Sense">
+	<skill id="2451" toLevel="1" name="Sixth Sense">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1659,7 +1659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2452" levels="1" name="Expose Vulnerability">
+	<skill id="2452" toLevel="1" name="Expose Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1708,7 +1708,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2453" levels="1" name="Exciting Adventure">
+	<skill id="2453" toLevel="1" name="Exciting Adventure">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1744,7 +1744,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2454" levels="1" name="Wind Riding">
+	<skill id="2454" toLevel="1" name="Wind Riding">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1780,7 +1780,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2455" levels="1" name="Ghost Walking">
+	<skill id="2455" toLevel="1" name="Ghost Walking">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1816,7 +1816,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2456" levels="1" name="Flame Hawk">
+	<skill id="2456" toLevel="1" name="Flame Hawk">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1852,7 +1852,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2457" levels="1" name="Arrow Rain">
+	<skill id="2457" toLevel="1" name="Arrow Rain">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1888,7 +1888,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2458" levels="1" name="Ghost Piercing">
+	<skill id="2458" toLevel="1" name="Ghost Piercing">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1924,7 +1924,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2459" levels="1" name="Dread Pool">
+	<skill id="2459" toLevel="1" name="Dread Pool">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1960,7 +1960,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2460" levels="1" name="Weapon Blockade">
+	<skill id="2460" toLevel="1" name="Weapon Blockade">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1996,7 +1996,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2461" levels="1" name="Force of Destruction">
+	<skill id="2461" toLevel="1" name="Force of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2032,7 +2032,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2462" levels="1" name="Demolition Impact">
+	<skill id="2462" toLevel="1" name="Demolition Impact">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2068,7 +2068,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2463" levels="1" name="Golem Armor">
+	<skill id="2463" toLevel="1" name="Golem Armor">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2104,7 +2104,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2464" levels="1" name="Flame Armor">
+	<skill id="2464" toLevel="1" name="Flame Armor">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2140,7 +2140,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2465" levels="1" name="Frost Armor">
+	<skill id="2465" toLevel="1" name="Frost Armor">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2176,7 +2176,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2466" levels="1" name="Hurricane Armor">
+	<skill id="2466" toLevel="1" name="Hurricane Armor">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2212,7 +2212,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2467" levels="1" name="Vampiric Mist">
+	<skill id="2467" toLevel="1" name="Vampiric Mist">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2248,7 +2248,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2468" levels="1" name="Servitor Barrier">
+	<skill id="2468" toLevel="1" name="Servitor Barrier">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2288,7 +2288,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2469" levels="1" name="Excessive Loyalty">
+	<skill id="2469" toLevel="1" name="Excessive Loyalty">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2328,7 +2328,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2470" levels="1" name="Mutual Response">
+	<skill id="2470" toLevel="1" name="Mutual Response">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2368,7 +2368,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2471" levels="1" name="Improve Combat">
+	<skill id="2471" toLevel="1" name="Improve Combat">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2404,7 +2404,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2472" levels="1" name="Improve Magic">
+	<skill id="2472" toLevel="1" name="Improve Magic">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2440,7 +2440,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2473" levels="1" name="Improve Condition">
+	<skill id="2473" toLevel="1" name="Improve Condition">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2476,7 +2476,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2474" levels="1" name="Improve Critical Attack">
+	<skill id="2474" toLevel="1" name="Improve Critical Attack">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2512,7 +2512,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2475" levels="1" name="Improve Shield Defense">
+	<skill id="2475" toLevel="1" name="Improve Shield Defense">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2548,7 +2548,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2476" levels="1" name="Improve Movement">
+	<skill id="2476" toLevel="1" name="Improve Movement">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2584,7 +2584,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2477" levels="1" name="Sublime Self-sacrifice">
+	<skill id="2477" toLevel="1" name="Sublime Self-sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2620,7 +2620,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2478" levels="1" name="Blessing of Eva">
+	<skill id="2478" toLevel="1" name="Blessing of Eva">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2656,7 +2656,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2479" levels="1" name="Lord of Vampires">
+	<skill id="2479" toLevel="1" name="Lord of Vampires">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2692,7 +2692,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2480" levels="1" name="Thorn Root">
+	<skill id="2480" toLevel="1" name="Thorn Root">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2728,7 +2728,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2481" levels="1" name="Seal of Limit">
+	<skill id="2481" toLevel="1" name="Seal of Limit">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2764,7 +2764,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2482" levels="1" name="Spirit of the Phoenix">
+	<skill id="2482" toLevel="1" name="Spirit of the Phoenix">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2804,7 +2804,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2483" levels="1" name="Eva's Will">
+	<skill id="2483" toLevel="1" name="Eva's Will">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2844,7 +2844,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2484" levels="1" name="Pain of Shilen">
+	<skill id="2484" toLevel="1" name="Pain of Shilen">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2884,7 +2884,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2485" levels="1" name="Herb of Life">
+	<skill id="2485" toLevel="1" name="Herb of Life">
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2904,7 +2904,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2486" levels="1" name="Herb of Mana">
+	<skill id="2486" toLevel="1" name="Herb of Mana">
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2924,7 +2924,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2487" levels="1" name="Item - Special Sound Crystal">
+	<skill id="2487" toLevel="1" name="Item - Special Sound Crystal">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -2935,7 +2935,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2488" levels="1" name="Wild Shot">
+	<skill id="2488" toLevel="1" name="Wild Shot">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2971,7 +2971,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2489" levels="1" name="Lightning Shock">
+	<skill id="2489" toLevel="1" name="Lightning Shock">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3010,7 +3010,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2490" levels="1" name="M. Def. Toolkit (Novice)">
+	<skill id="2490" toLevel="1" name="M. Def. Toolkit (Novice)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -3038,7 +3038,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2491" levels="1" name="Transform Zaken">
+	<skill id="2491" toLevel="1" name="Transform Zaken">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3055,7 +3055,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2492" levels="1" name="Transform Anakim">
+	<skill id="2492" toLevel="1" name="Transform Anakim">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3072,7 +3072,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2493" levels="1" name="Transform Venom">
+	<skill id="2493" toLevel="1" name="Transform Venom">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3089,7 +3089,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2494" levels="1" name="Transform Gordon">
+	<skill id="2494" toLevel="1" name="Transform Gordon">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3106,7 +3106,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2495" levels="1" name="Transform Ranku">
+	<skill id="2495" toLevel="1" name="Transform Ranku">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3123,7 +3123,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2496" levels="1" name="Transform Kechi">
+	<skill id="2496" toLevel="1" name="Transform Kechi">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3140,7 +3140,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2497" levels="1" name="Transform Demon Prince">
+	<skill id="2497" toLevel="1" name="Transform Demon Prince">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3157,7 +3157,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2498" levels="1" name="Bottle of Empty Soul">
+	<skill id="2498" toLevel="1" name="Bottle of Empty Soul">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3183,7 +3183,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2499" levels="1" name="Full Bottle of Souls">
+	<skill id="2499" toLevel="1" name="Full Bottle of Souls">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
