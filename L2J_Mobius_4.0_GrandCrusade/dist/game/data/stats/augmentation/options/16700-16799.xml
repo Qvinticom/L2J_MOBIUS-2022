@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
 	<option id="16700" name="o_f_46_1g_acc_ring_14">
-		<!-- Max MP + 6.5 HP Regeneration + 0.05 -->
+		<!-- Max MP + 6.5 HP Recovery + 0.05 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>6.5</amount>
@@ -14,20 +14,20 @@
 		</effects>
 	</option>
 	<option id="16701" name="o_f_46_1g_acc_ring_15">
-		<!-- Max MP + 6.5 MP Regeneration + 0.015 -->
+		<!-- Max MP + 6.5 MP Recovery + 0.015 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.015</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxMp">
 				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.015</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16702" name="o_f_46_1g_acc_ring_16">
-		<!-- Increase M. Atk. 2.5 -->
+		<!-- M. Atk. + 2.5 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>2.5</amount>
@@ -36,7 +36,7 @@
 		</effects>
 	</option>
 	<option id="16703" name="o_f_46_1g_acc_ring_17">
-		<!-- Increase M. Atk. 1.25 HP Regeneration + 0.05 -->
+		<!-- M. Atk. + 1.25 HP Recovery + 0.05 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>1.25</amount>
@@ -49,20 +49,20 @@
 		</effects>
 	</option>
 	<option id="16704" name="o_f_46_1g_acc_ring_18">
-		<!-- Increase M. Atk. 1.25 MP Regeneration + 0.015 -->
+		<!-- M. Atk. + 1.25 MP Recovery + 0.015 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.015</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>1.25</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.015</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16705" name="o_f_46_2g_acc_ring_19">
-		<!-- HP Regeneration + 0.1 -->
+		<!-- HP Recovery + 0.1 -->
 		<effects>
 			<effect name="HpRegen">
 				<amount>0.1</amount>
@@ -71,7 +71,7 @@
 		</effects>
 	</option>
 	<option id="16706" name="o_f_46_2g_acc_ring_20">
-		<!-- MP Regeneration + 0.03 -->
+		<!-- MP Recovery + 0.03 -->
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.03</amount>
@@ -80,14 +80,14 @@
 		</effects>
 	</option>
 	<option id="16707" name="o_f_46_2g_acc_ring_21">
-		<!-- HP Regeneration + 0.05 MP Regeneration + 0.015 -->
+		<!-- HP Recovery + 0.05 MP Recovery + 0.015 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.015</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>0.05</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.015</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -102,7 +102,7 @@
 		</effects>
 	</option>
 	<option id="16709" name="o_f_46_2s_acc_ring_2">
-		<!-- M. Def. + 1.2 Increase Max HP 12.0 -->
+		<!-- M. Def. + 1.2 Max HP + 12.0 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.2</amount>
@@ -128,7 +128,7 @@
 		</effects>
 	</option>
 	<option id="16711" name="o_f_46_2s_acc_ring_4">
-		<!-- M. Def. + 1.2 Increase M. Atk. 1.45 -->
+		<!-- M. Def. + 1.2 M. Atk. + 1.45 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.2</amount>
@@ -141,7 +141,7 @@
 		</effects>
 	</option>
 	<option id="16712" name="o_f_46_2s_acc_ring_5">
-		<!-- M. Def. + 1.2 HP Regeneration + 0.055 -->
+		<!-- M. Def. + 1.2 HP Recovery + 0.055 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.2</amount>
@@ -154,7 +154,7 @@
 		</effects>
 	</option>
 	<option id="16713" name="o_f_46_2s_acc_ring_6">
-		<!-- M. Def. + 1.2 MP Regeneration + 0.02 -->
+		<!-- M. Def. + 1.2 MP Recovery + 0.02 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.2</amount>
@@ -167,7 +167,7 @@
 		</effects>
 	</option>
 	<option id="16714" name="o_f_46_2s_acc_ring_7">
-		<!-- Increase Max HP 24.0 -->
+		<!-- Max HP + 24.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>24.0</amount>
@@ -176,7 +176,7 @@
 		</effects>
 	</option>
 	<option id="16715" name="o_f_46_2s_acc_ring_8">
-		<!-- Increase Max HP 12.0 Max MP + 7.5 -->
+		<!-- Max HP + 12.0 Max MP + 7.5 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>12.0</amount>
@@ -189,7 +189,7 @@
 		</effects>
 	</option>
 	<option id="16716" name="o_f_46_2s_acc_ring_9">
-		<!-- Increase Max HP 12.0 Increase M. Atk. 1.45 -->
+		<!-- Max HP + 12.0 M. Atk. + 1.45 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>12.0</amount>
@@ -202,7 +202,7 @@
 		</effects>
 	</option>
 	<option id="16717" name="o_f_46_2s_acc_ring_10">
-		<!-- Increase Max HP 12.0 HP Regeneration + 0.055 -->
+		<!-- Max HP + 12.0 HP Recovery + 0.055 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>12.0</amount>
@@ -215,14 +215,14 @@
 		</effects>
 	</option>
 	<option id="16718" name="o_f_46_2s_acc_ring_11">
-		<!-- Increase Max HP 12.0 MP Regeneration + 0.02 -->
+		<!-- Max HP + 12.0 MP Recovery + 0.02 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.02</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>12.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.02</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -237,7 +237,7 @@
 		</effects>
 	</option>
 	<option id="16720" name="o_f_46_2s_acc_ring_13">
-		<!-- Max MP + 7.5 Increase M. Atk. 1.45 -->
+		<!-- Max MP + 7.5 M. Atk. + 1.45 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>7.5</amount>
@@ -250,7 +250,7 @@
 		</effects>
 	</option>
 	<option id="16721" name="o_f_46_2s_acc_ring_14">
-		<!-- Max MP + 7.5 HP Regeneration + 0.055 -->
+		<!-- Max MP + 7.5 HP Recovery + 0.055 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>7.5</amount>
@@ -263,20 +263,20 @@
 		</effects>
 	</option>
 	<option id="16722" name="o_f_46_2s_acc_ring_15">
-		<!-- Max MP + 7.5 MP Regeneration + 0.02 -->
+		<!-- Max MP + 7.5 MP Recovery + 0.02 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.02</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxMp">
 				<amount>7.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.02</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16723" name="o_f_46_2s_acc_ring_16">
-		<!-- Increase M. Atk. 2.9 -->
+		<!-- M. Atk. + 2.9 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>2.9</amount>
@@ -285,7 +285,7 @@
 		</effects>
 	</option>
 	<option id="16724" name="o_f_46_2s_acc_ring_17">
-		<!-- Increase M. Atk. 1.45 HP Regeneration + 0.055 -->
+		<!-- M. Atk. + 1.45 HP Recovery + 0.055 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>1.45</amount>
@@ -298,20 +298,20 @@
 		</effects>
 	</option>
 	<option id="16725" name="o_f_46_2s_acc_ring_18">
-		<!-- Increase M. Atk. 1.45 MP Regeneration + 0.02 -->
+		<!-- M. Atk. + 1.45 MP Recovery + 0.02 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.02</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>1.45</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.02</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16726" name="o_f_46_2s_acc_ring_19">
-		<!-- HP Regeneration + 0.11 -->
+		<!-- HP Recovery + 0.11 -->
 		<effects>
 			<effect name="HpRegen">
 				<amount>0.11</amount>
@@ -320,7 +320,7 @@
 		</effects>
 	</option>
 	<option id="16727" name="o_f_46_2s_acc_ring_20">
-		<!-- MP Regeneration + 0.04 -->
+		<!-- MP Recovery + 0.04 -->
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.04</amount>
@@ -329,14 +329,14 @@
 		</effects>
 	</option>
 	<option id="16728" name="o_f_46_2s_acc_ring_21">
-		<!-- HP Regeneration + 0.055 MP Regeneration + 0.02 -->
+		<!-- HP Recovery + 0.055 MP Recovery + 0.02 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.02</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>0.055</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.02</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -351,7 +351,7 @@
 		</effects>
 	</option>
 	<option id="16730" name="o_f_46_2r_acc_ring_2">
-		<!-- M. Def. + 1.5 Increase Max HP 15.0 -->
+		<!-- M. Def. + 1.5 Max HP + 15.0 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.5</amount>
@@ -377,7 +377,7 @@
 		</effects>
 	</option>
 	<option id="16732" name="o_f_46_2r_acc_ring_4">
-		<!-- M. Def. + 1.5 Increase M. Atk. 1.8 -->
+		<!-- M. Def. + 1.5 M. Atk. + 1.8 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.5</amount>
@@ -390,7 +390,7 @@
 		</effects>
 	</option>
 	<option id="16733" name="o_f_46_2r_acc_ring_5">
-		<!-- M. Def. + 1.5 HP Regeneration + 0.07 -->
+		<!-- M. Def. + 1.5 HP Recovery + 0.07 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.5</amount>
@@ -403,7 +403,7 @@
 		</effects>
 	</option>
 	<option id="16734" name="o_f_46_2r_acc_ring_6">
-		<!-- M. Def. + 1.5 MP Regeneration + 0.025 -->
+		<!-- M. Def. + 1.5 MP Recovery + 0.025 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.5</amount>
@@ -416,7 +416,7 @@
 		</effects>
 	</option>
 	<option id="16735" name="o_f_46_2r_acc_ring_7">
-		<!-- Increase Max HP 30.0 -->
+		<!-- Max HP + 30.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>30.0</amount>
@@ -425,7 +425,7 @@
 		</effects>
 	</option>
 	<option id="16736" name="o_f_46_2r_acc_ring_8">
-		<!-- Increase Max HP 15.0 Max MP + 9.0 -->
+		<!-- Max HP + 15.0 Max MP + 9.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>15.0</amount>
@@ -438,7 +438,7 @@
 		</effects>
 	</option>
 	<option id="16737" name="o_f_46_2r_acc_ring_9">
-		<!-- Increase Max HP 15.0 Increase M. Atk. 1.8 -->
+		<!-- Max HP + 15.0 M. Atk. + 1.8 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>15.0</amount>
@@ -451,7 +451,7 @@
 		</effects>
 	</option>
 	<option id="16738" name="o_f_46_2r_acc_ring_10">
-		<!-- Increase Max HP 15.0 HP Regeneration + 0.07 -->
+		<!-- Max HP + 15.0 HP Recovery + 0.07 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>15.0</amount>
@@ -464,14 +464,14 @@
 		</effects>
 	</option>
 	<option id="16739" name="o_f_46_2r_acc_ring_11">
-		<!-- Increase Max HP 15.0 MP Regeneration + 0.025 -->
+		<!-- Max HP + 15.0 MP Recovery + 0.025 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.025</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>15.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -486,7 +486,7 @@
 		</effects>
 	</option>
 	<option id="16741" name="o_f_46_2r_acc_ring_13">
-		<!-- Max MP + 9.0 Increase M. Atk. 1.8 -->
+		<!-- Max MP + 9.0 M. Atk. + 1.8 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>9.0</amount>
@@ -499,7 +499,7 @@
 		</effects>
 	</option>
 	<option id="16742" name="o_f_46_2r_acc_ring_14">
-		<!-- Max MP + 9.0 HP Regeneration + 0.07 -->
+		<!-- Max MP + 9.0 HP Recovery + 0.07 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>9.0</amount>
@@ -512,20 +512,20 @@
 		</effects>
 	</option>
 	<option id="16743" name="o_f_46_2r_acc_ring_15">
-		<!-- Max MP + 9.0 MP Regeneration + 0.025 -->
+		<!-- Max MP + 9.0 MP Recovery + 0.025 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.025</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxMp">
 				<amount>9.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16744" name="o_f_46_2r_acc_ring_16">
-		<!-- Increase M. Atk. 3.6 -->
+		<!-- M. Atk. + 3.6 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>3.6</amount>
@@ -534,7 +534,7 @@
 		</effects>
 	</option>
 	<option id="16745" name="o_f_46_2r_acc_ring_17">
-		<!-- Increase M. Atk. 1.8 HP Regeneration + 0.07 -->
+		<!-- M. Atk. + 1.8 HP Recovery + 0.07 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>1.8</amount>
@@ -547,20 +547,20 @@
 		</effects>
 	</option>
 	<option id="16746" name="o_f_46_2r_acc_ring_18">
-		<!-- Increase M. Atk. 1.8 MP Regeneration + 0.025 -->
+		<!-- M. Atk. + 1.8 MP Recovery + 0.025 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.025</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>1.8</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16747" name="o_f_46_2r_acc_ring_19">
-		<!-- HP Regeneration + 0.14 -->
+		<!-- HP Recovery + 0.14 -->
 		<effects>
 			<effect name="HpRegen">
 				<amount>0.14</amount>
@@ -569,7 +569,7 @@
 		</effects>
 	</option>
 	<option id="16748" name="o_f_46_2r_acc_ring_20">
-		<!-- MP Regeneration + 0.05 -->
+		<!-- MP Recovery + 0.05 -->
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.05</amount>
@@ -578,14 +578,14 @@
 		</effects>
 	</option>
 	<option id="16749" name="o_f_46_2r_acc_ring_21">
-		<!-- HP Regeneration + 0.07 MP Regeneration + 0.025 -->
+		<!-- HP Recovery + 0.07 MP Recovery + 0.025 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.025</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>0.07</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.025</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -600,7 +600,7 @@
 		</effects>
 	</option>
 	<option id="16751" name="o_f_46_2u_acc_ring_2">
-		<!-- M. Def. + 1.75 Increase Max HP 17.5 -->
+		<!-- M. Def. + 1.75 Max HP + 17.5 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.75</amount>
@@ -626,7 +626,7 @@
 		</effects>
 	</option>
 	<option id="16753" name="o_f_46_2u_acc_ring_4">
-		<!-- M. Def. + 1.75 Increase M. Atk. 2.1 -->
+		<!-- M. Def. + 1.75 M. Atk. + 2.1 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.75</amount>
@@ -639,7 +639,7 @@
 		</effects>
 	</option>
 	<option id="16754" name="o_f_46_2u_acc_ring_5">
-		<!-- M. Def. + 1.75 HP Regeneration + 0.08 -->
+		<!-- M. Def. + 1.75 HP Recovery + 0.08 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.75</amount>
@@ -652,7 +652,7 @@
 		</effects>
 	</option>
 	<option id="16755" name="o_f_46_2u_acc_ring_6">
-		<!-- M. Def. + 1.75 MP Regeneration + 0.029 -->
+		<!-- M. Def. + 1.75 MP Recovery + 0.029 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.75</amount>
@@ -665,20 +665,20 @@
 		</effects>
 	</option>
 	<option id="16756" name="o_f_46_2u_acc_ring_7">
-		<!-- Increase Max HP 35.0 MP Regeneration + 0.029 -->
+		<!-- Max HP + 35.0 MP Recovery + 0.029 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.029</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>35.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.029</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16757" name="o_f_46_2u_acc_ring_8">
-		<!-- Increase Max HP 17.5 Max MP + 10.5 -->
+		<!-- Max HP + 17.5 Max MP + 10.5 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>17.5</amount>
@@ -691,7 +691,7 @@
 		</effects>
 	</option>
 	<option id="16758" name="o_f_46_2u_acc_ring_9">
-		<!-- Increase Max HP 17.5 Increase M. Atk. 2.1 -->
+		<!-- Max HP + 17.5 M. Atk. + 2.1 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>17.5</amount>
@@ -704,7 +704,7 @@
 		</effects>
 	</option>
 	<option id="16759" name="o_f_46_2u_acc_ring_10">
-		<!-- Increase Max HP 17.5 HP Regeneration + 0.08 -->
+		<!-- Max HP + 17.5 HP Recovery + 0.08 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>17.5</amount>
@@ -717,14 +717,14 @@
 		</effects>
 	</option>
 	<option id="16760" name="o_f_46_2u_acc_ring_11">
-		<!-- Increase Max HP 17.5 MP Regeneration + 0.029 -->
+		<!-- Max HP + 17.5 MP Recovery + 0.029 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.029</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>17.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.029</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -739,7 +739,7 @@
 		</effects>
 	</option>
 	<option id="16762" name="o_f_46_2u_acc_ring_13">
-		<!-- Max MP + 10.5 Increase M. Atk. 2.1 -->
+		<!-- Max MP + 10.5 M. Atk. + 2.1 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>10.5</amount>
@@ -752,7 +752,7 @@
 		</effects>
 	</option>
 	<option id="16763" name="o_f_46_2u_acc_ring_14">
-		<!-- Max MP + 10.5 HP Regeneration + 0.08 -->
+		<!-- Max MP + 10.5 HP Recovery + 0.08 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>10.5</amount>
@@ -765,20 +765,20 @@
 		</effects>
 	</option>
 	<option id="16764" name="o_f_46_2u_acc_ring_15">
-		<!-- Max MP + 10.5 MP Regeneration + 0.029 -->
+		<!-- Max MP + 10.5 MP Recovery + 0.029 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.029</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxMp">
 				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.029</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16765" name="o_f_46_2u_acc_ring_16">
-		<!-- Increase M. Atk. 4.2 -->
+		<!-- M. Atk. + 4.2 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>4.2</amount>
@@ -787,7 +787,7 @@
 		</effects>
 	</option>
 	<option id="16766" name="o_f_46_2u_acc_ring_17">
-		<!-- Increase M. Atk. 2.1 HP Regeneration + 0.08 -->
+		<!-- M. Atk. + 2.1 HP Recovery + 0.08 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>2.1</amount>
@@ -800,20 +800,20 @@
 		</effects>
 	</option>
 	<option id="16767" name="o_f_46_2u_acc_ring_18">
-		<!-- Increase M. Atk. 2.1 MP Regeneration + 0.029 -->
+		<!-- M. Atk. + 2.1 MP Recovery + 0.029 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.029</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>2.1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.029</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16768" name="o_f_46_2u_acc_ring_19">
-		<!-- HP Regeneration + 0.16 -->
+		<!-- HP Recovery + 0.16 -->
 		<effects>
 			<effect name="HpRegen">
 				<amount>0.16</amount>
@@ -822,7 +822,7 @@
 		</effects>
 	</option>
 	<option id="16769" name="o_f_46_2u_acc_ring_20">
-		<!-- MP Regeneration + 0.059 -->
+		<!-- MP Recovery + 0.059 -->
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.059</amount>
@@ -831,88 +831,88 @@
 		</effects>
 	</option>
 	<option id="16770" name="o_f_46_2u_acc_ring_21">
-		<!-- HP Regeneration + 0.08 MP Regeneration + 0.029 -->
+		<!-- HP Recovery + 0.08 MP Recovery + 0.029 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.029</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>0.08</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.029</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="16771" name="o_s_49_2g_acc_ring_1">
-		<!-- Passive: Increase Earth P. Def. -->
+		<!-- Passive: Increases Earth P. Def. -->
 		<passive_skill id="8012" level="1" /> <!-- Augment Option - Earth Resistance -->
 	</option>
 	<option id="16772" name="o_s_49_2g_acc_ring_2">
-		<!-- Passive: Increase Fire P. Def. -->
+		<!-- Passive: Increases Fire P. Def. -->
 		<passive_skill id="8009" level="1" /> <!-- Augment Option - Fire Resistance -->
 	</option>
 	<option id="16773" name="o_s_49_2g_acc_ring_3">
-		<!-- Passive: Increase Holy P. Def. -->
-		<passive_skill id="8007" level="1" /> <!-- Augment Option - Resistance to Holy -->
+		<!-- Passive: Increases Holy P. Def. -->
+		<passive_skill id="8007" level="1" /> <!-- Augment Option - Holy Resistance -->
 	</option>
 	<option id="16774" name="o_s_49_2g_acc_ring_4">
-		<!-- Passive: Increase Dark P. Def. -->
+		<!-- Passive: Increases Dark P. Def. -->
 		<passive_skill id="8008" level="1" /> <!-- Augment Option - Dark Resistance -->
 	</option>
 	<option id="16775" name="o_s_49_2g_acc_ring_5">
-		<!-- Passive: Increase Water P. Def. -->
+		<!-- Passive: Increases Water P. Def. -->
 		<passive_skill id="8010" level="1" /> <!-- Augment Option - Water Resistance -->
 	</option>
 	<option id="16776" name="o_s_49_2g_acc_ring_6">
-		<!-- Passive: Increase Wind P. Def. -->
+		<!-- Passive: Increases Wind P. Def. -->
 		<passive_skill id="8011" level="1" /> <!-- Augment Option - Wind Resistance -->
 	</option>
 	<option id="16777" name="o_s_49_2g_acc_ring_7">
-		<!-- Passive: Increase Bleed P. Atk. -->
+		<!-- Passive: Increases Bleed P. Atk. -->
 		<passive_skill id="8050" level="1" /> <!-- Augment Option - Enhance Bleed -->
 	</option>
 	<option id="16778" name="o_s_49_2g_acc_ring_8">
-		<!-- Passive: Increase Bleed P. Def. -->
+		<!-- Passive: Increases Bleed P. Def. -->
 		<passive_skill id="8056" level="1" /> <!-- Augment Option - Bleed Resistance -->
 	</option>
 	<option id="16779" name="o_s_49_2g_acc_ring_9">
-		<!-- Passive: Increase Mental Abnormal P. Atk. -->
+		<!-- Passive: Increases Mental P. Atk. -->
 		<passive_skill id="8054" level="1" /> <!-- Augment Option - Enhance Mental Attack -->
 	</option>
 	<option id="16780" name="o_s_49_2g_acc_ring_10">
-		<!-- Passive: Increase Mental Abnormal P. Def. -->
+		<!-- Passive: Increases Mental P. Def. -->
 		<passive_skill id="8060" level="1" /> <!-- Augment Option - Mental Attack Resistance -->
 	</option>
 	<option id="16781" name="o_s_49_2g_acc_ring_11">
-		<!-- Passive: Increases the power of paralysis-type attacks. -->
+		<!-- Passive: Increases Paralysis P. Atk. -->
 		<passive_skill id="8053" level="1" /> <!-- Augment Option - Enhance Paralysis -->
 	</option>
 	<option id="16782" name="o_s_49_2g_acc_ring_12">
-		<!-- Passive: Increases your defense against paralysis-type attacks. -->
+		<!-- Passive: Increases Paralysis P. Def. -->
 		<passive_skill id="8059" level="1" /> <!-- Augment Option - Paralysis Resistance -->
 	</option>
 	<option id="16783" name="o_s_49_2g_acc_ring_13">
-		<!-- Passive: Increase Poison P. Atk. -->
+		<!-- Passive: Increases Poison P. Atk. -->
 		<passive_skill id="8051" level="1" /> <!-- Augment Option - Enhance Poison -->
 	</option>
 	<option id="16784" name="o_s_49_2g_acc_ring_14">
-		<!-- Passive: Increase Poison P. Def. -->
+		<!-- Passive: Increases Poison P. Def. -->
 		<passive_skill id="8057" level="1" /> <!-- Augment Option - Poison Resistance -->
 	</option>
 	<option id="16785" name="o_s_49_2g_acc_ring_15">
-		<!-- Passive: Increase Stun P. Atk. -->
+		<!-- Passive: Increases Stun P. Atk. -->
 		<passive_skill id="8049" level="1" /> <!-- Augment Option - Enhance Stun -->
 	</option>
 	<option id="16786" name="o_s_49_2g_acc_ring_16">
-		<!-- Passive: Increase Stun P. Def. -->
+		<!-- Passive: Increases Stun P. Def. -->
 		<passive_skill id="8055" level="1" /> <!-- Augment Option - Stun Resistance -->
 	</option>
 	<option id="16787" name="o_s_49_2g_acc_ring_17">
-		<!-- Passive: Increase Sleep P. Atk. -->
+		<!-- Passive: Increases Sleep P. Atk. -->
 		<passive_skill id="8052" level="1" /> <!-- Augment Option - Enhance Sleep -->
 	</option>
 	<option id="16788" name="o_s_49_2g_acc_ring_18">
-		<!-- Passive: Increase Sleep P. Def. -->
+		<!-- Passive: Increases Sleep P. Def. -->
 		<passive_skill id="8058" level="1" /> <!-- Augment Option - Sleep Resistance -->
 	</option>
 	<option id="16789" name="o_f_49_1g_acc_ring_1">
@@ -925,7 +925,7 @@
 		</effects>
 	</option>
 	<option id="16790" name="o_f_49_1g_acc_ring_2">
-		<!-- M. Def. + 1.1 Increase Max HP 11.5 -->
+		<!-- M. Def. + 1.1 Max HP + 11.5 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.1</amount>
@@ -951,7 +951,7 @@
 		</effects>
 	</option>
 	<option id="16792" name="o_f_49_1g_acc_ring_4">
-		<!-- M. Def. + 1.1 Increase M. Atk. 1.4 -->
+		<!-- M. Def. + 1.1 M. Atk. + 1.4 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.1</amount>
@@ -964,7 +964,7 @@
 		</effects>
 	</option>
 	<option id="16793" name="o_f_49_1g_acc_ring_5">
-		<!-- M. Def. + 1.1 HP Regeneration + 0.05 -->
+		<!-- M. Def. + 1.1 HP Recovery + 0.05 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.1</amount>
@@ -977,7 +977,7 @@
 		</effects>
 	</option>
 	<option id="16794" name="o_f_49_1g_acc_ring_6">
-		<!-- M. Def. + 1.1 MP Regeneration + 0.018 -->
+		<!-- M. Def. + 1.1 MP Recovery + 0.018 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.1</amount>
@@ -990,7 +990,7 @@
 		</effects>
 	</option>
 	<option id="16795" name="o_f_49_1g_acc_ring_7">
-		<!-- Increase Max HP 23.0 -->
+		<!-- Max HP + 23.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>23.0</amount>
@@ -999,7 +999,7 @@
 		</effects>
 	</option>
 	<option id="16796" name="o_f_49_1g_acc_ring_8">
-		<!-- Increase Max HP 11.5 Max MP + 7.1 -->
+		<!-- Max HP + 11.5 Max MP + 7.1 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>11.5</amount>
@@ -1012,7 +1012,7 @@
 		</effects>
 	</option>
 	<option id="16797" name="o_f_49_1g_acc_ring_9">
-		<!-- Increase Max HP 11.5 Increase M. Atk. 1.4 -->
+		<!-- Max HP + 11.5 M. Atk. + 1.4 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>11.5</amount>
@@ -1025,7 +1025,7 @@
 		</effects>
 	</option>
 	<option id="16798" name="o_f_49_1g_acc_ring_10">
-		<!-- Increase Max HP 11.5 HP Regeneration + 0.05 -->
+		<!-- Max HP + 11.5 HP Recovery + 0.05 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>11.5</amount>
@@ -1038,14 +1038,14 @@
 		</effects>
 	</option>
 	<option id="16799" name="o_f_49_1g_acc_ring_11">
-		<!-- Increase Max HP 11.5 MP Regeneration + 0.018 -->
+		<!-- Max HP + 11.5 MP Recovery + 0.018 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.018</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>11.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.018</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>

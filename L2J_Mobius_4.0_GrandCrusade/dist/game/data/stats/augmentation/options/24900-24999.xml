@@ -1,71 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
 	<option id="24900" name="o_july_shirt_attr_49">
-		<!-- Increases Resistance to Water, Fire, Wind, Earth, Holy, and Dark attributes by 50 each. -->
+		<!-- Increases Water/Fire/Wind/Earth/Holy/Dark P. Def. by 50 each -->
 		<effects>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
-				<attribute>WIND</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
-				<attribute>FIRE</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
-				<attribute>EARTH</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
+				<amount>50.0</amount>
 				<attribute>WATER</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
+				<amount>50.0</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50.0</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50.0</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50.0</amount>
 				<attribute>HOLY</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
+				<amount>50.0</amount>
 				<attribute>DARK</attribute>
 			</effect>
 		</effects>
 	</option>
 	<option id="24901" name="o_july_shirt_attr_50">
-		<!-- Increases Resistance to Water, Fire, Wind, Earth, Holy, and Dark attributes by 50 each. -->
+		<!-- Increases Water/Fire/Wind/Earth/Holy/Dark P. Def. by 50 each -->
 		<effects>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
-				<attribute>WIND</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
-				<attribute>FIRE</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
-				<attribute>EARTH</attribute>
-			</effect>
-			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
+				<amount>50.0</amount>
 				<attribute>WATER</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
+				<amount>50.0</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50.0</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50.0</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>50.0</amount>
 				<attribute>HOLY</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
-				<amount>50</amount>
-				<mode>DIFF</mode>
+				<amount>50.0</amount>
 				<attribute>DARK</attribute>
 			</effect>
 		</effects>
@@ -74,7 +62,7 @@
 		<!-- CON +1 -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
 			</effect>
@@ -84,14 +72,14 @@
 		<!-- CON +1. MEN +1. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -99,24 +87,24 @@
 		<!-- INT +1. STR +1. CON +1. MEN +1. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -124,24 +112,24 @@
 		<!-- INT +1. STR +1. CON +2. MEN +1. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -149,24 +137,24 @@
 		<!-- INT +1. STR +1. CON +2. MEN +2. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -174,24 +162,24 @@
 		<!-- INT +2. STR +2. CON +2. MEN +2. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -199,24 +187,24 @@
 		<!-- INT +2. STR +2. CON +3. MEN +2. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -224,24 +212,24 @@
 		<!-- INT +2. STR +2. CON +3. MEN +3. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -249,24 +237,24 @@
 		<!-- INT +3. STR +3. CON +3. MEN +3. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -274,24 +262,24 @@
 		<!-- INT +3. STR +3. CON +4. MEN +3. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>4</amount>
+				<amount>4.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -299,24 +287,24 @@
 		<!-- INT +3. STR +3. CON +4. MEN +4. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>3</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>4</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>4</amount>
+				<amount>4.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -324,24 +312,24 @@
 		<!-- INT +4. STR +4. CON +4. MEN +4. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>4</amount>
+				<amount>4.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>4</amount>
+				<amount>4.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>4</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>4</amount>
+				<amount>4.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -349,24 +337,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -374,24 +362,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -399,24 +387,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -424,24 +412,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -449,24 +437,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -474,24 +462,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -499,24 +487,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -524,24 +512,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -549,24 +537,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -574,24 +562,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -599,24 +587,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -624,24 +612,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -649,24 +637,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -674,24 +662,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -699,24 +687,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -724,24 +712,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -749,24 +737,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -774,24 +762,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -799,24 +787,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -824,24 +812,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -849,24 +837,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -874,24 +862,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -899,24 +887,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -924,24 +912,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -949,24 +937,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -974,24 +962,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -999,24 +987,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1024,24 +1012,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1049,24 +1037,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1074,24 +1062,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1099,24 +1087,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1124,24 +1112,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1149,24 +1137,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1174,24 +1162,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1199,24 +1187,24 @@
 		<!-- INT +5. STR +5. CON +5. MEN +5. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>5</amount>
+				<amount>5.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</option>
@@ -1234,478 +1222,401 @@
 		</effects>
 	</option>
 	<option id="24950" name="o_s_76_85_opt_ring_drop_up1">
-		<!-- Passive: Item drop rate increases by 10%. -->
-		<passive_skill id="8415" level="1" /> <!-- Ring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 10%. -->
+		<passive_skill id="8415" level="1" /> <!-- Ring Ability: Drop Rate Up -->
 	</option>
 	<option id="24951" name="o_s_76_85_opt_ring_drop_up2">
-		<!-- Passive: Item drop rate increases by 20%. -->
-		<passive_skill id="8415" level="2" /> <!-- Ring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 20%. -->
+		<passive_skill id="8415" level="2" /> <!-- Ring Ability: Drop Rate Up -->
 	</option>
 	<option id="24952" name="o_s_76_85_opt_ring_drop_up3">
-		<!-- Passive: Item drop rate increases by 30%. -->
-		<passive_skill id="8415" level="3" /> <!-- Ring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 30%. -->
+		<passive_skill id="8415" level="3" /> <!-- Ring Ability: Drop Rate Up -->
 	</option>
 	<option id="24953" name="o_s_76_85_opt_ring_drop_up4">
-		<!-- Passive: Item drop rate increases by 40%. -->
-		<passive_skill id="8415" level="4" /> <!-- Ring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 40%. -->
+		<passive_skill id="8415" level="4" /> <!-- Ring Ability: Drop Rate Up -->
 	</option>
 	<option id="24954" name="o_s_76_85_opt_ring_drop_up5">
-		<!-- Passive: Item drop rate increases by 50%. -->
-		<passive_skill id="8415" level="5" /> <!-- Ring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 50%. -->
+		<passive_skill id="8415" level="5" /> <!-- Ring Ability: Drop Rate Up -->
 	</option>
 	<option id="24955" name="o_s_76_85_opt_earring_drop_up1">
-		<!-- Passive: Item drop rate increases by 10%. -->
-		<passive_skill id="8416" level="1" /> <!-- Earring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 10%. -->
+		<passive_skill id="8416" level="1" /> <!-- Earring Ability: Increase Drop Rate -->
 	</option>
 	<option id="24956" name="o_s_76_85_opt_earring_drop_up2">
-		<!-- Passive: Item drop rate increases by 20%. -->
-		<passive_skill id="8416" level="2" /> <!-- Earring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 20%. -->
+		<passive_skill id="8416" level="2" /> <!-- Earring Ability: Increase Drop Rate -->
 	</option>
 	<option id="24957" name="o_s_76_85_opt_earring_drop_up3">
-		<!-- Passive: Item drop rate increases by 30%. -->
-		<passive_skill id="8416" level="3" /> <!-- Earring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 30%. -->
+		<passive_skill id="8416" level="3" /> <!-- Earring Ability: Increase Drop Rate -->
 	</option>
 	<option id="24958" name="o_s_76_85_opt_earring_drop_up4">
-		<!-- Passive: Item drop rate increases by 40%. -->
-		<passive_skill id="8416" level="4" /> <!-- Earring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 40%. -->
+		<passive_skill id="8416" level="4" /> <!-- Earring Ability: Increase Drop Rate -->
 	</option>
 	<option id="24959" name="o_s_76_85_opt_earring_drop_up5">
-		<!-- Passive: Item drop rate increases by 50%. -->
-		<passive_skill id="8416" level="5" /> <!-- Earring Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 50%. -->
+		<passive_skill id="8416" level="5" /> <!-- Earring Ability: Increase Drop Rate -->
 	</option>
 	<option id="24960" name="o_s_76_85_opt_necklace_drop_up1">
-		<!-- Passive: Item drop rate increases by 10%. -->
-		<passive_skill id="8417" level="1" /> <!-- Necklace Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 10%. -->
+		<passive_skill id="8417" level="1" /> <!-- Necklace Ability: Drop Rate Up -->
 	</option>
 	<option id="24961" name="o_s_76_85_opt_necklace_drop_up2">
-		<!-- Passive: Item drop rate increases by 20%. -->
-		<passive_skill id="8417" level="2" /> <!-- Necklace Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 20%. -->
+		<passive_skill id="8417" level="2" /> <!-- Necklace Ability: Drop Rate Up -->
 	</option>
 	<option id="24962" name="o_s_76_85_opt_necklace_drop_up3">
-		<!-- Passive: Item drop rate increases by 30%. -->
-		<passive_skill id="8417" level="3" /> <!-- Necklace Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 30%. -->
+		<passive_skill id="8417" level="3" /> <!-- Necklace Ability: Drop Rate Up -->
 	</option>
 	<option id="24963" name="o_s_76_85_opt_necklace_drop_up4">
-		<!-- Passive: Item drop rate increases by 40%. -->
-		<passive_skill id="8417" level="4" /> <!-- Necklace Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 40%. -->
+		<passive_skill id="8417" level="4" /> <!-- Necklace Ability: Drop Rate Up -->
 	</option>
 	<option id="24964" name="o_s_76_85_opt_necklace_drop_up5">
-		<!-- Passive: Item drop rate increases by 50%. -->
-		<passive_skill id="8417" level="5" /> <!-- Necklace Ability - Drop Rate Up -->
+		<!-- Passive: Item drop rate + 50%. -->
+		<passive_skill id="8417" level="5" /> <!-- Necklace Ability: Drop Rate Up -->
 	</option>
-	<!-- TODO: Confirm those! -->
-	<option id="24965" name="high_five">
-		<!-- Increase M. Def. by 8. -->
+	<option id="24965" name="o_event_7anni_tshirt_p_0">
+		<!-- M. Def. + 8.0 -->
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>8</amount>
+				<amount>8.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24966" name="high_five">
-		<!-- Increase M. Def. by 9. -->
+	<option id="24966" name="o_event_7anni_tshirt_p_1">
+		<!-- M. Def. + 9.0 -->
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>9</amount>
+				<amount>9.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24967" name="high_five">
-		<!-- Increase M. Def. by 10. -->
+	<option id="24967" name="o_event_7anni_tshirt_p_2">
+		<!-- M. Def. + 10.0 -->
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>10</amount>
+				<amount>10.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24968" name="high_five">
-		<!-- Increase M. Def. by 11. -->
+	<option id="24968" name="o_event_7anni_tshirt_p_3">
+		<!-- M. Def. + 11.0 -->
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>11</amount>
+				<amount>11.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24969" name="high_five">
-		<!-- Increase M. Def. by 12. -->
+	<option id="24969" name="o_event_7anni_tshirt_p_4">
+		<!-- M. Def. + 12.0 -->
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>12</amount>
+				<amount>12.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24970" name="high_five">
-		<!-- Increase M. Def. by 13 and Speed by 7. -->
+	<option id="24970" name="o_event_7anni_tshirt_p_5">
+		<!-- M. Def. + 13.0 Speed + 7. -->
 		<effects>
+			<effect name="MagicalDefence">
+				<amount>13.0</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="Speed">
-				<amount>7</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>13</amount>
+				<amount>7.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24971" name="high_five">
-		<!-- Increase M. Def. by 14 and Speed by 7. -->
+	<option id="24971" name="o_event_7anni_tshirt_p_6">
+		<!-- M. Def. + 14.0 Speed + 7. -->
 		<effects>
-			<effect name="Speed">
-				<amount>7</amount>
+			<effect name="MagicalDefence">
+				<amount>14.0</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>14</amount>
+			<effect name="Speed">
+				<amount>7.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24972" name="high_five">
-		<!-- Increase M. Def. by 15 and Speed by 7,Increases physical skill damage by 93. Decreases MP Consumption by 3%. -->
+	<option id="24972" name="o_event_7anni_tshirt_p_7">
+		<!-- M. Def. + 15.0 Speed + 7. P. Skill Damage + 93. MP Consumption - 3%. -->
 		<effects>
-			<effect name="Speed">
-				<amount>7</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>93</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
-			</effect>
 			<effect name="MagicalDefence">
-				<amount>15</amount>
+				<amount>15.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>7.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24973" name="high_five">
-		<!-- Increase M. Def. by 16 and Speed by 7, Increases physical skill damage by 93. Decreases MP Consumption by 3%,Increases Critical Damage by 41.3 and Magical Critical Rate by 2. -->
+	<option id="24973" name="o_event_7anni_tshirt_p_8">
+		<!-- M. Def. + 16.0 Speed + 7. P. Skill Damage + 93. MP Consumption - 3%. P. Critical Damage + 41.3. M. Critical Rate + 20. -->
 		<effects>
+			<effect name="MagicalDefence">
+				<amount>16.0</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="Speed">
-				<amount>7</amount>
+				<amount>7.0</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>93</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>41</amount>
+				<amount>41.3</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicCriticalRate">
-				<amount>2</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>16</amount>
+				<amount>20.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24974" name="high_five">
-		<!-- Increase M. Def. by 17 and Speed by 7, Increases physical skill damage by 93. Decreases MP Consumption by 3%,Increases Critical Damage by 41.3 and Magical Critical Rate by 2. -->
+	<option id="24974" name="o_event_7anni_tshirt_p_9">
+		<!-- M. Def. + 17.0 Speed + 7. P. Skill Damage + 93. MP Consumption - 3%. P. Critical Damage + 41.3. M. Critical Rate + 20. -->
 		<effects>
+			<effect name="MagicalDefence">
+				<amount>17.0</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="Speed">
-				<amount>7</amount>
+				<amount>7.0</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>93</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>41</amount>
+				<amount>41.3</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicCriticalRate">
-				<amount>2</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>17</amount>
+				<amount>20.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24975" name="high_five">
-		<!-- CON + 1. -->
+	<option id="24975" name="o_event_7anni_tshirt_stat_4">
+		<!-- CON +2 -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>1.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
 			</effect>
 		</effects>
 	</option>
-	<option id="24976" name="high_five">
-		<!-- CON + 1 and MEN +1 -->
+	<option id="24976" name="o_event_7anni_tshirt_stat_5">
+		<!-- CON +2, and MEN +2 -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>MEN</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
 			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
+			</effect>
 		</effects>
 	</option>
-	<option id="24977" name="high_five">
-		<!-- INT +1, STR +1, CON +1, MEN +1 -->
+	<option id="24977" name="o_event_7anni_tshirt_stat_6">
+		<!-- INT +2, STR +2, CON +2, MEN +2 -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>MEN</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
 			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
+			</effect>
 		</effects>
 	</option>
-	<option id="24978" name="high_five">
-		<!-- INT +1, STR +1, CON +1, MEN +1 -->
+	<option id="24978" name="o_event_7anni_tshirt_stat_7">
+		<!-- INT +2, STR +2, CON +2, MEN +2 -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>MEN</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>CON</stat>
 			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>DEX</stat>
+			</effect>
 		</effects>
 	</option>
-	<option id="24979" name="high_five">
-		<!-- STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1 -->
+	<option id="24979" name="o_event_7anni_tshirt_stat_8">
+		<!-- STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2. -->
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
-				<stat>WIT</stat>
+				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>MEN</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>CON</stat>
-			</effect>
-		</effects>
-	</option>
-	<option id="24980" name="high_five">
-		<!-- STR +1, DEX +1, CON +2, INT +1, WIT +1, MEN +2 -->
-		<effects>
-			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>STR</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<stat>INT</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>WIT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
 				<stat>MEN</stat>
 			</effect>
+		</effects>
+	</option>
+	<option id="24980" name="o_event_7anni_tshirt_stat_9">
+		<!-- STR +2, DEX +2, CON +3, INT +2, WIT +2, MEN +3. -->
+		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3.0</amount>
+				<mode>DIFF</mode>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
-				<stat>CON</stat>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>MEN</stat>
 			</effect>
 		</effects>
 	</option>
-	<option id="24981" name="high_five">
-		<!-- Passive Skill: Moving speed increases by 7. -->
-		<passive_skill id="21235" level="1" /> <!-- Olf's T-shirt: Speed -->
+	<option id="24981" name="o_s_event_7anni_shirt_s1">
+		<!-- Passive: Speed + 7. -->
+		<passive_skill id="21235" level="1" /> <!-- Power Shirt: Speed -->
 	</option>
-	<option id="24982" name="high_five">
-		<!-- Active Skil: Blessed Escape ability can be used. Can be used every 20 hour(s). -->
-		<active_skill id="21236" level="1" /> <!-- Olf's T-shirt: Blessed Escape -->
+	<option id="24982" name="o_s_event_7anni_shirt_s2">
+		<!-- Active: Can use Blessed Escape. Can be used every 20 hours. -->
+		<active_skill id="21236" level="1" /> <!-- Power Shirt: Blessed Escape -->
 	</option>
-	<option id="24983" name="high_five">
-		<!-- Active Skil: Temporarily becomes invincible for 7 seconds. Can be used every 20 hour(s). -->
-		<active_skill id="21237" level="1" /> <!-- Olf's T-shirt: Blessed Invincibility -->
+	<option id="24983" name="o_s_event_7anni_shirt_s3">
+		<!-- Active: Becomes invincible for 7 seconds. Can be used every 20 hours. -->
+		<active_skill id="21237" level="1" /> <!-- Power Shirt: Invincibility -->
 	</option>
-	<option id="24984" name="high_five">
-		<!-- Increases M. Def by 18 and Speed by 7, Increases physical skill damage by 93. Decreases MP Consumption by 3%, Increases Critical Damage by 41.3, and Magical Critical Rate by 2. -->
+	<option id="24984" name="o_event_7anni_tshirt_p_10">
+		<!-- M. Def. + 18. Speed + 7. P. Skill Damage + 93. MP Consumption - 3%. P. Critical Damage + 41.3. M. Critical Rate + 20. -->
 		<effects>
+			<effect name="MagicalDefence">
+				<amount>18.0</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="Speed">
-				<amount>7</amount>
+				<amount>7.0</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>93</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-3</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>41</amount>
+				<amount>41.3</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicCriticalRate">
-				<amount>2</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>18</amount>
+				<amount>20.0</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
-	<option id="24985" name="high_five">
-		<!-- STR +2, DEX +1, CON +2, INT +2, WIT +1, MEN +2 -->
+	<option id="24985" name="o_event_7anni_tshirt_stat_10">
+		<!-- STR +3, DEX +2, CON +3, INT +3, WIT +2, MEN +3 -->
 		<effects>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
-				<stat>WIT</stat>
+				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
-				<mode>DIFF</mode>
-				<stat>MEN</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>3.0</amount>
 				<mode>DIFF</mode>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>2</amount>
+				<amount>2.0</amount>
 				<mode>DIFF</mode>
-				<stat>CON</stat>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2.0</amount>
+				<mode>DIFF</mode>
+				<stat>MEN</stat>
 			</effect>
 		</effects>
 	</option>

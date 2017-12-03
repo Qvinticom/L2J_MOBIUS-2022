@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/optionsData.xsd">
 	<option id="19600" name="o_w_75_2g_acc_necklace_4">
-		<!-- M. Def. + 1.44 Increase M. Atk. 2.6 -->
+		<!-- M. Def. + 1.44 M. Atk. + 2.6 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.44</amount>
@@ -14,7 +14,7 @@
 		</effects>
 	</option>
 	<option id="19601" name="o_w_75_2g_acc_necklace_5">
-		<!-- M. Def. + 1.44 HP Regeneration + 0.09 -->
+		<!-- M. Def. + 1.44 HP Recovery + 0.09 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.44</amount>
@@ -27,7 +27,7 @@
 		</effects>
 	</option>
 	<option id="19602" name="o_w_75_2g_acc_necklace_6">
-		<!-- M. Def. + 1.44 MP Regeneration + 0.03 -->
+		<!-- M. Def. + 1.44 MP Recovery + 0.03 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.44</amount>
@@ -40,7 +40,7 @@
 		</effects>
 	</option>
 	<option id="19603" name="o_w_75_2g_acc_necklace_7">
-		<!-- Increase Max HP 30.0 -->
+		<!-- Max HP + 30.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>30.0</amount>
@@ -49,7 +49,7 @@
 		</effects>
 	</option>
 	<option id="19604" name="o_w_75_2g_acc_necklace_8">
-		<!-- Increase Max HP 15.0 Max MP + 6.5 -->
+		<!-- Max HP + 15.0 Max MP + 6.5 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>15.0</amount>
@@ -62,7 +62,7 @@
 		</effects>
 	</option>
 	<option id="19605" name="o_w_75_2g_acc_necklace_9">
-		<!-- Increase Max HP 15.0 Increase M. Atk. 2.6 -->
+		<!-- Max HP + 15.0 M. Atk. + 2.6 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>15.0</amount>
@@ -75,7 +75,7 @@
 		</effects>
 	</option>
 	<option id="19606" name="o_w_75_2g_acc_necklace_10">
-		<!-- Increase Max HP 15.0 HP Regeneration + 0.09 -->
+		<!-- Max HP + 15.0 HP Recovery + 0.09 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>15.0</amount>
@@ -88,14 +88,14 @@
 		</effects>
 	</option>
 	<option id="19607" name="o_w_75_2g_acc_necklace_11">
-		<!-- Increase Max HP 15.0 MP Regeneration + 0.03 -->
+		<!-- Max HP + 15.0 MP Recovery + 0.03 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.03</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>15.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -110,7 +110,7 @@
 		</effects>
 	</option>
 	<option id="19609" name="o_w_75_2g_acc_necklace_13">
-		<!-- Max MP + 6.5 Increase M. Atk. 2.6 -->
+		<!-- Max MP + 6.5 M. Atk. + 2.6 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>6.5</amount>
@@ -123,7 +123,7 @@
 		</effects>
 	</option>
 	<option id="19610" name="o_w_75_2g_acc_necklace_14">
-		<!-- Max MP + 6.5 HP Regeneration + 0.09 -->
+		<!-- Max MP + 6.5 HP Recovery + 0.09 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>6.5</amount>
@@ -136,20 +136,20 @@
 		</effects>
 	</option>
 	<option id="19611" name="o_w_75_2g_acc_necklace_15">
-		<!-- Max MP + 6.5 MP Regeneration + 0.03 -->
+		<!-- Max MP + 6.5 MP Recovery + 0.03 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.03</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxMp">
 				<amount>6.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19612" name="o_w_75_2g_acc_necklace_16">
-		<!-- Increase M. Atk. 5.2 -->
+		<!-- M. Atk. + 5.2 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>5.2</amount>
@@ -158,7 +158,7 @@
 		</effects>
 	</option>
 	<option id="19613" name="o_w_75_2g_acc_necklace_17">
-		<!-- Increase M. Atk. 2.6 HP Regeneration + 0.09 -->
+		<!-- M. Atk. + 2.6 HP Recovery + 0.09 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>2.6</amount>
@@ -171,20 +171,20 @@
 		</effects>
 	</option>
 	<option id="19614" name="o_w_75_2g_acc_necklace_18">
-		<!-- Increase M. Atk. 2.6 MP Regeneration + 0.03 -->
+		<!-- M. Atk. + 2.6 MP Recovery + 0.03 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.03</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>2.6</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19615" name="o_w_75_2g_acc_necklace_19">
-		<!-- HP Regeneration + 0.18 -->
+		<!-- HP Recovery + 0.18 -->
 		<effects>
 			<effect name="HpRegen">
 				<amount>0.18</amount>
@@ -193,7 +193,7 @@
 		</effects>
 	</option>
 	<option id="19616" name="o_w_75_2g_acc_necklace_20">
-		<!-- MP Regeneration + 0.06 -->
+		<!-- MP Recovery + 0.06 -->
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.06</amount>
@@ -202,14 +202,14 @@
 		</effects>
 	</option>
 	<option id="19617" name="o_w_75_2g_acc_necklace_21">
-		<!-- HP Regeneration + 0.09 MP Regeneration + 0.03 -->
+		<!-- HP Recovery + 0.09 MP Recovery + 0.03 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.03</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>0.09</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.03</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -224,7 +224,7 @@
 		</effects>
 	</option>
 	<option id="19619" name="o_w_75_2s_acc_necklace_2">
-		<!-- M. Def. + 1.7 Increase Max HP 17.0 -->
+		<!-- M. Def. + 1.7 Max HP + 17.0 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.7</amount>
@@ -250,7 +250,7 @@
 		</effects>
 	</option>
 	<option id="19621" name="o_w_75_2s_acc_necklace_4">
-		<!-- M. Def. + 1.7 Increase M. Atk. 3.0 -->
+		<!-- M. Def. + 1.7 M. Atk. + 3.0 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.7</amount>
@@ -263,7 +263,7 @@
 		</effects>
 	</option>
 	<option id="19622" name="o_w_75_2s_acc_necklace_5">
-		<!-- M. Def. + 1.7 HP Regeneration + 0.11 -->
+		<!-- M. Def. + 1.7 HP Recovery + 0.11 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.7</amount>
@@ -276,7 +276,7 @@
 		</effects>
 	</option>
 	<option id="19623" name="o_w_75_2s_acc_necklace_6">
-		<!-- M. Def. + 1.7 MP Regeneration + 0.035 -->
+		<!-- M. Def. + 1.7 MP Recovery + 0.035 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>1.7</amount>
@@ -289,7 +289,7 @@
 		</effects>
 	</option>
 	<option id="19624" name="o_w_75_2s_acc_necklace_7">
-		<!-- Increase Max HP 34.0 -->
+		<!-- Max HP + 34.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>34.0</amount>
@@ -298,7 +298,7 @@
 		</effects>
 	</option>
 	<option id="19625" name="o_w_75_2s_acc_necklace_8">
-		<!-- Increase Max HP 17.0 Max MP + 7.5 -->
+		<!-- Max HP + 17.0 Max MP + 7.5 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>17.0</amount>
@@ -311,7 +311,7 @@
 		</effects>
 	</option>
 	<option id="19626" name="o_w_75_2s_acc_necklace_9">
-		<!-- Increase Max HP 17.0 Increase M. Atk. 3.0 -->
+		<!-- Max HP + 17.0 M. Atk. + 3.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>17.0</amount>
@@ -324,7 +324,7 @@
 		</effects>
 	</option>
 	<option id="19627" name="o_w_75_2s_acc_necklace_10">
-		<!-- Increase Max HP 17.0 HP Regeneration + 0.11 -->
+		<!-- Max HP + 17.0 HP Recovery + 0.11 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>17.0</amount>
@@ -337,14 +337,14 @@
 		</effects>
 	</option>
 	<option id="19628" name="o_w_75_2s_acc_necklace_11">
-		<!-- Increase Max HP 17.0 MP Regeneration + 0.035 -->
+		<!-- Max HP + 17.0 MP Recovery + 0.035 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.035</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>17.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -359,7 +359,7 @@
 		</effects>
 	</option>
 	<option id="19630" name="o_w_75_2s_acc_necklace_13">
-		<!-- Max MP + 7.5 Increase M. Atk. 3.0 -->
+		<!-- Max MP + 7.5 M. Atk. + 3.0 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>7.5</amount>
@@ -372,7 +372,7 @@
 		</effects>
 	</option>
 	<option id="19631" name="o_w_75_2s_acc_necklace_14">
-		<!-- Max MP + 7.5 HP Regeneration + 0.11 -->
+		<!-- Max MP + 7.5 HP Recovery + 0.11 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>7.5</amount>
@@ -385,20 +385,20 @@
 		</effects>
 	</option>
 	<option id="19632" name="o_w_75_2s_acc_necklace_15">
-		<!-- Max MP + 7.5 MP Regeneration + 0.035 -->
+		<!-- Max MP + 7.5 MP Recovery + 0.035 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.035</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxMp">
 				<amount>7.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19633" name="o_w_75_2s_acc_necklace_16">
-		<!-- Increase M. Atk. 6.0 -->
+		<!-- M. Atk. + 6.0 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>6.0</amount>
@@ -407,7 +407,7 @@
 		</effects>
 	</option>
 	<option id="19634" name="o_w_75_2s_acc_necklace_17">
-		<!-- Increase M. Atk. 3.0 HP Regeneration + 0.11 -->
+		<!-- M. Atk. + 3.0 HP Recovery + 0.11 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>3.0</amount>
@@ -420,20 +420,20 @@
 		</effects>
 	</option>
 	<option id="19635" name="o_w_75_2s_acc_necklace_18">
-		<!-- Increase M. Atk. 3.0 MP Regeneration + 0.035 -->
+		<!-- M. Atk. + 3.0 MP Recovery + 0.035 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.035</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>3.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19636" name="o_w_75_2s_acc_necklace_19">
-		<!-- HP Regeneration + 0.22 -->
+		<!-- HP Recovery + 0.22 -->
 		<effects>
 			<effect name="HpRegen">
 				<amount>0.22</amount>
@@ -442,7 +442,7 @@
 		</effects>
 	</option>
 	<option id="19637" name="o_w_75_2s_acc_necklace_20">
-		<!-- MP Regeneration + 0.07 -->
+		<!-- MP Recovery + 0.07 -->
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.07</amount>
@@ -451,14 +451,14 @@
 		</effects>
 	</option>
 	<option id="19638" name="o_w_75_2s_acc_necklace_21">
-		<!-- HP Regeneration + 0.11 MP Regeneration + 0.035 -->
+		<!-- HP Recovery + 0.11 MP Recovery + 0.035 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.035</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>0.11</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.035</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -473,7 +473,7 @@
 		</effects>
 	</option>
 	<option id="19640" name="o_w_75_2r_acc_necklace_2">
-		<!-- M. Def. + 2.0 Increase Max HP 21.0 -->
+		<!-- M. Def. + 2.0 Max HP + 21.0 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>2.0</amount>
@@ -499,7 +499,7 @@
 		</effects>
 	</option>
 	<option id="19642" name="o_w_75_2r_acc_necklace_4">
-		<!-- M. Def. + 2.0 Increase M. Atk. 3.7 -->
+		<!-- M. Def. + 2.0 M. Atk. + 3.7 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>2.0</amount>
@@ -512,7 +512,7 @@
 		</effects>
 	</option>
 	<option id="19643" name="o_w_75_2r_acc_necklace_5">
-		<!-- M. Def. + 2.0 HP Regeneration + 0.13 -->
+		<!-- M. Def. + 2.0 HP Recovery + 0.13 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>2.0</amount>
@@ -525,7 +525,7 @@
 		</effects>
 	</option>
 	<option id="19644" name="o_w_75_2r_acc_necklace_6">
-		<!-- M. Def. + 2.0 MP Regeneration + 0.04 -->
+		<!-- M. Def. + 2.0 MP Recovery + 0.04 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>2.0</amount>
@@ -538,7 +538,7 @@
 		</effects>
 	</option>
 	<option id="19645" name="o_w_75_2r_acc_necklace_7">
-		<!-- Increase Max HP 42.0 -->
+		<!-- Max HP + 42.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>42.0</amount>
@@ -547,7 +547,7 @@
 		</effects>
 	</option>
 	<option id="19646" name="o_w_75_2r_acc_necklace_8">
-		<!-- Increase Max HP 21.0 Max MP + 9.0 -->
+		<!-- Max HP + 21.0 Max MP + 9.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>21.0</amount>
@@ -560,7 +560,7 @@
 		</effects>
 	</option>
 	<option id="19647" name="o_w_75_2r_acc_necklace_9">
-		<!-- Increase Max HP 21.0 Increase M. Atk. 3.7 -->
+		<!-- Max HP + 21.0 M. Atk. + 3.7 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>21.0</amount>
@@ -573,7 +573,7 @@
 		</effects>
 	</option>
 	<option id="19648" name="o_w_75_2r_acc_necklace_10">
-		<!-- Increase Max HP 21.0 HP Regeneration + 0.13 -->
+		<!-- Max HP + 21.0 HP Recovery + 0.13 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>21.0</amount>
@@ -586,14 +586,14 @@
 		</effects>
 	</option>
 	<option id="19649" name="o_w_75_2r_acc_necklace_11">
-		<!-- Increase Max HP 21.0 MP Regeneration + 0.04 -->
+		<!-- Max HP + 21.0 MP Recovery + 0.04 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.04</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>21.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -608,7 +608,7 @@
 		</effects>
 	</option>
 	<option id="19651" name="o_w_75_2r_acc_necklace_13">
-		<!-- Max MP + 9.0 Increase M. Atk. 3.7 -->
+		<!-- Max MP + 9.0 M. Atk. + 3.7 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>9.0</amount>
@@ -621,7 +621,7 @@
 		</effects>
 	</option>
 	<option id="19652" name="o_w_75_2r_acc_necklace_14">
-		<!-- Max MP + 9.0 HP Regeneration + 0.13 -->
+		<!-- Max MP + 9.0 HP Recovery + 0.13 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>9.0</amount>
@@ -634,20 +634,20 @@
 		</effects>
 	</option>
 	<option id="19653" name="o_w_75_2r_acc_necklace_15">
-		<!-- Max MP + 9.0 MP Regeneration + 0.04 -->
+		<!-- Max MP + 9.0 MP Recovery + 0.04 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.04</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxMp">
 				<amount>9.0</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19654" name="o_w_75_2r_acc_necklace_16">
-		<!-- Increase M. Atk. 7.4 -->
+		<!-- M. Atk. + 7.4 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>7.4</amount>
@@ -656,7 +656,7 @@
 		</effects>
 	</option>
 	<option id="19655" name="o_w_75_2r_acc_necklace_17">
-		<!-- Increase M. Atk. 3.7 HP Regeneration + 0.13 -->
+		<!-- M. Atk. + 3.7 HP Recovery + 0.13 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>3.7</amount>
@@ -669,20 +669,20 @@
 		</effects>
 	</option>
 	<option id="19656" name="o_w_75_2r_acc_necklace_18">
-		<!-- Increase M. Atk. 3.7 MP Regeneration + 0.04 -->
+		<!-- M. Atk. + 3.7 MP Recovery + 0.04 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.04</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>3.7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19657" name="o_w_75_2r_acc_necklace_19">
-		<!-- HP Regeneration + 0.26 -->
+		<!-- HP Recovery + 0.26 -->
 		<effects>
 			<effect name="HpRegen">
 				<amount>0.26</amount>
@@ -691,7 +691,7 @@
 		</effects>
 	</option>
 	<option id="19658" name="o_w_75_2r_acc_necklace_20">
-		<!-- MP Regeneration + 0.08 -->
+		<!-- MP Recovery + 0.08 -->
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.08</amount>
@@ -700,14 +700,14 @@
 		</effects>
 	</option>
 	<option id="19659" name="o_w_75_2r_acc_necklace_21">
-		<!-- HP Regeneration + 0.13 MP Regeneration + 0.04 -->
+		<!-- HP Recovery + 0.13 MP Recovery + 0.04 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.04</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>0.13</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.04</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -722,7 +722,7 @@
 		</effects>
 	</option>
 	<option id="19661" name="o_w_75_2u_acc_necklace_2">
-		<!-- M. Def. + 2.4 Increase Max HP 24.5 -->
+		<!-- M. Def. + 2.4 Max HP + 24.5 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>2.4</amount>
@@ -748,7 +748,7 @@
 		</effects>
 	</option>
 	<option id="19663" name="o_w_75_2u_acc_necklace_4">
-		<!-- M. Def. + 2.4 Increase M. Atk. 4.35 -->
+		<!-- M. Def. + 2.4 M. Atk. + 4.35 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>2.4</amount>
@@ -761,7 +761,7 @@
 		</effects>
 	</option>
 	<option id="19664" name="o_w_75_2u_acc_necklace_5">
-		<!-- M. Def. + 2.4 HP Regeneration + 0.16 -->
+		<!-- M. Def. + 2.4 HP Recovery + 0.16 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>2.4</amount>
@@ -774,7 +774,7 @@
 		</effects>
 	</option>
 	<option id="19665" name="o_w_75_2u_acc_necklace_6">
-		<!-- M. Def. + 2.4 MP Regeneration + 0.05 -->
+		<!-- M. Def. + 2.4 MP Recovery + 0.05 -->
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>2.4</amount>
@@ -787,7 +787,7 @@
 		</effects>
 	</option>
 	<option id="19666" name="o_w_75_2u_acc_necklace_7">
-		<!-- Increase Max HP 49.0 -->
+		<!-- Max HP + 49.0 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>49.0</amount>
@@ -796,7 +796,7 @@
 		</effects>
 	</option>
 	<option id="19667" name="o_w_75_2u_acc_necklace_8">
-		<!-- Increase Max HP 24.5 Max MP + 10.5 -->
+		<!-- Max HP + 24.5 Max MP + 10.5 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>24.5</amount>
@@ -809,7 +809,7 @@
 		</effects>
 	</option>
 	<option id="19668" name="o_w_75_2u_acc_necklace_9">
-		<!-- Increase Max HP 24.5 Increase M. Atk. 4.35 -->
+		<!-- Max HP + 24.5 M. Atk. + 4.35 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>24.5</amount>
@@ -822,7 +822,7 @@
 		</effects>
 	</option>
 	<option id="19669" name="o_w_75_2u_acc_necklace_10">
-		<!-- Increase Max HP 24.5 HP Regeneration + 0.16 -->
+		<!-- Max HP + 24.5 HP Recovery + 0.16 -->
 		<effects>
 			<effect name="MaxHp">
 				<amount>24.5</amount>
@@ -835,14 +835,14 @@
 		</effects>
 	</option>
 	<option id="19670" name="o_w_75_2u_acc_necklace_11">
-		<!-- Increase Max HP 24.5 MP Regeneration + 0.05 -->
+		<!-- Max HP + 24.5 MP Recovery + 0.05 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.05</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxHp">
 				<amount>24.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.05</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -857,7 +857,7 @@
 		</effects>
 	</option>
 	<option id="19672" name="o_w_75_2u_acc_necklace_13">
-		<!-- Max MP + 10.5 Increase M. Atk. 4.35 -->
+		<!-- Max MP + 10.5 M. Atk. + 4.35 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>10.5</amount>
@@ -870,7 +870,7 @@
 		</effects>
 	</option>
 	<option id="19673" name="o_w_75_2u_acc_necklace_14">
-		<!-- Max MP + 10.5 HP Regeneration + 0.16 -->
+		<!-- Max MP + 10.5 HP Recovery + 0.16 -->
 		<effects>
 			<effect name="MaxMp">
 				<amount>10.5</amount>
@@ -883,20 +883,20 @@
 		</effects>
 	</option>
 	<option id="19674" name="o_w_75_2u_acc_necklace_15">
-		<!-- Max MP + 10.5 MP Regeneration + 0.05 -->
+		<!-- Max MP + 10.5 MP Recovery + 0.05 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.05</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MaxMp">
 				<amount>10.5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.05</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19675" name="o_w_75_2u_acc_necklace_16">
-		<!-- Increase M. Atk. 8.7 -->
+		<!-- M. Atk. + 8.7 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>8.7</amount>
@@ -905,7 +905,7 @@
 		</effects>
 	</option>
 	<option id="19676" name="o_w_75_2u_acc_necklace_17">
-		<!-- Increase M. Atk. 4.35 HP Regeneration + 0.16 -->
+		<!-- M. Atk. + 4.35 HP Recovery + 0.16 -->
 		<effects>
 			<effect name="MAtk">
 				<amount>4.35</amount>
@@ -918,20 +918,20 @@
 		</effects>
 	</option>
 	<option id="19677" name="o_w_75_2u_acc_necklace_18">
-		<!-- Increase M. Atk. 4.35 MP Regeneration + 0.05 -->
+		<!-- M. Atk. + 4.35 MP Recovery + 0.05 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.05</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="MAtk">
 				<amount>4.35</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.05</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19678" name="o_w_75_2u_acc_necklace_19">
-		<!-- HP Regeneration + 0.32 -->
+		<!-- HP Recovery + 0.32 -->
 		<effects>
 			<effect name="HpRegen">
 				<amount>0.32</amount>
@@ -940,7 +940,7 @@
 		</effects>
 	</option>
 	<option id="19679" name="o_w_75_2u_acc_necklace_20">
-		<!-- MP Regeneration + 0.1 -->
+		<!-- MP Recovery + 0.1 -->
 		<effects>
 			<effect name="MpRegen">
 				<amount>0.1</amount>
@@ -949,92 +949,92 @@
 		</effects>
 	</option>
 	<option id="19680" name="o_w_75_2u_acc_necklace_21">
-		<!-- HP Regeneration + 0.16 MP Regeneration + 0.05 -->
+		<!-- HP Recovery + 0.16 MP Recovery + 0.05 -->
 		<effects>
-			<effect name="MpRegen">
-				<amount>0.05</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>0.16</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>0.05</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</option>
 	<option id="19681" name="o_s_80_1g_acc_necklace_1">
-		<!-- Passive: Increase Earth P. Def. -->
+		<!-- Passive: Increases Earth P. Def. -->
 		<passive_skill id="3951" level="1" /> <!-- Augment Option - Earth Resistance -->
 	</option>
 	<option id="19682" name="o_s_80_1g_acc_necklace_2">
-		<!-- Passive: Increase Fire P. Def. -->
+		<!-- Passive: Increases Fire P. Def. -->
 		<passive_skill id="3948" level="1" /> <!-- Augment Option - Fire Resistance -->
 	</option>
 	<option id="19683" name="o_s_80_1g_acc_necklace_3">
-		<!-- Passive: Increase Holy P. Def. -->
-		<passive_skill id="3946" level="1" /> <!-- Augment Option - Resistance to Holy -->
+		<!-- Passive: Increases Holy P. Def. -->
+		<passive_skill id="3946" level="1" /> <!-- Augment Option - Holy Resistance -->
 	</option>
 	<option id="19684" name="o_s_80_1g_acc_necklace_4">
-		<!-- Passive: Increase Dark P. Def. -->
+		<!-- Passive: Increases Dark P. Def. -->
 		<passive_skill id="3947" level="1" /> <!-- Augment Option - Dark Resistance -->
 	</option>
 	<option id="19685" name="o_s_80_1g_acc_necklace_5">
-		<!-- Passive: Increase Water P. Def. -->
+		<!-- Passive: Increases Water P. Def. -->
 		<passive_skill id="3949" level="1" /> <!-- Augment Option - Water Resistance -->
 	</option>
 	<option id="19686" name="o_s_80_1g_acc_necklace_6">
-		<!-- Passive: Increase Wind P. Def. -->
+		<!-- Passive: Increases Wind P. Def. -->
 		<passive_skill id="3950" level="1" /> <!-- Augment Option - Wind Resistance -->
 	</option>
 	<option id="19687" name="o_s_80_1g_acc_necklace_7">
-		<!-- Passive: Increase Bleed P. Atk. -->
+		<!-- Passive: Increases Bleed P. Atk. -->
 		<passive_skill id="3989" level="1" /> <!-- Augment Option - Bleed Resistance -->
 	</option>
 	<option id="19688" name="o_s_80_1g_acc_necklace_8">
-		<!-- Passive: Increase Bleed P. Def. -->
+		<!-- Passive: Increases Bleed P. Def. -->
 		<passive_skill id="3995" level="1" /> <!-- Augment Option - Bleed Resistance -->
 	</option>
 	<option id="19689" name="o_s_80_1g_acc_necklace_9">
-		<!-- Passive: Increase Mental Abnormal P. Atk. -->
+		<!-- Passive: Increases Mental P. Atk. -->
 		<passive_skill id="3993" level="1" /> <!-- Augment Option - Mental Attack Resistance -->
 	</option>
 	<option id="19690" name="o_s_80_1g_acc_necklace_10">
-		<!-- Passive: Increase Mental Abnormal P. Def. -->
+		<!-- Passive: Increases Mental P. Def. -->
 		<passive_skill id="3999" level="1" /> <!-- Augment Option - Mental Attack Resistance -->
 	</option>
 	<option id="19691" name="o_s_80_1g_acc_necklace_11">
-		<!-- Passive: Increases the power of paralysis-type attacks. -->
+		<!-- Passive: Increases Paralysis P. Atk. -->
 		<passive_skill id="3992" level="1" /> <!-- Augment Option - Paralysis Resistance -->
 	</option>
 	<option id="19692" name="o_s_80_1g_acc_necklace_12">
-		<!-- Passive: Increases your defense against paralysis-type attacks. -->
+		<!-- Passive: Increases Paralysis P. Def. -->
 		<passive_skill id="3998" level="1" /> <!-- Augment Option - Paralysis Resistance -->
 	</option>
 	<option id="19693" name="o_s_80_1g_acc_necklace_13">
-		<!-- Passive: Increase Poison P. Atk. -->
+		<!-- Passive: Increases Poison P. Atk. -->
 		<passive_skill id="3990" level="1" /> <!-- Augment Option - Poison Resistance -->
 	</option>
 	<option id="19694" name="o_s_80_1g_acc_necklace_14">
-		<!-- Passive: Increase Poison P. Def. -->
+		<!-- Passive: Increases Poison P. Def. -->
 		<passive_skill id="3996" level="1" /> <!-- Augment Option - Poison Resistance -->
 	</option>
 	<option id="19695" name="o_s_80_1g_acc_necklace_15">
-		<!-- Passive: Increase Stun P. Atk. -->
+		<!-- Passive: Increases Stun P. Atk. -->
 		<passive_skill id="3988" level="1" /> <!-- Augment Option - Stun Resistance -->
 	</option>
 	<option id="19696" name="o_s_80_1g_acc_necklace_16">
-		<!-- Passive: Increase Stun P. Def. -->
+		<!-- Passive: Increases Stun P. Def. -->
 		<passive_skill id="3994" level="1" /> <!-- Augment Option - Stun Resistance -->
 	</option>
 	<option id="19697" name="o_s_80_1g_acc_necklace_17">
-		<!-- Passive: Increase Sleep P. Atk. -->
+		<!-- Passive: Increases Sleep P. Atk. -->
 		<passive_skill id="3991" level="1" /> <!-- Augment Option - Sleep Resistance -->
 	</option>
 	<option id="19698" name="o_s_80_1g_acc_necklace_18">
-		<!-- Passive: Increase Sleep P. Def. -->
+		<!-- Passive: Increases Sleep P. Def. -->
 		<passive_skill id="3997" level="1" /> <!-- Augment Option - Sleep Resistance -->
 	</option>
 	<option id="19699" name="o_s_80_1g_acc_necklace_19">
-		<!-- Passive: Increase Earth P. Atk. -->
+		<!-- Passive: Increases Earth P. Atk. -->
 		<passive_skill id="3945" level="1" /> <!-- Augment Option - Earth Attack -->
 	</option>
 </list>
