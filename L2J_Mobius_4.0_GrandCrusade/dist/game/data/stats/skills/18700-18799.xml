@@ -284,16 +284,19 @@
 		</effects>
 	</skill>
 	<skill id="18715" toLevel="1" name="Greater Ruby">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Soulshot damage + 20%. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="18716" toLevel="1" name="Greater Ruby">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Beast Soulshot damage + 20%. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="18717" toLevel="6" name="Ruby">
+		<!-- P. Atk. + 9%. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -308,11 +311,13 @@
 		</effects>
 	</skill>
 	<skill id="18718" toLevel="2" name="Greater Sapphire">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<!-- Blessed Spiritshot Damage + 20%. -->
+		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
 	</skill>
 	<skill id="18719" toLevel="6" name="Sapphire">
+		<!-- M. Atk. + 13%. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>

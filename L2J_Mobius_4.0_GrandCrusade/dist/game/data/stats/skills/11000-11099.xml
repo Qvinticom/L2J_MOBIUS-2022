@@ -2278,9 +2278,11 @@
 			<value level="3">84</value>
 			<value level="4">88</value>
 		</mpConsume>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
 		<castRange>1100</castRange>
 		<effectRange>1100</effectRange>
-		<hitTime>10000</hitTime>
+		<hitTime>15000</hitTime>
 		<reuseDelay>20000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>
@@ -2296,6 +2298,9 @@
 		</magicCriticalRate>
 		<mpPerChanneling>15</mpPerChanneling>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<channelingEffects>
 			<effect name="HpDrain">
 				<power>
@@ -2308,8 +2313,6 @@
 				<percentage>100</percentage>
 			</effect>
 		</channelingEffects>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="11032" toLevel="7" name="Death Howl">
 		<!-- Updated to IO -->
@@ -4948,7 +4951,7 @@
 	<skill id="11067" toLevel="4" name="Quadruple Elemental Blast">
 		<!-- Updated to GRAND CRUSADE -->
 		<!-- Glory Days confirmed -->
-		<!-- Deals M. Attack of $s1 power on the target and the enemies near it. Inflicts constant damage for $s2 to inflict Knock Down. Over-hit is possible. Available to use in the Mana Burst Level 4. -->
+		<!-- Inflicts magical damage on target and nearby enemies with 635 Power. Burning and causing knock down enemies for 5 seconds. Over-hit. Only available at Mana Burst Lv 4. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -5000,10 +5003,10 @@
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
-					<value level="1">620</value>
-					<value level="2">641</value>
-					<value level="3">655</value>
-					<value level="4">669</value>
+					<value level="1">635</value>
+					<value level="2">651</value>
+					<value level="3">667</value>
+					<value level="4">683</value>
 					<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1005">{base + base / 100 * (1 + 0.4 * (subIndex - 1))}</value>
 					<value fromLevel="1" toLevel="4" fromSubLevel="1006" toSubLevel="1006">{base + base / 100 * (2 + 0.8 * (subIndex - 5))}</value>
 					<value fromLevel="1" toLevel="4" fromSubLevel="1007" toSubLevel="1007">{base + base / 100 * (3 + 0.3 * (subIndex - 6))}</value>

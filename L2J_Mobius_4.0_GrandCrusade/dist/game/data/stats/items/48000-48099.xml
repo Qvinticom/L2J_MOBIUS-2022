@@ -39,6 +39,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="48028" name="Valkyrie Outfit Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a top armor or a one-piece into that of Valkyrie. It changes everything, making the appearance of all armor into that of Valkyrie. -->
@@ -47,6 +50,9 @@
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="48031" name="Entrance Pass: Shilen's Altar" type="EtcItem">
 		<!-- Extra Pass for Shilen's Altar. Double-click to reset cooldown to Shilen's Altar. Cannot use if locked out from Instanced Zone. Can only be used once a day outside of the instance zone. -->

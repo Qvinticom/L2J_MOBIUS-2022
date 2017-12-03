@@ -29,6 +29,34 @@
 		<item id="46336" /> <!-- Shadow Dualsword -->
 	</enchant>
 
+	<!-- Scroll: Enchant Cloak -->
+	<enchant id="28593" maxEnchant="10">
+		<item id="28585" />
+		<item id="28586" />
+		<item id="28587" />
+		<item id="28588" />
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+	
+	<!-- Scroll: Enchant Cloak - Legendary -->
+	<enchant id="28593" minEnchant="10" maxEnchant="20">
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+
+	<!-- Scroll: Ancient Cloak - Legendary -->
+	<enchant id="28593" minEnchant="7" maxEnchant="20" bonusRate="10">
+		<item id="28589" />
+		<item id="28590" />
+		<item id="28591" />
+		<item id="28592" />
+	</enchant>
+
 	<!-- Scrolls: Enchant Weapon -->
 	<enchant id="729" targetGrade="A" />
 	<enchant id="947" targetGrade="B" />

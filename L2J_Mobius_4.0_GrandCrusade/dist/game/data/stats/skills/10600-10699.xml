@@ -109,7 +109,7 @@
 		</effects>
 	</skill>
 	<skill id="10609" toLevel="1" name="Critical Chances">
-		<!-- For 5 min., Critical Damage + 304 and vital spot attack success rate + 15%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger. -->
+		<!-- Increases Critical Damage by 304, Vital Spot Attack Rate by 15%, Critical Rate/Damage from the side and from behind by 65% and 50%, respectively, for 5 minutes. Decreases Critical Damage from the front by 30%. Requires dagger/dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
@@ -137,7 +137,7 @@
 				<position>FRONT</position>
 			</effect>
 			<effect name="CriticalDamagePosition">
-				<amount>30</amount>
+				<amount>65</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
 			</effect>
@@ -147,7 +147,7 @@
 				<position>BACK</position>
 			</effect>
 			<effect name="CriticalRatePositionBonus">
-				<amount>30</amount>
+				<amount>65</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
 			</effect>
@@ -287,7 +287,7 @@
 		</effects>
 	</skill>
 	<skill id="10656" toLevel="1" name="Shadow Hunter">
-		<!-- For 5 min., Critical Damage + 608 and vital spot attack success rate + 5%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger. -->
+		<!-- Increases Critical Damage by 608, Vital Spot Attack Rate by 5%, Critical Rate/Damage from the side by 30%, Critical Rate from behind by 50% and Critical Damage from behind by 65% for 5 minutes. Decreases Critical Damage from the front by 30%. Requires dagger/dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
@@ -320,7 +320,7 @@
 				<position>SIDE</position>
 			</effect>
 			<effect name="CriticalDamagePosition">
-				<amount>50</amount>
+				<amount>65</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
 			</effect>

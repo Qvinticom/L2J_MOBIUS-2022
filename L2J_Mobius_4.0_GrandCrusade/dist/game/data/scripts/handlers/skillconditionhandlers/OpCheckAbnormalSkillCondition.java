@@ -16,6 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
+import com.l2jmobius.gameserver.enums.SkillConditionAffectType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -31,21 +32,32 @@ public class OpCheckAbnormalSkillCondition implements ISkillCondition
 	private final AbnormalType _type;
 	private final int _level;
 	private final boolean _hasAbnormal;
+	private final SkillConditionAffectType _affectType;
 	
 	public OpCheckAbnormalSkillCondition(StatsSet params)
 	{
 		_type = params.getEnum("type", AbnormalType.class);
 		_level = params.getInt("level");
 		_hasAbnormal = params.getBoolean("hasAbnormal");
+		_affectType = params.getEnum("affectType", SkillConditionAffectType.class, SkillConditionAffectType.TARGET);
 	}
 	
 	@Override
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
-		if (target.isCharacter())
+		switch (_affectType)
 		{
-			final boolean hasAbnormal = ((L2Character) target).getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level));
-			return _hasAbnormal ? hasAbnormal : !hasAbnormal;
+			case CASTER:
+			{
+				return caster.getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level)) == _hasAbnormal;
+			}
+			case TARGET:
+			{
+				if (target.isCharacter())
+				{
+					return ((L2Character) target).getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level)) == _hasAbnormal;
+				}
+			}
 		}
 		return false;
 	}

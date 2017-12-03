@@ -3734,7 +3734,7 @@
 		</effects>
 	</skill>
 	<skill id="10562" toLevel="1" name="Critical Tactics">
-		<!-- For 5 min., Critical Damage + 304 and vital spot attack success rate + 10%. Front Critical Damage - 30%, Side Critical Rate + 20% and Critical Damage + 20%. Rear Critical Rate + 40% and Critical Damage + 40%. Requires a dagger or dual dagger. -->
+		<!-- Increases Critical Damage by 304, Vital Spot Attack Rate by 10%, Critical Rate/Damage from the front and the side by 30%, Critical Rate/Damage from behind by 40% for 5 minutes. Requires dagger/dual dagger. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
@@ -3762,7 +3762,7 @@
 				<position>FRONT</position>
 			</effect>
 			<effect name="CriticalDamagePosition">
-				<amount>20</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
 			</effect>
@@ -3772,7 +3772,7 @@
 				<position>BACK</position>
 			</effect>
 			<effect name="CriticalRatePositionBonus">
-				<amount>20</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
 			</effect>
