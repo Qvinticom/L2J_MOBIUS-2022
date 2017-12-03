@@ -77,6 +77,7 @@ public final class RequestBRBuyProduct implements IClientIncomingPacket
 			if (paymentId < 0)
 			{
 				activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+				activeChar.removeRequest(PrimeShopRequest.class);
 				return;
 			}
 			else if (paymentId > 0)
@@ -84,6 +85,7 @@ public final class RequestBRBuyProduct implements IClientIncomingPacket
 				if (!activeChar.destroyItemByItemId("PrimeShop-" + item.getBrId(), paymentId, price, activeChar, true))
 				{
 					activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+					activeChar.removeRequest(PrimeShopRequest.class);
 					return;
 				}
 			}
@@ -92,6 +94,7 @@ public final class RequestBRBuyProduct implements IClientIncomingPacket
 				if (activeChar.getPrimePoints() < price)
 				{
 					activeChar.sendPacket(new ExBRBuyProduct(ExBrProductReplyType.LACK_OF_POINT));
+					activeChar.removeRequest(PrimeShopRequest.class);
 					return;
 				}
 				activeChar.setPrimePoints(activeChar.getPrimePoints() - price);
