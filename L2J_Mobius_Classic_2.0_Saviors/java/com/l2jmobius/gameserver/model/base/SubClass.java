@@ -36,6 +36,9 @@ public final class SubClass
 	private int _vitalityPoints = 0;
 	private boolean _dualClass = false;
 	
+	public static final int MAX_VITALITY_POINTS = 140000;
+	public static final int MIN_VITALITY_POINTS = 0;
+	
 	public SubClass()
 	{
 		// Used for specifying ALL attributes of a sub class directly,
@@ -69,12 +72,12 @@ public final class SubClass
 	
 	public int getVitalityPoints()
 	{
-		return _vitalityPoints;
+		return Math.min(Math.max(_vitalityPoints, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
 	}
 	
 	public void setVitalityPoints(int value)
 	{
-		_vitalityPoints = value;
+		_vitalityPoints = Math.min(Math.max(value, MIN_VITALITY_POINTS), MAX_VITALITY_POINTS);
 	}
 	
 	/**
