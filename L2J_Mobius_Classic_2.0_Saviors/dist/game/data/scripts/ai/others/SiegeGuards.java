@@ -74,32 +74,29 @@ public class SiegeGuards extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("AGGRO_CHECK"))
+		if ((npc != null) && !npc.isDead())
 		{
-			if ((npc != null) && !npc.isDead())
+			final L2Object target = npc.getTarget();
+			if (!npc.isInCombat() || (target == null) || (npc.calculateDistance(target, false, false) > npc.getAggroRange()) || target.isInvul())
 			{
-				final L2Object target = npc.getTarget();
-				if (!npc.isInCombat() || (target == null) || (npc.calculateDistance(target, false, false) > npc.getAggroRange()) || target.isInvul())
+				for (L2Character nearby : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
 				{
-					for (L2Character nearby : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
+					if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
 					{
-						if (nearby.isPlayable() && GeoEngine.getInstance().canSeeTarget(npc, nearby))
+						final L2Summon summon = nearby.isSummon() ? (L2Summon) nearby : null;
+						final L2PcInstance pl = summon == null ? (L2PcInstance) nearby : summon.getOwner();
+						if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(npc.getScriptValue())) && ((pl.getSiegeState() != 0) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
 						{
-							final L2Summon summon = nearby.isSummon() ? (L2Summon) nearby : null;
-							final L2PcInstance pl = summon == null ? (L2PcInstance) nearby : summon.getOwner();
-							if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(npc.getScriptValue())) && ((pl.getSiegeState() != 0) || (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
+							if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
 							{
-								if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
-								{
-									addAttackPlayerDesire(npc, pl);
-									break; // no need to search more
-								}
+								addAttackPlayerDesire(npc, pl);
+								break; // no need to search more
 							}
 						}
 					}
 				}
-				startQuestTimer("AGGRO_CHECK", 2000, npc, null);
 			}
+			startQuestTimer("AGGRO_CHECK" + npc.getId(), 3000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -126,7 +123,7 @@ public class SiegeGuards extends AbstractNpcAI
 		final Castle castle = npc.getCastle();
 		final Fort fortress = npc.getFort();
 		npc.setScriptValue(fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-		startQuestTimer("AGGRO_CHECK", 2000, npc, null);
+		startQuestTimer("AGGRO_CHECK" + npc.getId(), getRandom(1000, 10000), npc, null);
 		return super.onSpawn(npc);
 	}
 	
