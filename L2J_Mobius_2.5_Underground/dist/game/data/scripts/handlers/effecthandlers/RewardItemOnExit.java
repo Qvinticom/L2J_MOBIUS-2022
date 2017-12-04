@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -38,9 +39,12 @@ public final class RewardItemOnExit extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		if (!info.isRemoved() && info.getEffected().isPlayer() && !info.getEffected().getActingPlayer().isDead())
+		if (!info.isRemoved() && (info.getEffected() != null) && info.getEffected().isPlayer() && !info.getEffected().isDead())
 		{
-			info.getEffected().getActingPlayer().addItem("RewardItemOnExitEffect", _itemId, _itemCount, info.getEffected().getActingPlayer(), true);
+			ThreadPoolManager.execute(() -> // Make sure item is saved.
+			{
+				info.getEffected().getActingPlayer().addItem("RewardItemOnExitEffect", _itemId, _itemCount, info.getEffected(), true);
+			});
 		}
 	}
 }
