@@ -18,7 +18,7 @@
 		</condition>
 		<condition type="CommandChannelLeader" />
 		<condition type="GroupMin">
-			<param name="limit" value="7" />
+			<param name="limit" value="14" />
 		</condition>
 		<condition type="GroupMax">
 			<param name="html" value="condBigGroup.html"/>
@@ -26,7 +26,7 @@
 		</condition>
 		<condition type="Level" showMessageAndHtml="true">
 			<param name="html" value="condNoLevelCommon.html" />
-			<param name="min" value="95" />
+			<param name="min" value="97" />
 		</condition>
 		<condition type="Distance" />
 		<condition type="Reenter" />
