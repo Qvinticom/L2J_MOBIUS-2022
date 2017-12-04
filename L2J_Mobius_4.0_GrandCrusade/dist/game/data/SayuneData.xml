@@ -44,13 +44,8 @@
 		<selector id="0" x="211952" y="82592" z="136">
 			<!-- Down -->
 			<choice id="-1" x="211952" y="82592" z="136" />
-			<!-- Arms of Timiniel -->
-			<choice id="1" x="213152" y="84496" z="980">
-				<loc id="9" x="213604" y="81868" z="1836" />
-				<loc id="-1" x="214032" y="81304" z="824" />
-			</choice>
 			<!-- Deep inside the Southern Forest -->
-			<choice id="9" x="213604" y="81868" z="1836">
+			<choice id="1" x="213604" y="81868" z="1836">
 				<loc id="2" x="214112" y="85312" z="1440" />
 				<loc id="3" x="214896" y="86480" z="1640" />
 				<loc id="4" x="217584" y="87984" z="1332" />
@@ -60,6 +55,11 @@
 				<loc id="8" x="222448" y="88424" z="1584" />
 				<loc id="-1" x="222064" y="88944" z="812" />
 			</choice>
+			<!-- Arms of Timiniel -->
+			<choice id="9" x="213152" y="84496" z="980">
+				<loc id="10" x="213604" y="81868" z="1836" />
+				<loc id="-1" x="214032" y="81304" z="824" />
+			</choice>						
 		</selector>
 	</map>
 	<!-- Arms of Timinel -> Magmeld 1 -->
