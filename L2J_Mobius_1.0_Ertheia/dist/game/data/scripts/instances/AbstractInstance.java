@@ -158,11 +158,8 @@ public abstract class AbstractInstance extends AbstractNpcAI
 					enterGroup.forEach(p -> p.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
 					return;
 				}
-			}
-			
-			// Check if any player from the group has already finished the instance
-			for (L2PcInstance member : enterGroup)
-			{
+				
+				// Check if any player from the group has already finished the instance
 				if (InstanceManager.getInstance().getInstanceTime(member, templateId) > 0)
 				{
 					enterGroup.forEach(p -> p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addString(member.getName())));
