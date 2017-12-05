@@ -37,7 +37,7 @@ public final class BlockAbnormalSlot extends AbstractEffect
 	
 	public BlockAbnormalSlot(StatsSet params)
 	{
-		_blockAbnormalSlots = Arrays.stream(params.getString("dispel").split(";")).map(slot -> Enum.valueOf(AbnormalType.class, slot)).collect(Collectors.toSet());
+		_blockAbnormalSlots = Arrays.stream(params.getString("slot").split(";")).map(slot -> Enum.valueOf(AbnormalType.class, slot)).collect(Collectors.toSet());
 	}
 	
 	@Override
