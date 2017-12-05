@@ -16,9 +16,9 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collections;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -37,19 +37,7 @@ public final class BlockAbnormalSlot extends AbstractEffect
 	
 	public BlockAbnormalSlot(StatsSet params)
 	{
-		final String blockAbnormalSlots = params.getString("slot", null);
-		if ((blockAbnormalSlots != null) && !blockAbnormalSlots.isEmpty())
-		{
-			_blockAbnormalSlots = new HashSet<>();
-			for (String slot : blockAbnormalSlots.split(";"))
-			{
-				_blockAbnormalSlots.add(AbnormalType.getAbnormalType(slot));
-			}
-		}
-		else
-		{
-			_blockAbnormalSlots = Collections.<AbnormalType> emptySet();
-		}
+		_blockAbnormalSlots = Arrays.stream(params.getString("dispel").split(";")).map(slot -> Enum.valueOf(AbnormalType.class, slot)).collect(Collectors.toSet());
 	}
 	
 	@Override

@@ -923,7 +923,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>IMPROVE_VAMPIRIC_HASTE,-1;ATTACK_TIME_DOWN,-1;VAMPIRIC_ATTACK,-1;CASTING_TIME_DOWN,-1</dispel>
+				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<dispel>IMPROVE_VAMPIRIC_HASTE;ATTACK_TIME_DOWN;VAMPIRIC_ATTACK;CASTING_TIME_DOWN</dispel>
@@ -1023,7 +1023,7 @@
 				<POISON>50</POISON>
 			</effect>
 			<effect name="DispelBySlotProbability">
-				<dispel>DANCE_OF_ALIGNMENT,-1;ARMOR_UNHOLY,-1;DANCE_OF_LIGHT,-1;SONG_OF_INVOCATION,-1;RESIST_BLEEDING,-1;RESIST_SHOCK,-1</dispel>
+				<dispel>DANCE_OF_ALIGNMENT;ARMOR_UNHOLY;DANCE_OF_LIGHT;SONG_OF_INVOCATION;RESIST_BLEEDING;RESIST_SHOCK</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_ALIGNMENT;ARMOR_UNHOLY;DANCE_OF_LIGHT;SONG_OF_INVOCATION;RESIST_BLEEDING;RESIST_SHOCK</slot>
@@ -1068,7 +1068,7 @@
 				<SLEEP>50</SLEEP>
 			</effect>
 			<effect name="DispelBySlotProbability">
-				<dispel>DANCE_OF_PROTECTION,-1;RESIST_DEBUFF_DISPEL,-1</dispel>
+				<dispel>DANCE_OF_PROTECTION;RESIST_DEBUFF_DISPEL</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_PROTECTION;RESIST_DEBUFF_DISPEL</slot>
@@ -1200,7 +1200,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>MULTI_BUFF,-1;COUNTER_CRITICAL,-1</dispel>
+				<dispel>MULTI_BUFF;COUNTER_CRITICAL</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
