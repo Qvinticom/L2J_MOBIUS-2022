@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import ai.AbstractNpcAI;
 
@@ -155,6 +156,16 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				if (getPlayerInstance(member) != null)
 				{
 					enterGroup.forEach(p -> p.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
+					return;
+				}
+			}
+			
+			// Check if any player from the group has already finished the instance
+			for (L2PcInstance member : enterGroup)
+			{
+				if (InstanceManager.getInstance().getInstanceTime(member, templateId) > 0)
+				{
+					enterGroup.forEach(p -> p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addString(member.getName())));
 					return;
 				}
 			}
