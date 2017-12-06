@@ -1339,6 +1339,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27611" level="1" /> <!-- Lord's Special Supply Box -->
+		</skills>
 	</item>
 	<item id="27586" name="Special Supply Box" additionalName="Mid-grade" type="EtcItem">
 		<!-- Reward box containing various rewards. -->
@@ -1353,6 +1358,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27612" level="1" /> <!-- Lord's Special Supply Box -->
+		</skills>
 	</item>
 	<item id="27587" name="Special Supply Box" additionalName="High-grade" type="EtcItem">
 		<!-- Reward box containing various rewards. -->
@@ -1367,6 +1377,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27613" level="1" /> <!-- Lord's Special Supply Box -->
+		</skills>
 	</item>
 	<item id="27588" name="Special Supply Box" additionalName="Top-grade" type="EtcItem">
 		<!-- Reward box containing various rewards. -->
@@ -1381,6 +1396,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27614" level="1" /> <!-- Lord's Special Supply Box -->
+		</skills>
 	</item>
 	<item id="27589" name="Supply Box" additionalName="Standard" type="EtcItem">
 		<!-- You can obtain a Daily Coin. If you are lucky, you may obtain a Special Supply Box. -->
@@ -1394,6 +1414,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27593" min="1" max="1" chance="95" />
+			<item id="27585" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="27590" name="Supply Box" additionalName="Mid-grade" type="EtcItem">
 		<!-- You can obtain a Daily Coin. If you are lucky, you may obtain a Special Supply Box. -->
@@ -1407,6 +1433,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27593" min="3" max="3" chance="95" />
+			<item id="27586" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="27591" name="Supply Box" additionalName="High-grade" type="EtcItem">
 		<!-- You can obtain a Daily Coin. If you are lucky, you may obtain a Special Supply Box. -->
@@ -1420,6 +1452,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27593" min="4" max="4" chance="95" />
+			<item id="27587" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="27592" name="Supply Box" additionalName="Top-grade" type="EtcItem">
 		<!-- You can obtain a Daily Coin. If you are lucky, you may obtain a Special Supply Box. -->
@@ -1433,6 +1471,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27593" min="5" max="5" chance="95" />
+			<item id="27588" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="27593" name="Daily Coin" type="EtcItem">
 		<!-- Take it to High Priest Franco in Talking Island to exchange for various consumable items. -->
