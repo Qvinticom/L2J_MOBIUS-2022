@@ -277,7 +277,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	 */
 	public static void switchSkills(L2PcInstance gmchar, boolean toAuraSkills)
 	{
-		final Collection<Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree().values() : SkillTreesData.getInstance().getGMAuraSkillTree().values();
+		final Collection<Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree() : SkillTreesData.getInstance().getGMAuraSkillTree();
 		for (Skill skill : skills)
 		{
 			gmchar.removeSkill(skill, false); // Don't Save GM skills to database

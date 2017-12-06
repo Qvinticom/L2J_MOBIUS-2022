@@ -9237,14 +9237,14 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (hero && (_baseClass == _activeClass))
 		{
-			for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree().values())
+			for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree())
 			{
 				addSkill(skill, false); // Don't persist hero skills into database
 			}
 		}
 		else
 		{
-			for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree().values())
+			for (Skill skill : SkillTreesData.getInstance().getHeroSkillTree())
 			{
 				removeSkill(skill, false, true); // Just remove skills from non-hero players
 			}
@@ -9403,24 +9403,15 @@ public final class L2PcInstance extends L2Playable
 	
 	public void setNobleLevel(int level)
 	{
-		final Collection<Skill> nobleSkillTree = SkillTreesData.getInstance().getNobleSkillTree().values();
 		if (level != 0)
 		{
-			for (Skill skill : nobleSkillTree)
-			{
-				addSkill(skill, false);
-			}
+			SkillTreesData.getInstance().getNobleSkillAutoGetTree().forEach(skill -> addSkill(skill, false));
 		}
 		else
 		{
-			for (Skill skill : nobleSkillTree)
-			{
-				removeSkill(skill, false, true);
-			}
+			SkillTreesData.getInstance().getNobleSkillTree().forEach(skill -> removeSkill(skill, false, true));
 		}
-		
 		_nobleLevel = level;
-		
 		sendSkillList();
 		if ((level != 0) && (getLevel() >= 99))
 		{

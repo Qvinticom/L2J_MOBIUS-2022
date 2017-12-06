@@ -44,7 +44,6 @@ import com.l2jmobius.gameserver.enums.MpRewardAffectType;
 import com.l2jmobius.gameserver.enums.MpRewardType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -80,8 +79,6 @@ public class NpcData implements IGameXmlReader
 			parseDatapackDirectory("data/stats/npcs/custom", true);
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_npcs.size() - npcCount) + " Custom NPCs.");
 		}
-		
-		loadNpcsSkillLearn();
 	}
 	
 	@Override
@@ -785,18 +782,6 @@ public class NpcData implements IGameXmlReader
 	public List<L2NpcTemplate> getAllNpcOfClassType(String... classTypes)
 	{
 		return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
-	}
-	
-	public void loadNpcsSkillLearn()
-	{
-		_npcs.values().forEach(template ->
-		{
-			final List<ClassId> teachInfo = SkillLearnData.getInstance().getSkillLearnData(template.getId());
-			if (teachInfo != null)
-			{
-				template.addTeachInfo(teachInfo);
-			}
-		});
 	}
 	
 	/**

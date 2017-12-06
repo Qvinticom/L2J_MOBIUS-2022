@@ -17,10 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -51,6 +48,11 @@ public final class RequestMagicSkillUse implements IClientIncomingPacket
 			return;
 		}
 		
+		if (activeChar.isSpawnProtected())
+		{
+			activeChar.onActionRequest();
+		}
+		
 		// Get the level of the used skill
 		Skill skill = activeChar.getKnownSkill(_magicId);
 		if (skill == null)
@@ -59,16 +61,9 @@ public final class RequestMagicSkillUse implements IClientIncomingPacket
 			skill = activeChar.getCustomSkill(_magicId);
 			if (skill == null)
 			{
-				if ((_magicId == CommonSkill.HAIR_ACCESSORY_SET.getId()) || SkillTreesData.getInstance().isSubClassChangeSkill(_magicId, 1))
-				{
-					skill = SkillData.getInstance().getSkill(_magicId, 1);
-				}
-				else
-				{
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					_log.warning("Skill Id " + _magicId + " not found in player!");
-					return;
-				}
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				_log.warning("Player " + activeChar + " tried to use a skill [" + _magicId + "] which hasn't been learned or it belongs to a macro of a currently inactive class.");
+				return;
 			}
 		}
 		

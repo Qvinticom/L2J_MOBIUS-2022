@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
@@ -31,7 +30,6 @@ import com.l2jmobius.gameserver.model.base.AcquireSkillType;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class L2NpcInstance extends L2Npc
@@ -53,11 +51,6 @@ public class L2NpcInstance extends L2Npc
 	public void initCharStatus()
 	{
 		setStatus(new FolkStatus(this));
-	}
-	
-	public List<ClassId> getClassesToTeach()
-	{
-		return getTemplate().getTeachInfo();
 	}
 	
 	/**
@@ -96,39 +89,6 @@ public class L2NpcInstance extends L2Npc
 			{
 				player.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.COLLECT));
 			}
-			return;
-		}
-		
-		if (!npc.getTemplate().canTeach(classId))
-		{
-			String html = "";
-			
-			if (npc instanceof L2WarehouseInstance)
-			{
-				html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/warehouse/" + npcId + "-noteach.htm");
-			}
-			
-			final NpcHtmlMessage noTeachMsg = new NpcHtmlMessage(npc.getObjectId());
-			if (html == null)
-			{
-				_log.warning("Npc " + npcId + " missing noTeach html!");
-				noTeachMsg.setHtml("<html><body>I cannot teach you any skills.<br>You must find your current class teachers.</body></html>");
-			}
-			else
-			{
-				noTeachMsg.setHtml(html);
-				noTeachMsg.replace("%objectId%", String.valueOf(npc.getObjectId()));
-			}
-			player.sendPacket(noTeachMsg);
-			return;
-		}
-		
-		if (((L2NpcInstance) npc).getClassesToTeach().isEmpty())
-		{
-			final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-			final String sb = "<html><body>I cannot teach you. My class list is empty.<br>Ask admin to fix it. Need add my npcid and classes to skill_learn.sql.<br>NpcId:" + npcId + ", Your classId:" + player.getClassId().getId() + "</body></html>";
-			html.setHtml(sb);
-			player.sendPacket(html);
 			return;
 		}
 		

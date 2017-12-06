@@ -86,7 +86,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jmobius.gameserver.data.xml.impl.ShuttleData;
 import com.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillLearnData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
@@ -287,7 +286,6 @@ public class GameServer
 		}
 		
 		printSection("NPCs");
-		SkillLearnData.getInstance();
 		NpcData.getInstance();
 		FakePlayerData.getInstance();
 		FakePlayerChatManager.getInstance();

@@ -21,6 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -51,7 +52,12 @@ public final class HealerTrainer extends AbstractNpcAI
 	// @formatter:on
 	// Misc
 	private static final int MIN_LEVEL = 76;
-	private static final int MIN_CLASS_LEVEL = 3;
+	private static final CategoryType[] ALLOWED_CATEGORIES =
+	{
+		CategoryType.FOURTH_CLASS_GROUP,
+		CategoryType.FIFTH_CLASS_GROUP,
+		CategoryType.SIXTH_CLASS_GROUP
+	};
 	
 	private HealerTrainer()
 	{
@@ -79,13 +85,13 @@ public final class HealerTrainer extends AbstractNpcAI
 			}
 			case "SkillTransferLearn":
 			{
-				if (!npc.getTemplate().canTeach(player.getClassId()))
+				if (!player.isInCategory(CategoryType.HEAL_MASTER))
 				{
 					htmltext = npc.getId() + "-noteach.html";
 					break;
 				}
 				
-				if ((player.getLevel() < MIN_LEVEL) || (player.getClassId().level() < MIN_CLASS_LEVEL))
+				if ((player.getLevel() < MIN_LEVEL) || !player.isInOneOfCategory(ALLOWED_CATEGORIES))
 				{
 					htmltext = "learn-lowlevel.html";
 					break;
@@ -104,13 +110,13 @@ public final class HealerTrainer extends AbstractNpcAI
 			}
 			case "SkillTransferCleanse":
 			{
-				if (!npc.getTemplate().canTeach(player.getClassId()))
+				if (!player.isInCategory(CategoryType.HEAL_MASTER))
 				{
 					htmltext = "cleanse-no.html";
 					break;
 				}
 				
-				if ((player.getLevel() < MIN_LEVEL) || (player.getClassId().level() < MIN_CLASS_LEVEL))
+				if ((player.getLevel() < MIN_LEVEL) || !player.isInOneOfCategory(ALLOWED_CATEGORIES))
 				{
 					htmltext = "cleanse-no.html";
 					break;

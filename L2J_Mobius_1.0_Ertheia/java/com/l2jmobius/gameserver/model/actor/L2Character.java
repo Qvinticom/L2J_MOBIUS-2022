@@ -5104,6 +5104,19 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return CategoryData.getInstance().isInCategory(type, getId());
 	}
 	
+	public final boolean isInOneOfCategory(CategoryType... types)
+	{
+		for (CategoryType type : types)
+		{
+			if (CategoryData.getInstance().isInCategory(type, getId()))
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 	/**
 	 * @return the character that summoned this NPC.
 	 */

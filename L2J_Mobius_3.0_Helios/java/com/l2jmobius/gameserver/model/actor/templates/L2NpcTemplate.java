@@ -36,7 +36,6 @@ import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.Sex;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
@@ -112,8 +111,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private MpRewardType _mpRewardType;
 	private int _mpRewardTicks;
 	private MpRewardAffectType _mpRewardAffectType;
-	
-	private final List<ClassId> _teachInfo = new ArrayList<>();
 	
 	private List<Integer> _extendDrop;
 	
@@ -936,26 +933,6 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	public static boolean isAssignableTo(Object obj, Class<?> clazz)
 	{
 		return L2NpcTemplate.isAssignableTo(obj.getClass(), clazz);
-	}
-	
-	public boolean canTeach(ClassId classId)
-	{
-		// If the player is on a third class, fetch the class teacher information for its parent class.
-		if (classId.level() == 3)
-		{
-			return _teachInfo.contains(classId.getParent());
-		}
-		return _teachInfo.contains(classId);
-	}
-	
-	public List<ClassId> getTeachInfo()
-	{
-		return _teachInfo;
-	}
-	
-	public void addTeachInfo(List<ClassId> teachInfo)
-	{
-		_teachInfo.addAll(teachInfo);
 	}
 	
 	public List<Integer> getExtendDrop()
