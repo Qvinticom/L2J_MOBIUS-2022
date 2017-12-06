@@ -133,16 +133,8 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 	{
 		if ((item != null) && (item.getAugmentation() != null))
 		{
-			if (item.getAugmentation().getOptionId(0) != 0)
-			{
-				packet.writeH(item.getAugmentation().getOptionId(0));
-				packet.writeH(item.getAugmentation().getOptionId(1));
-			}
-			else
-			{
-				packet.writeD(item.getAugmentation().getOptionId(0));
-				packet.writeD(item.getAugmentation().getOptionId(1));
-			}
+			packet.writeH(item.getAugmentation().getOptionId(0));
+			packet.writeH(item.getAugmentation().getOptionId(1));
 		}
 		else
 		{
