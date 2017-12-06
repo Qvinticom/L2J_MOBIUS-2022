@@ -865,14 +865,14 @@ public final class MemoryOfDisaster extends AbstractInstance
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NO_WAY2);
 						npc.doDie(null);
-						attacker.doAttack(world.getNpc(SILVERA));
+						attacker.doAutoAttack(world.getNpc(SILVERA));
 						break;
 					}
 					case SILVERA:
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MY_GOD);
 						npc.doDie(null);
-						world.getNpc(SIEGE_GOLEM).doAttack(attacker);
+						world.getNpc(SIEGE_GOLEM).doAutoAttack(attacker);
 						break;
 					}
 				}

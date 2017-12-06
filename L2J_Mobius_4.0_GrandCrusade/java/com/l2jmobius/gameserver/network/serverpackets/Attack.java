@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class Attack implements IClientOutgoingPacket
 {
 	private final int _attackerObjId;
-	private final boolean _soulshot;
-	private final int _ssGrade;
 	private final Location _attackerLoc;
 	private final Location _targetLoc;
 	private final List<Hit> _hits = new ArrayList<>();
@@ -38,29 +36,26 @@ public class Attack implements IClientOutgoingPacket
 	/**
 	 * @param attacker
 	 * @param target
-	 * @param useShots
-	 * @param ssGrade
 	 */
-	public Attack(L2Character attacker, L2Character target, boolean useShots, int ssGrade)
+	public Attack(L2Character attacker, L2Character target)
 	{
 		_attackerObjId = attacker.getObjectId();
-		_soulshot = useShots;
-		_ssGrade = Math.min(ssGrade, 6);
 		_attackerLoc = new Location(attacker);
 		_targetLoc = new Location(target);
 	}
 	
 	/**
 	 * Adds hit to the attack (Attacks such as dual dagger/sword/fist has two hits)
-	 * @param target
-	 * @param damage
-	 * @param miss
-	 * @param crit
-	 * @param shld
+	 * @param hit
 	 */
-	public void addHit(L2Character target, int damage, boolean miss, boolean crit, byte shld)
+	public void addHit(Hit hit)
 	{
-		_hits.add(new Hit(target, damage, miss, crit, shld, _soulshot, _ssGrade));
+		_hits.add(hit);
+	}
+	
+	public List<Hit> getHits()
+	{
+		return _hits;
 	}
 	
 	/**
@@ -69,14 +64,6 @@ public class Attack implements IClientOutgoingPacket
 	public boolean hasHits()
 	{
 		return !_hits.isEmpty();
-	}
-	
-	/**
-	 * @return {@code true} if attack has soul shot charged.
-	 */
-	public boolean hasSoulshot()
-	{
-		return _soulshot;
 	}
 	
 	/**

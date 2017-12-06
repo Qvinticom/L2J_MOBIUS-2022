@@ -78,7 +78,7 @@ public class DoppelgangerAI extends L2CharacterAI
 			return;
 		}
 		clientStopMoving(null);
-		_actor.doAttack(attackTarget);
+		_actor.doAutoAttack(attackTarget);
 	}
 	
 	private void thinkCast()

@@ -262,7 +262,7 @@ public class L2PlayerAI extends L2PlayableAI
 			return;
 		}
 		
-		_actor.doAttack((L2Character) target);
+		_actor.doAutoAttack((L2Character) target);
 	}
 	
 	private void thinkCast()

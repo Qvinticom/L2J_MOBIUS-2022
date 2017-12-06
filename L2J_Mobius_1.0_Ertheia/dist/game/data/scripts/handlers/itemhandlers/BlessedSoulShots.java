@@ -104,7 +104,7 @@ public class BlessedSoulShots implements IItemHandler
 				return false;
 			}
 			// Charge soul shot
-			weaponInst.setChargedShot(ShotType.BLESSED_SOULSHOTS, true);
+			activeChar.chargeShot(ShotType.BLESSED_SOULSHOTS);
 		}
 		finally
 		{

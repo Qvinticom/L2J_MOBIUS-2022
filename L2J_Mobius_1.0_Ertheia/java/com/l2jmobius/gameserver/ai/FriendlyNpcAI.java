@@ -218,7 +218,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 			return;
 		}
 		
-		_actor.doAttack(originalAttackTarget);
+		_actor.doAutoAttack(originalAttackTarget);
 	}
 	
 	@Override

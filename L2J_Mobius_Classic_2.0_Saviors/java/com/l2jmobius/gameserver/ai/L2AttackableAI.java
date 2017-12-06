@@ -994,7 +994,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		}
 		
 		// Attacks target
-		_actor.doAttack(target);
+		_actor.doAutoAttack(target);
 	}
 	
 	private boolean checkSkillTarget(Skill skill, L2Object target)

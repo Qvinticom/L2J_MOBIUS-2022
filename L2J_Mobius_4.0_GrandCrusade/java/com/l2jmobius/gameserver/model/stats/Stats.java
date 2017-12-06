@@ -143,6 +143,7 @@ public enum Stats
 	PHYSICAL_ATTACK_RANGE("pAtkRange", new PRangeFinalizer()),
 	MAGIC_ATTACK_RANGE("mAtkRange"),
 	ATTACK_COUNT_MAX("atkCountMax"),
+	PHYSICAL_POLEARM_TARGET_SINGLE("polearmSingleTarget"),
 	// Run speed, walk & escape speed are calculated proportionally, magic speed is a buff
 	MOVE_SPEED("moveSpeed"),
 	RUN_SPEED("runSpd", new SpeedFinalizer()),
@@ -267,7 +268,8 @@ public enum Stats
 	STAT_BONUS_SKILL_CRITICAL("statSkillCritical"),
 	STAT_BONUS_SPEED("statSpeed"),
 	CRAFTING_CRITICAL("craftingCritical"),
-	SHOTS_BONUS("shotBonus", new ShotsBonusFinalizer());
+	SHOTS_BONUS("shotBonus", new ShotsBonusFinalizer()),
+	ATTACK_DAMAGE("attackDamage");
 	
 	static final Logger LOGGER = Logger.getLogger(Stats.class.getName());
 	public static final int NUM_STATS = values().length;

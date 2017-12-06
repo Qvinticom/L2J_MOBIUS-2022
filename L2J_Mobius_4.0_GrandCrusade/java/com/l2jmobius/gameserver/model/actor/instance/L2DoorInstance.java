@@ -91,7 +91,7 @@ public final class L2DoorInstance extends L2Character
 	}
 	
 	@Override
-	public void doAttack(L2Character target)
+	public void doAutoAttack(L2Character target)
 	{
 	}
 	

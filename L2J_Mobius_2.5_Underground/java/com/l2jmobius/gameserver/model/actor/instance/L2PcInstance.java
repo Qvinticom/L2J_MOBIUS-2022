@@ -4642,9 +4642,9 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	@Override
-	public void doAttack(L2Character target)
+	public void doAutoAttack(L2Character target)
 	{
-		super.doAttack(target);
+		super.doAutoAttack(target);
 		setRecentFakeDeath(false);
 		if (target.isFakePlayer())
 		{

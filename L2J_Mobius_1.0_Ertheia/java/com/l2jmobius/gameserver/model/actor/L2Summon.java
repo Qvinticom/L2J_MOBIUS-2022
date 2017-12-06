@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
@@ -77,7 +76,6 @@ public abstract class L2Summon extends L2Playable
 	private boolean _follow = true;
 	private boolean _previousFollowStatus = true;
 	protected boolean _restoreSummon = true;
-	private int _shotsMask = 0;
 	private int _summonPoints = 0;
 	
 	// @formatter:off
@@ -1028,25 +1026,6 @@ public abstract class L2Summon extends L2Playable
 	public boolean isSummon()
 	{
 		return true;
-	}
-	
-	@Override
-	public boolean isChargedShot(ShotType type)
-	{
-		return (_shotsMask & type.getMask()) == type.getMask();
-	}
-	
-	@Override
-	public void setChargedShot(ShotType type, boolean charged)
-	{
-		if (charged)
-		{
-			_shotsMask |= type.getMask();
-		}
-		else
-		{
-			_shotsMask &= ~type.getMask();
-		}
 	}
 	
 	@Override

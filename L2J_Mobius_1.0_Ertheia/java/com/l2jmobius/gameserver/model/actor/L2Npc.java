@@ -144,7 +144,6 @@ public class L2Npc extends L2Character
 	private int _spiritshotamount = 0;
 	private int _displayEffect = 0;
 	
-	private int _shotsMask = 0;
 	private int _killingBlowWeaponId;
 	
 	private int _cloneObjId; // Used in NpcInfo packet to clone the specified player.
@@ -1410,47 +1409,43 @@ public class L2Npc extends L2Character
 	}
 	
 	@Override
-	public boolean isChargedShot(ShotType type)
+	public void rechargeShots(boolean physical, boolean magic, boolean fish)
 	{
-		return (_shotsMask & type.getMask()) == type.getMask();
-	}
-	
-	@Override
-	public void setChargedShot(ShotType type, boolean charged)
-	{
-		if (charged)
+		if (isFakePlayer() && Config.FAKE_PLAYER_USE_SHOTS)
 		{
-			_shotsMask |= type.getMask();
+			if (physical)
+			{
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 9193, 1, 0, 0), 600);
+				chargeShot(ShotType.SOULSHOTS);
+			}
+			if (magic)
+			{
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 9195, 1, 0, 0), 600);
+				chargeShot(ShotType.SPIRITSHOTS);
+			}
 		}
 		else
 		{
-			_shotsMask &= ~type.getMask();
-		}
-	}
-	
-	@Override
-	public void rechargeShots(boolean physical, boolean magic, boolean fish)
-	{
-		if (physical && (_soulshotamount > 0))
-		{
-			if (Rnd.get(100) > getTemplate().getSoulShotChance())
+			if (physical && (_soulshotamount > 0))
 			{
-				return;
+				if (Rnd.get(100) > getTemplate().getSoulShotChance())
+				{
+					return;
+				}
+				_soulshotamount--;
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
+				chargeShot(ShotType.SOULSHOTS);
 			}
-			_soulshotamount--;
-			Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
-			setChargedShot(ShotType.SOULSHOTS, true);
-		}
-		
-		if (magic && (_spiritshotamount > 0))
-		{
-			if (Rnd.get(100) > getTemplate().getSpiritShotChance())
+			if (magic && (_spiritshotamount > 0))
 			{
-				return;
+				if (Rnd.get(100) > getTemplate().getSpiritShotChance())
+				{
+					return;
+				}
+				_spiritshotamount--;
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
+				chargeShot(ShotType.SPIRITSHOTS);
 			}
-			_spiritshotamount--;
-			Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
-			setChargedShot(ShotType.SPIRITSHOTS, true);
 		}
 	}
 	

@@ -223,7 +223,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			
 			return;
 		}
-		_actor.doAttack(target);
+		_actor.doAutoAttack(target);
 	}
 	
 	protected void thinkForceAttack()
@@ -264,7 +264,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			return;
 		}
 		
-		_actor.doAttack(getForcedTarget());
+		_actor.doAutoAttack(getForcedTarget());
 	}
 	
 	@Override
@@ -364,7 +364,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 				}
 			}
 			
-			_actor.doAttack(target);
+			_actor.doAutoAttack(target);
 		}
 	}
 	

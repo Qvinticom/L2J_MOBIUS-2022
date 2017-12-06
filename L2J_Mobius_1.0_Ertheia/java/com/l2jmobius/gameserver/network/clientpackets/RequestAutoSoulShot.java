@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -34,6 +35,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public final class RequestAutoSoulShot implements IClientIncomingPacket
 {
 	private int _itemId;
+	private boolean _enable;
 	private int _type;
 	
 	@Override
@@ -41,6 +43,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 	{
 		_itemId = packet.readD();
 		_type = packet.readD();
+		_enable = _type == 1;
 		return true;
 	}
 	
@@ -61,7 +64,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 				return;
 			}
 			
-			if (_type == 1)
+			if (_enable)
 			{
 				if (!activeChar.getInventory().canManipulateWithItemId(item.getId()))
 				{
@@ -114,23 +117,34 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 						
 						// Activate shots
 						activeChar.addAutoSoulShot(_itemId);
-						client.sendPacket(new ExAutoSoulShot(_itemId, _type));
-						
-						// Send message
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
-						sm.addItemName(item);
-						client.sendPacket(sm);
+						client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 						
 						// Recharge summon's shots
 						final L2Summon pet = activeChar.getPet();
 						if (pet != null)
 						{
+							// Send message
+							if (!pet.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
+							{
+								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+								sm.addItemName(item);
+								client.sendPacket(sm);
+							}
+							// Charge
 							pet.rechargeShots(isSoulshot, isSpiritshot, false);
 						}
-						activeChar.getServitors().values().forEach(s ->
+						for (L2Summon summon : activeChar.getServitors().values())
 						{
-							s.rechargeShots(isSoulshot, isSpiritshot, false);
-						});
+							// Send message
+							if (!summon.isChargedShot(item.getItem().getDefaultAction() == ActionType.SUMMON_SOULSHOT ? ShotType.SOULSHOTS : ((item.getId() == 6647) || (item.getId() == 20334)) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
+							{
+								final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
+								sm.addItemName(item);
+								client.sendPacket(sm);
+							}
+							// Charge
+							summon.rechargeShots(isSoulshot, isSpiritshot, false);
+						}
 					}
 					else
 					{
@@ -150,7 +164,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 					
 					// Activate shots
 					activeChar.addAutoSoulShot(_itemId);
-					client.sendPacket(new ExAutoSoulShot(_itemId, _type));
+					client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 					
 					// Send message
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
@@ -165,7 +179,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 			{
 				// Cancel auto shots
 				activeChar.removeAutoSoulShot(_itemId);
-				client.sendPacket(new ExAutoSoulShot(_itemId, _type));
+				client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
 				
 				// Send message
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);

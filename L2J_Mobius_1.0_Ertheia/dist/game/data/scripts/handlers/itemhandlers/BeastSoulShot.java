@@ -120,7 +120,7 @@ public class BeastSoulShot implements IItemHandler
 			if (!pet.isChargedShot(ShotType.SOULSHOTS))
 			{
 				activeOwner.sendMessage("Your pet uses soulshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
-				pet.setChargedShot(ShotType.SOULSHOTS, true);
+				pet.chargeShot(ShotType.SOULSHOTS);
 				// Visual effect change if player has equipped Ruby lvl 3 or higher
 				if (activeOwner.getActiveRubyJewel() != null)
 				{
@@ -138,7 +138,7 @@ public class BeastSoulShot implements IItemHandler
 			if (!s.isChargedShot(ShotType.SOULSHOTS))
 			{
 				activeOwner.sendMessage("Your servitor uses soulshot."); // activeOwner.sendPacket(SystemMessageId.YOUR_PET_USES_SPIRITSHOT);
-				s.setChargedShot(ShotType.SOULSHOTS, true);
+				s.chargeShot(ShotType.SOULSHOTS);
 				// Visual effect change if player has equipped Ruby lvl 3 or higher
 				if (activeOwner.getActiveRubyJewel() != null)
 				{

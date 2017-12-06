@@ -195,7 +195,7 @@ public final class L2StaticObjectInstance extends L2Character
 	}
 	
 	@Override
-	public void doAttack(L2Character target)
+	public void doAutoAttack(L2Character target)
 	{
 	}
 	

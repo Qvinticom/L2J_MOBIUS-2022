@@ -107,7 +107,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 			return;
 		}
 		clientStopMoving(null);
-		_actor.doAttack(attackTarget);
+		_actor.doAutoAttack(attackTarget);
 	}
 	
 	private void thinkCast()
@@ -276,7 +276,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		final L2Summon summon = getActor();
 		if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && summon.getOwner().isInsideRadius(_actor, 2 * AVOID_RADIUS, true, false))
 		{
-			summon.doAttack(attacker);
+			summon.doAutoAttack(attacker);
 		}
 	}
 	

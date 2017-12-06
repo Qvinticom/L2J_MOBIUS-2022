@@ -22,11 +22,19 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExAutoSoulShot implements IClientOutgoingPacket
 {
 	private final int _itemId;
+	@SuppressWarnings("unused")
+	private final boolean _enable;
 	private final int _type;
 	
-	public ExAutoSoulShot(int itemId, int type)
+	/**
+	 * @param itemId
+	 * @param enable
+	 * @param type
+	 */
+	public ExAutoSoulShot(int itemId, boolean enable, int type)
 	{
 		_itemId = itemId;
+		_enable = enable;
 		_type = type;
 	}
 	
@@ -36,6 +44,7 @@ public class ExAutoSoulShot implements IClientOutgoingPacket
 		OutgoingPackets.EX_AUTO_SOUL_SHOT.writeId(packet);
 		
 		packet.writeD(_itemId);
+		// packet.writeD(_enable ? 0x01 : 0x00);
 		packet.writeD(_type);
 		return true;
 	}

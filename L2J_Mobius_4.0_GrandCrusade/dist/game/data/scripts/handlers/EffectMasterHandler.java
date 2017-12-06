@@ -44,6 +44,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AttackAttribute", AttackAttribute::new);
 		EffectHandler.getInstance().registerHandler("AttackAttributeAdd", AttackAttributeAdd::new);
 		EffectHandler.getInstance().registerHandler("AttackBehind", AttackBehind::new);
+		EffectHandler.getInstance().registerHandler("AttackDamagePosition", AttackDamagePosition::new);
 		EffectHandler.getInstance().registerHandler("AttackTrait", AttackTrait::new);
 		EffectHandler.getInstance().registerHandler("Backstab", Backstab::new);
 		EffectHandler.getInstance().registerHandler("Betray", Betray::new);
@@ -240,6 +241,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("PhysicalSoulAttack", PhysicalSoulAttack::new);
 		EffectHandler.getInstance().registerHandler("PkCount", PkCount::new);
 		EffectHandler.getInstance().registerHandler("Plunder", Plunder::new);
+		EffectHandler.getInstance().registerHandler("PolearmSingleTarget", PolearmSingleTarget::new);
 		EffectHandler.getInstance().registerHandler("ProtectionBlessing", ProtectionBlessing::new);
 		EffectHandler.getInstance().registerHandler("ProtectDeathPenalty", ProtectDeathPenalty::new);
 		EffectHandler.getInstance().registerHandler("PullBack", PullBack::new);

@@ -92,7 +92,6 @@ import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.Sex;
 import com.l2jmobius.gameserver.enums.ShortcutType;
-import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.enums.Team;
@@ -4643,9 +4642,9 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	@Override
-	public void doAttack(L2Character target)
+	public void doAutoAttack(L2Character target)
 	{
-		super.doAttack(target);
+		super.doAutoAttack(target);
 		setRecentFakeDeath(false);
 		if (target.isFakePlayer())
 		{
@@ -8788,7 +8787,8 @@ public final class L2PcInstance extends L2Playable
 		if (_activeSoulShots.contains(itemId))
 		{
 			removeAutoSoulShot(itemId);
-			sendPacket(new ExAutoSoulShot(itemId, 0));
+			sendPacket(new ExAutoSoulShot(itemId, false, 0));
+			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 			sm.addItemName(itemId);
 			sendPacket(sm);
@@ -8804,7 +8804,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		for (int itemId : _activeSoulShots)
 		{
-			sendPacket(new ExAutoSoulShot(itemId, 0));
+			sendPacket(new ExAutoSoulShot(itemId, false, 0));
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 			sm.addItemName(itemId);
 			sendPacket(sm);
@@ -13063,23 +13063,6 @@ public final class L2PcInstance extends L2Playable
 	public boolean isPlayer()
 	{
 		return true;
-	}
-	
-	@Override
-	public boolean isChargedShot(ShotType type)
-	{
-		final L2ItemInstance weapon = getActiveWeaponInstance();
-		return (weapon != null) && weapon.isChargedShot(type);
-	}
-	
-	@Override
-	public void setChargedShot(ShotType type, boolean charged)
-	{
-		final L2ItemInstance weapon = getActiveWeaponInstance();
-		if (weapon != null)
-		{
-			weapon.setChargedShot(type, charged);
-		}
 	}
 	
 	/**

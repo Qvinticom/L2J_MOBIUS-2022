@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.events.impl.character;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * An instantly executed event when L2Character is attacked by L2Character.
@@ -28,11 +29,13 @@ public class OnCreatureAttack implements IBaseEvent
 {
 	private final L2Character _attacker;
 	private final L2Character _target;
+	private final Skill _skill;
 	
-	public OnCreatureAttack(L2Character attacker, L2Character target)
+	public OnCreatureAttack(L2Character attacker, L2Character target, Skill skill)
 	{
 		_attacker = attacker;
 		_target = target;
+		_skill = skill;
 	}
 	
 	public final L2Character getAttacker()
@@ -43,6 +46,11 @@ public class OnCreatureAttack implements IBaseEvent
 	public final L2Character getTarget()
 	{
 		return _target;
+	}
+	
+	public final Skill getSkill()
+	{
+		return _skill;
 	}
 	
 	@Override

@@ -840,13 +840,7 @@
 		<hitTime>2000</hitTime>
 		<targetType>NONE</targetType>
 		<effects>
-			<effect name="HitNumber">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-				<weaponType>
-					<item>POLE</item>
-				</weaponType>
-			</effect>
+			<effect name="PolearmSingleTarget" />
 			<effect name="Accuracy">
 				<amount>
 					<value level="1">2</value>

@@ -21,7 +21,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.LinkedList;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -31,6 +31,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
@@ -54,6 +55,7 @@ import com.l2jmobius.gameserver.enums.BasicProperty;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
+import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
@@ -67,6 +69,7 @@ import com.l2jmobius.gameserver.instancemanager.TimersManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.CreatureContainer;
+import com.l2jmobius.gameserver.model.Hit;
 import com.l2jmobius.gameserver.model.L2AccessLevel;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -82,7 +85,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.actor.status.CharStatus;
-import com.l2jmobius.gameserver.model.actor.tasks.character.HitTask;
 import com.l2jmobius.gameserver.model.actor.tasks.character.NotifyAITask;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jmobius.gameserver.model.actor.transform.Transform;
@@ -102,7 +104,6 @@ import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureTeleported
 import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jmobius.gameserver.model.events.returns.DamageReturn;
 import com.l2jmobius.gameserver.model.events.returns.LocationReturn;
-import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.holders.IgnoreSkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -119,7 +120,6 @@ import com.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import com.l2jmobius.gameserver.model.options.OptionsSkillType;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.model.skills.SkillCastingType;
@@ -257,7 +257,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	// set by the start of attack, in game ticks
 	private volatile long _attackEndTime;
-	private int _disableRangedAttackEndTime;
+	private volatile long _disableRangedAttackEndTime;
 	
 	private volatile L2CharacterAI _ai = null;
 	
@@ -274,6 +274,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	/** A map holding info about basic property mesmerizing system. */
 	private volatile Map<BasicProperty, BasicPropertyResist> _basicPropertyResists;
+	
+	private ScheduledFuture<?> _hitTask = null;
+	/** A set containing the shot types currently charged. */
+	private Set<ShotType> _chargedShots = EnumSet.noneOf(ShotType.class);
 	
 	/** A list containing the dropped items of this fake player. */
 	private final List<L2ItemInstance> _fakePlayerDrops = new CopyOnWriteArrayList<>();
@@ -931,7 +935,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * </ul>
 	 * @param target The L2Character targeted
 	 */
-	public void doAttack(L2Character target)
+	public void doAutoAttack(L2Character target)
 	{
 		synchronized (_attackLock)
 		{
@@ -942,24 +946,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			if (!target.isTargetable())
 			{
-				return;
-			}
-			
-			// Notify to scripts
-			final TerminateReturn attackReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureAttack(this, target), this, TerminateReturn.class);
-			if ((attackReturn != null) && attackReturn.terminate())
-			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			// Notify to scripts
-			final TerminateReturn attackedReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target, null), target, TerminateReturn.class);
-			if ((attackedReturn != null) && attackedReturn.terminate())
-			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
@@ -990,24 +976,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
 			final L2Weapon weaponItem = getActiveWeaponItem();
-			
-			// Check if attacker's weapon can attack
-			if (weaponItem != null)
-			{
-				if (!weaponItem.isAttackWeapon() && !isGM())
-				{
-					if (weaponItem.getItemType() == WeaponType.FISHINGROD)
-					{
-						sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
-					}
-					else
-					{
-						sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
-					}
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
+			final WeaponType weaponType = getAttackType();
 			
 			if (getActingPlayer() != null)
 			{
@@ -1055,41 +1024,66 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			
 			// BOW and CROSSBOW checks
-			if ((weaponItem != null) && weaponItem.getItemType().isRanged())
+			if (weaponItem != null)
 			{
-				// Check for arrows and MP
-				if (isPlayer())
+				if (!weaponItem.isAttackWeapon() && !isGM())
 				{
-					// Checking if target has moved to peace zone - only for player-bow attacks at the moment
-					// Other melee is checked in movement code and for offensive spells a check is done every time
-					if (target.isInsidePeaceZone(getActingPlayer()))
+					if (weaponItem.getItemType() == WeaponType.FISHINGROD)
 					{
-						getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-						sendPacket(ActionFailed.STATIC_PACKET);
+						sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
+					}
+					else
+					{
+						sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
+					}
+					sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				
+				// Ranged weapon checks.
+				if (weaponItem.getItemType().isRanged())
+				{
+					// Check if bow delay is still active.
+					if (_disableRangedAttackEndTime > System.nanoTime())
+					{
+						if (isPlayer())
+						{
+							ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+							sendPacket(ActionFailed.STATIC_PACKET);
+						}
 						return;
 					}
 					
-					// Equip arrows needed in left hand and send a Server->Client packet ItemList to the L2PcInstance then return True
-					if (weaponItem.getItemType().isCrossbow() ? !checkAndEquipAmmunition(EtcItemType.BOLT) : !checkAndEquipAmmunition(EtcItemType.ARROW))
+					// Check for arrows and MP
+					if (isPlayer())
 					{
-						// Cancel the action because the L2PcInstance have no arrow
-						getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						sendPacket(ActionFailed.STATIC_PACKET);
-						sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
-						return;
-					}
-					
-					// Verify if the bow can be use
-					if (_disableRangedAttackEndTime <= GameTimeController.getInstance().getGameTicks())
-					{
-						// Verify if L2PcInstance owns enough MP
+						// Check if there are arrows to use or else cancel the attack.
+						if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW))
+						{
+							// Cancel the action because the L2PcInstance have no arrow
+							getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+							sendPacket(ActionFailed.STATIC_PACKET);
+							sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
+							return;
+						}
+						
+						// Checking if target has moved to peace zone - only for player-bow attacks at the moment
+						// Other melee is checked in movement code and for offensive spells a check is done every time
+						if (target.isInsidePeaceZone(getActingPlayer()))
+						{
+							getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+							sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
+							sendPacket(ActionFailed.STATIC_PACKET);
+							return;
+						}
+						
+						// Check if player has enough MP to shoot.
 						int mpConsume = weaponItem.getMpConsume();
 						if ((weaponItem.getReducedMpConsume() > 0) && (Rnd.get(100) < weaponItem.getReducedMpConsumeChance()))
 						{
 							mpConsume = weaponItem.getReducedMpConsume();
 						}
 						mpConsume = isAffected(EffectFlag.CHEAPSHOT) ? 0 : mpConsume;
-						
 						if (getCurrentMp() < mpConsume)
 						{
 							// If L2PcInstance doesn't have enough MP, stop the attack
@@ -1104,21 +1098,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						{
 							getStatus().reduceMp(mpConsume);
 						}
-						
-						// Set the period of bow no re-use
-						_disableRangedAttackEndTime = (5 * GameTimeController.TICKS_PER_SECOND) + GameTimeController.getInstance().getGameTicks();
 					}
-					else
-					{
-						// Cancel the action because the bow can't be re-use at this moment
-						ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
-						sendPacket(ActionFailed.STATIC_PACKET);
-						return;
-					}
-				}
-				else if (_disableRangedAttackEndTime > GameTimeController.getInstance().getGameTicks())
-				{
-					return;
 				}
 			}
 			
@@ -1128,42 +1108,63 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				setCurrentCp(getCurrentCp() - 10);
 			}
 			
-			final boolean wasSSCharged = isChargedShot(ShotType.SOULSHOTS) || isChargedShot(ShotType.BLESSED_SOULSHOTS); // Verify if soulshots are charged.
-			final int timeAtk = Formulas.calculateTimeBetweenAttacks(getPAtkSpd()); // Get the Attack Speed of the L2Character (delay (in milliseconds) before next attack)
-			final int timeToHit = timeAtk / 2; // the hit is calculated to happen halfway to the animation - might need further tuning e.g. in bow case
-			final int ssGrade = (weaponItem != null) ? weaponItem.getItemGrade().ordinal() : 0;
-			final Attack attack = new Attack(this, target, wasSSCharged, ssGrade);
-			_attackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(timeAtk);
+			final WeaponType attackType = getAttackType();
+			final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == L2Item.SLOT_LR_HAND);
+			final int timeAtk = Formulas.calculateTimeBetweenAttacks(getPAtkSpd());
+			final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
+			_attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
 			
 			// Make sure that char is facing selected target
 			// also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
 			setHeading(Util.calculateHeadingFrom(this, target));
 			
 			// Get the Attack Reuse Delay of the L2Weapon
-			boolean hitted = false;
-			switch (getAttackType())
+			final Attack attack = generateAttackTargetData(target, weaponItem, attackType);
+			boolean crossbow = false;
+			switch (attackType)
 			{
-				case BOW:
-				{
-					hitted = doAttackHitByBow(attack, target, timeAtk, Formulas.calculateReuseTime(this, weaponItem), false);
-					break;
-				}
 				case CROSSBOW:
 				case TWOHANDCROSSBOW:
 				{
-					hitted = doAttackHitByBow(attack, target, timeAtk, Formulas.calculateReuseTime(this, weaponItem), true);
-					break;
+					crossbow = true;
 				}
-				case POLE:
+				case BOW:
 				{
-					hitted = doAttackHitSimple(attack, target, timeToHit);
+					final int reuse = Formulas.calculateReuseTime(this, weaponItem);
+					
+					// Consume arrows
+					final Inventory inventory = getInventory();
+					if (inventory != null)
+					{
+						inventory.reduceArrowCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
+					}
+					
+					if (isMoving())
+					{
+						stopMove(null);
+					}
+					
+					// Check if the L2Character is a L2PcInstance
+					if (isPlayer())
+					{
+						if (crossbow)
+						{
+							sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
+						}
+						
+						sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, reuse));
+					}
+					
+					// Calculate and set the disable delay of the bow in function of the Attack Speed
+					_disableRangedAttackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(reuse);
+					_hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
 					break;
 				}
 				case FIST:
 				{
 					if (!isPlayer())
 					{
-						hitted = doAttackHitSimple(attack, target, timeToHit);
+						_hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
 						break;
 					}
 				}
@@ -1172,39 +1173,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				case DUALBLUNT:
 				case DUALDAGGER:
 				{
-					hitted = doAttackHitByDual(attack, target, timeToHit);
+					final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
+					_hitTask = ThreadPoolManager.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
 					break;
 				}
 				default:
 				{
-					hitted = doAttackHitSimple(attack, target, timeToHit);
+					_hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
 					break;
-				}
-			}
-			
-			// Flag the attacker if it's a L2PcInstance outside a PvP area
-			final L2PcInstance player = getActingPlayer();
-			if (player != null)
-			{
-				AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
-				player.updatePvPStatus(target);
-			}
-			// Check if hit isn't missed
-			if (!hitted)
-			{
-				abortAttack(); // Abort the attack of the L2Character and send Server->Client ActionFailed packet
-			}
-			else if ((player != null) && !target.isHpBlocked())
-			{
-				if (player.isCursedWeaponEquipped())
-				{
-					// If hit by a cursed weapon, CP is reduced to 0
-					target.setCurrentCp(0);
-				}
-				else if (player.isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
-				{
-					// If a cursed weapon is hit by a Hero, CP is reduced to 0
-					target.setCurrentCp(0);
 				}
 			}
 			
@@ -1213,6 +1189,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			if (attack.hasHits())
 			{
 				broadcastPacket(attack);
+			}
+			
+			// Flag the attacker if it's a L2PcInstance outside a PvP area
+			final L2PcInstance player = getActingPlayer();
+			if (player != null)
+			{
+				AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
+				player.updatePvPStatus(target);
 			}
 			
 			if (isFakePlayer() && (target.isPlayable() || target.isFakePlayer()))
@@ -1225,326 +1209,94 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
 				}
 			}
-			
-			// Notify AI with EVT_READY_TO_ACT
-			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), timeAtk);
 		}
 	}
 	
-	/**
-	 * Launch a Bow attack.<br>
-	 * <B><U>Actions</U>:</B>
-	 * <ul>
-	 * <li>Calculate if hit is missed or not</li>
-	 * <li>Consume arrows</li>
-	 * <li>If hit isn't missed, calculate if shield defense is efficient</li>
-	 * <li>If hit isn't missed, calculate if hit is critical</li>
-	 * <li>If hit isn't missed, calculate physical damages</li>
-	 * <li>If the L2Character is a L2PcInstance, Send a Server->Client packet SetupGauge</li>
-	 * <li>Create a new hit task with Medium priority</li>
-	 * <li>Calculate and set the disable delay of the bow in function of the Attack Speed</li>
-	 * <li>Add this hit to the Server-Client packet Attack</li>
-	 * </ul>
-	 * @param attack Server->Client packet Attack in which the hit will be added
-	 * @param target The L2Character targeted
-	 * @param sAtk The Attack Speed of the attacker
-	 * @param reuse
-	 * @param crossbow : if used weapon to fire is crossbow instead of a bow
-	 * @return True if the hit isn't missed
-	 */
-	private boolean doAttackHitByBow(Attack attack, L2Character target, int sAtk, int reuse, boolean crossbow)
+	private Attack generateAttackTargetData(L2Character target, L2Weapon weapon, WeaponType weaponType)
 	{
-		int damage1 = 0;
-		byte shld1 = 0;
-		boolean crit1 = false;
+		final boolean isDual = WeaponType.DUAL.equals(weaponType) || WeaponType.DUALBLUNT.equals(weaponType) || WeaponType.DUALDAGGER.equals(weaponType) || WeaponType.DUALFIST.equals(weaponType);
+		final Attack attack = new Attack(this, target);
 		
-		// Calculate if hit is missed or not
-		final boolean miss1 = Formulas.calcHitMiss(this, target);
+		boolean shotConsumed = false;
 		
-		// Consume arrows
-		final Inventory inventory = getInventory();
-		if (inventory != null)
+		// Calculate the main target hit
+		Hit hit = generateHit(target, weapon, shotConsumed, isDual);
+		attack.addHit(hit);
+		shotConsumed = hit.isShotUsed();
+		
+		// Second hit for the dual attack.
+		if (isDual)
 		{
-			inventory.reduceArrowCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
+			hit = generateHit(target, weapon, shotConsumed, isDual);
+			attack.addHit(hit);
+			shotConsumed = hit.isShotUsed();
 		}
-		
-		if (isMoving())
-		{
-			stopMove(null);
-		}
-		
-		// Check if hit isn't missed
-		if (!miss1)
-		{
-			// Calculate if shield defense is efficient
-			shld1 = Formulas.calcShldUse(this, target);
-			
-			// Calculate if hit is critical
-			crit1 = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
-			
-			// Calculate physical damages
-			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, shld1, crit1, attack.hasSoulshot());
-			
-			// Bows Ranged Damage Formula (Damage gradually decreases when 60% or lower than full hit range, and increases when 60% or higher).
-			// full hit range is 500 which is the base bow range, and the 60% of this is 800.
-			if (!crossbow)
-			{
-				damage1 *= (calculateDistance(target, true, false) / 4000) + 0.8;
-			}
-		}
-		
-		// Check if the L2Character is a L2PcInstance
-		if (isPlayer())
-		{
-			if (crossbow)
-			{
-				sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
-			}
-			
-			sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, sAtk + reuse));
-		}
-		
-		// Create a new hit task with Medium priority
-		ThreadPoolManager.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
-		
-		// Calculate and set the disable delay of the bow in function of the Attack Speed
-		_disableRangedAttackEndTime = ((sAtk + reuse) / GameTimeController.MILLIS_IN_TICK) + GameTimeController.getInstance().getGameTicks();
-		
-		// Add this hit to the Server-Client packet Attack
-		attack.addHit(target, damage1, miss1, crit1, shld1);
-		
-		// Return true if hit isn't missed
-		return !miss1;
-	}
-	
-	/**
-	 * Launch a Dual attack.<br>
-	 * <B><U>Actions</U>:</B>
-	 * <ul>
-	 * <li>Calculate if hits are missed or not</li>
-	 * <li>If hits aren't missed, calculate if shield defense is efficient</li>
-	 * <li>If hits aren't missed, calculate if hit is critical</li>
-	 * <li>If hits aren't missed, calculate physical damages</li>
-	 * <li>Create 2 new hit tasks with Medium priority</li>
-	 * <li>Add those hits to the Server-Client packet Attack</li>
-	 * </ul>
-	 * @param attack Server->Client packet Attack in which the hit will be added
-	 * @param target The L2Character targeted
-	 * @param sAtk
-	 * @return True if hit 1 or hit 2 isn't missed
-	 */
-	private boolean doAttackHitByDual(Attack attack, L2Character target, int sAtk)
-	{
-		int damage1 = 0;
-		int damage2 = 0;
-		byte shld1 = 0;
-		byte shld2 = 0;
-		boolean crit1 = false;
-		boolean crit2 = false;
-		
-		// Calculate if hits are missed or not
-		boolean miss1 = Formulas.calcHitMiss(this, target);
-		boolean miss2 = Formulas.calcHitMiss(this, target);
-		
-		// Check if hit 1 isn't missed
-		if (!miss1)
-		{
-			// Calculate if shield defense is efficient against hit 1
-			shld1 = Formulas.calcShldUse(this, target);
-			
-			// Calculate if hit 1 is critical
-			crit1 = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
-			
-			// Calculate physical damages of hit 1
-			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, shld1, crit1, attack.hasSoulshot());
-			damage1 /= 2;
-		}
-		
-		// Check if hit 2 isn't missed
-		if (!miss2)
-		{
-			// Calculate if shield defense is efficient against hit 2
-			shld2 = Formulas.calcShldUse(this, target);
-			
-			// Calculate if hit 2 is critical
-			crit2 = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
-			
-			// Calculate physical damages of hit 2
-			damage2 = (int) Formulas.calcAutoAttackDamage(this, target, shld2, crit2, attack.hasSoulshot());
-			damage2 /= 2;
-		}
-		
-		// Create a new hit task with Medium priority for hit 1
-		ThreadPoolManager.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk / 2);
-		
-		// Create a new hit task with Medium priority for hit 2 with a higher delay
-		ThreadPoolManager.schedule(new HitTask(this, target, damage2, crit2, miss2, attack.hasSoulshot(), shld2), sAtk);
-		
-		// Add those hits to the Server-Client packet Attack
-		attack.addHit(target, damage1, miss1, crit1, shld1);
-		attack.addHit(target, damage2, miss2, crit2, shld2);
-		
-		// Launch multiple attack (if possible)
-		int attackCountMax = (int) getStat().getValue(Stats.ATTACK_COUNT_MAX, 1);
-		if (attackCountMax > 1)
-		{
-			attackCountMax--; // Main target has already been attacked.
-			final List<L2Character> attackSurround = getAttackSurround(target, sAtk, attackCountMax);
-			for (L2Character surroundTarget : attackSurround)
-			{
-				int damage = 0;
-				byte shld = 0;
-				boolean crit = false;
-				final boolean miss = Formulas.calcHitMiss(this, target);
-				
-				if (!miss)
-				{
-					shld = Formulas.calcShldUse(this, surroundTarget);
-					crit = Formulas.calcCrit(getStat().getCriticalHit(), this, surroundTarget, null);
-					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, shld, crit, attack.hasSoulshot());
-					damage /= 2;
-				}
-				
-				ThreadPoolManager.schedule(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk / 2);
-				attack.addHit(surroundTarget, damage, miss, crit, shld);
-				miss1 |= miss;
-			}
-			
-			for (L2Character surroundTarget : attackSurround)
-			{
-				int damage = 0;
-				byte shld = 0;
-				boolean crit = false;
-				final boolean miss = Formulas.calcHitMiss(this, target);
-				
-				if (!miss)
-				{
-					shld = Formulas.calcShldUse(this, surroundTarget);
-					crit = Formulas.calcCrit(getStat().getCriticalHit(), this, surroundTarget, null);
-					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, shld, crit, attack.hasSoulshot());
-					damage /= 2;
-				}
-				
-				ThreadPoolManager.schedule(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk);
-				attack.addHit(surroundTarget, damage, miss, crit, shld);
-				miss2 |= miss;
-			}
-			
-		}
-		
-		// Return true if hit 1 or hit 2 isn't missed
-		return (!miss1 || !miss2);
-	}
-	
-	/**
-	 * Launch a simple attack.<br>
-	 * <B><U>Actions</U>:</B>
-	 * <ul>
-	 * <li>Calculate if hit is missed or not</li>
-	 * <li>If hit isn't missed, calculate if shield defense is efficient</li>
-	 * <li>If hit isn't missed, calculate if hit is critical</li>
-	 * <li>If hit isn't missed, calculate physical damages</li>
-	 * <li>Create a new hit task with Medium priority</li>
-	 * <li>Add this hit to the Server-Client packet Attack</li>
-	 * </ul>
-	 * @param attack Server->Client packet Attack in which the hit will be added
-	 * @param target The L2Character targeted
-	 * @param sAtk
-	 * @return True if the hit isn't missed
-	 */
-	private boolean doAttackHitSimple(Attack attack, L2Character target, int sAtk)
-	{
-		int damage1 = 0;
-		byte shld1 = 0;
-		boolean crit1 = false;
-		
-		// Calculate if hit is missed or not
-		boolean miss1 = Formulas.calcHitMiss(this, target);
-		
-		// Check if hit isn't missed
-		if (!miss1)
-		{
-			// Calculate if shield defense is efficient
-			shld1 = Formulas.calcShldUse(this, target);
-			
-			// Calculate if hit is critical
-			crit1 = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
-			
-			// Calculate physical damages
-			damage1 = (int) Formulas.calcAutoAttackDamage(this, target, shld1, crit1, attack.hasSoulshot());
-		}
-		
-		// Create a new hit task with Medium priority
-		ThreadPoolManager.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
-		
-		// Add this hit to the Server-Client packet Attack
-		attack.addHit(target, damage1, miss1, crit1, shld1);
 		
 		// H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
 		int attackCountMax = (int) getStat().getValue(Stats.ATTACK_COUNT_MAX, 1);
-		if (attackCountMax > 1)
+		if ((attackCountMax > 1) && !(getStat().getValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 0) > 0))
 		{
-			attackCountMax--; // Main target has already been attacked.
-			for (L2Character surroundTarget : getAttackSurround(target, sAtk, attackCountMax))
+			final double headingAngle = Util.convertHeadingToDegree(getHeading());
+			final int maxRadius = getStat().getPhysicalAttackRadius();
+			final int halfAttackAngle = getStat().getPhysicalAttackAngle() / 2;
+			for (L2Character obj : L2World.getInstance().getVisibleObjects(this, L2Character.class, maxRadius))
 			{
-				int damage = 0;
-				byte shld = 0;
-				boolean crit = false;
-				final boolean miss = Formulas.calcHitMiss(this, target);
-				
-				if (!miss)
+				// Skip main target.
+				if (obj == target)
 				{
-					shld = Formulas.calcShldUse(this, surroundTarget);
-					crit = Formulas.calcCrit(getStat().getCriticalHit(), this, surroundTarget, null);
-					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, shld, crit, attack.hasSoulshot());
+					continue;
 				}
 				
-				ThreadPoolManager.schedule(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk);
-				attack.addHit(surroundTarget, damage, miss, crit, shld);
-				miss1 |= miss;
+				// Check if target is within attack angle.
+				if (Math.abs(calculateDirectionTo(obj) - headingAngle) > halfAttackAngle)
+				{
+					continue;
+				}
+				
+				// Launch a simple attack against the L2Character targeted
+				if (obj.isAutoAttackable(this))
+				{
+					hit = generateHit(obj, weapon, shotConsumed, false);
+					attack.addHit(hit);
+					shotConsumed = hit.isShotUsed();
+					
+					if (--attackCountMax <= 0)
+					{
+						break;
+					}
+				}
 			}
-			
 		}
 		
-		// Return true if hit isn't missed
-		return !miss1;
+		return attack;
 	}
 	
-	/**
-	 * @param target
-	 * @param sAtk
-	 * @param attackCountMax
-	 * @return a list of surrounding enemies based on your weapon.
-	 */
-	private List<L2Character> getAttackSurround(L2Character target, int sAtk, int attackCountMax)
+	private Hit generateHit(L2Character target, L2Weapon weapon, boolean shotConsumed, boolean halfDamage)
 	{
-		final List<L2Character> list = new LinkedList<>();
-		final int maxRadius = getStat().getPhysicalAttackRadius();
-		final int maxAngleDiff = getStat().getPhysicalAttackAngle();
-		for (L2Character obj : L2World.getInstance().getVisibleObjects(this, L2Character.class, maxRadius))
+		int damage = 0;
+		byte shld = 0;
+		boolean crit = false;
+		boolean miss = Formulas.calcHitMiss(this, target);
+		if (!shotConsumed)
 		{
-			if (obj == target)
+			shotConsumed = !miss && unchargeShot(ShotType.SOULSHOTS);
+		}
+		
+		int ssGrade = (shotConsumed && (weapon != null)) ? weapon.getItemGrade().ordinal() : 0;
+		
+		// Check if hit isn't missed
+		if (!miss)
+		{
+			shld = Formulas.calcShldUse(this, target);
+			crit = Formulas.calcCrit(getStat().getCriticalHit(), this, target, null);
+			damage = (int) Formulas.calcAutoAttackDamage(this, target, shld, crit, shotConsumed);
+			if (halfDamage)
 			{
-				continue;
-			}
-			
-			if (!isFacing(obj, maxAngleDiff))
-			{
-				continue;
-			}
-			
-			// Launch a simple attack against the L2Character targeted
-			if (obj.isAutoAttackable(this))
-			{
-				list.add(obj);
-				if (list.size() >= attackCountMax)
-				{
-					break;
-				}
+				damage /= 2;
 			}
 		}
 		
-		return list;
+		return new Hit(target, damage, miss, crit, shld, shotConsumed, ssGrade);
 	}
 	
 	public void doCast(Skill skill)
@@ -3103,6 +2855,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		if (isAttackingNow())
 		{
+			final ScheduledFuture<?> hitTask = _hitTask;
+			if (hitTask != null)
+			{
+				hitTask.cancel(false);
+				_hitTask = null;
+			}
+			
 			sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
@@ -3859,182 +3618,155 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * <li>If attack isn't aborted and hit isn't missed, reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary</li>
 	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li>
 	 * </ul>
-	 * @param target The L2Character targeted
-	 * @param damage Nb of HP to reduce
-	 * @param crit True if hit is critical
-	 * @param miss True if hit is missed
-	 * @param soulshot True if SoulShot are charged
-	 * @param shld True if shield is efficient
+	 * @param weapon the weapon used for the hit
+	 * @param attack the attack data of targets to hit
+	 * @param hitTime the time it took for this hit to occur
+	 * @param attackTime the time it takes for the whole attack to complete
 	 */
-	public void onHitTimer(L2Character target, int damage, boolean crit, boolean miss, boolean soulshot, byte shld)
+	public void onHitTimeNotDual(L2Weapon weapon, Attack attack, int hitTime, int attackTime)
 	{
-		// If the attacker/target is dead or use fake death, notify the AI with EVT_CANCEL
-		// and send a Server->Client packet ActionFailed (if attacker is a L2PcInstance)
-		if ((target == null) || isAlikeDead())
+		if (isAlikeDead())
 		{
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
 		}
 		
-		if ((isNpc() && target.isAlikeDead()) || target.isDead() || (!isInSurroundingRegion(target) && !isDoor()))
+		for (Hit hit : attack.getHits())
 		{
-			// getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
-			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
-			
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (miss)
-		{
-			// Notify target AI
-			if (target.hasAI())
+			final L2Character target = ((L2Character) hit.getTarget());
+			if ((target == null) || target.isDead() || !isInSurroundingRegion(target))
 			{
-				target.getAI().notifyEvent(CtrlEvent.EVT_EVADED, this);
+				continue;
 			}
+			
+			if (hit.isMiss())
+			{
+				notifyAttackAvoid(target, false);
+			}
+			else
+			{
+				onHitTarget(target, weapon, hit);
+			}
+		}
+		
+		_hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - hitTime);
+	}
+	
+	public void onFirstHitTimeForDual(L2Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack)
+	{
+		if (isAlikeDead())
+		{
+			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
+			return;
+		}
+		
+		_hitTask = ThreadPoolManager.schedule(() -> onSecondHitTimeForDual(weapon, attack, hitTime, delayForSecondAttack, attackTime), delayForSecondAttack);
+		
+		// First dual attack is the first hit only.
+		final Hit hit = attack.getHits().get(0);
+		final L2Character target = ((L2Character) hit.getTarget());
+		
+		if ((target == null) || target.isDead() || !isInSurroundingRegion(target))
+		{
+			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
+			return;
+		}
+		
+		if (hit.isMiss())
+		{
 			notifyAttackAvoid(target, false);
 		}
 		else
 		{
-			// If we didn't miss the hit, discharge the shoulshots, if any
-			setChargedShot(isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS, false);
+			onHitTarget(target, weapon, hit);
 		}
-		
-		// Check Raidboss attack
-		// Character will be petrified if attacking a raid that's more
-		// than 8 levels lower
-		if (target.isRaid() && target.giveRaidCurse() && !Config.RAID_DISABLE_CURSE)
+	}
+	
+	public void onSecondHitTimeForDual(L2Weapon weapon, Attack attack, int hitTime1, int hitTime2, int attackTime)
+	{
+		if (isAlikeDead())
 		{
-			if (getLevel() > (target.getLevel() + 8))
-			{
-				final Skill skill = CommonSkill.RAID_CURSE2.getSkill();
-				if (skill != null)
-				{
-					skill.applyEffects(target, this);
-				}
-				else
-				{
-					_log.warning("Skill 4515 at level 1 is missing in DP.");
-				}
-				
-				damage = 0; // prevents messing up drop calculation
-			}
+			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
+			return;
 		}
 		
-		if (!miss && (damage > 0))
+		// Second dual attack is the remaining hits (first hit not included)
+		for (int i = 1; i < attack.getHits().size(); i++)
 		{
-			final L2Weapon weapon = getActiveWeaponItem();
-			final boolean isRanged = ((weapon != null) && weapon.getItemType().isRanged());
-			int reflectedDamage = 0;
-			
-			// reduce targets HP
-			target.reduceCurrentHp(damage, this, null, false, false, crit, false);
-			
-			// Send message about damage/crit or miss
-			sendDamageMessage(target, null, damage, crit, miss);
-			
-			// If L2Character target is a L2PcInstance, send a system message
-			if (target.isPlayer())
+			final Hit hit = attack.getHits().get(i);
+			final L2Character target = ((L2Character) hit.getTarget());
+			if ((target == null) || target.isDead() || !isInSurroundingRegion(target))
 			{
-				final L2PcInstance enemy = target.getActingPlayer();
-				enemy.getAI().clientStartAutoAttack();
+				continue;
 			}
 			
-			// When killing blow is made, the target doesn't reflect (vamp too?). Do not reflect or vampiric if target is invulnerable.
-			if (!target.isDead() && !target.isHpBlocked())
+			if (hit.isMiss())
 			{
-				if (!isRanged) // No reflect if weapon is of type bow
-				{
-					// quick fix for no drop from raid if boss attack high-level char with damage reflection
-					if (!target.isRaid() || (getActingPlayer() == null) || (getActingPlayer().getLevel() <= (target.getLevel() + 8)))
-					{
-						// Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
-						final double reflectPercent = target.getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT, 0) - getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
-						
-						if (reflectPercent > 0)
-						{
-							reflectedDamage = (int) ((reflectPercent / 100.) * damage);
-							reflectedDamage = Math.min(reflectedDamage, target.getMaxHp());
-							reflectedDamage = Math.min(reflectedDamage, getStat().getPDef());
-						}
-					}
-				}
-				
-				// Absorb HP from the damage inflicted
-				double absorbPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
-				if ((absorbPercent > 0) && (Rnd.nextDouble() < getStat().getValue(Stats.ABSORB_DAMAGE_CHANCE)))
-				{
-					int absorbDamage = (int) Math.min(absorbPercent * damage, getMaxRecoverableHp() - getCurrentHp());
-					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
-					if (absorbDamage > 0)
-					{
-						setCurrentHp(getCurrentHp() + absorbDamage);
-					}
-				}
-				
-				// Absorb MP from the damage inflicted
-				absorbPercent = getStat().getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
-				if (absorbPercent > 0)
-				{
-					int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, getMaxRecoverableMp() - getCurrentMp());
-					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
-					if (absorbDamage > 0)
-					{
-						setCurrentMp(getCurrentMp() + absorbDamage);
-					}
-				}
-				
-				if (reflectedDamage > 0)
-				{
-					reduceCurrentHp(reflectedDamage, target, null, false, false, crit, true);
-					target.sendDamageMessage(this, null, reflectedDamage, false, false);
-				}
+				notifyAttackAvoid(target, false);
 			}
-			
-			// Notify AI with EVT_ATTACKED
-			if (target.hasAI())
+			else
 			{
-				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
-			}
-			getAI().clientStartAutoAttack();
-			if (isSummon())
-			{
-				final L2PcInstance owner = ((L2Summon) this).getOwner();
-				if (owner != null)
-				{
-					owner.getAI().clientStartAutoAttack();
-				}
-			}
-			
-			// Manage attack or cast break of the target (calculating rate, sending message...)
-			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
-			{
-				target.breakAttack();
-				target.breakCast();
-			}
-			
-			if (_triggerSkills != null)
-			{
-				for (OptionsSkillHolder holder : _triggerSkills.values())
-				{
-					if ((!crit && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && crit))
-					{
-						if (Rnd.get(100) < holder.getChance())
-						{
-							SkillCaster.triggerCast(this, target, holder.getSkill(), null, false);
-						}
-					}
-				}
-			}
-			// Launch weapon Special ability effect if available
-			if (crit && (weapon != null))
-			{
-				weapon.applyConditionalSkills(this, target, null, ItemSkillType.ON_CRITICAL_SKILL);
+				onHitTarget(target, weapon, hit);
 			}
 		}
 		
-		// Recharge any active auto-soulshot tasks for current creature.
-		rechargeShots(true, false, false);
+		_hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
+	}
+	
+	public void onHitTarget(L2Character target, L2Weapon weapon, Hit hit)
+	{
+		// reduce targets HP
+		doAttack(hit.getDamage(), target, null, false, false, hit.isCritical(), false);
+		
+		// Notify to scripts when the attack has been done.
+		EventDispatcher.getInstance().notifyEvent(new OnCreatureAttack(this, target, null), this);
+		EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target, null), target);
+		
+		if (_triggerSkills != null)
+		{
+			for (OptionsSkillHolder holder : _triggerSkills.values())
+			{
+				if ((!hit.isCritical() && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && hit.isCritical()))
+				{
+					if (Rnd.get(100) < holder.getChance())
+					{
+						SkillCaster.triggerCast(this, target, holder.getSkill(), null, false);
+					}
+				}
+			}
+		}
+		
+		// Launch weapon Special ability effect if available
+		if (hit.isCritical() && (weapon != null))
+		{
+			weapon.applyConditionalSkills(this, target, null, ItemSkillType.ON_CRITICAL_SKILL);
+		}
+		
+		if (isPlayer() && !target.isHpBlocked())
+		{
+			if (((L2PcInstance) this).isCursedWeaponEquipped())
+			{
+				// If hit by a cursed weapon, CP is reduced to 0
+				target.setCurrentCp(0);
+			}
+			else if (((L2PcInstance) this).isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
+			{
+				// If a cursed weapon is hit by a Hero, CP is reduced to 0
+				target.setCurrentCp(0);
+			}
+		}
+	}
+	
+	private void onAttackFinish(Attack attack)
+	{
+		// Recharge any active auto-soulshot tasks for current creature after the attack has successfully hit.
+		if (attack.getHits().stream().anyMatch(h -> !h.isMiss()))
+		{
+			rechargeShots(true, false, false);
+		}
+		
+		// Notify that this character is ready to act for the next attack
+		getAI().notifyEvent(CtrlEvent.EVT_READY_TO_ACT);
 	}
 	
 	/**
@@ -4496,7 +4228,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return _attackEndTime;
 	}
 	
-	public int getRangedAttackEndTime()
+	public long getRangedAttackEndTime()
 	{
 		return _disableRangedAttackEndTime;
 	}
@@ -4696,6 +4428,102 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void addStatusListener(L2Character object)
 	{
 		getStatus().addStatusListener(object);
+	}
+	
+	public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
+	{
+		// Start attack stance and notify being attacked.
+		if (target.hasAI())
+		{
+			target.getAI().clientStartAutoAttack();
+			target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
+		}
+		
+		getAI().clientStartAutoAttack();
+		
+		if (!reflect && !isDOT)
+		{
+			damage *= getStat().getPositionTypeValue(Stats.ATTACK_DAMAGE, Position.getPosition(this, target));
+			
+			// Counterattacks happen before damage received.
+			if (!target.isDead() && (skill != null))
+			{
+				Formulas.calcCounterAttack(this, target, skill, true);
+				
+				// Shield Deflect Magic: Reflect all damage on caster.
+				if (skill.isMagic() && (target.getStat().getValue(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100)))
+				{
+					reduceCurrentHp(damage, target, skill, isDOT, directlyToHp, critical, true);
+					return;
+				}
+			}
+		}
+		
+		// Target receives the damage.
+		target.reduceCurrentHp(damage, this, skill, isDOT, directlyToHp, critical, reflect);
+		
+		// Check if damage should be reflected or absorbed. When killing blow is made, the target doesn't reflect (vamp too?).
+		if (!reflect && !isDOT && !target.isDead())
+		{
+			int reflectedDamage = 0;
+			
+			// Reduce HP of the target and calculate reflection damage to reduce HP of attacker if necessary
+			double reflectPercent = target.getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT, 0) - getStat().getValue(Stats.REFLECT_DAMAGE_PERCENT_DEFENSE, 0);
+			if (reflectPercent > 0)
+			{
+				reflectedDamage = (int) ((reflectPercent / 100.) * damage);
+				reflectedDamage = Math.min(reflectedDamage, target.getMaxHp());
+				
+				// Reflected damage is limited by P.Def/M.Def
+				if ((skill != null) && skill.isMagic())
+				{
+					reflectedDamage = (int) Math.min(reflectedDamage, target.getStat().getMDef() * 1.5);
+				}
+				else
+				{
+					reflectedDamage = Math.min(reflectedDamage, target.getStat().getPDef());
+				}
+			}
+			
+			// Absorb HP from the damage inflicted
+			double absorbPercent = getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * target.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
+			if ((absorbPercent > 0) && (Rnd.nextDouble() < getStat().getValue(Stats.ABSORB_DAMAGE_CHANCE)))
+			{
+				int absorbDamage = (int) Math.min(absorbPercent * damage, getMaxRecoverableHp() - getCurrentHp());
+				absorbDamage = Math.min(absorbDamage, (int) target.getCurrentHp());
+				if (absorbDamage > 0)
+				{
+					setCurrentHp(getCurrentHp() + absorbDamage);
+				}
+			}
+			
+			// Absorb MP from the damage inflicted. Unconfirmed for skill attacks.
+			if (skill == null)
+			{
+				absorbPercent = getStat().getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
+				if (absorbPercent > 0)
+				{
+					int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, getMaxRecoverableMp() - getCurrentMp());
+					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
+					if (absorbDamage > 0)
+					{
+						setCurrentMp(getCurrentMp() + absorbDamage);
+					}
+				}
+			}
+			
+			if (reflectedDamage > 0)
+			{
+				target.doAttack(reflectedDamage, this, skill, isDOT, directlyToHp, critical, true);
+			}
+		}
+		
+		// Break casting of target during attack.
+		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
+		{
+			target.breakAttack();
+			target.breakCast();
+		}
 	}
 	
 	public void reduceCurrentHp(double value, L2Character attacker, Skill skill)
@@ -5596,6 +5424,39 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public double distFromMe(L2Character target)
 	{
 		return calculateDistance(target, true, false);
+	}
+	
+	public boolean isChargedShot(ShotType type)
+	{
+		return _chargedShots.contains(type);
+	}
+	
+	/**
+	 * @param type of the shot to charge
+	 * @return {@code true} if there was no shot of this type charged before, {@code false} otherwise.
+	 */
+	public boolean chargeShot(ShotType type)
+	{
+		return _chargedShots.add(type);
+	}
+	
+	/**
+	 * @param type of the shot to uncharge
+	 * @return {@code true} if there was a charged shot of this type, {@code false} otherwise.
+	 */
+	public boolean unchargeShot(ShotType type)
+	{
+		return _chargedShots.remove(type);
+	}
+	
+	public void unchargeAllShots()
+	{
+		_chargedShots = EnumSet.noneOf(ShotType.class);
+	}
+	
+	public void rechargeShots(boolean physical, boolean magic, boolean fish)
+	{
+		// Dummy method to be overriden.
 	}
 	
 	public void setCursorKeyMovement(boolean value)
