@@ -81,7 +81,10 @@ public final class Augmentation
 	{
 		for (Options op : _options)
 		{
-			op.apply(player);
+			if (op != null)
+			{
+				op.apply(player);
+			}
 		}
 	}
 	
@@ -89,7 +92,10 @@ public final class Augmentation
 	{
 		for (Options op : _options)
 		{
-			op.remove(player);
+			if (op != null)
+			{
+				op.remove(player);
+			}
 		}
 	}
 }
