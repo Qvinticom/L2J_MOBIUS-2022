@@ -170,59 +170,72 @@
 	<skill id="26116" toLevel="6" name="Zodiac Agathion Stat Boost">
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
 		<effects>
 			<effect name="StatUp">
-				<value level="1">1</value>
-				<value level="2">1</value>
-				<value level="3">1</value>
-				<value level="4">1</value>
-				<value level="5">1</value>
-				<value level="6">1</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
 				<stat>MEN</stat>
 			</effect>
 			<effect name="StatUp">
-				<value level="1">0</value>
-				<value level="2">1</value>
-				<value level="3">1</value>
-				<value level="4">1</value>
-				<value level="5">1</value>
-				<value level="6">1</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp">
-				<value level="1">0</value>
-				<value level="2">0</value>
-				<value level="3">1</value>
-				<value level="4">1</value>
-				<value level="5">1</value>
-				<value level="6">1</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
 				<stat>WIT</stat>
 			</effect>
 			<effect name="StatUp">
-				<value level="1">0</value>
-				<value level="2">0</value>
-				<value level="3">0</value>
-				<value level="4">1</value>
-				<value level="5">1</value>
-				<value level="6">1</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
-				<value level="1">0</value>
-				<value level="2">0</value>
-				<value level="3">0</value>
-				<value level="4">0</value>
-				<value level="5">1</value>
-				<value level="6">1</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<value level="1">0</value>
-				<value level="2">0</value>
-				<value level="3">0</value>
-				<value level="4">0</value>
-				<value level="5">0</value>
-				<value level="6">1</value>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+				</amount>
 				<stat>STR</stat>
 			</effect>
 		</effects>
@@ -231,72 +244,75 @@
 		<!-- Attribute Resistance + 5. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
-		<effect name="DefenceAttribute">
-			<amount>
-				<value level="1">5</value>
-				<value level="2">10</value>
-				<value level="3">15</value>
-				<value level="4">20</value>
-				<value level="4">25</value>
-				<value level="4">30</value>
-			</amount>
-			<attribute>FIRE</attribute>
-		</effect>
-		<effect name="DefenceAttribute">
-			<amount>
-				<value level="1">5</value>
-				<value level="2">10</value>
-				<value level="3">15</value>
-				<value level="4">20</value>
-				<value level="4">25</value>
-				<value level="4">30</value>
-			</amount>
-			<attribute>WIND</attribute>
-		</effect>
-		<effect name="DefenceAttribute">
-			<amount>
-				<value level="1">5</value>
-				<value level="2">10</value>
-				<value level="3">15</value>
-				<value level="4">20</value>
-				<value level="4">25</value>
-				<value level="4">30</value>
-			</amount>
-			<attribute>WATER</attribute>
-		</effect>
-		<effect name="DefenceAttribute">
-			<amount>
-				<value level="1">5</value>
-				<value level="2">10</value>
-				<value level="3">15</value>
-				<value level="4">20</value>
-				<value level="4">25</value>
-				<value level="4">30</value>
-			</amount>
-			<attribute>EARTH</attribute>
-		</effect>
-		<effect name="DefenceAttribute">
-			<amount>
-				<value level="1">5</value>
-				<value level="2">10</value>
-				<value level="3">15</value>
-				<value level="4">20</value>
-				<value level="4">25</value>
-				<value level="4">30</value>
-			</amount>
-			<attribute>HOLY</attribute>
-		</effect>
-		<effect name="DefenceAttribute">
-			<amount>
-				<value level="1">5</value>
-				<value level="2">10</value>
-				<value level="3">15</value>
-				<value level="4">20</value>
-				<value level="4">25</value>
-				<value level="4">30</value>
-			</amount>
-			<attribute>DARK</attribute>
-		</effect>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="26118" toLevel="12" name="Healing Light">
 		<!-- Restores entire party's HP/MP/CP with a chance to cancel debuffs. -->
@@ -309,7 +325,8 @@
 		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<reuseDelay>
 			<value level="1">2250000</value>
 			<value level="2">2100000</value>
@@ -325,18 +342,21 @@
 			<value level="12">600000</value>
 		</reuseDelay>
 		<effects>
-			<effect name="HealPercent">
-				<power>100</power>
+			<effect name="Hp">
+				<amount>100</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="CpHealPercent">
-				<power>100</power>
+			<effect name="Cp">
+				<amount>100</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="ManaHealPercent">
-				<power>100</power>
+			<effect name="Mp">
+				<amount>100</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
-				<rate>50</rate>
+				<rate>40</rate>
 				<max>10</max>
 			</effect>
 		</effects>
