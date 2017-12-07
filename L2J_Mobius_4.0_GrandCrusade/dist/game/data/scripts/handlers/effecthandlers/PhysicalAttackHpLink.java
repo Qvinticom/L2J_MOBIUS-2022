@@ -143,6 +143,6 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			damage = Math.min(damage, damageCap);
 		}
 		effected.reduceCurrentHp(damage, effector, skill, false, false, critical, false);
-		effector.sendDamageMessage(effected, skill, (int) damage, critical, false);
+		// effector.sendDamageMessage(effected, skill, (int) damage, critical, false);
 	}
 }

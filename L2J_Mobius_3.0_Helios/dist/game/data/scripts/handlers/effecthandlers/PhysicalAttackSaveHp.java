@@ -161,6 +161,6 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 		}
 		
 		effected.reduceCurrentHp(damage, effector, skill, false, false, critical, false);
-		effector.sendDamageMessage(effected, skill, (int) damage, critical, false);
+		// effector.sendDamageMessage(effected, skill, (int) damage, critical, false);
 	}
 }

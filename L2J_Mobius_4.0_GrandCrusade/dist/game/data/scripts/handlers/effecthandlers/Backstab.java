@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -104,10 +103,10 @@ public final class Backstab extends AbstractEffect
 			effected.breakCast();
 		}
 		
-		if (effector.isPlayer())
-		{
-			final L2PcInstance activePlayer = effector.getActingPlayer();
-			activePlayer.sendDamageMessage(effected, skill, (int) damage, true, false);
-		}
+		// if (effector.isPlayer())
+		// {
+		// final L2PcInstance activePlayer = effector.getActingPlayer();
+		// activePlayer.sendDamageMessage(effected, skill, (int) damage, true, false);
+		// }
 	}
 }

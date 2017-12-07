@@ -105,7 +105,7 @@ public final class MagicalAttackByAbnormalSlot extends AbstractEffect
 		else
 		{
 			effected.reduceCurrentHp(damage, effector, skill, false, false, mcrit, false);
-			effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
+			// effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
 			
 			// Absorb HP from the damage inflicted
 			double absorbPercent = effector.getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * effector.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);

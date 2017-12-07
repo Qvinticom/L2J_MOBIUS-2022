@@ -99,7 +99,7 @@ public final class MagicalSoulAttack extends AbstractEffect
 			else
 			{
 				effected.reduceCurrentHp(damage, effector, skill, false, false, mcrit, false);
-				effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
+				// effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
 			}
 		}
 	}
