@@ -4533,7 +4533,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void reduceCurrentHp(double value, L2Character attacker, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
 	{
-		EventDispatcher.getInstance().notifyEventAsync(new OnCreatureDamageDealt(attacker, this, value, skill, critical, isDOT, reflect), attacker);
+		// Notify of this attack only if there is an attacking creature.
+		if (attacker != null)
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureDamageDealt(attacker, this, value, skill, critical, isDOT, reflect), attacker);
+		}
+		
 		final DamageReturn term = EventDispatcher.getInstance().notifyEvent(new OnCreatureDamageReceived(attacker, this, value, skill, critical, isDOT, reflect), this, DamageReturn.class);
 		if (term != null)
 		{
@@ -4554,6 +4559,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		else
 		{
 			getStatus().reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
+		}
+		
+		if (attacker != null)
+		{
+			attacker.sendDamageMessage(this, skill, (int) value, critical, false);
 		}
 	}
 	
