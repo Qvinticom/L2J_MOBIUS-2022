@@ -42,6 +42,7 @@
 		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="CanTransform">
 				<transformId>157</transformId>

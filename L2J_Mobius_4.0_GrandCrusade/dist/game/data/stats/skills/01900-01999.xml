@@ -79,6 +79,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>POISON,9;ROOT_MAGICALLY,9;ROOT_PHYSICALLY,9;BLEEDING,9;STUN,9</dispel>
@@ -146,6 +147,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="Speed">
 				<amount>50</amount>
@@ -264,6 +266,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="DebuffBlock" />
 			<effect name="DispelByCategory">
@@ -310,6 +313,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="PAtk">
 				<amount>10</amount>
@@ -386,6 +390,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<!-- Undying Will -->
@@ -486,6 +491,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="HealOverTime">
 				<power>460</power>
@@ -539,6 +545,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="KnockBack">
 				<distance>50</distance>
@@ -621,6 +628,7 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="AbnormalShield">
 				<times>
@@ -2463,6 +2471,7 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<isDebuff>true</isDebuff>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>
@@ -2501,6 +2510,7 @@
 		<specialLevel>-2</specialLevel>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<excludedFromCheck>true</excludedFromCheck>
 		<conditions>
 			<condition name="OpTargetPc" />
 		</conditions>

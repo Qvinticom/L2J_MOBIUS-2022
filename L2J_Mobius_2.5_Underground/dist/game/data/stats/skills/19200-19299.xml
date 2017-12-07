@@ -703,6 +703,7 @@
 		<!-- STR/DEX/CON/INT/WIT/MEN/CHA + 1 -->
 		<icon>icon.skill19222</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effectPoint>100</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -768,6 +769,7 @@
 		<!-- Teleports to selected party member. Consumes 100 Spirit Ores. -->
 		<icon>icon.skill19223</icon>
 		<operateType>A1</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<mpConsume>142</mpConsume>
 		<castRange>-1</castRange>
 		<hitTime>5000</hitTime>
@@ -794,6 +796,7 @@
 		<!-- Gives 'Blessing of the Exalted' effect to all party members. Maintains target's buff/de-buff condition even following death and resurrection. Consumes 40 Spirit Ores. -->
 		<icon>icon.skill19224</icon>
 		<operateType>A2</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<mpConsume>207</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -824,6 +827,7 @@
 		<!-- Summons 5 Battle Quick Healing Potions. Consumes 40 Crystals (R-grade). -->
 		<icon>icon.skill19225</icon>
 		<operateType>A1</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<mpConsume>142</mpConsume>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
@@ -848,6 +852,7 @@
 		<!-- For 1 hr., increases gained XP/SP by 3%. Consumes 40 Spirit Ores. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A2</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -949,6 +954,7 @@
 		<!-- LUC + 3. -->
 		<icon>icon.skill19222</icon>
 		<operateType>P</operateType>
+		<excludedFromCheck>true</excludedFromCheck>
 		<effectPoint>100</effectPoint>
 		<effects>
 			<effect name="StatUp">
