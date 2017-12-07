@@ -174,7 +174,11 @@
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
-		<set name="time" val="360" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="16423" level="1" /> <!-- Noelle's Gift -->
+		</skills>
 	</item>
 	<item id="40312" name="Santa's Cloak" type="Armor">
 		<!-- Light and cozy cloak. -->
