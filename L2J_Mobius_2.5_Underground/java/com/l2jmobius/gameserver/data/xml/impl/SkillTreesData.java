@@ -1375,11 +1375,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 */
 	public L2SkillLearn getRevelationSkill(SubclassType type, int id, int lvl)
 	{
-		if (_revelationSkillTree.get(type) != null)
-		{
-			return _revelationSkillTree.get(type).get(SkillData.getSkillHashCode(id, lvl));
-		}
-		return null;
+		return _revelationSkillTree.get(type).get(SkillData.getSkillHashCode(id, lvl));
 	}
 	
 	/**
@@ -1687,12 +1683,6 @@ public final class SkillTreesData implements IGameXmlReader
 			return true;
 		}
 		
-		// Exclude Revelation Skills from this check.
-		if (getRevelationSkill(player.isDualClassActive() ? SubclassType.DUALCLASS : player.isSubClassActive() ? SubclassType.SUBCLASS : SubclassType.BASECLASS, skill.getId(), Math.min(skill.getLevel(), maxLvl)) != null)
-		{
-			return true;
-		}
-		
 		// Exclude Transfer Skills from this check.
 		if (getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getClassId()) != null)
 		{
@@ -1704,6 +1694,13 @@ public final class SkillTreesData implements IGameXmlReader
 		{
 			return true;
 		}
+		
+		// Exclude Revelation Skills from this check.
+		if (getRevelationSkill(player.isDualClassActive() ? SubclassType.DUALCLASS : SubclassType.BASECLASS, skill.getId(), Math.min(skill.getLevel(), maxLvl)) != null)
+		{
+			return true;
+		}
+		
 		return false;
 	}
 	

@@ -9604,6 +9604,28 @@ public final class L2PcInstance extends L2Playable
 		
 		try
 		{
+			final SubClass subClass = getSubClasses().remove(classIndex);
+			if (subClass == null)
+			{
+				return false;
+			}
+			
+			if (subClass.isDualClass())
+			{
+				getVariables().remove(PlayerVariables.ABILITY_POINTS_DUAL_CLASS);
+				getVariables().remove(PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS);
+				int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
+				if (revelationSkill != 0)
+				{
+					removeSkill(revelationSkill);
+				}
+				revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
+				if (revelationSkill != 0)
+				{
+					removeSkill(revelationSkill);
+				}
+			}
+			
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
 				PreparedStatement deleteShortcuts = con.prepareStatement(DELETE_CHAR_SHORTCUTS);
@@ -9635,34 +9657,12 @@ public final class L2PcInstance extends L2Playable
 				deleteSubclass.setInt(1, getObjectId());
 				deleteSubclass.setInt(2, classIndex);
 				deleteSubclass.execute();
-				
-				if (getSubClasses().get(classIndex).isDualClass())
-				{
-					getVariables().remove(PlayerVariables.ABILITY_POINTS_DUAL_CLASS);
-					getVariables().remove(PlayerVariables.ABILITY_POINTS_USED_DUAL_CLASS);
-					int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
-					if (revelationSkill != 0)
-					{
-						removeSkill(revelationSkill);
-					}
-					revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
-					if (revelationSkill != 0)
-					{
-						removeSkill(revelationSkill);
-					}
-					getVariables().remove(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS);
-					getVariables().remove(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS);
-				}
 			}
 			catch (Exception e)
 			{
 				_log.log(Level.WARNING, "Could not modify sub class for " + getName() + " to class index " + classIndex + ": " + e.getMessage(), e);
-				
-				// This must be done in order to maintain data consistency.
-				getSubClasses().remove(classIndex);
 				return false;
 			}
-			getSubClasses().remove(classIndex);
 		}
 		finally
 		{

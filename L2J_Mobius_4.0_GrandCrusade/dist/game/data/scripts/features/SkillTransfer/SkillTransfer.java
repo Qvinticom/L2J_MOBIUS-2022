@@ -51,7 +51,10 @@ public final class SkillTransfer extends AbstractNpcAI
 	private SkillTransfer()
 	{
 		setPlayerProfessionChangeId(this::onProfessionChange);
-		setOnEnterWorld(Config.SKILL_CHECK_ENABLE);
+		if (Config.SKILL_CHECK_ENABLE)
+		{
+			setOnEnterWorld(Config.SKILL_CHECK_ENABLE);
+		}
 	}
 	
 	public void onProfessionChange(OnPlayerProfessionChange event)

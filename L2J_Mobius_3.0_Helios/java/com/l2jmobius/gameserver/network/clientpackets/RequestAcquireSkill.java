@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.enums.SubclassType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -65,8 +66,8 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 {
 	private static final String[] REVELATION_VAR_NAMES =
 	{
-		"RevelationSkill1",
-		"RevelationSkill2"
+		PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS,
+		PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS
 	};
 	
 	private static final String[] DUALCLASS_REVELATION_VAR_NAMES =
@@ -449,6 +450,16 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 					
 					giveSkill(activeChar, trainer, skill);
 				}
+				
+				final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableRevelationSkills(activeChar, SubclassType.BASECLASS);
+				if (skills.size() > 0)
+				{
+					activeChar.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION));
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+				}
 				break;
 			}
 			case REVELATION_DUALCLASS:
@@ -491,6 +502,16 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 					activeChar.getVariables().set(varName, skill.getId());
 					
 					giveSkill(activeChar, trainer, skill);
+				}
+				
+				final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableRevelationSkills(activeChar, SubclassType.DUALCLASS);
+				if (skills.size() > 0)
+				{
+					activeChar.sendPacket(new ExAcquirableSkillListByClass(skills, AcquireSkillType.REVELATION_DUALCLASS));
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 				}
 				break;
 			}

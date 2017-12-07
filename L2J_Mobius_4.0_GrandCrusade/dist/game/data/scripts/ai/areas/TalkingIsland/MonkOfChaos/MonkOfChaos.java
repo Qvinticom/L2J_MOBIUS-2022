@@ -46,8 +46,8 @@ public final class MonkOfChaos extends AbstractNpcAI
 	private static final int CHAOS_POMANDER_DUALCLASS = 37375;
 	private static final String[] REVELATION_VAR_NAMES =
 	{
-		"RevelationSkill1",
-		"RevelationSkill2"
+		PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS,
+		PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS,
 	};
 	
 	private static final String[] DUALCLASS_REVELATION_VAR_NAMES =
@@ -159,9 +159,9 @@ public final class MonkOfChaos extends AbstractNpcAI
 					{
 						player.removeSkill(sk);
 						player.getVariables().remove(varName);
-						giveItems(player, chaosPomander, 1);
 					}
 				}
+				giveItems(player, chaosPomander, count);
 				htmltext = "canceled.html";
 				break;
 			}
