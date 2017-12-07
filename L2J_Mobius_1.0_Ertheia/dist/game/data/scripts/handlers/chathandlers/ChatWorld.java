@@ -74,7 +74,7 @@ public final class ChatWorld implements IChatHandler
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
 			return;
 		}
-		else if (activeChar.getWorldChatPoints() < 1)
+		else if (activeChar.getWorldChatUsed() >= activeChar.getWorldChatPoints())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_HAVE_SPENT_YOUR_WORLD_CHAT_QUOTA_FOR_THE_DAY_A_NEW_DAY_STARTS_EVERY_DAY_AT_18_30);
 		}
@@ -111,7 +111,7 @@ public final class ChatWorld implements IChatHandler
 				L2World.getInstance().getPlayers().stream().filter(activeChar::isNotBlocked).forEach(cs::sendTo);
 			}
 			
-			activeChar.setWorldChatPoints(activeChar.getWorldChatPoints() - 1);
+			activeChar.setWorldChatUsed(activeChar.getWorldChatUsed() + 1);
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 			if (Config.WORLD_CHAT_INTERVAL.getSeconds() > 0)
 			{

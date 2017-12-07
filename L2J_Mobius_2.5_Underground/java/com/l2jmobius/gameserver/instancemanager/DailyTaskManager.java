@@ -159,7 +159,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		// Update data for online players.
 		L2World.getInstance().getPlayers().stream().forEach(player ->
 		{
-			player.getVariables().set(PlayerVariables.EXTEND_DROP, "");
+			player.getVariables().remove(PlayerVariables.EXTEND_DROP);
 			player.getVariables().storeMe();
 		});
 		
@@ -198,7 +198,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var = ?"))
 		{
-			ps.setInt(1, Config.WORLD_CHAT_POINTS_PER_DAY);
+			ps.setInt(1, 0);
 			ps.setString(2, PlayerVariables.WORLD_CHAT_VARIABLE_NAME);
 			ps.executeUpdate();
 		}
@@ -210,7 +210,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		// Update data for online players.
 		L2World.getInstance().getPlayers().stream().forEach(player ->
 		{
-			player.setWorldChatPoints(Config.WORLD_CHAT_POINTS_PER_DAY);
+			player.setWorldChatUsed(0);
 			player.sendPacket(new ExWorldChatCnt(player));
 			player.getVariables().storeMe();
 		});

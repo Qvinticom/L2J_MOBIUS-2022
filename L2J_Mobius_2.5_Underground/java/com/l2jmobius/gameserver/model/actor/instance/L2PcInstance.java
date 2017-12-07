@@ -13451,16 +13451,24 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public int getWorldChatPoints()
 	{
-		return getVariables().getInt(PlayerVariables.WORLD_CHAT_VARIABLE_NAME, 1);
+		return (int) getStat().getValue(Stats.WORLD_CHAT_POINTS, Config.WORLD_CHAT_POINTS_PER_DAY);
+	}
+	
+	/**
+	 * @return The amount of times player has used world chat
+	 */
+	public int getWorldChatUsed()
+	{
+		return getVariables().getInt(PlayerVariables.WORLD_CHAT_VARIABLE_NAME, 0);
 	}
 	
 	/**
 	 * Sets the amount of times player can use world chat
-	 * @param points
+	 * @param timesUsed how many times world chat has been used up until now.
 	 */
-	public void setWorldChatPoints(int points)
+	public void setWorldChatUsed(int timesUsed)
 	{
-		getVariables().set(PlayerVariables.WORLD_CHAT_VARIABLE_NAME, points);
+		getVariables().set(PlayerVariables.WORLD_CHAT_VARIABLE_NAME, timesUsed);
 	}
 	
 	public void prohibiteCeremonyOfChaos()

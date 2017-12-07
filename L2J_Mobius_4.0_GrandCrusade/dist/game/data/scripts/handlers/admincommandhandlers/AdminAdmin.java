@@ -333,7 +333,7 @@ public class AdminAdmin implements IAdminCommandHandler
 						activeChar.sendMessage("Your target's level is below the minimum: " + Config.WORLD_CHAT_MIN_LEVEL);
 						break;
 					}
-					activeChar.sendMessage(targetPlayer.getName() + ": has " + targetPlayer.getWorldChatPoints() + " world chat points");
+					activeChar.sendMessage(targetPlayer.getName() + ": has used world chat " + targetPlayer.getWorldChatUsed() + " times out of maximum " + targetPlayer.getWorldChatPoints() + " times.");
 					break;
 				}
 				case "set":
@@ -354,19 +354,19 @@ public class AdminAdmin implements IAdminCommandHandler
 					
 					if (!st.hasMoreTokens())
 					{
-						activeChar.sendMessage("Incorrect syntax, use: //worldchat set <points>");
+						activeChar.sendMessage("Incorrect syntax, use: //worldchat set <times used>");
 						break;
 					}
 					
 					final String valueToken = st.nextToken();
 					if (!Util.isDigit(valueToken))
 					{
-						activeChar.sendMessage("Incorrect syntax, use: //worldchat set <points>");
+						activeChar.sendMessage("Incorrect syntax, use: //worldchat set <times used>");
 						break;
 					}
 					
-					activeChar.sendMessage(targetPlayer.getName() + ": points changed from " + targetPlayer.getWorldChatPoints() + " to " + valueToken);
-					targetPlayer.setWorldChatPoints(Integer.parseInt(valueToken));
+					activeChar.sendMessage(targetPlayer.getName() + ": times used changed from " + targetPlayer.getWorldChatPoints() + " to " + valueToken);
+					targetPlayer.setWorldChatUsed(Integer.parseInt(valueToken));
 					if (Config.ENABLE_WORLD_CHAT)
 					{
 						targetPlayer.sendPacket(new ExWorldChatCnt(targetPlayer));

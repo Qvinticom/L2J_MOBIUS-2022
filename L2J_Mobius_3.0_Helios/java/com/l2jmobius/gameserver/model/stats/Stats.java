@@ -103,6 +103,10 @@ public enum Stats
 	PVE_RAID_PHYSICAL_SKILL_DEFENCE("pveRaidPhysSkillsDef"),
 	PVE_RAID_MAGICAL_SKILL_DEFENCE("pveRaidMagicalDef"),
 	
+	// FIXED BONUS
+	PVP_DAMAGE_TAKEN("pvpDamageTaken"),
+	PVE_DAMAGE_TAKEN("pveDamageTaken"),
+	
 	// ATTACK & DEFENCE RATES
 	MAGIC_CRITICAL_DAMAGE("mCritPower"),
 	PHYSICAL_SKILL_POWER("physicalSkillPower"), // Adding skill power (not multipliers) results in points added directly to final value unmodified by defence, traits, elements, criticals etc.
@@ -268,6 +272,7 @@ public enum Stats
 	STAT_BONUS_SKILL_CRITICAL("statSkillCritical"),
 	STAT_BONUS_SPEED("statSpeed"),
 	SHOTS_BONUS("shotBonus", new ShotsBonusFinalizer()),
+	WORLD_CHAT_POINTS("worldChatPoints"),
 	ATTACK_DAMAGE("attackDamage");
 	
 	static final Logger LOGGER = Logger.getLogger(Stats.class.getName());

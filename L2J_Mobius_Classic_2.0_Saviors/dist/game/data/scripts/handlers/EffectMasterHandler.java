@@ -98,6 +98,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CrystalGradeModify", CrystalGradeModify::new);
 		EffectHandler.getInstance().registerHandler("CubicMastery", CubicMastery::new);
 		EffectHandler.getInstance().registerHandler("DamageBlock", DamageBlock::new);
+		EffectHandler.getInstance().registerHandler("DamageByAttack", DamageByAttack::new);
 		EffectHandler.getInstance().registerHandler("DamageShield", DamageShield::new);
 		EffectHandler.getInstance().registerHandler("DamageShieldResist", DamageShieldResist::new);
 		EffectHandler.getInstance().registerHandler("DamOverTime", DamOverTime::new);
@@ -360,6 +361,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("VitalityPointUp", VitalityPointUp::new);
 		EffectHandler.getInstance().registerHandler("WeightLimit", WeightLimit::new);
 		EffectHandler.getInstance().registerHandler("WeightPenalty", WeightPenalty::new);
+		EffectHandler.getInstance().registerHandler("WorldChatPoints", WorldChatPoints::new);
 		LOGGER.info(EffectMasterHandler.class.getSimpleName() + ": Loaded " + EffectHandler.getInstance().size() + " effect handlers.");
 	}
 }

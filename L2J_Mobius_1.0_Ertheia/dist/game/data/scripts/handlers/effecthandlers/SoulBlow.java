@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
-import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * Soul Blow effect implementation.
@@ -93,12 +92,6 @@ public final class SoulBlow extends AbstractEffect
 		
 		// Check if damage should be reflected
 		Formulas.calcCounterAttack(effector, effected, skill, true);
-		
-		final double damageCap = effected.getStat().getValue(Stats.DAMAGE_LIMIT);
-		if (damageCap > 0)
-		{
-			damage = Math.min(damage, damageCap);
-		}
 		
 		effected.reduceCurrentHp(damage, effector, skill, false, false, true, false);
 		

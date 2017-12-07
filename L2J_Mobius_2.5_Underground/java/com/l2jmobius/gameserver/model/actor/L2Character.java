@@ -4552,6 +4552,25 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 		}
 		
+		final double damageCap = getStat().getValue(Stats.DAMAGE_LIMIT);
+		if (damageCap > 0)
+		{
+			value = Math.min(value, damageCap);
+		}
+		
+		// Calculate PvP/PvE damage received. It is a post-attack stat.
+		if (attacker != null)
+		{
+			if (attacker.isPlayable())
+			{
+				value *= (100 + getStat().getValue(Stats.PVP_DAMAGE_TAKEN)) / 100;
+			}
+			else
+			{
+				value *= (100 + getStat().getValue(Stats.PVE_DAMAGE_TAKEN)) / 100;
+			}
+		}
+		
 		if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0))
 		{
 			getStatus().reduceHp(value / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
