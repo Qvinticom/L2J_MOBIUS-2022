@@ -25,6 +25,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.IChatHandler;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -67,6 +68,11 @@ public final class ChatWorld implements IChatHandler
 		else if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
+		}
+		else if (Config.JAIL_DISABLE_CHAT && activeChar.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
+		{
+			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
+			return;
 		}
 		else if (activeChar.getWorldChatPoints() < 1)
 		{

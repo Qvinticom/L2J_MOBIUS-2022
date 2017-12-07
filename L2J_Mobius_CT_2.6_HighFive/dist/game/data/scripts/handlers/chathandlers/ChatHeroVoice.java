@@ -51,7 +51,11 @@ public final class ChatHeroVoice implements IChatHandler
 			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER);
 			return;
 		}
-		
+		if (Config.JAIL_DISABLE_CHAT && activeChar.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
+		{
+			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED);
+			return;
+		}
 		if (!activeChar.getFloodProtectors().getHeroVoice().tryPerformAction("hero voice"))
 		{
 			activeChar.sendMessage("Action failed. Heroes are only able to speak in the global channel once every 10 seconds.");
