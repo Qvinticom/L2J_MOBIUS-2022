@@ -187,15 +187,15 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				return false;
 			}
 			
-			if (me.isChampion() && Config.CHAMPION_PASSIVE)
-			{
-				return false;
-			}
-			
 			if (!me.isAggressive())
 			{
 				return false;
 			}
+		}
+		
+		if (me.isChampion() && Config.CHAMPION_PASSIVE)
+		{
+			return false;
 		}
 		
 		return target.isAutoAttackable(me) && GeoEngine.getInstance().canSeeTarget(me, target);
