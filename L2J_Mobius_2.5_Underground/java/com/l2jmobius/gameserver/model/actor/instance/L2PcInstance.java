@@ -8471,8 +8471,12 @@ public final class L2PcInstance extends L2Playable
 		// In case of double casting, check if both slots are occupied, then queue skill.
 		if ((!doubleCast && isCastingNow(SkillCaster::isAnyNormalType)) || (isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL) && isCastingNow(s -> s.getCastingType() == SkillCastingType.NORMAL_SECOND)))
 		{
-			// Create a new SkillDat object and queue it in the player _queuedSkill
-			setQueuedSkill(skill, item, forceUse, dontMove);
+			// Do not queue skill if called by an item.
+			if (item == null)
+			{
+				// Create a new SkillDat object and queue it in the player _queuedSkill
+				setQueuedSkill(skill, item, forceUse, dontMove);
+			}
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}

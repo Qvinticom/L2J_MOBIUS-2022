@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -100,7 +101,7 @@ public final class UseItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (item.getItem().getType2() == L2Item.TYPE2_QUEST)
+		if (item.isQuestItem() && (item.getItem().getDefaultAction() != ActionType.NONE))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
 			return;
@@ -164,6 +165,13 @@ public final class UseItem implements IClientIncomingPacket
 				sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseOnGroup, reuseDelay);
 				return;
 			}
+		}
+		
+		// If item's default action is to show html, show item's main html.
+		if (item.getItem().getDefaultAction() == ActionType.SHOW_HTML)
+		{
+			item.onBypassFeedback(activeChar, null);
+			return;
 		}
 		
 		if (item.isEquipable())
