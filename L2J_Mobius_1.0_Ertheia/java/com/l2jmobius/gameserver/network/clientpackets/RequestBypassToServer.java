@@ -164,10 +164,6 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 						((L2Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
 					}
 				}
-				else
-				{
-					activeChar.sendDebugMessage("ObjectId of npc bypass is not digit: " + id);
-				}
 				
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			}

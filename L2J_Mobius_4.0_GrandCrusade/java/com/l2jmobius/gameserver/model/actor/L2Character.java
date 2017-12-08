@@ -220,8 +220,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
 	protected byte _zoneValidateCounter = 4;
 	
-	private L2Character _debugger = null;
-	
 	private final ReentrantLock _teleportLock = new ReentrantLock();
 	private final Object _attackLock = new Object();
 	
@@ -351,48 +349,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public final CharEffectList getEffectList()
 	{
 		return _effectList;
-	}
-	
-	/**
-	 * Verify if this character is under debug.
-	 * @return {@code true} if this character is under debug, {@code false} otherwise
-	 */
-	public boolean isDebug()
-	{
-		return _debugger != null;
-	}
-	
-	/**
-	 * Sets character instance, to which debug packets will be send.
-	 * @param debugger the character debugging this character
-	 */
-	public void setDebug(L2Character debugger)
-	{
-		_debugger = debugger;
-	}
-	
-	/**
-	 * Send debug packet.
-	 * @param pkt
-	 */
-	public void sendDebugPacket(IClientOutgoingPacket pkt)
-	{
-		if (_debugger != null)
-		{
-			_debugger.sendPacket(pkt);
-		}
-	}
-	
-	/**
-	 * Send debug text string
-	 * @param msg
-	 */
-	public void sendDebugMessage(String msg)
-	{
-		if (_debugger != null)
-		{
-			_debugger.sendMessage(msg);
-		}
 	}
 	
 	/**
@@ -1712,8 +1668,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	@Override
 	public boolean deleteMe()
 	{
-		setDebug(null);
-		
 		if (hasAI())
 		{
 			getAI().stopAITask();

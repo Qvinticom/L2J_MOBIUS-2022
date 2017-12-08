@@ -68,7 +68,6 @@ import handlers.admincommandhandlers.AdminClan;
 import handlers.admincommandhandlers.AdminClanHall;
 import handlers.admincommandhandlers.AdminCreateItem;
 import handlers.admincommandhandlers.AdminCursedWeapons;
-import handlers.admincommandhandlers.AdminDebug;
 import handlers.admincommandhandlers.AdminDelete;
 import handlers.admincommandhandlers.AdminDisconnect;
 import handlers.admincommandhandlers.AdminDoorControl;
@@ -330,7 +329,6 @@ import handlers.usercommandhandlers.Unstuck;
 import handlers.voicedcommandhandlers.Banking;
 import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
-import handlers.voicedcommandhandlers.Debug;
 import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.Premium;
 import handlers.voicedcommandhandlers.StatsVCmd;
@@ -399,7 +397,6 @@ public class MasterHandler
 			AdminPcCondOverride.class,
 			AdminCreateItem.class,
 			AdminCursedWeapons.class,
-			AdminDebug.class,
 			AdminDelete.class,
 			AdminDisconnect.class,
 			AdminDoorControl.class,
@@ -587,7 +584,6 @@ public class MasterHandler
 			Config.BANKING_SYSTEM_ENABLED ? Banking.class : null,
 			Config.CHAT_ADMIN ? ChatAdmin.class : null,
 			Config.MULTILANG_ENABLE && Config.MULTILANG_VOICED_ALLOW ? Lang.class : null,
-			Config.DEBUG_VOICE_COMMAND ? Debug.class : null,
 			Config.ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null,
 			Config.PREMIUM_SYSTEM_ENABLED ? Premium.class : null,
 		},

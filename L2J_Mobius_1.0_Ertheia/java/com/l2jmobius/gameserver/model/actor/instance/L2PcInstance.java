@@ -10757,7 +10757,6 @@ public final class L2PcInstance extends L2Playable
 			abortAttack();
 			abortCast();
 			stopMove(null);
-			setDebug(null);
 		}
 		catch (Exception e)
 		{

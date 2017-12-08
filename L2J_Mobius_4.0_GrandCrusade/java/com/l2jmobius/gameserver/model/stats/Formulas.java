@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.enums.BasicProperty;
 import com.l2jmobius.gameserver.enums.DispelSlotType;
 import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.enums.ShotType;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
@@ -46,7 +45,6 @@ import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
-import com.l2jmobius.gameserver.network.Debug;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -123,26 +121,6 @@ public final class Formulas
 		// ````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^
 		final double baseMod = ((77 * (((power + attacker.getPAtk()) * 0.666 * ssmod * cdMult) + (isPosition * (power + (attacker.getPAtk() * ssmod)) * randomMod) + (6 * cdPatk))) / defence);
 		final double damage = baseMod * weaponTraitMod * generalTraitMod * attributeMod * randomMod * pvpPveMod;
-		
-		if (attacker.isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("skillPower", power);
-			set.set("ssboost", ssmod);
-			set.set("isPosition", isPosition);
-			set.set("baseMod", baseMod);
-			set.set("criticalMod", criticalMod);
-			set.set("criticalVulnMod", criticalVulnMod);
-			set.set("criticalAddMod", criticalAddMod);
-			set.set("criticalAddVuln", criticalAddVuln);
-			set.set("weaponTraitMod", weaponTraitMod);
-			set.set("generalTraitMod", generalTraitMod);
-			set.set("attributeMod", attributeMod);
-			set.set("weaponMod", randomMod);
-			set.set("penaltyMod", pvpPveMod);
-			set.set("damage", (int) damage);
-			Debug.sendSkillDebug(attacker, target, skill, set);
-		}
 		
 		return damage;
 	}
@@ -706,18 +684,6 @@ public final class Formulas
 		final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
 		final double finalRate = traitMod > 0 ? CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist : 0;
 		
-		if (attacker.isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("baseMod", baseMod);
-			set.set("elementMod", elementMod);
-			set.set("traitMod", traitMod);
-			set.set("buffDebuffMod", buffDebuffMod);
-			set.set("rate", rate);
-			set.set("finalRate", finalRate);
-			Debug.sendSkillDebug(attacker, target, skill, set);
-		}
-		
 		if ((finalRate <= Rnd.get(100)) && (target != attacker))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
@@ -786,19 +752,6 @@ public final class Formulas
 		// Check the Rate Limits.
 		final double finalRate = CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist;
 		
-		if (attacker.getOwner().isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("baseMod", baseRate);
-			set.set("resMod", resMod);
-			set.set("statMod", statMod);
-			set.set("elementMod", elementMod);
-			set.set("lvlBonusMod", lvlBonusMod);
-			set.set("rate", rate);
-			set.set("finalRate", finalRate);
-			Debug.sendSkillDebug(attacker.getOwner(), target, skill, set);
-		}
-		
 		return Rnd.get(100) < finalRate;
 	}
 	
@@ -823,17 +776,6 @@ public final class Formulas
 		// general magic resist
 		final double resModifier = target.getStat().getValue(Stats.MAGIC_SUCCESS_RES, 1);
 		final int rate = 100 - Math.round((float) (lvlModifier * targetModifier * resModifier));
-		
-		if (attacker.isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("lvlDifference", lvlDifference);
-			set.set("lvlModifier", lvlModifier);
-			set.set("resModifier", resModifier);
-			set.set("targetModifier", targetModifier);
-			set.set("rate", rate);
-			Debug.sendSkillDebug(attacker, target, skill, set);
-		}
 		
 		return (Rnd.get(100) < rate);
 	}
@@ -1102,15 +1044,6 @@ public final class Formulas
 			{
 				// Resist Modifier.
 				final int cancelMagicLvl = skill.getMagicLevel();
-				if (activeChar.isDebug())
-				{
-					final StatsSet set = new StatsSet();
-					set.set("baseMod", rate);
-					set.set("magicLevel", cancelMagicLvl);
-					set.set("resMod", target.getStat().getValue(Stats.RESIST_DISPEL_BUFF, 1));
-					set.set("rate", rate);
-					Debug.sendSkillDebug(activeChar, target, skill, set);
-				}
 				
 				// Prevent initialization.
 				final List<BuffInfo> buffs = target.getEffectList().getBuffs();

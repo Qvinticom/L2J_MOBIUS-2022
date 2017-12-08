@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
-import com.l2jmobius.gameserver.network.Debug;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -183,34 +181,6 @@ public final class EnchantScroll extends AbstractEnchantItem
 		final double random = 100 * Rnd.nextDouble();
 		final boolean success = (random < finalChance);
 		
-		if (player.isDebug())
-		{
-			final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getItem(), _scrollGroupId);
-			final StatsSet set = new StatsSet();
-			if (isBlessed())
-			{
-				set.set("isBlessed", isBlessed());
-			}
-			if (isSafe())
-			{
-				set.set("isSafe", isSafe());
-			}
-			set.set("chance", Util.formatDouble(chance, "#.##"));
-			if (bonusRate > 0)
-			{
-				set.set("bonusRate", Util.formatDouble(bonusRate, "#.##"));
-			}
-			if (supportBonusRate > 0)
-			{
-				set.set("supportBonusRate", Util.formatDouble(supportBonusRate, "#.##"));
-			}
-			set.set("finalChance", Util.formatDouble(finalChance, "#.##"));
-			set.set("random", Util.formatDouble(random, "#.##"));
-			set.set("success", success);
-			set.set("item group", group.getName());
-			set.set("scroll group", _scrollGroupId);
-			Debug.sendItemDebug(player, enchantItem, set);
-		}
 		return success ? EnchantResultType.SUCCESS : EnchantResultType.FAILURE;
 	}
 }

@@ -76,10 +76,5 @@ public final class RequestLinkHtml implements IClientIncomingPacket
 		final NpcHtmlMessage msg = new NpcHtmlMessage(htmlObjectId);
 		msg.setFile(actor.getHtmlPrefix(), filename);
 		actor.sendPacket(msg);
-		
-		if (actor.isGM() && actor.isDebug())
-		{
-			actor.sendMessage("HTML: " + filename);
-		}
 	}
 }

@@ -1159,7 +1159,6 @@ public final class Skill implements IIdentifiable
 		{
 			return null;
 		}
-		activeChar.sendDebugMessage("-> " + this + "\n      TT: " + getTargetType() + "\n      AS: " + getAffectScope() + "\n      AO: " + getAffectObject());
 		final IAffectScopeHandler handler = AffectScopeHandler.getInstance().getHandler(getAffectScope());
 		if (handler != null)
 		{
@@ -1338,7 +1337,6 @@ public final class Skill implements IIdentifiable
 		
 		if (effected.isIgnoringSkillEffects(getId(), getLevel()))
 		{
-			effected.sendDebugMessage("Skill " + toString() + " has been ignored (ignoring skill effects)");
 			return;
 		}
 		
@@ -1376,7 +1374,6 @@ public final class Skill implements IIdentifiable
 				{
 					final BasicPropertyResist resist = effected.getBasicPropertyResist(getBasicProperty());
 					resist.increaseResistLevel();
-					effected.sendDebugMessage(toString() + " has increased your " + getBasicProperty() + " debuff resistance to " + resist.getResistLevel() + " level for " + resist.getRemainTime().toMillis() + " milliseconds.");
 				}
 			}
 			

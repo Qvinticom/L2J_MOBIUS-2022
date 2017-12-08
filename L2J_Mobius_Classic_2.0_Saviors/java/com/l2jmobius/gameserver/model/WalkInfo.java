@@ -77,7 +77,6 @@ public class WalkInfo
 			}
 			
 			_currentNode = newNode;
-			npc.sendDebugMessage("Route: " + getRoute().getName() + ", next random node is " + _currentNode);
 		}
 		else
 		{
@@ -94,7 +93,6 @@ public class WalkInfo
 			{
 				// Notify quest
 				EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveRouteFinished(npc), npc);
-				npc.sendDebugMessage("Route: " + getRoute().getName() + ", last node arrived");
 				
 				if (!getRoute().repeatWalk())
 				{

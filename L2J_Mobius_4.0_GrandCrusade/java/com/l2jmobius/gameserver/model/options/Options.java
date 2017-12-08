@@ -159,7 +159,6 @@ public class Options
 	
 	public void apply(L2PcInstance player)
 	{
-		player.sendDebugMessage("Activating option id: " + _id);
 		if (hasEffects())
 		{
 			final BuffInfo info = new BuffInfo(player, player, null, true, null, this);
@@ -171,7 +170,6 @@ public class Options
 					{
 						effect.instant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
 					}
-					player.sendDebugMessage("Appling instant effect: " + effect.getClass().getSimpleName());
 				}
 				else
 				{
@@ -182,8 +180,6 @@ public class Options
 					{
 						info.addEffect(effect);
 					}
-					
-					player.sendDebugMessage("Appling continious effect: " + effect.getClass().getSimpleName());
 				}
 			}
 			if (!info.getEffects().isEmpty())
@@ -196,7 +192,6 @@ public class Options
 			for (SkillHolder holder : getActiveSkills())
 			{
 				addSkill(player, holder.getSkill());
-				player.sendDebugMessage("Adding active skill: " + getActiveSkills());
 			}
 		}
 		if (hasPassiveSkills())
@@ -204,7 +199,6 @@ public class Options
 			for (SkillHolder holder : getPassiveSkills())
 			{
 				addSkill(player, holder.getSkill());
-				player.sendDebugMessage("Adding passive skill: " + getPassiveSkills());
 			}
 		}
 		if (hasActivationSkills())
@@ -212,7 +206,6 @@ public class Options
 			for (OptionsSkillHolder holder : _activationSkills)
 			{
 				player.addTriggerSkill(holder);
-				player.sendDebugMessage("Adding trigger skill: " + holder);
 			}
 		}
 		
@@ -222,14 +215,12 @@ public class Options
 	
 	public void remove(L2PcInstance player)
 	{
-		player.sendDebugMessage("Deactivating option id: " + _id);
 		if (hasEffects())
 		{
 			for (BuffInfo info : player.getEffectList().getOptions())
 			{
 				if (info.getOption() == this)
 				{
-					player.sendDebugMessage("Removing effects: " + info.getEffects());
 					player.getEffectList().remove(info, false, true, true);
 				}
 			}
@@ -239,7 +230,6 @@ public class Options
 			for (SkillHolder holder : getActiveSkills())
 			{
 				player.removeSkill(holder.getSkill(), false, false);
-				player.sendDebugMessage("Removing active skill: " + getActiveSkills());
 			}
 		}
 		if (hasPassiveSkills())
@@ -247,7 +237,6 @@ public class Options
 			for (SkillHolder holder : getPassiveSkills())
 			{
 				player.removeSkill(holder.getSkill(), false, true);
-				player.sendDebugMessage("Removing passive skill: " + getPassiveSkills());
 			}
 		}
 		if (hasActivationSkills())
@@ -255,7 +244,6 @@ public class Options
 			for (OptionsSkillHolder holder : _activationSkills)
 			{
 				player.removeTriggerSkill(holder);
-				player.sendDebugMessage("Removing trigger skill: " + holder);
 			}
 		}
 		
