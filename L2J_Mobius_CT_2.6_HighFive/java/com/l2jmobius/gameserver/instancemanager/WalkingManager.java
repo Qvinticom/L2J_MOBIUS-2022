@@ -244,12 +244,6 @@ public final class WalkingManager implements IXmlReader
 				if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 				{
 					final WalkInfo walk = new WalkInfo(routeName);
-					
-					if (npc.isDebug())
-					{
-						walk.setLastAction(System.currentTimeMillis());
-					}
-					
 					L2NpcWalkerNode node = walk.getCurrentNode();
 					
 					// adjust next waypoint, if NPC spawns at first waypoint
@@ -257,18 +251,15 @@ public final class WalkingManager implements IXmlReader
 					{
 						walk.calculateNextNode(npc);
 						node = walk.getCurrentNode();
-						npc.sendDebugMessage("Route '" + routeName + "': spawn point is same with first waypoint, adjusted to next");
 					}
 					
 					if (!npc.isInsideRadius(node, 3000, true, false))
 					{
 						final String message = "Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance(node, true, true) + "), walking will not start";
 						LOGGER.warning(getClass().getSimpleName() + ": " + message);
-						npc.sendDebugMessage(message);
 						return;
 					}
 					
-					npc.sendDebugMessage("Starting to move at route '" + routeName + "'");
 					if (node.runToLocation())
 					{
 						npc.setRunning();
@@ -286,7 +277,6 @@ public final class WalkingManager implements IXmlReader
 				}
 				else
 				{
-					npc.sendDebugMessage("Failed to start moving along route '" + routeName + "', scheduled");
 					ThreadPoolManager.schedule(new StartMovingTask(npc, routeName), 60000);
 				}
 			}
@@ -302,13 +292,11 @@ public final class WalkingManager implements IXmlReader
 				// Prevent call simultaneously from scheduled task and onArrived() or temporarily stop walking for resuming in future
 				if (walk.isBlocked() || walk.isSuspended())
 				{
-					npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (operation is blocked)");
 					return;
 				}
 				
 				walk.setBlocked(true);
 				final L2NpcWalkerNode node = walk.getCurrentNode();
-				npc.sendDebugMessage("Route '" + routeName + "', continuing to node " + walk.getCurrentNodeId());
 				if (node.runToLocation())
 				{
 					npc.setRunning();
@@ -320,10 +308,6 @@ public final class WalkingManager implements IXmlReader
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
 				walk.setBlocked(false);
 				walk.setStoppedByAttack(false);
-			}
-			else
-			{
-				npc.sendDebugMessage("Failed to continue moving along route '" + routeName + "' (wrong AI state - " + npc.getAI().getIntention() + ")");
 			}
 		}
 	}
@@ -418,8 +402,6 @@ public final class WalkingManager implements IXmlReader
 			return;
 		}
 		
-		npc.sendDebugMessage("Route '" + walk.getRoute().getName() + "', arrived to node " + walk.getCurrentNodeId());
-		npc.sendDebugMessage("Done in " + ((System.currentTimeMillis() - walk.getLastAction()) / 1000) + " s");
 		walk.calculateNextNode(npc);
 		walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
 		
@@ -432,10 +414,6 @@ public final class WalkingManager implements IXmlReader
 			npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
 		}
 		
-		if (npc.isDebug())
-		{
-			walk.setLastAction(System.currentTimeMillis());
-		}
 		ThreadPoolManager.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
 	}
 	

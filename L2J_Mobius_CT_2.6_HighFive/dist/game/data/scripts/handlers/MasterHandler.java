@@ -64,7 +64,6 @@ import handlers.admincommandhandlers.AdminChangeAccessLevel;
 import handlers.admincommandhandlers.AdminClan;
 import handlers.admincommandhandlers.AdminCreateItem;
 import handlers.admincommandhandlers.AdminCursedWeapons;
-import handlers.admincommandhandlers.AdminDebug;
 import handlers.admincommandhandlers.AdminDelete;
 import handlers.admincommandhandlers.AdminDisconnect;
 import handlers.admincommandhandlers.AdminDoorControl;
@@ -276,7 +275,6 @@ import handlers.usercommandhandlers.Unstuck;
 import handlers.voicedcommandhandlers.Banking;
 import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
-import handlers.voicedcommandhandlers.Debug;
 import handlers.voicedcommandhandlers.Lang;
 import handlers.voicedcommandhandlers.Premium;
 import handlers.voicedcommandhandlers.StatsVCmd;
@@ -343,7 +341,6 @@ public class MasterHandler
 			AdminPcCondOverride.class,
 			AdminCreateItem.class,
 			AdminCursedWeapons.class,
-			AdminDebug.class,
 			AdminDelete.class,
 			AdminDisconnect.class,
 			AdminDoorControl.class,
@@ -539,7 +536,6 @@ public class MasterHandler
 			Config.BANKING_SYSTEM_ENABLED ? Banking.class : null,
 			Config.L2JMOD_CHAT_ADMIN ? ChatAdmin.class : null,
 			Config.L2JMOD_MULTILANG_ENABLE && Config.L2JMOD_MULTILANG_VOICED_ALLOW ? Lang.class : null,
-			Config.L2JMOD_DEBUG_VOICE_COMMAND ? Debug.class : null,
 			Config.L2JMOD_ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null,
 			Config.PREMIUM_SYSTEM_ENABLED ? Premium.class : null,
 		},

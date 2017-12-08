@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
@@ -75,7 +74,6 @@ import com.l2jmobius.gameserver.model.zone.type.L2CastleZone;
 import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jmobius.gameserver.model.zone.type.L2FortZone;
 import com.l2jmobius.gameserver.model.zone.type.L2MotherTreeZone;
-import com.l2jmobius.gameserver.network.Debug;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
@@ -620,28 +618,6 @@ public final class Formulas
 		damage *= weaponMod;
 		damage *= penaltyMod;
 		
-		if (attacker.isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("skillPower", skill.getPower(isPvP, isPvE));
-			set.set("ssboost", ssboost);
-			set.set("proximityBonus", proximityBonus);
-			set.set("pvpBonus", pvpBonus);
-			set.set("baseMod", baseMod);
-			set.set("criticalMod", criticalMod);
-			set.set("criticalModPos", criticalModPos);
-			set.set("criticalVulnMod", criticalVulnMod);
-			set.set("criticalAddMod", criticalAddMod);
-			set.set("criticalAddVuln", criticalAddVuln);
-			set.set("weaponTraitMod", weaponTraitMod);
-			set.set("generalTraitMod", generalTraitMod);
-			set.set("attributeMod", attributeMod);
-			set.set("weaponMod", weaponMod);
-			set.set("penaltyMod", penaltyMod);
-			set.set("damage", (int) damage);
-			Debug.sendSkillDebug(attacker, target, skill, set);
-		}
-		
 		return Math.max(damage, 1);
 	}
 	
@@ -710,26 +686,6 @@ public final class Formulas
 		damage *= attributeMod;
 		damage *= weaponMod;
 		damage *= penaltyMod;
-		
-		if (attacker.isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("skillPower", skill.getPower(isPvP, isPvE));
-			set.set("ssboost", ssboost);
-			set.set("proximityBonus", proximityBonus);
-			set.set("pvpBonus", pvpBonus);
-			set.set("baseMod", baseMod);
-			set.set("criticalMod", criticalMod);
-			set.set("criticalVulnMod", criticalVulnMod);
-			set.set("criticalAddMod", criticalAddMod);
-			set.set("criticalAddVuln", criticalAddVuln);
-			set.set("generalTraitMod", generalTraitMod);
-			set.set("attributeMod", attributeMod);
-			set.set("weaponMod", weaponMod);
-			set.set("penaltyMod", penaltyMod);
-			set.set("damage", (int) damage);
-			Debug.sendSkillDebug(attacker, target, skill, set);
-		}
 		
 		return Math.max(damage, 1);
 	}
@@ -1431,19 +1387,6 @@ public final class Formulas
 		final double rate = baseMod * elementMod * traitMod * mAtkMod * buffDebuffMod;
 		final double finalRate = traitMod > 0 ? Util.constrain(rate, skill.getMinChance(), skill.getMaxChance()) : 0;
 		
-		if (attacker.isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("baseMod", baseMod);
-			set.set("elementMod", elementMod);
-			set.set("traitMod", traitMod);
-			set.set("mAtkMod", mAtkMod);
-			set.set("buffDebuffMod", buffDebuffMod);
-			set.set("rate", rate);
-			set.set("finalRate", finalRate);
-			Debug.sendSkillDebug(attacker, target, skill, set);
-		}
-		
 		if (finalRate <= Rnd.get(100))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
@@ -1503,19 +1446,6 @@ public final class Formulas
 		// Check the Rate Limits.
 		final double finalRate = Util.constrain(rate, skill.getMinChance(), skill.getMaxChance());
 		
-		if (attacker.getOwner().isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("baseMod", baseRate);
-			set.set("resMod", resMod);
-			set.set("statMod", statMod);
-			set.set("elementMod", elementMod);
-			set.set("lvlBonusMod", lvlBonusMod);
-			set.set("rate", rate);
-			set.set("finalRate", finalRate);
-			Debug.sendSkillDebug(attacker.getOwner(), target, skill, set);
-		}
-		
 		return (Rnd.get(100) < finalRate);
 	}
 	
@@ -1545,17 +1475,6 @@ public final class Formulas
 		// general magic resist
 		final double resModifier = target.calcStat(Stats.MAGIC_SUCCESS_RES, 1, null, skill);
 		final int rate = 100 - Math.round((float) (lvlModifier * targetModifier * resModifier));
-		
-		if (attacker.isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("lvlDifference", lvlDifference);
-			set.set("lvlModifier", lvlModifier);
-			set.set("resModifier", resModifier);
-			set.set("targetModifier", targetModifier);
-			set.set("rate", rate);
-			Debug.sendSkillDebug(attacker, target, skill, set);
-		}
 		
 		return (Rnd.get(100) < rate);
 	}
@@ -1973,17 +1892,7 @@ public final class Formulas
 		final double baseRate = blowChance * dexMod * sideMod;
 		// Apply blow rates
 		final double rate = activeChar.calcStat(Stats.BLOW_RATE, baseRate, target, null);
-		// Debug
-		if (activeChar.isDebug())
-		{
-			final StatsSet set = new StatsSet();
-			set.set("dexMod", dexMod);
-			set.set("blowChance", blowChance);
-			set.set("sideMod", sideMod);
-			set.set("baseRate", baseRate);
-			set.set("rate", rate);
-			Debug.sendSkillDebug(activeChar, target, skill, set);
-		}
+		
 		return Rnd.get(100) < rate;
 	}
 	
@@ -2000,15 +1909,7 @@ public final class Formulas
 				final double prof = activeChar.calcStat(Stats.CANCEL_PROF, 0, target, null);
 				final double resMod = 1 + (((vuln + prof) * -1) / 100);
 				final double finalRate = rate / resMod;
-				if (activeChar.isDebug())
-				{
-					final StatsSet set = new StatsSet();
-					set.set("baseMod", rate);
-					set.set("magicLevel", cancelMagicLvl);
-					set.set("resMod", resMod);
-					set.set("rate", finalRate);
-					Debug.sendSkillDebug(activeChar, target, skill, set);
-				}
+				
 				// Prevent initialization.
 				final List<BuffInfo> buffs = target.getEffectList().hasBuffs() ? new ArrayList<>(target.getEffectList().getBuffs()) : new ArrayList<>(1);
 				if (target.getEffectList().hasTriggered())

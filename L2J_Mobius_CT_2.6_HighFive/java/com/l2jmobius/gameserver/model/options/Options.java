@@ -75,7 +75,6 @@ public class Options
 			{
 				funcs.add(fuction);
 			}
-			player.sendDebugMessage("Adding stats: " + fuctionTemplate.getStat() + " val: " + fuctionTemplate.getValue());
 		}
 		return funcs;
 	}
@@ -157,7 +156,6 @@ public class Options
 	
 	public void apply(L2PcInstance player)
 	{
-		player.sendDebugMessage("Activating option id: " + _id);
 		if (hasFuncs())
 		{
 			player.addStatFuncs(getStatFuncs(null, player));
@@ -165,19 +163,16 @@ public class Options
 		if (hasActiveSkill())
 		{
 			addSkill(player, getActiveSkill().getSkill());
-			player.sendDebugMessage("Adding active skill: " + getActiveSkill());
 		}
 		if (hasPassiveSkill())
 		{
 			addSkill(player, getPassiveSkill().getSkill());
-			player.sendDebugMessage("Adding passive skill: " + getPassiveSkill());
 		}
 		if (hasActivationSkills())
 		{
 			for (OptionsSkillHolder holder : _activationSkills)
 			{
 				player.addTriggerSkill(holder);
-				player.sendDebugMessage("Adding trigger skill: " + holder);
 			}
 		}
 		
@@ -186,7 +181,6 @@ public class Options
 	
 	public void remove(L2PcInstance player)
 	{
-		player.sendDebugMessage("Deactivating option id: " + _id);
 		if (hasFuncs())
 		{
 			player.removeStatsOwner(this);
@@ -194,19 +188,16 @@ public class Options
 		if (hasActiveSkill())
 		{
 			player.removeSkill(getActiveSkill().getSkill(), false, false);
-			player.sendDebugMessage("Removing active skill: " + getActiveSkill());
 		}
 		if (hasPassiveSkill())
 		{
 			player.removeSkill(getPassiveSkill().getSkill(), false, true);
-			player.sendDebugMessage("Removing passive skill: " + getPassiveSkill());
 		}
 		if (hasActivationSkills())
 		{
 			for (OptionsSkillHolder holder : _activationSkills)
 			{
 				player.removeTriggerSkill(holder);
-				player.sendDebugMessage("Removing trigger skill: " + holder);
 			}
 		}
 		player.sendSkillList();

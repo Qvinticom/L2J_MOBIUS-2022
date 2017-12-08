@@ -776,7 +776,6 @@ public final class Config
 	public static boolean L2JMOD_MULTILANG_NS_ENABLE;
 	public static List<String> L2JMOD_MULTILANG_NS_ALLOWED = new ArrayList<>();
 	public static boolean L2WALKER_PROTECTION;
-	public static boolean L2JMOD_DEBUG_VOICE_COMMAND;
 	public static int L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
 	public static int L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP;
 	public static int L2JMOD_DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
@@ -2563,7 +2562,6 @@ public final class Config
 			}
 			
 			L2WALKER_PROTECTION = CustomSettings.getBoolean("L2WalkerProtection", false);
-			L2JMOD_DEBUG_VOICE_COMMAND = CustomSettings.getBoolean("DebugVoiceCommand", false);
 			
 			L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP = CustomSettings.getInt("DualboxCheckMaxPlayersPerIP", 0);
 			L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = CustomSettings.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);

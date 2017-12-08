@@ -113,7 +113,6 @@ public final class Config
 	public static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
 	public static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
 	public static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
-	public static final String CUSTOM_DEBUG_VOICE_COMMAND_CONFIG_FILE = "./config/Custom/DebugVoiceCommand.ini";
 	public static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
 	public static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
 	public static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
@@ -1092,7 +1091,6 @@ public final class Config
 	public static String MULTILANG_DEFAULT;
 	public static boolean MULTILANG_VOICED_ALLOW;
 	public static boolean L2WALKER_PROTECTION;
-	public static boolean DEBUG_VOICE_COMMAND;
 	public static int DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
 	public static int DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP;
 	public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
@@ -2520,11 +2518,6 @@ public final class Config
 				final String splitInfo[] = s.split(",");
 				COMMUNITY_AVAILABLE_TELEPORTS.put(splitInfo[0], new Location(Integer.parseInt(splitInfo[1]), Integer.parseInt(splitInfo[2]), Integer.parseInt(splitInfo[3])));
 			}
-			
-			// Load DebugVoiceCommand config file (if exists)
-			final PropertiesParser DebugVoiceCommand = new PropertiesParser(CUSTOM_DEBUG_VOICE_COMMAND_CONFIG_FILE);
-			
-			DEBUG_VOICE_COMMAND = DebugVoiceCommand.getBoolean("DebugVoiceCommand", false);
 			
 			// Load DualboxCheck config file (if exists)
 			final PropertiesParser DualboxCheck = new PropertiesParser(CUSTOM_DUALBOX_CHECK_CONFIG_FILE);

@@ -1379,7 +1379,6 @@ public final class Skill implements IIdentifiable
 		
 		if (effected.isInvulAgainst(getId(), getLevel()))
 		{
-			effected.sendDebugMessage("Skill " + toString() + " has been ignored (invul against)");
 			return;
 		}
 		
