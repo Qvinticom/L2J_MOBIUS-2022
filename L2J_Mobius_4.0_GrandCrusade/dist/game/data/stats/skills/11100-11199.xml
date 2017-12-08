@@ -3162,16 +3162,14 @@
 				<skillLevelScaleTo>5</skillLevelScaleTo>
 				<chance>80</chance>
 			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus" fromLevel="5" toLevel="7">
-				<amount>10</amount>
+			<effect name="DamageByAttack" fromLevel="5" toLevel="7">
+				<amount>-10</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus" fromLevel="5" toLevel="7">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus" fromLevel="5" toLevel="7">
-				<amount>10</amount>
+			<effect name="DamageByAttack" fromLevel="5" toLevel="7">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>

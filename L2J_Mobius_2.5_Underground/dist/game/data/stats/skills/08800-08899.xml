@@ -85,16 +85,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>3</amount>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -107,16 +100,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>8</amount>
+			<effect name="DamageByAttack">
+				<amount>-8</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -129,16 +115,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -151,16 +130,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -173,16 +145,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -195,16 +160,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>3</amount>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -217,16 +175,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>8</amount>
+			<effect name="DamageByAttack">
+				<amount>-8</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -239,16 +190,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -261,16 +205,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -283,16 +220,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -305,16 +235,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>3</amount>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -327,16 +250,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>8</amount>
+			<effect name="DamageByAttack">
+				<amount>-8</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -349,16 +265,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -371,16 +280,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -393,16 +295,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -738,16 +633,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>3</amount>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -761,16 +649,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>8</amount>
+			<effect name="DamageByAttack">
+				<amount>-8</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -784,16 +665,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -807,16 +681,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -830,16 +697,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -853,16 +713,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>3</amount>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -876,16 +729,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>8</amount>
+			<effect name="DamageByAttack">
+				<amount>-8</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -899,16 +745,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -922,16 +761,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -945,16 +777,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -968,16 +793,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>3</amount>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -991,16 +809,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>8</amount>
+			<effect name="DamageByAttack">
+				<amount>-8</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1014,16 +825,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1037,16 +841,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1060,16 +857,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>

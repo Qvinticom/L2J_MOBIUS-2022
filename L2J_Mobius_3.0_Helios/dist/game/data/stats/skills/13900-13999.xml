@@ -9,16 +9,14 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -205,16 +203,14 @@
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>10</amount>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>10</amount>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1407,16 +1403,14 @@
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="WeightLimit">
@@ -2161,8 +2155,7 @@
 		</effects>
 	</skill>
 	<skill id="13957" toLevel="10" name="Activate.Silence">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<!-- Silence has temporarily restrained skills. Ignores debuff immunity. -->
+		<!-- Updated to Helios -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>

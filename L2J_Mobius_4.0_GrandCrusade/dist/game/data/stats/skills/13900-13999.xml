@@ -9,16 +9,14 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -205,16 +203,14 @@
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>10</amount>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>10</amount>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1407,16 +1403,14 @@
 				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>2</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>2</amount>
+			<effect name="DamageByAttack">
+				<amount>-2</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="WeightLimit">
@@ -2467,28 +2461,14 @@
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>10</amount>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>10</amount>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">

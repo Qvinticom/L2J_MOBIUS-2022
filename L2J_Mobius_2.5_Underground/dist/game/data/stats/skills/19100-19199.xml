@@ -776,28 +776,14 @@
 		<operateType>P</operateType>
 		<icon>icon.skill19137</icon>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>10</amount>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>10</amount>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>		
 		</effects>

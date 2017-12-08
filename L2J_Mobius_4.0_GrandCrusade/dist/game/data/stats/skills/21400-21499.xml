@@ -297,28 +297,9 @@
 		<icon>[icon.ev_wp_halloween]</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>3</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>3</amount>
+			<effect name="DamageByAttack">
+				<amount>-3</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">

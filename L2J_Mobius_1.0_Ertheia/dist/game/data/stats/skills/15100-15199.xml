@@ -1316,28 +1316,14 @@
 				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>9</amount>
+			<effect name="DamageByAttack">
+				<amount>-9</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>9</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>9</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PveMagicalSkillDefenceBonus">
-				<amount>9</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
-				<amount>9</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>9</amount>
+			<effect name="DamageByAttack">
+				<amount>-9</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>

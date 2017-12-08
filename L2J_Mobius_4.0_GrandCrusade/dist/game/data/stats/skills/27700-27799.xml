@@ -2,12 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="27700" toLevel="6" name="Inherent Abilities - Gloves Attack">
 		<!-- Updated to GRAND CRUSADE -->
-		<!-- Level: 1 P. Atk. + 1%%, M. Atk. + 2%%. -->
-		<!-- Level: 2 P. Atk. + 1.1%%, M. Atk. + 2.2%%. -->
-		<!-- Level: 3 P. Atk. + 1.2%%, M. Atk. + 2.4%%. -->
-		<!-- Level: 4 P. Atk. + 1.3%%, M. Atk. + 2.6%%. -->
-		<!-- Level: 5 P. Atk. + 1.4%%, M. Atk. + 2.8%%. -->
-		<!-- Level: 6 P. Atk. + 1.5%%, M. Atk. + 3%%. -->
+		<!-- Level: 1 P. Atk. + 1%, M. Atk. + 2%. -->
+		<!-- Level: 2 P. Atk. + 1.1%, M. Atk. + 2.2%. -->
+		<!-- Level: 3 P. Atk. + 1.2%, M. Atk. + 2.4%. -->
+		<!-- Level: 4 P. Atk. + 1.3%, M. Atk. + 2.6%. -->
+		<!-- Level: 5 P. Atk. + 1.4%, M. Atk. + 2.8%. -->
+		<!-- Level: 6 P. Atk. + 1.5%, M. Atk. + 3%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -38,12 +38,12 @@
 	</skill>
 	<skill id="27701" toLevel="6" name="Inherent Abilities - Shoes Attack">
 		<!-- Updated to GRAND CRUSADE -->
-		<!-- Level: 1 P. Atk. + 1%%, M. Atk. + 2%%. -->
-		<!-- Level: 2 P. Atk. + 1.1%%, M. Atk. + 2.2%%. -->
-		<!-- Level: 3 P. Atk. + 1.2%%, M. Atk. + 2.4%%. -->
-		<!-- Level: 4 P. Atk. + 1.3%%, M. Atk. + 2.6%%. -->
-		<!-- Level: 5 P. Atk. + 1.4%%, M. Atk. + 2.8%%. -->
-		<!-- Level: 6 P. Atk. + 1.5%%, M. Atk. + 3%%. -->
+		<!-- Level: 1 P. Atk. + 1%, M. Atk. + 2%. -->
+		<!-- Level: 2 P. Atk. + 1.1%, M. Atk. + 2.2%. -->
+		<!-- Level: 3 P. Atk. + 1.2%, M. Atk. + 2.4%. -->
+		<!-- Level: 4 P. Atk. + 1.3%, M. Atk. + 2.6%. -->
+		<!-- Level: 5 P. Atk. + 1.4%, M. Atk. + 2.8%. -->
+		<!-- Level: 6 P. Atk. + 1.5%, M. Atk. + 3%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -546,7 +546,7 @@
 	</skill>
 	<skill id="27745" toLevel="1" name="Chef Monkey's Belt">
 		<!-- Updated to GRAND CRUSADE -->
-		<!-- Max CP/HP/MP + 300, Weight + 12800, Damage + 7%%, Received Damage - 5%%, Inventory Slots + 18, Attribute Resistance + 5. -->
+		<!-- Max CP/HP/MP + 300, Weight + 12800, Damage + 7%, Received Damage - 5%, Inventory Slots + 18, Attribute Resistance + 5. -->
 		<icon>BranchIcon.icon.g_monkey_belt</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -567,31 +567,14 @@
 				<amount>12800</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>8</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
 				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>8</amount>
-				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>8</amount>
-				<type>ENEMY_ALL</type>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="EnlargeSlot">
@@ -695,7 +678,7 @@
 	</skill>
 	<skill id="27759" toLevel="1" name="Eva's Rune">
 		<!-- Updated to GRAND CRUSADE -->
-		<!-- Through the power of Eva, increases Max HP by 10%% and decreases Cooldown by 20%%. Reflects a portion of damage received back onto the enemy. -->
+		<!-- Through the power of Eva, increases Max HP by 10%% and decreases Cooldown by 20%. Reflects a portion of damage received back onto the enemy. -->
 		<icon>BranchSys.icon.br_rune_of_eva_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1018,58 +1001,24 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
+			<effect name="DamageByAttack">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-7</value>
+					<value level="4">-10</value>
 				</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
+			<effect name="DamageByAttack">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-7</value>
+					<value level="4">-10</value>
 				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>		
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
-				</amount>
+				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 		</effects>
