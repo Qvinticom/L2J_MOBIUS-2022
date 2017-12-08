@@ -1057,9 +1057,42 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18793" toLevel="2" name="Spellbook: Vitality of the Exalted Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">47854</value> <!-- Spellbook: Vitality of the Exalted Lv. 1 -->
+			<value level="2">47855</value> <!-- Spellbook: Vitality of the Exalted Lv. 2 -->
+		</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19290</skillId>
+				<skillLevel>1</skillLevel>
+				<skillLevel>2</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19290</skillId>
+				<skillLvl>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18794" toLevel="2" name="Puss the Cat??s Blessing">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
