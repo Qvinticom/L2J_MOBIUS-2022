@@ -1265,7 +1265,7 @@ public final class Skill implements IIdentifiable
 						effect.continuousInstant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
 					}
 					
-					if (effect.canStart(info))
+					if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
 					{
 						info.addEffect(effect);
 					}

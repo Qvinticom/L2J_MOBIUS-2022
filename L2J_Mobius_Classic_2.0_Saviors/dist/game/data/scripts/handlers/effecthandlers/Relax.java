@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -65,42 +64,42 @@ public final class Relax extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isDead())
+		if (effected.isDead())
 		{
 			return false;
 		}
 		
-		if (info.getEffected().isPlayer())
+		if (effected.isPlayer())
 		{
-			if (!info.getEffected().getActingPlayer().isSitting())
+			if (!effected.getActingPlayer().isSitting())
 			{
 				return false;
 			}
 		}
 		
-		if ((info.getEffected().getCurrentHp() + 1) > info.getEffected().getMaxRecoverableHp())
+		if ((effected.getCurrentHp() + 1) > effected.getMaxRecoverableHp())
 		{
-			if (info.getSkill().isToggle())
+			if (skill.isToggle())
 			{
-				info.getEffected().sendPacket(SystemMessageId.THAT_SKILL_HAS_BEEN_DE_ACTIVATED_AS_HP_WAS_FULLY_RECOVERED);
+				effected.sendPacket(SystemMessageId.THAT_SKILL_HAS_BEEN_DE_ACTIVATED_AS_HP_WAS_FULLY_RECOVERED);
 				return false;
 			}
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();
-		if (manaDam > info.getEffected().getCurrentMp())
+		if (manaDam > effected.getCurrentMp())
 		{
-			if (info.getSkill().isToggle())
+			if (skill.isToggle())
 			{
-				info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
+				effected.sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
 				return false;
 			}
 		}
 		
-		info.getEffected().reduceCurrentMp(manaDam);
+		effected.reduceCurrentMp(manaDam);
 		
-		return info.getSkill().isToggle();
+		return skill.isToggle();
 	}
 }

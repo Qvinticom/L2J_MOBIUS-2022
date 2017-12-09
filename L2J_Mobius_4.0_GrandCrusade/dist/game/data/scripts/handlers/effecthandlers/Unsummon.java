@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -63,9 +62,9 @@ public final class Unsummon extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return info.getEffected().isSummon();
+		return effected.isSummon();
 	}
 	
 	@Override

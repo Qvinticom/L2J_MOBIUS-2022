@@ -21,14 +21,13 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Abstract effect implementation.<br>
- * Instant effects should not override {@link #onExit(BuffInfo)}.<br>
- * Instant effects should not override {@link #canStart(BuffInfo)}, all checks should be done {@link #onStart(BuffInfo)}.<br>
- * Do not call super class methods {@link #onStart(BuffInfo)} nor {@link #onExit(BuffInfo)}.
+ * Instant effects should not override {@link #onExit(L2Character, L2Character, Skill)}.<br>
+ * Instant effects should not override {@link #canStart(L2Character, L2Character, Skill)}, all checks should be done {@link #onStart(L2Character, L2Character, Skill)}.<br>
+ * Do not call super class methods {@link #onStart(L2Character, L2Character, Skill)} nor {@link #onExit(L2Character, L2Character, Skill)}.
  * @author Zoey76
  */
 public abstract class AbstractEffect
@@ -76,22 +75,14 @@ public abstract class AbstractEffect
 	}
 	
 	/**
-	 * Get this effect's type.<br>
-	 * TODO: Remove.
-	 * @return the effect type
-	 */
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
-	}
-	
-	/**
 	 * Verify if the buff can start.<br>
 	 * Used for continuous effects.
-	 * @param info the buff info
+	 * @param effector
+	 * @param effected
+	 * @param skill
 	 * @return {@code true} if all the start conditions are meet, {@code false} otherwise
 	 */
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
 		return true;
 	}
@@ -111,32 +102,22 @@ public abstract class AbstractEffect
 		
 	}
 	
-	/**
-	 * Called on effect start.
-	 * @param info the buff info
-	 */
-	public void onStart(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
+		
 	}
 	
 	/**
 	 * Called on each tick.<br>
 	 * If the abnormal time is lesser than zero it will last forever.
-	 * @param info the buff info
+	 * @param effector
+	 * @param effected
+	 * @param skill
 	 * @return if {@code true} this effect will continue forever, if {@code false} it will stop after abnormal time has passed
 	 */
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
 		return false;
-	}
-	
-	/**
-	 * Called when the effect is exited.
-	 * @param info the buff info
-	 */
-	public void onExit(BuffInfo info)
-	{
-		
 	}
 	
 	/**
@@ -146,12 +127,6 @@ public abstract class AbstractEffect
 	public long getEffectFlags()
 	{
 		return EffectFlag.NONE.getMask();
-	}
-	
-	@Override
-	public String toString()
-	{
-		return "Effect " + getClass().getSimpleName();
 	}
 	
 	public boolean checkCondition(Object obj)
@@ -186,5 +161,21 @@ public abstract class AbstractEffect
 	public void pump(L2Character effected, Skill skill)
 	{
 		
+	}
+	
+	/**
+	 * Get this effect's type.<br>
+	 * TODO: Remove.
+	 * @return the effect type
+	 */
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.NONE;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "Effect " + getClass().getSimpleName();
 	}
 }

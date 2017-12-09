@@ -17,8 +17,9 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.MoveType;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -40,20 +41,20 @@ public class StatByMoveType extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getStat().mergeMoveTypeValue(_stat, _type, _value);
+		effected.getStat().mergeMoveTypeValue(_stat, _type, _value);
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getStat().mergeMoveTypeValue(_stat, _type, -_value);
+		effected.getStat().mergeMoveTypeValue(_stat, _type, -_value);
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		return info.getSkill().isPassive() || info.getSkill().isToggle();
+		return skill.isPassive() || skill.isToggle();
 	}
 }

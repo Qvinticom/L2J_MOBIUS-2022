@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -54,9 +53,9 @@ public final class Disarmor extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return (_slot != L2Item.SLOT_NONE) && info.getEffected().isPlayer();
+		return (_slot != L2Item.SLOT_NONE) && effected.isPlayer();
 	}
 	
 	@Override
@@ -98,18 +97,18 @@ public final class Disarmor extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (!info.getEffected().isPlayer())
+		if (!effected.isPlayer())
 		{
 			return;
 		}
 		
-		final Integer disarmedObjId = _unequippedItems.remove(info.getEffected().getObjectId());
+		final Integer disarmedObjId = _unequippedItems.remove(effected.getObjectId());
 		if ((disarmedObjId != null) && (disarmedObjId > 0))
 		{
-			final L2PcInstance player = info.getEffected().getActingPlayer();
-			info.getEffected().getInventory().unblockItemSlot(_slot);
+			final L2PcInstance player = effected.getActingPlayer();
+			player.getInventory().unblockItemSlot(_slot);
 			
 			final L2ItemInstance item = player.getInventory().getItemByObjectId(disarmedObjId);
 			if (item != null)
@@ -137,6 +136,6 @@ public final class Disarmor extends AbstractEffect
 				}
 			}
 		}
-		super.onExit(info);
+		super.onExit(effector, effected, skill);
 	}
 }

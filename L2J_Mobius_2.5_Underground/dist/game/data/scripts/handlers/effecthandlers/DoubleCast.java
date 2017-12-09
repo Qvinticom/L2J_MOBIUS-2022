@@ -22,10 +22,10 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -56,34 +56,34 @@ public final class DoubleCast extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayer())
+		if (effected.isPlayer())
 		{
 			for (SkillHolder holder : TOGGLE_SKILLS)
 			{
-				final Skill skill = holder.getSkill();
-				if ((skill != null) && !info.getEffected().isAffectedBySkill(holder))
+				final Skill s = holder.getSkill();
+				if ((s != null) && !effected.isAffectedBySkill(holder))
 				{
-					_addedToggles.computeIfAbsent(info.getEffected().getObjectId(), v -> new ArrayList<>()).add(holder);
-					skill.applyEffects(info.getEffected(), info.getEffected());
+					_addedToggles.computeIfAbsent(effected.getObjectId(), v -> new ArrayList<>()).add(holder);
+					s.applyEffects(effected, effected);
 				}
 			}
 		}
-		super.onStart(info);
+		super.onStart(effector, effected, skill);
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayer())
+		if (effected.isPlayer())
 		{
-			_addedToggles.computeIfPresent(info.getEffected().getObjectId(), (k, v) ->
+			_addedToggles.computeIfPresent(effected.getObjectId(), (k, v) ->
 			{
-				v.forEach(h -> info.getEffected().stopSkillEffects(h.getSkill()));
+				v.forEach(h -> effected.stopSkillEffects(h.getSkill()));
 				return null;
 			});
 		}
-		super.onExit(info);
+		super.onExit(effector, effected, skill);
 	}
 }

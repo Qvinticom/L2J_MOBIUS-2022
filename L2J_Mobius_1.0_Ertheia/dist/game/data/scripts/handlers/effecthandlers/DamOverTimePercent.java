@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -45,19 +46,19 @@ public final class DamOverTimePercent extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isDead())
+		if (effected.isDead())
 		{
 			return false;
 		}
 		
-		double damage = info.getEffected().getCurrentHp() * _power * getTicksMultiplier();
-		if (damage >= (info.getEffected().getCurrentHp() - 1))
+		double damage = effected.getCurrentHp() * _power * getTicksMultiplier();
+		if (damage >= (effected.getCurrentHp() - 1))
 		{
-			if (info.getSkill().isToggle())
+			if (skill.isToggle())
 			{
-				info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_HP);
+				effected.sendPacket(SystemMessageId.YOUR_SKILL_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_HP);
 				return false;
 			}
 			
@@ -65,17 +66,17 @@ public final class DamOverTimePercent extends AbstractEffect
 			if (!_canKill)
 			{
 				// Fix for players dying by DOTs if HP < 1 since reduceCurrentHP method will kill them
-				if (info.getEffected().getCurrentHp() <= 1)
+				if (effected.getCurrentHp() <= 1)
 				{
-					return info.getSkill().isToggle();
+					return skill.isToggle();
 				}
 				
-				damage = info.getEffected().getCurrentHp() - 1;
+				damage = effected.getCurrentHp() - 1;
 			}
 		}
 		
-		info.getEffector().doAttack(damage, info.getEffected(), info.getSkill(), true, false, false, false);
+		effector.doAttack(damage, effected, skill, true, false, false, false);
 		
-		return info.getSkill().isToggle();
+		return skill.isToggle();
 	}
 }

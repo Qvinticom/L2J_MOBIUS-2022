@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -78,22 +77,22 @@ public final class Synergy extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffector().isDead())
+		if (effector.isDead())
 		{
 			return false;
 		}
 		
 		for (AbnormalType required : _requiredSlots)
 		{
-			if (!info.getEffector().hasAbnormalType(required))
+			if (!effector.hasAbnormalType(required))
 			{
-				return info.getSkill().isToggle();
+				return skill.isToggle();
 			}
 		}
 		
-		final int abnormalCount = (int) _optionalSlots.stream().filter(info.getEffector()::hasAbnormalType).count();
+		final int abnormalCount = (int) _optionalSlots.stream().filter(effector::hasAbnormalType).count();
 		
 		if (abnormalCount >= _minSlot)
 		{
@@ -102,19 +101,19 @@ public final class Synergy extends AbstractEffect
 			
 			if (partyBuffSkill != null)
 			{
-				final L2Object target = partyBuffSkill.getTarget(info.getEffector(), info.getEffected(), false, false, false);
+				final L2Object target = partyBuffSkill.getTarget(effector, effected, false, false, false);
 				
 				if ((target != null) && target.isCharacter())
 				{
-					SkillCaster.triggerCast(info.getEffector(), (L2Character) target, partyBuffSkill);
+					SkillCaster.triggerCast(effector, (L2Character) target, partyBuffSkill);
 				}
 			}
 			else
 			{
-				_log.warning("Skill not found effect called from " + info.getSkill());
+				_log.warning("Skill not found effect called from " + skill);
 			}
 		}
 		
-		return info.getSkill().isToggle();
+		return skill.isToggle();
 	}
 }

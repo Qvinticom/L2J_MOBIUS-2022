@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -52,8 +51,8 @@ public class AddSkillBySkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().removeSkill(_addedSkill.getSkill(), true);
+		effected.removeSkill(_addedSkill.getSkill(), true);
 	}
 }

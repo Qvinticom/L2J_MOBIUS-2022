@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2FortCommanderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -45,9 +44,9 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		final L2Character creature = info.getEffected();
+		final L2Character creature = effected;
 		return creature.isPlayer() || creature.isSummon() || (creature.isAttackable() && //
 			!((creature instanceof L2DefenderInstance) || (creature instanceof L2FortCommanderInstance) || //
 				(creature instanceof L2SiegeFlagInstance) || (creature.getTemplate().getRace() == Race.SIEGE_WEAPON)));
@@ -60,9 +59,9 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		fearAction(null, info.getEffected());
+		fearAction(null, effected);
 		return false;
 	}
 	
@@ -74,11 +73,11 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (!info.getEffected().isPlayer())
+		if (!effected.isPlayer())
 		{
-			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
 	}
 	

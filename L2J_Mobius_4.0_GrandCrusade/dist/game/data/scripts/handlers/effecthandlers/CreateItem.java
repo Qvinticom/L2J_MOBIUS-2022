@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -37,9 +36,9 @@ public final class CreateItem extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return info.getEffected().isPlayer();
+		return effected.isPlayer();
 	}
 	
 	@Override
@@ -53,9 +52,9 @@ public final class CreateItem extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		final L2PcInstance player = info.getEffected().getActingPlayer();
+		final L2PcInstance player = effected.getActingPlayer();
 		if (player != null)
 		{
 			player.setCreateItemLevel(0);

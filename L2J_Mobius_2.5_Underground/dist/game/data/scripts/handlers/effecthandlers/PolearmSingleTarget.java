@@ -19,7 +19,6 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -42,11 +41,11 @@ public class PolearmSingleTarget extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayer())
+		if (effected.isPlayer())
 		{
-			info.getEffected().getStat().removeFixedValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE);
+			effected.getStat().removeFixedValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE);
 		}
 	}
 }

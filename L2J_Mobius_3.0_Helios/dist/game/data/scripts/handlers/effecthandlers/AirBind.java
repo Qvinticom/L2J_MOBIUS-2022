@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ExAlterSkillRequest;
 
@@ -101,11 +100,11 @@ public final class AirBind extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (!info.getEffected().isPlayer())
+		if (!effected.isPlayer())
 		{
-			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
 	}
 	

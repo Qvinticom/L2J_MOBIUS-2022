@@ -780,7 +780,7 @@ public class CharStat
 			// Call pump to each effect
 			//@formatter:off
 			effectsStream.forEach(info -> info.getEffects().stream()
-				.filter(effect -> effect.canStart(info))
+				.filter(effect -> effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
 				.filter(effect -> effect.canPump(info.getEffector(), info.getEffected(), info.getSkill()))
 				.forEach(effect -> effect.pump(info.getEffected(), info.getSkill())));
 			//@formatter:on
@@ -792,7 +792,7 @@ public class CharStat
 					.filter(BuffInfo::isInUse)
 					.filter(info -> info.isAbnormalType(AbnormalType.ABILITY_CHANGE))
 					.forEach(info -> info.getEffects().stream()
-						.filter(effect -> effect.canStart(info))
+						.filter(effect -> effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
 						.filter(effect -> effect.canPump(_activeChar, _activeChar, info.getSkill()))
 						.forEach(effect -> effect.pump(_activeChar, info.getSkill())));
 				//@formatter:on

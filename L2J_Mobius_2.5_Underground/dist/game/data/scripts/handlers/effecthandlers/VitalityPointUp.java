@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -38,9 +37,9 @@ public final class VitalityPointUp extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return (info.getEffected() != null) && info.getEffected().isPlayer();
+		return (effected != null) && effected.isPlayer();
 	}
 	
 	@Override

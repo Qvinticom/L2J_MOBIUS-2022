@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -44,11 +45,11 @@ public class GetMomentum extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayer())
+		if (effected.isPlayer())
 		{
-			final L2PcInstance player = info.getEffected().getActingPlayer();
+			final L2PcInstance player = effected.getActingPlayer();
 			final int maxCharge = (int) player.getStat().getValue(Stats.MAX_MOMENTUM, 0);
 			final int newCharge = Math.min(player.getCharges() + 1, maxCharge);
 			
@@ -68,6 +69,6 @@ public class GetMomentum extends AbstractEffect
 			player.sendPacket(new EtcStatusUpdate(player));
 		}
 		
-		return info.getSkill().isToggle();
+		return skill.isToggle();
 	}
 }

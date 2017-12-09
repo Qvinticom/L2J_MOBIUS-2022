@@ -176,7 +176,7 @@ public class Options
 					effect.continuousInstant(info.getEffector(), info.getEffected(), info.getSkill(), info.getItem());
 					effect.pump(player, info.getSkill());
 					
-					if (effect.canStart(info))
+					if (effect.canStart(info.getEffector(), info.getEffected(), info.getSkill()))
 					{
 						info.addEffect(effect);
 					}

@@ -18,6 +18,11 @@ package events.HuntForSanta;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -39,7 +44,7 @@ public final class HuntForSanta extends LongTimeEvent
 	private static final SkillHolder BUFF_TREE = new SkillHolder(16420, 1);
 	private static final SkillHolder BUFF_SNOWMAN = new SkillHolder(16421, 1);
 	// Item
-	// private static final int SANTAS_MARK = 40313;
+	private static final int SANTAS_MARK = 40313;
 	
 	private HuntForSanta()
 	{
@@ -63,21 +68,27 @@ public final class HuntForSanta extends LongTimeEvent
 			case "receiveBuffStocking":
 			{
 				htmltext = applyBuff(npc, player, BUFF_STOCKING.getSkill());
+				startQuestTimer("rewardBuffStocking" + player.getObjectId(), 7200000, null, player);
 				break;
 			}
 			case "receiveBuffTree":
 			{
 				htmltext = applyBuff(npc, player, BUFF_TREE.getSkill());
+				startQuestTimer("rewardBuffTree" + player.getObjectId(), 7200000, null, player);
 				break;
 			}
 			case "receiveBuffSnowman":
 			{
 				htmltext = applyBuff(npc, player, BUFF_SNOWMAN.getSkill());
+				startQuestTimer("rewardBuffSnowman" + player.getObjectId(), 7200000, null, player);
 				break;
 			}
 			case "receiveBuffAll":
 			{
 				htmltext = applyAllBuffs(npc, player);
+				startQuestTimer("rewardBuffStocking" + player.getObjectId(), 7200000, null, player);
+				startQuestTimer("rewardBuffTree" + player.getObjectId(), 7200000, null, player);
+				startQuestTimer("rewardBuffSnowman" + player.getObjectId(), 7200000, null, player);
 				break;
 			}
 			case "changeBuff":
@@ -87,6 +98,17 @@ public final class HuntForSanta extends LongTimeEvent
 				break;
 			}
 		}
+		
+		if (event.startsWith("rewardBuffStocking") //
+			|| event.startsWith("rewardBuffSnowman") //
+			|| event.startsWith("rewardBuffTree"))
+		{
+			if ((player != null) && (player.isOnlineInt() == 1))
+			{
+				giveItems(player, SANTAS_MARK, 1);
+			}
+		}
+		
 		return htmltext;
 	}
 	
@@ -128,20 +150,36 @@ public final class HuntForSanta extends LongTimeEvent
 	
 	private void removeBuffs(L2PcInstance player)
 	{
+		player.getEffectList().stopSkillEffects(true, BUFF_STOCKING.getSkill());
+		player.getEffectList().stopSkillEffects(true, BUFF_TREE.getSkill());
+		player.getEffectList().stopSkillEffects(true, BUFF_SNOWMAN.getSkill());
+		cancelQuestTimer("rewardBuffStocking" + player.getObjectId(), null, player);
+		cancelQuestTimer("rewardBuffTree" + player.getObjectId(), null, player);
+		cancelQuestTimer("rewardBuffSnowman" + player.getObjectId(), null, player);
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLogin(OnPlayerLogin event)
+	{
+		final L2PcInstance player = event.getActiveChar();
 		final BuffInfo buffStocking = player.getEffectList().getBuffInfoBySkillId(BUFF_STOCKING.getSkillId());
 		final BuffInfo buffTree = player.getEffectList().getBuffInfoBySkillId(BUFF_TREE.getSkillId());
 		final BuffInfo buffSnowman = player.getEffectList().getBuffInfoBySkillId(BUFF_SNOWMAN.getSkillId());
 		if (buffStocking != null)
 		{
-			player.getEffectList().stopSkillEffects(true, buffStocking.getSkill());
+			cancelQuestTimer("rewardBuffStocking" + player.getObjectId(), null, player);
+			startQuestTimer("rewardBuffStocking" + player.getObjectId(), buffStocking.getTime() * 1000, null, player);
 		}
 		if (buffTree != null)
 		{
-			player.getEffectList().stopSkillEffects(true, buffTree.getSkill());
+			cancelQuestTimer("rewardBuffTree" + player.getObjectId(), null, player);
+			startQuestTimer("rewardBuffTree" + player.getObjectId(), buffTree.getTime() * 1000, null, player);
 		}
 		if (buffSnowman != null)
 		{
-			player.getEffectList().stopSkillEffects(true, buffSnowman.getSkill());
+			cancelQuestTimer("rewardBuffSnowman" + player.getObjectId(), null, player);
+			startQuestTimer("rewardBuffSnowman" + player.getObjectId(), buffSnowman.getTime() * 1000, null, player);
 		}
 	}
 	

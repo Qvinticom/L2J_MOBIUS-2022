@@ -18,8 +18,9 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
 /**
@@ -38,19 +39,19 @@ public final class SkillTurningOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if ((info.getEffected() == null) || (info.getEffected() == info.getEffector()) || info.getEffected().isRaid())
+		if ((effected == null) || (effected == effector) || effected.isRaid())
 		{
 			return false;
 		}
 		
-		final boolean skillSuccess = _staticChance ? Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill()) : ((_chance >= 100) || (Rnd.get(100) < _chance));
+		final boolean skillSuccess = _staticChance ? Formulas.calcProbability(_chance, effector, effected, skill) : ((_chance >= 100) || (Rnd.get(100) < _chance));
 		if (skillSuccess)
 		{
-			info.getEffected().breakCast();
+			effected.breakCast();
 		}
 		
-		return super.onActionTime(info);
+		return super.onActionTime(effector, effected, skill);
 	}
 }

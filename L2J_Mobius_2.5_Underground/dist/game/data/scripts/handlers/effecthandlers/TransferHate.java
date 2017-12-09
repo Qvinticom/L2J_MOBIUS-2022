@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.util.Util;
@@ -47,9 +46,9 @@ public final class TransferHate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Util.checkIfInRange(info.getSkill().getEffectRange(), info.getEffector(), info.getEffected(), true);
+		return Util.checkIfInRange(skill.getEffectRange(), effector, effected, true);
 	}
 	
 	@Override

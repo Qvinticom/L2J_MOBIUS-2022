@@ -17,8 +17,9 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
@@ -33,20 +34,20 @@ public final class TransferDamageToPlayer extends AbstractStatAddEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayable() && info.getEffector().isPlayer())
+		if (effected.isPlayable() && effector.isPlayer())
 		{
-			((L2Playable) info.getEffected()).setTransferDamageTo(null);
+			((L2Playable) effected).setTransferDamageTo(null);
 		}
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayable() && info.getEffector().isPlayer())
+		if (effected.isPlayable() && effector.isPlayer())
 		{
-			((L2Playable) info.getEffected()).setTransferDamageTo(info.getEffector().getActingPlayer());
+			((L2Playable) effected).setTransferDamageTo(effector.getActingPlayer());
 		}
 	}
 }

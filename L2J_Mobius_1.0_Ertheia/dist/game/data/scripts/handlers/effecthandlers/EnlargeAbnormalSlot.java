@@ -19,7 +19,6 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -36,9 +35,9 @@ public final class EnlargeAbnormalSlot extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
+		return (effector != null) && (effected != null) && effected.isPlayer();
 	}
 	
 	@Override
@@ -48,8 +47,8 @@ public final class EnlargeAbnormalSlot extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getStat().setMaxBuffCount(Math.max(0, info.getEffected().getStat().getMaxBuffCount() - _slots));
+		effected.getStat().setMaxBuffCount(Math.max(0, effected.getStat().getMaxBuffCount() - _slots));
 	}
 }

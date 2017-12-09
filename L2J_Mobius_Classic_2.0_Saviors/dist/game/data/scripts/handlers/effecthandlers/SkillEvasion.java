@@ -17,8 +17,9 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Note: In retail this effect doesn't stack. It appears that the active value is taken from the last such effect.
@@ -36,14 +37,14 @@ public class SkillEvasion extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getStat().addSkillEvasionTypeValue(_magicType, _amount);
+		effected.getStat().addSkillEvasionTypeValue(_magicType, _amount);
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getStat().removeSkillEvasionTypeValue(_magicType, _amount);
+		effected.getStat().removeSkillEvasionTypeValue(_magicType, _amount);
 	}
 }

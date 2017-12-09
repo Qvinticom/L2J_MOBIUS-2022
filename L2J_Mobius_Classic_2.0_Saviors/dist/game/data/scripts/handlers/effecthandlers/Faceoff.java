@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * @author Sdw
@@ -37,22 +38,22 @@ public class Faceoff extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return info.getEffected().isPlayer();
+		return effected.isPlayer();
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffector().getActingPlayer().setAttackerObjId(info.getEffected().getObjectId());
-		info.getEffected().getActingPlayer().setAttackerObjId(info.getEffector().getObjectId());
+		effector.getActingPlayer().setAttackerObjId(effected.getObjectId());
+		effected.getActingPlayer().setAttackerObjId(effector.getObjectId());
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffector().getActingPlayer().setAttackerObjId(0);
-		info.getEffected().getActingPlayer().setAttackerObjId(0);
+		effector.getActingPlayer().setAttackerObjId(0);
+		effected.getActingPlayer().setAttackerObjId(0);
 	}
 }

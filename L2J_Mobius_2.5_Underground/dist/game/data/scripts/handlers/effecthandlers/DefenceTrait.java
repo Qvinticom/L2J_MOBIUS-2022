@@ -21,9 +21,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.TraitType;
 
 /**
@@ -66,9 +67,9 @@ public final class DefenceTrait extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		final CharStat charStat = info.getEffected().getStat();
+		final CharStat charStat = effected.getStat();
 		synchronized (charStat.getDefenceTraits())
 		{
 			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
@@ -87,9 +88,9 @@ public final class DefenceTrait extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		final CharStat charStat = info.getEffected().getStat();
+		final CharStat charStat = effected.getStat();
 		synchronized (charStat.getDefenceTraits())
 		{
 			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())

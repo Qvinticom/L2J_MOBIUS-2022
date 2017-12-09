@@ -17,8 +17,9 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -35,21 +36,21 @@ public final class ManaDamOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isDead())
+		if (effected.isDead())
 		{
 			return false;
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();
-		if ((manaDam > info.getEffected().getCurrentMp()) && info.getSkill().isToggle())
+		if ((manaDam > effected.getCurrentMp()) && skill.isToggle())
 		{
-			info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
+			effected.sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
 			return false;
 		}
 		
-		info.getEffected().reduceCurrentMp(manaDam);
-		return info.getSkill().isToggle();
+		effected.reduceCurrentMp(manaDam);
+		return skill.isToggle();
 	}
 }

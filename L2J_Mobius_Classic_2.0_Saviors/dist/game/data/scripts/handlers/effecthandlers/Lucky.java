@@ -17,8 +17,9 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Lucky effect implementation.
@@ -31,8 +32,8 @@ public final class Lucky extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
+		return (effector != null) && (effected != null) && effected.isPlayer();
 	}
 }

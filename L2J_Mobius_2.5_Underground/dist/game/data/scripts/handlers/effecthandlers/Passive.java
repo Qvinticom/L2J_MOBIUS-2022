@@ -19,7 +19,6 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -33,9 +32,9 @@ public final class Passive extends AbstractEffect
 	}
 	
 	@Override
-	public boolean canStart(BuffInfo info)
+	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		return info.getEffected().isAttackable();
+		return effected.isAttackable();
 	}
 	
 	@Override
@@ -48,9 +47,9 @@ public final class Passive extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().enableAllSkills();
-		info.getEffected().setIsImmobilized(false);
+		effected.enableAllSkills();
+		effected.setIsImmobilized(false);
 	}
 }

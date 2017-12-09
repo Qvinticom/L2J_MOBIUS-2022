@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import com.l2jmobius.gameserver.network.serverpackets.Revive;
@@ -45,43 +46,43 @@ public final class FakeDeath extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isDead())
+		if (effected.isDead())
 		{
 			return false;
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();
-		if (manaDam > info.getEffected().getCurrentMp())
+		if (manaDam > effected.getCurrentMp())
 		{
-			if (info.getSkill().isToggle())
+			if (skill.isToggle())
 			{
-				info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
+				effected.sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
 				return false;
 			}
 		}
 		
-		info.getEffected().reduceCurrentMp(manaDam);
+		effected.reduceCurrentMp(manaDam);
 		
-		return info.getSkill().isToggle();
+		return skill.isToggle();
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayer())
+		if (effected.isPlayer())
 		{
-			info.getEffected().getActingPlayer().setRecentFakeDeath(true);
+			effected.getActingPlayer().setRecentFakeDeath(true);
 		}
 		
-		info.getEffected().broadcastPacket(new ChangeWaitType(info.getEffected(), ChangeWaitType.WT_STOP_FAKEDEATH));
-		info.getEffected().broadcastPacket(new Revive(info.getEffected()));
+		effected.broadcastPacket(new ChangeWaitType(effected, ChangeWaitType.WT_STOP_FAKEDEATH));
+		effected.broadcastPacket(new Revive(effected));
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().startFakeDeath();
+		effected.startFakeDeath();
 	}
 }

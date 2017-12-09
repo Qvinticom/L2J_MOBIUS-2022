@@ -17,10 +17,11 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * An effect that blocks a debuff. Acts like DOTA's Linken Sphere.
@@ -36,9 +37,9 @@ public final class AbnormalShield extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().setAbnormalShieldBlocks(_times);
+		effected.setAbnormalShieldBlocks(_times);
 	}
 	
 	@Override
@@ -48,9 +49,9 @@ public final class AbnormalShield extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().setAbnormalShieldBlocks(Integer.MIN_VALUE);
+		effected.setAbnormalShieldBlocks(Integer.MIN_VALUE);
 	}
 	
 	@Override

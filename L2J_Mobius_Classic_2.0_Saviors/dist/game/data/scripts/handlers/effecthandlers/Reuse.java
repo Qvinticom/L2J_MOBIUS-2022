@@ -18,8 +18,9 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.commons.util.MathUtil;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * @author Sdw
@@ -36,14 +37,14 @@ public class Reuse extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getStat().mergeReuseTypeValue(_magicType, (_amount / 100) + 1, MathUtil::mul);
+		effected.getStat().mergeReuseTypeValue(_magicType, (_amount / 100) + 1, MathUtil::mul);
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		info.getEffected().getStat().mergeReuseTypeValue(_magicType, (_amount / 100) + 1, MathUtil::div);
+		effected.getStat().mergeReuseTypeValue(_magicType, (_amount / 100) + 1, MathUtil::div);
 	}
 }

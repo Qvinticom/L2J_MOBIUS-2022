@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
@@ -40,40 +39,35 @@ public final class CallSkillOnActionTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		return castSkill(info);
-	}
-	
-	private boolean castSkill(BuffInfo info)
-	{
-		if (info.getEffector().isDead())
+		if (effector.isDead())
 		{
 			return false;
 		}
 		
-		final Skill skill = _skill.getSkill();
-		if (skill != null)
+		final Skill triggerSkill = _skill.getSkill();
+		if (triggerSkill != null)
 		{
-			if (skill.isSynergySkill())
+			if (triggerSkill.isSynergySkill())
 			{
-				skill.applyEffects(info.getEffector(), info.getEffector());
+				triggerSkill.applyEffects(effector, effector);
 			}
 			
-			L2World.getInstance().forEachVisibleObjectInRange(info.getEffector(), L2Character.class, _skill.getSkill().getAffectRange(), c ->
+			L2World.getInstance().forEachVisibleObjectInRange(effector, L2Character.class, _skill.getSkill().getAffectRange(), c ->
 			{
-				final L2Object target = skill.getTarget(info.getEffector(), c, false, false, false);
+				final L2Object target = triggerSkill.getTarget(effector, c, false, false, false);
 				
 				if ((target != null) && target.isCharacter())
 				{
-					SkillCaster.triggerCast(info.getEffector(), (L2Character) target, skill);
+					SkillCaster.triggerCast(effector, (L2Character) target, triggerSkill);
 				}
 			});
 		}
 		else
 		{
-			_log.warning("Skill not found effect called from " + info.getSkill());
+			_log.warning("Skill not found effect called from " + skill);
 		}
-		return info.getSkill().isToggle();
+		return skill.isToggle();
 	}
 }

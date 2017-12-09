@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Target Me effect implementation.
@@ -32,25 +33,25 @@ public final class TargetMe extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayable())
+		if (effected.isPlayable())
 		{
-			((L2Playable) info.getEffected()).setLockedTarget(null);
+			((L2Playable) effected).setLockedTarget(null);
 		}
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isPlayable())
+		if (effected.isPlayable())
 		{
-			if (info.getEffected().getTarget() != info.getEffector())
+			if (effected.getTarget() != effector)
 			{
-				info.getEffected().setTarget(info.getEffector());
+				effected.setTarget(effector);
 			}
 			
-			((L2Playable) info.getEffected()).setLockedTarget(info.getEffector());
+			((L2Playable) effected).setLockedTarget(effector);
 		}
 	}
 }

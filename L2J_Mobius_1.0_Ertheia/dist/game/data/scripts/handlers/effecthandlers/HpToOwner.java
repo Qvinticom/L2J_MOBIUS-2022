@@ -17,9 +17,10 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 
 /**
@@ -39,16 +40,16 @@ public final class HpToOwner extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (!info.getSkill().isToggle() && info.getSkill().isMagic())
+		if (!skill.isToggle() && skill.isMagic())
 		{
 			// TODO: M.Crit can occur even if this skill is resisted. Only then m.crit damage is applied and not debuff
-			final boolean mcrit = Formulas.calcCrit(info.getSkill().getMagicCriticalRate(), info.getEffector(), info.getEffected(), info.getSkill());
+			final boolean mcrit = Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
 			if (mcrit)
 			{
 				final double damage = _power * 10; // Tests show that 10 times HP DOT is taken during magic critical.
-				info.getEffected().reduceCurrentHp(damage, info.getEffector(), info.getSkill(), true, false, true, false);
+				effected.reduceCurrentHp(damage, effector, skill, true, false, true, false);
 			}
 		}
 	}
@@ -60,22 +61,22 @@ public final class HpToOwner extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isDead())
+		if (effected.isDead())
 		{
 			return false;
 		}
 		
 		final double damage = _power * getTicksMultiplier();
 		
-		info.getEffector().doAttack(damage, info.getEffected(), info.getSkill(), true, false, false, false);
+		effector.doAttack(damage, effected, skill, true, false, false, false);
 		if (_stealAmount > 0)
 		{
 			final double amount = (damage * _stealAmount) / 100;
-			info.getEffector().setCurrentHp(info.getEffector().getCurrentHp() + amount);
-			info.getEffector().setCurrentMp(info.getEffector().getCurrentMp() + amount);
+			effector.setCurrentHp(effector.getCurrentHp() + amount);
+			effector.setCurrentMp(effector.getCurrentMp() + amount);
 		}
-		return info.getSkill().isToggle();
+		return skill.isToggle();
 	}
 }

@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ExRegenMax;
 
@@ -38,15 +37,15 @@ public final class HealOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		if (info.getEffected().isDead() || info.getEffected().isDoor())
+		if (effected.isDead() || effected.isDoor())
 		{
 			return false;
 		}
 		
-		double hp = info.getEffected().getCurrentHp();
-		final double maxhp = info.getEffected().getMaxRecoverableHp();
+		double hp = effected.getCurrentHp();
+		final double maxhp = effected.getMaxRecoverableHp();
 		
 		// Not needed to set the HP and send update packet if player is already at max HP
 		if (hp >= maxhp)
@@ -56,19 +55,17 @@ public final class HealOverTime extends AbstractEffect
 		
 		hp += _power * getTicksMultiplier();
 		hp = Math.min(hp, maxhp);
-		info.getEffected().setCurrentHp(hp, false);
-		info.getEffected().broadcastStatusUpdate(info.getEffector());
-		return info.getSkill().isToggle();
+		effected.setCurrentHp(hp, false);
+		effected.broadcastStatusUpdate(effector);
+		return skill.isToggle();
 	}
 	
 	@Override
-	public void onStart(BuffInfo info)
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		final L2Character effected = info.getEffected();
-		final Skill skill = info.getSkill();
 		if (effected.isPlayer() && (getTicks() > 0) && (skill.getAbnormalType() == AbnormalType.HP_RECOVER))
 		{
-			effected.sendPacket(new ExRegenMax(info.getAbnormalTime(), getTicks(), _power));
+			effected.sendPacket(new ExRegenMax(skill.getAbnormalTime(), getTicks(), _power));
 		}
 	}
 }
