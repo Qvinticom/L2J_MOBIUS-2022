@@ -1765,9 +1765,10 @@
 			<effect name="FatalBlow">
 				<power>6969</power>
 				<overHit>true</overHit>
-				<chance>20</chance>
+				<chanceBoost>200</chanceBoost>
 			</effect>
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>10</halfLethal>
 			</effect>
 		</effects>

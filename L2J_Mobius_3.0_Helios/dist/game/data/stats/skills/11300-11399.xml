@@ -3787,7 +3787,7 @@
 		<effects>
 			<effect name="FatalBlow">
 				<!-- Guessed -->
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 				<power>
 					<value level="1">45696</value>
 					<value level="2">47772</value>
@@ -3795,7 +3795,7 @@
 				</power>
 			</effect>
 			<effect name="Lethal">
-				<!-- Guessed -->
+				<fullLethal>0</fullLethal>
 				<halfLethal>10</halfLethal>
 			</effect>
 		</effects>
@@ -3821,7 +3821,7 @@
 		<effects>
 			<effect name="FatalBlow">
 				<!-- Guessed -->
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 				<power>
 					<value level="1">51411</value>
 					<value level="2">53747</value>
@@ -3829,7 +3829,7 @@
 				</power>
 			</effect>
 			<effect name="Lethal">
-				<!-- Guessed -->
+				<fullLethal>0</fullLethal>
 				<halfLethal>10</halfLethal>
 			</effect>
 		</effects>

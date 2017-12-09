@@ -2238,9 +2238,10 @@
 		<effects>
 			<effect name="FatalBlow">
 				<power>1700</power>
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 			</effect>
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>5</halfLethal>
 			</effect>
 		</effects>

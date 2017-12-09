@@ -296,19 +296,19 @@
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
- 		<effects>
+		<effects>
 			<effect name="FatalBlow">
 				<power>
 					<value level="1">56030</value>
 					<value level="2">58530</value>
 					<value level="3">61030</value>
 				</power>
-				<criticalChance>15</criticalChance>
-				<chanceBoost>300</chanceBoost>
-				<overHit>true</overHit>
- 			</effect>
- 		</effects>
- 	</skill>
+				<criticalChance>15</criticalChance> <!-- Guessed -->
+				<chanceBoost>365</chanceBoost> <!-- Guessed -->
+				<overHit>true</overHit> <!-- Guessed -->
+			</effect>
+		</effects>
+	</skill>
 	<skill id="10747" toLevel="1" name="Rogue - Individual Passive">
 		<!-- Glory Days confirmed -->
 		<icon>icon.skill0217</icon>
@@ -358,11 +358,12 @@
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 			<effect name="FatalBlow">
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 				<power>8875</power>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>15</halfLethal>
 			</effect>
 		</effects>

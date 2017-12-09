@@ -494,7 +494,7 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>30</criticalChance>
-				<chance>40</chance>
+				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pveEffects>
@@ -516,7 +516,7 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * (5 + subIndex)}</value>
 				</power>
 				<criticalChance>30</criticalChance>
-				<chance>40</chance>
+				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pvpEffects>
@@ -610,7 +610,7 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>15</criticalChance>
-				<chance>36.5</chance>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pveEffects>
@@ -632,7 +632,7 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * (5 + subIndex)}</value>
 				</power>
 				<criticalChance>15</criticalChance>
-				<chance>36.5</chance>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pvpEffects>
@@ -739,7 +739,7 @@
 				<criticalChance>20</criticalChance>
 				<abnormalType>BLEEDING</abnormalType>
 				<abnormalPower>4130</abnormalPower>
-				<chance>36.5</chance>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pveEffects>
@@ -762,8 +762,8 @@
 				</power>
 				<criticalChance>20</criticalChance>
 				<abnormalType>BLEEDING</abnormalType>
-				<abnormalPower>4130</abnormalPower>
-				<chance>36.5</chance>
+				<abnormalPower>4130</abnormalPower> <!-- TODO: Must have different values per level. -->
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pvpEffects>
@@ -838,7 +838,7 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>20</criticalChance>
-				<chance>36.5</chance>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pveEffects>
@@ -856,7 +856,7 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * (5 + subIndex)}</value>
 				</power>
 				<criticalChance>20</criticalChance>
-				<chance>36.5</chance>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pvpEffects>
@@ -2929,7 +2929,7 @@
 			</effect>
 			<effect name="FatalBlow">
 				<power>8875</power>
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 			</effect>
 		</effects>
 	</skill>
@@ -3117,7 +3117,7 @@
 					<value level="6">27993</value>
 					<value level="7">29472</value>
 				</power>
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 			</effect>
 			<effect name="Speed">
 				<amount>-23</amount>

@@ -22,7 +22,6 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -38,27 +37,24 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
 public final class FatalBlow extends AbstractEffect
 {
 	private final double _power;
-	private final double _chance;
+	private final double _chanceBoost;
 	private final double _criticalChance;
-	private final boolean _overHit;
-	
 	private final Set<AbnormalType> _abnormals;
 	private final double _abnormalPower;
 	
 	public FatalBlow(StatsSet params)
 	{
-		_power = params.getDouble("power", 0);
-		_chance = params.getDouble("chance", 0);
+		_power = params.getDouble("power");
+		_chanceBoost = params.getDouble("chanceBoost");
 		_criticalChance = params.getDouble("criticalChance", 0);
-		_overHit = params.getBoolean("overHit", false);
 		
-		final String abnormals = params.getString("abnormalType", null);
+		String abnormals = params.getString("abnormalType", null);
 		if ((abnormals != null) && !abnormals.isEmpty())
 		{
 			_abnormals = new HashSet<>();
 			for (String slot : abnormals.split(";"))
 			{
-				_abnormals.add(AbnormalType.getAbnormalType(slot));
+				_abnormals.add(Enum.valueOf(AbnormalType.class, slot));
 			}
 		}
 		else
@@ -71,7 +67,7 @@ public final class FatalBlow extends AbstractEffect
 	@Override
 	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chance);
+		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chanceBoost);
 	}
 	
 	@Override
@@ -92,11 +88,6 @@ public final class FatalBlow extends AbstractEffect
 		if (effector.isAlikeDead())
 		{
 			return;
-		}
-		
-		if (_overHit && effected.isAttackable())
-		{
-			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
 		double power = _power;

@@ -799,7 +799,7 @@
 				</power>
 				<criticalChance>20</criticalChance>
 				<abnormalType>BLEEDING</abnormalType>
-				<abnormalPower>4130</abnormalPower>
+				<abnormalPower>4130</abnormalPower> <!-- TODO: Must have different values per level. -->
 				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
@@ -859,6 +859,7 @@
 		</conditions>
 		<effects>
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>15</halfLethal>
 			</effect>
 		</effects>
@@ -875,7 +876,7 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>20</criticalChance>
-				<chance>36.5</chance>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pveEffects>
@@ -893,7 +894,7 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * (5 + subIndex)}</value>
 				</power>
 				<criticalChance>20</criticalChance>
-				<chance>36.5</chance>
+				<chanceBoost>365</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 		</pvpEffects>
@@ -2974,7 +2975,7 @@
 			</effect>
 			<effect name="FatalBlow">
 				<power>8875</power>
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 			</effect>
 		</effects>
 	</skill>
@@ -3162,7 +3163,7 @@
 					<value level="6">27993</value>
 					<value level="7">29472</value>
 				</power>
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 			</effect>
 			<effect name="Speed">
 				<amount>-23</amount>

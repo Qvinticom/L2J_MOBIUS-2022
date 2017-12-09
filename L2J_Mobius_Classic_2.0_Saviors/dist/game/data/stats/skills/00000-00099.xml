@@ -1840,7 +1840,7 @@
 					<value level="24">977</value>
 				</power>
 				<overHit>true</overHit>
-				<chance>20</chance>
+				<chanceBoost>200</chanceBoost>
 			</effect>
 		</effects>
 	</skill>
@@ -3423,7 +3423,7 @@
 					<value level="39">15</value>
 					<value level="40">15</value>
 				</criticalChance>
-				<chance>40</chance>
+				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="Lethal">

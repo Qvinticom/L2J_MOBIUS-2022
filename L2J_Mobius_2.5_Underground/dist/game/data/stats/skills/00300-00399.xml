@@ -1079,12 +1079,13 @@
 					<value level="10">3653</value>
 				</power>
 				<overHit>true</overHit>
-				<chance>25</chance>
+				<chanceBoost>250</chanceBoost>
 			</effect>
 			<effect name="Bluff">
 				<chance>80</chance>
 			</effect>
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>5</halfLethal>
 			</effect>
 		</effects>
@@ -1715,10 +1716,11 @@
 			<effect name="FatalBlow">
 				<power>5773</power>
 				<criticalChance>20</criticalChance>
-				<chance>30</chance>
+				<chanceBoost>300</chanceBoost>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>15</halfLethal>
 			</effect>
 		</effects>

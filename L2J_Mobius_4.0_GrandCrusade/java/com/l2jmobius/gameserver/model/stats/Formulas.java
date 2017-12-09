@@ -36,6 +36,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
 import com.l2jmobius.gameserver.model.cubic.CubicInstance;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
+import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.items.L2Armor;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
@@ -262,6 +263,37 @@ public final class Formulas
 		
 		final double finalRate = target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE, rate) + target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE_ADD, 0);
 		return finalRate > Rnd.get(1000);
+	}
+	
+	/**
+	 * Gets the default (10% for side, 30% for back) positional critical rate bonus and multiplies it by any buffs that give positional critical rate bonus.
+	 * @param activeChar the attacker.
+	 * @param target the target.
+	 * @return a multiplier representing the positional critical rate bonus. Autoattacks for example get this bonus on top of the already capped critical rate of 500.
+	 */
+	public static double calcCriticalPositionBonus(L2Character activeChar, L2Character target)
+	{
+		// final Position position = activeChar.getStat().has(Stats.ATTACK_BEHIND) ? Position.BACK : Position.getPosition(activeChar, target);
+		switch (Position.getPosition(activeChar, target))
+		{
+			case SIDE: // 10% Critical Chance bonus when attacking from side.
+			{
+				return 1.1 * activeChar.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.SIDE);
+			}
+			case BACK: // 30% Critical Chance bonus when attacking from back.
+			{
+				return 1.3 * activeChar.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.BACK);
+			}
+			default: // No Critical Chance bonus when attacking from front.
+			{
+				return activeChar.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.FRONT);
+			}
+		}
+	}
+	
+	public static double calcCriticalHeightBonus(ILocational from, ILocational target)
+	{
+		return ((((CommonUtil.constrain(from.getZ() - target.getZ(), -25, 25) * 4) / 5) + 10) / 100) + 1;
 	}
 	
 	/**
@@ -1018,21 +1050,37 @@ public final class Formulas
 		return cha.getStat().getValue(Stats.FALL, (fallHeight * cha.getMaxHp()) / 1000.0);
 	}
 	
-	public static boolean calcBlowSuccess(L2Character activeChar, L2Character target, Skill skill, double blowChance)
+	/**
+	 * Basic chance formula:<br>
+	 * <ul>
+	 * <li>chance = weapon_critical * dex_bonus * crit_height_bonus * crit_pos_bonus * effect_bonus * fatal_blow_rate</li>
+	 * <li>weapon_critical = (12 for daggers)</li>
+	 * <li>dex_bonus = dex modifier bonus for current dex (Seems unused in GOD, so its not used in formula).</li>
+	 * <li>crit_height_bonus = (z_diff * 4 / 5 + 10) / 100 + 1 or alternatively (z_diff * 0.008) + 1.1. Be aware of z_diff constraint of -25 to 25.</li>
+	 * <li>crit_pos_bonus = crit_pos(front = 1, side = 1.1, back = 1.3) * p_critical_rate_position_bonus</li>
+	 * <li>effect_bonus = (p2 + 100) / 100, p2 - 2nd param of effect. Blow chance of effect.</li>
+	 * </ul>
+	 * Chance cannot be higher than 80%.
+	 * @param activeChar
+	 * @param target
+	 * @param skill
+	 * @param chanceBoost
+	 * @return
+	 */
+	public static boolean calcBlowSuccess(L2Character activeChar, L2Character target, Skill skill, double chanceBoost)
 	{
-		final double weaponCritical = 12; // Dagger weapon critical mod is 12... TODO: Make it work for other weapons.
+		final L2Weapon weapon = activeChar.getActiveWeaponItem();
+		final double weaponCritical = weapon != null ? weapon.getStats(Stats.CRITICAL_RATE, activeChar.getTemplate().getBaseCritRate()) : activeChar.getTemplate().getBaseCritRate();
 		// double dexBonus = BaseStats.DEX.calcBonus(activeChar); Not used in GOD
-		final double critHeightBonus = ((((CommonUtil.constrain(activeChar.getZ() - target.getZ(), -25, 25) * 4) / 5) + 10) / 100) + 1;
-		final Position position = Position.getPosition(activeChar, target);
-		final double criticalPosition = position == Position.BACK ? 1.3 : position == Position.SIDE ? 1.1 : 1; // 30% chance from back, 10% chance from side.
-		final double criticalPositionMod = criticalPosition * activeChar.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, position);
+		final double critHeightBonus = calcCriticalHeightBonus(activeChar, target);
+		final double criticalPosition = calcCriticalPositionBonus(activeChar, target); // 30% chance from back, 10% chance from side. Include buffs that give positional crit rate.
+		final double chanceBoostMod = (100 + chanceBoost) / 100;
 		final double blowRateMod = activeChar.getStat().getValue(Stats.BLOW_RATE, 1);
-		blowChance = (weaponCritical + blowChance) * 10;
 		
-		final double rate = blowChance * critHeightBonus * criticalPositionMod * blowRateMod;
+		final double rate = criticalPosition * critHeightBonus * weaponCritical * chanceBoostMod * blowRateMod;
 		
 		// Blow rate is capped at 80%
-		return Rnd.get(1000) < Math.min(rate, 800);
+		return Rnd.get(100) < Math.min(rate, 80);
 	}
 	
 	public static List<BuffInfo> calcCancelStealEffects(L2Character activeChar, L2Character target, Skill skill, DispelSlotType slot, int rate, int max)

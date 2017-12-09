@@ -1466,9 +1466,10 @@
 					<value level="10">3653</value>
 				</power>
 				<overHit>true</overHit>
-				<chance>25</chance>
+				<chanceBoost>250</chanceBoost>
 			</effect>
 			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
 				<halfLethal>5</halfLethal>
 			</effect>
 		</effects>

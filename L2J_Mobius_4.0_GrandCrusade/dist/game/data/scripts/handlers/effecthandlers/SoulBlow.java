@@ -33,13 +33,13 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
 public final class SoulBlow extends AbstractEffect
 {
 	private final double _power;
-	private final double _chance;
+	private final double _chanceBoost;
 	private final boolean _overHit;
 	
 	public SoulBlow(StatsSet params)
 	{
-		_power = params.getDouble("power", 0);
-		_chance = params.getDouble("chance", 0);
+		_power = params.getDouble("power");
+		_chanceBoost = params.getDouble("chanceBoost");
 		_overHit = params.getBoolean("overHit", false);
 	}
 	
@@ -52,7 +52,7 @@ public final class SoulBlow extends AbstractEffect
 	@Override
 	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chance);
+		return !Formulas.calcPhysicalSkillEvasion(effector, effected, skill) && Formulas.calcBlowSuccess(effector, effected, skill, _chanceBoost);
 	}
 	
 	@Override

@@ -2658,7 +2658,7 @@
 					<value level="3">7306</value>
 					<value level="4">8602</value>
 				</power>
-				<chance>20</chance>
+				<chanceBoost>200</chanceBoost>
 			</effect>
 			<effect name="PhysicalMute" />
 		</effects>
@@ -2757,15 +2757,13 @@
 		<effects>
 			<effect name="FatalBlow">
 				<power>6335</power>
-				<chance>15</chance>
+				<chanceBoost>150</chanceBoost>
 			</effect>
 			<effect name="Speed">
 				<amount>40</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
-		<selfEffects>
-		</selfEffects>
 	</skill>
 	<skill id="5085" toLevel="1" name="Anesthesia">
 		<!-- Confirmed CT2.5 -->
