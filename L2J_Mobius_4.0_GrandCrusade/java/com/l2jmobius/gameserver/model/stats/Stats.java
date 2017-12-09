@@ -83,6 +83,7 @@ public enum Stats
 	CRITICAL_DAMAGE("cAtk"),
 	CRITICAL_DAMAGE_ADD("cAtkAdd"), // this is another type for special critical damage mods - vicious stance, critical power and critical damage SA
 	HATE_ATTACK("attackHate"),
+	REAR_DAMAGE_RATE("rearDamage"),
 	
 	// PVP BONUS
 	PVP_PHYSICAL_ATTACK_DAMAGE("pvpPhysDmg"),

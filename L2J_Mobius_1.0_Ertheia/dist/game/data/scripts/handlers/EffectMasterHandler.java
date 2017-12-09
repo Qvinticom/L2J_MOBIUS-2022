@@ -258,6 +258,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("PvpPhysicalSkillDefenceBonus", PvpPhysicalSkillDefenceBonus::new);
 		EffectHandler.getInstance().registerHandler("RandomizeHate", RandomizeHate::new);
 		EffectHandler.getInstance().registerHandler("RealDamage", RealDamage::new);
+		EffectHandler.getInstance().registerHandler("RearDamage", RearDamage::new);
 		EffectHandler.getInstance().registerHandler("RebalanceHP", RebalanceHP::new);
 		EffectHandler.getInstance().registerHandler("RebalanceHPSummon", RebalanceHPSummon::new);
 		EffectHandler.getInstance().registerHandler("RecoverVitalityInPeaceZone", RecoverVitalityInPeaceZone::new);

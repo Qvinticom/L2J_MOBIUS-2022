@@ -4396,8 +4396,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (!reflect && !isDOT)
 		{
-			// TODO: Implement AttackDamagePosition effect
-			// damage *= getStat().getPositionTypeValue(Stats.ATTACK_DAMAGE, Position.getPosition(this, target));
+			// RearDamage effect bonus.
+			if (isBehind(target))
+			{
+				damage *= getStat().getValue(Stats.REAR_DAMAGE_RATE, 1);
+			}
 			
 			// Counterattacks happen before damage received.
 			if (!target.isDead() && (skill != null))
