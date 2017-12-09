@@ -297,8 +297,11 @@ public class SkillCaster implements Runnable
 			}
 		}
 		
-		// Stop effects since we started casting. It should be sent before casting bar and mana consume.
-		caster.stopEffectsOnAction();
+		// Stop effects since we started casting (except for skills without action). It should be sent before casting bar and mana consume.
+		if (!_skill.isWithoutAction())
+		{
+			caster.stopEffectsOnAction();
+		}
 		
 		// Consume skill initial MP needed for cast. Retail sends it regardless if > 0 or not.
 		final int initmpcons = caster.getStat().getMpInitialConsume(_skill);

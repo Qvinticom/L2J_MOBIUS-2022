@@ -76,8 +76,7 @@ public final class Formulas
 	
 	public static double calcBlowDamage(L2Character attacker, L2Character target, Skill skill, boolean backstab, double power, byte shld, boolean ss)
 	{
-		final double distance = attacker.calculateDistance(target, true, false);
-		if (distance > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Integer.MAX_VALUE))
+		if (attacker.calculateDistance(target, true, false) > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Double.MAX_VALUE))
 		{
 			return 0;
 		}
@@ -128,8 +127,7 @@ public final class Formulas
 	
 	public static double calcMagicDam(L2Character attacker, L2Character target, Skill skill, double mAtk, double power, double mDef, boolean sps, boolean bss, boolean mcrit)
 	{
-		final double distance = attacker.calculateDistance(target, true, false);
-		if (distance > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Integer.MAX_VALUE))
+		if (attacker.calculateDistance(target, true, false) > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Double.MAX_VALUE))
 		{
 			return 0;
 		}
@@ -457,17 +455,6 @@ public final class Formulas
 		return Math.max(skillTime, 0);
 	}
 	
-	public static int calcSkillCancelTime(L2Character creature, Skill skill)
-	{
-		// Fishing skills.
-		if ((skill.getId() == 1312) || (skill.getId() == 1314) || (skill.getId() == 1315))
-		{
-			return 0;
-		}
-		// return (int) Math.max(skill.getCancelTime() / calcSkillTimeFactor(attacker, skill), 500);
-		return (int) Math.max(skill.getHitTime() / calcSkillTimeFactor(creature, skill), SKILL_LAUNCH_TIME);
-	}
-	
 	/**
 	 * TODO: Implement armor bonus and NPC Divider
 	 * @param creature
@@ -514,6 +501,17 @@ public final class Formulas
 		}
 		
 		return Math.max(factor, 0.01);
+	}
+	
+	public static double calcSkillCancelTime(L2Character creature, Skill skill)
+	{
+		// Fishing skills.
+		if ((skill.getId() == 1312) || (skill.getId() == 1314) || (skill.getId() == 1315))
+		{
+			return 0;
+		}
+		// return (int) Math.max(skill.getCancelTime() / calcSkillTimeFactor(attacker, skill), 500);
+		return Math.max(skill.getHitTime() / calcSkillTimeFactor(creature, skill), SKILL_LAUNCH_TIME);
 	}
 	
 	/**
@@ -678,8 +676,7 @@ public final class Formulas
 			
 			if (!resisted)
 			{
-				final double distance = attacker.calculateDistance(target, true, false);
-				if (distance > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Integer.MAX_VALUE))
+				if (attacker.calculateDistance(target, true, false) > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Double.MAX_VALUE))
 				{
 					resisted = true;
 				}
@@ -939,7 +936,9 @@ public final class Formulas
 	 * Calculates the attribute bonus with the following formula: <BR>
 	 * diff > 0, so AttBonus = 1,025 + sqrt[(diff^3) / 2] * 0,0001, cannot be above 1,25! <BR>
 	 * diff < 0, so AttBonus = 0,975 - sqrt[(diff^3) / 2] * 0,0001, cannot be below 0,75! <BR>
-	 * diff == 0, so AttBonus = 1
+	 * diff == 0, so AttBonus = 1<br>
+	 * It has been tested that physical skills do get affected by attack attribute even<br>
+	 * if they don't have any attribute. In that case only the biggest attack attribute is taken.
 	 * @param attacker
 	 * @param target
 	 * @param skill Can be {@code null} if there is no skill used for the attack.
@@ -950,23 +949,10 @@ public final class Formulas
 		int attack_attribute;
 		int defence_attribute;
 		
-		if (skill != null)
+		if ((skill != null) && (skill.getAttributeType() != AttributeType.NONE))
 		{
-			if ((skill.getAttributeType() == AttributeType.NONE) || (skill.getAttributeType() == AttributeType.NONE_ARMOR))
-			{
-				attack_attribute = 0;
-				defence_attribute = target.getDefenseElementValue(AttributeType.NONE_ARMOR);
-			}
-			else if (attacker.getAttackElement() == skill.getAttributeType())
-			{
-				attack_attribute = attacker.getAttackElementValue(attacker.getAttackElement()) + skill.getAttributeValue();
-				defence_attribute = target.getDefenseElementValue(attacker.getAttackElement());
-			}
-			else
-			{
-				attack_attribute = skill.getAttributeValue();
-				defence_attribute = target.getDefenseElementValue(skill.getAttributeType());
-			}
+			attack_attribute = attacker.getAttackElementValue(skill.getAttributeType()) + skill.getAttributeValue();
+			defence_attribute = target.getDefenseElementValue(skill.getAttributeType());
 		}
 		else
 		{
@@ -1277,8 +1263,7 @@ public final class Formulas
 	
 	public static double calcWeaponTraitBonus(L2Character attacker, L2Character target)
 	{
-		final TraitType type = attacker.getAttackType().getTraitType();
-		final double result = target.getStat().getDefenceTraits()[type.getId()] - 1.0;
+		double result = target.getStat().getDefenceTrait(attacker.getAttackType().getTraitType()) - 1.0;
 		return 1.0 - result;
 	}
 	
@@ -1346,9 +1331,7 @@ public final class Formulas
 	 */
 	public static double calcAutoAttackDamage(L2Character attacker, L2Character target, byte shld, boolean crit, boolean ss)
 	{
-		final double distance = attacker.calculateDistance(target, true, false);
-		
-		if (distance > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Integer.MAX_VALUE))
+		if (attacker.calculateDistance(target, true, false) > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Double.MAX_VALUE))
 		{
 			return 0;
 		}
