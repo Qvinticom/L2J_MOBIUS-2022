@@ -167,13 +167,6 @@ public final class UseItem implements IClientIncomingPacket
 			}
 		}
 		
-		// If item's default action is to show html, show item's main html.
-		if (item.getItem().getDefaultAction() == ActionType.SHOW_HTML)
-		{
-			item.onBypassFeedback(activeChar, null);
-			return;
-		}
-		
 		if (item.isEquipable())
 		{
 			// Don't allow to put formal wear while a cursed weapon is equipped.
