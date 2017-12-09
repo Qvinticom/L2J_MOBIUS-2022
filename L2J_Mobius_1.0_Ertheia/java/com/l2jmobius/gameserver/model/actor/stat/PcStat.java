@@ -494,13 +494,16 @@ public class PcStat extends PlayableStat
 			return;
 		}
 		
-		if (points < getVitalityPoints())
+		if (!quiet)
 		{
-			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
-		}
-		else
-		{
-			getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
+			if (points < getVitalityPoints())
+			{
+				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_DECREASED);
+			}
+			else
+			{
+				getActiveChar().sendPacket(SystemMessageId.YOUR_VITALITY_HAS_INCREASED);
+			}
 		}
 		
 		setVitalityPoints(points);
