@@ -159,10 +159,6 @@ public final class PhysicalSoulAttack extends AbstractEffect
 			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
 		}
 		
-		// Check if damage should be reflected
-		Formulas.calcCounterAttack(effector, effected, skill, critical);
-		
-		effected.reduceCurrentHp(damage, effector, skill, false, false, critical, false);
-		// effector.sendDamageMessage(effected, skill, (int) damage, critical, false);
+		effector.doAttack(damage, effected, skill, false, false, critical, false);
 	}
 }

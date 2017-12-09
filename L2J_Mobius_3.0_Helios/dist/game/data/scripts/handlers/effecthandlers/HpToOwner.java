@@ -69,7 +69,7 @@ public final class HpToOwner extends AbstractEffect
 		
 		final double damage = _power * getTicksMultiplier();
 		
-		info.getEffected().reduceCurrentHp(damage, info.getEffector(), info.getSkill(), true, false, false, false);
+		info.getEffector().doAttack(damage, info.getEffected(), info.getSkill(), true, false, false, false);
 		if (_stealAmount > 0)
 		{
 			final double amount = (damage * _stealAmount) / 100;

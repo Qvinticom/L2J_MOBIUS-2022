@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -25,7 +24,6 @@ import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
-import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * Magical Attack By Abnormal effect implementation.
@@ -73,34 +71,6 @@ public final class MagicalAttackByAbnormal extends AbstractEffect
 		// each buff increase +30%
 		damage *= (((effected.getBuffCount() * 0.3) + 1.3) / 4);
 		
-		// Manage attack or cast break of the target (calculating rate, sending message...)
-		if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
-		{
-			effected.breakAttack();
-			effected.breakCast();
-		}
-		
-		// Shield Deflect Magic: Reflect all damage on caster.
-		if (effected.getStat().getValue(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100))
-		{
-			effector.reduceCurrentHp(damage, effected, skill, false, false, mcrit, true);
-		}
-		else
-		{
-			effected.reduceCurrentHp(damage, effector, skill, false, false, mcrit, false);
-			// effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
-			
-			// Absorb HP from the damage inflicted
-			double absorbPercent = effector.getStat().getValue(Stats.ABSORB_DAMAGE_PERCENT, 0) * effector.getStat().getValue(Stats.ABSORB_DAMAGE_DEFENCE, 1);
-			if ((absorbPercent > 0) && (Rnd.nextDouble() < effector.getStat().getValue(Stats.ABSORB_DAMAGE_CHANCE)))
-			{
-				int absorbDamage = (int) Math.min(absorbPercent * damage, effector.getMaxRecoverableHp() - effector.getCurrentHp());
-				absorbDamage = Math.min(absorbDamage, (int) effected.getCurrentHp());
-				if (absorbDamage > 0)
-				{
-					effector.setCurrentHp(effector.getCurrentHp() + absorbDamage);
-				}
-			}
-		}
+		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
 	}
 }

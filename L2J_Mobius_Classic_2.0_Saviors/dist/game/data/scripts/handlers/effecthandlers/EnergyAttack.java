@@ -162,10 +162,6 @@ public final class EnergyAttack extends AbstractEffect
 		
 		damage = Math.max(0, damage);
 		
-		// Check if damage should be reflected
-		Formulas.calcCounterAttack(attacker, effected, skill, critical);
-		
-		effected.reduceCurrentHp(damage, effector, skill, false, false, critical, false);
-		// attacker.sendDamageMessage(effected, skill, (int) damage, critical, false);
+		effector.doAttack(damage, effected, skill, false, false, critical, false);
 	}
 }

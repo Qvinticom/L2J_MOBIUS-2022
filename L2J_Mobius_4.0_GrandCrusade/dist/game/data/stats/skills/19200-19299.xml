@@ -1584,16 +1584,15 @@
 	</skill>
 	<skill id="19258" toLevel="2" name="Berserker's Backfire">
 		<!-- Updated to GRAND CRUSADE -->
-		<icon>icon.skill0030</icon>
+		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="AttackDamagePosition">
+			<effect name="CriticalDamagePosition">
 				<amount>
 					<value level="1">2</value>
 					<value level="2">5</value>			
 				</amount>
+				<mode>PER</mode>
 				<position>BACK</position>
 			</effect>
 		</effects>

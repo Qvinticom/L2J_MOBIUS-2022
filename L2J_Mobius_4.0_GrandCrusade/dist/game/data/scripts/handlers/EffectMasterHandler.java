@@ -44,7 +44,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AttackAttribute", AttackAttribute::new);
 		EffectHandler.getInstance().registerHandler("AttackAttributeAdd", AttackAttributeAdd::new);
 		EffectHandler.getInstance().registerHandler("AttackBehind", AttackBehind::new);
-		EffectHandler.getInstance().registerHandler("AttackDamagePosition", AttackDamagePosition::new);
 		EffectHandler.getInstance().registerHandler("AttackTrait", AttackTrait::new);
 		EffectHandler.getInstance().registerHandler("Backstab", Backstab::new);
 		EffectHandler.getInstance().registerHandler("Betray", Betray::new);

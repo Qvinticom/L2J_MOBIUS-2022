@@ -87,16 +87,6 @@ public final class HpDrain extends AbstractEffect
 		final double hpFinal = ((effector.getCurrentHp() + hpAdd) > effector.getMaxHp() ? effector.getMaxHp() : (effector.getCurrentHp() + hpAdd));
 		effector.setCurrentHp(hpFinal);
 		
-		if (damage > 0)
-		{
-			// Manage attack or cast break of the target (calculating rate, sending message...)
-			if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
-			{
-				effected.breakAttack();
-				effected.breakCast();
-			}
-			effected.reduceCurrentHp(damage, effector, skill, false, false, mcrit, false);
-			// effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
-		}
+		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
 	}
 }

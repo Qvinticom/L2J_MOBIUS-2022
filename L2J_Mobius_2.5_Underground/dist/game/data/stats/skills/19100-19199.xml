@@ -890,15 +890,7 @@
 		<!-- Rear Damage + 3%. -->
 		<operateType>P</operateType>
 		<icon>icon.skill0030</icon>
-		<effects>
-			<effect name="AttackDamagePosition">
-				<amount>
-					<value level="1">3</value>
-					<value level="2">6</value>
-				</amount>
-				<position>BACK</position>
-			</effect>
-		</effects>
+		<!-- TODO: Handle rear damage stat -->
 	</skill>
 	<skill id="19145" toLevel="2" name="Noble Death Whisper">
 		<!-- Physical Critical Damage + 3%. -->

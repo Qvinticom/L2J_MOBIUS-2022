@@ -74,7 +74,7 @@ public final class DamOverTimePercent extends AbstractEffect
 			}
 		}
 		
-		info.getEffected().reduceCurrentHp(damage, info.getEffector(), info.getSkill(), true, false, false, false);
+		info.getEffector().doAttack(damage, info.getEffected(), info.getSkill(), true, false, false, false);
 		
 		return info.getSkill().isToggle();
 	}

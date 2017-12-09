@@ -144,9 +144,6 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
 		}
 		
-		// Check if damage should be reflected
-		Formulas.calcCounterAttack(effector, effected, skill, critical);
-		
 		final double minHp = (effected.getMaxHp() * _saveHp) / 100;
 		
 		if ((effected.getCurrentHp() - damage) < minHp)
@@ -154,7 +151,6 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			damage = effected.getCurrentHp() - minHp;
 		}
 		
-		effected.reduceCurrentHp(damage, effector, skill, false, false, critical, false);
-		// effector.sendDamageMessage(effected, skill, (int) damage, critical, false);
+		effector.doAttack(damage, effected, skill, false, false, critical, false);
 	}
 }

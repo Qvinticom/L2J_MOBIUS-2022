@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -25,7 +24,6 @@ import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Formulas;
-import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -82,25 +80,6 @@ public final class MagicalSoulAttack extends AbstractEffect
 		final double mAtk = effector.getMAtk() * (chargedSouls > 0 ? (1.3 + (chargedSouls * 0.05)) : 1);
 		final double damage = Formulas.calcMagicDam(effector, effected, skill, mAtk, _power, effected.getMDef(), sps, bss, mcrit);
 		
-		if (damage > 0)
-		{
-			// Manage attack or cast break of the target (calculating rate, sending message...)
-			if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
-			{
-				effected.breakAttack();
-				effected.breakCast();
-			}
-			
-			// Shield Deflect Magic: Reflect all damage on caster.
-			if (effected.getStat().getValue(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0) > Rnd.get(100))
-			{
-				effector.reduceCurrentHp(damage, effected, skill, false, false, mcrit, true);
-			}
-			else
-			{
-				effected.reduceCurrentHp(damage, effector, skill, false, false, mcrit, false);
-				// effector.sendDamageMessage(effected, skill, (int) damage, mcrit, false);
-			}
-		}
+		effector.doAttack(damage, effected, skill, false, false, mcrit, false);
 	}
 }

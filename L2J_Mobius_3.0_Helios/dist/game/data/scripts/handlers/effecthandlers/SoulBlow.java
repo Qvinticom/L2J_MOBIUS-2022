@@ -90,22 +90,6 @@ public final class SoulBlow extends AbstractEffect
 			damage *= 1 + (chargedSouls * 0.04);
 		}
 		
-		// Check if damage should be reflected
-		Formulas.calcCounterAttack(effector, effected, skill, true);
-		
-		effected.reduceCurrentHp(damage, effector, skill, false, false, true, false);
-		
-		// Manage attack or cast break of the target (calculating rate, sending message...)
-		if (!effected.isRaid() && Formulas.calcAtkBreak(effected, damage))
-		{
-			effected.breakAttack();
-			effected.breakCast();
-		}
-		
-		// if (effector.isPlayer())
-		// {
-		// final L2PcInstance activePlayer = effector.getActingPlayer();
-		// activePlayer.sendDamageMessage(effected, skill, (int) damage, true, false);
-		// }
+		effector.doAttack(damage, effected, skill, false, false, true, false);
 	}
 }
