@@ -16,9 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -29,7 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class AdminInvul implements IAdminCommandHandler
 {
-	private static Logger _log = Logger.getLogger(AdminInvul.class.getName());
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_invul",
@@ -69,19 +65,11 @@ public class AdminInvul implements IAdminCommandHandler
 		{
 			activeChar.setIsInvul(false);
 			text = activeChar.getName() + " is now mortal";
-			if (Config.DEBUG)
-			{
-				_log.fine("GM: Gm removed invul mode from character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
-			}
 		}
 		else
 		{
 			activeChar.setIsInvul(true);
 			text = activeChar.getName() + " is now invulnerable";
-			if (Config.DEBUG)
-			{
-				_log.fine("GM: Gm activated invul mode for character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
-			}
 		}
 		activeChar.sendMessage(text);
 	}

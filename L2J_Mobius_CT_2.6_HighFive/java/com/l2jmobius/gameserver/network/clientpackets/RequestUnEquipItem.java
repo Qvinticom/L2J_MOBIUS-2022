@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Arrays;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
@@ -49,11 +48,6 @@ public class RequestUnEquipItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (Config.DEBUG)
-		{
-			_log.fine("Request unequip slot " + _slot);
-		}
-		
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{

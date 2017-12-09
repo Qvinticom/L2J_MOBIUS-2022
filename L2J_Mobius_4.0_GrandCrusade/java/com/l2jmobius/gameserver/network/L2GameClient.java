@@ -170,10 +170,6 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.log(Level.WARNING, "Network exception caught for: " + toString(), cause);
-		}
 	}
 	
 	public Channel getChannel()

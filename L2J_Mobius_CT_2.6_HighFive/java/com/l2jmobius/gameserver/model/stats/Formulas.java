@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.stats;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.SevenSigns;
@@ -84,8 +83,6 @@ import com.l2jmobius.util.Rnd;
  */
 public final class Formulas
 {
-	private static final Logger _log = Logger.getLogger(Formulas.class.getName());
-	
 	/** Regeneration Task period. */
 	private static final int HP_REGENERATE_PERIOD = 3000; // 3 secs
 	
@@ -519,11 +516,6 @@ public final class Formulas
 		
 		// Check the distance between the player and the player spawn point, in the center of the arena.
 		final double distToCenter = activeChar.calculateDistance(festivalCenter[0], festivalCenter[1], 0, false, false);
-		
-		if (Config.DEBUG)
-		{
-			_log.info("Distance: " + distToCenter + ", RegenMulti: " + ((distToCenter * 2.5) / 50));
-		}
 		
 		return 1.0 - (distToCenter * 0.0005); // Maximum Decreased Regen of ~ -65%;
 	}

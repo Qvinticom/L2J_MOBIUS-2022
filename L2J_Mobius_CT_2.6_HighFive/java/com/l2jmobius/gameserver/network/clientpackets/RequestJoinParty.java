@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -184,23 +183,12 @@ public final class RequestJoinParty extends L2GameClientPacket
 			// in case a leader change has happened, use party's mode
 			target.sendPacket(new AskJoinParty(requestor.getName(), party.getDistributionType()));
 			party.setPendingInvitation(true);
-			
-			if (Config.DEBUG)
-			{
-				_log.fine("sent out a party invitation to:" + target.getName());
-			}
-			
 		}
 		else
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(target.getName());
 			requestor.sendPacket(sm);
-			
-			if (Config.DEBUG)
-			{
-				_log.warning(requestor.getName() + " already received a party invitation");
-			}
 		}
 	}
 	
@@ -222,21 +210,10 @@ public final class RequestJoinParty extends L2GameClientPacket
 			target.setActiveRequester(requestor);
 			requestor.onTransactionRequest(target);
 			requestor.setPartyDistributionType(partyDistributionType);
-			
-			if (Config.DEBUG)
-			{
-				_log.fine("sent out a party invitation to:" + target.getName());
-			}
-			
 		}
 		else
 		{
 			requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
-			
-			if (Config.DEBUG)
-			{
-				_log.warning(requestor.getName() + " already received a party invitation");
-			}
 		}
 	}
 	

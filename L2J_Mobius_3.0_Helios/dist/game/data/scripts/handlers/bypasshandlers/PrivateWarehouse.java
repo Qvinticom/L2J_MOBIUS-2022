@@ -18,7 +18,6 @@ package handlers.bypasshandlers;
 
 import java.util.logging.Level;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -85,11 +84,6 @@ public class PrivateWarehouse implements IBypassHandler
 		}
 		
 		player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE));
-		
-		if (Config.DEBUG)
-		{
-			_log.finer("Source: L2WarehouseInstance.java; Player: " + player.getName() + "; Command: showRetrieveWindow; Message: Showing stored items.");
-		}
 	}
 	
 	@Override

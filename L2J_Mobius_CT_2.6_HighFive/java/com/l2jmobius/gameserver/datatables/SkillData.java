@@ -20,10 +20,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.engines.DocumentEngine;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -117,10 +115,6 @@ public final class SkillData
 		// requested level too high
 		if ((maxLvl > 0) && (level > maxLvl))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": call to unexisting skill level id: " + skillId + " requested level: " + level + " max level: " + maxLvl, new Throwable());
-			}
 			return _skills.get(getSkillHashCode(skillId, maxLvl));
 		}
 		

@@ -21,7 +21,6 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
@@ -538,10 +537,6 @@ public class AdminSkill implements IAdminCommandHandler
 				player.sendSkillList();
 				// Admin info.
 				activeChar.sendMessage("You gave the skill " + name + " to " + player.getName() + ".");
-				if (Config.DEBUG)
-				{
-					_log.finer("[GM]" + activeChar.getName() + " gave skill " + name + " to " + player.getName() + ".");
-				}
 				activeChar.sendSkillList();
 			}
 			else
@@ -573,10 +568,6 @@ public class AdminSkill implements IAdminCommandHandler
 			player.removeSkill(skill);
 			// Admin information
 			activeChar.sendMessage("You removed the skill " + skillname + " from " + player.getName() + ".");
-			if (Config.DEBUG)
-			{
-				_log.finer("[GM]" + activeChar.getName() + " removed skill " + skillname + " from " + player.getName() + ".");
-			}
 			activeChar.sendSkillList();
 		}
 		else

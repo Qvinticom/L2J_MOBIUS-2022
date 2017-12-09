@@ -128,10 +128,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				if (Config.DEBUG)
-				{
-					_log.info("admin_walk: " + e);
-				}
 			}
 		}
 		else if (command.startsWith("admin_move_to"))
@@ -571,12 +567,6 @@ public class AdminTeleport implements IAdminCommandHandler
 				spawn.init();
 				
 				activeChar.sendMessage("Created " + target.getTemplate().getName() + " on " + target.getObjectId() + ".");
-				
-				if (Config.DEBUG)
-				{
-					_log.fine("Spawn at X=" + spawn.getX() + " Y=" + spawn.getY() + " Z=" + spawn.getZ());
-					_log.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") moved NPC " + target.getObjectId());
-				}
 			}
 			catch (Exception e)
 			{

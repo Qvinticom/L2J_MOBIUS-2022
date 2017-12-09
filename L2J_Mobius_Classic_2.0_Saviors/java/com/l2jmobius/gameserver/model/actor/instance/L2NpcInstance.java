@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.List;
 import java.util.Map;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
@@ -61,11 +60,6 @@ public class L2NpcInstance extends L2Npc
 	 */
 	public static void showSkillList(L2PcInstance player, L2Npc npc, ClassId classId)
 	{
-		if (Config.DEBUG)
-		{
-			_log.finer("SkillList activated on: " + npc.getObjectId());
-		}
-		
 		final int npcId = npc.getTemplate().getId();
 		if (npcId == 32611) // Tolonis (Officer)
 		{

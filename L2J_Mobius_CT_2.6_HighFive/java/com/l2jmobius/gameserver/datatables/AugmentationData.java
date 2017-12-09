@@ -907,10 +907,6 @@ public class AugmentationData
 		}
 		stat12 = Rnd.get(offset, (offset + STAT_SUBBLOCKSIZE) - 1);
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getClass().getSimpleName() + ": Augmentation success: stat12=" + stat12 + "; stat34=" + stat34 + "; resultColor=" + resultColor + "; level=" + lifeStoneLevel + "; grade=" + lifeStoneGrade);
-		}
 		return new L2Augmentation(((stat34 << 16) + stat12));
 	}
 	
@@ -1039,10 +1035,6 @@ public class AugmentationData
 		// stat12 has stats only
 		stat12 = base + skillsLength + (ACC_STAT_SUBBLOCKSIZE * resultColor) + stat12;
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getClass().getSimpleName() + ": Accessory augmentation success: stat12=" + stat12 + "; stat34=" + stat34 + "; level=" + lifeStoneLevel);
-		}
 		return new L2Augmentation(((stat34 << 16) + stat12));
 	}
 	

@@ -22,7 +22,6 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -171,11 +170,6 @@ public class CharStatus
 			getActiveChar().abortAttack();
 			getActiveChar().abortCast();
 			
-			if (Config.DEBUG)
-			{
-				_log.fine("char is dead.");
-			}
-			
 			getActiveChar().doDie(attacker);
 		}
 	}
@@ -197,11 +191,6 @@ public class CharStatus
 	{
 		if ((_regTask == null) && !getActiveChar().isDead())
 		{
-			if (Config.DEBUG)
-			{
-				_log.fine("HP/MP regen started");
-			}
-			
 			// Get the Regeneration period
 			final int period = Formulas.getRegeneratePeriod(getActiveChar());
 			
@@ -222,11 +211,6 @@ public class CharStatus
 	{
 		if (_regTask != null)
 		{
-			if (Config.DEBUG)
-			{
-				_log.fine("HP/MP regen stop");
-			}
-			
 			// Stop the HP/MP/CP Regeneration task
 			_regTask.cancel(false);
 			_regTask = null;

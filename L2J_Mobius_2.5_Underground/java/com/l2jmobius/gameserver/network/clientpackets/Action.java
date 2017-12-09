@@ -32,8 +32,11 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public final class Action implements IClientIncomingPacket
 {
 	private int _objectId;
+	@SuppressWarnings("unused")
 	private int _originX;
+	@SuppressWarnings("unused")
 	private int _originY;
+	@SuppressWarnings("unused")
 	private int _originZ;
 	private int _actionId;
 	
@@ -51,11 +54,6 @@ public final class Action implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
-		if (Config.DEBUG)
-		{
-			_log.info(getClass().getSimpleName() + ": " + (_actionId == 0 ? "Simple-click" : "Shift-click") + " Target object ID: " + _objectId + " orignX: " + _originX + " orignY: " + _originY + " orignZ: " + _originZ);
-		}
-		
 		// Get the current L2PcInstance of the player
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)

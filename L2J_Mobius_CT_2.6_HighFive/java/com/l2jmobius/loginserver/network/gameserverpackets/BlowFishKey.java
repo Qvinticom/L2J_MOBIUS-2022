@@ -22,7 +22,6 @@ import java.util.logging.Logger;
 
 import javax.crypto.Cipher;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;
 import com.l2jmobius.util.crypt.NewCrypt;
@@ -64,10 +63,6 @@ public class BlowFishKey extends BaseRecievePacket
 			System.arraycopy(tempDecryptKey, i, key, 0, len - i);
 			
 			server.SetBlowFish(new NewCrypt(key));
-			if (Config.DEBUG)
-			{
-				_log.info("New BlowFish key received, Blowfih Engine initialized:");
-			}
 			server.setLoginConnectionState(GameServerState.BF_CONNECTED);
 		}
 		catch (GeneralSecurityException e)

@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Level;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -52,11 +51,6 @@ public final class CharacterDelete extends L2GameClientPacket
 		// sendPacket(new CharDeleteFail(CharDeleteFail.REASON_DELETION_FAILED));
 		// return;
 		// }
-		
-		if (Config.DEBUG)
-		{
-			_log.fine("deleting slot:" + _charSlot);
-		}
 		
 		try
 		{

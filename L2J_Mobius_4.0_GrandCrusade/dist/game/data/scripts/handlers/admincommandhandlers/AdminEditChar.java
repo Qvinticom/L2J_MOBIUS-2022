@@ -1217,10 +1217,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		sm.addInt(newReputation);
 		player.sendPacket(sm);
 		activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldReputation + ") to (" + newReputation + ").");
-		if (Config.DEBUG)
-		{
-			_log.finer("[SET KARMA] [GM]" + activeChar.getName() + " Changed karma for " + player.getName() + " from (" + oldReputation + ") to (" + newReputation + ").");
-		}
 	}
 	
 	private void editCharacter(L2PcInstance activeChar, String targetName)

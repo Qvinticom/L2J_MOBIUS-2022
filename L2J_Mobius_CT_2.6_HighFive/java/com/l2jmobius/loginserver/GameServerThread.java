@@ -28,7 +28,6 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;
@@ -37,7 +36,6 @@ import com.l2jmobius.loginserver.network.loginserverpackets.InitLS;
 import com.l2jmobius.loginserver.network.loginserverpackets.KickPlayer;
 import com.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
 import com.l2jmobius.loginserver.network.loginserverpackets.RequestCharacters;
-import com.l2jmobius.util.Util;
 import com.l2jmobius.util.crypt.NewCrypt;
 import com.l2jmobius.util.network.BaseSendablePacket;
 
@@ -123,11 +121,6 @@ public class GameServerThread extends Thread
 				{
 					_log.warning("Incorrect packet checksum, closing connection (LS)");
 					return;
-				}
-				
-				if (Config.DEBUG)
-				{
-					_log.warning("[C]" + Config.EOL + Util.printData(data));
 				}
 				
 				L2JGameServerPacketHandler.handlePacket(data, this);
@@ -236,10 +229,6 @@ public class GameServerThread extends Thread
 		{
 			final byte[] data = sl.getContent();
 			NewCrypt.appendChecksum(data);
-			if (Config.DEBUG)
-			{
-				_log.finest("[S] " + sl.getClass().getSimpleName() + ":" + Config.EOL + Util.printData(data));
-			}
 			_blowfish.crypt(data, 0, data.length);
 			
 			final int len = data.length + 2;

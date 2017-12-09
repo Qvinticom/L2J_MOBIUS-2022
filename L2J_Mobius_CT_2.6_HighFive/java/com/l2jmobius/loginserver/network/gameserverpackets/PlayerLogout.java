@@ -18,8 +18,6 @@ package com.l2jmobius.loginserver.network.gameserverpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.loginserver.GameServerTable;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.util.network.BaseRecievePacket;
 
@@ -40,10 +38,6 @@ public class PlayerLogout extends BaseRecievePacket
 		final String account = readS();
 		
 		server.removeAccountOnGameServer(account);
-		if (Config.DEBUG)
-		{
-			_log.info("Player " + account + " logged out from gameserver [" + server.getServerId() + "] " + GameServerTable.getInstance().getServerNameById(server.getServerId()));
-		}
 		
 		server.broadcastToTelnet("Player " + account + " disconnected from GameServer " + server.getServerId());
 	}

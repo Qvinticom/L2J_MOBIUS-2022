@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -50,13 +49,6 @@ public class RequestExRqItemLink extends L2GameClientPacket
 				if (item.isPublished())
 				{
 					client.sendPacket(new ExRpItemLink(item));
-				}
-				else
-				{
-					if (Config.DEBUG)
-					{
-						_log.info(getClient() + " requested item link for item which wasnt published! ID:" + _objectId);
-					}
 				}
 			}
 		}

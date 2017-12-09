@@ -18,7 +18,6 @@ package com.l2jmobius.loginserver.network.gameserverpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.LoginController;
 
@@ -43,9 +42,5 @@ public class PlayerTracert extends BaseRecievePacket
 		final String hop4 = readS();
 		
 		LoginController.getInstance().setAccountLastTracert(account, pcIp, hop1, hop2, hop3, hop4);
-		if (Config.DEBUG)
-		{
-			_log.info("Saved " + account + " last tracert");
-		}
 	}
 }

@@ -20,7 +20,6 @@ import java.nio.BufferUnderflowException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.mmocore.ReceivablePacket;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -75,10 +74,6 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient>
 				if ((actor != null) && (actor.isSpawnProtected() || actor.isInvul()))
 				{
 					actor.onActionRequest();
-					if (Config.DEBUG)
-					{
-						_log.info("Spawn protection for player " + actor.getName() + " removed by packet: " + getType());
-					}
 				}
 			}
 		}

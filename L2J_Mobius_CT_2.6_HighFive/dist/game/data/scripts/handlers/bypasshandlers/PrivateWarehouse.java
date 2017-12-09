@@ -125,11 +125,6 @@ public class PrivateWarehouse implements IBypassHandler
 		{
 			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE));
 		}
-		
-		if (Config.DEBUG)
-		{
-			_log.fine("Source: L2WarehouseInstance.java; Player: " + player.getName() + "; Command: showRetrieveWindow; Message: Showing stored items.");
-		}
 	}
 	
 	@Override

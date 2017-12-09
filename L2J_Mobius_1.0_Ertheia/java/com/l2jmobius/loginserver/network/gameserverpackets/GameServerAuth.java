@@ -78,19 +78,10 @@ public class GameServerAuth extends BaseRecievePacket
 			_hosts[i] = readS();
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.info("Auth request received");
-		}
-		
 		if (handleRegProcess())
 		{
 			final AuthResponse ar = new AuthResponse(server.getGameServerInfo().getId());
 			server.sendPacket(ar);
-			if (Config.DEBUG)
-			{
-				_log.info("Authed: id: " + server.getGameServerInfo().getId());
-			}
 			server.setLoginConnectionState(GameServerState.AUTHED);
 		}
 	}

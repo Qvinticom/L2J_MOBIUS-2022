@@ -109,12 +109,6 @@ public class ClanWarehouse implements IBypassHandler
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
 				activeChar.setInventoryBlockingStatus(true);
-				
-				if (Config.DEBUG)
-				{
-					_log.fine("Source: L2WarehouseInstance.java; Player: " + activeChar.getName() + "; Command: showDepositWindowClan; Message: Showing items to deposit.");
-				}
-				
 				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.CLAN));
 				return true;
 			}
@@ -160,11 +154,6 @@ public class ClanWarehouse implements IBypassHandler
 		else
 		{
 			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN));
-		}
-		
-		if (Config.DEBUG)
-		{
-			_log.fine("Source: L2WarehouseInstance.java; Player: " + player.getName() + "; Command: showRetrieveWindowClan; Message: Showing stored items.");
 		}
 	}
 	

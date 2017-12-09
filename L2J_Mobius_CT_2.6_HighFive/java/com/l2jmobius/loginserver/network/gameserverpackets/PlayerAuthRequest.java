@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.loginserver.network.gameserverpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.SessionKey;
@@ -30,8 +27,6 @@ import com.l2jmobius.util.network.BaseRecievePacket;
  */
 public class PlayerAuthRequest extends BaseRecievePacket
 {
-	private static Logger _log = Logger.getLogger(PlayerAuthRequest.class.getName());
-	
 	/**
 	 * @param decrypt
 	 * @param server
@@ -47,28 +42,14 @@ public class PlayerAuthRequest extends BaseRecievePacket
 		final SessionKey sessionKey = new SessionKey(loginKey1, loginKey2, playKey1, playKey2);
 		
 		PlayerAuthResponse authResponse;
-		if (Config.DEBUG)
-		{
-			_log.info("auth request received for Player " + account);
-		}
 		final SessionKey key = LoginController.getInstance().getKeyForAccount(account);
 		if ((key != null) && key.equals(sessionKey))
 		{
-			if (Config.DEBUG)
-			{
-				_log.info("auth request: OK");
-			}
 			LoginController.getInstance().removeAuthedLoginClient(account);
 			authResponse = new PlayerAuthResponse(account, true);
 		}
 		else
 		{
-			if (Config.DEBUG)
-			{
-				_log.info("auth request: NO");
-				_log.info("session key from self: " + key);
-				_log.info("session key sent: " + sessionKey);
-			}
 			authResponse = new PlayerAuthResponse(account, false);
 		}
 		server.sendPacket(authResponse);

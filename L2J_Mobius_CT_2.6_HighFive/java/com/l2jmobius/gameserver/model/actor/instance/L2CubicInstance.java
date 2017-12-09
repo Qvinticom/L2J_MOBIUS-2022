@@ -22,7 +22,6 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.datatables.SkillData;
@@ -552,11 +551,6 @@ public final class L2CubicInstance implements IIdentifiable
 			final byte shld = Formulas.calcShldUse(_owner, target, skill);
 			int damage = (int) Formulas.calcMagicDam(this, target, skill, mcrit, shld);
 			
-			if (Config.DEBUG)
-			{
-				_log.info("L2SkillMdam: useCubicSkill() -> damage = " + damage);
-			}
-			
 			if (damage > 0)
 			{
 				// Manage attack or cast break of the target (calculating rate, sending message...)
@@ -582,11 +576,6 @@ public final class L2CubicInstance implements IIdentifiable
 	
 	public void useCubicDrain(Skill skill, L2Object[] targets)
 	{
-		if (Config.DEBUG)
-		{
-			_log.info("L2SkillDrain: useCubicSkill()");
-		}
-		
 		for (L2Character target : (L2Character[]) targets)
 		{
 			if (target.isAlikeDead())
@@ -598,10 +587,6 @@ public final class L2CubicInstance implements IIdentifiable
 			final byte shld = Formulas.calcShldUse(_owner, target, skill);
 			
 			final int damage = (int) Formulas.calcMagicDam(this, target, skill, mcrit, shld);
-			if (Config.DEBUG)
-			{
-				_log.info("L2SkillDrain: useCubicSkill() -> damage = " + damage);
-			}
 			
 			// TODO: Unhardcode fixed value
 			final double hpAdd = (0.4 * damage);
@@ -628,11 +613,6 @@ public final class L2CubicInstance implements IIdentifiable
 	
 	public void useCubicDisabler(Skill skill, L2Object[] targets)
 	{
-		if (Config.DEBUG)
-		{
-			_log.info("Disablers: useCubicSkill()");
-		}
-		
 		for (L2Character target : (L2Character[]) targets)
 		{
 			if ((target == null) || target.isDead())
@@ -654,18 +634,6 @@ public final class L2CubicInstance implements IIdentifiable
 					{
 						DuelManager.getInstance().onBuff(target.getActingPlayer(), skill);
 					}
-					
-					if (Config.DEBUG)
-					{
-						_log.info("Disablers: useCubicSkill() -> success");
-					}
-				}
-				else
-				{
-					if (Config.DEBUG)
-					{
-						_log.info("Disablers: useCubicSkill() -> failed");
-					}
 				}
 			}
 			
@@ -680,18 +648,6 @@ public final class L2CubicInstance implements IIdentifiable
 					
 					// Apply effects
 					skill.applyEffects(_owner, target, false, false, true, 0);
-					
-					if (Config.DEBUG)
-					{
-						_log.info("Disablers: useCubicSkill() -> success");
-					}
-				}
-				else
-				{
-					if (Config.DEBUG)
-					{
-						_log.info("Disablers: useCubicSkill() -> failed");
-					}
 				}
 			}
 		}

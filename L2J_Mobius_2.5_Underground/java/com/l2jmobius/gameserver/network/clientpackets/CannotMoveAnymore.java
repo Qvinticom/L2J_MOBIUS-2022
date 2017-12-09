@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.Location;
@@ -53,10 +52,6 @@ public final class CannotMoveAnymore implements IClientIncomingPacket
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.finer("client: x:" + _x + " y:" + _y + " z:" + _z + " server x:" + player.getX() + " y:" + player.getY() + " z:" + player.getZ());
-		}
 		if (player.getAI() != null)
 		{
 			player.getAI().notifyEvent(CtrlEvent.EVT_ARRIVED_BLOCKED, new Location(_x, _y, _z, _heading));

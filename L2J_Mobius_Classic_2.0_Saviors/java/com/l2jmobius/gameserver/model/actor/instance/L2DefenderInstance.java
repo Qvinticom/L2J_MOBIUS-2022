@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -104,10 +103,6 @@ public class L2DefenderInstance extends L2Attackable
 		}
 		if (!isInsideRadius(getSpawn(), 40, false, false))
 		{
-			if (Config.DEBUG)
-			{
-				_log.info(getObjectId() + ": moving home");
-			}
 			setisReturningToSpawnPoint(true);
 			clearAggroList();
 			
@@ -147,11 +142,6 @@ public class L2DefenderInstance extends L2Attackable
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (this != player.getTarget())
 		{
-			if (Config.DEBUG)
-			{
-				_log.info("new target selected:" + getObjectId());
-			}
-			
 			// Set the target of the L2PcInstance player
 			player.setTarget(this);
 		}

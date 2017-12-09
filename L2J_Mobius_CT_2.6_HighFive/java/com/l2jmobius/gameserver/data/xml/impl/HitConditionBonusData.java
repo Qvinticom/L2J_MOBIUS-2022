@@ -20,7 +20,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.util.data.xml.IXmlReader;
@@ -37,6 +36,7 @@ public final class HitConditionBonusData implements IXmlReader
 	private int highBonus = 0;
 	private int lowBonus = 0;
 	private int darkBonus = 0;
+	@SuppressWarnings("unused")
 	private int rainBonus = 0;
 	
 	/**
@@ -52,16 +52,6 @@ public final class HitConditionBonusData implements IXmlReader
 	{
 		parseDatapackFile("data/stats/hitConditionBonus.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded Hit Condition bonuses.");
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getClass().getSimpleName() + ": Front bonus: " + frontBonus);
-			LOGGER.info(getClass().getSimpleName() + ": Side bonus: " + sideBonus);
-			LOGGER.info(getClass().getSimpleName() + ": Back bonus: " + backBonus);
-			LOGGER.info(getClass().getSimpleName() + ": High bonus: " + highBonus);
-			LOGGER.info(getClass().getSimpleName() + ": Low bonus: " + lowBonus);
-			LOGGER.info(getClass().getSimpleName() + ": Dark bonus: " + darkBonus);
-			LOGGER.info(getClass().getSimpleName() + ": Rain bonus: " + rainBonus);
-		}
 	}
 	
 	@Override

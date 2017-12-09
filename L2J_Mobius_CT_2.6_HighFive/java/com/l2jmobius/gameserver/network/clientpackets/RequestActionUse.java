@@ -95,11 +95,6 @@ public final class RequestActionUse extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.info(getType() + ": " + activeChar + " requested action use ID: " + _actionId + " Ctrl pressed:" + _ctrlPressed + " Shift pressed:" + _shiftPressed);
-		}
-		
 		// Don't do anything if player is dead or confused
 		if ((activeChar.isFakeDeath() && (_actionId != 0)) || activeChar.isDead() || activeChar.isOutOfControl())
 		{
@@ -1053,14 +1048,6 @@ public final class RequestActionUse extends L2GameClientPacket
 			case 66: // Shyness
 			{
 				tryBroadcastSocial(15);
-				break;
-			}
-			default:
-			{
-				if (Config.DEBUG)
-				{
-					_log.warning(activeChar.getName() + ": unhandled action type " + _actionId);
-				}
 				break;
 			}
 		}

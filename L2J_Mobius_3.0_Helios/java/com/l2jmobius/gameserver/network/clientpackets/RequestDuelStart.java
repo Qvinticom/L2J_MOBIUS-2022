@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
@@ -193,11 +192,6 @@ public final class RequestDuelStart implements IClientIncomingPacket
 					activeChar.onTransactionRequest(partyLeader);
 					partyLeader.sendPacket(new ExDuelAskStart(activeChar.getName(), _partyDuel));
 					
-					if (Config.DEBUG)
-					{
-						_log.finer(activeChar.getName() + " requested a duel with " + partyLeader.getName());
-					}
-					
 					SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 					msg.addString(partyLeader.getName());
 					activeChar.sendPacket(msg);
@@ -221,11 +215,6 @@ public final class RequestDuelStart implements IClientIncomingPacket
 			{
 				activeChar.onTransactionRequest(targetChar);
 				targetChar.sendPacket(new ExDuelAskStart(activeChar.getName(), _partyDuel));
-				
-				if (Config.DEBUG)
-				{
-					_log.finer(activeChar.getName() + " requested a duel with " + targetChar.getName());
-				}
 				
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 				msg.addString(targetChar.getName());

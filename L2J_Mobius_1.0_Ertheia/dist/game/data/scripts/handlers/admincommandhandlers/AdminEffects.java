@@ -19,7 +19,6 @@ package handlers.admincommandhandlers;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Team;
@@ -513,10 +512,6 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				if (Config.DEBUG)
-				{
-					e.printStackTrace();
-				}
 			}
 		}
 		else if (command.startsWith("admin_ave_abnormal"))

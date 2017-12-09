@@ -687,10 +687,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			_lastSpawnPoints.put(mob.getObjectId(), new Location(newlocx, newlocy, newlocz));
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.finest("Spawned Mob Id: " + _template.getId() + " , at: X: " + mob.getX() + " Y: " + mob.getY() + " Z: " + mob.getZ());
-		}
 		// Increase the current number of L2NpcInstance managed by this L2Spawn
 		_currentCount++;
 		return mob;

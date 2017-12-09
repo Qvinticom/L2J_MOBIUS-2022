@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -140,24 +139,6 @@ public class SSQStatus extends L2GameServerPacket
 					duskPercent = Math.round(((float) duskTotalScore / (float) totalOverallScore) * 100);
 				}
 				
-				if (Config.DEBUG)
-				{
-					_log.info("Dusk Stone Score: " + duskStoneScore + " - Dawn Stone Score: " + dawnStoneScore);
-					_log.info("Dusk Festival Score: " + duskFestivalScore + " - Dawn Festival Score: " + dawnFestivalScore);
-					_log.info("Dusk Score: " + duskTotalScore + " - Dawn Score: " + dawnTotalScore);
-					_log.info("Overall Score: " + totalOverallScore);
-					_log.info("");
-					if (totalStoneScore == 0)
-					{
-						_log.info("Dusk Prop: 0 - Dawn Prop: 0");
-					}
-					else
-					{
-						_log.info("Dusk Prop: " + ((duskStoneScore / totalStoneScore) * 500) + " - Dawn Prop: " + ((dawnStoneScore / totalStoneScore) * 500));
-					}
-					_log.info("Dusk %: " + duskPercent + " - Dawn %: " + dawnPercent);
-				}
-				
 				/* DUSK */
 				writeQ(duskStoneScoreProp); // Seal Stone Score
 				writeQ(duskFestivalScore); // Festival Score
@@ -241,11 +222,6 @@ public class SSQStatus extends L2GameServerPacket
 				{
 					final int dawnProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DAWN);
 					final int duskProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DUSK);
-					
-					if (Config.DEBUG)
-					{
-						_log.info(SevenSigns.getSealName(i, true) + " = Dawn Prop: " + dawnProportion + "(" + ((dawnProportion / totalDawnMembers) * 100) + "%), Dusk Prop: " + duskProportion + "(" + ((duskProportion / totalDuskMembers) * 100) + "%)");
-					}
 					
 					writeC(i);
 					writeC(SevenSigns.getInstance().getSealOwner(i));

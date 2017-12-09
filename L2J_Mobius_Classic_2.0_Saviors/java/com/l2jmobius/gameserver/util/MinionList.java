@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.util;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
@@ -35,8 +34,6 @@ import com.l2jmobius.gameserver.model.holders.MinionHolder;
  */
 public class MinionList
 {
-	private static final Logger _log = Logger.getLogger(MinionList.class.getName());
-	
 	protected final L2MonsterInstance _master;
 	/** List containing the current spawned minions */
 	private final List<L2MonsterInstance> _minionReferences = new CopyOnWriteArrayList<>();
@@ -384,11 +381,6 @@ public class MinionList
 		}
 		
 		minion.spawnMe(newX, newY, master.getZ());
-		
-		if (Config.DEBUG)
-		{
-			_log.info("Spawned minion template " + minion.getId() + " with objid: " + minion.getObjectId() + " to boss " + master.getObjectId() + " ,at: " + minion.getX() + " x, " + minion.getY() + " y, " + minion.getZ() + " z");
-		}
 		
 		return minion;
 	}

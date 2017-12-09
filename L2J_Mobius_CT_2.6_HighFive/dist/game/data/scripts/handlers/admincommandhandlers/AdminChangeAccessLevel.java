@@ -20,7 +20,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -93,10 +92,6 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 				catch (SQLException se)
 				{
 					activeChar.sendMessage("SQLException while changing character's access level");
-					if (Config.DEBUG)
-					{
-						se.printStackTrace();
-					}
 				}
 			}
 		}

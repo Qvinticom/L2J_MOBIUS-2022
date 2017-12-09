@@ -448,10 +448,6 @@ public final class InstanceManager implements IGameXmlReader
 		{
 			if (_currentInstanceId == Integer.MAX_VALUE)
 			{
-				if (Config.DEBUG_INSTANCES)
-				{
-					LOGGER.info(getClass().getSimpleName() + ": Instance id owerflow, starting from zero.");
-				}
 				_currentInstanceId = 0;
 			}
 			_currentInstanceId++;

@@ -302,11 +302,6 @@ public final class L2TeleporterInstance extends L2Npc
 			
 			if (Config.FREE_TELEPORTING || player.destroyItemByItemId("Teleport " + (list.getIsForNoble() ? " nobless" : ""), list.getItemId(), price, this, true))
 			{
-				if (Config.DEBUG)
-				{
-					_log.info("Teleporting player " + player.getName() + " to new location: " + list.getLocX() + ":" + list.getLocY() + ":" + list.getLocZ());
-				}
-				
 				player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ(), player.getHeading(), -1);
 			}
 		}

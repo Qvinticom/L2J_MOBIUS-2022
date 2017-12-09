@@ -221,11 +221,6 @@ public class LoginController
 				{
 					if (rset.next())
 					{
-						if (Config.DEBUG)
-						{
-							_log.fine("Account '" + login + "' exists.");
-						}
-						
 						final AccountInfo info = new AccountInfo(rset.getString("login"), rset.getString("password"), rset.getInt("accessLevel"), rset.getInt("lastServer"));
 						if (!info.checkPassHash(hashBase64))
 						{

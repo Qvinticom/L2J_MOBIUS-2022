@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -26,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 
 public class GuardKnownList extends AttackableKnownList
 {
-	private static final Logger _log = Logger.getLogger(GuardKnownList.class.getName());
-	
 	public GuardKnownList(L2GuardInstance activeChar)
 	{
 		super(activeChar);
@@ -46,11 +42,6 @@ public class GuardKnownList extends AttackableKnownList
 			// Check if the object added is a L2PcInstance that owns Karma
 			if (object.getActingPlayer().getKarma() > 0)
 			{
-				if (Config.DEBUG)
-				{
-					_log.fine(getActiveChar().getObjectId() + ": PK " + object.getObjectId() + " entered scan range");
-				}
-				
 				// Set the L2GuardInstance Intention to AI_INTENTION_ACTIVE
 				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 				{
@@ -63,11 +54,6 @@ public class GuardKnownList extends AttackableKnownList
 			// Check if the object added is an aggressive L2MonsterInstance
 			if (((L2MonsterInstance) object).isAggressive())
 			{
-				if (Config.DEBUG)
-				{
-					_log.fine(getActiveChar().getObjectId() + ": Aggressive mob " + object.getObjectId() + " entered scan range");
-				}
-				
 				// Set the L2GuardInstance Intention to AI_INTENTION_ACTIVE
 				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 				{

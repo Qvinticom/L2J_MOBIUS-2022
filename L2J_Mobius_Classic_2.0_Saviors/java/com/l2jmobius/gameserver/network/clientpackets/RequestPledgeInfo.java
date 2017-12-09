@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -48,10 +47,6 @@ public final class RequestPledgeInfo implements IClientIncomingPacket
 		final L2Clan clan = ClanTable.getInstance().getClan(_clanId);
 		if (clan == null)
 		{
-			if (Config.DEBUG)
-			{
-				_log.warning(getClass().getSimpleName() + ": Clan data for clanId " + _clanId + " is missing for player " + activeChar);
-			}
 			return; // we have no clan data ?!? should not happen
 		}
 		

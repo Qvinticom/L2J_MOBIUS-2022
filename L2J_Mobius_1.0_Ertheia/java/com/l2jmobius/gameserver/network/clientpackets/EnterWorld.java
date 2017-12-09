@@ -165,13 +165,10 @@ public class EnterWorld implements IClientIncomingPacket
 			vars.remove("INSTANCE_RESTORE");
 		}
 		
-		if (L2World.getInstance().findObject(activeChar.getObjectId()) != null)
-		{
-			if (Config.DEBUG)
-			{
-				_log.warning("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
-			}
-		}
+		// if (L2World.getInstance().findObject(activeChar.getObjectId()) != null)
+		// {
+		// _log.warning("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
+		// }
 		
 		if (Config.PVP_COLOR_SYSTEM_ENABLED && !Config.FACTION_SYSTEM_ENABLED)
 		{

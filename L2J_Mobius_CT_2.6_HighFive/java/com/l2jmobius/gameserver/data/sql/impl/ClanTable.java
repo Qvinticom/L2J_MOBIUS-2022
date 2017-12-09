@@ -151,11 +151,6 @@ public class ClanTable
 			return null;
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.info(getClass().getSimpleName() + ": " + player.getObjectId() + "(" + player.getName() + ") requested a clan creation.");
-		}
-		
 		if (10 > player.getLevel())
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_CRITERIA_IN_ORDER_TO_CREATE_A_CLAN);

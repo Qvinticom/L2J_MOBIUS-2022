@@ -21,7 +21,6 @@ import java.net.Socket;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.handler.ITelnetHandler;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
@@ -275,10 +274,6 @@ public class PlayerHandler implements ITelnetHandler
 			}
 			catch (Exception e)
 			{
-				if (Config.DEBUG)
-				{
-					e.printStackTrace();
-				}
 			}
 		}
 		else if (command.startsWith("unjail"))
@@ -305,10 +300,6 @@ public class PlayerHandler implements ITelnetHandler
 			}
 			catch (Exception e)
 			{
-				if (Config.DEBUG)
-				{
-					e.printStackTrace();
-				}
 			}
 		}
 		return false;

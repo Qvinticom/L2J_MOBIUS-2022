@@ -16,7 +16,6 @@
  */
 package instances;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Logger;
@@ -97,11 +96,6 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			if (inst.isRemoveBuffEnabled())
 			{
 				handleRemoveBuffs(instance);
-			}
-			
-			if (Config.DEBUG_INSTANCES)
-			{
-				_log.info("Instance " + inst.getName() + " (" + instance.getTemplateId() + ") has been created by player " + player.getName());
 			}
 		}
 	}
@@ -232,11 +226,6 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			{
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE).addString(InstanceManager.getInstance().getInstance(world.getInstanceId()).getName()));
 			}
-		}
-		
-		if (Config.DEBUG_INSTANCES)
-		{
-			_log.info("Time restrictions has been set for player in instance ID: " + world.getInstanceId() + " (" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(time) + ")");
 		}
 	}
 	

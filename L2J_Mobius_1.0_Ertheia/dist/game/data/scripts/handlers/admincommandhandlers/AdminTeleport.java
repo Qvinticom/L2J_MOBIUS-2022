@@ -23,7 +23,6 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
@@ -135,10 +134,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				if (Config.DEBUG)
-				{
-					_log.info("admin_walk: " + e);
-				}
 			}
 		}
 		else if (command.startsWith("admin_move_to"))
@@ -564,12 +559,6 @@ public class AdminTeleport implements IAdminCommandHandler
 				spawn.init();
 				
 				activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId() + ".");
-				
-				if (Config.DEBUG)
-				{
-					_log.finer("Spawn at X=" + spawn.getX() + " Y=" + spawn.getY() + " Z=" + spawn.getZ());
-					_log.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") moved NPC " + target.getObjectId());
-				}
 			}
 			catch (Exception e)
 			{

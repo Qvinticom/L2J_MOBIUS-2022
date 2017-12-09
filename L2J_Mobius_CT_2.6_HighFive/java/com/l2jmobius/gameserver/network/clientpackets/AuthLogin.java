@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -60,11 +59,6 @@ public final class AuthLogin extends L2GameClientPacket
 			return;
 		}
 		final SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
-		if (Config.DEBUG)
-		{
-			_log.info("user:" + _loginName);
-			_log.info("key:" + key);
-		}
 		
 		// avoid potential exploits
 		if (client.getAccountName() == null)

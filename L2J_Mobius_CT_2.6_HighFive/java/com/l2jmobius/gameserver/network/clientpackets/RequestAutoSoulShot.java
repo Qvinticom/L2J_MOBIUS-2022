@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -54,11 +53,6 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 		
 		if ((activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null) && !activeChar.isDead())
 		{
-			if (Config.DEBUG)
-			{
-				_log.fine("AutoSoulShot:" + _itemId);
-			}
-			
 			final L2ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
 			if (item == null)
 			{

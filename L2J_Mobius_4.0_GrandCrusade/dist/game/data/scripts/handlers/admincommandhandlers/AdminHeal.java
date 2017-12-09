@@ -122,10 +122,6 @@ public class AdminHeal implements IAdminCommandHandler
 			{
 				target.setCurrentCp(target.getMaxCp());
 			}
-			if (Config.DEBUG)
-			{
-				_log.finer("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") healed character " + target.getName());
-			}
 		}
 		else
 		{

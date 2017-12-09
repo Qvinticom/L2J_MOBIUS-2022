@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.RecipeController;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -31,10 +30,6 @@ public final class RequestRecipeBookOpen extends L2GameClientPacket
 	protected void readImpl()
 	{
 		_isDwarvenCraft = (readD() == 0);
-		if (Config.DEBUG)
-		{
-			_log.info("RequestRecipeBookOpen : " + (_isDwarvenCraft ? "dwarvenCraft" : "commonCraft"));
-		}
 	}
 	
 	@Override

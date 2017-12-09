@@ -92,11 +92,6 @@ public final class CharacterCreate implements IClientIncomingPacket
 		// Last Verified: May 30, 2009 - Gracia Final - Players are able to create characters with names consisting of as little as 1,2,3 letter/number combinations.
 		if ((_name.length() < 1) || (_name.length() > 16))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finer("Character Creation Failure: Character name " + _name + " is invalid. Message generated: Your title cannot exceed 16 characters in length. Please try again.");
-			}
-			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
 			return;
 		}
@@ -122,11 +117,6 @@ public final class CharacterCreate implements IClientIncomingPacket
 		// Last Verified: May 30, 2009 - Gracia Final
 		if (!Util.isAlphaNumeric(_name) || !isValidName(_name))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finer("Character Creation Failure: Character name " + _name + " is invalid. Message generated: Incorrect name. Please try again.");
-			}
-			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
 			return;
 		}
@@ -165,21 +155,11 @@ public final class CharacterCreate implements IClientIncomingPacket
 		{
 			if ((CharNameTable.getInstance().getAccountCharacterCount(client.getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) && (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0))
 			{
-				if (Config.DEBUG)
-				{
-					_log.finer("Max number of characters reached. Creation failed.");
-				}
-				
 				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
 				return;
 			}
 			else if (CharNameTable.getInstance().doesCharNameExist(_name))
 			{
-				if (Config.DEBUG)
-				{
-					_log.finer("Character Creation Failure: Message generated: You cannot create another character. Please delete the existing character and try again.");
-				}
-				
 				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
 				return;
 			}
@@ -187,11 +167,6 @@ public final class CharacterCreate implements IClientIncomingPacket
 			template = PlayerTemplateData.getInstance().getTemplate(_classId);
 			if ((template == null) || (ClassId.getClassId(_classId).level() > 0))
 			{
-				if (Config.DEBUG)
-				{
-					_log.finer("Character Creation Failure: " + _name + " classId: " + _classId + " Template: " + template + " Message generated: Your character creation has failed.");
-				}
-				
 				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
 			}
@@ -286,11 +261,6 @@ public final class CharacterCreate implements IClientIncomingPacket
 	
 	private void initNewChar(L2GameClient client, L2PcInstance newChar)
 	{
-		if (Config.DEBUG)
-		{
-			_log.finer("Character init start");
-		}
-		
 		L2World.getInstance().storeObject(newChar);
 		
 		if (Config.STARTING_ADENA > 0)
@@ -350,11 +320,6 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		for (L2SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, true))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finer("Adding starter skill:" + skill.getSkillId() + " / " + skill.getSkillLevel());
-			}
-			
 			newChar.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 		}
 		
@@ -372,10 +337,5 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
 		client.setCharSelection(cl.getCharInfo());
-		
-		if (Config.DEBUG)
-		{
-			_log.finer("Character init end");
-		}
 	}
 }

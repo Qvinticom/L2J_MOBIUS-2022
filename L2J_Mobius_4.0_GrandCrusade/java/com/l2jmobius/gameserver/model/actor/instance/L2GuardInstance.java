@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -36,8 +34,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  */
 public class L2GuardInstance extends L2Attackable
 {
-	private static Logger _log = Logger.getLogger(L2GuardInstance.class.getName());
-	
 	/**
 	 * Constructor of L2GuardInstance (use L2Character and L2NpcInstance constructor).<br>
 	 * <B><U> Actions</U> :</B>
@@ -172,11 +168,6 @@ public class L2GuardInstance extends L2Attackable
 			// Check if the L2PcInstance is in the _aggroList of the L2GuardInstance
 			if (containsTarget(player))
 			{
-				if (Config.DEBUG)
-				{
-					_log.finer(player.getObjectId() + ": Attacked guard " + getObjectId());
-				}
-				
 				// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 			}

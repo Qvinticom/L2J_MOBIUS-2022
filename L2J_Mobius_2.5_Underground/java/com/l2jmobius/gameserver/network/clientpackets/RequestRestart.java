@@ -67,11 +67,6 @@ public final class RequestRestart implements IClientIncomingPacket
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && !(player.isGM() && Config.GM_RESTART_FIGHTING))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finer("Player " + player.getName() + " tried to logout while fighting.");
-			}
-			
 			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
 			client.sendPacket(RestartResponse.FALSE);
 			return;

@@ -91,11 +91,6 @@ public final class UseItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.log(Level.INFO, activeChar + ": use item " + _objectId);
-		}
-		
 		// Flood protect UseItem
 		if (!getClient().getFloodProtectors().getUseItem().tryPerformAction("use item"))
 		{
@@ -345,10 +340,6 @@ public final class UseItem extends L2GameClientPacket
 				if ((etcItem != null) && (etcItem.getHandlerName() != null))
 				{
 					_log.log(Level.WARNING, "Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
-				}
-				else if (Config.DEBUG)
-				{
-					_log.log(Level.WARNING, "No Item handler registered for Item Id: " + _itemId + "!");
 				}
 				return;
 			}

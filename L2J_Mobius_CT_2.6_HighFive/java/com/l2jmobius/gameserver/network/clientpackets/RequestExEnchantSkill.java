@@ -166,11 +166,6 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED);
 				sm.addSkillName(_skillId);
 				player.sendPacket(sm);
-				
-				if (Config.DEBUG)
-				{
-					_log.fine("Learned skill ID: " + _skillId + " Level: " + _skillLvl + " for " + requiredSp + " SP, " + requiredAdena + " Adena.");
-				}
 			}
 			else
 			{

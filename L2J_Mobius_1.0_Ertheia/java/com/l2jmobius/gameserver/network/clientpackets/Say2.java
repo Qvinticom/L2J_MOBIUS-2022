@@ -99,11 +99,6 @@ public final class Say2 implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
-		if (Config.DEBUG)
-		{
-			_log.info("Say2: Msg Type = '" + _type + "' Text = '" + _text + "'.");
-		}
-		
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{

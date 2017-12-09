@@ -234,11 +234,6 @@ public class ItemTable
 			}
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.finer(getClass().getSimpleName() + ": Item created: " + item);
-		}
-		
 		// Add the L2ItemInstance object to _allObjects of L2world
 		L2World.getInstance().storeObject(item);
 		

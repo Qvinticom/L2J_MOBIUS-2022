@@ -264,10 +264,6 @@ public final class Skill implements IIdentifiable
 		
 		if (Config.ENABLE_MODIFY_SKILL_REUSE && Config.SKILL_REUSE_LIST.containsKey(_id))
 		{
-			if (Config.DEBUG)
-			{
-				_log.info("*** Skill " + _name + " (" + _level + ") changed reuse from " + set.getInt("reuseDelay", 0) + " to " + Config.SKILL_REUSE_LIST.get(_id) + " seconds.");
-			}
 			_reuseDelay = Config.SKILL_REUSE_LIST.get(_id);
 		}
 		else

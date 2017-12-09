@@ -1072,19 +1072,11 @@ public class AdminEditChar implements IAdminCommandHandler
 			player.sendPacket(sm);
 			// Admin information
 			activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
-			if (Config.DEBUG)
-			{
-				_log.fine("[SET KARMA] [GM]" + activeChar.getName() + " Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
-			}
 		}
 		else
 		{
 			// tell admin of mistake
 			activeChar.sendMessage("You must enter a value for karma greater than or equal to 0.");
-			if (Config.DEBUG)
-			{
-				_log.fine("[SET KARMA] ERROR: [GM]" + activeChar.getName() + " entered an incorrect value for new karma: " + newKarma + " for " + player.getName() + ".");
-			}
 		}
 	}
 	

@@ -103,12 +103,6 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			{
 				ThreadPoolManager.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
 			}
-			
-			// Send debug message
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getClass().getSimpleName() + ": Current mode " + _mode);
-			}
 		}
 		else
 		{
@@ -430,10 +424,6 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			}
 		}
 		scheduleModeChange();
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getClass().getName() + ": Manor mode changed to " + _mode + "!");
-		}
 	}
 	
 	public final void setNextSeedProduction(List<SeedProduction> list, int castleId)

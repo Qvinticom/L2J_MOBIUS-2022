@@ -24,7 +24,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.commons.util.crypt.LoginCrypt;
 import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
@@ -261,11 +260,6 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	@Override
 	public void onDisconnection()
 	{
-		if (Config.DEBUG)
-		{
-			_log.info("DISCONNECTED: " + toString());
-		}
-		
 		if (!hasJoinedGS() || ((getConnectionStartTime() + LoginController.LOGIN_TIMEOUT) < System.currentTimeMillis()))
 		{
 			LoginController.getInstance().removeAuthedLoginClient(getAccount());

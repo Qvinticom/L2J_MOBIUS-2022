@@ -3878,20 +3878,11 @@ public final class L2PcInstance extends L2Playable
 		final L2Summon pet = getPet();
 		if (((pet != null) && (pet.getControlObjectId() == objectId)) || (getMountObjectID() == objectId))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(getObjectId() + ": player tried to " + action + " item controling pet");
-			}
-			
 			return null;
 		}
 		
 		if (isProcessingItem(objectId))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(getObjectId() + ":player tried to " + action + " an enchant scroll he was using");
-			}
 			return null;
 		}
 		
@@ -10574,20 +10565,11 @@ public final class L2PcInstance extends L2Playable
 		final L2Summon pet = getPet();
 		if (((pet != null) && (pet.getControlObjectId() == objectId)) || (getMountObjectID() == objectId))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(getObjectId() + ": player tried to " + action + " item controling pet");
-			}
-			
 			return false;
 		}
 		
 		if (isProcessingItem(objectId))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(getObjectId() + ":player tried to " + action + " an enchant scroll he was using");
-			}
 			return false;
 		}
 		

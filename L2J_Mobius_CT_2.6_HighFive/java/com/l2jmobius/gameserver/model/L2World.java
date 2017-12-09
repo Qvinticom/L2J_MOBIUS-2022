@@ -27,7 +27,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
@@ -259,10 +258,6 @@ public final class L2World
 		// Get all visible objects contained in the _visibleObjects of L2WorldRegions
 		// in a circular area of 2000 units
 		final List<L2Object> visibles = getVisibleObjects(object, 2000);
-		if (Config.DEBUG)
-		{
-			_log.finest("objects in range:" + visibles.size());
-		}
 		
 		// tell the player about the surroundings
 		// Go through the visible objects contained in the circular area

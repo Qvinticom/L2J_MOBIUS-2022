@@ -149,20 +149,12 @@ public final class RequestDropItem implements IClientIncomingPacket
 		
 		if ((L2Item.TYPE2_QUEST == item.getItem().getType2()) && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(activeChar.getObjectId() + ":player tried to drop quest item");
-			}
 			activeChar.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
 			return;
 		}
 		
 		if (!activeChar.isInsideRadius(_x, _y, 0, 150, false, false) || (Math.abs(_z - activeChar.getZ()) > 50))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(activeChar.getObjectId() + ": trying to drop too far away");
-			}
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DISCARD_SOMETHING_THAT_FAR_AWAY_FROM_YOU);
 			return;
 		}
@@ -173,11 +165,6 @@ public final class RequestDropItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			_log.finer("requested drop item " + _objectId + "(" + item.getCount() + ") at " + _x + "/" + _y + "/" + _z);
-		}
-		
 		if (item.isEquipped())
 		{
 			activeChar.getInventory().unEquipItemInSlot(item.getLocationSlot());
@@ -186,11 +173,6 @@ public final class RequestDropItem implements IClientIncomingPacket
 		}
 		
 		final L2ItemInstance dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);
-		
-		if (Config.DEBUG)
-		{
-			_log.finer("dropping " + _objectId + " item(" + _count + ") at: " + _x + " " + _y + " " + _z);
-		}
 		
 		// activeChar.broadcastUserInfo();
 		

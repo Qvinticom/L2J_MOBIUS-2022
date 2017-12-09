@@ -128,12 +128,6 @@ public final class Instance implements IIdentifiable, INamable
 			// Notify DP scripts
 			EventDispatcher.getInstance().notifyEventAsync(new OnInstanceCreated(this, player), _template);
 		}
-		
-		// Debug logger
-		if (Config.DEBUG_INSTANCES)
-		{
-			LOGGER.info("Instance " + _template.getName() + " (" + _template.getId() + ") has been created with instance id " + getId());
-		}
 	}
 	
 	@Override

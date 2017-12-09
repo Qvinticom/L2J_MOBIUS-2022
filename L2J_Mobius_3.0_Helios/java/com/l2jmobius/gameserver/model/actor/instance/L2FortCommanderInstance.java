@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.List;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -99,10 +98,6 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	{
 		if (!isInsideRadius(getSpawn(), 200, false, false))
 		{
-			if (Config.DEBUG)
-			{
-				_log.info(getObjectId() + ": moving home");
-			}
 			setisReturningToSpawnPoint(true);
 			clearAggroList();
 			

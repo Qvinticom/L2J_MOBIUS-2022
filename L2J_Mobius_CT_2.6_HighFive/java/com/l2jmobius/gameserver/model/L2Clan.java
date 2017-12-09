@@ -975,10 +975,6 @@ public class L2Clan implements IIdentifiable, INamable
 			ps.setInt(9, getNewLeaderId());
 			ps.setInt(10, getId());
 			ps.execute();
-			if (Config.DEBUG)
-			{
-				_log.fine("New clan leader saved in db: " + getId());
-			}
 		}
 		catch (Exception e)
 		{
@@ -1020,10 +1016,6 @@ public class L2Clan implements IIdentifiable, INamable
 			ps.setInt(12, getAllyCrestId());
 			ps.setInt(13, getNewLeaderId());
 			ps.execute();
-			if (Config.DEBUG)
-			{
-				_log.fine("New clan saved in db: " + getId());
-			}
 		}
 		catch (Exception e)
 		{
@@ -1125,11 +1117,6 @@ public class L2Clan implements IIdentifiable, INamable
 						}
 					}
 				}
-			}
-			
-			if (Config.DEBUG && (getName() != null))
-			{
-				_log.info("Restored clan data for \"" + getName() + "\" from database.");
 			}
 			
 			restoreSubPledges();
@@ -1897,11 +1884,6 @@ public class L2Clan implements IIdentifiable, INamable
 					// TODO: clan lvl9 or more can reinforce knights cheaper if first knight unit already created, use Config.KNIGHT_REINFORCE_COST
 				}
 			}
-			
-			if (Config.DEBUG)
-			{
-				_log.fine("New sub_clan saved in db: " + getId() + "; " + pledgeType);
-			}
 		}
 		catch (Exception e)
 		{
@@ -1967,10 +1949,6 @@ public class L2Clan implements IIdentifiable, INamable
 			ps.setInt(3, getId());
 			ps.setInt(4, pledgeType);
 			ps.execute();
-			if (Config.DEBUG)
-			{
-				_log.fine("Subpledge updated in db: " + getId());
-			}
 		}
 		catch (Exception e)
 		{
@@ -2403,11 +2381,6 @@ public class L2Clan implements IIdentifiable, INamable
 		if (null == player)
 		{
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			_log.fine(player.getObjectId() + "(" + player.getName() + ") requested ally creation from ");
 		}
 		
 		if (!player.isClanLeader())

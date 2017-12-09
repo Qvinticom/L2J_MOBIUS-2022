@@ -32,8 +32,11 @@ public final class Action extends L2GameClientPacket
 	private static final String __C__1F_ACTION = "[C] 1F Action";
 	
 	private int _objectId;
+	@SuppressWarnings("unused")
 	private int _originX;
+	@SuppressWarnings("unused")
 	private int _originY;
+	@SuppressWarnings("unused")
 	private int _originZ;
 	private int _actionId;
 	
@@ -50,11 +53,6 @@ public final class Action extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (Config.DEBUG)
-		{
-			_log.info(getType() + ": " + (_actionId == 0 ? "Simple-click" : "Shift-click") + " Target object ID: " + _objectId + " orignX: " + _originX + " orignY: " + _originY + " orignZ: " + _originZ);
-		}
-		
 		// Get the current L2PcInstance of the player
 		final L2PcInstance activeChar = getActiveChar();
 		if (activeChar == null)

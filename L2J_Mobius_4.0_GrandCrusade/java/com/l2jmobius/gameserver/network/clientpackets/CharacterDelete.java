@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Level;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.CharacterDeleteFailType;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
@@ -54,11 +53,6 @@ public final class CharacterDelete implements IClientIncomingPacket
 		// client.sendPacket(new CharDeleteFail(CharacterDeleteFailType.UNKNOWN));
 		// return;
 		// }
-		
-		if (Config.DEBUG)
-		{
-			_log.finer("deleting slot:" + _charSlot);
-		}
 		
 		try
 		{

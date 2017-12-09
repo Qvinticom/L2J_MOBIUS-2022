@@ -145,12 +145,6 @@ public class CharacterSelect implements IClientIncomingPacket
 						}
 					}
 					
-					// The L2PcInstance must be created here, so that it can be attached to the L2GameClient
-					if (Config.DEBUG)
-					{
-						_log.finer("selected slot:" + _charSlot);
-					}
-					
 					// load up character from disk
 					final L2PcInstance cha = client.loadCharFromDisk(_charSlot);
 					if (cha == null)

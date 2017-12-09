@@ -442,10 +442,6 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								if (st.countTokens() >= 1)
 								{
 									int fee;
-									if (Config.DEBUG)
-									{
-										_log.warning("Mp editing invoked");
-									}
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-apply_confirmed.htm");
@@ -493,10 +489,6 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								if (st.countTokens() >= 1)
 								{
 									int fee;
-									if (Config.DEBUG)
-									{
-										_log.warning("Mp editing invoked");
-									}
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-apply_confirmed.htm");
@@ -544,10 +536,6 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								if (st.countTokens() >= 1)
 								{
 									int fee;
-									if (Config.DEBUG)
-									{
-										_log.warning("Exp editing invoked");
-									}
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-apply_confirmed.htm");
@@ -719,10 +707,6 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								if (st.countTokens() >= 1)
 								{
 									int fee;
-									if (Config.DEBUG)
-									{
-										_log.warning("Tele editing invoked");
-									}
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-apply_confirmed.htm");
@@ -770,10 +754,6 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								if (st.countTokens() >= 1)
 								{
 									int fee;
-									if (Config.DEBUG)
-									{
-										_log.warning("Support editing invoked");
-									}
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-apply_confirmed.htm");

@@ -16,10 +16,6 @@
  */
 package com.l2jmobius.loginserver.network.gameserverpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
-import com.l2jmobius.loginserver.GameServerTable;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.util.network.BaseRecievePacket;
 
@@ -28,8 +24,6 @@ import com.l2jmobius.util.network.BaseRecievePacket;
  */
 public class PlayerInGame extends BaseRecievePacket
 {
-	private static Logger _log = Logger.getLogger(PlayerInGame.class.getName());
-	
 	/**
 	 * @param decrypt
 	 * @param server
@@ -42,10 +36,6 @@ public class PlayerInGame extends BaseRecievePacket
 		{
 			final String account = readS();
 			server.addAccountOnGameServer(account);
-			if (Config.DEBUG)
-			{
-				_log.info("Account " + account + " logged in GameServer: [" + server.getServerId() + "] " + GameServerTable.getInstance().getServerNameById(server.getServerId()));
-			}
 			server.broadcastToTelnet("Account " + account + " logged in GameServer " + server.getServerId());
 		}
 	}

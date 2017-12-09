@@ -25,7 +25,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
@@ -305,11 +304,6 @@ public final class BlockCheckerEngine
 				_abnormalEnd = true;
 				
 				ThreadPoolManager.execute(new EndEvent());
-				
-				if (Config.DEBUG)
-				{
-					_log.config("Handys Block Checker Event at arena " + _arena + " ended due lack of players!");
-				}
 			}
 		}
 		catch (Exception e)

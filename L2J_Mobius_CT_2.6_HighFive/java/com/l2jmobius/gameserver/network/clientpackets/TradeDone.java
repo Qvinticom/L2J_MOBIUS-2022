@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -53,10 +52,6 @@ public final class TradeDone extends L2GameClientPacket
 		final TradeList trade = player.getActiveTradeList();
 		if (trade == null)
 		{
-			if (Config.DEBUG)
-			{
-				_log.warning("player.getTradeList == null in " + getType() + " for player " + player.getName());
-			}
 			return;
 		}
 		

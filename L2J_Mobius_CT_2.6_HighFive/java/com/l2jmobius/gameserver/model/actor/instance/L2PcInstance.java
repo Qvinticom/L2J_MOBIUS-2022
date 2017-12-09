@@ -3853,20 +3853,11 @@ public final class L2PcInstance extends L2Playable
 		// Pet is summoned and not the item that summoned the pet AND not the buggle from strider you're mounting
 		if ((hasSummon() && (getSummon().getControlObjectId() == objectId)) || (getMountObjectID() == objectId))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(getObjectId() + ": player tried to " + action + " item controling pet");
-			}
-			
 			return null;
 		}
 		
 		if (getActiveEnchantItemId() == objectId)
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(getObjectId() + ":player tried to " + action + " an enchant scroll he was using");
-			}
 			return null;
 		}
 		
@@ -10910,20 +10901,11 @@ public final class L2PcInstance extends L2Playable
 		// Pet is summoned and not the item that summoned the pet AND not the buggle from strider you're mounting
 		if ((hasSummon() && (getSummon().getControlObjectId() == objectId)) || (getMountObjectID() == objectId))
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(getObjectId() + ": player tried to " + action + " item controling pet");
-			}
-			
 			return false;
 		}
 		
 		if (getActiveEnchantItemId() == objectId)
 		{
-			if (Config.DEBUG)
-			{
-				_log.finest(getObjectId() + ":player tried to " + action + " an enchant scroll he was using");
-			}
 			return false;
 		}
 		

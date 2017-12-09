@@ -17,7 +17,6 @@
 package handlers.chathandlers;
 
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -38,8 +37,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class ChatGeneral implements IChatHandler
 {
-	private static Logger _log = Logger.getLogger(ChatGeneral.class.getName());
-	
 	private static final ChatType[] CHAT_TYPES =
 	{
 		ChatType.GENERAL,
@@ -63,10 +60,6 @@ public final class ChatGeneral implements IChatHandler
 			else
 			{
 				command = text.substring(1);
-				if (Config.DEBUG)
-				{
-					_log.info("Command: " + command);
-				}
 			}
 			vch = VoicedCommandHandler.getInstance().getHandler(command);
 			if (vch != null)
@@ -76,10 +69,6 @@ public final class ChatGeneral implements IChatHandler
 			}
 			else
 			{
-				if (Config.DEBUG)
-				{
-					_log.warning("No handler registered for bypass '" + command + "'");
-				}
 				vcd_used = false;
 			}
 		}

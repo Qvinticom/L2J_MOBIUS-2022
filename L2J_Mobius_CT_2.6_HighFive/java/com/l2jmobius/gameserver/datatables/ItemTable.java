@@ -232,11 +232,6 @@ public class ItemTable
 			}
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.fine(getClass().getSimpleName() + ": Item created  oid:" + item.getObjectId() + " itemid:" + itemId);
-		}
-		
 		// Add the L2ItemInstance object to _allObjects of L2world
 		L2World.getInstance().storeObject(item);
 		

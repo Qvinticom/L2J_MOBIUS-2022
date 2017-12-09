@@ -472,11 +472,6 @@ public class CursedWeapon implements INamable
 	
 	public void saveData()
 	{
-		if (Config.DEBUG)
-		{
-			_log.info("CursedWeapon: Saving data to disk.");
-		}
-		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement del = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");
 			PreparedStatement ps = con.prepareStatement("INSERT INTO cursed_weapons (itemId, charId, playerReputation, playerPkKills, nbKills, endTime) VALUES (?, ?, ?, ?, ?, ?)"))

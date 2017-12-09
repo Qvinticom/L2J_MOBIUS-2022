@@ -195,10 +195,6 @@ public final class TradeRequest implements IClientIncomingPacket
 		
 		if (player.isProcessingTransaction())
 		{
-			if (Config.DEBUG)
-			{
-				_log.finer("Already trading with someone else.");
-			}
 			client.sendPacket(SystemMessageId.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE);
 			return;
 		}
@@ -206,10 +202,6 @@ public final class TradeRequest implements IClientIncomingPacket
 		SystemMessage sm;
 		if (partner.isProcessingRequest() || partner.isProcessingTransaction())
 		{
-			if (Config.DEBUG)
-			{
-				_log.info("Transaction already in progress.");
-			}
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER);
 			sm.addString(partner.getName());
 			client.sendPacket(sm);
