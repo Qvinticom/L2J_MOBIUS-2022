@@ -4373,10 +4373,24 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				
 				// Temporary fix for character outside world region errors (should not happen)
-				/*
-				 * if ((curX < L2World.MAP_MIN_X) || (curX > L2World.MAP_MAX_X) || (curY < L2World.MAP_MIN_Y) || (curY > L2World.MAP_MAX_Y)) { _log.warning("Character " + getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
-				 * getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE); if (isPlayer()) { getActingPlayer().logout(); } else if (isSummon()) { return; } else { onDecay(); } return; }
-				 */
+				if ((curX < L2World.MAP_MIN_X) || (curX > L2World.MAP_MAX_X) || (curY < L2World.MAP_MIN_Y) || (curY > L2World.MAP_MAX_Y))
+				{
+					_log.warning("Character " + getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
+					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					if (isPlayer())
+					{
+						getActingPlayer().logout();
+					}
+					else if (isSummon())
+					{
+						return;
+					}
+					else
+					{
+						onDecay();
+					}
+					return;
+				}
 				
 				// location different if destination wasn't reached (or just z coord is different)
 				final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
