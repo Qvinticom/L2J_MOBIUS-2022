@@ -239,10 +239,9 @@ public final class SubclassCertification extends AbstractNpcAI
 		}
 		
 		String htmltext;
-		final String tmp = variable + level + "-" + player.getClassIndex();
-		final String globalVariable = player.getVariables().getString(tmp);
+		final String var = variable + level + "-" + player.getClassIndex();
 		
-		if (!globalVariable.equals("") && !globalVariable.equals("0"))
+		if (player.getVariables().hasVariable(var) && !player.getVariables().getString(var).equals("0"))
 		{
 			htmltext = "AlreadyReceived.html";
 		}
@@ -263,7 +262,7 @@ public final class SubclassCertification extends AbstractNpcAI
 			smsg.addItemName(item);
 			player.sendPacket(smsg);
 			
-			player.getVariables().set(tmp, String.valueOf(item.getObjectId()));
+			player.getVariables().set(var, String.valueOf(item.getObjectId()));
 			htmltext = "GetAbility.html";
 		}
 		return htmltext;
