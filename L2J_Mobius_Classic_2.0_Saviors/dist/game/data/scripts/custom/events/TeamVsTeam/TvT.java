@@ -478,53 +478,17 @@ public class TvT extends Event
 				break;
 			}
 			case "10":
-			{
-				broadcastScreenMessage("10", 4);
-				break;
-			}
 			case "9":
-			{
-				broadcastScreenMessage("9", 4);
-				break;
-			}
 			case "8":
-			{
-				broadcastScreenMessage("8", 4);
-				break;
-			}
 			case "7":
-			{
-				broadcastScreenMessage("7", 4);
-				break;
-			}
 			case "6":
-			{
-				broadcastScreenMessage("6", 4);
-				break;
-			}
 			case "5":
-			{
-				broadcastScreenMessage("5", 4);
-				break;
-			}
 			case "4":
-			{
-				broadcastScreenMessage("4", 4);
-				break;
-			}
 			case "3":
-			{
-				broadcastScreenMessage("3", 4);
-				break;
-			}
 			case "2":
-			{
-				broadcastScreenMessage("2", 4);
-				break;
-			}
 			case "1":
 			{
-				broadcastScreenMessage("1", 4);
+				broadcastScreenMessage(event, 4);
 				break;
 			}
 		}
@@ -548,7 +512,16 @@ public class TvT extends Event
 				player.sendMessage("You have been kicked for been inactive.");
 				if (PVP_WORLD != null)
 				{
-					broadcastScreenMessageWithEffect("Player " + player.getName() + " was kicked for been inactive!", 7);
+					// Manage forfeit.
+					if ((BLUE_TEAM.isEmpty() && !RED_TEAM.isEmpty()) || //
+						(RED_TEAM.isEmpty() && !BLUE_TEAM.isEmpty()))
+					{
+						manageForfeit();
+					}
+					else
+					{
+						broadcastScreenMessageWithEffect("Player " + player.getName() + " was kicked for been inactive!", 7);
+					}
 				}
 			}
 		}
@@ -742,34 +715,37 @@ public class TvT extends Event
 		}
 	}
 	
+	private void manageForfeit()
+	{
+		cancelQuestTimer("10", null, null);
+		cancelQuestTimer("9", null, null);
+		cancelQuestTimer("8", null, null);
+		cancelQuestTimer("7", null, null);
+		cancelQuestTimer("6", null, null);
+		cancelQuestTimer("5", null, null);
+		cancelQuestTimer("4", null, null);
+		cancelQuestTimer("3", null, null);
+		cancelQuestTimer("2", null, null);
+		cancelQuestTimer("1", null, null);
+		cancelQuestTimer("EndFight", null, null);
+		startQuestTimer("EndFight", 10000, null, null);
+		broadcastScreenMessageWithEffect("Enemy team forfeit!", 7);
+	}
+	
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	private void OnPlayerLogout(OnPlayerLogout event)
 	{
 		final L2PcInstance player = event.getActiveChar();
-		if (player != null)
+		// Remove player from lists.
+		PLAYER_LIST.remove(player);
+		PLAYER_SCORES.remove(player);
+		BLUE_TEAM.remove(player);
+		RED_TEAM.remove(player);
+		// Manage forfeit.
+		if ((BLUE_TEAM.isEmpty() && !RED_TEAM.isEmpty()) || //
+			(RED_TEAM.isEmpty() && !BLUE_TEAM.isEmpty()))
 		{
-			PLAYER_LIST.remove(player);
-			PLAYER_SCORES.remove(player);
-			BLUE_TEAM.remove(player);
-			RED_TEAM.remove(player);
-		}
-		// If all players left instance end the event.
-		if (PLAYER_LIST.isEmpty())
-		{
-			// Stop timers.
-			for (List<QuestTimer> timers : getQuestTimers().values())
-			{
-				for (QuestTimer timer : timers)
-				{
-					timer.cancel();
-				}
-			}
-			// Destroy world.
-			if (PVP_WORLD != null)
-			{
-				PVP_WORLD.destroy();
-				PVP_WORLD = null;
-			}
+			manageForfeit();
 		}
 	}
 	
@@ -810,7 +786,7 @@ public class TvT extends Event
 		}
 		EVENT_ACTIVE = true;
 		
-		// Cancel timers. (In case event started immediately after another event finished.)
+		// Cancel timers. (In case event started immediately after another event was canceled.)
 		for (List<QuestTimer> timers : getQuestTimers().values())
 		{
 			for (QuestTimer timer : timers)
@@ -829,7 +805,6 @@ public class TvT extends Event
 		// Send message to players.
 		Broadcast.toAllOnlinePlayers("TvT Event: Registration opened for " + REGISTRATION_TIME + " minutes.");
 		Broadcast.toAllOnlinePlayers("TvT Event: You can register at Giran TvT Event Manager.");
-		
 		return true;
 	}
 	
