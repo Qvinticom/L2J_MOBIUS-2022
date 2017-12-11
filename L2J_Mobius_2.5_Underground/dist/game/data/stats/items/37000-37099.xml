@@ -1561,6 +1561,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
 		<skills>
 			<skill id="19042" level="1" /> <!-- King's Summon -->
 			<skill id="19039" level="1" /> <!-- Cloak of Light -->
@@ -1585,6 +1588,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
 		<skills>
 			<skill id="19042" level="1" /> <!-- King's Summon -->
 			<skill id="19040" level="1" /> <!-- Cloak of Darkness -->

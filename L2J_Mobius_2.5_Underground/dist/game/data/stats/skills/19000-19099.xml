@@ -1162,16 +1162,9 @@
 			</condition>
 		</passiveConditions>
 		<effects>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">
@@ -1207,16 +1200,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
-				<amount>5</amount>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="StatUp">
