@@ -359,6 +359,11 @@
 		<set name="soulshots" val="2" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">107.0</stat>
 			<stat type="mAtk">68.0</stat>
@@ -713,6 +718,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">690.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -730,6 +739,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">770.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -747,6 +760,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -764,6 +781,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">770.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -782,6 +803,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -800,6 +825,14 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">770.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -817,6 +850,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1521.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -833,6 +870,10 @@
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">1286.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -850,6 +891,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">643.0</stat>
 			<stat type="mAtk">481.0</stat>
@@ -867,6 +912,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">643.0</stat>
 			<stat type="mAtk">481.0</stat>
@@ -885,6 +934,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">776.0</stat>
 			<stat type="mAtk">518.0</stat>
@@ -904,6 +957,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -921,6 +978,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">792.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -938,6 +999,10 @@
 		<set name="soulshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">931.0</stat>
 			<stat type="mAtk">388.0</stat>

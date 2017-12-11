@@ -230,6 +230,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="647" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">175</stat>
 			<stat type="mAtk">91</stat>
@@ -550,6 +554,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="633" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">213</stat>
 			<stat type="mAtk">107</stat>
@@ -871,6 +879,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="600" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">281</stat>
 			<stat type="mAtk">132</stat>
@@ -1138,6 +1150,10 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="670" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">333</stat>
 			<stat type="mAtk">151</stat>
@@ -1802,7 +1818,9 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<set name="damage_range" val="0;0;66;120" />
 		<skills>
+			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="17747" level="1" /> <!-- Dandy's Strength -->
 		</skills>
 		<stats>

@@ -130,7 +130,9 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
 		<set name="time" val="60" />
+		<set name="damage_range" val="0;0;66;120" />
 		<skills>
+			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="17771" level="1" /> <!-- Assisting Strength -->
 		</skills>
 		<stats>
@@ -737,7 +739,9 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
 		<set name="time" val="60" />
+		<set name="damage_range" val="0;0;66;120" />
 		<skills>
+			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="8893" level="1" /> <!-- Antharas' Breath -->
 			<skill id="8890" level="1" /> <!-- Dignity -->
 			<skill id="8895" level="1" /> <!-- Antharas Lash -->

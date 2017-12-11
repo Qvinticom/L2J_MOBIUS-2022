@@ -1129,8 +1129,11 @@
 		<isDebuff>false</isDebuff>
 		<effects>
 			<effect name="HitNumber">
-				<amount>3</amount>
+				<amount>4</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>

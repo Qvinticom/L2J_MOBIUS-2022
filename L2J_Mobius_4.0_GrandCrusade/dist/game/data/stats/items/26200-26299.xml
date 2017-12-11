@@ -1179,6 +1179,10 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1570,6 +1574,10 @@
 		<set name="weight" val="500" />
 		<set name="bodypart" val="lrhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>

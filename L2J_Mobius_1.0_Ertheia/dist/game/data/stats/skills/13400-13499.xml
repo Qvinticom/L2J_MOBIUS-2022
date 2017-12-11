@@ -472,8 +472,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="HitNumber">
-				<amount>2</amount>
+				<amount>8</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>
@@ -870,8 +873,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="HitNumber">
-				<amount>2</amount>
+				<amount>8</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 			<effect name="MaxMp">
 				<amount>30</amount>

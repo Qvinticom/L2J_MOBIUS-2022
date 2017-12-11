@@ -830,6 +830,9 @@
 					<value level="4">4</value>
 				</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
@@ -1371,12 +1374,12 @@
 	<skill id="3568" toLevel="2" name="Special Ability: HP Drain">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.ensoul_big_old</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">75</value>
 			<value level="2">84</value>
 		</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>
@@ -1683,6 +1686,8 @@
 	<skill id="3576" toLevel="9" name="Special Ability: MP Regeneration">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill1047</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">75</value>
 			<value level="2">84</value>
@@ -1694,8 +1699,6 @@
 			<value level="8">86</value>
 			<value level="9">86</value>
 		</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MpRegen">
 				<amount>
@@ -2225,8 +2228,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="HitNumber">
-				<amount>5</amount>
+				<amount>8</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>10</amount>
@@ -2449,15 +2455,19 @@
 		</effects>
 	</skill>
 	<skill id="3599" toLevel="1" name="Polearm Multi-attack">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Confirmed CT2.5 and Updated to GC -->
+		<!-- Enables the character to attack multiple opponents. -->
 		<icon>icon.skill0216</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="HitNumber">
-				<amount>2</amount>
+				<amount>4</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>

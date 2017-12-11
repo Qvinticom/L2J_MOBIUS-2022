@@ -694,12 +694,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="10080" />
 		<skills>
-			<skill id="13552" level="1" /> <!-- Mysterious Pasive Skill -->
+			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="13552" level="1" /> <!-- Mysterious Stormer -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1007</stat>
@@ -708,6 +711,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37636" name="Mysterious Thrower" additionalName="7-day" type="Weapon">
@@ -1104,18 +1108,20 @@
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
 		<skills>
-			<skill id="13552" level="1" /> <!-- Mysterious Pasive Skill -->
+			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="13552" level="1" /> <!-- Mysterious Stormer -->
 		</skills>
 		<stats>
 			<stat type="pAtk">1007</stat>
@@ -1124,6 +1130,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37650" name="Mysterious Thrower" additionalName="30-day" type="Weapon">
@@ -1957,16 +1964,19 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">752</stat>
 			<stat type="mAtk">414</stat>
@@ -1974,6 +1984,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37694" name="Valentine Bow" type="Weapon">

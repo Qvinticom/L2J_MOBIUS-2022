@@ -64,31 +64,120 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="13109" toLevel="5" name="Special Ability: Damage Up">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. Enables the character to attack multiple opponents. Inflicts additional damage during PvP. -->
 		<icon>icon.skill1068</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">94</value>
+			<value level="4">97</value>
+			<value level="5">99</value>
+		</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">288</value>
+					<value level="2">332</value>
+					<value level="3">377</value>
+					<value level="4">415</value>
+					<value level="5">600</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HitNumber">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13110" toLevel="5" name="Special Ability: Guidance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Accuracy. Enables the character to attack multiple opponents. Increases damage inflicted during PvP. -->
 		<icon>icon.skill1240</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">5.02</value>
+					<value level="2">5.37</value>
+					<value level="3">5.72</value>
+					<value level="4">6.07</value>
+					<value level="5">6.88</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HitNumber">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13111" toLevel="1" name="Special Ability: HP Drain">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores HP by using some of the damage inflicted upon the enemy with a certain probability. Can attack multiple enemies. Inflicts additional damage during PvP. -->
 		<icon>icon.skill1268</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>4</amount>
+				<chance>30</chance>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HitNumber">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13112" toLevel="1" name="Special Ability: Critical Stun">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily stunned and unable to move. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
@@ -109,9 +198,11 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="13113" toLevel="1" name="Special Ability: Critical Slow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Temporarily decreases Speed. -->
 		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
@@ -132,9 +223,14 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13114" toLevel="1" name="Special Ability: Magic Hold">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily inflicted with hold and unable to move. -->
 		<icon>icon.skill1201</icon>
 		<operateType>A2</operateType>
@@ -157,14 +253,25 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Root" />
+		</effects>
 	</skill>
 	<skill id="13115" toLevel="1" name="Polearm Multi-attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Enables the character to attack multiple opponents. -->
 		<icon>icon.skill0216</icon>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="HitNumber">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13116" toLevel="1" name="Talisman (R-grade) - Knock Back Resistance">
 		<!-- Increases Knock Back Resistance when equipped. -->

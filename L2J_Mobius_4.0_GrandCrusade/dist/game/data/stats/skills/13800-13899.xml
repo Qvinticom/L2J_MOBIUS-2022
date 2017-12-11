@@ -1040,8 +1040,11 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="HitNumber">
-				<amount>5</amount>
+				<amount>8</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>

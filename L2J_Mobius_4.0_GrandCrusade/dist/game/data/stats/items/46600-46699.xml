@@ -780,6 +780,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">770.0</stat>
 			<stat type="mAtk">388.0</stat>
@@ -1506,8 +1510,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
 		<stats>
 			<stat type="pAtk">827</stat>

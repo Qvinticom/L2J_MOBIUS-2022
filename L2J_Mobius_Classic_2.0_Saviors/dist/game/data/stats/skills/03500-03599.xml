@@ -1675,8 +1675,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="HitNumber">
-				<amount>5</amount>
+				<amount>8</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>10</amount>
@@ -1880,15 +1883,19 @@
 		</effects>
 	</skill>
 	<skill id="3599" toLevel="1" name="Polearm Multi-attack">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Confirmed CT2.5 and Updated to GC -->
+		<!-- Enables the character to attack multiple opponents. -->
 		<icon>icon.skill0216</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="HitNumber">
-				<amount>2</amount>
+				<amount>4</amount>
 				<mode>DIFF</mode>
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
 			</effect>
 		</effects>
 	</skill>

@@ -67,7 +67,6 @@
 	<item id="38214" name="Squid: Spear" type="Weapon">
 		<set name="icon" val="icon.wp_fishing4" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
@@ -76,16 +75,16 @@
 		<set name="spiritshots" val="1" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
 		<stats>
 			<stat type="pAtk">79</stat>
 			<stat type="mAtk">47</stat>
+			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
