@@ -4898,7 +4898,7 @@
 			<value level="4">1706</value>
 		</mpConsume>
 		<castRange>1100</castRange>
-		<effectRange>1100</effectRange>
+		<effectRange>1400</effectRange>
 		<hitTime>6750</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -4911,7 +4911,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<fanRange>0;0;1100;50</fanRange> <!-- Guessed -->
+		<fanRange>75;0;1400;75</fanRange>
 		<affectLimit>5-12</affectLimit>
 		<effects>
 			<effect name="MagicalAttack">
