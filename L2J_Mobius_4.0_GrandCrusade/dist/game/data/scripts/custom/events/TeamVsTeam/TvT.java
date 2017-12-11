@@ -269,7 +269,7 @@ public class TvT extends Event
 								}
 							}
 						}
-						else if (lastBlueParty != null)
+						else
 						{
 							participant.joinParty(lastBlueParty);
 						}
@@ -304,7 +304,7 @@ public class TvT extends Event
 								}
 							}
 						}
-						else if (lastRedParty != null)
+						else
 						{
 							participant.joinParty(lastRedParty);
 						}
