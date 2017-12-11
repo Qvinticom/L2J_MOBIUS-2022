@@ -365,6 +365,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	public Location getExitLocation(L2PcInstance player)
 	{
 		Location location = null;
+		
 		switch (_exitLocationType)
 		{
 			case RANDOM:

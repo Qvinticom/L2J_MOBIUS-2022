@@ -29,7 +29,10 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.quest.Event;
 import com.l2jmobius.gameserver.model.residences.AbstractResidence;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -90,6 +93,19 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 		{
 			_log.warning("Living player [" + activeChar.getName() + "] called RestartPointPacket! Ban this player!");
 			return;
+		}
+		
+		// Custom event resurrection management.
+		if (activeChar.isOnCustomEvent())
+		{
+			for (AbstractEventListener listener : activeChar.getListeners(EventType.ON_CREATURE_DEATH))
+			{
+				if (listener.getOwner() instanceof Event)
+				{
+					((Event) listener.getOwner()).notifyEvent("ResurrectPlayer", null, activeChar);
+					return;
+				}
+			}
 		}
 		
 		final Castle castle = CastleManager.getInstance().getCastle(activeChar.getX(), activeChar.getY(), activeChar.getZ());

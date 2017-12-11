@@ -888,19 +888,22 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	public void onDeath(L2PcInstance player)
 	{
-		// Send message
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
-		sm.addInt(_template.getEjectTime());
-		player.sendPacket(sm);
-		
-		// Start eject task
-		_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.schedule(() ->
+		if (!player.isOnCustomEvent())
 		{
-			if (player.isDead())
+			// Send message
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
+			sm.addInt(_template.getEjectTime());
+			player.sendPacket(sm);
+			
+			// Start eject task
+			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.schedule(() ->
 			{
-				ejectPlayer(player.getActingPlayer());
-			}
-		}, _template.getEjectTime() * 60 * 1000)); // minutes to milliseconds
+				if (player.isDead())
+				{
+					ejectPlayer(player.getActingPlayer());
+				}
+			}, _template.getEjectTime() * 60 * 1000)); // minutes to milliseconds
+		}
 	}
 	
 	/**

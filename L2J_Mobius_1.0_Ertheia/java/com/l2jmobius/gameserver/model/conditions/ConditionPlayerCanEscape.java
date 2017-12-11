@@ -63,6 +63,10 @@ public class ConditionPlayerCanEscape extends Condition
 		{
 			canTeleport = false;
 		}
+		else if (player.isOnCustomEvent())
+		{
+			canTeleport = false;
+		}
 		return (_val == canTeleport);
 	}
 }

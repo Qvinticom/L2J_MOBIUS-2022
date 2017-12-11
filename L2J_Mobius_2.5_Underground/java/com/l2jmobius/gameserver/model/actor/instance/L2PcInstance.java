@@ -674,6 +674,7 @@ public final class L2PcInstance extends L2Playable
 	
 	@SuppressWarnings("rawtypes")
 	private volatile Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events;
+	private boolean _isOnCustomEvent = false;
 	
 	public boolean isSpawnProtected()
 	{
@@ -8150,7 +8151,12 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		// Check if the attacker is in TvT and TvT is started
+		if (isOnCustomEvent() && (getTeam() == attacker.getTeam()))
+		{
+			return false;
+		}
+		
+		// CoC needs this check?
 		if (isOnEvent())
 		{
 			return true;
@@ -13117,12 +13123,26 @@ public final class L2PcInstance extends L2Playable
 		_canRevive = val;
 	}
 	
+	public boolean isOnCustomEvent()
+	{
+		return _isOnCustomEvent;
+	}
+	
+	public void setOnCustomEvent(boolean value)
+	{
+		_isOnCustomEvent = value;
+	}
+	
 	/**
 	 * @return {@code true} if player is on event, {@code false} otherwise.
 	 */
 	@Override
 	public boolean isOnEvent()
 	{
+		if (_isOnCustomEvent)
+		{
+			return true;
+		}
 		if (_events != null)
 		{
 			for (AbstractEvent<?> listener : _events.values())
@@ -13138,6 +13158,10 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean isBlockedFromExit()
 	{
+		if (_isOnCustomEvent)
+		{
+			return true;
+		}
 		if (_events != null)
 		{
 			for (AbstractEvent<?> listener : _events.values())
@@ -13153,6 +13177,10 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean isBlockedFromDeathPenalty()
 	{
+		if (_isOnCustomEvent)
+		{
+			return true;
+		}
 		if (_events != null)
 		{
 			for (AbstractEvent<?> listener : _events.values())

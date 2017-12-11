@@ -31,6 +31,8 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -788,4 +790,15 @@ public final class Util
 		return (input < min) ? min : (input > max) ? max : input;
 	}
 	
+	/**
+	 * Short an <L2PcInstance, Integer> map by its integer values.
+	 * @param unsortedMap
+	 * @return
+	 */
+	public static Map<L2PcInstance, Integer> sortByValue(Map<L2PcInstance, Integer> unsortedMap)
+	{
+		Map<L2PcInstance, Integer> sortedMap = new TreeMap<>(new ValueComparator(unsortedMap));
+		sortedMap.putAll(unsortedMap);
+		return sortedMap;
+	}
 }
