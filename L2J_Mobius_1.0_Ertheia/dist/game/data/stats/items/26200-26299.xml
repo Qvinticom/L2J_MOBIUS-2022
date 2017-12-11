@@ -989,6 +989,9 @@
 	<item id="26249" name="Cloak of Light for the Chosen" type="Armor">
 		<!-- Cloak of Light for those who have proven themselves as testers in Lineage II. P. Def. + 50, M. Def. + 40, and STR/MEN/DEX/WIT/INT/CON +2. Damage received during PvP decreases by 5%. Can use Blessed Escape. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -997,6 +1000,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<skills>
+			<skill id="21476" level="1" /> <!-- Cloak of the Chosen -->
+			<skill id="21410" level="1" /> <!-- Cloak of the Chosen: Blessed Escape -->
+		</skills>
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
@@ -1005,6 +1015,9 @@
 	<item id="26250" name="Cloak of Darkness for the Chosen" type="Armor">
 		<!-- Cloak of Darkness for those who have proven themselves as testers in Lineage II. P. Def. + 50, M. Def. + 40, and STR/MEN/DEX/WIT/INT/CON +2. Damage received during PvP decreases by 5%. Can use Blessed Escape. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1013,6 +1026,13 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<skills>
+			<skill id="21476" level="1" /> <!-- Cloak of the Chosen -->
+			<skill id="21410" level="1" /> <!-- Cloak of the Chosen: Blessed Escape -->
+		</skills>
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
