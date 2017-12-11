@@ -495,7 +495,7 @@ public class TvT extends Event
 		{
 			if (event.contains("Warning"))
 			{
-				player.sendPacket(new ExShowScreenMessage("You have been marked as inactive!", ExShowScreenMessage.TOP_CENTER, 10000, 0, true, false));
+				sendScreenMessage(player, "You have been marked as inactive!", 10);
 			}
 			else
 			{
@@ -558,12 +558,12 @@ public class TvT extends Event
 			if ((zone == BLUE_PEACE_ZONE) && (character.getTeam() == Team.RED))
 			{
 				character.teleToLocation(RED_SPAWN_LOC, PVP_WORLD);
-				character.getActingPlayer().sendPacket(new ExShowScreenMessage("Entering the enemy headquarters is prohibited!", ExShowScreenMessage.TOP_CENTER, 10000, 0, true, false));
+				sendScreenMessage(character.getActingPlayer(), "Entering the enemy headquarters is prohibited!", 10);
 			}
 			if ((zone == RED_PEACE_ZONE) && (character.getTeam() == Team.BLUE))
 			{
 				character.teleToLocation(BLUE_SPAWN_LOC, PVP_WORLD);
-				character.getActingPlayer().sendPacket(new ExShowScreenMessage("Entering the enemy headquarters is prohibited!", ExShowScreenMessage.TOP_CENTER, 10000, 0, true, false));
+				sendScreenMessage(character.getActingPlayer(), "Entering the enemy headquarters is prohibited!", 10);
 			}
 			// Start inactivity check.
 			if (character.isPlayer() && //
@@ -670,14 +670,19 @@ public class TvT extends Event
 		return true;
 	}
 	
-	private void broadcastScreenMessageWithEffect(String message, int duration)
+	private void sendScreenMessage(L2PcInstance player, String message, int duration)
 	{
-		PVP_WORLD.broadcastPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, true));
+		player.sendPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, false));
 	}
 	
 	private void broadcastScreenMessage(String message, int duration)
 	{
 		PVP_WORLD.broadcastPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, false));
+	}
+	
+	private void broadcastScreenMessageWithEffect(String message, int duration)
+	{
+		PVP_WORLD.broadcastPacket(new ExShowScreenMessage(message, ExShowScreenMessage.TOP_CENTER, duration * 1000, 0, true, true));
 	}
 	
 	private void broadcastScoreMessage()
