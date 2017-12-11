@@ -67,13 +67,17 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18717" toLevel="1" name="Greater Ruby">
+	<skill id="18717" toLevel="6" name="Greater Ruby">
+		<!-- P. Atk. + 9%. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<effects>
 			<effect name="PAtk">
-				<amount>9</amount>
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value fromLevel="6" toLevel="6">9</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -83,13 +87,17 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18719" toLevel="1" name="Greater Sapphire">
+	<skill id="18719" toLevel="6" name="Greater Sapphire">
+		<!-- M. Atk. + 13%. -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<effects>
 			<effect name="MAtk">
-				<amount>13</amount>
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value fromLevel="6" toLevel="6">13</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
