@@ -531,18 +531,25 @@ public class TvT extends Event
 		// Activity timer.
 		if (event.startsWith("KickPlayer") && (player != null) && (player.getInstanceWorld() == PVP_WORLD))
 		{
-			player.setTeam(Team.NONE);
-			PVP_WORLD.ejectPlayer(player);
-			PLAYER_LIST.remove(player);
-			PLAYER_SCORES.remove(player);
-			BLUE_TEAM.remove(player);
-			RED_TEAM.remove(player);
-			player.setOnCustomEvent(false);
-			removeListeners(player);
-			player.sendMessage("You have been kicked for been inactive.");
-			if (PVP_WORLD != null)
+			if (event.contains("Warning"))
 			{
-				broadcastScreenMessageWithEffect("Player " + player.getName() + " was kicked for been inactive.", 7);
+				player.sendPacket(new ExShowScreenMessage("You have been marked as inactive!", ExShowScreenMessage.TOP_CENTER, 10000, 0, true, false));
+			}
+			else
+			{
+				player.setTeam(Team.NONE);
+				PVP_WORLD.ejectPlayer(player);
+				PLAYER_LIST.remove(player);
+				PLAYER_SCORES.remove(player);
+				BLUE_TEAM.remove(player);
+				RED_TEAM.remove(player);
+				player.setOnCustomEvent(false);
+				removeListeners(player);
+				player.sendMessage("You have been kicked for been inactive.");
+				if (PVP_WORLD != null)
+				{
+					broadcastScreenMessageWithEffect("Player " + player.getName() + " was kicked for been inactive!", 7);
+				}
 			}
 		}
 		return htmltext;
@@ -593,6 +600,7 @@ public class TvT extends Event
 					((zone == RED_PEACE_ZONE) && (character.getTeam() == Team.RED)))))
 			{
 				startQuestTimer("KickPlayer" + character.getObjectId(), PVP_WORLD.getDoor(BLUE_DOOR_ID).isOpen() ? INACTIVITY_TIME * 60000 : (INACTIVITY_TIME * 60000) + (WAIT_TIME * 60000), null, character.getActingPlayer());
+				startQuestTimer("KickPlayerWarning" + character.getObjectId(), PVP_WORLD.getDoor(BLUE_DOOR_ID).isOpen() ? (INACTIVITY_TIME / 2) * 60000 : ((INACTIVITY_TIME / 2) * 60000) + (WAIT_TIME * 60000), null, character.getActingPlayer());
 			}
 		}
 		return null;
@@ -604,6 +612,7 @@ public class TvT extends Event
 		if (character.isPlayer() && character.getActingPlayer().isOnCustomEvent())
 		{
 			cancelQuestTimer("KickPlayer" + character.getObjectId(), null, character.getActingPlayer());
+			cancelQuestTimer("KickPlayerWarning" + character.getObjectId(), null, character.getActingPlayer());
 		}
 		return super.onExitZone(character, zone);
 	}
