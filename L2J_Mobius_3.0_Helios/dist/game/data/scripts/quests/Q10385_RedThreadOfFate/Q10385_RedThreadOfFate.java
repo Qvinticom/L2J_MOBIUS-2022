@@ -41,7 +41,6 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import instances.TalkingIslandPast.TalkingIslandPast;
-import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 
 /**
  * Red Thread of Fate (10385)
@@ -116,7 +115,6 @@ public final class Q10385_RedThreadOfFate extends Quest
 		addSeeCreatureId(INVISIBLE_ANGHEL_WATERFALL_NPC);
 		addKillId(SHILEN_MESSENGER);
 		addCondMinLevel(MIN_LEVEL, "33491-08.html");
-		addCondCompletedQuest(Q10338_SeizeYourDestiny.class.getSimpleName(), "33491-08.html");
 		addCondNotRace(Race.ERTHEIA, "33491-09.html");
 		registerQuestItems(MYSTERIOUS_LETTER, HEINE_FROM_THE_GARDEN_OF_EVA, CLEAREST_WATER, BRIGHTEST_LIGHT, PUREST_SOUL, FIERCEST_FLAME, FONDEST_HEART, VULCUN_TRUE_GOLD, VULCUN_PURE_SILVER, VULCUN_BLOOD_FIRE, SCROLL_OF_ESCAPE_VALLEY_OF_SAINTS, SCROLL_OF_ESCAPE_FORGE_OF_THE_GODS, SCROLL_OF_ESCAPE_IVORY_TOWER, SCROLL_OF_ESCAPE_DWARVEN_VILLAGE);
 	}
