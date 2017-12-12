@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Split of Destiny (177)
+ * Split Destiny (177)
  * @author Sdw
  */
 public final class Q00177_SplitDestiny extends Quest
@@ -39,14 +39,7 @@ public final class Q00177_SplitDestiny extends Quest
 	// NPCs
 	private static final int HADEL = 33344;
 	private static final int ISHUMA = 32615;
-	private static final int[] GIANTS_HAND_MONSTERS =
-	{
-		21549, // Corrupted Guard
-		21550, // Corrupted Guard
-		21547, // Corrupted Knight
-		21548, // Resurrected Knight
-		21587, // Vampire Warrior
-	};
+	private static final int VAMPIRICE_BERISE = 27530;
 	private static final int[] GIANTS_FOOT_MONSTERS =
 	{
 		22257, // Island Guardian
@@ -70,7 +63,7 @@ public final class Q00177_SplitDestiny extends Quest
 		super(177);
 		addStartNpc(HADEL);
 		addTalkId(HADEL, ISHUMA);
-		addKillId(GIANTS_HAND_MONSTERS);
+		addKillId(VAMPIRICE_BERISE);
 		addKillId(GIANTS_FOOT_MONSTERS);
 		registerQuestItems(PETRIFIED_GIANTS_HAND.getId(), PETRIFIED_GIANTS_FOOT.getId(), PETRIFIED_GIANTS_HAND_PIECE, PETRIFIED_GIANTS_FOOT_PIECE);
 	}
@@ -322,7 +315,7 @@ public final class Q00177_SplitDestiny extends Quest
 			{
 				case 1:
 				{
-					if (CommonUtil.contains(GIANTS_HAND_MONSTERS, npc.getId()))
+					if (npc.getId() == VAMPIRICE_BERISE)
 					{
 						giveItems(killer, PETRIFIED_GIANTS_HAND_PIECE, 1);
 						qs.setCond(2, true);
@@ -331,7 +324,7 @@ public final class Q00177_SplitDestiny extends Quest
 				}
 				case 2:
 				{
-					if (CommonUtil.contains(GIANTS_HAND_MONSTERS, npc.getId()))
+					if (npc.getId() == VAMPIRICE_BERISE)
 					{
 						if (giveItemRandomly(killer, npc, PETRIFIED_GIANTS_HAND_PIECE, 1, 10, 1.0, true))
 						{
