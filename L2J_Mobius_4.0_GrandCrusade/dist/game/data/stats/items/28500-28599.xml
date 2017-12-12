@@ -879,6 +879,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="5" />
 		<skills>
 			<skill id="27871" level="1" /> <!-- Elmoreden Cloak Basic Effect -->
 			<skill id="27872" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Elmoreden Cloak Enchant Effect -->
@@ -910,6 +911,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="5" />
 		<skills>
 			<skill id="27873" level="1" /> <!-- Aden Cloak Basic Effect -->
 			<skill id="27874" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Aden Cloak Enchant Effect -->
@@ -941,6 +943,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="5" />
 		<skills>
 			<skill id="27875" level="1" /> <!-- Elmore Cloak Basic Effect -->
 			<skill id="27876" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Elmore Cloak Enchant Effect -->
@@ -972,6 +975,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="5" />
 		<skills>
 			<skill id="27877" level="1" /> <!-- Ferios Cloak Basic Effect -->
 			<skill id="27878" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Ferios Cloak Enchant Effect -->
@@ -1001,6 +1005,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="5" />
 		<skills>
 			<skill id="27871" level="1" /> <!-- Elmoreden Cloak Basic Effect -->
 			<skill id="27872" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Elmoreden Cloak Enchant Effect -->
@@ -1039,6 +1044,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="5" />
 		<skills>
 			<skill id="27873" level="1" /> <!-- Aden Cloak Basic Effect -->
 			<skill id="27874" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Aden Cloak Enchant Effect -->
@@ -1077,6 +1083,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="5" />
 		<skills>
 			<skill id="27875" level="1" /> <!-- Elmore Cloak Basic Effect -->
 			<skill id="27876" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Elmore Cloak Enchant Effect -->
@@ -1115,6 +1122,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="5" />
 		<skills>
 			<skill id="27877" level="1" /> <!-- Ferios Cloak Basic Effect -->
 			<skill id="27878" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Ferios Cloak Enchant Effect -->
@@ -1150,7 +1158,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="EnchantScrolls" />
 		<skills>
