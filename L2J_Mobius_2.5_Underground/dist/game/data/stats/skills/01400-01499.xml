@@ -290,6 +290,8 @@
 	<skill id="1405" toLevel="6" name="Divine Inspiration">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
 		<icon>icon.skill1405</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">52</value>
 			<value level="2">61</value>
@@ -298,8 +300,6 @@
 			<value level="5">99</value>
 			<value level="6">99</value>
 		</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="EnlargeAbnormalSlot">
 				<slots>

@@ -652,31 +652,66 @@
 		<!-- Info: Transfers PvP/PvE attack/defense from items, just as other SAs, but not augments. -->
 		<icon>icon.skill19220</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
+		<abnormalType>SPIRIT_SHARING</abnormalType>
 		<mpConsume>77</mpConsume>
-		<hitTime>1000</hitTime>
-		<coolTime>200</coolTime>
+		<hitTime>1200</hitTime>
+		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<isMagic>1</isMagic>
 		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalType>SPIRIT_SHARING</abnormalType>
+		<itemConsumeCount>5</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<effectPoint>418</effectPoint>
-		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-			<effect name="ServitorShare">
-				<ON_EQUIP/>
+		<castRange>900</castRange>
+		<targetType>SUMMON</targetType>
+		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpHaveSummon" />
+		</conditions>
+		<effects>
+			<!-- Pvp FIXME -->
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="ServitorShare">
-				<ON_CRITICAL_SKILL/>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="ServitorShare">
-				<ON_MAGIC_SKILL/>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
 			</effect>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<!-- Pve FIXME -->
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19221" toLevel="1" name="Power of Darkness">
 		<!-- Updated to IO -->
