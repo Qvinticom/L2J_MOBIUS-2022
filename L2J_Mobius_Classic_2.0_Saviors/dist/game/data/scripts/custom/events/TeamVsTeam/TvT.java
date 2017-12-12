@@ -86,6 +86,7 @@ public class TvT extends Event
 		new SkillHolder(4330, 1), // Concentration
 		new SkillHolder(4331, 1), // Empower
 	};
+	private static final SkillHolder GHOST_WALKING = new SkillHolder(100000, 1); // Custom Ghost Walking
 	// Others
 	private static final int INSTANCE_ID = 3049;
 	private static final int BLUE_DOOR_ID = 24190002;
@@ -468,11 +469,19 @@ public class TvT extends Event
 					{
 						player.setIsPendingRevive(true);
 						player.teleToLocation(BLUE_SPAWN_LOC, false, PVP_WORLD);
+						// Make player invulnerable for 30 seconds.
+						GHOST_WALKING.getSkill().applyEffects(player, player);
+						// Reset existing activity timers.
+						resetActivityTimers(player); // In case player died in peace zone.
 					}
 					else if (RED_TEAM.contains(player))
 					{
 						player.setIsPendingRevive(true);
 						player.teleToLocation(RED_SPAWN_LOC, false, PVP_WORLD);
+						// Make player invulnerable for 30 seconds.
+						GHOST_WALKING.getSkill().applyEffects(player, player);
+						// Reset existing activity timers.
+						resetActivityTimers(player); // In case player died in peace zone.
 					}
 				}
 				break;
@@ -572,8 +581,7 @@ public class TvT extends Event
 				((((zone == BLUE_PEACE_ZONE) && (character.getTeam() == Team.BLUE)) || //
 					((zone == RED_PEACE_ZONE) && (character.getTeam() == Team.RED)))))
 			{
-				startQuestTimer("KickPlayer" + character.getObjectId(), PVP_WORLD.getDoor(BLUE_DOOR_ID).isOpen() ? INACTIVITY_TIME * 60000 : (INACTIVITY_TIME * 60000) + (WAIT_TIME * 60000), null, character.getActingPlayer());
-				startQuestTimer("KickPlayerWarning" + character.getObjectId(), PVP_WORLD.getDoor(BLUE_DOOR_ID).isOpen() ? (INACTIVITY_TIME / 2) * 60000 : ((INACTIVITY_TIME / 2) * 60000) + (WAIT_TIME * 60000), null, character.getActingPlayer());
+				resetActivityTimers(character.getActingPlayer());
 			}
 		}
 		return null;
@@ -584,8 +592,14 @@ public class TvT extends Event
 	{
 		if (character.isPlayer() && character.getActingPlayer().isOnCustomEvent())
 		{
-			cancelQuestTimer("KickPlayer" + character.getObjectId(), null, character.getActingPlayer());
-			cancelQuestTimer("KickPlayerWarning" + character.getObjectId(), null, character.getActingPlayer());
+			final L2PcInstance player = character.getActingPlayer();
+			cancelQuestTimer("KickPlayer" + character.getObjectId(), null, player);
+			cancelQuestTimer("KickPlayerWarning" + character.getObjectId(), null, player);
+			// Removed invulnerability shield.
+			if (player.isAffectedBySkill(GHOST_WALKING))
+			{
+				player.getEffectList().stopSkillEffects(true, GHOST_WALKING.getSkill());
+			}
 		}
 		return super.onExitZone(character, zone);
 	}
@@ -718,6 +732,14 @@ public class TvT extends Event
 				listener.unregisterMe();
 			}
 		}
+	}
+	
+	private void resetActivityTimers(L2PcInstance player)
+	{
+		cancelQuestTimer("KickPlayer" + player.getObjectId(), null, player);
+		cancelQuestTimer("KickPlayerWarning" + player.getObjectId(), null, player);
+		startQuestTimer("KickPlayer" + player.getObjectId(), PVP_WORLD.getDoor(BLUE_DOOR_ID).isOpen() ? INACTIVITY_TIME * 60000 : (INACTIVITY_TIME * 60000) + (WAIT_TIME * 60000), null, player);
+		startQuestTimer("KickPlayerWarning" + player.getObjectId(), PVP_WORLD.getDoor(BLUE_DOOR_ID).isOpen() ? (INACTIVITY_TIME / 2) * 60000 : ((INACTIVITY_TIME / 2) * 60000) + (WAIT_TIME * 60000), null, player);
 	}
 	
 	private void manageForfeit()

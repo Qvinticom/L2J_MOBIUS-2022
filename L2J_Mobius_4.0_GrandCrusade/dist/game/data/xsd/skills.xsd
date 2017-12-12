@@ -2073,7 +2073,6 @@
 															<xs:element name="addedSkillId" type="xs:unsignedShort" />
 															<xs:element name="addedSkillLevel" type="xs:unsignedByte" />
 															<xs:element name="skills" type="xs:string" />
-															<xs:element name="pAtkMod" type="xs:unsignedByte" />
 															<xs:element name="isSummonSpawn" type="xs:boolean" />
 															<xs:element name="randomOffset" type="xs:unsignedByte" />
 															<xs:element name="AGGRESSION">
@@ -2109,6 +2108,7 @@
 															</xs:element>
 															<xs:element name="damageModifier" type="xs:decimal" />
 															<xs:element name="animationSpeed" type="xs:unsignedShort" />
+															<xs:element name="pAtkMod" type="xs:unsignedByte" />
 														</xs:choice>
 													</xs:sequence>
 													<xs:attribute name="name" type="xs:string" use="required" />
@@ -2928,12 +2928,13 @@
 								<xs:element name="despawnDelay" type="xs:unsignedInt" />
 							</xs:choice>
 						</xs:sequence>
-						<xs:attribute name="id" type="xs:unsignedShort" use="required" />
+						<xs:attribute name="id" type="xs:unsignedInt" use="required" />
 						<xs:attribute name="toLevel" type="xs:unsignedByte" use="optional" />
 						<xs:attribute name="name" type="xs:string" use="required" />
 						<xs:attribute name="levels" type="xs:unsignedByte" use="optional" />
 						<xs:attribute name="fromLevel" type="xs:unsignedByte" use="optional" />
 						<xs:attribute name="usingServerSideName" type="xs:boolean" use="optional" />
+						<xs:attribute name="displayId" type="xs:unsignedShort" use="optional" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

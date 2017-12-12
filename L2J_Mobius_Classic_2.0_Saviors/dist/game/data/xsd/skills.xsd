@@ -1530,7 +1530,6 @@
 															<xs:element name="hp" type="xs:unsignedByte" />
 															<xs:element name="mp" type="xs:unsignedByte" />
 															<xs:element name="cp" type="xs:unsignedByte" />
-															<xs:element name="pAtkMod" type="xs:unsignedByte" />
 															<xs:element name="reputation" type="xs:unsignedByte" />
 														</xs:choice>
 													</xs:sequence>
@@ -2005,9 +2004,10 @@
 								<xs:element name="blockActionUseSkill" type="xs:boolean" />
 							</xs:choice>
 						</xs:sequence>
-						<xs:attribute name="id" type="xs:unsignedShort" use="required" />
+						<xs:attribute name="id" type="xs:unsignedInt" use="required" />
 						<xs:attribute name="toLevel" type="xs:unsignedByte" use="required" />
 						<xs:attribute name="name" type="xs:string" use="required" />
+						<xs:attribute name="displayId" type="xs:unsignedShort" use="optional" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
