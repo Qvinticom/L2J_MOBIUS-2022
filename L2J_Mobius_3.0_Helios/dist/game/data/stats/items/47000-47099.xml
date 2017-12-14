@@ -13,6 +13,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13934" level="2" /> <!-- Paulina's Necklace - Skill Cooldown -->
 		</skills>
@@ -34,6 +35,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13935" level="2" /> <!-- Paulina's Earrings - Vampiric Rage -->
 		</skills>
@@ -55,6 +57,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13936" level="2" /> <!-- Paulina's Earrings - MP Consumption -->
 		</skills>
@@ -76,6 +79,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13937" level="2" /> <!-- Paulina's Ring - Critical Damage -->
 		</skills>
@@ -97,6 +101,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13938" level="2" /> <!-- Paulina's Ring - Critical Rate -->
 		</skills>
@@ -109,7 +114,7 @@
 		<!-- A gift from Tulesir the Minstrel to heroes of the future having safely completed 10 days of adventure. Though old, its performance is on par with a new one. Enchantment not possible. When equipped, STR +1 , DEX +1, CON +1, INT +1, WIT +1, MEN +1, Max HP/MP +510, Movement Speed +7, 6 Defensive Attributes +6. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="CRYSTAL" />
@@ -119,6 +124,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13945" level="1" /> <!-- Old Elemental Shirt -->
+		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -133,6 +142,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47007" name="Paulina's Apocalypse Shaper" additionalName="Not used" type="Weapon">
 		<!-- Apocalypse Shaper imbued with the energy of Paulina. -->
@@ -149,6 +159,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">441</stat>
 			<stat type="mAtk">232</stat>
@@ -157,6 +168,7 @@
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47008" name="Paulina's Apocalypse Cutter" type="Weapon">
@@ -174,6 +186,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">519</stat>
 			<stat type="mAtk">232</stat>
@@ -181,6 +194,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47009" name="Paulina's Apocalypse Slasher" type="Weapon">
@@ -198,6 +212,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">632</stat>
 			<stat type="mAtk">232</stat>
@@ -205,6 +220,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47010" name="Paulina's Apocalypse Avenger" type="Weapon">
@@ -222,6 +238,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">519</stat>
 			<stat type="mAtk">232</stat>
@@ -230,6 +247,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47011" name="Paulina's Apocalypse Fighter" type="Weapon">
@@ -247,6 +265,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">632</stat>
 			<stat type="mAtk">232</stat>
@@ -255,6 +274,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47012" name="Paulina's Apocalypse Stormer" type="Weapon">
@@ -285,6 +305,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47013" name="Paulina's Apocalypse Thrower" type="Weapon">
@@ -302,6 +323,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">1022</stat>
 			<stat type="mAtk">232</stat>
@@ -310,6 +332,7 @@
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47014" name="Paulina's Apocalypse Shooter" type="Weapon">
@@ -327,6 +350,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">920</stat>
 			<stat type="mAtk">232</stat>
@@ -335,6 +359,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47015" name="Paulina's Apocalypse Buster" additionalName="Not used" type="Weapon">
@@ -352,6 +377,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">403</stat>
 			<stat type="mAtk">293</stat>
@@ -359,6 +385,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47016" name="Paulina's Apocalypse Caster" type="Weapon">
@@ -376,6 +403,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">415</stat>
 			<stat type="mAtk">293</stat>
@@ -384,6 +412,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47017" name="Paulina's Apocalypse Retributer" type="Weapon">
@@ -401,6 +430,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">505</stat>
 			<stat type="mAtk">322</stat>
@@ -409,6 +439,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47018" name="Paulina's Apocalypse Dualsword" type="Weapon">
@@ -426,6 +457,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">632</stat>
 			<stat type="mAtk">232</stat>
@@ -433,6 +465,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47019" name="Paulina's Apocalypse Dual Dagger" type="Weapon">
@@ -450,6 +483,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">519</stat>
 			<stat type="mAtk">232</stat>
@@ -458,6 +492,7 @@
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47020" name="Paulina's Apocalypse Dual Blunt" additionalName="Not used" type="Weapon">
@@ -475,6 +510,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pAtk">613</stat>
 			<stat type="mAtk">232</stat>
@@ -483,6 +519,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47021" name="Paulina's Twilight Helmet" additionalName="Heavy Armor" type="Armor">
@@ -499,6 +536,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">130</stat>
 		</stats>
@@ -518,6 +556,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">191</stat>
 		</stats>
@@ -537,6 +576,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -555,6 +595,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">87</stat>
 		</stats>
@@ -573,6 +614,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">87</stat>
 		</stats>
@@ -590,6 +632,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -610,6 +653,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">130</stat>
 		</stats>
@@ -629,6 +673,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">152</stat>
 			<stat type="rEvas">5</stat>
@@ -649,6 +694,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">95</stat>
 			<stat type="rEvas">3</stat>
@@ -668,6 +714,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">87</stat>
 		</stats>
@@ -686,6 +733,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">87</stat>
 		</stats>
@@ -704,6 +752,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">130</stat>
 		</stats>
@@ -723,6 +772,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="mDef">41</stat>
 			<stat type="pDef">105</stat>
@@ -744,6 +794,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="mDef">27</stat>
 			<stat type="pDef">65</stat>
@@ -764,6 +815,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">87</stat>
 		</stats>
@@ -782,6 +834,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">87</stat>
 		</stats>
@@ -801,6 +854,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<stats>
 			<stat type="pDef">42</stat>
 			<stat type="pAtkRange">40</stat>
@@ -821,6 +875,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13934" level="3" /> <!-- Paulina's Necklace - Skill Cooldown -->
 		</skills>
@@ -843,6 +898,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13935" level="3" /> <!-- Paulina's Earrings - Vampiric Rage -->
 		</skills>
@@ -865,6 +921,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13936" level="3" /> <!-- Paulina's Earrings - MP Consumption -->
 		</skills>
@@ -887,6 +944,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13937" level="3" /> <!-- Paulina's Ring - Critical Damage -->
 		</skills>
@@ -909,6 +967,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13938" level="3" /> <!-- Paulina's Ring - Critical Rate -->
 		</skills>
@@ -927,6 +986,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47044" name="Commando Belt" type="Armor">
 		<!-- The Commando Belt is the symbol of the Dimensional Commandos, and is given to elite veterans who have completed Exploring the Dimension - Sealing the Dimension. Damage +2%, Damage Received -2%, Weight +12800, Inventory Slots +18. -->
@@ -942,6 +1002,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<skills>
 			<skill id="13946" level="1" /> <!-- Commando Belt -->
 		</skills>
@@ -957,6 +1018,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47046" name="Alligator Leather" type="EtcItem">
 		<!-- An Alligator Leather gained by hunting alligators on Alligator Island. Collect these and take them to Head Blacksmith Flutter at the Town of Oren. -->
@@ -966,6 +1028,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47047" name="Destroyed Gargoyle Fragment" type="EtcItem">
 		<!-- A Broken Gargoyle Fragment obtained after defeating the Hunter Gargoyle in the Outlaw Forest area. Collect these and take them to Captain Mouen in the Town of Oren. -->
@@ -975,6 +1038,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47048" name="Basilisk Scale" type="EtcItem">
 		<!-- A Basilisk Scale obtained after defeating the Tarlk Basilisk or Elder Tarlk Basilisk in the Outlaw Forest area. Collect these and take them to Captain Mouen in the Town of Oren. -->
@@ -984,6 +1048,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47049" name="Mahum ID Tag" type="EtcItem">
 		<!-- ID Tag obtained after defeating the Mahum monsters in the Outlaw Forest area. Collect these and take them to Captain Mouen in the Town of Oren. -->
@@ -993,6 +1058,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47050" name="Spore Pocket" type="EtcItem">
 		<!-- A pocket containing spores, obtained after defeating monsters in the Sea of Spores area. Take this to Paterson at the Town of Aden. -->
@@ -1002,6 +1068,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47051" name="Mark of the Plains Monsters" type="EtcItem">
 		<!-- Obtained after defeating monsters in the Forsaken Plains area. Take it to Head Blacksmith Flutter in the Town of Oren. -->
@@ -1011,6 +1078,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47052" name="Mark of the Plateau Monsters" type="EtcItem">
 		<!-- Obtained after defeating monsters in the Forsaken Plains area. Take it to Head Blacksmith Flutter in the Town of Oren. -->
@@ -1020,6 +1088,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47053" name="Slaughterer Mark" type="EtcItem">
 		<!-- A mark of proof obtained after defeating monsters in the Fields of Massacre. Collect and take it to Captain Mathias in the Town of Rune. -->
@@ -1029,6 +1098,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47054" name="Scroll of Escape: Arms of Timiniel" type="EtcItem">
 		<!-- Teleports to the Fairy Citizen in the Arms of Timiniel. -->
@@ -1039,6 +1109,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47055" name="Scroll of Escape: Arms of Timiniel" type="EtcItem">
 		<!-- Teleports to Nerupa in the Arms of Timiniel. -->
@@ -1049,6 +1120,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47056" name="Scroll of Escape: Harnak Underground Ruins" type="EtcItem">
 		<!-- Teleports to Hadel, who can send you to the Harnak Underground Ruins. -->
@@ -1059,6 +1131,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47057" name="Scroll of Escape: Bloody Swampland" type="EtcItem">
 		<!-- Teleports to Vollodos, between the Bloody Swampland and the Altar of Evil. -->
@@ -1069,6 +1142,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47058" name="Scroll of Escape: Kartia's Labyrinth" type="EtcItem">
 		<!-- Teleports to the Kartia Researcher, who can send you to Kartia's Labyrinth. -->
@@ -1079,6 +1153,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47059" name="Scroll of Escape: Isle of Souls" type="EtcItem">
 		<!-- Teleports to Hesed in the Isle of Souls. -->
@@ -1089,6 +1164,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47060" name="Scroll of Escape: Seal of Shilen" type="EtcItem">
 		<!-- Teleports to the Seal of Shilen. -->
@@ -1099,6 +1175,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47061" name="Scroll of Escape: Pagan Temple" type="EtcItem">
 		<!-- Teleports to Knight Captain Kargos, who has something to do with entering the Pagan Temple. -->
@@ -1109,6 +1186,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47062" name="Scroll of Escape: Cemetery" type="EtcItem">
 		<!-- Teleports to the Cemetery. -->
@@ -1119,6 +1197,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47063" name="Scroll of Escape: Blazing Swamp" type="EtcItem">
 		<!-- Teleports to the Blazing Swamp. -->
@@ -1129,6 +1208,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47064" name="Blessed Paulina's Seraph Heavy Armor Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
@@ -1140,6 +1220,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47065" name="Blessed Paulina's Seraph Light Armor Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
@@ -1151,6 +1232,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47066" name="Blessed Paulina's Seraph Robe Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
@@ -1162,6 +1244,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47067" name="Blessed Paulina's Seraph Accessory Pack" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
@@ -1173,6 +1256,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47068" name="PC Cafe - Paulina's Seraph Heavy Armor Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
@@ -1184,6 +1268,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47069" name="PC Cafe - Paulina's Seraph Light Armor Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
@@ -1195,6 +1280,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47070" name="PC Cafe - Paulina's Seraph Robe Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
@@ -1206,6 +1292,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47071" name="PC Cafe - Paulina's Seraph Accessory Pack" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
@@ -1217,6 +1304,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47072" name="Blessed Paulina's Specter Dualsword Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Dualsword which can be equipped from Lv. 85 upwards. -->
@@ -1228,6 +1316,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47073" name="Blessed Paulina's Specter Cutter Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Cutter which can be equipped from Lv. 85 upwards. -->
@@ -1239,6 +1328,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47074" name="Blessed Paulina's Specter Slasher Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Slasher which can be equipped from Lv. 85 upwards. -->
@@ -1250,6 +1340,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47075" name="Blessed Paulina's Specter Avenger Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Avenger which can be equipped from Lv. 85 upwards. -->
@@ -1261,6 +1352,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47076" name="Blessed Paulina's Specter Fighter Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Fighter which can be equipped from Lv. 85 upwards. -->
@@ -1272,6 +1364,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47077" name="Blessed Paulina's Specter Stormer Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Stormer which can be equipped from Lv. 85 upwards. -->
@@ -1283,6 +1376,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47078" name="Blessed Paulina's Specter Thrower Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Thrower which can be equipped from Lv. 85 upwards. -->
@@ -1294,6 +1388,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47079" name="Blessed Paulina's Specter Shooter Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Shooter which can be equipped from Lv. 85 upwards. -->
@@ -1305,6 +1400,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47080" name="Blessed Paulina's Specter Dual Dagger Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Dual Dagger which can be equipped from Lv. 85 upwards. -->
@@ -1316,6 +1412,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47081" name="Blessed Paulina's Specter Caster Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Caster which can be equipped from Lv. 85 upwards. -->
@@ -1327,6 +1424,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47082" name="Blessed Paulina's Specter Retributer Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter Retributer which can be equipped from Lv. 85 upwards. -->
@@ -1338,6 +1436,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47083" name="Tulesir's Gift Box" type="EtcItem">
 		<!-- Use to receive 1 random item. -->
@@ -1348,6 +1447,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47084" name="Beloa's Gift Box" type="EtcItem">
 		<!-- Use to obtain one of the following: Kaliel's Energy Box, Superior Giant's Codex Box, Venir's Talisman Box. -->
@@ -1358,6 +1458,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47085" name="Superior Giant's Codex Box" type="EtcItem">
 		<!-- Use to obtain one of the following: Superior Giant's Codex, Superior Giant's Codex - Mastery, Superior Giant's Codex - Discipline -->
@@ -1368,6 +1469,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47086" name="Venir's Talisman Box" type="EtcItem">
 		<!-- Use to obtain Venir's Talisman Stage 1, Stage 2, or Stage 3. -->
@@ -1378,6 +1480,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47087" name="Jewelry Box" type="EtcItem">
 		<!-- Use to obtain one Jewel. -->
@@ -1388,6 +1491,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47088" name="Crystal with Anakim's Energy" type="EtcItem">
 		<!-- A crystal with Anakim's Energy. When compounded with the Shining Soul of Monster Spirit, the crystal absorbs the monster's soul and becomes Anakim Soul Crystal, which releases the seal of power and is able to assign special abilities to weapons. -->

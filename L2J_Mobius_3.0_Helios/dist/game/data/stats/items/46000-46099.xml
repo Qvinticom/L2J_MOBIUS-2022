@@ -799,6 +799,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13816" level="1" /> <!-- Kelbim Dagger -->
 		</skills>
@@ -824,6 +826,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2050" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13817" level="1" /> <!-- Kelbim Dual Dagger -->
 		</skills>
@@ -849,6 +853,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13818" level="1" /> <!-- Kelbim Bow -->
 		</skills>
@@ -874,6 +880,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1580" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13819" level="1" /> <!-- Kelbim Crossbow -->
 		</skills>	

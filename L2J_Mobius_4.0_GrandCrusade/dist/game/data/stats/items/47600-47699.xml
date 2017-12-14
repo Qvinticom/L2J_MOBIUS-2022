@@ -246,7 +246,7 @@
 		<!-- Red Libra-only Item. A shirt widely used in Elysium. However, cannot increase power in Aden. <Item Skill>. Magic Defense Increased by 18. Movement Speed increased by 7. Max HP increased by 552. Max MP increased by 552. Skill MP Consumption reduced by 3%. Damage Reflect Resistance increased by 5. Vampiric Rage increased by 5%. Skill Cooldown reduced by 3%. Damage Received reduced by 3%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance increased by 36. STR+4, DEX+4, CON+4, INT+4, WIT+4, MEN+4. <Active Skill>. Einhasad's Wrath/Einhasad's Protection/Einhasad's Silence/Einhasad's Salvation/Einhasad's Blessing. To be deleted on March 9th, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -255,6 +255,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13562" level="10" /> <!-- Shiny Elemental Shirt -->
+			<skill id="13563" level="5" /> <!-- Einhasad's Wrath -->
+			<skill id="13564" level="4" /> <!-- Einhasad's Protection -->
+			<skill id="13565" level="3" /> <!-- Einhasad's Silence -->
+			<skill id="13566" level="2" /> <!-- Einhasad's Salvation -->
+			<skill id="13567" level="1" /> <!-- Einhasad's Blessing -->
+		</skills>
 		<stats>
 			<stat type="pDef">52</stat>
 		</stats>

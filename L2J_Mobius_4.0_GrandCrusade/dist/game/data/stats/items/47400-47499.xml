@@ -215,7 +215,7 @@
 		<!-- A shiny magic shirt laden with Einhasad's Energy. <Item Skill>. M. Def. +17. Movement Speed +7.  Max HP +547. Max MP +547. Skill MP Consumption -3%. Damage Reflection Resistance +5. Vampiric Rage +5%. Skill Cooldown -3%. Damage Received -3%. Water/Fire/Wind/Earth/Divine/Dark Attribute Resistance +36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4. <Active Skill>. Einhasad's Wrath/Einhasad's Protection/Einhasad's Silence/Einhasad's Salvation. Will be deleted when the event ends. Enchantment not possible. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -224,6 +224,15 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="13562" level="9" /> <!-- Shiny Elemental Shirt -->
+			<skill id="13563" level="5" /> <!-- Einhasad's Wrath -->
+			<skill id="13564" level="4" /> <!-- Einhasad's Protection -->
+			<skill id="13565" level="3" /> <!-- Einhasad's Silence -->
+			<skill id="13566" level="2" /> <!-- Einhasad's Salvation -->
+			<skill id="13567" level="1" /> <!-- Einhasad's Blessing -->
+		</skills>
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
@@ -232,7 +241,7 @@
 		<!-- A shiny magic shirt laden with Einhasad's Energy. <Item Skill>. M. Def. +18. Movement Speed +7.  Max HP +552. Max MP +552. Skill MP Consumption -3%. Damage Reflection Resistance +5. Vampiric Rage +5%. Skill Cooldown -3%. Damage Received -3%. Water/Fire/Wind/Earth/Divine/Dark Attribute Resistance +36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4. <Active Skill>. Einhasad's Wrath/Einhasad's Protection/Einhasad's Salvation/Einhasad's Silence. Will be deleted when the event ends. Enchantment not possible. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />
@@ -241,6 +250,15 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
+		<skills>
+			<skill id="13562" level="10" /> <!-- Shiny Elemental Shirt -->
+			<skill id="13563" level="5" /> <!-- Einhasad's Wrath -->
+			<skill id="13564" level="4" /> <!-- Einhasad's Protection -->
+			<skill id="13565" level="3" /> <!-- Einhasad's Silence -->
+			<skill id="13566" level="2" /> <!-- Einhasad's Salvation -->
+			<skill id="13567" level="1" /> <!-- Einhasad's Blessing -->
+		</skills>
 		<stats>
 			<stat type="pDef">52</stat>
 		</stats>

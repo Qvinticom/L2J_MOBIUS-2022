@@ -114,7 +114,7 @@
 		<!-- A gift from Tulesir the Minstrel to heroes of the future having safely completed 10 days of adventure. Though old, its performance is on par with a new one. Enchantment not possible. When equipped, STR +1 , DEX +1, CON +1, INT +1, WIT +1, MEN +1, Max HP/MP +510, Movement Speed +7, 6 Defensive Attributes +6. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="CRYSTAL" />
@@ -125,6 +125,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13945" level="1" /> <!-- Old Elemental Shirt -->
+		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -165,6 +168,7 @@
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47008" name="Paulina's Apocalypse Cutter" type="Weapon">
@@ -190,6 +194,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47009" name="Paulina's Apocalypse Slasher" type="Weapon">
@@ -215,6 +220,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47010" name="Paulina's Apocalypse Avenger" type="Weapon">
@@ -241,6 +247,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47011" name="Paulina's Apocalypse Fighter" type="Weapon">
@@ -267,6 +274,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47012" name="Paulina's Apocalypse Stormer" type="Weapon">
@@ -297,6 +305,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47013" name="Paulina's Apocalypse Thrower" type="Weapon">
@@ -323,6 +332,7 @@
 			<stat type="pAtkSpd">293</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47014" name="Paulina's Apocalypse Shooter" type="Weapon">
@@ -349,6 +359,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47015" name="Paulina's Apocalypse Buster" additionalName="Not used" type="Weapon">
@@ -374,6 +385,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47016" name="Paulina's Apocalypse Caster" type="Weapon">
@@ -400,6 +412,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47017" name="Paulina's Apocalypse Retributer" type="Weapon">
@@ -426,6 +439,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47018" name="Paulina's Apocalypse Dualsword" type="Weapon">
@@ -451,6 +465,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47019" name="Paulina's Apocalypse Dual Dagger" type="Weapon">
@@ -477,6 +492,7 @@
 			<stat type="pAtkSpd">433</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47020" name="Paulina's Apocalypse Dual Blunt" additionalName="Not used" type="Weapon">
@@ -503,6 +519,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="windPower">150</stat>
 		</stats>
 	</item>
 	<item id="47021" name="Paulina's Twilight Helmet" additionalName="Heavy Armor" type="Armor">
