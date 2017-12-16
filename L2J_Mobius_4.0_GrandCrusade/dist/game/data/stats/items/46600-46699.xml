@@ -820,6 +820,7 @@
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1376,7 +1377,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
+		</skills>
 		<stats>
 			<stat type="pAtk">737</stat>
 			<stat type="mAtk">409</stat>
@@ -1403,7 +1408,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
+		</skills>
 		<stats>
 			<stat type="pAtk">827</stat>
 			<stat type="mAtk">409</stat>
@@ -1429,7 +1438,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1007</stat>
 			<stat type="mAtk">409</stat>
@@ -1455,7 +1468,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
+		</skills>
 		<stats>
 			<stat type="pAtk">827</stat>
 			<stat type="mAtk">409</stat>
@@ -1482,7 +1499,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1007</stat>
 			<stat type="mAtk">409</stat>
@@ -1512,6 +1533,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="damage_range" val="0;0;66;120" />
 		<skills>
+			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
 		<stats>
@@ -1540,7 +1562,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="damage_range" val="0;0;10;0" />
 		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="13925" level="1" /> <!-- Emperor Shunaiman's Authority -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1631</stat>
 			<stat type="mAtk">409</stat>
