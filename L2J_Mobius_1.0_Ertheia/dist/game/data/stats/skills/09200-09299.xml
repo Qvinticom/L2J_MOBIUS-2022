@@ -1419,18 +1419,9 @@
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_1</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_exp_buff_2</value>
 		</icon>
-		<abnormalTime>3600</abnormalTime>
-		<operateType>A2</operateType>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<stayAfterDeath>true</stayAfterDeath>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>
-			<value level="1">22960</value>
-			<value level="2">22961</value>
-		</itemConsumeId>
 		<passiveConditions>
 			<condition name="CheckLevel">
 				<minLevel>1</minLevel>
@@ -1444,14 +1435,14 @@
 					<value level="1">100</value>
 					<value level="2">200</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="SpModify">
 				<amount>
 					<value level="1">100</value>
 					<value level="2">200</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
