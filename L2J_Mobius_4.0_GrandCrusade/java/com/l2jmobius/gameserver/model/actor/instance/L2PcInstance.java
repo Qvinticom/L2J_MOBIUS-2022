@@ -6773,6 +6773,9 @@ public final class L2PcInstance extends L2Playable
 			
 			player.restoreItemReuse();
 			
+			// Restore player shortcuts
+			player.restoreShortCuts();
+			
 			// Initialize status update cache
 			player.initStatusUpdateCache();
 			
@@ -6924,7 +6927,6 @@ public final class L2PcInstance extends L2Playable
 	 * <ul>
 	 * <li>Skills</li>
 	 * <li>Macros</li>
-	 * <li>Short-cuts</li>
 	 * <li>Henna</li>
 	 * <li>Teleport Bookmark</li>
 	 * <li>Recipe Book</li>
@@ -6940,9 +6942,6 @@ public final class L2PcInstance extends L2Playable
 		
 		// Retrieve from the database all macroses of this L2PcInstance and add them to _macros.
 		_macros.restoreMe();
-		
-		// Retrieve from the database all shortCuts of this L2PcInstance and add them to _shortCuts.
-		_shortCuts.restoreMe();
 		
 		// Retrieve from the database all henna of this L2PcInstance and add them to _henna.
 		restoreHenna();
@@ -6964,6 +6963,18 @@ public final class L2PcInstance extends L2Playable
 		
 		// Restore items in pet inventory.
 		restorePetInventoryItems();
+	}
+	
+	/**
+	 * Restores:
+	 * <ul>
+	 * <li>Short-cuts</li>
+	 * </ul>
+	 */
+	private void restoreShortCuts()
+	{
+		// Retrieve from the database all shortCuts of this L2PcInstance and add them to _shortCuts.
+		_shortCuts.restoreMe();
 	}
 	
 	/**
