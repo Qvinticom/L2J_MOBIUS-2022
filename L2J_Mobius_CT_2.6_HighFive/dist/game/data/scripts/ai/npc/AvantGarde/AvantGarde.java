@@ -195,7 +195,7 @@ public class AvantGarde extends AbstractNpcAI
 					{
 						for (int i = 1; i <= Config.MAX_SUBCLASS; i++)
 						{
-							final String qvar = player.getVariables().getString(varName + i);
+							final String qvar = player.getVariables().getString(varName + i, "0");
 							if (!qvar.isEmpty() && (qvar.endsWith(";") || !qvar.equals("0")))
 							{
 								activeCertifications++;
@@ -213,7 +213,7 @@ public class AvantGarde extends AbstractNpcAI
 							for (int i = 1; i <= Config.MAX_SUBCLASS; i++)
 							{
 								final String qvarName = varName + i;
-								final String qvar = player.getVariables().getString(qvarName);
+								final String qvar = player.getVariables().getString(qvarName, "0");
 								if (qvar.endsWith(";"))
 								{
 									final String skillIdVar = qvar.replace(";", "");
