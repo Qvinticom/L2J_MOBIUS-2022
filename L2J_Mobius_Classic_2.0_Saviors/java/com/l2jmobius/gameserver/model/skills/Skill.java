@@ -209,6 +209,7 @@ public final class Skill implements IIdentifiable
 	
 	private final double _magicCriticalRate;
 	private final SkillBuffType _buffType;
+	private final boolean _displayInList;
 	
 	public Skill(StatsSet set)
 	{
@@ -441,6 +442,7 @@ public final class Skill implements IIdentifiable
 		
 		_magicCriticalRate = set.getDouble("magicCriticalRate", 0);
 		_buffType = isTriggeredSkill() ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : isDebuff() ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
+		_displayInList = set.getBoolean("displayInList", true);
 	}
 	
 	public TraitType getTraitType()
@@ -1803,6 +1805,11 @@ public final class Skill implements IIdentifiable
 	public boolean isIrreplacableBuff()
 	{
 		return _irreplacableBuff;
+	}
+	
+	public boolean isDisplayInList()
+	{
+		return _displayInList;
 	}
 	
 	/**

@@ -11699,6 +11699,34 @@ public final class L2PcInstance extends L2Playable
 				{
 					// Include transformation skills and those skills that are allowed during transformation.
 					currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
+					
+					// Revelation skills.
+					if (isDualClassActive())
+					{
+						int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
+						if (revelationSkill != 0)
+						{
+							addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+						}
+						revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
+						if (revelationSkill != 0)
+						{
+							addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+						}
+					}
+					else if (!isSubClassActive())
+					{
+						int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS, 0);
+						if (revelationSkill != 0)
+						{
+							addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+						}
+						revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS, 0);
+						if (revelationSkill != 0)
+						{
+							addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+						}
+					}
 				}
 				// Include transformation skills.
 				currentSkills.addAll(transformSkills.values());
@@ -11710,6 +11738,7 @@ public final class L2PcInstance extends L2Playable
 							.filter(Objects::nonNull)
 							.filter(s -> !s.isBlockActionUseSkill()) // Skills that are blocked from player use are not shown in skill list.
 							.filter(s -> !SkillTreesData.getInstance().isAlchemySkill(s.getId(), s.getLevel()))
+							.filter(s -> s.isDisplayInList())
 							.collect(Collectors.toList());
 		//@formatter:on
 	}

@@ -2477,9 +2477,6 @@
 								<xs:element name="effect">
 									<xs:complexType>
 										<xs:sequence>
-											<xs:element minOccurs="0" name="ON_MAGIC_SKILL" />
-											<xs:element minOccurs="0" name="ON_CRITICAL_SKILL" />
-											<xs:element minOccurs="0" name="ON_EQUIP" />
 											<xs:element minOccurs="0" name="slot" type="xs:string" />
 											<xs:element minOccurs="0" name="rate" type="xs:unsignedByte" />
 											<xs:element minOccurs="0" name="max" type="xs:unsignedByte" />
@@ -2818,6 +2815,7 @@
 								<xs:element name="isSharedWithSummon" type="xs:boolean" />
 								<xs:element name="halfKillRate" type="xs:unsignedByte" />
 								<xs:element name="reuseDelayGroup" type="xs:unsignedShort" />
+								<xs:element name="displayInList" type="xs:boolean" />
 								<xs:element name="isSuicideAttack" type="xs:boolean" />
 								<xs:element name="toggleGroupId" type="xs:unsignedByte" />
 								<xs:element name="abnormallVL" type="xs:unsignedByte" />
