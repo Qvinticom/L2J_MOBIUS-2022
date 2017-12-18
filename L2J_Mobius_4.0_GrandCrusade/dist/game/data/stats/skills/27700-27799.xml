@@ -1133,7 +1133,7 @@
 		<castRange>900</castRange>
 		<effectPoint>1</effectPoint>
 		<effects>
-			<effect name="PveMagicalSkillDefenceBonus">
+			<effect name="PveMagicalSkillDamageBonus">
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
@@ -1142,7 +1142,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDefenceBonus">
+			<effect name="PvePhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
@@ -1151,34 +1151,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalSkillDefenceBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">8</value>
-					<value level="3">8</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>		
-			<effect name="PvpMagicalSkillDefenceBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">8</value>
-					<value level="3">8</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalAttackDefenceBonus">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">8</value>
-					<value level="3">8</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
+			<effect name="PvePhysicalSkillDamageBonus">
 				<amount>
 					<value level="1">5</value>
 					<value level="2">8</value>
