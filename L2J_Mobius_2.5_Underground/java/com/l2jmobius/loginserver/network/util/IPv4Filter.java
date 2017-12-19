@@ -24,13 +24,11 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.logging.Logger;
 
-import com.l2jmobius.loginserver.network.mmocore.IAcceptFilter;
-
 /**
  * IPv4 filter.
  * @author Forsaiken
  */
-public class IPv4Filter implements IAcceptFilter, Runnable
+public class IPv4Filter implements Runnable
 {
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
@@ -66,7 +64,6 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 		}
 	}
 	
-	@Override
 	public boolean accept(SocketChannel sc)
 	{
 		final InetAddress addr = sc.socket().getInetAddress();

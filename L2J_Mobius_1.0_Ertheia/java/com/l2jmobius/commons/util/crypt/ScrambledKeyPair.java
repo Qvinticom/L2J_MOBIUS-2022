@@ -72,4 +72,9 @@ public class ScrambledKeyPair
 		
 		return scrambledMod;
 	}
+	
+	public byte[] getScrambledModulus()
+	{
+		return _scrambledModulus;
+	}
 }

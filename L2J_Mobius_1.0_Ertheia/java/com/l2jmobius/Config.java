@@ -92,7 +92,6 @@ public final class Config
 	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 	public static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
 	public static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
-	public static final String MMO_CONFIG_FILE = "./config/MMO.ini";
 	public static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
 	public static final String PVP_CONFIG_FILE = "./config/PVP.ini";
@@ -1776,15 +1775,6 @@ public final class Config
 			TRAINING_CAMP_EXP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampExpMultiplier", 1.0);
 			TRAINING_CAMP_SP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampSpMultiplier", 1.0);
 			
-			// MMO
-			final PropertiesParser mmoSettings = new PropertiesParser(MMO_CONFIG_FILE);
-			
-			MMO_SELECTOR_SLEEP_TIME = mmoSettings.getInt("SleepTime", 20);
-			MMO_MAX_SEND_PER_PASS = mmoSettings.getInt("MaxSendPerPass", 12);
-			MMO_MAX_READ_PER_PASS = mmoSettings.getInt("MaxReadPerPass", 12);
-			MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
-			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
-			
 			// Load IdFactory config file (if exists)
 			final PropertiesParser IdFactory = new PropertiesParser(IDFACTORY_CONFIG_FILE);
 			
@@ -2866,7 +2856,7 @@ public final class Config
 			GAME_SERVER_LOGIN_HOST = ServerSettings.getString("LoginHostname", "127.0.0.1");
 			GAME_SERVER_LOGIN_PORT = ServerSettings.getInt("LoginPort", 9013);
 			
-			LOGIN_BIND_ADDRESS = ServerSettings.getString("LoginserverHostname", "*");
+			LOGIN_BIND_ADDRESS = ServerSettings.getString("LoginserverHostname", "0.0.0.0");
 			PORT_LOGIN = ServerSettings.getInt("LoginserverPort", 2106);
 			
 			try
@@ -2904,15 +2894,6 @@ public final class Config
 			NORMAL_CONNECTION_TIME = ServerSettings.getInt("NormalConnectionTime", 700);
 			FAST_CONNECTION_TIME = ServerSettings.getInt("FastConnectionTime", 350);
 			MAX_CONNECTION_PER_IP = ServerSettings.getInt("MaxConnectionPerIP", 50);
-			
-			// MMO
-			final PropertiesParser mmoSettings = new PropertiesParser(MMO_CONFIG_FILE);
-			
-			MMO_SELECTOR_SLEEP_TIME = mmoSettings.getInt("SleepTime", 20);
-			MMO_MAX_SEND_PER_PASS = mmoSettings.getInt("MaxSendPerPass", 12);
-			MMO_MAX_READ_PER_PASS = mmoSettings.getInt("MaxReadPerPass", 12);
-			MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
-			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
 		}
 		else
 		{

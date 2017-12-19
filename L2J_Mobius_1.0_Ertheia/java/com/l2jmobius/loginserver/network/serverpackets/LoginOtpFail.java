@@ -16,14 +16,19 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.IOutgoingPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.loginserver.network.OutgoingPackets;
+
 /**
  * @author UnAfraid
  */
-public class LoginOtpFail extends L2LoginServerPacket
+public class LoginOtpFail implements IOutgoingPacket
 {
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0D);
+		OutgoingPackets.LOGIN_OPT_FAIL.writeId(packet);
+		return true;
 	}
 }

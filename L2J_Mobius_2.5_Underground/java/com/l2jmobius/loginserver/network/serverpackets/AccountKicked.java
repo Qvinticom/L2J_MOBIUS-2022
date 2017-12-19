@@ -16,10 +16,14 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.IOutgoingPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.loginserver.network.OutgoingPackets;
+
 /**
  * @author KenM
  */
-public final class AccountKicked extends L2LoginServerPacket
+public final class AccountKicked implements IOutgoingPacket
 {
 	public enum AccountKickedReason
 	{
@@ -52,9 +56,11 @@ public final class AccountKicked extends L2LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x02);
-		writeD(_reason.getCode());
+		OutgoingPackets.ACCOUNT_KICKED.writeId(packet);
+		packet.writeD(_reason.getCode());
+		
+		return true;
 	}
 }

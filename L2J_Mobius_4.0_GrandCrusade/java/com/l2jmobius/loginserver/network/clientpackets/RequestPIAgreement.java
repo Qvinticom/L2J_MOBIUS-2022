@@ -16,27 +16,30 @@
  */
 package com.l2jmobius.loginserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.IIncomingPacket;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.serverpackets.PIAgreementAck;
 
 /**
  * @author UnAfraid
  */
-public class RequestPIAgreement extends L2LoginClientPacket
+public class RequestPIAgreement implements IIncomingPacket<L2LoginClient>
 {
 	private int _accountId;
 	private int _status;
 	
 	@Override
-	protected boolean readImpl()
+	public boolean read(L2LoginClient client, PacketReader packet)
 	{
-		_accountId = readD();
-		_status = readC();
+		_accountId = packet.readD();
+		_status = packet.readC();
 		return true;
 	}
 	
 	@Override
-	public void run()
+	public void run(L2LoginClient client)
 	{
-		getClient().sendPacket(new PIAgreementAck(_accountId, _status));
+		client.sendPacket(new PIAgreementAck(_accountId, _status));
 	}
 }

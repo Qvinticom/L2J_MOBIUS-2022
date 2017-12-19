@@ -21,9 +21,6 @@ import java.security.KeyPair;
 import java.security.interfaces.RSAPublicKey;
 import java.util.logging.Logger;
 
-/**
- *
- */
 public class ScrambledKeyPair
 {
 	private static Logger _log = Logger.getLogger(ScrambledKeyPair.class.getName());
@@ -71,5 +68,10 @@ public class ScrambledKeyPair
 		_log.finer("Modulus was scrambled");
 		
 		return scrambledMod;
+	}
+	
+	public byte[] getScrambledModulus()
+	{
+		return _scrambledModulus;
 	}
 }

@@ -65,7 +65,7 @@ public final class GameServerTable implements IGameXmlReader
 		load();
 		
 		loadRegisteredGameServers();
-		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + GAME_SERVER_TABLE.size() + " registered Game Servers");
+		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + GAME_SERVER_TABLE.size() + " registered Game Servers.");
 		
 		initRSAKeys();
 		LOGGER.info(GameServerTable.class.getSimpleName() + ": Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
@@ -76,7 +76,7 @@ public final class GameServerTable implements IGameXmlReader
 	{
 		SERVER_NAMES.clear();
 		parseDatapackFile("data/servername.xml");
-		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + SERVER_NAMES.size() + " server names");
+		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + SERVER_NAMES.size() + " server names.");
 	}
 	
 	@Override

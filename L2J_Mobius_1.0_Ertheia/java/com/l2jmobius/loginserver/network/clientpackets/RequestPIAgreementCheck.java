@@ -17,31 +17,34 @@
 package com.l2jmobius.loginserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.IIncomingPacket;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.serverpackets.PIAgreementCheck;
 
 /**
  * @author UnAfraid
  */
-public class RequestPIAgreementCheck extends L2LoginClientPacket
+public class RequestPIAgreementCheck implements IIncomingPacket<L2LoginClient>
 {
 	private int _accountId;
 	
 	@Override
-	protected boolean readImpl()
+	public boolean read(L2LoginClient client, PacketReader packet)
 	{
-		_accountId = readD();
-		final byte[] padding0 = new byte[3];
-		final byte[] checksum = new byte[4];
-		final byte[] padding1 = new byte[12];
-		readB(padding0);
-		readB(checksum);
-		readB(padding1);
+		_accountId = packet.readD();
+		byte[] padding0 = new byte[3];
+		byte[] checksum = new byte[4];
+		byte[] padding1 = new byte[12];
+		packet.readB(padding0, 0, padding0.length);
+		packet.readB(checksum, 0, checksum.length);
+		packet.readB(padding1, 0, padding1.length);
 		return true;
 	}
 	
 	@Override
-	public void run()
+	public void run(L2LoginClient client)
 	{
-		getClient().sendPacket(new PIAgreementCheck(_accountId, Config.SHOW_PI_AGREEMENT ? 0x01 : 0x00));
+		client.sendPacket(new PIAgreementCheck(_accountId, Config.SHOW_PI_AGREEMENT ? 0x01 : 0x00));
 	}
 }

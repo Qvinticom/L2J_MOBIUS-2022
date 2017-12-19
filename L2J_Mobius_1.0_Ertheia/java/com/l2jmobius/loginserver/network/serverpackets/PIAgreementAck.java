@@ -16,10 +16,14 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.IOutgoingPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.loginserver.network.OutgoingPackets;
+
 /**
  * @author UnAfraid
  */
-public class PIAgreementAck extends L2LoginServerPacket
+public class PIAgreementAck implements IOutgoingPacket
 {
 	private final int _accountId;
 	private final int _status;
@@ -31,10 +35,11 @@ public class PIAgreementAck extends L2LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x12);
-		writeD(_accountId);
-		writeC(_status);
+		OutgoingPackets.PI_AGREEMENT_ACK.writeId(packet);
+		packet.writeD(_accountId);
+		packet.writeC(_status);
+		return true;
 	}
 }

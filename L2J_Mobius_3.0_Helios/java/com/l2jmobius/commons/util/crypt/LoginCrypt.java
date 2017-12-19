@@ -16,14 +16,17 @@
  */
 package com.l2jmobius.commons.util.crypt;
 
-import java.io.IOException;
+import javax.crypto.SecretKey;
 
+import com.l2jmobius.commons.network.ICrypt;
 import com.l2jmobius.commons.util.Rnd;
 
+import io.netty.buffer.ByteBuf;
+
 /**
- * @author KenM
+ * @author NosBit
  */
-public class LoginCrypt
+public class LoginCrypt implements ICrypt
 {
 	private static final byte[] STATIC_BLOWFISH_KEY =
 	{
@@ -45,82 +48,102 @@ public class LoginCrypt
 		(byte) 0x6c
 	};
 	
-	private static final NewCrypt _STATIC_CRYPT = new NewCrypt(STATIC_BLOWFISH_KEY);
-	private NewCrypt _crypt = null;
+	private static final BlowfishEngine STATIC_BLOWFISH_ENGINE = new BlowfishEngine();
+	
+	static
+	{
+		STATIC_BLOWFISH_ENGINE.init(STATIC_BLOWFISH_KEY);
+	}
+	
+	private final BlowfishEngine _blowfishEngine = new BlowfishEngine();
 	private boolean _static = true;
 	
-	/**
-	 * Method to initialize the the blowfish cipher with dynamic key.
-	 * @param key the blowfish key to initialize the dynamic blowfish cipher with
-	 */
-	public void setKey(byte[] key)
+	public LoginCrypt(SecretKey blowfishKey)
 	{
-		_crypt = new NewCrypt(key);
+		_blowfishEngine.init(blowfishKey.getEncoded());
 	}
 	
-	/**
-	 * Method to decrypt an incoming login client packet.
-	 * @param raw array with encrypted data
-	 * @param offset offset where the encrypted data is located
-	 * @param size number of bytes of encrypted data
-	 * @return true when checksum could be verified, false otherwise
-	 * @throws IOException the size is not multiple of blowfishs block size or the raw array can't hold size bytes starting at offset due to it's size
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.commons.network.ICrypt#encrypt(io.netty.buffer.ByteBuf)
 	 */
-	public boolean decrypt(byte[] raw, int offset, int size) throws IOException
+	@Override
+	public void encrypt(ByteBuf buf)
 	{
-		if ((size % 8) != 0)
-		{
-			throw new IOException("size have to be multiple of 8");
-		}
-		if ((offset + size) > raw.length)
-		{
-			throw new IOException("raw array too short for size starting from offset");
-		}
+		// Checksum & XOR Key or Checksum only
+		buf.writeZero(_static ? 16 : 12);
 		
-		_crypt.decrypt(raw, offset, size);
-		return NewCrypt.verifyChecksum(raw, offset, size);
-	}
-	
-	/**
-	 * Method to encrypt an outgoing packet to login client.<br>
-	 * Performs padding and resizing of data array.
-	 * @param raw array with plain data
-	 * @param offset offset where the plain data is located
-	 * @param size number of bytes of plain data
-	 * @return the new array size
-	 * @throws IOException packet is too long to make padding and add verification data
-	 */
-	public int encrypt(byte[] raw, int offset, int size) throws IOException
-	{
-		// reserve checksum
-		size += 4;
+		// Padding
+		buf.writeZero(8 - (buf.readableBytes() % 8));
 		
 		if (_static)
 		{
-			// reserve for XOR "key"
-			size += 4;
-			
-			// padding
-			size += 8 - (size % 8);
-			if ((offset + size) > raw.length)
-			{
-				throw new IOException("packet too long");
-			}
-			NewCrypt.encXORPass(raw, offset, size, Rnd.nextInt());
-			_STATIC_CRYPT.crypt(raw, offset, size);
 			_static = false;
+			
+			int key = Rnd.nextInt();
+			buf.skipBytes(4); // The first 4 bytes are ignored
+			while (buf.readerIndex() < (buf.writerIndex() - 8))
+			{
+				int data = buf.readIntLE();
+				key += data;
+				data ^= key;
+				buf.setIntLE(buf.readerIndex() - 4, data);
+			}
+			buf.setIntLE(buf.readerIndex(), key);
+			
+			buf.resetReaderIndex();
+			
+			final byte[] block = new byte[8];
+			while (buf.isReadable(8))
+			{
+				buf.readBytes(block);
+				STATIC_BLOWFISH_ENGINE.encryptBlock(block, 0);
+				buf.setBytes(buf.readerIndex() - block.length, block);
+			}
 		}
 		else
 		{
-			// padding
-			size += 8 - (size % 8);
-			if ((offset + size) > raw.length)
+			int checksum = 0;
+			while (buf.isReadable(8))
 			{
-				throw new IOException("packet too long");
+				checksum ^= buf.readIntLE();
 			}
-			NewCrypt.appendChecksum(raw, offset, size);
-			_crypt.crypt(raw, offset, size);
+			buf.setIntLE(buf.readerIndex(), checksum);
+			
+			buf.resetReaderIndex();
+			
+			final byte[] block = new byte[8];
+			while (buf.isReadable(8))
+			{
+				buf.readBytes(block);
+				_blowfishEngine.encryptBlock(block, 0);
+				buf.setBytes(buf.readerIndex() - block.length, block);
+			}
 		}
-		return size;
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.l2jserver.commons.network.ICrypt#decrypt(io.netty.buffer.ByteBuf)
+	 */
+	@Override
+	public void decrypt(ByteBuf buf)
+	{
+		// Packet size must be multiple of 8
+		if ((buf.readableBytes() % 8) != 0)
+		{
+			buf.clear();
+			return;
+		}
+		
+		final byte[] block = new byte[8];
+		while (buf.isReadable(8))
+		{
+			buf.readBytes(block);
+			_blowfishEngine.decryptBlock(block, 0);
+			buf.setBytes(buf.readerIndex() - block.length, block);
+		}
+		
+		// TODO: verify checksum also dont forget!
 	}
 }

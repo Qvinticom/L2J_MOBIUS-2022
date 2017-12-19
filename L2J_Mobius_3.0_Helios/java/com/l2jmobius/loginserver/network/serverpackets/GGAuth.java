@@ -16,16 +16,15 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
-import java.util.logging.Logger;
+import com.l2jmobius.commons.network.IOutgoingPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.loginserver.network.OutgoingPackets;
 
 /**
  * Fromat: d d: response
  */
-public final class GGAuth extends L2LoginServerPacket
+public final class GGAuth implements IOutgoingPacket
 {
-	static final Logger _log = Logger.getLogger(GGAuth.class.getName());
-	public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
-	
 	private final int _response;
 	
 	public GGAuth(int response)
@@ -34,13 +33,14 @@ public final class GGAuth extends L2LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0b);
-		writeD(_response);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		OutgoingPackets.GG_AUTH.writeId(packet);
+		packet.writeD(_response);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		return true;
 	}
 }

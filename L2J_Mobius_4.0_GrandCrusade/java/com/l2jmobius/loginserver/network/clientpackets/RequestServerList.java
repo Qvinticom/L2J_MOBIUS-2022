@@ -16,6 +16,9 @@
  */
 package com.l2jmobius.loginserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.IIncomingPacket;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.ServerList;
 
@@ -27,58 +30,35 @@ import com.l2jmobius.loginserver.network.serverpackets.ServerList;
  * c: ?
  * </pre>
  */
-public class RequestServerList extends L2LoginClientPacket
+public class RequestServerList implements IIncomingPacket<L2LoginClient>
 {
 	private int _skey1;
 	private int _skey2;
+	@SuppressWarnings("unused")
 	private int _data3;
 	
-	/**
-	 * @return
-	 */
-	public int getSessionKey1()
-	{
-		return _skey1;
-	}
-	
-	/**
-	 * @return
-	 */
-	public int getSessionKey2()
-	{
-		return _skey2;
-	}
-	
-	/**
-	 * @return
-	 */
-	public int getData3()
-	{
-		return _data3;
-	}
-	
 	@Override
-	public boolean readImpl()
+	public boolean read(L2LoginClient client, PacketReader packet)
 	{
-		if (super._buf.remaining() >= 8)
+		if (packet.getReadableBytes() >= 8)
 		{
-			_skey1 = readD(); // loginOk 1
-			_skey2 = readD(); // loginOk 2
+			_skey1 = packet.readD(); // loginOk 1
+			_skey2 = packet.readD(); // loginOk 2
 			return true;
 		}
 		return false;
 	}
 	
 	@Override
-	public void run()
+	public void run(L2LoginClient client)
 	{
-		if (getClient().getSessionKey().checkLoginPair(_skey1, _skey2))
+		if (client.getSessionKey().checkLoginPair(_skey1, _skey2))
 		{
-			getClient().sendPacket(new ServerList(getClient()));
+			client.sendPacket(new ServerList(client));
 		}
 		else
 		{
-			getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+			client.close(LoginFailReason.REASON_ACCESS_FAILED);
 		}
 	}
 }

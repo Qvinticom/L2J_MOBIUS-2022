@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
-import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.GeneralSecurityException;
 import java.util.logging.Level;
@@ -32,10 +31,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.loginserver.network.L2LoginClient;
-import com.l2jmobius.loginserver.network.L2LoginPacketHandler;
-import com.l2jmobius.loginserver.network.mmocore.SelectorConfig;
-import com.l2jmobius.loginserver.network.mmocore.SelectorThread;
+import com.l2jmobius.loginserver.network.ClientNetworkManager;
 
 /**
  * @author KenM
@@ -47,10 +43,9 @@ public final class L2LoginServer
 	public static final int PROTOCOL_REV = 0x0106;
 	private static L2LoginServer _instance;
 	private GameServerListener _gameServerListener;
-	private SelectorThread<L2LoginClient> _selectorThread;
 	private Thread _restartLoginServer;
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
 		new L2LoginServer();
 	}
@@ -60,7 +55,7 @@ public final class L2LoginServer
 		return _instance;
 	}
 	
-	private L2LoginServer()
+	private L2LoginServer() throws Exception
 	{
 		_instance = this;
 		Server.serverMode = Server.MODE_LOGINSERVER;
@@ -105,37 +100,6 @@ public final class L2LoginServer
 		
 		loadBanFile();
 		
-		InetAddress bindAddress = null;
-		if (!Config.LOGIN_BIND_ADDRESS.equals("*"))
-		{
-			try
-			{
-				bindAddress = InetAddress.getByName(Config.LOGIN_BIND_ADDRESS);
-			}
-			catch (UnknownHostException e)
-			{
-				_log.log(Level.WARNING, "WARNING: The LoginServer bind address is invalid, using all avaliable IPs. Reason: " + e.getMessage(), e);
-			}
-		}
-		
-		final SelectorConfig sc = new SelectorConfig();
-		sc.MAX_READ_PER_PASS = Config.MMO_MAX_READ_PER_PASS;
-		sc.MAX_SEND_PER_PASS = Config.MMO_MAX_SEND_PER_PASS;
-		sc.SLEEP_TIME = Config.MMO_SELECTOR_SLEEP_TIME;
-		sc.HELPER_BUFFER_COUNT = Config.MMO_HELPER_BUFFER_COUNT;
-		
-		final L2LoginPacketHandler lph = new L2LoginPacketHandler();
-		final SelectorHelper sh = new SelectorHelper();
-		try
-		{
-			_selectorThread = new SelectorThread<>(sc, sh, lph, sh, sh);
-		}
-		catch (IOException e)
-		{
-			_log.log(Level.SEVERE, "FATAL: Failed to open Selector. Reason: " + e.getMessage(), e);
-			System.exit(1);
-		}
-		
 		try
 		{
 			_gameServerListener = new GameServerListener();
@@ -148,17 +112,7 @@ public final class L2LoginServer
 			System.exit(1);
 		}
 		
-		try
-		{
-			_selectorThread.openServerSocket(bindAddress, Config.PORT_LOGIN);
-			_selectorThread.start();
-			_log.info(getClass().getSimpleName() + ": is now listening on: " + Config.LOGIN_BIND_ADDRESS + ":" + Config.PORT_LOGIN);
-		}
-		catch (IOException e)
-		{
-			_log.log(Level.SEVERE, "FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
-			System.exit(1);
-		}
+		ClientNetworkManager.getInstance().start();
 	}
 	
 	public GameServerListener getGameServerListener()

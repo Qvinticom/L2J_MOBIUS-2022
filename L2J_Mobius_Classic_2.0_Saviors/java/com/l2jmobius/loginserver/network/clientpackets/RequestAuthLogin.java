@@ -24,12 +24,14 @@ import java.util.logging.Logger;
 import javax.crypto.Cipher;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.IIncomingPacket;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.LoginController.AuthLoginResult;
 import com.l2jmobius.loginserver.model.data.AccountInfo;
+import com.l2jmobius.loginserver.network.ConnectionState;
 import com.l2jmobius.loginserver.network.L2LoginClient;
-import com.l2jmobius.loginserver.network.L2LoginClient.LoginClientState;
 import com.l2jmobius.loginserver.network.serverpackets.AccountKicked;
 import com.l2jmobius.loginserver.network.serverpackets.AccountKicked.AccountKickedReason;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
@@ -42,7 +44,7 @@ import com.l2jmobius.loginserver.network.serverpackets.ServerList;
  * 
  * <pre>
  */
-public class RequestAuthLogin extends L2LoginClientPacket
+public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 {
 	private static Logger _log = Logger.getLogger(RequestAuthLogin.class.getName());
 	
@@ -53,45 +55,28 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	private String _user;
 	private String _password;
 	
-	/**
-	 * @return
-	 */
-	public String getPassword()
-	{
-		return _password;
-	}
-	
-	/**
-	 * @return
-	 */
-	public String getUser()
-	{
-		return _user;
-	}
-	
 	@Override
-	public boolean readImpl()
+	public boolean read(L2LoginClient client, PacketReader packet)
 	{
-		if (super._buf.remaining() >= 256)
+		if (packet.getReadableBytes() >= 256)
 		{
 			_newAuthMethod = true;
-			readB(_raw1);
-			readB(_raw2);
+			packet.readB(_raw1, 0, _raw1.length);
+			packet.readB(_raw2, 0, _raw2.length);
 			return true;
 		}
-		else if (super._buf.remaining() >= 128)
+		else if (packet.getReadableBytes() >= 128)
 		{
-			readB(_raw1);
+			packet.readB(_raw1, 0, _raw1.length);
 			return true;
 		}
 		return false;
 	}
 	
 	@Override
-	public void run()
+	public void run(L2LoginClient client)
 	{
-		final L2LoginClient client = getClient();
-		final byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
+		byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
 		try
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
@@ -127,7 +112,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			return;
 		}
 		
-		final InetAddress clientAddr = client.getConnection().getInetAddress();
+		final InetAddress clientAddr = client.getConnectionAddress();
 		final LoginController lc = LoginController.getInstance();
 		final AccountInfo info = lc.retriveAccountInfo(clientAddr, _user, _password);
 		if (info == null)
@@ -146,7 +131,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			case AUTH_SUCCESS:
 			{
 				client.setAccount(info.getLogin());
-				client.setState(LoginClientState.AUTHED_LOGIN);
+				client.setConnectionState(ConnectionState.AUTHED_LOGIN);
 				client.setSessionKey(lc.assignSessionKeyToClient(info.getLogin(), client));
 				lc.getCharactersOnAccount(info.getLogin());
 				if (Config.SHOW_LICENCE)
