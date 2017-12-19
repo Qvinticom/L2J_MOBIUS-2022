@@ -1057,19 +1057,20 @@
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>-2</effectPoint>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<affectRange>150</affectRange>
+		<castRange>-1</castRange>
+		<affectRange>200</affectRange>
 		<affectLimit>10-10</affectLimit>
-		<coolTime>500</coolTime>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>6500</power>
+				<power>9000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1078,19 +1079,19 @@
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>-2</effectPoint>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>90</magicLvl>
-		<affectRange>150</affectRange>
+		<affectRange>200</affectRange>
 		<affectLimit>10-10</affectLimit>
-		<coolTime>500</coolTime>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>8190</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1099,19 +1100,19 @@
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>-2</effectPoint>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>95</magicLvl>
-		<affectRange>150</affectRange>
+		<affectRange>200</affectRange>
 		<affectLimit>10-10</affectLimit>
-		<coolTime>500</coolTime>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>6500</power>
+				<power>12000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1120,18 +1121,17 @@
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
-		<hitTime>1000</hitTime>
+		<hitTime>1500</hitTime>
 		<effectPoint>-2</effectPoint>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<effectRange>400</effectRange>
 		<magicLvl>85</magicLvl>
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>20000</power>
+				<power>10000</power>
 			</effect>
 		</effects>
 	</skill>

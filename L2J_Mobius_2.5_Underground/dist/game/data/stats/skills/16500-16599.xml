@@ -454,15 +454,37 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16550" toLevel="1" name="Zellaka's Quake">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts ranged physical damage and knocks them back for 2 seconds. -->
 		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<hitTime>2500</hitTime>
-		<coolTime>500</coolTime>
+		<coolTime>3000</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<affectLimit>10-10</affectLimit>
+		<castRange>300</castRange>
+		<affectRange>300</affectRange>
+		<trait>KNOCKDOWN</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>9000</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>100</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16551" toLevel="1" name="Ice Attack">
 		<!-- AUTO GENERATED SKILL -->

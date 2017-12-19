@@ -171,7 +171,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<effects>
-			<effect name="DamageShield">
+			<effect name="DamageShieldResist">
 				<amount>
 					<value level="1">10</value>
 					<value level="2">20</value>
@@ -301,19 +301,6 @@
 		<effects>
 			<effect name="DamageShield">
 				<amount>100</amount>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="14814" toLevel="1" name="Instant Kill Attack Resistance">
-		<!-- Glory Days confirmed -->
-		<!-- Has slight resistance to half-kill and lethal strike. -->
-		<icon>icon.skill0263</icon>
-		<operateType>P</operateType>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
-		<effects>
-			<effect name="InstantKillResist">
-				<amount>10</amount>
 			</effect>
 		</effects>
 	</skill>
