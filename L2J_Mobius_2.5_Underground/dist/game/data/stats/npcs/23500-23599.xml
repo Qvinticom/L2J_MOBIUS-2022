@@ -974,9 +974,10 @@
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1328145" hpRegen="11.5" mp="50920" mpRegen="3.9" />
+			<vitals hp="1328146" hpRegen="11.5" mp="50920" mpRegen="3.9" />
+			<attack physical="63121" magical="68961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5921" magical="5405" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
