@@ -717,7 +717,7 @@
 	<skill id="30008" toLevel="5" name="Wind Blend">
 		<!-- Updated to IO -->
 		<!-- For 3 sec., blends into the wind. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
-		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
+		<operateType>A2</operateType>
 		<icon>icon.skill30008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -726,9 +726,10 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 		</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
+		<abnormalType>WIND_BLEND</abnormalType>
+		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
+		<abnormalTime>5</abnormalTime>
 		<effectPoint>687</effectPoint>
-		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>
@@ -762,8 +763,25 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="ReduceDamage">
-				<amount>50</amount>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 		<endEffects>
@@ -835,7 +853,7 @@
 			</effect>
 			<effect name="Hide" />
 			<effect name="Speed">
-				<amount>100</amount>
+				<amount>50</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="9" toLevel="10" fromSubLevel="1001" toSubLevel="1020">
@@ -1573,17 +1591,16 @@
 		<!-- Updated to IO -->
 		<!-- For 30 sec., nearby party members' Speed + 50, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 30. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30022</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">30</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
+		<abnormalType>SAYHA_BLESSING</abnormalType>
 		<effectPoint>687</effectPoint>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
 		<magicLvl>
 			<value level="1">99</value>
 			<value level="2">101</value>
@@ -1596,6 +1613,9 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>

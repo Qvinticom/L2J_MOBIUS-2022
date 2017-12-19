@@ -217,11 +217,13 @@ public enum AbnormalType
 	VP_UP(-1),
 	WEAKENED_DEATH_PENALTY(-1),
 	WEAPON_MASTER_SPECIAL(-1),
+	WIND_BLEND(-1),
 	WISPERING_OF_BATTLE(-1),
 	WP_CHANGE_EVENT(-1),
 	CLAN_TEAMWORK(-1),
 	SONG_OF_ARCHERY(-1),
 	DANCE_OF_SAGE(-1),
+	SAYHA_BLESSING(-1),
 	SONG_WEAPON(-1), // TODO: need find proper name
 	HEAL_RESISTANCE(-1), // TODO: need find proper name
 	AB_HAWK_EYE(0),

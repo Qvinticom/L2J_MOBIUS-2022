@@ -619,6 +619,7 @@
 	<skill id="30008" toLevel="5" name="Wind Blend">
 		<!-- Updated to IO -->
 		<!-- For 3 sec., blends into the wind. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
+		<operateType>A2</operateType>
 		<icon>icon.skill30008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -627,9 +628,10 @@
 			<value level="4">4</value>
 			<value level="5">5</value>
 		</abnormalLvl>
+		<abnormalType>WIND_BLEND</abnormalType>
+		<abnormalVisualEffect>WIND_BLEND</abnormalVisualEffect>
 		<abnormalTime>3</abnormalTime>
 		<effectPoint>687</effectPoint>
-		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<magicLvl>
@@ -663,8 +665,25 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="ReduceDamage">
-				<amount>50</amount>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">50</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 		<endEffects>
@@ -1338,13 +1357,12 @@
 		<!-- Updated to IO -->
 		<!-- For 30 sec., nearby party members' Speed + 50, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 30. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30022</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
+		<abnormalType>SAYHA_BLESSING</abnormalType>
 		<effectPoint>687</effectPoint>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
 		<magicLvl>
 			<value level="1">99</value>
 			<value level="2">101</value>
@@ -1357,6 +1375,9 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1379,6 +1400,10 @@
 					<value level="1">30</value>
 					<value level="2">40</value>
 				</PULL>
+				<ZONE>
+					<value level="1">30</value>
+					<value level="2">40</value>
+				</ZONE>
 				<AIRBIND>
 					<value level="1">30</value>
 					<value level="2">40</value>
