@@ -17,6 +17,7 @@
 package com.l2jmobius.commons.util.crypt;
 
 import java.math.BigInteger;
+import java.security.Key;
 import java.security.KeyPair;
 import java.security.interfaces.RSAPublicKey;
 import java.util.logging.Logger;
@@ -73,5 +74,15 @@ public class ScrambledKeyPair
 	public byte[] getScrambledModulus()
 	{
 		return _scrambledModulus;
+	}
+	
+	public Key getPrivateKey()
+	{
+		return _pair.getPrivate();
+	}
+	
+	public Key getPublicKey()
+	{
+		return _pair.getPublic();
 	}
 }

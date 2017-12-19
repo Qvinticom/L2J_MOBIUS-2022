@@ -18,7 +18,6 @@ package com.l2jmobius.loginserver.network;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
-import java.security.interfaces.RSAPrivateKey;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -69,8 +68,8 @@ public final class L2LoginClient extends ChannelInboundHandler<L2LoginClient>
 	public L2LoginClient(SecretKey blowfishKey)
 	{
 		super();
-		_scrambledPair = LoginController.getInstance().getScrambledRSAKeyPair();
 		_blowfishKey = blowfishKey;
+		_scrambledPair = LoginController.getInstance().getScrambledRSAKeyPair();
 	}
 	
 	@Override
@@ -115,16 +114,6 @@ public final class L2LoginClient extends ChannelInboundHandler<L2LoginClient>
 		return _addr;
 	}
 	
-	public byte[] getScrambledModulus()
-	{
-		return _scrambledPair._scrambledModulus;
-	}
-	
-	public RSAPrivateKey getRSAPrivateKey()
-	{
-		return (RSAPrivateKey) _scrambledPair._pair.getPrivate();
-	}
-	
 	public String getAccount()
 	{
 		return _account;
@@ -158,6 +147,11 @@ public final class L2LoginClient extends ChannelInboundHandler<L2LoginClient>
 	public int getSessionId()
 	{
 		return _sessionId;
+	}
+	
+	public ScrambledKeyPair getScrambledKeyPair()
+	{
+		return _scrambledPair;
 	}
 	
 	public boolean hasJoinedGS()

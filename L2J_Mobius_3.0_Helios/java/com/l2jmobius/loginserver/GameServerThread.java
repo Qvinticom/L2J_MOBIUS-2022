@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.security.KeyPair;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.util.Set;
@@ -29,6 +28,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.util.crypt.NewCrypt;
+import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import com.l2jmobius.commons.util.network.BaseSendablePacket;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler;
@@ -211,9 +211,9 @@ public class GameServerThread extends Thread
 		{
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
-		final KeyPair pair = GameServerTable.getInstance().getKeyPair();
-		_privateKey = (RSAPrivateKey) pair.getPrivate();
-		_publicKey = (RSAPublicKey) pair.getPublic();
+		final ScrambledKeyPair pair = LoginController.getInstance().getScrambledRSAKeyPair();
+		_privateKey = (RSAPrivateKey) pair.getPrivateKey();
+		_publicKey = (RSAPublicKey) pair.getPublicKey();
 		_blowfish = new NewCrypt("_;v.]05-31!|+-%xT!^[$\00");
 		setName(getClass().getSimpleName() + "-" + getId() + "@" + _connectionIp);
 		start();

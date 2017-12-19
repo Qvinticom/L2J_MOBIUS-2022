@@ -80,7 +80,7 @@ public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 		try
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
-			rsaCipher.init(Cipher.DECRYPT_MODE, client.getRSAPrivateKey());
+			rsaCipher.init(Cipher.DECRYPT_MODE, client.getScrambledKeyPair().getPrivateKey());
 			rsaCipher.doFinal(_raw1, 0, 128, decrypted, 0);
 			if (_newAuthMethod)
 			{
