@@ -93,6 +93,7 @@ Events:
 -Custom Elpies Event
 -Custom Rabbits Event
 -Custom Race Event
+-Custom Team vs Team
 
 Customs:
 -Allowed player races
