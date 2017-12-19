@@ -3,7 +3,7 @@ L2J-Mobius Underground
 Client: https://drive.google.com/uc?id=0Bz1qNvCniabUMDhOd3RpUzBNSW8&export=download
 Mirror: https://mega.nz/#!h1FXyByZ!XmyZBtk4qSOlKb435rx7X372_NreN1PTH8l7A4lNCoo
 
-Geodata: http://www.mediafire.com/file/7bbh4u5rth9vc91/mobius_geodata_underground_l2d.zip
+Geodata: http://www.mediafire.com/file/bo5wyngtsf5575k/mobius_geodata_underground_l2d.zip
 
 
 Working features...

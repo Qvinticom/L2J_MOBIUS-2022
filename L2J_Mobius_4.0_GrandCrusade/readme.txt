@@ -3,7 +3,7 @@ L2J-Mobius Grand Crusade
 Client: https://drive.google.com/uc?id=1MA8eTpTZHblC9Iki4xXdWWbS4HGednDq&export=download
 Mirror: https://mega.nz/#!0eB0RIZS!RGm506vctH72n7H9tCNpepWfIfs1AvFB5NkcsNcMYA4
 
-Geodata: http://www.mediafire.com/file/sbiue13slxu3ceu/mobius_geodata_grand_crusade_l2d.zip
+Geodata: http://www.mediafire.com/file/46e2ej73xs3cn52/mobius_geodata_grand_crusade_l2d.zip
 
 
 Working features...
