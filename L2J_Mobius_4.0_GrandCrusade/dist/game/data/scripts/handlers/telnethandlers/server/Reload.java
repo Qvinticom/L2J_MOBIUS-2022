@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
-import com.l2jmobius.gameserver.data.xml.impl.ItemCrystalizationData;
+import com.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.SayuneData;
@@ -216,7 +216,7 @@ public class Reload implements ITelnetCommand
 			}
 			case "crystalizable":
 			{
-				ItemCrystalizationData.getInstance().load();
+				ItemCrystallizationData.getInstance().load();
 				return AdminData.getInstance().broadcastMessageToGMs("Telnet Admin: Reloaded item crystalization data.");
 			}
 			case "appearance":

@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.data.xml.impl.FishingData;
-import com.l2jmobius.gameserver.data.xml.impl.ItemCrystalizationData;
+import com.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
@@ -259,7 +259,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "crystalizable":
 				{
-					ItemCrystalizationData.getInstance().load();
+					ItemCrystallizationData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item crystalization data.");
 					break;
 				}

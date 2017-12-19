@@ -16,16 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.xml.impl.ItemCrystalizationData;
+import com.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.CrystalizationData;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
@@ -110,6 +108,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 			
 			if (item.isHeroItem())
 			{
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
@@ -122,18 +121,19 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		final L2ItemInstance itemToRemove = activeChar.getInventory().getItemByObjectId(_objectId);
 		if ((itemToRemove == null) || itemToRemove.isShadowItem() || itemToRemove.isTimeLimitedItem())
 		{
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!itemToRemove.getItem().isCrystallizable() || (itemToRemove.getItem().getCrystalCount() <= 0) || (itemToRemove.getItem().getCrystalType() == CrystalType.NONE))
 		{
-			_log.warning(activeChar.getName() + " (" + activeChar.getObjectId() + ") tried to crystallize " + itemToRemove.getItem().getId());
+			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_CRYSTALLIZED);
 			return;
 		}
 		
 		if (!activeChar.getInventory().canManipulateWithItemId(itemToRemove.getId()))
 		{
-			activeChar.sendMessage("You cannot use this item.");
+			client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_CRYSTALLIZED);
 			return;
 		}
 		
@@ -199,6 +199,13 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 			return;
 		}
 		
+		final List<ItemChanceHolder> crystallizationRewards = ItemCrystallizationData.getInstance().getCrystallizationRewards(itemToRemove);
+		if ((crystallizationRewards == null) || crystallizationRewards.isEmpty())
+		{
+			activeChar.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
+			return;
+		}
+		
 		// activeChar.setInCrystallize(true);
 		
 		// unequip if needed
@@ -234,19 +241,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		iu.addRemovedItem(removedItem);
 		activeChar.sendInventoryUpdate(iu);
 		
-		final int crystalId = itemToRemove.getItem().getCrystalItemId();
-		final int crystalAmount = itemToRemove.getCrystalCount();
-		
-		final List<ItemChanceHolder> items = new ArrayList<>();
-		items.add(new ItemChanceHolder(crystalId, 100, crystalAmount));
-		
-		final CrystalizationData data = ItemCrystalizationData.getInstance().getCrystalization(itemToRemove.getId());
-		if (data != null)
-		{
-			data.getItems().stream().filter(holder -> (holder.getId() != crystalId)).forEach(items::add);
-		}
-		
-		for (ItemChanceHolder holder : items)
+		for (ItemChanceHolder holder : crystallizationRewards)
 		{
 			final double rand = Rnd.nextDouble() * 100;
 			if (rand < holder.getChance())

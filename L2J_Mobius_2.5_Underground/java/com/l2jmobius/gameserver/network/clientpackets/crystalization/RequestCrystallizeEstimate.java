@@ -16,14 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.crystalization;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.ItemCrystalizationData;
+import com.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.model.CrystalizationData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -180,26 +178,17 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 			return;
 		}
 		
-		activeChar.setInCrystallize(true);
-		
-		// add crystals
-		final int crystalId = item.getItem().getCrystalItemId();
-		final int crystalAmount = item.getCrystalCount();
-		final List<ItemChanceHolder> items = new ArrayList<>();
-		items.add(new ItemChanceHolder(crystalId, 100, crystalAmount));
-		
-		final CrystalizationData data = ItemCrystalizationData.getInstance().getCrystalization(item.getId());
-		if (data != null)
+		// Show crystallization rewards window.
+		final List<ItemChanceHolder> crystallizationRewards = ItemCrystallizationData.getInstance().getCrystallizationRewards(item);
+		if ((crystallizationRewards != null) && !crystallizationRewards.isEmpty())
 		{
-			for (ItemChanceHolder holder : data.getItems())
-			{
-				if (holder.getId() != crystalId)
-				{
-					items.add(holder);
-				}
-			}
+			activeChar.setInCrystallize(true);
+			client.sendPacket(new ExGetCrystalizingEstimation(crystallizationRewards));
+		}
+		else
+		{
+			client.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
 		}
 		
-		client.sendPacket(new ExGetCrystalizingEstimation(items));
 	}
 }

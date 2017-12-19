@@ -68,7 +68,7 @@ import com.l2jmobius.gameserver.data.xml.impl.HennaData;
 import com.l2jmobius.gameserver.data.xml.impl.HitConditionBonusData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialEquipmentData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialShortcutData;
-import com.l2jmobius.gameserver.data.xml.impl.ItemCrystalizationData;
+import com.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import com.l2jmobius.gameserver.data.xml.impl.KarmaData;
 import com.l2jmobius.gameserver.data.xml.impl.LuckyGameData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
@@ -223,7 +223,7 @@ public class GameServer
 		EnchantItemGroupsData.getInstance();
 		EnchantItemData.getInstance();
 		EnchantItemOptionsData.getInstance();
-		ItemCrystalizationData.getInstance();
+		ItemCrystallizationData.getInstance();
 		OptionData.getInstance();
 		AugmentationData.getInstance();
 		EnsoulData.getInstance();
