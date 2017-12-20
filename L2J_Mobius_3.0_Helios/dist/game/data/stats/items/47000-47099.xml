@@ -324,6 +324,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="damage_range" val="0;0;10;0" />
 		<stats>
 			<stat type="pAtk">1022</stat>
 			<stat type="mAtk">232</stat>
@@ -484,6 +485,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="damage_range" val="0;0;44;120" />
 		<stats>
 			<stat type="pAtk">519</stat>
 			<stat type="mAtk">232</stat>

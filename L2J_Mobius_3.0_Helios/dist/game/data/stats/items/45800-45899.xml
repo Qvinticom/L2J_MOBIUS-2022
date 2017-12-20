@@ -5,6 +5,7 @@
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -33,6 +34,7 @@
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -60,6 +62,7 @@
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -87,6 +90,7 @@
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1550" />
 		<set name="is_clan_depositable" val="false" />
@@ -115,6 +119,7 @@
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -142,6 +147,8 @@
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="2010" />
 		<set name="is_clan_depositable" val="false" />
@@ -156,7 +163,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -174,6 +180,7 @@
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1800" />
 		<set name="is_clan_depositable" val="false" />
@@ -202,6 +209,7 @@
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="weapon_type" val="RAPIER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1280" />
 		<set name="is_clan_depositable" val="false" />
@@ -230,6 +238,7 @@
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1580" />
 		<set name="is_clan_depositable" val="false" />
@@ -447,6 +456,7 @@
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -475,6 +485,7 @@
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -502,6 +513,7 @@
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -529,6 +541,7 @@
 		<set name="icon" val="icon.weapon_raksilion_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -557,6 +570,7 @@
 		<set name="icon" val="icon.weapon_kirche_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1550" />
 		<set name="is_clan_depositable" val="false" />
@@ -585,6 +599,8 @@
 		<set name="icon" val="icon.weapon_grave_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="2010" />
 		<set name="is_clan_depositable" val="false" />
@@ -599,7 +615,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -617,6 +632,8 @@
 		<set name="icon" val="icon.weapon_spina_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -645,6 +662,7 @@
 		<set name="icon" val="icon.weapon_medianox_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1580" />
 		<set name="is_clan_depositable" val="false" />
@@ -672,6 +690,7 @@
 		<set name="icon" val="icon.weapon_imerose_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -700,6 +719,7 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1080" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -727,6 +747,7 @@
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1080" />
 		<set name="is_clan_depositable" val="false" />
@@ -756,6 +777,7 @@
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -783,6 +805,8 @@
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;44;120" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="2050" />
 		<set name="is_clan_depositable" val="false" />
@@ -811,6 +835,7 @@
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -1053,6 +1078,7 @@
 		<set name="icon" val="icon.weapon_ignicion_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1081,6 +1107,7 @@
 		<set name="icon" val="icon.weapon_ninfea_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1108,6 +1135,7 @@
 		<set name="icon" val="icon.weapon_skia_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -1135,6 +1163,7 @@
 		<set name="icon" val="icon.weapon_ikeon_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -1163,6 +1192,7 @@
 		<set name="icon" val="icon.weapon_deodos_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1550" />
 		<set name="is_clan_depositable" val="false" />
@@ -1191,6 +1221,8 @@
 		<set name="icon" val="icon.weapon_transgredi_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="2010" />
 		<set name="is_clan_depositable" val="false" />
@@ -1205,7 +1237,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1223,6 +1254,8 @@
 		<set name="icon" val="icon.weapon_solenas_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1251,6 +1284,7 @@
 		<set name="icon" val="icon.weapon_lapis_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1580" />
 		<set name="is_clan_depositable" val="false" />
@@ -1278,6 +1312,7 @@
 		<set name="icon" val="icon.weapon_zihel_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1305,6 +1340,7 @@
 		<set name="icon" val="icon.weapon_alacer_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1080" />
 		<set name="is_clan_depositable" val="false" />
@@ -1333,6 +1369,7 @@
 		<set name="icon" val="icon.weapon_rupe_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1080" />
 		<set name="is_clan_depositable" val="false" />
@@ -1362,6 +1399,7 @@
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1389,6 +1427,8 @@
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;44;120" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="2050" />
 		<set name="is_clan_depositable" val="false" />
@@ -1417,6 +1457,7 @@
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R95" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -1639,6 +1680,7 @@
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1667,6 +1709,7 @@
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1694,6 +1737,7 @@
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -1721,6 +1765,7 @@
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />
@@ -1749,6 +1794,7 @@
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1550" />
 		<set name="is_clan_depositable" val="false" />
@@ -1777,6 +1823,8 @@
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="2010" />
 		<set name="is_clan_depositable" val="false" />
@@ -1791,7 +1839,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="time" val="43200" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="13115" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1809,6 +1856,8 @@
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1837,6 +1886,7 @@
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1580" />
 		<set name="is_clan_depositable" val="false" />
@@ -1864,6 +1914,7 @@
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1891,6 +1942,7 @@
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1080" />
 		<set name="is_clan_depositable" val="false" />
@@ -1919,6 +1971,7 @@
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1080" />
 		<set name="is_clan_depositable" val="false" />
@@ -1948,6 +2001,7 @@
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1975,6 +2029,7 @@
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="2050" />
 		<set name="is_clan_depositable" val="false" />
@@ -2003,6 +2058,7 @@
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R99" />
 		<set name="weight" val="1740" />
 		<set name="is_clan_depositable" val="false" />

@@ -6,6 +6,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -33,6 +35,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -60,6 +64,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -86,6 +92,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -113,6 +121,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -139,6 +149,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -166,6 +178,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -192,6 +206,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -218,6 +234,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -230,7 +248,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="647" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -249,6 +266,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -276,6 +295,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -303,6 +324,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -330,6 +353,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -357,6 +382,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -384,6 +411,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -410,6 +439,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -437,6 +468,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -463,6 +496,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -490,6 +525,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -516,6 +553,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -542,6 +581,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -554,7 +595,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="633" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -573,6 +613,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -600,6 +642,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -627,6 +671,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -654,6 +700,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -681,6 +729,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -708,6 +758,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -734,6 +786,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -761,6 +815,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -787,6 +843,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -814,6 +872,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -840,6 +900,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -867,6 +929,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -879,7 +943,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="600" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -898,6 +961,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -925,6 +990,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -952,6 +1019,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -979,6 +1048,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1006,6 +1077,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1032,6 +1105,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1059,6 +1134,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1085,6 +1162,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1112,6 +1191,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1138,6 +1219,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1150,7 +1233,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="weight" val="670" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1169,6 +1251,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1196,6 +1280,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1223,6 +1309,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1250,6 +1338,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="RAPIER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1277,6 +1367,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1303,6 +1395,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1330,6 +1424,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1677,6 +1773,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1706,6 +1803,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1734,6 +1832,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1763,6 +1862,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1791,6 +1891,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1819,6 +1920,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1849,6 +1951,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1878,6 +1981,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1907,6 +2011,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1936,6 +2041,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1964,6 +2070,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -1993,6 +2100,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2021,6 +2129,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2049,6 +2158,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2078,6 +2188,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2106,6 +2217,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2135,6 +2247,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2165,6 +2278,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2194,6 +2308,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2223,6 +2338,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2251,6 +2367,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2279,6 +2396,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2307,6 +2425,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2336,6 +2455,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -2365,6 +2485,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />

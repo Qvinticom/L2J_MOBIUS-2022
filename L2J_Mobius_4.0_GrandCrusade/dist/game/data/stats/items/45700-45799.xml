@@ -1726,6 +1726,7 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="S" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1751,6 +1752,7 @@
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />
@@ -1778,6 +1780,8 @@
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
 		<set name="weight" val="1520" />
 		<set name="is_clan_depositable" val="false" />

@@ -1481,6 +1481,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1505,6 +1507,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1530,6 +1534,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1554,6 +1560,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualfist_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1579,6 +1587,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_pole_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1590,7 +1600,6 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="205" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1608,6 +1617,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1633,6 +1644,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_twohand_crossbow_i00" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1658,6 +1671,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1682,6 +1697,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1706,6 +1723,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1730,6 +1749,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_twohand_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1754,6 +1775,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dual_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1778,6 +1801,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1803,6 +1828,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualblunt_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

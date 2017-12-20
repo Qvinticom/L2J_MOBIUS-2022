@@ -7,7 +7,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -29,7 +28,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -47,65 +45,65 @@
 	<item id="46302" name="Christmas Talisman Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: P. Skill Critical Damage (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46303" name="Christmas Talisman Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: M. Skill Critical Damage (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46304" name="Christmas Talisman Pack" additionalName="Ultimate Defense" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: Ultimate Defense (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46305" name="Christmas Talisman Pack" additionalName="Debuff Resistance" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: Debuff Resistance (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46306" name="Christmas Talisman Pack" additionalName="P. Atk." type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: P. Atk. (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46307" name="Christmas Talisman Pack" additionalName="M. Atk." type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: M. Atk. (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46308" name="Christmas Talisman Pack" additionalName="P. Def." type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: P. Def. (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46309" name="Christmas Talisman Pack" additionalName="M. Def." type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: M. Def. (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46310" name="Christmas Talisman Pack" additionalName="Attribute Resistance" type="EtcItem">
 		<!-- Double-click to get a Christmas Talisman: Attribute Defense (1-hour). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_box_of_adventure_4_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46311" name="Emergency Whistle - Adolph" type="EtcItem">
 		<!-- Send a signal to Adolph, who will use the Protection of Faith skill. The whistle disappears after 2 uses. -->
@@ -113,7 +111,6 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -121,6 +118,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46312" name="Emergency Whistle - Barton" type="EtcItem">
 		<!-- Send a signal to Barton, who will use the Berserker skill. Using the Berserker skill will increase Barton's Debuff Resistance/Speed/P. Atk./P. Accuracy/P. Def./Atk. Spd./Critical Damage. Recovre 20% of HP when killing the opponent. Additionally, P. Atk. + 10% and Critical Rate + 100 when HP is below 60%. P. Atk. + 30% and Critical Rate + 300 when HP is below 30%. The whistle disappears after 2 uses. -->
@@ -128,7 +126,6 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -136,6 +133,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46313" name="Emergency Whistle - Hayuk" type="EtcItem">
 		<!-- Send a signal to Hayuk, who will use the Phoenix Arrow skill. The whistle disappears after 2 uses. -->
@@ -143,7 +141,6 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -151,6 +148,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46314" name="Emergency Whistle - Elise" type="EtcItem">
 		<!-- Send a signal to Elise, who will use the Celestial Party Protection skill. The whistle disappears after 2 uses. -->
@@ -158,7 +156,6 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -166,6 +163,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46315" name="Emergency Whistle - Eliyah" type="EtcItem">
 		<!-- Send a signal to Eliyah, who will use the Shadow Hell skill. The whistle disappears after 2 uses. -->
@@ -173,7 +171,6 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -181,6 +178,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46316" name="System Control Room Key" type="EtcItem">
 		<!-- Key to get to Core in the Cruma Tower. Key to the System Control Room. -->
@@ -188,11 +186,11 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46317" name="Shadow Shaper" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to + 10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
@@ -202,15 +200,17 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">443</stat>
 			<stat type="mAtk">176</stat>
@@ -218,6 +218,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46318" name="Shadow Cutter" type="Weapon">
@@ -228,21 +229,24 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">526</stat>
 			<stat type="mAtk">176</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46319" name="Shadow Slasher" type="Weapon">
@@ -253,21 +257,24 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">646</stat>
 			<stat type="mAtk">176</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46320" name="Shadow Fighter" type="Weapon">
@@ -278,15 +285,17 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1550" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">646</stat>
 			<stat type="mAtk">176</stat>
@@ -294,6 +303,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46321" name="Shadow Stormer" type="Weapon">
@@ -304,15 +314,20 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2010" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">526</stat>
 			<stat type="mAtk">176</stat>
@@ -320,6 +335,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46322" name="Shadow Thrower" type="Weapon">
@@ -330,15 +346,17 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">1031</stat>
 			<stat type="mAtk">176</stat>
@@ -346,6 +364,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46323" name="Shadow Shooter" type="Weapon">
@@ -356,14 +375,17 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1580" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">1012</stat>
 			<stat type="mAtk">176</stat>
@@ -371,6 +393,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46324" name="Shadow Buster" type="Weapon">
@@ -381,21 +404,24 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">394</stat>
 			<stat type="mAtk">272</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46325" name="Shadow Retributer" type="Weapon">
@@ -406,15 +432,17 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1080" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">486</stat>
 			<stat type="mAtk">310</stat>
@@ -423,6 +451,7 @@
 			<stat type="accMagic">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46326" name="Shadow Dualsword" type="Weapon">
@@ -433,21 +462,24 @@
 		<set name="crystal_type" val="R" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="9" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<stats>
 			<stat type="pAtk">646</stat>
 			<stat type="mAtk">176</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46327" name="Shadow Shaper" type="Weapon">
@@ -456,11 +488,12 @@
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13842" level="12" /> <!-- Shadow Shaper -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -472,6 +505,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46328" name="Shadow Cutter" type="Weapon">
@@ -480,11 +514,12 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13837" level="12" /> <!-- Shadow Cutter -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -495,6 +530,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46329" name="Shadow Slasher" type="Weapon">
@@ -503,11 +539,12 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1740" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13838" level="12" /> <!-- Shadow Slasher -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -518,6 +555,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46330" name="Shadow Fighter" type="Weapon">
@@ -526,11 +564,12 @@
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1550" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13839" level="12" /> <!-- Shadow Fighter -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -542,6 +581,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46331" name="Shadow Stormer" type="Weapon">
@@ -550,11 +590,12 @@
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="2010" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13840" level="12" /> <!-- Shadow Stormer -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -566,6 +607,7 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46332" name="Shadow Thrower" type="Weapon">
@@ -574,11 +616,12 @@
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13843" level="12" /> <!-- Shadow Thrower -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -590,6 +633,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46333" name="Shadow Shooter" type="Weapon">
@@ -598,10 +642,12 @@
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1580" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13844" level="12" /> <!-- Shadow Shooter -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -613,6 +659,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46334" name="Shadow Buster" type="Weapon">
@@ -621,11 +668,12 @@
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13845" level="12" /> <!-- Shadow Buster -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -636,6 +684,7 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46335" name="Shadow Retributer" type="Weapon">
@@ -644,11 +693,12 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1080" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13846" level="12" /> <!-- Shadow Retributer -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -661,6 +711,7 @@
 			<stat type="accMagic">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46336" name="Shadow Dualsword" type="Weapon">
@@ -669,11 +720,12 @@
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
-		<set name="is_freightable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1520" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<skills>
 			<skill id="13841" level="12" /> <!-- Shadow Dualsword -->
 			<skill id="13847" level="1" /> <!-- PvE Damage Increase 10% -->
@@ -684,6 +736,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46337" name="Scroll: Enchant Shadow Weapon" type="EtcItem">
@@ -706,7 +759,6 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -722,7 +774,6 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -738,7 +789,6 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -754,7 +804,6 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -770,7 +819,6 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -786,7 +834,6 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -802,7 +849,6 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -818,7 +864,6 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -834,7 +879,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -863,7 +907,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -892,7 +935,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -921,7 +963,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -950,7 +991,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -979,7 +1019,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1008,7 +1047,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1037,7 +1075,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1066,7 +1103,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1095,7 +1131,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1123,7 +1158,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1151,7 +1185,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1167,7 +1200,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1183,7 +1215,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1199,7 +1230,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1215,7 +1245,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1231,7 +1260,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1247,7 +1275,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1263,7 +1290,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1279,7 +1305,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1295,7 +1320,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1311,7 +1335,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1327,7 +1350,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
@@ -1344,13 +1366,11 @@
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_sellable" val="false" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -1365,7 +1385,6 @@
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1380,7 +1399,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1395,7 +1413,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1410,7 +1427,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1425,7 +1441,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1439,7 +1454,6 @@
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1447,6 +1461,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46376" name="Shadow Weapon Coupon" type="EtcItem">
 		<!-- Coupon you can trade in for a Shadow Weapon. -->
@@ -1454,7 +1469,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1467,6 +1481,8 @@
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1484,12 +1500,15 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46378" name="Frozen Dagger" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1508,12 +1527,15 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46379" name="Frozen Two-handed Sword" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1531,12 +1553,15 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46380" name="Frozen Fist Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualfist_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1555,12 +1580,15 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46381" name="Frozen Spear" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_pole_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1572,6 +1600,9 @@
 		<set name="spiritshots" val="3" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="205" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -1579,12 +1610,15 @@
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46382" name="Frozen Bow" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1603,12 +1637,15 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">500</stat>
+			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
 	<item id="46383" name="Frozen Crossbow" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_twohand_crossbow_i00" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1627,12 +1664,15 @@
 			<stat type="rCrit">10</stat>
 			<stat type="accCombat">-1.5</stat>
 			<stat type="pAtkRange">400</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46384" name="Frozen One-handed Blunt Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1650,12 +1690,15 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46385" name="Frozen Two-handed Blunt Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1673,12 +1716,15 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46386" name="Frozen One-handed Magic Blunt Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1696,12 +1742,15 @@
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46387" name="Frozen Two-handed Magic Blunt Weapon" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_twohand_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1719,12 +1768,15 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46388" name="Frozen Dualsword" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dual_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1742,12 +1794,15 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46389" name="Frozen Dual Dagger" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualdagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1766,12 +1821,15 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="46390" name="Frozen Dual Blunt" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dualblunt_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1789,6 +1847,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="46391" name="Frozen Shield" type="Weapon">
@@ -1830,7 +1889,6 @@
 		<set name="icon" val="icon.armor_back04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="EQUIP" />
 		<stats>
 			<stat type="pDef">7</stat>
@@ -1840,19 +1898,16 @@
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="46395" name="Shadow Ingot" type="EtcItem">
 		<!-- Item needed to craft a Shadow Weapon. Take a + 10 Shadow Weapon and 10 Shadow Ingots to Neti in Gludio to get an enhanced Shadow weapon. -->
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46396" name="NPC Sigel Knight Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="240" />
 		<stats>
 			<stat type="pDef">7</stat>
@@ -1861,7 +1916,6 @@
 	<item id="46397" name="NPC Tyrr Warrior Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="240" />
 		<stats>
 			<stat type="pDef">7</stat>
@@ -1870,7 +1924,6 @@
 	<item id="46398" name="NPC Othell Rogue Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="240" />
 		<stats>
 			<stat type="pDef">7</stat>
@@ -1879,7 +1932,6 @@
 	<item id="46399" name="NPC Yul Archer Transformation Cloak" type="Armor">
 		<set name="icon" val="icon.armor_back04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="240" />
 		<stats>
 			<stat type="pDef">7</stat>

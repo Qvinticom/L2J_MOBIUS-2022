@@ -239,6 +239,7 @@
 		<set name="icon" val="icon.weapon_antaras_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -258,6 +259,7 @@
 		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -276,6 +278,8 @@
 		<set name="icon" val="icon.weapon_antaras_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -296,6 +300,7 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -314,6 +319,7 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -332,10 +338,11 @@
 		<set name="icon" val="icon.weapon_antaras_spear_i00" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
-		<set name="damage_range" val="0;0;66;120" />
 		<set name="weight" val="2010" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
@@ -355,6 +362,7 @@
 		<set name="icon" val="icon.weapon_antaras_fist_i00" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -374,6 +382,7 @@
 		<set name="icon" val="icon.weapon_antaras_onehand_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -393,6 +402,7 @@
 		<set name="icon" val="icon.weapon_antaras_dual_blunt_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -412,6 +422,7 @@
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -430,6 +441,7 @@
 		<set name="icon" val="icon.weapon_valrakas_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -449,6 +461,7 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -467,6 +480,7 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -485,6 +499,8 @@
 		<set name="icon" val="icon.weapon_valrakas_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -505,6 +521,7 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -523,6 +540,7 @@
 		<set name="icon" val="icon.weapon_valrakas_onehand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -542,6 +560,7 @@
 		<set name="icon" val="icon.weapon_valrakas_twohand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -562,6 +581,7 @@
 		<set name="icon" val="icon.weapon_lind_dagger_i00" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -581,6 +601,8 @@
 		<set name="icon" val="icon.weapon_lind_bow_i00" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -601,6 +623,7 @@
 		<set name="icon" val="icon.weapon_lind_twohand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
@@ -619,6 +642,7 @@
 		<set name="icon" val="icon.weapon_lind_onehand_magic_blunt_i00" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -637,6 +661,7 @@
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
@@ -655,6 +680,7 @@
 		<set name="icon" val="icon.weapon_lind_crossbow_i00" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="reuse_delay" val="1350" />
@@ -674,6 +700,8 @@
 		<set name="icon" val="icon.weapon_lind_dual_dagger_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />

@@ -326,6 +326,7 @@
 		<!-- Temporary practice weapon for learning about the Soul Crystal system. Very inefficient as a weapon. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="crystal_type" val="C" />
 		<set name="weight" val="1420" />
@@ -664,6 +665,7 @@
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -685,6 +687,7 @@
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -706,6 +709,7 @@
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -727,6 +731,7 @@
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -749,6 +754,7 @@
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -771,6 +777,8 @@
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -780,7 +788,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -796,6 +803,8 @@
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -817,6 +826,7 @@
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -838,6 +848,7 @@
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -859,6 +870,7 @@
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -881,6 +893,7 @@
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -904,6 +917,7 @@
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -925,6 +939,8 @@
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />
@@ -946,6 +962,7 @@
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="500" />
 		<set name="soulshots" val="1" />

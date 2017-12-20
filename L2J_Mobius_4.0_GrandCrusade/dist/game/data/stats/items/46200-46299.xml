@@ -42,6 +42,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -62,6 +64,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -81,6 +85,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -100,6 +106,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -120,6 +128,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -140,13 +150,14 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="500" />
-		<set name="damage_range" val="0;0;66;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -164,6 +175,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -184,6 +197,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -203,6 +218,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -222,6 +239,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -242,6 +261,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -262,6 +283,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -281,6 +304,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />
@@ -301,6 +326,8 @@
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="soulshots" val="1" />

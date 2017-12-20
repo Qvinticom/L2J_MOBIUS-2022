@@ -467,6 +467,8 @@
 		<!-- Throws a love-filled heart. Can use the active skill Heart Shot.. Warning: When using on a monster, you can receive another player's attack. -->
 		<set name="icon" val="icon.bm_krono_bow" />
 		<set name="weapon_type" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -493,6 +495,7 @@
 		<!-- Magic lollipop with a cute piggy drawing on it. It makes a piggy squeal upon a strike. Can transform into a cute piggy for a certain amount of time. -->
 		<set name="icon" val="icon.bm_pig_candy" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -516,6 +519,7 @@
 		<set name="icon" val="icon.bm_the_dagger_of_hero" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -548,6 +552,7 @@
 		<set name="icon" val="icon.bm_the_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -579,6 +584,7 @@
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -610,6 +616,7 @@
 		<set name="icon" val="icon.bm_the_axe_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -642,6 +649,7 @@
 		<set name="icon" val="icon.bm_the_fist_of_hero" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -674,6 +682,7 @@
 		<set name="icon" val="icon.bm_the_pole_of_hero" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -707,6 +716,7 @@
 		<set name="icon" val="icon.bm_the_bow_of_hero" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -739,6 +749,7 @@
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -771,6 +782,7 @@
 		<set name="icon" val="icon.bm_infinity_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -802,6 +814,7 @@
 		<set name="icon" val="icon.bm_the_mace_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -833,6 +846,7 @@
 		<set name="icon" val="icon.bm_the_staff_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -866,6 +880,7 @@
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -897,6 +912,7 @@
 		<set name="icon" val="icon.bm_r_dualdagger" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -928,6 +944,7 @@
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -960,6 +977,7 @@
 		<set name="icon" val="icon.bm_the_dagger_of_hero" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -992,6 +1010,7 @@
 		<set name="icon" val="icon.bm_the_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1023,6 +1042,7 @@
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1054,6 +1074,7 @@
 		<set name="icon" val="icon.bm_the_axe_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1086,6 +1107,7 @@
 		<set name="icon" val="icon.bm_the_fist_of_hero" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1118,6 +1140,7 @@
 		<set name="icon" val="icon.bm_the_pole_of_hero" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1151,6 +1174,7 @@
 		<set name="icon" val="icon.bm_the_bow_of_hero" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1183,6 +1207,7 @@
 		<set name="icon" val="icon.bm_infinity_shooter" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1215,6 +1240,7 @@
 		<set name="icon" val="icon.bm_infinity_sword" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1246,6 +1272,7 @@
 		<set name="icon" val="icon.bm_the_mace_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1278,6 +1305,7 @@
 		<set name="icon" val="icon.bm_the_staff_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1311,6 +1339,7 @@
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1342,6 +1371,7 @@
 		<set name="icon" val="icon.bm_r_dualdagger" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1374,6 +1404,7 @@
 		<set name="icon" val="icon.bm_r_dualblunt" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="500" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

@@ -5,9 +5,10 @@
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -24,6 +25,7 @@
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="37701" name="Valentine Dual Blunt Weapon" type="Weapon">
@@ -31,9 +33,9 @@
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -50,6 +52,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37702" name="Valentine Shield" type="Armor">
@@ -60,7 +63,6 @@
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="1891" />
 		<set name="weight" val="1130" />
-		<set name="is_freightable" val="false" />
 		<set name="price" val="88681000" />
 		<stats>
 			<stat type="sDef">546</stat>
@@ -77,7 +79,6 @@
 		<set name="crystal_type" val="R99" />
 		<set name="crystal_count" val="1891" />
 		<set name="weight" val="920" />
-		<set name="is_freightable" val="false" />
 		<set name="price" val="88681000" />
 		<stats>
 			<stat type="pDef">150</stat>
@@ -92,7 +93,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="icon" val="icon.etc_whiteday_herb" />
 		<set name="for_npc" val="true" />
@@ -107,7 +107,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -121,7 +120,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -135,7 +133,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -149,7 +146,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -163,7 +159,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -177,7 +172,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -191,7 +185,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -205,7 +198,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -219,7 +211,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -236,12 +227,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" /> 
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="1" />
@@ -257,12 +243,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" /> 
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="2" />
@@ -271,7 +252,6 @@
 	<item id="37716" name="Seven Signs' Energy" type="EtcItem">
 		<!-- Bring Talisman - Lilith and Talisman - Anakim to the Seed Talisman Manager to receive a Talisman - Seven Signs. -->
 		<set name="icon" val="icon.sevensign_energy_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37717" name="Talisman - Seven Signs" type="Armor">
@@ -284,12 +264,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" /> 
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="13569" level="3" />
@@ -302,7 +277,6 @@
 		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -334,7 +308,6 @@
 	<item id="37719" name="Pa'agrio's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i02" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -350,7 +323,6 @@
 	<item id="37720" name="Maphr's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i01" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -363,7 +335,6 @@
 	<item id="37721" name="Sayha's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i03" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -376,7 +347,6 @@
 	<item id="37722" name="Eva's Special Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -389,7 +359,6 @@
 	<item id="37723" name="Shiny Elemental Shirt Exchange Stone" type="EtcItem">
 		<!-- Bring Pa'agrio's Shirt, Maphr's Shirt, Sayha's Shirt, or Eva's Shirt to the Fantasy Isle Paddy to exchange for a Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.shirt_stone" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -399,7 +368,6 @@
 		<!-- Material with the condensed power of Shilen. The groups that oppose Shilen purchase them for research,so they can be sold at stores for a high price. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="10000000" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37725" name="NC Dinos Uniform" type="Armor">
@@ -407,13 +375,11 @@
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="1000" />
 	</item>
 	<item id="37726" name="NC Dinos Shortstop Cap" type="Armor">
 		<!-- NC Dinos Defense Hat. -->
 		<set name="icon" val="icon.accessory_mining_cap_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37727" name="Dandy's Gift Box" type="EtcItem">
@@ -421,7 +387,6 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -445,7 +410,6 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -465,7 +429,6 @@
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -487,7 +450,6 @@
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -510,7 +472,6 @@
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -535,7 +496,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -558,7 +518,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -581,7 +540,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -606,7 +564,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -630,7 +587,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -654,7 +610,6 @@
 		<set name="weight" val="440" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -677,7 +632,6 @@
 		<!-- Soulshot for test use. To be included in the D-grade or C-grade load effect. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -686,7 +640,6 @@
 		<!-- Soulshot for test use. To be included in the C-grade or D-grade load effect. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="C" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -696,7 +649,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -706,7 +658,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -716,7 +667,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -726,7 +676,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -736,7 +685,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -746,7 +694,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -756,7 +703,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -766,7 +712,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -776,7 +721,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -786,7 +730,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -796,7 +739,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -806,7 +748,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -816,7 +757,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -826,7 +766,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
@@ -836,7 +775,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -845,7 +783,6 @@
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="weight" val="2" />
 		<set name="price" val="14" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -853,14 +790,12 @@
 		<!-- Can exchange it for various items through the warehouse keeper. -->
 		<set name="icon" val="icon.pink_cube_piece" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37757" name="Certificate: 50 Olympiad Matches" type="EtcItem">
 		<!-- Document that proves participation in the Olympiad Match 50. Take this document to the Olympiad Manager to receive a whole reward. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -874,7 +809,6 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -886,7 +820,6 @@
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage for even greater rewards. But, in order to raise to stage 2, the next period's defense must be successful. 15-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -900,7 +833,6 @@
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage, you can receive even more rewards. But, in order to raise to stage 3, the next period's defense must be successful. 15-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -914,7 +846,6 @@
 		<!-- Faint energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage, you can receive even more rewards. But, in order to raise to stage 4, the next period's defense must be successful. 15-day. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -928,7 +859,6 @@
 		<!-- Faint energy of dimensional strength. It is the highest stage for receiving rewards from Mermoden. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -944,7 +874,6 @@
 		<set name="bodypart" val="back" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -965,7 +894,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -977,7 +905,6 @@
 		<!-- Message sent from Elikia to Leona Blackbird. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -991,7 +918,6 @@
 		<set name="icon" val="icon.etc_stone_black_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1005,7 +931,6 @@
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1019,7 +944,6 @@
 		<set name="icon" val="icon.etc_freezing_core_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1031,7 +955,6 @@
 		<!-- Energy of the dimensions. It is the highest stage for receiving rewards from Mermoden. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1045,7 +968,6 @@
 		<set name="icon" val="icon.bless_scroll_r2" />
 		<set name="weight" val="100" />
 		<set name="price" val="5267574" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37771" name="Scroll of Blessing: Weapon (R95-grade)" type="EtcItem">
@@ -1054,7 +976,6 @@
 		<set name="weight" val="100" />
 		<set name="price" val="70637960" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37772" name="Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
@@ -1063,7 +984,6 @@
 		<set name="weight" val="100" />
 		<set name="price" val="155659040" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37773" name="Recipe: Scroll of Blessing: Weapon (R-grade)" type="EtcItem">
@@ -1072,7 +992,6 @@
 		<set name="weight" val="30" />
 		<set name="price" val="526757" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="4163" /> <!-- mk_wp_scroll_of_blessing_r_gd35 -->
@@ -1083,7 +1002,6 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="7063796" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4164" /> <!-- mk_wp_scroll_of_blessing_r95_gd35 -->
@@ -1094,7 +1012,6 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="15565904" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4165" /> <!-- mk_wp_scroll_of_blessing_r99_gd35 -->
@@ -1105,7 +1022,6 @@
 		<set name="icon" val="icon.etc_bless_scroll_fragment_r" />
 		<set name="weight" val="10" />
 		<set name="price" val="47408" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1115,7 +1031,6 @@
 		<set name="weight" val="10" />
 		<set name="price" val="635742" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
@@ -1125,7 +1040,6 @@
 		<set name="weight" val="10" />
 		<set name="price" val="1400931" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
@@ -1135,7 +1049,6 @@
 		<set name="weight" val="100" />
 		<set name="price" val="1371850" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37780" name="Scroll of Blessing: Armor (R95-grade)" type="EtcItem">
@@ -1144,7 +1057,6 @@
 		<set name="weight" val="100" />
 		<set name="price" val="19162980" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37781" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
@@ -1153,7 +1065,6 @@
 		<set name="weight" val="100" />
 		<set name="price" val="42227840" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37782" name="Recipe: Scroll of Blessing: Armor (R-grade)" type="EtcItem">
@@ -1162,7 +1073,6 @@
 		<set name="weight" val="30" />
 		<set name="price" val="137185" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="recipe_id" val="4166" /> <!-- mk_am_scroll_of_blessing_r_gd35 -->
@@ -1173,7 +1083,6 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="1916298" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4167" /> <!-- mk_am_scroll_of_blessing_r95_gd35 -->
@@ -1184,7 +1093,6 @@
 		<set name="icon" val="icon.etc_recipe_gold_i00" />
 		<set name="weight" val="30" />
 		<set name="price" val="4222784" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="4168" /> <!-- mk_am_scroll_of_blessing_r99_gd35 -->
@@ -1196,7 +1104,6 @@
 		<set name="weight" val="10" />
 		<set name="price" val="12347" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
@@ -1206,7 +1113,6 @@
 		<set name="weight" val="10" />
 		<set name="price" val="172467" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
@@ -1216,7 +1122,6 @@
 		<set name="weight" val="10" />
 		<set name="price" val="380051" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
@@ -1226,7 +1131,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1241,7 +1145,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1256,7 +1159,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1270,7 +1172,6 @@
 		<set name="icon" val="icon.etc_codex_of_giant_i02" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
@@ -1278,7 +1179,6 @@
 		<!-- Increases Stun resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1286,7 +1186,6 @@
 		<!-- Increases hold resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1294,7 +1193,6 @@
 		<!-- Increases Bleed Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1302,7 +1200,6 @@
 		<!-- Increases paralysis resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1310,7 +1207,6 @@
 		<!-- Increases Mental resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1318,7 +1214,6 @@
 		<!-- Increases Sleep Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1326,7 +1221,6 @@
 		<!-- Increases Poison Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1334,7 +1228,6 @@
 		<!-- Increases Knock Back / Knock Down resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>

@@ -285,6 +285,8 @@
 		<!-- Blue Mackerel-shaped weapon. One-handed blunt weapon. -->
 		<set name="icon" val="icon.wp_fishing1" />
 		<set name="default_action" val="EQUIP" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="D" />
@@ -312,6 +314,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -338,6 +342,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -363,6 +369,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -388,6 +396,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -413,6 +423,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -438,6 +450,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -463,6 +477,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -488,6 +504,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -513,6 +531,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -538,6 +558,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -584,6 +606,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -609,6 +633,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -668,6 +694,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -738,6 +766,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -780,6 +810,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -805,6 +837,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="DAGGER" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -830,6 +864,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="POLE" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -855,6 +891,8 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weapon_type" val="BLUNT" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
