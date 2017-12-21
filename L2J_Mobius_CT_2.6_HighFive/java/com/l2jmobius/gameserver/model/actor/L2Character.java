@@ -4122,11 +4122,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		// Delete movement data of the L2Character
 		_move = null;
+		_cursorKeyMovement = false;
 		
-		// if (getAI() != null)
-		// getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		
-		// Set the current position (x,y,z), its current L2WorldRegion if necessary and its heading
 		// All data are contained in a Location object
 		if (loc != null)
 		{
@@ -4252,6 +4249,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final int curX = getX();
 		final int curY = getY();
 		final int curZ = getZ();
+		
+		// In case of cursor movement, avoid moving through obstacles.
+		if (_cursorKeyMovement)
+		{
+			final Location newDestination = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
+			x = newDestination.getX();
+			y = newDestination.getY();
+			z = newDestination.getZ();
+		}
 		
 		// Calculate distance (dx,dy) between current position and destination
 		// TODO: improve Z axis move/follow support when dx,dy are small compared to dz
