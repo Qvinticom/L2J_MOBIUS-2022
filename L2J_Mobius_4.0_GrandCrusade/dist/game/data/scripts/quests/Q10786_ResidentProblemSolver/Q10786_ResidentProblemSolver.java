@@ -152,7 +152,7 @@ public final class Q10786_ResidentProblemSolver extends Quest
 		{
 			int killCount = qs.getInt(KILL_COUNT_VAR);
 			qs.set(KILL_COUNT_VAR, ++killCount);
-			if (killCount >= 50)
+			if (killCount >= 150)
 			{
 				qs.setCond(2, true);
 			}

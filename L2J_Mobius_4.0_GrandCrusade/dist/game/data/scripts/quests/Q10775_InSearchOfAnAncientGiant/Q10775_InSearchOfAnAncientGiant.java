@@ -151,7 +151,7 @@ public final class Q10775_InSearchOfAnAncientGiant extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			giveItems(killer, ENERGY_OF_REGENERATION, 1);
-			if (getQuestItemsCount(killer, ENERGY_OF_REGENERATION) >= 20)
+			if (getQuestItemsCount(killer, ENERGY_OF_REGENERATION) >= 40)
 			{
 				qs.setCond(2, true);
 			}
