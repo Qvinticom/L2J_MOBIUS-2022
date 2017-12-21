@@ -853,6 +853,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37667" min="1" max="1" chance="100" />
+			<item id="37668" min="1" max="1" chance="100" />
+			<item id="37670" min="1" max="1" chance="100" />
+			<item id="37669" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="47354" name="Emperor Shunaiman's Weapon Set Pack" type="EtcItem">
 		<!-- Double click to obtain Emperor Shunaiman's weapons. -->
@@ -864,6 +872,24 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46693" min="1" max="1" chance="100" />
+			<item id="46694" min="1" max="1" chance="100" />
+			<item id="46695" min="1" max="1" chance="100" />
+			<item id="46696" min="1" max="1" chance="100" />
+			<item id="46697" min="1" max="1" chance="100" />
+			<item id="46698" min="1" max="1" chance="100" />
+			<item id="46699" min="1" max="1" chance="100" />
+			<item id="46700" min="1" max="1" chance="100" />
+			<item id="46701" min="1" max="1" chance="100" />
+			<item id="46702" min="1" max="1" chance="100" />
+			<item id="46703" min="1" max="1" chance="100" />
+			<item id="46704" min="1" max="1" chance="100" />
+			<item id="46705" min="1" max="1" chance="100" />
+			<item id="46706" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="47355" name="Superion Support Box" type="EtcItem">
 		<!-- Double click to obtain Emperor Shunaiman's Weapon Set Pack x1, +8 Bloody Eternal Pack x1, 2,000,000,000 Adena, Rare Accessory Pack x1, Talisman - Longing x1, Enhanced Tauti's Bracelet x1, Refined Romantic Chapeau containing the GM's Blessing x3, Old Elemental Shirt x1, Nurka's Belt x1, Lv. 5 Legendary Dye Pack x1, Mysterious No-grade Soulshot x20,000, and Mysterious Blessed No-grade Spiritshot x20,000. -->
@@ -875,6 +901,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
 	</item>
 	<item id="47356" name="Basic Supply Box" additionalName="Blackbird Clan" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Phantasmal Ridge's Magic Circle area. Double click to view the item. -->

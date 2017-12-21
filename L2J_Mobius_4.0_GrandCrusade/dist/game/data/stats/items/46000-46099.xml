@@ -1038,20 +1038,34 @@
 	<item id="46082" name="Mysterious Soulshot (R-grade)" type="EtcItem">
 		<!-- The power of a spirit is bestowed upon a weapon (R-grade), temporarily inflicting a powerful attack on the enemy. -->
 		<set name="icon" val="icon.soulshot_r_i00" />
+		<set name="default_action" val="SOULSHOT" />
 		<set name="price" val="380" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="crystal_type" val="R" />
+		<set name="handler" val="SoulShots" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="9193" level="1" /> <!-- Soulshot (R-grade) -->
+		</skills>
 	</item>
 	<item id="46083" name="Mysterious Blessed Spiritshot (R-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon (R-grade), temporarily increasing its magic significantly. -->
 		<set name="icon" val="icon.blessed_spiritshot_r_i00" />
+		<set name="default_action" val="SPIRITSHOT" />
 		<set name="price" val="1100" />
 		<set name="is_sellable" val="false" />
+		<set name="material" val="PAPER" />
 		<set name="crystal_type" val="R" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="9195" level="1" /> <!-- Blessed Spiritshot (R-grade) -->
+		</skills>
 	</item>
 	<item id="46084" name="Player Commendation Special Bait" additionalName="PC-exclusive" type="EtcItem">
 		<!-- Bait that can no longer be used. Can be exchanged through Village Fishing Guild Members for a new PC Cafe Bait Exchange. -->

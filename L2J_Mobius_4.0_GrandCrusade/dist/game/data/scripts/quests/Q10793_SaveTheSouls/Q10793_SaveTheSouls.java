@@ -150,7 +150,7 @@ public final class Q10793_SaveTheSouls extends Quest
 		{
 			int count = qs.getInt(KILL_COUNT_VAR);
 			qs.set(KILL_COUNT_VAR, ++count);
-			if (count >= 50)
+			if (count >= 200)
 			{
 				qs.setCond(2, true);
 			}
