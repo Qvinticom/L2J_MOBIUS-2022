@@ -426,7 +426,7 @@
 		<!-- STR +5 when wearing the Talisman. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -435,12 +435,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
 	</item>
 	<item id="47436" name="Mysterious Talisman - INT" additionalName="2-hour" type="Armor">
 		<!-- INT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -449,12 +450,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
 	</item>
 	<item id="47437" name="Mysterious Talisman - DEX" additionalName="2-hour" type="Armor">
 		<!-- DEX +5 when wearing the Talisman. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -463,12 +465,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
 	</item>
 	<item id="47438" name="Mysterious Talisman - WIT" additionalName="2-hour" type="Armor">
 		<!-- WIT +5 when wearing the Talisman. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -477,12 +480,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
 	</item>
 	<item id="47439" name="Mysterious Talisman - CON" additionalName="2-hour" type="Armor">
 		<!-- CON +5 when wearing the Talisman. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -491,12 +495,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
 	</item>
 	<item id="47440" name="Mysterious Talisman - MEN" additionalName="2-hour" type="Armor">
 		<!-- MEN +5 when wearing the Talisman. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -505,12 +510,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
 	</item>
 	<item id="47441" name="Mysterious Talisman - Attack Attribute" additionalName="2-hour" type="Armor">
 		<!-- Attack Attribute Bonus +50 when wearing the Talisman. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -519,12 +525,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
 	</item>
 	<item id="47442" name="Mysterious Talisman - Attribute Defense" additionalName="2-hour" type="Armor">
 		<!-- Attribute Defense +50 when wearing the Talisman. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="talisman" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
@@ -533,6 +540,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="time" val="120" />
 	</item>
 	<item id="47443" name="Mysterious Talisman - STR 2 Hour Box" type="EtcItem">
 		<!-- Gift Box containing one Mysterious Talisman - STR (2-hour). -->
