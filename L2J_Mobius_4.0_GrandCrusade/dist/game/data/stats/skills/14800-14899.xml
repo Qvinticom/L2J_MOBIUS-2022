@@ -2491,6 +2491,12 @@
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Blink">
+				<angle>0</angle> <!-- Teleport to Back -->
+				<range>300</range>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="14883" toLevel="1" name="Eliyah's Mass Exile">
 		<!-- Glory Days confirmed -->
@@ -2531,7 +2537,6 @@
 			<effect name="DamageBlock">
 				<type>BLOCK_MP</type>
 			</effect>
-			<!-- FIXME: p_blocl_buff -->
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
@@ -2708,13 +2713,15 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
+		<affectRange>400</affectRange>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2735,13 +2742,15 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
+		<affectRange>400</affectRange>
 		<magicLvl>90</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2762,13 +2771,15 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
+		<affectRange>400</affectRange>
 		<magicLvl>95</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY_ONLY</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2921,8 +2932,11 @@
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectLimit>10-10</affectLimit>
+		<affectRange>400</affectRange>
+		<targetType>TARGET</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="HealPercent">
 				<power>40</power>
