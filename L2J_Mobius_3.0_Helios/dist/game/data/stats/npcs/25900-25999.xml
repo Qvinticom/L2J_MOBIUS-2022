@@ -136,12 +136,15 @@
 		</collision>
 	</npc>
 	<npc id="25902" level="96" type="L2RaidBoss" name="Gigantic Golem" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="15369" level="1" />
 			<skill name="Skill02_ID" id="15367" level="1" />
 			<param name="Skill01_Probablity" value="300" />
 			<param name="Skill02_Probablity" value="500" />
+			<minions name="Privates">
+				<npc id="25903" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="25904" count="2" respawnTime="360" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -235,7 +238,6 @@
 		</collision>
 	</npc>
 	<npc id="25903" level="95" type="L2Monster" name="Gigantic Golem Subordinate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="15370" level="1" />
 		</parameters>
@@ -270,7 +272,6 @@
 		</collision>
 	</npc>
 	<npc id="25904" level="95" type="L2Monster" name="Gigantic Golem Subordinate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="15371" level="1" />
 		</parameters>
@@ -1575,7 +1576,13 @@
 		</collision>
 	</npc>
 	<npc id="25933" level="93" type="L2RaidBoss" name="Garden Patrol Captain" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25934" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25935" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25936" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3969891000" sp="952773" raidPoints="30" />
@@ -1591,7 +1598,6 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -1654,7 +1660,6 @@
 		</collision>
 	</npc>
 	<npc id="25934" level="93" type="L2Monster" name="Garden Patrol Minion" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1669,7 +1674,6 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -1680,7 +1684,6 @@
 		</collision>
 	</npc>
 	<npc id="25935" level="93" type="L2Monster" name="Gardener Minion" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1695,7 +1698,6 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
@@ -1706,7 +1708,6 @@
 		</collision>
 	</npc>
 	<npc id="25936" level="93" type="L2Monster" name="Garden Manager Minion" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1721,7 +1722,6 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->

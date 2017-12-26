@@ -2260,6 +2260,21 @@
 	</npc>
 	<npc id="26137" level="102" type="L2RaidBoss" name="Mimir" title="Great Sage">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<skill name="Skill01_ID" id="16590" level="1" />
+			<skill name="Skill02_ID" id="16591" level="1" />
+			<skill name="Skill03_ID" id="16592" level="1" />
+			<skill name="Skill04_ID" id="16593" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="Skill03_Probablity" value="500" />
+			<param name="Skill04_Probablity" value="500" />
+			<minions name="Privates">
+				<npc id="26138" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="26139" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26140" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>GIANT</race>
 		<acquire exp="38714665651" sp="77429377" raidPoints="30" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2271,8 +2286,11 @@
 			<attack physical="48571.4285714286" magical="8571.42857142857" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3777.77777777778" magical="2193.54838709677" />
 		</stats>
-		<status attackable="true" />
 		<skill_list>
+			<skill id="16590" level="1" /> <!-- Ancient Power Thunder -->
+			<skill id="16591" level="1" /> <!-- Ancient Plasma Wave -->
+			<skill id="16592" level="1" /> <!-- Ancient Earthquake -->
+			<skill id="16593" level="1" /> <!-- Prayer for the Emperor -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
@@ -2359,13 +2377,17 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>MIMIR</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="32" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
-	<npc id="26138" level="101" type="L2Npc" name="Mimillion Bathus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26138" level="101" type="L2Monster" name="Mimillion Bathus">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2374,15 +2396,34 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>MIMIR</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="46" />
 		</collision>
 	</npc>
-	<npc id="26139" level="101" type="L2Npc" name="Mimillion Carcass">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26139" level="101" type="L2Monster" name="Mimillion Carcass">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15304" />
@@ -2392,15 +2433,33 @@
 				<walk ground="55" />
 				<run ground="190" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="BOW" range="900" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>MIMIR</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="26140" level="101" type="L2Npc" name="Mimillion Kshana">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26140" level="101" type="L2Monster" name="Mimillion Kshana">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2409,14 +2468,34 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>MIMIR</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="26141" level="104" type="L2Monster" name="Ramona" title="Queen">
+	<npc id="26141" level="104" type="L2RaidBoss" name="Ramona" title="Queen">
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2448,7 +2527,7 @@
 			<height normal="87" />
 		</collision>
 	</npc>
-	<npc id="26142" level="104" type="L2Monster" name="Ramona" title="Queen">
+	<npc id="26142" level="104" type="L2RaidBoss" name="Ramona" title="Queen">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<sex>FEMALE</sex>
@@ -2733,6 +2812,23 @@
 	</npc>
 	<npc id="26148" level="103" type="L2RaidBoss" name="Enhanced Mimir" title="Helios' Calling">
 		<!-- Source: www.l2wiki.com -->
+		<parameters>
+			<skill name="Skill01_ID" id="16590" level="1" />
+			<skill name="Skill02_ID" id="16591" level="1" />
+			<skill name="Skill03_ID" id="16592" level="1" />
+			<skill name="Skill04_ID" id="16593" level="1" />
+			<skill name="Skill05_ID" id="16596" level="1" />
+			<param name="Skill01_Probablity" value="500" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="Skill03_Probablity" value="500" />
+			<param name="Skill04_Probablity" value="500" />
+			<param name="Skill05_Probablity" value="1000" />
+			<minions name="Privates">
+				<npc id="26149" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="26150" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="26151" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="224175791505" sp="448351616" raidPoints="100" />
@@ -2742,7 +2838,7 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="253" range="40" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
 			<defence physical="3814.81481481481" magical="2215.05376344086" />
 		</stats>
 		<skill_list>
@@ -2836,13 +2932,17 @@
 				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky_drop>
 		</drop_lists>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>ENHANCED_MIMIR</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="32" />
 			<height normal="50.5" />
 		</collision>
 	</npc>
 	<npc id="26149" level="102" type="L2Monster" name="Enhanced Mimillion Bathus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2851,15 +2951,34 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>ENHANCED_MIMIR</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="46" />
 		</collision>
 	</npc>
 	<npc id="26150" level="102" type="L2Monster" name="Enhanced Mimillion Carcass">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15304" />
@@ -2869,15 +2988,33 @@
 				<walk ground="55" />
 				<run ground="190" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="BOW" range="900" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>ENHANCED_MIMIR</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="42.5" />
 		</collision>
 	</npc>
 	<npc id="26151" level="102" type="L2Monster" name="Enhanced Mimillion Kshana">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2886,8 +3023,28 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<ai clanHelpRange="400">
+			<clan_list>
+				<clan>ENHANCED_MIMIR</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="24" />
 			<height normal="47.5" />
@@ -4197,7 +4354,6 @@
 		</collision>
 	</npc>
 	<npc id="26174" level="101" type="L2Npc" name="Enslaved Chrysocolla" title="Raid Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -4206,15 +4362,18 @@
 				<walk ground="54" />
 				<run ground="230" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="27.2" />
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="26175" level="101" type="L2Npc" name="Slave Foreman Archer" title="Raid Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26175" level="101" type="L2Npc" name="Slave Foreman Archer" title="Raid Minion">		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
@@ -4224,15 +4383,18 @@
 				<walk ground="45" />
 				<run ground="220" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
 		</collision>
 	</npc>
 	<npc id="26176" level="101" type="L2Npc" name="Enslaved Pythia" title="Raid Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" />
@@ -4242,15 +4404,18 @@
 				<walk ground="60" />
 				<run ground="160" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="27.5" />
 		</collision>
 	</npc>
 	<npc id="26177" level="101" type="L2Npc" name="Slaver Foreman Healer" title="Raid Minion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -4259,8 +4424,12 @@
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="20" />
 			<height normal="32.5" />

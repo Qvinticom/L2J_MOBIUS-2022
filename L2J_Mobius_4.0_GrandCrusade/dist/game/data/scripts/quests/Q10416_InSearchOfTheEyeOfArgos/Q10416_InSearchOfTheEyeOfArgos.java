@@ -16,12 +16,19 @@
  */
 package quests.Q10416_InSearchOfTheEyeOfArgos;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
 
 /**
  * In Search of the Eye of Argos (10416)
@@ -32,17 +39,29 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 	// NPCs
 	private static final int JANITT = 33851;
 	private static final int EYE_OF_ARGOS = 31683;
-	// Items
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
+	// Monsters
+	private static final int[] MONSTERS =
+	{
+		21294, // Canyon Antelope
+		21296, // Canyon Bandersnatch
+		23311, // Valley Buffalo
+		23312, // Valley Grendel
+		21295, // Canyon Antelope Slave
+		21297, // Canyon Bandersnatch Slave
+		21299, // Valley Buffalo Slave
+		21304 // Valley Grendel Slave
+	};
 	// Misc
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 75;
+	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10416_InSearchOfTheEyeOfArgos()
 	{
 		super(10416);
 		addStartNpc(JANITT);
 		addTalkId(JANITT, EYE_OF_ARGOS);
+		addKillId(MONSTERS);
 		addCondNotRace(Race.ERTHEIA, "33851-06.html");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33851-07.htm");
 	}
@@ -73,16 +92,19 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 			}
 			case "31683-02.html":
 			{
-				if (st.isCond(1))
+				if (st.isCond(2))
 				{
-					st.exitQuest(false, true);
-					giveItems(player, EAA, 2);
-					giveStoryQuestReward(npc, player);
-					if (player.getLevel() > MIN_LEVEL)
+					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 1_088_640, 261);
+						addExpAndSp(player, 178_732_196, 261);
+						giveStoryQuestReward(npc, player);
+						st.exitQuest(QuestType.ONE_TIME, true);
+						htmltext = event;
 					}
-					htmltext = event;
+					else
+					{
+						htmltext = getNoQuestLevelRewardMsg(player);
+					}
 				}
 				break;
 			}
@@ -108,9 +130,13 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (st.isCond(1) && (npc.getId() == JANITT))
 				{
-					htmltext = npc.getId() == JANITT ? "33851-05.html" : "31683-01.html";
+					htmltext = "33851-05.html";
+				}
+				if (st.isCond(2) && (npc.getId() == EYE_OF_ARGOS))
+				{
+					htmltext = "31683-01.html";
 				}
 				break;
 			}
@@ -124,5 +150,43 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			int count = qs.getInt(KILL_COUNT_VAR);
+			qs.set(KILL_COUNT_VAR, ++count);
+			if (count >= 200)
+			{
+				qs.setCond(2, true);
+			}
+			else
+			{
+				sendNpcLogList(killer);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			final int killCount = qs.getInt(KILL_COUNT_VAR);
+			if (killCount > 0)
+			{
+				final Set<NpcLogListHolder> holder = new HashSet<>();
+				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_BEASTS_OF_THE_VALLEY, killCount));
+				return holder;
+			}
+		}
+		return super.getNpcLogList(player);
 	}
 }

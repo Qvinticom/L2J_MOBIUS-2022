@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23700" level="100" type="L2Npc" name="Altar Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -10,15 +9,18 @@
 				<walk ground="60" />
 				<run ground="240" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="23701" level="100" type="L2Npc" name="Knight Guard" title="Dragonclaw Clan">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -27,15 +29,18 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="23702" level="101" type="L2Npc" name="Duran" title="Dragonclaw Royal Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -44,15 +49,18 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="23703" level="101" type="L2Npc" name="Ice Knight" title="Winter Omen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -61,8 +69,12 @@
 				<walk ground="20" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -73,7 +85,6 @@
 		</collision>
 	</npc>
 	<npc id="23704" level="101" type="L2Npc" name="Ifrit" title="Master of Flames">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -82,8 +93,12 @@
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
@@ -94,7 +109,6 @@
 		</collision>
 	</npc>
 	<npc id="23705" level="101" type="L2Npc" name="Arimanes" title="Master of Flames">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -103,8 +117,12 @@
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -115,7 +133,6 @@
 		</collision>
 	</npc>
 	<npc id="23706" level="100" type="L2Npc" name="Kelbim's Follower">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -124,15 +141,18 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="23707" level="100" type="L2Npc" name="Kelbim's Follower">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -141,15 +161,18 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="23708" level="100" type="L2Npc" name="Kelbim's Follower">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -158,15 +181,18 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="9" />
 			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="23709" level="100" type="L2Npc" name="Flame Scarab">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -175,8 +201,12 @@
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
@@ -187,7 +217,6 @@
 		</collision>
 	</npc>
 	<npc id="23710" level="100" type="L2Npc" name="Knight Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -196,15 +225,18 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="23711" level="100" type="L2Npc" name="Altar Guardian Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -213,15 +245,18 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="23712" level="100" type="L2Npc" name="Altar Guardian Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
@@ -231,15 +266,18 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="23713" level="100" type="L2Npc" name="Altar Guardian Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -248,8 +286,12 @@
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="6.5" />
 			<height normal="22.5" />
@@ -290,7 +332,6 @@
 		</collision>
 	</npc>
 	<npc id="23716" level="100" type="L2Npc" name="Wild Hog Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -299,15 +340,18 @@
 				<walk ground="10" />
 				<run ground="200" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="46.5" />
 			<height normal="43.5" />
 		</collision>
 	</npc>
 	<npc id="23717" level="100" type="L2Npc" name="Siege Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -316,8 +360,12 @@
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="50" />
 			<height normal="68" />
@@ -354,8 +402,12 @@
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -401,7 +453,6 @@
 		</drop_lists>
 	</npc>
 	<npc id="23721" level="100" type="L2Npc" name="Maze Buffalo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -410,8 +461,12 @@
 				<walk ground="20" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -469,7 +524,6 @@
 		</drop_lists>
 	</npc>
 	<npc id="23723" level="100" type="L2Npc" name="Frost Ursus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -478,8 +532,12 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
@@ -569,7 +627,6 @@
 		</drop_lists>
 	</npc>
 	<npc id="23726" level="100" type="L2Npc" name="Frost Glacier Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -578,8 +635,12 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
 		<skill_list>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
@@ -848,6 +909,11 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
@@ -2252,8 +2318,8 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="40" />
-			<defence physical="16590" magical="22114" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skill_list>
@@ -2312,8 +2378,8 @@
 				<walk ground="55" />
 				<run ground="190" />
 			</speed>
-			<attack physical="3608421.13759" magical="2904018.0" critical="8" attackSpeed="398" range="900" />
-			<defence physical="32114" magical="19990" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="900" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skill_list>
@@ -2371,8 +2437,8 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="5808036.47781" magical="2904018.0" critical="8" attackSpeed="398" range="40" />
-			<defence physical="16590" magical="22114" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>		
 		<skill_list>
@@ -2431,8 +2497,8 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="40" />
-			<defence physical="17778" magical="17778" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>	
 		<skill_list>
@@ -2492,8 +2558,8 @@
 				<walk ground="55" />
 				<run ground="190" />
 			</speed>
-			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="900" />
-			<defence physical="17092" magical="22559" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="900" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skill_list>
@@ -2550,8 +2616,8 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="40" />
-			<defence physical="19092" magical="25559" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skill_list>
@@ -2608,8 +2674,8 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="5996234.35514" magical="2997813.0" critical="8" attackSpeed="398" range="40" />
-			<defence physical="17778" magical="17778" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skill_list>
@@ -2671,8 +2737,8 @@
 				<walk ground="55" />
 				<run ground="190" />
 			</speed>
-			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="900" />
-			<defence physical="19092" magical="25559" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="900" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skill_list>
@@ -2731,8 +2797,8 @@
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="3812228.123127" magical="2153313.0" critical="8" attackSpeed="398" range="40" />
-			<defence physical="19092" magical="25559" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 			</stats>
 		<skill_list>
@@ -2791,8 +2857,8 @@
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="7219299.643177" magical="3956372.0" critical="8" attackSpeed="398" range="40" />
-			<defence physical="28555" magical="31279" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skill_list>
@@ -2893,8 +2959,8 @@
 		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
-			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7495" magical="1956" />
+			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
 				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
 				<attack type="EARTH" value="280" />
@@ -2935,8 +3001,8 @@
 		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
-			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7495" magical="1956" />
+			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
 				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
 				<attack type="EARTH" value="280" />
@@ -2977,8 +3043,8 @@
 		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
-			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7495" magical="1956" />
+			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
 				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
 				<attack type="EARTH" value="280" />
@@ -3017,8 +3083,8 @@
 		<acquire exp="92292843" sp="92387" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
-			<attack physical="51282" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7495" magical="1956" />
+			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
 				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
 				<attack type="EARTH" value="280" />
@@ -3235,8 +3301,11 @@
 		<acquire exp="908048947" sp="908061" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
-			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3777.777777777778" magical="2193.548387096774" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 			<speed>
 				<walk ground="55" />
 				<run ground="140" />
@@ -3284,8 +3353,11 @@
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
-			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3777.777777777778" magical="2193.548387096774" />
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="900" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 			<speed>
 				<walk ground="55" />
 				<run ground="140" />

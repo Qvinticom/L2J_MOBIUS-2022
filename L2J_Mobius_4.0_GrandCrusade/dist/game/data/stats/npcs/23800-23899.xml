@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23800" level="102" type="L2Monster" name="Delta Kshana" title="Superion Scout">
-		<!-- NEED TO CHECK IF ITS THE SAME STATS AS NPC ID: 23776 -->
 		<race>GIANT</race>
 		<acquire exp="908048947" sp="908061" />
 		<stats>
@@ -10,6 +9,11 @@
 				<walk ground="55" />
 				<run ground="140" />
 			</speed>
+			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
 		<skill_list>
 			<skill id="4416" level="11" /> <!-- Giants -->
@@ -119,8 +123,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="23803" level="101" type="L2Monster" name="Gigantic Healer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<!-- Gigantic Healer ?? -->
+		<!-- Gigantic Healer -->
 		<race>DIVINE</race>
 		<acquire exp="13963332" sp="13975" />
 		<equipment rhand="5793" />
@@ -130,6 +133,11 @@
 				<walk ground="49" />
 				<run ground="180" />
 			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 		</stats>
 		<collision>
 			<radius normal="10" />
