@@ -12,45 +12,48 @@
 		<param name="firstDoorId" value="16180031" />
 		<param name="secondDoorId" value="16180032" />
 		<param name="thirdDoorId" value="16180033" />
+		<param name="helperAdolph" value="33609" />
 		<param name="helperBarton" value="33611" />
 		<param name="helperHayuk" value="33613" />
 		<param name="helperEliyah" value="33615" />
 		<param name="helperElise" value="33617" />
 		<param name="helperSurvivor" value="33642" />
-		<param name="route1" value="kartia_85_route_1" />
-		<param name="route2" value="kartia_85_route_2" />
-		<param name="soloEXP" value="480000000" />
-		<param name="SoloEXP_Rand" value="8055934" />
-		<param name="SoloSP" value="3800000" />
-		<param name="SoloSP_Rand" value="73460" />
-		<skill name="adolphHate" id="15182" level="1" /> <!-- Adolph's Superior Aggression Aura -->
+		<param name="helperGuardian" value="33618" />
+		<param name="route1_1" value="kartia_85_route_1_1" />
+		<param name="route2_1" value="kartia_85_route_2_1" />
+		<param name="route1_2" value="kartia_85_route_1_2" />
+		<param name="route2_2" value="kartia_85_route_2_2" />
+		<param name="route1_3" value="kartia_85_route_1_3" />
+		<param name="route2_3" value="kartia_85_route_2_3" />
+		<skill name="adolphHate" id="14840" level="1" /> <!-- Adolph's Superior Aggression Aura -->
 		<skill name="adolphPunish" id="14846" level="1" /> <!-- Adolph's Justice Punishment -->
-		<skill name="adolphShield" id="15185" level="1" /> <!-- Adolph's Shield Wave -->
+		<skill name="adolphShield" id="14849" level="1" /> <!-- Adolph's Shield Wave -->
+		<skill name="adolphAggression" id="14889" level="1" /> <!-- Adolph's Aggression -->
+		<skill name="adolphChainHydra" id="14843" level="1" /> <!-- Adolph's Chain Hydra -->
 		<skill name="adolphUltimate" id="14852" level="1" /> <!-- Adolph's Final Ultimate Defense -->
 		<skill name="bartonInfinity" id="14858" level="1" /> <!-- Barton's Infinity Strike -->
 		<skill name="bartonBerserker" id="14867" level="1" /> <!-- Barton's Berserker Rage -->
-		<skill name="eliseChainHeal" id="15002" level="1" /> <!-- Progressive Heal - NPC -->
-		<skill name="eliseHeal" id="14899" level="1" /> <!-- Elise' Radiant Heal -->
+		<skill name="bartonHurricane" id="14855" level="1" /> <!-- Barton's Hurricane Rush -->
+		<skill name="bartonPowerBomber" id="14864" level="1" /> <!-- Barton's Power Bomber -->
+		<skill name="bartonSonicStar" id="14861" level="1" /> <!-- Barton's Sonic Star -->
+		<skill name="eliseProgressiveHeal" id="14898" level="1" /> <!-- Progressive Heal - NPC -->
+		<skill name="eliseRadiantHeal" id="14899" level="1" /> <!-- Elise' Radiant Heal -->
 		<skill name="eliseRecharge" id="14905" level="1" /> <!-- Elise' Radiant Recharge -->
+		<skill name="eliseCrystalRegene" id="14908" level="1" /> <!-- Elise' Crystal Regeneration -->
+		<skill name="hayukRecoilShot" id="14876" level="1" /> <!-- Hayuk's Recoil Shot -->
+		<skill name="hayukPinpointShot"	id="14879" level="1" /> <!-- Hayuk's Pinpoint Shot -->
+		<skill name="hayukHeavyArrowRain" id="14873" level="1" /> <!-- Hayuk's Heavy Arrow Rain -->
+		<skill name="hayukMultipleArrow" id="14870" level="1" /> <!-- Hayuk's Multiple Arrow -->
+		<skill name="hayukQuickEvasion"	id="14882" level="1" /> <!-- Hayuk's Multiple Arrow -->
+		<skill name="guardianSpiritsBlow"	id="14892" level="1" /> <!-- Guardian Spirit's Blow -->
+		<skill name="guardianSpiritsWrath"	id="14895" level="1" /> <!-- Guardian Spirit's Wrath -->
 		<location name="playerLoc" x="-109294" y="22037" z="-10816" heading="32488" />
 		<location name="prisonerEscapeLoc" x="-109295" y="22038" z="-10815" />
 		<location name="middlePointRoom1" x="-111550" y="22036" z="-10580" />
 		<location name="middlePointRoom3" x="-111616" y="17999" z="-10319" />
-		<location name="bossEscapeLoc1" x="-111610" y="19295" z="-10456" />
-		<location name="bossEscapeLoc2" x="-111609" y="18604" z="-10336" />
 		<location name="teleportZone1_loc" x="-110574" y="22050" z="-10812" />
 		<location name="teleportZone2_loc" x="-111614" y="20565" z="-10462" />
 		<location name="teleportZone3_loc" x="-111618" y="18345" z="-10319" />
-		<location name="adolphTeleportStatus2" x="-111608" y="20444" z="-10456" />
-		<location name="bartonTeleportStatus2" x="-111608" y="20500" z="-10456" />
-		<location name="hayukTeleportStatus2" x="-111700" y="20500" z="-10450" />
-		<location name="eliyahTeleportStatus2" x="-1118000" y="20500" z="-10456" />
-		<location name="eliseTeleportStatus2" x="-111500" y="20500" z="-10456" />
-		<location name="adolphTeleportStatus3" x="-111620" y="18260" z="-10312" />
-		<location name="bartonTeleportStatus3" x="-111620" y="18150" z="-10312" />
-		<location name="hayukTeleportStatus3" x="-111520" y="18150" z="-10312" />
-		<location name="eliyahTeleportStatus3" x="-1114200" y="18150" z="-10312" />
-		<location name="eliseTeleportStatus3" x="-111720" y="18150" z="-10312" />
 	</parameters>
 	<conditions>
 		<condition type="Level" showMessageAndHtml="true">
@@ -95,6 +98,11 @@
 			<npc id="33615" x="-109296" y="21832" z="-10816" heading="-32704" /> <!-- Eliyah -->
 			<npc id="33617" x="-109302" y="22241" z="-10816" heading="32552" /> <!-- Elise -->
 		</group>
+		<group name="GUARDIANS" spawnByDefault="false">
+			<npc id="33618" x="-109346" y="21882" z="-10816" heading="-32704" /> <!-- Eliyah's Guardian Spirit -->
+			<npc id="33618" x="-109246" y="21782" z="-10816" heading="-32704" /> <!-- Eliyah's Guardian Spirit -->
+			<npc id="33618" x="-109266" y="21852" z="-10816" heading="-32704" /> <!-- Eliyah's Guardian Spirit -->
+		</group>
 		<group name="PRISONERS" spawnByDefault="false">
 			<npc id="33641" x="-110213" y="22011" z="-10576" heading="0" /> <!-- Kartia Prisoner -->
 			<npc id="33641" x="-110340" y="22132" z="-10576" heading="0" /> <!-- Kartia Prisoner -->
@@ -108,7 +116,6 @@
 			<npc id="33641" x="-110338" y="21953" z="-10576" heading="0" /> <!-- Kartia Prisoner -->
 		</group>
 		<group name="ROOM1_STAGE1_WAVE1" spawnByDefault="false">
-			<npc id="19220" x="-111642" y="21462" z="-10576" heading="33120" /> <!-- Kartia Guard -->
 			<npc id="19220" x="-111642" y="21462" z="-10576" heading="33120" /> <!-- Kartia Guard -->
 			<npc id="19220" x="-111642" y="21462" z="-10576" heading="33120" /> <!-- Kartia Guard -->
 			<npc id="19220" x="-111642" y="21462" z="-10576" heading="33120" /> <!-- Kartia Guard -->

@@ -1102,7 +1102,7 @@
 		<!-- Glory Days confirmed -->
 		<!-- Drags the selected target and enemies near the target to the user's location. -->
 		<icon>icon.skill10016</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
@@ -1124,8 +1124,7 @@
 		<affectLimit>10-10</affectLimit>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PullBack">
 				<speed>600</speed>
@@ -1140,7 +1139,7 @@
 		<!-- Glory Days confirmed -->
 		<!-- Drags the selected target and enemies near the target to the user's location. -->
 		<icon>icon.skill10016</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
@@ -1162,8 +1161,7 @@
 		<affectLimit>10-10</affectLimit>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PullBack">
 				<speed>600</speed>
@@ -1178,7 +1176,7 @@
 		<!-- Glory Days confirmed -->
 		<!-- Drags the selected target and enemies near the target to the user's location. -->
 		<icon>icon.skill10016</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
@@ -1200,8 +1198,7 @@
 		<affectLimit>10-10</affectLimit>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PullBack">
 				<speed>600</speed>
@@ -1363,7 +1360,7 @@
 		<fanRange>0;0;150;180</fanRange>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
@@ -1399,7 +1396,7 @@
 		<fanRange>0;0;150;180</fanRange>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
@@ -1435,7 +1432,7 @@
 		<fanRange>0;0;150;180</fanRange>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack">
@@ -2721,7 +2718,6 @@
 		<isDebuff>true</isDebuff>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2750,7 +2746,6 @@
 		<isDebuff>true</isDebuff>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2779,7 +2774,6 @@
 		<isDebuff>true</isDebuff>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2937,11 +2931,6 @@
 		<targetType>TARGET</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<effects>
-			<effect name="HealPercent">
-				<power>40</power>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="14899" toLevel="1" name="Elise' Radiant Heal">
 		<!-- Glory Days confirmed -->
@@ -2962,8 +2951,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="HpCpHeal">
-				<power>1488</power>
+			<effect name="HealPercent">
+				<power>20</power>
 			</effect>
 		</effects>
 	</skill>

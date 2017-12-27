@@ -33,16 +33,14 @@ import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
 /**
  * Kartia Helper Adolph AI.
- * @author St3eT
+ * @author flanagak
  */
 public final class KartiaHelperAdolph extends AbstractNpcAI
 {
@@ -58,6 +56,27 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 		33798, // Life Plunderer (85)
 		33799, // Life Plunderer (90)
 		33800, // Life Plunderer (95)
+	};
+	private static final int[] KARTIA_FRIENDS =
+	{
+		33617, // Elise (Kartia 85)
+		33628, // Elise (Kartia 90)
+		33639, // Elise (Kartia 95)
+		33609, // Adolph (Kartia 85)
+		33620, // Adolph (Kartia 90)
+		33631, // Adolph (Kartia 95)
+		33611, // Barton (Kartia 85)
+		33622, // Barton (Kartia 90)
+		33633, // Barton (Kartia 95)
+		33615, // Eliyah (Kartia 85)
+		33626, // Eliyah (Kartia 90)
+		33637, // Eliyah (Kartia 95)
+		33613, // Hayuk (Kartia 85)
+		33624, // Hayuk (Kartia 90)
+		33635, // Hayuk (Kartia 95)
+		33618, // Eliyah's Guardian Spirit (Kartia 85)
+		33629, // Eliyah's Guardian Spirit (Kartia 90)
+		33640, // Eliyah's Guardian Spirit (Kartia 95)
 	};
 	// Misc
 	private static final int[] KARTIA_SOLO_INSTANCES =
@@ -82,114 +101,161 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 		final Instance instance = npc.getInstanceWorld();
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
-			final StatsSet instParams = instance.getTemplateParameters();
-			boolean actionFound = false;
-			
-			if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
+			final StatsSet npcVars = npc.getVariables();
+			player = npcVars.getObject("PLAYER_OBJECT", L2PcInstance.class);
+			if (player != null)
 			{
-				final List<L2MonsterInstance> monsterList = L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class, 500);
-				if (!monsterList.isEmpty())
+				final double distance = npc.calculateDistance(player, false, false);
+				if (distance > 300)
 				{
-					final L2MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
-					
-					if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()))
+					final Location loc = new Location(player.getX(), player.getY(), player.getZ() + 50);
+					final Location randLoc = new Location(loc.getX() + getRandom(-100, 100), loc.getY() + getRandom(-100, 100), loc.getZ());
+					if (distance > 600)
 					{
-						actionFound = true;
-						addAttackDesire(npc, monster);
+						npc.teleToLocation(loc);
 					}
-				}
-			}
-			
-			if (!actionFound)
-			{
-				final SkillHolder hateSkill = instParams.getSkillHolder("adolphHate");
-				if (npc.isInCombat() && (hateSkill != null) && SkillCaster.checkUseConditions(npc, hateSkill.getSkill()))
-				{
-					addSkillCastDesire(npc, npc.getTarget(), hateSkill, 23);
-				}
-				else
-				{
-					final L2PcInstance instancePlayer = npc.getVariables().getObject("PLAYER_OBJECT", L2PcInstance.class);
-					if (instancePlayer != null)
+					else
 					{
-						final double radian = Math.toRadians(Util.convertHeadingToDegree(instancePlayer.getHeading()));
-						final int X = (int) (instancePlayer.getX() + (Math.cos(radian) * 150));
-						final int Y = (int) (instancePlayer.getY() + (Math.sin(radian) * 150));
-						final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(instancePlayer.getX(), instancePlayer.getY(), instancePlayer.getZ(), X, Y, instancePlayer.getZ(), instance);
+						npc.setRunning();
+					}
+					addMoveToDesire(npc, randLoc, 23);
+				}
+				else if (!npc.isInCombat() || (npc.getTarget() == null))
+				{
+					final List<L2MonsterInstance> monsterList = L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class, 500);
+					if (!monsterList.isEmpty())
+					{
+						final L2MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
 						
-						if (!npc.isInsideRadius(loc, 50, true, true))
+						if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()) && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 						{
-							npc.setRunning();
-							addMoveToDesire(npc, loc, 23);
+							addAttackDesire(npc, monster);
 						}
 					}
 				}
 			}
 		}
-	}
-	
-	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
-	{
-		final Instance instance = npc.getInstanceWorld();
-		if (instance != null)
+		else if ((instance != null) && event.equals("USE_SKILL"))
 		{
-			final StatsSet instParams = instance.getTemplateParameters();
-			final SkillHolder hateSkill = instParams.getSkillHolder("adolphHate");
-			final SkillHolder shieldSkill = instParams.getSkillHolder("adolphShield");
-			final SkillHolder punishSkill = instParams.getSkillHolder("adolphPunish");
-			
-			if ((hateSkill != null) && (skill.getId() == hateSkill.getSkillId()))
+			if (npc.isInCombat() || npc.isAttackingNow() || (npc.getTarget() != null))
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_FILTHY_MONSTERS_I_WILL_TAKE_YOU_ON);
-			}
-			else if ((shieldSkill != null) && (skill.getId() == shieldSkill.getSkillId()))
-			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.STOP_RIGHT_THERE_I_WILL_BE_YOUR_OPPONENT);
-			}
-			else if ((punishSkill != null) && (skill.getId() == punishSkill.getSkillId()))
-			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
+				if ((npc.getCurrentMpPercent() > 25) && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
+				{
+					useRandomSkill(npc);
+				}
 			}
 		}
-		return super.onSpellFinished(npc, player, skill);
+	}
+	
+	public void useRandomSkill(L2Npc npc)
+	{
+		final Instance instance = npc.getInstanceWorld();
+		final L2Npc target = (L2Npc) npc.getTarget();
+		if ((instance != null) && !npc.isCastingNow() && (target != null) && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
+		{
+			final StatsSet instParams = instance.getTemplateParameters();
+			final SkillHolder skill_01 = instParams.getSkillHolder("adolphHate");
+			final SkillHolder skill_02 = instParams.getSkillHolder("adolphPunish");
+			final SkillHolder skill_03 = instParams.getSkillHolder("adolphShield");
+			final SkillHolder skill_04 = instParams.getSkillHolder("adolphAggression");
+			final SkillHolder skill_05 = instParams.getSkillHolder("adolphChainHydra");
+			final SkillHolder lowHpSkill = instParams.getSkillHolder("adolphUltimate");
+			final int numberOfActiveSkills = 5;
+			final int randomSkill = getRandom(numberOfActiveSkills + 1);
+			
+			if ((lowHpSkill != null) && (npc.getCurrentHpPercent() < 50))
+			{
+				// NPC has low HP Skill and HP is < 50% HP
+				if (!npc.isAffectedBySkill(lowHpSkill.getSkillId()) && (SkillCaster.checkUseConditions(npc, lowHpSkill.getSkill())))
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.IT_S_NOT_OVER);
+					npc.doCast(lowHpSkill.getSkill());
+				}
+			}
+			else
+			{
+				switch (randomSkill)
+				{
+					case 0:
+					case 1:
+					{
+						if ((skill_01 != null) && SkillCaster.checkUseConditions(npc, skill_01.getSkill()))
+						{
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
+							npc.doCast(skill_01.getSkill(), null, true, false);
+							final List<L2MonsterInstance> monsterList = L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class, 300);
+							if (!monsterList.isEmpty())
+							{
+								for (L2MonsterInstance monster : monsterList)
+								{
+									if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()) && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
+									{
+										monster.addDamageHate(npc, 100, 10000);
+									}
+								}
+							}
+						}
+						break;
+					}
+					case 2:
+					{
+						if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
+						{
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE3);
+							npc.doCast(skill_02.getSkill(), null, true, false);
+						}
+						break;
+					}
+					case 3:
+					{
+						if ((skill_03 != null) && SkillCaster.checkUseConditions(npc, skill_03.getSkill()))
+						{
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FOR_THE_GODDESS);
+							npc.doCast(skill_03.getSkill(), null, true, false);
+						}
+						break;
+					}
+					case 4:
+					{
+						if ((skill_04 != null) && SkillCaster.checkUseConditions(npc, skill_04.getSkill()))
+						{
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_BE_DESTROYED);
+							npc.doCast(skill_04.getSkill());
+						}
+						break;
+					}
+					case 5:
+					{
+						if ((skill_05 != null) && SkillCaster.checkUseConditions(npc, skill_05.getSkill()))
+						{
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_DIE);
+							npc.doCast(skill_05.getSkill(), null, true, false);
+						}
+						break;
+					}
+				}
+			}
+		}
 	}
 	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
 		final L2Npc npc = (L2Npc) event.getTarget();
-		final Instance instance = npc.getInstanceWorld();
-		if ((instance != null) && !event.getAttacker().isPlayable())
+		if (npc != null)
 		{
-			final StatsSet instParams = instance.getTemplateParameters();
-			final int random = getRandom(1000);
-			
-			if (random < 333)
+			final Instance instance = npc.getInstanceWorld();
+			if ((instance != null) && !event.getAttacker().isPlayable() && !CommonUtil.contains(KARTIA_FRIENDS, event.getAttacker().getId()))
 			{
-				final SkillHolder shieldSkill = instParams.getSkillHolder("adolphShield");
-				if ((shieldSkill != null) && SkillCaster.checkUseConditions(npc, shieldSkill.getSkill()))
+				if (!npc.isInCombat())
 				{
-					addSkillCastDesire(npc, npc.getTarget(), shieldSkill, 23);
-				}
-			}
-			else if (random < 666)
-			{
-				final SkillHolder punishSkill = instParams.getSkillHolder("adolphPunish");
-				if ((punishSkill != null) && SkillCaster.checkUseConditions(npc, punishSkill.getSkill()))
-				{
-					addSkillCastDesire(npc, npc.getTarget(), punishSkill, 23);
-				}
-			}
-			
-			if ((npc.getCurrentHpPercent() < 30) && npc.isScriptValue(0))
-			{
-				final SkillHolder ultimateSkill = instParams.getSkillHolder("adolphUltimate");
-				if ((ultimateSkill != null) && !npc.isAffectedBySkill(ultimateSkill.getSkillId()) && SkillCaster.checkUseConditions(npc, ultimateSkill.getSkill()))
-				{
-					npc.setScriptValue(1);
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.IT_S_NOT_OVER);
-					addSkillCastDesire(npc, npc.getTarget(), ultimateSkill, 23);
-					getTimers().addTimer("RESTORE_SCRIPTVAL", 10000, n -> npc.setScriptValue(0));
+					npc.setTarget(event.getAttacker());
+					addAttackDesire(npc, (L2Character) npc.getTarget());
+					final StatsSet instParams = instance.getTemplateParameters();
+					final SkillHolder hateSkill = instParams.getSkillHolder("adolphHate");
+					if ((hateSkill != null) && SkillCaster.checkUseConditions(npc, hateSkill.getSkill()))
+					{
+						npc.doCast(hateSkill.getSkill(), null, true, false);
+					}
 				}
 			}
 		}
@@ -210,23 +276,10 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 	{
 		final Instance instance = event.getWorld();
 		final int status = event.getStatus();
-		switch (status)
+		if (status == 1)
 		{
-			case 1:
-			{
-				instance.getAliveNpcs(KARTIA_ADOLPH).forEach(adolph -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, adolph, null));
-				break;
-			}
-			case 2:
-			case 3:
-			{
-				final Location loc = instance.getTemplateParameters().getLocation("adolphTeleportStatus" + status);
-				if (loc != null)
-				{
-					instance.getAliveNpcs(KARTIA_ADOLPH).forEach(adolph -> adolph.teleToLocation(loc));
-				}
-				break;
-			}
+			instance.getAliveNpcs(KARTIA_ADOLPH).forEach(adolph -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, adolph, null));
+			instance.getAliveNpcs(KARTIA_ADOLPH).forEach(adolph -> getTimers().addRepeatingTimer("USE_SKILL", 6000, adolph, null));
 		}
 	}
 	

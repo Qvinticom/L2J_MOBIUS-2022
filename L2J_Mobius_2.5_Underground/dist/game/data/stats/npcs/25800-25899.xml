@@ -3682,10 +3682,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="2658577152" sp="638058" />
+		<acquire exp="4570101620" sp="5484121" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1341871" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<vitals hp="3194997" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<speed>
 				<walk ground="34" />
 				<run ground="200" />
@@ -3708,66 +3708,86 @@
 		</skill_list>
 		<drop_lists>
 			<drop>
-				<item id="36796" min="1" max="1" chance="3.619" /> <!-- Requiem Slasher Fragment -->
-				<item id="36798" min="1" max="1" chance="3.61699999999998" /> <!-- Requiem Fighter Fragment -->
-				<item id="36804" min="1" max="1" chance="3.61699999999998" /> <!-- Requiem Retributer Fragment -->
-				<item id="36795" min="1" max="1" chance="3.60899999999999" /> <!-- Requiem Cutter Fragment -->
-				<item id="36801" min="1" max="1" chance="3.605" /> <!-- Requiem Shooter Fragment -->
-				<item id="36802" min="1" max="1" chance="3.60199999999999" /> <!-- Requiem Buster Fragment -->
-				<item id="36799" min="1" max="1" chance="3.594" /> <!-- Requiem Stormer Fragment -->
-				<item id="36797" min="1" max="1" chance="3.59000000000001" /> <!-- Requiem Avenger Fragment -->
-				<item id="36800" min="1" max="1" chance="3.57500000000002" /> <!-- Requiem Thrower Fragment -->
-				<item id="36803" min="1" max="1" chance="3.55599999999999" /> <!-- Requiem Caster Fragment -->
-				<item id="36794" min="1" max="1" chance="3.54400000000001" /> <!-- Requiem Shaper Fragment -->
-				<item id="36812" min="1" max="1" chance="3.57900000000006" /> <!-- Immortal Leather Armor Ingredient -->
-				<item id="36817" min="1" max="1" chance="3.57900000000006" /> <!-- Immortal Tunic Ingredient -->
-				<item id="36813" min="1" max="1" chance="3.57600000000009" /> <!-- Immortal Leather Legging Ingredient -->
-				<item id="36806" min="1" max="1" chance="3.57199999999992" /> <!-- Immortal Breastplate Ingredient -->
-				<item id="36807" min="1" max="1" chance="3.56999999999994" /> <!-- Immortal Gaiter Ingredient -->
-				<item id="36818" min="1" max="1" chance="3.51299999999991" /> <!-- Immortal Stocking Ingredient -->
-				<item id="36805" min="1" max="1" chance="3.61300000000007" /> <!-- Immortal Helmet Ingredient -->
-				<item id="36816" min="1" max="1" chance="3.60300000000002" /> <!-- Immortal Circlet Ingredient -->
-				<item id="36821" min="1" max="1" chance="3.59899999999996" /> <!-- Immortal Sigil Ingredient -->
-				<item id="36811" min="1" max="1" chance="3.58899999999992" /> <!-- Immortal Leather Helmet Ingredient -->
-				<item id="36810" min="1" max="1" chance="3.54200000000003" /> <!-- Immortal Shield Ingredient -->
-				<item id="17526" min="1" max="1" chance="18.390686173501" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="17527" min="1" max="1" chance="18.309734773778" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36586" min="1" max="1" chance="9.6001000853669" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="36574" min="1" max="1" chance="9.0224014600689" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="36738" min="1" max="1" chance="1.3393777045127" /> <!-- Recipe: Requiem Thrower (60%) -->
-				<item id="36756" min="1" max="1" chance="1.3375378999735" /> <!-- Recipe: Immortal Stockings (60%) -->
-				<item id="36750" min="1" max="1" chance="1.3349621736187" /> <!-- Recipe: Immortal Leather Armor (60%) -->
-				<item id="36809" min="1" max="1" chance="1.334226251803" /> <!-- Immortal Boot Ingredient -->
-				<item id="36820" min="1" max="1" chance="1.3331223690795" /> <!-- Immortal Shoe Ingredient -->
-				<item id="36734" min="1" max="1" chance="1.3290747990933" /> <!-- Recipe: Requiem Slasher (60%) -->
-				<item id="36749" min="1" max="1" chance="1.3283388772777" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
-				<item id="36746" min="1" max="1" chance="1.325395190015" /> <!-- Recipe: Immortal Gauntlets (60%) -->
-				<item id="36759" min="1" max="1" chance="1.3264990727385" /> <!-- Recipe: Immortal Sigil (60%) -->
-				<item id="36751" min="1" max="1" chance="1.323187424568" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
-				<item id="36745" min="1" max="1" chance="1.3202437373053" /> <!-- Recipe: Immortal Gaiters (60%) -->
-				<item id="36741" min="1" max="1" chance="1.3202437373053" /> <!-- Recipe: Requiem Caster (60%) -->
-				<item id="36754" min="1" max="1" chance="1.3202437373053" /> <!-- Recipe: Immortal Circlet (60%) -->
-				<item id="36737" min="1" max="1" chance="1.318771893674" /> <!-- Recipe: Requiem Stormer (60%) -->
-				<item id="36747" min="1" max="1" chance="1.3180359718583" /> <!-- Recipe: Immortal Boots (60%) -->
-				<item id="36752" min="1" max="1" chance="1.316564128227" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
-				<item id="36736" min="1" max="1" chance="1.3161961673192" /> <!-- Recipe: Requiem Fighter (60%) -->
-				<item id="36735" min="1" max="1" chance="1.3161961673192" /> <!-- Recipe: Requiem Avenger (60%) -->
-				<item id="36757" min="1" max="1" chance="1.3158282064114" /> <!-- Recipe: Immortal Gloves (60%) -->
-				<item id="36744" min="1" max="1" chance="1.3150922845957" /> <!-- Recipe: Immortal Breastplate (60%) -->
-				<item id="36743" min="1" max="1" chance="1.3132524800565" /> <!-- Recipe: Immortal Helmet (60%) -->
-				<item id="36748" min="1" max="1" chance="1.3095728709782" /> <!-- Recipe: Immortal Shield (60%) -->
-				<item id="36758" min="1" max="1" chance="1.3062612228077" /> <!-- Recipe: Immortal Shoes (60%) -->
-				<item id="36814" min="1" max="1" chance="1.3062612228077" /> <!-- Immortal Leather Glove Ingredient -->
-				<item id="36753" min="1" max="1" chance="1.3047893791764" /> <!-- Recipe: Immortal Leather Boots (60%) -->
-				<item id="36808" min="1" max="1" chance="1.3025816137294" /> <!-- Immortal Gauntlet Ingredient -->
-				<item id="36739" min="1" max="1" chance="1.2992699655589" /> <!-- Recipe: Requiem Shooter (60%) -->
-				<item id="36819" min="1" max="1" chance="1.2974301610197" /> <!-- Immortal Glove Ingredient -->
-				<item id="36815" min="1" max="1" chance="1.2941185128492" /> <!-- Immortal Leather Boot Ingredient -->
-				<item id="36742" min="1" max="1" chance="1.2930146301257" /> <!-- Recipe: Requiem Retributer (60%) -->
-				<item id="36732" min="1" max="1" chance="1.29227870831" /> <!-- Recipe: Requiem Shaper (60%) -->
-				<item id="36740" min="1" max="1" chance="1.2911748255865" /> <!-- Recipe: Requiem Buster (60%) -->
-				<item id="36733" min="1" max="1" chance="1.2897029819552" /> <!-- Recipe: Requiem Cutter (60%) -->
-				<item id="36755" min="1" max="1" chance="1.2882311383239" /> <!-- Recipe: Immortal Tunic (60%) -->
+				<item id="17526" min="1" max="1" chance="50.58" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="48.84" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="25.27" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="36586" min="1" max="1" chance="24.25" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="36751" min="1" max="1" chance="3.639" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
+				<item id="36737" min="1" max="1" chance="3.634" /> <!-- Recipe: Requiem Stormer (60%) -->
+				<item id="36818" min="1" max="1" chance="3.633" /> <!-- Immortal Stocking Ingredient -->
+				<item id="36817" min="1" max="1" chance="3.632" /> <!-- Immortal Tunic Ingredient -->
+				<item id="36816" min="1" max="1" chance="3.63" /> <!-- Immortal Circlet Ingredient -->
+				<item id="36736" min="1" max="1" chance="3.63" /> <!-- Recipe: Requiem Fighter (60%) -->
+				<item id="36757" min="1" max="1" chance="3.63" /> <!-- Recipe: Immortal Gloves (60%) -->
+				<item id="36753" min="1" max="1" chance="3.629" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+				<item id="36758" min="1" max="1" chance="3.628" /> <!-- Recipe: Immortal Shoes (60%) -->
+				<item id="36747" min="1" max="1" chance="3.627" /> <!-- Recipe: Immortal Boots (60%) -->
+				<item id="36814" min="1" max="1" chance="3.625" /> <!-- Immortal Leather Glove Ingredient -->
+				<item id="36801" min="1" max="1" chance="3.621" /> <!-- Requiem Shooter Fragment -->
+				<item id="36815" min="1" max="1" chance="3.614" /> <!-- Immortal Leather Boot Ingredient -->
+				<item id="36755" min="1" max="1" chance="3.612" /> <!-- Recipe: Immortal Tunic (60%) -->
+				<item id="36794" min="1" max="1" chance="3.609" /> <!-- Requiem Shaper Fragment -->
+				<item id="36810" min="1" max="1" chance="3.609" /> <!-- Immortal Shield Ingredient -->
+				<item id="36796" min="1" max="1" chance="3.598" /> <!-- Requiem Slasher Fragment -->
+				<item id="36738" min="1" max="1" chance="3.591" /> <!-- Recipe: Requiem Thrower (60%) -->
+				<item id="36805" min="1" max="1" chance="3.586" /> <!-- Immortal Helmet Ingredient -->
+				<item id="36819" min="1" max="1" chance="3.583" /> <!-- Immortal Glove Ingredient -->
+				<item id="36740" min="1" max="1" chance="3.582" /> <!-- Recipe: Requiem Buster (60%) -->
+				<item id="36808" min="1" max="1" chance="3.58" /> <!-- Immortal Gauntlet Ingredient -->
+				<item id="36733" min="1" max="1" chance="3.579" /> <!-- Recipe: Requiem Cutter (60%) -->
+				<item id="36795" min="1" max="1" chance="3.578" /> <!-- Requiem Cutter Fragment -->
+				<item id="36752" min="1" max="1" chance="3.574" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+				<item id="36797" min="1" max="1" chance="3.571" /> <!-- Requiem Avenger Fragment -->
+				<item id="36744" min="1" max="1" chance="3.571" /> <!-- Recipe: Immortal Breastplate (60%) -->
+				<item id="36754" min="1" max="1" chance="3.568" /> <!-- Recipe: Immortal Circlet (60%) -->
+				<item id="36749" min="1" max="1" chance="3.568" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
+				<item id="36800" min="1" max="1" chance="3.567" /> <!-- Requiem Thrower Fragment -->
+				<item id="36750" min="1" max="1" chance="3.567" /> <!-- Recipe: Immortal Leather Armor (60%) -->
+				<item id="36734" min="1" max="1" chance="3.566" /> <!-- Recipe: Requiem Slasher (60%) -->
+				<item id="36748" min="1" max="1" chance="3.564" /> <!-- Recipe: Immortal Shield (60%) -->
+				<item id="36799" min="1" max="1" chance="3.561" /> <!-- Requiem Stormer Fragment -->
+				<item id="36743" min="1" max="1" chance="3.56" /> <!-- Recipe: Immortal Helmet (60%) -->
+				<item id="36803" min="1" max="1" chance="3.557" /> <!-- Requiem Caster Fragment -->
+				<item id="36759" min="1" max="1" chance="3.558" /> <!-- Recipe: Immortal Sigil (60%) -->
+				<item id="36812" min="1" max="1" chance="3.553" /> <!-- Immortal Leather Armor Ingredient -->
+				<item id="36746" min="1" max="1" chance="3.553" /> <!-- Recipe: Immortal Gauntlets (60%) -->
+				<item id="36735" min="1" max="1" chance="3.547" /> <!-- Recipe: Requiem Avenger (60%) -->
+				<item id="36821" min="1" max="1" chance="3.548" /> <!-- Immortal Sigil Ingredient -->
+				<item id="36741" min="1" max="1" chance="3.543" /> <!-- Recipe: Requiem Caster (60%) -->
+				<item id="36756" min="1" max="1" chance="3.543" /> <!-- Recipe: Immortal Stockings (60%) -->
+				<item id="36809" min="1" max="1" chance="3.533" /> <!-- Immortal Boot Ingredient -->
+				<item id="36807" min="1" max="1" chance="3.528" /> <!-- Immortal Gaiter Ingredient -->
+				<item id="36806" min="1" max="1" chance="3.528" /> <!-- Immortal Breastplate Ingredient -->
+				<item id="36732" min="1" max="1" chance="3.524" /> <!-- Recipe: Requiem Shaper (60%) -->
+				<item id="36813" min="1" max="1" chance="3.524" /> <!-- Immortal Leather Legging Ingredient -->
+				<item id="36811" min="1" max="1" chance="3.522" /> <!-- Immortal Leather Helmet Ingredient -->
+				<item id="36739" min="1" max="1" chance="3.522" /> <!-- Recipe: Requiem Shooter (60%) -->
+				<item id="36742" min="1" max="1" chance="3.52" /> <!-- Recipe: Requiem Retributer (60%) -->
+				<item id="36798" min="1" max="1" chance="3.519" /> <!-- Requiem Fighter Fragment -->
+				<item id="36804" min="1" max="1" chance="3.517" /> <!-- Requiem Retributer Fragment -->
+				<item id="36802" min="1" max="1" chance="3.516" /> <!-- Requiem Buster Fragment -->
+				<item id="36745" min="1" max="1" chance="3.511" /> <!-- Recipe: Immortal Gaiters (60%) -->
+				<item id="36820" min="1" max="1" chance="3.504" /> <!-- Immortal Shoe Ingredient -->
+				<item id="46476" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46489" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46504" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46462" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46445" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46446" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46492" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46460" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46477" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46461" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3793,10 +3813,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="2969270892" sp="712625" raidPoints="7" />
+		<acquire exp="12716516673" sp="16912967" raidPoints="7" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="4406824" hpRegen="8.5" mp="2023" mpRegen="3" />
+			<vitals hp="10492650" hpRegen="8.5" mp="2023" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -3825,66 +3845,86 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="36829" min="1" max="1" chance="3.63900000000002" /> <!-- Apocalypse Fighter Fragment -->
-				<item id="36826" min="1" max="1" chance="3.611" /> <!-- Apocalypse Cutter Fragment -->
-				<item id="36828" min="1" max="1" chance="3.582" /> <!-- Apocalypse Avenger Fragment -->
-				<item id="36835" min="1" max="1" chance="3.562" /> <!-- Apocalypse Retributer Fragment -->
-				<item id="36827" min="1" max="1" chance="3.555" /> <!-- Apocalypse Slasher Fragment -->
-				<item id="36830" min="1" max="1" chance="3.55399999999999" /> <!-- Apocalypse Stormer Fragment -->
-				<item id="36832" min="1" max="1" chance="3.52400000000002" /> <!-- Apocalypse Shooter Fragment -->
-				<item id="36834" min="1" max="1" chance="3.52199999999998" /> <!-- Apocalypse Caster Fragment -->
-				<item id="36825" min="1" max="1" chance="3.51499999999999" /> <!-- Apocalypse Shaper Fragment -->
-				<item id="36831" min="1" max="1" chance="3.50999999999999" /> <!-- Apocalypse Thrower Fragment -->
-				<item id="36833" min="1" max="1" chance="3.50200000000002" /> <!-- Apocalypse Buster Fragment -->
-				<item id="36849" min="1" max="1" chance="3.64000000000009" /> <!-- Twilight Stocking Ingredient -->
-				<item id="36838" min="1" max="1" chance="3.61200000000005" /> <!-- Twilight Gaiter Ingredient -->
-				<item id="36848" min="1" max="1" chance="3.59900000000006" /> <!-- Twilight Tunic Ingredient -->
-				<item id="36844" min="1" max="1" chance="3.59400000000005" /> <!-- Twilight Leather Legging Ingredient -->
-				<item id="36843" min="1" max="1" chance="3.58600000000007" /> <!-- Twilight Leather Armor Ingredient -->
-				<item id="36837" min="1" max="1" chance="3.58300000000011" /> <!-- Twilight Breastplate Ingredient -->
-				<item id="36852" min="1" max="1" chance="3.65200000000001" /> <!-- Twilight Sigil Ingredient -->
-				<item id="36842" min="1" max="1" chance="3.63700000000008" /> <!-- Twilight Leather Helmet Ingredient -->
-				<item id="36841" min="1" max="1" chance="3.61100000000008" /> <!-- Twilight Shield Ingredient -->
-				<item id="36836" min="1" max="1" chance="3.56500000000006" /> <!-- Twilight Helmet Ingredient -->
-				<item id="36847" min="1" max="1" chance="3.51099999999995" /> <!-- Twilight Circlet Ingredient -->
-				<item id="17526" min="1" max="1" chance="15.85171020956" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="36586" min="1" max="1" chance="15.487338874684" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="36574" min="1" max="1" chance="15.477996019944" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="17527" min="1" max="1" chance="15.340967483751" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36790" min="1" max="1" chance="1.1379597073818" /> <!-- Recipe: Twilight Sigil (60%) -->
-				<item id="36840" min="1" max="1" chance="1.1286168526414" /> <!-- Twilight Boot Ingredient -->
-				<item id="36845" min="1" max="1" chance="1.12830542415" /> <!-- Twilight Leather Glove Ingredient -->
-				<item id="36764" min="1" max="1" chance="1.1248797107452" /> <!-- Recipe: Apocalypse Cutter (60%) -->
-				<item id="36850" min="1" max="1" chance="1.1242568537625" /> <!-- Twilight Glove Ingredient -->
-				<item id="36776" min="1" max="1" chance="1.1239454252712" /> <!-- Recipe: Twilight Gaiters (60%) -->
-				<item id="36783" min="1" max="1" chance="1.1211425688491" /> <!-- Recipe: Twilight Leather Gloves (60%) -->
-				<item id="36769" min="1" max="1" chance="1.1211425688491" /> <!-- Recipe: Apocalypse Thrower (60%) -->
-				<item id="36767" min="1" max="1" chance="1.120208283375" /> <!-- Recipe: Apocalypse Fighter (60%) -->
-				<item id="36765" min="1" max="1" chance="1.120208283375" /> <!-- Recipe: Apocalypse Slasher (60%) -->
-				<item id="36787" min="1" max="1" chance="1.1195854263923" /> <!-- Recipe: Twilight Stockings (60%) -->
-				<item id="36779" min="1" max="1" chance="1.1195854263923" /> <!-- Recipe: Twilight Shield (60%) -->
-				<item id="36772" min="1" max="1" chance="1.1183397124269" /> <!-- Recipe: Apocalypse Caster (60%) -->
-				<item id="36786" min="1" max="1" chance="1.1174054269529" /> <!-- Recipe: Twilight Tunic (60%) -->
-				<item id="36788" min="1" max="1" chance="1.1174054269529" /> <!-- Recipe: Twilight Gloves (60%) -->
-				<item id="36773" min="1" max="1" chance="1.1164711414788" /> <!-- Recipe: Apocalypse Retributer (60%) -->
-				<item id="36770" min="1" max="1" chance="1.1155368560048" /> <!-- Recipe: Apocalypse Shooter (60%) -->
-				<item id="36785" min="1" max="1" chance="1.1152254275135" /> <!-- Recipe: Twilight Circlet (60%) -->
-				<item id="36784" min="1" max="1" chance="1.1149139990221" /> <!-- Recipe: Twilight Leather Boots (60%) -->
-				<item id="36777" min="1" max="1" chance="1.1124225710913" /> <!-- Recipe: Twilight Gauntlets (60%) -->
-				<item id="36839" min="1" max="1" chance="1.1114882856173" /> <!-- Twilight Gauntlet Ingredient -->
-				<item id="36781" min="1" max="1" chance="1.1114882856173" /> <!-- Recipe: Twilight Leather Armor (60%) -->
-				<item id="36768" min="1" max="1" chance="1.1096197146692" /> <!-- Recipe: Apocalypse Stormer (60%) -->
-				<item id="36775" min="1" max="1" chance="1.1083740007038" /> <!-- Recipe: Twilight Breastplate (60%) -->
-				<item id="36778" min="1" max="1" chance="1.1080625722125" /> <!-- Recipe: Twilight Boots (60%) -->
-				<item id="36846" min="1" max="1" chance="1.1037025733336" /> <!-- Twilight Leather Boot Ingredient -->
-				<item id="36789" min="1" max="1" chance="1.1027682878596" /> <!-- Recipe: Twilight Shoes (60%) -->
-				<item id="36763" min="1" max="1" chance="1.1005882884202" /> <!-- Recipe: Apocalypse Shaper (60%) -->
-				<item id="36851" min="1" max="1" chance="1.0984082889807" /> <!-- Twilight Shoe Ingredient -->
-				<item id="36782" min="1" max="1" chance="1.097785431998" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
-				<item id="36771" min="1" max="1" chance="1.0962282895413" /> <!-- Recipe: Apocalypse Buster (60%) -->
-				<item id="36774" min="1" max="1" chance="1.0940482901019" /> <!-- Recipe: Twilight Helmet (60%) -->
-				<item id="36766" min="1" max="1" chance="1.0918682906624" /> <!-- Recipe: Apocalypse Avenger (60%) -->
-				<item id="36780" min="1" max="1" chance="1.0899997197144" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
+				<item id="36574" min="1" max="1" chance="51.18" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="36586" min="1" max="1" chance="51.13" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="50.34" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="48.76" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36826" min="1" max="1" chance="3.639" /> <!-- Apocalypse Cutter Fragment -->
+				<item id="36783" min="1" max="1" chance="3.638" /> <!-- Recipe: Twilight Leather Gloves (60%) -->
+				<item id="36775" min="1" max="1" chance="3.632" /> <!-- Recipe: Twilight Breastplate (60%) -->
+				<item id="36834" min="1" max="1" chance="3.631" /> <!-- Apocalypse Caster Fragment -->
+				<item id="36847" min="1" max="1" chance="3.63" /> <!-- Twilight Circlet Ingredient -->
+				<item id="36830" min="1" max="1" chance="3.626" /> <!-- Apocalypse Stormer Fragment -->
+				<item id="36781" min="1" max="1" chance="3.623" /> <!-- Recipe: Twilight Leather Armor (60%) -->
+				<item id="36852" min="1" max="1" chance="3.627" /> <!-- Twilight Sigil Ingredient -->
+				<item id="36838" min="1" max="1" chance="3.621" /> <!-- Twilight Gaiter Ingredient -->
+				<item id="36785" min="1" max="1" chance="3.621" /> <!-- Recipe: Twilight Circlet (60%) -->
+				<item id="36842" min="1" max="1" chance="3.619" /> <!-- Twilight Leather Helmet Ingredient -->
+				<item id="36849" min="1" max="1" chance="3.614" /> <!-- Twilight Stocking Ingredient -->
+				<item id="36765" min="1" max="1" chance="3.611" /> <!-- Recipe: Apocalypse Slasher (60%) -->
+				<item id="36786" min="1" max="1" chance="3.604" /> <!-- Recipe: Twilight Tunic (60%) -->
+				<item id="36845" min="1" max="1" chance="3.603" /> <!-- Twilight Leather Glove Ingredient -->
+				<item id="36832" min="1" max="1" chance="3.602" /> <!-- Apocalypse Shooter Fragment -->
+				<item id="36837" min="1" max="1" chance="3.601" /> <!-- Twilight Breastplate Ingredient -->
+				<item id="36836" min="1" max="1" chance="3.6" /> <!-- Twilight Helmet Ingredient -->
+				<item id="36774" min="1" max="1" chance="3.591" /> <!-- Recipe: Twilight Helmet (60%) -->
+				<item id="36835" min="1" max="1" chance="3.591" /> <!-- Apocalypse Retributer Fragment -->
+				<item id="36827" min="1" max="1" chance="3.587" /> <!-- Apocalypse Slasher Fragment -->
+				<item id="36846" min="1" max="1" chance="3.587" /> <!-- Twilight Leather Boot Ingredient -->
+				<item id="36770" min="1" max="1" chance="3.587" /> <!-- Recipe: Apocalypse Shooter (60%) -->
+				<item id="36850" min="1" max="1" chance="3.586" /> <!-- Twilight Glove Ingredient -->
+				<item id="36767" min="1" max="1" chance="3.585" /> <!-- Recipe: Apocalypse Fighter (60%) -->
+				<item id="36843" min="1" max="1" chance="3.584" /> <!-- Twilight Leather Armor Ingredient -->
+				<item id="36766" min="1" max="1" chance="3.583" /> <!-- Recipe: Apocalypse Avenger (60%) -->
+				<item id="36844" min="1" max="1" chance="3.582" /> <!-- Twilight Leather Legging Ingredient -->
+				<item id="36833" min="1" max="1" chance="3.577" /> <!-- Apocalypse Buster Fragment -->
+				<item id="36790" min="1" max="1" chance="3.58" /> <!-- Recipe: Twilight Sigil (60%) -->
+				<item id="36763" min="1" max="1" chance="3.575" /> <!-- Recipe: Apocalypse Shaper (60%) -->
+				<item id="36779" min="1" max="1" chance="3.571" /> <!-- Recipe: Twilight Shield (60%) -->
+				<item id="36780" min="1" max="1" chance="3.566" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
+				<item id="36768" min="1" max="1" chance="3.561" /> <!-- Recipe: Apocalypse Stormer (60%) -->
+				<item id="36828" min="1" max="1" chance="3.561" /> <!-- Apocalypse Avenger Fragment -->
+				<item id="36782" min="1" max="1" chance="3.56" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
+				<item id="36839" min="1" max="1" chance="3.555" /> <!-- Twilight Gauntlet Ingredient -->
+				<item id="36769" min="1" max="1" chance="3.553" /> <!-- Recipe: Apocalypse Thrower (60%) -->
+				<item id="36772" min="1" max="1" chance="3.552" /> <!-- Recipe: Apocalypse Caster (60%) -->
+				<item id="36825" min="1" max="1" chance="3.546" /> <!-- Apocalypse Shaper Fragment -->
+				<item id="36841" min="1" max="1" chance="3.546" /> <!-- Twilight Shield Ingredient -->
+				<item id="36778" min="1" max="1" chance="3.545" /> <!-- Recipe: Twilight Boots (60%) -->
+				<item id="36787" min="1" max="1" chance="3.544" /> <!-- Recipe: Twilight Stockings (60%) -->
+				<item id="36829" min="1" max="1" chance="3.541" /> <!-- Apocalypse Fighter Fragment -->
+				<item id="36764" min="1" max="1" chance="3.541" /> <!-- Recipe: Apocalypse Cutter (60%) -->
+				<item id="36840" min="1" max="1" chance="3.537" /> <!-- Twilight Boot Ingredient -->
+				<item id="36851" min="1" max="1" chance="3.531" /> <!-- Twilight Shoe Ingredient -->
+				<item id="36777" min="1" max="1" chance="3.528" /> <!-- Recipe: Twilight Gauntlets (60%) -->
+				<item id="36848" min="1" max="1" chance="3.525" /> <!-- Twilight Tunic Ingredient -->
+				<item id="36831" min="1" max="1" chance="3.521" /> <!-- Apocalypse Thrower Fragment -->
+				<item id="36788" min="1" max="1" chance="3.511" /> <!-- Recipe: Twilight Gloves (60%) -->
+				<item id="36776" min="1" max="1" chance="3.508" /> <!-- Recipe: Twilight Gaiters (60%) -->
+				<item id="36773" min="1" max="1" chance="3.507" /> <!-- Recipe: Apocalypse Retributer (60%) -->
+				<item id="36784" min="1" max="1" chance="3.506" /> <!-- Recipe: Twilight Leather Boots (60%) -->
+				<item id="36771" min="1" max="1" chance="3.504" /> <!-- Recipe: Apocalypse Buster (60%) -->
+				<item id="36789" min="1" max="1" chance="3.503" /> <!-- Recipe: Twilight Shoes (60%) -->
+				<item id="46476" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46489" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46504" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46462" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46445" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46446" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46492" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46460" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46477" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46461" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
@@ -3905,10 +3945,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="3297130032" sp="791311" raidPoints="7" />
+		<acquire exp="35177164807" sp="70354390" raidPoints="7" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="6579243" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<vitals hp="15665180" hpRegen="8.5" mp="2205" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -3937,67 +3977,92 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="35301" min="1" max="1" chance="3.615" /> <!-- Specter Stormer Fragment -->
-				<item id="35298" min="1" max="1" chance="3.61" /> <!-- Specter Slasher Fragment -->
-				<item id="35302" min="1" max="1" chance="3.58500000000001" /> <!-- Specter Thrower Fragment -->
-				<item id="35304" min="1" max="1" chance="3.56499999999999" /> <!-- Specter Buster Fragment -->
-				<item id="35297" min="1" max="1" chance="3.55700000000002" /> <!-- Specter Cutter Fragment -->
-				<item id="35305" min="1" max="1" chance="3.547" /> <!-- Specter Caster Fragment -->
-				<item id="35306" min="1" max="1" chance="3.546" /> <!-- Specter Retributer Fragment -->
-				<item id="35299" min="1" max="1" chance="3.53499999999999" /> <!-- Specter Avenger Fragment -->
-				<item id="35303" min="1" max="1" chance="3.53099999999998" /> <!-- Specter Shooter Fragment -->
-				<item id="35296" min="1" max="1" chance="3.52700000000002" /> <!-- Specter Shaper Fragment -->
-				<item id="35300" min="1" max="1" chance="3.50299999999999" /> <!-- Specter Fighter Fragment -->
-				<item id="35320" min="1" max="1" chance="3.58400000000003" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35319" min="1" max="1" chance="3.5829999999999" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35309" min="1" max="1" chance="3.56900000000006" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35308" min="1" max="1" chance="3.5609999999999" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35315" min="1" max="1" chance="3.55700000000004" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35314" min="1" max="1" chance="3.51500000000008" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35307" min="1" max="1" chance="3.61200000000007" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35323" min="1" max="1" chance="3.60999999999994" /> <!-- Seraph Sigil Ingredient -->
-				<item id="35318" min="1" max="1" chance="3.56900000000005" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35313" min="1" max="1" chance="3.56300000000003" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35312" min="1" max="1" chance="3.50100000000009" /> <!-- Seraph Shield Ingredient -->
-				<item id="36586" min="1" max="1" chance="23.16018605935" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17527" min="1" max="1" chance="15.632498282746" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="15.481944527214" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="36574" min="1" max="1" chance="4.5009299830941" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="45432" min="1" max="1" chance="3.1541011783968" /> <!-- Entrance Pass: Kartia's Labyrinth Lv. 95 Party -->
-				<item id="35447" min="1" max="1" chance="1.1507952688482" /> <!-- Recipe: Seraph Sigil (60%) -->
-				<item id="35444" min="1" max="1" chance="1.1413856591275" /> <!-- Recipe: Seraph Stockings (60%) -->
-				<item id="35311" min="1" max="1" chance="1.1388764298686" /> <!-- Seraph Boot Ingredient -->
-				<item id="35434" min="1" max="1" chance="1.1360535469524" /> <!-- Recipe: Seraph Gauntlets (60%) -->
-				<item id="35424" min="1" max="1" chance="1.1338579713509" /> <!-- Recipe: Specter Fighter (60%) -->
-				<item id="35420" min="1" max="1" chance="1.1338579713509" /> <!-- Recipe: Specter Shaper (60%) -->
-				<item id="35427" min="1" max="1" chance="1.1338579713509" /> <!-- Recipe: Specter Shooter (60%) -->
-				<item id="35436" min="1" max="1" chance="1.1316623957494" /> <!-- Recipe: Seraph Shield (60%) -->
-				<item id="35433" min="1" max="1" chance="1.1304077811199" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<item id="35445" min="1" max="1" chance="1.1285258591758" /> <!-- Recipe: Seraph Gloves (60%) -->
-				<item id="35440" min="1" max="1" chance="1.1282122055184" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="1.1257029762596" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35443" min="1" max="1" chance="1.1250756689448" /> <!-- Recipe: Seraph Tunic (60%) -->
-				<item id="35435" min="1" max="1" chance="1.1250756689448" /> <!-- Recipe: Seraph Boots (60%) -->
-				<item id="35432" min="1" max="1" chance="1.1238210543154" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<item id="35442" min="1" max="1" chance="1.1175479811682" /> <!-- Recipe: Seraph Circlet (60%) -->
-				<item id="35421" min="1" max="1" chance="1.1159797128814" /> <!-- Recipe: Specter Cutter (60%) -->
-				<item id="35437" min="1" max="1" chance="1.1159797128814" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
-				<item id="35316" min="1" max="1" chance="1.1156660592241" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35310" min="1" max="1" chance="1.114725098252" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35446" min="1" max="1" chance="1.1128431763079" /> <!-- Recipe: Seraph Shoes (60%) -->
-				<item id="35321" min="1" max="1" chance="1.110333947049" /> <!-- Seraph Glove Ingredient -->
-				<item id="35429" min="1" max="1" chance="1.1097066397343" /> <!-- Recipe: Specter Caster (60%) -->
-				<item id="35431" min="1" max="1" chance="1.1090793324196" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<item id="35423" min="1" max="1" chance="1.1090793324196" /> <!-- Recipe: Specter Avenger (60%) -->
-				<item id="35426" min="1" max="1" chance="1.1081383714475" /> <!-- Recipe: Specter Thrower (60%) -->
-				<item id="35441" min="1" max="1" chance="1.1078247177901" /> <!-- Recipe: Seraph Leather Boots (60%) -->
-				<item id="35425" min="1" max="1" chance="1.1071974104754" /> <!-- Recipe: Specter Stormer (60%) -->
-				<item id="35317" min="1" max="1" chance="1.106883756818" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35428" min="1" max="1" chance="1.1065701031607" /> <!-- Recipe: Specter Buster (60%) -->
-				<item id="35322" min="1" max="1" chance="1.105942795846" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35430" min="1" max="1" chance="1.1056291421886" /> <!-- Recipe: Specter Retributer (60%) -->
-				<item id="35438" min="1" max="1" chance="1.1037472202445" /> <!-- Recipe: Seraph Leather Armor (60%) -->
-				<item id="35422" min="1" max="1" chance="1.1002970300135" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="36586" min="1" max="1" chance="75.08" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="51.17" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="50.94" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="15.69" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="45432" min="1" max="1" chance="10.029" /> <!-- Entrance Pass: Kartia's Labyrinth Lv. 95 Party -->
+				<item id="35318" min="1" max="1" chance="1.8555" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35313" min="1" max="1" chance="1.8425" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35322" min="1" max="1" chance="1.84" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35307" min="1" max="1" chance="1.833" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35298" min="1" max="1" chance="1.832" /> <!-- Specter Slasher Fragment -->
+				<item id="35306" min="1" max="1" chance="1.829" /> <!-- Specter Retributer Fragment -->
+				<item id="35303" min="1" max="1" chance="1.828" /> <!-- Specter Shooter Fragment -->
+				<item id="35297" min="1" max="1" chance="1.8265" /> <!-- Specter Cutter Fragment -->
+				<item id="35312" min="1" max="1" chance="1.821" /> <!-- Seraph Shield Ingredient -->
+				<item id="35302" min="1" max="1" chance="1.816" /> <!-- Specter Thrower Fragment -->
+				<item id="35315" min="1" max="1" chance="1.8" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35310" min="1" max="1" chance="1.793" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35301" min="1" max="1" chance="1.785" /> <!-- Specter Stormer Fragment -->
+				<item id="35309" min="1" max="1" chance="1.784" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35300" min="1" max="1" chance="1.781" /> <!-- Specter Fighter Fragment -->
+				<item id="35308" min="1" max="1" chance="1.778" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35319" min="1" max="1" chance="1.773" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35317" min="1" max="1" chance="1.769" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35321" min="1" max="1" chance="1.769" /> <!-- Seraph Glove Ingredient -->
+				<item id="35323" min="1" max="1" chance="1.769" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35314" min="1" max="1" chance="1.752" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35304" min="1" max="1" chance="1.749" /> <!-- Specter Buster Fragment -->
+				<item id="35305" min="1" max="1" chance="1.732" /> <!-- Specter Caster Fragment -->
+				<item id="35311" min="1" max="1" chance="1.731" /> <!-- Seraph Boot Ingredient -->
+				<item id="35299" min="1" max="1" chance="1.728" /> <!-- Specter Avenger Fragment -->
+				<item id="35296" min="1" max="1" chance="1.72" /> <!-- Specter Shaper Fragment -->
+				<item id="35320" min="1" max="1" chance="1.719" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35316" min="1" max="1" chance="1.718" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="46475" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46476" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46489" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46504" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46474" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46445" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46446" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46493" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46460" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46461" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46463" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46448" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 5 -->
 			</drop>
 			<lucky_drop>
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->

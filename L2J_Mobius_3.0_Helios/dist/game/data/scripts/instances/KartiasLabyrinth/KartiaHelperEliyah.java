@@ -16,15 +16,23 @@
  */
 package instances.KartiasLabyrinth;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttacked;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 
 import ai.AbstractNpcAI;
 
 /**
- * Kartia Helper Eliyah AI.
- * @author St3eT
+ * Kartia Helper Eliyah AI. Summoner
+ * @author flanagak
  */
 public final class KartiaHelperEliyah extends AbstractNpcAI
 {
@@ -34,6 +42,33 @@ public final class KartiaHelperEliyah extends AbstractNpcAI
 		33615, // Eliyah (Kartia 85)
 		33626, // Eliyah (Kartia 90)
 		33637, // Eliyah (Kartia 95)
+	};
+	private static final int[] KARTIA_ADOLPH =
+	{
+		33609, // Adolph (Kartia 85)
+		33620, // Adolph (Kartia 90)
+		33631, // Adolph (Kartia 95)
+	};
+	private static final int[] KARTIA_FRIENDS =
+	{
+		33617, // Elise (Kartia 85)
+		33628, // Elise (Kartia 90)
+		33639, // Elise (Kartia 95)
+		33609, // Adolph (Kartia 85)
+		33620, // Adolph (Kartia 90)
+		33631, // Adolph (Kartia 95)
+		33611, // Barton (Kartia 85)
+		33622, // Barton (Kartia 90)
+		33633, // Barton (Kartia 95)
+		33615, // Eliyah (Kartia 85)
+		33626, // Eliyah (Kartia 90)
+		33637, // Eliyah (Kartia 95)
+		33613, // Hayuk (Kartia 85)
+		33624, // Hayuk (Kartia 90)
+		33635, // Hayuk (Kartia 95)
+		33618, // Eliyah's Guardian Spirit (Kartia 85)
+		33629, // Eliyah's Guardian Spirit (Kartia 90)
+		33640, // Eliyah's Guardian Spirit (Kartia 95)
 	};
 	// Misc
 	private static final int[] KARTIA_SOLO_INSTANCES =
@@ -45,30 +80,98 @@ public final class KartiaHelperEliyah extends AbstractNpcAI
 	
 	private KartiaHelperEliyah()
 	{
+		setCreatureKillId(this::onCreatureKill, KARTIA_ELIYAH);
+		setCreatureAttackedId(this::onCreatureAttacked, KARTIA_ELIYAH);
+		addSeeCreatureId(KARTIA_ELIYAH);
 		setInstanceStatusChangeId(this::onInstanceStatusChange, KARTIA_SOLO_INSTANCES);
+	}
+	
+	@Override
+	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	{
+		final Instance instance = npc.getInstanceWorld();
+		if ((instance != null) && event.equals("CHECK_ACTION"))
+		{
+			final FriendlyNpcInstance adolph = npc.getVariables().getObject("ADOLPH_OBJECT", FriendlyNpcInstance.class);
+			if (adolph != null)
+			{
+				final double distance = npc.calculateDistance(adolph, false, false);
+				if (distance > 300)
+				{
+					final Location loc = new Location(adolph.getX(), adolph.getY(), adolph.getZ() + 50);
+					final Location randLoc = new Location(loc.getX() + getRandom(-100, 100), loc.getY() + getRandom(-100, 100), loc.getZ());
+					if (distance > 600)
+					{
+						npc.teleToLocation(loc);
+					}
+					else
+					{
+						npc.setRunning();
+					}
+					addMoveToDesire(npc, randLoc, 23);
+				}
+				else if (!npc.isInCombat() || (npc.getTarget() == null))
+				{
+					final L2Character monster = (L2Character) adolph.getTarget();
+					if ((monster != null) && adolph.isInCombat() && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
+					{
+						npc.setTarget(monster);
+					}
+				}
+			}
+		}
 	}
 	
 	public void onInstanceStatusChange(OnInstanceStatusChange event)
 	{
 		final Instance instance = event.getWorld();
 		final int status = event.getStatus();
-		switch (status)
+		if (status == 1)
 		{
-			case 1:
+			instance.getAliveNpcs(KARTIA_ELIYAH).forEach(eliyah -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, eliyah, null));
+			if ((instance.getAliveNpcs(KARTIA_ELIYAH) != null) && (instance.getAliveNpcs(KARTIA_ELIYAH).size() > 0))
 			{
-				// Nothing for now
-				break;
+				instance.spawnGroup("GUARDIANS");
 			}
-			case 2:
-			case 3:
+		}
+	}
+	
+	@Override
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	{
+		if (creature.isPlayer())
+		{
+			npc.getVariables().set("PLAYER_OBJECT", creature.getActingPlayer());
+		}
+		else if (CommonUtil.contains(KARTIA_ADOLPH, creature.getId()))
+		{
+			npc.getVariables().set("ADOLPH_OBJECT", creature);
+		}
+		return super.onSeeCreature(npc, creature, isSummon);
+	}
+	
+	public void onCreatureAttacked(OnCreatureAttacked event)
+	{
+		final L2Npc npc = (L2Npc) event.getTarget();
+		if (npc != null)
+		{
+			final Instance instance = npc.getInstanceWorld();
+			if ((instance != null) && !event.getAttacker().isPlayable() && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
 			{
-				final Location loc = instance.getTemplateParameters().getLocation("eliyahTeleportStatus" + status);
-				if (loc != null)
-				{
-					instance.getAliveNpcs(KARTIA_ELIYAH).forEach(eliyah -> eliyah.teleToLocation(loc));
-				}
-				break;
+				npc.setTarget(event.getAttacker());
 			}
+		}
+	}
+	
+	public void onCreatureKill(OnCreatureDeath event)
+	{
+		final L2Npc npc = (L2Npc) event.getTarget();
+		final Instance world = npc.getInstanceWorld();
+		if (world != null)
+		{
+			getTimers().cancelTimersOf(npc);
+			world.despawnGroup("GUARDIANS");
+			npc.doDie(event.getAttacker());
 		}
 	}
 	

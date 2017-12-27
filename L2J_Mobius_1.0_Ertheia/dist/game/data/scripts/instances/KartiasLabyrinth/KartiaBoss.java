@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
 
 /**
  * Kartia Boss AI.
- * @author St3eT
+ * @author flanagak
  */
 public final class KartiaBoss extends AbstractNpcAI
 {
@@ -139,8 +139,8 @@ public final class KartiaBoss extends AbstractNpcAI
 		{
 			for (int i = 0; i < 3; i++)
 			{
-				addSpawn(fighter, npc, false, 0, false, npc.getInstanceId());
-				addSpawn(mage, npc, false, 0, false, npc.getInstanceId());
+				addSpawn(fighter, npc, true, 0, false, npc.getInstanceId());
+				addSpawn(mage, npc, true, 0, false, npc.getInstanceId());
 			}
 		}
 	}

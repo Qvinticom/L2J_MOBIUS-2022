@@ -16,8 +16,15 @@
  */
 package instances.KartiasLabyrinth;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -34,8 +41,8 @@ import com.l2jmobius.gameserver.util.Util;
 import ai.AbstractNpcAI;
 
 /**
- * Kartia Helper Elise AI.
- * @author St3eT
+ * Kartia Helper Elise AI. Healer
+ * @author flanagak
  */
 public final class KartiaHelperElise extends AbstractNpcAI
 {
@@ -70,9 +77,27 @@ public final class KartiaHelperElise extends AbstractNpcAI
 		33624, // Hayuk (Kartia 90)
 		33635, // Hayuk (Kartia 95)
 	};
-	private static final int HEALING_TREE = 19256;
-	// Skill
-	private static final SkillHolder TREE_HEAL_SKILL = new SkillHolder(15003, 1); // Summon Tree of Life - NPC
+	private static final int[] KARTIA_FRIENDS =
+	{
+		33617, // Elise (Kartia 85)
+		33628, // Elise (Kartia 90)
+		33639, // Elise (Kartia 95)
+		33609, // Adolph (Kartia 85)
+		33620, // Adolph (Kartia 90)
+		33631, // Adolph (Kartia 95)
+		33611, // Barton (Kartia 85)
+		33622, // Barton (Kartia 90)
+		33633, // Barton (Kartia 95)
+		33615, // Eliyah (Kartia 85)
+		33626, // Eliyah (Kartia 90)
+		33637, // Eliyah (Kartia 95)
+		33613, // Hayuk (Kartia 85)
+		33624, // Hayuk (Kartia 90)
+		33635, // Hayuk (Kartia 95)
+		33618, // Eliyah's Guardian Spirit (Kartia 85)
+		33629, // Eliyah's Guardian Spirit (Kartia 90)
+		33640, // Eliyah's Guardian Spirit (Kartia 95)
+	};
 	// Misc
 	private static final int[] KARTIA_SOLO_INSTANCES =
 	{
@@ -95,167 +120,124 @@ public final class KartiaHelperElise extends AbstractNpcAI
 		if ((instance != null) && event.equals("CHECK_ACTION"))
 		{
 			final StatsSet npcVars = npc.getVariables();
-			final StatsSet instParams = instance.getTemplateParameters();
-			
-			player = npcVars.getObject("PLAYER_OBJECT", L2PcInstance.class);
 			final FriendlyNpcInstance adolph = npcVars.getObject("ADOLPH_OBJECT", FriendlyNpcInstance.class);
-			final FriendlyNpcInstance barton = npcVars.getObject("BARTON_OBJECT", FriendlyNpcInstance.class);
-			final FriendlyNpcInstance eliyah = npcVars.getObject("ELIYAH_OBJECT", FriendlyNpcInstance.class);
-			final FriendlyNpcInstance hayuk = npcVars.getObject("HAYUK_OBJECT", FriendlyNpcInstance.class);
-			
-			if ((player != null) && !player.isDead() && ((player.getCurrentHpPercent() < 75) || (player.getCurrentMpPercent() < 30)))
+			if (!npc.isCastingNow())
 			{
-				final int hpPer = player.getCurrentHpPercent();
-				if ((hpPer < 40) && npcVars.getBoolean("CAN_USE_TREE", true))
-				{
-					summonHealingTree(npc, player);
-				}
-				else if (hpPer < 60)
-				{
-					final SkillHolder chainSkill = instParams.getSkillHolder("eliseChainHeal");
-					if (chainSkill != null)
-					{
-						addSkillCastDesire(npc, player, chainSkill, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
-					}
-				}
-				else if (hpPer < 75)
-				{
-					final SkillHolder healSkill = instParams.getSkillHolder("eliseHeal");
-					if (healSkill != null)
-					{
-						addSkillCastDesire(npc, player, healSkill, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
-					}
-				}
-				else if (player.getCurrentMpPercent() < 30)
-				{
-					final SkillHolder rechargeSkill = instParams.getSkillHolder("eliseRecharge");
-					if (rechargeSkill != null)
-					{
-						addSkillCastDesire(npc, player, rechargeSkill, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MEN_FOCUS_CHARGING_COMPLETE);
-					}
-				}
+				healFriends(npc, player);
 			}
-			else if ((adolph != null) && !adolph.isDead() && (adolph.getCurrentHpPercent() < 75))
-			{
-				final int hpPer = adolph.getCurrentHpPercent();
-				if ((hpPer < 40) && npcVars.getBoolean("CAN_USE_TREE", true))
-				{
-					summonHealingTree(npc, adolph);
-				}
-				else if (hpPer < 60)
-				{
-					final SkillHolder chainSkill = instParams.getSkillHolder("eliseChainHeal");
-					if (chainSkill != null)
-					{
-						addSkillCastDesire(npc, adolph, chainSkill, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
-					}
-				}
-				else
-				{
-					final SkillHolder healSkill = instParams.getSkillHolder("eliseHeal");
-					if (healSkill != null)
-					{
-						addSkillCastDesire(npc, adolph, healSkill, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
-					}
-				}
-			}
-			else if ((barton != null) && !barton.isDead() && (barton.getCurrentHpPercent() < 60))
-			{
-				final int hpPer = barton.getCurrentHpPercent();
-				if ((hpPer < 30) && npcVars.getBoolean("CAN_USE_TREE", true))
-				{
-					summonHealingTree(npc, barton);
-				}
-				else
-				{
-					final SkillHolder chainSkill = instParams.getSkillHolder("eliseChainHeal");
-					if (chainSkill != null)
-					{
-						addSkillCastDesire(npc, barton, chainSkill, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
-					}
-				}
-			}
-			else if ((eliyah != null) && !eliyah.isDead() && (eliyah.getCurrentHpPercent() < 60))
-			{
-				final int hpPer = eliyah.getCurrentHpPercent();
-				if ((hpPer < 30) && npcVars.getBoolean("CAN_USE_TREE", true))
-				{
-					summonHealingTree(npc, eliyah);
-				}
-				else
-				{
-					final SkillHolder chainSkill = instParams.getSkillHolder("eliseChainHeal");
-					if (chainSkill != null)
-					{
-						addSkillCastDesire(npc, eliyah, chainSkill, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
-					}
-				}
-			}
-			else if ((hayuk != null) && !hayuk.isDead() && (hayuk.getCurrentHpPercent() < 60))
-			{
-				final int hpPer = hayuk.getCurrentHpPercent();
-				if ((hpPer < 30) && npcVars.getBoolean("CAN_USE_TREE", true))
-				{
-					summonHealingTree(npc, hayuk);
-				}
-				else
-				{
-					final SkillHolder chainSkill = instParams.getSkillHolder("eliseChainHeal");
-					if (chainSkill != null)
-					{
-						addSkillCastDesire(npc, hayuk, chainSkill, 23);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
-					}
-				}
-			}
-			else if (adolph != null)
+			if (adolph != null)
 			{
 				final double distance = npc.calculateDistance(adolph, false, false);
-				if (distance > 200)
+				if (distance > 300)
 				{
-					final Location loc = new Location(adolph.getX() + getRandom(-100, 100), adolph.getY() + getRandom(-100, 100), adolph.getZ() + 50);
-					if (distance > 500)
+					final Location loc = new Location(adolph.getX(), adolph.getY(), adolph.getZ() + 50);
+					final Location randLoc = new Location(loc.getX() + getRandom(-100, 100), loc.getY() + getRandom(-100, 100), loc.getZ());
+					if (distance > 600)
 					{
 						npc.teleToLocation(loc);
 					}
 					else
 					{
 						npc.setRunning();
-						addMoveToDesire(npc, loc, 23);
+					}
+					addMoveToDesire(npc, randLoc, 23);
+				}
+			}
+			npc.setTarget(npc);
+		}
+	}
+	
+	private void healFriends(L2Npc npc, L2PcInstance player)
+	{
+		final Instance instance = npc.getInstanceWorld();
+		if (instance != null)
+		{
+			final StatsSet npcVars = npc.getVariables();
+			final StatsSet instParams = instance.getTemplateParameters();
+			if (!npc.isCastingNow())
+			{
+				player = npcVars.getObject("PLAYER_OBJECT", L2PcInstance.class);
+				final SkillHolder progressiveHeal = instParams.getSkillHolder("eliseProgressiveHeal"); // AOE heal
+				final SkillHolder radiantHeal = instParams.getSkillHolder("eliseRadiantHeal"); // Single target heal
+				final SkillHolder recharge = instParams.getSkillHolder("eliseRecharge");
+				
+				// Get HP percentage for all friends
+				final Map<L2Object, Integer> hpMap = new HashMap<>();
+				instance.getAliveNpcs(KARTIA_FRIENDS).forEach(friend -> hpMap.put(friend, friend != null ? friend.getCurrentHpPercent() : 100));
+				hpMap.put(player, player != null ? player.getCurrentHpPercent() : 100);
+				Map<L2Object, Integer> sortedHpMap = new HashMap<>();
+				sortedHpMap = Util.sortByValue(hpMap, false);
+				
+				// See if any friends are below 80% HP and add to list of people to heal.
+				final List<L2Object> peopleToHeal = new ArrayList<>();
+				for (L2Object friend : sortedHpMap.keySet())
+				{
+					if ((friend != null) && (sortedHpMap.get(friend) < 80) && (sortedHpMap.get(friend) > 1))
+					{
+						peopleToHeal.add(friend);
+					}
+				}
+				
+				if (peopleToHeal.size() > 0)
+				{
+					// At least one friend was below 80% HP.
+					if (peopleToHeal.size() > 1)
+					{
+						// Helper NPC AOE skills affecting monsters so skill power has set to 0.
+						// Using skill is just for animation. Need to heal each NPC/Player manually.
+						npc.setTarget(npc);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
+						npc.doCast(progressiveHeal.getSkill(), null, true, false);
+						npc.setTarget(npc);
+						for (L2Object personToHeal : peopleToHeal)
+						{
+							if (personToHeal.getInstanceType() == InstanceType.L2PcInstance)
+							{
+								L2PcInstance thePlayer = (L2PcInstance) personToHeal;
+								thePlayer.setCurrentHp((thePlayer.getMaxHp() * .20) + thePlayer.getCurrentHp());
+							}
+							else
+							{
+								L2Npc npcToHeal = (L2Npc) personToHeal;
+								npcToHeal.setCurrentHp((npcToHeal.getMaxHp() * .20) + npcToHeal.getCurrentHp());
+							}
+						}
+					}
+					else
+					{
+						// Only one person needs cure. Cast single target heal
+						for (L2Object personToHeal : peopleToHeal)
+						{
+							npc.setTarget(personToHeal);
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.POWER_OF_LIGHT_PROTECT_US);
+							npc.doCast(radiantHeal.getSkill(), null, true, false);
+							npc.setTarget(npc);
+						}
+					}
+				}
+				else
+				{
+					// No one needs healing. Check if player character needs recharge.
+					if ((player != null) && !player.isDead() && (player.getCurrentMpPercent() < 50))
+					{
+						npc.setTarget(player);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ELECTRIFYING_RECHARGE);
+						npc.doCast(recharge.getSkill(), null, true, false);
+						npc.setTarget(npc);
 					}
 				}
 			}
 		}
+		
 	}
 	
 	public void onInstanceStatusChange(OnInstanceStatusChange event)
 	{
 		final Instance instance = event.getWorld();
 		final int status = event.getStatus();
-		switch (status)
+		if (status == 1)
 		{
-			case 1:
-			{
-				instance.getAliveNpcs(KARTIA_ELISE).forEach(elise -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, elise, null));
-				break;
-			}
-			case 2:
-			case 3:
-			{
-				final Location loc = instance.getTemplateParameters().getLocation("eliseTeleportStatus" + status);
-				if (loc != null)
-				{
-					instance.getAliveNpcs(KARTIA_ELISE).forEach(elise -> elise.teleToLocation(loc));
-				}
-				break;
-			}
+			instance.getAliveNpcs(KARTIA_ELISE).forEach(elise -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, elise, null));
 		}
 	}
 	
@@ -297,16 +279,8 @@ public final class KartiaHelperElise extends AbstractNpcAI
 		if (world != null)
 		{
 			getTimers().cancelTimersOf(npc);
+			npc.doDie(event.getAttacker());
 		}
-	}
-	
-	private void summonHealingTree(L2Npc npc, L2Character target)
-	{
-		npc.getVariables().set("CAN_USE_TREE", false);
-		npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.COME_FORTH_TREE_OF_LIFE);
-		final L2Npc tree = addSpawn(HEALING_TREE, Util.getRandomPosition(target, 20, 50), false, 0, false, npc.getInstanceId());
-		getTimers().addTimer("TREE_REUSE", 10000, evnt -> npc.getVariables().set("CAN_USE_TREE", true));
-		getTimers().addTimer("TREE_HEAL", 3000, evnt -> addSkillCastDesire(tree, target, TREE_HEAL_SKILL, 23));
 	}
 	
 	public static void main(String[] args)

@@ -33,6 +33,8 @@ public class Q00497_IncarnationOfGreedZellakaSolo extends Quest
 	private static final int KARTIA_RESEARCHER = 33647;
 	// Item
 	private static final int DIMENSION_TRAVELERS_BLUE_BOX = 34930;
+	// Boss
+	private static final int BOSS = 19253; // Zellaka (Solo 85)
 	// Misc
 	private static final int MIN_LEVEL = 85;
 	private static final int MAX_LEVEL = 89;
@@ -42,6 +44,7 @@ public class Q00497_IncarnationOfGreedZellakaSolo extends Quest
 		super(497);
 		addStartNpc(KARTIA_RESEARCHER);
 		addTalkId(KARTIA_RESEARCHER);
+		addKillId(BOSS);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33647-00.htm");
 	}
 	
@@ -114,5 +117,16 @@ public class Q00497_IncarnationOfGreedZellakaSolo extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			qs.setCond(2, true);
+		}
+		return super.onKill(npc, player, isSummon);
 	}
 }

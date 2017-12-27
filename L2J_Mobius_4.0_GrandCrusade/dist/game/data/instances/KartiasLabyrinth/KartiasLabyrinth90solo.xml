@@ -16,22 +16,37 @@
 		<param name="helperHayuk" value="33624" />
 		<param name="helperEliyah" value="33626" />
 		<param name="helperElise" value="33628" />
-		<param name="helperSurvivor" value="33644" />
-		<param name="route1" value="kartia_90_route_1" />
-		<param name="route2" value="kartia_90_route_2" />
-		<param name="soloEXP" value="670000000" />
-		<param name="SoloEXP_Rand" value="6173918" />
-		<param name="SoloSP" value="5600000" />
-		<param name="SoloSP_Rand" value="82134" />
-		<skill name="adolphHate" id="15183" level="1" /> <!-- Adolph's Superior Aggression Aura -->
-		<skill name="adolphPunish" id="14847" level="1" /> <!-- Adolph's Justice Punishment -->
-		<skill name="adolphShield" id="15186" level="1" /> <!-- Adolph's Shield Wave -->
-		<skill name="adolphUltimate" id="14853" level="1" /> <!-- Adolph's Final Ultimate Defense -->
-		<skill name="bartonInfinity" id="14859" level="1" /> <!-- Barton's Infinity Strike -->
-		<skill name="bartonBerserker" id="14868" level="1" /> <!-- Barton's Berserker Rage -->
-		<skill name="eliseChainHeal" id="15002" level="1" /> <!-- Progressive Heal - NPC -->
-		<skill name="eliseHeal" id="14900" level="1" /> <!-- Elise' Radiant Heal -->
-		<skill name="eliseRecharge" id="14906" level="1" /> <!-- Elise' Radiant Recharge -->
+		<param name="helperSurvivor" value="33644" />		
+		<param name="helperAdolph" value="33620" />		
+		<param name="helperGuardian" value="33629" />
+		<param name="route1_1" value="kartia_90_route_1_1" />
+		<param name="route2_1" value="kartia_90_route_2_1" />
+		<param name="route1_2" value="kartia_90_route_1_2" />
+		<param name="route2_2" value="kartia_90_route_2_2" />
+		<param name="route1_3" value="kartia_90_route_1_3" />
+		<param name="route2_3" value="kartia_90_route_2_3" />
+		<skill name="adolphHate" id="14840" level="1" /> <!-- Adolph's Superior Aggression Aura -->
+		<skill name="adolphPunish" id="14846" level="1" /> <!-- Adolph's Justice Punishment -->
+		<skill name="adolphShield" id="14849" level="1" /> <!-- Adolph's Shield Wave -->
+		<skill name="adolphAggression" id="14889" level="1" /> <!-- Adolph's Aggression -->
+		<skill name="adolphChainHydra" id="14843" level="1" /> <!-- Adolph's Chain Hydra -->
+		<skill name="adolphUltimate" id="14852" level="1" /> <!-- Adolph's Final Ultimate Defense -->
+		<skill name="bartonInfinity" id="14858" level="1" /> <!-- Barton's Infinity Strike -->
+		<skill name="bartonBerserker" id="14867" level="1" /> <!-- Barton's Berserker Rage -->
+		<skill name="bartonHurricane" id="14855" level="1" /> <!-- Barton's Hurricane Rush -->
+		<skill name="bartonPowerBomber" id="14864" level="1" /> <!-- Barton's Power Bomber -->
+		<skill name="bartonSonicStar" id="14861" level="1" /> <!-- Barton's Sonic Star -->
+		<skill name="eliseProgressiveHeal" id="14898" level="1" /> <!-- Progressive Heal - NPC -->
+		<skill name="eliseRadiantHeal" id="14899" level="1" /> <!-- Elise' Radiant Heal -->
+		<skill name="eliseRecharge" id="14905" level="1" /> <!-- Elise' Radiant Recharge -->
+		<skill name="eliseCrystalRegene" id="14908" level="1" /> <!-- Elise' Crystal Regeneration -->
+		<skill name="hayukRecoilShot" id="14876" level="1" /> <!-- Hayuk's Recoil Shot -->
+		<skill name="hayukPinpointShot"	id="14879" level="1" /> <!-- Hayuk's Pinpoint Shot -->
+		<skill name="hayukHeavyArrowRain" id="14873" level="1" /> <!-- Hayuk's Heavy Arrow Rain -->
+		<skill name="hayukMultipleArrow" id="14870" level="1" /> <!-- Hayuk's Multiple Arrow -->
+		<skill name="hayukQuickEvasion"	id="14882" level="1" /> <!-- Hayuk's Multiple Arrow -->
+		<skill name="guardianSpiritsBlow"	id="14892" level="1" /> <!-- Guardian Spirit's Blow -->
+		<skill name="guardianSpiritsWrath"	id="14895" level="1" /> <!-- Guardian Spirit's Wrath -->
 		<location name="playerLoc" x="-118532" y="-10456" z="-11920" heading="32460" />
 		<location name="prisonerEscapeLoc" x="-118505" y="-10461" z="-11924" />
 		<location name="middlePointRoom1" x="-120848" y="-10452" z="-11685" />
@@ -41,16 +56,6 @@
 		<location name="teleportZone1_loc" x="-119852" y="-10445" z="-11924" />
 		<location name="teleportZone2_loc" x="-120855" y="-11984" z="-11573" />
 		<location name="teleportZone3_loc" x="-120861" y="-14149" z="-11427" />
-		<location name="adolphTeleportStatus2" x="-120850" y="-12050" z="-11568" />
-		<location name="bartonTeleportStatus2" x="-120850" y="-11950" z="-11568" />
-		<location name="hayukTeleportStatus2" x="-120950" y="-11950" z="-11568" />
-		<location name="eliyahTeleportStatus2" x="-121050" y="-11950" z="-11568" />
-		<location name="eliseTeleportStatus2" x="-120750" y="-11950" z="-11568" />
-		<location name="adolphTeleportStatus3" x="-120865" y="-14230" z="-11424" />
-		<location name="bartonTeleportStatus3" x="-120865" y="-14145" z="-11424" />
-		<location name="hayukTeleportStatus3" x="-120965" y="-14145" z="-11424" />
-		<location name="eliyahTeleportStatus3" x="-121065" y="-14145" z="-11424" />
-		<location name="eliseTeleportStatus3" x="-120765" y="-14145" z="-11424" />
 	</parameters>
 	<conditions>
 		<condition type="Level" showMessageAndHtml="true">
@@ -94,6 +99,11 @@
 			<npc id="33624" x="-118732" y="-10240" z="-11920" heading="32592" /> <!-- Hayuk -->
 			<npc id="33626" x="-118546" y="-10750" z="-11920" heading="-32356" /> <!-- Eliyah -->
 			<npc id="33628" x="-118535" y="-10243" z="-11920" heading="32720" /> <!-- Elise -->
+		</group>
+		<group name="GUARDIANS" spawnByDefault="false">
+			<npc id="33629" x="-118596" y="-10800" z="-11920" heading="-32704" /> <!-- Eliyah's Guardian Spirit -->
+			<npc id="33629" x="-118496" y="-10700" z="-11920" heading="-32704" /> <!-- Eliyah's Guardian Spirit -->
+			<npc id="33629" x="-118576" y="-10780" z="-11920" heading="-32704" /> <!-- Eliyah's Guardian Spirit -->
 		</group>
 		<group name="PRISONERS" spawnByDefault="false">
 			<npc id="33643" x="-119439" y="-10479" z="-11688" heading="0" /> <!-- Kartia Prisoner -->

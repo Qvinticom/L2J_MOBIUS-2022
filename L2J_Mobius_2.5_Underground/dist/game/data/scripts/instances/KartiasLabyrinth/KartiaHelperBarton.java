@@ -35,8 +35,8 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import ai.AbstractNpcAI;
 
 /**
- * Kartia Helper Barton AI.
- * @author St3eT
+ * Kartia Helper Barton AI. Tyrr Warrior
+ * @author flanagak
  */
 public final class KartiaHelperBarton extends AbstractNpcAI
 {
@@ -52,6 +52,27 @@ public final class KartiaHelperBarton extends AbstractNpcAI
 		33609, // Adolph (Kartia 85)
 		33620, // Adolph (Kartia 90)
 		33631, // Adolph (Kartia 95)
+	};
+	private static final int[] KARTIA_FRIENDS =
+	{
+		33617, // Elise (Kartia 85)
+		33628, // Elise (Kartia 90)
+		33639, // Elise (Kartia 95)
+		33609, // Adolph (Kartia 85)
+		33620, // Adolph (Kartia 90)
+		33631, // Adolph (Kartia 95)
+		33611, // Barton (Kartia 85)
+		33622, // Barton (Kartia 90)
+		33633, // Barton (Kartia 95)
+		33615, // Eliyah (Kartia 85)
+		33626, // Eliyah (Kartia 90)
+		33637, // Eliyah (Kartia 95)
+		33613, // Hayuk (Kartia 85)
+		33624, // Hayuk (Kartia 90)
+		33635, // Hayuk (Kartia 95)
+		33618, // Eliyah's Guardian Spirit (Kartia 85)
+		33629, // Eliyah's Guardian Spirit (Kartia 90)
+		33640, // Eliyah's Guardian Spirit (Kartia 95)
 	};
 	// Misc
 	private static final int[] KARTIA_SOLO_INSTANCES =
@@ -79,26 +100,37 @@ public final class KartiaHelperBarton extends AbstractNpcAI
 			if (adolph != null)
 			{
 				final double distance = npc.calculateDistance(adolph, false, false);
-				if (distance > 200)
+				if (distance > 300)
 				{
-					final Location loc = new Location(adolph.getX() + getRandom(-100, 100), adolph.getY() + getRandom(-100, 100), adolph.getZ() + 50);
-					if (distance > 500)
+					final Location loc = new Location(adolph.getX(), adolph.getY(), adolph.getZ() + 50);
+					final Location randLoc = new Location(loc.getX() + getRandom(-100, 100), loc.getY() + getRandom(-100, 100), loc.getZ());
+					if (distance > 600)
 					{
 						npc.teleToLocation(loc);
 					}
 					else
 					{
 						npc.setRunning();
-						addMoveToDesire(npc, loc, 23);
 					}
+					addMoveToDesire(npc, randLoc, 23);
 				}
-				else if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
+				else if (!npc.isInCombat() || (npc.getTarget() == null))
 				{
 					final L2Character monster = (L2Character) adolph.getTarget();
-					if ((monster != null) && adolph.isInCombat())
+					if ((monster != null) && adolph.isInCombat() && !CommonUtil.contains(KARTIA_FRIENDS, monster.getId()))
 					{
 						addAttackDesire(npc, monster);
 					}
+				}
+			}
+		}
+		else if ((instance != null) && event.equals("USE_SKILL"))
+		{
+			if (npc.isInCombat() || npc.isAttackingNow() || (npc.getTarget() != null))
+			{
+				if ((npc.getCurrentMpPercent() > 25) && !CommonUtil.contains(KARTIA_FRIENDS, npc.getTargetId()))
+				{
+					useRandomSkill(npc);
 				}
 			}
 		}
@@ -108,23 +140,10 @@ public final class KartiaHelperBarton extends AbstractNpcAI
 	{
 		final Instance instance = event.getWorld();
 		final int status = event.getStatus();
-		switch (status)
+		if (status == 1)
 		{
-			case 1:
-			{
-				instance.getAliveNpcs(KARTIA_BARTON).forEach(barton -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, barton, null));
-				break;
-			}
-			case 2:
-			case 3:
-			{
-				final Location loc = instance.getTemplateParameters().getLocation("bartonTeleportStatus" + status);
-				if (loc != null)
-				{
-					instance.getAliveNpcs(KARTIA_BARTON).forEach(barton -> barton.teleToLocation(loc));
-				}
-				break;
-			}
+			instance.getAliveNpcs(KARTIA_BARTON).forEach(barton -> getTimers().addRepeatingTimer("CHECK_ACTION", 3000, barton, null));
+			instance.getAliveNpcs(KARTIA_BARTON).forEach(barton -> getTimers().addRepeatingTimer("USE_SKILL", 6000, barton, null));
 		}
 	}
 	
@@ -142,33 +161,83 @@ public final class KartiaHelperBarton extends AbstractNpcAI
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
+	public void useRandomSkill(L2Npc npc)
+	{
+		final Instance instance = npc.getInstanceWorld();
+		final L2Npc target = (L2Npc) npc.getTarget();
+		if ((instance != null) && !npc.isCastingNow() && (target != null) && (!CommonUtil.contains(KARTIA_FRIENDS, target.getId())))
+		{
+			final StatsSet instParams = instance.getTemplateParameters();
+			final SkillHolder skill_01 = instParams.getSkillHolder("bartonInfinity");
+			final SkillHolder skill_02 = instParams.getSkillHolder("bartonBerserker");
+			final SkillHolder skill_03 = instParams.getSkillHolder("bartonHurricane");
+			final SkillHolder skill_04 = instParams.getSkillHolder("bartonPowerBomber");
+			final SkillHolder skill_05 = instParams.getSkillHolder("bartonSonicStar");
+			final int numberOfActiveSkills = 5;
+			final int randomSkill = getRandom(numberOfActiveSkills + 1);
+			
+			switch (randomSkill)
+			{
+				case 0:
+				case 1:
+				{
+					if ((skill_01 != null) && SkillCaster.checkUseConditions(npc, skill_01.getSkill()))
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WILL_SHOW_YOU_THE_JUSTICE_OF_ADEN);
+						npc.doCast(skill_01.getSkill(), null, true, false);
+					}
+					break;
+				}
+				case 2:
+				{
+					if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE3);
+						npc.doCast(skill_02.getSkill(), null, true, false);
+					}
+					break;
+				}
+				case 3:
+				{
+					if ((skill_03 != null) && SkillCaster.checkUseConditions(npc, skill_03.getSkill()))
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.FOR_THE_GODDESS);
+						npc.doCast(skill_03.getSkill(), null, true, false);
+					}
+					break;
+				}
+				case 4:
+				{
+					if ((skill_04 != null) && SkillCaster.checkUseConditions(npc, skill_04.getSkill()))
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_BE_DESTROYED);
+						npc.doCast(skill_04.getSkill(), null, true, false);
+					}
+					break;
+				}
+				case 5:
+				{
+					if ((skill_05 != null) && SkillCaster.checkUseConditions(npc, skill_05.getSkill()))
+					{
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_DIE);
+						npc.doCast(skill_05.getSkill(), null, true, false);
+					}
+					break;
+				}
+			}
+		}
+	}
+	
 	public void onCreatureAttacked(OnCreatureAttacked event)
 	{
 		final L2Npc npc = (L2Npc) event.getTarget();
-		final Instance instance = npc.getInstanceWorld();
-		if ((instance != null) && !event.getAttacker().isPlayable())
+		if (npc != null)
 		{
-			final StatsSet instParams = instance.getTemplateParameters();
-			final int random = getRandom(1000);
-			
-			if (random < 333)
+			final Instance instance = npc.getInstanceWorld();
+			if ((instance != null) && !npc.isInCombat() && !event.getAttacker().isPlayable() && !CommonUtil.contains(KARTIA_FRIENDS, event.getAttacker().getId()))
 			{
-				final SkillHolder infinitySkill = instParams.getSkillHolder("bartonInfinity");
-				if ((infinitySkill != null) && SkillCaster.checkUseConditions(npc, infinitySkill.getSkill()))
-				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE3);
-					addSkillCastDesire(npc, npc.getTarget(), infinitySkill, 23);
-				}
-			}
-			else if ((npc.getCurrentHpPercent() < 50) && npc.isScriptValue(0))
-			{
-				final SkillHolder berserkerSkill = instParams.getSkillHolder("bartonBerserker");
-				if ((berserkerSkill != null) && !npc.isAffectedBySkill(berserkerSkill.getSkillId()) && SkillCaster.checkUseConditions(npc, berserkerSkill.getSkill()))
-				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WAAAAAAAAHHHHHH);
-					addSkillCastDesire(npc, npc.getTarget(), berserkerSkill, 23);
-					getTimers().addTimer("RESTORE_SCRIPTVAL", 10000, n -> npc.setScriptValue(0));
-				}
+				npc.setTarget(event.getAttacker());
+				addAttackDesire(npc, (L2Character) npc.getTarget());
 			}
 		}
 	}
@@ -180,6 +249,7 @@ public final class KartiaHelperBarton extends AbstractNpcAI
 		if (world != null)
 		{
 			getTimers().cancelTimersOf(npc);
+			npc.doDie(event.getAttacker());
 		}
 	}
 	

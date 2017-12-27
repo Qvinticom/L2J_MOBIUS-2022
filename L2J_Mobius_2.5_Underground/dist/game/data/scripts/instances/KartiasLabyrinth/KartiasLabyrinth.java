@@ -19,13 +19,16 @@ package instances.KartiasLabyrinth;
 import java.util.List;
 
 import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
@@ -47,7 +50,7 @@ import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGlutton
 
 /**
  * Kartia Labyrinth instance zone.
- * @author St3eT
+ * @author flanagak
  */
 public final class KartiasLabyrinth extends AbstractInstance
 {
@@ -84,17 +87,27 @@ public final class KartiasLabyrinth extends AbstractInstance
 		33623,
 		33634,
 	};
-	// @formatter:off
 	private static final int[] MONSTERS =
 	{
-		19220, 19221, 19222, // Solo 85
-		19223, 19224, 19225, // Solo 90
-		19226, 19227, 19228, // Solo 95
-		19229, 19230, 19231, // Group 85
-		19232, 19233, 19234, // Group 90
-		19235, 19236, 19237, // Group 95
+		19220,
+		19221,
+		19222, // Solo 85
+		19223,
+		19224,
+		19225, // Solo 90
+		19226,
+		19227,
+		19228, // Solo 95
+		19229,
+		19230,
+		19231, // Group 85
+		19232,
+		19233,
+		19234, // Group 90
+		19235,
+		19236,
+		19237, // Group 95
 	};
-	// @formatter:on
 	private static final int[] BOSSES =
 	{
 		19253, // Zellaka (Solo 85)
@@ -134,19 +147,10 @@ public final class KartiasLabyrinth extends AbstractInstance
 	// Zones
 	private static final int KARTIA_85_DETECT_1 = 12020;
 	private static final int KARTIA_85_DETECT_2 = 12021;
-	// private static final int KARTIA_85_TELEPORT_1 = 12022;
-	// private static final int KARTIA_85_TELEPORT_2 = 12023;
-	// private static final int KARTIA_85_TELEPORT_3 = 12024;
 	private static final int KARTIA_90_DETECT_1 = 12025;
 	private static final int KARTIA_90_DETECT_2 = 12026;
-	// private static final int KARTIA_90_TELEPORT_1 = 12027;
-	// private static final int KARTIA_90_TELEPORT_2 = 12028;
-	// private static final int KARTIA_90_TELEPORT_3 = 12029;
 	private static final int KARTIA_95_DETECT_1 = 12030;
 	private static final int KARTIA_95_DETECT_2 = 12031;
-	// private static final int KARTIA_95_TELEPORT_1 = 12032;
-	// private static final int KARTIA_95_TELEPORT_2 = 12033;
-	// private static final int KARTIA_95_TELEPORT_3 = 12034;
 	// Misc
 	private static final int TEMPLATE_ID_SOLO_85 = 205;
 	private static final int TEMPLATE_ID_SOLO_90 = 206;
@@ -154,6 +158,22 @@ public final class KartiasLabyrinth extends AbstractInstance
 	private static final int TEMPLATE_ID_GROUP_85 = 208;
 	private static final int TEMPLATE_ID_GROUP_90 = 209;
 	private static final int TEMPLATE_ID_GROUP_95 = 210;
+	private static final long WAVE_DEALY = 30000;
+	private static final long WAVE_MONITOR_DELAY = 3000;
+	// Solo instance XP reward values
+	private static final int SOLO_BASE_EXP_85 = 480000000;
+	private static final int SOLO_RAND_EXP_85 = 8055934;
+	private static final int SOLO_BASE_EXP_90 = 670000000;
+	private static final int SOLO_RAND_EXP_90 = 6173918;
+	private static final int SOLO_BASE_EXP_95 = 970000000;
+	private static final int SOLO_RAND_EXP_95 = 6305195;
+	// Solo instance SP reward values
+	private static final int SOLO_BASE_SP_85 = 3800000;
+	private static final int SOLO_RAND_SP_85 = 73460;
+	private static final int SOLO_BASE_SP_90 = 5600000;
+	private static final int SOLO_RAND_SP_90 = 82134;
+	private static final int SOLO_BASE_SP_95 = 8500000;
+	private static final int SOLO_RAND_SP_95 = 39112;
 	
 	public KartiasLabyrinth()
 	{
@@ -177,9 +197,9 @@ public final class KartiasLabyrinth extends AbstractInstance
 		setCreatureKillId(this::onCreatureKill, MONSTERS);
 		setCreatureKillId(this::onBossKill, BOSSES);
 		setCreatureSeeId(this::onCreatureSee, MONSTERS);
-		addEnterZoneId(KARTIA_85_DETECT_1, KARTIA_85_DETECT_2 /* , KARTIA_85_TELEPORT_1, KARTIA_85_TELEPORT_2, KARTIA_85_TELEPORT_3 */);
-		addEnterZoneId(KARTIA_90_DETECT_1, KARTIA_90_DETECT_2 /* , KARTIA_90_TELEPORT_1, KARTIA_90_TELEPORT_2, KARTIA_90_TELEPORT_3 */);
-		addEnterZoneId(KARTIA_95_DETECT_1, KARTIA_95_DETECT_2 /* , KARTIA_95_TELEPORT_1, KARTIA_95_TELEPORT_2, KARTIA_95_TELEPORT_3 */);
+		addEnterZoneId(KARTIA_85_DETECT_1, KARTIA_85_DETECT_2);
+		addEnterZoneId(KARTIA_90_DETECT_1, KARTIA_90_DETECT_2);
+		addEnterZoneId(KARTIA_95_DETECT_1, KARTIA_95_DETECT_2);
 		addInstanceCreatedId(TEMPLATE_ID_SOLO_85, TEMPLATE_ID_SOLO_90, TEMPLATE_ID_SOLO_95, TEMPLATE_ID_GROUP_85, TEMPLATE_ID_GROUP_90, TEMPLATE_ID_GROUP_95);
 	}
 	
@@ -197,33 +217,63 @@ public final class KartiasLabyrinth extends AbstractInstance
 			}
 			case "request_zellaka_solo":
 			{
-				enterInstance(player, npc, TEMPLATE_ID_SOLO_85);
-				return null;
+				final QuestState qs = player.getQuestState(Q00497_IncarnationOfGreedZellakaSolo.class.getSimpleName());
+				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+				{
+					enterInstance(player, npc, TEMPLATE_ID_SOLO_85);
+					return null;
+				}
+				return "33647-9.htm";
 			}
 			case "request_pelline_solo":
 			{
-				enterInstance(player, npc, TEMPLATE_ID_SOLO_90);
-				return null;
+				final QuestState qs = player.getQuestState(Q00498_IncarnationOfJealousyPellineSolo.class.getSimpleName());
+				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+				{
+					enterInstance(player, npc, TEMPLATE_ID_SOLO_90);
+					return null;
+				}
+				return "33647-9.htm";
 			}
 			case "request_kalios_solo":
 			{
-				enterInstance(player, npc, TEMPLATE_ID_SOLO_95);
-				return null;
+				final QuestState qs = player.getQuestState(Q00499_IncarnationOfGluttonyKaliosSolo.class.getSimpleName());
+				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+				{
+					enterInstance(player, npc, TEMPLATE_ID_SOLO_95);
+					return null;
+				}
+				return "33647-9.htm";
 			}
 			case "request_zellaka_party":
 			{
-				enterInstance(player, npc, TEMPLATE_ID_GROUP_85);
-				return null;
+				final QuestState qs = player.getQuestState(Q00494_IncarnationOfGreedZellakaGroup.class.getSimpleName());
+				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+				{
+					enterInstance(player, npc, TEMPLATE_ID_GROUP_85);
+					return null;
+				}
+				return "33647-9.htm";
 			}
 			case "request_pelline_party":
 			{
-				enterInstance(player, npc, TEMPLATE_ID_GROUP_90);
-				return null;
+				final QuestState qs = player.getQuestState(Q00495_IncarnationOfJealousyPellineGroup.class.getSimpleName());
+				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+				{
+					enterInstance(player, npc, TEMPLATE_ID_GROUP_90);
+					return null;
+				}
+				return "33647-9.htm";
 			}
 			case "request_kalios_party":
 			{
-				enterInstance(player, npc, TEMPLATE_ID_GROUP_95);
-				return null;
+				final QuestState qs = player.getQuestState(Q00496_IncarnationOfGluttonyKaliosGroup.class.getSimpleName());
+				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+				{
+					enterInstance(player, npc, TEMPLATE_ID_GROUP_95);
+					return null;
+				}
+				return "33647-9.htm";
 			}
 			default:
 			{
@@ -280,16 +330,18 @@ public final class KartiasLabyrinth extends AbstractInstance
 				{
 					if (npc != null)
 					{
-						if (npc.getInstanceWorld().getParameters().getInt("ROOM", 1) <= 2)
+						if (npc.getInstanceWorld().getParameters().getInt("ROOM", 1) < 2)
 						{
+							// Move mobs in Room 1 to the middle at top of the steps. Add timer to start moving towards prisoners.
 							final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom1");
 							final Location moveTo = new Location(loc.getX() + getRandom(-100, 100), loc.getY() + getRandom(-100, 100), loc.getZ());
 							npc.setRunning();
 							addMoveToDesire(npc, moveTo, 6);
-							getTimers().addTimer("START_MOVE", 15000, npc, null);
+							getTimers().addTimer("START_MOVE", 12000, npc, null);
 						}
 						else if (npc.getInstanceWorld().getParameters().getInt("ROOM", 1) == 3)
 						{
+							// Move mobs in Room 3 towards center of room.
 							final Location loc = instance.getTemplateParameters().getLocation("middlePointRoom3");
 							final Location moveTo = new Location(loc.getX() + getRandom(-200, 200), loc.getY() + getRandom(-200, 200), loc.getZ());
 							npc.setRunning();
@@ -302,18 +354,8 @@ public final class KartiasLabyrinth extends AbstractInstance
 				{
 					if (npc != null)
 					{
-						WalkingManager.getInstance().startMoving(npc, instance.getTemplateParameters().getString(getRandomBoolean() ? "route1" : "route2"));
-						getTimers().addTimer("CHANGE_TARGETABLE_STATUS", 5000, npc, null);
-					}
-					break;
-				}
-				case "CHANGE_TARGETABLE_STATUS":
-				{
-					if (npc != null)
-					{
-						npc.setTargetable(true);
-						final L2PcInstance randomPlayer = instance.getPlayers().stream().findAny().get();
-						npc.moveToLocation(randomPlayer.getX(), randomPlayer.getY(), randomPlayer.getZ(), 10);
+						final String selectedRoute = (getRandomBoolean() ? "route1_" : "route2_") + Integer.toString(getRandom(1, 3));
+						WalkingManager.getInstance().startMoving(npc, instance.getTemplateParameters().getString(selectedRoute));
 					}
 					break;
 				}
@@ -346,7 +388,6 @@ public final class KartiasLabyrinth extends AbstractInstance
 			
 		});
 		
-		instance.getParameters().set("TELEPORT_1_ENABLED", true);
 		if (!isSoloKartia(instance))
 		{
 			getTimers().addTimer("CALL_PROGRESS", 2500, n -> manageProgressInInstance(instance));
@@ -375,6 +416,20 @@ public final class KartiasLabyrinth extends AbstractInstance
 		}
 	}
 	
+	private void manageWaves(Instance instance)
+	{
+		if ((instance != null) && instance.getAliveNpcs(MONSTERS).isEmpty())
+		{
+			getTimers().cancelTimers("NEXT_WAVE_DELAY");
+			getTimers().cancelTimers("MONITOR_WAVE");
+			getTimers().addTimer("CALL_PROGRESS", 5000, n -> manageProgressInInstance(instance));
+		}
+		else
+		{
+			getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
+		}
+	}
+	
 	public void onBossKill(OnCreatureDeath event)
 	{
 		final L2Npc npc = (L2Npc) event.getTarget();
@@ -384,80 +439,29 @@ public final class KartiasLabyrinth extends AbstractInstance
 		{
 			if (isSoloKartia(instance))
 			{
-				final StatsSet tempParam = instance.getTemplateParameters();
-				final int xp = tempParam.getInt("soloEXP");
-				final int xp_rnd = tempParam.getInt("SoloEXP_Rand");
-				final int sp = tempParam.getInt("SoloSP");
-				final int sp_rnd = tempParam.getInt("SoloSP_Rand");
-				
-				instance.getPlayers().forEach(player ->
+				final L2PcInstance player = instance.getFirstPlayer();
+				if (player != null)
 				{
-					addExpAndSp(player, (xp + getRandom(xp_rnd)), (sp + getRandom(sp_rnd)));
-				});
-			}
-			
-			// Check Instance Quests.
-			instance.getPlayers().forEach(player ->
-			{
-				switch (instance.getTemplateId())
-				{
-					case TEMPLATE_ID_SOLO_85:
+					switch (instance.getTemplateId())
 					{
-						final QuestState qs = player.getQuestState(Q00497_IncarnationOfGreedZellakaSolo.class.getSimpleName());
-						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						case TEMPLATE_ID_SOLO_85:
 						{
-							qs.setCond(2, true);
+							player.addExpAndSp(SOLO_BASE_EXP_85 + getRandom(SOLO_RAND_EXP_85), SOLO_BASE_SP_85 + getRandom(SOLO_RAND_SP_85));
+							break;
 						}
-						break;
-					}
-					case TEMPLATE_ID_SOLO_90:
-					{
-						final QuestState qs = player.getQuestState(Q00498_IncarnationOfJealousyPellineSolo.class.getSimpleName());
-						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						case TEMPLATE_ID_SOLO_90:
 						{
-							qs.setCond(2, true);
+							player.addExpAndSp(SOLO_BASE_EXP_90 + getRandom(SOLO_RAND_EXP_90), SOLO_BASE_SP_90 + getRandom(SOLO_RAND_SP_90));
+							break;
 						}
-						break;
-					}
-					case TEMPLATE_ID_SOLO_95:
-					{
-						final QuestState qs = player.getQuestState(Q00499_IncarnationOfGluttonyKaliosSolo.class.getSimpleName());
-						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
+						case TEMPLATE_ID_SOLO_95:
 						{
-							qs.setCond(2, true);
+							player.addExpAndSp(SOLO_BASE_EXP_95 + getRandom(SOLO_RAND_EXP_95), SOLO_BASE_SP_95 + getRandom(SOLO_RAND_SP_95));
+							break;
 						}
-						break;
-					}
-					case TEMPLATE_ID_GROUP_85:
-					{
-						final QuestState qs = player.getQuestState(Q00494_IncarnationOfGreedZellakaGroup.class.getSimpleName());
-						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-						{
-							qs.setCond(2, true);
-						}
-						break;
-					}
-					case TEMPLATE_ID_GROUP_90:
-					{
-						final QuestState qs = player.getQuestState(Q00495_IncarnationOfJealousyPellineGroup.class.getSimpleName());
-						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-						{
-							qs.setCond(2, true);
-						}
-						break;
-					}
-					case TEMPLATE_ID_GROUP_95:
-					{
-						final QuestState qs = player.getQuestState(Q00496_IncarnationOfGluttonyKaliosGroup.class.getSimpleName());
-						if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-						{
-							qs.setCond(2, true);
-						}
-						break;
 					}
 				}
-			});
-			
+			}
 			instance.finishInstance();
 		}
 	}
@@ -475,8 +479,6 @@ public final class KartiasLabyrinth extends AbstractInstance
 					instance.setParameter("BOSS_CAN_ESCAPE", false);
 					npc.setScriptValue(1);
 					npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.NOT_BAD_FOR_A_BUNCH_OF_HUMANS_I_M_LEAVING);
-					npc.disableCoreAI(true);
-					addMoveToDesire(npc, instance.getTemplateParameters().getLocation("bossEscapeLoc1"), 23);
 				}
 			}
 			else
@@ -503,7 +505,6 @@ public final class KartiasLabyrinth extends AbstractInstance
 		final Instance instance = character.getInstanceWorld();
 		if ((instance != null) && character.isPlayer())
 		{
-			// final L2PcInstance player = character.getActingPlayer();
 			switch (zone.getId())
 			{
 				case KARTIA_85_DETECT_1:
@@ -532,11 +533,6 @@ public final class KartiasLabyrinth extends AbstractInstance
 					}
 					break;
 				}
-				/*
-				 * case KARTIA_85_TELEPORT_1: case KARTIA_90_TELEPORT_1: case KARTIA_95_TELEPORT_1: { if (instance.getParameters().getBoolean("TELEPORT_1_ENABLED", false)) { player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone1_loc")); } break; } case
-				 * KARTIA_85_TELEPORT_2: case KARTIA_90_TELEPORT_2: case KARTIA_95_TELEPORT_2: { if (instance.getParameters().getBoolean("TELEPORT_2_ENABLED", false)) { player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone2_loc")); } break; } case KARTIA_85_TELEPORT_3:
-				 * case KARTIA_90_TELEPORT_3: case KARTIA_95_TELEPORT_3: { if (instance.getParameters().getBoolean("TELEPORT_3_ENABLED", false)) { player.teleToLocation(instance.getTemplateParameters().getLocation("teleportZone3_loc")); } break; }
-				 */
 			}
 		}
 		return super.onEnterZone(character, zone);
@@ -546,31 +542,15 @@ public final class KartiasLabyrinth extends AbstractInstance
 	public void onMoveFinished(L2Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (instance != null)
+		if ((instance != null) && CommonUtil.contains(PRISONERS, npc.getId()))
 		{
-			if (CommonUtil.contains(PRISONERS, npc.getId()))
+			if (npc.isScriptValue(0))
 			{
-				if (npc.isScriptValue(0))
-				{
-					npc.setScriptValue(1);
-					final Location moveTo = new Location(npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ());
-					addMoveToDesire(npc, moveTo, 23);
-				}
-				else
-				{
-					npc.deleteMe();
-				}
+				final Location moveTo = new Location(npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ());
+				addMoveToDesire(npc, moveTo, 23);
 			}
-			else if (npc.isScriptValue(1))
+			else
 			{
-				npc.setScriptValue(2);
-				addMoveToDesire(npc, instance.getTemplateParameters().getLocation("bossEscapeLoc2"), 23);
-			}
-			else if (npc.isScriptValue(2))
-			{
-				instance.setParameter("MINIBOSS_SURVIVED", true);
-				instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
-				instance.setStatus(3); // Used for notify helper's AI
 				npc.deleteMe();
 			}
 		}
@@ -585,7 +565,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		{
 			final Location moveTo = new Location(npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ());
 			npc.setRandomWalking(true);
-			addMoveToDesire(npc, moveTo, 0);
+			addMoveToDesire(npc, moveTo, 6);
 		}
 	}
 	
@@ -605,6 +585,11 @@ public final class KartiasLabyrinth extends AbstractInstance
 				npc.doCast(BOSS_STONE.getSkill());
 				((L2Attackable) npc).setCanReturnToSpawnPoint(false);
 				npc.setRandomWalking(false);
+				npc.setTargetable(false);
+				npc.setIsInvul(true);
+			}
+			else if (CommonUtil.contains(MONSTERS, npc.getId()) || CommonUtil.contains(MINI_BOSSES, npc.getId()))
+			{
 				npc.setTargetable(false);
 				npc.setIsInvul(true);
 			}
@@ -632,14 +617,16 @@ public final class KartiasLabyrinth extends AbstractInstance
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE1"));
 							param.set("WAVE", 2);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 2:
 						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE2"));
 							param.set("WAVE", 3);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 3:
@@ -662,14 +649,16 @@ public final class KartiasLabyrinth extends AbstractInstance
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE1"));
 							param.set("WAVE", 2);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 2:
 						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE2"));
 							param.set("WAVE", 3);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 3:
@@ -692,14 +681,16 @@ public final class KartiasLabyrinth extends AbstractInstance
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE3_WAVE1"));
 							param.set("WAVE", 2);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 2:
 						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE3_WAVE2"));
 							param.set("WAVE", 3);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 3:
@@ -744,7 +735,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 					}
 					break;
 				}
-				case 4:
+				case 4: // Only used in group version of instance.
 				{
 					switch (wave)
 					{
@@ -753,14 +744,16 @@ public final class KartiasLabyrinth extends AbstractInstance
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE1"));
 							param.set("WAVE", 2);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 2:
 						{
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE2"));
 							param.set("WAVE", 3);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 3:
@@ -774,7 +767,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 					}
 					break;
 				}
-				case 5:
+				case 5: // Only used in group version of instance.
 				{
 					switch (wave)
 					{
@@ -783,7 +776,8 @@ public final class KartiasLabyrinth extends AbstractInstance
 							showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE5_WAVE1"));
 							param.set("WAVE", 2);
-							getTimers().addTimer("NEXT_WAVE_DELAY", 30000, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("NEXT_WAVE_DELAY", WAVE_DEALY, n -> manageProgressInInstance(instance));
+							getTimers().addTimer("MONITOR_WAVE", WAVE_MONITOR_DELAY, n -> manageWaves(instance));
 							break;
 						}
 						case 2:
@@ -815,8 +809,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		}
 		else if (room == 2)
 		{
-			instance.getParameters().set("TELEPORT_1_ENABLED", false);
-			instance.setParameter("BOSS_CAN_ESCAPE", true);
+			instance.setParameter("BOSS_CAN_ESCAPE", false);
 			instance.setParameter("BOSS_KILL_OPEN_DOOR", true);
 			instance.spawnGroup("ROOM2_STAGE1_WAVE1");
 			instance.openCloseDoor(instance.getTemplateParameters().getInt("secondDoorId"), true);
@@ -909,24 +902,23 @@ public final class KartiasLabyrinth extends AbstractInstance
 	private void moveMonsters(List<L2Npc> monsterList)
 	{
 		int delay = 500;
-		for (L2Npc npc : monsterList)
+		for (L2Npc monster : monsterList)
 		{
-			final Instance world = npc.getInstanceWorld();
-			if (npc.isAttackable() && (world != null))
+			final Instance world = monster.getInstanceWorld();
+			if (monster.isAttackable() && (world != null))
 			{
 				if (world.getParameters().getInt("ROOM", 1) <= 2)
 				{
-					npc.setRandomWalking(false);
-					npc.setTargetable(false);
-					getTimers().addTimer("MOVE_TO_MIDDLE", delay, npc, null);
+					monster.setRandomWalking(false);
+					getTimers().addTimer("MOVE_TO_MIDDLE", delay, monster, null);
 					delay += 250;
 				}
 				else if (world.getParameters().getInt("ROOM", 1) == 3)
 				{
-					onTimerEvent("MOVE_TO_MIDDLE", null, npc, null);
+					onTimerEvent("MOVE_TO_MIDDLE", null, monster, null);
 				}
-				((L2Attackable) npc).setCanReturnToSpawnPoint(false);
-				npc.initSeenCreatures();
+				((L2Attackable) monster).setCanReturnToSpawnPoint(false);
+				monster.initSeenCreatures();
 			}
 		}
 	}
@@ -937,10 +929,19 @@ public final class KartiasLabyrinth extends AbstractInstance
 		final L2Npc npc = (L2Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		
-		if ((world != null) && creature.isPlayer() && npc.isScriptValue(0))
+		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpcInstance)) && npc.isScriptValue(0))
 		{
-			npc.setScriptValue(1);
-			addAttackDesire(npc, creature);
+			final double distance = npc.calculateDistance(creature, false, false);
+			if ((distance < 450) && !CommonUtil.contains(PRISONERS, creature.getId()))
+			{
+				npc.setTargetable(true);
+				npc.setIsInvul(false);
+				npc.setScriptValue(1);
+				WalkingManager.getInstance().cancelMoving(npc);
+				((L2MonsterInstance) npc).addDamageHate(creature, 0, 1000);
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+				addAttackDesire(npc, creature);
+			}
 		}
 	}
 	

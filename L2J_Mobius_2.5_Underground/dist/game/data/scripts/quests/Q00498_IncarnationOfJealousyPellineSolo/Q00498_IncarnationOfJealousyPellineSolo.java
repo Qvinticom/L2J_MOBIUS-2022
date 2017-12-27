@@ -33,6 +33,8 @@ public class Q00498_IncarnationOfJealousyPellineSolo extends Quest
 	private static final int KARTIA_RESEARCHER = 33647;
 	// Item
 	private static final int DIMENSION_TRAVELERS_RED_BOX = 34931;
+	// Boss
+	private static final int BOSS = 19254; // Pelline (Solo 90)
 	// Misc
 	private static final int MIN_LEVEL = 90;
 	private static final int MAX_LEVEL = 94;
@@ -42,6 +44,7 @@ public class Q00498_IncarnationOfJealousyPellineSolo extends Quest
 		super(498);
 		addStartNpc(KARTIA_RESEARCHER);
 		addTalkId(KARTIA_RESEARCHER);
+		addKillId(BOSS);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33647-00.htm");
 	}
 	
@@ -114,5 +117,16 @@ public class Q00498_IncarnationOfJealousyPellineSolo extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			qs.setCond(2, true);
+		}
+		return super.onKill(npc, player, isSummon);
 	}
 }
