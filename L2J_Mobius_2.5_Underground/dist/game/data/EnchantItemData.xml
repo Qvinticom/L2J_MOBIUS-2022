@@ -362,16 +362,18 @@
 	<!-- Ancient Scrolls: Enchant Weapon -->
 	<enchant id="22426" targetGrade="R" maxEnchant="15" bonusRate="10" />
 	<enchant id="23342" targetGrade="R" bonusRate="10" />
+
 	<!-- Heavenly Scrolls: Enchant Weapon -->
-	<enchant id="23343" targetGrade="R" bonusRate="100" />
+	<enchant id="23343" targetGrade="R" maxEnchantFighter="12" maxEnchantMagic="7" bonusRate="100" />
 
 	<!-- Scrolls: Enchant Armor -->
 	<enchant id="22428" targetGrade="R" bonusRate="10" />
 	<!-- Ancient Scrolls: Enchant Armor -->
 	<enchant id="22429" targetGrade="R" maxEnchant="15" bonusRate="10" />
 	<enchant id="23344" targetGrade="R" bonusRate="10" />
+
 	<!-- Heavenly Scrolls: Enchant Armor -->
-	<enchant id="23345" targetGrade="R" bonusRate="100" />
+	<enchant id="23345" targetGrade="R" maxEnchant="7" bonusRate="100" />
 
 	<!-- Event - Scrolls: Enchant Weapon -->
 	<enchant id="22550" targetGrade="A" />
@@ -633,22 +635,22 @@
 	<enchant id="23433" targetGrade="D" />
 
 	<!-- Divine Scrolls: Enchant Weapon -->
-	<enchant id="23731" targetGrade="A" bonusRate="100" />
-	<enchant id="23732" targetGrade="S" bonusRate="100" />
-	<enchant id="23733" targetGrade="R" bonusRate="100" />
+	<enchant id="23731" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23732" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23733" targetGrade="R" maxEnchant="4" bonusRate="100" />
 
-	<enchant id="23737" targetGrade="A" bonusRate="100" />
-	<enchant id="23738" targetGrade="S" bonusRate="100" />
-	<enchant id="23739" targetGrade="R" bonusRate="100" />
+	<enchant id="23737" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23738" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23739" targetGrade="R" maxEnchant="4" bonusRate="100" />
 
 	<!-- Divine Scrolls: Enchant Armor -->
-	<enchant id="23734" targetGrade="A" bonusRate="100" />
-	<enchant id="23735" targetGrade="S" bonusRate="100" />
-	<enchant id="23736" targetGrade="R" bonusRate="100" />
+	<enchant id="23734" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23735" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23736" targetGrade="R" maxEnchant="4" bonusRate="100" />
 
-	<enchant id="23740" targetGrade="A" bonusRate="100" />
-	<enchant id="23741" targetGrade="S" bonusRate="100" />
-	<enchant id="23742" targetGrade="R" bonusRate="100" />
+	<enchant id="23740" targetGrade="A" maxEnchant="4" bonusRate="100" />
+	<enchant id="23741" targetGrade="S" maxEnchant="4" bonusRate="100" />
+	<enchant id="23742" targetGrade="R" maxEnchant="4" bonusRate="100" />
 
 	<!-- Weapon Destiny Enchant Scrolls -->
 	<enchant id="33455" targetGrade="D" />
