@@ -546,6 +546,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		{
 			if (npc.isScriptValue(0))
 			{
+				npc.setScriptValue(1);
 				final Location moveTo = new Location(npc.getX() + getRandom(-200, 200), npc.getY() + getRandom(-200, 200), npc.getZ());
 				addMoveToDesire(npc, moveTo, 23);
 			}
