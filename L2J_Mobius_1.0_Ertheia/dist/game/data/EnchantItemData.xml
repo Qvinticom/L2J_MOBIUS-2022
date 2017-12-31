@@ -95,27 +95,35 @@
 	<enchant id="22227" targetGrade="C" maxEnchant="15" />
 	<enchant id="22229" targetGrade="D" maxEnchant="15" />
 
-	<enchant id="33838" targetGrade="D" maxEnchant="15" />
-	<enchant id="33839" targetGrade="C" maxEnchant="15" />
-	<enchant id="33840" targetGrade="B" maxEnchant="15" />
-	<enchant id="33841" targetGrade="A" maxEnchant="15" />
-	<enchant id="33842" targetGrade="S" maxEnchant="15" />
-	<enchant id="33843" targetGrade="R" maxEnchant="15" />
+	<!-- Scroll: Enchant Weapon of Destruction -->
+	<enchant id="22221" targetGrade="S" minEnchant="15" />
+	<enchant id="22223" targetGrade="A" minEnchant="15" />
+	<enchant id="22225" targetGrade="B" minEnchant="15" />
+	<enchant id="22227" targetGrade="C" minEnchant="15" />
+	<enchant id="22229" targetGrade="D" minEnchant="15" />
+	<enchant id="33478" targetGrade="R" minEnchant="15" />
+
+	<enchant id="33838" targetGrade="D" minEnchant="15" />
+	<enchant id="33839" targetGrade="C" minEnchant="15" />
+	<enchant id="33840" targetGrade="B" minEnchant="15" />
+	<enchant id="33841" targetGrade="A" minEnchant="15" />
+	<enchant id="33842" targetGrade="S" minEnchant="15" />
+	<enchant id="33843" targetGrade="R" minEnchant="15" />
 	
 	<!-- Scroll: Enchant Armor of Destruction -->
-	<enchant id="33479" targetGrade="R" maxEnchant="6" />
-	<enchant id="22222" targetGrade="S" maxEnchant="6" />
-	<enchant id="22224" targetGrade="A" maxEnchant="6" />
-	<enchant id="22226" targetGrade="B" maxEnchant="6" />
-	<enchant id="22228" targetGrade="C" maxEnchant="6" />
-	<enchant id="22230" targetGrade="D" maxEnchant="6" />
+	<enchant id="22222" targetGrade="S" minEnchant="6" />
+	<enchant id="22224" targetGrade="A" minEnchant="6" />
+	<enchant id="22226" targetGrade="B" minEnchant="6" />
+	<enchant id="22228" targetGrade="C" minEnchant="6" />
+	<enchant id="22230" targetGrade="D" minEnchant="6" />
+	<enchant id="33479" targetGrade="R" minEnchant="6" />
 
-	<enchant id="33844" targetGrade="D" maxEnchant="6" />
-	<enchant id="33845" targetGrade="C" maxEnchant="6" />
-	<enchant id="33846" targetGrade="B" maxEnchant="6" />
-	<enchant id="33847" targetGrade="A" maxEnchant="6" />
-	<enchant id="33848" targetGrade="S" maxEnchant="6" />
-	<enchant id="33849" targetGrade="R" maxEnchant="6" />
+	<enchant id="33844" targetGrade="D" minEnchant="6" />
+	<enchant id="33845" targetGrade="C" minEnchant="6" />
+	<enchant id="33846" targetGrade="B" minEnchant="6" />
+	<enchant id="33847" targetGrade="A" minEnchant="6" />
+	<enchant id="33848" targetGrade="S" minEnchant="6" />
+	<enchant id="33849" targetGrade="R" minEnchant="6" />
 
 	<!-- Master Yogi's Scroll: Enchant Weapon -->
 	<enchant id="13540" maxEnchant="15">
