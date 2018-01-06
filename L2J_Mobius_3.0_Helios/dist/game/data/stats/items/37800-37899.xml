@@ -4,20 +4,18 @@
 		<!-- Increases aerial yoke resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37801" name="Bloody Eternal Enhancement Stone Fragment" type="EtcItem">
 		<!-- Bring 10 fragments to the Black of mammon to obtain a Bloody Eternal Enhancement Stone. -->
 		<set name="icon" val="icon.energy_condenser_fragment_pvp" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37802" name="Dark Eternal Enhancement Stone Fragment" type="EtcItem">
 		<!-- Bring 10 fragments to the Black of mammon to obtain a Dark Eternal Enhancement Stone. -->
 		<set name="icon" val="icon.energy_condenser_fragment_pve" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37803" name="Master Yogi's Special Scroll: Enchant Weapon" type="EtcItem">
@@ -25,9 +23,9 @@
 		<set name="icon" val="icon.yogi_scroll_of_enchant_weapon_grade_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37804" name="Replica Tiara" type="Armor">
 		<!-- A replica of the Exalted Tiara. Attack Attribute Bonus + 30 when equipped. -->
@@ -63,7 +61,6 @@
 		<set name="crystal_type" val="EVENT" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -72,6 +69,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37806" name="Master Yogi's Staff" type="Weapon">
@@ -83,7 +81,6 @@
 		<set name="crystal_type" val="EVENT" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -92,6 +89,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37807" name="Master Yogi's Staff" type="Weapon">
@@ -103,7 +101,6 @@
 		<set name="crystal_type" val="EVENT" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -112,6 +109,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37808" name="Master Yogi's Staff" type="Weapon">
@@ -123,7 +121,6 @@
 		<set name="crystal_type" val="EVENT" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 		<stats>
 			<stat type="pAtk">11</stat>
@@ -132,6 +129,7 @@
 			<stat type="accCombat">8</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
 	<item id="37809" name="Mysterious Crystal" type="EtcItem">
@@ -139,7 +137,6 @@
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37810" name="Metal Suit Hair Accessory" type="Armor">
@@ -147,7 +144,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_hair" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -156,7 +152,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_u" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -165,7 +160,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_l" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -174,7 +168,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_g" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -183,7 +176,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_co_sf_b" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
 	</item>
@@ -193,8 +185,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37816" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of Metal Shoot hair for 30 days. -->
@@ -205,9 +197,9 @@
 		<set name="time" val="43200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37817" name="Metal Suit Breastplate Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a top to that of a Metal Shoot breastplate for 30 days. -->
@@ -218,9 +210,9 @@
 		<set name="time" val="43200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37818" name="Metal Suit Gaiters Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a bottom to that of Metal Shoot gaiters for 30 days. -->
@@ -231,9 +223,9 @@
 		<set name="time" val="43200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37819" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of gloves to that of Metal Shoot gloves for 30 days. -->
@@ -244,9 +236,9 @@
 		<set name="time" val="43200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37820" name="Metal Suit Boots Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of boots to that of Metal Shoot boots for 30 days. -->
@@ -257,9 +249,9 @@
 		<set name="time" val="43200" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37821" name="Transformation Potion: Metal Suit" type="EtcItem">
 		<!-- Modifies your appearance into that of a Metal Suit for 1 hr. -->
@@ -267,15 +259,15 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37822" name="Scroll of Escape: Hellbound" type="EtcItem">
 		<!-- Scroll that teleports you to Hellbound. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37823" name="Leona's Gift" type="EtcItem">
 		<!-- Blackbird's present that is given to the heroes who help in defeating the evil on Hellbound. -->
@@ -283,12 +275,12 @@
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="37824" name="Hair Accessory Appearance Stone Coupon" additionalName="15-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special appearance hair accessory appearance stone (15-day limited). The exchange can be done through the Adventurers' Guide. -->
@@ -296,7 +288,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 	</item>
@@ -306,7 +297,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
@@ -316,10 +306,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37827" name="NC Dinos Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of an NC Dinos Hat (30-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -327,10 +317,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37828" name="Vigilante Hat Appearance Stone" additionalName="15-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (15-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -338,10 +328,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37829" name="Vigilante Hat Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Item that changes the appearance of a hair accessory to that of a Vigilante Hat (30-day limited). Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
@@ -349,10 +339,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37830" name="Valentine Appearance Stone Coupon: Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Item that can be exchanged for a special appearance weapon appearance stone (15-day limited). The exchange can be done through the Adventurers' Guide. -->
@@ -360,7 +350,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 	</item>
@@ -370,10 +359,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="37832" name="Valentine Appearance Stone: Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon.15-day. -->
@@ -381,10 +373,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37833" name="Valentine Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon.15-day. -->
@@ -392,10 +384,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37834" name="Valentine Appearance Stone: Two-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Valentine's Day weapon.15-day. -->
@@ -403,10 +395,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37835" name="Valentine Appearance Stone: One-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of a Valentine's Day weapon.15-day. -->
@@ -414,10 +406,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37836" name="Valentine Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon.15-day. -->
@@ -425,10 +417,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37837" name="Valentine Appearance Stone: Spear" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon.15-day. -->
@@ -436,10 +428,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37838" name="Valentine Appearance Stone: Bow" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon.15-day. -->
@@ -447,10 +439,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37839" name="Valentine Appearance Stone: Crossbow" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon.15-day. -->
@@ -458,10 +450,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37840" name="Valentine Appearance Stone: One-handed Magic Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon.15-day. -->
@@ -469,10 +461,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37841" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic blunt to that of a Valentine's Day weapon.15-day. -->
@@ -480,10 +472,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37842" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt to that of a Valentine's Day weapon.15-day. -->
@@ -491,10 +483,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37843" name="Valentine Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of a Valentine's Day weapon.15-day. -->
@@ -502,10 +494,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37844" name="Valentine Appearance Stone: Dual Dagger" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of a Valentine's Day weapon.15-day. -->
@@ -513,10 +505,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37845" name="Valentine Appearance Stone: Dual Blunt Weapon" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of a Valentine's Day weapon.15-day. -->
@@ -524,10 +516,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37846" name="Valentine Appearance Stone: Shield" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Valentine's Day shield.15-day. -->
@@ -535,10 +527,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37847" name="Valentine Appearance Stone: Sigil" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil.15-day. -->
@@ -546,10 +538,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="21600" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37848" name="Valentine Appearance Stone: Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dagger to that of a Valentine's Day weapon.30-day. -->
@@ -557,10 +549,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37849" name="Valentine Appearance Stone: One-handed Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of a Valentine's Day weapon.30-day. -->
@@ -568,10 +560,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37850" name="Valentine Appearance Stone: Two-handed Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of a Valentine's Day weapon.30-day. -->
@@ -579,10 +571,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37851" name="Valentine Appearance Stone: One-handed Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of a Valentine's Day weapon.30-day. -->
@@ -590,10 +582,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37852" name="Valentine Appearance Stone: Fist Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a fist weapon to that of a Valentine's Day weapon.30-day. -->
@@ -601,10 +593,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37853" name="Valentine Appearance Stone: Spear" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a spear to that of a Valentine's Day weapon.30-day. -->
@@ -612,10 +604,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37854" name="Valentine Appearance Stone: Bow" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a bow to that of a Valentine's Day weapon.30-day. -->
@@ -623,10 +615,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37855" name="Valentine Appearance Stone: Crossbow" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a crossbow to that of a Valentine's Day weapon 30-day. -->
@@ -634,10 +626,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37856" name="Valentine Appearance Stone: One-handed Magic Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic sword to that of a Valentine's Day weapon. 30-day. -->
@@ -645,10 +637,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37857" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed magic blunt to that of a Valentine's Day weapon. 30-day. -->
@@ -656,10 +648,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37858" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed magic blunt to that of a Valentine's Day weapon. 30-day. -->
@@ -667,10 +659,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37859" name="Valentine Appearance Stone: Dualsword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dualsword to that of a Valentine's Day weapon. 30-day. -->
@@ -678,10 +670,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37860" name="Valentine Appearance Stone: Dual Dagger" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger to that of a Valentine's Day weapon. 30-day. -->
@@ -689,10 +681,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37861" name="Valentine Appearance Stone: Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of a Valentine's Day weapon. 30-day. -->
@@ -700,10 +692,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37862" name="Valentine Appearance Stone: Shield" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a shield to that of a Valentine's Day shield. 30-day. -->
@@ -711,10 +703,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37863" name="Valentine Appearance Stone: Sigil" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a sigil to that of a Valentine's Day sigil. 30-day. -->
@@ -722,37 +714,37 @@
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="time" val="43200" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37864" name="Hero's SP Scroll (Novice)" type="EtcItem">
 		<!-- Double-click to obtain 1,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll1_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37865" name="Hero's SP Scroll (Experienced)" type="EtcItem">
 		<!-- Double-click to obtain 5,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll2_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37866" name="Hero's SP Scroll (Expert)" type="EtcItem">
 		<!-- Double-click to obtain 10,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37867" name="Valiant Scroll" type="EtcItem">
 		<!-- For 30 minutes, P. Atk. + 10%, M. Atk. by 21%, P. Def. by 15%, M. Def. by 15%, Max HP, MP, and CP by 15%. Does not disappear upon death. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
@@ -760,12 +752,8 @@
 		<set name="weight" val="0" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
-		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />

@@ -1458,9 +1458,19 @@
 	<item id="38756" name="Chaos Essence Pack" type="EtcItem">
 		<!-- Double-click to obtain a Chaos Essence (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="time" val="43200" />
+		<set name="handler" val="ExtractableItems" />
+			<capsuled_items>
+			<item id="36949" min="1" max="1" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="38757" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Success rate + 20% for enchanting R-grade weapons with Blessed Scroll: Enchant Weapon. Only for items enchanted between + 3 and + 9. -->
