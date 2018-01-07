@@ -2572,7 +2572,6 @@
 		</effects>
 	</skill>
 	<skill id="22689" toLevel="1" name="Raid's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., obtained XP/SP + 10%. -->
 		<icon>BranchSys2.icon.br_vitality_day_i00</icon>
 		<operateType>A2</operateType>
@@ -2594,6 +2593,14 @@
 		<targetType>TARGET</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22690" toLevel="1" name="Elven Radler">
 		<!-- AUTO GENERATED SKILL -->

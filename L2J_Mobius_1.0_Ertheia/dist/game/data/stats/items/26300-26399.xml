@@ -20,7 +20,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -48,7 +47,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -60,58 +58,58 @@
 		<!-- You can start a campfire by using this flint. The warmth of the bonfire will decrease Skill Cooldown by 10%, increase PVE Damage by 10%, and bestow the Vampirig Rage effect. It will be effective only when the fire is started at a certain distance away from the village. Does not stack with the Christmas Tree effect. -->
 		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
 		<set name="price" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26305" name="Kotatsu" type="EtcItem">
 		<!-- Increases Speed by 20, and reduces Skill MP Consumption by 20% and PvE Damage by 10%. It will be effective only when summoned at a certain distance away from the village. It lasts 10 minutes. Does not stack with the Christmas Tree effect. -->
 		<set name="icon" val="BranchSys.icon.br_kotatsu_i00" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26306" name="Offering Test Recipe 1" type="EtcItem">
 		<!-- For Dwarves only. rare_condition 100000000, rare_announce 1 -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="RECIPE" />
 	</item>
 	<item id="26307" name="Offering Test Recipe 2" type="EtcItem">
 		<!-- For Dwarves only. rare_condition 100000000, rare_announce 0 -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="RECIPE" />
 	</item>
 	<item id="26308" name="Offering Test Recipe 3" type="EtcItem">
 		<!-- For Dwarves only. rare_condition 100000000 -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="RECIPE" />
 	</item>
 	<item id="26309" name="Offering Test Recipe 4" type="EtcItem">
 		<!-- For Dwarves only. rare_announce 1 -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="RECIPE" />
 	</item>
 	<item id="26310" name="Offering Test Recipe 5" type="EtcItem">
 		<!-- For Dwarves only. rare_announce 0 -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
 		<set name="weight" val="30" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="RECIPE" />
 	</item>
 	<item id="26311" name="Offering Test Ingredient 1" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Quest item. -->
@@ -119,7 +117,6 @@
 		<set name="price" val="1000" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -135,7 +132,6 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -150,6 +146,7 @@
 			<stat type="pAtkSpd">325</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkRange">40</stat>
+			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
 	<item id="26313" name="Offering Test Ingredient 3" type="EtcItem">
@@ -157,7 +154,6 @@
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -169,14 +165,12 @@
 		<!-- Stackable item worth 1000 Adena. Premium item. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26315" name="Offering Test Ingredient 5" type="EtcItem">
 		<!-- Price is 0, but can be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -184,7 +178,6 @@
 		<!-- Stackable item worth 1000 Adena. Cannot be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
@@ -193,14 +186,12 @@
 		<!-- Stackable item worth 1000. Must be used as an offering. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26318" name="Dragon Scales" type="EtcItem">
 		<!-- Main ingredient to create Dragon Claws (Fragments). -->
 		<set name="icon" val="BranchIcon.Icon.etc_dragon_skin_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -209,56 +200,55 @@
 	<item id="26319" name="Venir's Talisman Stage 1 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 Venir's Talismans Stage 1. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26320" name="Venir's Talisman Stage 2 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 Venir's Talismans Stage 2. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26321" name="Venir's Talisman Stage 3 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 8 Venir's Talismans Stage 3. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26322" name="Venir's Talisman Stage 4 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 6 Venir's Talismans Stage 4. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26323" name="Venir's Talisman Stage 5 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 4 Venir's Talismans Stage 5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26324" name="Venir's Talisman Stage 6 Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 2 Venir's Talismans Stage 6. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="26325" name="Santa Cloak" type="Armor">
 		<!-- Santa's warm cloak. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="220" />
 		<stats>
@@ -270,7 +260,6 @@
 		<set name="icon" val="icon.london_olympic_bikini" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="1000" />
@@ -279,7 +268,6 @@
 		<!-- Lineage II baseball cap. -->
 		<set name="icon" val="icon.accessory_mining_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="10" />
@@ -289,7 +277,6 @@
 		<set name="icon" val="BranchSys3.icon1.Br_schoollook" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -299,7 +286,6 @@
 		<!-- School Uniform A hair accessory. -->
 		<set name="icon" val="icon.accessory_mining_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -310,7 +296,6 @@
 		<set name="icon" val="BranchSys3.icon1.Br_schoollook" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -320,7 +305,6 @@
 		<!-- School Uniform B hair accessory. -->
 		<set name="icon" val="icon.accessory_mining_cap_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -329,27 +313,28 @@
 	<item id="26332" name="Lineage II Baseball Uniform Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the Lineage II Baseball Uniform. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the Lineage II Baseball Uniform. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26333" name="Lineage II Baseball Cap Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the Lineage II Baseball Cap. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26334" name="School Uniform A Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the School Uniform A. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform A. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -359,7 +344,6 @@
 	<item id="26335" name="School Uniform Hair A Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the School Uniform Hair A. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
@@ -369,7 +353,6 @@
 	<item id="26336" name="School Uniform B Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of the entire armor into that of the School Uniform B. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of the School Uniform B. Appearance is restored through the use of a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -379,7 +362,6 @@
 	<item id="26337" name="School Uniform Hair B Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a hair accessory to that of the School Uniform Hair B. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
@@ -390,11 +372,10 @@
 		<!-- Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21477" level="1" />
 			<skill id="21364" level="9" />
@@ -404,11 +385,10 @@
 		<!-- HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21477" level="2" />
 			<skill id="21364" level="10" />
@@ -418,11 +398,10 @@
 		<!-- Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21477" level="3" />
 			<skill id="21364" level="11" />
@@ -432,11 +411,10 @@
 		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="21477" level="4" />
 			<skill id="21364" level="12" />
@@ -452,7 +430,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5000" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26343" name="Recipe: Talisman - Abundance Lv. 2 (High-grade)" type="EtcItem">
@@ -465,7 +442,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5001" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26344" name="Recipe: Talisman - Abundance Lv. 3 (High-grade)" type="EtcItem">
@@ -478,7 +454,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5002" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26345" name="Recipe: Talisman - Abundance Lv. 4 (High-grade)" type="EtcItem">
@@ -491,7 +466,6 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 		<set name="recipe_id" val="5003" />
-		<set name="is_freightable" val="false" />
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="26346" name="Kaliel's Wish Pouch" type="EtcItem">
@@ -500,7 +474,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -508,11 +481,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="26347" name="Kaliel's Token" type="EtcItem">
 		<!-- Kaliel's Token. Give it to Jolie (Event Manager) to receive a Gift Box or Soul Box. Deleted after event. -->
 		<set name="icon" val="BranchIcon.Icon.event_upgradegold" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -520,17 +493,17 @@
 		<!-- Double-click to receive various items with Kaliel's Blessing that are helpful for obtaining XP and hunting. Temporary event item. -->
 		<set name="icon" val="BranchIcon.Icon.newyear_lucky_bag3" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="26349" name="Kaliel's Gift Box Pouch" type="EtcItem">
 		<!-- Double-click to receive various valuable items with Kaliel's Blessing. Temporary event item. -->
 		<set name="icon" val="BranchIcon.Icon.newyear_lucky_bag3" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="26350" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 4 for one-handed swords/ blunts, daggers, spears, etc. (A-grade). P. Atk. + 5 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
@@ -538,7 +511,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -546,6 +518,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26351" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- When enchanted, P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
@@ -553,7 +526,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -561,6 +533,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26352" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 5 for one-handed swords/ blunts, daggers, spears, etc. (S-grade). P. Atk. + 6 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. P. Atk./M. Atk. Increase doubles starting at + 4. -->
@@ -568,7 +541,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -576,14 +548,14 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26353" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for armor and accessories (S-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -591,13 +563,13 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26354" name="Gem" type="EtcItem">
 		<!-- Used as an ingredient to purchase items from the in-game shop. -->
 		<set name="icon" val="icon.etc_talisman_energy_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

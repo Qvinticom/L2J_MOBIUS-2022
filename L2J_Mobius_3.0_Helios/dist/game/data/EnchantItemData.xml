@@ -112,14 +112,6 @@
 	<enchant id="20522" targetGrade="S" bonusRate="100" />
 
 	<!-- Scroll: Enchant Weapon of Destruction -->
-	<enchant id="33478" targetGrade="R" maxEnchant="15" />
-	<enchant id="22221" targetGrade="S" maxEnchant="15" />
-	<enchant id="22223" targetGrade="A" maxEnchant="15" />
-	<enchant id="22225" targetGrade="B" maxEnchant="15" />
-	<enchant id="22227" targetGrade="C" maxEnchant="15" />
-	<enchant id="22229" targetGrade="D" maxEnchant="15" />
-
-	<!-- Scroll: Enchant Weapon of Destruction -->
 	<enchant id="22221" targetGrade="S" minEnchant="15" />
 	<enchant id="22223" targetGrade="A" minEnchant="15" />
 	<enchant id="22225" targetGrade="B" minEnchant="15" />
@@ -705,7 +697,7 @@
 
 	<!-- Blessed Giant's Scroll: Enchant Armor -->
 	<enchant id="36284" targetGrade="R" />
-		
+
 	<!-- Lucky Enchant Stone: Weapon -->
 	<support id="12362" targetGrade="D" minEnchant="3" maxEnchant="9" bonusRate="20" />
 	<support id="12363" targetGrade="C" minEnchant="3" maxEnchant="9" bonusRate="18" />
@@ -873,7 +865,5 @@
 	<support id="23778" targetGrade="A" minEnchant="10" maxEnchant="15" bonusRate="18" />
 	<support id="23779" targetGrade="S" minEnchant="10" maxEnchant="15" bonusRate="15" />
 	<support id="23780" targetGrade="R" minEnchant="10" maxEnchant="15" bonusRate="10" />
-	
-	
 
 </list>

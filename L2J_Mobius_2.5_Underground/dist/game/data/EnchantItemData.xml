@@ -112,14 +112,6 @@
 	<enchant id="20522" targetGrade="S" bonusRate="100" />
 
 	<!-- Scroll: Enchant Weapon of Destruction -->
-	<enchant id="33478" targetGrade="R" maxEnchant="15" />
-	<enchant id="22221" targetGrade="S" maxEnchant="15" />
-	<enchant id="22223" targetGrade="A" maxEnchant="15" />
-	<enchant id="22225" targetGrade="B" maxEnchant="15" />
-	<enchant id="22227" targetGrade="C" maxEnchant="15" />
-	<enchant id="22229" targetGrade="D" maxEnchant="15" />
-
-	<!-- Scroll: Enchant Weapon of Destruction -->
 	<enchant id="22221" targetGrade="S" minEnchant="15" />
 	<enchant id="22223" targetGrade="A" minEnchant="15" />
 	<enchant id="22225" targetGrade="B" minEnchant="15" />
@@ -844,6 +836,7 @@
 	
 	<!-- Windy Lucky Enchant Stone Weapon -->
 	<support id="39465" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
+	<support id="28497" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="20" />
 
 	<!-- Windy Lucky Enchant Stone Armor -->
 	<support id="39464" targetGrade="R" minEnchant="3" maxEnchant="9" bonusRate="30" />
