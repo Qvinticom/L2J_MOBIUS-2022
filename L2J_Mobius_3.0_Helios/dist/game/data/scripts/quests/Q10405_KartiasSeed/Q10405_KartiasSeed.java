@@ -143,7 +143,7 @@ public final class Q10405_KartiasSeed extends Quest
 		
 		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
-			if (giveItemRandomly(killer, KARTIA_SEED, 1, 50, 1, true))
+			if (giveItemRandomly(killer, KARTIA_SEED, 1, 100, 1, true))
 			{
 				st.setCond(2);
 			}
