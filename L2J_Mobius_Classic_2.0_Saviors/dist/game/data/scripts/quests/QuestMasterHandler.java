@@ -24,37 +24,6 @@ import quests.Q00002_WhatWomenWant.Q00002_WhatWomenWant;
 import quests.Q00003_WillTheSealBeBroken.Q00003_WillTheSealBeBroken;
 import quests.Q00004_LongLiveThePaagrioLord.Q00004_LongLiveThePaagrioLord;
 import quests.Q00005_MinersFavor.Q00005_MinersFavor;
-import quests.Q00070_SagaOfThePhoenixKnight.Q00070_SagaOfThePhoenixKnight;
-import quests.Q00071_SagaOfEvasTemplar.Q00071_SagaOfEvasTemplar;
-import quests.Q00072_SagaOfTheSwordMuse.Q00072_SagaOfTheSwordMuse;
-import quests.Q00073_SagaOfTheDuelist.Q00073_SagaOfTheDuelist;
-import quests.Q00074_SagaOfTheDreadnought.Q00074_SagaOfTheDreadnought;
-import quests.Q00075_SagaOfTheTitan.Q00075_SagaOfTheTitan;
-import quests.Q00076_SagaOfTheGrandKhavatari.Q00076_SagaOfTheGrandKhavatari;
-import quests.Q00077_SagaOfTheDominator.Q00077_SagaOfTheDominator;
-import quests.Q00078_SagaOfTheDoomcryer.Q00078_SagaOfTheDoomcryer;
-import quests.Q00079_SagaOfTheAdventurer.Q00079_SagaOfTheAdventurer;
-import quests.Q00080_SagaOfTheWindRider.Q00080_SagaOfTheWindRider;
-import quests.Q00081_SagaOfTheGhostHunter.Q00081_SagaOfTheGhostHunter;
-import quests.Q00082_SagaOfTheSagittarius.Q00082_SagaOfTheSagittarius;
-import quests.Q00083_SagaOfTheMoonlightSentinel.Q00083_SagaOfTheMoonlightSentinel;
-import quests.Q00084_SagaOfTheGhostSentinel.Q00084_SagaOfTheGhostSentinel;
-import quests.Q00085_SagaOfTheCardinal.Q00085_SagaOfTheCardinal;
-import quests.Q00086_SagaOfTheHierophant.Q00086_SagaOfTheHierophant;
-import quests.Q00087_SagaOfEvasSaint.Q00087_SagaOfEvasSaint;
-import quests.Q00088_SagaOfTheArchmage.Q00088_SagaOfTheArchmage;
-import quests.Q00089_SagaOfTheMysticMuse.Q00089_SagaOfTheMysticMuse;
-import quests.Q00090_SagaOfTheStormScreamer.Q00090_SagaOfTheStormScreamer;
-import quests.Q00091_SagaOfTheArcanaLord.Q00091_SagaOfTheArcanaLord;
-import quests.Q00092_SagaOfTheElementalMaster.Q00092_SagaOfTheElementalMaster;
-import quests.Q00093_SagaOfTheSpectralMaster.Q00093_SagaOfTheSpectralMaster;
-import quests.Q00094_SagaOfTheSoultaker.Q00094_SagaOfTheSoultaker;
-import quests.Q00095_SagaOfTheHellKnight.Q00095_SagaOfTheHellKnight;
-import quests.Q00096_SagaOfTheSpectralDancer.Q00096_SagaOfTheSpectralDancer;
-import quests.Q00097_SagaOfTheShillienTemplar.Q00097_SagaOfTheShillienTemplar;
-import quests.Q00098_SagaOfTheShillienSaint.Q00098_SagaOfTheShillienSaint;
-import quests.Q00099_SagaOfTheFortuneSeeker.Q00099_SagaOfTheFortuneSeeker;
-import quests.Q00100_SagaOfTheMaestro.Q00100_SagaOfTheMaestro;
 import quests.Q00101_SwordOfSolidarity.Q00101_SwordOfSolidarity;
 import quests.Q00102_SeaOfSporesFever.Q00102_SeaOfSporesFever;
 import quests.Q00103_SpiritOfCraftsman.Q00103_SpiritOfCraftsman;
@@ -149,7 +118,6 @@ import quests.Q00329_CuriosityOfADwarf.Q00329_CuriosityOfADwarf;
 import quests.Q00331_ArrowOfVengeance.Q00331_ArrowOfVengeance;
 import quests.Q00333_HuntOfTheBlackLion.Q00333_HuntOfTheBlackLion;
 import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
-import quests.Q00348_AnArrogantSearch.Q00348_AnArrogantSearch;
 import quests.Q00354_ConquestOfAlligatorIsland.Q00354_ConquestOfAlligatorIsland;
 import quests.Q00355_FamilyHonor.Q00355_FamilyHonor;
 import quests.Q00356_DigUpTheSeaOfSpores.Q00356_DigUpTheSeaOfSpores;
@@ -172,11 +140,6 @@ import quests.Q00410_PathOfThePalusKnight.Q00410_PathOfThePalusKnight;
 import quests.Q00411_PathOfTheAssassin.Q00411_PathOfTheAssassin;
 import quests.Q00412_PathOfTheDarkWizard.Q00412_PathOfTheDarkWizard;
 import quests.Q00413_PathOfTheShillienOracle.Q00413_PathOfTheShillienOracle;
-import quests.Q00414_PathOfTheOrcRaider.Q00414_PathOfTheOrcRaider;
-import quests.Q00415_PathOfTheOrcMonk.Q00415_PathOfTheOrcMonk;
-import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
-import quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger;
-import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q11000_MoonKnight.Q11000_MoonKnight;
 
@@ -194,37 +157,37 @@ public class QuestMasterHandler
 		Q00003_WillTheSealBeBroken.class,
 		Q00004_LongLiveThePaagrioLord.class,
 		Q00005_MinersFavor.class,
-		Q00070_SagaOfThePhoenixKnight.class,
-		Q00071_SagaOfEvasTemplar.class,
-		Q00072_SagaOfTheSwordMuse.class,
-		Q00073_SagaOfTheDuelist.class,
-		Q00074_SagaOfTheDreadnought.class,
-		Q00075_SagaOfTheTitan.class,
-		Q00076_SagaOfTheGrandKhavatari.class,
-		Q00077_SagaOfTheDominator.class,
-		Q00078_SagaOfTheDoomcryer.class,
-		Q00079_SagaOfTheAdventurer.class,
-		Q00080_SagaOfTheWindRider.class,
-		Q00081_SagaOfTheGhostHunter.class,
-		Q00082_SagaOfTheSagittarius.class,
-		Q00083_SagaOfTheMoonlightSentinel.class,
-		Q00084_SagaOfTheGhostSentinel.class,
-		Q00085_SagaOfTheCardinal.class,
-		Q00086_SagaOfTheHierophant.class,
-		Q00087_SagaOfEvasSaint.class,
-		Q00088_SagaOfTheArchmage.class,
-		Q00089_SagaOfTheMysticMuse.class,
-		Q00090_SagaOfTheStormScreamer.class,
-		Q00091_SagaOfTheArcanaLord.class,
-		Q00092_SagaOfTheElementalMaster.class,
-		Q00093_SagaOfTheSpectralMaster.class,
-		Q00094_SagaOfTheSoultaker.class,
-		Q00095_SagaOfTheHellKnight.class,
-		Q00096_SagaOfTheSpectralDancer.class,
-		Q00097_SagaOfTheShillienTemplar.class,
-		Q00098_SagaOfTheShillienSaint.class,
-		Q00099_SagaOfTheFortuneSeeker.class,
-		Q00100_SagaOfTheMaestro.class,
+		// TODO: Q00070_SagaOfThePhoenixKnight.class,
+		// TODO: Q00071_SagaOfEvasTemplar.class,
+		// TODO: Q00072_SagaOfTheSwordMuse.class,
+		// TODO: Q00073_SagaOfTheDuelist.class,
+		// TODO: Q00074_SagaOfTheDreadnought.class,
+		// TODO: Q00075_SagaOfTheTitan.class,
+		// TODO: Q00076_SagaOfTheGrandKhavatari.class,
+		// TODO: Q00077_SagaOfTheDominator.class,
+		// TODO: Q00078_SagaOfTheDoomcryer.class,
+		// TODO: Q00079_SagaOfTheAdventurer.class,
+		// TODO: Q00080_SagaOfTheWindRider.class,
+		// TODO: Q00081_SagaOfTheGhostHunter.class,
+		// TODO: Q00082_SagaOfTheSagittarius.class,
+		// TODO: Q00083_SagaOfTheMoonlightSentinel.class,
+		// TODO: Q00084_SagaOfTheGhostSentinel.class,
+		// TODO: Q00085_SagaOfTheCardinal.class,
+		// TODO: Q00086_SagaOfTheHierophant.class,
+		// TODO: Q00087_SagaOfEvasSaint.class,
+		// TODO: Q00088_SagaOfTheArchmage.class,
+		// TODO: Q00089_SagaOfTheMysticMuse.class,
+		// TODO: Q00090_SagaOfTheStormScreamer.class,
+		// TODO: Q00091_SagaOfTheArcanaLord.class,
+		// TODO: Q00092_SagaOfTheElementalMaster.class,
+		// TODO: Q00093_SagaOfTheSpectralMaster.class,
+		// TODO: Q00094_SagaOfTheSoultaker.class,
+		// TODO: Q00095_SagaOfTheHellKnight.class,
+		// TODO: Q00096_SagaOfTheSpectralDancer.class,
+		// TODO: Q00097_SagaOfTheShillienTemplar.class,
+		// TODO: Q00098_SagaOfTheShillienSaint.class,
+		// TODO: Q00099_SagaOfTheFortuneSeeker.class,
+		// TODO: Q00100_SagaOfTheMaestro.class,
 		Q00101_SwordOfSolidarity.class,
 		Q00102_SeaOfSporesFever.class,
 		Q00103_SpiritOfCraftsman.class,
@@ -321,7 +284,7 @@ public class QuestMasterHandler
 		Q00374_WhisperOfDreamsPart1.class,
 		Q00375_WhisperOfDreamsPart2.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
-		Q00348_AnArrogantSearch.class,
+		// TODO: Q00348_AnArrogantSearch.class,
 		Q00354_ConquestOfAlligatorIsland.class,
 		Q00355_FamilyHonor.class,
 		Q00356_DigUpTheSeaOfSpores.class,
@@ -342,11 +305,11 @@ public class QuestMasterHandler
 		Q00411_PathOfTheAssassin.class,
 		Q00412_PathOfTheDarkWizard.class,
 		Q00413_PathOfTheShillienOracle.class,
-		Q00414_PathOfTheOrcRaider.class,
-		Q00415_PathOfTheOrcMonk.class,
-		Q00416_PathOfTheOrcShaman.class,
-		Q00417_PathOfTheScavenger.class,
-		Q00418_PathOfTheArtisan.class,
+		// TODO: Q00414_PathOfTheOrcRaider.class,
+		// TODO: Q00415_PathOfTheOrcMonk.class,
+		// TODO: Q00416_PathOfTheOrcShaman.class,
+		// TODO: Q00417_PathOfTheScavenger.class,
+		// TODO: Q00418_PathOfTheArtisan.class,
 		Q00662_AGameOfCards.class,
 		Q11000_MoonKnight.class,
 	};
