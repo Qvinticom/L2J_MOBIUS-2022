@@ -3265,9 +3265,9 @@
 		</effects>
 	</skill>
 	<skill id="1374" toLevel="1" name="Heroic Valor">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Update Grand Crusade -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>60</abnormalTime>
 		<abnormalType>HERO_BUFF</abnormalType>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -3275,8 +3275,8 @@
 		<hitTime>2500</hitTime>
 		<icon>icon.skill1374</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>80</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>120</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<magicLvl>-1</magicLvl>
 		<mpConsume>231</mpConsume>
 		<mpInitialConsume>58</mpInitialConsume>
@@ -3293,23 +3293,23 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
-				<amount>250</amount>
-				<mode>DIFF</mode>
+				<amount>10</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>500</amount>
-				<mode>DIFF</mode>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-40</amount>
-				<slot>BUFF</slot>
+			<effect name="Speed">
+				<amount>30</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1375" toLevel="1" name="Heroic Grandeur">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Update Grand Crusade -->
 		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<abnormalType>HERO_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
 		<affectRange>1000</affectRange>
@@ -3321,8 +3321,8 @@
 		<icon>icon.skill1375</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>80</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>120</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<mpConsume>87</mpConsume>
@@ -3339,8 +3339,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="Mute">
-			</effect>
+			<effect name="Mute" />
 			<effect name="PhysicalMute" />
 			<effect name="MagicalDefence">
 				<amount>-50</amount>
@@ -3350,24 +3349,16 @@
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>-16</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="ShieldDefenceRate">
+			<effect name="Speed">
 				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ReduceCancel">
-				<amount>100</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1376" toLevel="1" name="Heroic Dread">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Update Grand Crusade -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>8</abnormalTime>
 		<abnormalType>HERO_DEBUFF</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -3380,8 +3371,8 @@
 		<icon>icon.skill1376</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>80</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>120</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<mpConsume>87</mpConsume>
@@ -3402,7 +3393,7 @@
 			<effect name="Fear">
 			</effect>
 			<effect name="Speed">
-				<amount>66</amount>
+				<amount>-100</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
