@@ -60,7 +60,6 @@ public class PartySpelled implements IClientOutgoingPacket
 			{
 				packet.writeD(info.getSkill().getDisplayId());
 				packet.writeH(info.getSkill().getDisplayLevel());
-				packet.writeH(0x00); // Sub level
 				packet.writeD(info.getSkill().getAbnormalType().getClientId());
 				writeOptionalD(packet, info.getTime());
 			}
@@ -71,7 +70,6 @@ public class PartySpelled implements IClientOutgoingPacket
 			{
 				packet.writeD(skill.getDisplayId());
 				packet.writeH(skill.getDisplayLevel());
-				packet.writeH(0x00); // Sub level
 				packet.writeD(skill.getAbnormalType().getClientId());
 				packet.writeH(-1);
 			}
