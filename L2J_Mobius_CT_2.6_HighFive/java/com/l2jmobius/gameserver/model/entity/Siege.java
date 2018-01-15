@@ -22,6 +22,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
@@ -1047,11 +1048,13 @@ public class Siege implements Siegable
 			case NotOwner:
 			{
 				players = getPlayersInZone();
-				for (L2PcInstance player : players)
+				final Iterator<L2PcInstance> it = players.iterator();
+				while (it.hasNext())
 				{
+					final L2PcInstance player = it.next();
 					if ((player == null) || player.inObserverMode() || ((player.getClanId() > 0) && (player.getClanId() == getCastle().getOwnerId())))
 					{
-						players.remove(player);
+						it.remove();
 					}
 				}
 				break;
@@ -1068,7 +1071,7 @@ public class Siege implements Siegable
 			}
 			default:
 			{
-				players = Collections.<L2PcInstance> emptyList();
+				players = Collections.emptyList();
 			}
 		}
 		
