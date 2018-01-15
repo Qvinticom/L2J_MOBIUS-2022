@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
@@ -94,8 +95,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private Map<AISkillScope, List<Skill>> _aiSkillLists;
 	private Set<Integer> _clans;
 	private Set<Integer> _ignoreClanNpcIds;
-	private List<DropHolder> _dropListDeath;
-	private List<DropHolder> _dropListSpoil;
+	private CopyOnWriteArrayList<DropHolder> _dropListDeath;
+	private CopyOnWriteArrayList<DropHolder> _dropListSpoil;
 	private double _collisionRadiusGrown;
 	private double _collisionHeightGrown;
 	
@@ -513,7 +514,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	{
 		if (_dropListDeath == null)
 		{
-			_dropListDeath = new ArrayList<>();
+			_dropListDeath = new CopyOnWriteArrayList<>();
 		}
 		_dropListDeath.add(dropHolder);
 	}
@@ -522,7 +523,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	{
 		if (_dropListSpoil == null)
 		{
-			_dropListSpoil = new ArrayList<>();
+			_dropListSpoil = new CopyOnWriteArrayList<>();
 		}
 		_dropListSpoil.add(dropHolder);
 	}
