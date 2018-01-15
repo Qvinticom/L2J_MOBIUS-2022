@@ -32,6 +32,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.variables.NpcVariables;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -39,6 +40,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import instances.AbstractInstance;
+import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
 
 /**
  * Harnak Underground Ruins Instance Zone.
@@ -81,14 +83,14 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 	private static final Map<CategoryType, Integer> MOB_CATEGORY = new HashMap<>();
 	static
 	{
-		MOB_CATEGORY.put(CategoryType.SIXTH_SIGEL_GROUP, RAKZAN);
-		MOB_CATEGORY.put(CategoryType.SIXTH_TIR_GROUP, KRAKIA_BATHUS);
-		MOB_CATEGORY.put(CategoryType.SIXTH_OTHEL_GROUP, BAMONTI);
-		MOB_CATEGORY.put(CategoryType.SIXTH_YR_GROUP, KRAKIA_CARCASS);
-		MOB_CATEGORY.put(CategoryType.SIXTH_FEOH_GROUP, WEISS_KHAN);
-		MOB_CATEGORY.put(CategoryType.SIXTH_IS_GROUP, SEKNUS);
-		MOB_CATEGORY.put(CategoryType.SIXTH_WYNN_GROUP, KRAKIA_LOTUS);
-		MOB_CATEGORY.put(CategoryType.SIXTH_EOLH_GROUP, WEISS_ELE);
+		MOB_CATEGORY.put(CategoryType.TANKER_CATEGORY, RAKZAN);
+		MOB_CATEGORY.put(CategoryType.WARRIOR_CATEGORY, KRAKIA_BATHUS);
+		MOB_CATEGORY.put(CategoryType.ROGUE_CATEGORY, BAMONTI);
+		MOB_CATEGORY.put(CategoryType.ARCHER_CATEGORY, KRAKIA_CARCASS);
+		MOB_CATEGORY.put(CategoryType.WIZARD_CATEGORY, WEISS_KHAN);
+		MOB_CATEGORY.put(CategoryType.ENCHANTER_CATEGORY, SEKNUS);
+		MOB_CATEGORY.put(CategoryType.SUMMONER_CATEGORY, KRAKIA_LOTUS);
+		MOB_CATEGORY.put(CategoryType.HEALER_CATEGORY, WEISS_ELE);
 	}
 	
 	public HarnakUndergroundRuins()
@@ -386,6 +388,11 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					world.setParameter("enabledSeal", enabledSeal);
 					if (enabledSeal == 2)
 					{
+						final QuestState qs = player.getQuestState(Q10338_SeizeYourDestiny.class.getSimpleName());
+						if ((qs != null) && qs.isCond(2))
+						{
+							qs.setCond(3, true);
+						}
 						cancelQuestTimer("fail_instance", null, player);
 						world.removeNpcs();
 						playMovie(player, Movie.SC_AWAKENING_BOSS_ENDING_A);
