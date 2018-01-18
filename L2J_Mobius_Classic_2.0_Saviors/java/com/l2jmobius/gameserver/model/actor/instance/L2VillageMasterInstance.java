@@ -128,7 +128,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 				return;
 			}
 			
-			if (!isValidName(cmdParams))
+			if (!cmdParams2.isEmpty() || !isValidName(cmdParams))
 			{
 				player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
 				return;
