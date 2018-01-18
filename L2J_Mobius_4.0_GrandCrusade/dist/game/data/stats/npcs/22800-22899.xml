@@ -85,10 +85,6 @@
 	<npc id="22801" level="87" type="L2Monster" name="Cruel Pincer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
-			<param name="Privates01_sil" value="22802" />
-			<param name="Privates01_ai" value="golem_cannon2_p" />
-			<param name="Privates02_sil" value="22803" />
-			<param name="Privates02_ai" value="golem_cannon3_p" />
 			<skill name="Skill01_ID" id="6598" level="9" />
 		</parameters>
 		<race>CONSTRUCT</race>
