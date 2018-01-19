@@ -30,7 +30,7 @@ public class SeeThroughSilentMove extends AbstractNpcAI
 	//@formatter:off
 	private static final int[] MONSTERS =
 	{
-		18001, 18002, 29009, 29010, 29011, 29012, 29013
+		20142, 18002, 29009, 29010, 29011, 29012, 29013
 	};
 	//@formatter:on
 	

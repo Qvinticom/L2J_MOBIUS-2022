@@ -69,7 +69,7 @@ public final class Q00662_AGameOfCards extends Quest
 		MONSTERS.put(21112, 552); // Hames Orc Footman
 		MONSTERS.put(21114, 587); // Cursed Guardian
 		MONSTERS.put(21116, 812); // Hames Orc Overlord
-		MONSTERS.put(18001, 232); // Blood Queen
+		MONSTERS.put(20142, 232); // Blood Queen
 	}
 	
 	public Q00662_AGameOfCards()

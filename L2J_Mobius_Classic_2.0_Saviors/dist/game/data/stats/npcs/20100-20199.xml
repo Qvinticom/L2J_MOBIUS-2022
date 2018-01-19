@@ -2004,12 +2004,15 @@
 	</npc>
 	<npc id="20142" level="60" type="L2Monster" name="Blood Queen">
 		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-			<param name="MoveAroundSocial2" value="0" />
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+			<skill name="DDMagic1" id="4039" level="6" />
+			<skill name="DDMagic2" id="4002" level="6" />
+			<skill name="DeBuff" id="4035" level="6" />
 		</parameters>
 		<race>DEMONIC</race>
-		<sex>MALE</sex>
+		<sex>FEMALE</sex>
 		<acquire exp="30672" sp="920" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1933" hpRegen="2.5" mp="1036" mpRegen="1.2" />
@@ -2033,6 +2036,9 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
+			<skill id="4035" level="6" /> <!-- Poison -->
+			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
