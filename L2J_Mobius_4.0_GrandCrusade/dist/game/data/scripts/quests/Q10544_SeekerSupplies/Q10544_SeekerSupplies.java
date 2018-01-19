@@ -28,7 +28,7 @@ import quests.Q10543_SheddingWeight.Q10543_SheddingWeight;
 /**
  * Seeker Supplies (10544)
  * @URL https://l2wiki.com/Commando_Supplies
- * @author GIgi
+ * @author Gigi
  */
 public final class Q10544_SeekerSupplies extends Quest
 {
@@ -50,8 +50,8 @@ public final class Q10544_SeekerSupplies extends Quest
 	private static final int ARMOR_SUPLLY_BOX = 39523;
 	private static final int ACCESSORY_SUPPLY_BOX = 39525;
 	// Reward's
-	private static final int LEATHER_SHIRT = 709;
-	private static final int LEATHER_PANTS = 713;
+	private static final int LEATHER_SHIRT = 22;
+	private static final int LEATHER_PANTS = 29;
 	private static final int LEATHER_TUNIC = 429;
 	private static final int LEATHER_STOCKINGS = 464;
 	private static final int APPRENTICE_EARRING = 112;
