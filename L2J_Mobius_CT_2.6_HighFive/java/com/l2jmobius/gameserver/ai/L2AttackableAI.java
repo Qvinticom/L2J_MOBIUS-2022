@@ -538,10 +538,6 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		{
 			npc.clearAggroList();
 			npc.getAttackByList().clear();
-			if ((npc instanceof L2MonsterInstance) && ((L2MonsterInstance) npc).hasMinions())
-			{
-				((L2MonsterInstance) npc).getMinionList().deleteReusedMinions();
-			}
 		}
 		
 		// Check if the mob should not return to spawn point

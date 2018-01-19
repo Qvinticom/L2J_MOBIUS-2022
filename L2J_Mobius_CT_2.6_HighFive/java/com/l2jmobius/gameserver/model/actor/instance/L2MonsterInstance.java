@@ -97,12 +97,6 @@ public class L2MonsterInstance extends L2Attackable
 				getLeader().getMinionList().onMinionSpawn(this);
 			}
 			
-			// delete spawned minions before dynamic minions spawned by script
-			if (hasMinions())
-			{
-				getMinionList().onMasterSpawn();
-			}
-			
 			startMaintenanceTask();
 		}
 		

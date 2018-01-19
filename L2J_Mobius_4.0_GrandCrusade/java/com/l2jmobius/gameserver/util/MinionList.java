@@ -30,15 +30,12 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 
 /**
- * @author luisantonioa, DS
+ * @author luisantonioa, DS, Mobius
  */
 public class MinionList
 {
 	protected final L2MonsterInstance _master;
-	/** List containing the current spawned minions */
-	private final List<L2MonsterInstance> _minionReferences = new CopyOnWriteArrayList<>();
-	/** List containing the cached deleted minions for reuse */
-	protected List<L2MonsterInstance> _reusedMinionReferences = null;
+	private final List<L2MonsterInstance> _spawnedMinions = new CopyOnWriteArrayList<>();
 	
 	public MinionList(L2MonsterInstance pMaster)
 	{
@@ -54,7 +51,7 @@ public class MinionList
 	 */
 	public List<L2MonsterInstance> getSpawnedMinions()
 	{
-		return _minionReferences;
+		return _spawnedMinions;
 	}
 	
 	/**
@@ -69,13 +66,7 @@ public class MinionList
 	 */
 	public final void spawnMinions(List<MinionHolder> minions)
 	{
-		if (_master.isAlikeDead())
-		{
-			return;
-		}
-		
-		// List<MinionHolder> minions = _master.getParameters().getMinionList("Privates");
-		if (minions == null)
+		if (_master.isAlikeDead() || (minions == null))
 		{
 			return;
 		}
@@ -95,8 +86,6 @@ public class MinionList
 				}
 			}
 		}
-		// remove non-needed minions
-		deleteReusedMinions();
 	}
 	
 	/**
@@ -104,48 +93,17 @@ public class MinionList
 	 */
 	public void deleteSpawnedMinions()
 	{
-		if (!_minionReferences.isEmpty())
+		if (!_spawnedMinions.isEmpty())
 		{
-			for (L2MonsterInstance minion : _minionReferences)
+			for (L2MonsterInstance minion : _spawnedMinions)
 			{
 				if (minion != null)
 				{
 					minion.setLeader(null);
 					minion.deleteMe();
-					if (_reusedMinionReferences != null)
-					{
-						_reusedMinionReferences.add(minion);
-					}
 				}
 			}
-			_minionReferences.clear();
-		}
-	}
-	
-	/**
-	 * Delete all reused minions to prevent memory leaks.
-	 */
-	public void deleteReusedMinions()
-	{
-		if (_reusedMinionReferences != null)
-		{
-			_reusedMinionReferences.clear();
-		}
-	}
-	
-	// hooks
-	
-	/**
-	 * Called on the master spawn Old minions (from previous spawn) are deleted. If master can respawn - enabled reuse of the killed minions.
-	 */
-	public void onMasterSpawn()
-	{
-		deleteSpawnedMinions();
-		
-		// if master has spawn and can respawn - try to reuse minions
-		if ((_reusedMinionReferences == null) && (_master.getParameters().getSet().get("SummonPrivateRate") == null) && !_master.getParameters().getMinionList("Privates").isEmpty() && (_master.getSpawn() != null) && _master.getSpawn().isRespawnEnabled())
-		{
-			_reusedMinionReferences = new CopyOnWriteArrayList<>();
+			_spawnedMinions.clear();
 		}
 	}
 	
@@ -155,7 +113,7 @@ public class MinionList
 	 */
 	public void onMinionSpawn(L2MonsterInstance minion)
 	{
-		_minionReferences.add(minion);
+		_spawnedMinions.add(minion);
 	}
 	
 	/**
@@ -178,11 +136,7 @@ public class MinionList
 	public void onMinionDie(L2MonsterInstance minion, int respawnTime)
 	{
 		minion.setLeader(null); // prevent memory leaks
-		_minionReferences.remove(minion);
-		if (_reusedMinionReferences != null)
-		{
-			_reusedMinionReferences.add(minion);
-		}
+		_spawnedMinions.remove(minion);
 		
 		final int time = respawnTime < 0 ? _master.isRaid() ? (int) Config.RAID_MINION_RESPAWN_TIMER : 0 : respawnTime;
 		if ((time > 0) && !_master.isAlikeDead())
@@ -215,7 +169,7 @@ public class MinionList
 			aggro *= 10;
 		}
 		
-		for (L2MonsterInstance minion : _minionReferences)
+		for (L2MonsterInstance minion : _spawnedMinions)
 		{
 			if ((minion != null) && !minion.isDead() && (callerIsMaster || !minion.isInCombat()))
 			{
@@ -232,7 +186,7 @@ public class MinionList
 		final int offset = 200;
 		final int minRadius = (int) _master.getCollisionRadius() + 30;
 		
-		for (L2MonsterInstance minion : _minionReferences)
+		for (L2MonsterInstance minion : _spawnedMinions)
 		{
 			if ((minion != null) && !minion.isDead() && !minion.isMovementDisabled())
 			{
@@ -267,20 +221,6 @@ public class MinionList
 		{
 			return;
 		}
-		
-		// searching in reused minions
-		if (_reusedMinionReferences != null)
-		{
-			final L2MonsterInstance minion = _reusedMinionReferences.stream().filter(m -> (m.getId() == minionId)).findFirst().orElse(null);
-			if (minion != null)
-			{
-				_reusedMinionReferences.remove(minion);
-				minion.refreshID();
-				initializeNpcInstance(_master, minion);
-				return;
-			}
-		}
-		// not found in cache
 		spawnMinion(_master, minionId);
 	}
 	
@@ -301,11 +241,6 @@ public class MinionList
 				// minion can be already spawned or deleted
 				if (!_minion.isSpawned())
 				{
-					if (_reusedMinionReferences != null)
-					{
-						_reusedMinionReferences.remove(_minion);
-					}
-					
 					_minion.refreshID();
 					initializeNpcInstance(_master, _minion);
 				}
@@ -390,7 +325,7 @@ public class MinionList
 	private final int countSpawnedMinionsById(int minionId)
 	{
 		int count = 0;
-		for (L2MonsterInstance minion : _minionReferences)
+		for (L2MonsterInstance minion : _spawnedMinions)
 		{
 			if ((minion != null) && (minion.getId() == minionId))
 			{
@@ -402,11 +337,11 @@ public class MinionList
 	
 	public final int countSpawnedMinions()
 	{
-		return _minionReferences.size();
+		return _spawnedMinions.size();
 	}
 	
 	public final long lazyCountSpawnedMinionsGroups()
 	{
-		return _minionReferences.stream().distinct().count();
+		return _spawnedMinions.stream().distinct().count();
 	}
 }
