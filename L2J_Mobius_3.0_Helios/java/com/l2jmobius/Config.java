@@ -445,6 +445,7 @@ public final class Config
 	public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
 	public static boolean DESTROY_DROPPED_PLAYER_ITEM;
 	public static boolean DESTROY_EQUIPABLE_PLAYER_ITEM;
+	public static boolean DESTROY_ALL_ITEMS;
 	public static boolean SAVE_DROPPED_ITEM;
 	public static boolean EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD;
 	public static int SAVE_DROPPED_ITEM_INTERVAL;
@@ -1844,6 +1845,7 @@ public final class Config
 			UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
 			DESTROY_DROPPED_PLAYER_ITEM = General.getBoolean("DestroyPlayerDroppedItem", false);
 			DESTROY_EQUIPABLE_PLAYER_ITEM = General.getBoolean("DestroyEquipableItem", false);
+			DESTROY_ALL_ITEMS = General.getBoolean("DestroyAllItems", false);
 			SAVE_DROPPED_ITEM = General.getBoolean("SaveDroppedItem", false);
 			EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD = General.getBoolean("EmptyDroppedItemTableAfterLoad", false);
 			SAVE_DROPPED_ITEM_INTERVAL = General.getInt("SaveDroppedItemInterval", 60) * 60000;

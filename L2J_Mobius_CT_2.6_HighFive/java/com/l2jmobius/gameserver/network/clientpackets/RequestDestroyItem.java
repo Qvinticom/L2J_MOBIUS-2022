@@ -114,7 +114,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		
 		final int itemId = itemToRemove.getId();
 		
-		if ((!activeChar.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) || CursedWeaponsManager.getInstance().isCursed(itemId))
+		if (!Config.DESTROY_ALL_ITEMS && ((!activeChar.canOverrideCond(PcCondOverride.DESTROY_ALL_ITEMS) && !itemToRemove.isDestroyable()) || CursedWeaponsManager.getInstance().isCursed(itemId)))
 		{
 			if (itemToRemove.isHeroItem())
 			{
