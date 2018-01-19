@@ -44,14 +44,14 @@ public final class Q10544_SeekerSupplies extends Quest
 	private static final int DEVON = 32160; // Dark Elf
 	private static final int MOKA = 32157; // Dwarf
 	private static final int VALFAR = 32146; // Kamael
-	// Item's
+	// Items
 	private static final int GROCERY_SUPLLY_BOX = 39524;
 	private static final int WEAPON_SUPLLY_BOX = 39522;
 	private static final int ARMOR_SUPLLY_BOX = 39523;
 	private static final int ACCESSORY_SUPPLY_BOX = 39525;
-	// Reward's
-	private static final int LEATHER_SHIRT = 709;
-	private static final int LEATHER_PANTS = 713;
+	// Rewards
+	private static final int LEATHER_SHIRT = 22;
+	private static final int LEATHER_PANTS = 29;
 	private static final int LEATHER_TUNIC = 429;
 	private static final int LEATHER_STOCKINGS = 464;
 	private static final int APPRENTICE_EARRING = 112;
