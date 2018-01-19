@@ -92,13 +92,14 @@ public class SkillCaster implements Runnable
 	private final Skill _skill;
 	private final L2ItemInstance _item;
 	private final SkillCastingType _castingType;
-	private final int _castTime;
+	private int _hitTime;
+	private int _cancelTime;
 	private int _coolTime;
 	private Collection<L2Object> _targets;
 	private ScheduledFuture<?> _task;
 	private int _phase;
 	
-	private SkillCaster(L2Character caster, L2Object target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed, int castTime)
+	private SkillCaster(L2Character caster, L2Object target, Skill skill, L2ItemInstance item, SkillCastingType castingType, boolean ctrlPressed, boolean shiftPressed)
 	{
 		Objects.requireNonNull(caster);
 		Objects.requireNonNull(skill);
@@ -109,7 +110,8 @@ public class SkillCaster implements Runnable
 		_skill = skill;
 		_item = item;
 		_castingType = castingType;
-		_castTime = castTime;
+		
+		calcSkillTiming(caster, skill);
 	}
 	
 	/**
@@ -171,10 +173,8 @@ public class SkillCaster implements Runnable
 			return null;
 		}
 		
-		castTime = castTime > -1 ? castTime : Formulas.calcHitTime(caster, skill);
-		
 		// Schedule a thread that will execute 500ms before casting time is over (for animation issues and retail handling).
-		final SkillCaster skillCaster = new SkillCaster(caster, target, skill, item, castingType, ctrlPressed, shiftPressed, castTime);
+		final SkillCaster skillCaster = new SkillCaster(caster, target, skill, item, castingType, ctrlPressed, shiftPressed);
 		skillCaster.run();
 		return skillCaster;
 	}
@@ -198,13 +198,13 @@ public class SkillCaster implements Runnable
 			case 0: // Start skill casting.
 			{
 				hasNextPhase = startCasting();
-				nextTaskDelay = _castTime;
+				nextTaskDelay = _hitTime;
 				break;
 			}
 			case 1: // Launch the skill.
 			{
 				hasNextPhase = launchSkill();
-				nextTaskDelay = Formulas.SKILL_LAUNCH_TIME;
+				nextTaskDelay = _cancelTime;
 				break;
 			}
 			case 2: // Finish launching and apply effects.
@@ -238,7 +238,7 @@ public class SkillCaster implements Runnable
 		}
 		
 		_coolTime = Formulas.calcAtkSpd(caster, _skill, _skill.getCoolTime()); // TODO Get proper formula of this.
-		final int displayedCastTime = _castTime + Formulas.SKILL_LAUNCH_TIME; // For client purposes, it must be displayed to player the skill casting time + launch time.
+		final int displayedCastTime = _hitTime + _cancelTime; // For client purposes, it must be displayed to player the skill casting time + launch time.
 		final boolean instantCast = (_castingType == SkillCastingType.SIMULTANEOUS) || _skill.isAbnormalInstant() || _skill.isWithoutAction();
 		
 		// Add this SkillCaster to the creature so it can be marked as casting.
@@ -760,6 +760,23 @@ public class SkillCaster implements Runnable
 				}
 			}
 		}
+	}
+	
+	private void calcSkillTiming(L2Character creature, Skill skill)
+	{
+		final double timeFactor = Formulas.calcSkillTimeFactor(creature, skill);
+		final double cancelTime = Formulas.calcSkillCancelTime(creature, skill);
+		if (skill.getOperateType().isChanneling())
+		{
+			_hitTime = (int) Math.max(skill.getHitTime() - cancelTime, 0);
+			_cancelTime = 2866;
+		}
+		else
+		{
+			_hitTime = (int) Math.max((skill.getHitTime() / timeFactor) - cancelTime, 0);
+			_cancelTime = (int) cancelTime;
+		}
+		_coolTime = (int) (skill.getCoolTime() / timeFactor); // cooltimeMillis / timeFactor
 	}
 	
 	public static void triggerCast(L2Character activeChar, L2Character target, Skill skill)

@@ -44,6 +44,7 @@ import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillConditionScope;
+import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.MoveType;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.StatsHolder;
@@ -75,6 +76,10 @@ public class CharStat
 	private final Deque<StatsHolder> _additionalAdd = new ConcurrentLinkedDeque<>();
 	private final Deque<StatsHolder> _additionalMul = new ConcurrentLinkedDeque<>();
 	private final Map<Stats, Double> _fixedValue = new ConcurrentHashMap<>();
+	
+	/** Values to be recalculated after every stat update */
+	private double _attackSpeedMultiplier = 1;
+	private double _mAttackSpeedMultiplier = 1;
 	
 	private final ReentrantReadWriteLock _lock = new ReentrantReadWriteLock();
 	
@@ -109,9 +114,14 @@ public class CharStat
 	/**
 	 * @return the Attack Speed multiplier (base+modifier) of the L2Character to get proper animations.
 	 */
-	public final float getAttackSpeedMultiplier()
+	public final double getAttackSpeedMultiplier()
 	{
-		return (float) (((1.1) * getPAtkSpd()) / _activeChar.getTemplate().getBasePAtkSpd());
+		return _attackSpeedMultiplier;
+	}
+	
+	public final double getMAttackSpeedMultiplier()
+	{
+		return _mAttackSpeedMultiplier;
 	}
 	
 	/**
@@ -801,6 +811,9 @@ public class CharStat
 			// Merge with additional stats
 			_additionalAdd.stream().filter(holder -> holder.verifyCondition(_activeChar)).forEach(holder -> mergeAdd(holder.getStat(), holder.getValue()));
 			_additionalMul.stream().filter(holder -> holder.verifyCondition(_activeChar)).forEach(holder -> mergeMul(holder.getStat(), holder.getValue()));
+			
+			_attackSpeedMultiplier = Formulas.calcAtkSpdMultiplier(_activeChar);
+			_mAttackSpeedMultiplier = Formulas.calcMAtkSpdMultiplier(_activeChar);
 		}
 		finally
 		{

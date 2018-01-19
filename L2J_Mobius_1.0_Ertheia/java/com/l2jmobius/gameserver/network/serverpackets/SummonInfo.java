@@ -282,7 +282,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 		if (containsMask(NpcInfoType.SPEED_MULTIPLIER))
 		{
 			packet.writeE((float) _summon.getStat().getMovementSpeedMultiplier());
-			packet.writeE(_summon.getStat().getAttackSpeedMultiplier());
+			packet.writeE((float) _summon.getStat().getAttackSpeedMultiplier());
 		}
 		if (containsMask(NpcInfoType.EQUIPPED))
 		{

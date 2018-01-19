@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.enums.DispelSlotType;
 import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
@@ -427,80 +428,57 @@ public final class Formulas
 		return (int) ((skillTime / attacker.getPAtkSpd()) * 300);
 	}
 	
-	/**
-	 * TODO: Implement those:
-	 * <ul>
-	 * <li>Skill cool time is block player from doing anything (moving, casting, attacking).</li>
-	 * <li>Seems hardcoded channeling value is not used for the skill task</li>
-	 * </ul>
-	 * @param creature
-	 * @param skill
-	 * @return the hit time of the skill.
-	 */
-	public static int calcHitTime(L2Character creature, Skill skill)
+	public static double calcAtkSpdMultiplier(L2Character creature)
 	{
-		int skillTime = skill.getHitTime() - SKILL_LAUNCH_TIME;
-		
-		// Calculate the Casting Time of the "Non-Static" Skills (with caster PAtk/MAtkSpd).
-		if (!skill.isStatic())
-		{
-			skillTime = calcAtkSpd(creature, skill, skillTime);
-		}
-		// Calculate the Casting Time of Magic Skills (reduced in 40% if using SPS/BSPS)
-		if (skill.isMagic() && (creature.isChargedShot(ShotType.SPIRITSHOTS) || creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS)))
-		{
-			skillTime = (int) (0.6 * skillTime);
-		}
-		
-		return Math.max(skillTime, 0);
+		double armorBonus = 1; // EquipedArmorSpeedByCrystal TODO: Implement me!
+		double dexBonus = BaseStats.DEX.calcBonus(creature);
+		double weaponAttackSpeed = Stats.weaponBaseValue(creature, Stats.PHYSICAL_ATTACK_SPEED) / armorBonus; // unk868
+		double attackSpeedPerBonus = creature.getStat().getMul(Stats.PHYSICAL_ATTACK_SPEED);
+		double attackSpeedDiffBonus = creature.getStat().getAdd(Stats.PHYSICAL_ATTACK_SPEED);
+		return (dexBonus * (weaponAttackSpeed / 333) * attackSpeedPerBonus) + (attackSpeedDiffBonus / 333);
+	}
+	
+	public static double calcMAtkSpdMultiplier(L2Character creature)
+	{
+		final double armorBonus = 1; // TODO: Implement me!
+		final double witBonus = BaseStats.WIT.calcBonus(creature);
+		final double castingSpeedPerBonus = creature.getStat().getMul(Stats.MAGIC_ATTACK_SPEED);
+		final double castingSpeedDiffBonus = creature.getStat().getAdd(Stats.MAGIC_ATTACK_SPEED);
+		return ((1 / armorBonus) * witBonus * castingSpeedPerBonus) + (castingSpeedDiffBonus / 333);
 	}
 	
 	/**
-	 * TODO: Implement armor bonus and NPC Divider
 	 * @param creature
 	 * @param skill
-	 * @return
+	 * @return factor divisor for skill hit time and cancel time.
 	 */
 	public static double calcSkillTimeFactor(L2Character creature, Skill skill)
 	{
-		double factor = 0;
-		if (skill.isPhysical() || skill.isDance()) // is_magic = 0 or 3
+		if (skill.getOperateType().isChanneling() || (skill.getMagicType() == 2) || (skill.getMagicType() == 4) || (skill.getMagicType() == 21))
 		{
-			final double armorBonus = 1; // EquipedArmorSpeedByCrystal TODO: Implement me!
-			final double dexBonus = BaseStats.DEX.calcBonus(creature);
-			final double weaponAttackSpeed = Stats.weaponBaseValue(creature, Stats.PHYSICAL_ATTACK_SPEED) / armorBonus; // unk868
-			final double attackSpeedPerBonus = creature.getStat().getMul(Stats.PHYSICAL_ATTACK_SPEED);
-			final double attackSpeedDiffBonus = creature.getStat().getAdd(Stats.PHYSICAL_ATTACK_SPEED);
-			factor = (dexBonus * (weaponAttackSpeed / 333) * attackSpeedPerBonus) + (attackSpeedDiffBonus / 333);
-		}
-		else if (skill.isMagic()) // is_magic = 1
-		{
-			final double armorBonus = 1; // TODO: Implement me!
-			final double witBonus = BaseStats.WIT.calcBonus(creature);
-			final double castingSpeedPerBonus = creature.getStat().getMul(Stats.MAGIC_ATTACK_SPEED); // m_use_speed
-			final double castingSpeedDiffBonus = creature.getStat().getAdd(Stats.MAGIC_ATTACK_SPEED);
-			factor = ((1 / armorBonus) * witBonus * castingSpeedPerBonus) + (castingSpeedDiffBonus / 333);
-		}
-		else if (skill.isStatic()) // is_magic = 2
-		{
-			factor = 1;
+			return 1.0d;
 		}
 		
-		if (skill.isChanneling()) // operate type = 5 or 6 or 7
+		double factor = 0.0;
+		if (skill.getMagicType() == 1)
 		{
-			factor = 1;
+			final double spiritshotHitTime = (creature.isChargedShot(ShotType.SPIRITSHOTS) || creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS)) ? 0.4 : 0; // TODO: Implement proper values
+			factor = creature.getStat().getMAttackSpeedMultiplier() + (creature.getStat().getMAttackSpeedMultiplier() * spiritshotHitTime); // matkspdmul + (matkspdmul * spiritshot_hit_time)
+		}
+		else
+		{
+			factor = creature.getAttackSpeedMultiplier();
 		}
 		
-		if (creature.isNpc() || creature.isSummon())
+		if (creature.isNpc())
 		{
-			// TODO: Implement me!
-			// if (attacker.unk08B0 > 0)
+			double npcFactor = ((L2Npc) creature).getTemplate().getHitTimeFactorSkill();
+			if (npcFactor > 0)
 			{
-				// factor /= attacker.unk08B0;
+				factor /= npcFactor;
 			}
 		}
-		
-		return Math.max(factor, 0.01);
+		return Math.max(0.01, factor);
 	}
 	
 	public static double calcSkillCancelTime(L2Character creature, Skill skill)

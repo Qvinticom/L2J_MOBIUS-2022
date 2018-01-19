@@ -62,23 +62,23 @@ public interface IStatsFunction
 	
 	default double calcWeaponBaseValue(L2Character creature, Stats stat)
 	{
-		final double baseTemplateBalue = creature.getTemplate().getBaseValue(stat, 0);
-		final double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateBalue)).orElseGet(() ->
+		final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
+		final double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElseGet(() ->
 		{
 			if (creature.isPet())
 			{
 				final L2PetInstance pet = (L2PetInstance) creature;
 				final L2ItemInstance weapon = pet.getActiveWeaponInstance();
-				final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateBalue;
+				final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
 				return baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);
 			}
 			else if (creature.isPlayer())
 			{
 				final L2ItemInstance weapon = creature.getActiveWeaponInstance();
-				return (weapon != null ? weapon.getItem().getStats(stat, baseTemplateBalue) : baseTemplateBalue);
+				return (weapon != null ? weapon.getItem().getStats(stat, baseTemplateValue) : baseTemplateValue);
 			}
 			
-			return baseTemplateBalue;
+			return baseTemplateValue;
 		});
 		
 		return baseValue;
@@ -86,8 +86,8 @@ public interface IStatsFunction
 	
 	default double calcWeaponPlusBaseValue(L2Character creature, Stats stat)
 	{
-		final double baseTemplateBalue = creature.getTemplate().getBaseValue(stat, 0);
-		double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateBalue)).orElse(baseTemplateBalue);
+		final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
+		double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
 		
 		if (creature.isPlayable())
 		{

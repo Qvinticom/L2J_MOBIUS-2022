@@ -58,7 +58,7 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		_heading = npc.getHeading();
 		_mAtkSpd = npc.getMAtkSpd();
 		_pAtkSpd = npc.getPAtkSpd();
-		_attackSpeedMultiplier = npc.getAttackSpeedMultiplier();
+		_attackSpeedMultiplier = (float) npc.getAttackSpeedMultiplier();
 		_moveMultiplier = npc.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(npc.getRunSpeed() / _moveMultiplier);
 		_walkSpd = (int) Math.round(npc.getWalkSpeed() / _moveMultiplier);

@@ -314,7 +314,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		if (containsMask(NpcInfoType.SPEED_MULTIPLIER))
 		{
 			packet.writeE((float) _npc.getStat().getMovementSpeedMultiplier());
-			packet.writeE(_npc.getStat().getAttackSpeedMultiplier());
+			packet.writeE((float) _npc.getStat().getAttackSpeedMultiplier());
 		}
 		if (containsMask(NpcInfoType.EQUIPPED))
 		{

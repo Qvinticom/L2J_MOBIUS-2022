@@ -100,6 +100,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private int _spiritShotChance;
 	private int _minSkillChance;
 	private int _maxSkillChance;
+	private double _hitTimeFactor;
+	private double _hitTimeFactorSkill;
 	private Map<Integer, Skill> _skills;
 	private Map<AISkillScope, List<Skill>> _aiSkillLists;
 	private Set<Integer> _clans;
@@ -183,6 +185,9 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		
 		_minSkillChance = set.getInt("minSkillChance", 7);
 		_maxSkillChance = set.getInt("maxSkillChance", 15);
+		
+		_hitTimeFactor = set.getInt("hit_time", 100) / 100d;
+		_hitTimeFactorSkill = set.getInt("hit_time_skill", 100) / 100d;
 		
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
@@ -500,6 +505,16 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	public int getMaxSkillChance()
 	{
 		return _maxSkillChance;
+	}
+	
+	public double getHitTimeFactor()
+	{
+		return _hitTimeFactor;
+	}
+	
+	public double getHitTimeFactorSkill()
+	{
+		return _hitTimeFactorSkill;
 	}
 	
 	@Override

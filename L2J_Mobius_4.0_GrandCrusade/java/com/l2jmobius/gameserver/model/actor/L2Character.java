@@ -4230,7 +4230,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return getStat().getMagicEvasionRate();
 	}
 	
-	public final float getAttackSpeedMultiplier()
+	public final double getAttackSpeedMultiplier()
 	{
 		return getStat().getAttackSpeedMultiplier();
 	}
