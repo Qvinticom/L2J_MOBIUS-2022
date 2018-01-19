@@ -95,6 +95,7 @@ public final class Q10734_DoOrDie extends Quest
 			}
 			case "other_buffs":
 			{
+				castBuffs(npc, player, "33950-06.html", "33950-04.html");
 				htmltext = (player.isMageClass()) ? "33950-03.html" : "33950-05.html";
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_002_Guide_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				break;
@@ -161,7 +162,6 @@ public final class Q10734_DoOrDie extends Quest
 								}
 								case 8:
 								{
-									giveAdena(player, 7000, true);
 									addExpAndSp(player, 805, 2);
 									qs.exitQuest(false, true);
 									htmltext = "33943-07.html";

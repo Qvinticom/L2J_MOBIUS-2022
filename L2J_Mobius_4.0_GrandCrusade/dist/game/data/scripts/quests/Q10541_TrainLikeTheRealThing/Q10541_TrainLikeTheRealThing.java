@@ -46,7 +46,7 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 	// NPCs
 	private static final int SHANNON = 32974;
 	private static final int ADVENTURERS_GUIDE = 32981;
-	private static final int SCARECROW = 27457;
+	private static final int DUMMY = 27457;
 	// Misc
 	private static final int MAX_LEVEL = 20;
 	private static final String KILL_COUNT_VAR = "KillCount";
@@ -71,7 +71,7 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 		super(10541);
 		addStartNpc(SHANNON);
 		addTalkId(SHANNON, ADVENTURERS_GUIDE);
-		addKillId(SCARECROW);
+		addKillId(DUMMY);
 		addCondNotRace(Race.ERTHEIA, "noRace.html");
 		addCondMaxLevel(MAX_LEVEL, "noLevel.html");
 		addCondCompletedQuest(Q10321_QualificationsOfTheSeeker.class.getSimpleName(), "noLevel.html");
@@ -225,18 +225,18 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 		}
 		else if ((qs != null) && qs.isCond(4))
 		{
-			int kills = qs.getInt(Integer.toString(SCARECROW));
+			int kills = qs.getInt(Integer.toString(DUMMY));
 			if (kills < 4)
 			{
 				kills++;
-				qs.set(Integer.toString(SCARECROW), kills);
+				qs.set(Integer.toString(DUMMY), kills);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpc(SCARECROW, qs.getInt(Integer.toString(SCARECROW)));
+			log.addNpc(DUMMY, qs.getInt(Integer.toString(DUMMY)));
 			qs.getPlayer().sendPacket(log);
 			
-			if (qs.getInt(Integer.toString(SCARECROW)) >= 4)
+			if (qs.getInt(Integer.toString(DUMMY)) >= 4)
 			{
 				qs.setCond(5, true);
 			}

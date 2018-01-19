@@ -240,6 +240,7 @@ public final class Q10331_StartOfFate extends Quest
 					takeItems(player, SARIL_NECKLACE, -1);
 					giveItems(player, PAULINAS_SET_D_GRADE, 1);
 					giveItems(player, PROOF_OF_COURAGE, 40);
+					giveAdena(player, 147600, true);
 					addExpAndSp(player, 296000, 15);
 					qs.exitQuest(false, true);
 				}

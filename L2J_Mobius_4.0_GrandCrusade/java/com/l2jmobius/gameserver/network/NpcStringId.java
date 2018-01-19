@@ -15198,7 +15198,7 @@ public final class NpcStringId
 	@ClientString(id = 554106, message = "Speak with the Adventurer's Guide")
 	public static NpcStringId SPEAK_WITH_THE_ADVENTURER_S_GUIDE;
 	
-	@ClientString(id = 554107, message = "Defeating the Scarecrow")
+	@ClientString(id = 554107, message = "Defeating the dummy")
 	public static NpcStringId DEFEATING_THE_SCARECROW;
 	
 	@ClientString(id = 554201, message = "|Lv. 1 - 20| Searching for New Power")
