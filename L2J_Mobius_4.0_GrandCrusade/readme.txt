@@ -69,6 +69,8 @@ Underground:
 -Daily rewards
 
 Helios:
+-Dimensional Rift
+-Dimensional Crack
 -Giants Cave
 -Superion Fortress
 -Ramona
