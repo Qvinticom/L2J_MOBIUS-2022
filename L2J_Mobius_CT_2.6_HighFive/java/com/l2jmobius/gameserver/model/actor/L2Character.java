@@ -4398,15 +4398,18 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					return;
 				}
 				
-				// location different if destination wasn't reached (or just z coord is different)
-				final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
-				x = destiny.getX();
-				y = destiny.getY();
-				z = destiny.getZ();
-				dx = x - curX;
-				dy = y - curY;
-				dz = z - curZ;
-				distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
+				if (!isInVehicle)
+				{
+					// location different if destination wasn't reached (or just z coord is different)
+					final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
+					x = destiny.getX();
+					y = destiny.getY();
+					z = destiny.getZ();
+					dx = x - curX;
+					dy = y - curY;
+					dz = z - curZ;
+					distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
+				}
 				
 				// Pathfinding checks.
 				if (((originalDistance - distance) > 30) && !isAfraid() && !isInVehicle)
