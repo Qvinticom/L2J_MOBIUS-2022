@@ -19,9 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -30,7 +28,8 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * @author Sdw, UnAfraid
+ * @author Sdw, UnAfraid, proGenitor <br>
+ *         Experimental packet compatible for L2Classic 2.0.
  */
 public class UserInfo extends AbstractMaskPacket<UserInfoType>
 {
@@ -161,8 +160,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(_activeChar.getINT());
 			packet.writeH(_activeChar.getWIT());
 			packet.writeH(_activeChar.getMEN());
-			packet.writeH(_activeChar.getLUC());
-			packet.writeH(_activeChar.getCHA());
+			packet.writeH(0x00);
+			packet.writeH(0x00);
 		}
 		
 		if (containsMask(UserInfoType.MAX_HPCPMP))
@@ -206,7 +205,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeC(_activeChar.getMountType().ordinal());
 			packet.writeC(_activeChar.getPrivateStoreType().getId());
 			packet.writeC(_activeChar.hasDwarvenCraft() || (_activeChar.getSkillLevel(248) > 0) ? 1 : 0);
-			packet.writeC(_activeChar.getAbilityPointsUsed());
+			packet.writeC(0x00);
 		}
 		
 		if (containsMask(UserInfoType.STATS))
@@ -231,12 +230,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.ELEMENTALS))
 		{
 			packet.writeH(14);
-			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.FIRE));
-			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.WATER));
-			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.WIND));
-			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.EARTH));
-			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.HOLY));
-			packet.writeH(_activeChar.getDefenseElementValue(AttributeType.DARK));
+			packet.writeH(0x00);
+			packet.writeH(0x00);
+			packet.writeH(0x00);
+			packet.writeH(0x00);
+			packet.writeH(0x00);
+			packet.writeH(0x00);
 		}
 		
 		if (containsMask(UserInfoType.POSITION))
@@ -278,9 +277,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.ATK_ELEMENTAL))
 		{
 			packet.writeH(5);
-			final AttributeType attackAttribute = _activeChar.getAttackElement();
-			packet.writeC(attackAttribute.getClientId());
-			packet.writeH(_activeChar.getAttackElementValue(attackAttribute));
+			packet.writeC(0x00);
+			packet.writeH(0x00);
 		}
 		
 		if (containsMask(UserInfoType.CLAN))
@@ -303,7 +301,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(22);
 			packet.writeC(_activeChar.getPvpFlag());
 			packet.writeD(_activeChar.getReputation()); // Reputation
-			packet.writeC(_activeChar.isNoble() ? 0x01 : 0x00);
+			packet.writeC(0x00);
 			packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0);
 			packet.writeC(_activeChar.getPledgeClass());
 			packet.writeD(_activeChar.getPkKills());
@@ -315,7 +313,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
 			packet.writeH(15);
-			packet.writeD(_activeChar.getVitalityPoints());
+			packet.writeD(0x00);
 			packet.writeC(0x00); // Vita Bonus
 			packet.writeD(_activeChar.getFame());
 			packet.writeD(_activeChar.getRaidbossPoints());
@@ -353,7 +351,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(0x00);
 			packet.writeH(0x00);
 			packet.writeH(_activeChar.getInventoryLimit());
-			packet.writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
+			packet.writeC(0);
 		}
 		
 		if (containsMask(UserInfoType.UNK_3))
