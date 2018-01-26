@@ -529,11 +529,46 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18564" toLevel="1" name="Shadai's Shiny Jewelry Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_bm_jewelbox_shhadai</icon>
+		<itemConsumeId>46689</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="20.0">
+							<item id="26491" count="1" />
+						</item>
+						<item chance="20.0">
+							<item id="26492" count="1" />
+						</item>
+						<item chance="20.0">
+							<item id="26493" count="1" />
+						</item>
+						<item chance="20.0">
+							<item id="26507" count="1" />
+						</item>
+						<item chance="20.0">
+							<item id="26508" count="1" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18565" toLevel="6" name="Greater Tanzanite - Barrier">
 		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. -->
