@@ -228,6 +228,6 @@ public final class Q10742_AFurryFriend extends Quest
 	public void onRouteFinished(L2Npc npc)
 	{
 		WalkingManager.getInstance().cancelMoving(npc);
-		ThreadPoolManager.schedule(() -> npc.deleteMe(), 100);
+		ThreadPoolManager.schedule(() -> npc.deleteMe(), 1000);
 	}
 }
