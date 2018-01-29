@@ -689,11 +689,12 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	
 	public Collection<ItemHolder> calculateDrops(DropType dropType, L2Character victim, L2Character killer)
 	{
-		final List<DropHolder> dropList = getDropList(dropType);
-		if (dropList == null)
+		if (getDropList(dropType) == null)
 		{
 			return null;
 		}
+		
+		final List<DropHolder> dropList = new ArrayList<>(getDropList(dropType));
 		
 		// randomize drop order
 		Collections.shuffle(dropList);

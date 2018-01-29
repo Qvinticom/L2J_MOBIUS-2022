@@ -95,8 +95,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private Map<AISkillScope, List<Skill>> _aiSkillLists;
 	private Set<Integer> _clans;
 	private Set<Integer> _ignoreClanNpcIds;
-	private CopyOnWriteArrayList<DropHolder> _dropListDeath;
-	private CopyOnWriteArrayList<DropHolder> _dropListSpoil;
+	private List<DropHolder> _dropListDeath;
+	private List<DropHolder> _dropListSpoil;
 	private double _collisionRadiusGrown;
 	private double _collisionHeightGrown;
 	
@@ -546,11 +546,12 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	
 	public Collection<ItemHolder> calculateDrops(DropType dropType, L2Character victim, L2Character killer)
 	{
-		final List<DropHolder> dropList = getDropList(dropType);
-		if (dropList == null)
+		if (getDropList(dropType) == null)
 		{
 			return null;
 		}
+		
+		final List<DropHolder> dropList = new ArrayList<>(getDropList(dropType));
 		
 		// randomize drop order
 		Collections.shuffle(dropList);
