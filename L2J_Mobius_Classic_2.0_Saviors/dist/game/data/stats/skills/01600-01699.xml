@@ -89,7 +89,7 @@
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>0</castRange>
 		<effectRange>900</effectRange>
-		<hitTime>4000</hitTime>
+		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">7</value>
@@ -117,7 +117,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALSWORD</item>
 				</weaponType>
 			</condition>
 		</conditions>
