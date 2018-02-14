@@ -477,79 +477,254 @@
 		</effects>
 	</skill>
 	<skill id="17156" toLevel="1" name="Decadence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- A deliciously dark flavor surrounds you.\nFor 2 hours, STR + 2, INT +2, and Attribute Resistance + 20. -->
 		<icon>icon.etc_whiteday_choco</icon>
+		<abnormalTime>7200</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<hitTime>700</hitTime>
-		<reuseDelay>10000</reuseDelay>
-		<isMagic>4</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37705</itemConsumeId>
+		<effects>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17157" toLevel="1" name="Sugar Rush">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- An exhilarating thrill of sweet energy.\nFor 2 hours, STR + 2, INT + 2, DEX + 2, and WIT + 2. -->
 		<icon>icon.etc_whiteday_candy</icon>
+		<abnormalTime>7200</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<hitTime>700</hitTime>
-		<reuseDelay>10000</reuseDelay>
-		<isMagic>4</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37706</itemConsumeId>
+		<effects>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17158" toLevel="1" name="Forever Alone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Activating shield of self-built perfection.\nFor 2 hours, STR + 2, INT + 2, CON + 2, and MEN + 2. -->
 		<icon>icon.etc_whiteday_cookie</icon>
+		<abnormalTime>7200</abnormalTime>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>100</effectPoint>
+		<hitTime>100</hitTime>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<hitTime>700</hitTime>
-		<reuseDelay>10000</reuseDelay>
-		<isMagic>4</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37707</itemConsumeId>
+		<effects>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17159" toLevel="1" name="Transformation Skill">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO : Support for Random transform and Consume item by use cause 3 items uses this skill -->
 		<!-- For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry tow, and Sleepy Tow. -->
 		<icon>icon.skill11540</icon>
-		<operateType>A2</operateType>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>5000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<isMagic>1</isMagic>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>115</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>115</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17160" toLevel="1" name="Summon Friend">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can summon a selected target. Only possible while in a party. Cooldown is 30 minutes. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>-2</castRange>
-		<hitTime>5000</hitTime>
 		<effectPoint>1000</effectPoint>
+		<effectRange>-2</effectRange>
+		<hitTime>10000</hitTime>
+		<icon>icon.skill_agathion_special</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
 		<reuseDelay>1800000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallPc">
+				<itemId>0</itemId>
+				<itemCount>0</itemCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17161" toLevel="1" name="Chocolate Truffle">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Vitality is replenished in peace zones. -->
 		<icon>icon.etc_whiteday_choco_long</icon>
 		<operateType>A2</operateType>
-		<castRange>900</castRange>
-		<effectPoint>1</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<abnormalType>BR_EVENT_BUF2</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RecoverVitalityInPeaceZone">
+				<amount>100</amount>
+				<ticks>10</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17162" toLevel="1" name="Candy Heart">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Vitality is replenished in peace zones. -->
-		<icon>icon.etc_whiteday_candy_long</icon>
+		<icon>icon.etc_whiteday_choco_long</icon>
 		<operateType>A2</operateType>
-		<castRange>900</castRange>
-		<effectPoint>1</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<abnormalType>BR_EVENT_BUF2</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RecoverVitalityInPeaceZone">
+				<amount>100</amount>
+				<ticks>10</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17163" toLevel="1" name="Comfort Cookie">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Vitality is replenished in peace zones. -->
-		<icon>icon.etc_whiteday_cookie_long</icon>
+		<icon>icon.etc_whiteday_choco_long</icon>
 		<operateType>A2</operateType>
-		<castRange>900</castRange>
-		<effectPoint>1</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<abnormalType>BR_EVENT_BUF2</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RecoverVitalityInPeaceZone">
+				<amount>100</amount>
+				<ticks>10</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17164" toLevel="1" name="Demonic Sword Zariche Appearance Stone">
 		<!-- AUTO GENERATED SKILL -->

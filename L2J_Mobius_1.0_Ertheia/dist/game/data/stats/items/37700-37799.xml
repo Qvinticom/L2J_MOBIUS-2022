@@ -103,119 +103,185 @@
 	<item id="37705" name="Chocolate Truffle" type="EtcItem">
 		<!-- Recovers vitality in peace zones. Double click to cast Decadence on the entire party. Can be stacked with Sugar Rush and Forever Alone effects. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17156" level="1" /> <!-- Decadence -->
+			<skill id="17161" level="1" /> <!-- Chocolate Truffle -->
+		</skills>
 	</item>
 	<item id="37706" name="Candy Heart" type="EtcItem">
 		<!-- Recovers vitality in peace zones. Double click to cast Sugar Rush on the entire party. Can be stacked with Decadence and Forever Alone effects. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17157" level="1" /> <!-- Sugar Rush -->
+			<skill id="17162" level="1" /> <!-- Candy Heart -->
+		</skills>
 	</item>
 	<item id="37707" name="Comfort Cookie" type="EtcItem">
 		<!-- Recovers vitality in peace zones. Double click to cast Forever Alone on the entire party. Can be stacked with Decadence and Sugar Rush effects. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17158" level="1" /> <!-- Forever Alone -->
+			<skill id="17163" level="1" /> <!-- Comfort Cookie -->
+		</skills>
 	</item>
 	<item id="37708" name="Coco's Transformation Chocolate" type="EtcItem">
 		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17159" level="1" /> <!-- Transformation Skill -->
+		</skills>
 	</item>
 	<item id="37709" name="Coco's Transformation Candy" type="EtcItem">
 		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17159" level="1" /> <!-- Transformation Skill -->
+		</skills>
 	</item>
 	<item id="37710" name="Coco's Transformation Cookie" type="EtcItem">
 		<!-- Item containing the magic of Coco, the messenger of love. For 60 minutes, you can transform into one of the following: Snow Man, Scarecrow Jack, Tin Golem, Makeshift Bat, Lady Tow, Angry Tow, Sleepy Tow. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17159" level="1" /> <!-- Transformation Skill -->
+		</skills>
 	</item>
 	<item id="37711" name="Coco's Friend Summon Chocolate" type="EtcItem">
 		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17160" level="1" /> <!-- Summon Friend -->
+		</skills>
 	</item>
 	<item id="37712" name="Coco's Friend Summon Candy" type="EtcItem">
 		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17160" level="1" /> <!-- Summon Friend -->
+		</skills>
 	</item>
 	<item id="37713" name="Coco's Friend Summon Cookie" type="EtcItem">
 		<!-- Item containing the magic of Coco, the messenger of love. Can summon a friend once every 30 minutes. Target a party member and double click to activate the skill. Cannot be stored in a warehouse. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
-		<set name="weight" val="5" />
-		<set name="is_depositable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="ELIXIR" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<skills>
+			<skill id="17160" level="1" /> <!-- Summon Friend -->
+		</skills>
 	</item>
 	<item id="37714" name="Talisman - Lilith" type="Armor">
 		<!-- When equipped, M. Def. + 552, MP Recovery by 3, Dark Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Anakim or Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
