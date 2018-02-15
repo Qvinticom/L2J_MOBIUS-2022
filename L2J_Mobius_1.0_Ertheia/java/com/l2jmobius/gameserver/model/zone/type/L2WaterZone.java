@@ -79,6 +79,11 @@ public class L2WaterZone extends L2ZoneType
 		// TODO: update to only send speed status when that packet is known
 		if (character.isPlayer())
 		{
+			// Mobius: Attempt to stop water task.
+			if (!character.isInsideZone(ZoneId.WATER))
+			{
+				((L2PcInstance) character).stopWaterTask();
+			}
 			character.getActingPlayer().broadcastUserInfo();
 		}
 		else if (character.isNpc())
