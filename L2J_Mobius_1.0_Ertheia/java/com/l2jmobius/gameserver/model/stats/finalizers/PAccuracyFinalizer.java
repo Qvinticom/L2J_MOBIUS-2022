@@ -82,5 +82,4 @@ public class PAccuracyFinalizer implements IStatsFunction
 		
 		return (0.2 * Math.max(enchantLevel - 3, 0)) + (0.2 * Math.max(enchantLevel - 6, 0));
 	}
-	
 }

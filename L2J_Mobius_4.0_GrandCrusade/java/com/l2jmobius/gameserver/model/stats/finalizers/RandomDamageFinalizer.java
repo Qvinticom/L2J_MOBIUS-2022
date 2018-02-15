@@ -32,7 +32,6 @@ public class RandomDamageFinalizer implements IStatsFunction
 	{
 		throwIfPresent(base);
 		
-		final double baseValue = calcWeaponBaseValue(creature, stat);
-		return Stats.defaultValue(creature, stat, baseValue);
+		return Stats.defaultValue(creature, stat, calcWeaponBaseValue(creature, stat));
 	}
 }

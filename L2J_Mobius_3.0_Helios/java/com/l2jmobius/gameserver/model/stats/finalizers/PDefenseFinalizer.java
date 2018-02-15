@@ -78,14 +78,17 @@ public class PDefenseFinalizer implements IStatsFunction
 						baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
 					}
 				}
+				baseValue *= BaseStats.CHA.calcBonus(creature);
 			}
-			baseValue *= BaseStats.CHA.calcBonus(creature);
 		}
 		if (creature.isRaid())
 		{
 			baseValue *= Config.RAID_PDEFENCE_MULTIPLIER;
 		}
-		baseValue *= creature.getLevelMod();
+		if (creature.getLevel() > 0)
+		{
+			baseValue *= creature.getLevelMod();
+		}
 		
 		return defaultValue(creature, stat, baseValue);
 	}

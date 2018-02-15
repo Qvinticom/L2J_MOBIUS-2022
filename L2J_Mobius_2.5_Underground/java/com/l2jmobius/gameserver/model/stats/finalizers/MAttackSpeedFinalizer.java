@@ -43,6 +43,13 @@ public class MAttackSpeedFinalizer implements IStatsFunction
 		final double chaBonus = creature.isPlayer() ? BaseStats.CHA.calcBonus(creature) : 1.;
 		final double witBonus = creature.getWIT() > 0 ? BaseStats.WIT.calcBonus(creature) : 1.;
 		baseValue *= witBonus * chaBonus;
-		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue), 1, Config.MAX_MATK_SPEED);
+		return validateValue(creature, defaultValue(creature, stat, baseValue), 1, Config.MAX_MATK_SPEED);
+	}
+	
+	private double defaultValue(L2Character creature, Stats stat, double baseValue)
+	{
+		final double mul = Math.max(creature.getStat().getMul(stat), 0.7);
+		final double add = creature.getStat().getAdd(stat);
+		return (baseValue * mul) + add + creature.getStat().getMoveTypeValue(stat, creature.getMoveType());
 	}
 }

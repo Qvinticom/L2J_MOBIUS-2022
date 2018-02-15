@@ -105,7 +105,7 @@ public final class Formulas
 		final double criticalAddVuln = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE_ADD, 0);
 		// Trait, elements
 		final double weaponTraitMod = calcWeaponTraitBonus(attacker, target);
-		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
+		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
 		final double attributeMod = calcAttributeBonus(attacker, target, skill);
 		final double randomMod = attacker.getRandomDamageMultiplier();
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
@@ -138,7 +138,7 @@ public final class Formulas
 		final double critMod = mcrit ? (2 * calcCritDamage(attacker, target, skill)) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
 		
 		// Trait, elements
-		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
+		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
 		final double attributeMod = calcAttributeBonus(attacker, target, skill);
 		final double randomMod = attacker.getRandomDamageMultiplier();
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, mcrit);
@@ -687,7 +687,7 @@ public final class Formulas
 		final double elementMod = calcAttributeBonus(attacker, target, skill);
 		final double traitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
 		final double basicPropertyResist = getBasicPropertyResistBonus(skill.getBasicProperty(), target);
-		final double buffDebuffMod = skill.isDebuff() ? target.getStat().getValue(Stats.RESIST_ABNORMAL_DEBUFF, 1) : 0;
+		final double buffDebuffMod = skill.isDebuff() ? target.getStat().getValue(Stats.RESIST_ABNORMAL_DEBUFF, 1) : 1;
 		final double rate = baseMod * elementMod * traitMod * buffDebuffMod;
 		final double finalRate = traitMod > 0 ? CommonUtil.constrain(rate, skill.getMinChance(), skill.getMaxChance()) * basicPropertyResist : 0;
 		
@@ -977,7 +977,7 @@ public final class Formulas
 			
 			double counterdmg = ((target.getPAtk() * 873) / attacker.getPDef()); // Old: (((target.getPAtk(attacker) * 10.0) * 70.0) / attacker.getPDef(target));
 			counterdmg *= calcWeaponTraitBonus(attacker, target);
-			counterdmg *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);
+			counterdmg *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
 			counterdmg *= calcAttributeBonus(attacker, target, skill);
 			
 			attacker.reduceCurrentHp(counterdmg, target, skill);
@@ -1145,6 +1145,12 @@ public final class Formulas
 	 */
 	public static boolean calcProbability(double baseChance, L2Character attacker, L2Character target, Skill skill)
 	{
+		// Skills without set probability should only test against trait invulnerability.
+		if (Double.isNaN(baseChance))
+		{
+			return calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true) > 0;
+		}
+		
 		// Outdated formula: return Rnd.get(100) < ((((((skill.getMagicLevel() + baseChance) - target.getLevel()) + 30) - target.getINT()) * calcAttributeBonus(attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));
 		// TODO: Find more retail-like formula
 		return Rnd.get(100) < (((((skill.getMagicLevel() + baseChance) - target.getLevel()) - getAbnormalResist(skill.getBasicProperty(), target)) * calcAttributeBonus(attacker, target, skill)) * calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false));

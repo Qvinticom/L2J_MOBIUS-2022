@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.stats;
 
 import java.io.File;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
@@ -61,7 +60,8 @@ public enum BaseStats
 	{
 		if ((creature != null) && (_stat != null))
 		{
-			return (int) Math.min(_stat.finalize(creature, Optional.empty()), MAX_STAT_VALUE - 1);
+			// return (int) Math.min(_stat.finalize(creature, Optional.empty()), MAX_STAT_VALUE - 1);
+			return (int) creature.getStat().getValue(_stat);
 		}
 		return 0;
 	}

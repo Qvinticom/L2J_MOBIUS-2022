@@ -22,6 +22,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.transform.TransformType;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -63,23 +64,19 @@ public interface IStatsFunction
 	default double calcWeaponBaseValue(L2Character creature, Stats stat)
 	{
 		final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
-		final double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElseGet(() ->
+		double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
+		if (creature.isPet())
 		{
-			if (creature.isPet())
-			{
-				final L2PetInstance pet = (L2PetInstance) creature;
-				final L2ItemInstance weapon = pet.getActiveWeaponInstance();
-				final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
-				return baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);
-			}
-			else if (creature.isPlayer())
-			{
-				final L2ItemInstance weapon = creature.getActiveWeaponInstance();
-				return (weapon != null ? weapon.getItem().getStats(stat, baseTemplateValue) : baseTemplateValue);
-			}
-			
-			return baseTemplateValue;
-		});
+			final L2PetInstance pet = (L2PetInstance) creature;
+			final L2ItemInstance weapon = pet.getActiveWeaponInstance();
+			final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
+			baseValue = baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);
+		}
+		else if (creature.isPlayer() && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE)))
+		{
+			final L2ItemInstance weapon = creature.getActiveWeaponInstance();
+			baseValue = (weapon != null ? weapon.getItem().getStats(stat, baseTemplateValue) : baseTemplateValue);
+		}
 		
 		return baseValue;
 	}

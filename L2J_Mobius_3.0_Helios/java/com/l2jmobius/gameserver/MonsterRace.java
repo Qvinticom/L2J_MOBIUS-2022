@@ -41,11 +41,6 @@ public class MonsterRace
 		_second = new int[2];
 	}
 	
-	public static MonsterRace getInstance()
-	{
-		return SingletonHolder._instance;
-	}
-	
 	public void newRace()
 	{
 		int random = 0;
@@ -141,6 +136,11 @@ public class MonsterRace
 	public int getSecondPlace()
 	{
 		return _second[0];
+	}
+	
+	public static MonsterRace getInstance()
+	{
+		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder

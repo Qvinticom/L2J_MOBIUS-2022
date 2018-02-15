@@ -57,11 +57,6 @@ public class CharStat
 	private long _exp = 0;
 	private long _sp = 0;
 	private byte _level = 1;
-	private final float[] _attackTraits = new float[TraitType.values().length];
-	private final int[] _attackTraitsCount = new int[TraitType.values().length];
-	private final float[] _defenceTraits = new float[TraitType.values().length];
-	private final int[] _defenceTraitsCount = new int[TraitType.values().length];
-	private final int[] _traitsInvul = new int[TraitType.values().length];
 	/** Creature's maximum buff count. */
 	private int _maxBuffCount = Config.BUFFS_MAX_AMOUNT;
 	private double _vampiricSum = 0;
@@ -76,6 +71,12 @@ public class CharStat
 	private final Deque<StatsHolder> _additionalAdd = new ConcurrentLinkedDeque<>();
 	private final Deque<StatsHolder> _additionalMul = new ConcurrentLinkedDeque<>();
 	private final Map<Stats, Double> _fixedValue = new ConcurrentHashMap<>();
+	
+	private final float[] _attackTraits = new float[TraitType.values().length];
+	private final float[] _defenceTraits = new float[TraitType.values().length];
+	private final int[] _attackTraitsCount = new int[TraitType.values().length];
+	private final int[] _defenceTraitsCount = new int[TraitType.values().length];
+	private final int[] _traitsInvul = new int[TraitType.values().length];
 	
 	/** Values to be recalculated after every stat update */
 	private double _attackSpeedMultiplier = 1;
