@@ -186,7 +186,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			|| ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getOptionId(0) != _augmentOption1) || (itemEnchantment.getAugmentation().getOptionId(1) != _augmentOption2)))
 			|| ((_soulCrystalOptions != null) && itemEnchantment.getSoulCrystalOptions().stream().anyMatch(e -> !CommonUtil.contains(_soulCrystalOptions, e)))
 			|| ((_soulCrystalOptions == null) && !itemEnchantment.getSoulCrystalOptions().isEmpty())
-			|| ((_soulCrystalSpecialOptions != null) && itemEnchantment.getSoulCrystalOptions().stream().anyMatch(e -> !CommonUtil.contains(_soulCrystalSpecialOptions, e)))
+			|| ((_soulCrystalSpecialOptions != null) && itemEnchantment.getSoulCrystalSpecialOptions().stream().anyMatch(e -> !CommonUtil.contains(_soulCrystalSpecialOptions, e)))
 			|| ((_soulCrystalSpecialOptions == null) && !itemEnchantment.getSoulCrystalSpecialOptions().isEmpty())
 			))
 		//@formatter:on
