@@ -30,7 +30,7 @@
 				<!-- NPC Trigger Target Cancel -->
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>90</chance>
 				<targetType>SELF</targetType>
@@ -72,7 +72,7 @@
 				<!-- NPC Trigger Target Cancel -->
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>90</chance>
 				<targetType>SELF</targetType>
@@ -347,7 +347,7 @@
 				<!-- Putrefaction Cleanse -->
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>TARGET</targetType>
@@ -2247,7 +2247,7 @@
 				<skillLevel>1</skillLevel>
 				<attackerType>L2Attackable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<chance>90</chance>
 			</effect>

@@ -489,7 +489,7 @@
 				<allowWeapons>ALL</allowWeapons>
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>
@@ -516,13 +516,13 @@
 				<targetType>SELF</targetType>
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
 				<isCritical>false</isCritical>
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -611,7 +611,7 @@
 				<!-- Self Heal (Warrior) - Recovers 10% of Max HP. -->
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>20</chance>
 				<targetType>SELF</targetType>
@@ -2343,7 +2343,7 @@
 				<isCritical>false</isCritical>
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">30</value>
 					<value level="2">20</value>

@@ -3539,7 +3539,7 @@
 			<effect name="TriggerSkillByDamage">
 				<!-- Flame Armor -->
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>TARGET</targetType>
 				<minDamage>1</minDamage>
@@ -4315,7 +4315,7 @@
 				<!-- Cancel Fear -->
 				<attackerType>L2Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -4427,7 +4427,7 @@
 				<!-- Cancel Fear -->
 				<attackerType>L2Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -4703,7 +4703,7 @@
 				<!-- Floating Blow -->
 				<attackerType>L2Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<skillId>11063</skillId>
 				<skillLevel>1</skillLevel>
 				<minDamage>1</minDamage>
@@ -5618,7 +5618,7 @@
 				<!-- Cancel Fear -->
 				<attackerType>L2Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>107</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>100</chance>
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
