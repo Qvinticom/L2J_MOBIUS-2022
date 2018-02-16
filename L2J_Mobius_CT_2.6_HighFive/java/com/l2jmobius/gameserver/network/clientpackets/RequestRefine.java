@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
  */
 public final class RequestRefine extends AbstractRefinePacket
 {
-	private static final String _C__D0_41_REQUESTREFINE = "[C] D0:41 RequestRefine";
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
 	private int _gemStoneItemObjId;
@@ -131,11 +130,5 @@ public final class RequestRefine extends AbstractRefinePacket
 		final StatusUpdate su = new StatusUpdate(activeChar);
 		su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 		activeChar.sendPacket(su);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_41_REQUESTREFINE;
 	}
 }

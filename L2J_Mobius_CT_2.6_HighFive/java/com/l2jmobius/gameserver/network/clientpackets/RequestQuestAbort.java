@@ -28,8 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.QuestList;
  */
 public final class RequestQuestAbort extends L2GameClientPacket
 {
-	private static final String _C__63_REQUESTQUESTABORT = "[C] 63 RequestQuestAbort";
-	
 	private int _questId;
 	
 	@Override
@@ -57,11 +55,5 @@ public final class RequestQuestAbort extends L2GameClientPacket
 				activeChar.sendPacket(new QuestList());
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__63_REQUESTQUESTABORT;
 	}
 }

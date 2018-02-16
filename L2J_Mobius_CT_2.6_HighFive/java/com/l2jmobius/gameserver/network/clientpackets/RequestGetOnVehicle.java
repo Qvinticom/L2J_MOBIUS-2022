@@ -30,8 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
  */
 public final class RequestGetOnVehicle extends L2GameClientPacket
 {
-	private static final String _C__53_GETONVEHICLE = "[C] 53 GetOnVehicle";
-	
 	private int _boatId;
 	private Location _pos;
 	
@@ -82,11 +80,5 @@ public final class RequestGetOnVehicle extends L2GameClientPacket
 		activeChar.setXYZ(boat.getX(), boat.getY(), boat.getZ());
 		activeChar.setInsideZone(ZoneId.PEACE, true);
 		activeChar.revalidateZone(true);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__53_GETONVEHICLE;
 	}
 }

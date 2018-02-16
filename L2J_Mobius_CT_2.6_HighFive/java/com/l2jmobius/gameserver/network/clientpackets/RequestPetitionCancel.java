@@ -36,8 +36,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestPetitionCancel extends L2GameClientPacket
 {
-	private static final String _C__8A_REQUEST_PETITIONCANCEL = "[C] 8A RequestPetitionCancel";
-	
 	// private int _unknown;
 	
 	@Override
@@ -92,11 +90,5 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 				activeChar.sendPacket(SystemMessageId.YOU_HAVE_NOT_SUBMITTED_A_PETITION);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__8A_REQUEST_PETITIONCANCEL;
 	}
 }

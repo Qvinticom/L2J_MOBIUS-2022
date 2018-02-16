@@ -22,8 +22,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public final class RequestRecipeBookOpen extends L2GameClientPacket
 {
-	private static final String _C__B5_REQUESTRECIPEBOOKOPEN = "[C] B5 RequestRecipeBookOpen";
-	
 	private boolean _isDwarvenCraft;
 	
 	@Override
@@ -54,11 +52,5 @@ public final class RequestRecipeBookOpen extends L2GameClientPacket
 		}
 		
 		RecipeController.getInstance().requestBookOpen(activeChar, _isDwarvenCraft);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B5_REQUESTRECIPEBOOKOPEN;
 	}
 }

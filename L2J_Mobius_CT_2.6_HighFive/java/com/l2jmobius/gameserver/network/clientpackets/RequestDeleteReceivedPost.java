@@ -30,8 +30,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestDeleteReceivedPost extends L2GameClientPacket
 {
-	private static final String _C__D0_68_REQUESTDELETERECEIVEDPOST = "[C] D0:68 RequestDeleteReceivedPost";
-	
 	private static final int BATCH_LENGTH = 4; // length of the one item
 	
 	int[] _msgIds = null;
@@ -88,12 +86,6 @@ public final class RequestDeleteReceivedPost extends L2GameClientPacket
 			msg.setDeletedByReceiver();
 		}
 		activeChar.sendPacket(new ExChangePostState(true, _msgIds, Message.DELETED));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_68_REQUESTDELETERECEIVEDPOST;
 	}
 	
 	@Override

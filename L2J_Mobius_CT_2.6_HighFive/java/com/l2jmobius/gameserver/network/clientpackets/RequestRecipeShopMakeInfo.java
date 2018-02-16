@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
  */
 public final class RequestRecipeShopMakeInfo extends L2GameClientPacket
 {
-	private static final String _C__B5_RequestRecipeShopMakeInfo = "[C] B5 RequestRecipeShopMakeInfo";
-	
 	private int _playerObjectId;
 	private int _recipeId;
 	
@@ -56,11 +54,5 @@ public final class RequestRecipeShopMakeInfo extends L2GameClientPacket
 		
 		player.sendPacket(new RecipeShopItemInfo(shop, _recipeId));
 		
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B5_RequestRecipeShopMakeInfo;
 	}
 }

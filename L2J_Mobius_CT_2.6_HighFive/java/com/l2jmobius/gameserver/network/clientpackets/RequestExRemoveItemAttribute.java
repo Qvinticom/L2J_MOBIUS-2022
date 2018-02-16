@@ -28,8 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestExRemoveItemAttribute extends L2GameClientPacket
 {
-	private static final String _C__D0_23_REQUESTEXREMOVEITEMATTRIBUTE = "[C] D0:23 RequestExRemoveItemAttribute";
-	
 	private int _objectId;
 	private long _price;
 	private byte _element;
@@ -167,11 +165,5 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 		}
 		
 		return _price;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_23_REQUESTEXREMOVEITEMATTRIBUTE;
 	}
 }

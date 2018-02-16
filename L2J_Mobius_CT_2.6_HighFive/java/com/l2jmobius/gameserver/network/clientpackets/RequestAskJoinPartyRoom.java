@@ -64,10 +64,4 @@ public class RequestAskJoinPartyRoom extends L2GameClientPacket
 			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 		}
 	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] D0:14 RequestAskJoinPartyRoom";
-	}
 }

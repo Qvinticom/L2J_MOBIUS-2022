@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class SetPrivateStoreMsgSell extends L2GameClientPacket
 {
-	private static final String _C__97_SETPRIVATESTOREMSGSELL = "[C] 97 SetPrivateStoreMsgSell";
-	
 	private static final int MAX_MSG_LENGTH = 29;
 	
 	private String _storeMsg;
@@ -56,11 +54,5 @@ public class SetPrivateStoreMsgSell extends L2GameClientPacket
 		
 		player.getSellList().setTitle(_storeMsg);
 		sendPacket(new PrivateStoreMsgSell(player));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__97_SETPRIVATESTOREMSGSELL;
 	}
 }

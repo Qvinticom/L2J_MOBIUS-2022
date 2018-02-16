@@ -28,8 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPutIntensiveResultForVar
  */
 public class RequestConfirmRefinerItem extends AbstractRefinePacket
 {
-	private static final String _C__D0_27_REQUESTCONFIRMREFINERITEM = "[C] D0:27 RequestConfirmRefinerItem";
-	
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
 	
@@ -75,11 +73,4 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		
 		activeChar.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItemId, gemStoneId, gemStoneCount));
 	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_27_REQUESTCONFIRMREFINERITEM;
-	}
-	
 }

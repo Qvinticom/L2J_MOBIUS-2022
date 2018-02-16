@@ -21,8 +21,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 
 public class RequestBuySellUIClose extends L2GameClientPacket
 {
-	private static final String _C__D0_76_REQUESTBUYSELLUICLOSE = "[C] D0:76 RequestBuySellUIClose";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -39,11 +37,5 @@ public class RequestBuySellUIClose extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new ItemList(activeChar, true));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_76_REQUESTBUYSELLUICLOSE;
 	}
 }

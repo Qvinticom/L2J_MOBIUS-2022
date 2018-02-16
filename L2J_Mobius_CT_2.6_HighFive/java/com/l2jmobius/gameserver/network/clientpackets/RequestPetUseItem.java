@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestPetUseItem extends L2GameClientPacket
 {
-	private static final String _C__8A_REQUESTPETUSEITEM = "[C] 8A RequestPetUseItem";
-	
 	private int _objectId;
 	
 	@Override
@@ -138,11 +136,5 @@ public final class RequestPetUseItem extends L2GameClientPacket
 				_log.warning("No item handler registered for itemId: " + item.getId());
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__8A_REQUESTPETUSEITEM;
 	}
 }

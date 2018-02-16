@@ -186,10 +186,4 @@ public final class TradeRequest extends L2GameClientPacket
 		sm.addString(partner.getName());
 		player.sendPacket(sm);
 	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] 1A TradeRequest";
-	}
 }

@@ -43,8 +43,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestSendPost extends L2GameClientPacket
 {
-	private static final String _C__D0_66_REQUESTSENDPOST = "[C] D0:66 RequestSendPost";
-	
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private static final int MAX_RECV_LENGTH = 16;
@@ -382,12 +380,6 @@ public final class RequestSendPost extends L2GameClientPacket
 		{
 			return _count;
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_66_REQUESTSENDPOST;
 	}
 	
 	@Override

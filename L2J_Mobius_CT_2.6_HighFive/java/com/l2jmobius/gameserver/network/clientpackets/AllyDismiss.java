@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public final class AllyDismiss extends L2GameClientPacket
 {
-	private static final String _C__8F_ALLYDISMISS = "[C] 8F AllyDismiss";
-	
 	private String _clanName;
 	
 	@Override
@@ -90,11 +88,5 @@ public final class AllyDismiss extends L2GameClientPacket
 		clan.updateClanInDB();
 		
 		player.sendPacket(SystemMessageId.YOU_HAVE_SUCCEEDED_IN_EXPELLING_THE_CLAN);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__8F_ALLYDISMISS;
 	}
 }

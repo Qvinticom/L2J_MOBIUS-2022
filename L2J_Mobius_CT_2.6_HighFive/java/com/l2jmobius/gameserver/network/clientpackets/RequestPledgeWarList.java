@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveWarList;
  */
 public final class RequestPledgeWarList extends L2GameClientPacket
 {
-	private static final String _C__D0_17_REQUESTPLEDGEWARLIST = "[C] D0:17 RequestPledgeWarList";
 	@SuppressWarnings("unused")
 	private int _unk1;
 	private int _tab;
@@ -54,11 +53,5 @@ public final class RequestPledgeWarList extends L2GameClientPacket
 		
 		// do we need powers to do that??
 		activeChar.sendPacket(new PledgeReceiveWarList(activeChar.getClan(), _tab));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_17_REQUESTPLEDGEWARLIST;
 	}
 }

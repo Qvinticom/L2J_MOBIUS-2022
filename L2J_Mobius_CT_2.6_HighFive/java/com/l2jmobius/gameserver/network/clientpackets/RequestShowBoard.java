@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
  */
 public final class RequestShowBoard extends L2GameClientPacket
 {
-	private static final String _C__5E_REQUESTSHOWBOARD = "[C] 5E RequestShowBoard";
-	
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
@@ -40,12 +38,6 @@ public final class RequestShowBoard extends L2GameClientPacket
 	protected void runImpl()
 	{
 		CommunityBoardHandler.getInstance().handleParseCommand(Config.BBS_DEFAULT, getActiveChar());
-	}
-	
-	@Override
-	public final String getType()
-	{
-		return _C__5E_REQUESTSHOWBOARD;
 	}
 	
 	@Override

@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class RequestUnEquipItem extends L2GameClientPacket
 {
-	private static final String _C__16_REQUESTUNEQUIPITEM = "[C] 16 RequestUnequipItem";
-	
 	private int _slot;
 	
 	/**
@@ -121,11 +119,5 @@ public class RequestUnEquipItem extends L2GameClientPacket
 			iu.addItems(Arrays.asList(unequipped));
 			activeChar.sendPacket(iu);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__16_REQUESTUNEQUIPITEM;
 	}
 }

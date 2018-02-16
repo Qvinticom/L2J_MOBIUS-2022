@@ -33,8 +33,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestAnswerJoinPledge extends L2GameClientPacket
 {
-	private static final String _C__27_REQUESTANSWERJOINPLEDGE = "[C] 27 RequestAnswerJoinPledge";
-	
 	private int _answer;
 	
 	@Override
@@ -121,11 +119,5 @@ public final class RequestAnswerJoinPledge extends L2GameClientPacket
 		}
 		
 		activeChar.getRequest().onRequestResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__27_REQUESTANSWERJOINPLEDGE;
 	}
 }

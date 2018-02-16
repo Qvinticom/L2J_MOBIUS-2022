@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestSkillList extends L2GameClientPacket
 {
-	private static final String _C__50_REQUESTSKILLLIST = "[C] 50 RequestSkillList";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -40,12 +38,6 @@ public final class RequestSkillList extends L2GameClientPacket
 		{
 			cha.sendSkillList();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__50_REQUESTSKILLLIST;
 	}
 	
 	@Override

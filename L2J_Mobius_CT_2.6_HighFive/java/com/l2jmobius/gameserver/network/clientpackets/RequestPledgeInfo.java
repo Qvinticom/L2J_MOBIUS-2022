@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeInfo;
 
 public final class RequestPledgeInfo extends L2GameClientPacket
 {
-	private static final String _C__65_REQUESTPLEDGEINFO = "[C] 65 RequestPledgeInfo";
-	
 	private int _clanId;
 	
 	@Override
@@ -49,12 +47,6 @@ public final class RequestPledgeInfo extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new PledgeInfo(clan));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__65_REQUESTPLEDGEINFO;
 	}
 	
 	@Override

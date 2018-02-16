@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public final class RequestBlock extends L2GameClientPacket
 {
-	private static final String _C__A9_REQUESTBLOCK = "[C] A9 RequestBlock";
-	
 	private static final int BLOCK = 0;
 	private static final int UNBLOCK = 1;
 	private static final int BLOCKLIST = 2;
@@ -111,11 +109,5 @@ public final class RequestBlock extends L2GameClientPacket
 				_log.info("Unknown 0xA9 block type: " + _type);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__A9_REQUESTBLOCK;
 	}
 }

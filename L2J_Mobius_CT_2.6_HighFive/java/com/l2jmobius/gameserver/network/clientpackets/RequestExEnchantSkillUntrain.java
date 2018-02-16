@@ -43,7 +43,6 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 {
-	private static final String _C__D0_33_REQUESTEXENCHANTSKILLUNTRAIN = "[C] D0:33 RequestExEnchantSkillUntrain";
 	private static final Logger _logEnchant = Logger.getLogger("enchant");
 	
 	private int _skillId;
@@ -186,11 +185,5 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		player.sendPacket(new ExEnchantSkillInfo(_skillId, afterUntrainSkillLevel));
 		player.sendPacket(new ExEnchantSkillInfoDetail(2, _skillId, afterUntrainSkillLevel - 1, player));
 		player.updateShortCuts(_skillId, afterUntrainSkillLevel);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_33_REQUESTEXENCHANTSKILLUNTRAIN;
 	}
 }

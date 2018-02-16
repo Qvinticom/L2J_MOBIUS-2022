@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.L2GameClient;
  */
 public class GameGuardReply extends L2GameClientPacket
 {
-	private static final String _C__CB_GAMEGUARDREPLY = "[C] CB GameGuardReply";
-	
 	private static final byte[] VALID =
 	{
 		(byte) 0x88,
@@ -82,12 +80,6 @@ public class GameGuardReply extends L2GameClientPacket
 		{
 			_log.log(Level.WARNING, "", e);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__CB_GAMEGUARDREPLY;
 	}
 	
 	@Override

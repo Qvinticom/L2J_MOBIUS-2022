@@ -42,8 +42,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class MultiSellChoose extends L2GameClientPacket
 {
-	private static final String _C__B0_MULTISELLCHOOSE = "[C] B0 MultiSellChoose";
-	
 	private int _listId;
 	private int _entryId;
 	private long _amount;
@@ -465,11 +463,5 @@ public class MultiSellChoose extends L2GameClientPacket
 				break;
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B0_MULTISELLCHOOSE;
 	}
 }

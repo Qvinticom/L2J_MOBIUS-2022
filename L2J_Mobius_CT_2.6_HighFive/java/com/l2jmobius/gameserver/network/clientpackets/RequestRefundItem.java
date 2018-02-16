@@ -38,8 +38,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestRefundItem extends L2GameClientPacket
 {
-	private static final String _C__D0_75_REQUESTREFUNDITEM = "[C] D0:75 RequestRefundItem";
-	
 	private static final int BATCH_LENGTH = 4; // length of the one item
 	private static final int CUSTOM_CB_SELL_LIST = 423;
 	
@@ -210,11 +208,5 @@ public final class RequestRefundItem extends L2GameClientPacket
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
 		player.sendPacket(new ExBuySellList(player, true));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_75_REQUESTREFUNDITEM;
 	}
 }

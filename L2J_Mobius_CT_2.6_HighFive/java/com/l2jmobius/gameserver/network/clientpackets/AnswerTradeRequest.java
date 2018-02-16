@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.TradeDone;
  */
 public final class AnswerTradeRequest extends L2GameClientPacket
 {
-	private static final String _C__55_ANSWERTRADEREQUEST = "[C] 55 AnswerTradeRequest";
-	
 	private int _response;
 	
 	@Override
@@ -87,11 +85,5 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 		// Clears requesting status
 		player.setActiveRequester(null);
 		partner.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__55_ANSWERTRADEREQUEST;
 	}
 }

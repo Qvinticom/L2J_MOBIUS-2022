@@ -57,7 +57,6 @@ import com.l2jmobius.gameserver.util.Util;
 @SuppressWarnings("unused")
 public final class CharacterCreate extends L2GameClientPacket
 {
-	private static final String _C__0C_CHARACTERCREATE = "[C] 0C CharacterCreate";
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	// cSdddddddddddd
@@ -310,11 +309,5 @@ public final class CharacterCreate extends L2GameClientPacket
 		{
 			q.newQuestState(player).setState(State.STARTED);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0C_CHARACTERCREATE;
 	}
 }

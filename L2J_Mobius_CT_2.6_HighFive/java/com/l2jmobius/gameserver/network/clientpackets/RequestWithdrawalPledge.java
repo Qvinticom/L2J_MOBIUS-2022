@@ -31,8 +31,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestWithdrawalPledge extends L2GameClientPacket
 {
-	private static final String _C__28_REQUESTWITHDRAWALPLEDGE = "[C] 28 RequestWithdrawalPledge";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -76,11 +74,5 @@ public final class RequestWithdrawalPledge extends L2GameClientPacket
 		
 		activeChar.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_CLAN);
 		activeChar.sendPacket(SystemMessageId.AFTER_LEAVING_OR_HAVING_BEEN_DISMISSED_FROM_A_CLAN_YOU_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_JOINING_ANOTHER_CLAN);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__28_REQUESTWITHDRAWALPLEDGE;
 	}
 }

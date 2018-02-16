@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public class MoveToLocationAirShip extends L2GameClientPacket
 {
-	private static final String _C__D0_38_MOVETOLOCATIONAIRSHIP = "[C] D0:38 MoveToLocationAirShip";
-	
 	public static final int MIN_Z = -895;
 	public static final int MAX_Z = 6105;
 	public static final int STEP = 300;
@@ -145,11 +143,5 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 				break;
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_38_MOVETOLOCATIONAIRSHIP;
 	}
 }

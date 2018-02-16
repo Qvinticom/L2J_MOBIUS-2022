@@ -18,8 +18,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 public final class RequestDeleteMacro extends L2GameClientPacket
 {
-	private static final String _C__CE_REQUESTDELETEMACRO = "[C] CE RequestDeleteMacro";
-	
 	private int _id;
 	
 	@Override
@@ -36,11 +34,5 @@ public final class RequestDeleteMacro extends L2GameClientPacket
 			return;
 		}
 		getClient().getActiveChar().deleteMacro(_id);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__CE_REQUESTDELETEMACRO;
 	}
 }

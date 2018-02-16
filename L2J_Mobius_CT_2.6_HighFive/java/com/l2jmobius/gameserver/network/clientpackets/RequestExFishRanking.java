@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestExFishRanking extends L2GameClientPacket
 {
-	private static final String _C__D0_18_REQUESTEXFISHRANKING = "[C] D0:18 RequestExFishRanking";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -47,11 +45,5 @@ public final class RequestExFishRanking extends L2GameClientPacket
 		{
 			FishingChampionshipManager.getInstance().showMidResult(activeChar);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_18_REQUESTEXFISHRANKING;
 	}
 }

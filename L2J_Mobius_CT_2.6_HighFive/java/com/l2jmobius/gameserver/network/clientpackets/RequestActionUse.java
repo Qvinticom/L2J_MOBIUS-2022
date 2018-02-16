@@ -62,8 +62,6 @@ import com.l2jmobius.util.Rnd;
  */
 public final class RequestActionUse extends L2GameClientPacket
 {
-	private static final String _C__56_REQUESTACTIONUSE = "[C] 56 RequestActionUse";
-	
 	private static final int SIN_EATER_ID = 12564;
 	private static final int SWITCH_STANCE_ID = 6054;
 	private static final NpcStringId[] NPC_STRINGS =
@@ -1520,12 +1518,6 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 		
 		partner.sendPacket(new ExAskCoupleAction(requester.getObjectId(), id));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__56_REQUESTACTIONUSE;
 	}
 	
 	@Override

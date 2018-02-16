@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class RequestPetitionFeedback extends L2GameClientPacket
 {
-	private static final String _C__C9_REQUESTPETITIONFEEDBACK = "[C] C9 RequestPetitionFeedback";
-	
 	private static final String INSERT_FEEDBACK = "INSERT INTO petition_feedback VALUES (?,?,?,?,?)";
 	
 	// cdds
@@ -76,11 +74,5 @@ public class RequestPetitionFeedback extends L2GameClientPacket
 		{
 			_log.log(Level.SEVERE, "Error while saving petition feedback");
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__C9_REQUESTPETITIONFEEDBACK;
 	}
 }

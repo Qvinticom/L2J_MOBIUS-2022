@@ -28,8 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.AskJoinPledge;
  */
 public final class RequestJoinPledge extends L2GameClientPacket
 {
-	private static final String _C__26_REQUESTJOINPLEDGE = "[C] 26 RequestJoinPledge";
-	
 	private int _target;
 	private int _pledgeType;
 	
@@ -80,11 +78,5 @@ public final class RequestJoinPledge extends L2GameClientPacket
 	public int getPledgeType()
 	{
 		return _pledgeType;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__26_REQUESTJOINPLEDGE;
 	}
 }

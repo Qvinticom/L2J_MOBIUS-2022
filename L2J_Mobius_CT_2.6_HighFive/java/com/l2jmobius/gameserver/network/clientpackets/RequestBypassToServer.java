@@ -52,7 +52,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestBypassToServer extends L2GameClientPacket
 {
-	private static final String _C__23_REQUESTBYPASSTOSERVER = "[C] 23 RequestBypassToServer";
 	// FIXME: This is for compatibility, will be changed when bypass functionality got an overhaul by NosBit
 	private static final String[] _possibleNonHtmlCommands =
 	{
@@ -340,11 +339,5 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			temp.setTarget(activeChar);
 			temp.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, activeChar.getLocation());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__23_REQUESTBYPASSTOSERVER;
 	}
 }

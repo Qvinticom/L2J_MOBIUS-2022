@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestSurrenderPledgeWar extends L2GameClientPacket
 {
-	private static final String _C__07_REQUESTSURRENDERPLEDGEWAR = "[C] 07 RequestSurrenderPledgeWar";
-	
 	private String _pledgeName;
 	
 	@Override
@@ -90,11 +88,5 @@ public final class RequestSurrenderPledgeWar extends L2GameClientPacket
 		// leader.setTransactionRequester(player);
 		// player.setTransactionRequester(leader);
 		// leader.sendPacket(new SurrenderPledgeWar(_clan.getName(), player.getName()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__07_REQUESTSURRENDERPLEDGEWAR;
 	}
 }

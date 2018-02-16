@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestJoinAlly extends L2GameClientPacket
 {
-	private static final String _C__8C_REQUESTJOINALLY = "[C] 8C RequestJoinAlly";
-	
 	private int _id;
 	
 	@Override
@@ -78,11 +76,5 @@ public final class RequestJoinAlly extends L2GameClientPacket
 		sm.addString(activeChar.getName());
 		target.sendPacket(sm);
 		target.sendPacket(new AskJoinAlly(activeChar.getObjectId(), activeChar.getClan().getAllyName()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__8C_REQUESTJOINALLY;
 	}
 }

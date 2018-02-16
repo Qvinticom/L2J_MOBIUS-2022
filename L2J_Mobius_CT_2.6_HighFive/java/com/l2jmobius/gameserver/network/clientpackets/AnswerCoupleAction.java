@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class AnswerCoupleAction extends L2GameClientPacket
 {
-	private static final String _C__D0_7A_ANSWERCOUPLEACTION = "[C] D0:7A AnswerCoupleAction";
-	
 	private int _charObjId;
 	private int _actionId;
 	private int _answer;
@@ -85,11 +83,5 @@ public class AnswerCoupleAction extends L2GameClientPacket
 			target.sendPacket(sm);
 		}
 		target.setMultiSocialAction(0, 0);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_7A_ANSWERCOUPLEACTION;
 	}
 }

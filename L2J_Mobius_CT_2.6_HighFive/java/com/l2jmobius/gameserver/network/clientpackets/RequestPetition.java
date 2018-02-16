@@ -35,8 +35,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestPetition extends L2GameClientPacket
 {
-	private static final String _C__89_RequestPetition = "[C] 89 RequestPetition";
-	
 	private String _content;
 	private int _type; // 1 = on : 0 = off;
 	
@@ -110,11 +108,5 @@ public final class RequestPetition extends L2GameClientPacket
 		sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_PETITIONS_CURRENTLY_ON_THE_WAITING_LIST);
 		sm.addInt(PetitionManager.getInstance().getPendingPetitionCount());
 		activeChar.sendPacket(sm);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__89_RequestPetition;
 	}
 }

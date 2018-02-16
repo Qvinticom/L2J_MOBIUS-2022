@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class RequestHennaRemove extends L2GameClientPacket
 {
-	private static final String _C__72_REQUESTHENNAREMOVE = "[C] 72 RequestHennaRemove";
 	private int _symbolId;
 	
 	@Override
@@ -75,11 +74,5 @@ public final class RequestHennaRemove extends L2GameClientPacket
 			_log.warning(getClass().getSimpleName() + ": Player " + activeChar + " requested Henna Draw remove without any henna.");
 			sendActionFailed();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__72_REQUESTHENNAREMOVE;
 	}
 }

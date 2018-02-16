@@ -28,8 +28,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 {
-	private static final String _C__D0_52_REQUESTWITHDRAWPREMIUMITEM = "[C] D0:52 RequestWithDrawPremiumItem";
-	
 	private int _itemNum;
 	private int _charId;
 	private long _itemCount;
@@ -109,11 +107,5 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		{
 			activeChar.sendPacket(new ExGetPremiumItemList(activeChar));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_52_REQUESTWITHDRAWPREMIUMITEM;
 	}
 }

@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public class RequestGiveNickName extends L2GameClientPacket
 {
-	private static final String _C__0B_REQUESTGIVENICKNAME = "[C] 0B RequestGiveNickName";
-	
 	private String _target;
 	private String _title;
 	
@@ -87,11 +85,5 @@ public class RequestGiveNickName extends L2GameClientPacket
 				activeChar.sendPacket(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0B_REQUESTGIVENICKNAME;
 	}
 }

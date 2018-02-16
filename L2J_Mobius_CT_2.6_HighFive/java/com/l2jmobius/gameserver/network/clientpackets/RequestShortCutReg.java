@@ -22,8 +22,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 public final class RequestShortCutReg extends L2GameClientPacket
 {
-	private static final String _C__3D_REQUESTSHORTCUTREG = "[C] 3D RequestShortCutReg";
-	
 	private ShortcutType _type;
 	private int _id;
 	private int _slot;
@@ -55,12 +53,6 @@ public final class RequestShortCutReg extends L2GameClientPacket
 		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _lvl, _characterType);
 		getActiveChar().registerShortCut(sc);
 		sendPacket(new ShortCutRegister(sc));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__3D_REQUESTSHORTCUTREG;
 	}
 	
 	@Override

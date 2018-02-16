@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public final class RequestPetGetItem extends L2GameClientPacket
 {
-	private static final String _C__98_REQUESTPETGETITEM = "[C] 98 RequestPetGetItem";
-	
 	private int _objectId;
 	
 	@Override
@@ -75,11 +73,5 @@ public final class RequestPetGetItem extends L2GameClientPacket
 		}
 		
 		pet.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__98_REQUESTPETGETITEM;
 	}
 }

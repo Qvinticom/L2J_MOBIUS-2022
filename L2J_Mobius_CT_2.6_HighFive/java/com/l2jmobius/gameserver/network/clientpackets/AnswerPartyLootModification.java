@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class AnswerPartyLootModification extends L2GameClientPacket
 {
-	private static final String _C__D0_79_ANSWERPARTYLOOTMODIFICATION = "[C] D0:79 AnswerPartyLootModification";
-	
 	public int _answer;
 	
 	@Override
@@ -47,11 +45,5 @@ public class AnswerPartyLootModification extends L2GameClientPacket
 		{
 			party.answerLootChangeRequest(activeChar, _answer == 1);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_79_ANSWERPARTYLOOTMODIFICATION;
 	}
 }

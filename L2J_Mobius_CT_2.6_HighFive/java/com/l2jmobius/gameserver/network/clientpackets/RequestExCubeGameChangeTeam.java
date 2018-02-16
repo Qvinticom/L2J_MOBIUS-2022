@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
 {
-	private static final String _C__D0_5A_REQUESTEXCUBEGAMECHANGETEAM = "[C] D0:5A RequestExCubeGameChangeTeam";
-	
 	private int _arena;
 	private int _team;
 	
@@ -77,11 +75,5 @@ public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
 				break;
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_5A_REQUESTEXCUBEGAMECHANGETEAM;
 	}
 }

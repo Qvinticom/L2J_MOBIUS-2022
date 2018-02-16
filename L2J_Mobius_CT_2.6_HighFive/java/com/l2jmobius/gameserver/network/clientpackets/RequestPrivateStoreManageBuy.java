@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestPrivateStoreManageBuy extends L2GameClientPacket
 {
-	private static final String _C__99_REQUESTPRIVATESTOREMANAGEBUY = "[C] 99 RequestPrivateStoreManageBuy";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -39,12 +37,6 @@ public final class RequestPrivateStoreManageBuy extends L2GameClientPacket
 		{
 			player.tryOpenPrivateBuyStore();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__99_REQUESTPRIVATESTOREMANAGEBUY;
 	}
 	
 	@Override

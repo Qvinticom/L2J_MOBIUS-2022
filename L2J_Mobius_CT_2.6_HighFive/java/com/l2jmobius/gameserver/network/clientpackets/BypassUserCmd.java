@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class BypassUserCmd extends L2GameClientPacket
 {
-	private static final String _C__B3_BYPASSUSERCMD = "[C] B3 BypassUserCmd";
-	
 	private int _command;
 	
 	@Override
@@ -58,11 +56,5 @@ public class BypassUserCmd extends L2GameClientPacket
 		{
 			handler.useUserCommand(_command, getClient().getActiveChar());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B3_BYPASSUSERCMD;
 	}
 }

@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
  */
 public class RequestEx2ndPasswordVerify extends L2GameClientPacket
 {
-	private static final String _C__D0_AE_REQUESTEX2NDPASSWORDVERIFY = "[C] D0:AE RequestEx2ndPasswordVerify";
-	
 	private String _password;
 	
 	@Override
@@ -43,11 +41,5 @@ public class RequestEx2ndPasswordVerify extends L2GameClientPacket
 		}
 		
 		getClient().getSecondaryAuth().checkPassword(_password, false);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_AE_REQUESTEX2NDPASSWORDVERIFY;
 	}
 }

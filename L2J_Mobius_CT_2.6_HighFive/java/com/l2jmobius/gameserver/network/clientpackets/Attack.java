@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  */
 public final class Attack extends L2GameClientPacket
 {
-	private static final String _C__01_ATTACK = "[C] 01 Attack";
-	
 	// cddddc
 	private int _objectId;
 	@SuppressWarnings("unused")
@@ -138,11 +136,5 @@ public final class Attack extends L2GameClientPacket
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__01_ATTACK;
 	}
 }

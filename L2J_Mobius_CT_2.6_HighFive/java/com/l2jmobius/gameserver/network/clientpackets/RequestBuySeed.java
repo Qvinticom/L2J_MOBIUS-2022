@@ -199,10 +199,4 @@ public class RequestBuySeed extends L2GameClientPacket
 			}
 		}
 	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] C5 RequestBuySeed";
-	}
 }

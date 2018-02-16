@@ -30,8 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResu
  */
 public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
 {
-	private static final String _C__D0_4C_REQUESTEXTRYTOPUTENCHANTTARGETITEM = "[C] D0:4C RequestExTryToPutEnchantTargetItem";
-	
 	private int _objectId;
 	
 	@Override
@@ -76,11 +74,5 @@ public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
 		activeChar.setIsEnchanting(true);
 		activeChar.setActiveEnchantTimestamp(System.currentTimeMillis());
 		activeChar.sendPacket(new ExPutEnchantTargetItemResult(_objectId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_4C_REQUESTEXTRYTOPUTENCHANTTARGETITEM;
 	}
 }

@@ -98,8 +98,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  */
 public class EnterWorld extends L2GameClientPacket
 {
-	private static final String _C__11_ENTERWORLD = "[C] 11 EnterWorld";
-	
 	private final int[][] tracert = new int[5][4];
 	
 	@Override
@@ -679,12 +677,6 @@ public class EnterWorld extends L2GameClientPacket
 		{
 			qs.getQuest().notifyEvent("UC", null, player);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__11_ENTERWORLD;
 	}
 	
 	@Override

@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExUISetting;
  */
 public class RequestKeyMapping extends L2GameClientPacket
 {
-	private static final String _C__D0_21_REQUESTKEYMAPPING = "[C] D0:21 RequestKeyMapping";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -52,11 +50,5 @@ public class RequestKeyMapping extends L2GameClientPacket
 	protected boolean triggersOnActionRequest()
 	{
 		return false;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_21_REQUESTKEYMAPPING;
 	}
 }

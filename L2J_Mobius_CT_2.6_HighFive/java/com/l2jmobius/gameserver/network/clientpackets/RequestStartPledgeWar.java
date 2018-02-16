@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestStartPledgeWar extends L2GameClientPacket
 {
-	private static final String _C__03_REQUESTSTARTPLEDGEWAR = "[C] 03 RequestStartPledgewar";
-	
 	private String _pledgeName;
 	
 	@Override
@@ -104,11 +102,5 @@ public final class RequestStartPledgeWar extends L2GameClientPacket
 		{
 			member.broadcastUserInfo();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__03_REQUESTSTARTPLEDGEWAR;
 	}
 }

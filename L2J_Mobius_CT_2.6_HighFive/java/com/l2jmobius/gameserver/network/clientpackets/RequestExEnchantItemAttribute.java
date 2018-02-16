@@ -32,8 +32,6 @@ import com.l2jmobius.util.Rnd;
 
 public class RequestExEnchantItemAttribute extends L2GameClientPacket
 {
-	private static final String _C__D0_35_REQUESTEXENCHANTITEMATTRIBUTE = "[C] D0:35 RequestExEnchantItemAttribute";
-	
 	private int _objectId;
 	
 	@Override
@@ -295,11 +293,5 @@ public class RequestExEnchantItemAttribute extends L2GameClientPacket
 			}
 		}
 		return 0;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_35_REQUESTEXENCHANTITEMATTRIBUTE;
 	}
 }

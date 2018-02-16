@@ -36,8 +36,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class SetPrivateStoreListBuy extends L2GameClientPacket
 {
-	private static final String _C__9A_SETPRIVATESTORELISTBUY = "[C] 9A SetPrivateStoreListBuy";
-	
 	private static final int BATCH_LENGTH = 40; // length of the one item
 	
 	private Item[] _items = null;
@@ -190,11 +188,5 @@ public final class SetPrivateStoreListBuy extends L2GameClientPacket
 		{
 			return _count * _price;
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__9A_SETPRIVATESTORELISTBUY;
 	}
 }

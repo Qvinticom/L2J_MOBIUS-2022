@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExMPCCShowPartyMemberInfo;
  */
 public final class RequestExMPCCShowPartyMembersInfo extends L2GameClientPacket
 {
-	private static final String _C__D0_2D_REQUESTMPCCSHOWPARTYMEMBERINFO = "[C] D0:2D RequestExMPCCShowPartyMembersInfo";
 	private int _partyLeaderId;
 	
 	@Override
@@ -48,11 +47,5 @@ public final class RequestExMPCCShowPartyMembersInfo extends L2GameClientPacket
 		{
 			activeChar.sendPacket(new ExMPCCShowPartyMemberInfo(player.getParty()));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_2D_REQUESTMPCCSHOWPARTYMEMBERINFO;
 	}
 }

@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
  */
 public final class RequestPledgeCrest extends L2GameClientPacket
 {
-	private static final String _C__68_REQUESTPLEDGECREST = "[C] 68 RequestPledgeCrest";
-	
 	private int _crestId;
 	
 	@Override
@@ -38,12 +36,6 @@ public final class RequestPledgeCrest extends L2GameClientPacket
 	protected void runImpl()
 	{
 		sendPacket(new PledgeCrest(_crestId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__68_REQUESTPLEDGECREST;
 	}
 	
 	@Override

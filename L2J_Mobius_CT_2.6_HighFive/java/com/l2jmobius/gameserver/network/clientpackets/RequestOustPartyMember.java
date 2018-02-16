@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestOustPartyMember extends L2GameClientPacket
 {
-	private static final String _C__45_REQUESTOUSTPARTYMEMBER = "[C] 45 RequestOustPartyMember";
-	
 	private String _name;
 	
 	@Override
@@ -55,11 +53,5 @@ public final class RequestOustPartyMember extends L2GameClientPacket
 				activeChar.getParty().removePartyMember(_name, MessageType.EXPELLED);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__45_REQUESTOUSTPARTYMEMBER;
 	}
 }

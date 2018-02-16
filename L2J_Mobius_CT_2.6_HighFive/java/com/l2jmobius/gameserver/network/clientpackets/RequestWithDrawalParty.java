@@ -31,8 +31,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
  */
 public final class RequestWithDrawalParty extends L2GameClientPacket
 {
-	private static final String _C__44_REQUESTWITHDRAWALPARTY = "[C] 44 RequestWithDrawalParty";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -77,11 +75,5 @@ public final class RequestWithDrawalParty extends L2GameClientPacket
 				}
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__44_REQUESTWITHDRAWALPARTY;
 	}
 }

@@ -42,8 +42,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestPostAttachment extends L2GameClientPacket
 {
-	private static final String _C__D0_6A_REQUESTPOSTATTACHMENT = "[C] D0:6A RequestPostAttachment";
-	
 	private int _msgId;
 	
 	@Override
@@ -271,12 +269,6 @@ public final class RequestPostAttachment extends L2GameClientPacket
 		
 		activeChar.sendPacket(new ExChangePostState(true, _msgId, Message.READED));
 		activeChar.sendPacket(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_6A_REQUESTPOSTATTACHMENT;
 	}
 	
 	@Override

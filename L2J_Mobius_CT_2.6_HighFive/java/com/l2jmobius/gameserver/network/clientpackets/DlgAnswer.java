@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.util.GMAudit;
  */
 public final class DlgAnswer extends L2GameClientPacket
 {
-	private static final String _C__C6_DLGANSWER = "[C] C6 DlgAnswer";
 	private int _messageId;
 	private int _answer;
 	private int _requesterId;
@@ -120,11 +119,5 @@ public final class DlgAnswer extends L2GameClientPacket
 				holder.getDoor().closeMe();
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__C6_DLGANSWER;
 	}
 }

@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 
 public final class RequestRecipeShopManageList extends L2GameClientPacket
 {
-	private static final String _C__B9_RequestRecipeShopManageList = "[C] B9 RequestRecipeShopManageList";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -57,11 +55,5 @@ public final class RequestRecipeShopManageList extends L2GameClientPacket
 		}
 		
 		player.sendPacket(new RecipeShopManageList(player, true));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B9_RequestRecipeShopManageList;
 	}
 }

@@ -44,8 +44,6 @@ public final class RequestEnchantItem extends L2GameClientPacket
 {
 	protected static final Logger _logEnchant = Logger.getLogger("enchant");
 	
-	private static final String _C__5F_REQUESTENCHANTITEM = "[C] 5F RequestEnchantItem";
-	
 	private int _objectId;
 	private int _supportId;
 	
@@ -415,11 +413,5 @@ public final class RequestEnchantItem extends L2GameClientPacket
 			activeChar.broadcastUserInfo();
 			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__5F_REQUESTENCHANTITEM;
 	}
 }

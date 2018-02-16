@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfoDetail;
  */
 public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 {
-	private static final String _C_D0_46_REQUESTEXENCHANTSKILLINFO = "[C] D0:46 RequestExEnchantSkillInfoDetail";
-	
 	private int _type;
 	private int _skillId;
 	private int _skillLvl;
@@ -109,11 +107,5 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		// send skill enchantment detail
 		final ExEnchantSkillInfoDetail esd = new ExEnchantSkillInfoDetail(_type, _skillId, _skillLvl, activeChar);
 		activeChar.sendPacket(esd);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C_D0_46_REQUESTEXENCHANTSKILLINFO;
 	}
 }

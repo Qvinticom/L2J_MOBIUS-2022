@@ -34,8 +34,6 @@ import com.l2jmobius.gameserver.util.Util;
 
 public final class RequestPrivateStoreBuy extends L2GameClientPacket
 {
-	private static final String _C__83_REQUESTPRIVATESTOREBUY = "[C] 83 RequestPrivateStoreBuy";
-	
 	private static final int BATCH_LENGTH = 20; // length of the one item
 	
 	private int _storePlayerId;
@@ -161,12 +159,6 @@ public final class RequestPrivateStoreBuy extends L2GameClientPacket
 			storePlayer.setPrivateStoreType(PrivateStoreType.NONE);
 			storePlayer.broadcastUserInfo();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__83_REQUESTPRIVATESTOREBUY;
 	}
 	
 	@Override

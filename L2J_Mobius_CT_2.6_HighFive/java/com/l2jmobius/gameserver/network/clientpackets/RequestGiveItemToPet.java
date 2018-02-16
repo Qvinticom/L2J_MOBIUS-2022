@@ -30,8 +30,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestGiveItemToPet extends L2GameClientPacket
 {
-	private static final String _C__95_REQUESTCIVEITEMTOPET = "[C] 95 RequestGiveItemToPet";
-	
 	private int _objectId;
 	private long _amount;
 	
@@ -119,11 +117,5 @@ public final class RequestGiveItemToPet extends L2GameClientPacket
 		{
 			_log.warning("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__95_REQUESTCIVEITEMTOPET;
 	}
 }

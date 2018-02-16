@@ -42,7 +42,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Say2 extends L2GameClientPacket
 {
-	private static final String _C__49_SAY2 = "[C] 49 Say2";
 	private static Logger _logChat = Logger.getLogger("chat");
 	
 	private static final String[] WALKER_COMMAND_LIST =
@@ -282,12 +281,6 @@ public final class Say2 extends L2GameClientPacket
 			}
 		}
 		return true;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__49_SAY2;
 	}
 	
 	@Override

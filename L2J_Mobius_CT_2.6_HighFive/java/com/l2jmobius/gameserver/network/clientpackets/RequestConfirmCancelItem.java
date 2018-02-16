@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestConfirmCancelItem extends L2GameClientPacket
 {
-	private static final String _C__D0_42_REQUESTCONFIRMCANCELITEM = "[C] D0:42 RequestConfirmCancelItem";
 	private int _objectId;
 	
 	@Override
@@ -137,11 +136,5 @@ public final class RequestConfirmCancelItem extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new ExPutItemResultForVariationCancel(item, price));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_42_REQUESTCONFIRMCANCELITEM;
 	}
 }

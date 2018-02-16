@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class RequestPrivateStoreQuitBuy extends L2GameClientPacket
 {
-	private static final String _C__9C_REQUESTPRIVATESTOREQUITBUY = "[C] 9C RequestPrivateStoreQuitBuy";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -45,12 +43,6 @@ public class RequestPrivateStoreQuitBuy extends L2GameClientPacket
 		player.setPrivateStoreType(PrivateStoreType.NONE);
 		player.standUp();
 		player.broadcastUserInfo();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__9C_REQUESTPRIVATESTOREQUITBUY;
 	}
 	
 	@Override

@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
  */
 public final class RequestHennaItemList extends L2GameClientPacket
 {
-	private static final String _C__C3_REQUESTHENNAITEMLIST = "[C] C3 RequestHennaItemList";
-	
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
@@ -43,11 +41,5 @@ public final class RequestHennaItemList extends L2GameClientPacket
 		{
 			activeChar.sendPacket(new HennaEquipList(activeChar));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__C3_REQUESTHENNAITEMLIST;
 	}
 }

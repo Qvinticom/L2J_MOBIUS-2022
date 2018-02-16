@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestExAcceptJoinMPCC extends L2GameClientPacket
 {
-	private static final String _C__D0_07_REQUESTEXASKJOINMPCC = "[C] D0:07 RequestExAcceptJoinMPCC";
 	private int _response;
 	
 	@Override
@@ -74,12 +73,5 @@ public final class RequestExAcceptJoinMPCC extends L2GameClientPacket
 			player.setActiveRequester(null);
 			requestor.onTransactionResponse();
 		}
-		
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_07_REQUESTEXASKJOINMPCC;
 	}
 }

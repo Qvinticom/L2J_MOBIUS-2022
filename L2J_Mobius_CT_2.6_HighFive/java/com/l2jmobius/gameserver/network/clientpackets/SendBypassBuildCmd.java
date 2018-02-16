@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.util.GMAudit;
  */
 public final class SendBypassBuildCmd extends L2GameClientPacket
 {
-	private static final String _C__74_SENDBYPASSBUILDCMD = "[C] 74 SendBypassBuildCmd";
-	
 	public static final int GM_MESSAGE = 9;
 	public static final int ANNOUNCEMENT = 10;
 	
@@ -83,11 +81,5 @@ public final class SendBypassBuildCmd extends L2GameClientPacket
 		}
 		
 		ach.useAdminCommand("admin_" + _command, activeChar);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__74_SENDBYPASSBUILDCMD;
 	}
 }

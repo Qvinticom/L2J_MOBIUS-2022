@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestSaveBookMarkSlot extends L2GameClientPacket
 {
-	private static final String _C__D0_51_01_REQUESTSAVEBOOKMARKSLOT = "[C] D0:51:01 RequestSaveBookMarkSlot";
-	
 	private int icon;
 	private String name, tag;
 	
@@ -46,11 +44,5 @@ public final class RequestSaveBookMarkSlot extends L2GameClientPacket
 			return;
 		}
 		activeChar.teleportBookmarkAdd(activeChar.getX(), activeChar.getY(), activeChar.getZ(), icon, tag, name);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_51_01_REQUESTSAVEBOOKMARKSLOT;
 	}
 }

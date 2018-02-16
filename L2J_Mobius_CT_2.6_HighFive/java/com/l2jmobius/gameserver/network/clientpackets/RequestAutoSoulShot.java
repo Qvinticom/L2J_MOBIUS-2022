@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestAutoSoulShot extends L2GameClientPacket
 {
-	private static final String _C__D0_0D_REQUESTAUTOSOULSHOT = "[C] D0:0D RequestAutoSoulShot";
-	
 	// format cd
 	private int _itemId;
 	private int _type; // 1 = on : 0 = off;
@@ -150,12 +148,6 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 				activeChar.sendPacket(sm);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_0D_REQUESTAUTOSOULSHOT;
 	}
 	
 	@Override

@@ -120,10 +120,4 @@ public class RequestSetCastleSiegeTime extends L2GameClientPacket
 		}
 		return true;
 	}
-	
-	@Override
-	public String getType()
-	{
-		return getClass().getSimpleName();
-	}
 }

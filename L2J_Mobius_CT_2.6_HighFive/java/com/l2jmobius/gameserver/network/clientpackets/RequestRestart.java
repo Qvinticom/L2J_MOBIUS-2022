@@ -39,7 +39,6 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public final class RequestRestart extends L2GameClientPacket
 {
-	private static final String _C__57_REQUESTRESTART = "[C] 57 RequestRestart";
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	@Override
@@ -140,11 +139,5 @@ public final class RequestRestart extends L2GameClientPacket
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
 		sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__57_REQUESTRESTART;
 	}
 }

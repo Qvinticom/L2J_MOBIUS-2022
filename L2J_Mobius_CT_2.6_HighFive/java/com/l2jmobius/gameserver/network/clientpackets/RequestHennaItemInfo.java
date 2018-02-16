@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.network.serverpackets.HennaItemDrawInfo;
  */
 public final class RequestHennaItemInfo extends L2GameClientPacket
 {
-	private static final String _C__C4_REQUESTHENNAITEMINFO = "[C] C4 RequestHennaItemInfo";
-	
 	private int _symbolId;
 	
 	@Override
@@ -56,11 +54,5 @@ public final class RequestHennaItemInfo extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendPacket(new HennaItemDrawInfo(henna, activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__C4_REQUESTHENNAITEMINFO;
 	}
 }

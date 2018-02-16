@@ -22,8 +22,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 
 public class RequestTutorialQuestionMark extends L2GameClientPacket
 {
-	private static final String _C__87_REQUESTTUTORIALQUESTIONMARK = "[C] 87 RequestTutorialQuestionMark";
-	
 	private int _number = 0;
 	
 	@Override
@@ -49,11 +47,5 @@ public class RequestTutorialQuestionMark extends L2GameClientPacket
 		{
 			qs.getQuest().notifyEvent("QM" + _number + "", null, player);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__87_REQUESTTUTORIALQUESTIONMARK;
 	}
 }

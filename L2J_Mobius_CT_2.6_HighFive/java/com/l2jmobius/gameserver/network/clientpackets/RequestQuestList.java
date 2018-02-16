@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.network.serverpackets.QuestList;
  */
 public final class RequestQuestList extends L2GameClientPacket
 {
-	private static final String _C__62_REQUESTQUESTLIST = "[C] 62 RequestQuestList";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -37,11 +35,5 @@ public final class RequestQuestList extends L2GameClientPacket
 	{
 		final QuestList ql = new QuestList();
 		sendPacket(ql);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__62_REQUESTQUESTLIST;
 	}
 }

@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class RequestChangePetName extends L2GameClientPacket
 {
-	private static final String _C__93_REQUESTCHANGEPETNAME = "[C] 93 RequestChangePetName";
-	
 	private String _name;
 	
 	@Override
@@ -85,11 +83,5 @@ public final class RequestChangePetName extends L2GameClientPacket
 		
 		pet.setName(_name);
 		pet.updateAndBroadcastStatus(1);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__93_REQUESTCHANGEPETNAME;
 	}
 }

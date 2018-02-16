@@ -34,9 +34,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestFriendDel extends L2GameClientPacket
 {
-	
-	private static final String _C__7A_REQUESTFRIENDDEL = "[C] 7A RequestFriendDel";
-	
 	private String _name;
 	
 	@Override
@@ -102,11 +99,5 @@ public final class RequestFriendDel extends L2GameClientPacket
 		{
 			_log.log(Level.WARNING, "could not del friend objectid: ", e);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__7A_REQUESTFRIENDDEL;
 	}
 }

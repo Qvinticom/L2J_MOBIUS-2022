@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.network.serverpackets.HennaItemRemoveInfo;
  */
 public final class RequestHennaItemRemoveInfo extends L2GameClientPacket
 {
-	private static final String _C__71_REQUESTHENNAITEMREMOVEINFO = "[C] 71 RequestHennaItemRemoveInfo";
-	
 	private int _symbolId;
 	
 	@Override
@@ -53,11 +51,5 @@ public final class RequestHennaItemRemoveInfo extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendPacket(new HennaItemRemoveInfo(henna, activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__71_REQUESTHENNAITEMREMOVEINFO;
 	}
 }

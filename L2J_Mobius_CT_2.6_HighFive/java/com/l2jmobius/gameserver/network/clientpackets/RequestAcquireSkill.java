@@ -56,7 +56,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestAcquireSkill extends L2GameClientPacket
 {
-	private static final String _C__7C_REQUESTACQUIRESKILL = "[C] 7C RequestAcquireSkill";
 	private static final String[] QUEST_VAR_NAMES =
 	{
 		"EmergentAbility65-",
@@ -573,11 +572,5 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 		}
 		final QuestState st = player.getQuestState("Q00136_MoreThanMeetsTheEye");
 		return (st != null) && st.isCompleted();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__7C_REQUESTACQUIRESKILL;
 	}
 }

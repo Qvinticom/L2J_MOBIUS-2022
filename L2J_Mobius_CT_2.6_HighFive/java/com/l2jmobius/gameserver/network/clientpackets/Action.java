@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public final class Action extends L2GameClientPacket
 {
-	private static final String __C__1F_ACTION = "[C] 1F Action";
-	
 	private int _objectId;
 	@SuppressWarnings("unused")
 	private int _originX;
@@ -164,11 +162,5 @@ public final class Action extends L2GameClientPacket
 	protected boolean triggersOnActionRequest()
 	{
 		return false;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return __C__1F_ACTION;
 	}
 }

@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPutItemResultForVariatio
  */
 public final class RequestConfirmTargetItem extends AbstractRefinePacket
 {
-	private static final String _C__D0_26_REQUESTCONFIRMTARGETITEM = "[C] D0:26 RequestConfirmTargetItem";
 	private int _itemObjId;
 	
 	@Override
@@ -65,11 +64,5 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket
 		}
 		
 		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId, item.getId()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_26_REQUESTCONFIRMTARGETITEM;
 	}
 }

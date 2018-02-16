@@ -33,8 +33,6 @@ import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillInfo;
  */
 public final class RequestAcquireSkillInfo extends L2GameClientPacket
 {
-	private static final String _C__73_REQUESTACQUIRESKILLINFO = "[C] 73 RequestAcquireSkillInfo";
-	
 	private int _id;
 	private int _level;
 	private AcquireSkillType _skillType;
@@ -139,11 +137,5 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 				break;
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__73_REQUESTACQUIRESKILLINFO;
 	}
 }

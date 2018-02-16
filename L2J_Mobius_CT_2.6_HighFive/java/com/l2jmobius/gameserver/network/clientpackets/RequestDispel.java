@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class RequestDispel extends L2GameClientPacket
 {
-	private static final String _C_D0_4B_REQUESTDISPEL = "[C] D0:4B RequestDispel";
-	
 	private int _objectId;
 	private int _skillId;
 	private int _skillLevel;
@@ -81,11 +79,5 @@ public class RequestDispel extends L2GameClientPacket
 				activeChar.getSummon().stopSkillEffects(true, _skillId);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C_D0_4B_REQUESTDISPEL;
 	}
 }

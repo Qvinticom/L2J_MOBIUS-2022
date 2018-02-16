@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestRecipeItemMakeSelf extends L2GameClientPacket
 {
-	private static final String _C__B8_REQUESTRECIPEITEMMAKESELF = "[C] B8 RequestRecipeItemMakeSelf";
-	
 	private int _id;
 	
 	@Override
@@ -62,11 +60,5 @@ public final class RequestRecipeItemMakeSelf extends L2GameClientPacket
 		}
 		
 		RecipeController.getInstance().requestMakeItem(activeChar, _id);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B8_REQUESTRECIPEITEMMAKESELF;
 	}
 }

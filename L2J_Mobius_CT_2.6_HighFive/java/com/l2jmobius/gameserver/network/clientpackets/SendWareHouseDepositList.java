@@ -39,8 +39,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class SendWareHouseDepositList extends L2GameClientPacket
 {
-	private static final String _C__3B_SENDWAREHOUSEDEPOSITLIST = "[C] 3B SendWareHouseDepositList";
-	
 	private static final int BATCH_LENGTH = 12;
 	
 	private List<ItemHolder> _items = null;
@@ -219,11 +217,5 @@ public final class SendWareHouseDepositList extends L2GameClientPacket
 		final StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__3B_SENDWAREHOUSEDEPOSITLIST;
 	}
 }

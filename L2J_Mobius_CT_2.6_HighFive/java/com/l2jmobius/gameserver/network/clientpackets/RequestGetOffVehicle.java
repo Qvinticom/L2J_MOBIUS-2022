@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
  */
 public final class RequestGetOffVehicle extends L2GameClientPacket
 {
-	private static final String _C__54_GETOFFVEHICLE = "[S] 54 GetOffVehicle";
-	
 	private int _boatId, _x, _y, _z;
 	
 	@Override
@@ -62,11 +60,5 @@ public final class RequestGetOffVehicle extends L2GameClientPacket
 		activeChar.setXYZ(_x, _y, _z);
 		activeChar.setInsideZone(ZoneId.PEACE, false);
 		activeChar.revalidateZone(true);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__54_GETOFFVEHICLE;
 	}
 }

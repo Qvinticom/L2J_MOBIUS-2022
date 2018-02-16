@@ -40,8 +40,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestRecipeShopListSet extends L2GameClientPacket
 {
-	private static final String _C__BB_RequestRecipeShopListSet = "[C] BB RequestRecipeShopListSet";
-	
 	private static final int BATCH_LENGTH = 12;
 	
 	private L2ManufactureItem[] _items = null;
@@ -133,11 +131,5 @@ public final class RequestRecipeShopListSet extends L2GameClientPacket
 		player.sitDown();
 		player.broadcastUserInfo();
 		Broadcast.toSelfAndKnownPlayers(player, new RecipeShopMsg(player));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__BB_RequestRecipeShopListSet;
 	}
 }

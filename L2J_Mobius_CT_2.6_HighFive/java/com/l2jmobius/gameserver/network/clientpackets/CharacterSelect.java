@@ -47,7 +47,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
  */
 public class CharacterSelect extends L2GameClientPacket
 {
-	private static final String _C__12_CHARACTERSELECT = "[C] 12 CharacterSelect";
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	// cd
@@ -165,11 +164,5 @@ public class CharacterSelect extends L2GameClientPacket
 			});
 			_logAccounting.log(record);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__12_CHARACTERSELECT;
 	}
 }

@@ -44,7 +44,6 @@ import com.l2jmobius.util.Rnd;
  */
 public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 {
-	private static final String _C__D0_32_REQUESTEXENCHANTSKILLSAFE = "[C] D0:32 RequestExEnchantSkillSafe";
 	private static final Logger _logEnchant = Logger.getLogger("enchant");
 	
 	private int _skillId;
@@ -201,11 +200,5 @@ public final class RequestExEnchantSkillSafe extends L2GameClientPacket
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 			player.sendPacket(sm);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_32_REQUESTEXENCHANTSKILLSAFE;
 	}
 }

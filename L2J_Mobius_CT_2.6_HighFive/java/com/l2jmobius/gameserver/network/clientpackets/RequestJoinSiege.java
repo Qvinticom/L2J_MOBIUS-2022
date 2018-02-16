@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
  */
 public final class RequestJoinSiege extends L2GameClientPacket
 {
-	private static final String _C__AD_RequestJoinSiege = "[C] AD RequestJoinSiege";
-	
 	private int _castleId;
 	private int _isAttacker;
 	private int _isJoining;
@@ -111,11 +109,5 @@ public final class RequestJoinSiege extends L2GameClientPacket
 			}
 			activeChar.sendPacket(new SiegeInfo(hall));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__AD_RequestJoinSiege;
 	}
 }

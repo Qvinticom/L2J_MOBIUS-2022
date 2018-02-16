@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public final class Logout extends L2GameClientPacket
 {
-	private static final String _C__00_LOGOUT = "[C] 00 Logout";
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	@Override
@@ -115,11 +114,5 @@ public final class Logout extends L2GameClientPacket
 		_logAccounting.log(record);
 		
 		player.logout();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__00_LOGOUT;
 	}
 }

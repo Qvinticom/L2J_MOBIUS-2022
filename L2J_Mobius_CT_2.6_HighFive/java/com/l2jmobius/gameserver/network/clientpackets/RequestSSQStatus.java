@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SSQStatus;
  */
 public final class RequestSSQStatus extends L2GameClientPacket
 {
-	private static final String _C__C8_RequestSSQStatus = "[C] C8 RequestSSQStatus";
-	
 	private int _page;
 	
 	@Override
@@ -52,11 +50,5 @@ public final class RequestSSQStatus extends L2GameClientPacket
 		
 		final SSQStatus ssqs = new SSQStatus(activeChar.getObjectId(), _page);
 		activeChar.sendPacket(ssqs);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__C8_RequestSSQStatus;
 	}
 }

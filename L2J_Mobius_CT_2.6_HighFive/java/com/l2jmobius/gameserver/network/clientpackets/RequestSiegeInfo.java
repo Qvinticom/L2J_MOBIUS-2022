@@ -22,8 +22,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
  */
 public class RequestSiegeInfo extends L2GameClientPacket
 {
-	private static final String _C__58_REQUESTSIEGEINFO = "[C] 58 RequestSiegeInfo";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -34,11 +32,5 @@ public class RequestSiegeInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		// TODO this
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__58_REQUESTSIEGEINFO;
 	}
 }

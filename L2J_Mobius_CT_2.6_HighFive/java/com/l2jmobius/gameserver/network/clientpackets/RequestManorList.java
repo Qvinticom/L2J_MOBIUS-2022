@@ -35,12 +35,6 @@ public class RequestManorList extends L2GameClientPacket
 	}
 	
 	@Override
-	public String getType()
-	{
-		return "[C] D0:01 RequestManorList";
-	}
-	
-	@Override
 	protected boolean triggersOnActionRequest()
 	{
 		return false;

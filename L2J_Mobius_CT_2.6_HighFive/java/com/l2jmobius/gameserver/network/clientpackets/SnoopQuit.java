@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class SnoopQuit extends L2GameClientPacket
 {
-	private static final String _C__B4_SNOOPQUIT = "[C] B4 SnoopQuit";
-	
 	private int _snoopID;
 	
 	@Override
@@ -50,12 +48,5 @@ public final class SnoopQuit extends L2GameClientPacket
 		
 		player.removeSnooper(activeChar);
 		activeChar.removeSnooped(player);
-		
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B4_SNOOPQUIT;
 	}
 }

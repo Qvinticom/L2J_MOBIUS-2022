@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowDominionRegistry;
  */
 public final class RequestJoinDominionWar extends L2GameClientPacket
 {
-	private static final String _C__D0_57_REQUESTJOINDOMINIONWAR = "[C] D0:57 RequestJoinDominionWar";
-	
 	private int _territoryId;
 	private int _isClan;
 	private int _isJoining;
@@ -124,11 +122,5 @@ public final class RequestJoinDominionWar extends L2GameClientPacket
 			}
 		}
 		activeChar.sendPacket(new ExShowDominionRegistry(castleId, activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_57_REQUESTJOINDOMINIONWAR;
 	}
 }

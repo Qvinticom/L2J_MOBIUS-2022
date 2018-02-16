@@ -21,8 +21,6 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeItemMakeInfo;
 
 public final class RequestRecipeItemMakeInfo extends L2GameClientPacket
 {
-	private static final String _C__B7_REQUESTRECIPEITEMMAKEINFO = "[C] B7 RequestRecipeItemMakeInfo";
-	
 	private int _id;
 	
 	@Override
@@ -42,11 +40,5 @@ public final class RequestRecipeItemMakeInfo extends L2GameClientPacket
 		
 		final RecipeItemMakeInfo response = new RecipeItemMakeInfo(_id, player);
 		sendPacket(response);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B7_REQUESTRECIPEITEMMAKEINFO;
 	}
 }

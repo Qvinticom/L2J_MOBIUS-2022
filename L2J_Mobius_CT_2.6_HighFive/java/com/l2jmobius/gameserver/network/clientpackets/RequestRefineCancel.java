@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestRefineCancel extends L2GameClientPacket
 {
-	private static final String _C__D0_43_REQUESTREFINECANCEL = "[C] D0:43 RequestRefineCancel";
 	private int _targetItemObjId;
 	
 	@Override
@@ -158,11 +157,5 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
 		activeChar.sendPacket(iu);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_43_REQUESTREFINECANCEL;
 	}
 }

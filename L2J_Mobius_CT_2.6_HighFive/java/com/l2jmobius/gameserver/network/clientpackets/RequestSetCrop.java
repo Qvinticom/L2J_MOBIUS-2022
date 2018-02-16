@@ -103,10 +103,4 @@ public final class RequestSetCrop extends L2GameClientPacket
 		// Save crop list
 		manor.setNextCropProcure(list, _manorId);
 	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] D0:04 RequestSetCrop";
-	}
 }

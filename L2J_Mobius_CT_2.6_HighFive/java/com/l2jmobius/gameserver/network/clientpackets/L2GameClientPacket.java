@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.nio.BufferUnderflowException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.mmocore.ReceivablePacket;
@@ -46,7 +45,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient>
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Client: " + getClient() + " - Failed reading: " + getType() + " ; " + e.getMessage(), e);
+			_log.severe("Client: " + getClient() + " - Failed reading: " + getType() + " ; " + e.getMessage());
 			
 			if (e instanceof BufferUnderflowException)
 			{
@@ -79,7 +78,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient>
 		}
 		catch (Throwable t)
 		{
-			_log.log(Level.SEVERE, "Client: " + getClient() + " - Failed running: " + getType() + " ; " + t.getMessage(), t);
+			_log.severe("Client: " + getClient() + " - Failed reading: " + getType() + " ; " + t.getMessage() + " " + t);
 			// in case of EnterWorld error kick player from game
 			if (this instanceof EnterWorld)
 			{
@@ -109,11 +108,6 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient>
 	}
 	
 	/**
-	 * @return A String with this packet name for debugging purposes
-	 */
-	public abstract String getType();
-	
-	/**
 	 * Overridden with true value on some packets that should disable spawn protection (RequestItemList and UseItem only)
 	 * @return
 	 */
@@ -136,5 +130,10 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient>
 		{
 			getClient().sendPacket(ActionFailed.STATIC_PACKET);
 		}
+	}
+	
+	public String getType()
+	{
+		return "[C] " + getClass().getSimpleName();
 	}
 }

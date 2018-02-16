@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class RequestDismissAlly extends L2GameClientPacket
 {
-	private static final String _C__90_REQUESTDISMISSALLY = "[C] 90 RequestDismissAlly";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -47,11 +45,5 @@ public final class RequestDismissAlly extends L2GameClientPacket
 			return;
 		}
 		activeChar.getClan().dissolveAlly(activeChar);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__90_REQUESTDISMISSALLY;
 	}
 }

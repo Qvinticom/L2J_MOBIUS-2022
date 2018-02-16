@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 
 public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 {
-	private static final String _C__86_REQUESTTUTORIALPASSCMDTOSERVER = "[C] 86 RequestTutorialPassCmdToServer";
-	
 	private String _bypass = null;
 	
 	@Override
@@ -54,11 +52,5 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 				qs.getQuest().notifyEvent(_bypass, null, player);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__86_REQUESTTUTORIALPASSCMDTOSERVER;
 	}
 }

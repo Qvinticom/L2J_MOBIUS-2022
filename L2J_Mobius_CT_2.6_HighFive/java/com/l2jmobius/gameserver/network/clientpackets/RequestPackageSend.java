@@ -38,7 +38,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class RequestPackageSend extends L2GameClientPacket
 {
-	private static final String _C_A8_REQUESTPACKAGESEND = "[C] A8 RequestPackageSend";
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private ItemHolder _items[] = null;
@@ -204,11 +203,5 @@ public class RequestPackageSend extends L2GameClientPacket
 		final StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		sendPacket(su);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C_A8_REQUESTPACKAGESEND;
 	}
 }

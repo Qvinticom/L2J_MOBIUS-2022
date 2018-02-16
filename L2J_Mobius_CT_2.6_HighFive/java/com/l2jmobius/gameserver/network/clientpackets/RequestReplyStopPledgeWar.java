@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class RequestReplyStopPledgeWar extends L2GameClientPacket
 {
-	private static final String _C__06_REQUESTREPLYSTOPPLEDGEWAR = "[C] 06 RequestReplyStopPledgeWar";
-	
 	private int _answer;
 	
 	@Override
@@ -63,11 +61,5 @@ public final class RequestReplyStopPledgeWar extends L2GameClientPacket
 		
 		activeChar.setActiveRequester(null);
 		requestor.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__06_REQUESTREPLYSTOPPLEDGEWAR;
 	}
 }

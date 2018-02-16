@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeBookItemList;
 
 public final class RequestRecipeBookDestroy extends L2GameClientPacket
 {
-	private static final String _C__B6_REQUESTRECIPEBOOKDESTROY = "[C] B6 RequestRecipeBookDestroy";
-	
 	private int _recipeID;
 	
 	/**
@@ -68,11 +66,5 @@ public final class RequestRecipeBookDestroy extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(response);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__B6_REQUESTRECIPEBOOKDESTROY;
 	}
 }

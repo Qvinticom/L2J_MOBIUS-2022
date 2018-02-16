@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExConfirmAddingContact;
  */
 public class RequestExAddContactToContactList extends L2GameClientPacket
 {
-	private static final String _C__D0_84_REQUESTEXADDCONTACTTOCONTACTLIST = "[C] D0:84 RequestExAddContactToContactList";
 	private String _name;
 	
 	@Override
@@ -56,11 +55,5 @@ public class RequestExAddContactToContactList extends L2GameClientPacket
 		
 		final boolean charAdded = activeChar.getContactList().add(_name);
 		activeChar.sendPacket(new ExConfirmAddingContact(_name, charAdded));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_84_REQUESTEXADDCONTACTTOCONTACTLIST;
 	}
 }

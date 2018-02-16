@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
  */
 public class RequestPackageSendableItemList extends L2GameClientPacket
 {
-	
-	private static final String _C_A7_REQUESTPACKAGESENDABLEITEMLIST = "[C] A7 RequestPackageSendableItemList";
 	private int _objectID;
 	
 	@Override
@@ -40,11 +38,5 @@ public class RequestPackageSendableItemList extends L2GameClientPacket
 	{
 		final L2ItemInstance[] items = getClient().getActiveChar().getInventory().getAvailableItems(true, true, true);
 		sendPacket(new PackageSendableList(items, _objectID));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C_A7_REQUESTPACKAGESENDABLEITEMLIST;
 	}
 }

@@ -238,10 +238,4 @@ public class RequestProcureCropList extends L2GameClientPacket
 			return _rewardId;
 		}
 	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] D0:02 RequestProcureCropList";
-	}
 }

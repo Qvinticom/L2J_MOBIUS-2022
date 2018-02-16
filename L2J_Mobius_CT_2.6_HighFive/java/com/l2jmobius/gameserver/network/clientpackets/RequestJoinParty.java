@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestJoinParty extends L2GameClientPacket
 {
-	private static final String _C__42_REQUESTJOINPARTY = "[C] 42 RequestJoinParty";
-	
 	private String _name;
 	private int _partyDistributionTypeId;
 	
@@ -215,11 +213,5 @@ public final class RequestJoinParty extends L2GameClientPacket
 		{
 			requestor.sendPacket(SystemMessageId.WAITING_FOR_ANOTHER_REPLY);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__42_REQUESTJOINPARTY;
 	}
 }

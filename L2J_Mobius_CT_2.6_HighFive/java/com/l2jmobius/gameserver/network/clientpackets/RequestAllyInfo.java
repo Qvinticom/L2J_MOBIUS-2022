@@ -28,8 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestAllyInfo extends L2GameClientPacket
 {
-	private static final String _C__2E_REQUESTALLYINFO = "[C] 2E RequestAllyInfo";
-	
 	@Override
 	public void readImpl()
 	{
@@ -106,11 +104,5 @@ public final class RequestAllyInfo extends L2GameClientPacket
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__2E_REQUESTALLYINFO;
 	}
 }

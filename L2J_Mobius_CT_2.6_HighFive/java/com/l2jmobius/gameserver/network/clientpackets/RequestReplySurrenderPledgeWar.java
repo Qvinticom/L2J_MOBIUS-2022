@@ -21,8 +21,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public final class RequestReplySurrenderPledgeWar extends L2GameClientPacket
 {
-	private static final String _C__08_REQUESTREPLYSURRENDERPLEDGEWAR = "[C] 08 RequestReplySurrenderPledgeWar";
-	
 	private String _reqName;
 	private int _answer;
 	
@@ -56,11 +54,5 @@ public final class RequestReplySurrenderPledgeWar extends L2GameClientPacket
 			_log.info(getClass().getSimpleName() + ": Missing implementation for answer: " + _answer + " and name: " + _reqName + "!");
 		}
 		activeChar.onTransactionRequest(requestor);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__08_REQUESTREPLYSURRENDERPLEDGEWAR;
 	}
 }

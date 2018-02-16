@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public final class RequestMagicSkillUse extends L2GameClientPacket
 {
-	private static final String _C__39_REQUESTMAGICSKILLUSE = "[C] 39 RequestMagicSkillUse";
-	
 	private int _magicId;
 	private boolean _ctrlPressed;
 	private boolean _shiftPressed;
@@ -115,11 +113,5 @@ public final class RequestMagicSkillUse extends L2GameClientPacket
 		}
 		
 		activeChar.useMagic(skill, _ctrlPressed, _shiftPressed);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__39_REQUESTMAGICSKILLUSE;
 	}
 }

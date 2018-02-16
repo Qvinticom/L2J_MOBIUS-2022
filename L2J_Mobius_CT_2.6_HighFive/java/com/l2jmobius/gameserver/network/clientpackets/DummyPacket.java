@@ -32,10 +32,4 @@ public final class DummyPacket extends L2GameClientPacket
 	{
 		
 	}
-	
-	@Override
-	public String getType()
-	{
-		return "DummyPacket";
-	}
 }

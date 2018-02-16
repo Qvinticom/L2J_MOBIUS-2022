@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class RequestResetNickname extends L2GameClientPacket
 {
-	private static final String _C__D0_50_REQUESTRESETNICKNAME = "[C] D0:50 RequestResetNickname";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -43,11 +41,5 @@ public class RequestResetNickname extends L2GameClientPacket
 		activeChar.getAppearance().setTitleColor(0xFFFF77);
 		activeChar.setTitle("");
 		activeChar.broadcastTitleInfo();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_50_REQUESTRESETNICKNAME;
 	}
 }

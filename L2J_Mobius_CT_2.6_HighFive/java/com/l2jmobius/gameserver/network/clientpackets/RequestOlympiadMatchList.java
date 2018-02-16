@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestOlympiadMatchList extends L2GameClientPacket
 {
-	private static final String _C__D0_2E_REQUESTOLYMPIADMATCHLIST = "[C] D0:2E RequestOlympiadMatchList";
 	private static final String COMMAND = "arenalist";
 	
 	@Override
@@ -49,11 +48,5 @@ public final class RequestOlympiadMatchList extends L2GameClientPacket
 		{
 			handler.useBypass(COMMAND, activeChar, null);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_2E_REQUESTOLYMPIADMATCHLIST;
 	}
 }

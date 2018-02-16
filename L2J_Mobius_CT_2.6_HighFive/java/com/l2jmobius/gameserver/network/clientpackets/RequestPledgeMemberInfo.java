@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
  */
 public final class RequestPledgeMemberInfo extends L2GameClientPacket
 {
-	private static final String _C__D0_16_REQUESTPLEDGEMEMBERINFO = "[C] D0:16 RequestPledgeMemberInfo";
 	@SuppressWarnings("unused")
 	private int _unk1;
 	private String _player;
@@ -61,11 +60,5 @@ public final class RequestPledgeMemberInfo extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendPacket(new PledgeReceiveMemberInfo(member));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_16_REQUESTPLEDGEMEMBERINFO;
 	}
 }

@@ -22,8 +22,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
  */
 public class RequestPledgeExtendedInfo extends L2GameClientPacket
 {
-	private static final String _C__67_REQUESTPLEDGECREST = "[C] 67 RequestPledgeExtendedInfo";
-	
 	@SuppressWarnings("unused")
 	private String _name;
 	
@@ -37,11 +35,5 @@ public class RequestPledgeExtendedInfo extends L2GameClientPacket
 	protected void runImpl()
 	{
 		// TODO: Implement
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__67_REQUESTPLEDGECREST;
 	}
 }

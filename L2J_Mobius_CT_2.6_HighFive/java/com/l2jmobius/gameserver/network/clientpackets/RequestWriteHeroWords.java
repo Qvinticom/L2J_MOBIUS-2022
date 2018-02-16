@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.model.entity.Hero;
  */
 public final class RequestWriteHeroWords extends L2GameClientPacket
 {
-	private static final String _C__D0_05_REQUESTWRITEHEROWORDS = "[C] D0:05 RequestWriteHeroWords";
-	
 	private String _heroWords;
 	
 	@Override
@@ -50,11 +48,5 @@ public final class RequestWriteHeroWords extends L2GameClientPacket
 		}
 		
 		Hero.getInstance().setHeroMessage(player, _heroWords);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_05_REQUESTWRITEHEROWORDS;
 	}
 }

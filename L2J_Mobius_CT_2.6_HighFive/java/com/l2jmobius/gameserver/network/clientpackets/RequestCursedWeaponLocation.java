@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponLocation.Cur
  */
 public final class RequestCursedWeaponLocation extends L2GameClientPacket
 {
-	private static final String _C__D0_2B_REQUESTCURSEDWEAPONLOCATION = "[C] D0:2B RequestCursedWeaponLocation";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -69,12 +67,6 @@ public final class RequestCursedWeaponLocation extends L2GameClientPacket
 		{
 			activeChar.sendPacket(new ExCursedWeaponLocation(list));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_2B_REQUESTCURSEDWEAPONLOCATION;
 	}
 	
 	@Override

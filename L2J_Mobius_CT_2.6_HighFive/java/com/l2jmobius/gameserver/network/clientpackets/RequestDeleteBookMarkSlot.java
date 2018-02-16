@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestDeleteBookMarkSlot extends L2GameClientPacket
 {
-	private static final String _C__D0_51_03_REQUESTDELETEBOOKMARKSLOT = "[C] D0:51:03 RequestDeleteBookMarkSlot";
-	
 	private int id;
 	
 	@Override
@@ -44,11 +42,5 @@ public final class RequestDeleteBookMarkSlot extends L2GameClientPacket
 		}
 		
 		activeChar.teleportBookmarkDelete(id);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_51_03_REQUESTDELETEBOOKMARKSLOT;
 	}
 }

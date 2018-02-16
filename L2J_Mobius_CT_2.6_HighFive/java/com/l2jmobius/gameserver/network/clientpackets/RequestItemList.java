@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ItemList;
  */
 public final class RequestItemList extends L2GameClientPacket
 {
-	private static final String _C__14_REQUESTITEMLIST = "[C] 14 RequestItemList";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -40,12 +38,6 @@ public final class RequestItemList extends L2GameClientPacket
 			final ItemList il = new ItemList(getClient().getActiveChar(), true);
 			sendPacket(il);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__14_REQUESTITEMLIST;
 	}
 	
 	@Override

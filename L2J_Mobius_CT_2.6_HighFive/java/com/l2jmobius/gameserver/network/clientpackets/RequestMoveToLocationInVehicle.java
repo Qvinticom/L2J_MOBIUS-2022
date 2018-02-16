@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
 
 public final class RequestMoveToLocationInVehicle extends L2GameClientPacket
 {
-	private static final String _C__75_MOVETOLOCATIONINVEHICLE = "[C] 75 RequestMoveToLocationInVehicle";
-	
 	private int _boatId;
 	private int _targetX;
 	private int _targetY;
@@ -124,11 +122,5 @@ public final class RequestMoveToLocationInVehicle extends L2GameClientPacket
 		final Location originPos = new Location(_originX, _originY, _originZ);
 		activeChar.setInVehiclePosition(pos);
 		activeChar.broadcastPacket(new MoveToLocationInVehicle(activeChar, pos, originPos));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__75_MOVETOLOCATIONINVEHICLE;
 	}
 }

@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.FriendListExtended;
  */
 public final class RequestExFriendListExtended extends L2GameClientPacket
 {
-	private static final String _C__D0_87_REQUESTEXFRIENDLISTEXTENDED = "[C] D0:87 RequestExFriendListExtended";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -48,11 +46,5 @@ public final class RequestExFriendListExtended extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new FriendListExtended(activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_87_REQUESTEXFRIENDLISTEXTENDED;
 	}
 }

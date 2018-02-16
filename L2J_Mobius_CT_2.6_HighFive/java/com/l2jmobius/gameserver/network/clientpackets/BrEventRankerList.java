@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExBrLoadEventTopRankers;
  */
 public class BrEventRankerList extends L2GameClientPacket
 {
-	private static final String _C__D0_7B_BREVENTRANKERLIST = "[C] D0:7B BrEventRankerList";
-	
 	private int _eventId;
 	private int _day;
 	@SuppressWarnings("unused")
@@ -46,11 +44,5 @@ public class BrEventRankerList extends L2GameClientPacket
 		final int bestScore = 0;
 		final int myScore = 0;
 		getClient().sendPacket(new ExBrLoadEventTopRankers(_eventId, _day, count, bestScore, myScore));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_7B_BREVENTRANKERLIST;
 	}
 }

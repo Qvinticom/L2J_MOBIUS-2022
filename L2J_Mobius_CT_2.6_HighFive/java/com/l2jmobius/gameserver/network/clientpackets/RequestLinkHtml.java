@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestLinkHtml extends L2GameClientPacket
 {
-	private static final String _C__22_REQUESTLINKHTML = "[C] 22 RequestLinkHtml";
 	private String _link;
 	
 	@Override
@@ -75,11 +74,5 @@ public final class RequestLinkHtml extends L2GameClientPacket
 		final NpcHtmlMessage msg = new NpcHtmlMessage(htmlObjectId);
 		msg.setFile(actor.getHtmlPrefix(), filename);
 		sendPacket(msg);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__22_REQUESTLINKHTML;
 	}
 }

@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 public final class RequestStopPledgeWar extends L2GameClientPacket
 {
-	private static final String _C__05_REQUESTSTOPPLEDGEWAR = "[C] 05 RequestStopPledgeWar";
-	
 	private String _pledgeName;
 	
 	@Override
@@ -117,11 +115,5 @@ public final class RequestStopPledgeWar extends L2GameClientPacket
 		{
 			member.broadcastUserInfo();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__05_REQUESTSTOPPLEDGEWAR;
 	}
 }

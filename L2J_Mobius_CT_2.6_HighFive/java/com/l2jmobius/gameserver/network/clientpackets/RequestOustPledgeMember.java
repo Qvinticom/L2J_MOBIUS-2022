@@ -33,8 +33,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestOustPledgeMember extends L2GameClientPacket
 {
-	private static final String _C__29_REQUESTOUSTPLEDGEMEMBER = "[C] 29 RequestOustPledgeMember";
-	
 	private String _target;
 	
 	@Override
@@ -100,11 +98,5 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 			final L2PcInstance player = member.getPlayerInstance();
 			player.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__29_REQUESTOUSTPLEDGEMEMBER;
 	}
 }

@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.mmocore.SendablePacket;
@@ -106,7 +105,7 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Client: " + getClient() + " - Failed writing: " + getClass().getSimpleName() + " ; " + e.getMessage(), e);
+			_log.severe("Client: " + getClient() + " - Failed writing: " + getType() + " ; " + e.getMessage() + " " + e);
 		}
 	}
 	
@@ -116,4 +115,9 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 	}
 	
 	protected abstract void writeImpl();
+	
+	public String getType()
+	{
+		return "[S] " + getClass().getSimpleName();
+	}
 }

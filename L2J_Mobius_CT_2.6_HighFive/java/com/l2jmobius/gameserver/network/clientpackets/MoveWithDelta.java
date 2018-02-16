@@ -22,8 +22,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
  */
 public class MoveWithDelta extends L2GameClientPacket
 {
-	private static final String _C__52_MOVEWITHDELTA = "[C] 52 MoveWithDelta";
-	
 	@SuppressWarnings("unused")
 	private int _dx;
 	@SuppressWarnings("unused")
@@ -43,11 +41,5 @@ public class MoveWithDelta extends L2GameClientPacket
 	protected void runImpl()
 	{
 		// TODO this
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__52_MOVEWITHDELTA;
 	}
 }

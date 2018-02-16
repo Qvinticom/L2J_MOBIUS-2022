@@ -22,8 +22,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
 public final class RequestPledgePower extends L2GameClientPacket
 {
-	private static final String _C__CC_REQUESTPLEDGEPOWER = "[C] CC RequestPledgePower";
-	
 	private int _rank;
 	private int _action;
 	private int _privs;
@@ -74,11 +72,5 @@ public final class RequestPledgePower extends L2GameClientPacket
 		{
 			player.sendPacket(new ManagePledgePower(getClient().getActiveChar().getClan(), _action, _rank));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__CC_REQUESTPLEDGEPOWER;
 	}
 }

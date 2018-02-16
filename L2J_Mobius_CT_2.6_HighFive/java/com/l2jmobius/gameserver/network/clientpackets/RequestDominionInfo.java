@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowOwnthingPos;
  */
 public class RequestDominionInfo extends L2GameClientPacket
 {
-	private static final String _C__D0_58_REQUESTDOMINIONINFO = "[C] D0:58 RequestDominionInfo";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -43,11 +41,5 @@ public class RequestDominionInfo extends L2GameClientPacket
 	protected boolean triggersOnActionRequest()
 	{
 		return false;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_58_REQUESTDOMINIONINFO;
 	}
 }

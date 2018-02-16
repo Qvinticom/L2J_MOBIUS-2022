@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
  */
 public final class RequestShowMiniMap extends L2GameClientPacket
 {
-	private static final String _C__6C_REQUESTSHOWMINIMAP = "[C] 6C RequestShowMiniMap";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -42,12 +40,6 @@ public final class RequestShowMiniMap extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendPacket(new ShowMiniMap(1665));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6C_REQUESTSHOWMINIMAP;
 	}
 	
 	@Override

@@ -25,12 +25,10 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 
 /**
- * author: Gnacik
+ * @author Gnacik
  */
 public class RequestPartyMatchList extends L2GameClientPacket
 {
-	private static final String _C__80_REQUESTPARTYMATCHLIST = "[C] 80 RequestPartyMatchList";
-	
 	private int _roomid;
 	private int _membersmax;
 	private int _lvlmin;
@@ -123,11 +121,5 @@ public class RequestPartyMatchList extends L2GameClientPacket
 			// _activeChar.setPartyMatching(1);
 			_activeChar.broadcastUserInfo();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__80_REQUESTPARTYMATCHLIST;
 	}
 }

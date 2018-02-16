@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestRejectPostAttachment extends L2GameClientPacket
 {
-	private static final String _C__D0_6B_REQUESTREJECTPOSTATTACHMENT = "[C] D0:6B RequestRejectPostAttachment";
-	
 	private int _msgId;
 	
 	@Override
@@ -96,11 +94,5 @@ public final class RequestRejectPostAttachment extends L2GameClientPacket
 			sm.addCharName(activeChar);
 			sender.sendPacket(sm);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_6B_REQUESTREJECTPOSTATTACHMENT;
 	}
 }

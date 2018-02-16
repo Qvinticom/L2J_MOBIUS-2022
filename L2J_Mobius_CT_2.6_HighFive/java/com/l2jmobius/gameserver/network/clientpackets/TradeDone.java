@@ -100,10 +100,4 @@ public final class TradeDone extends L2GameClientPacket
 			player.cancelActiveTrade();
 		}
 	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] 1C TradeDone";
-	}
 }

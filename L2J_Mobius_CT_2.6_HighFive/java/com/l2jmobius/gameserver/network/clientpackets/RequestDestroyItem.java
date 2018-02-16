@@ -40,8 +40,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestDestroyItem extends L2GameClientPacket
 {
-	private static final String _C__60_REQUESTDESTROYITEM = "[C] 60 RequestDestroyItem";
-	
 	private int _objectId;
 	private long _count;
 	
@@ -221,11 +219,5 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		final StatusUpdate su = new StatusUpdate(activeChar);
 		su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 		activeChar.sendPacket(su);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__60_REQUESTDESTROYITEM;
 	}
 }

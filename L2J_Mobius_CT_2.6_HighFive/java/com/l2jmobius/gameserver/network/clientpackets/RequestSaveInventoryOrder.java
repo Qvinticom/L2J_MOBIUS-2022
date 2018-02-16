@@ -30,8 +30,6 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
  */
 public final class RequestSaveInventoryOrder extends L2GameClientPacket
 {
-	private static final String _C__D0_24_REQUESTSAVEINVENTORYORDER = "[C] D0:24 RequestSaveInventoryOrder";
-	
 	private List<InventoryOrder> _order;
 	
 	/** client limit */
@@ -86,11 +84,5 @@ public final class RequestSaveInventoryOrder extends L2GameClientPacket
 	protected boolean triggersOnActionRequest()
 	{
 		return false;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_24_REQUESTSAVEINVENTORYORDER;
 	}
 }

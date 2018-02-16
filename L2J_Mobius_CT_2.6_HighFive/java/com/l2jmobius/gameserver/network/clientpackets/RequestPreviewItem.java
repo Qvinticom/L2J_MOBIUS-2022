@@ -46,8 +46,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestPreviewItem extends L2GameClientPacket
 {
-	private static final String _C__C7_REQUESTPREVIEWITEM = "[C] C7 RequestPreviewItem";
-	
 	@SuppressWarnings("unused")
 	private int _unk;
 	private int _listId;
@@ -241,11 +239,5 @@ public final class RequestPreviewItem extends L2GameClientPacket
 			// Schedule task
 			ThreadPoolManager.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__C7_REQUESTPREVIEWITEM;
 	}
 }

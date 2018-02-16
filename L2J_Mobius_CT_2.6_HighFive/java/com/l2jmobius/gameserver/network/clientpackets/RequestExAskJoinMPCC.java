@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestExAskJoinMPCC extends L2GameClientPacket
 {
-	private static final String _C__D0_06_REQUESTEXASKJOINMPCC = "[C] D0:06 RequestExAskJoinMPCC";
 	private String _name;
 	
 	@Override
@@ -177,11 +176,5 @@ public final class RequestExAskJoinMPCC extends L2GameClientPacket
 			sm.addString(targetLeader.getName());
 			requestor.sendPacket(sm);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_06_REQUESTEXASKJOINMPCC;
 	}
 }

@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  */
 public final class RequestPrivateStoreManageSell extends L2GameClientPacket
 {
-	private static final String _C__30_REQUESTPRIVATESTOREMANAGESELL = "[C] 30 RequestPrivateStoreManageSell";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -50,12 +48,6 @@ public final class RequestPrivateStoreManageSell extends L2GameClientPacket
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__30_REQUESTPRIVATESTOREMANAGESELL;
 	}
 	
 	@Override

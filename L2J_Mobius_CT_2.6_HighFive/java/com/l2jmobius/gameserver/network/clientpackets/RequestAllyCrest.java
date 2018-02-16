@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.network.serverpackets.AllyCrest;
  */
 public final class RequestAllyCrest extends L2GameClientPacket
 {
-	private static final String _C__92_REQUESTALLYCREST = "[C] 92 RequestAllyCrest";
-	
 	private int _crestId;
 	
 	@Override
@@ -38,12 +36,6 @@ public final class RequestAllyCrest extends L2GameClientPacket
 	protected void runImpl()
 	{
 		sendPacket(new AllyCrest(_crestId));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__92_REQUESTALLYCREST;
 	}
 	
 	@Override

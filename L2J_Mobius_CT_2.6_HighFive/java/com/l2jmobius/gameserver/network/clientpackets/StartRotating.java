@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.StartRotation;
  */
 public final class StartRotating extends L2GameClientPacket
 {
-	private static final String _C__5B_STARTROTATING = "[C] 5B StartRotating";
-	
 	private int _degree;
 	private int _side;
 	
@@ -57,11 +55,5 @@ public final class StartRotating extends L2GameClientPacket
 			br = new StartRotation(activeChar.getObjectId(), _degree, _side, 0);
 			activeChar.broadcastPacket(br);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__5B_STARTROTATING;
 	}
 }

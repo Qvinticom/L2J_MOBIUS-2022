@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class RequestSetPledgeCrest extends L2GameClientPacket
 {
-	private static final String _C__09_REQUESTSETPLEDGECREST = "[C] 09 RequestSetPledgeCrest";
-	
 	private int _length;
 	private byte[] _data = null;
 	
@@ -109,11 +107,5 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 				activeChar.sendPacket(SystemMessageId.THE_CREST_WAS_SUCCESSFULLY_REGISTERED);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__09_REQUESTSETPLEDGECREST;
 	}
 }

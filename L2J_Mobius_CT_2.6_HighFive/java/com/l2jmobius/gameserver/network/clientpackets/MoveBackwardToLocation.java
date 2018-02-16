@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class MoveBackwardToLocation extends L2GameClientPacket
 {
-	private static final String _C__0F_MOVEBACKWARDTOLOC = "[C] 0F MoveBackwardToLoc";
-	
 	private int _targetX;
 	private int _targetY;
 	private int _targetZ;
@@ -130,11 +128,5 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 			return;
 		}
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0F_MOVEBACKWARDTOLOC;
 	}
 }

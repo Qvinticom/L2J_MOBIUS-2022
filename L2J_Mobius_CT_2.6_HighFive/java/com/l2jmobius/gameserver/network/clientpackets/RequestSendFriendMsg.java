@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.L2FriendSay;
  */
 public final class RequestSendFriendMsg extends L2GameClientPacket
 {
-	private static final String _C__6B_REQUESTSENDMSG = "[C] 6B RequestSendFriendMsg";
 	private static Logger _logChat = Logger.getLogger("chat");
 	
 	private String _message;
@@ -80,11 +79,5 @@ public final class RequestSendFriendMsg extends L2GameClientPacket
 		}
 		
 		targetPlayer.sendPacket(new L2FriendSay(activeChar.getName(), _reciever, _message));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6B_REQUESTSENDMSG;
 	}
 }

@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExGetBossRecord;
  */
 public class RequestGetBossRecord extends L2GameClientPacket
 {
-	private static final String _C__D0_40_REQUESTGETBOSSRECORD = "[C] D0:40 RequestGetBossRecord";
 	private int _bossId;
 	
 	@Override
@@ -58,12 +57,6 @@ public class RequestGetBossRecord extends L2GameClientPacket
 		
 		// trigger packet
 		activeChar.sendPacket(new ExGetBossRecord(ranking, points, list));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_40_REQUESTGETBOSSRECORD;
 	}
 	
 	@Override

@@ -102,10 +102,4 @@ public class RequestSetSeed extends L2GameClientPacket
 		// Save new list
 		manor.setNextSeedProduction(list, _manorId);
 	}
-	
-	@Override
-	public String getType()
-	{
-		return "[C] D0:03 RequestSetSeed";
-	}
 }

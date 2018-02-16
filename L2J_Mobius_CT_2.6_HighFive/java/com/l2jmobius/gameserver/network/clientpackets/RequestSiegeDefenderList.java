@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
  */
 public final class RequestSiegeDefenderList extends L2GameClientPacket
 {
-	private static final String _C__AC_REQUESTSIEGEDEFENDERLIST = "[C] AC RequestSiegeDefenderList";
-	
 	private int _castleId;
 	
 	@Override
@@ -47,11 +45,5 @@ public final class RequestSiegeDefenderList extends L2GameClientPacket
 		}
 		final SiegeDefenderList sdl = new SiegeDefenderList(castle);
 		sendPacket(sdl);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__AC_REQUESTSIEGEDEFENDERLIST;
 	}
 }

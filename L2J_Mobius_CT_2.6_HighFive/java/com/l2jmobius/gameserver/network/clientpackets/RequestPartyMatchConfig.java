@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
  */
 public final class RequestPartyMatchConfig extends L2GameClientPacket
 {
-	private static final String _C__7F_REQUESTPARTYMATCHCONFIG = "[C] 7F RequestPartyMatchConfig";
-	
 	private int _auto, _loc, _lvl;
 	
 	@Override
@@ -93,11 +91,5 @@ public final class RequestPartyMatchConfig extends L2GameClientPacket
 			
 			_activeChar.sendPacket(matchList);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__7F_REQUESTPARTYMATCHCONFIG;
 	}
 }

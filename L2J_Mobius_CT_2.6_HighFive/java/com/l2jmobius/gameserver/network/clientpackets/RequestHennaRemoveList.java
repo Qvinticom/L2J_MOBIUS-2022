@@ -21,8 +21,6 @@ import com.l2jmobius.gameserver.network.serverpackets.HennaRemoveList;
 
 public final class RequestHennaRemoveList extends L2GameClientPacket
 {
-	private static final String _C__70_REQUESTHENNAREMOVELIST = "[C] 70 RequestHennaRemoveList";
-	
 	@SuppressWarnings("unused")
 	private int _unknown;
 	
@@ -41,11 +39,5 @@ public final class RequestHennaRemoveList extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendPacket(new HennaRemoveList(activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__70_REQUESTHENNAREMOVELIST;
 	}
 }

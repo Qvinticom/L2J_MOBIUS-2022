@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowSeedMapInfo;
  */
 public class RequestSeedPhase extends L2GameClientPacket
 {
-	private static final String _C__D0_63_REQUESTSEEDPHASE = "[C] D0:63 RequestSeedPhase";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -41,11 +39,5 @@ public class RequestSeedPhase extends L2GameClientPacket
 			return;
 		}
 		activeChar.sendPacket(ExShowSeedMapInfo.STATIC_PACKET);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_63_REQUESTSEEDPHASE;
 	}
 }

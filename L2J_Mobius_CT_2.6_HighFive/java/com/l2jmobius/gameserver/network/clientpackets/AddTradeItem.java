@@ -30,8 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.TradeOwnAdd;
  */
 public final class AddTradeItem extends L2GameClientPacket
 {
-	private static final String _C__1B_ADDTRADEITEM = "[C] 1B AddTradeItem";
-	
 	private int _tradeId;
 	private int _objectId;
 	private long _count;
@@ -98,11 +96,5 @@ public final class AddTradeItem extends L2GameClientPacket
 			player.sendPacket(new TradeOwnAdd(item));
 			trade.getPartner().sendPacket(new TradeOtherAdd(item));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__1B_ADDTRADEITEM;
 	}
 }

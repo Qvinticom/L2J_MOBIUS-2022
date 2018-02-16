@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestChangePartyLeader extends L2GameClientPacket
 {
-	private static final String _C__D0_0C_REQUESTCHANGEPARTYLEADER = "[C] D0:0C RequestChangePartyLeader";
-	
 	private String _name;
 	
 	@Override
@@ -48,11 +46,5 @@ public final class RequestChangePartyLeader extends L2GameClientPacket
 		{
 			party.changePartyLeader(_name);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_0C_REQUESTCHANGEPARTYLEADER;
 	}
 }

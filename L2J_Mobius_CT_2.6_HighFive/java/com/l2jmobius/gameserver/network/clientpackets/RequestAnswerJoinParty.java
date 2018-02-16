@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestAnswerJoinParty extends L2GameClientPacket
 {
-	private static final String _C__43_REQUESTANSWERPARTY = "[C] 43 RequestAnswerJoinParty";
-	
 	private int _response;
 	
 	@Override
@@ -141,11 +139,5 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 		
 		player.setActiveRequester(null);
 		requestor.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__43_REQUESTANSWERPARTY;
 	}
 }

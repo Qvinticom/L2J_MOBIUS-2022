@@ -31,8 +31,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestPartyMatchDetail extends L2GameClientPacket
 {
-	private static final String _C__81_REQUESTPARTYMATCHDETAIL = "[C] 81 RequestPartyMatchDetail";
-	
 	private int _roomid;
 	@SuppressWarnings("unused")
 	private int _unk1;
@@ -99,11 +97,5 @@ public final class RequestPartyMatchDetail extends L2GameClientPacket
 		{
 			_activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__81_REQUESTPARTYMATCHDETAIL;
 	}
 }

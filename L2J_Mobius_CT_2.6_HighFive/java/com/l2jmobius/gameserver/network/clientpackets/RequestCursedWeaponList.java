@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponList;
  */
 public class RequestCursedWeaponList extends L2GameClientPacket
 {
-	private static final String _C__D0_2A_REQUESTCURSEDWEAPONLIST = "[C] D0:2A RequestCursedWeaponList";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -54,12 +52,6 @@ public class RequestCursedWeaponList extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new ExCursedWeaponList(list));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_2A_REQUESTCURSEDWEAPONLIST;
 	}
 	
 	@Override

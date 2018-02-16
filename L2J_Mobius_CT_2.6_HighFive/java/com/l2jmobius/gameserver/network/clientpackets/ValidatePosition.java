@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  */
 public class ValidatePosition extends L2GameClientPacket
 {
-	private static final String _C__59_VALIDATEPOSITION = "[C] 59 ValidatePosition";
-	
 	private int _x;
 	private int _y;
 	private int _z;
@@ -202,11 +200,5 @@ public class ValidatePosition extends L2GameClientPacket
 		activeChar.setClientZ(_z);
 		activeChar.setClientHeading(_heading); // No real need to validate heading.
 		activeChar.setLastServerPosition(realX, realY, realZ);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__59_VALIDATEPOSITION;
 	}
 }

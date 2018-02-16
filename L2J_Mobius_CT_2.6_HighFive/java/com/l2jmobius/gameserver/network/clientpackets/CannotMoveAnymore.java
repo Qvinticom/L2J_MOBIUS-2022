@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class CannotMoveAnymore extends L2GameClientPacket
 {
-	private static final String _C__47_STOPMOVE = "[C] 47 CannotMoveAnymore";
-	
 	private int _x;
 	private int _y;
 	private int _z;
@@ -72,11 +70,5 @@ public final class CannotMoveAnymore extends L2GameClientPacket
 		// _heading);
 		// getClient().getActiveChar().sendPacket(sr);
 		// getClient().getActiveChar().broadcastPacket(sr);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__47_STOPMOVE;
 	}
 }

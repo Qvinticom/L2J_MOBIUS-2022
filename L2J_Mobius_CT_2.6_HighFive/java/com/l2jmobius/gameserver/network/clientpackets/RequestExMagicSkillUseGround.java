@@ -31,8 +31,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestExMagicSkillUseGround extends L2GameClientPacket
 {
-	private static final String _C__D0_44_REQUESTEXMAGICSKILLUSEGROUND = "[C] D0:44 RequestExMagicSkillUseGround";
-	
 	private int _x;
 	private int _y;
 	private int _z;
@@ -88,11 +86,5 @@ public final class RequestExMagicSkillUseGround extends L2GameClientPacket
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			_log.warning("No skill found with id " + _skillId + " and level " + level + " !!");
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_44_REQUESTEXMAGICSKILLUSEGROUND;
 	}
 }

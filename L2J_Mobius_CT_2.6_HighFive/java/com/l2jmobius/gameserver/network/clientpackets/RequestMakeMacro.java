@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public final class RequestMakeMacro extends L2GameClientPacket
 {
-	private static final String _C__CD_REQUESTMAKEMACRO = "[C] CD RequestMakeMacro";
-	
 	private Macro _macro;
 	private int _commandsLenght = 0;
 	
@@ -95,11 +93,5 @@ public final class RequestMakeMacro extends L2GameClientPacket
 			return;
 		}
 		player.registerMacro(_macro);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__CD_REQUESTMAKEMACRO;
 	}
 }

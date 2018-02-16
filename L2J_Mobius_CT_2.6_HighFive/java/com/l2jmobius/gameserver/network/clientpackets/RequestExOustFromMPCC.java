@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestExOustFromMPCC extends L2GameClientPacket
 {
-	private static final String _C__D0_08_REQUESTEXOUSTFROMMPCC = "[C] D0:08 RequestExOustFromMPCC";
 	private String _name;
 	
 	@Override
@@ -66,11 +65,5 @@ public final class RequestExOustFromMPCC extends L2GameClientPacket
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_08_REQUESTEXOUSTFROMMPCC;
 	}
 }

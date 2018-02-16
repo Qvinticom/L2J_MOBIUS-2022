@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowSentPostList;
  */
 public final class RequestSentPostList extends L2GameClientPacket
 {
-	private static final String _C__D0_6C_REQUESTSENTPOSTLIST = "[C] D0:6C RequestSentPostList";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -49,12 +47,6 @@ public final class RequestSentPostList extends L2GameClientPacket
 		// }
 		
 		activeChar.sendPacket(new ExShowSentPostList(activeChar.getObjectId()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_6C_REQUESTSENTPOSTLIST;
 	}
 	
 	@Override

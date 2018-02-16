@@ -34,8 +34,6 @@ import com.l2jmobius.gameserver.network.serverpackets.GmViewQuestInfo;
  */
 public final class RequestGMCommand extends L2GameClientPacket
 {
-	private static final String _C__7E_REQUESTGMCOMMAND = "[C] 7E RequestGMCommand";
-	
 	private String _targetName;
 	private int _command;
 	
@@ -114,11 +112,5 @@ public final class RequestGMCommand extends L2GameClientPacket
 			}
 			
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__7E_REQUESTGMCOMMAND;
 	}
 }

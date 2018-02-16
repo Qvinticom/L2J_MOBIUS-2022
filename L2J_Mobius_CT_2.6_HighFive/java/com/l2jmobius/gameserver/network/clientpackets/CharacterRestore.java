@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
  */
 public final class CharacterRestore extends L2GameClientPacket
 {
-	private static final String _C__7B_CHARACTERRESTORE = "[C] 7B CharacterRestore";
-	
 	// cd
 	private int _charSlot;
 	
@@ -52,11 +50,5 @@ public final class CharacterRestore extends L2GameClientPacket
 		getClient().setCharSelection(cl.getCharInfo());
 		final CharSelectInfoPackage charInfo = getClient().getCharSelection(_charSlot);
 		EventDispatcher.getInstance().notifyEvent(new OnPlayerRestore(charInfo.getObjectId(), charInfo.getName(), getClient()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__7B_CHARACTERRESTORE;
 	}
 }

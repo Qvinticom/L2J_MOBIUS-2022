@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class RequestExitPartyMatchingWaitingRoom extends L2GameClientPacket
 {
-	private static final String _C__D0_25_REQUESTEXITPARTYMATCHINGWAITINGROOM = "[C] D0:25 RequestExitPartyMatchingWaitingRoom";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -42,11 +40,5 @@ public final class RequestExitPartyMatchingWaitingRoom extends L2GameClientPacke
 		}
 		
 		PartyMatchWaitingList.getInstance().removePlayer(_activeChar);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_25_REQUESTEXITPARTYMATCHINGWAITINGROOM;
 	}
 }

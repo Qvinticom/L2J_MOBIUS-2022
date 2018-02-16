@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class RequestSetAllyCrest extends L2GameClientPacket
 {
-	private static final String _C__91_REQUESTSETALLYCREST = "[C] 91 RequestSetAllyCrest";
-	
 	private int _length;
 	private byte[] _data = null;
 	
@@ -99,11 +97,5 @@ public final class RequestSetAllyCrest extends L2GameClientPacket
 			}
 		}
 		
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__91_REQUESTSETALLYCREST;
 	}
 }

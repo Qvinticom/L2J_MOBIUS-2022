@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
  */
 public class RequestGotoLobby extends L2GameClientPacket
 {
-	private static final String _C__D0_38_REQUESTGOTOLOBBY = "[C] D0:38 RequestGotoLobby";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -38,11 +36,5 @@ public class RequestGotoLobby extends L2GameClientPacket
 	{
 		final L2GameClient client = getClient();
 		client.sendPacket(new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_38_REQUESTGOTOLOBBY;
 	}
 }

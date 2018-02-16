@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestFriendInvite extends L2GameClientPacket
 {
-	private static final String _C__77_REQUESTFRIENDINVITE = "[C] 77 RequestFriendInvite";
-	
 	private String _name;
 	
 	@Override
@@ -101,11 +99,5 @@ public final class RequestFriendInvite extends L2GameClientPacket
 		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
 		sm.addString(_name);
 		activeChar.sendPacket(sm);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__77_REQUESTFRIENDINVITE;
 	}
 }

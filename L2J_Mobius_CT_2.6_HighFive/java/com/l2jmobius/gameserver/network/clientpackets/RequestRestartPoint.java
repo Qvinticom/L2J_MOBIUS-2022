@@ -39,8 +39,6 @@ import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
  */
 public final class RequestRestartPoint extends L2GameClientPacket
 {
-	private static final String _C__7D_REQUESTRESTARTPOINT = "[C] 7D RequestRestartPoint";
-	
 	protected int _requestedPointType;
 	protected boolean _continuation;
 	
@@ -280,11 +278,5 @@ public final class RequestRestartPoint extends L2GameClientPacket
 			activeChar.setIsPendingRevive(true);
 			activeChar.teleToLocation(loc, true);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__7D_REQUESTRESTARTPOINT;
 	}
 }

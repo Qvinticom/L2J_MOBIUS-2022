@@ -49,8 +49,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class UseItem extends L2GameClientPacket
 {
-	private static final String _C__19_USEITEM = "[C] 19 UseItem";
-	
 	private int _objectId;
 	private boolean _ctrlPressed;
 	private int _itemId;
@@ -391,12 +389,6 @@ public final class UseItem extends L2GameClientPacket
 		{
 			activeChar.sendPacket(new ExUseSharedGroupItem(_itemId, group, remaining, reuse));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__19_USEITEM;
 	}
 	
 	@Override

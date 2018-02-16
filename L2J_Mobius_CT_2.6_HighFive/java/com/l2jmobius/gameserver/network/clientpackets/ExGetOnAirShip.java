@@ -22,8 +22,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
  */
 public class ExGetOnAirShip extends L2GameClientPacket
 {
-	private static final String _C__D0_36_EXGETONAIRSHIP = "[C] D0:36 ExGetOnAirShip";
-	
 	private int _x;
 	private int _y;
 	private int _z;
@@ -45,11 +43,5 @@ public class ExGetOnAirShip extends L2GameClientPacket
 		_log.info("[T1:ExGetOnAirShip] y: " + _y);
 		_log.info("[T1:ExGetOnAirShip] z: " + _z);
 		_log.info("[T1:ExGetOnAirShip] ship ID: " + _shipId);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_36_EXGETONAIRSHIP;
 	}
 }

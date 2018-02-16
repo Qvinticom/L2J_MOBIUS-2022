@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestRecipeShopMakeItem extends L2GameClientPacket
 {
-	private static final String _C__BF_REQUESTRECIPESHOPMAKEITEM = "[C] BF RequestRecipeShopMakeItem";
-	
 	private int _id;
 	private int _recipeId;
 	@SuppressWarnings("unused")
@@ -87,11 +85,5 @@ public final class RequestRecipeShopMakeItem extends L2GameClientPacket
 		{
 			RecipeController.getInstance().requestManufactureItem(manufacturer, _recipeId, activeChar);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__BF_REQUESTRECIPESHOPMAKEITEM;
 	}
 }

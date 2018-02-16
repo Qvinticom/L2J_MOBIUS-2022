@@ -37,8 +37,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class SendWareHouseWithDrawList extends L2GameClientPacket
 {
-	private static final String _C__32_SENDWAREHOUSEWITHDRAWLIST = "[C] 3C SendWareHouseWithDrawList";
-	
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
 	private ItemHolder _items[] = null;
@@ -208,11 +206,5 @@ public final class SendWareHouseWithDrawList extends L2GameClientPacket
 		final StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__32_SENDWAREHOUSEWITHDRAWLIST;
 	}
 }

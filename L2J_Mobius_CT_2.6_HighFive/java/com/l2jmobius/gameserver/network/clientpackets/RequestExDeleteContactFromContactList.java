@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class RequestExDeleteContactFromContactList extends L2GameClientPacket
 {
-	private static final String _C__D0_85_REQUESTEXDELETECONTACTFROMCONTACTLIST = "[C] D0:85 RequestExDeleteContactFromContactList";
 	private String _name;
 	
 	@Override
@@ -54,11 +53,5 @@ public class RequestExDeleteContactFromContactList extends L2GameClientPacket
 		}
 		
 		activeChar.getContactList().remove(_name);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_85_REQUESTEXDELETECONTACTFROMCONTACTLIST;
 	}
 }

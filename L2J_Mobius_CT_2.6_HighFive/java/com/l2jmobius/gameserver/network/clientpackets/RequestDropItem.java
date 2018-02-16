@@ -38,8 +38,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestDropItem extends L2GameClientPacket
 {
-	private static final String _C__17_REQUESTDROPITEM = "[C] 17 RequestDropItem";
-	
 	private int _objectId;
 	private long _count;
 	private int _x;
@@ -205,12 +203,6 @@ public final class RequestDropItem extends L2GameClientPacket
 			_log.warning(msg);
 			AdminData.getInstance().broadcastMessageToGMs(msg);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__17_REQUESTDROPITEM;
 	}
 	
 	@Override

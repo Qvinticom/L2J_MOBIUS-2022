@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantSupportItemRes
  */
 public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 {
-	private static final String _C__D0_4D_REQUESTEXTRYTOPUTENCHANTSUPPORTITEM = "[C] D0:4D RequestExTryToPutEnchantSupportItem";
-	
 	private int _supportObjectId;
 	private int _enchantObjectId;
 	
@@ -78,11 +76,5 @@ public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 			activeChar.setActiveEnchantSupportItemId(support.getObjectId());
 			activeChar.sendPacket(new ExPutEnchantSupportItemResult(_supportObjectId));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_4D_REQUESTEXTRYTOPUTENCHANTSUPPORTITEM;
 	}
 }

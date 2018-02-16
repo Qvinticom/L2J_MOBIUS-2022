@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeShopSellList;
  */
 public final class RequestRecipeShopManagePrev extends L2GameClientPacket
 {
-	private static final String _C__C0_RequestRecipeShopPrev = "[C] C0 RequestRecipeShopPrev";
-	
 	@Override
 	protected void readImpl()
 	{
@@ -49,11 +47,5 @@ public final class RequestRecipeShopManagePrev extends L2GameClientPacket
 		}
 		
 		player.sendPacket(new RecipeShopSellList(player, player.getTarget().getActingPlayer()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__C0_RequestRecipeShopPrev;
 	}
 }

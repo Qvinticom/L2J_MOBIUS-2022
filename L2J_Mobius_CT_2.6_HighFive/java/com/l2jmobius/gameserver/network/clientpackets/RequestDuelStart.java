@@ -28,8 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RequestDuelStart extends L2GameClientPacket
 {
-	private static final String _C__D0_1B_REQUESTDUELSTART = "[C] D0:1B RequestDuelStart";
-	
 	private String _player;
 	private int _partyDuel;
 	
@@ -172,11 +170,5 @@ public final class RequestDuelStart extends L2GameClientPacket
 				activeChar.sendPacket(msg);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_1B_REQUESTDUELSTART;
 	}
 }

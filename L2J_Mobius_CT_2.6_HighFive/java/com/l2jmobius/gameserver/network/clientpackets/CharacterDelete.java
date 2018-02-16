@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
  */
 public final class CharacterDelete extends L2GameClientPacket
 {
-	private static final String _C__0C_CHARACTERDELETE = "[C] 0D CharacterDelete";
-	
 	// cd
 	private int _charSlot;
 	
@@ -88,11 +86,5 @@ public final class CharacterDelete extends L2GameClientPacket
 		final CharSelectionInfo cl = new CharSelectionInfo(getClient().getAccountName(), getClient().getSessionId().playOkID1, 0);
 		sendPacket(cl);
 		getClient().setCharSelection(cl.getCharInfo());
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0C_CHARACTERDELETE;
 	}
 }

@@ -27,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
  */
 public final class RequestWithdrawPartyRoom extends L2GameClientPacket
 {
-	private static final String _C__D0_0B_REQUESTWITHDRAWPARTYROOM = "[C] D0:0B RequestWithdrawPartyRoom";
-	
 	private int _roomid;
 	@SuppressWarnings("unused")
 	private int _unk1;
@@ -74,11 +72,5 @@ public final class RequestWithdrawPartyRoom extends L2GameClientPacket
 			_activeChar.sendPacket(new ExClosePartyRoom());
 			_activeChar.sendPacket(SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_0B_REQUESTWITHDRAWPARTYROOM;
 	}
 }

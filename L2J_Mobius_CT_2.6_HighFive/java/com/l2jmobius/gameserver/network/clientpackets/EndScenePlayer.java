@@ -23,8 +23,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public final class EndScenePlayer extends L2GameClientPacket
 {
-	private static final String _C__D0_5B_ENDSCENEPLAYER = "[C] D0:5B EndScenePlayer";
-	
 	private int _movieId;
 	
 	@Override
@@ -55,11 +53,5 @@ public final class EndScenePlayer extends L2GameClientPacket
 		activeChar.decayMe();
 		activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 		activeChar.setIsTeleporting(false, false);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_5B_ENDSCENEPLAYER;
 	}
 }

@@ -37,8 +37,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestCrystallizeItem extends L2GameClientPacket
 {
-	private static final String _C__2F_REQUESTDCRYSTALLIZEITEM = "[C] 2F RequestCrystallizeItem";
-	
 	private int _objectId;
 	private long _count;
 	
@@ -230,11 +228,5 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 		world.removeObject(removedItem);
 		
 		activeChar.setInCrystallize(false);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__2F_REQUESTDCRYSTALLIZEITEM;
 	}
 }

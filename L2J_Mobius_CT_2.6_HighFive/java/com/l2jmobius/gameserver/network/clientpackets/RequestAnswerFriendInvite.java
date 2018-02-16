@@ -28,8 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestAnswerFriendInvite extends L2GameClientPacket
 {
-	private static final String _C__78_REQUESTANSWERFRIENDINVITE = "[C] 78 RequestAnswerFriendInvite";
-	
 	private int _response;
 	
 	@Override
@@ -104,11 +102,5 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 		
 		player.setActiveRequester(null);
 		requestor.onTransactionResponse();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__78_REQUESTANSWERFRIENDINVITE;
 	}
 }

@@ -30,8 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
  */
 public class MoveToLocationInAirShip extends L2GameClientPacket
 {
-	private static final String _C__D0_20_MOVETOLOCATIONINAIRSHIP = "[C] D0:20 MoveToLocationInAirShip";
-	
 	private int _shipId;
 	private int _targetX;
 	private int _targetY;
@@ -94,11 +92,5 @@ public class MoveToLocationInAirShip extends L2GameClientPacket
 		
 		activeChar.setInVehiclePosition(new Location(_targetX, _targetY, _targetZ));
 		activeChar.broadcastPacket(new ExMoveToLocationInAirShip(activeChar));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_20_MOVETOLOCATIONINAIRSHIP;
 	}
 }

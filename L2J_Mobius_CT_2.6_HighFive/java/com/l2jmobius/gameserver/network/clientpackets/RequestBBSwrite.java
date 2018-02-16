@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
  */
 public final class RequestBBSwrite extends L2GameClientPacket
 {
-	private static final String _C__24_REQUESTBBSWRITE = "[C] 24 RequestBBSwrite";
 	private String _url;
 	private String _arg1;
 	private String _arg2;
@@ -47,11 +46,5 @@ public final class RequestBBSwrite extends L2GameClientPacket
 	protected final void runImpl()
 	{
 		CommunityBoardHandler.getInstance().handleWriteCommand(getActiveChar(), _url, _arg1, _arg2, _arg3, _arg4, _arg5);
-	}
-	
-	@Override
-	public final String getType()
-	{
-		return _C__24_REQUESTBBSWRITE;
 	}
 }

@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPutCommissionResultForVa
  */
 public final class RequestConfirmGemStone extends AbstractRefinePacket
 {
-	private static final String _C__D0_28_REQUESTCONFIRMGEMSTONE = "[C] D0:28 RequestConfirmGemStone";
 	private int _targetItemObjId;
 	private int _refinerItemObjId;
 	private int _gemstoneItemObjId;
@@ -87,11 +86,5 @@ public final class RequestConfirmGemStone extends AbstractRefinePacket
 		}
 		
 		activeChar.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, _gemStoneCount, gemStoneItem.getId()));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__D0_28_REQUESTCONFIRMGEMSTONE;
 	}
 }

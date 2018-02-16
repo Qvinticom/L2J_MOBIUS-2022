@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SiegeDefenderList;
  */
 public final class RequestConfirmSiegeWaitingList extends L2GameClientPacket
 {
-	private static final String _C__AE_RequestConfirmSiegeWaitingList = "[C] AE RequestConfirmSiegeWaitingList";
-	
 	private int _approved;
 	private int _castleId;
 	private int _clanId;
@@ -100,12 +98,5 @@ public final class RequestConfirmSiegeWaitingList extends L2GameClientPacket
 		
 		// Update the defender list
 		activeChar.sendPacket(new SiegeDefenderList(castle));
-		
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__AE_RequestConfirmSiegeWaitingList;
 	}
 }
