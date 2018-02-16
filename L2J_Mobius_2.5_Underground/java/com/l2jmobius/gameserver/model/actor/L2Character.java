@@ -55,7 +55,6 @@ import com.l2jmobius.gameserver.enums.BasicProperty;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
-import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
@@ -4303,7 +4302,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (!reflect && !isDOT)
 		{
-			damage *= getStat().getPositionTypeValue(Stats.ATTACK_DAMAGE, Position.getPosition(this, target));
+			// RearDamage effect bonus.
+			if (isBehind(target))
+			{
+				damage *= getStat().getValue(Stats.REAR_DAMAGE_RATE, 1);
+			}
 			
 			// Counterattacks happen before damage received.
 			if (!target.isDead() && (skill != null))
