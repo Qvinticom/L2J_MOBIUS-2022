@@ -25,6 +25,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.GameTimeController;
+import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
 /**
@@ -134,17 +135,23 @@ public final class HitConditionBonusData implements IGameXmlReader
 		}
 		
 		// Get side bonus
-		if (attacker.isBehindTarget(true))
+		switch (Position.getPosition(attacker, target))
 		{
-			mod += backBonus;
-		}
-		else if (attacker.isInFrontOfTarget())
-		{
-			mod += frontBonus;
-		}
-		else
-		{
-			mod += sideBonus;
+			case SIDE:
+			{
+				mod += sideBonus;
+				break;
+			}
+			case BACK:
+			{
+				mod += backBonus;
+				break;
+			}
+			default:
+			{
+				mod += frontBonus;
+				break;
+			}
 		}
 		
 		// If (mod / 100) is less than 0, return 0, because we can't lower more than 100%.

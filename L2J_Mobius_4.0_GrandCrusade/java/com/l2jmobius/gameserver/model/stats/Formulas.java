@@ -49,6 +49,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Global calculations.
@@ -227,41 +228,43 @@ public final class Formulas
 			
 			// Physical skill critical rate
 			final double statBonus;
-			final double rateBonus;
 			
 			// There is a chance that activeChar has altered base stat for skill critical.
-			final byte skillCritRateStat = (byte) activeChar.getStat().getValue(Stats.STAT_BONUS_SKILL_CRITICAL, -1);
+			byte skillCritRateStat = (byte) activeChar.getStat().getValue(Stats.STAT_BONUS_SKILL_CRITICAL);
 			if ((skillCritRateStat >= 0) && (skillCritRateStat < BaseStats.values().length))
 			{
 				// Best tested
-				statBonus = BaseStats.STR.getValue(activeChar.getDEX()) * 2;
-				rateBonus = (activeChar.getStat().getValue(Stats.CRITICAL_RATE_SKILL) * 2) - 1; // Tests made by retail GMs show that 3x10% increase yields to 16.2 -> 26.1
+				statBonus = BaseStats.values()[skillCritRateStat].calcBonus(activeChar);
 			}
 			else
 			{
 				// Default base stat used for skill critical formula is STR.
 				statBonus = BaseStats.STR.calcBonus(activeChar);
-				rateBonus = activeChar.getStat().getValue(Stats.CRITICAL_RATE_SKILL);
 			}
 			
-			final double finalRate = rate * statBonus * rateBonus * 10;
+			final double rateBonus = activeChar.getStat().getValue(Stats.CRITICAL_RATE_SKILL, 1);
+			double finalRate = rate * statBonus * rateBonus * 10;
 			return finalRate > Rnd.get(1000);
 		}
 		
 		// Autoattack critical rate.
-		// It is capped to 500, but unbound by positional critical rate and level diff bonus.
-		rate *= activeChar.getStat().getPositionTypeValue(Stats.CRITICAL_RATE, Position.getPosition(activeChar, target));
+		// Even though, visible critical rate is capped to 500, you can reach higher than 50% chance with position and level modifiers.
+		// TODO: Find retail-like calculation for criticalRateMod.
+		final double criticalRateMod = (target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE, rate) + target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE_ADD, 0)) / 10;
+		final double criticalLocBonus = calcCriticalPositionBonus(activeChar, target);
+		final double criticalHeightBonus = calcCriticalHeightBonus(activeChar, target);
+		rate = criticalLocBonus * criticalRateMod * criticalHeightBonus;
 		
-		// In retail, it appears that when you are higher level attacking lower level mobs, your critical rate is much higher.
-		// Level 91 attacking level 1 appear that nearly all hits are critical. Unconfirmed for skills and pvp.
-		if (activeChar.isNpc() || target.isNpc())
+		// Autoattack critical depends on level difference at high levels as well.
+		if ((activeChar.getLevel() >= 78) || (target.getLevel() >= 78))
 		{
-			final double levelMod = 1 + (activeChar.getLevelMod() - target.getLevelMod());
-			rate *= levelMod;
+			rate = rate + (Math.sqrt(activeChar.getLevel()) * (activeChar.getLevel() - target.getLevel()) * 0.125);
 		}
 		
-		final double finalRate = target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE, rate) + target.getStat().getValue(Stats.DEFENCE_CRITICAL_RATE_ADD, 0);
-		return finalRate > Rnd.get(1000);
+		// Autoattack critical rate is limited between 3%-97%.
+		rate = CommonUtil.constrain(rate, 3, 97);
+		
+		return rate > Rnd.get(100);
 	}
 	
 	/**
@@ -462,7 +465,7 @@ public final class Formulas
 		double factor = 0.0;
 		if (skill.getMagicType() == 1)
 		{
-			final double spiritshotHitTime = (creature.isChargedShot(ShotType.SPIRITSHOTS) || creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS)) ? 0.4 : 0; // TODO: Implement proper values
+			final double spiritshotHitTime = (creature.isChargedShot(ShotType.SPIRITSHOTS) || creature.isChargedShot(ShotType.BLESSED_SPIRITSHOTS)) ? 0.4 : 0; // TODO: Implement propper values
 			factor = creature.getStat().getMAttackSpeedMultiplier() + (creature.getStat().getMAttackSpeedMultiplier() * spiritshotHitTime); // matkspdmul + (matkspdmul * spiritshot_hit_time)
 		}
 		else
@@ -538,7 +541,7 @@ public final class Formulas
 		}
 		
 		final int degreeside = target.isAffected(EffectFlag.PHYSICAL_SHIELD_ANGLE_ALL) ? 360 : 120;
-		if ((degreeside < 360) && (!target.isFacing(attacker, degreeside)))
+		if ((degreeside < 360) && (Math.abs(target.calculateDirectionTo(attacker) - Util.convertHeadingToDegree(target.getHeading())) > (degreeside / 2)))
 		{
 			return 0;
 		}

@@ -78,11 +78,11 @@ public class ConditionPlayerState extends Condition
 			}
 			case BEHIND:
 			{
-				return (effector.isBehindTarget() == _required);
+				return (effector.isBehind(effected) == _required);
 			}
 			case FRONT:
 			{
-				return (effector.isInFrontOfTarget() == _required);
+				return (effector.isInFrontOf(effected) == _required);
 			}
 			case CHAOTIC:
 			{

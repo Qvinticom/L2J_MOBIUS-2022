@@ -324,7 +324,7 @@ public final class BalokWarzone extends AbstractInstance
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (!npc.isDead() && caster.isBehindTarget())
+		if (!npc.isDead() && caster.isBehind(npc))
 		{
 			final BuffInfo info = npc.getEffectList().getBuffInfoBySkillId(INVINCIBILITY_ACTIVATION.getSkillId());
 			if ((info != null) && (getRandom(100) < 40))

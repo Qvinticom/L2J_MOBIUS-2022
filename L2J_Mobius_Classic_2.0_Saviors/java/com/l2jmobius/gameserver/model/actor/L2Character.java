@@ -55,6 +55,7 @@ import com.l2jmobius.gameserver.enums.BasicProperty;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
+import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
@@ -315,11 +316,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		setInstanceType(InstanceType.L2Character);
-		initCharStat();
-		initCharStatus();
-		
 		// Set its template to the new L2Character
 		_template = template;
+		initCharStat();
+		initCharStatus();
 		
 		if (isNpc())
 		{
@@ -4049,125 +4049,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * @param target
-	 * @return True if the L2Character is behind the target and can't be seen.
-	 */
-	public boolean isBehind(L2Object target)
-	{
-		double angleChar, angleTarget, angleDiff;
-		final double maxAngleDiff = 60;
-		
-		if (target == null)
-		{
-			return false;
-		}
-		
-		if (target.isCharacter())
-		{
-			final L2Character target1 = (L2Character) target;
-			angleChar = Util.calculateAngleFrom(this, target1);
-			angleTarget = Util.convertHeadingToDegree(target1.getHeading());
-			angleDiff = angleChar - angleTarget;
-			if (angleDiff <= (-360 + maxAngleDiff))
-			{
-				angleDiff += 360;
-			}
-			if (angleDiff >= (360 - maxAngleDiff))
-			{
-				angleDiff -= 360;
-			}
-			if (Math.abs(angleDiff) <= maxAngleDiff)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public boolean isBehindTarget()
-	{
-		return isBehind(getTarget());
-	}
-	
-	/**
-	 * @param isAttacking if its an attack to be check, or the character itself.
-	 * @return
-	 */
-	public boolean isBehindTarget(boolean isAttacking)
-	{
-		if (isAttacking && isAffected(EffectFlag.ATTACK_BEHIND))
-		{
-			return true;
-		}
-		
-		return isBehind(getTarget());
-	}
-	
-	/**
-	 * @param target
-	 * @return True if the target is facing the L2Character.
-	 */
-	public boolean isInFrontOf(L2Character target)
-	{
-		double angleChar, angleTarget, angleDiff;
-		final double maxAngleDiff = 60;
-		if (target == null)
-		{
-			return false;
-		}
-		
-		angleTarget = Util.calculateAngleFrom(target, this);
-		angleChar = Util.convertHeadingToDegree(target.getHeading());
-		angleDiff = angleChar - angleTarget;
-		if (angleDiff <= (-360 + maxAngleDiff))
-		{
-			angleDiff += 360;
-		}
-		if (angleDiff >= (360 - maxAngleDiff))
-		{
-			angleDiff -= 360;
-		}
-		return Math.abs(angleDiff) <= maxAngleDiff;
-	}
-	
-	/**
-	 * @param target
-	 * @param maxAngle
-	 * @return true if target is in front of L2Character (shield def etc)
-	 */
-	public boolean isFacing(L2Object target, int maxAngle)
-	{
-		double angleChar, angleTarget, angleDiff, maxAngleDiff;
-		if (target == null)
-		{
-			return false;
-		}
-		maxAngleDiff = maxAngle / 2.;
-		angleTarget = Util.calculateAngleFrom(this, target);
-		angleChar = Util.convertHeadingToDegree(getHeading());
-		angleDiff = angleChar - angleTarget;
-		if (angleDiff <= (-360 + maxAngleDiff))
-		{
-			angleDiff += 360;
-		}
-		if (angleDiff >= (360 - maxAngleDiff))
-		{
-			angleDiff -= 360;
-		}
-		return Math.abs(angleDiff) <= maxAngleDiff;
-	}
-	
-	public boolean isInFrontOfTarget()
-	{
-		final L2Object target = getTarget();
-		if (target instanceof L2Character)
-		{
-			return isInFrontOf((L2Character) target);
-		}
-		return false;
-	}
-	
-	/**
 	 * @return the Level Modifier ((level + 89) / 100).
 	 */
 	public double getLevelMod()
@@ -4422,11 +4303,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (!reflect && !isDOT)
 		{
-			// RearDamage effect bonus.
-			if (isBehind(target))
-			{
-				damage *= getStat().getValue(Stats.REAR_DAMAGE_RATE, 1);
-			}
+			damage *= getStat().getPositionTypeValue(Stats.ATTACK_DAMAGE, Position.getPosition(this, target));
 			
 			// Counterattacks happen before damage received.
 			if (!target.isDead() && (skill != null))

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.enums;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.interfaces.ILocational;
 
 /**
  * @author Sdw
@@ -27,8 +27,32 @@ public enum Position
 	SIDE,
 	BACK;
 	
-	public static Position getPosition(L2Character effector, L2Character effected)
+	/**
+	 * Position calculation based on the retail-like formulas:<br>
+	 * <ul>
+	 * <li>heading: (unsigned short) abs(heading - (unsigned short)(int)floor(atan2(toY - fromY, toX - fromX) * 65535.0 / 6.283185307179586))</li>
+	 * <li>side: if (heading >= 0x2000 && heading <= 0x6000 || (unsigned int)(heading - 0xA000) <= 0x4000)</li>
+	 * <li>front: else if ((unsigned int)(heading - 0x2000) <= 0xC000)</li>
+	 * <li>back: otherwise.</li>
+	 * </ul>
+	 * @param from
+	 * @param to
+	 * @return
+	 */
+	public static Position getPosition(ILocational from, ILocational to)
 	{
-		return effector.isInFrontOf(effected) ? FRONT : (effector.isBehind(effected) ? BACK : SIDE);
+		final int heading = Math.abs(to.getHeading() - from.calculateHeadingTo(to));
+		if (((heading >= 0x2000) && (heading <= 0x6000)) || (Integer.toUnsignedLong(heading - 0xA000) <= 0x4000))
+		{
+			return SIDE;
+		}
+		else if (Integer.toUnsignedLong(heading - 0x2000) <= 0xC000)
+		{
+			return FRONT;
+		}
+		else
+		{
+			return BACK;
+		}
 	}
 }
