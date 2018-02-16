@@ -118,6 +118,14 @@ public final class Formulas
 		final Position position = Position.getPosition(attacker, target);
 		final double isPosition = position == Position.BACK ? 0.2 : position == Position.SIDE ? 0.05 : 0;
 		
+		// Mobius: Fix for way too low blow damage.
+		power *= 5;
+		// Mobius: Manage level difference as well.
+		if (attacker.getLevel() < target.getLevel())
+		{
+			power *= 1 - (Math.min(target.getLevel() - attacker.getLevel(), 9) / 10);
+		}
+		
 		// ........................_____________________________Initial Damage____________________________...___________Position Additional Damage___________..._CriticalAdd_
 		// ATTACK CALCULATION 77 * [(skillpower+patk) * 0.666 * cdbonus * cdPosBonusHalf * cdVulnHalf * ss + isBack0.2Side0.05 * (skillpower+patk*ss) * random + 6 * cd_patk] / pdef
 		// ````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^```^^^^^^^^^^^^
