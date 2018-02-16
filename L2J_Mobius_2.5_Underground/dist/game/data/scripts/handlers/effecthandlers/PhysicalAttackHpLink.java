@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -25,7 +24,6 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -80,7 +78,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		}
 		
 		final double attack = effector.getPAtk();
-		final double power = _power * (-((effected.getCurrentHp() * 2) / effected.getMaxHp()) + 2);
+		final double power = _power;
 		double defence = effected.getPDef();
 		
 		switch (Formulas.calcShldUse(effector, effected))
@@ -98,7 +96,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		}
 		
 		double damage = 1;
-		final boolean critical = (_criticalChance > 0) && ((BaseStats.STR.calcBonus(effector) * _criticalChance) > (Rnd.nextDouble() * 100));
+		final boolean critical = Formulas.calcCrit(_criticalChance, effector, effected, skill);
 		
 		if (defence != -1)
 		{
@@ -110,9 +108,9 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			final double randomMod = effector.getRandomDamageMultiplier();
 			
 			// Skill specific mods.
-			final double wpnMod = effector.getAttackType().isRanged() ? 70 : (70 * 1.10113);
+			final double wpnMod = effector.getAttackType().isRanged() ? 70 : 77;
 			final double rangedBonus = effector.getAttackType().isRanged() ? (attack + _power) : 0;
-			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
+			final double critMod = critical ? (2 * Formulas.calcCritDamage(effector, effected, skill)) : 1;
 			double ssmod = 1;
 			if (skill.useSoulShot())
 			{
@@ -132,6 +130,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
 			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
+			damage *= Math.max(1.0d, ((100 - ((effected.getCurrentHp() / effected.getMaxHp()) * 100) - 40) * 2) / 100);
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);

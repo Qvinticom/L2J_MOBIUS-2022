@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -25,7 +24,6 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -108,7 +106,7 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 		}
 		
 		double damage = 1;
-		final boolean critical = (_criticalChance > 0) && ((BaseStats.STR.calcBonus(effector) * _criticalChance) > (Rnd.nextDouble() * 100));
+		final boolean critical = Formulas.calcCrit(_criticalChance, effector, effected, skill);
 		
 		if (defence != -1)
 		{
@@ -120,7 +118,7 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			final double randomMod = effector.getRandomDamageMultiplier();
 			
 			// Skill specific mods.
-			final double wpnMod = effector.getAttackType().isRanged() ? 70 : (70 * 1.10113);
+			final double wpnMod = effector.getAttackType().isRanged() ? 70 : 77;
 			final double rangedBonus = effector.getAttackType().isRanged() ? (attack + _power) : 0;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
 			double ssmod = 1;

@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -26,7 +25,6 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -126,7 +124,7 @@ public final class EnergyAttack extends AbstractEffect
 		}
 		
 		double damage = 1;
-		final boolean critical = (_criticalChance > 0) && ((BaseStats.STR.calcBonus(attacker) * _criticalChance) > (Rnd.nextDouble() * 100));
+		final boolean critical = Formulas.calcCrit(_criticalChance, attacker, effected, skill);
 		
 		if (defence != -1)
 		{
@@ -138,7 +136,7 @@ public final class EnergyAttack extends AbstractEffect
 			
 			// Skill specific mods.
 			final double energyChargesBoost = 1 + (charge * 0.1); // 10% bonus damage for each charge used.
-			final double critMod = critical ? Formulas.calcCritDamage(attacker, effected, skill) : 1;
+			final double critMod = critical ? (2 * Formulas.calcCritDamage(attacker, effected, skill)) : 1;
 			double ssmod = 1;
 			if (skill.useSoulShot())
 			{
