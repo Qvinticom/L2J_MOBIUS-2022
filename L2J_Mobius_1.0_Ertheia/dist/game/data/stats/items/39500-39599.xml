@@ -1005,69 +1005,108 @@
 	<item id="39563" name="Talisman - Wind Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39564" min="1" max="1" chance="25" />
+			<item id="39565" min="1" max="1" chance="25" />
+			<item id="39566" min="1" max="1" chance="25" />
+			<item id="39567" min="1" max="1" chance="25" />
+		</capsuled_items>
 	</item>
-	<item id="39564" name="Talisman - Wind Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind: P. Critical Damage. Cannot be used in the Olympiad. -->
+	<item id="39564" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
+		<!-- Wrapped Pack containing a Talisman - Wind: P. Skill Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39568" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
-	<item id="39565" name="Talisman - Wind Pack" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind: M. Critical Damage. Cannot be used in the Olympiad. -->
+	<item id="39565" name="Talisman - Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
+		<!-- Wrapped Pack containing a Talisman - Wind: M. Skill Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39569" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="39566" name="Talisman - Wind Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: Defense. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39570" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="39567" name="Talisman - Wind Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: Debuff Resistance. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<capsuled_items>
+			<item id="39571" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
-	<item id="39568" name="Talisman - Wind: P. Critical Damage" type="Armor">
+	<item id="39568" name="Talisman - Wind: P. Critical Damage" additionalName="Passive" type="Armor">
 		<!-- P. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="duration" val="10800" />
 		<skills>
 			<skill id="17973" level="1" />
 		</skills>
 	</item>
-	<item id="39569" name="Talisman - Wind: M. Critical Damage" type="Armor">
+	<item id="39569" name="Talisman - Wind: M. Critical Damage" additionalName="Passive" type="Armor">
 		<!-- M. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="duration" val="10800" />
 		<skills>
 			<skill id="17974" level="1" />
 		</skills>
@@ -1079,13 +1118,13 @@
 		<set name="bodypart" val="deco1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="duration" val="10800" />
 		<skills>
 			<skill id="17975" level="1" />
 		</skills>
@@ -1097,13 +1136,13 @@
 		<set name="bodypart" val="deco1" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="true" />
+		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
+		<set name="duration" val="10800" />
 		<skills>
 			<skill id="17976" level="1" />
 		</skills>
