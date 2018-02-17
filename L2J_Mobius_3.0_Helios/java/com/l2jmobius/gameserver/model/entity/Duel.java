@@ -71,7 +71,7 @@ public class Duel
 	private final boolean _partyDuel;
 	private final Calendar _duelEndTime;
 	private int _surrenderRequest = 0;
-	private int _countdown = 4;
+	private int _countdown = 5;
 	private boolean _finished = false;
 	
 	private final Map<Integer, PlayerCondition> _playerConditions = new ConcurrentHashMap<>();
