@@ -79,6 +79,7 @@ public final class InstanceManager implements IGameXmlReader
 	
 	protected InstanceManager()
 	{
+		load();
 	}
 	
 	// --------------------------------------------------------------------

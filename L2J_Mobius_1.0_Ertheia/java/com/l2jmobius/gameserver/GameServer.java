@@ -295,7 +295,7 @@ public class GameServer
 		CommissionManager.getInstance();
 		
 		printSection("Instance");
-		InstanceManager.getInstance().load();
+		InstanceManager.getInstance();
 		
 		printSection("Olympiad");
 		Olympiad.getInstance();
