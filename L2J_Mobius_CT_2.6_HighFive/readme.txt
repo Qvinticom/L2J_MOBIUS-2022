@@ -1,6 +1,6 @@
 L2J-Mobius High Five
 
-Client: http://computergames.ro/download/lineage-ii-the-chaotic-throne-high-five-client/
+Client: https://mega.nz/#!BZVjgI7L!bIJp-VpomuUGkqUZSGBE-VUXs_eLEpX21s_IaIM6g8E
 Geodata: http://www.mediafire.com/file/41cpkch7kyhhzqy/mobius_geodata_h5_l2d.zip
 
 What is done
