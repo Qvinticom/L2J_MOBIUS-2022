@@ -59,7 +59,7 @@ public final class Q00404_PathOfTheHumanWizard extends Quest
 	// Quest Monster
 	private static final int WATER_SEER = 27030;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00404_PathOfTheHumanWizard()
 	{
@@ -181,11 +181,18 @@ public final class Q00404_PathOfTheHumanWizard extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == PARINA)
 			{
 				htmltext = "30391-04.htm";
+			}
+		}
+		if (qs.isCompleted())
+		{
+			if (npc.getId() == PARINA)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -200,7 +207,6 @@ public final class Q00404_PathOfTheHumanWizard extends Quest
 					}
 					else
 					{
-						giveAdena(player, 163800, true);
 						takeItems(player, FLAME_EARING, 1);
 						takeItems(player, WIND_BANGLE, 1);
 						takeItems(player, WATER_NECKLACE, 1);
@@ -212,15 +218,15 @@ public final class Q00404_PathOfTheHumanWizard extends Quest
 						final int level = player.getLevel();
 						if (level >= 20)
 						{
-							addExpAndSp(player, 320534, 23152);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else if (level == 19)
 						{
-							addExpAndSp(player, 456128, 29850);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else
 						{
-							addExpAndSp(player, 591724, 36548);
+							addExpAndSp(player, 80314, 5087);
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));

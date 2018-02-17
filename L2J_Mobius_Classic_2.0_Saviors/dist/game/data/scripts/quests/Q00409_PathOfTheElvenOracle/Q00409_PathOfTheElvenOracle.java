@@ -47,7 +47,7 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 	// Reward
 	private static final int LEAF_OF_ORACLE = 1235;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	// Quest Monster
 	private static final int lIZARDMAN_WARRIOR = 27032;
 	private static final int LIZARDMAN_SCOUT = 27033;
@@ -250,7 +250,7 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == PRIEST_MANUEL)
 			{
@@ -262,6 +262,13 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 				{
 					htmltext = "30293-04.htm";
 				}
+			}
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == PRIEST_MANUEL)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -290,20 +297,19 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 						{
 							if (!hasQuestItems(player, HALF_OF_DAIRY))
 							{
-								giveAdena(player, 163800, true);
 								giveItems(player, LEAF_OF_ORACLE, 1);
 								final int level = player.getLevel();
 								if (level >= 20)
 								{
-									addExpAndSp(player, 320534, 20392);
+									addExpAndSp(player, 80314, 5087);
 								}
 								else if (level == 19)
 								{
-									addExpAndSp(player, 456128, 27090);
+									addExpAndSp(player, 80314, 5087);
 								}
 								else
 								{
-									addExpAndSp(player, 591724, 33788);
+									addExpAndSp(player, 80314, 5087);
 								}
 								qs.exitQuest(false, true);
 								player.sendPacket(new SocialAction(player.getObjectId(), 3));

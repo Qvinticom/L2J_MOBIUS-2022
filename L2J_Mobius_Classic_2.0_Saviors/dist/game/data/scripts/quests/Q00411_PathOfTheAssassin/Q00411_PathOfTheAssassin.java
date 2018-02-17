@@ -49,7 +49,7 @@ public final class Q00411_PathOfTheAssassin extends Quest
 	// Quest Monster
 	private static final int CALPICO = 27036;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00411_PathOfTheAssassin()
 	{
@@ -187,7 +187,7 @@ public final class Q00411_PathOfTheAssassin extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == TRISKEL)
 			{
@@ -201,6 +201,13 @@ public final class Q00411_PathOfTheAssassin extends Quest
 				}
 			}
 		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == TRISKEL)
+			{
+				return htmltext;
+			}
+		}
 		else if (qs.isStarted())
 		{
 			switch (npc.getId())
@@ -209,20 +216,19 @@ public final class Q00411_PathOfTheAssassin extends Quest
 				{
 					if (!hasAtLeastOneQuestItem(player, ARKENIAS_LETTER, LEIKANS_NOTE, SHILENS_TEARS, IRON_HEART) && hasQuestItems(player, ARKENIAS_RECOMMENDATION))
 					{
-						giveAdena(player, 163800, true);
 						giveItems(player, IRON_HEART, 1);
 						final int level = player.getLevel();
 						if (level >= 20)
 						{
-							addExpAndSp(player, 320534, 35830);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else if (level == 19)
 						{
-							addExpAndSp(player, 456128, 35830);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else
 						{
-							addExpAndSp(player, 591724, 42528);
+							addExpAndSp(player, 80314, 5087);
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));

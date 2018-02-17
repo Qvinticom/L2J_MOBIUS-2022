@@ -241,11 +241,18 @@ public final class Q00401_PathOfTheWarrior extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == MASTER_AURON)
 			{
 				htmltext = "30010-01.htm";
+			}
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == MASTER_AURON)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -274,9 +281,8 @@ public final class Q00401_PathOfTheWarrior extends Quest
 						}
 						else
 						{
-							// giveAdena(player, 1000, true); No Longer Gives Adena
 							giveItems(player, MEDALLION_OF_WARRIOR, 1);
-							addExpAndSp(player, 6080, 0); // Player now only gets EXP Fixed rate.
+							addExpAndSp(player, 80314, 5087); // Player now only gets EXP Fixed rate.
 							qs.exitQuest(false, true);
 							player.sendPacket(new SocialAction(player.getObjectId(), 3));
 							htmltext = "30010-13.html";

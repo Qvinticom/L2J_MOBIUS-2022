@@ -53,7 +53,7 @@ public final class Q00407_PathOfTheElvenScout extends Quest
 	// Quest Monster
 	private static final int OL_MAHUM_SENTRY = 27031;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00407_PathOfTheElvenScout()
 	{
@@ -214,11 +214,18 @@ public final class Q00407_PathOfTheElvenScout extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == MASTER_REORIA)
 			{
 				htmltext = "30328-01.htm";
+			}
+		}
+		if (qs.isCompleted())
+		{
+			if (npc.getId() == MASTER_REORIA)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -242,17 +249,16 @@ public final class Q00407_PathOfTheElvenScout extends Quest
 						final int level = player.getLevel();
 						if (level >= 20)
 						{
-							addExpAndSp(player, 320534, 19932);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else if (level == 19)
 						{
-							addExpAndSp(player, 456128, 26630);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else
 						{
-							addExpAndSp(player, 591724, 33328);
+							addExpAndSp(player, 80314, 5087);
 						}
-						giveAdena(player, 163800, true);
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
 						htmltext = "30328-07.html";

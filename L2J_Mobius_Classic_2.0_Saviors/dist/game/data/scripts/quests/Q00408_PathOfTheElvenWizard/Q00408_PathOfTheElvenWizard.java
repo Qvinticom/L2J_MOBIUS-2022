@@ -57,7 +57,7 @@ public final class Q00408_PathOfTheElvenWizard extends Quest
 	private static final int SUKAR_WERERAT_LEADER = 20047;
 	private static final int PINCER_SPIDER = 20466;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00408_PathOfTheElvenWizard()
 	{
@@ -261,11 +261,18 @@ public final class Q00408_PathOfTheElvenWizard extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == ROSSELA)
 			{
 				htmltext = "30414-01.htm";
+			}
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == ROSSELA)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -327,7 +334,6 @@ public final class Q00408_PathOfTheElvenWizard extends Quest
 					{
 						if (!hasAtLeastOneQuestItem(player, ROSELLAS_LETTER, APPETIZING_APPLE, IMMORTAL_LOVE, GREENISS_CHARM, SAP_OF_THE_MOTHER_TREE, LUCKY_POTPOURRI) && hasQuestItems(player, FERTILITY_PERIDOT, MAGICAL_POWERS_RUBY, NOBILITY_AMETHYST, PURE_AQUAMARINE))
 						{
-							giveAdena(player, 163800, true);
 							if (!hasQuestItems(player, ETERNITY_DIAMOND))
 							{
 								giveItems(player, ETERNITY_DIAMOND, 1);
@@ -335,15 +341,15 @@ public final class Q00408_PathOfTheElvenWizard extends Quest
 							final int level = player.getLevel();
 							if (level >= 20)
 							{
-								addExpAndSp(player, 320534, 22532);
+								addExpAndSp(player, 80314, 5087);
 							}
 							else if (level == 19)
 							{
-								addExpAndSp(player, 456128, 29230);
+								addExpAndSp(player, 80314, 5087);
 							}
 							else
 							{
-								addExpAndSp(player, 591724, 35928);
+								addExpAndSp(player, 80314, 5087);
 							}
 							qs.exitQuest(false, true);
 							player.sendPacket(new SocialAction(player.getObjectId(), 3));

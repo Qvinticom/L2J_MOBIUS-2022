@@ -63,7 +63,7 @@ public final class Q00403_PathOfTheRogue extends Quest
 	// Reward
 	private static final int BEZIQUES_RECOMMENDATION = 1190;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	private static final int REQUIRED_ITEM_COUNT = 10;
 	// Quest Monster
 	private static final int CATS_EYE_BANDIT = 27038;
@@ -269,11 +269,18 @@ public final class Q00403_PathOfTheRogue extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == CAPTAIN_BEZIQUE)
 			{
 				htmltext = "30379-01.htm";
+			}
+		}
+		if (qs.isCompleted())
+		{
+			if (npc.getId() == CAPTAIN_BEZIQUE)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -284,7 +291,6 @@ public final class Q00403_PathOfTheRogue extends Quest
 				{
 					if (hasQuestItems(player, STOLEN_JEWELRY, STOLEN_TOMES, STOLEN_RING, STOLEN_NECKLACE))
 					{
-						giveAdena(player, 163800, true);
 						takeItems(player, NETIS_BOW, 1);
 						takeItems(player, NETIS_DAGGER, 1);
 						takeItems(player, MOST_WANTED_LIST, 1);
@@ -296,15 +302,15 @@ public final class Q00403_PathOfTheRogue extends Quest
 						final int level = player.getLevel();
 						if (level >= 20)
 						{
-							addExpAndSp(player, 320534, 20232);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else if (level == 19)
 						{
-							addExpAndSp(player, 456128, 26930);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else
 						{
-							addExpAndSp(player, 591724, 33628);
+							addExpAndSp(player, 80314, 5087);
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));

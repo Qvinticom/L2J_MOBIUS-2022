@@ -56,7 +56,7 @@ public final class Q00412_PathOfTheDarkWizard extends Quest
 	private static final int SKELETON_HUNTER = 20517;
 	private static final int SKELETON_HUNTER_ARCHER = 20518;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00412_PathOfTheDarkWizard()
 	{
@@ -246,7 +246,7 @@ public final class Q00412_PathOfTheDarkWizard extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == VARIKA)
 			{
@@ -260,6 +260,13 @@ public final class Q00412_PathOfTheDarkWizard extends Quest
 				}
 			}
 		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == VARIKA)
+			{
+				return htmltext;
+			}
+		}
 		else if (qs.isStarted())
 		{
 			switch (npc.getId())
@@ -268,20 +275,19 @@ public final class Q00412_PathOfTheDarkWizard extends Quest
 				{
 					if (hasQuestItems(player, SEEDS_OF_DESPAIR, SEEDS_OF_HORROR, SEEDS_OF_LUNACY, SEEDS_OF_ANGER))
 					{
-						giveAdena(player, 163800, true);
 						giveItems(player, JEWEL_OF_DARKNESS, 1);
 						final int level = player.getLevel();
 						if (level >= 20)
 						{
-							addExpAndSp(player, 320534, 28630);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else if (level == 19)
 						{
-							addExpAndSp(player, 456128, 28630);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else
 						{
-							addExpAndSp(player, 591724, 35328);
+							addExpAndSp(player, 80314, 5087);
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));

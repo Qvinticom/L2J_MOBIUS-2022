@@ -49,7 +49,7 @@ public final class Q00410_PathOfThePalusKnight extends Quest
 	private static final int ARACHNID_TRACKER = 20043;
 	private static final int LYCANTHROPE = 20049;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00410_PathOfThePalusKnight()
 	{
@@ -214,11 +214,18 @@ public final class Q00410_PathOfThePalusKnight extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == MASTER_VIRGIL)
 			{
 				htmltext = "30329-01.htm";
+			}
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == MASTER_VIRGIL)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -244,20 +251,19 @@ public final class Q00410_PathOfThePalusKnight extends Quest
 					}
 					else if (hasQuestItems(player, COFFIN_OF_ETERNAL_REST))
 					{
-						giveAdena(player, 163800, true);
 						giveItems(player, GAZE_OF_ABYSS, 1);
 						final int level = player.getLevel();
 						if (level >= 20)
 						{
-							addExpAndSp(player, 320534, 26212);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else if (level == 19)
 						{
-							addExpAndSp(player, 456128, 32910);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else
 						{
-							addExpAndSp(player, 591724, 39608);
+							addExpAndSp(player, 80314, 5087);
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));

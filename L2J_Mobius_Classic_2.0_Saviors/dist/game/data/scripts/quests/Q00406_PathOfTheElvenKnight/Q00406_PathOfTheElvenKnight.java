@@ -47,7 +47,7 @@ public final class Q00406_PathOfTheElvenKnight extends Quest
 	// Reward
 	private static final int ELVEN_KNIGHT_BROOCH = 1204;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	// Mobs
 	private static final int OL_MAHUM_NOVICE = 20782;
 	private static final Map<Integer, ItemChanceHolder> MONSTER_DROPS = new HashMap<>();
@@ -169,11 +169,18 @@ public final class Q00406_PathOfTheElvenKnight extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == MASTER_SORIUS)
 			{
 				htmltext = "30327-01.htm";
+			}
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == MASTER_SORIUS)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -208,7 +215,6 @@ public final class Q00406_PathOfTheElvenKnight extends Quest
 					}
 					else
 					{
-						giveAdena(player, 163800, true);
 						if (!hasQuestItems(player, ELVEN_KNIGHT_BROOCH))
 						{
 							giveItems(player, ELVEN_KNIGHT_BROOCH, 1);
@@ -216,15 +222,15 @@ public final class Q00406_PathOfTheElvenKnight extends Quest
 						final int level = player.getLevel();
 						if (level >= 20)
 						{
-							addExpAndSp(player, 320534, 23152);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else if (level == 19)
 						{
-							addExpAndSp(player, 456128, 29850);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else
 						{
-							addExpAndSp(player, 591724, 33328);
+							addExpAndSp(player, 80314, 5087);
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));

@@ -140,6 +140,11 @@ import quests.Q00410_PathOfThePalusKnight.Q00410_PathOfThePalusKnight;
 import quests.Q00411_PathOfTheAssassin.Q00411_PathOfTheAssassin;
 import quests.Q00412_PathOfTheDarkWizard.Q00412_PathOfTheDarkWizard;
 import quests.Q00413_PathOfTheShillienOracle.Q00413_PathOfTheShillienOracle;
+import quests.Q00414_PathOfTheOrcRaider.Q00414_PathOfTheOrcRaider;
+import quests.Q00415_PathOfTheOrcMonk.Q00415_PathOfTheOrcMonk;
+import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
+import quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger;
+import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q11000_MoonKnight.Q11000_MoonKnight;
 
@@ -305,11 +310,11 @@ public class QuestMasterHandler
 		Q00411_PathOfTheAssassin.class,
 		Q00412_PathOfTheDarkWizard.class,
 		Q00413_PathOfTheShillienOracle.class,
-		// TODO: Q00414_PathOfTheOrcRaider.class,
-		// TODO: Q00415_PathOfTheOrcMonk.class,
-		// TODO: Q00416_PathOfTheOrcShaman.class,
-		// TODO: Q00417_PathOfTheScavenger.class,
-		// TODO: Q00418_PathOfTheArtisan.class,
+		Q00414_PathOfTheOrcRaider.class,
+		Q00415_PathOfTheOrcMonk.class,
+		Q00416_PathOfTheOrcShaman.class,
+		Q00417_PathOfTheScavenger.class,
+		Q00418_PathOfTheArtisan.class,
 		Q00662_AGameOfCards.class,
 		Q11000_MoonKnight.class,
 	};

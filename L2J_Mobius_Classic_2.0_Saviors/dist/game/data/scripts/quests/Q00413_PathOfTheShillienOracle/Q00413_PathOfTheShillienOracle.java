@@ -53,7 +53,7 @@ public final class Q00413_PathOfTheShillienOracle extends Quest
 	private static final int SKELETON_INFANTRYMAN = 20515;
 	private static final int DARK_SUCCUBUS = 20776;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00413_PathOfTheShillienOracle()
 	{
@@ -203,11 +203,18 @@ public final class Q00413_PathOfTheShillienOracle extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == MAGISTER_SIDRA)
 			{
 				htmltext = "30330-01.htm";
+			}
+		}
+		else if (qs.isCompleted())
+		{
+			if (npc.getId() == MAGISTER_SIDRA)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -230,20 +237,19 @@ public final class Q00413_PathOfTheShillienOracle extends Quest
 					}
 					else if (hasAtLeastOneQuestItem(player, ANDARIEL_BOOK, GARMIELS_BOOK))
 					{
-						giveAdena(player, 163800, true);
 						giveItems(player, ORB_OF_ABYSS, 1);
 						final int level = player.getLevel();
 						if (level >= 20)
 						{
-							addExpAndSp(player, 320534, 26532);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else if (level == 19)
 						{
-							addExpAndSp(player, 456128, 33230);
+							addExpAndSp(player, 80314, 5087);
 						}
 						else
 						{
-							addExpAndSp(player, 591724, 39928);
+							addExpAndSp(player, 80314, 5087);
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));

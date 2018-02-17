@@ -77,7 +77,7 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 	// Quest Monster
 	private static final int UNDEAD_PRIEST = 27024;
 	// Misc
-	private static final int MIN_LEVEL = 18;
+	private static final int MIN_LEVEL = 19;
 	
 	public Q00402_PathOfTheHumanKnight()
 	{
@@ -151,7 +151,6 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 			{
 				if (hasQuestItems(player, SQUIRES_MARK) && ((CoinCount) == 3))
 				{
-					giveAdena(player, 81900, true);
 					giveItems(player, SWORD_OF_RITUAL, 1);
 					takeItems(player, COIN_OF_LORDS1, 1);
 					takeItems(player, COIN_OF_LORDS2, 1);
@@ -175,15 +174,15 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 					final int level = player.getLevel();
 					if (level >= 20)
 					{
-						addExpAndSp(player, 160267, 11576);
+						addExpAndSp(player, 80314, 5087);
 					}
 					else if (level == 19)
 					{
-						addExpAndSp(player, 228064, 14925);
+						addExpAndSp(player, 80314, 5087);
 					}
 					else
 					{
-						addExpAndSp(player, 295862, 18274);
+						addExpAndSp(player, 80314, 5087);
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
@@ -195,7 +194,6 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 			{
 				if (hasQuestItems(player, SQUIRES_MARK) && ((CoinCount) > 3) && ((CoinCount) < 6))
 				{
-					giveAdena(player, 81900, true);
 					giveItems(player, SWORD_OF_RITUAL, 1);
 					takeItems(player, COIN_OF_LORDS1, 1);
 					takeItems(player, COIN_OF_LORDS2, 1);
@@ -219,15 +217,15 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 					final int level = player.getLevel();
 					if (level >= 20)
 					{
-						addExpAndSp(player, 160267, 11576);
+						addExpAndSp(player, 80314, 5087);
 					}
 					else if (level == 19)
 					{
-						addExpAndSp(player, 228064, 14925);
+						addExpAndSp(player, 80314, 5087);
 					}
 					else
 					{
-						addExpAndSp(player, 295862, 18274);
+						addExpAndSp(player, 80314, 5087);
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
@@ -395,11 +393,18 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs.isCreated() || qs.isCompleted())
+		if (qs.isCreated())
 		{
 			if (npc.getId() == SIR_KLAUS_VASPER)
 			{
 				htmltext = "30417-01.htm";
+			}
+		}
+		if (qs.isCompleted())
+		{
+			if (npc.getId() == SIR_KLAUS_VASPER)
+			{
+				return htmltext;
 			}
 		}
 		else if (qs.isStarted())
@@ -425,7 +430,6 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 						}
 						else
 						{
-							giveAdena(player, 163800, true);
 							giveItems(player, SWORD_OF_RITUAL, 1);
 							takeItems(player, COIN_OF_LORDS1, 1);
 							takeItems(player, COIN_OF_LORDS2, 1);
@@ -437,15 +441,15 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 							final int level = player.getLevel();
 							if (level >= 20)
 							{
-								addExpAndSp(player, 320534, 23152);
+								addExpAndSp(player, 80314, 5087);
 							}
 							else if (level == 19)
 							{
-								addExpAndSp(player, 456128, 29850);
+								addExpAndSp(player, 80314, 5087);
 							}
 							else
 							{
-								addExpAndSp(player, 591724, 36542);
+								addExpAndSp(player, 80314, 5087);
 							}
 							qs.exitQuest(false, true);
 							player.sendPacket(new SocialAction(player.getObjectId(), 3));
