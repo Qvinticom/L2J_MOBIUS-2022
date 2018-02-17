@@ -17,10 +17,12 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.datatables.AugmentationData;
-import com.l2jmobius.gameserver.model.Augmentation;
+import com.l2jmobius.gameserver.data.xml.impl.VariationData;
+import com.l2jmobius.gameserver.model.VariationInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.options.Variation;
+import com.l2jmobius.gameserver.model.options.VariationFee;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
@@ -33,17 +35,17 @@ import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 public final class RequestRefine extends AbstractRefinePacket
 {
 	private int _targetItemObjId;
-	private int _refinerItemObjId;
-	private int _gemStoneItemObjId;
-	private long _gemStoneCount;
+	private int _mineralItemObjId;
+	private int _feeItemObjId;
+	private long _feeCount;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_targetItemObjId = packet.readD();
-		_refinerItemObjId = packet.readD();
-		_gemStoneItemObjId = packet.readD();
-		_gemStoneCount = packet.readQ();
+		_mineralItemObjId = packet.readD();
+		_feeItemObjId = packet.readD();
+		_feeCount = packet.readQ();
 		return true;
 	}
 	
@@ -55,77 +57,82 @@ public final class RequestRefine extends AbstractRefinePacket
 		{
 			return;
 		}
+		
 		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
 			return;
 		}
-		final L2ItemInstance refinerItem = activeChar.getInventory().getItemByObjectId(_refinerItemObjId);
-		if (refinerItem == null)
-		{
-			return;
-		}
-		final L2ItemInstance gemStoneItem = activeChar.getInventory().getItemByObjectId(_gemStoneItemObjId);
-		if (gemStoneItem == null)
+		
+		final L2ItemInstance mineralItem = activeChar.getInventory().getItemByObjectId(_mineralItemObjId);
+		if (mineralItem == null)
 		{
 			return;
 		}
 		
-		if (!isValid(activeChar, targetItem, refinerItem, gemStoneItem))
+		final L2ItemInstance feeItem = activeChar.getInventory().getItemByObjectId(_feeItemObjId);
+		if (feeItem == null)
 		{
-			activeChar.sendPacket(new ExVariationResult(0, 0, 0));
+			return;
+		}
+		
+		final VariationFee fee = VariationData.getInstance().getFee(targetItem.getId(), mineralItem.getId());
+		if (!isValid(activeChar, targetItem, mineralItem, feeItem, fee))
+		{
+			activeChar.sendPacket(new ExVariationResult(0, 0, false));
 			activeChar.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
 		
-		final LifeStone ls = getLifeStone(refinerItem.getId());
-		if (ls == null)
+		if (_feeCount != fee.getItemCount())
 		{
+			activeChar.sendPacket(new ExVariationResult(0, 0, false));
+			activeChar.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
 			return;
 		}
 		
-		final int lifeStoneLevel = ls.getLevel();
-		final int lifeStoneGrade = ls.getGrade();
-		if (_gemStoneCount != getGemStoneCount(targetItem.getItem().getCrystalType(), lifeStoneGrade))
+		final Variation variation = VariationData.getInstance().getVariation(mineralItem.getId());
+		if (variation == null)
 		{
-			activeChar.sendPacket(new ExVariationResult(0, 0, 0));
-			activeChar.sendPacket(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS);
+			activeChar.sendPacket(new ExVariationResult(0, 0, false));
+			return;
+		}
+		
+		final VariationInstance augment = VariationData.getInstance().generateRandomVariation(variation, targetItem);
+		if (augment == null)
+		{
+			activeChar.sendPacket(new ExVariationResult(0, 0, false));
 			return;
 		}
 		
 		// unequip item
+		final InventoryUpdate iu = new InventoryUpdate();
 		if (targetItem.isEquipped())
 		{
-			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
-			final InventoryUpdate iu = new InventoryUpdate();
+			L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
 			for (L2ItemInstance itm : unequiped)
 			{
 				iu.addModifiedItem(itm);
 			}
-			activeChar.sendInventoryUpdate(iu);
 			activeChar.broadcastUserInfo();
 		}
 		
 		// consume the life stone
-		if (!activeChar.destroyItem("RequestRefine", refinerItem, 1, null, false))
+		if (!activeChar.destroyItem("RequestRefine", mineralItem, 1, null, false))
 		{
 			return;
 		}
 		
 		// consume the gemstones
-		if (!activeChar.destroyItem("RequestRefine", gemStoneItem, _gemStoneCount, null, false))
+		if (!activeChar.destroyItem("RequestRefine", feeItem, _feeCount, null, false))
 		{
 			return;
 		}
 		
-		final Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade, targetItem.getItem().getBodyPart(), refinerItem.getId(), targetItem);
-		targetItem.setAugmentation(aug, true);
+		targetItem.setAugmentation(augment, true);
+		activeChar.sendPacket(new ExVariationResult(augment.getOption1Id(), augment.getOption2Id(), true));
 		
-		activeChar.sendPacket(new ExVariationResult(aug.getOptionId(0), aug.getOptionId(1), 1));
-		
-		final InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
 		activeChar.sendInventoryUpdate(iu);
 	}
-	
 }

@@ -24,10 +24,10 @@ public class ExPutIntensiveResultForVariationMake implements IClientOutgoingPack
 	private final int _refinerItemObjId;
 	private final int _lifestoneItemId;
 	private final int _gemstoneItemId;
-	private final int _gemstoneCount;
+	private final long _gemstoneCount;
 	private final int _unk2;
 	
-	public ExPutIntensiveResultForVariationMake(int refinerItemObjId, int lifeStoneId, int gemstoneItemId, int gemstoneCount)
+	public ExPutIntensiveResultForVariationMake(int refinerItemObjId, int lifeStoneId, int gemstoneItemId, long gemstoneCount)
 	{
 		_refinerItemObjId = refinerItemObjId;
 		_lifestoneItemId = lifeStoneId;

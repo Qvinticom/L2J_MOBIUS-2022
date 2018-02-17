@@ -50,7 +50,7 @@ public class CharSelectInfoPackage
 	private int _reputation = 0;
 	private int _pkKills = 0;
 	private int _pvpKills = 0;
-	private Augmentation _augmentation;
+	private VariationInstance _augmentation;
 	private int _x = 0;
 	private int _y = 0;
 	private int _z = 0;
@@ -336,12 +336,12 @@ public class CharSelectInfoPackage
 		return _reputation;
 	}
 	
-	public void setAugmentation(Augmentation augmentation)
+	public void setAugmentation(VariationInstance augmentation)
 	{
 		_augmentation = augmentation;
 	}
 	
-	public Augmentation getAugmentation()
+	public VariationInstance getAugmentation()
 	{
 		return _augmentation;
 	}

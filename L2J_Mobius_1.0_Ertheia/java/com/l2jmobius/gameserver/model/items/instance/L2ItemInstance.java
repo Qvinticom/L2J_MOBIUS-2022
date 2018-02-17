@@ -39,7 +39,6 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
-import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -51,12 +50,12 @@ import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
-import com.l2jmobius.gameserver.model.Augmentation;
 import com.l2jmobius.gameserver.model.DropProtection;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.VariationInstance;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -132,7 +131,7 @@ public final class L2ItemInstance extends L2Object
 	private boolean _wear;
 	
 	/** Augmented Item */
-	private Augmentation _augmentation = null;
+	private VariationInstance _augmentation = null;
 	
 	/** Shadow item */
 	private int _mana = -1;
@@ -942,7 +941,7 @@ public final class L2ItemInstance extends L2Object
 	 * Returns the augmentation object for this item
 	 * @return augmentation
 	 */
-	public Augmentation getAugmentation()
+	public VariationInstance getAugmentation()
 	{
 		return _augmentation;
 	}
@@ -953,7 +952,7 @@ public final class L2ItemInstance extends L2Object
 	 * @param updateDatabase
 	 * @return return true if successfully
 	 */
-	public boolean setAugmentation(Augmentation augmentation, boolean updateDatabase)
+	public boolean setAugmentation(VariationInstance augmentation, boolean updateDatabase)
 	{
 		// there shall be no previous augmentation..
 		if (_augmentation != null)
@@ -982,11 +981,11 @@ public final class L2ItemInstance extends L2Object
 		}
 		
 		// Copy augmentation before removing it.
-		final Augmentation augment = _augmentation;
+		final VariationInstance augment = _augmentation;
 		_augmentation = null;
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM item_attributes WHERE itemId = ?"))
+			PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId = ?"))
 		{
 			ps.setInt(1, getObjectId());
 			ps.executeUpdate();
@@ -1003,7 +1002,7 @@ public final class L2ItemInstance extends L2Object
 	public void restoreAttributes()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps1 = con.prepareStatement("SELECT augAttributes FROM item_attributes WHERE itemId=?");
+			PreparedStatement ps1 = con.prepareStatement("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId=?");
 			PreparedStatement ps2 = con.prepareStatement("SELECT elemType,elemValue FROM item_elementals WHERE itemId=?"))
 		{
 			ps1.setInt(1, getObjectId());
@@ -1011,10 +1010,12 @@ public final class L2ItemInstance extends L2Object
 			{
 				if (rs.next())
 				{
-					final int aug_attributes = rs.getInt(1);
-					if (aug_attributes != -1)
+					int mineralId = rs.getInt("mineralId");
+					int option1 = rs.getInt("option1");
+					int option2 = rs.getInt("option2");
+					if ((option1 != -1) && (option2 != -1))
 					{
-						_augmentation = AugmentationData.getInstance().getAugmentation(rs.getInt("augAttributes"));
+						_augmentation = new VariationInstance(mineralId, option1, option2);
 					}
 				}
 			}
@@ -1053,10 +1054,12 @@ public final class L2ItemInstance extends L2Object
 	
 	private void updateItemOptions(Connection con)
 	{
-		try (PreparedStatement ps = con.prepareStatement("REPLACE INTO item_attributes VALUES(?,?)"))
+		try (PreparedStatement ps = con.prepareStatement("REPLACE INTO item_variations VALUES(?,?,?,?)"))
 		{
 			ps.setInt(1, getObjectId());
-			ps.setInt(2, _augmentation != null ? _augmentation.getId() : -1);
+			ps.setInt(2, _augmentation != null ? _augmentation.getMineralId() : 0);
+			ps.setInt(3, _augmentation != null ? _augmentation.getOption1Id() : -1);
+			ps.setInt(4, _augmentation != null ? _augmentation.getOption2Id() : -1);
 			ps.executeUpdate();
 		}
 		catch (SQLException e)
@@ -1691,7 +1694,7 @@ public final class L2ItemInstance extends L2Object
 				ps.executeUpdate();
 			}
 			
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_attributes WHERE itemId = ?"))
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId = ?"))
 			{
 				ps.setInt(1, getObjectId());
 				ps.executeUpdate();

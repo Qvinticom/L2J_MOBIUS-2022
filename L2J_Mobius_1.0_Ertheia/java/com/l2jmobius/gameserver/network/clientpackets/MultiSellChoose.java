@@ -159,7 +159,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			|| (itemEnchantment.getAttributeDefence(AttributeType.HOLY) != _holyDefence)
 			|| (itemEnchantment.getAttributeDefence(AttributeType.DARK) != _darkDefence)
 			|| ((itemEnchantment.getAugmentation() == null) && ((_augmentOption1 != 0) || (_augmentOption2 != 0)))
-			|| ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getOptionId(0) != _augmentOption1) || (itemEnchantment.getAugmentation().getOptionId(1) != _augmentOption2)))
+			|| ((itemEnchantment.getAugmentation() != null) && ((itemEnchantment.getAugmentation().getOption1Id() != _augmentOption1) || (itemEnchantment.getAugmentation().getOption2Id() != _augmentOption2)))
 			))
 		//@formatter:on
 		{

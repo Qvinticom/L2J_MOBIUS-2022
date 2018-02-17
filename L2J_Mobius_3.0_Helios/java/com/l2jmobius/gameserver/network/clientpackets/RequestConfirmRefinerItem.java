@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.datatables.AugmentationData;
+import com.l2jmobius.gameserver.data.xml.impl.VariationData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.CrystalType;
+import com.l2jmobius.gameserver.model.options.VariationFee;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutIntensiveResultForVariationMake;
@@ -63,33 +63,13 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 			return;
 		}
 		
-		if (!AugmentationData.getInstance().isAugmentaionStoneValid(refinerItem.getId()))
-		{
-			activeChar.sendMessage("This is not a proper life stone."); // need to update retailchances.xml with this item
-			return;
-		}
-		
-		if (!isValid(activeChar, targetItem, refinerItem))
+		final VariationFee fee = VariationData.getInstance().getFee(targetItem.getId(), refinerItem.getId());
+		if ((fee == null) || !isValid(activeChar, targetItem, refinerItem))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
-		final int refinerItemId = refinerItem.getItem().getId();
-		final CrystalType grade = targetItem.getItem().getCrystalType();
-		final LifeStone ls = getLifeStone(refinerItemId);
-		int gemStoneId = 0;
-		if (getGemStoneId(grade) != null)
-		{
-			for (int id : getGemStoneId(grade))
-			{
-				if (activeChar.getInventory().getAllItemsByItemId(id) != null)
-				{
-					gemStoneId = id;
-					break;
-				}
-			}
-		}
-		activeChar.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItemId, gemStoneId, getGemStoneCount(grade, ls.getGrade())));
+		activeChar.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItem.getId(), fee.getItemId(), fee.getItemCount()));
 	}
 }

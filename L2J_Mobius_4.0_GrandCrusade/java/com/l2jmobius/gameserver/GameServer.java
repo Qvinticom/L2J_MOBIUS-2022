@@ -91,7 +91,7 @@ import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
-import com.l2jmobius.gameserver.datatables.AugmentationData;
+import com.l2jmobius.gameserver.data.xml.impl.VariationData;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.ItemTable;
@@ -226,7 +226,7 @@ public class GameServer
 		EnchantItemOptionsData.getInstance();
 		ItemCrystallizationData.getInstance();
 		OptionData.getInstance();
-		AugmentationData.getInstance();
+		VariationData.getInstance();
 		EnsoulData.getInstance();
 		EnchantItemHPBonusData.getInstance();
 		BuyListData.getInstance();

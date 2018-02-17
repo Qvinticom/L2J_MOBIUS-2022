@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.Augmentation;
+import com.l2jmobius.gameserver.model.VariationInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -89,9 +89,10 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		
 		for (int slot : getPaperdollOrder())
 		{
-			final Augmentation augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
-			packet.writeD(augment != null ? augment.getOptionId(0) : 0); // Confirmed
-			// packet.writeD(augment != null ? augment.getOptionId(1) : 0); // Confirmed
+			final VariationInstance augment = _activeChar.getInventory().getPaperdollAugmentation(slot);
+			packet.writeD(augment != null ? augment.getOption1Id() : 0); // Confirmed
+			// Mobius: Maybe use 2x writeH?
+			// packet.writeD(augment != null ? augment.getOption2Id() : 0); // Confirmed
 		}
 		packet.writeD(0x00);
 		packet.writeD(0x00);

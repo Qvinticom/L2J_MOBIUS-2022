@@ -29,9 +29,9 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.VariationInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -191,8 +191,8 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(i == _activeId ? 1 : 0);
 			
 			packet.writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
-			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOptionId(0) : 0);
-			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOptionId(1) : 0);
+			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
+			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);
 			
 			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
 			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
@@ -358,17 +358,19 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		if (weaponObjId > 0)
 		{
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement statement = con.prepareStatement("SELECT augAttributes FROM item_attributes WHERE itemId=?"))
+				PreparedStatement statement = con.prepareStatement("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId=?"))
 			{
 				statement.setInt(1, weaponObjId);
 				try (ResultSet result = statement.executeQuery())
 				{
 					if (result.next())
 					{
-						final int augment = result.getInt("augAttributes");
-						if (augment > 0)
+						int mineralId = result.getInt("mineralId");
+						int option1 = result.getInt("option1");
+						int option2 = result.getInt("option2");
+						if ((option1 != -1) && (option2 != -1))
 						{
-							charInfopackage.setAugmentation(AugmentationData.getInstance().getAugmentation(augment));
+							charInfopackage.setAugmentation(new VariationInstance(mineralId, option1, option2));
 						}
 					}
 				}

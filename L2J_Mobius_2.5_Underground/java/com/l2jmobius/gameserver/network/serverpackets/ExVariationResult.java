@@ -24,15 +24,15 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExVariationResult implements IClientOutgoingPacket
 {
-	private final int _stat12;
-	private final int _stat34;
-	private final int _unk3;
+	private final int _option1;
+	private final int _option2;
+	private final int _success;
 	
-	public ExVariationResult(int unk1, int unk2, int unk3)
+	public ExVariationResult(int option1, int option2, boolean success)
 	{
-		_stat12 = unk1;
-		_stat34 = unk2;
-		_unk3 = unk3;
+		_option1 = option1;
+		_option2 = option2;
+		_success = success ? 0x01 : 0x00;
 	}
 	
 	@Override
@@ -40,9 +40,9 @@ public class ExVariationResult implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_VARIATION_RESULT.writeId(packet);
 		
-		packet.writeD(_stat12);
-		packet.writeD(_stat34);
-		packet.writeD(_unk3);
+		packet.writeD(_option1);
+		packet.writeD(_option2);
+		packet.writeD(_success);
 		return true;
 	}
 }

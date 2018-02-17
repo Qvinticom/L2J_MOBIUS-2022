@@ -39,7 +39,7 @@ public class ItemInfo
 	private int _enchantLevel;
 	
 	/** The augmentation of the item */
-	private Augmentation _augmentation;
+	private VariationInstance _augmentation;
 	
 	/** The quantity of L2ItemInstance */
 	private long _count;
@@ -168,7 +168,10 @@ public class ItemInfo
 		_enchantLevel = item.getEnchant();
 		
 		// Get the augmentation bonus
-		_augmentation = item.getAugmentation();
+		if ((item.getAugmentationOption1() >= 0) && (item.getAugmentationOption2() >= 0))
+		{
+			_augmentation = new VariationInstance(0, item.getAugmentationOption1(), item.getAugmentationOption2());
+		}
 		
 		// Get the quantity of the L2ItemInstance
 		_count = item.getCount();
@@ -297,7 +300,7 @@ public class ItemInfo
 		return _enchantLevel;
 	}
 	
-	public Augmentation getAugmentation()
+	public VariationInstance getAugmentation()
 	{
 		return _augmentation;
 	}
@@ -375,5 +378,11 @@ public class ItemInfo
 	public long getVisualExpiration()
 	{
 		return _visualExpiration;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return String.valueOf(_item) + "[objId: " + _objectId + ", count: " + _count + "]";
 	}
 }

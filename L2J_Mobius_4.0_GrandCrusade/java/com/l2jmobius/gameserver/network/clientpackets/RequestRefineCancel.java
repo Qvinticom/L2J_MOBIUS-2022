@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.VariationData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -53,108 +54,36 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 		final L2ItemInstance targetItem = activeChar.getInventory().getItemByObjectId(_targetItemObjId);
 		if (targetItem == null)
 		{
-			client.sendPacket(new ExVariationCancelResult(0));
+			client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
 			return;
 		}
+		
 		if (targetItem.getOwnerId() != activeChar.getObjectId())
 		{
 			Util.handleIllegalPlayerAction(client.getActiveChar(), "Warning!! Character " + client.getActiveChar().getName() + " of account " + client.getActiveChar().getAccountName() + " tryied to augment item that doesn't own.", Config.DEFAULT_PUNISH);
 			return;
 		}
+		
 		// cannot remove augmentation from a not augmented item
 		if (!targetItem.isAugmented())
 		{
 			client.sendPacket(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM);
-			client.sendPacket(new ExVariationCancelResult(0));
+			client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
 			return;
 		}
 		
 		// get the price
-		int price = 0;
-		switch (targetItem.getItem().getCrystalType())
+		final long price = VariationData.getInstance().getCancelFee(targetItem.getId(), targetItem.getAugmentation().getMineralId());
+		if (price < 0)
 		{
-			case C:
-			{
-				if (targetItem.getCrystalCount() < 1720)
-				{
-					price = 95000;
-				}
-				else if (targetItem.getCrystalCount() < 2452)
-				{
-					price = 150000;
-				}
-				else
-				{
-					price = 210000;
-				}
-				break;
-			}
-			case B:
-			{
-				if (targetItem.getCrystalCount() < 1746)
-				{
-					price = 240000;
-				}
-				else
-				{
-					price = 270000;
-				}
-				break;
-			}
-			case A:
-			{
-				if (targetItem.getCrystalCount() < 2160)
-				{
-					price = 330000;
-				}
-				else if (targetItem.getCrystalCount() < 2824)
-				{
-					price = 390000;
-				}
-				else
-				{
-					price = 420000;
-				}
-				break;
-			}
-			case S:
-			{
-				price = 480000;
-				break;
-			}
-			case S80:
-			case S84:
-			{
-				price = 920000;
-				break;
-			}
-			case R:
-			{
-				price = 1560000;
-				break;
-			}
-			case R95:
-			{
-				price = 5400000;
-				break;
-			}
-			case R99:
-			{
-				price = 14160000;
-				break;
-			}
-			// any other item type is not augmentable
-			default:
-			{
-				client.sendPacket(new ExVariationCancelResult(0));
-				return;
-			}
+			client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
+			return;
 		}
 		
 		// try to reduce the players adena
-		if (!activeChar.reduceAdena("RequestRefineCancel", price, null, true))
+		if (!activeChar.reduceAdena("RequestRefineCancel", price, targetItem, true))
 		{
-			client.sendPacket(new ExVariationCancelResult(0));
+			client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
 			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			return;
 		}
@@ -169,10 +98,10 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 		targetItem.removeAugmentation();
 		
 		// send ExVariationCancelResult
-		client.sendPacket(new ExVariationCancelResult(1));
+		client.sendPacket(ExVariationCancelResult.STATIC_PACKET_SUCCESS);
 		
 		// send inventory update
-		final InventoryUpdate iu = new InventoryUpdate();
+		InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
 		activeChar.sendInventoryUpdate(iu);
 	}

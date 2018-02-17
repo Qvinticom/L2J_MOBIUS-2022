@@ -495,7 +495,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 				ps.execute();
 			}
 			
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_attributes WHERE itemId IN (SELECT object_id FROM items WHERE items.owner_id=?)"))
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId IN (SELECT object_id FROM items WHERE items.owner_id=?)"))
 			{
 				ps.setInt(1, objid);
 				ps.execute();

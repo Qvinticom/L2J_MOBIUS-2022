@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.VariationData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -72,81 +73,11 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 			return;
 		}
 		
-		int price = 0;
-		switch (item.getItem().getCrystalType())
+		final long price = VariationData.getInstance().getCancelFee(item.getId(), item.getAugmentation().getMineralId());
+		if (price < 0)
 		{
-			case D:
-			{
-				price = 80000; // classic
-				break;
-			}
-			case C:
-			{
-				price = 240000; // classic
-				break;
-			}
-			case B:
-			{
-				price = 720000; // classic
-				break;
-			}
-			case A:
-			{
-				price = 1500000; // classic - guessed
-				break;
-			}
-			case S:
-			{
-				if (item.getCrystalCount() <= 2052)
-				{
-					price = 480000;
-				}
-				else
-				{
-					price = 920000;
-				}
-				break;
-			}
-			case S80:
-			case S84:
-			{
-				if (item.getCrystalCount() <= 4965)
-				{
-					price = 920000;
-				}
-				else if (item.getCrystalCount() <= 7050)
-				{
-					price = 2800000;
-				}
-				else if (item.getCrystalCount() <= 8233)
-				{
-					price = 2800000;
-				}
-				else
-				{
-					price = 3200000;
-				}
-				break;
-			}
-			case R:
-			{
-				price = 3492800;
-				break;
-			}
-			case R95:
-			{
-				price = 2943200;
-				break;
-			}
-			case R99:
-			{
-				price = 6485800;
-				break;
-			}
-			default:
-			{
-				return;
-			}
+			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			return;
 		}
 		
 		activeChar.sendPacket(new ExPutItemResultForVariationCancel(item, price));

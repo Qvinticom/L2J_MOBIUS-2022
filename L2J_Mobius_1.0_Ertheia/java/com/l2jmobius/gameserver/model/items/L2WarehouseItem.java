@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.items;
 import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.Augmentation;
+import com.l2jmobius.gameserver.model.VariationInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
@@ -43,7 +43,7 @@ public class L2WarehouseItem
 	private final int _locationSlot;
 	private final int _enchant;
 	private final CrystalType _grade;
-	private final Augmentation _augmentation;
+	private final VariationInstance _augmentation;
 	private final int _customType1;
 	private final int _customType2;
 	private final int _mana;
@@ -221,7 +221,7 @@ public class L2WarehouseItem
 	/**
 	 * @return the augmentation If.
 	 */
-	public Augmentation getAugmentation()
+	public VariationInstance getAugmentation()
 	{
 		return _augmentation;
 	}

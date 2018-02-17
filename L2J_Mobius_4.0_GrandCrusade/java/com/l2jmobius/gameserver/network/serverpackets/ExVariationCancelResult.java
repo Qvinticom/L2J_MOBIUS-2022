@@ -21,9 +21,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExVariationCancelResult implements IClientOutgoingPacket
 {
+	public static final ExVariationCancelResult STATIC_PACKET_SUCCESS = new ExVariationCancelResult(1);
+	public static final ExVariationCancelResult STATIC_PACKET_FAILURE = new ExVariationCancelResult(0);
+	
 	private final int _result;
 	
-	public ExVariationCancelResult(int result)
+	private ExVariationCancelResult(int result)
 	{
 		_result = result;
 	}

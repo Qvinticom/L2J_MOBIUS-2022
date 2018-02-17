@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.VariationData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -72,105 +73,11 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 			return;
 		}
 		
-		int price = 0;
-		switch (item.getItem().getCrystalType())
+		final long price = VariationData.getInstance().getCancelFee(item.getId(), item.getAugmentation().getMineralId());
+		if (price < 0)
 		{
-			case C:
-			{
-				if (item.getCrystalCount() < 1720)
-				{
-					price = 95000;
-				}
-				else if (item.getCrystalCount() < 2452)
-				{
-					price = 150000;
-				}
-				else
-				{
-					price = 210000;
-				}
-				break;
-			}
-			case B:
-			{
-				if (item.getCrystalCount() < 1746)
-				{
-					price = 240000;
-				}
-				else
-				{
-					price = 270000;
-				}
-				break;
-			}
-			case A:
-			{
-				if (item.getCrystalCount() < 2160)
-				{
-					price = 330000;
-				}
-				else if (item.getCrystalCount() < 2824)
-				{
-					price = 390000;
-				}
-				else
-				{
-					price = 420000;
-				}
-				break;
-			}
-			case S:
-			{
-				if (item.getCrystalCount() <= 2052)
-				{
-					price = 480000;
-				}
-				else
-				{
-					price = 920000;
-				}
-				break;
-			}
-			case S80:
-			case S84:
-			{
-				if (item.getCrystalCount() <= 4965)
-				{
-					price = 920000;
-				}
-				else if (item.getCrystalCount() <= 7050)
-				{
-					price = 2800000;
-				}
-				else if (item.getCrystalCount() <= 8233)
-				{
-					price = 2800000;
-				}
-				else
-				{
-					price = 3200000;
-				}
-				break;
-			}
-			case R:
-			{
-				price = 3492800;
-				break;
-			}
-			case R95:
-			{
-				price = 2943200;
-				break;
-			}
-			case R99:
-			{
-				price = 6485800;
-				break;
-			}
-			default:
-			{
-				return;
-			}
+			activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
+			return;
 		}
 		
 		activeChar.sendPacket(new ExPutItemResultForVariationCancel(item, price));

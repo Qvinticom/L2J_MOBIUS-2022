@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.VariationData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -50,6 +51,12 @@ public final class RequestConfirmTargetItem extends AbstractRefinePacket
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_itemObjId);
 		if (item == null)
 		{
+			return;
+		}
+		
+		if (!VariationData.getInstance().hasFeeData(item.getId()))
+		{
+			client.sendPacket(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM);
 			return;
 		}
 		
