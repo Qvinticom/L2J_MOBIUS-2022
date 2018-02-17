@@ -21,12 +21,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.nio.ByteBuffer;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.StringJoiner;
 import java.util.StringTokenizer;
 
@@ -572,5 +575,16 @@ public final class CommonUtil
 			sj.add(o.toString());
 		}
 		return sj.toString();
+	}
+	
+	/**
+	 * @param val
+	 * @param format
+	 * @return
+	 */
+	public static String formatDouble(double val, String format)
+	{
+		final DecimalFormat formatter = new DecimalFormat(format, new DecimalFormatSymbols(Locale.ENGLISH));
+		return formatter.format(val);
 	}
 }

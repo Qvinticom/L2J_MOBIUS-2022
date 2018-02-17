@@ -61,6 +61,7 @@ import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchant
 import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchantPushTwo;
 import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchantRemoveOne;
 import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchantRemoveTwo;
+import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchantRetryToPutItems;
 import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchantTry;
 import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;

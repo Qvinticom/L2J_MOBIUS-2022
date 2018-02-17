@@ -16,9 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.compound;
 
+import java.util.List;
+
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.CompoundRequest;
+import com.l2jmobius.gameserver.model.items.combination.CombinationItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -78,8 +82,10 @@ public class RequestNewEnchantPushOne implements IClientIncomingPacket
 			return;
 		}
 		
+		final List<CombinationItem> combinationItems = CombinationItemsData.getInstance().getItemsByFirstSlot(itemOne.getId());
+		
 		// Not implemented or not able to merge!
-		if ((itemOne.getItem().getCompoundItem() == 0) || (itemOne.getItem().getCompoundChance() == 0))
+		if (combinationItems.isEmpty())
 		{
 			client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
 			activeChar.removeRequest(request.getClass());

@@ -50,6 +50,7 @@ import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import com.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
 import com.l2jmobius.gameserver.data.xml.impl.CubicData;
 import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
@@ -204,6 +205,7 @@ public class GameServer
 		CategoryData.getInstance();
 		SecondaryAuthData.getInstance();
 		AbilityPointsData.getInstance();
+		CombinationItemsData.getInstance();
 		SayuneData.getInstance();
 		ClanRewardData.getInstance();
 		DailyMissionHandler.getInstance().executeScript();

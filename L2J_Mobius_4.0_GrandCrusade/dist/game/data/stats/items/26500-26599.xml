@@ -3,8 +3,6 @@
 	<item id="26500" name="Cat's Eye" additionalName="Lv. 4" type="Armor">
 		<!-- Decreases damage received from Reflect Damage by 40%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
-		<set name="compoundItem" val="26501" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -22,8 +20,6 @@
 	<item id="26501" name="Cat's Eye" additionalName="Lv. 5" type="Armor">
 		<!-- Decreases damage received from Reflect Damage by 50%. Adds 10 second invincibility skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
-		<set name="compoundItem" val="28376" />
-		<set name="compoundChance" val="100" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -37,8 +33,6 @@
 	<item id="26502" name="Amethyst" additionalName="Lv. 1" type="Armor">
 		<!-- PvP Damage + 3%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
-		<set name="compoundItem" val="26503" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -56,8 +50,6 @@
 	<item id="26503" name="Amethyst" additionalName="Lv. 2" type="Armor">
 		<!-- PvP Damage + 5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
-		<set name="compoundItem" val="26504" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -75,8 +67,6 @@
 	<item id="26504" name="Amethyst" additionalName="Lv. 3" type="Armor">
 		<!-- PvP Damage + 7%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
-		<set name="compoundItem" val="26505" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -94,8 +84,6 @@
 	<item id="26505" name="Amethyst" additionalName="Lv. 4" type="Armor">
 		<!-- PvP Damage + 10%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
-		<set name="compoundItem" val="26506" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -113,8 +101,6 @@
 	<item id="26506" name="Amethyst" additionalName="Lv. 5" type="Armor">
 		<!-- PvP Damage + 15%. Can remove invincibility. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
-		<set name="compoundItem" val="28377" />
-		<set name="compoundChance" val="100" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />

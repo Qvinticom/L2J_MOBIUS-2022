@@ -1503,8 +1503,6 @@
 	<item id="38850" name="Topaz" additionalName="Lv. 1" type="Armor">
 		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 1062 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
-		<set name="compoundItem" val="38851" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1522,8 +1520,6 @@
 	<item id="38851" name="Topaz" additionalName="Lv. 2" type="Armor">
 		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 3717 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
-		<set name="compoundItem" val="38852" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1541,8 +1537,6 @@
 	<item id="38852" name="Topaz" additionalName="Lv. 3" type="Armor">
 		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 6903 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
-		<set name="compoundItem" val="38853" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1560,8 +1554,6 @@
 	<item id="38853" name="Topaz" additionalName="Lv. 4" type="Armor">
 		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 10089 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
-		<set name="compoundItem" val="38854" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1591,8 +1583,6 @@
 	<item id="38855" name="Ruby" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="38856" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1610,8 +1600,6 @@
 	<item id="38856" name="Ruby" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 3.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="38857" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1629,8 +1617,6 @@
 	<item id="38857" name="Ruby" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="38858" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1648,8 +1634,6 @@
 	<item id="38858" name="Ruby" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 12.5%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="38859" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1667,8 +1651,6 @@
 	<item id="38859" name="Ruby" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 20%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="47688" />
-		<set name="compoundChance" val="100" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1683,8 +1665,6 @@
 	<item id="38860" name="Emergency Recovery Jewel Lv. 1" type="Armor">
 		<!-- Recovers 1500 HP/CP. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="38861" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="is_sellable" val="false" />
@@ -1697,8 +1677,6 @@
 	<item id="38861" name="Emergency Recovery Jewel Lv. 2" type="Armor">
 		<!-- Recovers 3000 HP/CP. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="38862" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1711,8 +1689,6 @@
 	<item id="38862" name="Emergency Recovery Jewel Lv. 3" type="Armor">
 		<!-- Recovers 6000 HP/CP. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="38863" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1725,8 +1701,6 @@
 	<item id="38863" name="Emergency Recovery Jewel Lv. 4" type="Armor">
 		<!-- Recovers 8000 HP/CP. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
-		<set name="compoundItem" val="38864" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1751,8 +1725,6 @@
 	<item id="38865" name="Heal Boost Jewel Lv. 1" type="Armor">
 		<!-- Received Heal Amount + 3%. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
-		<set name="compoundItem" val="38866" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1765,8 +1737,6 @@
 	<item id="38866" name="Heal Boost Jewel Lv. 2" type="Armor">
 		<!-- Received Heal Amount + 6%. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
-		<set name="compoundItem" val="38867" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1779,8 +1749,6 @@
 	<item id="38867" name="Heal Boost Jewel Lv. 3" type="Armor">
 		<!-- Received Heal Amount + 9%. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
-		<set name="compoundItem" val="38868" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1793,8 +1761,6 @@
 	<item id="38868" name="Heal Boost Jewel Lv. 4" type="Armor">
 		<!-- Received Heal Amount + 13%. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
-		<set name="compoundItem" val="38869" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1819,8 +1785,6 @@
 	<item id="38870" name="Obsidian" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 1%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
-		<set name="compoundItem" val="38871" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1838,8 +1802,6 @@
 	<item id="38871" name="Obsidian" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 3%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
-		<set name="compoundItem" val="38872" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1857,8 +1819,6 @@
 	<item id="38872" name="Obsidian" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 7%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
-		<set name="compoundItem" val="38873" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1876,8 +1836,6 @@
 	<item id="38873" name="Obsidian" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, PvP incoming damage decreases by 11%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
-		<set name="compoundItem" val="38874" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1909,8 +1867,6 @@
 	<item id="38875" name="Opal" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, the weapon attribute increases by 10. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
-		<set name="compoundItem" val="38876" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1928,8 +1884,6 @@
 	<item id="38876" name="Opal" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, the weapon attribute increases by 20. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
-		<set name="compoundItem" val="38877" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1947,8 +1901,6 @@
 	<item id="38877" name="Opal" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, the weapon attribute increases by 40. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
-		<set name="compoundItem" val="38878" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1966,8 +1918,6 @@
 	<item id="38878" name="Opal" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, the weapon attribute increases by 70. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
-		<set name="compoundItem" val="38879" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -1999,8 +1949,6 @@
 	<item id="38880" name="Emerald" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, CON + 1 and MEN + 1. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
-		<set name="compoundItem" val="38881" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2018,8 +1966,6 @@
 	<item id="38881" name="Emerald" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, STR + 1, CON + 1, INT + 1, and MEN + 1. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
-		<set name="compoundItem" val="38882" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2038,8 +1984,6 @@
 	<item id="38882" name="Emerald" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, STR + 1, DEX + 1, CON + 1, INT + 1, WIT + 1, and MEN + 1. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
-		<set name="compoundItem" val="38883" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2058,8 +2002,6 @@
 	<item id="38883" name="Emerald" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, STR + 2, DEX + 2, CON + 2, INT + 2, WIT + 2, and MEN + 2. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_emerald_i00" />
-		<set name="compoundItem" val="38884" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2092,8 +2034,6 @@
 	<item id="38885" name="Aquamarine" additionalName="Lv. 1" type="Armor">
 		<!-- When using a skill after equipping, there is a 1% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
-		<set name="compoundItem" val="38886" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2112,8 +2052,6 @@
 	<item id="38886" name="Aquamarine" additionalName="Lv. 2" type="Armor">
 		<!-- When using a skill after equipping, there is a 2% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
-		<set name="compoundItem" val="38887" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2132,8 +2070,6 @@
 	<item id="38887" name="Aquamarine" additionalName="Lv. 3" type="Armor">
 		<!-- When using a skill after equipping, there is a 4% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
-		<set name="compoundItem" val="38888" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2152,8 +2088,6 @@
 	<item id="38888" name="Aquamarine" additionalName="Lv. 4" type="Armor">
 		<!-- When using a skill after equipping, there is a 9% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
-		<set name="compoundItem" val="38889" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2186,8 +2120,6 @@
 	<item id="38890" name="Diamond" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, P. Def. Increases by 283 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
-		<set name="compoundItem" val="38891" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2206,8 +2138,6 @@
 	<item id="38891" name="Diamond" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, P. Def. Increases by 567 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
-		<set name="compoundItem" val="38892" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2226,8 +2156,6 @@
 	<item id="38892" name="Diamond" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, P. Def. Increases by 945 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
-		<set name="compoundItem" val="38893" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2246,8 +2174,6 @@
 	<item id="38893" name="Diamond" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, P. Def. Increases by 1418 and incoming P. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
-		<set name="compoundItem" val="38894" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2280,8 +2206,6 @@
 	<item id="38895" name="Pearl" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, M. Def. Increases by 163 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
-		<set name="compoundItem" val="38896" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2300,8 +2224,6 @@
 	<item id="38896" name="Pearl" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, M. Def. Increases by 328 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
-		<set name="compoundItem" val="38897" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2320,8 +2242,6 @@
 	<item id="38897" name="Pearl" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, M. Def. Increases by 548 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
-		<set name="compoundItem" val="38898" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />
@@ -2340,8 +2260,6 @@
 	<item id="38898" name="Pearl" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, M. Def. Increases by 821 and incoming M. Critical Damage decreases. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
-		<set name="compoundItem" val="38899" />
-		<set name="compoundChance" val="33" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="weight" val="5" />

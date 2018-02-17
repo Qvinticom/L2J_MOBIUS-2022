@@ -503,8 +503,6 @@
 	<item id="38162" name="Agathion - Twinkling Virgo" type="Armor">
 		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
-		<set name="compoundItem" val="38161" />
-		<set name="compoundChance" val="50" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -529,8 +527,6 @@
 	<item id="38163" name="Agathion - Radiant Virgo" type="Armor">
 		<!-- Can summon Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increase by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
-		<set name="compoundItem" val="38162" />
-		<set name="compoundChance" val="50" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -555,8 +551,6 @@
 	<item id="38164" name="Agathion - Virgo" type="Armor">
 		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
-		<set name="compoundItem" val="38163" />
-		<set name="compoundChance" val="50" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -580,8 +574,6 @@
 	<item id="38165" name="Agathion - Faint Virgo" type="Armor">
 		<!-- Summons Virgo. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
-		<set name="compoundItem" val="38164" />
-		<set name="compoundChance" val="50" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

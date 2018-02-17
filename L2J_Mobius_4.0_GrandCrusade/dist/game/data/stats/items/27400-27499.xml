@@ -979,8 +979,6 @@
 	<item id="27471" name="Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 25% and decreases Vitality Point Consumption Speed by 7%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="compoundItem" val="27472" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -995,8 +993,6 @@
 	<item id="27472" name="Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 50% and decreases Vitality Point Consumption Speed by 15%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="compoundItem" val="28378" />
-		<set name="compoundChance" val="100" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1006,8 +1002,6 @@
 	<item id="27473" name="Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- Resistance to Debuffs + 30%. Cancels your debuffs. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
-		<set name="compoundItem" val="28383" />
-		<set name="compoundChance" val="100" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1021,8 +1015,6 @@
 	<item id="27474" name="Tanzanite" additionalName="Lv. 1" type="Armor">
 		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="compoundItem" val="27475" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1040,8 +1032,6 @@
 	<item id="27475" name="Tanzanite" additionalName="Lv. 2" type="Armor">
 		<!-- Creates a protection shield that absorbs 10,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="compoundItem" val="27476" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1059,8 +1049,6 @@
 	<item id="27476" name="Tanzanite" additionalName="Lv. 3" type="Armor">
 		<!-- Creates a protection shield that absorbs 15,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="compoundItem" val="27477" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1078,8 +1066,6 @@
 	<item id="27477" name="Tanzanite" additionalName="Lv. 4" type="Armor">
 		<!-- Creates a protection shield that absorbs 30,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="compoundItem" val="27478" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1097,8 +1083,6 @@
 	<item id="27478" name="Tanzanite" additionalName="Lv. 5" type="Armor">
 		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
-		<set name="compoundItem" val="28380" />
-		<set name="compoundChance" val="100" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_sellable" val="false" />
@@ -1129,8 +1113,6 @@
 	<item id="27480" name="Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 3%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="compoundItem" val="27481" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1145,8 +1127,6 @@
 	<item id="27481" name="Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 6%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="compoundItem" val="27482" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1161,8 +1141,6 @@
 	<item id="27482" name="Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 12%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
-		<set name="compoundItem" val="27471" />
-		<set name="compoundChance" val="33" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
