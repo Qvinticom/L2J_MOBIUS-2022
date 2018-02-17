@@ -91,8 +91,6 @@ public class Duel
 		
 		if (_partyDuel)
 		{
-			// increase countdown so that start task can teleport players
-			_countdown++;
 			// inform players that they will be ported shortly
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IN_A_MOMENT_YOU_WILL_BE_TRANSPORTED_TO_THE_SITE_WHERE_THE_DUEL_WILL_TAKE_PLACE);
 			broadcastToTeam1(sm);
@@ -588,7 +586,7 @@ public class Duel
 	}
 	
 	/**
-	 * teleport all players
+	 * Teleports all players to a free arena.
 	 */
 	public void teleportPlayers()
 	{
@@ -813,6 +811,8 @@ public class Duel
 				stopFighting();
 				// Don't restore hp, mp, cp
 				restorePlayerConditions(true);
+				// TODO: is there no other message for a canceled duel?
+				// send SystemMessage
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				
 				broadcastToTeam1(sm);
@@ -822,7 +822,9 @@ public class Duel
 			case TIMEOUT:
 			{
 				stopFighting();
+				// hp,mp,cp seem to be restored in a timeout too...
 				restorePlayerConditions(false);
+				// send SystemMessage
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				
 				broadcastToTeam1(sm);

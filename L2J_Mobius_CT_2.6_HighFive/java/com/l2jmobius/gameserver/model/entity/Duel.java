@@ -289,7 +289,7 @@ public class Duel
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				_log.log(Level.SEVERE, "There has been a problem while runing a duel end task!", e);
 			}
 		}
 	}
@@ -437,13 +437,12 @@ public class Duel
 		}
 		else
 		{
-			// Set duel state and team
+			// set isInDuel() state
 			_playerA.setIsInDuel(_duelId);
 			_playerA.setTeam(Team.BLUE);
 			_playerB.setIsInDuel(_duelId);
 			_playerB.setTeam(Team.RED);
 			
-			// Send duel Start packets
 			// Send duel packets
 			broadcastToTeam1(ExDuelReady.PLAYER_DUEL);
 			broadcastToTeam2(ExDuelReady.PLAYER_DUEL);
@@ -461,7 +460,7 @@ public class Duel
 		broadcastToTeam1(B04_S01);
 		broadcastToTeam2(B04_S01);
 		
-		// start dueling task
+		// start duelling task
 		ThreadPoolManager.schedule(new ScheduleDuelTask(this), 1000);
 	}
 	
@@ -720,7 +719,7 @@ public class Duel
 	}
 	
 	/**
-	 * Playback the bow animation for all looser
+	 * Playback the bow animation for all loosers
 	 */
 	public void playKneelAnimation()
 	{
@@ -1053,11 +1052,10 @@ public class Duel
 		else
 		// teleport the player back & delete his PlayerCondition record
 		{
-			final PlayerCondition cond = _playerConditions.get(player.getObjectId());
+			final PlayerCondition cond = _playerConditions.remove(player.getObjectId());
 			if (cond != null)
 			{
 				cond.teleportBack();
-				_playerConditions.remove(player.getObjectId());
 			}
 			player.setIsInDuel(0);
 		}
