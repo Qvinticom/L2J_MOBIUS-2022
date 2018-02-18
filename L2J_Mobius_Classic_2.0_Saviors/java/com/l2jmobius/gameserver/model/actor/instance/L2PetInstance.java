@@ -333,7 +333,11 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public L2ItemInstance getActiveWeaponInstance()
 	{
-		return getInventory().getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == L2Item.SLOT_R_HAND)).stream().findAny().orElse(null);
+		if (getInventory() != null)
+		{
+			return getInventory().getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == L2Item.SLOT_R_HAND)).stream().findAny().orElse(null);
+		}
+		return null;
 	}
 	
 	/**
