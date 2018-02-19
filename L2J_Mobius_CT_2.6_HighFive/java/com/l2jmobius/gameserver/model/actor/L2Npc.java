@@ -1179,6 +1179,7 @@ public class L2Npc extends L2Character
 			}
 		}
 		
+		html.replace("%npcname%", String.valueOf(getName()));
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%festivalMins%", SevenSignsFestival.getInstance().getTimeToNextFestivalStr());
 		player.sendPacket(html);
