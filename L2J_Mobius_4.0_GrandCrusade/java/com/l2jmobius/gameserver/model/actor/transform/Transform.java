@@ -481,7 +481,7 @@ public final class Transform implements IIdentifiable
 	 */
 	public double getLevelMod(L2Character creature)
 	{
-		double val = -1;
+		double val = 1;
 		final TransformTemplate template = getTemplate(creature);
 		if (template != null)
 		{
