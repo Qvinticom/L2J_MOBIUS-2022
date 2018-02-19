@@ -40,45 +40,40 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_storePlayerId = packet.readD();
-		final int count = packet.readD();
-		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET))
+		int itemsCount = packet.readD();
+		if ((itemsCount <= 0) || (itemsCount > Config.MAX_ITEM_IN_PACKET))
 		{
 			return false;
 		}
-		_items = new ItemRequest[count];
+		_items = new ItemRequest[itemsCount];
 		
-		for (int i = 0; i < count; i++)
+		for (int i = 0; i < itemsCount; i++)
 		{
-			final int objectId = packet.readD();
+			final int slot = packet.readD();
 			final int itemId = packet.readD();
-			@SuppressWarnings("unused")
-			final int enchantLevel = packet.readH(); // TODO: use this
-			@SuppressWarnings("unused")
-			final int nameExists = packet.readH(); // TODO: use this
-			final long cnt = packet.readQ();
+			packet.readH(); // TODO analyse this
+			packet.readH(); // TODO analyse this
+			final long count = packet.readQ();
 			final long price = packet.readQ();
-			@SuppressWarnings("unused")
-			final int augmentationEffect1 = packet.readD(); // TODO: use this
-			@SuppressWarnings("unused")
-			final int augmentationEffect2 = packet.readD(); // TODO: use this
-			@SuppressWarnings("unused")
-			final int visualId = packet.readD(); // TODO: use this
-			final int primarySpecialAbilities = packet.readC();
-			for (int a = 0; a < primarySpecialAbilities; a++)
+			packet.readD(); // visual id
+			packet.readD(); // option 1
+			packet.readD(); // option 2
+			int soulCrystals = packet.readC();
+			for (int s = 0; s < soulCrystals; s++)
+			{
+				packet.readD(); // soul crystal option
+			}
+			int soulCrystals2 = packet.readC();
+			for (int s = 0; s < soulCrystals2; s++)
 			{
 				packet.readD(); // sa effect
 			}
-			final int secondarySpecialAbilities = packet.readC();
-			for (int a = 0; a < secondarySpecialAbilities; a++)
-			{
-				packet.readD(); // sa effect
-			}
-			if (/* (objectId < 1) || */ (itemId < 1) || (cnt < 1) || (price < 0))
+			if (/* (slot < 1) || */ (itemId < 1) || (count < 1) || (price < 0))
 			{
 				_items = null;
 				return false;
 			}
-			_items[i] = new ItemRequest(objectId, itemId, cnt, price);
+			_items[i] = new ItemRequest(slot, itemId, count, price);
 		}
 		return true;
 	}

@@ -163,15 +163,15 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 	
 	private static class Item
 	{
-		private final int _itemId;
+		private final int _objectId;
 		private final long _count;
 		private final long _price;
 		
-		public Item(int id, long num, long pri)
+		public Item(int objectId, long count, long price)
 		{
-			_itemId = id;
-			_count = num;
-			_price = pri;
+			_objectId = objectId;
+			_count = count;
+			_price = price;
 		}
 		
 		public boolean addToTradeList(TradeList list)
@@ -181,7 +181,7 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 				return false;
 			}
 			
-			list.addItem(_itemId, _count, _price);
+			list.addItem(_objectId, _count, _price);
 			return true;
 		}
 		
@@ -190,5 +190,4 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 			return _count * _price;
 		}
 	}
-	
 }
