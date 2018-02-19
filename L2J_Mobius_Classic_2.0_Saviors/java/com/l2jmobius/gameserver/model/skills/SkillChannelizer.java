@@ -151,14 +151,6 @@ public class SkillChannelizer implements Runnable
 			// Apply channeling skills on the targets.
 			if (skill.getChannelingSkillId() > 0)
 			{
-				final Skill baseSkill = SkillData.getInstance().getSkill(skill.getChannelingSkillId(), 1);
-				if (baseSkill == null)
-				{
-					_log.warning(getClass().getSimpleName() + ": skill " + skill + " couldn't find effect id skill: " + skill.getChannelingSkillId() + " !");
-					_channelizer.abortCast();
-					return;
-				}
-				
 				final List<L2Character> targetList = new ArrayList<>();
 				final L2Object target = skill.getTarget(_channelizer, false, false, false);
 				if (target != null)

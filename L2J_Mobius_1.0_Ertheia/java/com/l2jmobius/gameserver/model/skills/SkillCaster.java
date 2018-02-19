@@ -723,8 +723,29 @@ public class SkillCaster implements Runnable
 			caster.sendPacket(ActionFailed.get(_castingType)); // send an "action failed" packet to the caster
 		}
 		
+		// Attack target after skill use
+		// TODO: This shouldnt be here. If skill condition fail, you still go autoattack. This doesn't happen if skill is in cooldown though.
+		if ((_skill.getNextAction() != NextActionType.NONE) && (caster.getAI().getNextIntention() == null))
+		{
+			if ((_skill.getNextAction() == NextActionType.ATTACK) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
+			{
+				caster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+			}
+			else if ((_skill.getNextAction() == NextActionType.CAST) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
+			{
+				caster.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, _skill, target, _item, false, false);
+			}
+			else
+			{
+				caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
+			}
+		}
+		else
+		{
+			caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
+		}
+		
 		// Notify the AI of the L2Character with EVT_FINISH_CASTING
-		caster.getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING);
 		
 		// If there is a queued skill, launch it and wipe the queue.
 		if (caster.isPlayer())
@@ -741,23 +762,6 @@ public class SkillCaster implements Runnable
 				});
 				
 				return;
-			}
-		}
-		
-		// Attack target after skill use
-		// TODO: This shouldnt be here. If skill condition fail, you still go autoattack. This doesn't happen if skill is in cooldown though.
-		if ((_skill.getNextAction() != NextActionType.NONE) && (target != null) && (target != caster) && target.canBeAttacked())
-		{
-			if ((caster.getAI().getIntention() == null) || (caster.getAI().getIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
-			{
-				if (_skill.getNextAction() == NextActionType.ATTACK)
-				{
-					caster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-				}
-				else if (_skill.getNextAction() == NextActionType.CAST)
-				{
-					caster.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, _skill, target, _item, false, false);
-				}
 			}
 		}
 	}
@@ -868,7 +872,7 @@ public class SkillCaster implements Runnable
 	 */
 	public boolean canAbortCast()
 	{
-		return _targets == null; // When targets are allocated, that means skill is already launched, therefore cannot be aborted.
+		return getCaster().getTarget() == null; // When targets are allocated, that means skill is already launched, therefore cannot be aborted.
 	}
 	
 	/**
