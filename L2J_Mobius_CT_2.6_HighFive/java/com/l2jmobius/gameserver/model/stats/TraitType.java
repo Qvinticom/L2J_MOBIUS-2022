@@ -21,61 +21,54 @@ package com.l2jmobius.gameserver.model.stats;
  */
 public enum TraitType
 {
-	NONE(0, 0),
-	SWORD(1, 1),
-	BLUNT(2, 1),
-	DAGGER(3, 1),
-	POLE(4, 1),
-	FIST(5, 1),
-	BOW(6, 1),
-	ETC(7, 1),
-	UNK_8(8, 0),
-	POISON(9, 3),
-	HOLD(10, 3),
-	BLEED(11, 3),
-	SLEEP(12, 3),
-	SHOCK(13, 3),
-	DERANGEMENT(14, 3),
-	BUG_WEAKNESS(15, 2),
-	ANIMAL_WEAKNESS(16, 2),
-	PLANT_WEAKNESS(17, 2),
-	BEAST_WEAKNESS(18, 2),
-	DRAGON_WEAKNESS(19, 2),
-	PARALYZE(20, 3),
-	DUAL(21, 1),
-	DUALFIST(22, 1),
-	BOSS(23, 3),
-	GIANT_WEAKNESS(24, 2),
-	CONSTRUCT_WEAKNESS(25, 2),
-	DEATH(26, 3),
-	VALAKAS(27, 2),
-	ANESTHESIA(28, 2),
-	CRITICAL_POISON(29, 3),
-	ROOT_PHYSICALLY(30, 3),
-	ROOT_MAGICALLY(31, 3),
-	RAPIER(32, 1),
-	CROSSBOW(33, 1),
-	ANCIENTSWORD(34, 1),
-	TURN_STONE(35, 3),
-	GUST(36, 3),
-	PHYSICAL_BLOCKADE(37, 3),
-	TARGET(38, 3),
-	PHYSICAL_WEAKNESS(39, 3),
-	MAGICAL_WEAKNESS(40, 3),
-	DUALDAGGER(41, 1);
+	NONE(0),
+	SWORD(1),
+	BLUNT(1),
+	DAGGER(1),
+	POLE(1),
+	FIST(1),
+	BOW(1),
+	ETC(1),
+	UNK_8(0),
+	POISON(3),
+	HOLD(3),
+	BLEED(3),
+	SLEEP(3),
+	SHOCK(3),
+	DERANGEMENT(3),
+	BUG_WEAKNESS(2),
+	ANIMAL_WEAKNESS(2),
+	PLANT_WEAKNESS(2),
+	BEAST_WEAKNESS(2),
+	DRAGON_WEAKNESS(2),
+	PARALYZE(3),
+	DUAL(1),
+	DUALFIST(1),
+	BOSS(3),
+	GIANT_WEAKNESS(2),
+	CONSTRUCT_WEAKNESS(2),
+	DEATH(3),
+	VALAKAS(2),
+	ANESTHESIA(2),
+	CRITICAL_POISON(3),
+	ROOT_PHYSICALLY(3),
+	ROOT_MAGICALLY(3),
+	RAPIER(1),
+	CROSSBOW(1),
+	ANCIENTSWORD(1),
+	TURN_STONE(3),
+	GUST(3),
+	PHYSICAL_BLOCKADE(3),
+	TARGET(3),
+	PHYSICAL_WEAKNESS(3),
+	MAGICAL_WEAKNESS(3),
+	DUALDAGGER(1);
 	
-	private final int _id;
 	private final int _type; // 1 = weapon, 2 = weakness, 3 = resistance
 	
-	TraitType(int id, int type)
+	TraitType(int type)
 	{
-		_id = id;
 		_type = type;
-	}
-	
-	public int getId()
-	{
-		return _id;
 	}
 	
 	public int getType()

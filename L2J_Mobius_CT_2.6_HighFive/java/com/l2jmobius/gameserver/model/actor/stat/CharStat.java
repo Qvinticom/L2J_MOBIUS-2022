@@ -759,7 +759,7 @@ public class CharStat
 	
 	public float getAttackTrait(TraitType traitType)
 	{
-		return _attackTraits[traitType.getId()];
+		return _attackTraits[traitType.ordinal()];
 	}
 	
 	public float[] getAttackTraits()
@@ -769,7 +769,7 @@ public class CharStat
 	
 	public boolean hasAttackTrait(TraitType traitType)
 	{
-		return _attackTraitsCount[traitType.getId()] > 0;
+		return _attackTraitsCount[traitType.ordinal()] > 0;
 	}
 	
 	public int[] getAttackTraitsCount()
@@ -779,7 +779,7 @@ public class CharStat
 	
 	public float getDefenceTrait(TraitType traitType)
 	{
-		return _defenceTraits[traitType.getId()];
+		return _defenceTraits[traitType.ordinal()];
 	}
 	
 	public float[] getDefenceTraits()
@@ -789,7 +789,7 @@ public class CharStat
 	
 	public boolean hasDefenceTrait(TraitType traitType)
 	{
-		return _defenceTraitsCount[traitType.getId()] > 0;
+		return _defenceTraitsCount[traitType.ordinal()] > 0;
 	}
 	
 	public int[] getDefenceTraitsCount()
@@ -799,7 +799,7 @@ public class CharStat
 	
 	public boolean isTraitInvul(TraitType traitType)
 	{
-		return _traitsInvul[traitType.getId()] > 0;
+		return _traitsInvul[traitType.ordinal()] > 0;
 	}
 	
 	public int[] getTraitsInvul()

@@ -2107,7 +2107,7 @@ public final class Formulas
 	public static double calcWeaponTraitBonus(L2Character attacker, L2Character target)
 	{
 		final TraitType type = attacker.getAttackType().getTraitType();
-		final double result = target.getStat().getDefenceTraits()[type.getId()] - 1.0;
+		final double result = target.getStat().getDefenceTraits()[type.ordinal()] - 1.0;
 		return 1.0 - result;
 	}
 	

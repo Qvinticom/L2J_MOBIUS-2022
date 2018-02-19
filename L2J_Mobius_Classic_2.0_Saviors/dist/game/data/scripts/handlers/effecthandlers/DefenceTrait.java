@@ -76,12 +76,12 @@ public final class DefenceTrait extends AbstractEffect
 			{
 				if (trait.getValue() < 2.0f)
 				{
-					charStat.getDefenceTraits()[trait.getKey().getId()] /= trait.getValue();
-					charStat.getDefenceTraitsCount()[trait.getKey().getId()]--;
+					charStat.getDefenceTraits()[trait.getKey().ordinal()] /= trait.getValue();
+					charStat.getDefenceTraitsCount()[trait.getKey().ordinal()]--;
 				}
 				else
 				{
-					charStat.getTraitsInvul()[trait.getKey().getId()]--;
+					charStat.getTraitsInvul()[trait.getKey().ordinal()]--;
 				}
 			}
 		}
@@ -97,12 +97,12 @@ public final class DefenceTrait extends AbstractEffect
 			{
 				if (trait.getValue() < 2.0f)
 				{
-					charStat.getDefenceTraits()[trait.getKey().getId()] *= trait.getValue();
-					charStat.getDefenceTraitsCount()[trait.getKey().getId()]++;
+					charStat.getDefenceTraits()[trait.getKey().ordinal()] *= trait.getValue();
+					charStat.getDefenceTraitsCount()[trait.getKey().ordinal()]++;
 				}
 				else
 				{
-					charStat.getTraitsInvul()[trait.getKey().getId()]++;
+					charStat.getTraitsInvul()[trait.getKey().ordinal()]++;
 				}
 			}
 		}
