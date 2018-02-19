@@ -449,10 +449,7 @@ public final class IceQueensCastleNormalBattle extends AbstractInstance
 					{
 						for (L2PcInstance players : world.playersInside)
 						{
-							if ((players != null) && (players.getInstanceId() == world.getInstanceId()))
-							{
-								players.setIsInvul(false);
-							}
+							players.setIsInvul(false);
 						}
 						world.freya.setIsInvul(false);
 						world.freya.disableCoreAI(false);
