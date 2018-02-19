@@ -465,6 +465,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		_transform.ifPresent(t -> t.onUntransform(this));
 		_transform = Optional.empty();
+		
+		// Mobius: Tempfix for untransform not showing stats.
+		// Resend UserInfo to player.
+		if (isPlayer())
+		{
+			sendPacket(new UserInfo((L2PcInstance) this));
+		}
 	}
 	
 	public Optional<Transform> getTransformation()
