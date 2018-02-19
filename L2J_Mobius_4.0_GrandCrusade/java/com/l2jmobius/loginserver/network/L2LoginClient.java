@@ -109,6 +109,11 @@ public final class L2LoginClient extends ChannelInboundHandler<L2LoginClient>
 		}
 	}
 	
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
+	{
+	}
+	
 	public InetAddress getConnectionAddress()
 	{
 		return _addr;
