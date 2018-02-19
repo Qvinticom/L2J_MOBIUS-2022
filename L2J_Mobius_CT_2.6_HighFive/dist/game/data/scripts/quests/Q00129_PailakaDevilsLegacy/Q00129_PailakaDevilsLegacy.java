@@ -93,7 +93,7 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 			}
 			case "32498-05.htm":
 			{
-				if (qs.isCond(0))
+				if (!qs.isStarted())
 				{
 					htmltext = event;
 					qs.startQuest();
