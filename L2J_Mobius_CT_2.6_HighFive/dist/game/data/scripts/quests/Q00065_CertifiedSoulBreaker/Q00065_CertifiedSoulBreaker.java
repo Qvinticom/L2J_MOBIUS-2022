@@ -648,6 +648,7 @@ public final class Q00065_CertifiedSoulBreaker extends Quest
 					else if (memoState == 5)
 					{
 						qs.setMemoState(6);
+						qs.setMemoStateEx(1, 0); // Custom line
 						qs.setCond(6, true);
 						htmltext = "32199-03.html";
 					}
