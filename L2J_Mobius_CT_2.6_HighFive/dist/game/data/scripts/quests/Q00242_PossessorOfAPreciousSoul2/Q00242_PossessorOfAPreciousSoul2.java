@@ -120,6 +120,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 					takeItems(player, SORCERY_INGREDIENT, -1);
 					st.set("awaitsDrops", "1");
 					st.setCond(9, true);
+					st.set("cornerstones", "0");
 				}
 				break;
 			case "PURE_UNICORN":
