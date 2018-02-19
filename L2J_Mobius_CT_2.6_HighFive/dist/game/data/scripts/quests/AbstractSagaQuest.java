@@ -313,6 +313,7 @@ public abstract class AbstractSagaQuest extends Quest
 				case "6-1":
 				{
 					st.setCond(8, true);
+					st.set("spawned", "0");
 					takeItems(player, Items[5], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "6-03.htm";
@@ -358,6 +359,8 @@ public abstract class AbstractSagaQuest extends Quest
 				case "9-1":
 				{
 					st.setCond(17, true);
+					st.set("Quest0", "0");
+					st.set("Tab", "0");
 					takeItems(player, Items[8], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "9-03.htm";
