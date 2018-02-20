@@ -233,7 +233,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 					if ((item.getEnchantLevel() == minEnchantAnnounce) || (item.getEnchantLevel() == maxEnchantAnnounce))
 					{
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
-						sm.addCharName(activeChar);
+						sm.addString(activeChar.getName());
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
 						activeChar.broadcastPacket(sm);

@@ -35,7 +35,7 @@ public final class ConditionQuest extends Condition
 	{
 		super(template, parameters, onlyLeader, showMessageAndHtml);
 		// Set message
-		setSystemMessage(SystemMessageId.C1_S_QUEST_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED, (message, player) -> message.addCharName(player));
+		setSystemMessage(SystemMessageId.C1_S_QUEST_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED, (message, player) -> message.addString(player.getName()));
 	}
 	
 	@Override

@@ -21,10 +21,8 @@ import java.util.Arrays;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -181,38 +179,6 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 	{
 		append(new SMParam(TYPE_LONG_NUMBER, number));
 		return (T) this;
-	}
-	
-	public final T addCharName(L2Character cha)
-	{
-		if (cha.isNpc())
-		{
-			final L2Npc npc = (L2Npc) cha;
-			if (npc.getTemplate().isUsingServerSideName())
-			{
-				return addString(npc.getTemplate().getName());
-			}
-			return addNpcName(npc);
-		}
-		else if (cha.isPlayer())
-		{
-			return addPcName(cha.getActingPlayer());
-		}
-		else if (cha.isSummon())
-		{
-			final L2Summon summon = (L2Summon) cha;
-			if (summon.getTemplate().isUsingServerSideName())
-			{
-				return addString(summon.getTemplate().getName());
-			}
-			return addNpcName(summon);
-		}
-		else if (cha.isDoor())
-		{
-			final L2DoorInstance door = (L2DoorInstance) cha;
-			return addDoorName(door.getId());
-		}
-		return addString(cha.getName());
 	}
 	
 	public final T addPcName(L2PcInstance pc)

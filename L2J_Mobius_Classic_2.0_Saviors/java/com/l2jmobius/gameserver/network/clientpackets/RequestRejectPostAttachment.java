@@ -95,7 +95,7 @@ public final class RequestRejectPostAttachment implements IClientIncomingPacket
 		if (sender != null)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_RETURNED_THE_MAIL);
-			sm.addCharName(activeChar);
+			sm.addString(activeChar.getName());
 			sender.sendPacket(sm);
 		}
 	}

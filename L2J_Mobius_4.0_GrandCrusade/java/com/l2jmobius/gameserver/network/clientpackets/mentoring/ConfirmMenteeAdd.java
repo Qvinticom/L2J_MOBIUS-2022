@@ -69,8 +69,8 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		
 		if (_confirmed == 0)
 		{
-			mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DECLINED_S1_S_MENTORING_OFFER).addCharName(mentor));
-			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DECLINED_BECOMING_YOUR_MENTEE).addCharName(mentee));
+			mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DECLINED_S1_S_MENTORING_OFFER).addString(mentor.getName()));
+			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DECLINED_BECOMING_YOUR_MENTEE).addString(mentee.getName()));
 		}
 		else if (validate(mentor, mentee))
 		{
@@ -86,10 +86,10 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMenteeAdd(mentor, mentee), mentor);
 				
-				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addCharName(mentee));
+				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addString(mentee.getName()));
 				mentor.sendPacket(new ExMentorList(mentor));
 				
-				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addCharName(mentor));
+				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addString(mentor.getName()));
 				mentee.sendPacket(new ExMentorList(mentee));
 			}
 			catch (Exception e)
@@ -142,7 +142,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		}
 		else if (mentee.getLevel() >= 86)
 		{
-			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE).addCharName(mentee));
+			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE).addString(mentee.getName()));
 			return false;
 		}
 		else if (mentee.isSubClassActive())
@@ -153,7 +153,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		
 		// else if (mentee.getInventory().getItemByItemId(MENTEE_CERT) == null)
 		// {
-		// mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_HAVE_THE_ITEM_NEEDED_TO_BECOME_A_MENTEE).addCharName(mentee));
+		// mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_HAVE_THE_ITEM_NEEDED_TO_BECOME_A_MENTEE).addString(mentee));
 		// return false;
 		// }
 		else if ((MentorManager.getInstance().getMentees(mentor.getObjectId()) != null) && (MentorManager.getInstance().getMentees(mentor.getObjectId()).size() >= 3))
@@ -163,7 +163,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		}
 		else if (mentee.isMentee())
 		{
-			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_HAS_A_MENTOR).addCharName(mentee));
+			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_HAS_A_MENTOR).addString(mentee.getName()));
 			return false;
 		}
 		return true;

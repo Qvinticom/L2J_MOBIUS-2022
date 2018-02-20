@@ -436,7 +436,7 @@ public class L2Party extends AbstractPlayerGroup
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
 			sm.addPcName(activeChar);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
 			
 			getMembers().forEach(m ->
@@ -459,7 +459,7 @@ public class L2Party extends AbstractPlayerGroup
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
 			sm.addPcName(activeChar);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
 			
 			getMembers().forEach(m ->

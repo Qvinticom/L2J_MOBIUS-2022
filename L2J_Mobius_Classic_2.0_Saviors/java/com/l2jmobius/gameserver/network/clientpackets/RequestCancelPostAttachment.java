@@ -210,7 +210,7 @@ public final class RequestCancelPostAttachment implements IClientIncomingPacket
 		if (receiver != null)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANCELED_THE_SENT_MAIL);
-			sm.addCharName(activeChar);
+			sm.addString(activeChar.getName());
 			receiver.sendPacket(sm);
 			receiver.sendPacket(new ExChangePostState(true, _msgId, Message.DELETED));
 		}

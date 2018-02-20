@@ -175,7 +175,7 @@ public final class Formulas
 				else
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
-					sm.addCharName(target);
+					sm.addString(target.getName());
 					sm.addSkillName(skill);
 					attacker.sendPacket(sm);
 					damage = 1;
@@ -185,7 +185,7 @@ public final class Formulas
 			if (target.isPlayer())
 			{
 				final SystemMessage sm = (skill.hasEffectType(L2EffectType.HP_DRAIN)) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_DRAIN) : SystemMessage.getSystemMessage(SystemMessageId.YOU_RESISTED_C1_S_MAGIC);
-				sm.addCharName(attacker);
+				sm.addString(attacker.getName());
 				target.sendPacket(sm);
 			}
 		}
@@ -674,7 +674,7 @@ public final class Formulas
 			if (resisted)
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
-				sm.addCharName(target);
+				sm.addString(target.getName());
 				sm.addSkillName(skill);
 				attacker.sendPacket(sm);
 				return false;
@@ -705,7 +705,7 @@ public final class Formulas
 		if ((finalRate <= Rnd.get(100)) && (target != attacker))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			sm.addSkillName(skill);
 			attacker.sendPacket(sm);
 			return false;
@@ -837,8 +837,8 @@ public final class Formulas
 			if (attacker.isPlayer())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC);
-				sm.addCharName(target);
-				sm.addCharName(attacker);
+				sm.addString(target.getName());
+				sm.addString(attacker.getName());
 				attacker.sendPacket(sm);
 				damage /= 2;
 			}
@@ -846,8 +846,8 @@ public final class Formulas
 			if (target.isPlayer())
 			{
 				final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.C1_WEAKLY_RESISTED_C2_S_MAGIC);
-				sm2.addCharName(target);
-				sm2.addCharName(attacker);
+				sm2.addString(target.getName());
+				sm2.addString(attacker.getName());
 				target.sendPacket(sm2);
 			}
 		}
@@ -976,13 +976,13 @@ public final class Formulas
 			if (target.isPlayer())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_COUNTERED_C1_S_ATTACK);
-				sm.addCharName(attacker);
+				sm.addString(attacker.getName());
 				target.sendPacket(sm);
 			}
 			if (attacker.isPlayer())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PERFORMING_A_COUNTERATTACK);
-				sm.addCharName(target);
+				sm.addString(target.getName());
 				attacker.sendPacket(sm);
 			}
 			

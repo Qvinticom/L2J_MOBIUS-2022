@@ -11520,7 +11520,7 @@ public final class L2PcInstance extends L2Playable
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
 					sm.addPcName(target.getActingPlayer());
-					sm.addCharName(this);
+					sm.addString(getName());
 					target.sendPacket(sm);
 				}
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);

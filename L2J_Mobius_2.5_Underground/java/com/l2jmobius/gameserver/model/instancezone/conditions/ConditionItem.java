@@ -40,7 +40,7 @@ public final class ConditionItem extends Condition
 		_count = parameters.getLong("count");
 		_take = parameters.getBoolean("take", false);
 		// Set message
-		setSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED, (msg, player) -> msg.addCharName(player));
+		setSystemMessage(SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED, (msg, player) -> msg.addString(player.getName()));
 	}
 	
 	@Override

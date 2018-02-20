@@ -56,7 +56,7 @@ public class RequestMenteeAdd implements IClientIncomingPacket
 		
 		if (ConfirmMenteeAdd.validate(mentor, mentee))
 		{
-			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OFFERED_TO_BECOME_S1_S_MENTOR).addCharName(mentee));
+			mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OFFERED_TO_BECOME_S1_S_MENTOR).addString(mentee.getName()));
 			mentee.sendPacket(new ExMentorAdd(mentor));
 		}
 	}

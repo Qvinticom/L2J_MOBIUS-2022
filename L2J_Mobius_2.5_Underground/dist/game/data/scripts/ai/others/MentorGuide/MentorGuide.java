@@ -267,7 +267,7 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 					// Add the mentee skill
 					handleMenteeSkills(player);
 					
-					mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_CONNECTED).addCharName(player));
+					mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_CONNECTED).addString(player.getName()));
 					mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
 				}
 			}
@@ -283,7 +283,7 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 					MentorManager.getInstance().cancelAllMentoringBuffs(mentor.getPlayerInstance());
 				}
 				
-				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_DISCONNECTED).addCharName(player));
+				mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTEE_S1_HAS_DISCONNECTED).addString(player.getName()));
 				mentor.sendPacket(new ExMentorList(mentor.getPlayerInstance()));
 			}
 		}
@@ -319,7 +319,7 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 					}
 				}
 				
-				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_CONNECTED).addCharName(player));
+				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_CONNECTED).addString(player.getName()));
 				mentee.sendPacket(new ExMentorList(mentee.getPlayerInstance()));
 			});
 				
@@ -342,7 +342,7 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 			startQuestTimer("REMOVE_BUFFS " + player.getObjectId(), 5 * 60 * 1000, null, null);
 			MentorManager.getInstance().getMentees(player.getObjectId()).stream().filter(Objects::nonNull).filter(L2Mentee::isOnline).forEach(mentee ->
 			{
-				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_DISCONNECTED).addCharName(player));
+				mentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_S1_HAS_DISCONNECTED).addString(player.getName()));
 				mentee.sendPacket(new ExMentorList(mentee.getPlayerInstance()));
 			});
 		}

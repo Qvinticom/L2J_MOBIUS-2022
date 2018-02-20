@@ -66,7 +66,7 @@ public final class RequestAnswerFriendInvite implements IClientIncomingPacket
 			|| requestor.getFriendList().contains(player.getObjectId()))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_ON_YOUR_FRIEND_LIST);
-			sm.addCharName(player);
+			sm.addString(player.getName());
 			requestor.sendPacket(sm);
 			return;
 		}

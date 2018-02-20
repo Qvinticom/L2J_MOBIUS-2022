@@ -111,7 +111,7 @@ public class AdminPledge implements IAdminCommandHandler
 						if (!targetPlayer.isClanLeader())
 						{
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER);
-							sm.addCharName(targetPlayer);
+							sm.addString(targetPlayer.getName());
 							activeChar.sendPacket(sm);
 							showMainPage(activeChar);
 							return false;

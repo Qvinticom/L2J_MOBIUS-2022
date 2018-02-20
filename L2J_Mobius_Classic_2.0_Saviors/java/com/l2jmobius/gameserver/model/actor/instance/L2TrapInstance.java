@@ -272,7 +272,7 @@ public final class L2TrapInstance extends L2Npc
 		else
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4);
-			sm.addCharName(this);
+			sm.addString(getName());
 			sm.addString(target.getName());
 			sm.addInt(damage);
 			sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));

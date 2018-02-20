@@ -38,7 +38,7 @@ public final class ConditionLevel extends Condition
 		_min = parameters.getInt("min", 1);
 		_max = parameters.getInt("max", Integer.MAX_VALUE);
 		// Set message
-		setSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY, (msg, player) -> msg.addCharName(player));
+		setSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY, (msg, player) -> msg.addString(player.getName()));
 	}
 	
 	@Override

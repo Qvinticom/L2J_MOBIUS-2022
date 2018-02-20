@@ -128,7 +128,7 @@ public final class ManaHealByLevel extends AbstractEffect
 		final SystemMessage sm = SystemMessage.getSystemMessage(effector.getObjectId() != effected.getObjectId() ? SystemMessageId.S2_MP_HAS_BEEN_RESTORED_BY_C1 : SystemMessageId.S1_MP_HAS_BEEN_RESTORED);
 		if (effector.getObjectId() != effected.getObjectId())
 		{
-			sm.addCharName(effector);
+			sm.addString(effector.getName());
 		}
 		sm.addInt((int) amount);
 		effected.sendPacket(sm);

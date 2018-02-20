@@ -80,7 +80,7 @@ public final class CallPc extends AbstractEffect
 			
 			target.addScript(new SummonRequestHolder(activeChar, skill));
 			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
-			confirm.addCharName(activeChar);
+			confirm.addString(activeChar.getName());
 			confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 			confirm.addTime(30000);
 			confirm.addRequesterId(activeChar.getObjectId());
@@ -134,7 +134,7 @@ public final class CallPc extends AbstractEffect
 		if (target.inObserverMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING2);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			activeChar.sendPacket(sm);
 			return false;
 		}

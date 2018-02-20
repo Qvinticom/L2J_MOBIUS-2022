@@ -67,8 +67,8 @@ public final class MagicalAttackMp extends AbstractEffect
 			if (effected.isPlayer())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_DRAIN);
-				sm.addCharName(effected);
-				sm.addCharName(effector);
+				sm.addString(effected.getName());
+				sm.addString(effector.getName());
 				effected.sendPacket(sm);
 			}
 			return false;
@@ -112,7 +112,7 @@ public final class MagicalAttackMp extends AbstractEffect
 		if (effected.isPlayer())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_C1);
-			sm.addCharName(effector);
+			sm.addString(effector.getName());
 			sm.addInt((int) mp);
 			effected.sendPacket(sm);
 		}

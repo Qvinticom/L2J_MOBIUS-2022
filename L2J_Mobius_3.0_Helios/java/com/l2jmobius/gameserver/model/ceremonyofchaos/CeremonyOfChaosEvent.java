@@ -287,7 +287,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		else
 		{
 			msg = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
-			msg.addCharName(winners.get(0).getPlayer());
+			msg.addString(winners.get(0).getPlayer().getName());
 		}
 		
 		for (CeremonyOfChaosMember member : getMembers().values())

@@ -81,7 +81,7 @@ public final class Cp extends AbstractEffect
 			if ((effector != null) && (effector != effected))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);
-				sm.addCharName(effector);
+				sm.addString(effector.getName());
 				sm.addInt((int) amount);
 				effected.sendPacket(sm);
 			}
