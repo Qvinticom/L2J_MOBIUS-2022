@@ -48,6 +48,9 @@ import ai.AbstractNpcAI;
 public final class ClanHallManager extends AbstractNpcAI
 {
 	// NPCs
+	//	35461, 35463, 35465, 35467, // Goddard
+	//	35566, 35568, 35570, 35572, 35574, 35576, 35578, // Rune
+	//	35580, 35582, 35584, 35586, // Schuttgart
 	// @formatter:off
 	private static final int[] CLANHALL_MANAGERS =
 	{
@@ -56,9 +59,6 @@ public final class ClanHallManager extends AbstractNpcAI
 		35403, 35405, 35407, // Dion
 		35439, 35441, 35443, 35445, 35447, 35449, // Aden
 		35451, 35453, 35455, 35457, 35459, // Giran
-		35461, 35463, 35465, 35467, // Goddard
-		35566, 35568, 35570, 35572, 35574, 35576, 35578, // Rune
-		35580, 35582, 35584, 35586, // Schuttgart
 		36721, 36723, 36725, 36727, // Gludio Outskirts
 		36729, 36731, 36733, 36735, // Dion Outskirts
 		36737, 36739, // Floran Village
@@ -72,24 +72,15 @@ public final class ClanHallManager extends AbstractNpcAI
 		4344, // Shield
 		4346, // Mental Shield
 		4345, // Might
-		15374, // Horn Melody
-		15375, // Drum Melody
 		4347, // Blessed Body
 		4349, // Magic Barrier
 		4350, // Resist Shock
 		4348, // Blessed Soul
-		15376, // Pipe Organ Melody
-		15377, // Guitar Melody
 		4351, // Concentration
 		4352, // Berserker Spirit
 		4353, // Blessed Shield
 		4358, // Guidance
 		4354, // Vampiric Rage
-		15378, // Harp Melody
-		15379, // Lute Melody
-		15380, // Knight's Harmony
-		15381, // Warrior's Harmony
-		15382, // Wizard's Harmony
 		4355, // Acumen
 		4356, // Empower
 		4357, // Haste

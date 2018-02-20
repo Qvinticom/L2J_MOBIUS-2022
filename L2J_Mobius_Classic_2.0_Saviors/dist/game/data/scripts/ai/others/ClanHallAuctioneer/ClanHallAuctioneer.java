@@ -78,7 +78,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			case "map":
 			{
 				htmltext = getHtm(player.getHtmlPrefix(), "ClanHallAuctioneer-map.html");
-				htmltext = htmltext.replace("%MAP%", npc.getParameters().getString("fnAgitMap", "gludio").toUpperCase());
+				htmltext = htmltext.replace("%MAP%", npc.getParameters().getString("fnAgitMap", "gludio"));
 				htmltext = htmltext.replace("%TOWN_NAME%", npc.getCastle().getName());
 				break;
 			}

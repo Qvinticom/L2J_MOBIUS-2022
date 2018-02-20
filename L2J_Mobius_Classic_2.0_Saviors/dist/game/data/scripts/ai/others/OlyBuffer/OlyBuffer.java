@@ -34,14 +34,13 @@ public final class OlyBuffer extends AbstractNpcAI
 	private static final SkillHolder[] ALLOWED_BUFFS =
 	{
 		new SkillHolder(4357, 2), // Haste Lv2
-		new SkillHolder(4342, 2), // Wind Walk Lv2
-		new SkillHolder(4356, 3), // Empower Lv3
 		new SkillHolder(4355, 3), // Acumen Lv3
-		new SkillHolder(4351, 6), // Concentration Lv6
+		new SkillHolder(4342, 2), // Wind Walk Lv2
 		new SkillHolder(4345, 3), // Might Lv3
-		new SkillHolder(4358, 3), // Guidance Lv3
-		new SkillHolder(4359, 3), // Focus Lv3
-		new SkillHolder(4360, 3), // Death Whisper Lv3
+		new SkillHolder(4344, 3), // Shield Lv3
+		new SkillHolder(4349, 2), // Magic Barrier lv.2		
+		new SkillHolder(4347, 4), // Blessed Body lv.4
+		new SkillHolder(4348, 4), // Blessed Soul lv.4
 		new SkillHolder(4352, 2), // Berserker Spirit Lv2
 	};
 	
