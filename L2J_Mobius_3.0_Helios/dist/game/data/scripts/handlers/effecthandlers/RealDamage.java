@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -43,6 +44,12 @@ public class RealDamage extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
+		// Check if fake players should aggro each other.
+		if (effector.isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && effected.isFakePlayer())
+		{
+			return;
+		}
+		
 		effected.reduceCurrentHp(_power, effector, skill, false, false, false, false);
 		if (effector.isPlayer())
 		{

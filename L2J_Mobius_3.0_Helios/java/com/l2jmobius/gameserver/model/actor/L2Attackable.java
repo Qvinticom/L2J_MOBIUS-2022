@@ -690,6 +690,12 @@ public class L2Attackable extends L2Npc
 			return;
 		}
 		
+		// Check if fake players should aggro each other.
+		if (isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && attacker.isFakePlayer())
+		{
+			return;
+		}
+		
 		L2PcInstance targetPlayer = attacker.getActingPlayer();
 		final L2Character summoner = attacker.getSummoner();
 		if (attacker.isNpc() && (summoner != null) && summoner.isPlayer() && !attacker.isTargetable())

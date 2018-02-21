@@ -4298,6 +4298,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void doAttack(double damage, L2Character target, Skill skill, boolean isDOT, boolean directlyToHp, boolean critical, boolean reflect)
 	{
+		// Check if fake players should aggro each other.
+		if (isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && target.isFakePlayer())
+		{
+			return;
+		}
+		
 		// Start attack stance and notify being attacked.
 		if (target.hasAI())
 		{
