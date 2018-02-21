@@ -156,7 +156,7 @@
 		</for>
 	</skill>
 	<skill id="1505" levels="1" name="Sublime Self-Sacrifice">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- High Five Confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -174,7 +174,7 @@
 		<set name="removedOnAnyActionExceptMove" val="true" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="PARTY_NOTME" />
+		<set name="targetType" val="AURA_FRIENDLY" />
 		<for>
 			<effect name="Invincible" />
 			<effect name="CpHeal">

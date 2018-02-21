@@ -8355,6 +8355,7 @@ public final class L2PcInstance extends L2Playable
 			case SELF:
 			case AURA_CORPSE_MOB:
 			case COMMAND_CHANNEL:
+			case AURA_FRIENDLY:
 			{
 				target = this;
 				break;
@@ -8461,6 +8462,7 @@ public final class L2PcInstance extends L2Playable
 			case AREA_SUMMON:
 			case AURA_CORPSE_MOB:
 			case COMMAND_CHANNEL:
+			case AURA_FRIENDLY:
 			{
 				target = this;
 				break;
@@ -8639,6 +8641,7 @@ public final class L2PcInstance extends L2Playable
 					case GROUND:
 					case AREA_SUMMON:
 					case UNLOCKABLE:
+					case AURA_FRIENDLY:
 					{
 						break;
 					}
