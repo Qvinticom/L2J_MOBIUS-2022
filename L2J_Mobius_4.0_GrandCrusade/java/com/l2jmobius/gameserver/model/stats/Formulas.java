@@ -119,7 +119,7 @@ public final class Formulas
 		final double isPosition = position == Position.BACK ? 0.2 : position == Position.SIDE ? 0.05 : 0;
 		
 		// Mobius: Fix for way too low blow damage.
-		power *= Math.max(1, attacker.getLevel() / 25); // Power increasing gradually by level.
+		power *= Math.max(1, attacker.getLevel() / 18); // Power increasing gradually by level.
 		// Mobius: Manage level difference as well.
 		if (attacker.getLevel() < target.getLevel())
 		{
