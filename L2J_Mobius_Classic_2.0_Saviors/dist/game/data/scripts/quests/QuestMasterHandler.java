@@ -320,9 +320,9 @@ public class QuestMasterHandler
 		Q00417_PathOfTheScavenger.class,
 		Q00418_PathOfTheArtisan.class,
 		Q00662_AGameOfCards.class,
-		Q11000_MoonKnight.class,
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
+		Q11000_MoonKnight.class,
 	};
 	
 	public static void main(String[] args)
