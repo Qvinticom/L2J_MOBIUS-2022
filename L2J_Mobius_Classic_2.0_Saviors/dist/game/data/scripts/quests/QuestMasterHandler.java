@@ -51,6 +51,7 @@ import quests.Q00165_ShilensHunt.Q00165_ShilensHunt;
 import quests.Q00166_MassOfDarkness.Q00166_MassOfDarkness;
 import quests.Q00167_DwarvenKinship.Q00167_DwarvenKinship;
 import quests.Q00168_DeliverSupplies.Q00168_DeliverSupplies;
+import quests.Q00169_OffspringOfNightmares.Q00169_OffspringOfNightmares;
 import quests.Q00170_DangerousSeduction.Q00170_DangerousSeduction;
 import quests.Q00211_TrialOfTheChallenger.Q00211_TrialOfTheChallenger;
 import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
@@ -146,6 +147,8 @@ import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger;
 import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
+import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
+import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
 import quests.Q11000_MoonKnight.Q11000_MoonKnight;
 
 /**
@@ -220,6 +223,7 @@ public class QuestMasterHandler
 		Q00166_MassOfDarkness.class,
 		Q00167_DwarvenKinship.class,
 		Q00168_DeliverSupplies.class,
+		Q00169_OffspringOfNightmares.class,
 		Q00170_DangerousSeduction.class,
 		Q00211_TrialOfTheChallenger.class,
 		Q00212_TrialOfDuty.class,
@@ -289,7 +293,7 @@ public class QuestMasterHandler
 		Q00374_WhisperOfDreamsPart1.class,
 		Q00375_WhisperOfDreamsPart2.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
-		// TODO: Q00348_AnArrogantSearch.class,
+		// Q00348_AnArrogantSearch.class,
 		Q00354_ConquestOfAlligatorIsland.class,
 		Q00355_FamilyHonor.class,
 		Q00356_DigUpTheSeaOfSpores.class,
@@ -317,6 +321,8 @@ public class QuestMasterHandler
 		Q00418_PathOfTheArtisan.class,
 		Q00662_AGameOfCards.class,
 		Q11000_MoonKnight.class,
+		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
+		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
 	};
 	
 	public static void main(String[] args)
