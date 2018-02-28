@@ -21,6 +21,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -68,6 +69,10 @@ public final class BlockActions extends AbstractEffect
 		if (!effected.isPlayer())
 		{
 			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
+		else
+		{
+			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		}
 	}
 }
