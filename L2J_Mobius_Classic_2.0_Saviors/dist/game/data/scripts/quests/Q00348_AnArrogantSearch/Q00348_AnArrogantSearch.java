@@ -1,3 +1,19 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package quests.Q00348_AnArrogantSearch;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -7,15 +23,16 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 
-//SanyaDC
-
+/**
+ * @author SanyaDC
+ */
 public class Q00348_AnArrogantSearch extends Quest
 {
+	// NPCs
 	public final int HANELLIN = 30864;
 	public final int CLAUDIA_ATHEBALT = 31001;
 	public final int TABLE_OF_VISION = 31646;
-	
-	// mobs
+	// Monsters
 	public final int CRIMSON_DRAKE = 20670;
 	public final int KADIOS = 20671;
 	public final int PLATINUM_TRIBE_SHAMAN = 20828;
@@ -23,7 +40,6 @@ public class Q00348_AnArrogantSearch extends Quest
 	public final int GUARDIAN_ANGEL = 20830;
 	public final int SEAL_ANGEL = 20831;
 	public final int STONE_WATCHMAN_EZEKIEL = 27296;
-	
 	// Items
 	public final int SHELL_OF_MONSTERS = 14857;
 	public final int BOOK_OF_SAINT = 4397;
@@ -45,8 +61,8 @@ public class Q00348_AnArrogantSearch extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -64,31 +80,31 @@ public class Q00348_AnArrogantSearch extends Quest
 			{
 				if (player.getLevel() >= 60)
 				{
-					st.startQuest();
-					st.setCond(2);
+					qs.startQuest();
+					qs.setCond(2);
 				}
 				break;
 			}
 			case "30864-04.htm":
 			{
-				if (st.getCond() == 3)
+				if (qs.isCond(3))
 				{
-					st.setCond(4);
+					qs.setCond(4);
 					takeItems(player, SHELL_OF_MONSTERS, -1);
 				}
 				break;
 			}
 			case "30864-05.htm":
 			{
-				if (st.getCond() == 4)
+				if (qs.isCond(4))
 				{
-					st.setCond(5);
+					qs.setCond(5);
 				}
 				break;
 			}
 			case "31001-01.htm":
 			{
-				if (st.getCond() == 5)
+				if (qs.isCond(5))
 				{
 					addRadar(player, 120112, 30912, -3616);
 				}
@@ -96,47 +112,47 @@ public class Q00348_AnArrogantSearch extends Quest
 			}
 			case "31646-01.htm":
 			{
-				if (st.getCond() == 5)
+				if (qs.isCond(5))
 				{
 					addSpawn(STONE_WATCHMAN_EZEKIEL, npc, true, 0, true);
+					qs.getPlayer().sendPacket(new RadarControl(2, 2, 0, 0, 0));
 				}
-				st.getPlayer().sendPacket(new RadarControl(2, 2, 0, 0, 0));
 				break;
 			}
 			case "30864-06.htm":
 			{
-				if (st.getCond() == 6)
+				if (qs.isCond(6))
 				{
-					st.setCond(7);
+					qs.setCond(7);
 				}
 				break;
 			}
 			case "30864-07.htm":
 			{
-				if (st.getCond() == 7)
+				if (qs.isCond(7))
 				{
 					takeItems(player, HEALING_POTION, 1);
+					qs.setCond(8);
 				}
-				st.setCond(8);
 				break;
 			}
 			case "30864-08.htm":
 			{
-				if (st.getCond() == 7)
+				if (qs.isCond(7))
 				{
 					takeItems(player, HEALING_POTION, 1);
+					qs.setCond(9);
 				}
-				st.setCond(9);
 				break;
 			}
 			case "end.htm":
 			{
-				if ((st.getCond() == 10) || (st.getCond() == 11))
+				if ((qs.getCond() == 10) || (qs.getCond() == 11))
 				{
 					takeItems(player, WHITE_CLOTH_PLATINUM, -1);
 					takeItems(player, WHITE_CLOTH_ANGLE, -1);
 					rewardItems(player, BLOODED_FABRIC, 1);
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 				}
 				break;
 			}
@@ -162,58 +178,82 @@ public class Q00348_AnArrogantSearch extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getId() == HANELLIN)
+				switch (npc.getId())
 				{
-					switch (qs.getCond())
+					case HANELLIN:
 					{
-						case 2:
-							htmltext = "30864-09.htm";
-							break;
-						case 3:
-							htmltext = "30864-10.htm";
-							break;
-						case 4:
-							htmltext = "30864-04.htm";
-							break;
-						case 5:
-							htmltext = "30864-05.htm";
-							break;
-						case 6:
-							htmltext = "30864-11.htm";
-							break;
-						case 7:
-							if ((qs.getCond() == 7) && (getQuestItemsCount(talker, HEALING_POTION) > 0))
+						switch (qs.getCond())
+						{
+							case 2:
 							{
-								htmltext = "30864-12.htm";
+								htmltext = "30864-09.htm";
+								break;
 							}
-							else
+							case 3:
 							{
-								htmltext = "noz.htm";
+								htmltext = "30864-10.htm";
+								break;
 							}
-							break;
-						case 9:
-							htmltext = "30864-07.htm";
-							break;
-						case 10:
-							htmltext = "30864-13.htm";
-							break;
-						case 11:
-							htmltext = "30864-13.htm";
-							break;
+							case 4:
+							{
+								htmltext = "30864-04.htm";
+								break;
+							}
+							case 5:
+							{
+								htmltext = "30864-05.htm";
+								break;
+							}
+							case 6:
+							{
+								htmltext = "30864-11.htm";
+								break;
+							}
+							case 7:
+							{
+								if (getQuestItemsCount(talker, HEALING_POTION) > 0)
+								{
+									htmltext = "30864-12.htm";
+								}
+								else
+								{
+									htmltext = "noz.htm";
+								}
+								break;
+							}
+							case 9:
+							{
+								htmltext = "30864-07.htm";
+								break;
+							}
+							case 10:
+							{
+								htmltext = "30864-13.htm";
+								break;
+							}
+							case 11:
+							{
+								htmltext = "30864-13.htm";
+								break;
+							}
+						}
+						break;
 					}
-				}
-				if (npc.getId() == CLAUDIA_ATHEBALT)
-				{
-					if (qs.getCond() == 5)
+					case CLAUDIA_ATHEBALT:
 					{
-						htmltext = "31001.htm";
+						if (qs.isCond(5))
+						{
+							htmltext = "31001.htm";
+						}
+						break;
 					}
-				}
-				if (npc.getId() == TABLE_OF_VISION)
-				{
-					if (qs.getCond() == 5)
+					case TABLE_OF_VISION:
 					{
-						htmltext = "31646.htm";
+						if (qs.isCond(5))
+						{
+							htmltext = "31646.htm";
+						}
+						break;
 					}
 				}
 			}
@@ -229,48 +269,47 @@ public class Q00348_AnArrogantSearch extends Quest
 		{
 			case CRIMSON_DRAKE:
 			case KADIOS:
-				if (qs.getCond() == 2)
+			{
+				if (qs.isCond(2) && getRandomBoolean())
 				{
-					giveItemRandomly(killer, npc, SHELL_OF_MONSTERS, 1, 1, 50, true);
+					giveItems(killer, SHELL_OF_MONSTERS, 1, true);
+					qs.setCond(3);
 				}
-				qs.setCond(3);
 				break;
+			}
 			case PLATINUM_TRIBE_SHAMAN:
 			case PLATINUM_TRIBE_PREFECT:
-				
-				if (qs.getCond() == 8)
+			{
+				if (qs.isCond(8))
 				{
-					if (getQuestItemsCount(killer, WHITE_CLOTH_PLATINUM) < 100)
-					{
-						giveItemRandomly(killer, npc, WHITE_CLOTH_PLATINUM, 1, 100, 50, true);
-					}
-					if (getQuestItemsCount(killer, WHITE_CLOTH_PLATINUM) >= 100)
+					if (giveItemRandomly(killer, npc, WHITE_CLOTH_PLATINUM, 1, 100, 0.5, true))
 					{
 						qs.setCond(10);
 					}
 				}
 				break;
+			}
 			case GUARDIAN_ANGEL:
 			case SEAL_ANGEL:
-				if (qs.getCond() == 9)
+			{
+				if (qs.isCond(9))
 				{
-					if (getQuestItemsCount(killer, WHITE_CLOTH_ANGLE) < 1000)
-					{
-						giveItemRandomly(killer, npc, WHITE_CLOTH_ANGLE, 1, 1000, 50, true);
-					}
-					if (getQuestItemsCount(killer, WHITE_CLOTH_ANGLE) >= 1000)
+					if (giveItemRandomly(killer, npc, WHITE_CLOTH_ANGLE, 1, 1000, 0.5, true))
 					{
 						qs.setCond(11);
 					}
 				}
 				break;
+			}
 			case STONE_WATCHMAN_EZEKIEL:
-				if (qs.getCond() == 5)
+			{
+				if (qs.isCond(5))
 				{
 					giveItems(killer, BOOK_OF_SAINT, 1);
+					qs.setCond(6);
 				}
-				qs.setCond(6);
 				break;
+			}
 		}
 		return null;
 	}

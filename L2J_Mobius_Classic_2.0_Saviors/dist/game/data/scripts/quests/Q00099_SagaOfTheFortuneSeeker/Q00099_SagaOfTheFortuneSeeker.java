@@ -1,3 +1,19 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package quests.Q00099_SagaOfTheFortuneSeeker;
 
 import java.util.HashSet;
@@ -13,10 +29,12 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.util.Util;
 
-//QuangNguyen
-
+/**
+ * @author QuangNguyen
+ */
 public class Q00099_SagaOfTheFortuneSeeker extends Quest
 {
+	// NPCs
 	public final int MOND = 31594;
 	public final int DAZLING = 34267;
 	public final int ROO_ROO = 34271;
@@ -25,7 +43,7 @@ public class Q00099_SagaOfTheFortuneSeeker extends Quest
 	public final int TABLET_OF_VISION_3 = 31651;
 	public final int TABLET_OF_VISION_4 = 31658;
 	public final int PAMELA_APRODIA = 31601;
-	// mobs
+	// Monsters
 	public final int ICE_MONSTER = 27316;
 	public final int SPIRIT_OF_A_DROWNED = 27317;
 	public final int SOUL_OF_COLD = 27318;
@@ -40,16 +58,17 @@ public class Q00099_SagaOfTheFortuneSeeker extends Quest
 	public final int ARCHANGEL_ICONOCLASSIS = 27257;
 	public final int HALISHA_ARCHON = 27219;
 	public final int MINERVIA_VAN_HAKKEN = 27309;
-	// items
+	// Items
 	public final int ICE_CRYSTAL_FRAGMENT = 49833;
 	public final int HALISHA_BADGE = 7514;
-	public final int AMULET_REZONANSA_PERVIY = 7297;
-	public final int AMULET_REZONANSA_VTOROI = 7328;
-	public final int AMULET_REZONANSA_TRETIY = 7359;
-	public final int AMULET_REZONANSA_CHETVERTIY = 7390;
+	public final int RESONANCE_AMULET = 7297;
+	public final int RESONANCE_AMULET_2 = 7328;
+	public final int RESONANCE_AMULET_3 = 7359;
+	public final int RESONANCE_AMULET_4 = 7390;
 	public final int SEALED_DOCUMENT = 7608;
-	// reward
-	public final int BOOKKUKURU = 90041;
+	// Reward
+	public final int BOOK_KUKURU = 90041;
+	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q00099_SagaOfTheFortuneSeeker()
@@ -57,9 +76,7 @@ public class Q00099_SagaOfTheFortuneSeeker extends Quest
 		super(99);
 		addStartNpc(MOND);
 		addTalkId(MOND, DAZLING, ROO_ROO, PAMELA_APRODIA, TABLET_OF_VISION_1, TABLET_OF_VISION_2, TABLET_OF_VISION_3, TABLET_OF_VISION_4);
-		addKillId(ICE_MONSTER, SPIRIT_OF_A_DROWNED, SOUL_OF_COLD, GHOST_OF_SOLITUDE, FIEND_OF_COLD);
-		addKillId(SPIRIT_OF_COLD, SPAMPLAND_WATCHMAN, FLAME_DRAKE, FIERY_IFRIT, IKEDIT);
-		addKillId(KEEPER_OF_THE_HOLY_EDICT, ARCHANGEL_ICONOCLASSIS, HALISHA_ARCHON, MINERVIA_VAN_HAKKEN);
+		addKillId(ICE_MONSTER, SPIRIT_OF_A_DROWNED, SOUL_OF_COLD, GHOST_OF_SOLITUDE, FIEND_OF_COLD, SPIRIT_OF_COLD, SPAMPLAND_WATCHMAN, FLAME_DRAKE, FIERY_IFRIT, IKEDIT, KEEPER_OF_THE_HOLY_EDICT, ARCHANGEL_ICONOCLASSIS, HALISHA_ARCHON, MINERVIA_VAN_HAKKEN);
 		registerQuestItems(SEALED_DOCUMENT, ICE_CRYSTAL_FRAGMENT, HALISHA_BADGE);
 		addCondMinLevel(76, "aiken02.htm");
 		addCondClassId(ClassId.BOUNTY_HUNTER, "aiken03.htm");
@@ -68,8 +85,8 @@ public class Q00099_SagaOfTheFortuneSeeker extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -77,115 +94,148 @@ public class Q00099_SagaOfTheFortuneSeeker extends Quest
 		switch (event)
 		{
 			case "aiken02a.htm":
+			{
 				htmltext = "aiken5.htm";
 				break;
+			}
 			case "aiken01s.htm":
-				if (st.getCond() == 0)
+			{
+				if (qs.isCond(0))
 				{
-					st.startQuest();
-					st.setCond(1);
+					qs.startQuest();
+					qs.setCond(1);
 				}
 				break;
+			}
 			case "jer2.htm":
-				if (st.getCond() == 1)
+			{
+				if (qs.isCond(1))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 				}
 				break;
+			}
 			case "rifken2.htm":
-				if (st.getCond() == 2)
+			{
+				if (qs.isCond(2))
 				{
-					st.setCond(3);
+					qs.setCond(3);
 				}
 				break;
+			}
 			case "rifken4.htm":
-				if (st.getCond() == 4)
+			{
+				if (qs.isCond(4))
 				{
-					st.setCond(5);
+					qs.setCond(5);
+					takeItems(player, ICE_CRYSTAL_FRAGMENT, -1);
+					giveItems(player, SEALED_DOCUMENT, 1);
 				}
-				takeItems(player, ICE_CRYSTAL_FRAGMENT, -1);
-				giveItems(player, SEALED_DOCUMENT, 1);
 				break;
+			}
 			case "jer4.htm":
-				if (st.getCond() == 5)
+			{
+				if (qs.isCond(5))
 				{
-					st.setCond(6);
+					qs.setCond(6);
+					giveItems(player, RESONANCE_AMULET, 1);
+					takeItems(player, SEALED_DOCUMENT, -1);
 				}
-				giveItems(player, AMULET_REZONANSA_PERVIY, 1);
-				takeItems(player, SEALED_DOCUMENT, -1);
 				break;
+			}
 			case "stone12.htm":
-				if (st.getCond() == 6)
+			{
+				if (qs.isCond(6))
 				{
-					st.setCond(7);
+					qs.setCond(7);
 				}
 				break;
+			}
 			case "stone22.htm":
-				if (st.getCond() == 8)
+			{
+				if (qs.isCond(8))
 				{
 					addSpawn(ARCHANGEL_ICONOCLASSIS, npc, true, 0, true);
-					st.setCond(9);
+					qs.setCond(9);
 				}
 				break;
+			}
 			case "stone25.htm":
-				if (st.getCond() == 10)
+			{
+				if (qs.isCond(10))
 				{
-					st.setCond(11);
+					qs.setCond(11);
 				}
 				break;
+			}
 			case "jer6.htm":
-				if (st.getCond() == 11)
+			{
+				if (qs.isCond(11))
 				{
-					st.setCond(12);
+					qs.setCond(12);
 				}
 				break;
+			}
 			case "stone32.htm":
-				if (st.getCond() == 14)
+			{
+				if (qs.isCond(14))
 				{
-					st.setCond(15);
+					qs.setCond(15);
 				}
 				break;
+			}
 			case "stone41.htm":
-				if (st.getCond() == 15)
+			{
+				if (qs.isCond(15))
 				{
-					st.setCond(16);
+					qs.setCond(16);
+					addSpawn(MINERVIA_VAN_HAKKEN, npc, true, 0, true);
 				}
-				addSpawn(MINERVIA_VAN_HAKKEN, npc, true, 0, true);
 				break;
+			}
 			case "erikrams2.htm":
-				if (st.getCond() == 16)
+			{
+				if (qs.isCond(16))
 				{
-					st.setCond(17);
+					qs.setCond(17);
+					giveItems(player, RESONANCE_AMULET_4, 1);
 				}
-				giveItems(player, AMULET_REZONANSA_CHETVERTIY, 1);
 				break;
+			}
 			case "stone43.htm":
-				if (st.getCond() == 17)
+			{
+				if (qs.isCond(17))
 				{
-					st.setCond(18);
+					qs.setCond(18);
 				}
 				break;
+			}
 			case "aiken7.htm":
-				if (st.getCond() == 18)
+			{
+				if (qs.getCond() == 18)
 				{
-					if ((player.getLevel() < 76) && (player.getBaseClass() != 55))
+					if ((player.getLevel() < 76) || (player.getBaseClass() != 55))
 					{
 						htmltext = "30849-nolvl.htm";
 					}
-					addExpAndSp(player, 3100000, 103000);
-					rewardItems(player, BOOKKUKURU, 1);
-					takeItems(player, AMULET_REZONANSA_PERVIY, -1);
-					takeItems(player, AMULET_REZONANSA_VTOROI, -1);
-					takeItems(player, AMULET_REZONANSA_TRETIY, -1);
-					takeItems(player, AMULET_REZONANSA_CHETVERTIY, -1);
-					takeItems(player, HALISHA_BADGE, -1);
-					st.exitQuest(false, true);
-					player.setClassId(117);
-					player.setBaseClass(117);
-					player.broadcastUserInfo();
-					npc.broadcastPacket(new MagicSkillUse(npc, player, 5103, 1, 1000, 0));
+					else
+					{
+						addExpAndSp(player, 3100000, 103000);
+						rewardItems(player, BOOK_KUKURU, 1);
+						takeItems(player, RESONANCE_AMULET, -1);
+						takeItems(player, RESONANCE_AMULET_2, -1);
+						takeItems(player, RESONANCE_AMULET_3, -1);
+						takeItems(player, RESONANCE_AMULET_4, -1);
+						takeItems(player, HALISHA_BADGE, -1);
+						qs.exitQuest(false, true);
+						player.setClassId(117);
+						player.setBaseClass(117);
+						player.broadcastUserInfo();
+						npc.broadcastPacket(new MagicSkillUse(npc, player, 5103, 1, 1000, 0));
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -208,126 +258,163 @@ public class Q00099_SagaOfTheFortuneSeeker extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getId() == MOND)
+				switch (npc.getId())
 				{
-					if (qs.getCond() == 1)
+					case MOND:
 					{
-						htmltext = "aiken01s.htm";
+						if (qs.isCond(1))
+						{
+							htmltext = "aiken01s.htm";
+						}
+						else if (qs.isCond(18))
+						{
+							htmltext = "aiken6.htm";
+						}
+						break;
 					}
-					if (qs.getCond() == 18)
+					case DAZLING:
 					{
-						htmltext = "aiken6.htm";
+						switch (qs.getCond())
+						{
+							case 1:
+							{
+								htmltext = "jer1.htm";
+								break;
+							}
+							case 2:
+							{
+								htmltext = "jer2.htm";
+								break;
+							}
+							case 5:
+							{
+								htmltext = "jer3.htm";
+								break;
+							}
+							case 6:
+							{
+								htmltext = "jer4.htm";
+								break;
+							}
+							case 11:
+							{
+								htmltext = "jer5.htm";
+								break;
+							}
+							case 12:
+							{
+								htmltext = "jer6.htm";
+								break;
+							}
+						}
+						break;
 					}
-					
-				}
-				if (npc.getId() == DAZLING)
-				{
-					if (qs.getCond() == 1)
+					case ROO_ROO:
 					{
-						htmltext = "jer1.htm";
+						switch (qs.getCond())
+						{
+							case 2:
+							{
+								htmltext = "rifken1.htm";
+								break;
+							}
+							case 3:
+							{
+								htmltext = "rifken2.htm";
+								break;
+							}
+							case 4:
+							{
+								htmltext = "rifken3.htm";
+								break;
+							}
+						}
+						break;
 					}
-					if (qs.getCond() == 2)
+					case TABLET_OF_VISION_1:
 					{
-						htmltext = "jer2.htm";
+						if (qs.isCond(6))
+						{
+							htmltext = "stone11.htm";
+						}
+						else if (qs.isCond(7))
+						{
+							htmltext = "stone12.htm";
+						}
+						break;
 					}
-					if (qs.getCond() == 5)
+					case TABLET_OF_VISION_2:
 					{
-						htmltext = "jer3.htm";
+						switch (qs.getCond())
+						{
+							case 8:
+							{
+								htmltext = "stone21.htm";
+								break;
+							}
+							case 9:
+							{
+								htmltext = "stone23.htm";
+								break;
+							}
+							case 10:
+							{
+								htmltext = "stone24.htm";
+								break;
+							}
+							case 11:
+							{
+								htmltext = "stone25.htm";
+								break;
+							}
+						}
+						break;
 					}
-					if (qs.getCond() == 6)
+					case TABLET_OF_VISION_3:
 					{
-						htmltext = "jer4.htm";
+						if (qs.isCond(14))
+						{
+							htmltext = "stone31.htm";
+						}
+						else if (qs.isCond(15))
+						{
+							htmltext = "stone32.htm";
+						}
+						break;
 					}
-					if (qs.getCond() == 11)
+					case TABLET_OF_VISION_4:
 					{
-						htmltext = "jer5.htm";
+						switch (qs.getCond())
+						{
+							case 15:
+							{
+								htmltext = "stone40.htm";
+								break;
+							}
+							case 17:
+							{
+								htmltext = "stone42.htm";
+								break;
+							}
+							case 18:
+							{
+								htmltext = "stone43.htm";
+								break;
+							}
+						}
+						break;
 					}
-					if (qs.getCond() == 12)
+					case PAMELA_APRODIA:
 					{
-						htmltext = "jer6.htm";
-					}
-				}
-				if (npc.getId() == ROO_ROO)
-				{
-					if (qs.getCond() == 2)
-					{
-						htmltext = "rifken1.htm";
-					}
-					if (qs.getCond() == 3)
-					{
-						htmltext = "rifken2.htm";
-					}
-					if (qs.getCond() == 4)
-					{
-						htmltext = "rifken3.htm";
-					}
-				}
-				if (npc.getId() == TABLET_OF_VISION_1)
-				{
-					if (qs.getCond() == 6)
-					{
-						htmltext = "stone11.htm";
-					}
-					if (qs.getCond() == 7)
-					{
-						htmltext = "stone12.htm";
-					}
-				}
-				if (npc.getId() == TABLET_OF_VISION_2)
-				{
-					if (qs.getCond() == 8)
-					{
-						htmltext = "stone21.htm";
-					}
-					if (qs.getCond() == 9)
-					{
-						htmltext = "stone23.htm";
-					}
-					if (qs.getCond() == 10)
-					{
-						htmltext = "stone24.htm";
-					}
-					if (qs.getCond() == 11)
-					{
-						htmltext = "stone25.htm";
-					}
-				}
-				if (npc.getId() == TABLET_OF_VISION_3)
-				{
-					if (qs.getCond() == 14)
-					{
-						htmltext = "stone31.htm";
-					}
-					if (qs.getCond() == 15)
-					{
-						htmltext = "stone32.htm";
-					}
-				}
-				if (npc.getId() == TABLET_OF_VISION_4)
-				{
-					if (qs.getCond() == 15)
-					{
-						htmltext = "stone40.htm";
-					}
-					if (qs.getCond() == 17)
-					{
-						htmltext = "stone42.htm";
-					}
-					if (qs.getCond() == 18)
-					{
-						htmltext = "stone43.htm";
-					}
-					
-				}
-				if (npc.getId() == PAMELA_APRODIA)
-				{
-					if (qs.getCond() == 16)
-					{
-						htmltext = "erikrams1.htm";
-					}
-					if (qs.getCond() == 17)
-					{
-						htmltext = "erikrams2.htm";
+						if (qs.isCond(16))
+						{
+							htmltext = "erikrams1.htm";
+						}
+						else if (qs.isCond(17))
+						{
+							htmltext = "erikrams2.htm";
+						}
+						break;
 					}
 				}
 				break;
@@ -355,74 +442,73 @@ public class Q00099_SagaOfTheFortuneSeeker extends Quest
 				case FIEND_OF_COLD:
 				case GHOST_OF_SOLITUDE:
 				case SPIRIT_OF_COLD:
-					if (qs.getCond() == 3)
+				{
+					if (qs.isCond(3))
 					{
-						if (getQuestItemsCount(killer, ICE_CRYSTAL_FRAGMENT) < 50)
-						{
-							giveItemRandomly(killer, npc, ICE_CRYSTAL_FRAGMENT, 1, 50, 50, true);
-						}
-						if (getQuestItemsCount(killer, ICE_CRYSTAL_FRAGMENT) >= 50)
+						if (giveItemRandomly(killer, npc, ICE_CRYSTAL_FRAGMENT, 1, 50, 0.5, true))
 						{
 							qs.setCond(4);
 						}
 					}
 					break;
+				}
 				case ARCHANGEL_ICONOCLASSIS:
-					if (qs.getCond() == 9)
+				{
+					if (qs.isCond(9))
 					{
 						qs.setCond(10);
 					}
 					break;
+				}
 				case SPAMPLAND_WATCHMAN:
 				case FLAME_DRAKE:
 				case FIERY_IFRIT:
 				case IKEDIT:
-					if (qs.getCond() == 12)
+				{
+					if (qs.isCond(12))
 					{
-						if (getQuestItemsCount(killer, HALISHA_BADGE) < 701)
+						if (giveItemRandomly(killer, npc, HALISHA_BADGE, 1, 700, 0.5, true))
 						{
-							giveItemRandomly(killer, npc, HALISHA_BADGE, 1, 701, 50, true);
-							if (getQuestItemsCount(killer, HALISHA_BADGE) >= 701)
-							{
-								addSpawn(HALISHA_ARCHON, npc, true, 0, true);
-								qs.setCond(13);
-							}
+							addSpawn(HALISHA_ARCHON, npc, true, 0, true);
+							qs.setCond(13);
 						}
 					}
 					break;
+				}
 				case HALISHA_ARCHON:
-					if (qs.getCond() == 13)
+				{
+					if (qs.isCond(13))
 					{
-						if (!hasQuestItems(killer, AMULET_REZONANSA_TRETIY))
-						{
-							giveItemRandomly(killer, npc, AMULET_REZONANSA_TRETIY, 1, 1, 50, true);
-						}
+						giveItems(killer, RESONANCE_AMULET_3, 1, true);
 						qs.setCond(14);
 					}
 					break;
+				}
 				case MINERVIA_VAN_HAKKEN:
-					if (qs.getCond() == 16)
+				{
+					if (qs.isCond(16))
 					{
 						addSpawn(PAMELA_APRODIA, npc, true, 20000, true);
 					}
 					break;
-			}
-			
-			if (qs.isCond(7))
-			{
-				int count = qs.getInt(KILL_COUNT_VAR);
-				if (npc.getId() == KEEPER_OF_THE_HOLY_EDICT)
-				{
-					if (count < 20)
-					{
-						qs.set(KILL_COUNT_VAR, ++count);
-						sendNpcLogList(killer);
-					}
 				}
-				if (count >= 20)
+				case KEEPER_OF_THE_HOLY_EDICT:
 				{
-					qs.setCond(8, true);
-					giveItems(killer, AMULET_REZONANSA_VTOROI, 1);
+					if (qs.isCond(7))
+					{
+						final int count = qs.getInt(KILL_COUNT_VAR);
+						if (count < 20)
+						{
+							qs.set(KILL_COUNT_VAR, count + 1);
+							sendNpcLogList(killer);
+						}
+						if (count >= 20)
+						{
+							qs.setCond(8, true);
+							giveItems(killer, RESONANCE_AMULET_2, 1);
+						}
+					}
+					break;
 				}
 			}
 		}
