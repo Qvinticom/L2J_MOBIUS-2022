@@ -313,18 +313,6 @@
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio02_mb1922_01" minZ="-3520" maxZ="-3020">
-				<node x="-28702" y="144765" />
-				<node x="-27703" y="144884" />
-				<node x="-27406" y="145596" />
-				<node x="-28041" y="145971" />
-				<node x="-28673" y="145182" />
-			</territory>
-		</territories>
-		<npc id="25149" dbSave="true" dbName="zombie_lord_crowl" respawnTime="252hour" respawnRandom="168hour" /> <!-- Zombie Lord Crowl -->
-	</spawn>
-	<spawn>
-		<territories>
 			<territory name="gludio02_mb1922_02" minZ="-3749" maxZ="-3249">
 				<node x="-30506" y="131738" />
 				<node x="-29294" y="131735" />
@@ -1296,5 +1284,102 @@
 			</territory>
 		</territories>
 		<npc id="25322" dbSave="true" dbName="demonic_agent_falston" respawnTime="24hour" respawnRandom="12hour" /> <!-- Demon's Agent Falston -->
+	</spawn>
+	
+	<!-- Greyclaw Kutus -->
+	<spawn>
+		<npc id="25001" x="-53289" y="147314" z="-2776" heading="0" dbSave="true" dbName="Greyclaw Kutus" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Spirit Bifrons -->
+	<spawn>
+		<npc id="25146" x="-13056" y="215680" z="-3760" heading="0" dbSave="true" dbName="Evil Spirit Bifrons" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Zombie Lord Crowl -->
+	<spawn>
+		<npc id="25149" x="-12624" y="138112" z="-3552" heading="0" dbSave="true" dbName="Zombie Lord Crowl" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Skyla -->
+	<spawn>
+		<npc id="25401" x="117808" y="102880" z="-3592" heading="0" dbSave="true" dbName="Skyla" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Execution Grounds Watchman Guillotine -->
+	<spawn>
+		<npc id="25118" x="50872" y="146616" z="-3632" heading="0" dbSave="true" dbName="Execution Grounds Watchman Guillotine" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Soul Collector Acheron -->
+	<spawn>
+		<npc id="25223" x="43152" y="152352" z="-2840" heading="0" dbSave="true" dbName="Soul Collector Acheron" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Evil Spirit Tempest -->
+	<spawn>
+		<npc id="25385" x="53600" y="143472" z="-3864" heading="0" dbSave="true" dbName="Evil Spirit Tempest" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Necrosentinel Royal Guard -->
+	<spawn>
+		<npc id="25412" x="81920" y="113136" z="-3056" heading="0" dbSave="true" dbName="Necrosentinel Royal Guard" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Cursed Clara -->
+	<spawn>
+		<npc id="25217" x="89904" y="105712" z="-3280" heading="0" dbSave="true" dbName="Cursed Clara" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Beleth Seer Sephia -->
+	<spawn>
+		<npc id="25137" x="120302" y="112898" z="-3792" heading="0" dbSave="true" dbName="Beleth Seer Sephia" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Black Lily -->
+	<spawn>
+		<npc id="25176" x="92544" y="115232" z="-3184" heading="0" dbSave="true" dbName="Black Lily" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Ancient Weird Drake -->
+	<spawn>
+		<npc id="25234" x="120080" y="111248" z="-3032" heading="0" dbSave="true" dbName="Ancient Weird Drake" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Lord Ishka -->
+	<spawn>
+		<npc id="25407" x="115072" y="112272" z="-3020" heading="0" dbSave="true" dbName="Lord Ishka" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Fairy Queen Timiniel -->
+	<spawn>
+		<npc id="25423" x="113600" y="47120" z="-4640" heading="0" dbSave="true" dbName="Fairy Queen Timiniel" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Furious Thieles -->
+	<spawn>
+		<npc id="25010" x="113920" y="52960" z="-3735" heading="0" dbSave="true" dbName="Furious Thieles" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Enchanted Valley Lookout Ruell -->
+	<spawn>
+		<npc id="25070" x="125600" y="50100" z="-3600" heading="0" dbSave="true" dbName="Enchanted Valley Lookout Ruell" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Ghost Knight Kabed -->
+	<spawn>
+		<npc id="25475" x="183568" y="24560" z="-3184" heading="0" dbSave="true" dbName="Ghost Knight Kabed" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Paniel the Unicorn -->
+	<spawn>
+		<npc id="25159" x="124984" y="43200" z="-3625" heading="0" dbSave="true" dbName="Paniel the Unicorn" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Grave Robber Kim -->
+	<spawn>
+		<npc id="25473" x="175712" y="29856" z="-3776" heading="0" dbSave="true" dbName="Grave Robber Kim" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Ghost of Peasant Captain -->
+	<spawn>
+		<npc id="25013" x="169744" y="11920" z="-2732" heading="0" dbSave="true" dbName="Ghost of Peasant Captain" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Fairy Queen's Messenger Berun -->
+	<spawn>
+		<npc id="25119" x="121872" y="64032" z="-3536" heading="0" dbSave="true" dbName="Fairy Queen Messenger Berun" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Shilen's Messenger Cabrio -->
+	<spawn>
+		<npc id="25035" x="180968" y="12035" z="-2720" heading="0" dbSave="true" dbName="Shilen Messenger Cabrio" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Kernon's Faithful Servant Kelone -->
+	<spawn>
+		<npc id="25263" x="145920" y="-27301" z="-2208" heading="0" dbSave="true" dbName="Kernon Faithful Servant Kelone" respawnTime="24hour" respawnRandom="12hour" />
+	</spawn>
+	<!-- Meanas Anor -->
+	<spawn>
+		<npc id="25453" x="156704" y="-6096" z="-4185" heading="0" dbSave="true" dbName="Kernon Faithful Servant Kelone" respawnTime="24hour" respawnRandom="12hour" />
 	</spawn>
 </list>

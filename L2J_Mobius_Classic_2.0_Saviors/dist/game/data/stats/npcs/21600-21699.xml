@@ -2827,7 +2827,6 @@
 		</collision>
 	</npc>
 	<npc id="21650" level="74" type="L2Monster" name="Swampland Watchman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -2845,7 +2844,6 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
 		<acquire exp="6571" sp="197" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2776" hpRegen="8.5" mp="1475" mpRegen="3" />
@@ -2907,7 +2905,6 @@
 		</drop_lists>
 	</npc>
 	<npc id="21651" level="74" type="L2Monster" name="Flame Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2921,7 +2918,6 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<equipment rhand="98" /> <!-- Halberd -->
 		<acquire exp="6571" sp="197" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2776" hpRegen="8.5" mp="1475" mpRegen="3" />

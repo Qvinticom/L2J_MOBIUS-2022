@@ -3298,6 +3298,25 @@
 			<radius normal="23" />
 			<height normal="90" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="242" min="1" max="1" chance="3.552" /> <!-- Soulfire Dirk -->
+				<item id="74" min="1" max="1" chance="3.551" /> <!-- Katana -->
+				<item id="73" min="1" max="1" chance="3.546" /> <!-- Shamshir -->
+				<item id="131" min="1" max="1" chance="3.516" /> <!-- Spirit Sword -->
+				<item id="195" min="1" max="1" chance="3.506" /> <!-- Cursed Staff -->
+				<item id="133" min="1" max="1" chance="3.499" /> <!-- Raid Sword -->
+				<item id="227" min="1" max="1" chance="3.498" /> <!-- Stiletto -->
+				<item id="2502" min="1" max="1" chance="3.459" /> <!-- Dwarven War Hammer -->
+				<item id="325" min="1" max="1" chance="3.448" /> <!-- Horn of Glory -->
+				<item id="285" min="1" max="1" chance="3.447" /> <!-- Noble Elven Bow -->
+				<item id="94" min="1" max="1" chance="3.43" /> <!-- Bec de Corbin -->
+				<item id="282" min="1" max="1" chance="3.43" /> <!-- Elemental Bow -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+				<item id="951" min="1" max="1" chance="30.85" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="25071" level="54" type="L2Monster" name="Ruell's Wind" title="Raid Fighter">
 		<parameters>
@@ -3681,6 +3700,21 @@
 			<radius normal="15" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="880" min="1" max="3" chance="29.21" /> <!-- Black Pearl Ring -->
+				<item id="849" min="1" max="3" chance="28.27" /> <!-- Tiger's Eye -->
+				<item id="912" min="1" max="1" chance="27.74" /> <!-- Near Forest Necklace -->
+				<item id="47" min="1" max="3" chance="17.51" /> <!-- Helmet -->
+				<item id="58" min="1" max="3" chance="16.58" /> <!-- Mithril Breastplate -->
+				<item id="393" min="1" max="3" chance="16.53" /> <!-- Scroll of Wisdom -->
+				<item id="59" min="1" max="3" chance="16.49" /> <!-- Mithril Gaiters -->
+				<item id="415" min="1" max="3" chance="16.16" /> <!-- Mithril Banded Gaiters -->
+				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="25080" level="29" type="L2Monster" name="Mercenary" title="Raid Fighter">
 		<parameters>

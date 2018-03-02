@@ -677,7 +677,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="27316" level="55" type="L2Monster" name="Ice Monster" title="Quest Monster">
+	<npc id="27316" level="70" type="L2Monster" name="Ice Monster" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -685,13 +685,12 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="161" /> <!-- Silver Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2823" hpRegen="6.5" mp="1507" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="190.09077" magical="163.64727" evasion="10" />
 			<speed>
-				<walk ground="20" />
+				<walk ground="36" />
 				<run ground="180" />
 			</speed>
 			<hit_time>540</hit_time>
@@ -724,7 +723,6 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="161" /> <!-- Silver Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -755,7 +753,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="27318" level="46" type="L2Monster" name="Soul of Cold" title="Quest Monster">
+	<npc id="27318" level="70" type="L2Monster" name="Soul of Cold" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -793,7 +791,7 @@
 			<height normal="35.6" />
 		</collision>
 	</npc>
-	<npc id="27319" level="18" type="L2Monster" name="Ghost of Solitude" title="Quest Monster">
+	<npc id="27319" level="70" type="L2Monster" name="Ghost of Solitude" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -831,7 +829,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27320" level="20" type="L2Monster" name="Fiend of Cold" title="Quest Monster">
+	<npc id="27320" level="70" type="L2Monster" name="Fiend of Cold" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -839,7 +837,6 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="2" /> <!-- Long Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09" />
 			<attack physical="6300" magical="4200" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120" />
@@ -870,10 +867,9 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="27321" level="20" type="L2Monster" name="Spirit of Cold" title="Quest Monster">
+	<npc id="27321" level="70" type="L2Monster" name="Spirit of Cold" title="Quest Monster">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="291" /> <!-- Trident -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09" />
 			<attack physical="36.4" magical="57.4" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120" />
