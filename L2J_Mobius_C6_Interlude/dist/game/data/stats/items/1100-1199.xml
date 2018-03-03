@@ -1,0 +1,1699 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="1100" type="Armor" name="Cotton Tunic">
+		<set name="bodypart" val="chest"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="magic"/>
+		<set name="weight" val="2120"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="21"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="38"/>
+		<set name="price" val="2430"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="21" order="0x10" stat="pDef"/>
+			<add val="38" order="0x60" stat="maxMp"/>
+		</for>
+	</item>
+	<item id="1101" type="Armor" name="Tunic of Devotion">
+		<set name="bodypart" val="chest"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="magic"/>
+		<set name="weight" val="2090"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="30"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="67"/>
+		<set name="price" val="20300"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add stat="pDef" order="0x10"  val="30"/>
+			<add val="67" order="0x60" stat="maxMp"/>
+		</for>
+	</item>
+	<item id="1102" type="Armor" name="Tunic of Magic">
+		<set name="bodypart" val="chest"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="magic"/>
+		<set name="weight" val="2080"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="34"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="86"/>
+		<set name="price" val="36900"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="34" order="0x10" stat="pDef"/>
+			<add val="86" order="0x60" stat="maxMp"/>
+		</for>
+	</item>
+	<item id="1103" type="Armor" name="Cotton Stockings">
+		<set name="bodypart" val="legs"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="magic"/>
+		<set name="weight" val="1060"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="13"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="23"/>
+		<set name="price" val="1520"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="13" order="0x10" stat="pDef"/>
+			<add val="23" order="0x60" stat="maxMp"/>
+		</for>
+	</item>
+	<item id="1104" type="Armor" name="Stockings of Devotion">
+		<set name="bodypart" val="legs"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="magic"/>
+		<set name="weight" val="1040"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="19"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="42"/>
+		<set name="price" val="12700"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="19" order="0x10" stat="pDef"/>
+			<add val="42" order="0x60" stat="maxMp"/>
+		</for>
+	</item>
+	<item id="1105" type="Armor" name="Stockings of Magic">
+		<set name="bodypart" val="legs"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="magic"/>
+		<set name="weight" val="1030"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="21"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="54"/>
+		<set name="price" val="23000"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="21" order="0x10" stat="pDef"/>
+			<add val="54" order="0x60" stat="maxMp"/>
+		</for>
+	</item>
+	<item id="1106" type="EtcItem" name="Norman's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1107" type="EtcItem" name="Bone Fragment">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1108" type="EtcItem" name="Arbon's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1109" type="EtcItem" name="Roien's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1110" type="EtcItem" name="Bone Fragment">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1111" type="EtcItem" name="Adamantite Ore">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1112" type="EtcItem" name="Leaf of the Mother Tree">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1113" type="EtcItem" name="Blood of Mitraell">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1114" type="EtcItem" name="Orc Amulet">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1115" type="EtcItem" name="Orc's Necklace">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1116" type="EtcItem" name="Orc Amulet">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1117" type="EtcItem" name="Orc's Necklace">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1118" type="EtcItem" name="Spore Sac">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1119" type="Armor" name="Short Leather Gloves">
+		<set name="bodypart" val="gloves"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="660"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="11"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="607"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="11" order="0x10" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1120" type="Armor" name="Pa'agrian Hand">
+		<set name="bodypart" val="gloves"/>
+		<set name="crystallizable" val="true"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="1600"/>
+		<set name="crystal_type" val="c"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="34"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="161000"/>
+		<set name="crystal_count" val="64"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="34" order="0x10" stat="pDef"/>
+			<enchant val="0" order="0x0C" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1121" type="Armor" name="Apprentice's Shoes">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="1320"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="8"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="7"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="8" order="0x10" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1122" type="Armor" name="Cotton Shoes">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="1320"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="11"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="607"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="11" order="0x10" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1123" type="Armor" name="Blue Buckskin Boots">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="true"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="1300"/>
+		<set name="crystal_type" val="d"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="22"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="33300"/>
+		<set name="crystal_count" val="60"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="22" order="0x10" stat="pDef"/>
+			<enchant val="0" order="0x0C" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1124" type="Armor" name="Boots of Power">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="true"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="1250"/>
+		<set name="crystal_type" val="d"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="27"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="74700"/>
+		<set name="crystal_count" val="135"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="27" order="0x10" stat="pDef"/>
+			<enchant val="0" order="0x0C" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1125" type="Armor" name="Assault Boots">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="true"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="1240"/>
+		<set name="crystal_type" val="d"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="29"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="97800"/>
+		<set name="crystal_count" val="177"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="29" order="0x10" stat="pDef"/>
+			<enchant val="0" order="0x0C" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1126" type="Armor" name="Crimson Boots">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="true"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="1210"/>
+		<set name="crystal_type" val="c"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="34"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="161000"/>
+		<set name="crystal_count" val="64"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="34" order="0x10" stat="pDef"/>
+			<enchant val="0" order="0x0C" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1127" type="Armor" name="Forgotten Boots">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="true"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="4000"/>
+		<set name="crystal_type" val="c"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="36"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="245000"/>
+		<set name="crystal_count" val="98"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="36" order="0x10" stat="pDef"/>
+			<enchant val="0" order="0x0C" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1128" type="Armor" name="Adamantite Boots">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="true"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="4000"/>
+		<set name="crystal_type" val="c"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="39"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="358000"/>
+		<set name="crystal_count" val="143"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="39" order="0x10" stat="pDef"/>
+			<enchant val="0" order="0x0C" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1129" type="Armor" name="Crude Leather Shoes">
+		<set name="bodypart" val="feet"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="1320"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="11"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="607"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="11" order="0x10" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1130" type="EtcItem" name="Cobendell's Medicine">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1131" type="EtcItem" name="Cobendell's Medicine">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1132" type="EtcItem" name="Cobendell's Medicine">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1133" type="EtcItem" name="Cobendell's Medicine">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1134" type="EtcItem" name="Cobendell's Medicine">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1135" type="EtcItem" name="Spiritbound Wand">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1136" type="EtcItem" name="Spiritbound Wand">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1137" type="EtcItem" name="Spiritbound Wand">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1138" type="EtcItem" name="Auron's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1139" type="EtcItem" name="Warrior Guild Mark">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1140" type="EtcItem" name="Rusted Bronze Sword">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1141" type="EtcItem" name="Rusted Bronze Sword">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="1142" type="Weapon" name="Rusted Bronze Sword">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="false"/>
+		<set name="weight" val="1400"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="none"/>
+		<set name="p_dam" val="18"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="21"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="18" order="0x08" stat="pAtk"/>
+			<set val="21" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</item>
+	<item id="1143" type="EtcItem" name="Simplon's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1144" type="EtcItem" name="Poison Spider's Leg">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1145" type="EtcItem" name="Medallion of Warrior">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="1146" type="Armor" name="Squire's Shirt">
+		<set name="bodypart" val="chest"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="light"/>
+		<set name="weight" val="3301"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="33"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="26"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="33" order="0x10" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1147" type="Armor" name="Squire's Pants">
+		<set name="bodypart" val="legs"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="light"/>
+		<set name="weight" val="1750"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="20"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="6"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="20" order="0x10" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1148" type="Armor" name="Hard Leather Helmet">
+		<set name="bodypart" val="head"/>
+		<set name="crystallizable" val="false"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="640"/>
+		<set name="crystal_type" val="none"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="26"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="18400"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="26" order="0x10" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1149" type="Armor" name="Shining Circlet">
+		<set name="bodypart" val="head"/>
+		<set name="crystallizable" val="true"/>
+		<set name="armor_type" val="none"/>
+		<set name="weight" val="600"/>
+		<set name="crystal_type" val="c"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="duration" val="-1"/>
+		<set name="p_def" val="54"/>
+		<set name="m_def" val="0"/>
+		<set name="mp_bonus" val="0"/>
+		<set name="price" val="368000"/>
+		<set name="crystal_count" val="147"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<for>
+			<add val="54" order="0x10" stat="pDef"/>
+			<enchant val="0" order="0x0C" stat="pDef"/>
+		</for>
+	</item>
+	<item id="1150" type="EtcItem" name="Spellbook: Wind Strike">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="spellbook"/>
+		<set name="weight" val="120"/>
+		<set name="consume_type" val="normal"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="1151" type="EtcItem" name="Spellbook: Self Heal">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="spellbook"/>
+		<set name="weight" val="120"/>
+		<set name="consume_type" val="normal"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="1152" type="EtcItem" name="Spellbook: Heal">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="spellbook"/>
+		<set name="weight" val="120"/>
+		<set name="consume_type" val="normal"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="100"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="1153" type="EtcItem" name="Jenna's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1154" type="EtcItem" name="Sentry Blade">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1155" type="EtcItem" name="Sentry Blade">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1156" type="EtcItem" name="Sentry Blade">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1157" type="EtcItem" name="Old Bronze Sword">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1158" type="EtcItem" name="Bone Fragment">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1159" type="EtcItem" name="Elf Skull">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1160" type="EtcItem" name="Dark Bezoar">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1161" type="EtcItem" name="Sword of Ritual">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1162" type="EtcItem" name="Coin of Lords">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1163" type="EtcItem" name="Coin of Lords">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1164" type="EtcItem" name="Coin of Lords">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1165" type="EtcItem" name="Coin of Lords">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1166" type="EtcItem" name="Coin of Lords">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1167" type="EtcItem" name="Coin of Lords">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1168" type="EtcItem" name="Gludio Guard's 1st Badge">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1169" type="EtcItem" name="Bugbear Necklace">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1170" type="EtcItem" name="Einhasad's 1st Temple Badge">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1171" type="EtcItem" name="Einhasad's Crucifix">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1172" type="EtcItem" name="Gludio Guard's 2nd Badge">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1173" type="EtcItem" name="Poison Spider Leg">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1174" type="EtcItem" name="Einhasad's 2nd Temple Badge">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1175" type="EtcItem" name="Lizardman's Totem">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1176" type="EtcItem" name="Gludio Guard's 3rd Badge">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1177" type="EtcItem" name="Giant Spider's Husk">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1178" type="EtcItem" name="Einhasad's 3rd Temple Badge">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1179" type="EtcItem" name="Skull of Silent Horror">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1180" type="EtcItem" name="Bezique's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1181" type="Weapon" name="Neti's Bow">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="false"/>
+		<set name="weight" val="1850"/>
+		<set name="soulshots" val="7"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="none"/>
+		<set name="p_dam" val="45"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="293"/>
+		<set name="mp_consume" val="2"/>
+		<set name="m_dam" val="16"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="45" order="0x08" stat="pAtk"/>
+			<set val="16" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="293" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</item>
+	<item id="1182" type="Weapon" name="Neti's Dagger">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="false"/>
+		<set name="weight" val="1000"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="crystal_type" val="none"/>
+		<set name="p_dam" val="19"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="433"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="16"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="19" order="0x08" stat="pAtk"/>
+			<set val="16" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="433" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</item>
+	<item id="1183" type="EtcItem" name="Spartoi's Bones">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1184" type="EtcItem" name="Horseshoe of Light">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1185" type="EtcItem" name="Most Wanted List">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1186" type="EtcItem" name="Stolen Jewelry">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1187" type="EtcItem" name="Stolen Tomes">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1188" type="EtcItem" name="Stolen Ring">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1189" type="EtcItem" name="Stolen Necklace">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1190" type="EtcItem" name="Bezique's Recommendation">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1191" type="EtcItem" name="1st Letter of Order">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1192" type="EtcItem" name="2nd Letter of Order">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1193" type="EtcItem" name="Lionel's Book">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1194" type="EtcItem" name="Book of Vivyan">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1195" type="EtcItem" name="Book of Simplon">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1196" type="EtcItem" name="Book of Praga">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1197" type="EtcItem" name="Certificate of Gallint">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1198" type="EtcItem" name="Pendant of Mother">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="1199" type="EtcItem" name="Necklace of Mother">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+</list>

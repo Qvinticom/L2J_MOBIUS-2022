@@ -1,0 +1,3137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="5600" type="Weapon" name="Meteor Shower - Critical Bleed">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1600"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="3021"/>
+		<set name="onCrit_skill_lvl" val="5"/>
+		<set name="onCrit_skill_chance" val="35"/>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5601" type="Weapon" name="Meteor Shower - Rsk. Haste">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1600"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3056"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Rsk. Haste -->
+			<mul order="0x30" stat="pAtkSpd" val="1.11">
+				<and>
+					<player hp="60"/>
+				</and>
+			</mul>
+		</for>
+	</item>
+	<item id="5602" type="Weapon" name="Elysian - Health">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_lvl" val="3"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5603" type="Weapon" name="Elysian - Anger">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3057"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5604" type="Weapon" name="Elysian - Critical Drain">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1580"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="weapon_type" val="blunt"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3072"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5605" type="Weapon" name="Branch of The Mother Tree - Conversion">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="226"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="152"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3048"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="226" order="0x08" stat="pAtk"/>
+			<set val="152" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- We have SA on XML -->
+		</for>
+	</item>
+	<item id="5606" type="Weapon" name="Branch of The Mother Tree - Magic Damage">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="226"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="152"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3552"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="226" order="0x08" stat="pAtk"/>
+			<set val="152" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5607" type="Weapon" name="Branch of The Mother Tree - Acumen">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="226"/>
+		<set name="rnd_dam" val="20"/>
+		<set name="weapon_type" val="bigblunt"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="152"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3047"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="226" order="0x08" stat="pAtk"/>
+			<set val="152" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- SA always used in skill add -->
+		</for>
+	</item>
+	<item id="5608" type="Weapon" name="Carnage Bow - Light">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="500"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="440"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="293"/>
+		<set name="mp_consume" val="9"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="440" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="293" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5609" type="Weapon" name="Carnage Bow - Critical Bleed">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1670"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="440"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="293"/>
+		<set name="mp_consume" val="9"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="3021"/>
+		<set name="onCrit_skill_lvl" val="5"/>
+		<set name="onCrit_skill_chance" val="35"/>
+		<for>
+			<set val="440" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="293" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5610" type="Weapon" name="Carnage Bow - Mana Up">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1670"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="440"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="293"/>
+		<set name="mp_consume" val="9"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3014"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="440" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="293" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</item>
+	<item id="5611" type="Weapon" name="Soul Bow - Cheap Shot">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1660"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="528"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="227"/>
+		<set name="mp_consume" val="10"/>
+		<set name="m_dam" val="125"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="528" order="0x08" stat="pAtk"/>
+			<set val="125" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="227" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- SA: Cheap Shot -->
+			<set val="2" order="0x08" stat="MpConsume"> 
+				<and>
+					<game skill="false" chance="38"/> 
+				</and> 
+			</set>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5612" type="Weapon" name="Soul Bow - Quick Recovery">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1660"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="528"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="227"/>
+		<set name="mp_consume" val="10"/>
+		<set name="m_dam" val="125"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="528" order="0x08" stat="pAtk"/>
+			<set val="125" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="227" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- SA: Quick Recovery -->
+			<mul val="0.85" order="0x30" stat="atkReuse"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5613" type="Weapon" name="Soul Bow - Critical Poison">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1660"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="528"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="bow"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="227"/>
+		<set name="mp_consume" val="10"/>
+		<set name="m_dam" val="125"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="3024"/>
+		<set name="onCrit_skill_lvl" val="5"/>
+		<set name="onCrit_skill_chance" val="10"/>
+		<for>
+			<set val="528" order="0x08" stat="pAtk"/>
+			<set val="125" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="227" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5614" type="Weapon" name="Bloody Orchid - Focus">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="960"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="186"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="433"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3051"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="186" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="433" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Focus -->
+			<add val="61" order="0x40" stat="rCrit"/>
+		</for>
+	</item>
+	<item id="5615" type="Weapon" name="Bloody Orchid - Back Blow">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="960"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="186"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="433"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3599"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="186" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="433" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5616" type="Weapon" name="Bloody Orchid - Critical Bleed">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="960"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="186"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="433"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="3021"/>
+		<set name="onCrit_skill_lvl" val="5"/>
+		<set name="onCrit_skill_chance" val="35"/>
+		<for>
+			<set val="186" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="433" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5617" type="Weapon" name="Soul Separator - Guidance">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="950"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="203"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="433"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3064"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="203" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="433" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5618" type="Weapon" name="Soul Separator - Critical Damage">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="950"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="203"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="433"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3066"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="203" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="433" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Critical Damage -->
+			<add val="200" order="0x40" stat="cAtk"/>
+		</for>
+	</item>
+	<item id="5619" type="Weapon" name="Soul Separator - Rsk. Haste">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="950"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="203"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dagger"/>
+		<set name="critical" val="12"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="433"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3056"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="203" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="12" order="0x08" stat="rCrit"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="433" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Rsk. Haste -->
+			<mul order="0x30" stat="pAtkSpd" val="1.13">
+				<and>
+					<player hp="60"/>
+				</and>
+			</mul>
+		</for>
+	</item>
+	<item id="5620" type="Weapon" name="Blood Tornado - Haste">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1370"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="259"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3068"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="259" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Haste -->
+			<mul val="1.07" order="0x30" stat="pAtkSpd"/>
+		</for>
+	</item>
+	<item id="5621" type="Weapon" name="Blood Tornado - Focus">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1370"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="259"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3565"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="259" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Focus -->
+			<add val="61" order="0x40" stat="rCrit"/>
+		</for>
+	</item>
+	<item id="5622" type="Weapon" name="Blood Tornado - Anger">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1370"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="259"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3058"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="259" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5623" type="Weapon" name="Dragon Grinder - Rsk. Evasion">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1350"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="282"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3069"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="282" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Rsk. Evasion -->
+			<add order="0x40" stat="rEvas" val="9">
+				<and>
+					<player hp="60"/>
+				</and>
+			</add>
+		</for>
+	</item>
+	<item id="5624" type="Weapon" name="Dragon Grinder - Guidance">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1350"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="282"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3065"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="282" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5625" type="Weapon" name="Dragon Grinder - Health">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1350"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="282"/>
+		<set name="rnd_dam" val="5"/>
+		<set name="weapon_type" val="dualfist"/>
+		<set name="critical" val="4"/>
+		<set name="hit_modify" val="4.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_lvl" val="3"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="282" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="4" order="0x08" stat="rCrit"/>
+			<add val="4" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5626" type="Weapon" name="Halberd - Haste">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3601"/>
+		<set name="item_skill_lvl" val="7"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Haste -->
+			<mul val="1.07" order="0x30" stat="pAtkSpd"/>
+		</for>
+	</item>
+	<item id="5627" type="Weapon" name="Halberd - Critical Stun">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="3070"/>
+		<set name="onCrit_skill_lvl" val="1"/>
+		<set name="onCrit_skill_chance" val="25"/>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5628" type="Weapon" name="Halberd - Wide Blow">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1900"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3599"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5629" type="Weapon" name="Orcish Halberd">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1880"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="219"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="109"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="21300000"/>
+		<set name="crystal_count" val="1704"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="219" order="0x08" stat="pAtk"/>
+			<set val="109" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</item>
+	<item id="5630" type="Weapon" name="Orcish Halberd">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1880"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="219"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="109"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="21300000"/>
+		<set name="crystal_count" val="1704"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="219" order="0x08" stat="pAtk"/>
+			<set val="109" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</item>
+	<item id="5631" type="Weapon" name="Orcish Halberd">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1880"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="219"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="109"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="21300000"/>
+		<set name="crystal_count" val="1704"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="219" order="0x08" stat="pAtk"/>
+			<set val="109" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+		</for>
+	</item>
+	<item id="5632" type="Weapon" name="Tallum Glaive - Guidance">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3602"/>
+		<set name="item_skill_lvl" val="8"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5633" type="Weapon" name="Tallum Glaive - Health">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_lvl" val="4"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5634" type="Weapon" name="Tallum Glaive - Wide Blow">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="pole"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="-3.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3599"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<set val="66" order="0x08" stat="pAtkRange"/>
+			<add val="-3" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5635" type="Weapon" name="Tallum Blade - Critical Poison">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="3024"/>
+		<set name="onCrit_skill_lvl" val="5"/>
+		<set name="onCrit_skill_chance" val="10"/>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5636" type="Weapon" name="Tallum Blade - Haste">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3068"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Haste -->
+			<mul val="1.07" order="0x30" stat="pAtkSpd"/>
+		</for>
+	</item>
+	<item id="5637" type="Weapon" name="Tallum Blade - Anger">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1330"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="107"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3057"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="213" order="0x08" stat="pAtk"/>
+			<set val="107" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5638" type="Weapon" name="Elemental Sword - Magic Power">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="830"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="170"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="143"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3073"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="170" order="0x08" stat="pAtk"/>
+			<set val="143" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+		</for>
+	</item>
+	<item id="5639" type="Weapon" name="Elemental Sword - Magic Paralyze">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="830"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="170"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="143"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="3075"/>
+		<set name="onCast_skill_lvl" val="1"/>
+		<set name="onCast_skill_chance" val="10"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="170" order="0x08" stat="pAtk"/>
+			<set val="143" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5640" type="Weapon" name="Elemental Sword - Empower">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="830"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="170"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="143"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="18300000"/>
+		<set name="crystal_count" val="1464"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3072"/>
+		<set name="item_skill_lvl" val="1"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="170" order="0x08" stat="pAtk"/>
+			<set val="143" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA used in skill add -->
+		</for>
+	</item>
+	<item id="5641" type="Weapon" name="Sword of Miracles - Magic Power">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="186"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="152"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3073"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="186" order="0x08" stat="pAtk"/>
+			<set val="152" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5642" type="Weapon" name="Sword of Miracles - Magic Silence">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="186"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="152"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="3074"/>
+		<set name="onCast_skill_lvl" val="1"/>
+		<set name="onCast_skill_chance" val="10"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="186" order="0x08" stat="pAtk"/>
+			<set val="152" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5643" type="Weapon" name="Sword of Miracles - Acumen">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="186"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="152"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3047"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="186" order="0x08" stat="pAtk"/>
+			<set val="152" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- SA always used in skill add -->
+		</for>
+	</item>
+	<item id="5644" type="Weapon" name="Dragon Slayer - Health">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="282"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_lvl" val="3"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="282" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5645" type="Weapon" name="Dragon Slayer - Critical Bleed">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="282"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="3021"/>
+		<set name="onCrit_skill_lvl" val="5"/>
+		<set name="onCrit_skill_chance" val="24"/>
+		<for>
+			<set val="282" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5646" type="Weapon" name="Dragon Slayer - Critical Drain">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1840"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="282"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="bigsword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="3022"/>
+		<set name="onCrit_skill_lvl" val="4"/>
+		<set name="onCrit_skill_chance" val="20"/>
+		<for>
+			<set val="282" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="325" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5647" type="Weapon" name="Dark Legion's Edge - Critical Damage">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1320"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3067"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Critical Damage -->
+			<add val="326" order="0x40" stat="cAtk"/>
+		</for>
+	</item>
+	<item id="5648" type="Weapon" name="Dark Legion's Edge - Health">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1320"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3013"/>
+		<set name="item_skill_lvl" val="3"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+		</for>
+	</item>
+	<item id="5649" type="Weapon" name="Dark Legion's Edge - Rsk. Focus">
+		<set name="bodypart" val="rhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="1320"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="a"/>
+		<set name="p_dam" val="232"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="sword"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="379"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="114"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="27000000"/>
+		<set name="crystal_count" val="2160"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="3071"/>
+		<set name="item_skill_lvl" val="2"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+		<for>
+			<set val="232" order="0x08" stat="pAtk"/>
+			<set val="114" order="0x08" stat="mAtk"/>
+			<set val="8" order="0x08" stat="rCrit"/>
+			<add val="0" order="0x10" stat="accCombat"/>
+			<set val="379" order="0x08" stat="pAtkSpd"/>
+			<enchant val="0" order="0x0C" stat="pAtk"/>
+			<enchant val="0" order="0x0C" stat="mAtk"/>
+			<!-- Enhances damage to target during PvP -->
+			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
+			<!-- SA: Rsk. Focus -->
+			<add order="0x40" stat="rCrit" val="99">
+				<and>        
+					<player hp="60"/>
+				</and>
+			</add>
+		</for>
+	</item>
+	<item id="5650" type="EtcItem" name="Alternative Dark Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="5"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5651" type="EtcItem" name="Alternative Red Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="5"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5652" type="EtcItem" name="Alternative Chilly Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="5"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5653" type="EtcItem" name="Alternative Blue Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="10"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5654" type="EtcItem" name="Alternative Golden Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="20"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5655" type="EtcItem" name="Alternative Lute Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="30"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5656" type="EtcItem" name="Alternative Desert Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="20"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5657" type="EtcItem" name="Alternative Blue Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5658" type="EtcItem" name="Alternative Blue Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="10"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5659" type="EtcItem" name="Alternative Golden Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="20"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5660" type="EtcItem" name="Alternative Lute Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="30"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5661" type="EtcItem" name="Alternative Desert Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="20"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5662" type="EtcItem" name="Alternative Red Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="20"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5663" type="EtcItem" name="Alternative Chilly Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="25"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5664" type="EtcItem" name="Alternative Thorn Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5665" type="EtcItem" name="Alternative Golden Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5666" type="EtcItem" name="Alternative Great Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="40"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5667" type="EtcItem" name="Alternative Red Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="20"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5668" type="EtcItem" name="Alternative Chilly Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="25"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5669" type="EtcItem" name="Alternative Blue Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5670" type="EtcItem" name="Alternative Thorn Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5671" type="EtcItem" name="Alternative Golden Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5672" type="EtcItem" name="Alternative Great Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="40"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5673" type="EtcItem" name="Alternative Red Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="40"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5674" type="EtcItem" name="Alternative Twin Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5675" type="EtcItem" name="Alternative Desert Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="100"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5676" type="EtcItem" name="Alternative Dark Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="5"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5677" type="EtcItem" name="Alternative Red Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="5"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5678" type="EtcItem" name="Alternative Blue Coda Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="10"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5679" type="EtcItem" name="Alternative Red Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="20"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5680" type="EtcItem" name="Alternative Chilly Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="25"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5681" type="EtcItem" name="Alternative Blue Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5682" type="EtcItem" name="Alternative Thorn Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5683" type="EtcItem" name="Alternative Sea Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5684" type="EtcItem" name="Alternative Chilly Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="40"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5685" type="EtcItem" name="Alternative Blue Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5686" type="EtcItem" name="Alternative Twin Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5687" type="EtcItem" name="Alternative Thorn Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5688" type="EtcItem" name="Alternative Golden Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5689" type="EtcItem" name="Alternative Great Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="40"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5690" type="EtcItem" name="Alternative Red Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="40"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5691" type="EtcItem" name="Alternative Chilly Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="40"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5692" type="EtcItem" name="Alternative Blue Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5693" type="EtcItem" name="Alternative Twin Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5694" type="EtcItem" name="Alternative Great Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="75"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5695" type="EtcItem" name="Alternative Desert Codran Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="100"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5696" type="EtcItem" name="Alternative Chilly Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="25"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5697" type="EtcItem" name="Alternative Blue Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5698" type="EtcItem" name="Alternative Thorn Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+	<item id="5699" type="EtcItem" name="Alternative Golden Cobol Seed">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="seed"/>
+		<set name="weight" val="1"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="50"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+	</item>
+</list>

@@ -1,0 +1,63 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.l2jmobius.gameserver.network.serverpackets;
+
+import com.l2jmobius.gameserver.model.L2Effect;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.skills.effects.EffectCharge;
+
+/* Packet format: F3 XX000000 YY000000 ZZ000000 */
+
+/**
+ * @author Luca Baldi
+ */
+public class EtcStatusUpdate extends L2GameServerPacket
+{
+	private final L2PcInstance _activeChar;
+	private final EffectCharge _effect;
+	
+	public EtcStatusUpdate(L2PcInstance activeChar)
+	{
+		_activeChar = activeChar;
+		_effect = (EffectCharge) _activeChar.getFirstEffect(L2Effect.EffectType.CHARGE);
+	}
+	
+	/**
+	 * @see com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket#writeImpl()
+	 */
+	@Override
+	protected void writeImpl()
+	{
+		writeC(0xF3); // several icons to a separate line (0 = disabled)
+		if (_effect != null)
+		{
+			writeD(_effect.getLevel()); // 1-7 increase force, lvl
+		}
+		else
+		{
+			writeD(0x00); // 1-7 increase force, lvl
+		}
+		writeD(_activeChar.getWeightPenalty()); // 1-4 weight penalty, lvl (1=50%, 2=66.6%, 3=80%, 4=100%)
+		writeD(_activeChar.isInRefusalMode() || _activeChar.isChatBanned() ? 1 : 0); // 1 = block all chat
+		// writeD(0x00); // 1 = danger area
+		writeD(_activeChar.isInsideZone(ZoneId.DANGERAREA)/* || _activeChar.isInDangerArea() */ ? 1 : 0); // 1 = danger area
+		writeD(Math.min(_activeChar.getExpertisePenalty() + _activeChar.getMasteryPenalty() + _activeChar.getMasteryWeapPenalty(), 1)); // 1 = grade penalty
+		writeD(_activeChar.getCharmOfCourage() ? 1 : 0); // 1 = charm of courage (no xp loss in siege..)
+		writeD(_activeChar.getDeathPenaltyBuffLevel()); // 1-15 death penalty, lvl (combat ability decreased due to death)
+	}
+}

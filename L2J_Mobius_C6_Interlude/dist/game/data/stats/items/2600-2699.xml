@@ -1,0 +1,2371 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="2600" type="Weapon" name="Raid Sword*Caliburs">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2190"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="204"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="89"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="7830000"/>
+		<set name="crystal_count" val="1044"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="204" order="0x08" stat="pAtk"/>
+    <set val="89" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="4" order="0x10" stat="accCombat">
+      <and>
+        <using slotitem="2600;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2601" type="Weapon" name="Raid Sword*Sword of Limit">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2170"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="204"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="89"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="7830000"/>
+		<set name="crystal_count" val="1044"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="204" order="0x08" stat="pAtk"/>
+    <set val="89" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="146" order="0x10" stat="cAtk">
+      <and>
+        <using slotitem="2601;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2602" type="Weapon" name="Raid Sword*Sword of Delusion">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2180"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="204"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="89"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="7830000"/>
+		<set name="crystal_count" val="1044"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="204" order="0x08" stat="pAtk"/>
+    <set val="89" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.25" order="0x30" stat="maxHp">
+      <and>
+        <using slotitem="2602;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2603" type="Weapon" name="Raid Sword*Sword of Nightmare">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2170"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="204"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="89"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="7830000"/>
+		<set name="crystal_count" val="1044"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="204" order="0x08" stat="pAtk"/>
+    <set val="89" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="65" order="0x40" stat="rCrit">
+      <and>
+        <using slotitem="2603;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2604" type="Weapon" name="Raid Sword*Tsurugi">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2170"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="204"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="89"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="7830000"/>
+		<set name="crystal_count" val="1044"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="204" order="0x08" stat="pAtk"/>
+    <set val="89" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.06" order="0x30" stat="pAtkSpd">
+      <and>
+        <using slotitem="2604;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2605" type="Weapon" name="Raid Sword*Samurai Long Sword">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2130"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="220"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="94"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="9550000"/>
+		<set name="crystal_count" val="1273"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="220" order="0x08" stat="pAtk"/>
+    <set val="94" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="43" order="0x40" stat="rCrit">
+      <and>
+        <using slotitem="2605;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2606" type="Weapon" name="Caliburs*Caliburs">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2140"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="127" order="0x10" stat="cAtk">
+      <and>
+        <using slotitem="2606;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2607" type="Weapon" name="Caliburs*Sword of Limit">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2150"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.25" order="0x30" stat="maxHp">
+      <and>
+        <using slotitem="2607;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2608" type="Weapon" name="Caliburs*Sword of Delusion">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2140"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="54" order="0x40" stat="rCrit">
+      <and>
+        <using slotitem="2608;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2609" type="Weapon" name="Caliburs*Sword of Nightmare">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2170"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.05" order="0x30" stat="pAtkSpd">
+      <and>
+        <using slotitem="2609;14;4"/>
+      </and>
+     </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2610" type="Weapon" name="Caliburs*Tsurugi">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2150"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="4" order="0x10" stat="accCombat">
+      <and>
+        <using slotitem="2610;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2611" type="Weapon" name="Caliburs*Samurai Long Sword">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2120"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="228"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="97"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="11300000"/>
+		<set name="crystal_count" val="1506"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="228" order="0x08" stat="pAtk"/>
+    <set val="97" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.05" order="0x30" stat="pAtkSpd">
+      <and>
+        <using slotitem="2611;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2612" type="Weapon" name="Sword of Limit*Sword of Limit">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2140"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="127" order="0x10" stat="cAtk">
+      <and>
+        <using slotitem="2612;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2613" type="Weapon" name="Sword of Limit*Sword of Delusion">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2140"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.25" order="0x30" stat="maxHp">
+      <and>
+        <using slotitem="2613;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2614" type="Weapon" name="Sword of Limit*Sword of Nightmare">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2130"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="54" order="0x40" stat="rCrit">
+      <and>
+        <using slotitem="2614;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2615" type="Weapon" name="Sword of Limit*Tsurugi">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2120"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.05" order="0x30" stat="pAtkSpd">
+      <and>
+        <using slotitem="2615;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2616" type="Weapon" name="Sword of Limit*Samurai Long Sword">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2100"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="228"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="97"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="11300000"/>
+		<set name="crystal_count" val="1506"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="228" order="0x08" stat="pAtk"/>
+    <set val="97" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="3" order="0x10" stat="accCombat">
+      <and>
+        <using slotitem="2616;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2617" type="Weapon" name="Sword of Delusion*Sword of Delusion">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2150"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="4" order="0x10" stat="accCombat">
+      <and>
+        <using slotitem="2617;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2618" type="Weapon" name="Sword of Delusion*Sword of Nightmare">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2130"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="127" order="0x10" stat="cAtk">
+      <and>
+        <using slotitem="2618;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2619" type="Weapon" name="Sword of Delusion*Tsurugi">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2140"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.25" order="0x30" stat="maxHp">
+      <and>
+        <using slotitem="2619;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2620" type="Weapon" name="Sword of Delusion*Samurai Long Sword">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2110"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="228"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="97"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="11300000"/>
+		<set name="crystal_count" val="1506"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="228" order="0x08" stat="pAtk"/>
+    <set val="97" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="133" order="0x10" stat="cAtk">
+      <and>
+        <using slotitem="2620;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2621" type="Weapon" name="Sword of Nightmare*Sword of Nightmare">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2130"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="54" order="0x40" stat="rCrit">
+      <and>
+        <using slotitem="2621;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2622" type="Weapon" name="Sword of Nightmare*Tsurugi">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2140"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.05" order="0x30" stat="pAtkSpd">
+      <and>
+        <using slotitem="2622;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2623" type="Weapon" name="Sword of Nightmare*Samurai Long Sword">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="228"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="97"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="11300000"/>
+		<set name="crystal_count" val="1506"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="228" order="0x08" stat="pAtk"/>
+    <set val="97" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.25" order="0x30" stat="maxHp">
+      <and>
+        <using slotitem="2623;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2624" type="Weapon" name="Tsurugi*Tsurugi">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2120"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="213"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="91"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="8680000"/>
+		<set name="crystal_count" val="1157"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="213" order="0x08" stat="pAtk"/>
+    <set val="91" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="54" order="0x40" stat="rCrit">
+      <and>
+        <using slotitem="2624;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2625" type="Weapon" name="Tsurugi*Samurai Long Sword">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2090"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="228"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="97"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="11300000"/>
+		<set name="crystal_count" val="1506"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="228" order="0x08" stat="pAtk"/>
+    <set val="97" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <add val="52" order="0x40" stat="rCrit">
+      <and>
+        <using slotitem="2625;14;4"/>
+      </and>
+    </add>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2626" type="Weapon" name="Samurai Long Sword*Samurai Long Sword">
+		<set name="bodypart" val="lrhand"/>
+		<set name="crystallizable" val="true"/>
+		<set name="weight" val="2080"/>
+		<set name="soulshots" val="1"/>
+		<set name="spiritshots" val="1"/>
+		<set name="crystal_type" val="b"/>
+		<set name="p_dam" val="236"/>
+		<set name="rnd_dam" val="10"/>
+		<set name="weapon_type" val="dual"/>
+		<set name="critical" val="8"/>
+		<set name="hit_modify" val="0.00000"/>
+		<set name="avoid_modify" val="0"/>
+		<set name="shield_def" val="0"/>
+		<set name="shield_def_rate" val="0"/>
+		<set name="atk_speed" val="325"/>
+		<set name="mp_consume" val="0"/>
+		<set name="m_dam" val="99"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="13100000"/>
+		<set name="crystal_count" val="1746"/>
+		<set name="sellable" val="true"/>
+		<set name="dropable" val="true"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="true"/>
+		<set name="item_skill_id" val="0"/>
+		<set name="item_skill_lvl" val="0"/>
+		<set name="enchant4_skill_id" val="0"/>
+		<set name="enchant4_skill_lvl" val="0"/>
+		<set name="onCast_skill_id" val="0"/>
+		<set name="onCast_skill_lvl" val="0"/>
+		<set name="onCast_skill_chance" val="0"/>
+		<set name="onCrit_skill_id" val="0"/>
+		<set name="onCrit_skill_lvl" val="0"/>
+		<set name="onCrit_skill_chance" val="0"/>
+  <for>
+    <set val="236" order="0x08" stat="pAtk"/>
+    <set val="99" order="0x08" stat="mAtk"/>
+    <set val="8" order="0x08" stat="rCrit"/>
+    <add val="0" order="0x10" stat="accCombat"/>
+    <set val="325" order="0x08" stat="pAtkSpd"/>
+    <mul val="1.04" order="0x30" stat="pAtkSpd">
+      <and>
+        <using slotitem="2626;14;4"/>
+      </and>
+    </mul>
+    <enchant val="0" order="0x0C" stat="pAtk"/>
+    <enchant val="0" order="0x0C" stat="mAtk"/>
+  </for>
+	</item>
+	<item id="2627" type="EtcItem" name="Mark of Challenger">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2628" type="EtcItem" name="Letter of Kash">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2629" type="EtcItem" name="Watcher's 1st Eye">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2630" type="EtcItem" name="Watcher's 2nd Eye">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2631" type="EtcItem" name="Scroll of Shyslassys">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2632" type="EtcItem" name="Broken Key">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2633" type="EtcItem" name="Mark of Duty">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2634" type="EtcItem" name="Letter of Dustin">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2635" type="EtcItem" name="Knights Tear">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2636" type="EtcItem" name="Mirror of Orpic">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2637" type="EtcItem" name="Tear of Confession">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2638" type="EtcItem" name="Report Piece">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2639" type="EtcItem" name="Report Piece">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2640" type="EtcItem" name="Tear of Loyalty">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2641" type="EtcItem" name="Militas Article">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2642" type="EtcItem" name="Saints Ashes Urn">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2643" type="EtcItem" name="Athebaldt's Skull">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2644" type="EtcItem" name="Athebaldt's Ribs">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2645" type="EtcItem" name="Athebaldt's Shin">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2646" type="EtcItem" name="Letter of Windawood">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2647" type="EtcItem" name="Dufners Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2648" type="EtcItem" name="Terry's 1st Order">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2649" type="EtcItem" name="Terry's 2nd Order">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2650" type="EtcItem" name="Terry's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2651" type="EtcItem" name="Viktor's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2652" type="EtcItem" name="Hawkeye's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2653" type="EtcItem" name="Mysterious Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2654" type="EtcItem" name="Ol Mahum Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2655" type="EtcItem" name="Turek Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2656" type="EtcItem" name="Ant Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2657" type="EtcItem" name="Turak Bugbear Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2658" type="EtcItem" name="Terry's Box">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2659" type="EtcItem" name="Viktor's Request">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2660" type="EtcItem" name="Medusa Scales">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2661" type="EtcItem" name="Shilen's Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2662" type="EtcItem" name="Analysis Request">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2663" type="EtcItem" name="Marina's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2664" type="EtcItem" name="Experiment Tools">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2665" type="EtcItem" name="Analysis Result">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2666" type="EtcItem" name="Terry's 3rd Order">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2667" type="EtcItem" name="List of Host">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2668" type="EtcItem" name="Abyss Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2669" type="EtcItem" name="Abyss Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2670" type="EtcItem" name="Abyss Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2671" type="EtcItem" name="Abyss Runestone">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2672" type="EtcItem" name="Terry's Report">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2673" type="EtcItem" name="Mark of Seeker">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2674" type="EtcItem" name="Mark of Scholar">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2675" type="EtcItem" name="Mirien's 1st Sigil">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2676" type="EtcItem" name="Mirien's 2nd Sigil">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2677" type="EtcItem" name="Mirien's 3rd Sigil">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2678" type="EtcItem" name="Mirien's Instruction">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2679" type="EtcItem" name="Maria's 1st Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2680" type="EtcItem" name="Maria's 2nd Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2681" type="EtcItem" name="Lucas's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2682" type="EtcItem" name="Lucilla's Handbag">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2683" type="EtcItem" name="Creta's 1st Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2684" type="EtcItem" name="Creta's Painting1">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2685" type="EtcItem" name="Creta's Painting2">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2686" type="EtcItem" name="Creta's Painting3">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2687" type="EtcItem" name="Brown Scroll Scrap">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2688" type="EtcItem" name="Crystal of Purity">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2689" type="EtcItem" name="High Priest's Sigil">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2690" type="EtcItem" name="Grand Magister's Sigil">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2691" type="EtcItem" name="Crono's Sigil">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2692" type="EtcItem" name="Sylvain's Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2693" type="EtcItem" name="Symbol of Sylvain">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2694" type="EtcItem" name="Jurek's List">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2695" type="EtcItem" name="Monster Eye Destroyer Skin">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2696" type="EtcItem" name="Shaman's Necklace">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2697" type="EtcItem" name="Shackle's Scalp">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2698" type="EtcItem" name="Symbol of Jurek">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+	<item id="2699" type="EtcItem" name="Cronos Letter">
+		<set name="crystallizable" val="false"/>
+		<set name="item_type" val="quest"/>
+		<set name="weight" val="0"/>
+		<set name="consume_type" val="stackable"/>
+		<set name="crystal_type" val="none"/>
+		<set name="duration" val="-1"/>
+		<set name="price" val="0"/>
+		<set name="crystal_count" val="0"/>
+		<set name="sellable" val="false"/>
+		<set name="dropable" val="false"/>
+		<set name="destroyable" val="true"/>
+		<set name="tradeable" val="false"/>
+	</item>
+</list>
