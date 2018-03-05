@@ -67,6 +67,7 @@ Underground:
 -Underground Gainak
 -Automated soulshots
 -Daily rewards
+-Attendance rewards
 
 Helios:
 -Dimensional Rift

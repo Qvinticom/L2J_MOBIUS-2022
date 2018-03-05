@@ -81,6 +81,7 @@ public final class Config
 	// --------------------------------------------------
 	// Config File Definitions
 	// --------------------------------------------------
+	public static final String ATTENDANCE_CONFIG_FILE = "./config/AttendanceRewards.ini";
 	public static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	public static final String CH_SIEGE_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
 	public static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
@@ -137,6 +138,11 @@ public final class Config
 	// --------------------------------------------------
 	// Variable Definitions
 	// --------------------------------------------------
+	public static boolean ENABLE_ATTENDANCE_REWARDS;
+	public static boolean PREMIUM_ONLY_ATTENDANCE_REWARDS;
+	public static boolean ATTENDANCE_REWARDS_SHARE_ACCOUNT;
+	public static int ATTENDANCE_REWARD_DELAY;
+	public static boolean ATTENDANCE_POPUP_WINDOW;
 	public static boolean PLAYER_DELEVEL;
 	public static int DELEVEL_MINIMUM;
 	public static boolean DECREASE_SKILL_LEVEL;
@@ -1415,6 +1421,14 @@ public final class Config
 			CLAN_LEVEL_11_REQUIREMENT = Feature.getInt("ClanLevel11Requirement", 170);
 			ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
 			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
+			
+			// Load Attandance config file (if exists)
+			final PropertiesParser Attandance = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
+			ENABLE_ATTENDANCE_REWARDS = Attandance.getBoolean("EnableAttendanceRewards", false);
+			PREMIUM_ONLY_ATTENDANCE_REWARDS = Attandance.getBoolean("PremiumOnlyAttendanceRewards", false);
+			ATTENDANCE_REWARDS_SHARE_ACCOUNT = Attandance.getBoolean("AttendanceRewardsShareAccount", false);
+			ATTENDANCE_REWARD_DELAY = Attandance.getInt("AttendanceRewardDelay", 30);
+			ATTENDANCE_POPUP_WINDOW = Attandance.getBoolean("AttendancePopupWindow", false);
 			
 			// Load Character config file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);

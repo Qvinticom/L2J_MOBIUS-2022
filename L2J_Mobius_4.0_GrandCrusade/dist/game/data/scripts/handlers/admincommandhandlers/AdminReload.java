@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import com.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
@@ -296,6 +297,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					FishingData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fishing data.");
+					break;
+				}
+				case "attendance":
+				{
+					AttendanceRewardData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Attendance Reward data.");
 					break;
 				}
 				case "fakeplayers":

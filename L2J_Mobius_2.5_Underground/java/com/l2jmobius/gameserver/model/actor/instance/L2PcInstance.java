@@ -63,6 +63,7 @@ import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
+import com.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.HennaData;
@@ -207,6 +208,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPCh
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPKill;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerReputationChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSubChange;
+import com.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
@@ -844,6 +846,10 @@ public final class L2PcInstance extends L2Playable
 	// Training Camp
 	private final static String TRAINING_CAMP_VAR = "TRAINING_CAMP";
 	private final static String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
+	
+	// Attendance Reward system
+	private final static String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
+	private final static String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
 	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;
@@ -14052,5 +14058,61 @@ public final class L2PcInstance extends L2Playable
 	{
 		final TrainingHolder trainingHolder = getTraingCampInfo();
 		return (trainingHolder != null) && (trainingHolder.getEndTime() > 0);
+	}
+	
+	public AttendanceInfoHolder getAttendanceInfo()
+	{
+		// Get reset time.
+		final Calendar calendar = Calendar.getInstance();
+		if ((calendar.get(Calendar.HOUR_OF_DAY) < 6) && (calendar.get(Calendar.MINUTE) < 30))
+		{
+			calendar.add(Calendar.DAY_OF_MONTH, -1);
+		}
+		calendar.set(Calendar.HOUR_OF_DAY, 6);
+		calendar.set(Calendar.MINUTE, 30);
+		calendar.set(Calendar.SECOND, 0);
+		calendar.set(Calendar.MILLISECOND, 0);
+		
+		// Get last player reward time.
+		final long receiveDate;
+		int rewardIndex;
+		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
+		{
+			receiveDate = getAccountVariables().getLong(ATTENDANCE_DATE_VAR, 0);
+			rewardIndex = getAccountVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
+		}
+		else
+		{
+			receiveDate = getVariables().getLong(ATTENDANCE_DATE_VAR, 0);
+			rewardIndex = getVariables().getInt(ATTENDANCE_INDEX_VAR, 0);
+		}
+		
+		// Check if player can receive reward today.
+		boolean canBeRewarded = false;
+		if (calendar.getTimeInMillis() > receiveDate)
+		{
+			canBeRewarded = true;
+			// Reset index if max is reached.
+			if (rewardIndex >= AttendanceRewardData.getInstance().getRewardsCount())
+			{
+				rewardIndex = 0;
+			}
+		}
+		
+		return new AttendanceInfoHolder(rewardIndex, canBeRewarded);
+	}
+	
+	public void setAttendanceInfo(int rewardIndex)
+	{
+		if (Config.ATTENDANCE_REWARDS_SHARE_ACCOUNT)
+		{
+			getAccountVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis());
+			getAccountVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
+		}
+		else
+		{
+			getVariables().set(ATTENDANCE_DATE_VAR, System.currentTimeMillis());
+			getVariables().set(ATTENDANCE_INDEX_VAR, rewardIndex);
+		}
 	}
 }

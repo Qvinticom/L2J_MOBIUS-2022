@@ -51,6 +51,7 @@ import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.FortSiege;
 import com.l2jmobius.gameserver.model.entity.L2Event;
 import com.l2jmobius.gameserver.model.entity.Siege;
+import com.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -98,6 +99,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.network.serverpackets.SkillList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
+import com.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 
@@ -651,6 +653,26 @@ public class EnterWorld implements IClientIncomingPacket
 		if (!activeChar.getEffectList().getCurrentAbnormalVisualEffects().isEmpty())
 		{
 			activeChar.updateAbnormalVisualEffects();
+		}
+		
+		if (Config.ENABLE_ATTENDANCE_REWARDS)
+		{
+			ThreadPoolManager.schedule(() ->
+			{
+				// Check if player can receive reward today.
+				final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
+				if (attendanceInfo.isRewardAvailable())
+				{
+					final int lastRewardIndex = attendanceInfo.getRewardIndex() + 1;
+					activeChar.sendPacket(new ExShowScreenMessage("Your attendance day " + lastRewardIndex + " reward is ready.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true));
+					activeChar.sendMessage("Your attendance day " + lastRewardIndex + " reward is ready.");
+					activeChar.sendMessage("Click on General Menu -> Attendance Check.");
+					if (Config.ATTENDANCE_POPUP_WINDOW)
+					{
+						activeChar.sendPacket(new ExVipAttendanceItemList(activeChar));
+					}
+				}
+			}, Config.ATTENDANCE_REWARD_DELAY * 60 * 1000);
 		}
 		
 		if (Config.HARDWARE_INFO_ENABLED)

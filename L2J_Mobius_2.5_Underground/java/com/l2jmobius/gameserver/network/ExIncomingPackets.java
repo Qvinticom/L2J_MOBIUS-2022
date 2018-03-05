@@ -40,6 +40,8 @@ import com.l2jmobius.gameserver.network.clientpackets.appearance.RequestExCancel
 import com.l2jmobius.gameserver.network.clientpackets.appearance.RequestExTryToPutShapeShiftingEnchantSupportItem;
 import com.l2jmobius.gameserver.network.clientpackets.appearance.RequestExTryToPutShapeShiftingTargetItem;
 import com.l2jmobius.gameserver.network.clientpackets.appearance.RequestShapeShiftingItem;
+import com.l2jmobius.gameserver.network.clientpackets.attendance.RequestVipAttendanceCheck;
+import com.l2jmobius.gameserver.network.clientpackets.attendance.RequestVipAttendanceItemList;
 import com.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeCancel;
 import com.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import com.l2jmobius.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
@@ -348,8 +350,8 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	SEND_EXECUTED_UI_EVENTS_COUNT(0x102, null, ConnectionState.IN_GAME),
 	EX_SEND_CLIENT_INI(0x103, null, ConnectionState.IN_GAME),
 	REQUEST_EX_AUTO_FISH(0x104, ExRequestAutoFish::new, ConnectionState.IN_GAME),
-	REQUEST_VIP_ATTENDANCE_ITEM_LIST(0x105, null, ConnectionState.IN_GAME),
-	REQUEST_VIP_ATTENDANCE_CHECK(0x106, null, ConnectionState.IN_GAME),
+	REQUEST_VIP_ATTENDANCE_ITEM_LIST(0x105, RequestVipAttendanceItemList::new, ConnectionState.IN_GAME),
+	REQUEST_VIP_ATTENDANCE_CHECK(0x106, RequestVipAttendanceCheck::new, ConnectionState.IN_GAME),
 	REQUEST_ITEM_ENSOUL(0x107, RequestItemEnsoul::new, ConnectionState.IN_GAME),
 	REQUEST_VIP_PRODUCT_LIST(0x108, null, ConnectionState.IN_GAME),
 	REQUEST_VIP_LUCKY_GAME_INFO(0x109, null, ConnectionState.IN_GAME),

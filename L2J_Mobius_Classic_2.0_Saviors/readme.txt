@@ -47,14 +47,16 @@ What is done
 -Augmentation chances from L2Wiki
 -Working Runes system
 -Added new Savior skills
+-Dungeon of Abyss
+-Attendance rewards
 
 Custom work
 -Newbie Helper NPC location info
 -Newbie Helper buff support until 40 level
 -Test Server Helper NPCs
+-Fake players engine
 
 TODO list
 -Parse retail monster spawns by zone
 -Test quests and update rewards
--Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
 -Provisional Clan Halls

@@ -43,6 +43,7 @@ import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.AlchemyData;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
+import com.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
 import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
@@ -243,6 +244,7 @@ public class GameServer
 		AlchemyData.getInstance();
 		CommissionManager.getInstance();
 		LuckyGameData.getInstance();
+		AttendanceRewardData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();
