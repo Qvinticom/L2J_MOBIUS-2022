@@ -90,7 +90,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 				if (npc.isScriptValue(0))
 				{
 					final Siege siege = npc.getCastle().getSiege();
-					final int time = (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? 480000 : 30000;
+					final int time = (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? 180000 : 30000;
 					startQuestTimer("MASS_TELEPORT", time, npc, null);
 					npc.setScriptValue(1);
 				}

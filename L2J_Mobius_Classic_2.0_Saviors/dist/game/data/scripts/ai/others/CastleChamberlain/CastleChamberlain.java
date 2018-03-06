@@ -76,16 +76,16 @@ public final class CastleChamberlain extends AbstractNpcAI
 		35184, 36655, // Giran
 		35226, 36656, // Oren
 		35274, 36657, // Aden
-		35316, 36658, // Innadril
-		35363, 36659, // Goddard
-		35509, 36660, // Rune
-		35555, 36661, // Schuttgart
+		// 35316, 36658, // Innadril
+		// 35363, 36659, // Goddard
+		// 35509, 36660, // Rune
+		// 35555, 36661, // Schuttgart
 	};
 	//@formatter:on
 	// Item
 	private static final int CROWN = 6841;
-	private static final int LORD_CLOAK_OF_LIGHT = 34996;
-	private static final int LORD_CLOAK_OF_DARK = 34997;
+	private static final int LORD_CLOAK_OF_LIGHT = 34925;
+	private static final int LORD_CLOAK_OF_DARK = 34926;
 	// Fortress
 	private static final Map<Integer, List<Integer>> FORTRESS = new HashMap<>();
 	
@@ -372,20 +372,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 		return price;
 	}
 	
-	private final boolean isDomainFortressInContractStatus(int castleId)
-	{
-		final int numFort = ((castleId == 1) || (castleId == 5)) ? 2 : 1;
-		final List<Integer> fortList = FORTRESS.get(castleId);
-		for (int i = 0; i < numFort; i++)
-		{
-			final Fort fortress = FortManager.getInstance().getFortById(fortList.get(i));
-			if (fortress.getFortState() == 2)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
+	// private final boolean isDomainFortressInContractStatus(int castleId)
+	// {
+	// 	final int numFort = ((castleId == 1) || (castleId == 5)) ? 2 : 1;
+	// 	final List<Integer> fortList = FORTRESS.get(castleId);
+	// 	for (int i = 0; i < numFort; i++)
+	// 	{
+	// 		final Fort fortress = FortManager.getInstance().getFortById(fortList.get(i));
+	// 		if (fortress.getFortState() == 2)
+	// 		{
+	// 			return true;
+	// 		}
+	// 	}
+	// 	return false;
+	// }
 	
 	private final boolean isOwner(L2PcInstance player, L2Npc npc)
 	{
@@ -463,10 +463,10 @@ public final class CastleChamberlain extends AbstractNpcAI
 					{
 						htmltext = "chamberlain-08.html";
 					}
-					else if (!isDomainFortressInContractStatus(castle.getResidenceId()))
-					{
-						htmltext = "chamberlain-27.html";
-					}
+					// else if (!isDomainFortressInContractStatus(castle.getResidenceId()))
+					// {
+					// 	htmltext = "chamberlain-27.html";
+					// }
 					else
 					{
 						htmltext = "chamberlain-12.html";
