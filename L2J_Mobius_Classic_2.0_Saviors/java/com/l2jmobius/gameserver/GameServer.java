@@ -40,7 +40,6 @@ import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.data.xml.impl.ActionData;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
-import com.l2jmobius.gameserver.data.xml.impl.AlchemyData;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
 import com.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
@@ -238,7 +237,6 @@ public class GameServer
 		PrimeShopData.getInstance();
 		PcCafePointsManager.getInstance();
 		AppearanceItemData.getInstance();
-		AlchemyData.getInstance();
 		CommissionManager.getInstance();
 		LuckyGameData.getInstance();
 		AttendanceRewardData.getInstance();
