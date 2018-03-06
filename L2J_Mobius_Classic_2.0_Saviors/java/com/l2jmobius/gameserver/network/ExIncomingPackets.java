@@ -37,7 +37,6 @@ import com.l2jmobius.gameserver.network.clientpackets.attendance.RequestVipAtten
 import com.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeCancel;
 import com.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import com.l2jmobius.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
-import com.l2jmobius.gameserver.network.clientpackets.awakening.RequestCallToChangeClass;
 import com.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import com.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
 import com.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestJoinCuriousHouse;
@@ -254,7 +253,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_COMMISSION_BUY_INFO(0x9E, RequestCommissionBuyInfo::new, ConnectionState.IN_GAME),
 	REQUEST_COMMISSION_BUY_ITEM(0x9F, RequestCommissionBuyItem::new, ConnectionState.IN_GAME),
 	REQUEST_COMMISSION_REGISTERED_ITEM(0xA0, RequestCommissionRegisteredItem::new, ConnectionState.IN_GAME),
-	REQUEST_CALL_TO_CHANGE_CLASS(0xA1, RequestCallToChangeClass::new, ConnectionState.IN_GAME),
+	REQUEST_CALL_TO_CHANGE_CLASS(0xA1, null, ConnectionState.IN_GAME),
 	REQUEST_CHANGE_TO_AWAKENED_CLASS(0xA2, RequestChangeToAwakenedClass::new, ConnectionState.IN_GAME),
 	REQUEST_WORLD_STATISTICS(0xA3, null, ConnectionState.IN_GAME),
 	REQUEST_USER_STATISTICS(0xA4, null, ConnectionState.IN_GAME),
