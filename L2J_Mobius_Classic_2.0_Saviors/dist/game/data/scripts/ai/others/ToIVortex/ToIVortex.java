@@ -42,9 +42,9 @@ public final class ToIVortex extends AbstractNpcAI
 	private static final int DIMENSION_VORTEX_2 = 30953;
 	private static final int DIMENSION_VORTEX_3 = 30954;
 	// Items
-	private static final int GREEN_DIMENSION_STONE = 4401;
-	private static final int BLUE_DIMENSION_STONE = 4402;
-	private static final int RED_DIMENSION_STONE = 4403;
+	private static final int GREEN_DIMENSION_STONE = 4404; // FIXME: 4401
+	private static final int BLUE_DIMENSION_STONE = 4405; // FIXME: 4402
+	private static final int RED_DIMENSION_STONE = 4406; // FIXME: 4403
 	private static final Map<String, Integer> TOI_FLOOR_ITEMS = new HashMap<>();
 	// Locations
 	private static final Map<String, Location> TOI_FLOORS = new HashMap<>();
