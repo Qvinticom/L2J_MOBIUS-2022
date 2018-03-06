@@ -98,7 +98,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.network.serverpackets.SkillList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
 import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
@@ -635,7 +634,6 @@ public class EnterWorld implements IClientIncomingPacket
 			activeChar.sendPacket(new ExBeautyItemList(activeChar));
 		}
 		
-		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
 		if (Config.ENABLE_WORLD_CHAT)
 		{
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));

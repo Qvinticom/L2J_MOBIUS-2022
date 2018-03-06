@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 
 /**
  * @author Sdw
@@ -81,7 +80,6 @@ public class ClassChange extends AbstractEffect
 				player.broadcastUserInfo();
 				player.sendPacket(new AcquireSkillList(player));
 				player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
-				player.sendPacket(new ExAcquireAPSkillList(player));
 			}, 1000);
 		}
 	}

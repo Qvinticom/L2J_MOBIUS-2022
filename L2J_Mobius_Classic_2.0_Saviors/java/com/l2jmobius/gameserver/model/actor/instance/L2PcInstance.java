@@ -330,7 +330,6 @@ import com.l2jmobius.gameserver.network.serverpackets.TradeOtherDone;
 import com.l2jmobius.gameserver.network.serverpackets.TradeStart;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
-import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendStatus;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -9374,10 +9373,6 @@ public final class L2PcInstance extends L2Playable
 		}
 		_noble = val;
 		sendSkillList();
-		if (val && (getLevel() >= 99))
-		{
-			sendPacket(new ExAcquireAPSkillList(this));
-		}
 	}
 	
 	public void setLvlJoinedAcademy(int lvl)

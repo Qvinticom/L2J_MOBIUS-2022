@@ -25,12 +25,6 @@ import com.l2jmobius.commons.network.IConnectionState;
 import com.l2jmobius.commons.network.IIncomingPacket;
 import com.l2jmobius.commons.network.IIncomingPackets;
 import com.l2jmobius.gameserver.network.clientpackets.*;
-import com.l2jmobius.gameserver.network.clientpackets.ability.RequestAbilityList;
-import com.l2jmobius.gameserver.network.clientpackets.ability.RequestAbilityWndClose;
-import com.l2jmobius.gameserver.network.clientpackets.ability.RequestAbilityWndOpen;
-import com.l2jmobius.gameserver.network.clientpackets.ability.RequestAcquireAbilityList;
-import com.l2jmobius.gameserver.network.clientpackets.ability.RequestChangeAbilityPoint;
-import com.l2jmobius.gameserver.network.clientpackets.ability.RequestResetAbilityPoint;
 import com.l2jmobius.gameserver.network.clientpackets.adenadistribution.RequestDivideAdena;
 import com.l2jmobius.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaCancel;
 import com.l2jmobius.gameserver.network.clientpackets.adenadistribution.RequestDivideAdenaStart;
@@ -327,13 +321,13 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_DIVIDE_ADENA_START(0xE6, RequestDivideAdenaStart::new, ConnectionState.IN_GAME),
 	REQUEST_DIVIDE_ADENA_CANCEL(0xE7, RequestDivideAdenaCancel::new, ConnectionState.IN_GAME),
 	REQUEST_DIVIDE_ADENA(0xE8, RequestDivideAdena::new, ConnectionState.IN_GAME),
-	REQUEST_ACQUIRE_ABILITY_LIST(0xE9, RequestAcquireAbilityList::new, ConnectionState.IN_GAME),
-	REQUEST_ABILITY_LIST(0xEA, RequestAbilityList::new, ConnectionState.IN_GAME),
-	REQUEST_RESET_ABILITY_POINT(0xEB, RequestResetAbilityPoint::new, ConnectionState.IN_GAME),
-	REQUEST_CHANGE_ABILITY_POINT(0xEC, RequestChangeAbilityPoint::new, ConnectionState.IN_GAME),
+	REQUEST_ACQUIRE_ABILITY_LIST(0xE9, null, ConnectionState.IN_GAME),
+	REQUEST_ABILITY_LIST(0xEA, null, ConnectionState.IN_GAME),
+	REQUEST_RESET_ABILITY_POINT(0xEB, null, ConnectionState.IN_GAME),
+	REQUEST_CHANGE_ABILITY_POINT(0xEC, null, ConnectionState.IN_GAME),
 	REQUEST_STOP_MOVE(0xED, RequestStopMove::new, ConnectionState.IN_GAME),
-	REQUEST_ABILITY_WND_OPEN(0xEE, RequestAbilityWndOpen::new, ConnectionState.IN_GAME),
-	REQUEST_ABILITY_WND_CLOSE(0xEF, RequestAbilityWndClose::new, ConnectionState.IN_GAME),
+	REQUEST_ABILITY_WND_OPEN(0xEE, null, ConnectionState.IN_GAME),
+	REQUEST_ABILITY_WND_CLOSE(0xEF, null, ConnectionState.IN_GAME),
 	EX_PC_CAFE_REQUEST_OPEN_WINDOW_WITHOUT_NPC(0xF0, ExPCCafeRequestOpenWindowWithoutNPC::new, ConnectionState.IN_GAME),
 	REQUEST_LUCKY_GAME_START_INFO(0xF1, RequestLuckyGameStartInfo::new, ConnectionState.IN_GAME),
 	REQUEST_LUCKY_GAME_PLAY(0xF2, RequestLuckyGamePlay::new, ConnectionState.IN_GAME),
