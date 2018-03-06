@@ -43,9 +43,7 @@ public class Q00153_DeliverGoods extends Quest
 	private static final int SILVIAS_RECEIPT_ID = 1017;
 	private static final int RANTS_RECEIPT_ID = 1018;
 	// Rewards
-	private static final int SOULSHOT_NO_GRADE_ID = 1835; // You get 3 Soulshots no grade.
-	private static final int RING_OF_KNOWLEDGE_ID = 875;
-	private static final int XP_REWARD_AMOUNT = 600;
+	private static final int RING_OF_KNOWLEDGE_ID = 49041;
 	
 	public Q00153_DeliverGoods()
 	{
@@ -100,10 +98,7 @@ public class Q00153_DeliverGoods extends Quest
 						takeItems(player, JACKSONS_RECEIPT_ID, -1);
 						takeItems(player, SILVIAS_RECEIPT_ID, -1);
 						takeItems(player, RANTS_RECEIPT_ID, -1);
-						// On retail it gives 2 rings but one at the time.
 						giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
-						giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
-						addExpAndSp(player, XP_REWARD_AMOUNT, 0);
 						st.exitQuest(false, true);
 						htmltext = "30041-04.html";
 					}
@@ -137,7 +132,6 @@ public class Q00153_DeliverGoods extends Quest
 				{
 					takeItems(player, CLOTH_BUNDLE_ID, -1);
 					giveItems(player, SILVIAS_RECEIPT_ID, 1);
-					giveItems(player, SOULSHOT_NO_GRADE_ID, 3);
 					htmltext = "30003-01.html";
 				}
 				else

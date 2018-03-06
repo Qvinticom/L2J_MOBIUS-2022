@@ -19,7 +19,6 @@ package quests.Q00103_SpiritOfCraftsman;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -50,16 +49,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 	private static final int SKELETON_HUNTER = 20517;
 	private static final int SKELETON_HUNTER_ARCHER = 20518;
 	// Rewards
-	private static final int BLOODSABER = 975;
-	private static final ItemHolder[] REWARDS =
-	{
-		new ItemHolder(1060, 100), // Lesser Healing Potion
-		new ItemHolder(4412, 10), // Echo Crystal - Theme of Battle
-		new ItemHolder(4413, 10), // Echo Crystal - Theme of Love
-		new ItemHolder(4414, 10), // Echo Crystal - Theme of Solitude
-		new ItemHolder(4415, 10), // Echo Crystal - Theme of Feast
-		new ItemHolder(4416, 10), // Echo Crystal - Theme of Celebration
-	};
+	private static final int REWARDS = 49050; // Blood Saber
 	// Misc
 	private static final int MIN_LVL = 10;
 	
@@ -135,13 +125,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 					else if (hasQuestItems(talker, STEELBENDERS_HEAD))
 					{
 						// Q00281_HeadForTheHills.giveNewbieReward(talker);
-						addExpAndSp(talker, 46663, 3999);
-						giveAdena(talker, 19799, true);
-						for (ItemHolder reward : REWARDS)
-						{
-							rewardItems(talker, reward);
-						}
-						rewardItems(talker, BLOODSABER, 1);
+						rewardItems(talker, REWARDS, 1);
 						qs.exitQuest(false, true);
 						talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
 						htmltext = "30307-07.html";

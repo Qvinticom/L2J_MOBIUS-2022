@@ -155,7 +155,7 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 			{
 				final long wererars = getQuestItemsCount(player, WERERAT_FANG);
 				final long foulclaws = getQuestItemsCount(player, VAROOL_FOULCLAW_FANG);
-				giveAdena(player, ((wererars * 30) + (foulclaws * 10000) + ((wererars + foulclaws) >= 10 ? 5000 : 0)), true);
+				giveAdena(player, ((wererars * 5) + (foulclaws * 1000) + ((wererars + foulclaws) >= 10 ? 5000 : 0)), true);
 				takeItems(player, -1, getRegisteredItemIds());
 				htmltext = "30155-07.html";
 			}

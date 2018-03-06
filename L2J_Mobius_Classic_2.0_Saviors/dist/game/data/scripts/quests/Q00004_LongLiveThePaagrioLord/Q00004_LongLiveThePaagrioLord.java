@@ -40,13 +40,14 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	private static final int HESTUI = 30585;
 	private static final int URUTU = 30587;
 	// Items
-	private static final int CLUB = 4;
 	private static final int HONEY_KHANDAR = 1541;
 	private static final int BEAR_FUR_CLOAK = 1542;
 	private static final int BLOODY_AXE = 1543;
 	private static final int ANCESTOR_SKULL = 1544;
 	private static final int SPIDER_DUST = 1545;
 	private static final int DEEP_SEA_ORB = 1546;
+	// Rewards
+	private static final int CLUB = 49051; // Club (Novice)
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
@@ -112,11 +113,9 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 						}
 						else
 						{
-							giveItems(player, CLUB, 1);
 							// Newbie Guide
 							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
-							addExpAndSp(player, 4254, 335);
-							giveAdena(player, 1850, true);
+							rewardItems(player, CLUB, 1);
 							st.exitQuest(false, true);
 							htmltext = "30578-06.html";
 						}

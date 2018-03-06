@@ -41,7 +41,7 @@ public class Q00002_WhatWomenWant extends Quest
 	private static final int ARUJIENS_LETTER3 = 1094;
 	private static final int POETRY_BOOK = 689;
 	private static final int GREENIS_LETTER = 693;
-	private static final int EARRING = 29486;
+	private static final int EARRING = 49040;
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	

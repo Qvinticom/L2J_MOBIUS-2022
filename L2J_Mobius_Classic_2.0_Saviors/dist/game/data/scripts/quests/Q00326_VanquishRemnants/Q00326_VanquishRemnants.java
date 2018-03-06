@@ -135,7 +135,7 @@ public final class Q00326_VanquishRemnants extends Quest
 					{
 						giveItems(player, BLACK_LION_MARK, 1);
 					}
-					giveAdena(player, ((red_badges * 46) + (blue_badges * 52) + (black_badges * 58) + ((sum >= 10) ? 4320 : 0)), true);
+					giveAdena(player, ((red_badges * 10) + (blue_badges * 10) + (black_badges * 12) + ((sum >= 10) ? 1000 : 0)), true);
 					takeItems(player, -1, RED_CROSS_BADGE, BLUE_CROSS_BADGE, BLACK_CROSS_BADGE);
 					htmltext = (sum >= 100) ? (hasQuestItems(player, BLACK_LION_MARK)) ? "30435-09.html" : "30435-06.html" : "30435-05.html";
 				}

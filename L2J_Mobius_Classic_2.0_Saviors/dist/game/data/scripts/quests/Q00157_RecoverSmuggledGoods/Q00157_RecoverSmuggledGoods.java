@@ -34,7 +34,7 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 	// Monster
 	private static final int GIANT_TOAD = 20121;
 	// Items
-	private static final int BUCKLER = 20;
+	private static final int BUCKLER = 49042;
 	private static final int ADAMANTITE_ORE = 1024;
 	// Misc
 	private static final int MIN_LVL = 5;

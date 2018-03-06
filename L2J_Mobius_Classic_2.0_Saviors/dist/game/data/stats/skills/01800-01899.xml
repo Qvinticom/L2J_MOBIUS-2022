@@ -12,12 +12,13 @@
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
+		<reuseDelayLock>true</reuseDelayLock>
+		<stayAfterDeath>true</stayAfterDeath>
 		<hitTime>3000</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>49543</itemConsumeId>
@@ -81,12 +82,13 @@
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>7200000</reuseDelay>
+		<reuseDelayLock>true</reuseDelayLock>
 		<hitTime>3000</hitTime>
+		<stayAfterDeath>true</stayAfterDeath>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>49543</itemConsumeId>
@@ -150,12 +152,13 @@
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
+		<reuseDelayLock>true</reuseDelayLock>
 		<hitTime>3000</hitTime>
+		<stayAfterDeath>true</stayAfterDeath>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>49543</itemConsumeId>

@@ -1175,9 +1175,6 @@
 		<specialLevel>-1</specialLevel>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<targetConditions>
-			<condition name="OpSiegeHammer" />
-		</targetConditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>15005</power>
@@ -1189,7 +1186,7 @@
 		<icon>icon.skill0326</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>300</itemConsumeCount>
-		<itemConsumeId>2131</itemConsumeId> <!-- Gemstone C -->
+		<itemConsumeId>2132</itemConsumeId> <!-- Gemstone B -->
 		<magicLvl>-1</magicLvl>
 		<mpInitialConsume>30</mpInitialConsume>
 		<operateType>A1</operateType>
@@ -2741,7 +2738,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="370" toLevel="5" name="Clan Body">
-		<!-- Updated to Ertheia -->
 		<icon>icon.skill0370</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2749,18 +2745,17 @@
 		<effects>
 			<effect name="MaxHp">
 				<amount>
-					<value level="1">3</value>
-					<value level="2">4</value>
-					<value level="3">5</value>
-					<value level="4">6</value>
-					<value level="5">7</value>
+					<value level="1">100</value>
+					<value level="2">200</value>
+					<value level="3">400</value>
+					<value level="4">700</value>
+					<value level="5">1000</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="371" toLevel="5" name="Clan Spirituality">
-		<!-- Updated to Ertheia -->
 		<icon>icon.skill0371</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2768,18 +2763,17 @@
 		<effects>
 			<effect name="MaxCp">
 				<amount>
-					<value level="1">6</value>
-					<value level="2">8</value>
-					<value level="3">10</value>
-					<value level="4">12</value>
-					<value level="5">14</value>
+					<value level="1">200</value>
+					<value level="2">400</value>
+					<value level="3">600</value>
+					<value level="4">900</value>
+					<value level="5">1200</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="372" toLevel="5" name="Clan Soul">
-		<!-- Updated to Ertheia -->
 		<icon>icon.skill0372</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2787,13 +2781,13 @@
 		<effects>
 			<effect name="MaxMp">
 				<amount>
-					<value level="1">3</value>
-					<value level="2">4</value>
-					<value level="3">5</value>
-					<value level="4">6</value>
-					<value level="5">7</value>
+					<value level="1">70</value>
+					<value level="2">140</value>
+					<value level="3">280</value>
+					<value level="4">500</value>
+					<value level="5">700</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2901,11 +2895,11 @@
 		<effects>
 			<effect name="MAtk">
 				<amount>
-					<value level="1">6</value>
-					<value level="2">8</value>
-					<value level="3">10</value>
-					<value level="4">12</value>
-					<value level="5">14</value>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">8</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3189,11 +3183,13 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="392" toLevel="3" name="Clan Fortune">
+	<skill id="392" toLevel="5" name="Clan Fortune">
 		<magicLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3201,6 +3197,8 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
 		</abnormalLvl>
 		<effects>
 			<effect name="ExpModify">
@@ -3208,6 +3206,8 @@
 					<value level="1">3</value>
 					<value level="2">6</value>
 					<value level="3">10</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3235,7 +3235,7 @@
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0395</icon>
 		<itemConsumeCount>40</itemConsumeCount>
-		<itemConsumeId>1785</itemConsumeId> <!-- Soul Ore -->
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
@@ -3248,21 +3248,21 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="Speed">
-				<amount>5</amount>
+			<effect name="PhysicalDefence">
+				<amount>5400</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>4050</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>5400</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-80</amount>
 				<slot>BUFF</slot>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3276,7 +3276,7 @@
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0396</icon>
 		<itemConsumeCount>40</itemConsumeCount>
-		<itemConsumeId>1785</itemConsumeId> <!-- Soul Ore -->
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>-1</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
@@ -3289,33 +3289,16 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DebuffBlock" />
+			<effect name="Accuracy">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="PAtk">
 				<amount>500</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MAtk">
 				<amount>500</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>-25</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>-8</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Accuracy">
-				<amount>8</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
@@ -3326,13 +3309,30 @@
 				<amount>100</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>	
+			<effect name="ResistDispelByCategory">
+				<amount>-80</amount>
+				<slot>BUFF</slot>
+			</effect>
 			<effect name="HealEffect">
 				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-80</amount>
-				<slot>BUFF</slot>
+			<effect name="DebuffBlock" />
+			<effect name="PhysicalDefence">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>-8</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

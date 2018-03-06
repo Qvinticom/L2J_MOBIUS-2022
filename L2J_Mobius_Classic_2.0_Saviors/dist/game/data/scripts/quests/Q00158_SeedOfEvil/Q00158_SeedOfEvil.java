@@ -36,8 +36,9 @@ public class Q00158_SeedOfEvil extends Quest
 	// Monster
 	private static final int NERKAS = 27016;
 	// Items
-	private static final int ENCHANT_ARMOR_D = 956;
 	private static final int CLAY_TABLET = 1025;
+	// Reward
+	private static final int SICKLE = 153;
 	// Misc
 	private static final int MIN_LEVEL = 21;
 	
@@ -108,9 +109,8 @@ public class Q00158_SeedOfEvil extends Quest
 				}
 				else if (st.isCond(2) && hasQuestItems(player, CLAY_TABLET))
 				{
-					giveItems(player, ENCHANT_ARMOR_D, 1);
-					addExpAndSp(player, 17818, 927);
-					giveAdena(player, 1495, true);
+					rewardItems(player, SICKLE, 1);
+					giveAdena(player, 5000, true);
 					st.exitQuest(false, true);
 					htmltext = "30031-05.html";
 				}

@@ -4,10 +4,14 @@
 		<!-- Obtained XP/SP + 25%. Stacks with effects of Nom Nom Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i05</icon>
 		<operateType>P</operateType>
-		<abnormalLevel>1</abnormalLevel>
+		<hitTime>500</hitTime>
 		<effects>
 			<effect name="ExpModify">
-				<amount>25</amount>
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -16,27 +20,36 @@
 		<!-- Obtained XP/SP + 25%. Stacks with effects of Yum Yum Candy. When two identical candies are in the inventory, only one effect is applied. -->
 		<icon>etc_whiteday_candy_i06</icon>
 		<operateType>P</operateType>
-		<abnormalLevel>1</abnormalLevel>
+		<hitTime>500</hitTime>
 		<effects>
 			<effect name="ExpModify">
-				<amount>25</amount>
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="9620" toLevel="1" name="Yummy Gift Box">
-		<!-- AUTO GENERATED SKILL -->
-		<itemConsumeId>36081</itemConsumeId>
+		<icon>icon.skill9620</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
+		<itemConsumeId>36081</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
-		<hitTime>500</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="RestorationRandom">
 				<items>

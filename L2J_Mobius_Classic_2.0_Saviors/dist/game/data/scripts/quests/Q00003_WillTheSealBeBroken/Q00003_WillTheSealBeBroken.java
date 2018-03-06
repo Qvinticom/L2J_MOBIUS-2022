@@ -43,7 +43,6 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	private static final int OMEN_BEAST_EYE = 1081;
 	private static final int TAINT_STONE = 1082;
 	private static final int SUCCUBUS_BLOOD = 1083;
-	private static final int ENCHANT = 956;
 	// Misc
 	private static final int MIN_LEVEL = 16;
 	
@@ -139,7 +138,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 				}
 				else
 				{
-					giveItems(player, ENCHANT, 1);
+					giveAdena(player, 3800, true);
 					st.exitQuest(false, true);
 					htmltext = "30141-06.html";
 				}

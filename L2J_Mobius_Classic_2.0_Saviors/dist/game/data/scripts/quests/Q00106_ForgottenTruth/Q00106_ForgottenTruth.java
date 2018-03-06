@@ -43,6 +43,8 @@ public final class Q00106_ForgottenTruth extends Quest
 	private static final int ANCIENT_SCROLL = 986;
 	private static final int ANCIENT_CLAY_TABLET = 987;
 	private static final int KARTAS_TRANSLATION = 988;
+	// Reward
+	private static final int REWARDS = 49049; // Eldritch Dagger (Novice)
 	// Misc
 	private static final int MIN_LVL = 10;
 	
@@ -141,9 +143,8 @@ public final class Q00106_ForgottenTruth extends Quest
 						else if (st.isCond(4) && hasQuestItems(talker, KARTAS_TRANSLATION))
 						{
 							// Q00281_HeadForTheHills.giveNewbieReward(talker);
+							rewardItems(talker, REWARDS, 1);
 							talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
-							giveAdena(talker, 10266, true);
-							addExpAndSp(talker, 24195, 2074);
 							st.exitQuest(false, true);
 							htmltext = "30358-07.html";
 						}

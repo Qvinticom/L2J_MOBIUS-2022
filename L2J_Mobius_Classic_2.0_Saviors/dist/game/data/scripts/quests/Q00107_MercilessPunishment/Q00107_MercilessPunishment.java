@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -46,16 +45,7 @@ public final class Q00107_MercilessPunishment extends Quest
 	// Monster
 	private static final int BARANKA_MESSENGER = 27041;
 	// Rewards
-	private static final int BUTCHER = 1510;
-	private static final ItemHolder[] REWARDS =
-	{
-		new ItemHolder(1060, 100), // Lesser Healing Potion
-		new ItemHolder(4412, 10), // Echo Crystal - Theme of Battle
-		new ItemHolder(4413, 10), // Echo Crystal - Theme of Love
-		new ItemHolder(4414, 10), // Echo Crystal - Theme of Solitude
-		new ItemHolder(4415, 10), // Echo Crystal - Theme of Feast
-		new ItemHolder(4416, 10), // Echo Crystal - Theme of Celebration
-	};
+	private static final int BUTCHER = 49052;
 	// Misc
 	private static final int MIN_LVL = 10;
 	
@@ -200,12 +190,6 @@ public final class Q00107_MercilessPunishment extends Quest
 								if (hasQuestItems(talker, HATOSS_ORDER_3, LETTER_TO_HUMAN, LETTER_TO_DARK_ELF, LETTER_TO_ELF))
 								{
 									// Q00281_HeadForTheHills.giveNewbieReward(talker);
-									addExpAndSp(talker, 34565, 2962);
-									giveAdena(talker, 14666, true);
-									for (ItemHolder reward : REWARDS)
-									{
-										giveItems(talker, reward);
-									}
 									giveItems(talker, BUTCHER, 1);
 									qs.exitQuest(false, true);
 									talker.sendPacket(new SocialAction(talker.getObjectId(), 3));

@@ -3035,7 +3035,7 @@
 	<skill id="1375" toLevel="1" name="Heroic Grandeur">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<abnormalType>HERO_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
 		<affectRange>1000</affectRange>
@@ -3065,14 +3065,11 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="Mute">
-			</effect>
-			<effect name="PhysicalMute" />
-			<effect name="MagicalDefence">
+			<effect name="PhysicalDefence">
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="MagicalDefence">
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3088,12 +3085,15 @@
 				<amount>100</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="Mute">
+			</effect>
+			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
 	<skill id="1376" toLevel="1" name="Heroic Dread">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>8</abnormalTime>
 		<abnormalType>HERO_DEBUFF</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>80</activateRate>

@@ -278,6 +278,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70297" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="70428" name="Talisman of Border Pack +5" type="EtcItem">
 		<!-- Double-click to get Talisman of Border Pack +5. Cannot be exchanged or dropped. -->
@@ -287,6 +291,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70298" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="70429" name="Agathion - Singer and Dancer Pack (7-day)" type="EtcItem">
 		<!-- Double-click to get Agathion - Singer and Dancer (7-day). Cannot be exchanged, dropped, sold or shared within account. Can store in private warehouse. -->
@@ -311,7 +319,7 @@
 	</item>
 	<item id="70431" name="NoItemName" type="Armor">
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -344,7 +352,7 @@
 	</item>
 	<item id="70434" name="NoItemName" type="Armor">
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
@@ -355,7 +363,7 @@
 	</item>
 	<item id="70435" name="NoItemName" type="Armor">
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i01" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />

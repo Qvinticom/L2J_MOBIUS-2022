@@ -40,7 +40,7 @@ public final class Q00154_SacrificeToTheSea extends Quest
 	private static final int YOUNG_KELTIR = 20545;
 	private static final int KELTIR = 20481;
 	// Reward
-	private static final int MAGE_EARING = 113;
+	private static final int MAGE_EARING = 49040;
 	// Misc
 	private static final int MIN_LVL = 2;
 	
@@ -102,7 +102,6 @@ public final class Q00154_SacrificeToTheSea extends Quest
 						{
 							takeItems(talker, MAIDEN_DOLL, -1);
 							rewardItems(talker, MAGE_EARING, 1);
-							addExpAndSp(talker, 0, 1000);
 							qs.exitQuest(false, true);
 							htmltext = "30312-06.html";
 							break;

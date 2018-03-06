@@ -119,7 +119,7 @@ public final class Q00265_BondsOfSlavery extends Quest
 				if (hasQuestItems(player, IMP_SHACKLES))
 				{
 					final long shackles = getQuestItemsCount(player, IMP_SHACKLES);
-					giveAdena(player, (shackles * 12) + (shackles >= 10 ? 500 : 0), true);
+					giveAdena(player, (shackles * 5) + (shackles >= 10 ? 500 : 0), true);
 					takeItems(player, IMP_SHACKLES, -1);
 					// Q00281_HeadForTheHills.giveNewbieReward(player);
 					htmltext = "30357-06.html";

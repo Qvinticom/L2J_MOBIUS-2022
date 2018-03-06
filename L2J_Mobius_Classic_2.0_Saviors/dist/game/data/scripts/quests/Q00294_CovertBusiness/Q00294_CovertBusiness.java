@@ -110,7 +110,7 @@ public final class Q00294_CovertBusiness extends Quest
 			{
 				if (hasQuestItems(talker, RING_OF_RACCOON))
 				{
-					giveAdena(talker, 2400, true);
+					giveAdena(talker, 200, true);
 					html = "30534-06.html";
 				}
 				else
@@ -118,7 +118,7 @@ public final class Q00294_CovertBusiness extends Quest
 					giveItems(talker, RING_OF_RACCOON, 1);
 					html = "30534-05.html";
 				}
-				addExpAndSp(talker, 0, 600);
+				takeItems(talker, BAT_FANG, -1);
 				qs.exitQuest(true, true);
 			}
 			else

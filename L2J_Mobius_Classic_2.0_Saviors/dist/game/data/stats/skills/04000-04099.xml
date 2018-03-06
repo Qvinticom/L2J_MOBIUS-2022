@@ -3047,9 +3047,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpSiegeHammer" />
-		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>665060</power>
@@ -3070,9 +3067,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpSiegeHammer" />
-		</conditions>
 		<effects>
 			<effect name="Heal">
 				<power>628</power>

@@ -19,7 +19,6 @@ package quests.Q00319_ScentOfDeath;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -38,7 +37,6 @@ public class Q00319_ScentOfDeath extends Quest
 	private static final int MARSH_ZOMBIE_LORD = 20020;
 	// Item
 	private static final int ZOMBIES_SKIN = 1045;
-	private static final ItemHolder LESSER_HEALING_POTION = new ItemHolder(1060, 1);
 	// Misc
 	private static final int MIN_LEVEL = 11;
 	private static final int MIN_CHANCE = 7;
@@ -124,8 +122,7 @@ public class Q00319_ScentOfDeath extends Quest
 					}
 					case 2:
 					{
-						giveAdena(player, 3350, false);
-						giveItems(player, LESSER_HEALING_POTION);
+						giveAdena(player, 500, false);
 						takeItems(player, ZOMBIES_SKIN, -1);
 						st.exitQuest(true, true);
 						htmltext = "30138-06.html";

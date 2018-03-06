@@ -170,7 +170,7 @@ public final class Q00292_BrigandsSweep extends Quest
 							final long sum = necklaces + pendants + lordPendants;
 							if (sum > 0)
 							{
-								giveAdena(talker, (necklaces * 12) + (pendants * 36) + (lordPendants * 33) + (sum >= 10 ? 1000 : 0), true);
+								giveAdena(talker, (necklaces * 6) + (pendants * 8) + (lordPendants * 10) + (sum >= 10 ? 1000 : 0), true);
 								takeItems(talker, -1, GOBLIN_NECKLACE, GOBLIN_PENDANT, GOBLIN_LORD_PENDANT);
 							}
 							if ((sum > 0) && !hasAtLeastOneQuestItem(talker, SUSPICIOUS_MEMO, SUSPICIOUS_CONTRACT))
@@ -182,7 +182,7 @@ public final class Q00292_BrigandsSweep extends Quest
 								final long memos = getQuestItemsCount(talker, SUSPICIOUS_MEMO);
 								if ((memos == 0) && hasQuestItems(talker, SUSPICIOUS_CONTRACT))
 								{
-									giveAdena(talker, 1120, true);
+									giveAdena(talker, 100, true);
 									takeItems(talker, -1, SUSPICIOUS_CONTRACT); // Retail like, reward is given in 2 pieces if both conditions are meet.
 									html = "30532-10.html";
 								}

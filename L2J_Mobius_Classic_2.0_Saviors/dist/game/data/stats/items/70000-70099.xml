@@ -224,6 +224,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70024" min="1" max="1" chance="100.0" />
+			<item id="70025" min="1" max="1" chance="100.0" />
+		</capsuled_items>
 	</item>
 	<item id="70021" name="Clan's Supplies" additionalName="Medium Grade" type="EtcItem">
 		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan�s Special Supplies (Medium-grade). Cannot be exchanged, dropped, or sold in a private store. -->
@@ -237,6 +242,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70024" min="2" max="4" chance="100.0" />
+			<item id="70026" min="1" max="1" chance="100.0" />
+		</capsuled_items>
 	</item>
 	<item id="70022" name="Clan's Supplies" additionalName="High Grade" type="EtcItem">
 		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan�s Special Supplies (High-grade). Cannot be exchanged, dropped, or sold in a private store. -->
@@ -250,6 +260,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70024" min="4" max="6" chance="100.0" />
+			<item id="70027" min="1" max="1" chance="100.0" />
+		</capsuled_items>
 	</item>
 	<item id="70023" name="Clan's Supplies" additionalName="Highest Grade" type="EtcItem">
 		<!-- A box with the reward for clan members for hunting monsters. It may contain Daily Coin or Clan�s Special Supplies (Highest-grade). Cannot be exchanged, dropped, or sold in a private store. -->
@@ -263,6 +278,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="70024" min="6" max="8" chance="100.0" />
+			<item id="70028" min="1" max="1" chance="100.0" />
+		</capsuled_items>
 	</item>
 	<item id="70024" name="Daily Coin" type="EtcItem">
 		<!-- Can be exchanged for useful items with High Priest or Elder in any town. Cannot be exchanged, dropped, or sold in a private store. -->
@@ -285,6 +305,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55172" level="1"/>	<!--Clan's Special Supplies-->
+		</skills>
 	</item>
 	<item id="70026" name="Clan's Special Supplies" additionalName="Medium Grade" type="EtcItem">
 		<!-- A reward for your gaming as part of a clan. Contains one of many various clan rewards. Cannot be exchanged, dropped, or sold in a private store. -->
@@ -297,6 +321,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55173" level="1"/>	<!--Clan's Special Supplies-->
+		</skills>
 	</item>
 	<item id="70027" name="Clan's Special Supplies" additionalName="High Grade" type="EtcItem">
 		<!-- A reward for your gaming as part of a clan. Contains one of many various clan rewards. Cannot be exchanged, dropped, or sold in a private store. -->
@@ -309,6 +337,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55174" level="1"/>	<!--Clan's Special Supplies-->
+		</skills>
 	</item>
 	<item id="70028" name="Clan's Special Supplies" additionalName="Highest Grade" type="EtcItem">
 		<!-- A reward for your gaming as part of a clan. Contains one of many various clan rewards. Cannot be exchanged, dropped, or sold in a private store. -->
@@ -321,6 +353,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55175" level="1"/>	<!--Clan's Special Supplies-->
+		</skills>
 	</item>
 	<item id="70029" name="Yellow Talisman - P. Atk." type="Armor">
 		<!-- A Shadow Item that increases P. Atk. Effects do not stack when a Talisman of a similar type is used. -->
@@ -334,6 +370,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55176" level="1" />
+		</skills>
 	</item>
 	<item id="70030" name="Yellow Talisman - Atk. Spd." type="Armor">
 		<!-- A Shadow Item that increases Atk. Spd. Effects do not stack when a Talisman of a similar type is used. -->
@@ -347,6 +387,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55177" level="1" />
+		</skills>
 	</item>
 	<item id="70031" name="Yellow Talisman - M. Def." type="Armor">
 		<!-- A Shadow Item that increases M. Def. Effects do not stack when a Talisman of a similar type is used. -->
@@ -360,6 +404,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55178" level="1" />
+		</skills>
 	</item>
 	<item id="70032" name="Yellow Talisman - M. Atk." type="Armor">
 		<!-- A Shadow Item that increases M. Atk. Effects do not stack when a Talisman of a similar type is used. -->
@@ -373,6 +421,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55179" level="1" />
+		</skills>
 	</item>
 	<item id="70033" name="Yellow Talisman - Casting Spd." type="Armor">
 		<!-- A Shadow Item that increases Casting Spd. Effects do not stack when a Talisman of a similar type is used. -->
@@ -386,6 +438,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55180" level="1" />
+		</skills>
 	</item>
 	<item id="70034" name="Yellow Talisman - Accuracy" type="Armor">
 		<!-- A Shadow Item that increases Accuracy. Effects do not stack when a Talisman of a similar type is used. -->
@@ -399,6 +455,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55181" level="1" />
+		</skills>
 	</item>
 	<item id="70035" name="Yellow Talisman - P. Def." type="Armor">
 		<!-- A Shadow Item that increases P. Def. Effects do not stack when a Talisman of a similar type is used. -->
@@ -412,6 +472,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55182" level="1" />
+		</skills>
 	</item>
 	<item id="70036" name="Yellow Talisman - Speed" type="Armor">
 		<!-- A Shadow Item that increases Speed. Effects do not stack when a Talisman of a similar type is used. -->
@@ -425,6 +489,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55183" level="1" />
+		</skills>
 	</item>
 	<item id="70037" name="Yellow Talisman - Evasion" type="Armor">
 		<!-- A Shadow Item that increases Evasion. Effects do not stack when a Talisman of a similar type is used. -->
@@ -438,6 +506,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55184" level="1" />
+		</skills>
 	</item>
 	<item id="70038" name="Yellow Talisman - Healing Power" type="Armor">
 		<!-- A Shadow Item that increases HP. Effects do not stack when a Talisman of a similar type is used. -->
@@ -451,6 +523,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55185" level="1" />
+		</skills>
 	</item>
 	<item id="70039" name="Blue Talisman - Invisibility" type="Armor">
 		<!-- A Shadow Item that makes the character invisible to monsters. Effects do not stack when a Talisman of a similar type is used. -->
@@ -464,6 +540,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="bodypart" val="talisman" />
+		<skills>
+			<skill id="55186" level="1" />
+		</skills>
 	</item>
 	<item id="70040" name="Roast Blue Mackerel - STR" type="EtcItem">
 		<!-- When used, provides STR +1 for 20 minutes. Cannot be dropped. -->

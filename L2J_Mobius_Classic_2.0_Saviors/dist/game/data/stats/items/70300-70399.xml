@@ -313,6 +313,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55397" level="3" /> <!-- XP/SP Scroll lvl 1 (50%) -->
+		</skills>
 	</item>
 	<item id="70326" name="Olympiad Warrior's Special Fruit" additionalName="Event" type="EtcItem">
 		<!-- For 20 minutes., obtained XP/SP + 10%, P. / M. Atk. +10%, P. / M. Def. +5%, Max. HP/MP/CP + 15%, HP / MP Recovery +20%, PvE damage + 10%. With a certain chance, converts 3% of damage dealt into HP. Can be used with Special Pirate Fruit. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->

@@ -89,7 +89,7 @@ public final class Q00295_DreamingOfTheSkies extends Quest
 			{
 				if (hasQuestItems(talker, RING_OF_FIREFLY))
 				{
-					giveAdena(talker, 2400, true);
+					giveAdena(talker, 200, true);
 					html = "30536-06.html";
 				}
 				else

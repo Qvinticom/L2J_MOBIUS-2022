@@ -125,7 +125,7 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 						if (getQuestItemsCount(player, SPORE_SAC) >= REQUIRED_ITEM_COUNT)
 						{
 							htmltext = "30137-05.html";
-							giveAdena(player, 3000, true);
+							giveAdena(player, 300, true);
 							st.exitQuest(true, true);
 						}
 						break;

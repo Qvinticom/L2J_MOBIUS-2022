@@ -51,13 +51,9 @@ public final class Q00264_KeenClaws extends Quest
 		MONSTER_CHANCES.put(20003, Arrays.asList(new ItemHolder(2, 25), new ItemHolder(8, 50)));
 		MONSTER_CHANCES.put(20456, Arrays.asList(new ItemHolder(1, 80), new ItemHolder(2, 100)));
 		
-		REWARDS.put(1, Arrays.asList(new ItemHolder(4633, 1)));
-		REWARDS.put(2, Arrays.asList(new ItemHolder(57, 2000)));
-		REWARDS.put(5, Arrays.asList(new ItemHolder(5140, 1)));
-		REWARDS.put(8, Arrays.asList(new ItemHolder(735, 1), new ItemHolder(57, 50)));
-		REWARDS.put(11, Arrays.asList(new ItemHolder(737, 1)));
-		REWARDS.put(14, Arrays.asList(new ItemHolder(734, 1)));
-		REWARDS.put(17, Arrays.asList(new ItemHolder(35, 1), new ItemHolder(57, 50)));
+		REWARDS.put(0, Arrays.asList(new ItemHolder(735, 1)));
+		REWARDS.put(1, Arrays.asList(new ItemHolder(734, 1)));
+		REWARDS.put(2, Arrays.asList(new ItemHolder(35, 1)));
 	}
 	
 	public Q00264_KeenClaws()

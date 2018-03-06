@@ -47,7 +47,7 @@ public class Q00324_SweetestVenom extends Quest
 	// Misc
 	private static final int MIN_LVL = 18;
 	private static final int REQUIRED_COUNT = 10;
-	private static final int ADENA_COUNT = 5810;
+	private static final int ADENA_COUNT = 1000;
 	
 	public Q00324_SweetestVenom()
 	{

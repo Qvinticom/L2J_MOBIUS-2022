@@ -37,9 +37,8 @@ public final class Q00271_ProofOfValor extends Quest
 	// Monsters
 	private static final int KASHA_WOLF = 20475;
 	// Rewards
-	private static final int HEALING_POTION = 1061;
-	private static final int NECKLACE_OF_COURAGE = 1506;
-	private static final int NECKLACE_OF_VALOR = 1507;
+	private static final int HEALING_POTION = 1539;
+	private static final int NECKLACE_OF_VALOR = 49039;
 	// Misc
 	private static final int MIN_LVL = 4;
 	
@@ -59,7 +58,7 @@ public final class Q00271_ProofOfValor extends Quest
 		if ((st != null) && event.equalsIgnoreCase("30577-04.htm"))
 		{
 			st.startQuest();
-			return hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR, NECKLACE_OF_COURAGE) ? "30577-08.html" : event;
+			return hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR) ? "30577-08.html" : event;
 		}
 		return null;
 	}
@@ -95,7 +94,7 @@ public final class Q00271_ProofOfValor extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR, NECKLACE_OF_COURAGE)) ? "30577-07.htm" : "30577-03.htm" : "30577-02.htm" : "30577-01.htm";
+				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR)) ? "30577-07.htm" : "30577-03.htm" : "30577-02.htm" : "30577-01.htm";
 				break;
 			}
 			case State.STARTED:
@@ -114,11 +113,11 @@ public final class Q00271_ProofOfValor extends Quest
 							if (getRandom(100) <= 13)
 							{
 								rewardItems(player, NECKLACE_OF_VALOR, 1);
-								rewardItems(player, HEALING_POTION, 10);
+								rewardItems(player, HEALING_POTION, 1);
 							}
 							else
 							{
-								rewardItems(player, NECKLACE_OF_COURAGE, 1);
+								rewardItems(player, NECKLACE_OF_VALOR, 1);
 							}
 							takeItems(player, KASHA_WOLF_FANG, -1);
 							st.exitQuest(true, true);

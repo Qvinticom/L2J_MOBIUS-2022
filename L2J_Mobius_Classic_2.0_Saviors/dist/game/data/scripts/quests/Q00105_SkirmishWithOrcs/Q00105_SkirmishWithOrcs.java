@@ -70,6 +70,9 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 		KENDELLS_7TH_ORDER,
 		KENDELLS_8TH_ORDER
 	};
+	// Rewards
+	private static final int SWORD_OF_SUNSET = 49046;
+	private static final int STAFF_OF_SUNSET = 49045;
 	// Misc
 	private static final int MIN_LVL = 10;
 	
@@ -193,9 +196,15 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 				if (st.isCond(4) && hasQuestItems(talker, KABOO_CHIEFS_2ST_TORQUE))
 				{
 					// Q00281_HeadForTheHills.giveNewbieReward(talker);
+					if (talker.isMageClass())
+					{
+						giveItems(talker, STAFF_OF_SUNSET, 1);
+					}
+					else
+					{
+						giveItems(talker, SWORD_OF_SUNSET, 1);
+					}
 					talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
-					giveAdena(talker, 17599, true);
-					addExpAndSp(talker, 41478, 3555);
 					st.exitQuest(false, true);
 					htmltext = "30218-09.html";
 				}

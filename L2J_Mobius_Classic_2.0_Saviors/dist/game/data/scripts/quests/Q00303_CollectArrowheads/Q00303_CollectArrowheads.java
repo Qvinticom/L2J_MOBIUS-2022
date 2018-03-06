@@ -103,8 +103,7 @@ public final class Q00303_CollectArrowheads extends Quest
 					{
 						if (getQuestItemsCount(player, ORCISH_ARROWHEAD) >= REQUIRED_ITEM_COUNT)
 						{
-							giveAdena(player, 1000, true);
-							addExpAndSp(player, 2000, 0);
+							giveAdena(player, 500, true);
 							st.exitQuest(true, true);
 							htmltext = "30029-06.html";
 						}

@@ -77,7 +77,7 @@ public final class Q00317_CatchTheWind extends Quest
 				final long shardCount = getQuestItemsCount(player, WIND_SHARD);
 				if (shardCount > 0)
 				{
-					giveAdena(player, ((shardCount * 40) + (shardCount >= 10 ? 2988 : 0)), true);
+					giveAdena(player, ((shardCount * 10) + (shardCount >= 10 ? 2988 : 0)), true);
 					takeItems(player, WIND_SHARD, -1);
 				}
 				

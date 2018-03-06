@@ -38,7 +38,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	private static final int RATH = 30126;
 	// Items
 	private static final int BRACELET_OF_LIZARDMAN = 7139;
-	private static final ItemHolder REWARD_ADENA = new ItemHolder(Inventory.ADENA_ID, 30000);
+	private static final ItemHolder REWARD_ADENA = new ItemHolder(Inventory.ADENA_ID, 5000);
 	private static final ItemHolder REWARD_ANIMAL_BONE = new ItemHolder(1872, 50);
 	private static final ItemHolder REWARD_ANIMAL_SKIN = new ItemHolder(1867, 50);
 	// Misc

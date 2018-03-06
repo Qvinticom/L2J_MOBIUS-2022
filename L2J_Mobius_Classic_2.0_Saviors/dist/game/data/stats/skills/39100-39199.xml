@@ -259,19 +259,133 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39147" toLevel="1" name="Talisman of Darkness Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39147</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49706</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="49707" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49708" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49709" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49710" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49711" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49712" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49713" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49714" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49715" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="49716" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39148" toLevel="1" name="Sealed Blessed Talisman of Border">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39148</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49738</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="49737" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39149" toLevel="1" name="Talisman of Baium Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39149</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49755</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="0.0001">
+						<item id="49683" count="1" />	<!-- Talisman of Baium -->
+					</item>
+					<item chance="0.01">
+						<item id="49682" count="1" />	<!-- Baium's Soul -->
+					</item>
+					<item chance="70.0">
+						<item id="49676" count="1" />	<!-- Talisman of Insolence I -->
+					</item>
+					<item chance="20.0">
+						<item id="49677" count="1" />	<!-- Talisman of Insolence II -->
+					</item>
+					<item chance="5.0">
+						<item id="49685" count="1" />	<!-- Energy of Insolence -->
+					</item>
+					<item chance="3.0">
+						<item id="49684" count="1" />	<!-- Talisman Crystal -->
+					</item>
+					<item chance="1.9899">
+						<item id="49543" count="1" />	<!-- Elemental Stone -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39150" toLevel="1" name="Sayha's Holy Water">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

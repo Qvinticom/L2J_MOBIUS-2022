@@ -1034,104 +1034,201 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3560" toLevel="1" name="Orfen's Earring">
-		<!-- Boss Jewel Skill -->
+	<skill id="3560" toLevel="3" name="Orfen's Earring">
 		<icon>icon.accessory_earring_of_orfen_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<HOLD>10</HOLD>
-				<DERANGEMENT>10</DERANGEMENT>
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</DERANGEMENT>
+				<HOLD>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</HOLD>
 			</effect>
 			<effect name="AttackTrait">
-				<SHOCK>5</SHOCK>
-				<DERANGEMENT>5</DERANGEMENT>
+				<DERANGEMENT>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</DERANGEMENT>
+				<HOLD>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</HOLD>
 			</effect>
 			<effect name="HealEffect">
-				<amount>2</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="MaxMp">
-				<amount>19</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>2</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="MpVampiricAttack" fromLevel="3" toLevel="3">
+				<amount>3</amount>
+				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3561" toLevel="1" name="Baium's Ring">
-		<!-- Confirmed CT2.5 -->
-		<!-- Boss Jewel Skill -->
+	<skill id="3561" toLevel="3" name="Baium's Ring">
 		<icon>icon.accessory_ring_of_baium_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackTrait">
-				<POISON>40</POISON>
-				<HOLD>30</HOLD>
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</SHOCK>
+				<BLEED>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</BLEED>
 			</effect>
 			<effect name="DefenceTrait">
-				<POISON>40</POISON>
-				<HOLD>30</HOLD>
-			</effect>
-			<effect name="Accuracy">
-				<amount>2</amount>
-				<mode>DIFF</mode>
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</SHOCK>
+				<BLEED>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</BLEED>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>4</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>4</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalDamage">
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage" fromLevel="3" toLevel="3">
 				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage" fromLevel="3" toLevel="3">
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3562" toLevel="1" name="Queen Ant's Ring">
-		<!-- Confirmed CT2.5 -->
-		<!-- Boss Jewel Skill -->
+	<skill id="3562" toLevel="3" name="Queen Ant's Ring">
 		<icon>icon.accessory_ring_of_queen_ant_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackTrait">
-				<POISON>10</POISON>
-				<HOLD>10</HOLD>
+				<POISON>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</POISON>
 			</effect>
 			<effect name="DefenceTrait">
-				<POISON>10</POISON>
-				<HOLD>10</HOLD>
+				<POISON>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</POISON>
 			</effect>
 			<effect name="Accuracy">
-				<amount>2</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxMp">
-				<amount>9</amount>
+			<effect name="MagicAccuracy">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">6</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">6</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3563" toLevel="1" name="Ring of Core">
+	<skill id="3563" toLevel="3" name="Ring of Core">
 		<!-- Boss Jewel Skill -->
 		<icon>icon.accessory_ring_of_core_i00</icon>
 		<magicLvl>75</magicLvl>
@@ -1139,35 +1236,75 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackTrait">
-				<POISON>10</POISON>
+				<DERANGEMENT>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</DERANGEMENT>
 			</effect>
 			<effect name="DefenceTrait">
-				<POISON>10</POISON>
+				<DERANGEMENT>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</DERANGEMENT>
 			</effect>
-			<effect name="Accuracy">
-				<amount>1</amount>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>2</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>2</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+				</amount>
 				<type>ENEMY_ALL</type>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>2</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>2</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>2</amount>
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

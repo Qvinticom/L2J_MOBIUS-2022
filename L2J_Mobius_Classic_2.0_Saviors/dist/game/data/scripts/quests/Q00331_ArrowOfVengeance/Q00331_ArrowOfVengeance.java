@@ -48,10 +48,10 @@ public class Q00331_ArrowOfVengeance extends Quest
 	}
 	// Misc
 	private static final int MIN_LVL = 32;
-	private static final int HARPY_FEATHER_ADENA = 78;
-	private static final int MEDUSA_VENOM_ADENA = 88;
-	private static final int WYRMS_TOOTH_ADENA = 92;
-	private static final int BONUS = 3100;
+	private static final int HARPY_FEATHER_ADENA = 6;
+	private static final int MEDUSA_VENOM_ADENA = 7;
+	private static final int WYRMS_TOOTH_ADENA = 9;
+	private static final int BONUS = 1000;
 	private static final int BONUS_COUNT = 10;
 	
 	public Q00331_ArrowOfVengeance()

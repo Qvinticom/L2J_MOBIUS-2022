@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -54,16 +53,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 		MONSTERS.put(27005, SPIRITBOUND_WAND3); // Spirit Of Mirrors
 	}
 	// Rewards
-	private static final ItemHolder[] REWARDS =
-	{
-		new ItemHolder(1060, 100), // Lesser Healing Potion
-		new ItemHolder(4412, 10), // Echo Crystal - Theme of Battle
-		new ItemHolder(4413, 10), // Echo Crystal - Theme of Love
-		new ItemHolder(4414, 10), // Echo Crystal - Theme of Solitude
-		new ItemHolder(4415, 10), // Echo Crystal - Theme of Feast
-		new ItemHolder(4416, 10), // Echo Crystal - Theme of Celebration
-		new ItemHolder(747, 1), // Wand of Adept
-	};
+	private static final int REWARDS = 49044; // Wand of Adept
 	// Misc
 	private static final int MIN_LVL = 10;
 	
@@ -131,12 +121,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 						if (st.isCond(3) && hasQuestItems(player, SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 						{
 							// Q00281_HeadForTheHills.giveNewbieReward(player);
-							for (ItemHolder reward : REWARDS)
-							{
-								giveItems(player, reward);
-							}
-							addExpAndSp(player, 39750, 3407);
-							giveAdena(player, 16866, true);
+							rewardItems(player, REWARDS, 1);
 							st.exitQuest(false, true);
 							htmltext = "30017-06.html";
 						}

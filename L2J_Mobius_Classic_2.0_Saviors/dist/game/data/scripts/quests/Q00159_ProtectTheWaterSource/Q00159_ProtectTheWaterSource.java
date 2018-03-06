@@ -38,6 +38,9 @@ public class Q00159_ProtectTheWaterSource extends Quest
 	private static final int PLAGUE_DUST = 1035;
 	private static final int HYACINTH_CHARM = 1071;
 	private static final int HYACINTH_CHARM2 = 1072;
+	// Rewards
+	private static final int SCROLL_OF_ESCAPSE = 736;
+	private static final int RING_NOVICE = 49041;
 	// Misc
 	private static final int MIN_LVL = 12;
 	
@@ -151,7 +154,8 @@ public class Q00159_ProtectTheWaterSource extends Quest
 					{
 						if (hasQuestItems(player, HYACINTH_CHARM2) && (getQuestItemsCount(player, PLAGUE_DUST) >= 5))
 						{
-							giveAdena(player, 18250, true);
+							rewardItems(player, SCROLL_OF_ESCAPSE, 1);
+							rewardItems(player, RING_NOVICE, 1);
 							st.exitQuest(false, true);
 							htmltext = "30154-08.html";
 						}

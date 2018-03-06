@@ -123,7 +123,7 @@ public final class Q00263_OrcSubjugation extends Quest
 				{
 					final long amulets = getQuestItemsCount(player, ORC_AMULET);
 					final long necklaces = getQuestItemsCount(player, ORC_NECKLACE);
-					giveAdena(player, ((amulets * 20) + (necklaces * 30) + ((amulets + necklaces) >= 10 ? 1100 : 0)), true);
+					giveAdena(player, ((amulets * 8) + (necklaces * 10) + ((amulets + necklaces) >= 10 ? 1100 : 0)), true);
 					takeItems(player, -1, getRegisteredItemIds());
 					htmltext = "30346-06.html";
 				}

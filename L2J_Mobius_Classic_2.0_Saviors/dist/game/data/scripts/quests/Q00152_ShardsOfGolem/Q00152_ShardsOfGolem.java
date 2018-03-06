@@ -35,7 +35,7 @@ public class Q00152_ShardsOfGolem extends Quest
 	// Monster
 	private static final int STONE_GOLEM = 20016;
 	// Items
-	private static final int WOODEN_BREASTPLATE = 23;
+	private static final int WOODEN_BREASTPLATE = 1100;
 	private static final int HARRYS_1ST_RECIEPT = 1008;
 	private static final int HARRYS_2ND_RECIEPT = 1009;
 	private static final int GOLEM_SHARD = 1010;
@@ -146,7 +146,6 @@ public class Q00152_ShardsOfGolem extends Quest
 								if (hasQuestItems(player, HARRYS_2ND_RECIEPT, TOOL_BOX))
 								{
 									giveItems(player, WOODEN_BREASTPLATE, 1);
-									addExpAndSp(player, 5000, 0);
 									st.exitQuest(false, true);
 									htmltext = "30035-05.html";
 								}

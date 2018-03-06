@@ -94,7 +94,7 @@ public final class Q00320_BonesTellTheFuture extends Quest
 				if (getQuestItemsCount(player, BONE_FRAGMENT) >= REQUIRED_BONE_COUNT)
 				{
 					htmltext = "30359-06.html";
-					giveAdena(player, 8470, true);
+					giveAdena(player, 500, true);
 					st.exitQuest(true, true);
 				}
 				else

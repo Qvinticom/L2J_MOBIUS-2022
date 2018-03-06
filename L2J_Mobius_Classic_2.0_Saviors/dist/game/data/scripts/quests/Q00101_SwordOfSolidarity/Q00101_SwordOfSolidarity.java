@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -48,16 +47,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 		20362, // Tunath Orc Warrior
 	};
 	// Rewards
-	private static final ItemHolder[] REWARDS =
-	{
-		new ItemHolder(738, 1), // Sword of Solidarity
-		new ItemHolder(1060, 100), // Lesser Healing Potion
-		new ItemHolder(4412, 10), // Echo Crystal - Theme of Battle
-		new ItemHolder(4413, 10), // Echo Crystal - Theme of Love
-		new ItemHolder(4414, 10), // Echo Crystal - Theme of Solitude
-		new ItemHolder(4415, 10), // Echo Crystal - Theme of Feast
-		new ItemHolder(4416, 10), // Echo Crystal - Theme of Celebration
-	};
+	private static final int REWARDS = 49043; // Sword of Solidarity
 	// Misc
 	private static final int MIN_LVL = 9;
 	
@@ -108,12 +98,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 					if (st.isCond(5) && hasQuestItems(player, BROKEN_SWORD_HANDLE))
 					{
 						// Q00281_HeadForTheHills.giveNewbieReward(player);
-						for (ItemHolder reward : REWARDS)
-						{
-							giveItems(player, reward);
-						}
-						addExpAndSp(player, 25747, 2171);
-						giveAdena(player, 10981, true);
+						rewardItems(player, REWARDS, 1);
 						st.exitQuest(false, true);
 						htmltext = event;
 					}

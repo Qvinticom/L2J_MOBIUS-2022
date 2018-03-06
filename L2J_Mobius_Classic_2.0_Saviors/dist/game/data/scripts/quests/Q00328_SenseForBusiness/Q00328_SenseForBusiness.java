@@ -52,10 +52,10 @@ public class Q00328_SenseForBusiness extends Quest
 	private static final int MONSTER_EYE_LENS = 1366;
 	private static final int BASILISK_GIZZARD = 1348;
 	// Misc
-	private static final int MONSTER_EYE_CARCASS_ADENA = 25;
-	private static final int MONSTER_EYE_LENS_ADENA = 1000;
-	private static final int BASILISK_GIZZARD_ADENA = 60;
-	private static final int BONUS = 618;
+	private static final int MONSTER_EYE_CARCASS_ADENA = 2;
+	private static final int MONSTER_EYE_LENS_ADENA = 10;
+	private static final int BASILISK_GIZZARD_ADENA = 2;
+	private static final int BONUS = 100;
 	private static final int BONUS_COUNT = 10;
 	private static final int MIN_LVL = 21;
 	

@@ -87,7 +87,6 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 			}
 			case "30717-09.html":
 			{
-				addExpAndSp(player, 31850, 0);
 				takeItems(player, CARNIVORE_SPORE, -1);
 				takeItems(player, HERBIVOROUS_SPORE, -1);
 				htmltext = event;
@@ -101,7 +100,6 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 			}
 			case "30717-14.html":
 			{
-				addExpAndSp(player, 45500, 2600);
 				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
@@ -112,17 +110,17 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 				int adena = 0;
 				if (value < 20)
 				{
-					adena = 44000;
+					adena = 3000;
 					htmltext = "30717-15.html";
 				}
 				else if (value < 70)
 				{
-					adena = 20950;
+					adena = 1300;
 					htmltext = "30717-16.html";
 				}
 				else
 				{
-					adena = 10400;
+					adena = 1300;
 					htmltext = "30717-17.html";
 				}
 				giveAdena(player, adena, true);
@@ -146,9 +144,9 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		final int dropItem = ((npc.getId() == ROTTING_TREE) ? HERBIVOROUS_SPORE : CARNIVORE_SPORE);
 		final int otherItem = ((dropItem == HERBIVOROUS_SPORE) ? CARNIVORE_SPORE : HERBIVOROUS_SPORE);
 		
-		if (giveItemRandomly(qs.getPlayer(), npc, dropItem, 1, 50, MONSTER_DROP_CHANCES.get(npc.getId()), true))
+		if (giveItemRandomly(qs.getPlayer(), npc, dropItem, 1, 100, MONSTER_DROP_CHANCES.get(npc.getId()), true))
 		{
-			if (getQuestItemsCount(killer, otherItem) >= 50)
+			if (getQuestItemsCount(killer, otherItem) >= 100)
 			{
 				qs.setCond(3);
 			}
@@ -171,8 +169,8 @@ public final class Q00356_DigUpTheSeaOfSpores extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			final boolean hasAllHerbSpores = (getQuestItemsCount(player, HERBIVOROUS_SPORE) >= 50);
-			final boolean hasAllCarnSpores = (getQuestItemsCount(player, CARNIVORE_SPORE) >= 50);
+			final boolean hasAllHerbSpores = (getQuestItemsCount(player, HERBIVOROUS_SPORE) >= 100);
+			final boolean hasAllCarnSpores = (getQuestItemsCount(player, CARNIVORE_SPORE) >= 100);
 			
 			if (hasAllHerbSpores && hasAllCarnSpores)
 			{

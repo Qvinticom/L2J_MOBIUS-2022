@@ -34,13 +34,12 @@ public class Q00170_DangerousSeduction extends Quest
 {
 	// NPC
 	private static final int VELLIOR = 30305;
-	
 	// Monster
 	private static final int MERKENIS = 27022;
-	
 	// Item
 	private static final int NIGHTMARE_CRYSTAL = 1046;
-	
+	// Reward
+	private static final int PIECE_BONE_BREASTPLATE = 25;
 	// Misc
 	private static final int MIN_LEVEL = 21;
 	
@@ -105,8 +104,7 @@ public class Q00170_DangerousSeduction extends Quest
 				}
 				else
 				{
-					giveAdena(player, 102680, true);
-					addExpAndSp(player, 38607, 4018);
+					rewardItems(player, PIECE_BONE_BREASTPLATE, 1);
 					st.exitQuest(false, true);
 					htmltext = "30305-06.html";
 				}

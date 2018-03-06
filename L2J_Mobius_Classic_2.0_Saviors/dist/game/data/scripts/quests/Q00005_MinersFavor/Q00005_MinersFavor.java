@@ -43,7 +43,7 @@ public class Q00005_MinersFavor extends Quest
 	private static final int BOOMBOOM_POWDER = 1550;
 	private static final int REDSTONE_BEER = 1551;
 	private static final int BOLTERS_SMELLY_SOCKS = 1552;
-	private static final int NECKLACE = 906;
+	private static final int NECKLACE = 49039; // Necklace (Novice)
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
@@ -122,8 +122,6 @@ public class Q00005_MinersFavor extends Quest
 						}
 						else
 						{
-							giveAdena(player, 2466, true);
-							addExpAndSp(player, 5672, 446);
 							giveItems(player, NECKLACE, 1);
 							st.exitQuest(false, true);
 							// Newbie Guide

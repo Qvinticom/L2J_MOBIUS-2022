@@ -164,7 +164,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
 		<set name="is_freightable" val="false" />	
-		<set name="commissionItemType" val="EARRING" />
+		<set name="commissionItemType" val="RING" />
 		<set name="handler" val="ItemSkills" />
 		<set name="enchant_enabled" val="7" />
 		<set name="time" val="21600" />
@@ -206,6 +206,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="20160" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="is_premium" val="true" />
+		<skills>
+			<skill id="39082" level="1" />
+		</skills>
 	</item>
 	<item id="49513" name="Shining Pendant Polish box" type="EtcItem">
 		<!-- Double-click to get 1 Shiny Pendant Polish. <Note>. Relocating of these items is restricted, open carefully. -->
@@ -834,6 +841,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="123200" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3562" level="2" /> <!-- Queen Ant's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="maxMp">15</stat>
@@ -847,6 +861,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="1300000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="3560" level="2" /> <!-- Orfen's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">61</stat>
 			<stat type="maxMp">25</stat>
@@ -860,6 +881,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="870000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3563" level="2" /> <!-- Ring of Core -->
+		</skills>
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="maxMp">15</stat>
@@ -873,6 +901,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="123200" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3562" level="3" /> <!-- Queen Ant's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -886,6 +921,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="1300000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="3560" level="3" /> <!-- Orfen's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">71</stat>
 			<stat type="maxMp">31</stat>
@@ -899,6 +941,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="870000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3563" level="3" /> <!-- Ring of Core -->
+			<skill id="35016" level="1" /> <!-- Ring of Core Ability Skill -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -912,6 +962,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="870000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3561" level="1" /> <!-- Baium's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">32</stat>
 			<stat type="maxMp">9</stat>
@@ -925,6 +982,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="870000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3561" level="2" /> <!-- Baium's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">40</stat>
 			<stat type="maxMp">15</stat>
@@ -938,6 +1002,13 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="price" val="870000" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3561" level="3" /> <!-- Baium's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -1060,6 +1131,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3562" level="3" /> <!-- Queen Ant's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -1078,6 +1154,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="3560" level="3" /> <!-- Orfen's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">71</stat>
 			<stat type="maxMp">31</stat>
@@ -1096,6 +1176,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3563" level="3" /> <!-- Ring of Core -->
+			<skill id="35016" level="1" /> <!-- Ring of Core Ability Skill -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>

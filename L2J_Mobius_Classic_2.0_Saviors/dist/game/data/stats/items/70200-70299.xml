@@ -255,6 +255,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3562" level="3" /> <!-- Queen Ant's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -273,6 +278,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="3560" level="3" /> <!-- Orfen's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">71</stat>
 			<stat type="maxMp">31</stat>
@@ -291,6 +301,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<set name="commissionItemType" val="RING" />
+		<skills>
+			<skill id="3563" level="3" /> <!-- Ring of Core -->
+			<skill id="35016" level="1" /> <!-- Ring of Core Ability Skill -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>

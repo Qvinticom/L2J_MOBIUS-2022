@@ -58,5 +58,4 @@ Custom work
 
 TODO list
 -Parse retail monster spawns by zone
--Test quests and update rewards
 -Provisional Clan Halls

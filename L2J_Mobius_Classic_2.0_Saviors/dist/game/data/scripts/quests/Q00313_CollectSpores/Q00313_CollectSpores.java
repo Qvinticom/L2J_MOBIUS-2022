@@ -120,7 +120,7 @@ public final class Q00313_CollectSpores extends Quest
 					{
 						if (getQuestItemsCount(player, SPORE_SAC) >= REQUIRED_SAC_COUNT)
 						{
-							giveAdena(player, 3500, true);
+							giveAdena(player, 500, true);
 							st.exitQuest(true, true);
 							htmltext = "30150-07.html";
 						}

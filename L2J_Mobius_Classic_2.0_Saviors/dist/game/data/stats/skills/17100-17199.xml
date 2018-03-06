@@ -52,38 +52,35 @@
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
 		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing... For 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
-		<icon>icon.etc_whiteday_herb</icon>
-		<itemConsumeId>37704</itemConsumeId>
-		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A2</operateType>
-		<basicProperty>NONE</basicProperty>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
-		<abnormalType>TRANSFORM</abnormalType>
+		<abnormalType>RHAPSODY</abnormalType>
 		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
-		<magicCriticalRate>5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<isMagic>2</isMagic>
-		<magicLvl>1</magicLvl>
+		<icon>icon.etc_whiteday_herb</icon>
+		<operateType>A2</operateType>
+		<hitTime>100</hitTime>
+		<effectPoint>100</effectPoint>
 		<reuseDelay>2000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<deleteAbnormalOnLeave>true</deleteAbnormalOnLeave>
 		<effects>
 			<effect name="PAtk">
-				<amount>100.0</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>100.0</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>100.0</amount>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>100.0</amount>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

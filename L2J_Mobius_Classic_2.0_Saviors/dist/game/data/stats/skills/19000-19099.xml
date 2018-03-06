@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19009" toLevel="1" name="Clan Advent">
-		<!-- When the clan leader logs in, clan members' P. Atk., P. Def., and M. Def. + 5%, M. Atk. + 6%, and HP/MP recovery bonus + 5. -->
+		<!-- When the clan leader logs in, clan members' P. Atk. M. Atk. + 2% -->
 		<icon>icon.skill19009</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -24,26 +24,12 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>5</amount>
+				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>6</amount>
+				<amount>2</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>5</amount>
-			</effect>
-			<effect name="MpRegen">
-				<amount>5</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -187,7 +173,6 @@
 		</effects>
 	</skill>
 	<skill id="19039" toLevel="1" name="Cloak of Light">
-		<!-- STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. Ineffective in Chaotic state. -->
 		<icon>icon.amor_goodness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -199,86 +184,97 @@
 			</condition>
 		</passiveConditions>
 		<effects>
-			<effect name="PvpPhysicalAttackDefenceBonus">
+			<effect name="MaxHp">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
+			<effect name="MaxMp">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
+			<effect name="MaxCp">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>STR</stat>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>INT</stat>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>CON</stat>
+			<effect name="DefenceTrait">
+				<BLUNT>3</BLUNT>
+				<SWORD>3</SWORD>
+				<DUAL>3</DUAL>
+				<BOW>3</BOW>
+				<POLE>3</POLE>
+				<DAGGER>3</DAGGER>
+				<DUALFIST>3</DUALFIST>
+				<DUALDAGGER>3</DUALDAGGER>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>DEX</stat>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>WIT</stat>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>MEN</stat>
+			<effect name="DamageShield">
+				<amount>3</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19040" toLevel="1" name="Cloak of Darkness">
-		<!-- STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PvpPhysicalAttackDefenceBonus">
+			<effect name="MaxHp">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDefenceBonus">
+			<effect name="MaxMp">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDefenceBonus">
+			<effect name="MaxCp">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>STR</stat>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>INT</stat>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>CON</stat>
+			<effect name="DefenceTrait">
+				<BLUNT>3</BLUNT>
+				<SWORD>3</SWORD>
+				<DUAL>3</DUAL>
+				<BOW>3</BOW>
+				<POLE>3</POLE>
+				<DAGGER>3</DAGGER>
+				<DUALFIST>3</DUALFIST>
+				<DUALDAGGER>3</DUALDAGGER>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>DEX</stat>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>WIT</stat>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>MEN</stat>
+			<effect name="DamageShield">
+				<amount>3</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>

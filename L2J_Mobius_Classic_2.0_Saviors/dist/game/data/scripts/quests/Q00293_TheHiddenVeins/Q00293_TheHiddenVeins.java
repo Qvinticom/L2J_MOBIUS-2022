@@ -147,7 +147,7 @@ public final class Q00293_TheHiddenVeins extends Quest
 						{
 							final long ores = getQuestItemsCount(player, CHRYSOLITE_ORE);
 							final long maps = getQuestItemsCount(player, HIDDEN_ORE_MAP);
-							giveAdena(player, (ores * 5) + (maps * 500) + (((ores + maps) >= 10) ? 2000 : 0), true);
+							giveAdena(player, (ores * 5) + (maps * 150) + (((ores + maps) >= 10) ? 1000 : 0), true);
 							takeItems(player, -1, CHRYSOLITE_ORE, HIDDEN_ORE_MAP);
 							// Q00281_HeadForTheHills.giveNewbieReward(player);
 							htmltext = (ores > 0) ? (maps > 0) ? "30535-10.html" : "30535-06.html" : "30535-09.html";

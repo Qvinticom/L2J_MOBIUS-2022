@@ -102,8 +102,7 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 						}
 						else if (st.isCond(2) && hasQuestItems(player, MOTHERTREE_FRUIT))
 						{
-							giveAdena(player, 1000, true);
-							addExpAndSp(player, 1000, 0);
+							giveAdena(player, 100, true);
 							st.exitQuest(false, true);
 							htmltext = "30362-06.html";
 						}

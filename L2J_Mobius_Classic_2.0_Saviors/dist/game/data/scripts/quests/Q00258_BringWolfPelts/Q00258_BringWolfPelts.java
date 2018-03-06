@@ -46,11 +46,9 @@ public final class Q00258_BringWolfPelts extends Quest
 	private static final Map<Integer, Integer> REWARDS = new HashMap<>();
 	static
 	{
-		REWARDS.put(390, 1); // Cotton Shirt
-		REWARDS.put(29, 6); // Leather Pants
-		REWARDS.put(22, 9); // Leather Shirt
-		REWARDS.put(1119, 13); // Short Leather Gloves
-		REWARDS.put(426, 16); // Tunic
+		REWARDS.put(41, 1); // Cloth Cap
+		REWARDS.put(42, 6); // Leather Cap
+		REWARDS.put(462, 9); // Stockings
 	}
 	// Misc
 	private static final int MIN_LVL = 3;

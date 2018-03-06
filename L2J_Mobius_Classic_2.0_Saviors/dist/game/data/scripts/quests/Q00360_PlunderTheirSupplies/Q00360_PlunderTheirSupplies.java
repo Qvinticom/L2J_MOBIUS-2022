@@ -39,10 +39,8 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	private static final int MIN_LVL = 52;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTER_DROP_CHANCES = new HashMap<>();
-	// Items
-	private static final int RECIPE_OF_SUPPLY = 5870;
+	// Item
 	private static final int SUPPLY_ITEMS = 5872;
-	private static final int SUSPICIOUS_DOCUMENT_PIECE = 5871;
 	
 	static
 	{
@@ -56,7 +54,7 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 		addStartNpc(COLEMAN);
 		addTalkId(COLEMAN);
 		addKillId(MONSTER_DROP_CHANCES.keySet());
-		registerQuestItems(SUPPLY_ITEMS, SUSPICIOUS_DOCUMENT_PIECE, RECIPE_OF_SUPPLY);
+		registerQuestItems(SUPPLY_ITEMS);
 	}
 	
 	@Override
@@ -108,19 +106,6 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		
-		if (getRandom(100) < 10)
-		{
-			if (getQuestItemsCount(killer, SUSPICIOUS_DOCUMENT_PIECE) < 4)
-			{
-				giveItems(killer, SUSPICIOUS_DOCUMENT_PIECE, 1);
-			}
-			else
-			{
-				giveItems(killer, RECIPE_OF_SUPPLY, 1);
-				takeItems(killer, SUSPICIOUS_DOCUMENT_PIECE, -1);
-			}
-			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
 		return super.onKill(npc, killer, isPet);
 	}
 	
@@ -140,35 +125,15 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 			case State.STARTED:
 			{
 				final long supplyCount = getQuestItemsCount(player, SUPPLY_ITEMS);
-				final long recipeCount = getQuestItemsCount(player, RECIPE_OF_SUPPLY);
-				if (supplyCount == 0)
+				if (supplyCount < 0)
 				{
-					if (recipeCount == 0)
-					{
-						htmltext = "30873-05.html";
-					}
-					else
-					{
-						giveAdena(player, (recipeCount * 6000), true);
-						takeItems(player, RECIPE_OF_SUPPLY, -1);
-						htmltext = "30873-08.html";
-					}
+					htmltext = "30873-05.html";
 				}
-				else
+				else if (supplyCount >= 500)
 				{
-					if (recipeCount == 0)
-					{
-						giveAdena(player, ((supplyCount * 100) + 6000), true);
-						takeItems(player, SUPPLY_ITEMS, -1);
-						htmltext = "30873-06.html";
-					}
-					else
-					{
-						giveAdena(player, (((supplyCount * 100) + 6000) + (recipeCount * 6000)), true);
-						takeItems(player, SUPPLY_ITEMS, -1);
-						takeItems(player, RECIPE_OF_SUPPLY, -1);
-						htmltext = "30873-07.html";
-					}
+					giveAdena(player, 14000, true);
+					takeItems(player, SUPPLY_ITEMS, -1);
+					htmltext = "30873-06.html";
 				}
 				break;
 			}

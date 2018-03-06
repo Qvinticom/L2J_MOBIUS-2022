@@ -112,8 +112,7 @@ public final class Q00160_NerupasRequest extends Quest
 						}
 						else if (hasQuestItems(player, NIGHTSHADE_LEAF))
 						{
-							rewardItems(player, LESSER_HEALING_POTION, 5);
-							addExpAndSp(player, 1000, 0);
+							rewardItems(player, LESSER_HEALING_POTION, 1);
 							qs.exitQuest(false, true);
 							htmltext = "30370-06.html";
 						}

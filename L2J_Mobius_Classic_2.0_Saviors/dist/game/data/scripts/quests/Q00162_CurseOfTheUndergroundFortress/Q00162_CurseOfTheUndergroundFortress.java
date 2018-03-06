@@ -48,7 +48,7 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 		MONSTERS_BONES.put(20504, 26); // Dread Soldier
 	}
 	// Items
-	private static final int BONE_SHIELD = 625;
+	private static final int BONE_SHIELD = 20;
 	private static final int BONE_FRAGMENT = 1158;
 	private static final int ELF_SKULL = 1159;
 	// Misc
@@ -156,8 +156,6 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 				if ((getQuestItemsCount(player, BONE_FRAGMENT) + getQuestItemsCount(player, ELF_SKULL)) >= REQUIRED_COUNT)
 				{
 					giveItems(player, BONE_SHIELD, 1);
-					addExpAndSp(player, 22652, 1004);
-					giveAdena(player, 24000, true);
 					st.exitQuest(false, true);
 					htmltext = "30147-06.html";
 				}

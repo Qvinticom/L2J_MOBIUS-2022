@@ -309,9 +309,9 @@
 		</collision>
 	</npc>
 	<npc id="24014" level="66" type="L2Monster" name="Vanor" title="Mercenary of Glory">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<acquire exp="13094" sp="392" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2367" hpRegen="10.5" mp="1219" mpRegen="3.6" />
 			<speed>

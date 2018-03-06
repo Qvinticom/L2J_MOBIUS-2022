@@ -40,14 +40,14 @@ public final class Q00358_IllegitimateChildOfTheGoddess extends Quest
 	// Rewards
 	private static final int[] REWARDS = new int[]
 	{
-		5364, // Recipe: Sealed Dark Crystal Shield(60%)
-		5366, // Recipe: Sealed Shield of Nightmare(60%)
-		6329, // Recipe: Sealed Phoenix Necklace(70%)
-		6331, // Recipe: Sealed Phoenix Earring(70%)
-		6333, // Recipe: Sealed Phoenix Ring(70%)
-		6335, // Recipe: Sealed Majestic Necklace(70%)
-		6337, // Recipe: Sealed Majestic Earring(70%)
-		6339, // Recipe: Sealed Majestic Ring(70%)
+		4975, // Recipe: BlackOrc Neckalce
+		4973, // Recipe: BlackOrc Earring
+		4974, // Recipe: BlackOrc Ring
+		4939, // Recipe: Adam Neckalce
+		4937, // Recipe: Adam Earring
+		4938, // Recipe: Adam Ring
+		4936, // Recipe: Avadon Shield
+		4980, // Recipe: Doom Shield
 	};
 	// Mobs
 	private static final Map<Integer, Double> MOBS = new HashMap<>();

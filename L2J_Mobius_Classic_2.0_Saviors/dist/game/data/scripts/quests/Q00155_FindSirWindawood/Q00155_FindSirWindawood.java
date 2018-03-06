@@ -33,7 +33,7 @@ public class Q00155_FindSirWindawood extends Quest
 	private static final int SIR_COLLIN_WINDAWOOD = 30311;
 	// Items
 	private static final int OFFICIAL_LETTER = 1019;
-	private static final int HASTE_POTION = 734;
+	private static final int HASTE_POTION = 49036;
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
@@ -92,7 +92,7 @@ public class Q00155_FindSirWindawood extends Quest
 			{
 				if (st.isStarted() && hasQuestItems(player, OFFICIAL_LETTER))
 				{
-					giveItems(player, HASTE_POTION, 1);
+					giveItems(player, HASTE_POTION, 2);
 					st.exitQuest(false, true);
 					htmltext = "30311-01.html";
 				}

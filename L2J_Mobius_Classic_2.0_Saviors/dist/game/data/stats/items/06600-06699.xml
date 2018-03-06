@@ -488,8 +488,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="11" />
-		<set name="crystal_type" val="B" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="123200" />
@@ -510,8 +508,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="69" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="1300000" />
@@ -522,8 +518,8 @@
 			<skill id="3560" level="1" /> <!-- Orfen's Earring -->
 		</skills>
 		<stats>
-			<stat type="mDef">71</stat>
-			<stat type="maxMp">31</stat>
+			<stat type="mDef">51</stat>
+			<stat type="maxMp">19</stat>
 		</stats>
 	</item>
 	<item id="6662" name="Ring of Core" type="Armor">
@@ -532,8 +528,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="46" />
-		<set name="crystal_type" val="A" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="870000" />
@@ -544,8 +538,8 @@
 			<skill id="3563" level="1" /> <!-- Ring of Core -->
 		</skills>
 		<stats>
-			<stat type="mDef">48</stat>
-			<stat type="maxMp">21</stat>
+			<stat type="mDef">32</stat>
+			<stat type="maxMp">9</stat>
 		</stats>
 	</item>
 </list>

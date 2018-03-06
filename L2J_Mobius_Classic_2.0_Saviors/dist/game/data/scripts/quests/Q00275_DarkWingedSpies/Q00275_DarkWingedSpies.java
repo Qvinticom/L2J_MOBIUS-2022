@@ -43,7 +43,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 	private static final int VARANGKAS_TRACKER = 27043;
 	// Misc
 	private static final int MIN_LVL = 11;
-	private static final int FANG_PRICE = 60;
+	private static final int FANG_PRICE = 5;
 	private static final int MAX_BAT_FANG_COUNT = 70;
 	
 	public Q00275_DarkWingedSpies()

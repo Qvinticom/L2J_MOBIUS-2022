@@ -43,6 +43,8 @@ public class Q00163_LegacyOfThePoet extends Quest
 	private static final int RUMIELS_2ND_POEM = 1039;
 	private static final int RUMIELS_3RD_POEM = 1040;
 	private static final int RUMIELS_4TH_POEM = 1041;
+	// Reward
+	private static final int LEATHER_SHIRT = 22;
 	// Misc
 	private static final int MIN_LVL = 11;
 	
@@ -156,8 +158,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 			{
 				if (hasQuestItems(player, RUMIELS_1ST_POEM, RUMIELS_2ND_POEM, RUMIELS_3RD_POEM, RUMIELS_4TH_POEM))
 				{
-					addExpAndSp(player, 21643, 943);
-					giveAdena(player, 13890, true);
+					giveItems(player, LEATHER_SHIRT, 1);
 					st.exitQuest(false, true);
 					htmltext = "30220-07.html";
 				}

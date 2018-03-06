@@ -1067,7 +1067,7 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 						final long insignia = getQuestItemsCount(player, BLOODY_AXE_INSIGNIA);
 						final long fang = getQuestItemsCount(player, DELU_LIZARDMAN_FANG);
 						final long talon = getQuestItemsCount(player, STAKATO_TALON);
-						giveAdena(player, ((ash * 35) + (insignia * 35) + (((fang + 35) + (talon * 35)))), true);
+						giveAdena(player, ((ash * 10) + (insignia * 10) + (((fang + 7) + (talon * 8)))), true);
 						takeItems(player, UNDEAD_ASH, -1);
 						takeItems(player, BLOODY_AXE_INSIGNIA, -1);
 						takeItems(player, DELU_LIZARDMAN_FANG, -1);
@@ -1094,10 +1094,10 @@ public final class Q00333_HuntOfTheBlackLion extends Quest
 						{
 							giveItems(player, LIONS_CLAW, 3);
 						}
-						giveAdena(player, (getQuestItemsCount(player, UNDEAD_ASH) * 35), true);
-						giveAdena(player, (getQuestItemsCount(player, BLOODY_AXE_INSIGNIA) * 35), true);
-						giveAdena(player, (getQuestItemsCount(player, DELU_LIZARDMAN_FANG) * 35), true);
-						giveAdena(player, (getQuestItemsCount(player, STAKATO_TALON) * 35), true);
+						giveAdena(player, (getQuestItemsCount(player, UNDEAD_ASH) * 10), true);
+						giveAdena(player, (getQuestItemsCount(player, BLOODY_AXE_INSIGNIA) * 10), true);
+						giveAdena(player, (getQuestItemsCount(player, DELU_LIZARDMAN_FANG) * 7), true);
+						giveAdena(player, (getQuestItemsCount(player, STAKATO_TALON) * 8), true);
 						takeItems(player, UNDEAD_ASH, -1);
 						takeItems(player, BLOODY_AXE_INSIGNIA, -1);
 						takeItems(player, DELU_LIZARDMAN_FANG, -1);

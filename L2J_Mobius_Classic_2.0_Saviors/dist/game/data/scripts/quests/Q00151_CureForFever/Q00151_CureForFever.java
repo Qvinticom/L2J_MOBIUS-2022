@@ -40,7 +40,7 @@ public class Q00151_CureForFever extends Quest
 		20108, // Blade Spider
 	};
 	// Items
-	private static final int ROUND_SHIELD = 102;
+	private static final int ROUND_SHIELD = 735;
 	private static final int POISON_SAC = 703;
 	private static final int FEVER_MEDICINE = 704;
 	// Misc
@@ -102,7 +102,6 @@ public class Q00151_CureForFever extends Quest
 						if (st.isCond(3) && hasQuestItems(player, FEVER_MEDICINE))
 						{
 							giveItems(player, ROUND_SHIELD, 1);
-							addExpAndSp(player, 13106, 613);
 							st.exitQuest(false, true);
 							showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
 							htmltext = "30050-06.html";

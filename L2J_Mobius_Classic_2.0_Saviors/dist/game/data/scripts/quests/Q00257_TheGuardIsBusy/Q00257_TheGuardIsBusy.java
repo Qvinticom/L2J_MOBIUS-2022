@@ -160,8 +160,9 @@ public final class Q00257_TheGuardIsBusy extends Quest
 				if (hasAtLeastOneQuestItem(player, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG))
 				{
 					final long amulets = getQuestItemsCount(player, ORC_AMULET);
-					final long common = getQuestItemsCount(player, ORC_NECKLACE, WEREWOLF_FANG);
-					giveAdena(player, ((amulets * 10) + (common * 20) + (((amulets + common) >= 10) ? 1000 : 0)), true);
+					final long necklace = getQuestItemsCount(player, ORC_NECKLACE);
+					final long fang = getQuestItemsCount(player, WEREWOLF_FANG);
+					giveAdena(player, ((amulets * 5) + (necklace * 8) + (fang * 10) + (((amulets + necklace + fang) >= 10) ? 1000 : 0)), true);
 					takeItems(player, -1, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG);
 					// Q00281_HeadForTheHills.giveNewbieReward(player);
 					htmltext = "30039-07.html";

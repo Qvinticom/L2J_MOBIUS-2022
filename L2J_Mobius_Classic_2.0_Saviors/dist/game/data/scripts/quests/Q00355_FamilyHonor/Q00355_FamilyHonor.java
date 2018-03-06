@@ -120,13 +120,13 @@ public final class Q00355_FamilyHonor extends Quest
 				}
 				else if (galfredoRomersBustCount >= 100)
 				{
-					giveAdena(player, (galfredoRomersBustCount * 120) + 7800, true);
+					giveAdena(player, (galfredoRomersBustCount * 20), true);
 					takeItems(player, GALFREDO_ROMERS_BUST, -1);
 					htmltext = "30181-07.html";
 				}
 				else
 				{
-					giveAdena(player, (galfredoRomersBustCount * 120) + 2800, true);
+					giveAdena(player, (galfredoRomersBustCount * 20), true);
 					takeItems(player, GALFREDO_ROMERS_BUST, -1);
 					htmltext = "30181-08.html";
 				}

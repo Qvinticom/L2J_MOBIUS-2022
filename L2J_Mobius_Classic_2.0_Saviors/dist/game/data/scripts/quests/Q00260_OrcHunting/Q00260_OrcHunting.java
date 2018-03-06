@@ -125,7 +125,7 @@ public final class Q00260_OrcHunting extends Quest
 				{
 					final long amulets = getQuestItemsCount(player, ORC_AMULET);
 					final long necklaces = getQuestItemsCount(player, ORC_NECKLACE);
-					giveAdena(player, ((amulets * 12) + (necklaces * 30) + ((amulets + necklaces) >= 10 ? 1000 : 0)), true);
+					giveAdena(player, ((amulets * 4) + (necklaces * 10) + ((amulets + necklaces) >= 10 ? 1000 : 0)), true);
 					takeItems(player, -1, getRegisteredItemIds());
 					// Q00281_HeadForTheHills.giveNewbieReward(player);
 					htmltext = "30221-06.html";

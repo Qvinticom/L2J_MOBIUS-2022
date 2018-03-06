@@ -111,8 +111,7 @@ public final class Q00261_CollectorsDream extends Quest
 						if (getQuestItemsCount(player, SPIDER_LEG) >= MAX_LEG_COUNT)
 						{
 							giveNewbieReward(player);
-							giveAdena(player, 1000, true);
-							addExpAndSp(player, 2000, 0);
+							giveAdena(player, 700, true);
 							st.exitQuest(true, true);
 							htmltext = "30222-05.html";
 						}

@@ -44,25 +44,18 @@ public class Q00102_SeaOfSporesFever extends Quest
 	private static final int DRYAD = 20013;
 	private static final int DRYAD_ELDER = 20019;
 	// Items
-	private static final int SWORD_OF_SENTINEL = 743;
-	private static final int STAFF_OF_SENTINEL = 744;
+	private static final int SWORD_OF_SENTINEL = 49047;
+	private static final int STAFF_OF_SENTINEL = 49048;
 	private static final int ALBERIUS_LIST = 746;
 	private static final int ALBERIUS_LETTER = 964;
 	private static final int EVERGREEN_AMULET = 965;
 	private static final int DRYADS_TEAR = 966;
-	private static final int LESSER_HEALING_POTION = 1060;
 	private static final int COBENDELLS_MEDICINE1 = 1130;
 	private static final int COBENDELLS_MEDICINE2 = 1131;
 	private static final int COBENDELLS_MEDICINE3 = 1132;
 	private static final int COBENDELLS_MEDICINE4 = 1133;
 	private static final int COBENDELLS_MEDICINE5 = 1134;
-	private static final int SOULSHOT_NO_GRADE = 1835;
-	private static final int SPIRITSHOT_NO_GRADE = 2509;
-	private static final int ECHO_CRYSTAL_THEME_OF_BATTLE = 4412;
-	private static final int ECHO_CRYSTAL_THEME_OF_LOVE = 4413;
-	private static final int ECHO_CRYSTAL_THEME_OF_SOLITUDE = 4414;
-	private static final int ECHO_CRYSTAL_THEME_OF_FEAST = 4415;
-	private static final int ECHO_CRYSTAL_THEME_OF_CELEBRATION = 4416;
+	
 	// Misc
 	private static final int MIN_LVL = 12;
 	private static final Map<Integer, Integer> SENTINELS = new HashMap<>();
@@ -176,24 +169,14 @@ public class Q00102_SeaOfSporesFever extends Quest
 							{
 								if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
 								{
-									giveItems(player, LESSER_HEALING_POTION, 100);
-									giveItems(player, ECHO_CRYSTAL_THEME_OF_BATTLE, 10);
-									giveItems(player, ECHO_CRYSTAL_THEME_OF_LOVE, 10);
-									giveItems(player, ECHO_CRYSTAL_THEME_OF_SOLITUDE, 10);
-									giveItems(player, ECHO_CRYSTAL_THEME_OF_FEAST, 10);
-									giveItems(player, ECHO_CRYSTAL_THEME_OF_CELEBRATION, 10);
 									if (player.isMageClass())
 									{
 										giveItems(player, STAFF_OF_SENTINEL, 1);
-										giveItems(player, SPIRITSHOT_NO_GRADE, 500);
 									}
 									else
 									{
 										giveItems(player, SWORD_OF_SENTINEL, 1);
-										giveItems(player, SOULSHOT_NO_GRADE, 500);
 									}
-									addExpAndSp(player, 30202, 1339);
-									giveAdena(player, 6331, true);
 									st.exitQuest(false, true);
 									htmltext = "30284-06.html";
 								}

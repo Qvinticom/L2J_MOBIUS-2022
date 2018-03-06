@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -63,16 +62,7 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 	private static final int BAT_DIAGRAM = 1570;
 	private static final int STAR_DIAMOND = 1571;
 	// Rewards
-	private static final ItemHolder[] REWARDS =
-	{
-		new ItemHolder(1060, 100), // Lesser Healing Potion
-		new ItemHolder(4412, 10), // Echo Crystal - Theme of Battle
-		new ItemHolder(4413, 10), // Echo Crystal - Theme of Love
-		new ItemHolder(4414, 10), // Echo Crystal - Theme of Solitude
-		new ItemHolder(4415, 10), // Echo Crystal - Theme of Feast
-		new ItemHolder(4416, 10), // Echo Crystal - Theme of Celebration
-	};
-	private static final int SILVERSMITH_HAMMER = 1511;
+	private static final int SILVERSMITH_HAMMER = 49053;
 	// Misc
 	private static final int MIN_LVL = 10;
 	private static final int MAX_GEM_COUNT = 10;
@@ -218,12 +208,6 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 								if (hasQuestItems(talker, STAR_DIAMOND))
 								{
 									// Q00281_HeadForTheHills.giveNewbieReward(talker);
-									addExpAndSp(talker, 34565, 2962);
-									giveAdena(talker, 14666, true);
-									for (ItemHolder reward : REWARDS)
-									{
-										giveItems(talker, reward);
-									}
 									giveItems(talker, SILVERSMITH_HAMMER, 1);
 									st.exitQuest(false, true);
 									talker.sendPacket(new SocialAction(talker.getObjectId(), 3));

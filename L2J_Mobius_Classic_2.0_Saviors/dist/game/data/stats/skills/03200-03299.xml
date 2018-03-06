@@ -2491,374 +2491,208 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3271" toLevel="1" name="Blue Talisman - P. Crit.">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
+	<skill id="3271" toLevel="2" name="Blue Talisman - P. Crit.">
 		<icon>icon.etc_talisman_i01</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3272" toLevel="3" name="Blue Talisman - P. Atk.">
+		<icon>icon.etc_talisman_i01</icon>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+			<value level="3">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
-				<amount>63</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3272" toLevel="1" name="Blue Talisman - P. Atk.">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalDefence">
-				<amount>72</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3273" toLevel="1" name="Blue Talisman - P. Def.">
-		<!-- Confirmed CT2.5 -->
-		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="Heal">
-				<power>200</power>
-			</effect>
-			<effect name="Cp">
-				<amount>200</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3274" toLevel="1" name="Blue Talisman - Physical Skill Evasion Rate">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="ShieldDefence">
-				<amount>220</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3275" toLevel="1" name="Blue Talisman - M. Crit.">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="ShieldDefenceRate">
-				<amount>30</amount>
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3276" toLevel="1" name="Blue Talisman - M. Atk.">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
+	<skill id="3273" toLevel="3" name="Blue Talisman - P. Def.">
+		<icon>icon.etc_talisman_i00</icon>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+			<value level="3">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalDefence">
-				<amount>100</amount>
-				<mode>DIFF</mode>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3277" toLevel="1" name="Blue Talisman - M. Def.">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
+	<skill id="3274" toLevel="3" name="Blue Talisman - Physical Skill Evasion Rate">
 		<icon>icon.etc_talisman_i01</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+			<value level="3">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">18</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3275" toLevel="2" name="Blue Talisman - M. Crit.">
+		<icon>icon.etc_talisman_i01</icon>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MagicCriticalRate">
-				<amount>2</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3278" toLevel="1" name="Blue Talisman - Magic Skill Evasion Rate">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="MpRegen">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3279" toLevel="1" name="Blue Talisman - Max. HP">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<removedOnDamage>true</removedOnDamage>
-		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="BlockActions">
-			</effect>
-			<effect name="ManaHealOverTime">
-				<power>27</power>
-				<ticks>5</ticks>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-90</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3280" toLevel="1" name="Blue Talisman - Max. MP">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
+	<skill id="3276" toLevel="3" name="Blue Talisman - M. Atk.">
 		<icon>icon.etc_talisman_i01</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>240000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+			<value level="3">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="SilentMove">
-				<chance>100</chance>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>-40</amount>
+		</effects>
+	</skill>
+	<skill id="3277" toLevel="3" name="Blue Talisman - M. Def.">
+		<icon>icon.etc_talisman_i01</icon>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+			<value level="3">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3278" toLevel="3" name="Blue Talisman - Magic Skill Evasion Rate">
+		<icon>icon.etc_talisman_i00</icon>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+			<value level="3">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalEvasion">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">18</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3279" toLevel="3" name="Blue Talisman - Max. HP">
+		<icon>icon.etc_talisman_i00</icon>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+			<value level="3">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3280" toLevel="3" name="Blue Talisman - Max. MP">
+		<icon>icon.etc_talisman_i01</icon>
+		<magicLvl>
+			<value level="1">55</value>
+			<value level="2">55</value>
+			<value level="3">55</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3281" toLevel="1" name="Grey Talisman Box - Guard">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
+		<hitTime>3000</hitTime>
 		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="MagicMpCost">
-				<amount>-4</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-10</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3282" toLevel="1" name="Grey Talisman - Denial">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>90</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="MagicMpCost">
-				<amount>-100</amount>
-				<mode>PER</mode>
-				<magicType>1</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-100</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>-100</amount>
-				<mode>PER</mode>
-				<magicType>3</magicType>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="3283" toLevel="1" name="Grey Talisman - Benefaction">
-		<!-- Confirmed CT2.5 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
-		<abnormalType>TALISMAN</abnormalType>
-		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2868,24 +2702,44 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="HealEffect">
-				<amount>100</amount>
-				<mode>DIFF</mode>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+				<max>5</max>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3284" toLevel="1" name="Grey Talisman - Block">
-		<!-- Confirmed CT2.5 -->
+	<skill id="3282" toLevel="1" name="Grey Talisman - Denial">
+		<effectPoint>532</effectPoint>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_talisman_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>300000</reuseDelay>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>-1</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3283" toLevel="1" name="Grey Talisman - Benefaction">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
+		<hitTime>4000</hitTime>
 		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2895,247 +2749,273 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalDefence">
-				<amount>2700</amount>
+			<effect name="PhysicalDefence">
+				<amount>1800</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>3600</amount>
+			<effect name="MagicalDefence">
+				<amount>1620</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-80</amount>
+				<slot>BUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="3284" toLevel="1" name="Grey Talisman - Block">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<activateRate>70</activateRate>
+		<effectPoint>532</effectPoint>
+		<hitTime>3000</hitTime>
+		<castRange>900</castRange>
+		<icon>icon.etc_talisman_i01</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>180000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>MAGIC</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="LimitHp">
+				<amount>-70</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3285" toLevel="1" name="Grey Talisman - Gravity">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
+		<castRange>600</castRange>
 		<effectPoint>532</effectPoint>
-		<hitTime>4000</hitTime>
+		<activateRate>70</activateRate>
+		<hitTime>3000</hitTime>
 		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
+		<isDebuff>true</isDebuff>
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>360000</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="PAtk">
-				<amount>8.7</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>10.1</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>3</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>-11</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-13.6</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>-1</amount>
-				<mode>DIFF</mode>
-			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>4</amount>
-				<mode>DIFF</mode>
+				<amount>-20</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>3</amount>
-				<mode>DIFF</mode>
+				<amount>-20</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3286" toLevel="1" name="Grey Talisman - Bond">
-		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<activateRate>70</activateRate>
 		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
+		<hitTime>3000</hitTime>
+		<castRange>600</castRange>
 		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>360000</reuseDelay>
+		<operateType>A2</operateType>
+		<reuseDelay>180000</reuseDelay>
+		<isDebuff>true</isDebuff>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>BLEEDING,9</dispel>
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3287" toLevel="1" name="Yellow Talisman - Guard">
-		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
+		<hitTime>3000</hitTime>
 		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>360000</reuseDelay>
+		<operateType>A2</operateType>
+		<reuseDelay>240000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>ROOT_PHYSICALLY,9</dispel>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+				<max>5</max>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3288" toLevel="1" name="Yellow Talisman - Denial">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
+		<hitTime>3000</hitTime>
 		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>360000</reuseDelay>
+		<operateType>A2</operateType>
+		<reuseDelay>240000</reuseDelay>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>ROOT_MAGICALLY,9</dispel>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>-1</max>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3289" toLevel="1" name="Yellow Talisman - Benefaction">
-		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
+		<hitTime>3000</hitTime>
 		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>360000</reuseDelay>
+		<operateType>A2</operateType>
+		<reuseDelay>900000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</dispel>
+			<effect name="PhysicalDefence">
+				<amount>3600</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3240</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-80</amount>
+				<slot>BUFF</slot>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3290" toLevel="1" name="Yellow Talisman - Block">
-		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
+		<hitTime>3000</hitTime>
+		<castRange>900</castRange>
+		<activateRate>70</activateRate>
 		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>360000</reuseDelay>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>SILENCE_PHYSICAL,9</dispel>
+			<effect name="LimitHp">
+				<amount>-70</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3291" toLevel="1" name="Yellow Talisman - Gravity">
-		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<castRange>600</castRange>
+		<activateRate>70</activateRate>
 		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
 		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>360000</reuseDelay>
+		<operateType>A2</operateType>
+		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>SILENCE,9</dispel>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>-20</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3292" toLevel="1" name="Yellow Talisman - Bond">
-		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>TALISMAN</abnormalType>
+		<activateRate>70</activateRate>
 		<effectPoint>532</effectPoint>
-		<hitTime>1200</hitTime>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
 		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
-		<mpConsume>40</mpConsume>
-		<mpInitialConsume>10</mpInitialConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>360000</reuseDelay>
+		<operateType>A2</operateType>
+		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DispelBySlot">
-				<dispel>SILENCE_ALL,9</dispel>
+			<effect name="Speed">
+				<amount>-30</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3293" toLevel="1" name="Talisman of Darkness - Healing Power">
-		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PAtk">
-				<amount>20.8</amount>
-				<mode>DIFF</mode>
+			<effect name="Heal">
+				<amount>4</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3294" toLevel="1" name="Talisman of Darkness - Power of Healing Magic">
-		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MAtk">
-				<amount>24.3</amount>
+			<effect name="HealEffect">
+				<amount>43</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>

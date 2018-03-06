@@ -37,7 +37,7 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 	private static final int BLACK_WOLF = 20317;
 	private static final int BLACK_TIMBER_WOLF = 20318;
 	// Rewards
-	private static final int SCROLL_OF_ESCAPE = 736;
+	private static final int ADENA = 57;
 	private static final int GRANDMAS_PEARL = 1502;
 	private static final int GRANDMAS_MIRROR = 1503;
 	private static final int GRANDMAS_NECKLACE = 1504;
@@ -103,14 +103,17 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 				{
 					giveItems(player, GRANDMAS_MIRROR, 1);
 				}
+				else if (chance <= 30)
+				{
+					giveItems(player, GRANDMAS_HAIRPIN, 1);
+				}
 				else if (chance <= 45)
 				{
 					giveItems(player, GRANDMAS_NECKLACE, 1);
 				}
 				else
 				{
-					giveItems(player, GRANDMAS_HAIRPIN, 1);
-					giveItems(player, SCROLL_OF_ESCAPE, 1);
+					giveItems(player, ADENA, 20);
 				}
 				qs.exitQuest(true, true);
 				html = "30553-05.html";

@@ -147,7 +147,7 @@ public final class Q00325_GrimCollector extends Quest
 					final long totalCount = (head + heart + liver + skull + rib + spine + arm + thigh + complete);
 					if (totalCount > 0)
 					{
-						long sum = ((head * 30) + (heart * 20) + (liver * 20) + (skull * 100) + (rib * 40) + (spine * 14) + (arm * 14) + (thigh * 14));
+						long sum = ((head * 8) + (heart * 5) + (liver * 5) + (skull * 25) + (rib * 5) + (spine * 5) + (arm * 5) + (thigh * 5));
 						
 						if (totalCount >= 10)
 						{

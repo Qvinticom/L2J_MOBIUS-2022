@@ -37,7 +37,7 @@ public class Q00001_LettersOfLove extends Quest
 	private static final int ROXXYS_KERCHIEF = 688;
 	private static final int DARINS_RECEIPT = 1079;
 	private static final int BAULROS_POTION = 1080;
-	private static final int NECKLACE_OF_KNOWLEDGE = 29471;
+	private static final int NECKLACE_OF_KNOWLEDGE = 49039;
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	

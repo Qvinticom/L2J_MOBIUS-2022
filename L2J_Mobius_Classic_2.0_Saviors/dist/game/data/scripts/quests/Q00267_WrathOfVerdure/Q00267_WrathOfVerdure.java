@@ -36,8 +36,6 @@ public final class Q00267_WrathOfVerdure extends Quest
 	private static final int GOBLIN_CLUB = 1335;
 	// Monster
 	private static final int GOBLIN_RAIDER = 20325;
-	// Reward
-	private static final int SILVERY_LEAF = 1340;
 	// Misc
 	private static final int MIN_LVL = 4;
 	
@@ -110,12 +108,7 @@ public final class Q00267_WrathOfVerdure extends Quest
 			{
 				if (hasQuestItems(player, GOBLIN_CLUB))
 				{
-					final long count = getQuestItemsCount(player, GOBLIN_CLUB);
-					rewardItems(player, SILVERY_LEAF, count);
-					if (count >= 10)
-					{
-						giveAdena(player, 600, true);
-					}
+					giveAdena(player, 2 + getQuestItemsCount(player, GOBLIN_CLUB), true);
 					takeItems(player, GOBLIN_CLUB, -1);
 					htmltext = "31853-06.html";
 				}

@@ -107,7 +107,7 @@ public final class Q00272_WrathOfAncestors extends Quest
 					}
 					case 2:
 					{
-						giveAdena(player, 1500, true);
+						giveAdena(player, 100, true);
 						st.exitQuest(true, true);
 						htmltext = "30572-06.html";
 						break;
