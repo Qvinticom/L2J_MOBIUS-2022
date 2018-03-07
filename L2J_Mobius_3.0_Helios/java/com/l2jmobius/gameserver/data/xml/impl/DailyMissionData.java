@@ -41,6 +41,7 @@ public class DailyMissionData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(DailyMissionData.class.getName());
 	private final Map<Integer, List<DailyMissionDataHolder>> _dailyMissionRewards = new LinkedHashMap<>();
+	private boolean _isAvailable;
 	
 	protected DailyMissionData()
 	{
@@ -52,6 +53,7 @@ public class DailyMissionData implements IGameXmlReader
 	{
 		_dailyMissionRewards.clear();
 		parseDatapackFile("data/DailyMission.xml");
+		_isAvailable = !_dailyMissionRewards.isEmpty();
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _dailyMissionRewards.size() + " one day rewards.");
 	}
 	
@@ -122,6 +124,11 @@ public class DailyMissionData implements IGameXmlReader
 	public Collection<DailyMissionDataHolder> getDailyMissionData(int id)
 	{
 		return _dailyMissionRewards.get(id);
+	}
+	
+	public boolean isAvailable()
+	{
+		return _isAvailable;
 	}
 	
 	/**

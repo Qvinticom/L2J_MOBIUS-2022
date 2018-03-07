@@ -68,7 +68,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBeautyItemList;
 import com.l2jmobius.gameserver.network.serverpackets.ExCastleState;
-import com.l2jmobius.gameserver.network.serverpackets.ExConnectedTimeAndGettableReward;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import com.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
@@ -100,6 +99,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
+import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 
