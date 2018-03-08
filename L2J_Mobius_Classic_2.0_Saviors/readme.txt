@@ -6,7 +6,7 @@ Mirror: https://mega.nz/#!0lcGQaaI!tuZUFcQS0gVPjzAIPquznOehLqJq0BR-5rm3BXxn6pg
 Geodata: http://www.mediafire.com/file/r8ryrhw7d5p858g/mobius_geodata_saviors_l2d.zip
 
 
-What is done
+Saviors:
 -Classic packet compatibility
 -Parsed item data from client
 -Proper Daily Mission rewards
@@ -47,15 +47,17 @@ What is done
 -Augmentation chances from L2Wiki
 -Working Runes system
 -Added new Savior skills
+-Classic 3rd class quests
 -Dungeon of Abyss
 -Attendance rewards
+-Various retail Classic events
 
-Custom work
+Customs:
 -Newbie Helper NPC location info
 -Newbie Helper buff support until 40 level
 -Test Server Helper NPCs
 -Fake players engine
 
-TODO list
+TODO:
 -Parse retail monster spawns by zone
 -Provisional Clan Halls
