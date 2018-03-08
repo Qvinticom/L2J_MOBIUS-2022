@@ -51,8 +51,8 @@ Saviors:
 -Various retail Classic events
 
 Zaken:
+-Parsed new skills from client
 -TODO: Parse item names from client
--TODO: Parse skill names from client
 -TODO: Parse NPC names from client
 -TODO: Add raidbosses according to map
 -TODO: Zaken boss
