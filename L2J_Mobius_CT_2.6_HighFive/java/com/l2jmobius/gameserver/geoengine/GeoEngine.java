@@ -65,7 +65,7 @@ public class GeoEngine
 	}
 	
 	/**
-	 * GeoEngine contructor. Loads all geodata files of chosen geodata format.
+	 * GeoEngine constructor. Loads all geodata files of chosen geodata format.
 	 */
 	public GeoEngine()
 	{
@@ -312,7 +312,8 @@ public class GeoEngine
 	 */
 	public final short getHeightNearest(int geoX, int geoY, int worldZ)
 	{
-		return getBlock(geoX, geoY).getHeightNearest(geoX, geoY, worldZ);
+		final ABlock block = getBlock(geoX, geoY);
+		return block != null ? block.getHeightNearest(geoX, geoY, worldZ) : (short) worldZ;
 	}
 	
 	/**
@@ -325,7 +326,8 @@ public class GeoEngine
 	 */
 	public final short getHeightNearestOriginal(int geoX, int geoY, int worldZ)
 	{
-		return getBlock(geoX, geoY).getHeightNearestOriginal(geoX, geoY, worldZ);
+		final ABlock block = getBlock(geoX, geoY);
+		return block != null ? block.getHeightNearestOriginal(geoX, geoY, worldZ) : (short) worldZ;
 	}
 	
 	/**
@@ -337,7 +339,8 @@ public class GeoEngine
 	 */
 	public final byte getNsweNearest(int geoX, int geoY, int worldZ)
 	{
-		return getBlock(geoX, geoY).getNsweNearest(geoX, geoY, worldZ);
+		final ABlock block = getBlock(geoX, geoY);
+		return block != null ? block.getNsweNearest(geoX, geoY, worldZ) : (byte) 0xFF;
 	}
 	
 	/**
@@ -350,7 +353,8 @@ public class GeoEngine
 	 */
 	public final byte getNsweNearestOriginal(int geoX, int geoY, int worldZ)
 	{
-		return getBlock(geoX, geoY).getNsweNearestOriginal(geoX, geoY, worldZ);
+		final ABlock block = getBlock(geoX, geoY);
+		return block != null ? block.getNsweNearestOriginal(geoX, geoY, worldZ) : (byte) 0xFF;
 	}
 	
 	/**
