@@ -590,19 +590,460 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55044" toLevel="1" name="Lineage II Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill55044</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29581</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<!-- Supply Box -->
+					<item chance="2.083333333333333">
+						<item id="49756" count="1" />	<!-- Cloth Piece -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49785" count="1" />	<!-- Weapon Supply Box A-Grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49664" count="1" />	<!-- Weapon Supply Box B-Grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49665" count="1" />	<!-- Armor Supply Box B-Grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49666" count="1" />	<!-- Ornament Supply Box B-Grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49667" count="1" />	<!-- Weapon Supply Box C-Grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49668" count="1" />	<!-- Armor Supply Box C-Grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49669" count="1" />	<!-- Ornament Supply Box C-Grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49541" count="1" />	<!-- Spellbook Chest -->
+					</item>
+					<!-- Enchant Scroll -->
+					<item chance="2.083333333333333">
+						<item id="951" count="1" />	<!-- Scroll: Enchant Weapon C-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="952" count="1" />	<!-- Scroll: Enchant Armor C-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="947" count="1" />	<!-- Scroll: Enchant Weapon B-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="948" count="1" />	<!-- Scroll: Enchant Armor B-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="730" count="1" />	<!-- Scroll: Enchant Weapon A-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="6573" count="1" />	<!-- Blessed Scroll: Enchant Weapon C-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="6574" count="1" />	<!-- Blessed Scroll: Enchant Armor C-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="6571" count="1" />	<!-- Blessed Scroll: Enchant Weapon B-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="6572" count="1" />	<!-- Blessed Scroll: Enchant Armor B-grade -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="6569" count="1" />	<!-- Blessed Scroll: Enchant Weapon A-grade -->
+					</item>
+					<!-- Mics -->
+					<item chance="2.083333333333333">
+						<item id="3936" count="1" />	<!-- Blessed Scroll of Resurrection -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1538" count="1" />	<!-- Blessed Scroll of Escape -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49080" count="1" />	<!-- Rice Cake of Fighting Spirit -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49081" count="1" />	<!-- Rice Cake of Flaming Fighting Spirit -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49518" count="1" />	<!-- Special Pirate Fruit -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="49110" count="1" />	<!-- High-Quality Dye Chest -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="70233" count="1" />	<!-- Strawberry Juice -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="70234" count="1" />	<!-- Mongo Juice -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="70235" count="1" />	<!-- Cherry Juice -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="29698" count="1" />	<!-- 2nd Buff Class Scroll -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="29695" count="1" />	<!-- Quick Healing Potion -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="90020" count="1" />	<!-- 3rd Class Transfer Dye Box -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="70005" count="1" />	<!-- Sealed Rune Lv.6 -->
+					</item>
+					<!-- Material -->
+					<item chance="2.083333333333333">
+						<item id="1891" count="1" />	<!-- Artisan's Frame -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1892" count="1" />	<!-- Blacksmith' Frame -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1893" count="1" />	<!-- Oriharukon -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1890" count="1" />	<!-- Mithril Alloy -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1887" count="1" />	<!-- Varnish of Purity -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="4041" count="1" />	<!-- Mold Hardener -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1875" count="1" />	<!-- Stone of Purity -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1888" count="1" />	<!-- Synthetic Cokes -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="4042" count="1" />	<!-- Enria -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="4039" count="1" />	<!-- Mold Glue -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1874" count="1" />	<!-- Oriharukon Ore -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1886" count="1" />	<!-- Silver Mold -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="4040" count="1" />	<!-- Mold Lubricant -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1894" count="1" />	<!-- Crafted Leather" -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="1883" count="1" />	<!-- Steel Mold -->
+					</item>
+					<item chance="2.083333333333333">
+						<item id="4043" count="1" />	<!-- Asofe -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55045" toLevel="1" name="Chronicle Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill55045</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29582</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<!-- Supply Box -->
+					<item chance="2.777777777777778">
+						<item id="49664" count="1" />	<!-- Weapon Supply Box B-Grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49665" count="1" />	<!-- Armor Supply Box B-Grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49666" count="1" />	<!-- Ornament Supply Box B-Grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49667" count="1" />	<!-- Weapon Supply Box C-Grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49668" count="1" />	<!-- Armor Supply Box C-Grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49669" count="1" />	<!-- Ornament Supply Box C-Grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49541" count="1" />	<!-- Spellbook Chest -->
+					</item>
+					<!-- Enchant Scroll -->
+					<item chance="2.777777777777778">
+						<item id="951" count="1" />	<!-- Scroll: Enchant Weapon C-grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="952" count="1" />	<!-- Scroll: Enchant Armor C-grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="947" count="1" />	<!-- Scroll: Enchant Weapon B-grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="948" count="1" />	<!-- Scroll: Enchant Armor B-grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="6573" count="1" />	<!-- Blessed Scroll: Enchant Weapon C-grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="6574" count="1" />	<!-- Blessed Scroll: Enchant Armor C-grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="6571" count="1" />	<!-- Blessed Scroll: Enchant Weapon B-grade -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="6572" count="1" />	<!-- Blessed Scroll: Enchant Armor B-grade -->
+					</item>
+					<!-- Mics -->
+					<item chance="2.777777777777778">
+						<item id="3936" count="1" />	<!-- Blessed Scroll of Resurrection -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="1538" count="1" />	<!-- Blessed Scroll of Escape -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49080" count="1" />	<!-- Rice Cake of Fighting Spirit -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49081" count="1" />	<!-- Rice Cake of Flaming Fighting Spirit -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49518" count="1" />	<!-- Special Pirate Fruit -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="49110" count="1" />	<!-- High-Quality Dye Chest -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="70233" count="1" />	<!-- Strawberry Juice -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="70234" count="1" />	<!-- Mongo Juice -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="70235" count="1" />	<!-- Cherry Juice -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="29698" count="1" />	<!-- 2nd Buff Class Scroll -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="29695" count="1" />	<!-- Quick Healing Potion -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="70005" count="1" />	<!-- Sealed Rune Lv.6 -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="70000" count="1" />	<!-- Sealed Rune Lv.1 -->
+					</item>
+					<!-- Material -->
+					<item chance="2.777777777777778">
+						<item id="1885" count="1" />	<!-- High-grade Suede -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="1877" count="1" />	<!-- Adamantite Nugget -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="1881" count="1" />	<!-- Coarse Bone Powder -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="1880" count="1" />	<!-- Steel -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="1889" count="1" />	<!-- Synthetic Braid -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="1879" count="1" />	<!-- Cokes -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="1882" count="1" />	<!-- Leather -->
+					</item>
+					<item chance="2.777777777777778">
+						<item id="1876" count="1" />	<!-- Mithril Ore -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55046" toLevel="1" name="Memories Chest">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29583</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<!-- Supply Box -->
+					<item chance="1.0">
+						<item id="49667" count="1" />	<!-- Weapon Supply Box C-Grade -->
+					</item>
+					<item chance="1.0">
+						<item id="49668" count="1" />	<!-- Armor Supply Box C-Grade -->
+					</item>
+					<item chance="1.0">
+						<item id="49669" count="1" />	<!-- Ornament Supply Box C-Grade -->
+					</item>
+					<item chance="1.0">
+						<item id="49541" count="1" />	<!-- Spellbook Chest -->
+					</item>
+					<item chance="1.0">
+						<item id="49491" count="1" />	<!-- Weapon Supply Box D-Grade -->
+					</item>
+					<!-- Enchant Scroll -->
+					<item chance="4.0">
+						<item id="955" count="1" />	<!-- Scroll: Enchant Weapon D-grade -->
+					</item>
+					<item chance="4.0">
+						<item id="956" count="1" />	<!-- Scroll: Enchant Armor D-grade -->
+					</item>
+					<item chance="3.5">
+						<item id="951" count="1" />	<!-- Scroll: Enchant Weapon C-grade -->
+					</item>
+					<item chance="3.5">
+						<item id="952" count="1" />	<!-- Scroll: Enchant Armor C-grade -->
+					</item>
+					<item chance="1.5">
+						<item id="6573" count="1" />	<!-- Blessed Scroll: Enchant Weapon C-grade -->
+					</item>
+					<item chance="1.5">
+						<item id="6574" count="1" />	<!-- Blessed Scroll: Enchant Armor C-grade -->
+					</item>
+					<!-- Mics -->
+					<item chance="6.299666666666667">
+						<item id="3936" count="1" />	<!-- Blessed Scroll of Resurrection -->
+					</item>
+					<item chance="6.299666666666667">
+						<item id="1538" count="1" />	<!-- Blessed Scroll of Escape -->
+					</item>
+					<item chance="6.299666666666667">
+						<item id="49080" count="1" />	<!-- Rice Cake of Fighting Spirit -->
+					</item>
+					<item chance="0.001">
+						<item id="70005" count="1" />	<!-- Sealed Rune Lv.6 -->
+					</item>
+					<item chance="0.1">
+						<item id="70000" count="1" />	<!-- Sealed Rune Lv.1 -->
+					</item>
+					<!-- Buff Scroll -->
+					<item chance="3.0">
+						<item id="3926" count="1" />	<!-- Scroll: Guidance -->
+					</item>
+					<item chance="3.0">
+						<item id="3927" count="1" />	<!-- Scroll: Death Whisper -->
+					</item>
+					<item chance="3.0">
+						<item id="3930" count="1" />	<!-- Scroll: Haste -->
+					</item>
+					<item chance="3.0">
+						<item id="29686" count="1" />	<!-- Scroll: Concentration -->
+					</item>
+					<item chance="3.0">
+						<item id="29689" count="1" />	<!-- Scroll: Magic Barrier -->
+					</item>
+					<item chance="3.0">
+						<item id="29690" count="1" />	<!-- Scroll: Blessed Body -->
+					</item>
+					<item chance="3.0">
+						<item id="29691" count="1" />	<!-- Scroll: Blessed Soul -->
+					</item>
+					<item chance="3.0">
+						<item id="3928" count="1" />	<!-- Scroll: Focus -->
+					</item>
+					<item chance="3.0">
+						<item id="3929" count="1" />	<!-- Scroll: Acumen -->
+					</item>
+					<item chance="3.0">
+						<item id="3932" count="1" />	<!-- Scroll: Empower -->
+					</item>
+					<item chance="3.0">
+						<item id="3935" count="1" />	<!-- Scroll: Shield -->
+					</item>
+					<item chance="3.0">
+						<item id="3933" count="1" />	<!-- Scroll: Might -->
+					</item>
+					<item chance="3.0">
+						<item id="3931" count="1" />	<!-- Scroll: Agility -->
+					</item>
+					<item chance="3.0">
+						<item id="3931" count="1" />	<!-- Scroll: Agility -->
+					</item>
+					<item chance="3.0">
+						<item id="29688" count="1" />	<!-- Scroll: Regeneration -->
+					</item>
+					<!-- Material -->
+					<item chance="2.0">
+						<item id="1882" count="1" />	<!-- Leather -->
+					</item>
+					<item chance="2.0">
+						<item id="1876" count="1" />	<!-- Mithril Ore -->
+					</item>
+					<item chance="2.0">
+						<item id="1884" count="2" />	<!-- Cord -->
+					</item>
+					<item chance="2.0">
+						<item id="1895" count="2" />	<!-- Metallic Fiber -->
+					</item>
+					<item chance="2.0">
+						<item id="1870" count="2" />	<!-- Coal -->
+					</item>
+					<item chance="2.0">
+						<item id="1878" count="2" />	<!-- Durable Braid -->
+					</item>
+					<item chance="2.0">
+						<item id="1865" count="2" />	<!-- Varnish -->
+					</item>
+					<item chance="2.0">
+						<item id="1872" count="2" />	<!-- Animal Bone -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55047" toLevel="1" name="Romantic Chapeau - Blessed Body">		
 		<icon>icon.skill55047</icon>

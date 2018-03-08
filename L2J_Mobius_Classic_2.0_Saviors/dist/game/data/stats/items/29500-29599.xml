@@ -1036,6 +1036,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55044" level="1"/>
+		</skills>
 	</item>
 	<item id="29582" name="Chronicle Chest" type="EtcItem">
 		<!-- A reward box given for collecting all the letters of the word �Chronicle�. There must be something interesting in there! Double-click to find out. -->
@@ -1044,6 +1048,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55045" level="1"/>
+		</skills>
 	</item>
 	<item id="29583" name="Memories Chest" type="EtcItem">
 		<!-- A reward box given for collecting all the letters of the word �Memories�. There must be something interesting in there! Double-click to find out. -->
@@ -1052,6 +1060,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55046" level="1"/>
+		</skills>
 	</item>
 	<item id="29584" name="Angel Cat's Blessing Chest" type="EtcItem">
 		<!-- Double-click the item to receive Angel Cat's Blessing (30-day). -->
