@@ -1,9 +1,7 @@
 L2J-Mobius Classic 2.0
 
-Client: https://drive.google.com/file/d/0B0Pl9EOrFIjuSVNPXzRpRFRZWlk
-Mirror: https://mega.nz/#!0lcGQaaI!tuZUFcQS0gVPjzAIPquznOehLqJq0BR-5rm3BXxn6pg
-
-Geodata: http://www.mediafire.com/file/r8ryrhw7d5p858g/mobius_geodata_saviors_l2d.zip
+Client: https://drive.google.com/uc?id=1i8udOtNak2ANythwdPYY3sVdawOxuyBo&export=download
+Geodata: http://www.mediafire.com/file/98mbrlontaoaxou/mobius_geodata_zaken_l2d.zip
 
 
 Saviors:
@@ -51,6 +49,14 @@ Saviors:
 -Dungeon of Abyss
 -Attendance rewards
 -Various retail Classic events
+
+Zaken:
+-TODO: Parse item names from client
+-TODO: Parse skill names from client
+-TODO: Parse NPC names from client
+-TODO: Add raidbosses according to map
+-TODO: Zaken boss
+-TODO: Newbie quest changes
 
 Customs:
 -Newbie Helper NPC location info

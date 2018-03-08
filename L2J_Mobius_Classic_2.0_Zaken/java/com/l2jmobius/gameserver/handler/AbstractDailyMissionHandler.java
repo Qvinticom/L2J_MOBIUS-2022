@@ -69,6 +69,12 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 		return entry != null ? entry.getProgress() : 0;
 	}
 	
+	public boolean getRecentlyCompleted(L2PcInstance player)
+	{
+		final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), false);
+		return (entry != null) && entry.getRecentlyCompleted();
+	}
+	
 	public synchronized void reset()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -97,6 +103,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 			final DailyMissionPlayerEntry entry = getPlayerEntry(player.getObjectId(), true);
 			entry.setStatus(DailyMissionStatus.COMPLETED);
 			entry.setLastCompleted(System.currentTimeMillis());
+			entry.setRecentlyCompleted(true);
 			storePlayerEntry(entry);
 			
 			return true;

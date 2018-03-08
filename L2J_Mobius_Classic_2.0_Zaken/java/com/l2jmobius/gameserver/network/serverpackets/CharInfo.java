@@ -116,6 +116,7 @@ public class CharInfo implements IClientOutgoingPacket
 		OutgoingPackets.CHAR_INFO.writeId(packet);
 		final CeremonyOfChaosEvent event = _activeChar.getEvent(CeremonyOfChaosEvent.class);
 		final CeremonyOfChaosMember cocPlayer = event != null ? event.getMember(_activeChar.getObjectId()) : null;
+		packet.writeC(0x00); // Grand Crusade
 		packet.writeD(_x); // Confirmed
 		packet.writeD(_y); // Confirmed
 		packet.writeD(_z); // Confirmed

@@ -74,6 +74,7 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHAR_INFO.writeId(packet);
+		packet.writeC(0x00); // Grand Crusade
 		packet.writeD(_x);
 		packet.writeD(_y);
 		packet.writeD(_z);

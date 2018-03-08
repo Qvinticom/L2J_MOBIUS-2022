@@ -28,6 +28,9 @@ public final class SpawnItem implements IClientOutgoingPacket
 	private final int _x, _y, _z;
 	private int _stackable;
 	private long _count;
+	private int _enchantLevl;
+	private int _isAugmented;
+	private int _saCount;
 	
 	public SpawnItem(L2Object obj)
 	{
@@ -42,12 +45,18 @@ public final class SpawnItem implements IClientOutgoingPacket
 			_itemId = item.getDisplayId();
 			_stackable = item.isStackable() ? 0x01 : 0x00;
 			_count = item.getCount();
+			_enchantLevl = item.getEnchantLevel();
+			_isAugmented = item.getAugmentation() != null ? 1 : 0;
+			_saCount = item.getSpecialAbilities().size();
 		}
 		else
 		{
 			_itemId = obj.getPoly().getPolyId();
 			_stackable = 0;
 			_count = 1;
+			_enchantLevl = 0;
+			_isAugmented = 0;
+			_saCount = 0;
 		}
 	}
 	
@@ -66,6 +75,10 @@ public final class SpawnItem implements IClientOutgoingPacket
 		packet.writeD(_stackable);
 		packet.writeQ(_count);
 		packet.writeD(0x00); // c2
+		
+		packet.writeC(_enchantLevl); // Grand Crusade
+		packet.writeC(_isAugmented); // Grand Crusade
+		packet.writeC(_saCount); // Grand Crusade
 		return true;
 	}
 }

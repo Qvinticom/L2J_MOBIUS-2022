@@ -44,7 +44,7 @@ public class InstanceZone implements IUserCommandHandler
 		{
 			return false;
 		}
-		activeChar.sendPacket(new ExInzoneWaiting(activeChar));
+		activeChar.sendPacket(new ExInzoneWaiting(activeChar, false));
 		return true;
 	}
 }

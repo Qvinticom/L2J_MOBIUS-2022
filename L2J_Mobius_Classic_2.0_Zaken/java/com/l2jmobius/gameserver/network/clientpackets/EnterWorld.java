@@ -638,8 +638,8 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 		}
-		activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar));
-		activeChar.sendPacket(ExConnectedTimeAndGettableReward.STATIC_PACKET);
+		activeChar.sendPacket(new ExConnectedTimeAndGettableReward(activeChar));
+		activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar, true));
 		
 		// Handle soulshots, disable all on EnterWorld
 		activeChar.sendPacket(new ExAutoSoulShot(0, true, 0));

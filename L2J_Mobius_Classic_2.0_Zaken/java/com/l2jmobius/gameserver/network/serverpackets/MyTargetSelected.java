@@ -46,6 +46,7 @@ public class MyTargetSelected implements IClientOutgoingPacket
 	{
 		OutgoingPackets.MY_TARGET_SELECTED.writeId(packet);
 		
+		packet.writeD(0x01); // Grand Crusade
 		packet.writeD(_objectId);
 		packet.writeH(_color);
 		packet.writeD(0x00);

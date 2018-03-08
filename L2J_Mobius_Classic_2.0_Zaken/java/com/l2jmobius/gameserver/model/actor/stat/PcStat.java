@@ -288,7 +288,7 @@ public class PcStat extends PlayableStat
 		// Send acquirable skill list
 		getActiveChar().sendPacket(new AcquireSkillList(getActiveChar()));
 		getActiveChar().sendPacket(new ExVoteSystemInfo(getActiveChar()));
-		getActiveChar().sendPacket(new ExOneDayReceiveRewardList(getActiveChar()));
+		getActiveChar().sendPacket(new ExOneDayReceiveRewardList(getActiveChar(), true));
 		return levelIncreased;
 	}
 	

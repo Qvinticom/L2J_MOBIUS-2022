@@ -33,6 +33,8 @@ import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreBuyingResult;
+import com.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSellingResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
@@ -872,6 +874,8 @@ public class TradeList
 				msg.addItemName(newItem);
 				player.sendPacket(msg);
 			}
+			
+			_owner.sendPacket(new ExPrivateStoreSellingResult(item.getObjectId(), item.getCount(), player.getAppearance().getVisibleName()));
 		}
 		
 		// Send inventory update packet
@@ -1063,6 +1067,8 @@ public class TradeList
 				msg.addItemName(newItem);
 				player.sendPacket(msg);
 			}
+			
+			_owner.sendPacket(new ExPrivateStoreBuyingResult(item.getObjectId(), item.getCount(), player.getAppearance().getVisibleName()));
 		}
 		
 		if (totalPrice > 0)

@@ -77,6 +77,8 @@ import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRPresent
 import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProductInfo;
 import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProductList;
 import com.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRRecentProductList;
+import com.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
+import com.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
 import com.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import com.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
 import com.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
@@ -334,6 +336,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_NEW_ENCHANT_REMOVE_TWO(0xF7, RequestNewEnchantRemoveTwo::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_CLOSE(0xF8, RequestNewEnchantClose::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_TRY(0xF9, RequestNewEnchantTry::new, ConnectionState.IN_GAME),
+	REQUEST_NEW_ENCHANT_RETRY_TO_PUT_ITEMS(0xFA, RequestNewEnchantRetryToPutItems::new, ConnectionState.IN_GAME),
 	EX_SEND_SELECTED_QUEST_ZONE_ID(0xFF, ExSendSelectedQuestZoneID::new, ConnectionState.IN_GAME),
 	REQUEST_ALCHEMY_SKILL_LIST(0x100, RequestAlchemySkillList::new, ConnectionState.IN_GAME),
 	REQUEST_ALCHEMY_TRY_MIX_CUBE(0x101, null, ConnectionState.IN_GAME),
@@ -358,22 +361,40 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	EX_CANCEL_MATCH_ARENA(0x114, null, ConnectionState.IN_GAME),
 	EX_CHANGE_CLASS_ARENA(0x115, null, ConnectionState.IN_GAME),
 	EX_CONFIRM_CLASS_ARENA(0x116, null, ConnectionState.IN_GAME),
-	// TODO: Check Helios updates
+	REQUEST_OPEN_DECO_NPCUI(0x117, null, ConnectionState.IN_GAME),
+	REQUEST_CHECK_AGIT_DECO_AVAILABILITY(0x118, null, ConnectionState.IN_GAME),
 	REQUEST_USER_FACTION_INFO(0x119, null, ConnectionState.IN_GAME),
 	EX_EXIT_ARENA(0x11A, null, ConnectionState.IN_GAME),
 	REQUEST_EVENT_BALTHUS_TOKEN(0x11B, null, ConnectionState.IN_GAME),
 	REQUEST_PARTY_MATCHING_HISTORY(0x11C, null, ConnectionState.IN_GAME),
-	REQUEST_TODO_LIST(0x11D, RequestTodoList::new, ConnectionState.IN_GAME),
-	REQUEST_TODO_LIST_HTML(0x11E, null, ConnectionState.IN_GAME),
-	REQUEST_ONE_DAY_REWARD_RECEIVE(0x11F, RequestOneDayRewardReceive::new, ConnectionState.IN_GAME),
-	REQUEST_QUEUE_TICKET(0x120, null, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_OPEN(0x121, RequestPledgeBonusOpen::new, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_REWARD_LIST(0x122, RequestPledgeBonusRewardList::new, ConnectionState.IN_GAME),
-	REQUEST_PLEDGE_BONUS_REWARD(0x123, RequestPledgeBonusReward::new, ConnectionState.IN_GAME),
-	REQUEST_SSO_AUTHN_TOKEN(0x124, null, ConnectionState.IN_GAME),
-	REQUEST_QUEUE_TICKET_LOGIN(0x125, null, ConnectionState.IN_GAME),
-	REQUEST_BLOCK_MEMO_INFO(0x126, null, ConnectionState.IN_GAME),
-	REQUEST_TRY_EN_SOUL_EXTRACTION(0x127, null, ConnectionState.IN_GAME);
+	EX_ARENA_CUSTOM_NOTIFICATION(0x11D, null, ConnectionState.IN_GAME),
+	REQUEST_TODO_LIST(0x11E, RequestTodoList::new, ConnectionState.IN_GAME),
+	REQUEST_TODO_LIST_HTML(0x11F, null, ConnectionState.IN_GAME),
+	REQUEST_ONE_DAY_REWARD_RECEIVE(0x120, RequestOneDayRewardReceive::new, ConnectionState.IN_GAME),
+	REQUEST_QUEUE_TICKET(0x121, null, ConnectionState.IN_GAME),
+	REQUEST_PLEDGE_BONUS_OPEN(0x122, RequestPledgeBonusOpen::new, ConnectionState.IN_GAME),
+	REQUEST_PLEDGE_BONUS_REWARD_LIST(0x123, RequestPledgeBonusRewardList::new, ConnectionState.IN_GAME),
+	REQUEST_PLEDGE_BONUS_REWARD(0x124, RequestPledgeBonusReward::new, ConnectionState.IN_GAME),
+	REQUEST_SSO_AUTHN_TOKEN(0x125, null, ConnectionState.IN_GAME),
+	REQUEST_QUEUE_TICKET_LOGIN(0x126, null, ConnectionState.IN_GAME),
+	REQUEST_BLOCK_MEMO_INFO(0x127, null, ConnectionState.IN_GAME),
+	REQUEST_TRY_EN_SOUL_EXTRACTION(0x128, null, ConnectionState.IN_GAME),
+	REQUEST_RAIDBOSS_SPAWN_INFO(0x129, RequestRaidBossSpawnInfo::new, ConnectionState.IN_GAME),
+	REQUEST_RAID_SERVER_INFO(0x12A, RequestRaidServerInfo::new, ConnectionState.IN_GAME),
+	REQUEST_SHOW_AGIT_SIEGE_INFO(0x12B, null, ConnectionState.IN_GAME),
+	REQUEST_ITEM_AUCTION_STATUS(0x12C, null, ConnectionState.IN_GAME),
+	REQUEST_MONSTER_BOOK_OPEN(0x12D, null, ConnectionState.IN_GAME),
+	REQUEST_MONSTER_BOOK_CLOSE(0x12E, null, ConnectionState.IN_GAME),
+	REQUEST_MONSTER_BOOK_REWARD(0x12F, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP(0x130, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_ASK(0x131, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_ANSWER(0x132, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_WITHDRAW(0x133, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_OUST(0x134, null, ConnectionState.IN_GAME),
+	EXREQUEST_MATCH_GROUP_CHANGE_MASTER(0x135, null, ConnectionState.IN_GAME),
+	REQUEST_BLOCK_LIST_FOR_AD(0x136, null, ConnectionState.IN_GAME),
+	REQUEST_UPGRADE_SYSTEM_RESULT(0x137, null, ConnectionState.IN_GAME),
+	REQUEST_USER_BAN_INFO(0x138, null, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	

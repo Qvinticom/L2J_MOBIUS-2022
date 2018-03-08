@@ -28,6 +28,7 @@ public class DailyMissionPlayerEntry
 	private DailyMissionStatus _status = DailyMissionStatus.NOT_AVAILABLE;
 	private int _progress;
 	private long _lastCompleted;
+	private boolean _recentlyCompleted;
 	
 	public DailyMissionPlayerEntry(int objectId, int rewardId)
 	{
@@ -87,5 +88,15 @@ public class DailyMissionPlayerEntry
 	public void setLastCompleted(long lastCompleted)
 	{
 		_lastCompleted = lastCompleted;
+	}
+	
+	public boolean getRecentlyCompleted()
+	{
+		return _recentlyCompleted;
+	}
+	
+	public void setRecentlyCompleted(boolean recentlyCompleted)
+	{
+		_recentlyCompleted = recentlyCompleted;
 	}
 }

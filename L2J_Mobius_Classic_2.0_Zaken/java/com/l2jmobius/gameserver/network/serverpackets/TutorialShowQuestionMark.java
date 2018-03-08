@@ -24,12 +24,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public final class TutorialShowQuestionMark implements IClientOutgoingPacket
 {
-	private final int _questid; // quest id?
-	private final int _condition; // cond?
+	private final int _questId;
+	private final int _condition;
 	
-	public TutorialShowQuestionMark(int questid, int condition)
+	public TutorialShowQuestionMark(int questId, int condition)
 	{
-		_questid = questid;
+		_questId = questId;
 		_condition = condition;
 	}
 	
@@ -39,7 +39,7 @@ public final class TutorialShowQuestionMark implements IClientOutgoingPacket
 		OutgoingPackets.TUTORIAL_SHOW_QUESTION_MARK.writeId(packet);
 		
 		packet.writeC(_condition);
-		packet.writeD(_questid);
+		packet.writeD(_questId);
 		return true;
 	}
 }

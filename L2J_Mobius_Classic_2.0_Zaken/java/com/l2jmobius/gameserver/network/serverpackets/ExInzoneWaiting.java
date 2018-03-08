@@ -33,12 +33,14 @@ public class ExInzoneWaiting implements IClientOutgoingPacket
 {
 	private final int _currentTemplateId;
 	private final Map<Integer, Long> _instanceTimes;
+	private final boolean _sendByClient;
 	
-	public ExInzoneWaiting(L2PcInstance activeChar)
+	public ExInzoneWaiting(L2PcInstance activeChar, boolean sendByClient)
 	{
 		final Instance instance = InstanceManager.getInstance().getPlayerInstance(activeChar, false);
 		_currentTemplateId = ((instance != null) && (instance.getTemplateId() >= 0)) ? instance.getTemplateId() : -1;
 		_instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(activeChar);
+		_sendByClient = sendByClient;
 	}
 	
 	@Override
@@ -46,6 +48,7 @@ public class ExInzoneWaiting implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_INZONE_WAITING_INFO.writeId(packet);
 		
+		packet.writeC(_sendByClient ? 0x00 : 0x01); // Grand Crusade
 		packet.writeD(_currentTemplateId);
 		packet.writeD(_instanceTimes.size());
 		for (Entry<Integer, Long> entry : _instanceTimes.entrySet())

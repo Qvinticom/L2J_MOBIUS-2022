@@ -29,13 +29,13 @@ public class RequestTodoList implements IClientIncomingPacket
 {
 	private int _tab;
 	@SuppressWarnings("unused")
-	private int _showAllLevels;
+	private boolean _showAllLevels;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_tab = packet.readC(); // Daily Reward = 9, Event = 1, Instance Zone = 2
-		_showAllLevels = packet.readC(); // Disabled = 0, Enabled = 1
+		_showAllLevels = packet.readC() == 1; // Disabled = 0, Enabled = 1
 		return true;
 	}
 	
@@ -60,9 +60,10 @@ public class RequestTodoList implements IClientIncomingPacket
 			// player.sendPacket(new ExTodoListInzone());
 			// break;
 			// }
-			case 9:
+			case 9: // Daily Rewards
 			{
-				player.sendPacket(new ExOneDayReceiveRewardList(player));
+				// Initial EW request should be false
+				player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 				break;
 			}
 		}

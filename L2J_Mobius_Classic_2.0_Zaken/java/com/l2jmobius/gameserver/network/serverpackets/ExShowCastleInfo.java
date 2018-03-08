@@ -34,7 +34,6 @@ public class ExShowCastleInfo implements IClientOutgoingPacket
 	
 	private ExShowCastleInfo()
 	{
-		
 	}
 	
 	@Override
@@ -65,6 +64,9 @@ public class ExShowCastleInfo implements IClientOutgoingPacket
 			}
 			packet.writeD(castle.getTaxPercent(TaxType.BUY));
 			packet.writeD((int) (castle.getSiege().getSiegeDate().getTimeInMillis() / 1000));
+			
+			packet.writeC(castle.getSiege().isInProgress() ? 0x01 : 0x00); // Grand Crusade
+			packet.writeC(castle.getSide().ordinal()); // Grand Crusade
 		}
 		return true;
 	}

@@ -85,6 +85,10 @@ public class RequestChangeAttributeItem implements IClientIncomingPacket
 		activeChar.sendPacket(msg);
 		InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(item);
+		for (L2ItemInstance i : activeChar.getInventory().getItemsByItemId(_consumeItemId))
+		{
+			iu.addItem(i);
+		}
 		activeChar.sendPacket(iu);
 		activeChar.broadcastUserInfo();
 		activeChar.sendPacket(ExChangeAttributeOk.STATIC);

@@ -62,6 +62,7 @@ public final class MultiSellList extends AbstractItemPacket
 		packet.writeD(_finished ? 0x01 : 0x00); // finished
 		packet.writeD(PAGE_SIZE); // size of pages
 		packet.writeD(_size); // list length
+		packet.writeC(0x00); // Grand Crusade
 		packet.writeC(_list.isChanceMultisell() ? 0x01 : 0x00); // new multisell window
 		packet.writeD(0x20); // Helios - Always 32
 		

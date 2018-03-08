@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets.dailymission;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -26,7 +27,12 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExConnectedTimeAndGettableReward implements IClientOutgoingPacket
 {
-	public static final ExConnectedTimeAndGettableReward STATIC_PACKET = new ExConnectedTimeAndGettableReward();
+	private final int _oneDayRewardAvailableCount;
+	
+	public ExConnectedTimeAndGettableReward(L2PcInstance player)
+	{
+		_oneDayRewardAvailableCount = DailyMissionData.getInstance().getDailyMissionData(player).size();
+	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
@@ -37,10 +43,18 @@ public class ExConnectedTimeAndGettableReward implements IClientOutgoingPacket
 		}
 		
 		OutgoingPackets.EX_CONNECTED_TIME_AND_GETTABLE_REWARD.writeId(packet);
-		for (int i = 0; i < 16; i++) // TODO : Find what the hell it is
-		{
-			packet.writeD(0x00);
-		}
+		packet.writeD(0x00);
+		packet.writeD(_oneDayRewardAvailableCount);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
 		return true;
 	}
 }

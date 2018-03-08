@@ -20,6 +20,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.enums.UserInfoType;
+import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -301,7 +302,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(22);
 			packet.writeC(_activeChar.getPvpFlag());
 			packet.writeD(_activeChar.getReputation()); // Reputation
-			packet.writeC(0x00);
+			packet.writeC(_activeChar.isNoble() ? 1 : 0);
 			packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0);
 			packet.writeC(_activeChar.getPledgeClass());
 			packet.writeD(_activeChar.getPkKills());
@@ -313,7 +314,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		if (containsMask(UserInfoType.VITA_FAME))
 		{
 			packet.writeH(15);
-			packet.writeD(0x00);
+			packet.writeD(_activeChar.getVitalityPoints());
 			packet.writeC(0x00); // Vita Bonus
 			packet.writeD(_activeChar.getFame());
 			packet.writeD(_activeChar.getRaidbossPoints());
@@ -351,7 +352,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeH(0x00);
 			packet.writeH(0x00);
 			packet.writeH(_activeChar.getInventoryLimit());
-			packet.writeC(0);
+			packet.writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
 		}
 		
 		if (containsMask(UserInfoType.UNK_3))

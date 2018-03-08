@@ -38,6 +38,9 @@
 		<xs:attribute type="xs:string" name="name" />
 		<xs:attribute type="xs:short" name="requiredCompletion" />
 		<xs:attribute type="xs:boolean" name="isOneTime" />
+		<xs:attribute type="xs:boolean" name="isMainClassOnly" />
+		<xs:attribute type="xs:boolean" name="isDualClassOnly" />
+		<xs:attribute type="xs:boolean" name="isDisplayedWhenNotAvailable" />
 	</xs:complexType>
 	<xs:complexType name="listType">
 		<xs:sequence>
