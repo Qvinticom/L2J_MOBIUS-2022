@@ -19,11 +19,6 @@ package quests;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import quests.Q00001_LettersOfLove.Q00001_LettersOfLove;
-import quests.Q00002_WhatWomenWant.Q00002_WhatWomenWant;
-import quests.Q00003_WillTheSealBeBroken.Q00003_WillTheSealBeBroken;
-import quests.Q00004_LongLiveThePaagrioLord.Q00004_LongLiveThePaagrioLord;
-import quests.Q00005_MinersFavor.Q00005_MinersFavor;
 import quests.Q00070_SagaOfThePhoenixKnight.Q00070_SagaOfThePhoenixKnight;
 import quests.Q00071_SagaOfEvasTemplar.Q00071_SagaOfEvasTemplar;
 import quests.Q00072_SagaOfTheSwordMuse.Q00072_SagaOfTheSwordMuse;
@@ -55,35 +50,7 @@ import quests.Q00097_SagaOfTheShillienTemplar.Q00097_SagaOfTheShillienTemplar;
 import quests.Q00098_SagaOfTheShillienSaint.Q00098_SagaOfTheShillienSaint;
 import quests.Q00099_SagaOfTheFortuneSeeker.Q00099_SagaOfTheFortuneSeeker;
 import quests.Q00100_SagaOfTheMaestro.Q00100_SagaOfTheMaestro;
-import quests.Q00101_SwordOfSolidarity.Q00101_SwordOfSolidarity;
-import quests.Q00102_SeaOfSporesFever.Q00102_SeaOfSporesFever;
-import quests.Q00103_SpiritOfCraftsman.Q00103_SpiritOfCraftsman;
-import quests.Q00104_SpiritOfMirrors.Q00104_SpiritOfMirrors;
-import quests.Q00105_SkirmishWithOrcs.Q00105_SkirmishWithOrcs;
-import quests.Q00106_ForgottenTruth.Q00106_ForgottenTruth;
-import quests.Q00107_MercilessPunishment.Q00107_MercilessPunishment;
-import quests.Q00108_JumbleTumbleDiamondFuss.Q00108_JumbleTumbleDiamondFuss;
 import quests.Q00127_FishingSpecialistsRequest.Q00127_FishingSpecialistsRequest;
-import quests.Q00151_CureForFever.Q00151_CureForFever;
-import quests.Q00152_ShardsOfGolem.Q00152_ShardsOfGolem;
-import quests.Q00153_DeliverGoods.Q00153_DeliverGoods;
-import quests.Q00154_SacrificeToTheSea.Q00154_SacrificeToTheSea;
-import quests.Q00155_FindSirWindawood.Q00155_FindSirWindawood;
-import quests.Q00156_MillenniumLove.Q00156_MillenniumLove;
-import quests.Q00157_RecoverSmuggledGoods.Q00157_RecoverSmuggledGoods;
-import quests.Q00158_SeedOfEvil.Q00158_SeedOfEvil;
-import quests.Q00159_ProtectTheWaterSource.Q00159_ProtectTheWaterSource;
-import quests.Q00160_NerupasRequest.Q00160_NerupasRequest;
-import quests.Q00161_FruitOfTheMotherTree.Q00161_FruitOfTheMotherTree;
-import quests.Q00162_CurseOfTheUndergroundFortress.Q00162_CurseOfTheUndergroundFortress;
-import quests.Q00163_LegacyOfThePoet.Q00163_LegacyOfThePoet;
-import quests.Q00164_BloodFiend.Q00164_BloodFiend;
-import quests.Q00165_ShilensHunt.Q00165_ShilensHunt;
-import quests.Q00166_MassOfDarkness.Q00166_MassOfDarkness;
-import quests.Q00167_DwarvenKinship.Q00167_DwarvenKinship;
-import quests.Q00168_DeliverSupplies.Q00168_DeliverSupplies;
-import quests.Q00169_OffspringOfNightmares.Q00169_OffspringOfNightmares;
-import quests.Q00170_DangerousSeduction.Q00170_DangerousSeduction;
 import quests.Q00211_TrialOfTheChallenger.Q00211_TrialOfTheChallenger;
 import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
 import quests.Q00213_TrialOfTheSeeker.Q00213_TrialOfTheSeeker;
@@ -126,7 +93,6 @@ import quests.Q00274_SkirmishWithTheWerewolves.Q00274_SkirmishWithTheWerewolves;
 import quests.Q00275_DarkWingedSpies.Q00275_DarkWingedSpies;
 import quests.Q00276_TotemOfTheHestui.Q00276_TotemOfTheHestui;
 import quests.Q00277_GatekeepersOffering.Q00277_GatekeepersOffering;
-import quests.Q00291_RevengeOfTheRedbonnet.Q00291_RevengeOfTheRedbonnet;
 import quests.Q00292_BrigandsSweep.Q00292_BrigandsSweep;
 import quests.Q00293_TheHiddenVeins.Q00293_TheHiddenVeins;
 import quests.Q00294_CovertBusiness.Q00294_CovertBusiness;
@@ -192,11 +158,6 @@ public class QuestMasterHandler
 	
 	private static final Class<?>[] QUESTS =
 	{
-		Q00001_LettersOfLove.class,
-		Q00002_WhatWomenWant.class,
-		Q00003_WillTheSealBeBroken.class,
-		Q00004_LongLiveThePaagrioLord.class,
-		Q00005_MinersFavor.class,
 		Q00070_SagaOfThePhoenixKnight.class,
 		Q00071_SagaOfEvasTemplar.class,
 		Q00072_SagaOfTheSwordMuse.class,
@@ -228,35 +189,7 @@ public class QuestMasterHandler
 		Q00098_SagaOfTheShillienSaint.class,
 		Q00099_SagaOfTheFortuneSeeker.class,
 		Q00100_SagaOfTheMaestro.class,
-		Q00101_SwordOfSolidarity.class,
-		Q00102_SeaOfSporesFever.class,
-		Q00103_SpiritOfCraftsman.class,
-		Q00104_SpiritOfMirrors.class,
-		Q00105_SkirmishWithOrcs.class,
-		Q00106_ForgottenTruth.class,
-		Q00107_MercilessPunishment.class,
-		Q00108_JumbleTumbleDiamondFuss.class,
 		Q00127_FishingSpecialistsRequest.class,
-		Q00151_CureForFever.class,
-		Q00152_ShardsOfGolem.class,
-		Q00153_DeliverGoods.class,
-		Q00154_SacrificeToTheSea.class,
-		Q00155_FindSirWindawood.class,
-		Q00156_MillenniumLove.class,
-		Q00157_RecoverSmuggledGoods.class,
-		Q00158_SeedOfEvil.class,
-		Q00159_ProtectTheWaterSource.class,
-		Q00160_NerupasRequest.class,
-		Q00161_FruitOfTheMotherTree.class,
-		Q00162_CurseOfTheUndergroundFortress.class,
-		Q00163_LegacyOfThePoet.class,
-		Q00164_BloodFiend.class,
-		Q00165_ShilensHunt.class,
-		Q00166_MassOfDarkness.class,
-		Q00167_DwarvenKinship.class,
-		Q00168_DeliverSupplies.class,
-		Q00169_OffspringOfNightmares.class,
-		Q00170_DangerousSeduction.class,
 		Q00211_TrialOfTheChallenger.class,
 		Q00212_TrialOfDuty.class,
 		Q00213_TrialOfTheSeeker.class,
@@ -299,7 +232,6 @@ public class QuestMasterHandler
 		Q00275_DarkWingedSpies.class,
 		Q00276_TotemOfTheHestui.class,
 		Q00277_GatekeepersOffering.class,
-		Q00291_RevengeOfTheRedbonnet.class,
 		Q00292_BrigandsSweep.class,
 		Q00293_TheHiddenVeins.class,
 		Q00294_CovertBusiness.class,
