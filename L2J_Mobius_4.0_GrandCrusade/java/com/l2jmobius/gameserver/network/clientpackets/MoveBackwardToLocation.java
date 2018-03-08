@@ -21,6 +21,7 @@ import java.util.Arrays;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.enums.AdminTeleportType;
 import com.l2jmobius.gameserver.enums.SayuneType;
 import com.l2jmobius.gameserver.model.Location;
@@ -83,6 +84,13 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ))
 		{
 			activeChar.sendPacket(new StopMove(activeChar));
+			return;
+		}
+		
+		// Mobius: Check for possible door logout and move over exploit. Also checked at ValidatePosition.
+		if (DoorData.getInstance().checkIfDoorsBetween(activeChar.getX(), activeChar.getY(), activeChar.getZ(), _targetX, _targetY, _targetZ, activeChar.getInstanceWorld(), false))
+		{
+			activeChar.stopMove(activeChar.getLastServerPosition());
 			return;
 		}
 		
