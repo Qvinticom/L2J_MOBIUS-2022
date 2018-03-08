@@ -338,7 +338,7 @@
 	</npc>
 	<npc id="30011" level="34" type="L2Monster" name="Turek Orc Elder" title="Deep in Debt">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2444" hpRegen="10.5" mp="1345" mpRegen="3.6" />
@@ -354,6 +354,34 @@
 			<radius normal="20" />
 			<height normal="47" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="880" min="1" max="1" chance="0.3" /> <!-- Black Pearl Ring -->
+				<item id="849" min="1" max="1" chance="0.075" /> <!-- Tiger's Eye -->
+				<item id="912" min="1" max="1" chance="0.075" /> <!-- Near Forest Necklace -->
+				<item id="57" min="195" max="455" chance="70" /> <!-- Adena -->
+				<item id="1341" min="10" max="30" chance="14.77" /> <!-- Bone Arrow -->
+				<item id="1872" min="1" max="1" chance="5.647" /> <!-- Animal Bone -->
+				<item id="1870" min="1" max="1" chance="4.263" /> <!-- Coal -->
+				<item id="1871" min="1" max="1" chance="4.247" /> <!-- Charcoal -->
+				<item id="1901" min="1" max="1" chance="3.585" /> <!-- Tiger's Eye Stone -->
+				<item id="1881" min="1" max="1" chance="0.75" /> <!-- Coarse Bone Powder -->
+				<item id="1879" min="1" max="1" chance="0.75" /> <!-- Cokes -->
+				<item id="2193" min="1" max="1" chance="0.75" /> <!-- Recipe: Boots of Strength -->
+				<item id="1875" min="1" max="1" chance="0.3" /> <!-- Stone of Purity -->
+			</drop>
+			<spoil>
+				<item id="2979" min="1" max="1" chance="15.63" /> <!-- Recipe: Manticore Skin Gloves -->
+				<item id="2279" min="1" max="1" chance="0.75" /> <!-- Recipe: War Pick -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="30012" level="70" type="L2Fisherman" name="Fishing Guild Member">
 		<parameters>

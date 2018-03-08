@@ -53,7 +53,7 @@ Saviors:
 Zaken:
 -Parsed new skills from client
 -Parsed new items from client
--TODO: Parse NPC names from client
+-Parsed new NPCs from L2Wiki
 -TODO: Add raidbosses according to map
 -TODO: Zaken boss
 -TODO: Newbie quest changes
@@ -65,5 +65,6 @@ Customs:
 -Fake players engine
 
 TODO:
+-Parse all skill names from client
 -Parse retail monster spawns by zone
 -Provisional Clan Halls
