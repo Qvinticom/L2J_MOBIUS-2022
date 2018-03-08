@@ -831,6 +831,78 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="90174" name="Silver Bait Box" type="EtcItem">
+		<!-- Double-click to obtain Fishing Rod Chest (10-day), 1080 Silver Baits. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_silver_lure_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90175" name="Golden Bait Box" type="EtcItem">
+		<!-- Double-click to obtain 180 pcs. of Golden Bait, 180 pcs. of Fishing Shot. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_gold_lure_special_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90176" name="Golden Fishing kit Lv. 1" type="EtcItem">
+		<!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 2160 Silver Baits. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90177" name="Golden Fishing kit Lv. 2" type="EtcItem">
+		<!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 2160 Silver Baits, 2 of Einhasad's Protection. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90178" name="Golden Fishing kit Lv. 3" type="EtcItem">
+		<!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 6480 Silver Baits, 4 of Einhasad's Protection. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90179" name="Golden Fishing kit Lv. 4" type="EtcItem">
+		<!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 6480 Silver Baits, 10 of Einhasad's Protection, Refined Romantic Chapeau (Special Ability). Cannot be dropped. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90180" name="Golden Fishing kit Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Mermaid Golden Fishing Rod Chest (30-day), 12960 Silver Baits, 15 of Einhasad's Protection, Refined Romantic Chapeau (Special Ability), Refined Rare Accessory Pack (30-day). Cannot be dropped. -->
+		<set name="icon" val="icon.bm_freya_sirr_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90181" name="Shiny Coin" type="EtcItem">
+		<!-- Coins can be exchanged for the following items with a Fishing Guild member: Fishing Rod Chest (10-day), Silver Bait Box, Golden Fishing kit Lv. 1~5, Shiny Fishing kit. Exact item depends on the number of coins. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse or shared within account. -->
+		<set name="icon" val="icon.ev_festival_goldcoin" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90182" name="Shining Golden Bait" type="EtcItem">
+		<!-- Fishing Bait. Can be used for fishing a Glowing Whale with a low probability of getting a Shiny Coin. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_gold_lure" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="90183" name="Chef's Fish Stew: Victory" type="EtcItem">
 		<!-- For 10 min. activates Chant of Victory Lv. 1. Cannot be dropped. <Attention> Cannot be stacked with Prophecy. Effect remains after death. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
@@ -862,5 +934,147 @@
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90187" name="Gold Urn" type="EtcItem">
+		<!-- Double-click on the Gold Urn to get one of its treasures. Cannot be dropped. -->
+		<set name="icon" val="icon.bm_gold_pot" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90188" name="Glowing Whale" type="EtcItem">
+		<!-- Double-click to restore a certain amount of SP. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.fish_huge_i15" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90189" name="Blue Spinel" additionalName="Event" type="EtcItem">
+		<!-- A reward item. You can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
+		<set name="icon" val="icon.ensoul_big_m" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90190" name="Dandy Pendant" additionalName="7-day" type="Armor">
+		<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="90191" name="Dandy Shining Pendant" additionalName="7-day" type="Armor">
+		<!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="pDef">52</stat>
+		</stats>
+	</item>
+	<item id="90192" name="Giant's Enchant Scroll Pack" type="EtcItem">
+		<!-- Double-click to receive one Average, Improved, Solid, or Blessed Scroll: Enchant Weapon (C/B). -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90193" name="Low-grade Arena Loot" type="EtcItem">
+		<!-- Arena Reward. Double-click to receive one of the following items: Toy Knight's Home Run Ball, Angel Cat's Blessing, Sayha's Holy Water, Soulshot Ticket, Major Warrior Healing Potion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90194" name="Intermediate Arena Loot" type="EtcItem">
+		<!-- Arena Reward. Double-click to receive one of the following items: Spellbook Box - 3rd Class Transfer, Magic Gem, Spellbook Chest, Common Life Stone, Scroll of Mood Melody. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90195" name="High-grade Arena Loot" type="EtcItem">
+		<!-- Arena Reward. Double-click to receive one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Box (15-day), Unidentified Stone, Dandy Shining Pendant (7-day), Dandy Shining Pendant (1-day), Dandy Pendant (7-day), Dandy Pendant (1-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90196" name="Dandy Pendant" additionalName="2 hours" type="Armor">
+		<!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="120" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="90197" name="Dandy Shining Pendant" additionalName="2 hours" type="Armor">
+		<!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_pendant_pve" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="120" />
+		<stats>
+			<stat type="pDef">52</stat>
+		</stats>
+	</item>
+	<item id="90198" name="MOPP Combat Ration" type="EtcItem">
+		<!-- MOPP Combat Ration. XP and SP gain by +10%, P./M. Atk. +15%, P./M. Def. +15%, Atk. Spd./Casting Spd. +10%, Speed +10. Sayha Grace points +30% Duration: 5 minutes. The effect is removed if the game is reloaded. -->
+		<set name="icon" val="icon.ev_mopp_herb" />
+		<set name="is_tradable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90199" name="Hunter's Memo" type="EtcItem">
+		<!-- Altran asked you to kill monsters who raided tombs of his family graveyard. Slay monsters from the list. -->
+		<set name="icon" val="icon.etc_paper_red_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>
