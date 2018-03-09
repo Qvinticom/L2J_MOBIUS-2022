@@ -3,8 +3,7 @@ L2J-Mobius Classic 2.0
 Client: https://drive.google.com/uc?id=1i8udOtNak2ANythwdPYY3sVdawOxuyBo&export=download
 Geodata: http://www.mediafire.com/file/98mbrlontaoaxou/mobius_geodata_zaken_l2d.zip
 
-
-Saviors:
+Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility
 -Parsed item data from client
 -Proper Daily Mission rewards
@@ -50,7 +49,7 @@ Saviors:
 -Attendance rewards
 -Various retail Classic events
 
-Zaken:
+Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Parsed new skills from client
 -Parsed new items from client
 -Parsed new NPCs from L2Wiki

@@ -5,8 +5,7 @@ Mirror: https://mega.nz/#!0lcGQaaI!tuZUFcQS0gVPjzAIPquznOehLqJq0BR-5rm3BXxn6pg
 
 Geodata: http://www.mediafire.com/file/r8ryrhw7d5p858g/mobius_geodata_saviors_l2d.zip
 
-
-Saviors:
+Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility
 -Parsed item data from client
 -Proper Daily Mission rewards
