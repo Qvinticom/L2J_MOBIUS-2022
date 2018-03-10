@@ -36,31 +36,32 @@ public class ItemLogFormatter extends Formatter
 	public String format(LogRecord record)
 	{
 		final Object[] params = record.getParameters();
-		final StringBuilder output = StringUtil.startAppend(30 + record.getMessage().length() + (params.length * 50), "[", dateFmt.format(new Date(record.getMillis())), "] ", record.getMessage());
+		final StringBuilder output = StringUtil.startAppend(30 + record.getMessage().length() + (params != null ? params.length * 50 : 0), "[", dateFmt.format(new Date(record.getMillis())), "] ", record.getMessage());
 		
-		for (Object p : record.getParameters())
+		if (params != null)
 		{
-			if (p == null)
+			for (Object p : params)
 			{
-				continue;
-			}
-			output.append(", ");
-			if (p instanceof L2ItemInstance)
-			{
-				final L2ItemInstance item = (L2ItemInstance) p;
-				StringUtil.append(output, "item ", String.valueOf(item.getObjectId()), ":");
-				if (item.getEnchantLevel() > 0)
+				if (p == null)
 				{
-					StringUtil.append(output, "+", String.valueOf(item.getEnchantLevel()), " ");
+					continue;
 				}
-				
-				StringUtil.append(output, item.getItem().getName(), "(", String.valueOf(item.getCount()), ")");
-			}
-			// else if (p instanceof L2PcInstance)
-			// output.append(((L2PcInstance)p).getName());
-			else
-			{
-				output.append(p.toString()/* + ":" + ((L2Object)p).getObjectId() */);
+				output.append(", ");
+				if (p instanceof L2ItemInstance)
+				{
+					final L2ItemInstance item = (L2ItemInstance) p;
+					StringUtil.append(output, "item ", String.valueOf(item.getObjectId()), ":");
+					if (item.getEnchantLevel() > 0)
+					{
+						StringUtil.append(output, "+", String.valueOf(item.getEnchantLevel()), " ");
+					}
+					
+					StringUtil.append(output, item.getItem().getName(), "(", String.valueOf(item.getCount()), ")");
+				}
+				else
+				{
+					output.append(p.toString());
+				}
 			}
 		}
 		output.append(Config.EOL);
