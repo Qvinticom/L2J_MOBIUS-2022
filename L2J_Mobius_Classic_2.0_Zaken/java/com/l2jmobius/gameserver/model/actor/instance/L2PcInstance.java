@@ -10256,6 +10256,10 @@ public final class L2PcInstance extends L2Playable
 		{
 			getAirShip().sendInfo(this);
 		}
+		else // Update last player position upon teleport.
+		{
+			setLastServerPosition(getX(), getY(), getZ());
+		}
 		
 		// Force a revalidation
 		revalidateZone(true);
