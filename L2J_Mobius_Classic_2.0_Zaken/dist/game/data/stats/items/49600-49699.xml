@@ -24,6 +24,10 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39125" level="1"/> <!--Weapon Supply Box (B-grade)-->
+		</skills>
 	</item>
 	<item id="49665" name="Armor Supply Box (B-grade)" type="EtcItem">
 		<!-- Double-click to receive one of B-grade Armor. -->
@@ -31,6 +35,10 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39127" level="1"/> <!--Armor Supply Box (B-grade)-->
+		</skills>
 	</item>
 	<item id="49666" name="Ornament Supply Box (B-grade)" type="EtcItem">
 		<!-- Double-click to receive one of B-grade Accessories. -->
@@ -38,6 +46,10 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39129" level="1"/> <!--Ornament Supply Box (B-grade)-->
+		</skills>
 	</item>
 	<item id="49667" name="Weapon Supply Box (C-grade)" type="EtcItem">
 		<!-- Double-click to receive one of C-grade Weapons. -->
@@ -45,6 +57,10 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39124" level="1"/> <!--Weapon Supply Box (B-grade)-->
+		</skills>
 	</item>
 	<item id="49668" name="Armor Supply Box (C-grade)" type="EtcItem">
 		<!-- Double-click to receive one of C-grade Armor. -->
@@ -52,6 +68,10 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39126" level="1"/> <!--Armor Supply Box (B-grade)-->
+		</skills>
 	</item>
 	<item id="49669" name="Ornament Supply Box (C-grade)" type="EtcItem">
 		<!-- Double-click to receive one of C-grade Accessories. -->
@@ -59,6 +79,10 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39128" level="1"/> <!--Ornament Supply Box (B-grade)-->
+		</skills>
 	</item>
 	<item id="49670" name="Weapon Ingredient Box (B-grade)" type="EtcItem">
 		<!-- Double-click to receive one of B-grade Weapon Ingredients. -->
@@ -383,6 +407,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="60000" />
+		<skills>
+			<skill id="55160" level="1"/> <!-- Special Pirate Fruit -->
+		</skills>
 	</item>
 	<item id="49698" name="Class Transfer Coupon" type="EtcItem">
 		<!-- Take it to Luck Cat to receive the 2nd Class. Intended for Lv. 49 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->

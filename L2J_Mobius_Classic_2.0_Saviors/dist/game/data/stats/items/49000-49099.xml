@@ -4,7 +4,7 @@
 		<!-- Summons Singer and Dancer Agathion when equipped. 30-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -13,6 +13,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39016" level="1" /> <!-- Seal Agathion -->
+			<skill id="39017" level="1" /> <!-- Seal Agathion -->
+			<skill id="39018" level="1" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="49001" name="Agathion - Singer and Dancer Pack (30-day)" type="EtcItem">
 		<!-- Allows to summon a Singer and Dancer Agathion (30-day) with double right-click. Cannot be exchanged, dropped, or sold. -->
@@ -25,12 +33,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49000" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="49002" name="Agathion - Singer and Dancer" additionalName="90-day" type="Armor">
 		<!-- Summons Singer and Dancer Agathion when equipped. 90-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 90 days. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -39,6 +51,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
+		<skills>
+			<skill id="21233" level="1" /> <!-- Release Agathion's Seal - Singer and Dancer -->
+			<skill id="23234" level="1" /> <!-- Singer and Dancer Agathion Cute Trick -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39016" level="1" /> <!-- Seal Agathion -->
+			<skill id="39017" level="1" /> <!-- Seal Agathion -->
+			<skill id="39018" level="1" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="49003" name="Agathion - Singer and Dancer Pack (90-day)" type="EtcItem">
 		<!-- Allows to summon a Singer and Dancer Agathion (90-day) with double right-click. Cannot be exchanged, dropped, or sold. -->
@@ -51,6 +71,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49002" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="49004" name="Ol Mahum Memo" additionalName="Event" type="EtcItem">
 		<!-- 10-year-old Memo from the Ol Mahum. Take 10 of these to the Turek Orc Elder for a Mahum Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish. Cannot be exchanged, dropped, or sold. Deleted after event. -->
@@ -255,8 +279,8 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<cond msgId="1902">
-			<player levelRange="20;39" />
+		<cond addName="1" msgId="113">
+			<target levelRange="21;85" />
 		</cond>
 		<cond msgId="113">
 			<player chaotic="false" />
@@ -276,8 +300,8 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<cond msgId="1902">
-			<player levelRange="20;39" />
+		<cond addName="1" msgId="113">
+			<target levelRange="20;39" />
 		</cond>
 		<cond msgId="113">
 			<player chaotic="false" />
@@ -297,8 +321,8 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<cond msgId="1902">
-			<player levelRange="20;39" />
+		<cond addName="1" msgId="113">
+			<target levelRange="40;51" />
 		</cond>
 		<cond msgId="113">
 			<player chaotic="false" />
@@ -318,8 +342,8 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<cond msgId="1902">
-			<player levelRange="20;39" />
+		<cond addName="1" msgId="113">
+			<target levelRange="52;60" />
 		</cond>
 		<cond msgId="113">
 			<player chaotic="false" />
@@ -339,8 +363,8 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
-		<cond msgId="1902">
-			<player levelRange="20;39" />
+		<cond addName="1" msgId="113">
+			<target levelRange="61;75" />
 		</cond>
 		<cond msgId="113">
 			<player chaotic="false" />
@@ -384,6 +408,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="39025" level="1" /> <!-- Adventurer's Scroll of Escape -->
+		</skills>
 	</item>
 	<item id="49033" name="Classic Gift Box" type="EtcItem">
 		<!-- A Lineage II Souvenir to commemorate the opening of the Classic Server. Double-click to obtain an Eva's Mark (30-day). Cannot be exchanged, dropped, or sold. -->
@@ -1074,6 +1101,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32000" level="1"/> <!-- Rice Cake of Fighting Spirit -->
+		</skills>
 	</item>
 	<item id="49081" name="Rice Cake of Flaming Fighting Spirit" type="EtcItem">
 		<!-- Increases XP and SP gain by 30% for 20 minutes. The effect remains after character's death. Cooldown: 10 minutes. <Attention> The effect does not change is Rice Cake of Fighting Spirit is used throughout the duration time of Rice Cake of Flaming Fighting Spirit. -->
@@ -1081,6 +1113,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32002" level="1"/> <!-- Rice Cake of Flaming Fighting Spirit -->
+		</skills>
 	</item>
 	<item id="49082" name="Get-Rich-Quick Supply Chest" type="EtcItem">
 		<!-- Open the chest to get one of the following items: Scroll: Enchant Weapon / Armor (D / C-grade), Magic Haste Potion, Greater Magic Haste Potion, Haste Potion, Greater Haste Potion, Greater Scroll of Resurrection, Scroll of Escape. -->

@@ -997,6 +997,9 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<skills>
+			<skill id="39025" level="1" /> <!-- Adventurer's Scroll of Escape -->
+		</skills>
 	</item>
 	<item id="70391" name="Phantom Mask" type="Armor">
 		<!-- Scary hair accessory. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->

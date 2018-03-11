@@ -144,34 +144,394 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39124" toLevel="1" name="Weapon Supply Box (C-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39124</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49667</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.3">
+						<item id="242" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="7887" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="72" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="71" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="281" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="193" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="160" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="161" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="192" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="194" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="302" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="263" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39125" toLevel="1" name="Weapon Supply Box (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39125</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49664</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="4.0">
+						<item id="175" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="267" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="268" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="287" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="79" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="284" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="171" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="234" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="300" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="78" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="7883" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="91" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="7900" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="7893" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="142" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="229" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="97" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="264" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="7892" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="92" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="210" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="7901" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="148" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="243" count="1" />
+					</item>
+					<item chance="4.0">
+						<item id="7889" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39126" toLevel="1" name="Armor Supply Box (C-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39126</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49668</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="2463" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="473" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="442" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="401" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="2437" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="2461" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="356" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="2438" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="2462" count="1" />
+					</item>
+					<item chance="10.0">
+						<item id="2414" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39127" toLevel="1" name="Armor Supply Box (B-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39127</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49665</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.3">
+						<item id="600" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="2415" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="2464" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="2439" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="2487" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="2416" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="601" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="2475" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="2417" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="554" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="612" count="1" />
+					</item>
+					<item chance="8.3">
+						<item id="503" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39128" toLevel="1" name="Ornament Supply Box (C-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39126</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49669</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="16.6">
+						<item id="854" count="1" />
+					</item>
+					<item chance="16.6">
+						<item id="855" count="1" />
+					</item>
+					<item chance="16.6">
+						<item id="917" count="1" />
+					</item>
+					<item chance="16.6">
+						<item id="119" count="1" />
+					</item>
+					<item chance="16.6">
+						<item id="885" count="1" />
+					</item>
+					<item chance="16.6">
+						<item id="886" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39129" toLevel="1" name="Ornament Supply Box - B-grade">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39127</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49666</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="6.6">
+						<item id="900" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="869" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="931" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="887" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="856" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="918" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="891" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="860" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="922" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="895" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="864" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="926" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="905" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="874" count="1" />
+					</item>
+					<item chance="6.6">
+						<item id="936" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39130" toLevel="1" name="Weapons Ingredient Box - C-grade">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -244,9 +604,75 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39144" toLevel="1" name="Special Pirate Fruit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill39144</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49518</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpDrain">
+				<power>49</power>
+				<percentage>3</percentage>
+			</effect>
+			<effect name="ExpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39145" toLevel="1" name="Tower of Insolence Enchant Scroll Pack">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -398,9 +824,47 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39152" toLevel="1" name="Ornament Supply Box (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39152</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49761</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="16.6">
+						<item id="6327" count="1" />	<!-- Talisman of Baium -->
+					</item>
+					<item chance="16.6">
+						<item id="6326" count="1" />	<!-- Baium's Soul -->
+					</item>
+					<item chance="16.6">
+						<item id="6328" count="1" />	<!-- Talisman of Insolence I -->
+					</item>
+					<item chance="16.6">
+						<item id="6324" count="1" />	<!-- Talisman of Insolence II -->
+					</item>
+					<item chance="16.6">
+						<item id="6323" count="1" />	<!-- Energy of Insolence -->
+					</item>
+					<item chance="16.6">
+						<item id="6325" count="1" />	<!-- Talisman Crystal -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39153" toLevel="1" name="Armor Ingredient Box - A-grade">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -448,14 +912,154 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39162" toLevel="1" name="Special Pirate Fruit - Attack">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill39162</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49773</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpDrain">
+				<power>49</power>
+				<percentage>3</percentage>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39163" toLevel="1" name="Special Pirate Fruit - Defense">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill39163</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49774</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpDrain">
+				<power>49</power>
+				<percentage>3</percentage>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39164" toLevel="1" name="Scroll of Mood Melody">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -498,14 +1102,207 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39172" toLevel="1" name="Weapon Supply Box (A-grade)">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39172</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49785</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="4.54">
+						<item id="98" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="213" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="7894" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="236" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="80" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="235" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="288" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="269" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="7902" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="151" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="7884" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="2504" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="150" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="7899" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="270" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="212" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="289" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="7895" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="2500" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="81" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="305" count="1" />
+					</item>
+					<item chance="4.54">
+						<item id="164" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39173" toLevel="1" name="A-grade Armor Supply Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39173</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49786</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="3.44">
+						<item id="5287" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5288" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5289" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5290" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5291" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5293" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5294" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5295" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5296" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5297" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5298" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5301" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5304" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5305" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5308" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5311" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5312" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5313" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5314" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5316" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5317" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5318" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5319" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5320" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5323" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5326" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5329" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5292" count="1" />
+					</item>
+					<item chance="3.44">
+						<item id="5315" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39174" toLevel="1" name="+8 Weapon Supply Box (B-grade)">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

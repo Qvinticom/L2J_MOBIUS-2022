@@ -556,6 +556,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39187" level="1"/> <!--Ornament Supply Box (A-grade)-->
+		</skills>
 	</item>
 	<item id="49851" name="Sayha's Gust" type="EtcItem">
 		<!-- Sayha Grace points +100%, XP/SP gain +100%. This effect remains even after character's death. Duration: 10 minutes. Reuse Time: 10 minutes. Available when more than one slot of the bar of Sayha�s Grace points is filled. Cannot be dropped or sold in the grocery store. -->

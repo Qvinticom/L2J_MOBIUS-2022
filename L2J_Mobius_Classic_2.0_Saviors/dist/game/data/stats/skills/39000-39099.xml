@@ -349,9 +349,23 @@
 		</effects>
 	</skill>
 	<skill id="39025" toLevel="1" name="Adventurer's Scroll of Escape">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill39025</icon>
+		<hitTime>20000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39026" toLevel="1" name="Ol Mahum Adena Pouch (Event)">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -712,14 +726,180 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39058" toLevel="1" name="Rare Accessory Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skil39058</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29578</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="29575" count="1" />
+					</item>
+					<item chance="100.0">
+						<item id="29576" count="1" />
+					</item>
+					<item chance="100.0">
+						<item id="29577" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39059" toLevel="1" name="Spellbok Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skil39059</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49541</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.5">
+						<item id="3047" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3046" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3052" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3044" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3080" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3079" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8891" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3064" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3063" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3066" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5811" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4922" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3072" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="6398" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4912" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3101" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3099" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8388" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8389" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3051" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3045" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8890" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4923" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3942" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="8397" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="5815" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3050" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3041" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3055" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3089" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4924" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4205" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3109" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3111" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3118" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="6397" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3116" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="3940" count="1" />
+					</item>
+					<item chance="2.5">
+						<item id="4915" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39060" toLevel="1" name="Pendant Varnish">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -969,9 +1149,75 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39085" toLevel="1" name="Special Pirate Fruit">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill39085</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>VOTE</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29817</itemConsumeId>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpDrain">
+				<power>49</power>
+				<percentage>3</percentage>
+			</effect>
+			<effect name="ExpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39086" toLevel="1" name="King Pirate's Treasure Chest">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

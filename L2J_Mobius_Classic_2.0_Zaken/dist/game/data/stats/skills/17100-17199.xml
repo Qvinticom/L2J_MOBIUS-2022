@@ -24,26 +24,80 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17110" toLevel="1" name="Snowy Squash Nectar">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
 		<effectPoint>-150</effectPoint>
 		<reuseDelay>2000</reuseDelay>
+		<effectRange>300</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37543</itemConsumeId> <!-- Snowy Squash Nectar -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>13399</item>
+					<item>13403</item>
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="17111" toLevel="1" name="Snowy Squash Seed">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill17111</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<reuseDelay>10000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37552</itemConsumeId> <!-- Snowy Squash Seed -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13399</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17112" toLevel="1" name="Large Snowy Squash Seed">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill17112</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<reuseDelay>10000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37553</itemConsumeId> <!-- Snowy Large Squash Seed -->
+		<magicLvl>1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>13403</npcId>
+				<npcCount>1</npcCount>
+				<despawnDelay>180000</despawnDelay>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17113" toLevel="1" name="Christmas Buff Set 2015">
 		<!-- AUTO GENERATED SKILL -->

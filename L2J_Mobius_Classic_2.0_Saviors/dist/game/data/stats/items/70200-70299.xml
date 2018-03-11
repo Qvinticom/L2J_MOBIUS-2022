@@ -426,25 +426,52 @@
 		<!-- When used, activates Prophecy of Fire - Lv. 1 for 5 minutes. <Note> The effect does not stack with Mango Juice, Cherry Juice, or any of the Prophecies. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_commissionable" val="false" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55329" level="1" />
+		</skills>
 	</item>
 	<item id="70234" name="Mango Juice" type="EtcItem">
 		<!-- When used, activates Prophecy of Water - Lv. 1 for 5 minutes. <Note> The effect does not stack with Strawberry Juice, Cherry Juice, or any of the Prophecies. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_commissionable" val="false" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55330" level="1" />
+		</skills>
 	</item>
 	<item id="70235" name="Cherry Juice" type="EtcItem">
 		<!-- When used, activates Prophecy of Wind - Lv. 1 for 5 minutes. <Note> The effect does not stack with Mango Juice, Strawberry Juice, or any of the Prophecies. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="reuse_delay" val="3000" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_commissionable" val="false" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55331" level="1" />
+		</skills>
 	</item>
 	<item id="70236" name="Scroll: 50 SP" additionalName="Event" type="EtcItem">
 		<!-- When used, adds 50 SP -->

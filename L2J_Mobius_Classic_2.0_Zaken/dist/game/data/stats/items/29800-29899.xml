@@ -265,6 +265,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="60000" />
+		<skills>
+			<skill id="39085" level="1"/> <!-- Special Pirate Fruit -->
+		</skills>
 	</item>
 	<item id="29818" name="Sigel’s Rune - Lv. 1" type="EtcItem">
 		<!-- A stone with a symbol of ancient Giants engraved. When put in the slot, the weapon is endowed with the Rune�s power. Only a top-rank blacksmith can do this. -->

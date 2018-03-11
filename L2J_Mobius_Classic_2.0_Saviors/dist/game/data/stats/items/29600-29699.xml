@@ -25,6 +25,17 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29511" min="1" max="1" chance="100" />
+			<item id="10650" min="30" max="30" chance="100" />
+			<item id="29648" min="30" max="30" chance="100" />
+			<item id="29651" min="50" max="50" chance="100" />
+			<item id="29653" min="30" max="30" chance="100" />
+			<item id="34603" min="5000" max="5000" chance="100" />
+			<item id="34610" min="3000" max="3000" chance="100" />
+			<item id="49036" min="30" max="30" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29602" name="Newbie Kit - Lvl 2" type="EtcItem">
 		<!-- Double-click on the item to get Normal Buff Scroll (30 pcs.), Newbie Kit - Lv. 3. Available at level 10 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -37,6 +48,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29512" min="1" max="1" chance="100" />
+			<item id="29654" min="30" max="30" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="10" />
+		</cond>
 	</item>
 	<item id="29603" name="Newbie Kit - Lvl 3" type="EtcItem">
 		<!-- Double-click on the item to get Package: Ticket: Temporary Weapon (D-grade), Mysterious Soulshot (D-grade, 9000 pcs.), Mysterious Blessed Spiritshot (D-grade, 2000 pcs.), Newbie Kit - Lv. 4. Available at level 20 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -49,6 +68,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29513" min="1" max="1" chance="100" />
+			<item id="29527" min="1" max="1" chance="100" />
+			<item id="34604" min="9000" max="9000" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="20" />
+		</cond>
 	</item>
 	<item id="29604" name="Newbie Kit - Lvl 4" type="EtcItem">
 		<!-- Double-click on the item to get Package: Magic Necklace Making, Mysterious Soulshot (D-grade, 9000 pcs.), Mysterious Blessed Spiritshot (D-grade, 2000 pcs.), Newbie Kit - Lv. 5. Available at level 25 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -61,6 +90,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29514" min="1" max="1" chance="100" />
+			<item id="29529" min="1" max="1" chance="100" />
+			<item id="34604" min="9000" max="9000" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="25" />
+		</cond>
 	</item>
 	<item id="29605" name="Newbie Kit - Lvl 5" type="EtcItem">
 		<!-- Double-click on the item to get Package: Tiger's Eye Making, Mysterious Soulshot (D-grade, 9000 pcs.), Mysterious Blessed Spiritshot (D-grade, 2000 pcs.), Newbie Kit - Lv. 6. Available at level 30 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -73,6 +112,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29515" min="1" max="1" chance="100" />
+			<item id="29530" min="1" max="1" chance="100" />
+			<item id="34604" min="9000" max="9000" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="30" />
+		</cond>
 	</item>
 	<item id="29606" name="Newbie Kit - Lvl 6" type="EtcItem">
 		<!-- Double-click on the item to get Scroll of Experience / SP (40%, 10 pcs.), Mysterious Soulshot (D-grade, 9000 pcs.), Mysterious Blessed Spiritshot (D-grade, 2000 pcs.), Newbie Kit - Lv. 7. Available at level 35 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -85,6 +134,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29516" min="1" max="1" chance="100" />
+			<item id="29649" min="10" max="10" chance="100" />
+			<item id="34604" min="9000" max="9000" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="35" />
+		</cond>
 	</item>
 	<item id="29607" name="Newbie Kit - Lvl 7" type="EtcItem">
 		<!-- Double-click on the item you may get Ticket: Temporary Weapon (C-grade). Available at level 40 or higher. Cannot be exchanged, dropped, sold in a shop. Can be stored in a private warehouse. -->
@@ -97,6 +156,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49573" min="1" max="1" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="40" />
+		</cond>
 	</item>
 	<item id="29608" name="Ticket: Temporary Weapon (D-grade)" type="EtcItem">
 		<!-- Dimensional Merchant can exchange that for D-grade weapon (30-day), which cannot be enchanted, dropped or exchanged. -->
@@ -753,6 +819,17 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29511" min="1" max="1" chance="100" />
+			<item id="10650" min="30" max="30" chance="100" />
+			<item id="29648" min="30" max="30" chance="100" />
+			<item id="29651" min="50" max="50" chance="100" />
+			<item id="29653" min="30" max="30" chance="100" />
+			<item id="34603" min="5000" max="5000" chance="100" />
+			<item id="34610" min="3000" max="3000" chance="100" />
+			<item id="49036" min="30" max="30" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29635" name="Newbie Kit - Lv. 2" type="EtcItem">
 		<!-- Double-click the item to get 1st Class Buff Scroll (30 pcs.), Newbie Kit - Lv.3. Available at level 10 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -765,6 +842,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29512" min="1" max="1" chance="100" />
+			<item id="29654" min="30" max="30" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="10" />
+		</cond>
 	</item>
 	<item id="29636" name="Newbie Kit - Lv. 3" type="EtcItem">
 		<!-- Double-click the item to get a Saber*Elven Sword (30-day), Mysterious D-grade Soulshot (9000 pcs.), Mysterious Blessed D-grade Spiritshot (2000 pcs.), Newbie Kit - Lv.4. Available at level 20 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -777,6 +862,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29513" min="1" max="1" chance="100" />
+			<item id="29527" min="1" max="1" chance="100" />
+			<item id="34604" min="9000" max="9000" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="20" />
+		</cond>
 	</item>
 	<item id="29637" name="Newbie Kit - Lv. 4" type="EtcItem">
 		<!-- Double-click the item to get Mysterious D-grade Soulshot (9000 pcs.), Mysterious Blessed D-grade Spiritshot (2000 pcs.), Newbie Kit - Lv.5. Available at level 25 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -789,6 +884,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29514" min="1" max="1" chance="100" />
+			<item id="29529" min="1" max="1" chance="100" />
+			<item id="34604" min="9000" max="9000" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="25" />
+		</cond>
 	</item>
 	<item id="29638" name="Newbie Kit - Lv. 5" type="EtcItem">
 		<!-- Double-click the item to get Mysterious D-grade Soulshot (9000 pcs.), Mysterious Blessed D-grade Spiritshot (2000 pcs.), Newbie Kit - Lv.6. Available at level 30 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -801,6 +906,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29515" min="1" max="1" chance="100" />
+			<item id="29530" min="1" max="1" chance="100" />
+			<item id="34604" min="9000" max="9000" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="30" />
+		</cond>
 	</item>
 	<item id="29639" name="Newbie Kit - Lv. 6" type="EtcItem">
 		<!-- Double-click the item to get XP/SP Scroll - Medium (20 pcs.), Mysterious D-grade Soulshot (9000 pcs.), Mysterious Blessed D-grade Spiritshot (2000 pcs.), Newbie Kit - Lv.7. Available at level 35 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -813,6 +928,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29516" min="1" max="1" chance="100" />
+			<item id="29649" min="10" max="10" chance="100" />
+			<item id="34604" min="9000" max="9000" chance="100" />
+			<item id="34611" min="2000" max="2000" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="35" />
+		</cond>
 	</item>
 	<item id="29640" name="Newbie Kit - Lv. 7" type="EtcItem">
 		<!-- Double-click the item to get 1 Black Samurai Long Sword*Black Samurai Long Sword (30-day). Available at level 40 or higher. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -825,6 +950,13 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49573" min="1" max="1" chance="100" />
+		</capsuled_items>
+		<cond msgId="113">
+			<player level="40" />
+		</cond>
 	</item>
 	<item id="29641" name="Mysterious No-grade Soulshot" additionalName="Not in Use" type="EtcItem">
 		<!-- A Soulshot temporarily increases attack power. Used with a No-grade weapon. -->
@@ -934,6 +1066,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -955,6 +1088,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -976,6 +1110,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1033,7 +1168,10 @@
 		<!-- Magic potion that increases Atk. Spd. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="500" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />

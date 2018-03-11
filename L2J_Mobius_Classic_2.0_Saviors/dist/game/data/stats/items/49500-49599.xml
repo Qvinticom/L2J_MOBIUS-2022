@@ -269,6 +269,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="60000" />
+		<skills>
+			<skill id="39144" level="1"/> <!-- Special Pirate Fruit -->
+		</skills>
 	</item>
 	<item id="49519" name="King Pirate's Treasure Chest" type="EtcItem">
 		<!-- Double-click on the chest to get one of Pirates' treasures. -->
@@ -333,6 +339,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55089" level="1"/>	<!--Rare Accessory Pack-->
+		</skills>
 	</item>
 	<item id="49526" name="Improved Scroll of Resurrection" type="EtcItem">
 		<!-- Magic scroll, used to resurrect a dead character, restoring 50% of XP. -->
@@ -492,6 +502,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39059" level="1"/> <!--Spellbook Chest -->
+		</skills>
 	</item>
 	<item id="49542" name="Improved Scroll of Resurrection" type="EtcItem">
 		<!-- Magic scroll, restoring 50% of XP and resurrecting the character. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->

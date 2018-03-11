@@ -585,9 +585,38 @@
 		</effects>
 	</skill>
 	<skill id="55043" toLevel="1" name="Rare Accessory Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skil55043</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29701</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100.0">
+						<item id="29575" count="1" />
+					</item>
+					<item chance="100.0">
+						<item id="29576" count="1" />
+					</item>
+					<item chance="100.0">
+						<item id="29577" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55044" toLevel="1" name="Lineage II Chest">
 		<icon>icon.skill55044</icon>
@@ -1808,7 +1837,7 @@
 		<icon>icon.skil55089</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>29578</itemConsumeId>
+		<itemConsumeId>49525</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1826,13 +1855,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100.0">
-						<item id="29575" count="1" />
+						<item id="49477" count="1" />
 					</item>
 					<item chance="100.0">
-						<item id="29576" count="1" />
+						<item id="49509" count="1" />
 					</item>
 					<item chance="100.0">
-						<item id="29577" count="1" />
+						<item id="49493" count="1" />
 					</item>
 				</items>
 			</effect>

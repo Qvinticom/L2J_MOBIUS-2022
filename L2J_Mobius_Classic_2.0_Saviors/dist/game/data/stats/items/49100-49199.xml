@@ -100,6 +100,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32012" level="1"/>
+		</skills>
 	</item>
 	<item id="49111" name="Dye Chest" type="EtcItem">
 		<!-- Double-click the chest to get one of the next items: Dye of STR / Dye of CON / Dye of DEX / Dye of INT / Dye of WIT / Dye of MEN. -->
@@ -107,6 +112,11 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="32013" level="1"/>
+		</skills>
 	</item>
 	<item id="49112" name="Staff Chest" additionalName="Grade C" type="EtcItem">
 		<!-- Double-click the chest to get one of the next items: Cursed Staff / Crystal Staff / Sage's Staff / Demon's Staff. -->

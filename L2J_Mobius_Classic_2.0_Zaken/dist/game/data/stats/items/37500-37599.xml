@@ -44,6 +44,13 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17110" level="1" /> <!-- Snowy Squash Nectar -->
+		</skills>
 	</item>
 	<item id="37544" name="Snowball" type="EtcItem">
 		<!-- Obtained from Squash. They say it brings good luck. Can be sold in any store or given to Aden Reconstruction Society. Will be deleted after event. -->
@@ -120,6 +127,13 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17111" level="1" /> <!-- Snowy Squash Seed -->
+		</skills>
 	</item>
 	<item id="37553" name="Large Snowy Squash Seed" type="EtcItem">
 		<!-- Double-click to spawn a Snowy Large Young Squash. Will be deleted after event. -->
@@ -127,5 +141,12 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_freightable" val="false" />
+		<skills>
+			<skill id="17112" level="1" /> <!-- Large Snowy Squash Seed -->
+		</skills>
 	</item>
 </list>

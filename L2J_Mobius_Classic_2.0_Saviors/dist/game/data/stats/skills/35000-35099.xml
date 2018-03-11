@@ -794,16 +794,16 @@
 		<isMagic>1</isMagic>
 		<magicLvl>-1</magicLvl>
 		<effects>
-			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>-3</amount>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>-3</amount>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>-3</amount>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ResistDDMagic">

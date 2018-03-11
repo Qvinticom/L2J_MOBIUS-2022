@@ -107,9 +107,19 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<!-- FIXME: This should be OTHERS -->
 		<targetType>OTHERS</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>12774</item>
+					<item>12777</item>
+					<item>13271</item>
+					<item>13275</item>
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="2006" toLevel="1" name="Scroll: Enchant Weapon (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
