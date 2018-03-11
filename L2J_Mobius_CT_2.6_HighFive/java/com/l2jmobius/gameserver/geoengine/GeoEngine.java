@@ -1120,12 +1120,11 @@ public class GeoEngine
 	 */
 	public final Location canMoveToTargetLoc(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
-		// Commented: Should be managed by MoveBackwardToLocation.
 		// Mobius: Double check for doors before normal checkMove to avoid exploiting key movement.
-		// if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instanceId, false))
-		// {
-		// return new GeoLocation(ox, oy, oz);
-		// }
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instanceId, false))
+		{
+			return new Location(ox, oy, oz);
+		}
 		
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
