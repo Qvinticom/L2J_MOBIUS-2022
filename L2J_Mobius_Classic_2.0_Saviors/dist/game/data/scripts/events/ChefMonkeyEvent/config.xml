@@ -18,7 +18,7 @@
 		<add npc="34292" x="117380" y="76684" z="-2672" heading="40961" /> <!-- Hunters Village -->
 	</spawnlist>
 	<messages>
-		<add type="onEnter" text="Chef Monkey Event will run!" />
-		<add type="onEnd" text="Chef Monkey Event will end!" />
+		<add type="onEnter" text="Chef Monkey Event active!" />
+		<add type="onEnd" text="Chef Monkey Event ends!" />
 	</messages>
 </event>
