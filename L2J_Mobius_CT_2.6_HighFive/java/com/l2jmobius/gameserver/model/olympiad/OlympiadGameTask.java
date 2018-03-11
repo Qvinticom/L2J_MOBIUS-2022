@@ -445,7 +445,7 @@ public final class OlympiadGameTask implements Runnable
 	 * Fifth stage: battle is running, returns true if winner found.
 	 * @return
 	 */
-	private final boolean checkBattle()
+	private boolean checkBattle()
 	{
 		try
 		{
@@ -462,20 +462,11 @@ public final class OlympiadGameTask implements Runnable
 	/**
 	 * Sixth stage: winner's validations
 	 */
-	private final void stopGame()
+	private void stopGame()
 	{
 		try
 		{
 			_game.validateWinner(_zone);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, e.getMessage(), e);
-		}
-		
-		try
-		{
-			_zone.updateZoneStatusForCharactersInside();
 		}
 		catch (Exception e)
 		{
@@ -490,13 +481,40 @@ public final class OlympiadGameTask implements Runnable
 		{
 			_log.log(Level.WARNING, e.getMessage(), e);
 		}
+		
+		try
+		{
+			_game.makePlayersInvul();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		
+		try
+		{
+			_zone.updateZoneStatusForCharactersInside();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
 	}
 	
 	/**
 	 * Seventh stage: game cleanup (port players back, closing doors, etc)
 	 */
-	private final void cleanupGame()
+	private void cleanupGame()
 	{
+		try
+		{
+			_game.removePlayersInvul();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		
 		try
 		{
 			_game.playersStatusBack();

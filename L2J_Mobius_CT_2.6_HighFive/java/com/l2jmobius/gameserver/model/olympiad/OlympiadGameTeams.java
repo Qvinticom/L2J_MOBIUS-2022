@@ -1094,4 +1094,42 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		
 		return true;
 	}
+	
+	@Override
+	protected void makePlayersInvul()
+	{
+		for (Participant participant : _teamOne)
+		{
+			if (participant.getPlayer() != null)
+			{
+				participant.getPlayer().setIsInvul(true);
+			}
+		}
+		for (Participant participant : _teamTwo)
+		{
+			if (participant.getPlayer() != null)
+			{
+				participant.getPlayer().setIsInvul(true);
+			}
+		}
+	}
+	
+	@Override
+	protected void removePlayersInvul()
+	{
+		for (Participant participant : _teamOne)
+		{
+			if (participant.getPlayer() != null)
+			{
+				participant.getPlayer().setIsInvul(false);
+			}
+		}
+		for (Participant participant : _teamTwo)
+		{
+			if (participant.getPlayer() != null)
+			{
+				participant.getPlayer().setIsInvul(false);
+			}
+		}
+	}
 }

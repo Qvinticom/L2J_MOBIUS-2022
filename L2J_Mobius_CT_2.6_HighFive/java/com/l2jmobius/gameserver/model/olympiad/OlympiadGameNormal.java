@@ -807,4 +807,30 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			}
 		}
 	}
+	
+	@Override
+	public final void makePlayersInvul()
+	{
+		if (_playerOne.getPlayer() != null)
+		{
+			_playerOne.getPlayer().setIsInvul(true);
+		}
+		if (_playerTwo.getPlayer() != null)
+		{
+			_playerTwo.getPlayer().setIsInvul(true);
+		}
+	}
+	
+	@Override
+	public final void removePlayersInvul()
+	{
+		if (_playerOne.getPlayer() != null)
+		{
+			_playerOne.getPlayer().setIsInvul(false);
+		}
+		if (_playerTwo.getPlayer() != null)
+		{
+			_playerTwo.getPlayer().setIsInvul(false);
+		}
+	}
 }

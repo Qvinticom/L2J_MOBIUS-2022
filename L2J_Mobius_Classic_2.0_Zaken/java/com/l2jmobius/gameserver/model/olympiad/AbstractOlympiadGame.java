@@ -487,4 +487,8 @@ public abstract class AbstractOlympiadGame
 	protected abstract void healPlayers();
 	
 	protected abstract void untransformPlayers();
+	
+	protected abstract void makePlayersInvul();
+	
+	protected abstract void removePlayersInvul();
 }

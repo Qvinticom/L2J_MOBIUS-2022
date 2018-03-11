@@ -333,6 +333,9 @@ public abstract class AbstractOlympiadGame
 			player.setCurrentHp(player.getMaxHp());
 			player.setCurrentMp(player.getMaxMp());
 			player.getStatus().startHpMpRegeneration();
+			
+			// Add invul state.
+			player.setIsInvul(true);
 		}
 		catch (Exception e)
 		{
@@ -379,6 +382,9 @@ public abstract class AbstractOlympiadGame
 			player.setCurrentHp(player.getMaxHp());
 			player.setCurrentMp(player.getMaxMp());
 			player.getStatus().startHpMpRegeneration();
+			
+			// Remove invul state.
+			player.setIsInvul(false);
 			
 			if (Config.L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
 			{
@@ -492,4 +498,8 @@ public abstract class AbstractOlympiadGame
 	protected abstract int[][] getReward();
 	
 	protected abstract String getWeeklyMatchType();
+	
+	protected abstract void makePlayersInvul();
+	
+	protected abstract void removePlayersInvul();
 }

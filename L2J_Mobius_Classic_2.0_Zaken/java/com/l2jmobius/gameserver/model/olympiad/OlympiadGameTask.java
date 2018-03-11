@@ -485,7 +485,7 @@ public final class OlympiadGameTask implements Runnable
 		
 		try
 		{
-			_stadium.updateZoneStatusForCharactersInside();
+			_game.cleanEffects();
 		}
 		catch (Exception e)
 		{
@@ -494,7 +494,16 @@ public final class OlympiadGameTask implements Runnable
 		
 		try
 		{
-			_game.cleanEffects();
+			_game.makePlayersInvul();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		
+		try
+		{
+			_stadium.updateZoneStatusForCharactersInside();
 		}
 		catch (Exception e)
 		{
@@ -507,6 +516,15 @@ public final class OlympiadGameTask implements Runnable
 	 */
 	private void cleanupGame()
 	{
+		try
+		{
+			_game.removePlayersInvul();
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, e.getMessage(), e);
+		}
+		
 		try
 		{
 			_game.playersStatusBack();
