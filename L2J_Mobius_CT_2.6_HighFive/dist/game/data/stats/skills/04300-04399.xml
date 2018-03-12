@@ -569,7 +569,7 @@
 		</for>
 	</skill>
 	<skill id="4338" levels="1" name="Life Cubic for Beginners">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Confirmed -->
 		<!-- Newbie Guide Buff -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -577,7 +577,7 @@
 		<set name="magicLvl" val="18" />
 		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="SummonCubic">
 				<param cubicId="3" cubicDelay="13" cubicDuration="3600" cubicMaxCount="20" />
