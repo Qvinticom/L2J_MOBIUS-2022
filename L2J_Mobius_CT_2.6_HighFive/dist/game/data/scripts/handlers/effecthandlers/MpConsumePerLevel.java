@@ -17,6 +17,7 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -39,20 +40,20 @@ public final class MpConsumePerLevel extends AbstractEffect
 	@Override
 	public boolean onActionTime(BuffInfo info)
 	{
-		if (info.getEffected().isDead())
+		final L2Character target = info.getEffected();
+		if (target.isDead())
 		{
 			return false;
 		}
 		
-		final double base = _power * getTicksMultiplier();
-		final double consume = (info.getAbnormalTime() > 0) ? ((info.getEffected().getLevel() - 1) / 7.5) * base * info.getAbnormalTime() : base;
-		if (consume > info.getEffected().getCurrentMp())
+		final double consume = _power * getTicksMultiplier() * ((target.getLevel() - 1) / 7.5);
+		if (consume > target.getCurrentMp())
 		{
-			info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
+			target.sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
 			return false;
 		}
 		
-		info.getEffected().reduceCurrentMp(consume);
+		target.reduceCurrentMp(consume);
 		return info.getSkill().isToggle();
 	}
 }
