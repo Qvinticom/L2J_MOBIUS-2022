@@ -21,7 +21,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25736" level="90" type="L2Monster" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25736" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -42,7 +42,7 @@
 			<height normal="120" />
 		</collision>
 	</npc>
-	<npc id="25737" level="90" type="L2Monster" name="Giant Golden Pig" title="Raid Boss">
+	<npc id="25737" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -62,6 +62,251 @@
 			<radius normal="77" />
 			<height normal="120" />
 		</collision>
+	</npc>
+	<npc id="25738" level="75" type="L2RaidBoss" name="Queen Ant Drone Priest">
+		<!-- Source: www.l2wiki.com -->
+		<race>BUG</race>
+		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015.6" mpRegen="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="537.3333333333333" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="7122" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+		</skill_list>
+		<collision>
+			<radius normal="35" />
+			<height normal="77.5" />
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6323" min="1" max="1" chance="24.39" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="24.27" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="1" chance="22.49" /> <!-- Sealed Phoenix Ring -->
+				<item id="5305" min="1" max="1" chance="1.9275" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="1.9215" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5295" min="1" max="1" chance="1.885" /> <!-- Sealed Tallum Gloves -->
+				<item id="5288" min="1" max="1" chance="1.8705" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5289" min="1" max="1" chance="1.8685" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5304" min="1" max="1" chance="1.8685" /> <!-- Sealed Tallum Tunic -->
+				<item id="5287" min="1" max="1" chance="1.864" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5290" min="1" max="1" chance="1.8585" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5301" min="1" max="1" chance="1.8545" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5293" min="1" max="1" chance="1.8445" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5296" min="1" max="1" chance="1.841" /> <!-- Sealed Tallum Boots -->
+				<item id="5298" min="1" max="1" chance="1.825" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5292" min="1" max="1" chance="1.8185" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5291" min="1" max="1" chance="1.816" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5297" min="1" max="1" chance="1.816" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5294" min="1" max="1" chance="1.8085" /> <!-- Sealed Tallum Helmet -->
+				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
+				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
+				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
+				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
+				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
+				<item id="6660" min="1" max="1" chance="0.03" /> <!-- Queen Ant's Ring -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</drop_lists>
+	</npc>
+	<npc id="25739" level="75" type="L2RaidBoss" name="Angel Priest of Baium">
+		<!-- Source: www.l2wiki.com -->
+		<race>DIVINE</race>
+		<equipment rhand="98" />
+		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015.6" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="537.3333333333333" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="7123" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="8" /> <!-- Angel -->
+		</skill_list>
+		<collision>
+			<radius normal="22" />
+			<height normal="120" />
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6325" min="1" max="1" chance="23.86" /> <!-- Sealed Phoenix Ring -->
+				<item id="6324" min="1" max="1" chance="22.52" /> <!-- Sealed Phoenix Earring -->
+				<item id="6323" min="1" max="1" chance="22.2" /> <!-- Sealed Phoenix Necklace -->
+				<item id="5294" min="1" max="1" chance="1.933" /> <!-- Sealed Tallum Helmet -->
+				<item id="5288" min="1" max="1" chance="1.9295" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5289" min="1" max="1" chance="1.9155" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5293" min="1" max="1" chance="1.9115" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5304" min="1" max="1" chance="1.9075" /> <!-- Sealed Tallum Tunic -->
+				<item id="5298" min="1" max="1" chance="1.9055" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5290" min="1" max="1" chance="1.8795" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5301" min="1" max="1" chance="1.8705" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="1" chance="1.8685" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5296" min="1" max="1" chance="1.8665" /> <!-- Sealed Tallum Boots -->
+				<item id="5292" min="1" max="1" chance="1.8625" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5305" min="1" max="1" chance="1.8525" /> <!-- Sealed Tallum Stockings -->
+				<item id="5297" min="1" max="1" chance="1.8305" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5287" min="1" max="1" chance="1.8305" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5291" min="1" max="1" chance="1.8185" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="1.8045" /> <!-- Sealed Tallum Gloves -->
+				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
+				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
+				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
+				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
+				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
+				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
+				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
+				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
+				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
+				<item id="49580" min="1" max="1" chance="0.03" /> <!-- Baium's Ring -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</drop_lists>
+	</npc>
+	<npc id="25742" level="75" type="L2RaidBoss" name="Priest of Core Decar">
+		<!-- Source: www.l2wiki.com -->
+		<race>GIANT</race>
+		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015.6" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="140" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="537.3333333333333" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="7124" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+		</skill_list>
+		<collision>
+			<radius normal="90" />
+			<height normal="81.6" />
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6323" min="1" max="1" chance="24.28" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="24.27" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="1" chance="23.96" /> <!-- Sealed Phoenix Ring -->
+				<item id="5298" min="1" max="1" chance="1.9375" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5289" min="1" max="1" chance="1.934" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5301" min="1" max="1" chance="1.9235" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5292" min="1" max="1" chance="1.9055" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5287" min="1" max="1" chance="1.9035" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5291" min="1" max="1" chance="1.8975" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5293" min="1" max="1" chance="1.893" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5305" min="1" max="1" chance="1.8835" /> <!-- Sealed Tallum Stockings -->
+				<item id="5296" min="1" max="1" chance="1.875" /> <!-- Sealed Tallum Boots -->
+				<item id="5297" min="1" max="1" chance="1.865" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5308" min="1" max="1" chance="1.8605" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5290" min="1" max="1" chance="1.856" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5294" min="1" max="1" chance="1.8545" /> <!-- Sealed Tallum Helmet -->
+				<item id="5304" min="1" max="1" chance="1.841" /> <!-- Sealed Tallum Tunic -->
+				<item id="5295" min="1" max="1" chance="1.84" /> <!-- Sealed Tallum Gloves -->
+				<item id="5288" min="1" max="1" chance="1.8345" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
+				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
+				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
+				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
+				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
+				<item id="6662" min="1" max="1" chance="0.03" /> <!-- Ring of Core -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</drop_lists>
+	</npc>
+	<npc id="25743" level="75" type="L2RaidBoss" name="Priest Orfen Lord Ipos">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015.6" mpRegen="3" />
+			<speed>
+				<walk ground="90" />
+				<run ground="140" />
+			</speed>
+			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
+			<defence physical="925.6666666666667" magical="537.3333333333333" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="7125" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skill_list>
+		<collision>
+			<radius normal="56" />
+			<height normal="76.1" />
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6325" min="1" max="1" chance="23.36" /> <!-- Sealed Phoenix Ring -->
+				<item id="6323" min="1" max="1" chance="22.75" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="1" chance="22.63" /> <!-- Sealed Phoenix Earring -->
+				<item id="5288" min="1" max="1" chance="1.9375" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5296" min="1" max="1" chance="1.933" /> <!-- Sealed Tallum Boots -->
+				<item id="5295" min="1" max="1" chance="1.9215" /> <!-- Sealed Tallum Gloves -->
+				<item id="5297" min="1" max="1" chance="1.893" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5293" min="1" max="1" chance="1.886" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5308" min="1" max="1" chance="1.872" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5294" min="1" max="1" chance="1.8705" /> <!-- Sealed Tallum Helmet -->
+				<item id="5305" min="1" max="1" chance="1.8625" /> <!-- Sealed Tallum Stockings -->
+				<item id="5290" min="1" max="1" chance="1.8605" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5289" min="1" max="1" chance="1.8545" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5304" min="1" max="1" chance="1.8505" /> <!-- Sealed Tallum Tunic -->
+				<item id="5298" min="1" max="1" chance="1.8465" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5292" min="1" max="1" chance="1.841" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5287" min="1" max="1" chance="1.8305" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5301" min="1" max="1" chance="1.8225" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5291" min="1" max="1" chance="1.816" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
+				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
+				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
+				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
+				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
+				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
+				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
+				<item id="6661" min="1" max="1" chance="0.03" /> <!-- Orfen's Earring -->
+				<item id="70000" min="17" max="51" chance="100" /> <!-- Sealed Rune - Stage 1 -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="25744" level="55" type="L2RaidBoss" name="Zombie Lord Dorkhon" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
