@@ -156,7 +156,7 @@ public class DoppelgangerInstance extends L2Npc
 				sm.addNpcName(this);
 				sm.addString(target.getName());
 				sm.addInt(damage);
-				sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
+				// sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
 			}
 			
 			sendPacket(sm);

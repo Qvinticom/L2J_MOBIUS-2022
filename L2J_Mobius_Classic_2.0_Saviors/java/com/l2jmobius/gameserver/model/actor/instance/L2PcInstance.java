@@ -11504,7 +11504,7 @@ public final class L2PcInstance extends L2Playable
 			sm.addPcName(this);
 			sm.addString(target.getName());
 			sm.addInt(damage);
-			sm.addPopup(target.getObjectId(), getObjectId(), -damage);
+			// sm.addPopup(target.getObjectId(), getObjectId(), -damage);
 		}
 		sendPacket(sm);
 	}
