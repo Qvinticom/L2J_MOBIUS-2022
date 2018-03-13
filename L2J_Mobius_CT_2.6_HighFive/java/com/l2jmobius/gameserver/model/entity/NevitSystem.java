@@ -80,11 +80,11 @@ public class NevitSystem implements IUniqueId
 		
 		if ((percent >= 45) && (percent < 50))
 		{
-			_player.sendPacket(SystemMessageId.YOUR_BIRTHDAY_GIFT_HAS_ARRIVED_YOU_CAN_OBTAIN_IT_FROM_THE_GATEKEEPER_IN_ANY_VILLAGE);
+			_player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
 		}
 		else if ((percent >= 50) && (percent < 75))
 		{
-			_player.sendPacket(SystemMessageId.YOU_ARE_FURTHER_INFUSED_WITH_THE_BLESSINGS_OF_NEVIT);
+			_player.sendPacket(SystemMessageId.YOU_ARE_FURTHER_INFUSED_WITH_THE_BLESSINGS_OF_NEVIT_CONTINUE_TO_BATTLE_EVIL_WHEREVER_IT_MAY_LURK);
 		}
 		else if (percent >= 75)
 		{
@@ -126,12 +126,12 @@ public class NevitSystem implements IUniqueId
 			}
 			case 50:
 			{
-				getPlayer().sendPacket(SystemMessageId.YOU_ARE_FURTHER_INFUSED_WITH_THE_BLESSINGS_OF_NEVIT);
+				getPlayer().sendPacket(SystemMessageId.YOU_ARE_FURTHER_INFUSED_WITH_THE_BLESSINGS_OF_NEVIT_CONTINUE_TO_BATTLE_EVIL_WHEREVER_IT_MAY_LURK);
 				break;
 			}
 			case 75:
 			{
-				getPlayer().sendPacket(SystemMessageId.NEVIT_S_ADVENT_BLESSING_SHINES_STRONGLY_FROM_ABOVE);
+				getPlayer().sendPacket(SystemMessageId.NEVIT_S_ADVENT_BLESSING_SHINES_STRONGLY_FROM_ABOVE_YOU_CAN_ALMOST_SEE_HIS_DIVINE_AURA);
 				break;
 			}
 		}
@@ -201,7 +201,7 @@ public class NevitSystem implements IUniqueId
 		{
 			getPlayer().getVariables().set("nevit_b", time);
 			getPlayer().sendPacket(new ExNevitAdventEffect(time));
-			getPlayer().sendPacket(SystemMessageId.NEVIT_HAS_BLESSED_YOU_FROM_ABOVE);
+			getPlayer().sendPacket(SystemMessageId.THE_ANGEL_NEVIT_HAS_BLESSED_YOU_FROM_ABOVE_YOU_ARE_IMBUED_WITH_FULL_VITALITY_AS_WELL_AS_A_VITALITY_REPLENISHING_EFFECT_AND_SHOULD_YOU_DIE_YOU_WILL_NOT_LOSE_EXP);
 			getPlayer().startAbnormalVisualEffect(true, AbnormalVisualEffect.NAVIT_ADVENT);
 			_nevitEffectTask = ThreadPoolManager.schedule(new NevitEffectEnd(), time * 1000L);
 		}

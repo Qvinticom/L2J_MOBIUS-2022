@@ -83,8 +83,8 @@ public final class TaintedDimension extends AbstractInstance
 	{
 		NpcStringId.UH_AH_AH_AH_AH,
 		NpcStringId.AH_UH_AH_UH_AH,
-		NpcStringId.KRRRR2,
-		NpcStringId.AH_AH_AH_UH_UH3,
+		NpcStringId.KRRRR_2,
+		NpcStringId.AH_AH_AH_UH_UH_3,
 	};
 	private static final int TEMPLATE_ID = 192;
 	

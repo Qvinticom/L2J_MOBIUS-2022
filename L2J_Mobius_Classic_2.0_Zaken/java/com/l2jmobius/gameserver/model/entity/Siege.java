@@ -1147,7 +1147,7 @@ public class Siege implements Siegable
 		}
 		else if ((player.getClan() == null) || (player.getClan().getLevel() < SiegeManager.getInstance().getSiegeClanMinLevel()))
 		{
-			player.sendPacket(SystemMessageId.ONLY_CLANS_OF_LEVEL_5_OR_ABOVE_MAY_REGISTER_FOR_A_CASTLE_SIEGE);
+			player.sendPacket(SystemMessageId.ONLY_CLANS_OF_LEVEL_3_OR_ABOVE_MAY_REGISTER_FOR_A_CASTLE_SIEGE);
 		}
 		else if (player.getClan().getId() == getCastle().getOwnerId())
 		{

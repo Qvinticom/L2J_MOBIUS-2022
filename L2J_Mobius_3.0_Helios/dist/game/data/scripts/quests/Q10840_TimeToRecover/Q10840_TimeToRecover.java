@@ -168,7 +168,7 @@ public final class Q10840_TimeToRecover extends Quest
 			if (killCount > 0)
 			{
 				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_EMBRYO3, killCount));
+				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_EMBRYO_3, killCount));
 				return holder;
 			}
 		}

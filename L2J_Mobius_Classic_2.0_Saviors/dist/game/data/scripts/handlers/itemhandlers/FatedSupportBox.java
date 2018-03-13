@@ -59,7 +59,7 @@ public class FatedSupportBox implements IItemHandler
 		
 		if (!player.isInventoryUnder80(false))
 		{
-			player.sendPacket(SystemMessageId.YOU_VE_EXCEEDED_THE_LIMIT_AND_CANNOT_RETRIEVE_THE_ITEM_PLEASE_CHECK_YOUR_LIMIT_IN_THE_INVENTORY);
+			player.sendPacket(SystemMessageId.EMPTY_458);
 			return false;
 		}
 		

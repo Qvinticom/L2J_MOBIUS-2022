@@ -82,7 +82,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 					{
 						activeChar.sendMessage("  Don't exist in the world.");
 					}
-					activeChar.sendPacket(SystemMessageId.EMPTY3);
+					activeChar.sendPacket(SystemMessageId.EMPTY_3);
 				}
 			}
 			else

@@ -118,7 +118,7 @@ public class EnemyOnly implements ITargetTypeHandler
 			{
 				if (sendMessage)
 				{
-					activeChar.sendPacket(SystemMessageId.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE);
+					activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_SKILLS_THAT_MAY_HARM_OTHER_PLAYERS_IN_THIS_AREA);
 				}
 				
 				return null;

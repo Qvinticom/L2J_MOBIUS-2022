@@ -152,7 +152,7 @@ public class DoppelgangerInstance extends L2Npc
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
 				sm.addNpcName(this);
 				sm.addString(target.getName());
 				sm.addInt(damage);

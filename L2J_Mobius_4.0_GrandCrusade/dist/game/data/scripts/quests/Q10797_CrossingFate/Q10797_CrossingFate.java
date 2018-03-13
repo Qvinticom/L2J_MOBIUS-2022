@@ -172,7 +172,7 @@ public class Q10797_CrossingFate extends Quest
 			if (killCount > 0)
 			{
 				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_BEASTS_OF_THE_VALLEY4, killCount));
+				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_BEASTS_OF_THE_VALLEY_4, killCount));
 				return holder;
 			}
 		}

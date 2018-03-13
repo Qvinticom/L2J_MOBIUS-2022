@@ -69,7 +69,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		{
 			try
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT2);
+				activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT_2);
 				activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
 			}
 			catch (Exception e)

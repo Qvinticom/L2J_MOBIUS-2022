@@ -983,7 +983,7 @@ public class L2CharacterAI extends AbstractAI
 			{
 				if (_actor.checkTransformed(transform -> !transform.isCombat()))
 				{
-					_actor.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+					_actor.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 					_actor.sendPacket(ActionFailed.STATIC_PACKET);
 					return true;
 				}

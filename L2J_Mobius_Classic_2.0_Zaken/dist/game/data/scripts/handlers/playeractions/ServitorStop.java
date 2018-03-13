@@ -40,7 +40,7 @@ public final class ServitorStop implements IPlayerActionHandler
 		{
 			if (s.isBetrayed())
 			{
-				activeChar.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+				activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 				return;
 			}
 			

@@ -169,7 +169,7 @@ public class Q10799_StrangeThingsAfootInTheValley extends Quest
 			if (killCount > 0)
 			{
 				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_IN_THE_DRAGON_VALLEY, killCount));
+				holder.add(new NpcLogListHolder(NpcStringId.SUBJUGATION_IN_THE_NORTHERN_DRAGON_VALLEY_2, killCount));
 				return holder;
 			}
 		}

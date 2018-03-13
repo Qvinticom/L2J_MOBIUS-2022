@@ -149,14 +149,14 @@ public final class Q10734_DoOrDie extends Quest
 								}
 								case 3:
 								{
-									showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
+									showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
 									qs.setCond(5, true);
 									htmltext = "33943-05.html";
 									break;
 								}
 								case 5:
 								{
-									showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
+									showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
 									htmltext = "33943-06.html";
 									break;
 								}
@@ -202,14 +202,14 @@ public final class Q10734_DoOrDie extends Quest
 								}
 								case 2:
 								{
-									showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
+									showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
 									qs.setCond(4, true);
 									htmltext = "33942-05.html";
 									break;
 								}
 								case 4:
 								{
-									showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
+									showOnScreenMsg(player, NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, ExShowScreenMessage.TOP_CENTER, 10000);
 									htmltext = "33942-06.html";
 									break;
 								}

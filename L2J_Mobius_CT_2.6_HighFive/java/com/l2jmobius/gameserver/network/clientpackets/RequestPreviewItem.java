@@ -66,7 +66,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		{
 			try
 			{
-				activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT2);
+				activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT_2);
 				activeChar.sendPacket(new UserInfo(activeChar));
 			}
 			catch (Exception e)

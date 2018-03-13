@@ -214,7 +214,7 @@ public class OlympiadManager
 				
 				if (Olympiad.getInstance().getRemainingWeeklyMatchesClassed(charId) < 1)
 				{
-					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_30_FREE_FOR_ALL_BATTLES_AND_30_CLASS_SPECIFIC_BATTLES_PER_WEEK);
+					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_50_FREE_FOR_ALL_BATTLES_AND_50_CLASS_SPECIFIC_BATTLES_PER_WEEK);
 					return false;
 				}
 				
@@ -241,7 +241,7 @@ public class OlympiadManager
 				
 				if (Olympiad.getInstance().getRemainingWeeklyMatchesNonClassed(charId) < 1)
 				{
-					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_30_FREE_FOR_ALL_BATTLES_AND_30_CLASS_SPECIFIC_BATTLES_PER_WEEK);
+					player.sendPacket(SystemMessageId.YOU_CAN_ENTER_UP_TO_50_FREE_FOR_ALL_BATTLES_AND_50_CLASS_SPECIFIC_BATTLES_PER_WEEK);
 					return false;
 				}
 				

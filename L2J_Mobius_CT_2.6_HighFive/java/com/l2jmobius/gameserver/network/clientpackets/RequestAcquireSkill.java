@@ -514,7 +514,7 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 	private void giveSkill(L2PcInstance player, L2Npc trainer, Skill skill)
 	{
 		// Send message.
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S12);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_2);
 		sm.addSkillName(skill);
 		player.sendPacket(sm);
 		

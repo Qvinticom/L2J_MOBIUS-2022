@@ -94,10 +94,10 @@ public final class RequestAllyInfo extends L2GameClientPacket
 				sm.addInt(aci.getTotal());
 				activeChar.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_INFO_SEPARATOR);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_4);
 			}
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_INFO_FOOT);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_5);
 			activeChar.sendPacket(sm);
 		}
 		else

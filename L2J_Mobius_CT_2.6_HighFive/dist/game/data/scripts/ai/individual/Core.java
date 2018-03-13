@@ -186,7 +186,7 @@ public final class Core extends AbstractNpcAI
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, objId, npc.getX(), npc.getY(), npc.getZ()));
 			npc.broadcastPacket(new NpcSay(objId, ChatType.NPC_GENERAL, npc.getId(), NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
 			npc.broadcastPacket(new NpcSay(objId, ChatType.NPC_GENERAL, npc.getId(), NpcStringId.SYSTEM_IS_BEING_SHUT_DOWN));
-			npc.broadcastPacket(new NpcSay(objId, ChatType.NPC_GENERAL, npc.getId(), NpcStringId.DOT_DOT_DOT_DOT_DOT_DOT));
+			npc.broadcastPacket(new NpcSay(objId, ChatType.NPC_GENERAL, npc.getId(), NpcStringId.EMPTY));
 			_firstAttacked = false;
 			
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);

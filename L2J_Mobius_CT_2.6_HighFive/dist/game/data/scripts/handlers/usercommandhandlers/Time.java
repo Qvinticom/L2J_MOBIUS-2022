@@ -61,7 +61,7 @@ public class Time implements IUserCommandHandler
 		SystemMessage sm;
 		if (GameTimeController.getInstance().isNight())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_TIME_IS_S1_S22);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_TIME_IS_S1_S2_2);
 			sm.addString(h);
 			sm.addString(m);
 		}

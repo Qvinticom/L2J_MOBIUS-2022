@@ -411,52 +411,52 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					{
 						case 0:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING41);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.FIFTY_SECONDS_ARE_REMAINING);
 							break;
 						}
 						case 1:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING42);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.FOURTY_SECONDS_ARE_REMAINING_2);
 							break;
 						}
 						case 2:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING43);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THIRTY_SECONDS_ARE_REMAINING_2);
 							break;
 						}
 						case 3:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING44);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.TWENTY_SECONDS_ARE_REMAINING_2);
 							break;
 						}
 						case 4:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING45);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.TEN_SECONDS_ARE_REMAINING_2);
 							break;
 						}
 						case 5:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.FIVE_SECONDS);
 							break;
 						}
 						case 6:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS2);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.FOUR_SECONDS);
 							break;
 						}
 						case 7:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS3);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THREE_SECONDS);
 							break;
 						}
 						case 8:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS4);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.TWO_SECONDS);
 							break;
 						}
 						case 9:
 						{
-							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECOND);
+							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.ONE_SECOND);
 							break;
 						}
 					}

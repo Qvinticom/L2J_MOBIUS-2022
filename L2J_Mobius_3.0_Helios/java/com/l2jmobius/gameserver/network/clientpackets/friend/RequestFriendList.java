@@ -81,6 +81,6 @@ public final class RequestFriendList implements IClientIncomingPacket
 		}
 		
 		// =========================
-		activeChar.sendPacket(SystemMessageId.EMPTY3);
+		activeChar.sendPacket(SystemMessageId.EMPTY_3);
 	}
 }

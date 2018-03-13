@@ -161,8 +161,8 @@ public final class MemoryOfDisaster extends AbstractInstance
 	{
 		NpcStringId.BRONK,
 		NpcStringId.CHIEF,
-		NpcStringId.BRONK2,
-		NpcStringId.NO_WAY3
+		NpcStringId.BRONK_2,
+		NpcStringId.NO_WAY_3
 	};
 	private static final NpcStringId[] SHOUT_RUN =
 	{
@@ -176,8 +176,8 @@ public final class MemoryOfDisaster extends AbstractInstance
 	{
 		NpcStringId.SILVERA,
 		NpcStringId.WE_CAN_T_TAKE_ANY_MORE_LOSSES,
-		NpcStringId.TOO_LATE3,
-		NpcStringId.NO_WAY4,
+		NpcStringId.TOO_LATE_3,
+		NpcStringId.NO_WAY_4,
 		NpcStringId.ANOTHER_ONE_OVER_THERE
 	};
 	private static final NpcStringId[] SACRIFICED_DARK_ELF_SUICIDE_MESSAGES =
@@ -747,7 +747,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			}
 			case WIRPHY:
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HELP_ME3);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HELP_ME_3);
 				npc.getInstanceWorld().getAliveNpcs(TEREDOR).stream().filter(n -> n.isScriptValue(2)).forEach(n -> addAttackDesire(n, npc));
 				break;
 			}
@@ -863,7 +863,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 					}
 					case WIRPHY:
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NO_WAY2);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NO_WAY_2);
 						npc.doDie(null);
 						attacker.doAutoAttack(world.getNpc(SILVERA));
 						break;
@@ -889,7 +889,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			{
 				if (dwarf.getId() == ROGIN)
 				{
-					dwarf.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.CHIEF2);
+					dwarf.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.CHIEF_2);
 				}
 				else
 				{

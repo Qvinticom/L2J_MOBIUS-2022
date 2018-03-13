@@ -192,7 +192,7 @@ public final class KartiaHelperBarton extends AbstractNpcAI
 				{
 					if ((skill_02 != null) && SkillCaster.checkUseConditions(npc, skill_02.getSkill()))
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE3);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE_3);
 						npc.doCast(skill_02.getSkill(), null, true, false);
 					}
 					break;

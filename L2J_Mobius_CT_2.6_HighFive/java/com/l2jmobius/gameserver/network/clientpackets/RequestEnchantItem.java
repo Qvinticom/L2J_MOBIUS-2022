@@ -129,7 +129,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 		scroll = activeChar.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, activeChar, item);
 		if (scroll == null)
 		{
-			activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+			activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
 			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
 			activeChar.sendPacket(new EnchantResult(2, 0, 0));
@@ -142,7 +142,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 			support = activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item);
 			if (support == null)
 			{
-				activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
 				activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
 				activeChar.sendPacket(new EnchantResult(2, 0, 0));
@@ -233,7 +233,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 					if (scrollTemplate.isSafe())
 					{
 						// safe enchant - remain old value
-						activeChar.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
+						activeChar.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_LEVEL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
 						activeChar.sendPacket(new EnchantResult(5, 0, 0));
 						
 						if (Config.LOG_ITEM_ENCHANTS)

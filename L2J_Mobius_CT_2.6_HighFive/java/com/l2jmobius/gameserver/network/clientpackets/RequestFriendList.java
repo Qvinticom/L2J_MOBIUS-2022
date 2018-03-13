@@ -79,6 +79,6 @@ public final class RequestFriendList extends L2GameClientPacket
 		}
 		
 		// =========================
-		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
+		activeChar.sendPacket(SystemMessageId.EMPTY_3);
 	}
 }

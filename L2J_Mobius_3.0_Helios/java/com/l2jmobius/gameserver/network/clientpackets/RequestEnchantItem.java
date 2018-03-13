@@ -137,7 +137,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 		// attempting to destroy scroll
 		if (activeChar.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, activeChar, item) == null)
 		{
-			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+			client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
 			activeChar.removeRequest(request.getClass());
 			client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
@@ -149,7 +149,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 		{
 			if (activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item) == null)
 			{
-				client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
 				activeChar.removeRequest(request.getClass());
 				client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
@@ -268,7 +268,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 					if (scrollTemplate.isSafe())
 					{
 						// safe enchant - remain old value
-						client.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_SKILL_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
+						client.sendPacket(SystemMessageId.ENCHANT_FAILED_THE_ENCHANT_VALUE_FOR_THE_CORRESPONDING_ITEM_WILL_BE_EXACTLY_RETAINED);
 						client.sendPacket(new EnchantResult(EnchantResult.SAFE_FAIL, item));
 						
 						if (Config.LOG_ITEM_ENCHANTS)

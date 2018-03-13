@@ -50,6 +50,7 @@ Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Various retail Classic events
 
 Zaken: https://eu.4game.com/lineage2classic/play/zaken/
+-Parsed new system messages and npc strings from client.
 -Parsed new skills from client
 -Parsed new items from client
 -Parsed new NPCs from L2Wiki

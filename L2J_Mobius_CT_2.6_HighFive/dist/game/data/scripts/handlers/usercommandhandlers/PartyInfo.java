@@ -82,7 +82,7 @@ public class PartyInfo implements IUserCommandHandler
 			}
 			activeChar.sendMessage("Members: " + party.getMemberCount() + "/9"); // TODO: Custom?
 		}
-		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
+		activeChar.sendPacket(SystemMessageId.EMPTY_3);
 		return true;
 	}
 	

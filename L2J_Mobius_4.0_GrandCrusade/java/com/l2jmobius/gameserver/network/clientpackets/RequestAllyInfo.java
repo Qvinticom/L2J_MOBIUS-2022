@@ -96,10 +96,10 @@ public final class RequestAllyInfo implements IClientIncomingPacket
 				sm.addInt(aci.getTotal());
 				client.sendPacket(sm);
 				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY4);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_4);
 			}
 			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY5);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_5);
 			client.sendPacket(sm);
 		}
 		else

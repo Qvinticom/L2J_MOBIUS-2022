@@ -1580,7 +1580,7 @@ public final class Formulas
 			}
 			if (target.isPlayer())
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_C1_S_ATTACK2);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_AVOIDED_C1_S_ATTACK_2);
 				sm.addString(activeChar.getName());
 				target.getActingPlayer().sendPacket(sm);
 			}

@@ -3079,7 +3079,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			return false;
 		}
@@ -3407,7 +3407,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			return false;
 		}
@@ -3463,7 +3463,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return false;
@@ -3488,7 +3488,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return false;
@@ -3520,7 +3520,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return false;
@@ -3703,7 +3703,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return false;
@@ -3792,7 +3792,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return null;
@@ -5012,7 +5012,7 @@ public final class L2PcInstance extends L2Playable
 						msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
 						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S13);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
 							sm.addString(msg);
 							Broadcast.toAllOnlinePlayers(sm);
 						}
@@ -5026,7 +5026,7 @@ public final class L2PcInstance extends L2Playable
 						msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", killer.getName()).replace("$target", getName());
 						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S13);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
 							sm.addString(msg);
 							Broadcast.toAllOnlinePlayers(sm);
 						}
@@ -6145,7 +6145,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				// You can't mount, dismount, break and drop items while fishing
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING2);
+				sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
 				return false;
 			}
 			else if (isTransformed() || isCursedWeaponEquipped())
@@ -9415,7 +9415,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.PEACE) || isInsideZone(ZoneId.SIEGE))
 		{
-			_noDuelReason = SystemMessageId.C1_CANNOT_MAKE_A_CHALLENGE_TO_A_DUEL_BECAUSE_C1_IS_CURRENTLY_IN_A_DUEL_PROHIBITED_AREA_PEACEFUL_ZONE_BATTLE_ZONE_NEAR_WATER_RESTART_PROHIBITED_AREA;
+			_noDuelReason = SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL;
 			return false;
 		}
 		return true;
@@ -11565,7 +11565,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
 			sm.addPcName(this);
 			sm.addString(target.getName());
 			sm.addInt(damage);
@@ -13786,7 +13786,7 @@ public final class L2PcInstance extends L2Playable
 		if (AdminData.getInstance().requireConfirm(command))
 		{
 			setAdminConfirmCmd(fullCommand);
-			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S13);
+			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1_3);
 			dlg.addString("Are you sure you want execute command " + fullCommand.substring(6) + " ?");
 			addAction(PlayerAction.ADMIN_COMMAND);
 			sendPacket(dlg);

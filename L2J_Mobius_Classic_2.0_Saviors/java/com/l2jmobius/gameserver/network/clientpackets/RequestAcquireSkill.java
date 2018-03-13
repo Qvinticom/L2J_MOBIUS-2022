@@ -206,7 +206,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 							if (!activeChar.destroyItemByItemId("Consume", item.getId(), item.getCount(), trainer, false))
 							{
 								// Doesn't have required item.
-								activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+								activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
 								L2VillageMasterInstance.showPledgeSkillList(activeChar);
 								return;
 							}
@@ -271,7 +271,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				{
 					if (!activeChar.destroyItemByItemId("SubSkills", item.getId(), item.getCount(), trainer, false))
 					{
-						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
 						return;
 					}
 					
@@ -420,7 +420,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				}
 				if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
 					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while not being level 85 or awaken!", IllegalActionPunishmentType.NONE);
 					return;
 				}
@@ -437,7 +437,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				
 				if (count >= 2)
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
 					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while having already learned 2 skills!", IllegalActionPunishmentType.NONE);
 					return;
 				}
@@ -473,7 +473,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				
 				if ((activeChar.getLevel() < 85) || !activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
 					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while not being level 85 or awaken!", IllegalActionPunishmentType.NONE);
 					return;
 				}
@@ -490,7 +490,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				
 				if (count >= 2)
 				{
-					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
 					Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is requesting skill Id: " + _id + " level " + _level + " while having already learned 2 skills!", IllegalActionPunishmentType.NONE);
 					return;
 				}
@@ -622,7 +622,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 							}
 							else
 							{
-								player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+								player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
 							}
 							return false;
 						}
@@ -640,7 +640,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 						if (reqItemCount < item.getCount())
 						{
 							// Player doesn't have required item.
-							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ITEMS_TO_LEARN_THIS_SKILL);
 							showSkillList(trainer, player);
 							return false;
 						}
@@ -706,7 +706,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 	private void giveSkill(L2PcInstance player, L2Npc trainer, Skill skill, boolean store)
 	{
 		// Send message.
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S12);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_2);
 		sm.addSkillName(skill);
 		player.sendPacket(sm);
 		

@@ -263,7 +263,7 @@ public class OlympiadManager
 		
 		if (!noble.isNoble())
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_ONLY_NOBLESSE_EXALTED_CHARACTERS_CAN_PARTICIPATE_IN_THE_OLYMPIAD);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CHARACTER_C1_DOES_NOT_MEET_THE_CONDITIONS_ONLY_CHARACTERS_WHO_HAVE_CHANGED_TWO_OR_MORE_CLASSES_CAN_PARTICIPATE_IN_OLYMPIAD);
 			sm.addString(noble.getName());
 			noble.sendPacket(sm);
 			return false;

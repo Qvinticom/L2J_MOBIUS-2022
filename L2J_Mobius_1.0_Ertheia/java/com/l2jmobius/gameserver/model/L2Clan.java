@@ -3057,12 +3057,24 @@ public class L2Clan implements IIdentifiable, INamable
 			if (_lastMembersOnlineBonus == null)
 			{
 				_lastMembersOnlineBonus = availableBonus;
-				broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.getLevel()));
+				for (L2ClanMember member : _members.values())
+				{
+					if (member.isOnline() && (member.getPlayerInstance() != null))
+					{
+						member.getPlayerInstance().sendMessage("Your clan has achieved login bonus Lv. " + availableBonus.getLevel());
+					}
+				}
 			}
 			else if (_lastMembersOnlineBonus.getLevel() < availableBonus.getLevel())
 			{
 				_lastMembersOnlineBonus = availableBonus;
-				broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_LOGIN_BONUS_LV_S1).addByte(availableBonus.getLevel()));
+				for (L2ClanMember member : _members.values())
+				{
+					if (member.isOnline() && (member.getPlayerInstance() != null))
+					{
+						member.getPlayerInstance().sendMessage("Your clan has achieved login bonus Lv. " + availableBonus.getLevel());
+					}
+				}
 			}
 		}
 		
@@ -3091,12 +3103,24 @@ public class L2Clan implements IIdentifiable, INamable
 				if (_lastHuntingBonus == null)
 				{
 					_lastHuntingBonus = availableBonus;
-					broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.getLevel()));
+					for (L2ClanMember member : _members.values())
+					{
+						if (member.isOnline() && (member.getPlayerInstance() != null))
+						{
+							member.getPlayerInstance().sendMessage("Your clan has achieved hunting bonus Lv. " + availableBonus.getLevel());
+						}
+					}
 				}
 				else if (_lastHuntingBonus.getLevel() < availableBonus.getLevel())
 				{
 					_lastHuntingBonus = availableBonus;
-					broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ACHIEVED_HUNTING_BONUS_LV_S1).addByte(availableBonus.getLevel()));
+					for (L2ClanMember member : _members.values())
+					{
+						if (member.isOnline() && (member.getPlayerInstance() != null))
+						{
+							member.getPlayerInstance().sendMessage("Your clan has achieved hunting bonus Lv. " + availableBonus.getLevel());
+						}
+					}
 				}
 			}
 		}

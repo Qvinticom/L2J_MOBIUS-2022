@@ -64,7 +64,7 @@ public class CanSummonMultiSkillCondition implements ISkillCondition
 		}
 		else if (player.isInAirShip())
 		{
-			player.sendPacket(SystemMessageId.A_SERVITOR_OR_PET_CANNOT_BE_SUMMONED_WHILE_ON_AN_AIRSHIP);
+			player.sendPacket(SystemMessageId.A_SERVITOR_CANNOT_BE_SUMMONED_WHILE_ON_AN_AIRSHIP);
 			canSummon = false;
 		}
 		else if ((player.getSummonPoints() + _summonPoints) > player.getMaxSummonPoints())

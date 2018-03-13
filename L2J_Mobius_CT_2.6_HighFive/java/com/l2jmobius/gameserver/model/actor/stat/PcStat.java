@@ -209,7 +209,7 @@ public class PcStat extends PlayableStat
 		{
 			if ((addToExp - baseExp) > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_EXP_BONUS_S2_AND_S3_SP_BONUS_S4);
 				sm.addLong(addToExp);
 				sm.addLong(addToExp - baseExp);
 				sm.addInt(addToSp);

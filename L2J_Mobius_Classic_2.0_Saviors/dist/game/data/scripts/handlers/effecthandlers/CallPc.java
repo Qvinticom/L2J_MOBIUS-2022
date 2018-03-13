@@ -133,7 +133,7 @@ public final class CallPc extends AbstractEffect
 		
 		if (target.inObserverMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING2);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING_2);
 			sm.addString(target.getName());
 			activeChar.sendPacket(sm);
 			return false;

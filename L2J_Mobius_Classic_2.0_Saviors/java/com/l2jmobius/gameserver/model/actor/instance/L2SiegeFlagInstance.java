@@ -161,7 +161,7 @@ public class L2SiegeFlagInstance extends L2Npc
 				if (_clan != null)
 				{
 					// send warning to owners of headquarters that theirs base is under attack
-					_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
+					_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SIEGE_CAMP_IS_UNDER_ATTACK));
 					setCanTalk(false);
 					ThreadPoolManager.schedule(new ScheduleTalkTask(), 20000);
 				}

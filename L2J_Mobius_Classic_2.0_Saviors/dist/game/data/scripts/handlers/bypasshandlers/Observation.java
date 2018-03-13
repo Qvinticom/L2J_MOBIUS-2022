@@ -96,7 +96,7 @@ public class Observation implements IBypassHandler
 		
 		if (activeChar.hasSummon())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_SIEGE_WITH_A_PET_OR_SERVITOR_SUMMONED);
+			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_SIEGE_WITH_A_SERVITOR_SUMMONED);
 			return false;
 		}
 		if (activeChar.isOnEvent())

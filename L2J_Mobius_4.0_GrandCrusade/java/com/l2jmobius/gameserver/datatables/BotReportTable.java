@@ -226,7 +226,7 @@ public final class BotReportTable
 		
 		if (bot.isInsideZone(ZoneId.PEACE) || bot.isInsideZone(ZoneId.PVP))
 		{
-			reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_WHO_IS_IN_A_PEACE_ZONE_OR_A_BATTLEGROUND);
+			reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_IN_THIS_AREA);
 			return false;
 		}
 		
@@ -286,7 +286,7 @@ public final class BotReportTable
 			{
 				if (rcdRep.getPointsLeft() == 0)
 				{
-					reporter.sendPacket(SystemMessageId.YOU_HAVE_USED_ALL_AVAILABLE_POINTS_POINTS_ARE_RESET_EVERYDAY_AT_NOON);
+					reporter.sendPacket(SystemMessageId.YOU_SPENT_ALL_AVAILABLE_POINTS_THEY_WILL_BECOME_AVAILABLE_WHEN_THEY_ARE_RESET_AT_06_30_AM_EVERY_DAY);
 					return false;
 				}
 				

@@ -259,7 +259,7 @@ public final class Q10323_TrainLikeItsReal extends Quest
 			}
 			else if (qs.isCond(6) || qs.isCond(7))
 			{
-				npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM2, qs.getMemoState()));
+				npcLogList.add(new NpcLogListHolder(NpcStringId.ELIMINATE_THE_TRAINING_GOLEM_2, qs.getMemoState()));
 			}
 			return npcLogList;
 		}

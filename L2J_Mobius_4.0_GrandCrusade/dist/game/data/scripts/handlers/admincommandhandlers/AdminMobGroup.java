@@ -620,7 +620,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 			activeChar.sendMessage(mobGroup.getGroupId() + ": " + mobGroup.getActiveMobCount() + " alive out of " + mobGroup.getMaxMobCount() + " of NPC ID " + mobGroup.getTemplate().getId() + " (" + mobGroup.getStatus() + ")");
 		}
 		
-		activeChar.sendPacket(SystemMessageId.EMPTY3);
+		activeChar.sendPacket(SystemMessageId.EMPTY_3);
 	}
 	
 	@Override

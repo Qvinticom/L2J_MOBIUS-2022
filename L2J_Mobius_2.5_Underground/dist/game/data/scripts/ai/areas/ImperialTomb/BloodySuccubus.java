@@ -71,7 +71,7 @@ public final class BloodySuccubus extends AbstractNpcAI
 	{
 		NpcStringId.FOR_THE_GODDESS,
 		NpcStringId.YOU_WILL_DIE,
-		NpcStringId.DIE2,
+		NpcStringId.DIE_2,
 		NpcStringId.YOU_WILL_BE_DESTROYED,
 		NpcStringId.OOOOH,
 		NpcStringId.DO_NOT_INTERFERE
@@ -106,7 +106,7 @@ public final class BloodySuccubus extends AbstractNpcAI
 	};
 	private static final NpcStringId[] ON_FAILED_MSG_SUCCUBUS_OF_SILENCE =
 	{
-		NpcStringId.IS_THIS_THE_END2,
+		NpcStringId.IS_THIS_THE_END_2,
 		NpcStringId.OH_GODDESS,
 		NpcStringId.NO_I_DIDN_T_STAY_SILENT_ALL_THIS_TIME_JUST_TO_DISAPPEAR_NOW_LIKE_THIS
 	};

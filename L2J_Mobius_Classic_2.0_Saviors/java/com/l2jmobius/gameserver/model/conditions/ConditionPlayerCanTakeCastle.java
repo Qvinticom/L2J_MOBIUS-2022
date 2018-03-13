@@ -70,7 +70,7 @@ public class ConditionPlayerCanTakeCastle extends Condition
 		}
 		else if (!Util.checkIfInRange(skill.getCastRange(), player, effected, true))
 		{
-			player.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+			player.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_CANCELLED);
 			canTakeCastle = false;
 		}
 		return (_val == canTakeCastle);

@@ -167,7 +167,7 @@ public final class Q10839_BlackbirdsNameValue extends Quest
 			if (killCount > 0)
 			{
 				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_EMBRYO2, killCount));
+				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_EMBRYO_2, killCount));
 				return holder;
 			}
 		}

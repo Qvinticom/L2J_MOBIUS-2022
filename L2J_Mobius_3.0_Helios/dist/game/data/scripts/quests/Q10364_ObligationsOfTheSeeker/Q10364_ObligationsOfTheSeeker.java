@@ -81,7 +81,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 			case "33451-03.html":
 			{
 				qs.startQuest();
-				showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
 				htmltext = event;
 				break;
 			}
@@ -122,7 +122,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 			{
 				qs.setCond(0);
 				qs.setCond(3);
-				showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_4, ExShowScreenMessage.TOP_CENTER, 4500);
+				showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_4, ExShowScreenMessage.TOP_CENTER, 4500);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -153,7 +153,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
+							showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
 							htmltext = "33451-06.html";
 							break;
 						}

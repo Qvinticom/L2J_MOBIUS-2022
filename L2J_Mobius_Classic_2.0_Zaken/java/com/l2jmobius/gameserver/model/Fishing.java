@@ -146,7 +146,7 @@ public class Fishing
 		{
 			if (minPlayerLevel == 85)
 			{
-				_player.sendPacket(SystemMessageId.FISHING_IS_AVAILABLE_TO_CHARACTERS_LV_85_OR_ABOVE);
+				_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_AS_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
 			}
 			else // In case of custom fishing level.
 			{
@@ -176,7 +176,7 @@ public class Fishing
 		
 		if (_player.isTransformed() || _player.isInBoat())
 		{
-			_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHEN_TRANSFORMED_OR_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_IT_S_AGAINST_THE_RULES);
+			_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_RIDING_AS_A_PASSENGER_OF_A_BOAT_OR_TRANSFORMED);
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
 			stopFishing(FishingEndType.ERROR);
 			return;

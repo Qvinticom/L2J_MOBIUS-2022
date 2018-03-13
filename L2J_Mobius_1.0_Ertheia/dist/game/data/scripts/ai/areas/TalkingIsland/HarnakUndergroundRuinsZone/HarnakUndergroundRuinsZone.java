@@ -141,27 +141,27 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 					}
 					case 1:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
+						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TWENTY_FIVE_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 2:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.SECONDS_LEFT2, ExShowScreenMessage.TOP_CENTER, 3000));
+						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TWENTY_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 3:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.SECONDS_LEFT3, ExShowScreenMessage.TOP_CENTER, 3000));
+						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.FIFTEEN_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 4:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.SECONDS_LEFT4, ExShowScreenMessage.TOP_CENTER, 3000));
+						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.TEN_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 5:
 					{
-						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.SECONDS_LEFT5, ExShowScreenMessage.TOP_CENTER, 3000));
+						zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.FIVE_SECONDS_LEFT, ExShowScreenMessage.TOP_CENTER, 3000));
 						break;
 					}
 					case 6:

@@ -44,7 +44,7 @@ public final class MercenaryCaptain extends AbstractNpcAI
 	{
 		if (event.equals("BROADCAST_TEXT") && (npc != null))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THE_SOUTHERN_PART_OF_DRAGON_VALLEY_IS_MUCH_MORE_DANGEROUS_THAN_THE_NORTH_BE_CAREFUL));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THE_EASTERN_PART_OF_DRAGON_VALLEY_IS_MUCH_MORE_DANGEROUS_THAN_THE_WEST_BE_CAREFUL));
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

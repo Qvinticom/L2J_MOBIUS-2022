@@ -48,9 +48,9 @@ import ai.AbstractNpcAI;
 public final class ClanHallManager extends AbstractNpcAI
 {
 	// NPCs
-	//	35461, 35463, 35465, 35467, // Goddard
-	//	35566, 35568, 35570, 35572, 35574, 35576, 35578, // Rune
-	//	35580, 35582, 35584, 35586, // Schuttgart
+	// 35461, 35463, 35465, 35467, // Goddard
+	// 35566, 35568, 35570, 35572, 35574, 35576, 35578, // Rune
+	// 35580, 35582, 35584, 35586, // Schuttgart
 	// @formatter:off
 	private static final int[] CLANHALL_MANAGERS =
 	{
@@ -477,7 +477,7 @@ public final class ClanHallManager extends AbstractNpcAI
 		}
 		else
 		{
-			htmltext = htmltext.replaceAll("%" + name + "recovery%", "<fstring p1=\"\" p2=\"\">" + NpcStringId.NONE2.getId() + "</fstring>");
+			htmltext = htmltext.replaceAll("%" + name + "recovery%", "<fstring p1=\"\" p2=\"\">" + NpcStringId.NONE_2.getId() + "</fstring>");
 			htmltext = htmltext.replaceAll("%" + name + "price%", "");
 			htmltext = htmltext.replaceAll("%" + name + "expire%", "");
 			htmltext = htmltext.replaceAll("%" + name + "deactive%", "");

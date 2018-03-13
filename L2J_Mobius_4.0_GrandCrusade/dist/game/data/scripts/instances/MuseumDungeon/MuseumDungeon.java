@@ -305,7 +305,7 @@ public final class MuseumDungeon extends AbstractInstance
 				if (instance.getAliveNpcs(THIEF).isEmpty())
 				{
 					qs.setCond(5, true);
-					showOnScreenMsg(player, NpcStringId.SPEAK_WITH_TOYRON_IN_ORDER_TO_RETURN_SHANNON, ExShowScreenMessage.TOP_CENTER, 4500);
+					showOnScreenMsg(player, NpcStringId.SPEAK_WITH_TOYRON_IN_ORDER_TO_RETURN_TO_SHANNON, ExShowScreenMessage.TOP_CENTER, 4500);
 					getTimers().cancelTimer("TOYRON_MSG_1", toyron, player);
 					getTimers().cancelTimer("TOYRON_MSG_2", toyron, player);
 				}

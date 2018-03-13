@@ -171,7 +171,7 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 			if (killCounts > 0)
 			{
 				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(NpcStringId.KILL_MONSTERS_IN_DRAGON_VALLEY, killCounts));
+				holder.add(new NpcLogListHolder(NpcStringId.SUBJUGATION_IN_THE_SOUTHERN_DRAGON_VALLEY_2, killCounts));
 				return holder;
 			}
 		}

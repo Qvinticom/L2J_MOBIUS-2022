@@ -71,7 +71,7 @@ public final class RequestDuelStart implements IClientIncomingPacket
 			final String name = FakePlayerData.getInstance().getProperName(_player);
 			if (activeChar.isInsideZone(ZoneId.PVP) || activeChar.isInsideZone(ZoneId.PEACE) || activeChar.isInsideZone(ZoneId.SIEGE))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_MAKE_A_CHALLENGE_TO_A_DUEL_BECAUSE_C1_IS_CURRENTLY_IN_A_DUEL_PROHIBITED_AREA_PEACEFUL_ZONE_BATTLE_ZONE_NEAR_WATER_RESTART_PROHIBITED_AREA);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL);
 				sm.addString(name);
 				activeChar.sendPacket(sm);
 				return;

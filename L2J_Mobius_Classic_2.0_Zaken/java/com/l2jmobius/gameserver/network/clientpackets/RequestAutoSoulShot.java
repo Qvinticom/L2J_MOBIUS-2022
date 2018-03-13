@@ -92,7 +92,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 							}
 							if (soulshotCount > item.getCount())
 							{
-								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
 								return;
 							}
 						}
@@ -110,7 +110,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 							}
 							if (spiritshotCount > item.getCount())
 							{
-								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR);
+								client.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_SERVITOR);
 								return;
 							}
 						}
@@ -148,7 +148,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 					}
 					else
 					{
-						client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_OR_PET_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
+						client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR_AND_THEREFORE_CANNOT_USE_THE_AUTOMATIC_USE_FUNCTION);
 					}
 				}
 				else if (isPlayerShot(item.getItem()))

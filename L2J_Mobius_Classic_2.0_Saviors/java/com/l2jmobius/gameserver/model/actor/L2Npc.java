@@ -953,7 +953,7 @@ public class L2Npc extends L2Character
 						final String msg = Config.ANNOUNCE_PK_MSG.replace("$killer", player.getName()).replace("$target", getName());
 						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
 						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S13);
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
 							sm.addString(msg);
 							Broadcast.toAllOnlinePlayers(sm);
 						}
@@ -985,7 +985,7 @@ public class L2Npc extends L2Character
 					final String msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", player.getName()).replace("$target", getName());
 					if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S13);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
 						sm.addString(msg);
 						Broadcast.toAllOnlinePlayers(sm);
 					}

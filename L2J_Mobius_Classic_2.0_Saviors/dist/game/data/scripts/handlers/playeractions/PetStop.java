@@ -44,7 +44,7 @@ public final class PetStop implements IPlayerActionHandler
 		}
 		else if (pet.isBetrayed())
 		{
-			activeChar.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+			activeChar.sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 		}
 		else
 		{

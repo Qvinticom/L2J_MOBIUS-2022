@@ -249,7 +249,7 @@ public class BlockList
 		{
 			listOwner.sendMessage((i++) + ". " + CharNameTable.getInstance().getNameById(playerId));
 		}
-		listOwner.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
+		listOwner.sendPacket(SystemMessageId.EMPTY_3);
 	}
 	
 	/**

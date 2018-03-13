@@ -63,7 +63,7 @@ public class ConditionPlayerCanSwitchSubclass extends Condition
 		}
 		else if (player.isOnEvent(CeremonyOfChaosEvent.class))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERED_IN_THE_CEREMONY_OF_CHAOS);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_CHANGE_YOUR_SUBCLASS_WHILE_REGISTERING_FOR_THE_CEREMONY_OF_CHAOS);
 			canSwitchSub = false;
 		}
 		else if (player.isOnEvent())

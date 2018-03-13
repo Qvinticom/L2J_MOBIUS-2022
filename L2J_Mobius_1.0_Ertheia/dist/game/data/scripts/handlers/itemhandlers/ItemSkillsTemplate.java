@@ -81,7 +81,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			{
 				if (itemSkill.hasEffectType(L2EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
 				{
-					playable.getActingPlayer().sendPacket(SystemMessageId.YOU_VE_EXCEEDED_THE_LIMIT_AND_CANNOT_RETRIEVE_THE_ITEM_PLEASE_CHECK_YOUR_LIMIT_IN_THE_INVENTORY);
+					playable.getActingPlayer().sendMessage("You've exceeded the limit and cannot retrieve the item. Please check your limit in the inventory.");
 					return false;
 				}
 				
@@ -153,7 +153,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		{
 			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
 			{
-				playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 				return false;
 			}
 		}

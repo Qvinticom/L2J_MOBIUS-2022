@@ -3355,7 +3355,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			return false;
 		}
@@ -3418,7 +3418,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (sendMessage)
 		{
-			sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+			sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 		}
 		return false;
 	}
@@ -3442,7 +3442,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (sendMessage)
 		{
-			sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+			sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 		}
 		return false;
 	}
@@ -3470,7 +3470,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return false;
@@ -3668,7 +3668,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return false;
@@ -3759,7 +3759,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sendMessage)
 			{
-				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT2);
+				sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
 			}
 			
 			return null;
@@ -4480,7 +4480,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				if (target.getEnchantLevel() > 0)
 				{
-					smsg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2S3);
+					smsg = SystemMessage.getSystemMessage(SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3);
 					smsg.addPcName(this);
 					smsg.addInt(target.getEnchantLevel());
 				}
@@ -6309,7 +6309,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				// You can't mount, dismount, break and drop items while fishing
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING2);
+				sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
 				return false;
 			}
 			else if (isTransformed() || isCursedWeaponEquipped())
@@ -12366,7 +12366,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_GIVEN_C2_DAMAGE_OF_S3);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
 			sm.addPcName(this);
 			sm.addCharName(target);
 			sm.addInt(damage);
@@ -12821,7 +12821,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else if (isParalyzed())
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_IN_A_FLINT_OR_PARALYZED_STATE);
+			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_IN_A_PETRIFIED_OR_PARALYZED_STATE);
 			return false;
 		}
 		else if (isDead())

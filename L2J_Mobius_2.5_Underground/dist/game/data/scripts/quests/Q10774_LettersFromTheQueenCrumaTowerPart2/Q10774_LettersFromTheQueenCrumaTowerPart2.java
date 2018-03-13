@@ -79,7 +79,7 @@ public final class Q10774_LettersFromTheQueenCrumaTowerPart2 extends LetterQuest
 				{
 					qs.setCond(2, true);
 					giveItems(player, SOE_CRUMA_TOWER, 1);
-					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_SYLVAIN_GAVE_YOU_TO_GO_TO_CRUMA_TOWER2, ExShowScreenMessage.TOP_CENTER, 8000);
+					showOnScreenMsg(player, NpcStringId.TRY_USING_THE_TELEPORT_SCROLL_SYLVAIN_GAVE_YOU_TO_GO_TO_CRUMA_TOWER_2, ExShowScreenMessage.TOP_CENTER, 8000);
 				}
 				break;
 			}

@@ -183,7 +183,7 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 			if (killCount > 0)
 			{
 				final Set<NpcLogListHolder> holder = new HashSet<>();
-				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_BEASTS_OF_THE_VALLEY3, killCount));
+				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_BEASTS_OF_THE_VALLEY_3, killCount));
 				return holder;
 			}
 		}

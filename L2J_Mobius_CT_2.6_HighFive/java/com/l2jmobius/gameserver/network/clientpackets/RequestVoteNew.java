@@ -73,7 +73,7 @@ public final class RequestVoteNew extends L2GameClientPacket
 		
 		if (activeChar.getRecomLeft() <= 0)
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CURRENTLY_DO_NOT_HAVE_ANY_RECOMMENDATIONS);
+			activeChar.sendPacket(SystemMessageId.YOU_ARE_OUT_OF_RECOMMENDATIONS_TRY_AGAIN_LATER);
 			return;
 		}
 		

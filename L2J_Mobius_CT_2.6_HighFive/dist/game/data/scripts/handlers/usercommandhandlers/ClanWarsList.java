@@ -115,7 +115,7 @@ public class ClanWarsList implements IUserCommandHandler
 					}
 				}
 			}
-			activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
+			activeChar.sendPacket(SystemMessageId.EMPTY_3);
 		}
 		catch (Exception e)
 		{

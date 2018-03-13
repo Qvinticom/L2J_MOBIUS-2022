@@ -337,7 +337,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			final ClanHall playerClanHall = ClanHallData.getInstance().getClanHallByClan(clan);
 			if (playerClanHall != null)
 			{
-				player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_CLAN_HALL_SO_YOU_CANNOT_BID);
+				player.sendPacket(SystemMessageId.EMPTY_462);
 				return;
 			}
 			
@@ -360,7 +360,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 				player.sendPacket(SystemMessageId.YOU_HAVE_REGISTERED_FOR_A_CLAN_HALL_AUCTION);
 				if (bid > Inventory.MAX_ADENA)
 				{
-					player.sendPacket(SystemMessageId.BIDDING_IS_NOT_ALLOWED_BECAUSE_THE_MAXIMUM_BIDDING_PRICE_EXCEEDS_100_BILLION);
+					player.sendPacket(SystemMessageId.THE_HIGHEST_BID_IS_OVER_999_9_BILLION_THEREFORE_YOU_CANNOT_PLACE_A_BID);
 					return;
 				}
 				final ClanHallAuction auction = ClanHallAuctionManager.getInstance().getClanHallAuctionById(clanHallId);
@@ -382,7 +382,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 					final L2PcInstance leader = bidder.get().getClan().getLeader().getPlayerInstance();
 					if ((leader != null) && leader.isOnline())
 					{
-						leader.sendPacket(SystemMessageId.YOU_HAVE_BEEN_OUTBID);
+						leader.sendPacket(SystemMessageId.YOU_WERE_OUTBID_THE_NEW_HIGHEST_BID_IS_S1_ADENA);
 					}
 				}
 				

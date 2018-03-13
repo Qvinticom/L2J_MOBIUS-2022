@@ -84,7 +84,7 @@ public final class SocialAction implements IPlayerActionHandler
 	{
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3);
+			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return false;
 		}
 		
@@ -167,7 +167,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		if (player.isFishing())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3);
+			player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return;
 		}
 		

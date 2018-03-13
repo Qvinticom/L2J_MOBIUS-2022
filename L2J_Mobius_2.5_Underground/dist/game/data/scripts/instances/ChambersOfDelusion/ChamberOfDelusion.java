@@ -399,7 +399,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 			final L2Npc gatekeeper = world.getNpc(raidGatekeeper);
 			if (gatekeeper != null)
 			{
-				gatekeeper.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MINUTES_ARE_ADDED_TO_THE_REMAINING_TIME_IN_THE_INSTANT_ZONE);
+				gatekeeper.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TWENTY_MINUTES_ARE_ADDED_TO_THE_REMAINING_TIME_IN_THE_INSTANT_ZONE);
 			}
 		}
 		else

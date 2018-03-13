@@ -181,7 +181,7 @@ public final class AuctionableHall extends ClanHall
 						{
 							ClanHallAuctionManager.getInstance().initNPC(getId());
 							ClanHallManager.getInstance().setFree(getId());
-							Clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE));
+							Clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
 						}
 						else
 						{

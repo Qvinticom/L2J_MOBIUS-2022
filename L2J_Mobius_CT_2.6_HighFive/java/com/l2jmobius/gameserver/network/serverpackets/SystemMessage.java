@@ -35,7 +35,7 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage>
 			throw new NullPointerException();
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S12);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_2);
 		sm.addString(text);
 		return sm;
 	}

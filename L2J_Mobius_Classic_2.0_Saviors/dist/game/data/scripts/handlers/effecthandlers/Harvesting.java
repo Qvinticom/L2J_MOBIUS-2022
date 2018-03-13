@@ -90,7 +90,7 @@ public final class Harvesting extends AbstractEffect
 					{
 						if (item.getCount() == 1)
 						{
-							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S2);
+							sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_2);
 							sm.addString(player.getName());
 							sm.addItemName(harvestedItem.getId());
 						}

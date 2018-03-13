@@ -337,7 +337,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			final ClanHall playerClanHall = ClanHallData.getInstance().getClanHallByClan(clan);
 			if (playerClanHall != null)
 			{
-				player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_CLAN_HALL_SO_YOU_CANNOT_BID);
+				player.sendMessage("You already have a clan hall, so you cannot bid.");
 				return;
 			}
 			

@@ -2260,7 +2260,7 @@ public class L2Clan implements IIdentifiable, INamable
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.THE_ACADEMY_ROYAL_GUARD_ORDER_OF_KNIGHTS_IS_FULL_AND_CANNOT_ACCEPT_NEW_MEMBERS_AT_THIS_TIME);
+				activeChar.sendPacket(SystemMessageId.THE_CLAN_IS_FULL);
 			}
 			return false;
 		}

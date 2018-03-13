@@ -208,7 +208,7 @@ public class Fishing
 			}
 			else
 			{
-				_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
+				_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE_YOUR_CHARACTER_IS_NOT_FACING_WATER_OR_YOU_ARE_NOT_IN_A_FISHING_GROUND);
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 			stopFishing(FishingEndType.ERROR);
@@ -388,7 +388,7 @@ public class Fishing
 		int baitZ = computeBaitZ(_player, baitX, baitY, fishingZone, waterZone);
 		if (baitZ == Integer.MIN_VALUE)
 		{
-			_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
+			_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE_YOUR_CHARACTER_IS_NOT_FACING_WATER_OR_YOU_ARE_NOT_IN_A_FISHING_GROUND);
 			return null;
 		}
 		

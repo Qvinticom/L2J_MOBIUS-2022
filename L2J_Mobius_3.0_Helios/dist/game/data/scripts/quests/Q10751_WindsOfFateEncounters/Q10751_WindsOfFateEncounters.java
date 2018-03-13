@@ -174,7 +174,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 					wizzard.setSummoner(player);
 					wizzard.setTitle(player.getAppearance().getVisibleName());
 					wizzard.broadcastInfo();
-					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD2, ExShowScreenMessage.TOP_CENTER, 10000);
+					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD_2, ExShowScreenMessage.TOP_CENTER, 10000);
 					npc.deleteMe();
 				}
 				htmltext = null;

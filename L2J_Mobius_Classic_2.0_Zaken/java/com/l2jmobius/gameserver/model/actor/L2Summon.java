@@ -615,7 +615,7 @@ public abstract class L2Summon extends L2Playable
 		// Check if this skill is enabled (e.g. reuse time)
 		if (isSkillDisabled(skill))
 		{
-			sendPacket(SystemMessageId.THAT_PET_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING);
+			sendPacket(SystemMessageId.THAT_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING);
 			return false;
 		}
 		
@@ -721,7 +721,7 @@ public abstract class L2Summon extends L2Playable
 			}
 			else
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
 				sm.addNpcName(this);
 				sm.addString(target.getName());
 				sm.addInt(damage);
@@ -939,7 +939,7 @@ public abstract class L2Summon extends L2Playable
 		
 		if (isBetrayed())
 		{
-			sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+			sendPacket(SystemMessageId.YOUR_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 			sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}

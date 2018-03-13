@@ -258,7 +258,7 @@ public final class ItemAuction
 		
 		if (newBid > 100000000000L)
 		{
-			player.sendPacket(SystemMessageId.BIDDING_IS_NOT_ALLOWED_BECAUSE_THE_MAXIMUM_BIDDING_PRICE_EXCEEDS_100_BILLION);
+			player.sendPacket(SystemMessageId.THE_HIGHEST_BID_IS_OVER_999_9_BILLION_THEREFORE_YOU_CANNOT_PLACE_A_BID);
 			return;
 		}
 		
@@ -334,7 +334,7 @@ public final class ItemAuction
 			final L2PcInstance old = _highestBid.getPlayer();
 			if (old != null)
 			{
-				old.sendPacket(SystemMessageId.YOU_HAVE_BEEN_OUTBID);
+				old.sendPacket(SystemMessageId.YOU_WERE_OUTBID_THE_NEW_HIGHEST_BID_IS_S1_ADENA);
 			}
 			
 			_highestBid = bid;
