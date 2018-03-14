@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
-	<!-- Monster Race Track -->
-	<zone name="dion_monster_pvp" type="ArenaZone" shape="NPoly" minZ="-3718" maxZ="-3714">
-		<node X="17171" Y="183277" />
-		<node X="11991" Y="183060" />
-		<node X="13086" Y="183060" />
-		<node X="13302" Y="183275" />
-		<node X="13305" Y="184091" />
-		<node X="13382" Y="184311" />
-		<node X="11989" Y="184310" />
-		<node X="11774" Y="184092" />
-	</zone>
 	<zone name="Seed of Annihilation 1" id="60006" type="EffectZone" shape="NPoly" minZ="-10700" maxZ="-10100">
 		<stat name="maxDynamicSkillCount" val="1" />
 		<stat name="showDangerIcon" val="false" />
