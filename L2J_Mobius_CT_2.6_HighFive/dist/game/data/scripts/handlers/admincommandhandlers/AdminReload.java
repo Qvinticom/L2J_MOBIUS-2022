@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
+import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
@@ -243,6 +244,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					TransformData.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded transform data.");
+					break;
+				}
+				case "itemmall":
+				{
+					ItemMallData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item mall data.");
 					break;
 				}
 				default:

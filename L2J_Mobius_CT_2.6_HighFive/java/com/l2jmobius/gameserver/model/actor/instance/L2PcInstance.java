@@ -921,6 +921,9 @@ public final class L2PcInstance extends L2Playable
 	private boolean _marryrequest = false;
 	private boolean _marryaccepted = false;
 	
+	// Item Mall
+	private final static String GAME_POINTS_VAR = "PRIME_POINTS"; // Keep compatibility with later clients.
+	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;
 	
@@ -14331,5 +14334,25 @@ public final class L2PcInstance extends L2Playable
 	public boolean isOnSameSiegeSideWith(L2Character target)
 	{
 		return (getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (getSiegeState() == target.getSiegeState()) && (getSiegeSide() == target.getSiegeSide());
+	}
+	
+	/**
+	 * @return the game shop points of the player.
+	 */
+	public long getGamePoints()
+	{
+		return getAccountVariables().getInt(GAME_POINTS_VAR, 0);
+	}
+	
+	/**
+	 * Sets game shop points for current player.
+	 * @param points
+	 */
+	public void setGamePoints(long points)
+	{
+		// Immediate store upon change
+		final AccountVariables vars = getAccountVariables();
+		vars.set(GAME_POINTS_VAR, Math.max(points, 0));
+		vars.storeMe();
 	}
 }

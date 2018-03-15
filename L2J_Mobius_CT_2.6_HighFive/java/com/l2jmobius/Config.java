@@ -649,6 +649,8 @@ public final class Config
 	public static String[] BOTREPORT_RESETPOINT_HOUR;
 	public static long BOTREPORT_REPORT_DELAY;
 	public static boolean BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS;
+	public static boolean ENABLE_ITEM_MALL;
+	public static int GAME_POINT_ITEM_ID;
 	
 	// --------------------------------------------------
 	// FloodProtector Settings
@@ -2039,6 +2041,8 @@ public final class Config
 			BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
 			BOTREPORT_REPORT_DELAY = General.getInt("BotReportDelay", 30) * 60000;
 			BOTREPORT_ALLOW_REPORTS_FROM_SAME_CLAN_MEMBERS = General.getBoolean("AllowReportsFromSameClanMembers", false);
+			ENABLE_ITEM_MALL = General.getBoolean("EnableItemMall", false);
+			GAME_POINT_ITEM_ID = General.getInt("GamePointItemId", -1);
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 			
 			// Load FloodProtector L2Properties file
