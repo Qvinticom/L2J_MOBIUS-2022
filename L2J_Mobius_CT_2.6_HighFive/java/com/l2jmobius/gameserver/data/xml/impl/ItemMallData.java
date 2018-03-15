@@ -40,11 +40,6 @@ public class ItemMallData implements IXmlReader
 	
 	protected ItemMallData()
 	{
-		if (!Config.ENABLE_ITEM_MALL)
-		{
-			return;
-		}
-		
 		load();
 	}
 	
@@ -52,6 +47,12 @@ public class ItemMallData implements IXmlReader
 	public void load()
 	{
 		_mallList.clear();
+		
+		if (!Config.ENABLE_ITEM_MALL)
+		{
+			return;
+		}
+		
 		parseDatapackFile("data/ItemMall.xml");
 	}
 	
