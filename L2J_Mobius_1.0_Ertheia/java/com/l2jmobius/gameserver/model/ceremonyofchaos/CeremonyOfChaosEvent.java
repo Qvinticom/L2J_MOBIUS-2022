@@ -324,7 +324,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				}
 			}
 			// Soul Crystal Fragment
-			if (Rnd.get(10) < 3) // Chance to get reward (30%)
+			else if (Rnd.get(10) < 3) // Chance to get reward (30%)
 			{
 				switch (Rnd.get(6))
 				{
@@ -361,7 +361,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 				}
 			}
 			// Mysterious Belt
-			if (Rnd.get(10) < 1) // Chance to get reward (10%)
+			else if (Rnd.get(10) < 1) // Chance to get reward (10%)
 			{
 				winner.addItem("CoC-Winner", 35565, 1, winner, true); // Mysterious Belt
 			}
