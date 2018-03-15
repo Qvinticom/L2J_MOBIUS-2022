@@ -26,6 +26,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import com.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -286,8 +287,84 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 		}
 		else
 		{
+			final L2PcInstance winner = winners.get(0).getPlayer();
 			msg = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH);
-			msg.addString(winners.get(0).getPlayer().getName());
+			msg.addString(winner.getName());
+			
+			// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
+			winner.addItem("CoC-Winner", 34900, Rnd.get(2, 4), winner, true); // Mysterious Marks
+			
+			// Possible additional rewards
+			
+			// Improved Life Stone
+			if (Rnd.get(10) < 3) // Chance to get reward (30%)
+			{
+				switch (Rnd.get(4))
+				{
+					case 0:
+					{
+						winner.addItem("CoC-Winner", 18570, 1, winner, true); // Improved Life Stone (R95-grade)
+						break;
+					}
+					case 1:
+					{
+						winner.addItem("CoC-Winner", 18571, 1, winner, true); // Improved Life Stone (R95-grade)
+						break;
+					}
+					case 2:
+					{
+						winner.addItem("CoC-Winner", 18575, 1, winner, true); // Improved Life Stone (R99-grade)
+						break;
+					}
+					case 3:
+					{
+						winner.addItem("CoC-Winner", 18576, 1, winner, true); // Improved Life Stone (R99-grade)
+						break;
+					}
+				}
+			}
+			// Soul Crystal Fragment
+			if (Rnd.get(10) < 3) // Chance to get reward (30%)
+			{
+				switch (Rnd.get(6))
+				{
+					case 0:
+					{
+						winner.addItem("CoC-Winner", 19467, 1, winner, true); // Yellow Soul Crystal Fragment (R99-Grade)
+						break;
+					}
+					case 1:
+					{
+						winner.addItem("CoC-Winner", 19468, 1, winner, true); // Teal Soul Crystal Fragment (R99-Grade)
+						break;
+					}
+					case 2:
+					{
+						winner.addItem("CoC-Winner", 19469, 1, winner, true); // Purple Soul Crystal Fragment (R99-Grade)
+						break;
+					}
+					case 3:
+					{
+						winner.addItem("CoC-Winner", 19511, 1, winner, true); // Yellow Soul Crystal Fragment (R95-Grade)
+						break;
+					}
+					case 4:
+					{
+						winner.addItem("CoC-Winner", 19512, 1, winner, true); // Teal Soul Crystal Fragment (R95-Grade)
+						break;
+					}
+					case 5:
+					{
+						winner.addItem("CoC-Winner", 19513, 1, winner, true); // Purple Soul Crystal Fragment (R95-Grade)
+						break;
+					}
+				}
+			}
+			// Mysterious Belt
+			if (Rnd.get(10) < 1) // Chance to get reward (10%)
+			{
+				winner.addItem("CoC-Winner", 35565, 1, winner, true); // Mysterious Belt
+			}
 		}
 		
 		for (CeremonyOfChaosMember member : getMembers().values())
