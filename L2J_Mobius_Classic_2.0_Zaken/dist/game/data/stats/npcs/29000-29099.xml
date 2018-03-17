@@ -1461,9 +1461,9 @@
 		<sex>MALE</sex>
 		<acquire exp="102487500" sp="3074625" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="360722" hpRegen="336" mp="180000" mpRegen="2.4" />
-			<attack physical="2009" magical="1520" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="362" magical="362" />
+			<vitals hp="28531442" hpRegen="2649" mp="12240" mpRegen="240" />
+			<attack physical="33864" magical="42273" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3680" magical="4661" />
 			<speed>
 				<walk ground="42" />
 				<run ground="190" />
@@ -1498,7 +1498,7 @@
 		<drop_lists>
 			<drop>
 				<item id="6328" min="1" max="1" chance="52.5" /> <!-- Sealed Majestic Ring -->
-				<!-- <item id="90763" min="1" max="1" chance="20.82" /> Zaken's Earring  Not used Saviors client -->
+				<item id="90763" min="1" max="1" chance="20.82" /> <!-- Zaken's Earring -->
 				<item id="6327" min="1" max="1" chance="20.33" /> <!-- Sealed Majestic Earring -->
 				<item id="6325" min="1" max="1" chance="14.7" /> <!-- Sealed Phoenix Ring -->
 				<item id="6326" min="1" max="1" chance="8.048" /> <!-- Sealed Majestic Necklace -->

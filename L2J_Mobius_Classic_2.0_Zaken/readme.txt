@@ -55,7 +55,7 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Parsed new items from client
 -Parsed new NPCs from L2Wiki
 -Added raidbosses according to map
--TODO: Zaken boss
+-Zaken boss AI
 -TODO: Newbie quest changes
 
 Customs:
