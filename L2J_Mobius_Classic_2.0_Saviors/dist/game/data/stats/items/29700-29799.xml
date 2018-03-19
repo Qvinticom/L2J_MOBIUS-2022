@@ -52,10 +52,11 @@
 		<!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -64,10 +65,11 @@
 		<!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -76,10 +78,11 @@
 		<!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -88,13 +91,14 @@
 		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -103,13 +107,14 @@
 		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -118,10 +123,11 @@
 		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -130,10 +136,11 @@
 		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -142,10 +149,11 @@
 		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -154,13 +162,14 @@
 		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -169,13 +178,14 @@
 		<!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -184,10 +194,11 @@
 		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -196,10 +207,11 @@
 		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -208,10 +220,11 @@
 		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -220,13 +233,14 @@
 		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -235,13 +249,14 @@
 		<!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -250,10 +265,11 @@
 		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -262,10 +278,11 @@
 		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -274,10 +291,11 @@
 		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -286,13 +304,14 @@
 		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -301,13 +320,14 @@
 		<!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
 		<set name="icon" val="BranchIcon.Icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -320,6 +340,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29704" min="1" max="1" chance="100" />
+			<item id="49469" min="10" max="10" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29725" name="Water Dragon Pendant Chest" type="EtcItem">
 		<!-- Double-click on the Chest to obtain 1 Water Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
@@ -356,6 +381,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29724" min="10" max="10" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29729" name="Special Water Dragon Pendant Chest" type="EtcItem">
 		<!-- Double-click on the Chest to obtain Water Dragon Pendant Chest (10 pcs). -->
@@ -392,6 +421,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29724" min="30" max="30" chance="100" />
+			<item id="90138" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29733" name="Package: Shiny Pendant Polish for Water Dragon Pendant" type="EtcItem">
 		<!-- Double-click on the Chest to obtain 1 Water Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
@@ -548,6 +582,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29746" min="100" max="100" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29749" name="Package: Mysterious Blessed Spiritshot (D-grade, 100 pcs)" type="EtcItem">
 		<!-- Double-click on the item to receive 100 Mysterious Blessed Spiritshot (B-grade). -->
@@ -557,6 +595,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29747" min="100" max="100" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29750" name="Sniper's Mysterious Package (B-grade)" type="EtcItem">
 		<!-- Double-click the item to receive Mysterious Soulshot (B-grade, 3000 pcs.), Scroll of Experience / SP - Normal (30%, 12 pcs.), 2nd Class Transfer Effect Scroll (12 pcs.) Cannot be exchanged, dropped, or sold. -->
@@ -569,6 +611,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29746" min="3000" max="3000" chance="100" />
+			<item id="29648" min="12" max="12" chance="100" />
+			<item id="29012" min="15" max="15" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29751" name="Mystic's Mysterious Package (B-grade)" type="EtcItem">
 		<!-- Double-click the item to receive Mysterious Spiritshot (B-grade, 1000 pcs.), Scroll of Experience / SP - Normal (30%, 12 pcs.), 2nd Class Transfer Effect Scroll (12 pcs.) Cannot be exchanged, dropped, or sold in a private store. -->
@@ -581,6 +629,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29747" min="1000" max="1000" chance="100" />
+			<item id="29648" min="12" max="12" chance="100" />
+			<item id="29012" min="15" max="15" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29752" name="Halloween Suit" type="Armor">
 		<!-- If equipped, cannot wear armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Weapons and Magic Equipment will not be removed. Hair Accessory will not be removed, but will not display. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->

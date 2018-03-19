@@ -141,14 +141,16 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29511" min="1" max="1" chance="100" />
-			<item id="10650" min="30" max="30" chance="100" />
-			<item id="29648" min="30" max="30" chance="100" />
-			<item id="29651" min="50" max="50" chance="100" />
-			<item id="29653" min="30" max="30" chance="100" />
 			<item id="34603" min="5000" max="5000" chance="100" />
-			<item id="34610" min="3000" max="3000" chance="100" />
+			<item id="34610" min="1000" max="1000" chance="100" />
+			<item id="29648" min="30" max="30" chance="100" />
+			<item id="49032" min="1" max="1" chance="100" />
+			<item id="49000" min="1" max="1" chance="100" />
+			<item id="29651" min="50" max="50" chance="100" />
+			<item id="10650" min="30" max="30" chance="100" />
 			<item id="49036" min="30" max="30" chance="100" />
+			<item id="29653" min="30" max="30" chance="100" />
+			<item id="29511" min="1" max="1" chance="100" />
 		</capsuled_items>
 	</item>
 	<item id="29511" name="Newbie Kit - Lvl 2" type="EtcItem">
@@ -184,10 +186,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29513" min="1" max="1" chance="100" />
 			<item id="29527" min="1" max="1" chance="100" />
 			<item id="34604" min="9000" max="9000" chance="100" />
 			<item id="34611" min="2000" max="2000" chance="100" />
+			<item id="29513" min="1" max="1" chance="100" />
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="20" />
@@ -206,10 +208,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29514" min="1" max="1" chance="100" />
 			<item id="29529" min="1" max="1" chance="100" />
 			<item id="34604" min="9000" max="9000" chance="100" />
 			<item id="34611" min="2000" max="2000" chance="100" />
+			<item id="29514" min="1" max="1" chance="100" />
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="25" />
@@ -228,10 +230,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29515" min="1" max="1" chance="100" />
 			<item id="29530" min="1" max="1" chance="100" />
 			<item id="34604" min="9000" max="9000" chance="100" />
 			<item id="34611" min="2000" max="2000" chance="100" />
+			<item id="29515" min="1" max="1" chance="100" />
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="30" />
@@ -250,10 +252,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="29516" min="1" max="1" chance="100" />
 			<item id="29649" min="10" max="10" chance="100" />
 			<item id="34604" min="9000" max="9000" chance="100" />
 			<item id="34611" min="2000" max="2000" chance="100" />
+			<item id="29516" min="1" max="1" chance="100" />
 		</capsuled_items>
 		<cond msgId="113">
 			<player level="35" />
@@ -338,6 +340,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29023" min="1000" max="1000" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29522" name="Package: Mysterious Blessed Spiritshot (No-grade, 1000 pcs.)" type="EtcItem">
 		<!-- Double-click the item to receive 1000 Mysterious Spiritshots (No-grade). -->
@@ -347,6 +353,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29024" min="1000" max="1000" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29523" name="Package: Mysterious Soulshot (D-grade, 1000 pcs.)" type="EtcItem">
 		<!-- Double-click the item to receive 1000 Mysterious Soulshots (D-grade). -->
@@ -356,6 +366,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29025" min="1000" max="1000" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29524" name="Package: Mysterious Blessed Spiritshot (D-grade, 1000 pcs.)" type="EtcItem">
 		<!-- Double-click the item to receive 1000 Mysterious Blessed Spiritshots (D-grade). -->
@@ -365,6 +379,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29026" min="1000" max="1000" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29525" name="Package: Mysterious Soulshot (C-grade, 1000 pcs.)" type="EtcItem">
 		<!-- Double-click the item to receive 1000 Mysterious Soulshots (C-grade). -->
@@ -374,6 +392,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29027" min="1000" max="1000" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29526" name="Package: Mysterious Blessed Spiritshot (C-grade, 1000 pcs.)" type="EtcItem">
 		<!-- Double-click the item to receive 1000 Mysterious Blessed Spiritshots (C-grade). -->
@@ -383,6 +405,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29028" min="1000" max="1000" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29527" name="Saber*Elven Sword" additionalName="30-day" type="Weapon">
 		<!-- 30-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -469,6 +495,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29023" min="5000" max="5000" chance="100" />
+			<item id="29648" min="15" max="15" chance="100" />
+			<item id="29011" min="15" max="15" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29532" name="Mystic's Mysterious Package (No-grade)" type="EtcItem">
 		<!-- Double-click the item to receive Mysterious Spiritshot (No-grade, 1000 pcs.), Scroll of Experience / SP - Normal (15 pcs.), 1st Class Transfer Effect Scroll (15 pcs.) Cannot be exchanged, dropped, or sold. -->
@@ -481,6 +513,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29024" min="1000" max="1000" chance="100" />
+			<item id="29648" min="15" max="15" chance="100" />
+			<item id="29011" min="15" max="15" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29533" name="Sniper's Mysterious Package (D-grade)" type="EtcItem">
 		<!-- Double-click the item to receive Mysterious Soulshot (D-grade, 5000 pcs.), Scroll of Experience / SP - Normal (15 pcs.), 1st Class Transfer Effect Scroll (15 pcs.) Cannot be exchanged, dropped, or sold. -->
@@ -493,6 +531,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29025" min="5000" max="5000" chance="100" />
+			<item id="29648" min="15" max="15" chance="100" />
+			<item id="29011" min="15" max="15" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29534" name="Mystic's Mysterious Package (D-grade)" type="EtcItem">
 		<!-- Double-click the item to receive Mysterious Spiritshot (D-grade, 1000 pcs.), Scroll of Experience / SP - Normal (15 pcs.), 1st Class Transfer Effect Scroll (15 pcs.) Cannot be exchanged, dropped, or sold. -->
@@ -505,6 +549,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29026" min="1000" max="1000" chance="100" />
+			<item id="29648" min="15" max="15" chance="100" />
+			<item id="29011" min="15" max="15" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29535" name="Sniper's Mysterious Package (C-grade)" type="EtcItem">
 		<!-- Double-click the item to receive Mysterious Soulshot (C-grade, 5000 pcs.), Scroll of Experience / SP - Normal (30%, 15 pcs.), 1st Class Transfer Effect Scroll (15 pcs.) Cannot be exchanged, dropped, or sold. -->
@@ -517,6 +567,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29027" min="5000" max="5000" chance="100" />
+			<item id="29648" min="15" max="15" chance="100" />
+			<item id="29011" min="15" max="15" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29536" name="Mystic's Mysterious Package (C-grade)" type="EtcItem">
 		<!-- Double-click the item to receive Mysterious Spiritshot (C-grade, 1000 pcs.), Scroll of Experience / SP - Normal (30%, 15 pcs.), 1st Class Transfer Effect Scroll (15 pcs.) Cannot be exchanged, dropped, or sold. -->
@@ -529,6 +585,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="29028" min="1000" max="1000" chance="100" />
+			<item id="29648" min="15" max="15" chance="100" />
+			<item id="29011" min="15" max="15" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="29537" name="Life Stone: Hair Accessory" type="EtcItem">
 		<!-- Used by Blacksmiths to add special characteristics to a Hair Accessory. (Not in use) -->

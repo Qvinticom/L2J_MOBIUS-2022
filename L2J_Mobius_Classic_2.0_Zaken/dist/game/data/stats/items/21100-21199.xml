@@ -36,11 +36,20 @@
 	<item id="21165" name="Agathion - Zaken's Spirit Swords" type="Armor">
 		<!-- Zaken cannot be attacked, the skill will be removed. The bracelet is only issued by ID. -->
 		<set name="icon" val="BranchSys2.Icon.br_aga_zaken_i00" />
-		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
-		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55417" level="1" /> <!-- Release Agathion - One-eyed Bat Drove -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 </list>

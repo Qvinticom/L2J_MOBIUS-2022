@@ -674,6 +674,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55319" level="1"/>
+		</skills>
 	</item>
 	<item id="29987" name="Memories Chest" type="EtcItem">
 		<!-- A reward box given for collecting all the letters of the word �Memories�. -->
@@ -682,6 +686,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55321" level="1"/>
+		</skills>
 	</item>
 	<item id="29988" name="Chronicle Chest" type="EtcItem">
 		<!-- A reward box given for collecting all the letters of the word �Chronicle�. -->
@@ -690,5 +698,9 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55320" level="1"/>
+		</skills>
 	</item>
 </list>

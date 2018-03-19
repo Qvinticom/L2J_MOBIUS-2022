@@ -229,6 +229,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55317" level="1"/>
+		</skills>
 	</item>
 	<item id="70219" name="Refined Rare Accessory Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to receive one of the following items: Refined Queen Ant's Ring (7-day), Refined Orfen's Earring (7-day), or Refined Ring of Core (7-day). -->

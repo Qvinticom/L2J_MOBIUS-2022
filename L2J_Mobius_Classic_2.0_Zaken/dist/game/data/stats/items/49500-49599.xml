@@ -1036,6 +1036,13 @@
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49589" min="180" max="180" chance="100" />
+			<item id="38154" min="180" max="180" chance="100" />
+			<item id="49502" min="5" max="5" chance="100" />
+			<item id="49503" min="5" max="5" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="49584" name="Golden Boot" type="EtcItem">
 		<!-- Double-click on the Golden Boot to get one of its treasures. Cannot be dropped. -->
@@ -1044,6 +1051,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45488" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="49585" name="Golden Necklace of Mermaid" additionalName="7-day" type="EtcItem">
 		<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50% for 1 hour. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->

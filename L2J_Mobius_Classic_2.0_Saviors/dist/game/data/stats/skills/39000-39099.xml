@@ -66,9 +66,27 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39013" toLevel="1" name="Scroll: Empower">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<abnormalType>MA_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3932</itemConsumeId>
+		<hitTime>4000</hitTime>
+		<icon>icon.etc_scroll_white_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>55</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39014" toLevel="1" name="Scroll: Might">
 		<abnormalLvl>4</abnormalLvl>
@@ -701,24 +719,96 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39053" toLevel="1" name="Agathion Teleport: Gludio">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-14225</x>
+				<y>123540</y>
+				<z>-3116</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39054" toLevel="1" name="Agathion Teleport: Dion">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>18748</x>
+				<y>145437</y>
+				<z>-3127</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39055" toLevel="1" name="Agathion Teleport: Giran">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82698</x>
+				<y>148638</y>
+				<z>-3468</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39056" toLevel="1" name="Agathion Teleport: Oren">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<hitTime>3000</hitTime>
+		<reuseDelay>3600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82321</x>
+				<y>55139</y>
+				<z>-1524</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39057" toLevel="1" name="Hero Experience Rune">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
