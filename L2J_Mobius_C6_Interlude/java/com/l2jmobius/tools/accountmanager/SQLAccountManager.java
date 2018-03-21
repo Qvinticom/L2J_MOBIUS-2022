@@ -162,18 +162,18 @@ public class SQLAccountManager
 		int count = 0;
 		Connection con = null;
 		con = DatabaseFactory.getInstance().getConnection();
-		String q = "SELECT login, access_level FROM accounts ";
+		String q = "SELECT login, accessLevel FROM accounts ";
 		if (m.equals("1"))
 		{
-			q = q.concat("WHERE access_level < 0");
+			q = q.concat("WHERE accessLevel < 0");
 		}
 		else if (m.equals("2"))
 		{
-			q = q.concat("WHERE access_level > 0");
+			q = q.concat("WHERE accessLevel > 0");
 		}
 		else if (m.equals("3"))
 		{
-			q = q.concat("WHERE access_level = 0");
+			q = q.concat("WHERE accessLevel = 0");
 		}
 		q = q.concat(" ORDER BY login ASC");
 		
@@ -181,7 +181,7 @@ public class SQLAccountManager
 		ResultSet rset = statement.executeQuery();
 		while (rset.next())
 		{
-			System.out.println(rset.getString("login") + " -> " + rset.getInt("access_level"));
+			System.out.println(rset.getString("login") + " -> " + rset.getInt("accessLevel"));
 			count++;
 		}
 		rset.close();
@@ -201,7 +201,7 @@ public class SQLAccountManager
 		// Add to Base
 		Connection con = null;
 		con = DatabaseFactory.getInstance().getConnection();
-		PreparedStatement statement = con.prepareStatement("REPLACE accounts (login, password, access_level) VALUES (?,?,?)");
+		PreparedStatement statement = con.prepareStatement("REPLACE accounts (login, password, accessLevel) VALUES (?,?,?)");
 		statement.setString(1, account);
 		statement.setString(2, Base64.getEncoder().encodeToString(newpass));
 		statement.setString(3, level);
@@ -227,7 +227,7 @@ public class SQLAccountManager
 		{
 			// Exist
 			// Update
-			statement = con.prepareStatement("UPDATE accounts SET access_level=? WHERE login=?;");
+			statement = con.prepareStatement("UPDATE accounts SET accessLevel=? WHERE login=?;");
 			statement.setEscapeProcessing(true);
 			statement.setString(1, level);
 			statement.setString(2, account);

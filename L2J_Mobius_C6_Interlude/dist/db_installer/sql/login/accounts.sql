@@ -3,10 +3,12 @@
 -- ---------------------------
 CREATE TABLE IF NOT EXISTS `accounts` (
   `login` VARCHAR(45) NOT NULL default '',
-  `password` VARCHAR(45) ,
-  `lastactive` DECIMAL(20),
-  `access_level` INT,
-  `lastIP` VARCHAR(20),
-  `lastServer` int(4) default 1,
+  `password` VARCHAR(45),
+  `email` varchar(255) DEFAULT NULL,
+  `created_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `lastactive` bigint(13) unsigned NOT NULL DEFAULT '0',
+  `accessLevel` TINYINT NOT NULL DEFAULT 0,
+  `lastIP` CHAR(15) NULL DEFAULT NULL,
+  `lastServer` TINYINT DEFAULT 1,
   PRIMARY KEY (`login`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
