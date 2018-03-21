@@ -84,7 +84,7 @@ public class L2NpcAction implements IActionHandler
 			if (target.isAutoAttackable(activeChar) && !((L2Character) target).isAlikeDead())
 			{
 				// Check the height difference
-				if (Math.abs(activeChar.getZ() - target.getZ()) < 400) // this max height difference might need some tweaking
+				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
 					// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
