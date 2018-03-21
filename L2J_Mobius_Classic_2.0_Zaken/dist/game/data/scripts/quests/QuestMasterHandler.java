@@ -148,6 +148,8 @@ import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
 import quests.Q11000_MoonKnight.Q11000_MoonKnight;
+import quests.Q11001_TombsOfAncestors.Q11001_TombsOfAncestors;
+import quests.Q11013_ShilensHunt.Q11013_ShilensHunt;
 
 /**
  * @author NosBit
@@ -287,6 +289,8 @@ public class QuestMasterHandler
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
 		Q11000_MoonKnight.class,
+		Q11001_TombsOfAncestors.class,
+		Q11013_ShilensHunt.class,
 	};
 	
 	public static void main(String[] args)
