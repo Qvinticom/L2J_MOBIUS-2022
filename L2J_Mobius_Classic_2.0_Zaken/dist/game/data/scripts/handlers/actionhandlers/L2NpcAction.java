@@ -83,12 +83,11 @@ public class L2NpcAction implements IActionHandler
 			// Check if the activeChar is attackable (without a forced attack) and isn't dead
 			if (target.isAutoAttackable(activeChar) && !((L2Character) target).isAlikeDead())
 			{
-				// Check the height difference
+				// Check if target is in LoS
 				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
 					// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-					// activeChar.startAttack(this);
 				}
 				else
 				{
