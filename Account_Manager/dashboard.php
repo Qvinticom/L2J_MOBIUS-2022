@@ -8,7 +8,7 @@ if(empty($_SESSION['account']))
 }
 
 $error = "";
-	if(isset($_POST['register'])) 
+	if(isset($_POST['changePassword'])) 
 	{
 		$conn = new mysqli($server_host, $db_user_name, $db_user_password, $db_database);
 		// Check connection
@@ -19,42 +19,56 @@ $error = "";
 			exit();
 		}
 		  
-		$account = mysqli_real_escape_string($conn, $_POST['username']);
+		$account = mysqli_real_escape_string($conn, $_SESSION['account']);
 		$password = base64_encode(sha1($_POST['password'], true));
-
-		$email = $_POST['email'];
+		$passwordOld = base64_encode(sha1($_POST['passwordOld'], true));
 		
 		if($_POST['password']!=$_POST['passwordVerify']){
 			$error .= "Password does not match.<br>"; 
 		}
-		
-		if(mb_strlen($account)<4 || mb_strlen($account)>14){
-			$error .= "Account length must be 4 to 14 characters long.";
-			}
+		if(mb_strlen($_POST['passwordOld'])<4 || mb_strlen($_POST['passwordOld'])>16){
+			$error .= "Old Password length must be 4 to 16 characters long.";
+		}	
 			
 		if(mb_strlen($_POST['password'])<4 || mb_strlen($_POST['password'])>16){
 			$error .= "Password length must be 4 to 16 characters long.";
-			}
-			
-		if(mb_strlen($email)<7 || mb_strlen($email)>100){
-			$error .= "Email length must be 7 to 100 characters long.";
-			}
-
-		$sql = "SELECT `login` FROM `accounts` WHERE `login`='".$account."'";
-		$result = $conn->query($sql);
-		if ($result->num_rows!=0) {
-			$error .= "Account already exist.<br>";	
-		}		
+		}	
+		if($password == '')
+			$error = 'Enter password';
 		
+		if($passwordOld == '')
+			$error = 'Enter old password';
+		
+		$sql = "SELECT * FROM `accounts` WHERE `login`='".$account."'";
+		$result = $conn->query($sql);
+
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) 
+				{
+					
+					if ($passwordOld == $row['password']) 
+						{
+							$error = "";
+						}
+					else
+						{
+							$error = 'Incorrect Old password';
+						}
+				}
+			} 
+			else 
+			{
+				$error = 'Something went wrong [1]';
+			}
 		if(empty($error)){
-			echo ($account.$password.$email);
-			$sqlregister = "INSERT INTO `accounts` (`login`, `password`, `email`, `lastIP`) VALUES ('".$account."','".$password."','".$email."','".$_SERVER['REMOTE_ADDR']."')";
-			if ($conn->query($sqlregister) === TRUE) {
-				$error = "Account created!";
-				sendemail($CONFIG['emailsmtp'], $CONFIG['emailuser'], $CONFIG['emailpass'], $CONFIG['emailaddress'], "L2j Mobius", "Password Change", $email, $account, $_POST['password']);
-				header( "refresh:5;url=index.php" );
-			} else {
-				$error = "Something went wrong";
+			$sqlupdate = "UPDATE `accounts` SET `password`='".$password."' WHERE (`login`='".$account."')";
+			if ($conn->query($sqlupdate) === TRUE) {
+				$error = "Password Successfuly Updated";
+				$_SESSION['password'] = $password;
+				header( "refresh:2;url=dashboard.php" );
+			} 
+			else {
+				$error = "Something went wrong [2]";
 			}
 		}
 		
@@ -87,7 +101,7 @@ $error = "";
 	                   $(document).ready(function(){
 
 
-	                    $('#register').submit(function() {
+	                    $('#changePassword').submit(function() {
 	                      
 	                    if($('#password').val() != $('#passwordVerify').val()){
 	                       alert("Please re-enter confirm password");
@@ -98,9 +112,8 @@ $error = "";
 
 	                        function clear_form()
 	                        {
-	                           $("#email").val('');
-	                           $("#username").val('');
 	                           $("#password").val('');
+				   $("#passwordOld").val('');
 	                           $("#passwordVerify").val('');
 	                        }
 	                   });
@@ -176,6 +189,13 @@ $error = "";
 
 					<div>
 						<form id="changePassword" method="post">
+							<div class="form-group">
+								<input class="form-control" data-error="Old Password is required." id="passwordOld" name="passwordOld" placeholder="Please enter your Old Password" required="required" type="password" value="<?php if(isset($_POST['passwordOld'])) echo $_POST['passwordOld'] ?>">
+
+								<div class="help-block with-errors">
+								</div>
+							</div>
+						
 
 							<div class="form-group">
 								<input class="form-control" data-error="Password is required." id="password" name="password" placeholder="Please enter your New Password" required="required" type="password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>">
@@ -191,7 +211,7 @@ $error = "";
 								<div class="help-block with-errors">
 								</div>
 							</div>
-							<input class="form-btn btn" id="submit" name="register" type="submit" value="REGISTER">
+							<input class="form-btn btn" id="submit" name="changePassword" type="submit" value="Change Password">
 						</form>
 						
 					</div>
@@ -211,7 +231,7 @@ $error = "";
 		<a href="http://l2jmobius.com"><img alt="" src="images/l2jmobius.png" title=""></a>
 	</div>
 	<script>
-	               var url = 'index.php';
+	               var url = 'dashboard.php';
 	</script> 
 	<script src="js/jquery.cookie.min.js">
 	</script> 
