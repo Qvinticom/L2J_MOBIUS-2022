@@ -1,3 +1,60 @@
+<?php
+error_reporting(0);
+include 'includes/config.php';
+$error = "";
+	if(isset($_POST['register'])) 
+	{
+		$conn = new mysqli($server_host, $db_user_name, $db_user_password, $db_database);
+		// Check connection
+		if (mysqli_connect_errno())
+		{
+			$error = "Can't Connect to MySQL <h5>". mysqli_connect_error()."</h5>";
+			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			exit();
+		}
+		  
+		$account = mysqli_real_escape_string($conn, $_POST['username']);
+		$password = base64_encode(sha1($_POST['password'], true));
+		$username = $_POST['username'];
+		$email = $_POST['email'];
+		
+		if($_POST['password']!=$_POST['passwordVerify']){
+			$error .= "Password does not match.<br>"; 
+		}
+		
+		if(mb_strlen($account)<4 || mb_strlen($account)>14){
+			$error .= "Account length must be 4 to 14 characters long.";
+			}
+			
+		if(mb_strlen($_POST['password'])<4 || mb_strlen($_POST['password'])>16){
+			$error .= "Password length must be 4 to 16 characters long.";
+			}
+			
+		if(mb_strlen($email)<7 || mb_strlen($email)>100){
+			$error .= "Email length must be 7 to 100 characters long.";
+			}
+
+		$sql = "SELECT `login` FROM `accounts` WHERE `login`='".$account."'";
+		$result = $conn->query($sql);
+		if ($result->num_rows!=0) {
+			$error .= "Account already exists.<br>";	
+		}		
+		
+		if(empty($error)){
+			echo ($account.$password.$email);
+			$sqlregister = "INSERT INTO `accounts` (`login`, `password`, `email`, `lastIP`) VALUES ('".$account."','".$password."','".$email."','".$_SERVER['REMOTE_ADDR']."')";
+			if ($conn->query($sqlregister) === TRUE) {
+				$error = "Account created!";
+				header( "refresh:5;url=index.php" );
+			} else {
+				$error = "Something went wrong.";
+			}
+		}
+		
+		$conn->close();
+	}
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -21,7 +78,6 @@
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 	<script language="javascript">
 	                   $(document).ready(function(){
-
 
 	                    $('#register').submit(function() {
 	                      
@@ -80,15 +136,21 @@
 
 
 					<div class="register">
-						<a data-target="#register" data-toggle="modal" type="button">CREATE AN ACCOUNT</a>
+						<a data-target="#modalRegister" data-toggle="modal" type="button">CREATE AN ACCOUNT</a>
 					</div>
+					<div class="messages">
+							<h4><font color="#FFFFFF"><?php
+								echo (!empty($error)?"<label><strong>".$error."</strong></label>":'');
+								?></font>
+							</h4>
+						</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
 
-	<div class="modal fade" id="register" role="dialog">
+	<div class="modal fade" id="modalRegister" role="dialog">
 		<div class="container">
 			<br>
 			<!-- Modal content-->
@@ -104,7 +166,7 @@
 
 
 					<div>
-						<form>
+						<form id="register" method="post">
 							<div class="form-group">
 								<input class="form-control" data-error="Account name is required." id="username" name="username" placeholder="Please enter your Account" required="required" type="text" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>">
 
@@ -130,24 +192,19 @@
 
 
 							<div class="form-group">
-								<input class="form-control" data-error="Verify Password is required." id="passwordVerify" name="passwordVerify" placeholder="Please re-enter your Password" required="required" type="password" value="">
+								<input class="form-control" data-error="Verify Password is required." id="passwordVerify" name="passwordVerify" placeholder="Please re-enter your Password" required="required" type="password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>">
 
 								<div class="help-block with-errors">
 								</div>
 							</div>
+							<input class="form-btn btn" id="submit" name="register" type="submit" value="REGISTER">
 						</form>
-						<input class="form-btn btn" name="register" type="submit" value="REGISTER">
+						
 					</div>
 
 
 					<div class="modal-footer">
 						<div class="messages">
-							<h4><font color="#FFFFFF"><?php
-							                                                                                                if(isset($errMsg)){
-							                                                                                                    echo $errMsg;
-							                                                                                                }
-							                                                                                                ?></font>
-							</h4>
 						</div>
 					</div>
 				</div>
@@ -160,7 +217,7 @@
 		<a href="http://l2jmobius.com"><img alt="" src="images/l2jmobius.png" title=""></a>
 	</div>
 	<script>
-	               var url = 'index.html';
+	               var url = 'index.php';
 	</script> 
 	<script src="js/jquery.cookie.min.js">
 	</script> 
