@@ -1,6 +1,12 @@
 <?php
 error_reporting(0);
 include 'includes/config.php';
+
+if(empty($_SESSION['account']))
+{
+	header('Location: index.php');
+}
+
 $error = "";
 	if(isset($_POST['register'])) 
 	{
@@ -15,6 +21,7 @@ $error = "";
 		  
 		$account = mysqli_real_escape_string($conn, $_POST['username']);
 		$password = base64_encode(sha1($_POST['password'], true));
+
 		$email = $_POST['email'];
 		
 		if($_POST['password']!=$_POST['passwordVerify']){
@@ -36,7 +43,7 @@ $error = "";
 		$sql = "SELECT `login` FROM `accounts` WHERE `login`='".$account."'";
 		$result = $conn->query($sql);
 		if ($result->num_rows!=0) {
-			$error .= "Account already exists.<br>";	
+			$error .= "Account already exist.<br>";	
 		}		
 		
 		if(empty($error)){
@@ -44,58 +51,12 @@ $error = "";
 			$sqlregister = "INSERT INTO `accounts` (`login`, `password`, `email`, `lastIP`) VALUES ('".$account."','".$password."','".$email."','".$_SERVER['REMOTE_ADDR']."')";
 			if ($conn->query($sqlregister) === TRUE) {
 				$error = "Account created!";
+				sendemail($CONFIG['emailsmtp'], $CONFIG['emailuser'], $CONFIG['emailpass'], $CONFIG['emailaddress'], "L2j Mobius", "Password Change", $email, $account, $_POST['password']);
 				header( "refresh:5;url=index.php" );
 			} else {
-				$error = "Something went wrong.";
+				$error = "Something went wrong";
 			}
 		}
-		
-		$conn->close();
-	}
-	
-	if(isset($_POST['login'])) 
-	{
-		$conn = new mysqli($server_host, $db_user_name, $db_user_password, $db_database);
-		// Check connection
-		if (mysqli_connect_errno())
-		{
-			$error = "Can't Connect to MySQL <h5>". mysqli_connect_error()."</h5>";
-			echo "Failed to connect to MySQL: " . mysqli_connect_error();
-			exit();
-		}
-		  
-		$account = mysqli_real_escape_string($conn, $_POST['username']);
-		$password = base64_encode(sha1($_POST['password'], true));
-		
-		if($account == '')
-			$error = 'Enter account';
-		if($password == '')
-			$error = 'Enter password';
-		
-		$sql = "SELECT * FROM `accounts` WHERE `login`='".$account."'";
-		$result = $conn->query($sql);
-
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()) 
-				{
-					
-					if ($password == $row['password']) 
-						{
-							$_SESSION['account'] = $account;
-							$_SESSION['password'] = $password;
-							$error = "You are connected. Redirecting . . .";
-							header( "refresh:1;url=dashboard.php" );	
-						}
-					else
-						{
-							$error = 'Password does not match.';
-						}
-				}
-			} 
-			else 
-			{
-				$error = 'Account does not exist. <a data-target="#modalRegister" data-toggle="modal" type="button">Create one.</a>';
-			}
 		
 		$conn->close();
 	}
@@ -124,6 +85,7 @@ $error = "";
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 	<script language="javascript">
 	                   $(document).ready(function(){
+
 
 	                    $('#register').submit(function() {
 	                      
@@ -176,13 +138,14 @@ $error = "";
 
 				<div class="statuses">
 					<div class="entercp">
-						Login to your <a data-target="#modalLogin" data-toggle="modal" type="button">Account</a> or
+						Welcome <?php echo $_SESSION['account']; ?>
+						<p><a href="logout.php">Logout</a></p>
 					</div>
 					<br>
 
 
 					<div class="register">
-						<a data-target="#modalRegister" data-toggle="modal" type="button">CREATE AN ACCOUNT</a>
+						<a data-target="#modalChangePassword" data-toggle="modal" type="button">Change Password</a>
 					</div>
 					<div class="messages">
 							<h4><font color="#FFFFFF"><?php
@@ -196,7 +159,7 @@ $error = "";
 	</header>
 
 
-	<div class="modal fade" id="modalRegister" role="dialog">
+	<div class="modal fade" id="modalChangePassword" role="dialog">
 		<div class="container">
 			<br>
 			<!-- Modal content-->
@@ -207,14 +170,15 @@ $error = "";
 					<div class="modal-header">
 						<button class="close" data-dismiss="modal" type="button">&times;</button>
 
-						<h4 class="modal-title">Register Account</h4>
+						<h4 class="modal-title">Change Password</h4>
 					</div>
 
 
 					<div>
-						<form id="register" method="post">
+						<form id="changePassword" method="post">
+
 							<div class="form-group">
-								<input class="form-control" data-error="Account name is required." id="username" name="username" placeholder="Please enter your Account" required="required" type="text" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>">
+								<input class="form-control" data-error="Password is required." id="password" name="password" placeholder="Please enter your New Password" required="required" type="password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>">
 
 								<div class="help-block with-errors">
 								</div>
@@ -222,76 +186,12 @@ $error = "";
 
 
 							<div class="form-group">
-								<input class="form-control" data-error="Valid email is required." id="email" name="email" placeholder="Please enter your Email" required="required" type="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>">
-
-								<div class="help-block with-errors">
-								</div>
-							</div>
-
-
-							<div class="form-group">
-								<input class="form-control" data-error="Password is required." id="password" name="password" placeholder="Please enter your Password" required="required" type="password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>">
-
-								<div class="help-block with-errors">
-								</div>
-							</div>
-
-
-							<div class="form-group">
-								<input class="form-control" data-error="Verify Password is required." id="passwordVerify" name="passwordVerify" placeholder="Please re-enter your Password" required="required" type="password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>">
+								<input class="form-control" data-error="Verify Password is required." id="passwordVerify" name="passwordVerify" placeholder="Please re-enter your New Password" required="required" type="password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>">
 
 								<div class="help-block with-errors">
 								</div>
 							</div>
 							<input class="form-btn btn" id="submit" name="register" type="submit" value="REGISTER">
-						</form>
-						
-					</div>
-
-
-					<div class="modal-footer">
-						<div class="messages">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="modal fade" id="modalLogin" role="dialog">
-		<div class="container">
-			<br>
-			<!-- Modal content-->
-
-
-			<div class="form">
-				<div class="modal-body">
-					<div class="modal-header">
-						<button class="close" data-dismiss="modal" type="button">&times;</button>
-
-						<h4 class="modal-title">Login</h4>
-					</div>
-
-
-					<div>
-						<form id="login" method="post">
-							<div class="form-group">
-								<input class="form-control" data-error="Account name is required." id="username" name="username" placeholder="Please enter your Account" required="required" type="text" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>">
-
-								<div class="help-block with-errors">
-								</div>
-							</div>
-
-
-							<div class="form-group">
-								<input class="form-control" data-error="Password is required." id="password" name="password" placeholder="Please enter your Password" required="required" type="password" value="<?php if(isset($_POST['password'])) echo $_POST['password'] ?>">
-
-								<div class="help-block with-errors">
-								</div>
-							</div>
-
-							<input class="form-btn btn" id="submit" name="login" type="submit" value="LOGIN">
-							
 						</form>
 						
 					</div>
