@@ -822,6 +822,18 @@ public final class Config
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
 	public static boolean ENABLE_FIND_PVP;
+	public static boolean AUTO_POTIONS_ENABLED;
+	public static boolean AUTO_POTIONS_IN_OLYMPIAD;
+	public static int AUTO_POTION_MIN_LVL;
+	public static boolean AUTO_CP_ENABLED;
+	public static boolean AUTO_HP_ENABLED;
+	public static boolean AUTO_MP_ENABLED;
+	public static int AUTO_CP_PERCENTAGE;
+	public static int AUTO_HP_PERCENTAGE;
+	public static int AUTO_MP_PERCENTAGE;
+	public static List<Integer> AUTO_CP_ITEM_IDS;
+	public static List<Integer> AUTO_HP_ITEM_IDS;
+	public static List<Integer> AUTO_MP_ITEM_IDS;
 	// --------------------------------------------------
 	// NPC Settings
 	// --------------------------------------------------
@@ -2710,6 +2722,31 @@ public final class Config
 			}
 			
 			ENABLE_FIND_PVP = CustomSettings.getBoolean("EnableFindPvP", false);
+			
+			AUTO_POTIONS_ENABLED = CustomSettings.getBoolean("AutoPotionsEnabled", false);
+			AUTO_POTIONS_IN_OLYMPIAD = CustomSettings.getBoolean("AutoPotionsInOlympiad", false);
+			AUTO_POTION_MIN_LVL = CustomSettings.getInt("AutoPotionMinimumLevel", 1);
+			AUTO_CP_ENABLED = CustomSettings.getBoolean("AutoCpEnabled", true);
+			AUTO_HP_ENABLED = CustomSettings.getBoolean("AutoHpEnabled", true);
+			AUTO_MP_ENABLED = CustomSettings.getBoolean("AutoMpEnabled", true);
+			AUTO_CP_PERCENTAGE = CustomSettings.getInt("AutoCpPercentage", 70);
+			AUTO_HP_PERCENTAGE = CustomSettings.getInt("AutoHpPercentage", 70);
+			AUTO_MP_PERCENTAGE = CustomSettings.getInt("AutoMpPercentage", 70);
+			AUTO_CP_ITEM_IDS = new ArrayList<>();
+			for (String s : CustomSettings.getString("AutoCpItemIds", "0").split(","))
+			{
+				AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
+			}
+			AUTO_HP_ITEM_IDS = new ArrayList<>();
+			for (String s : CustomSettings.getString("AutoHpItemIds", "0").split(","))
+			{
+				AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
+			}
+			AUTO_MP_ITEM_IDS = new ArrayList<>();
+			for (String s : CustomSettings.getString("AutoMpItemIds", "0").split(","))
+			{
+				AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
+			}
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);

@@ -104,6 +104,7 @@ Events:
 
 Customs:
 -Allowed player races
+-Auto potions command
 -Banking
 -Champion monsters
 -Classmaster

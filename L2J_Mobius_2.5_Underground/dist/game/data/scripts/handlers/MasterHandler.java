@@ -326,6 +326,7 @@ import handlers.usercommandhandlers.PartyInfo;
 import handlers.usercommandhandlers.SiegeStatus;
 import handlers.usercommandhandlers.Time;
 import handlers.usercommandhandlers.Unstuck;
+import handlers.voicedcommandhandlers.AutoPotion;
 import handlers.voicedcommandhandlers.Banking;
 import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
@@ -586,6 +587,7 @@ public class MasterHandler
 			Config.MULTILANG_ENABLE && Config.MULTILANG_VOICED_ALLOW ? Lang.class : null,
 			Config.ALLOW_CHANGE_PASSWORD ? ChangePassword.class : null,
 			Config.PREMIUM_SYSTEM_ENABLED ? Premium.class : null,
+			Config.AUTO_POTIONS_ENABLED ? AutoPotion.class : null,
 		},
 		{
 			// Target Handlers

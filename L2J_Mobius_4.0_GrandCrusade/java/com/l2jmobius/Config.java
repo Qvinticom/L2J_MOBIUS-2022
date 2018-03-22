@@ -109,6 +109,7 @@ public final class Config
 	// Custom Config File Definitions
 	// --------------------------------------------------
 	public static final String CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE = "./config/Custom/AllowedPlayerRaces.ini";
+	public static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
 	public static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
 	public static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
 	public static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
@@ -1114,6 +1115,18 @@ public final class Config
 	public static boolean ALLOW_DWARF;
 	public static boolean ALLOW_KAMAEL;
 	public static boolean ALLOW_ERTHEIA;
+	public static boolean AUTO_POTIONS_ENABLED;
+	public static boolean AUTO_POTIONS_IN_OLYMPIAD;
+	public static int AUTO_POTION_MIN_LVL;
+	public static boolean AUTO_CP_ENABLED;
+	public static boolean AUTO_HP_ENABLED;
+	public static boolean AUTO_MP_ENABLED;
+	public static int AUTO_CP_PERCENTAGE;
+	public static int AUTO_HP_PERCENTAGE;
+	public static int AUTO_MP_PERCENTAGE;
+	public static List<Integer> AUTO_CP_ITEM_IDS;
+	public static List<Integer> AUTO_HP_ITEM_IDS;
+	public static List<Integer> AUTO_MP_ITEM_IDS;
 	public static boolean CUSTOM_STARTING_LOC;
 	public static int CUSTOM_STARTING_LOC_X;
 	public static int CUSTOM_STARTING_LOC_Y;
@@ -2428,6 +2441,34 @@ public final class Config
 			ALLOW_DWARF = AllowedPlayerRaces.getBoolean("AllowDwarf", true);
 			ALLOW_KAMAEL = AllowedPlayerRaces.getBoolean("AllowKamael", true);
 			ALLOW_ERTHEIA = AllowedPlayerRaces.getBoolean("AllowErtheia", true);
+			
+			// Load AutoPotions config file (if exists)
+			final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
+			
+			AUTO_POTIONS_ENABLED = AutoPotions.getBoolean("AutoPotionsEnabled", false);
+			AUTO_POTIONS_IN_OLYMPIAD = AutoPotions.getBoolean("AutoPotionsInOlympiad", false);
+			AUTO_POTION_MIN_LVL = AutoPotions.getInt("AutoPotionMinimumLevel", 1);
+			AUTO_CP_ENABLED = AutoPotions.getBoolean("AutoCpEnabled", true);
+			AUTO_HP_ENABLED = AutoPotions.getBoolean("AutoHpEnabled", true);
+			AUTO_MP_ENABLED = AutoPotions.getBoolean("AutoMpEnabled", true);
+			AUTO_CP_PERCENTAGE = AutoPotions.getInt("AutoCpPercentage", 70);
+			AUTO_HP_PERCENTAGE = AutoPotions.getInt("AutoHpPercentage", 70);
+			AUTO_MP_PERCENTAGE = AutoPotions.getInt("AutoMpPercentage", 70);
+			AUTO_CP_ITEM_IDS = new ArrayList<>();
+			for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(","))
+			{
+				AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
+			}
+			AUTO_HP_ITEM_IDS = new ArrayList<>();
+			for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(","))
+			{
+				AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
+			}
+			AUTO_MP_ITEM_IDS = new ArrayList<>();
+			for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(","))
+			{
+				AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
+			}
 			
 			// Load Banking config file (if exists)
 			final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
