@@ -128,6 +128,7 @@ public final class Config
 	public static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
 	public static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
 	public static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
+	public static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
 	public static final String CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE = "./config/Custom/SayuneForAll.ini";
 	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
 	public static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
@@ -1133,6 +1134,10 @@ public final class Config
 	public static int CUSTOM_STARTING_LOC_Z;
 	public static int SHOP_MIN_RANGE_FROM_NPC;
 	public static int SHOP_MIN_RANGE_FROM_PLAYER;
+	public static boolean ENABLE_RANDOM_MONSTER_SPAWNS;
+	public static int MOB_MIN_SPAWN_RANGE;
+	public static int MOB_MAX_SPAWN_RANGE;
+	public static List<Integer> MOBS_LIST_NOT_RANDOM;
 	public static boolean FREE_JUMPS_FOR_ALL;
 	public static boolean CUSTOM_CB_ENABLED;
 	public static int COMMUNITYBOARD_CURRENCY;
@@ -2839,6 +2844,22 @@ public final class Config
 			TITLE_FOR_PVP_AMOUNT3 = PvpTitleColor.getString("PvPTitleForAmount3", "Title");
 			TITLE_FOR_PVP_AMOUNT4 = PvpTitleColor.getString("PvPTitleForAmount4", "Title");
 			TITLE_FOR_PVP_AMOUNT5 = PvpTitleColor.getString("PvPTitleForAmount5", "Title");
+			
+			// Load RandomSpawns config file (if exists)
+			final PropertiesParser RandomSpawns = new PropertiesParser(CUSTOM_RANDOM_SPAWNS_CONFIG_FILE);
+			
+			ENABLE_RANDOM_MONSTER_SPAWNS = RandomSpawns.getBoolean("EnableRandomMonsterSpawns", false);
+			MOB_MAX_SPAWN_RANGE = RandomSpawns.getInt("MaxSpawnMobRange", 150);
+			MOB_MIN_SPAWN_RANGE = MOB_MAX_SPAWN_RANGE * -1;
+			if (ENABLE_RANDOM_MONSTER_SPAWNS)
+			{
+				final String[] mobsIds = RandomSpawns.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
+				MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
+				for (String id : mobsIds)
+				{
+					MOBS_LIST_NOT_RANDOM.add(Integer.valueOf(id));
+				}
+			}
 			
 			// Load SayuneForAll config file (if exists)
 			final PropertiesParser SayuneForAll = new PropertiesParser(CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE);

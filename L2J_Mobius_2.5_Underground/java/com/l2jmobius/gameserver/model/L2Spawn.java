@@ -23,9 +23,11 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -35,6 +37,7 @@ import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.interfaces.INamable;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.model.spawns.NpcSpawnTemplate;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
  * This class manages the spawn and respawn of a group of L2NpcInstance that are in the same are and have the same type.<br>
@@ -538,6 +541,20 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			newlocx = getX();
 			newlocy = getY();
 			newlocz = getZ();
+		}
+		
+		// If random spawn system is enabled
+		if (Config.ENABLE_RANDOM_MONSTER_SPAWNS)
+		{
+			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
+			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
+			
+			final boolean isQuestMonster = (npc.getTitle() != null) && npc.getTitle().contains("Quest");
+			if (npc.isMonster() && !isQuestMonster && !npc.isWalker() && !npc.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, npc.getInstanceWorld()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId()))
+			{
+				newlocx = randX;
+				newlocy = randY;
+			}
 		}
 		
 		// DO NOT CORRECT SPAWN Z IN GENERAL - Prevent NPC spawns on top of buildings

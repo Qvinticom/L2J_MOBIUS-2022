@@ -600,23 +600,23 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		}
 		else
 		{
-			// The L2NpcInstance is spawned at a random position
+			// The L2NpcInstance is spawned at the exact position (Lox, Locy, Locz)
 			newlocx = getX();
 			newlocy = getY();
 			newlocz = getZ();
+		}
+		
+		// If random spawn system is enabled
+		if (Config.ENABLE_RANDOM_MONSTER_SPAWNS)
+		{
+			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
+			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			
-			// If random spawn system is enabled
-			if (Config.ENABLE_RANDOM_MONSTER_SPAWNS)
+			final boolean isQuestMonster = (mob.getTitle() != null) && mob.getTitle().contains("Quest");
+			if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && !mob.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
 			{
-				final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
-				final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
-				
-				final boolean isQuestMonster = (mob.getTitle() != null) && mob.getTitle().contains("Quest");
-				if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && !mob.isInsideZone(ZoneId.NO_BOOKMARK) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) && (getInstanceId() == 0) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
-				{
-					newlocx = randX;
-					newlocy = randY;
-				}
+				newlocx = randX;
+				newlocy = randY;
 			}
 		}
 		
