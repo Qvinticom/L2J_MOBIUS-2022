@@ -17,6 +17,12 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageReceived;
+import com.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
+import com.l2jmobius.gameserver.model.events.returns.DamageReturn;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
@@ -27,5 +33,26 @@ public class SphericBarrier extends AbstractStatAddEffect
 	public SphericBarrier(StatsSet params)
 	{
 		super(params, Stats.SPHERIC_BARRIER_RANGE);
+	}
+	
+	@Override
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		effected.addListener(new FunctionEventListener(effected, EventType.ON_CREATURE_DAMAGE_RECEIVED, (OnCreatureDamageReceived event) -> onDamageReceivedEvent(event), this));
+	}
+	
+	@Override
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	{
+		effected.removeListenerIf(EventType.ON_CREATURE_DAMAGE_RECEIVED, listener -> listener.getOwner() == this);
+	}
+	
+	private DamageReturn onDamageReceivedEvent(OnCreatureDamageReceived event)
+	{
+		if (event.getAttacker().calculateDistance(event.getTarget(), true, false) > _amount)
+		{
+			return new DamageReturn(false, true, false, 0);
+		}
+		return new DamageReturn(false, false, false, event.getDamage());
 	}
 }

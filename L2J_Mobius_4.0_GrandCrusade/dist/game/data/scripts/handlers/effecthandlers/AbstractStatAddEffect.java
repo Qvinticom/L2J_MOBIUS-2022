@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class AbstractStatAddEffect extends AbstractEffect
 {
 	private final Stats _stat;
-	private final double _amount;
+	protected final double _amount;
 	
 	public AbstractStatAddEffect(StatsSet params, Stats stat)
 	{

@@ -92,12 +92,6 @@ public final class EnergyAttack extends AbstractEffect
 			return;
 		}
 		
-		final double distance = attacker.calculateDistance(effected, true, false);
-		if (distance > effected.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Integer.MAX_VALUE))
-		{
-			return;
-		}
-		
 		if (_overHit && effected.isAttackable())
 		{
 			((L2Attackable) effected).overhitEnabled(true);

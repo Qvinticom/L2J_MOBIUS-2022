@@ -78,11 +78,6 @@ public final class Formulas
 	
 	public static double calcBlowDamage(L2Character attacker, L2Character target, Skill skill, boolean backstab, double power, byte shld, boolean ss)
 	{
-		if (attacker.calculateDistance(target, true, false) > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Double.MAX_VALUE))
-		{
-			return 0;
-		}
-		
 		double defence = target.getPDef();
 		
 		switch (shld)
@@ -137,11 +132,6 @@ public final class Formulas
 	
 	public static double calcMagicDam(L2Character attacker, L2Character target, Skill skill, double mAtk, double power, double mDef, boolean sps, boolean bss, boolean mcrit)
 	{
-		if (attacker.calculateDistance(target, true, false) > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Double.MAX_VALUE))
-		{
-			return 0;
-		}
-		
 		// Bonus Spirit shot
 		final double shotsBonus = bss ? (4 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : sps ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1;
 		final double critMod = mcrit ? (2 * calcCritDamage(attacker, target, skill)) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
@@ -663,12 +653,10 @@ public final class Formulas
 				}
 			}
 			
-			if (!resisted)
+			final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
+			if (!resisted && (sphericBarrierRange > 0))
 			{
-				if (attacker.calculateDistance(target, true, false) > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Double.MAX_VALUE))
-				{
-					resisted = true;
-				}
+				resisted = attacker.calculateDistance(target, true, false) > sphericBarrierRange;
 			}
 			
 			if (resisted)
@@ -1326,11 +1314,6 @@ public final class Formulas
 	 */
 	public static double calcAutoAttackDamage(L2Character attacker, L2Character target, byte shld, boolean crit, boolean ss)
 	{
-		if (attacker.calculateDistance(target, true, false) > target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, Double.MAX_VALUE))
-		{
-			return 0;
-		}
-		
 		// DEFENCE CALCULATION (pDef + sDef)
 		double defence = target.getPDef();
 		
