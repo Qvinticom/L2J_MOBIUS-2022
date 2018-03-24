@@ -7537,10 +7537,10 @@ public final class L2PcInstance extends L2Playable
 					ps.execute();
 				}
 			}
-			else
-			{
-				_log.warning("Could not store new skill, it's null!");
-			}
+			// else
+			// {
+			// _log.warning("Could not store new skill, it's null!");
+			// }
 		}
 		catch (Exception e)
 		{

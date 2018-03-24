@@ -10957,10 +10957,10 @@ public final class L2PcInstance extends L2Playable
 				statement.execute();
 				statement.close();
 			}
-			else
-			{
-				LOGGER.warning("could not store new skill. its NULL");
-			}
+			// else
+			// {
+			// LOGGER.warning("could not store new skill. its NULL");
+			// }
 		}
 		catch (Exception e)
 		{
