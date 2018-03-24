@@ -194,7 +194,7 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 				}
 				else
 				{
-					final int newSubLevel = skill.getSubLevel() > 0 ? ((skill.getSubLevel() - (skill.getSubLevel() % 1000)) + enchantSkillHolder.getEnchantFailLevel()) : 0;
+					final int newSubLevel = ((skill.getSubLevel() > 0) && (enchantSkillHolder.getEnchantFailLevel() > 0)) ? ((skill.getSubLevel() - (skill.getSubLevel() % 1000)) + enchantSkillHolder.getEnchantFailLevel()) : 0;
 					final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _type == SkillEnchantType.NORMAL ? newSubLevel : skill.getSubLevel());
 					if (_type == SkillEnchantType.NORMAL)
 					{
