@@ -14,11 +14,13 @@ What is done
 -Castle dungeon instances
 -High Five treasure boxes
 -Fixed server lag on many occasions
+-Auto potions voiced command
 -Store offline trader transactions in realtime
 -Minimum range config for private stores
 -Random spawn system for monsters
 -Custom starting location
 -Custom community board
+-Custom Olympiad period
 -Premium System
 -User command expon/expoff
 -Reworked drop system
