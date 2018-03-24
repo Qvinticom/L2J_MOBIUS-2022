@@ -108,6 +108,7 @@ Customs:
 -PvP announce
 -PvP reward item
 -PvP title color
+-Random spawns
 -Sayune for all
 -Screen welcome message
 -Sell buffs
