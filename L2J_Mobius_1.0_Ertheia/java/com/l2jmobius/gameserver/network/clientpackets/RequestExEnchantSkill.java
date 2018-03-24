@@ -287,6 +287,6 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 		skill = player.getKnownSkill(_skillId);
 		player.sendPacket(new ExEnchantSkillInfo(skill.getId(), skill.getLevel(), skill.getSubLevel(), skill.getSubLevel()));
 		player.sendPacket(new ExEnchantSkillInfoDetail(_type, skill.getId(), skill.getLevel(), Math.min(skill.getSubLevel() + 1, EnchantSkillGroupsData.MAX_ENCHANT_LEVEL), player));
-		player.updateShortCuts(skill.getLevel(), skill.getSubLevel(), skill.getSubLevel());
+		player.updateShortCuts(skill.getId(), skill.getLevel(), skill.getSubLevel());
 	}
 }
