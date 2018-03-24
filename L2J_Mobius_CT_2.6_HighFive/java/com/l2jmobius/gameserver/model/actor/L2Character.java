@@ -5168,6 +5168,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			if (oldSkill != null)
 			{
 				removeStatsOwner(oldSkill);
+				
+				if (oldSkill.isPassive())
+				{
+					stopSkillEffects(false, oldSkill.getId());
+				}
 			}
 			// Add Func objects of newSkill to the calculator set of the L2Character
 			addStatFuncs(newSkill.getStatFuncs(null, this));
