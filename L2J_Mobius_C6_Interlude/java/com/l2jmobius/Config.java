@@ -947,6 +947,7 @@ public final class Config
 	public static boolean ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS;
 	public static OlympiadPeriod ALT_OLY_PERIOD;
 	public static int ALT_OLY_PERIOD_MULTIPLIER;
+	public static List<Integer> ALT_OLY_COMPETITION_DAYS;
 	
 	public static Map<Integer, Integer> NORMAL_WEAPON_ENCHANT_LEVEL = new HashMap<>();
 	public static Map<Integer, Integer> BLESS_WEAPON_ENCHANT_LEVEL = new HashMap<>();
@@ -2858,6 +2859,11 @@ public final class Config
 			ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS = Boolean.parseBoolean(OLYMPSetting.getProperty("AltOlyUseCustomPeriodSettings", "false"));
 			ALT_OLY_PERIOD = OlympiadPeriod.valueOf(OLYMPSetting.getProperty("AltOlyPeriod", "MONTH"));
 			ALT_OLY_PERIOD_MULTIPLIER = Integer.parseInt(OLYMPSetting.getProperty("AltOlyPeriodMultiplier", "1"));
+			ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
+			for (String s : OLYMPSetting.getProperty("AltOlyCompetitionDays", "1,2,3,4,5,6,7").split(","))
+			{
+				ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
+			}
 		}
 		catch (Exception e)
 		{

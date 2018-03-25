@@ -546,6 +546,7 @@ public final class Config
 	public static boolean ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS;
 	public static String ALT_OLY_PERIOD;
 	public static int ALT_OLY_PERIOD_MULTIPLIER;
+	public static List<Integer> ALT_OLY_COMPETITION_DAYS;
 	public static int ALT_MANOR_REFRESH_TIME;
 	public static int ALT_MANOR_REFRESH_MIN;
 	public static int ALT_MANOR_APPROVE_TIME;
@@ -2303,6 +2304,11 @@ public final class Config
 			ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS = Olympiad.getBoolean("AltOlyUseCustomPeriodSettings", false);
 			ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
 			ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
+			ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
+			for (String s : Olympiad.getString("AltOlyCompetitionDays", "1,2,3,4,5,6,7").split(","))
+			{
+				ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
+			}
 			
 			final File hexIdFile = new File(HEXID_FILE);
 			if (hexIdFile.exists())

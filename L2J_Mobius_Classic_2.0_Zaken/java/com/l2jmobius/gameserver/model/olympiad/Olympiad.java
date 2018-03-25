@@ -354,6 +354,36 @@ public class Olympiad extends ListenersContainer
 		}
 		
 		_compStart = Calendar.getInstance();
+		if (Config.ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS)
+		{
+			final int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
+			boolean dayFound = false;
+			int dayCounter = 0;
+			for (int i = currentDay; i < 8; i++)
+			{
+				if (Config.ALT_OLY_COMPETITION_DAYS.contains(i))
+				{
+					dayFound = true;
+					break;
+				}
+				dayCounter++;
+			}
+			if (!dayFound)
+			{
+				for (int i = 1; i < 8; i++)
+				{
+					if (Config.ALT_OLY_COMPETITION_DAYS.contains(i))
+					{
+						break;
+					}
+					dayCounter++;
+				}
+			}
+			if (dayCounter > 0)
+			{
+				_compStart.add(Calendar.DAY_OF_MONTH, dayCounter);
+			}
+		}
 		_compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
 		_compStart.set(Calendar.MINUTE, COMP_MIN);
 		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
@@ -646,6 +676,36 @@ public class Olympiad extends ListenersContainer
 	private long setNewCompBegin()
 	{
 		_compStart = Calendar.getInstance();
+		if (Config.ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS)
+		{
+			final int currentDay = _compStart.get(Calendar.DAY_OF_WEEK);
+			boolean dayFound = false;
+			int dayCounter = 0;
+			for (int i = currentDay; i < 8; i++)
+			{
+				if (Config.ALT_OLY_COMPETITION_DAYS.contains(i))
+				{
+					dayFound = true;
+					break;
+				}
+				dayCounter++;
+			}
+			if (!dayFound)
+			{
+				for (int i = 1; i < 8; i++)
+				{
+					if (Config.ALT_OLY_COMPETITION_DAYS.contains(i))
+					{
+						break;
+					}
+					dayCounter++;
+				}
+			}
+			if (dayCounter > 0)
+			{
+				_compStart.add(Calendar.DAY_OF_MONTH, dayCounter);
+			}
+		}
 		_compStart.set(Calendar.HOUR_OF_DAY, COMP_START);
 		_compStart.set(Calendar.MINUTE, COMP_MIN);
 		_compStart.add(Calendar.HOUR_OF_DAY, 24);
