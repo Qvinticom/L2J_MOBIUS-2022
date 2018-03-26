@@ -18,4 +18,6 @@ session_start();
 	//Link for Patch Download
 	$dlPatch = 'https://www.google.com';
 	
+	//Server Reply Email Address
+	$CONFIG['emailaddress'] = "yourmail@yourdomain.com";
 ?>

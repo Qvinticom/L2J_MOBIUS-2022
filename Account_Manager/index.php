@@ -99,6 +99,80 @@ $error = "";
 		
 		$conn->close();
 	}
+	if(isset($_POST['forgot'])) 
+	{
+		$conn = new mysqli($server_host, $db_user_name, $db_user_password, $db_database);
+		// Check connection
+		if (mysqli_connect_errno())
+		{
+			$error = "Can't Connect to MySQL <h5>". mysqli_connect_error()."</h5>";
+			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			exit();
+		}
+		  
+		$account = mysqli_real_escape_string($conn, $_POST['username']);
+		$email = $_POST['email'];
+		$admin = $CONFIG['emailaddress'];
+		//get a random password
+		$password_rnd = rand(9999, 999999);
+		//encode password
+		$password = base64_encode(sha1($password_rnd, true));
+		
+		if($account == '')
+			$error = 'Enter account';
+		if($email == '')
+			$error = 'Enter email';
+		
+		$sql = "SELECT * FROM `accounts` WHERE `login`='".$account."' AND `email`='".$email."'";
+		$result = $conn->query($sql);
+
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) 
+				{
+					
+					if ($email == $row['email']) 
+						{
+							if ($account == $row['login']) 
+								{
+									$to = $email;
+									$subject = 'Your recovered Password';
+									$message = 'Use this password to login '. $password_rnd;
+									$headers = 'From :'. $admin;
+									if (mail($to, $subject, $message, $headers)){
+										$update = "UPDATE `accounts` SET `password`='".$password."' WHERE `login`='".$account."'";
+										$resultupdate = $conn->query($update);
+										if ($resultupdate)
+										{
+											$error = 'Your password has been sent to your email';
+										}
+										else 
+										{
+											$error = 'Fail to recover your password';
+										}
+									}
+									else
+									{
+										$error = 'Failed - Contact Administrator '.$admin;
+									}
+								}
+							else {
+								$error = 'Account does not match.';
+							}
+							
+						}
+					else
+						{
+							$error = 'Email does not match.';
+						}
+				}
+			} 
+			else 
+			{
+				$error = 'Email or Account does not match.';
+			}
+		
+		$conn->close();
+	}
 ?>
 
 <!DOCTYPE html>
@@ -176,7 +250,8 @@ $error = "";
 
 				<div class="statuses">
 					<div class="entercp">
-						Login to your <a data-target="#modalLogin" data-toggle="modal" type="button">Account</a> or
+						Login to your <a data-target="#modalLogin" data-toggle="modal" type="button">Account</a> or 
+						<a data-target="#modalForgot" data-toggle="modal" type="button">RESTORE PASSWORD</a>
 					</div>
 					<br>
 
@@ -293,7 +368,52 @@ $error = "";
 							<input class="form-btn btn" id="submit" name="login" type="submit" value="LOGIN">
 							
 						</form>
-						
+					</div>
+
+
+					<div class="modal-footer">
+						<div class="messages">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="modalForgot" role="dialog">
+		<div class="container">
+			<br>
+			<!-- Modal content-->
+
+
+			<div class="form">
+				<div class="modal-body">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal" type="button">&times;</button>
+
+						<h4 class="modal-title">Forgot My password</h4>
+					</div>
+
+
+					<div>
+						<form id="login" method="post">
+							<div class="form-group">
+								<input class="form-control" data-error="Account name is required." id="username" name="username" placeholder="Please enter your Account" required="required" type="text" value="<?php if(isset($_POST['username'])) echo $_POST['username'] ?>">
+
+								<div class="help-block with-errors">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<input class="form-control" data-error="Valid email is required." id="email" name="email" placeholder="Please enter your Email" required="required" type="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>">
+
+								<div class="help-block with-errors">
+								</div>
+							</div>
+
+							<input class="form-btn btn" id="submit" name="forgot" type="submit" value="Restore">
+							
+						</form>
 					</div>
 
 
