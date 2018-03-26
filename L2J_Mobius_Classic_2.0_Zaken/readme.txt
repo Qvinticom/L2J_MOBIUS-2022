@@ -48,6 +48,8 @@ Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Dungeon of Abyss
 -Attendance rewards
 -Various retail Classic events
+-Classic Olympiad shedule
+-Ruin area herb drops
 
 Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Parsed new system messages and npc strings from client.
@@ -65,6 +67,5 @@ Customs:
 -Fake players engine
 
 TODO:
--Parse all skill names from client
 -Parse retail monster spawns by zone
 -Provisional Clan Halls

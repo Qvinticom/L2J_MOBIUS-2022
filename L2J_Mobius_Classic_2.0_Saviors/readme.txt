@@ -50,6 +50,8 @@ Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Dungeon of Abyss
 -Attendance rewards
 -Various retail Classic events
+-Classic Olympiad shedule
+-Ruin area herb drops
 
 Customs:
 -Newbie Helper NPC location info
