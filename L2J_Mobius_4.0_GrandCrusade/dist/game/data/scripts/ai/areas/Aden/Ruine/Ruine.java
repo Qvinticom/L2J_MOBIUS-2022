@@ -35,7 +35,7 @@ public class Ruine extends AbstractNpcAI
 	private static final int MIN_LEVEL_CRACK = 95;
 	private static final int MIN_LEVEL_RIFT = 100;
 	// Teleports
-	private static final Location DIMENSIONAL_CRACK = new Location(-120313, -182464, -6752);
+	private static final Location DIMENSIONAL_CRACK = new Location(-119304, -182456, -6752);
 	private static final Location DIMENSIONAL_RIFT = new Location(140629, 79672, -5424);
 	
 	private Ruine()
