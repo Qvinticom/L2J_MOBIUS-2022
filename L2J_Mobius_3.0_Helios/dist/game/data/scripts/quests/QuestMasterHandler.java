@@ -192,6 +192,7 @@ import quests.Q00904_DragonTrophyAntharas.Q00904_DragonTrophyAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
+import quests.Q00926_30DaySearchOperation.Q00926_30DaySearchOperation;
 import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperation;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
@@ -613,6 +614,7 @@ public class QuestMasterHandler
 		Q00905_RefinedDragonBlood.class,
 		Q00906_TheCallOfValakas.class,
 		Q00907_DragonTrophyValakas.class,
+		Q00926_30DaySearchOperation.class,
 		Q00928_100DaySubjugationOperation.class,
 		Q00937_ToReviveTheFishingGuild.class,
 		Q10273_GoodDayToFly.class,
