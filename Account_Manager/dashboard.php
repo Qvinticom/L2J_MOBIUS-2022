@@ -89,7 +89,7 @@ $error = "";
 	</script>
 
 	<title>Mobius Underground - Main</title>
-	<link href="css/register.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<link href="images/loader.png" rel="icon" type="image/png">
 	<script src='https://www.google.com/recaptcha/api.js'>
 	</script>
@@ -113,7 +113,7 @@ $error = "";
 	                        function clear_form()
 	                        {
 	                           $("#password").val('');
-				   $("#passwordOld").val('');
+							   $("#passwordOld").val('');
 	                           $("#passwordVerify").val('');
 	                        }
 	                   });
@@ -137,7 +137,6 @@ $error = "";
 			<div class="header-left">
 			</div>
 
-
 			<div class="header-right">
 				<div class="logo">
 				</div>
@@ -147,18 +146,48 @@ $error = "";
 					<a href="#">MAIN</a> <a href="#">DOWNLOAD</a> <a href="#">DONATE</a> <a href="#">FORUM</a>
 				</div>
 				<br>
-				<img src="images/logo.png" width="100%">
+				<div class="entercp">
+					Welcome <?php echo $_SESSION['account']; ?>  <a href="logout.php">X</a>
+				</div>
 
 				<div class="statuses">
-					<div class="entercp">
-						Welcome <?php echo $_SESSION['account']; ?>
-						<p><a href="logout.php">Logout</a></p>
+					<div align="left" class="info">
+						<div class="message">
+						<?php
+						// Create connection
+						$conn = new mysqli($server_host, $db_user_name, $db_user_password, $db_database);
+						// Check connection
+						if ($conn->connect_error) {
+							die("Connection failed: " . $conn->connect_error);
+						} 
+						$account = mysqli_real_escape_string($conn, $_SESSION['account']);
+						$sql = "SELECT * FROM `accounts` WHERE `login`='".$account."'";
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+							// output data of each row
+							while($row = $result->fetch_assoc()) {
+								$mil = $row["lastactive"];
+								$seconds = $mil / 1000;
+								$date =  date("d/m/Y H:i:s", $seconds);
+								echo "	<p>Last Login: " . $date. "</p>
+										<p>Email: " . $row["email"]. "</p>
+										<p>Created : " . $row["created_time"]. "</p>
+										<p>Last IP : " . $row["lastIP"]. "</p>";
+							}
+						} else {
+							echo "0 results";
+						}
+						$conn->close();
+						?>
+						</div>
 					</div>
 					<br>
-
-
 					<div class="register">
 						<a data-target="#modalChangePassword" data-toggle="modal" type="button">Change Password</a>
+					</div>
+					<div class="register">
+						<a href="logout.php" type="button">Logout</a>
 					</div>
 					<div class="messages">
 							<h4><font color="#FFFFFF"><?php
@@ -170,8 +199,6 @@ $error = "";
 			</div>
 		</div>
 	</header>
-
-
 	<div class="modal fade" id="modalChangePassword" role="dialog">
 		<div class="container">
 			<br>

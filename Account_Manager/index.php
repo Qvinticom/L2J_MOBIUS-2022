@@ -114,7 +114,7 @@ $error = "";
 	</script>
 
 	<title>Mobius Underground - Main</title>
-	<link href="css/register.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<link href="images/loader.png" rel="icon" type="image/png">
 	<script src='https://www.google.com/recaptcha/api.js'>
 	</script>
