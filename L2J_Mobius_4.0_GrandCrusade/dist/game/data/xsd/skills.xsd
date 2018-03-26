@@ -2052,7 +2052,7 @@
 															<xs:element name="hp" type="xs:unsignedByte" />
 															<xs:element name="mp" type="xs:unsignedByte" />
 															<xs:element name="cp" type="xs:unsignedByte" />
-															<xs:element name="xp" type="xs:unsignedInt" />
+															<xs:element name="xp" type="xs:unsignedLong" />
 															<xs:element name="ACCURACY_COMBAT">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">

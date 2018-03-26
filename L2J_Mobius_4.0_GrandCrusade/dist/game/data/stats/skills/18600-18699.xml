@@ -945,9 +945,26 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18628" toLevel="1" name="Express Bus Pass Card">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47384</itemConsumeId> <!-- Express Bus Pass Card -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>100000000000</xp>
+			</effect>
+			<effect name="GiveSp">
+				<xp>240000000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18629" toLevel="1" name="Balthus Knight Disguise">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

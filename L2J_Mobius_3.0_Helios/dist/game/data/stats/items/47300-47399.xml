@@ -1180,11 +1180,18 @@
 		<!-- A bus card that can be used to get on the Express Bus. Use to acquire 100,000,000,000 EXP and 240,000,000 SP. Characters with Lv. 99 or higher only. -->
 		<set name="icon" val="icon.card_hidden" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<cond msgId="1902">
+			<player levelRange="99;255" />
+		</cond>
+		<skills>
+			<skill id="18628" level="1" /> <!-- Express Bus Pass Card -->
+		</skills>
 	</item>
 	<item id="47385" name="Balthus Knight Mark" type="EtcItem">
 		<!-- Used to dress up as a member of the Balthus Knights for 1 hour. Only available for characters with Lv. 85 or higher. Buff deleted if Sub/Dual Class is changed. To be deleted when the event ends. Will be deleted when the Balthus Knights Event ends. -->

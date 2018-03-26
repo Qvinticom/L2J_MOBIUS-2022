@@ -2090,7 +2090,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="xp" type="xs:unsignedInt" />
+															<xs:element name="xp" type="xs:unsignedLong" />
 															<xs:element name="ACCURACY_COMBAT">
 																<xs:complexType>
 																	<xs:sequence>
