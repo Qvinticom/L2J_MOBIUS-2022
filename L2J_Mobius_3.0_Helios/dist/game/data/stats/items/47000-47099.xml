@@ -989,6 +989,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47084" min="1" max="1" chance="100" /> <!-- Beloa's Gift Box -->
+			<item id="19442" min="2000" max="2000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
+			<item id="17754" min="3000" max="3000" chance="100" /> <!-- Soulshot (R-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="47044" name="Commando Belt" type="Armor">
 		<!-- The Commando Belt is the symbol of the Dimensional Commandos, and is given to elite veterans who have completed Exploring the Dimension - Sealing the Dimension. Damage +2%, Damage Received -2%, Weight +12800, Inventory Slots +18. -->
@@ -1454,35 +1460,53 @@
 	<item id="47084" name="Beloa's Gift Box" type="EtcItem">
 		<!-- Use to obtain one of the following: Kaliel's Energy Box, Superior Giant's Codex Box, Venir's Talisman Box. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36152" min="1" max="1" chance="33" /> <!-- Kaliel's Energy Box -->
+			<item id="47085" min="1" max="1" chance="33" /> <!-- Superior Giant's Codex Box -->
+			<item id="47086" min="1" max="1" chance="33" /> <!-- Venir's Talisman Box) -->
+		</capsuled_items>
 	</item>
 	<item id="47085" name="Superior Giant's Codex Box" type="EtcItem">
 		<!-- Use to obtain one of the following: Superior Giant's Codex, Superior Giant's Codex - Mastery, Superior Giant's Codex - Discipline -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="30297" min="1" max="1" chance="33" /> <!-- Superior Giant's Codex -->
+			<item id="30298" min="1" max="1" chance="33" /> <!-- Superior Giant's Codex - Mastery -->
+			<item id="30299" min="1" max="1" chance="33" /> <!-- Superior Giant's Codex - Discipline -->
+		</capsuled_items>
 	</item>
 	<item id="47086" name="Venir's Talisman Box" type="EtcItem">
 		<!-- Use to obtain Venir's Talisman Stage 1, Stage 2, or Stage 3. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39634" min="1" max="1" chance="60" /> <!-- Venir's Talisman Level 1 -->
+			<item id="39635" min="1" max="1" chance="35" /> <!-- Venir's Talisman Level 2 -->
+			<item id="39636" min="1" max="1" chance="5" /> <!-- Venir's Talisman Level 3 -->
+		</capsuled_items>
 	</item>
 	<item id="47087" name="Jewelry Box" type="EtcItem">
 		<!-- Use to obtain one Jewel. -->

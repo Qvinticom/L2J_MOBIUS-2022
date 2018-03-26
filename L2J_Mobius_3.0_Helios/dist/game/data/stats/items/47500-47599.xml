@@ -33,12 +33,20 @@
 	<item id="47504" name="Lias Supply Items" type="EtcItem">
 		<!-- Supplies given by Lias to agents having completed Dimensional Rift - 100-day Subjugation Operation. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47503" min="1" max="1" chance="100" /> <!-- High-grade Spirit Stone -->
+			<item id="47501" min="1" max="1" chance="100" /> <!-- Rune Stone Fragment -->
+			<item id="47502" min="1" max="1" chance="100" /> <!-- Superior Giant's Codex Chapter 1 - Fragment -->
+			<item id="47086" min="1" max="1" chance="100" /> <!-- Venir's Talisman Box -->
+		</capsuled_items>
 	</item>
 	<item id="47505" name="Bracelet of the Conqueror - CON" type="Armor">
 		<!-- The Bracelet of the Conqueror. Equip to activate 5 Talisman slots. HP +531 CON +3. -->
