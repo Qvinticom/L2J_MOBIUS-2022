@@ -771,7 +771,8 @@ public final class L2World
 		}
 		catch (ArrayIndexOutOfBoundsException e)
 		{
-			_log.warning(getClass().getSimpleName() + ": Incorrect world region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y) + " Z: " + ((z >> SHIFT_BY_Z) + OFFSET_Z) + " for coordinates x: " + x + " y: " + y + " z: " + z);
+			// TODO: Find when this can be null. (Bad geodata? Check GeoEngine hasGeoPos method.)
+			// _log.warning(getClass().getSimpleName() + ": Incorrect world region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y) + " Z: " + ((z >> SHIFT_BY_Z) + OFFSET_Z) + " for coordinates x: " + x + " y: " + y + " z: " + z);
 			return null;
 		}
 	}

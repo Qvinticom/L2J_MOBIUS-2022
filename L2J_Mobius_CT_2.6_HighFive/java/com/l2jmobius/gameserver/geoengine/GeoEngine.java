@@ -297,7 +297,8 @@ public class GeoEngine
 		final ABlock block = getBlock(geoX, geoY);
 		if (block == null) // null block check
 		{
-			_log.warning("Cound not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
+			// TODO: Find when this can be null.
+			// _log.warning("Could not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
 			return false;
 		}
 		return block.hasGeoPos();
