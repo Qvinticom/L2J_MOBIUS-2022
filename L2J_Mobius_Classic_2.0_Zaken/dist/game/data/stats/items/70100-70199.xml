@@ -860,56 +860,146 @@
 	<item id="70163" name="Energy of Development" type="EtcItem">
 		<!-- XP/SP gain +5% for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55273" level="1" /> <!-- Energy of Development -->
+		</skills>
 	</item>
 	<item id="70164" name="Powerful Energy of Development" type="EtcItem">
 		<!-- XP/SP gain +7% for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55273" level="2" /> <!-- Energy of Development -->
+		</skills>
 	</item>
 	<item id="70165" name="Great Energy of Development" type="EtcItem">
 		<!-- XP/SP gain +10% for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55273" level="3" /> <!-- Energy of Development -->
+		</skills>
 	</item>
 	<item id="70166" name="Energy of Speed" type="EtcItem">
 		<!-- Speed +2 for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55274" level="1" /> <!-- Energy of Speed -->
+		</skills>
 	</item>
 	<item id="70167" name="Powerful Energy of Speed" type="EtcItem">
 		<!-- Speed +3 for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55274" level="2" /> <!-- Energy of Speed -->
+		</skills>
 	</item>
 	<item id="70168" name="Great Energy of Speed" type="EtcItem">
 		<!-- Speed +5 for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i01" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55274" level="3" /> <!-- Energy of Speed -->
+		</skills>
 	</item>
 	<item id="70169" name="Energy of Accuracy" type="EtcItem">
 		<!-- P. Accuracy +1 for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55275" level="1" /> <!-- Energy of Accuracy -->
+		</skills>
 	</item>
 	<item id="70170" name="Powerful Energy of Accuracy" type="EtcItem">
 		<!-- P. Accuracy +2 for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55275" level="2" /> <!-- Energy of Accuracy -->
+		</skills>
 	</item>
 	<item id="70171" name="Great Energy of Accuracy" type="EtcItem">
 		<!-- P. Accuracy +4 for 10 minutes. -->
 		<set name="icon" val="BranchIcon.Icon.etc_g_bonus_herb_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_depositable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="55275" level="3" /> <!-- Energy of Accuracy -->
+		</skills>
 	</item>
 	<item id="70172" name="Coin of Tears" type="EtcItem">
 		<!-- A coin saturated with grief. You can find it in the Ruins of Agony once in a while. -->

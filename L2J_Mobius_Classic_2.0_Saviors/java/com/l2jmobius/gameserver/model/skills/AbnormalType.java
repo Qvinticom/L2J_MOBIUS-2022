@@ -517,7 +517,10 @@ public enum AbnormalType
 	STEEL_MIND(596),
 	STRAWBERRY_FRUIT(-1),
 	MONGO_FRUIT(-1),
-	CHERRY_FRUIT(-1);
+	CHERRY_FRUIT(-1),
+	HERB_EXP(-1),
+	HERB_SPEED(-1),
+	HERB_ACCURANCY(-1);
 	
 	private int _clientId;
 	
