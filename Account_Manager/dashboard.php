@@ -88,7 +88,7 @@ $error = "";
 	<script src="js/jquery.min.js" type="text/javascript">
 	</script>
 
-	<title>Mobius Underground - Main</title>
+	<title>Mobius Underground - Dashboard</title>
 	<link href="css/style.css" rel="stylesheet">
 	<link href="images/loader.png" rel="icon" type="image/png">
 	<script src='https://www.google.com/recaptcha/api.js'>
@@ -143,7 +143,7 @@ $error = "";
 
 
 				<div class="menu">
-					<a href="#">MAIN</a> <a href="#">DOWNLOAD</a> <a href="#">DONATE</a> <a href="#">FORUM</a>
+					<a href="index.php">MAIN</a> <a href="download.php">DOWNLOAD</a> <a href="#">DONATE</a> <a href="<?php echo $forum;?>">FORUM</a>
 				</div>
 				<br>
 				<div class="entercp">
