@@ -8,7 +8,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -29,15 +29,13 @@
 		</cond>
 		<skills>
 			<skill id="3578" level="1" /> <!-- Special Ability: Infinity Blade -->
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
-			<skill id="3579" level="1" type="ON_CRITICAL_SKILL" /> <!-- Decrease P. Def. -->
+			<skill id="3579" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Reflect -->
 		</skills>
 		<stats>
-			<stat type="pAtk">524</stat>
-			<stat type="mAtk">230</stat>
+			<stat type="pAtk">301</stat>
+			<stat type="mAtk">166</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -50,7 +48,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -70,15 +68,14 @@
 			<player isHero="true" />
 		</cond>
 		<skills>
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
 			<skill id="3582" level="1" /> <!-- Special Ability: Infinity Cleaver -->
+			<skill id="3584" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Protection -->
 		</skills>
 		<stats>
-			<stat type="pAtk">638</stat>
-			<stat type="mAtk">230</stat>
+			<stat type="pAtk">368</stat>
+			<stat type="mAtk">166</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -112,16 +109,14 @@
 		</cond>
 		<skills>
 			<skill id="3580" level="1" /> <!-- Special Ability: Infinity Axe -->
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
-			<skill id="3581" level="1" type="ON_CRITICAL_SKILL" /> <!-- Discord -->
+			<skill id="3581" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Tenacity -->
 		</skills>
 		<stats>
-			<stat type="pAtk">524</stat>
-			<stat type="mAtk">230</stat>
+			<stat type="pAtk">301</stat>
+			<stat type="mAtk">166</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -134,7 +129,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -154,17 +149,15 @@
 			<player isHero="true" />
 		</cond>
 		<skills>
-			<skill id="3598" level="1" type_chance="3" type="ON_MAGIC_SKILL" /> <!-- Full Recovery -->
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
 			<skill id="3597" level="1" /> <!-- Special Ability: Infinity Rod -->
+			<skill id="3598" level="1" type="ON_MAGIC_SKILL" /> <!-- Infinity Power - Mana Limit -->
 		</skills>
 		<stats>
-			<stat type="pAtk">420</stat>
-			<stat type="mAtk">307</stat>
+			<stat type="pAtk">255</stat>
+			<stat type="mAtk">204</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -177,7 +170,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -197,17 +190,15 @@
 			<player isHero="true" />
 		</cond>
 		<skills>
-			<skill id="3596" level="1" type_chance="3" type="ON_MAGIC_SKILL" /> <!-- Full Recovery -->
-			<skill id="8525" level="1" /> <!-- Hero's Holy Attack -->
 			<skill id="3595" level="1" /> <!-- Special Ability: Infinity Scepter -->
+			<skill id="3596" level="1" type="ON_MAGIC_SKILL" /> <!-- Infinity Power - Vampiric Mana -->
 		</skills>
 		<stats>
-			<stat type="pAtk">511</stat>
-			<stat type="mAtk">337</stat>
+			<stat type="pAtk">295</stat>
+			<stat type="mAtk">219</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -220,7 +211,7 @@
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -241,16 +232,14 @@
 		</cond>
 		<skills>
 			<skill id="3589" level="1" /> <!-- Special Ability: Infinity Stinger -->
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
-			<skill id="3590" level="1" type="ON_CRITICAL_SKILL" /> <!-- Restrain Magic Skills -->
+			<skill id="3590" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Immortal -->
 		</skills>
 		<stats>
-			<stat type="pAtk">458</stat>
-			<stat type="mAtk">230</stat>
+			<stat type="pAtk">272</stat>
+			<stat type="mAtk">166</stat>
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">433</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -263,7 +252,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -284,16 +273,14 @@
 		</cond>
 		<skills>
 			<skill id="3587" level="1" /> <!-- Special Ability: Infinity Fang -->
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
-			<skill id="3588" level="1" type="ON_CRITICAL_SKILL" /> <!-- Stun -->
+			<skill id="3584" level="1" /> <!-- Infinity Power - Protection -->
 		</skills>
 		<stats>
-			<stat type="pAtk">638</stat>
-			<stat type="mAtk">230</stat>
-			<stat type="rCrit">6</stat>
+			<stat type="pAtk">368</stat>
+			<stat type="mAtk">166</stat>
+			<stat type="rCrit">8</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -306,7 +293,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -329,16 +316,14 @@
 		</cond>
 		<skills>
 			<skill id="3593" level="1" /> <!-- Special Ability: Infinity Bow -->
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
-			<skill id="3594" level="1" type="ON_CRITICAL_SKILL" /> <!-- Decrease Speed -->
+			<skill id="3594" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Archery -->
 		</skills>
 		<stats>
-			<stat type="pAtk">952</stat>
-			<stat type="mAtk">230</stat>
+			<stat type="pAtk">665</stat>
+			<stat type="mAtk">177</stat>
 			<stat type="rCrit">12</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">293</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">5</stat>
 			<stat type="pAtkRange">500</stat>
 		</stats>
@@ -351,7 +336,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -372,15 +357,13 @@
 		</cond>
 		<skills>
 			<skill id="3585" level="1" /> <!-- Special Ability: Infinity Wing -->
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
-			<skill id="3586" level="1" type="ON_CRITICAL_SKILL" /> <!-- Restrain Physical Skills -->
+			<skill id="3586" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Refresh -->
 		</skills>
 		<stats>
-			<stat type="pAtk">638</stat>
-			<stat type="mAtk">230</stat>
+			<stat type="pAtk">361</stat>
+			<stat type="mAtk">164</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
@@ -393,7 +376,7 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="NONE" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
@@ -414,16 +397,14 @@
 		</cond>
 		<skills>
 			<skill id="3591" level="1" /> <!-- Special Ability: Infinity Spear -->
-			<skill id="8524" level="1" /> <!-- Hero's Holy Attack -->
-			<skill id="3592" level="1" type="ON_CRITICAL_SKILL" /> <!-- Dispel -->
+			<skill id="3581" level="1" type="ON_CRITICAL_SKILL" /> <!-- Infinity Power - Tenacity -->
 		</skills>
 		<stats>
-			<stat type="pAtk">524</stat>
-			<stat type="mAtk">230</stat>
+			<stat type="pAtk">301</stat>
+			<stat type="mAtk">166</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="accCombat">-3.75</stat>
 			<stat type="pAtkSpd">325</stat>
-			<stat type="holyPower">250</stat>
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">80</stat>
 		</stats>
