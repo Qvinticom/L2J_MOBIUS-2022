@@ -131,7 +131,11 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 		{
 			_params = Arrays.copyOf(_params, _paramIndex + 1);
 			_smId.setParamCount(_paramIndex + 1);
-			_log.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
+			// Mobius: With additional on-screen damage param (popup), length is increased.
+			if (param.getType() != TYPE_POPUP_ID)
+			{
+				_log.info("Wrong parameter count '" + (_paramIndex + 1) + "' for SystemMessageId: " + _smId);
+			}
 		}
 		
 		_params[_paramIndex++] = param;

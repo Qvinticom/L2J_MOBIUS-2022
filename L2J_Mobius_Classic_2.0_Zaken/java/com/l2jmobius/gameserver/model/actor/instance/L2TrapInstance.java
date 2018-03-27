@@ -275,7 +275,7 @@ public final class L2TrapInstance extends L2Npc
 			sm.addString(getName());
 			sm.addString(target.getName());
 			sm.addInt(damage);
-			// sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
+			sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
 			_owner.sendPacket(sm);
 		}
 	}

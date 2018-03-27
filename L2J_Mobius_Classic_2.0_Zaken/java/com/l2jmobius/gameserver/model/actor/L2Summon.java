@@ -725,7 +725,7 @@ public abstract class L2Summon extends L2Playable
 				sm.addNpcName(this);
 				sm.addString(target.getName());
 				sm.addInt(damage);
-				// sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
+				sm.addPopup(target.getObjectId(), getObjectId(), (damage * -1));
 			}
 			
 			sendPacket(sm);
