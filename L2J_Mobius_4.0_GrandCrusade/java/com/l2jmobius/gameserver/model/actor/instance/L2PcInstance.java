@@ -2616,7 +2616,7 @@ public final class L2PcInstance extends L2Playable
 				continue;
 			}
 			
-			if (getSkillLevel(skill.getId()) == -1)
+			if (getSkillLevel(skill.getId()) == 0)
 			{
 				skillCounter++;
 			}

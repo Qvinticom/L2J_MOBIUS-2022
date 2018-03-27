@@ -138,8 +138,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				return;
 			}
 			
-			final int tmpLv = (prevSkillLevel == -1) ? 0 : prevSkillLevel;
-			if (tmpLv != (_level - 1))
+			if (prevSkillLevel != (_level - 1))
 			{
 				// The previous level skill has not been learned.
 				activeChar.sendPacket(SystemMessageId.THE_PREVIOUS_LEVEL_SKILL_HAS_NOT_BEEN_LEARNED);
@@ -759,7 +758,6 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 	}
 	
 	/**
-	 * TODO: CHECK & REMOVE THIS SHIT!!!!!!!!!!!!!!<br>
 	 * Verify if the player can transform.
 	 * @param player the player to verify
 	 * @return {@code true} if the player meets the required conditions to learn a transformation, {@code false} otherwise
@@ -770,7 +768,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		{
 			return true;
 		}
-		final QuestState st = player.getQuestState("Q00136_MoreThanMeetsTheEye");
-		return (st != null) && st.isCompleted();
+		final QuestState qs = player.getQuestState("Q00136_MoreThanMeetsTheEye");
+		return (qs != null) && qs.isCompleted();
 	}
 }

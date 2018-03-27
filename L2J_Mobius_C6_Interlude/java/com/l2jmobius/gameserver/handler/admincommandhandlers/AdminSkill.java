@@ -224,7 +224,7 @@ public class AdminSkill implements IAdminCommandHandler
 					continue;
 				}
 				
-				if (player.getSkillLevel(sk.getId()) == -1)
+				if (player.getSkillLevel(sk.getId()) == 0)
 				{
 					skillCounter++;
 				}

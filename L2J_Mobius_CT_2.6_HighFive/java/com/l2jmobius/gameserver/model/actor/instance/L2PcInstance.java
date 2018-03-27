@@ -2592,7 +2592,7 @@ public final class L2PcInstance extends L2Playable
 				continue;
 			}
 			
-			if (getSkillLevel(sk.getId()) == -1)
+			if (getSkillLevel(sk.getId()) == 0)
 			{
 				skillCounter++;
 			}
@@ -10631,7 +10631,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public int getExpertiseLevel()
 	{
-		return getSkillLevel(239) < 0 ? 0 : getSkillLevel(239);
+		return getSkillLevel(239);
 	}
 	
 	@Override

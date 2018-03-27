@@ -337,7 +337,7 @@ public abstract class Inventory extends ItemContainer
 					}
 					for (SkillHolder sk : itm.getItem().getSkills())
 					{
-						if (player.getSkillLevel(sk.getSkillId()) != -1)
+						if (player.getSkillLevel(sk.getSkillId()) != 0)
 						{
 							continue;
 						}

@@ -44,6 +44,6 @@ public class OpSkillAcquireSkillCondition implements ISkillCondition
 			return false;
 		}
 		final int skillLevel = ((L2Character) target).getSkillLevel(_skillId);
-		return _hasLearned ? skillLevel != -1 : skillLevel == -1;
+		return _hasLearned ? skillLevel != 0 : skillLevel == 0;
 	}
 }

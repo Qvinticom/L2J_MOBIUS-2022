@@ -72,7 +72,7 @@ public final class RequestExEnchantSkillInfoDetail extends L2GameClientPacket
 		final int playerSkillLvl = activeChar.getSkillLevel(_skillId);
 		
 		// dont have such skill
-		if (playerSkillLvl == -1)
+		if (playerSkillLvl == 0)
 		{
 			return;
 		}

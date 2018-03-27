@@ -813,8 +813,7 @@ public class CharStat
 	 */
 	public int getMaxBuffCount()
 	{
-		final int extraSlots = _activeChar.getSkillLevel(DIVINE_INSPIRATION);
-		return extraSlots > -1 ? _maxBuffCount + extraSlots : _maxBuffCount;
+		return _maxBuffCount + _activeChar.getSkillLevel(DIVINE_INSPIRATION);
 	}
 	
 	/**

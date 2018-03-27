@@ -1200,7 +1200,7 @@ public class L2PetInstance extends L2Summon
 	{
 		if (getKnownSkill(skillId) == null)
 		{
-			return -1;
+			return 0;
 		}
 		
 		final int lvl = getLevel();

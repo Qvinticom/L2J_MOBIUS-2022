@@ -8104,13 +8104,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	public int getSkillLevel(int skillId)
 	{
 		final L2Skill skill = getSkills().get(skillId);
-		
-		if (skill == null)
-		{
-			return -1;
-		}
-		
-		return skill.getLevel();
+		return (skill == null) ? 0 : skill.getLevel();
 	}
 	
 	/**
@@ -8194,7 +8188,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	 */
 	public int getMaxBuffCount()
 	{
-		return Config.BUFFS_MAX_AMOUNT + Math.max(0, getSkillLevel(L2Skill.SKILL_DIVINE_INSPIRATION));
+		return Config.BUFFS_MAX_AMOUNT + getSkillLevel(L2Skill.SKILL_DIVINE_INSPIRATION);
 	}
 	
 	/**
@@ -8496,12 +8490,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		final int magicId = skill.getDisplayId();
 		
 		// Get the level of the skill
-		int level = getSkillLevel(skill.getId());
-		
-		if (level < 1)
-		{
-			level = 1;
-		}
+		final int level = getSkillLevel(skill.getId());
 		
 		// Send a Server->Client packet MagicSkillLaunched to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
 		if (!skill.isPotion())

@@ -87,10 +87,6 @@ public class L2SkillSummon extends L2Skill
 					return true; // Player is always able to cast mass cubic skill
 				}
 				int mastery = player.getSkillLevel(SKILL_CUBIC_MASTERY);
-				if (mastery < 0)
-				{
-					mastery = 0;
-				}
 				final int count = player.getCubics().size();
 				if (count > mastery)
 				{
@@ -160,10 +156,6 @@ public class L2SkillSummon extends L2Skill
 					}
 					final L2PcInstance player = ((L2PcInstance) obj);
 					int mastery = player.getSkillLevel(SKILL_CUBIC_MASTERY);
-					if (mastery < 0)
-					{
-						mastery = 0;
-					}
 					if ((mastery == 0) && !player.getCubics().isEmpty())
 					{
 						// Player can have only 1 cubic - we shuld replace old cubic with new one
@@ -196,10 +188,6 @@ public class L2SkillSummon extends L2Skill
 			}
 			
 			int mastery = activeChar.getSkillLevel(SKILL_CUBIC_MASTERY);
-			if (mastery < 0)
-			{
-				mastery = 0;
-			}
 			if (activeChar.getCubics().containsKey(_npcId))
 			{
 				final L2CubicInstance cubic = activeChar.getCubic(_npcId);

@@ -144,7 +144,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			final Skill skill = SkillData.getInstance().getSkill(learn.getSkillId(), learn.getSkillLevel());
 			final int points;
 			final int knownLevel = activeChar.getSkillLevel(skill.getId());
-			if (knownLevel == -1) // player didn't knew it at all!
+			if (knownLevel == 0) // player didn't knew it at all!
 			{
 				points = learn.getSkillLevel();
 			}

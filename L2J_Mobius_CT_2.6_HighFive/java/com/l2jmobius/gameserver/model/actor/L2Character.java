@@ -5257,7 +5257,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public int getSkillLevel(int skillId)
 	{
 		final Skill skill = getKnownSkill(skillId);
-		return (skill == null) ? -1 : skill.getLevel();
+		return (skill == null) ? 0 : skill.getLevel();
 	}
 	
 	/**

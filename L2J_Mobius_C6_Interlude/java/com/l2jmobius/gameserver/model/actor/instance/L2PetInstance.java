@@ -1342,7 +1342,7 @@ public class L2PetInstance extends L2Summon
 	{
 		if ((getSkills() == null) || (getSkills().get(skillId) == null))
 		{
-			return -1;
+			return 0;
 		}
 		final int lvl = getLevel();
 		return lvl > 70 ? 7 + ((lvl - 70) / 5) : lvl / 10;

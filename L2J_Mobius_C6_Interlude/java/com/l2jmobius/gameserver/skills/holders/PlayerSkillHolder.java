@@ -61,7 +61,7 @@ public class PlayerSkillHolder implements ISkillsHolder
 	public int getSkillLevel(int skillId)
 	{
 		final L2Skill skill = getKnownSkill(skillId);
-		return (skill == null) ? -1 : skill.getLevel();
+		return (skill == null) ? 0 : skill.getLevel();
 	}
 	
 	/**
