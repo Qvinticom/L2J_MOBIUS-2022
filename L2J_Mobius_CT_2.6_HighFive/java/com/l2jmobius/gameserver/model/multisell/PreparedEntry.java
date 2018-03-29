@@ -78,7 +78,7 @@ public class PreparedEntry extends Entry
 		adenaAmount += _taxAmount; // do not forget tax
 		if (adenaAmount > 0)
 		{
-			_ingredients.add(new Ingredient(ADENA_ID, adenaAmount, false, false));
+			_ingredients.add(new Ingredient(ADENA_ID, adenaAmount, 0, false, false));
 		}
 		
 		// now copy products

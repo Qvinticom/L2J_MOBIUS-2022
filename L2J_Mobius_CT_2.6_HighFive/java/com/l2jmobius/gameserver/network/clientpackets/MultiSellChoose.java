@@ -232,7 +232,7 @@ public class MultiSellChoose extends L2GameClientPacket
 						// if this is not a list that maintains enchantment, check the count of all items that have the given id.
 						// otherwise, check only the count of items with exactly the needed enchantment level
 						final long required = ((Config.ALT_BLACKSMITH_USE_RECIPES || !e.getMaintainIngredient()) ? (e.getItemCount() * _amount) : e.getItemCount());
-						if (inv.getInventoryItemCount(e.getItemId(), list.getMaintainEnchantment() ? e.getEnchantLevel() : -1, false) < required)
+						if (inv.getInventoryItemCount(e.getItemId(), (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0)) ? e.getEnchantLevel() : -1, false) < required)
 						{
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_UNIT_S_OF_THE_ITEM_S1_IS_ARE_REQUIRED);
 							sm.addItemName(e.getTemplate());
@@ -291,7 +291,7 @@ public class MultiSellChoose extends L2GameClientPacket
 								// b) list does not maintain enchantment: get the instances with the LOWEST enchantment level
 								
 								// a) if enchantment is maintained, then get a list of items that exactly match this enchantment
-								if (list.getMaintainEnchantment())
+								if (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0))
 								{
 									// loop through this list and remove (one by one) each item until the required amount is taken.
 									final L2ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
@@ -404,7 +404,7 @@ public class MultiSellChoose extends L2GameClientPacket
 							for (int i = 0; i < (e.getItemCount() * _amount); i++)
 							{
 								product = inv.addItem("Multisell", e.getItemId(), 1, player, player.getTarget());
-								if ((product != null) && list.getMaintainEnchantment())
+								if ((product != null) && (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0)))
 								{
 									if (i < augmentation.size())
 									{

@@ -105,7 +105,7 @@ public final class MultiSellList extends L2GameServerPacket
 				}
 				else
 				{
-					writeH(0x00); // enchant level
+					writeH(ing.getEnchantLevel()); // enchant level
 					writeD(0x00); // augment id
 					writeD(0x00); // mana
 					writeH(0x00); // attack element
@@ -140,7 +140,7 @@ public final class MultiSellList extends L2GameServerPacket
 				}
 				else
 				{
-					writeH(0x00); // enchant level
+					writeH(ing.getEnchantLevel()); // enchant level
 					writeD(0x00); // augment id
 					writeD(0x00); // mana
 					writeH(0x00); // attack element

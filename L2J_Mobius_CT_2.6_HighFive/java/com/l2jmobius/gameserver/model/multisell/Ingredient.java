@@ -30,6 +30,7 @@ public class Ingredient
 {
 	private int _itemId;
 	private long _itemCount;
+	private final int _enchantmentLevel;
 	private boolean _isTaxIngredient;
 	private boolean _maintainIngredient;
 	private L2Item _template = null;
@@ -37,13 +38,14 @@ public class Ingredient
 	
 	public Ingredient(StatsSet set)
 	{
-		this(set.getInt("id"), set.getLong("count"), set.getBoolean("isTaxIngredient", false), set.getBoolean("maintainIngredient", false));
+		this(set.getInt("id"), set.getLong("count"), set.getInt("enchantmentLevel", 0), set.getBoolean("isTaxIngredient", false), set.getBoolean("maintainIngredient", false));
 	}
 	
-	public Ingredient(int itemId, long itemCount, boolean isTaxIngredient, boolean maintainIngredient)
+	public Ingredient(int itemId, long itemCount, int enchantmentLevel, boolean isTaxIngredient, boolean maintainIngredient)
 	{
 		_itemId = itemId;
 		_itemCount = itemCount;
+		_enchantmentLevel = enchantmentLevel;
 		_isTaxIngredient = isTaxIngredient;
 		_maintainIngredient = maintainIngredient;
 		if (_itemId > 0)
@@ -57,7 +59,7 @@ public class Ingredient
 	 */
 	public Ingredient getCopy()
 	{
-		return new Ingredient(_itemId, _itemCount, _isTaxIngredient, _maintainIngredient);
+		return new Ingredient(_itemId, _itemCount, _enchantmentLevel, _isTaxIngredient, _maintainIngredient);
 	}
 	
 	public final L2Item getTemplate()
@@ -82,7 +84,7 @@ public class Ingredient
 	
 	public final int getEnchantLevel()
 	{
-		return _itemInfo != null ? _itemInfo.getEnchantLevel() : 0;
+		return _itemInfo == null ? _enchantmentLevel : _itemInfo.getEnchantLevel();
 	}
 	
 	public final void setItemId(int itemId)
