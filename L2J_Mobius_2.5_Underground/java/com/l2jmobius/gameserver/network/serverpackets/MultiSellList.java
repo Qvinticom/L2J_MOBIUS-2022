@@ -22,7 +22,6 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -97,14 +96,14 @@ public final class MultiSellList extends AbstractItemPacket
 					packet.writeH(65535);
 				}
 				packet.writeQ(_list.getProductCount(product));
-				packet.writeH(displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
+				packet.writeH(product.getEnchantmentLevel() > 0 ? product.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
 				packet.writeD((int) Math.ceil(product.getChance())); // chance
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
 				writeItemEnsoulOptions(packet, displayItemEnchantment);
 			}
 			
-			for (ItemHolder ingredient : entry.getIngredients())
+			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
 				final L2Item template = ItemTable.getInstance().getTemplate(ingredient.getId());
 				final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) ? itemEnchantment : null;
@@ -112,7 +111,7 @@ public final class MultiSellList extends AbstractItemPacket
 				packet.writeD(ingredient.getId());
 				packet.writeH(template != null ? template.getType2() : 65535);
 				packet.writeQ(_list.getIngredientCount(ingredient));
-				packet.writeH(displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
+				packet.writeH(ingredient.getEnchantmentLevel() > 0 ? ingredient.getEnchantmentLevel() : displayItemEnchantment != null ? displayItemEnchantment.getEnchantLevel() : 0); // enchant level
 				writeItemAugment(packet, displayItemEnchantment);
 				writeItemElemental(packet, displayItemEnchantment);
 				writeItemEnsoulOptions(packet, displayItemEnchantment);

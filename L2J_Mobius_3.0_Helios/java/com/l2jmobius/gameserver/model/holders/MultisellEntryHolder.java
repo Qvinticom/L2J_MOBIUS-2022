@@ -29,17 +29,17 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 public class MultisellEntryHolder
 {
 	private final boolean _stackable;
-	private final List<ItemHolder> _ingredients;
+	private final List<ItemChanceHolder> _ingredients;
 	private final List<ItemChanceHolder> _products;
 	
-	public MultisellEntryHolder(List<ItemHolder> ingredients, List<ItemChanceHolder> products)
+	public MultisellEntryHolder(List<ItemChanceHolder> ingredients, List<ItemChanceHolder> products)
 	{
 		_ingredients = Collections.unmodifiableList(ingredients);
 		_products = Collections.unmodifiableList(products);
 		_stackable = products.stream().map(i -> ItemTable.getInstance().getTemplate(i.getId())).filter(Objects::nonNull).allMatch(L2Item::isStackable);
 	}
 	
-	public final List<ItemHolder> getIngredients()
+	public final List<ItemChanceHolder> getIngredients()
 	{
 		return _ingredients;
 	}

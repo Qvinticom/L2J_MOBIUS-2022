@@ -36,7 +36,6 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.MultisellEntryHolder;
 import com.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -271,6 +270,33 @@ public class MultiSellChoose implements IClientIncomingPacket
 			// Summarize all item counts into one map. That would include non-stackable items under 1 id and multiple count.
 			final Map<Integer, Long> itemIdCount = entry.getIngredients().stream().collect(Collectors.toMap(i -> i.getId(), i -> list.getIngredientCount(i), (k1, k2) -> Math.addExact(k1, k2)));
 			
+			// Check for enchanted level requirements.
+			for (ItemChanceHolder ingredient : entry.getIngredients())
+			{
+				if (ingredient.getEnchantmentLevel() == 0)
+				{
+					continue;
+				}
+				int found = 0;
+				for (L2ItemInstance item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()))
+				{
+					if (item.getEnchantLevel() >= ingredient.getEnchantmentLevel())
+					{
+						found++;
+					}
+				}
+				
+				if (found < ingredient.getCount())
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
+					sm.addString("+" + ingredient.getEnchantmentLevel() + " " + ItemTable.getInstance().getTemplate(ingredient.getId()).getName());
+					player.sendPacket(sm);
+					return;
+				}
+				
+				itemIdCount.remove(ingredient.getId()); // Since we check now.
+			}
+			
 			// Now check if the player has sufficient items in the inventory to cover the ingredients' expences. Take care for non-stackable items like 2 swords to dual.
 			boolean allOk = true;
 			for (Entry<Integer, Long> idCount : itemIdCount.entrySet())
@@ -288,7 +314,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			boolean itemEnchantmentProcessed = (itemEnchantment == null);
 			
 			// Take all ingredients
-			for (ItemHolder ingredient : entry.getIngredients())
+			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
 				final long totalCount = Math.multiplyExact(list.getIngredientCount(ingredient), _amount);
 				final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredient.getId());
@@ -332,6 +358,23 @@ public class MultiSellChoose implements IClientIncomingPacket
 							_log.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special ingredient with id: " + ingredient.getId() + ".");
 							return;
 						}
+					}
+				}
+				else if (ingredient.getEnchantmentLevel() > 0)
+				{
+					// Take the enchanted item.
+					final L2ItemInstance destroyedItem = inventory.destroyItem("Multisell", inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel()).iterator().next(), totalCount, player, npc);
+					if (destroyedItem != null)
+					{
+						itemEnchantmentProcessed = true;
+						iu.addItem(destroyedItem);
+					}
+					else
+					{
+						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
+						sm.addItemName(ingredient.getId());
+						player.sendPacket(sm);
+						return;
 					}
 				}
 				else if (!itemEnchantmentProcessed && (itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId()))
@@ -418,8 +461,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				else
 				{
 					// Give item.
-					final L2ItemInstance addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc);
-					iu.addItem(addedItem);
+					final L2ItemInstance addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
 					
 					// Check if the newly given item should be enchanted.
 					if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getItem().getClass().equals(itemEnchantment.getItem().getClass()))
@@ -447,11 +489,14 @@ public class MultiSellChoose implements IClientIncomingPacket
 								addedItem.addSpecialAbility(_soulCrystalSpecialOptions[i], i + 1, 2, false);
 							}
 						}
-						
 						addedItem.updateDatabase();
-						
 						// Mark that we have already upgraded the item.
 						itemEnchantmentProcessed = false;
+					}
+					if (product.getEnchantmentLevel() > 0)
+					{
+						addedItem.setEnchantLevel(product.getEnchantmentLevel());
+						addedItem.updateDatabase();
 					}
 					
 					if (addedItem.getCount() > 1)
@@ -474,6 +519,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 						sm.addItemName(addedItem);
 						player.sendPacket(sm);
 					}
+					
+					// Inventory update.
+					iu.addItem(addedItem);
 				}
 			}
 			
@@ -512,7 +560,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 	 * @param totalCount
 	 * @return {@code false} if ingredient amount is not enough, {@code true} otherwise.
 	 */
-	private boolean checkIngredients(final L2PcInstance player, PreparedMultisellListHolder list, final PcInventory inventory, final L2Clan clan, final int ingredientId, final long totalCount)
+	private boolean checkIngredients(L2PcInstance player, PreparedMultisellListHolder list, PcInventory inventory, L2Clan clan, int ingredientId, long totalCount)
 	{
 		final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredientId);
 		if (specialItem != null)

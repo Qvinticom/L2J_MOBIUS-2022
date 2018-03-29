@@ -88,7 +88,7 @@ public final class MultisellData implements IGameXmlReader
 				{
 					if ("item".equalsIgnoreCase(itemNode.getNodeName()))
 					{
-						final List<ItemHolder> ingredients = new ArrayList<>(1);
+						final List<ItemChanceHolder> ingredients = new ArrayList<>(1);
 						final List<ItemChanceHolder> products = new ArrayList<>(1);
 						final MultisellEntryHolder entry = new MultisellEntryHolder(ingredients, products);
 						
@@ -98,7 +98,8 @@ public final class MultisellData implements IGameXmlReader
 							{
 								final int id = parseInteger(d.getAttributes(), "id");
 								final long count = parseLong(d.getAttributes(), "count");
-								final ItemHolder ingredient = new ItemHolder(id, count);
+								final byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
+								final ItemChanceHolder ingredient = new ItemChanceHolder(id, 0, count, enchantmentLevel);
 								
 								if (itemExists(ingredient))
 								{
@@ -115,7 +116,8 @@ public final class MultisellData implements IGameXmlReader
 								final int id = parseInteger(d.getAttributes(), "id");
 								final long count = parseLong(d.getAttributes(), "count");
 								final double chance = parseDouble(d.getAttributes(), "chance", Double.NaN);
-								final ItemChanceHolder product = new ItemChanceHolder(id, chance, count);
+								final byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
+								final ItemChanceHolder product = new ItemChanceHolder(id, chance, count, enchantmentLevel);
 								
 								if (itemExists(product))
 								{

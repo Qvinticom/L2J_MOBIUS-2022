@@ -436,6 +436,21 @@ public class PcInventory extends Inventory
 	@Override
 	public L2ItemInstance addItem(String process, int itemId, long count, L2PcInstance actor, Object reference)
 	{
+		return addItem(process, itemId, count, actor, reference, true);
+	}
+	
+	/**
+	 * Adds item in inventory and checks _adena and _ancientAdena
+	 * @param process : String Identifier of process triggering this action
+	 * @param itemId : int Item Identifier of the item to be added
+	 * @param count : int Quantity of items to be added
+	 * @param actor : L2PcInstance Player requesting the item creation
+	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
+	 * @param update : Update inventory (not used by MultiSellChoose packet / it sends update after finish)
+	 * @return L2ItemInstance corresponding to the new item or the updated item in inventory
+	 */
+	public L2ItemInstance addItem(String process, int itemId, long count, L2PcInstance actor, Object reference, boolean update)
+	{
 		final L2ItemInstance item = super.addItem(process, itemId, count, actor, reference);
 		if (item != null)
 		{
@@ -456,15 +471,18 @@ public class PcInventory extends Inventory
 		if ((item != null) && (actor != null))
 		{
 			// Send inventory update packet
-			if (!Config.FORCE_INVENTORY_UPDATE)
+			if (update)
 			{
-				final InventoryUpdate playerIU = new InventoryUpdate();
-				playerIU.addItem(item);
-				actor.sendInventoryUpdate(playerIU);
-			}
-			else
-			{
-				actor.sendItemList(false);
+				if (!Config.FORCE_INVENTORY_UPDATE)
+				{
+					final InventoryUpdate playerIU = new InventoryUpdate();
+					playerIU.addItem(item);
+					actor.sendInventoryUpdate(playerIU);
+				}
+				else
+				{
+					actor.sendItemList(false);
+				}
 			}
 			
 			// Notify to scripts

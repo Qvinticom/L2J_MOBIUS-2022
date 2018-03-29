@@ -28,6 +28,7 @@ import com.l2jmobius.commons.util.Rnd;
 public class ItemChanceHolder extends ItemHolder
 {
 	private final double _chance;
+	private final byte _enchantmentLevel;
 	
 	public ItemChanceHolder(int id, double chance)
 	{
@@ -38,6 +39,14 @@ public class ItemChanceHolder extends ItemHolder
 	{
 		super(id, count);
 		_chance = chance;
+		_enchantmentLevel = 0;
+	}
+	
+	public ItemChanceHolder(int id, double chance, long count, byte enchantmentLevel)
+	{
+		super(id, count);
+		_chance = chance;
+		_enchantmentLevel = enchantmentLevel;
 	}
 	
 	/**
@@ -47,6 +56,15 @@ public class ItemChanceHolder extends ItemHolder
 	public double getChance()
 	{
 		return _chance;
+	}
+	
+	/**
+	 * Gets the enchant level.
+	 * @return the enchant level of the item contained in this object
+	 */
+	public byte getEnchantmentLevel()
+	{
+		return _enchantmentLevel;
 	}
 	
 	/**
