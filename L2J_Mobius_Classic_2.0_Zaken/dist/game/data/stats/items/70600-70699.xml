@@ -1077,6 +1077,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55605" level="1" /> <!-- Artisan's Goggles (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70688" name="Artisan's Goggles (DEX+1 WIT+1)" type="Armor">
 		<!-- Large goggles that protect the eyes. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1088,6 +1092,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55606" level="1" /> <!-- Artisan's Goggles (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70689" name="Artisan's Goggles (CON+1 MEN+1)" type="Armor">
 		<!-- Large goggles that protect the eyes. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1099,6 +1107,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55607" level="1" /> <!-- Artisan's Goggles (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70690" name="Uniform Hat (STR+1 INT+1)" type="Armor">
 		<!-- Stylish uniform hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1110,6 +1122,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55608" level="1" /> <!-- Uniform Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70691" name="Uniform Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- Stylish uniform hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1121,6 +1137,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55609" level="1" /> <!-- Uniform Hat (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70692" name="Uniform Hat (CON+1 MEN+1)" type="Armor">
 		<!-- Stylish uniform hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1132,6 +1152,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55610" level="1" /> <!-- Uniform Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70693" name="Assassin's Bamboo Hat (STR+1 INT+1)" type="Armor">
 		<!-- Wide-brimmed hat fashioned out of bamboo. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1143,6 +1167,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55611" level="1" /> <!-- Assassin's Bamboo Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70694" name="Assassin's Bamboo Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- Wide-brimmed hat fashioned out of bamboo. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1154,6 +1182,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55612" level="1" /> <!-- Assassin's Bamboo Hat (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70695" name="Assassin's Bamboo Hat (CON+1 MEN+1)" type="Armor">
 		<!-- Wide-brimmed hat fashioned out of bamboo. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1165,6 +1197,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55613" level="1" /> <!-- Assassin's Bamboo Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70696" name="Valkyrie Hat (STR+1 INT+1)" type="Armor">
 		<!-- The hat with Valkyrie's power in it.STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1176,6 +1212,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55614" level="1" /> <!-- Valkyrie Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70697" name="Valkyrie Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- The hat with Valkyrie's power in it.DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1187,6 +1227,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55615" level="1" /> <!-- Valkyrie Hat (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70698" name="Valkyrie Hat (CON+1 MEN+1)" type="Armor">
 		<!-- The hat with Valkyrie's power in it.CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1198,6 +1242,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55616" level="1" /> <!-- Valkyrie Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70699" name="Gatekeeper Hat (STR+1 INT+1)" type="Armor">
 		<!-- Gatekeeper Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -1209,5 +1257,9 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55617" level="1" /> <!-- Gatekeeper Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 </list>

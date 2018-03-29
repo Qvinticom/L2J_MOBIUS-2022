@@ -10,6 +10,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55618" level="1" /> <!-- Gatekeeper Hat (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70701" name="Gatekeeper Hat (CON+1 MEN+1)" type="Armor">
 		<!-- Gatekeeper Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -21,6 +25,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55619" level="1" /> <!-- Gatekeeper Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70702" name="Wedding Veil (STR+1 INT+1)" type="Armor">
 		<!-- Pure white wedding veil. STR+1, INT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -32,6 +40,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55620" level="1" /> <!-- Wedding Veil (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70703" name="Wedding Veil (DEX+1 WIT+1)" type="Armor">
 		<!-- Pure white wedding veil. DEX+1, WIT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -43,6 +55,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55621" level="1" /> <!-- Wedding Veil (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70704" name="Wedding Veil (CON+1 MEN+1)" type="Armor">
 		<!-- Pure white wedding veil. CON+1, MEN+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -54,6 +70,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55622" level="1" /> <!-- Wedding Veil (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70705" name="Maid Hair Accessory (STR+1 INT+1)" type="Armor">
 		<!-- Maid Hair Accessory. STR+1, INT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -65,6 +85,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55623" level="1" /> <!-- Maid Hair Accessory (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70706" name="Maid Hair Accessory (DEX+1 WIT+1)" type="Armor">
 		<!-- Maid Hair Accessory. DEX+1, WIT+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -76,6 +100,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55624" level="1" /> <!-- Maid Hair Accessory (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70707" name="Maid Hair Accessory (CON+1 MEN+1)" type="Armor">
 		<!-- Maid Hair Accessory. CON+1, MEN+1. May be used only by female characters. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -87,6 +115,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55625" level="1" /> <!-- Maid Hair Accessory (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70708" name="Refined Romantic Chapeau: Red (STR+1 INT+1)" type="Armor">
 		<!-- Refined Romantic Chapeau: Red. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -98,6 +130,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55626" level="1" /> <!-- Refined Romantic Chapeau: Red (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70709" name="Refined Romantic Chapeau: Red (DEX+1 WIT+1)" type="Armor">
 		<!-- Refined Romantic Chapeau: Red. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -109,6 +145,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55627" level="1" /> <!-- Refined Romantic Chapeau: Red (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70710" name="Refined Romantic Chapeau: Red (CON+1 MEN+1)" type="Armor">
 		<!-- Refined Romantic Chapeau: Red. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -120,6 +160,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55628" level="1" /> <!-- Refined Romantic Chapeau: Red (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70711" name="Refined Angel Ring (STR+1 INT+1)" type="Armor">
 		<!-- Refined Angel Ring. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -131,6 +175,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55629" level="1" /> <!-- Refined Angel Ring (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70712" name="Refined Angel Ring (DEX+1 WIT+1)" type="Armor">
 		<!-- Refined Angel Ring. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -142,6 +190,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55630" level="1" /> <!-- Refined Angel Ring (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70713" name="Refined Angel Ring (CON+1 MEN+1)" type="Armor">
 		<!-- Refined Angel Ring. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -153,6 +205,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55631" level="1" /> <!-- Refined Angel Ring (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70714" name="Refined Wizard Hat (STR+1 INT+1)" type="Armor">
 		<!-- Refined Wizard Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -164,6 +220,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55632" level="1" /> <!-- Refined Wizard Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70715" name="Refined Wizard Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- Refined Wizard Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -175,6 +235,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55633" level="1" /> <!-- Refined Wizard Hat (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70716" name="Refined Wizard Hat (CON+1 MEN+1)" type="Armor">
 		<!-- Refined Wizard Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -186,6 +250,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55634" level="1" /> <!-- Refined Wizard Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70717" name="Laborer Hat (STR+1 INT+1)" type="Armor">
 		<!-- Laborer Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -197,6 +265,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55635" level="1" /> <!-- Laborer Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70718" name="Laborer Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- Laborer Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -208,6 +280,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55636" level="1" /> <!-- Laborer Hat (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70719" name="Laborer Hat (CON+1 MEN+1)" type="Armor">
 		<!-- Laborer Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -219,6 +295,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55637" level="1" /> <!-- Laborer Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70720" name="Top Hat (STR+1 INT+1)" type="Armor">
 		<!-- Magical-looking hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -230,6 +310,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55638" level="1" /> <!-- Top Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70721" name="Top Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- Magical-looking hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -241,6 +325,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55639" level="1" /> <!-- Top Hat (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70722" name="Top Hat (CON+1 MEN+1)" type="Armor">
 		<!-- Magical-looking hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -252,6 +340,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55640" level="1" /> <!-- Wizard Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70723" name="Vigilante Hat (STR+1 INT+1)" type="Armor">
 		<!-- Vigilante Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -263,6 +355,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55641" level="1" /> <!-- Vigilante Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70724" name="Vigilante Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- Vigilante Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -274,6 +370,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55642" level="1" /> <!-- Vigilante Hat (DEX +1 WIT +1) -->
+		</skills>
 	</item>
 	<item id="70725" name="Vigilante Hat (CON+1 MEN+1)" type="Armor">
 		<!-- Vigilante Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -285,6 +385,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55643" level="1" /> <!-- Vigilante Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70726" name="White Uniform Hat (STR+1 INT+1)" type="Armor">
 		<!-- White uniform hat that makes you feel the energy of a man of the sea. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -296,6 +400,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55644" level="1" /> <!-- White Uniform Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70727" name="White Uniform Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- White uniform hat that makes you feel the energy of a man of the sea. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -307,6 +415,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55645" level="1" /> <!-- White Uniform Hat (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70728" name="White Uniform Hat (CON+1 MEN+1)" type="Armor">
 		<!-- White uniform hat that makes you feel the energy of a man of the sea. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -318,6 +430,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55646" level="1" /> <!-- White Uniform Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70729" name="Warrior's Helmet (STR+1 INT+1)" type="Armor">
 		<!-- Helmet of a brave ancient warrior. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -329,6 +445,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55647" level="1" /> <!-- Warrior's Helmet (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70730" name="Warrior's Helmet (DEX+1 WIT+1)" type="Armor">
 		<!-- Helmet of a brave ancient warrior. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -340,6 +460,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55648" level="1" /> <!-- Warrior's Helmet (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70731" name="Warrior's Helmet (CON+1 MEN+1)" type="Armor">
 		<!-- Helmet of a brave ancient warrior. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -351,6 +475,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55649" level="1" /> <!-- Warrior's Helmet (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70732" name="First Mate Hat (STR+1 INT+1)" type="Armor">
 		<!-- First Mate Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -362,6 +490,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55650" level="1" /> <!-- First Mate Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70733" name="First Mate Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- First Mate Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -373,6 +505,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55651" level="1" /> <!-- First Mate Hat (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70734" name="First Mate Hat (CON+1 MEN+1)" type="Armor">
 		<!-- First Mate Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -384,6 +520,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55652" level="1" /> <!-- First Mate Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70735" name="Refined Romantic Chapeau: Blue (STR+1 INT+1)" type="Armor">
 		<!-- Refined Romantic Chapeau: Blue. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -395,6 +535,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55653" level="1" /> <!-- Refined Romantic Chapeau: Blue (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70736" name="Refined Romantic Chapeau: Blue (DEX+1 WIT+1)" type="Armor">
 		<!-- Refined Romantic Chapeau: Blue. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -406,6 +550,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55654" level="1" /> <!-- Refined Romantic Chapeau: Blue (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70737" name="Refined Romantic Chapeau: Blue (CON+1 MEN+1)" type="Armor">
 		<!-- Refined Romantic Chapeau: Blue. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -417,6 +565,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55655" level="1" /> <!-- Refined Romantic Chapeau: Blue (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70738" name="Gold-rimmed Glasses (STR+1 INT+1)" type="Armor">
 		<!-- Expensive-looking gold-rimmed glasses. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -428,6 +580,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55656" level="1" /> <!-- Gold-rimmed Glasses (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70739" name="Gold-rimmed Glasses (DEX+1 WIT+1)" type="Armor">
 		<!-- Expensive-looking gold-rimmed glasses. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -439,6 +595,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55657" level="1" /> <!-- Gold-rimmed Glasses (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70740" name="Gold-rimmed Glasses (CON+1 MEN+1)" type="Armor">
 		<!-- Expensive-looking gold-rimmed glasses. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -450,6 +610,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55658" level="1" /> <!-- Gold-rimmed Glasses (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70741" name="Horn-rimmed Glasses (STR+1 INT+1)" type="Armor">
 		<!-- Magic Horn-rimmed Glasses. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -461,6 +625,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55659" level="1" /> <!-- Horn-rimmed Glasses (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70742" name="Horn-rimmed Glasses (DEX+1 WIT+1)" type="Armor">
 		<!-- Magic Horn-rimmed Glasses. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -472,6 +640,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55660" level="1" /> <!-- Horn-rimmed Glasses (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70743" name="Horn-rimmed Glasses (CON+1 MEN+1)" type="Armor">
 		<!-- Magic Horn-rimmed Glasses. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -483,6 +655,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55661" level="1" /> <!-- Horn-rimmed Glasses (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70744" name="Stylish Straw Hat (STR+1 INT+1)" type="Armor">
 		<!-- Straw Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -494,6 +670,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55662" level="1" /> <!-- Stylish Straw Hat (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70745" name="Stylish Straw Hat (DEX+1 WIT+1)" type="Armor">
 		<!-- Straw Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -505,6 +685,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55663" level="1" /> <!-- Stylish Straw Hat (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70746" name="Stylish Straw Hat (CON+1 MEN+1)" type="Armor">
 		<!-- Straw Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -516,6 +700,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55664" level="1" /> <!-- Stylish Straw Hat (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70747" name="Chic Silver Chapeau (STR+1 INT+1)" type="Armor">
 		<!-- Chic Silver Chapeau. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -527,6 +715,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55665" level="1" /> <!-- Chic Silver Chapeau (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70748" name="Chic Silver Chapeau (DEX+1 WIT+1)" type="Armor">
 		<!-- Chic Silver Chapeau. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -538,6 +730,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55666" level="1" /> <!-- Chic Silver Chapeau (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70749" name="Chic Silver Chapeau (CON+1 MEN+1)" type="Armor">
 		<!-- Chic Silver Chapeau. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -549,6 +745,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55667" level="1" /> <!-- Chic Silver Chapeau (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70750" name="Afro Hair (STR+1 INT+1)" type="Armor">
 		<!-- Afro style hair. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -560,6 +760,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55668" level="1" /> <!-- Afro Hair (STR+1 INT+1) -->
+		</skills>
 	</item>
 	<item id="70751" name="Afro Hair (DEX+1 WIT+1)" type="Armor">
 		<!-- Afro style hair. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -571,6 +775,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55669" level="1" /> <!-- Afro Hair (DEX+1 WIT+1) -->
+		</skills>
 	</item>
 	<item id="70752" name="Afro Hair (CON+1 MEN+1)" type="Armor">
 		<!-- Afro style hair. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
@@ -582,6 +790,10 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55670" level="1" /> <!-- Afro Hair (CON+1 MEN+1) -->
+		</skills>
 	</item>
 	<item id="70753" name="Eva's Scroll: Enchant Hair Accessory" type="EtcItem">
 		<!-- Hair Accessory M. / P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3. Cannot be dropped. Cannot be dropped. -->
