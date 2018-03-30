@@ -29,12 +29,13 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 
 /**
  * Moon Knight (11000)
- * @author Stayway
+ * @author Stayway, Mobius
  */
 public class Q11000_MoonKnight extends Quest
 {
@@ -88,112 +89,322 @@ public class Q11000_MoonKnight extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (qs != null)
+		if (qs == null)
 		{
-			switch (event)
+			return htmltext;
+		}
+		
+		switch (event)
+		{
+			case "30208-01.html":
+			case "30208-02.html":
+			case "30437-02.html":
+			case "30941-02.html":
+			case "30941-03.html":
 			{
-				case "30208-01.html":
-				case "30208-02.html":
-				case "30437-02.html":
-				case "30941-02.html":
-				case "30941-03.html":
+				htmltext = event;
+				break;
+			}
+			case "30939-02.htm":
+			{
+				qs.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "30939-06.html":
+			{
+				if (qs.isCond(4))
 				{
+					qs.setCond(5, true);
 					htmltext = event;
-					break;
 				}
-				case "30939-02.htm":
+				break;
+			}
+			case "30939-09.html":
+			{
+				if (qs.isCond(5))
 				{
-					qs.startQuest();
+					qs.setCond(6, true);
 					htmltext = event;
-					break;
 				}
-				case "30939-04.html":
+				break;
+			}
+			case "30425-01.html":
+			{
+				if (qs.isCond(6))
 				{
-					if (qs.isCond(4))
-					{
-						qs.setCond(5, true);
-						htmltext = event;
-					}
-					break;
+					qs.setCond(7, true);
+					htmltext = event;
 				}
-				case "30939-06.html":
+				break;
+			}
+			case "30437-03.html":
+			{
+				if (qs.isCond(7))
 				{
-					if (qs.isCond(5))
-					{
-						qs.setCond(6, true);
-						htmltext = event;
-					}
-					break;
+					qs.setCond(8, true);
+					takeItems(player, ARMOR_TRADE_CONTRACT, 1);
+					giveItems(player, ROLENTO_BAG, 1);
+					giveItems(player, IRON_SCALE_GUILD_CERTIFICATE, 1);
+					htmltext = event;
 				}
-				case "30425-01.html":
+				break;
+			}
+			case "30941-04.html":
+			{
+				if (qs.isCond(8))
 				{
-					if (qs.isCond(6))
-					{
-						qs.setCond(7, true);
-						htmltext = event;
-					}
-					break;
+					qs.setCond(9, true);
+					takeItems(player, TUREK_ORC_ORDER, 1);
+					takeItems(player, ROLENTO_BAG, 1);
+					takeItems(player, IRON_SCALE_GUILD_CERTIFICATE, 1);
+					htmltext = event;
 				}
-				case "30437-03.html":
+				break;
+			}
+			case "reward1":
+			{
+				if (qs.isCond(10))
 				{
-					if (qs.isCond(7))
-					{
-						qs.setCond(8, true);
-						takeItems(player, ARMOR_TRADE_CONTRACT, 1);
-						giveItems(player, ROLENTO_BAG, 1);
-						giveItems(player, IRON_SCALE_GUILD_CERTIFICATE, 1);
-						htmltext = event;
-					}
-					break;
+					giveItems(player, MOON_HELMET, 1);
+					giveItems(player, MOON_SHELL, 1);
+					giveItems(player, MOON_LEATHER_GLOVES, 1);
+					giveItems(player, MOON_SHOES, 1);
+					qs.exitQuest(false, true);
 				}
-				case "30941-04.html":
+				break;
+			}
+			case "reward2":
+			{
+				if (qs.isCond(10))
 				{
-					if (qs.isCond(8))
-					{
-						qs.setCond(9, true);
-						takeItems(player, TUREK_ORC_ORDER, 1);
-						takeItems(player, ROLENTO_BAG, 1);
-						takeItems(player, IRON_SCALE_GUILD_CERTIFICATE, 1);
-						htmltext = event;
-					}
-					break;
+					giveItems(player, MOON_HELMET, 1);
+					giveItems(player, MOON_ARMOR, 1);
+					giveItems(player, MOON_GAUNTLETS_HEAVY, 1);
+					giveItems(player, MOON_BOOTS_HEAVY, 1);
+					qs.exitQuest(false, true);
 				}
-				case "reward1":
+				break;
+			}
+			case "reward3":
+			{
+				if (qs.isCond(10))
 				{
-					if (qs.isCond(10))
-					{
-						giveItems(player, MOON_HELMET, 1);
-						giveItems(player, MOON_SHELL, 1);
-						giveItems(player, MOON_LEATHER_GLOVES, 1);
-						giveItems(player, MOON_SHOES, 1);
-						qs.exitQuest(false, true);
-					}
-					break;
+					giveItems(player, MOON_HELMET, 1);
+					giveItems(player, MOON_CAPE, 1);
+					giveItems(player, MOON_SILK_GLOVES, 1);
+					giveItems(player, MOON_SANDALS, 1);
+					qs.exitQuest(false, true);
 				}
-				case "reward2":
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance talker)
+	{
+		final QuestState qs = getQuestState(talker, true);
+		String htmltext = getNoQuestMsg(talker);
+		switch (qs.getState())
+		{
+			case State.CREATED:
+			{
+				if (npc.getId() == JONES)
 				{
-					if (qs.isCond(10))
-					{
-						giveItems(player, MOON_HELMET, 1);
-						giveItems(player, MOON_ARMOR, 1);
-						giveItems(player, MOON_GAUNTLETS_HEAVY, 1);
-						giveItems(player, MOON_BOOTS_HEAVY, 1);
-						qs.exitQuest(false, true);
-					}
-					break;
+					htmltext = "30939-01.htm";
 				}
-				case "reward3":
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (npc.getId())
 				{
-					if (qs.isCond(10))
+					case JONES:
 					{
-						giveItems(player, MOON_HELMET, 1);
-						giveItems(player, MOON_CAPE, 1);
-						giveItems(player, MOON_SILK_GLOVES, 1);
-						giveItems(player, MOON_SANDALS, 1);
-						qs.exitQuest(false, true);
+						switch (qs.getCond())
+						{
+							case 1:
+							{
+								htmltext = "30939-03.html";
+								break;
+							}
+							case 2:
+							case 3:
+							{
+								htmltext = "30939-04.html";
+								break;
+							}
+							case 4:
+							{
+								htmltext = "30939-05.html";
+								break;
+							}
+							case 5:
+							{
+								if (hasQuestItems(talker, TUREK_ORC_ORDER) && hasQuestItems(talker, ARMOR_TRADE_CONTRACT))
+								{
+									htmltext = "30939-08.html";
+								}
+								else
+								{
+									htmltext = "30939-07.html";
+								}
+								break;
+							}
+							case 6:
+							{
+								htmltext = "30939-10.html";
+								break;
+							}
+							case 7:
+							{
+								htmltext = "30939-11.html";
+								break;
+							}
+							case 8:
+							{
+								htmltext = "30939-12.html";
+								break;
+							}
+							case 9:
+							{
+								htmltext = "30939-13.html";
+								break;
+							}
+							case 10:
+							{
+								htmltext = "30939-14.html";
+								break;
+							}
+						}
+						break;
 					}
-					break;
+					case DAMION:
+					{
+						if (qs.isCond(1))
+						{
+							qs.setCond(2, true);
+							htmltext = "30208-01.html";
+						}
+						else if (qs.isCond(2))
+						{
+							htmltext = "30208-01.html";
+						}
+						else if (qs.isCond(3))
+						{
+							if (hasQuestItems(talker, AMORA_RECEIPT))
+							{
+								takeItems(talker, AMORA_RECEIPT, 1);
+								htmltext = "30208-03.html";
+								qs.setCond(4, true);
+							}
+							else
+							{
+								htmltext = "30208-01.html";
+							}
+						}
+						else
+						{
+							htmltext = "30208-04.html";
+						}
+						break;
+					}
+					case AMORA:
+					{
+						if (qs.isCond(2))
+						{
+							if ((getQuestItemsCount(talker, MOLD) < 10))
+							{
+								htmltext = "30940-01.html";
+							}
+							else
+							{
+								giveItems(talker, AMORA_RECEIPT, 1);
+								takeItems(talker, MOLD, 10);
+								qs.setCond(3, true);
+								htmltext = "30940-02.html";
+							}
+						}
+						else if (qs.isCond(3))
+						{
+							htmltext = "30940-03.html";
+						}
+						else if (qs.getCond() > 3)
+						{
+							htmltext = "30940-04.html";
+						}
+						break;
+					}
+					case NETI:
+					{
+						if (qs.isCond(6) && hasQuestItems(talker, TUREK_ORC_ORDER, ARMOR_TRADE_CONTRACT))
+						{
+							htmltext = "30425-01.html";
+							qs.setCond(7, true);
+						}
+						else if (qs.isCond(7))
+						{
+							htmltext = "30425-02.html";
+						}
+						else if (qs.getState() > 7)
+						{
+							htmltext = "30425-03.html";
+						}
+						break;
+					}
+					case ROLENTO:
+					{
+						if (qs.isCond(7) && hasQuestItems(talker, TUREK_ORC_ORDER, ARMOR_TRADE_CONTRACT))
+						{
+							htmltext = "30437-01.html";
+						}
+						else if (qs.isCond(8))
+						{
+							htmltext = "30437-04.html";
+						}
+						else if (qs.getCond() > 8)
+						{
+							htmltext = "30437-05.html";
+						}
+						break;
+					}
+					case GUDZ:
+					{
+						if (qs.isCond(8))
+						{
+							if (hasQuestItems(talker, TUREK_ORC_ORDER, ROLENTO_BAG, IRON_SCALE_GUILD_CERTIFICATE))
+							{
+								htmltext = "30941-01.html";
+							}
+						}
+						else if (qs.isCond(9))
+						{
+							if (getQuestItemsCount(talker, TUREK_ORC_INVADER_HEAD) < 10)
+							{
+								htmltext = "30941-05.html";
+							}
+							else
+							{
+								takeItems(talker, TUREK_ORC_INVADER_HEAD, 10);
+								qs.setCond(10, true);
+								htmltext = "30941-06.html";
+							}
+						}
+						else if (qs.isCond(10))
+						{
+							htmltext = "30941-07.html";
+						}
+						break;
+					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(talker);
+				break;
 			}
 		}
 		return htmltext;
@@ -235,176 +446,6 @@ public class Q11000_MoonKnight extends Quest
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
-	{
-		final QuestState qs = getQuestState(talker, true);
-		String htmltext = getNoQuestMsg(talker);
-		switch (npc.getId())
-		{
-			case JONES:
-			{
-				if (qs.isCreated())
-				{
-					htmltext = "30939-01.htm";
-				}
-				else if (qs.isStarted())
-				{
-					switch (qs.getCond())
-					{
-						case 1:
-						case 2:
-						case 3:
-						{
-							htmltext = "30939-02a.html";
-							break;
-						}
-						case 4:
-						{
-							htmltext = "30939-03.html";
-							break;
-						}
-						case 5:
-						{
-							if ((getQuestItemsCount(talker, TUREK_ORC_ORDER) < 1) || (getQuestItemsCount(talker, ARMOR_TRADE_CONTRACT) < 1))
-							{
-								htmltext = "30939-04a.html";
-							}
-							else if ((getQuestItemsCount(talker, TUREK_ORC_ORDER) >= 1) && (getQuestItemsCount(talker, ARMOR_TRADE_CONTRACT) >= 1))
-							{
-								htmltext = "30939-05.html";
-							}
-							break;
-						}
-						case 6:
-						{
-							htmltext = "30939-06a.html";
-							break;
-						}
-						case 10:
-						{
-							htmltext = "30939-07.html";
-							break;
-						}
-					}
-				}
-				else
-				{
-					htmltext = getAlreadyCompletedMsg(talker);
-				}
-				break;
-			}
-			case DAMION:
-			{
-				switch (qs.getCond())
-				{
-					case 1:
-					{
-						htmltext = "30208-01.html";
-						qs.setCond(2, true);
-						break;
-					}
-					case 2:
-					{
-						htmltext = "30208-01.html";
-						break;
-					}
-					case 3:
-					{
-						if (hasQuestItems(talker, AMORA_RECEIPT))
-						{
-							takeItems(talker, AMORA_RECEIPT, 1);
-							htmltext = "30208-03.html";
-							qs.setCond(4, true);
-						}
-						break;
-					}
-					case 4:
-					{
-						htmltext = "30208-03a.html";
-						break;
-					}
-				}
-				break;
-			}
-			case AMORA:
-			{
-				if (qs.isCond(2) && (getQuestItemsCount(talker, MOLD) >= 10))
-				{
-					giveItems(talker, AMORA_RECEIPT, 1);
-					takeItems(talker, MOLD, 10);
-					qs.setCond(3, true);
-					htmltext = "30940-01.html";
-				}
-				else if (qs.isCond(3))
-				{
-					htmltext = "30940-01a.html";
-				}
-				break;
-			}
-			case NETI:
-			{
-				if (qs.isCond(6) && hasQuestItems(talker, TUREK_ORC_ORDER, ARMOR_TRADE_CONTRACT))
-				{
-					htmltext = "30425-01.html";
-					qs.setCond(7, true);
-				}
-				else if (qs.isCond(7))
-				{
-					htmltext = "30425-01a.html"; // Need retail html
-				}
-				break;
-			}
-			case ROLENTO:
-			{
-				if (qs.isCond(7) && hasQuestItems(talker, TUREK_ORC_ORDER, ARMOR_TRADE_CONTRACT))
-				{
-					htmltext = "30437-01.html";
-				}
-				else if (qs.isCond(8))
-				{
-					htmltext = "30437-03a.html";
-				}
-				break;
-			}
-			case GUDZ:
-			{
-				switch (qs.getCond())
-				{
-					case 8:
-					{
-						if (hasQuestItems(talker, TUREK_ORC_ORDER, ROLENTO_BAG, IRON_SCALE_GUILD_CERTIFICATE))
-						{
-							htmltext = "30941-01.html";
-						}
-						break;
-					}
-					case 9:
-					{
-						if (getQuestItemsCount(talker, TUREK_ORC_INVADER_HEAD) >= 10)
-						{
-							htmltext = "30941-05.html";
-							takeItems(talker, TUREK_ORC_INVADER_HEAD, 10);
-							qs.setCond(10, true);
-						}
-						else
-						{
-							htmltext = "30941-04a.html";
-						}
-						break;
-					}
-					case 10:
-					{
-						htmltext = "30941-05a.html";
-						break;
-					}
-				}
-				break;
-			}
-		}
-		return htmltext;
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LEVEL_CHANGED)
