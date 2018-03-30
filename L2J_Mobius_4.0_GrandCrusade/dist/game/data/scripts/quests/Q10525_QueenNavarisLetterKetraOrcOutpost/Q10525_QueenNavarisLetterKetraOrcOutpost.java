@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import quests.LetterQuest;
 
 /**
- * Queen Navari's Letter, Ketra Orc Outpost (10521)
+ * Queen Navari's Letter, Ketra Orc Outpost (10525)
  * @URL https://l2wiki.com/Queen_Navari%27s_Letter,_Ketra_Orc_Outpost
  * @author Mobius
  */
@@ -48,7 +48,7 @@ public class Q10525_QueenNavarisLetterKetraOrcOutpost extends LetterQuest
 	
 	public Q10525_QueenNavarisLetterKetraOrcOutpost()
 	{
-		super(10521);
+		super(10525);
 		addTalkId(GREGORY, LUGONNES);
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
