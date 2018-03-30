@@ -106,32 +106,29 @@ public class Q10524_TheAssassinationOfTheVarkaSilenosCommanderChief extends Ques
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (npc.getId() == HANSEN)
+		switch (qs.getState())
 		{
-			switch (qs.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = "33853-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (qs.isCond(1))
 				{
-					htmltext = "33853-01.htm";
-					break;
+					htmltext = "33853-05.html";
 				}
-				case State.STARTED:
+				else if (qs.isCond(2))
 				{
-					if (qs.isCond(1))
-					{
-						htmltext = "33853-05.html";
-					}
-					else if (qs.isCond(2))
-					{
-						htmltext = "33853-06.html";
-					}
-					break;
+					htmltext = "33853-06.html";
 				}
-				case State.COMPLETED:
-				{
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
-				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;
