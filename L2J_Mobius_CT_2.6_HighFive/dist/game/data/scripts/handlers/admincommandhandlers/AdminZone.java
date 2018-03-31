@@ -138,13 +138,13 @@ public class AdminZone implements IAdminCommandHandler
 				if (zone.getName() != null)
 				{
 					zones.append(zone.getName());
-					zones.append("<br1>");
 					if (zone.getId() < 300000)
 					{
-						zones.append("(");
+						zones.append(" (");
 						zones.append(zone.getId());
 						zones.append(")");
 					}
+					zones.append("<br1>");
 				}
 				else
 				{
