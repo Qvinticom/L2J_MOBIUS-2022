@@ -37,7 +37,7 @@ import ai.AbstractNpcAI;
  */
 public final class SelMahumSquad extends AbstractNpcAI
 {
-	// NPC's
+	// NPCs
 	private static final int CHEF = 18908;
 	private static final int FIRE = 18927;
 	private static final int STOVE = 18933;

@@ -33,7 +33,6 @@ import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -613,7 +612,6 @@ public final class BlockCheckerEngine
 				}
 				
 				item.decayMe();
-				L2World.getInstance().removeObject(item);
 			}
 			_drops.clear();
 		}

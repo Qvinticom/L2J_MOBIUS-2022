@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  */
 public final class ClassTransferTalk extends AbstractNpcAI
 {
-	// NPC's
+	// NPCs
 	// Talking Island Village (Administrative office)
 	private static final int FRANCO = 32153;
 	private static final int RIVIAN = 32147;

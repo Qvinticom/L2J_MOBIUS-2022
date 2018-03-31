@@ -24,7 +24,6 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.ItemCrystallizationData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
@@ -261,8 +260,6 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		client.sendPacket(sm);
 		
 		activeChar.broadcastUserInfo();
-		
-		L2World.getInstance().removeObject(removedItem);
 		
 		activeChar.setInCrystallize(false);
 	}

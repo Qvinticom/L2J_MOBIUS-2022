@@ -1007,7 +1007,7 @@ public final class L2World
 	 */
 	public synchronized void deleteVisibleNpcSpawns()
 	{
-		LOGGER.info("Deleting all visible NPC's.");
+		LOGGER.info("Deleting all visible NPCs.");
 		
 		for (int i = 0; i <= REGIONS_X; i++)
 		{
@@ -1016,7 +1016,7 @@ public final class L2World
 				_worldRegions[i][j].deleteVisibleNpcSpawns();
 			}
 		}
-		LOGGER.info("All visible NPC's deleted.");
+		LOGGER.info("All visible NPCs deleted.");
 	}
 	
 	/**

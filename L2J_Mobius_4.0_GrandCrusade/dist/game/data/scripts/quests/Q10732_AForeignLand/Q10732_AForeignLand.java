@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
  */
 public final class Q10732_AForeignLand extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int NAVARI = 33931;
 	private static final int GERETH = 33932;
 	// Misc

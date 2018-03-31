@@ -80,7 +80,7 @@ public final class AuctionItem
 	public final L2ItemInstance createNewItemInstance()
 	{
 		final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), _itemId);
-		L2World.getInstance().storeObject(item);
+		L2World.getInstance().addObject(item);
 		item.setCount(_itemCount);
 		item.setEnchantLevel(item.getItem().getDefaultEnchantLevel());
 		return item;

@@ -11093,10 +11093,6 @@ public final class L2PcInstance extends L2Playable
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerMentorStatus(this, false), this);
 		}
 		
-		// Remove L2Object object from _allObjects of L2World
-		L2World.getInstance().removeObject(this);
-		L2World.getInstance().removeFromAllPlayers(this); // force remove in case of crash during teleport
-		
 		try
 		{
 			notifyFriends(L2FriendStatus.MODE_OFFLINE);
@@ -12304,10 +12300,6 @@ public final class L2PcInstance extends L2Playable
 	
 	public void stopMovie()
 	{
-		setIsTeleporting(true, false); // avoid to get player removed from L2World
-		decayMe();
-		spawnMe(getX(), getY(), getZ());
-		setIsTeleporting(false, false);
 		sendPacket(new ExStopScenePlayer(getMovieHolder().getMovie()));
 		setMovieHolder(null);
 	}

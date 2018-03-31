@@ -57,7 +57,7 @@ import ai.AbstractNpcAI;
  */
 public final class TullyWorkshop extends AbstractNpcAI
 {
-	// NPC's
+	// NPCs
 	private static final int AGENT = 32372;
 	private static final int CUBE_68 = 32467;
 	private static final int DORIAN = 32373;
@@ -123,7 +123,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 	
 	protected ScheduledFuture<?> _countdown = null;
 	
-	// NPC's, spawned after Tully's death are stored here
+	// NPCs, spawned after Tully's death are stored here
 	protected static List<L2Npc> postMortemSpawn = new ArrayList<>();
 	protected static Set<Integer> brokenContraptions = ConcurrentHashMap.newKeySet();
 	protected static Set<Integer> rewardedContraptions = new HashSet<>();

@@ -437,7 +437,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), STRINGID_DIE[npc.getId() - 36562]));
 			
-			// All other friendly NPC's do suicide - start timer
+			// All other friendly NPCs do suicide - start timer
 			startQuestTimer("suicide", 1500, npc, null);
 			cancelQuestTimer("check_for_foes", npc, null);
 			cancelQuestTimer("buff", npc, null);

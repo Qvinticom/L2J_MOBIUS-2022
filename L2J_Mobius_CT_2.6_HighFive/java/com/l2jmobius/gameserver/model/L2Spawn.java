@@ -88,11 +88,8 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	/** The task launching the function doSpawn() */
 	class SpawnTask implements Runnable
 	{
-		private final L2Npc _oldNpc;
-		
-		public SpawnTask(L2Npc pOldNpc)
+		public SpawnTask()
 		{
-			_oldNpc = pOldNpc;
 		}
 		
 		@Override
@@ -100,8 +97,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		{
 			try
 			{
-				// doSpawn();
-				respawnNpc(_oldNpc);
+				doSpawn();
 			}
 			catch (Exception e)
 			{
@@ -445,8 +441,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			_scheduledCount++;
 			
 			// Create a new SpawnTask to launch after the respawn Delay
-			// ClientScheduler.getInstance().scheduleLow(new SpawnTask(npcId), _respawnDelay);
-			ThreadPoolManager.schedule(new SpawnTask(oldNpc), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
+			ThreadPoolManager.schedule(new SpawnTask(), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
 		}
 	}
 	
@@ -621,7 +616,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		}
 		
 		// DO NOT CORRECT SPAWN Z IN GENERAL - Prevent NPC spawns on top of buildings
-		// don't correct z of flying npc's
+		// don't correct z of flying NPCs
 		// if (!npc.isFlying())
 		// {
 		// newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
@@ -777,18 +772,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	public final Deque<L2Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
-	}
-	
-	/**
-	 * @param oldNpc
-	 */
-	public void respawnNpc(L2Npc oldNpc)
-	{
-		if (_doRespawn)
-		{
-			oldNpc.refreshID();
-			initializeNpcInstance(oldNpc);
-		}
 	}
 	
 	public L2NpcTemplate getTemplate()

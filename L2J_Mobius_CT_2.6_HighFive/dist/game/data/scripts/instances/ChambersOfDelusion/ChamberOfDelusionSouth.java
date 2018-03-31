@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.Location;
  */
 public final class ChamberOfDelusionSouth extends Chamber
 {
-	// NPC's
+	// NPCs
 	private static final int ENTRANCE_GATEKEEPER = 32660;
 	private static final int ROOM_GATEKEEPER_FIRST = 32674;
 	private static final int ROOM_GATEKEEPER_LAST = 32678;

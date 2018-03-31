@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Q10378_WeedingWork extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int DADFPHYNA = 33697;
 	// Monster's
 	private static final int MANDRAGORA_OF_JOY_AND_SORROW = 23210;

@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.quest.State;
  */
 public class Q00777_SlayDarkLordTiat extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int ALLENOS = 32526;
 	// Boss
 	private static final int TIAT = 29163;

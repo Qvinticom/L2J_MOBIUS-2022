@@ -420,9 +420,6 @@ public abstract class L2Vehicle extends L2Character
 		
 		oldZoneRegion.removeFromZones(this);
 		
-		// Remove L2Object object from _allObjects of World
-		L2World.getInstance().removeObject(this);
-		
 		return super.deleteMe();
 	}
 	

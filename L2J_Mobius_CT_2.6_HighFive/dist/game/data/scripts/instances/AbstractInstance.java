@@ -201,10 +201,10 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	}
 	
 	/**
-	 * Spawns group of instance NPC's
+	 * Spawns group of instance NPCs
 	 * @param groupName the name of group from XML definition to spawn
 	 * @param instanceId the instance ID
-	 * @return list of spawned NPC's
+	 * @return list of spawned NPCs
 	 */
 	protected List<L2Npc> spawnGroup(String groupName, int instanceId)
 	{

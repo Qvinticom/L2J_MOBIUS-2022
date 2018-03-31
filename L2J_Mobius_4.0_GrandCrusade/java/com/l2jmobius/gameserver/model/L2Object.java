@@ -177,7 +177,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			setWorldRegion(L2World.getInstance().getRegion(getLocation()));
 			
 			// Add the L2Object spawn in the _allobjects of L2World
-			L2World.getInstance().storeObject(this);
+			L2World.getInstance().addObject(this);
 			
 			// Add the L2Object spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
 			getWorldRegion().addVisibleObject(this);
@@ -519,19 +519,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		
 	}
 	
-	protected void badCoords()
-	{
-		if (isCharacter())
-		{
-			decayMe();
-		}
-		else if (isPlayer())
-		{
-			((L2Character) this).teleToLocation(new Location(0, 0, 0), false);
-			((L2Character) this).sendMessage("Error with your coords, Please ask a GM for help!");
-		}
-	}
-	
 	public final void setXYZInvisible(int x, int y, int z)
 	{
 		if (x > L2World.MAP_MAX_X)
@@ -691,27 +678,20 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		setY(newY);
 		setZ(newZ);
 		
-		try
+		if (_isSpawned)
 		{
-			if (_isSpawned)
+			final L2WorldRegion oldRegion = getWorldRegion();
+			final L2WorldRegion newRegion = L2World.getInstance().getRegion(this);
+			if (newRegion != oldRegion)
 			{
-				final L2WorldRegion oldRegion = getWorldRegion();
-				final L2WorldRegion newRegion = L2World.getInstance().getRegion(this);
-				if (newRegion != oldRegion)
+				if (oldRegion != null)
 				{
-					if (oldRegion != null)
-					{
-						oldRegion.removeVisibleObject(this);
-					}
-					newRegion.addVisibleObject(this);
-					L2World.getInstance().switchRegion(this, newRegion);
-					setWorldRegion(newRegion);
+					oldRegion.removeVisibleObject(this);
 				}
+				newRegion.addVisibleObject(this);
+				L2World.getInstance().switchRegion(this, newRegion);
+				setWorldRegion(newRegion);
 			}
-		}
-		catch (Exception e)
-		{
-			badCoords();
 		}
 	}
 	

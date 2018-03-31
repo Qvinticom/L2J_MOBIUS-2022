@@ -27,6 +27,7 @@ import java.util.function.Predicate;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
@@ -43,7 +44,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 public final class L2World
 {
-	private static final Logger _log = Logger.getLogger(L2World.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2World.class.getName());
 	/** Gracia border Flying objects not allowed to the east of it. */
 	public static final int GRACIA_MAX_X = -166168;
 	public static final int GRACIA_MAX_Z = 6105;
@@ -90,8 +91,6 @@ public final class L2World
 	private static final Map<Integer, L2PcInstance> _allEvilPlayers = new ConcurrentHashMap<>();
 	/** Map containing all visible objects. */
 	private final Map<Integer, L2Object> _allObjects = new ConcurrentHashMap<>();
-	/** Map used for debug. */
-	// private final Map<Integer, String> _allObjectsDebug = new ConcurrentHashMap<>();
 	/** Map with the pets instances and their owner ID. */
 	private final Map<Integer, L2PetInstance> _petsInstance = new ConcurrentHashMap<>();
 	
@@ -114,7 +113,7 @@ public final class L2World
 			}
 		}
 		
-		_log.info(getClass().getSimpleName() + ": (" + REGIONS_X + " by " + REGIONS_Y + " by " + REGIONS_Z + ") World Region Grid set up.");
+		LOGGER.info(getClass().getSimpleName() + ": (" + REGIONS_X + " by " + REGIONS_Y + " by " + REGIONS_Z + ") World Region Grid set up.");
 	}
 	
 	/**
@@ -126,20 +125,33 @@ public final class L2World
 	 * </ul>
 	 * @param object
 	 */
-	public void storeObject(L2Object object)
+	public void addObject(L2Object object)
 	{
-		if (_allObjects.containsKey(object.getObjectId()))
+		if (_allObjects.putIfAbsent(object.getObjectId(), object) != null)
 		{
-			// _log.warning(getClass().getSimpleName() + ": Current object: " + object + " already exist in OID map!");
-			// _log.warning(CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
-			// _log.warning(getClass().getSimpleName() + ": Previous object: " + _allObjects.get(object.getObjectId()) + " already exist in OID map!");
-			// _log.warning(_allObjectsDebug.get(object.getObjectId()));
-			// _log.warning("---------------------- End ---------------------");
-			return;
+			LOGGER.warning(getClass().getSimpleName() + ": Object " + object + " already exists in the world. Stack Trace: " + CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
 		}
 		
-		_allObjects.put(object.getObjectId(), object);
-		// _allObjectsDebug.put(object.getObjectId(), CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
+		if (object.isPlayer())
+		{
+			final L2PcInstance newPlayer = (L2PcInstance) object;
+			if (newPlayer.isTeleporting()) // TODO: drop when we stop removing player from the world while teleporting.
+			{
+				return;
+			}
+			
+			final L2PcInstance existingPlayer = _allPlayers.putIfAbsent(object.getObjectId(), newPlayer);
+			if (existingPlayer != null)
+			{
+				existingPlayer.logout();
+				newPlayer.logout();
+				LOGGER.warning(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
+			}
+			else if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				addFactionPlayerToWorld(existingPlayer);
+			}
+		}
 	}
 	
 	/**
@@ -155,7 +167,27 @@ public final class L2World
 	public void removeObject(L2Object object)
 	{
 		_allObjects.remove(object.getObjectId());
-		// _allObjectsDebug.remove(object.getObjectId());
+		if (object.isPlayer())
+		{
+			final L2PcInstance player = (L2PcInstance) object;
+			if (player.isTeleporting()) // TODO: drop when we stop removing player from the world while teleportingq.
+			{
+				return;
+			}
+			_allPlayers.remove(object.getObjectId());
+			
+			if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				if (player.isGood())
+				{
+					_allGoodPlayers.remove(player.getObjectId());
+				}
+				else if (player.isEvil())
+				{
+					_allEvilPlayers.remove(player.getObjectId());
+				}
+			}
+		}
 	}
 	
 	/**
@@ -249,15 +281,6 @@ public final class L2World
 	}
 	
 	/**
-	 * Remove the given pet instance.
-	 * @param pet the pet to remove
-	 */
-	public void removePet(L2PetInstance pet)
-	{
-		_petsInstance.remove(pet.getOwner().getObjectId());
-	}
-	
-	/**
 	 * Add a L2Object in the world. <B><U> Concept</U> :</B> L2Object (including PlayerInstance) are identified in <B>_visibleObjects</B> of his current WorldRegion and in <B>_knownObjects</B> of other surrounding L2Characters <BR>
 	 * PlayerInstance are identified in <B>_allPlayers</B> of L2World, in <B>_allPlayers</B> of his current WorldRegion and in <B>_knownPlayer</B> of other surrounding L2Characters <B><U> Actions</U> :</B>
 	 * <li>Add the L2Object object in _allPlayers* of L2World</li>
@@ -275,24 +298,6 @@ public final class L2World
 	 */
 	public void addVisibleObject(L2Object object, L2WorldRegion newRegion)
 	{
-		// TODO: this code should be obsoleted by protection in putObject func...
-		if (object.isPlayer())
-		{
-			final L2PcInstance player = object.getActingPlayer();
-			if (!player.isTeleporting())
-			{
-				final L2PcInstance old = getPlayer(player.getObjectId());
-				if (old != null)
-				{
-					_log.warning(getClass().getSimpleName() + ": Duplicate character!? Closing both characters (" + player.getName() + ")");
-					player.logout();
-					old.logout();
-					return;
-				}
-				addPlayerToWorld(player);
-			}
-		}
-		
 		if (!newRegion.isActive())
 		{
 			return;
@@ -350,41 +355,6 @@ public final class L2World
 				EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) object, (L2Character) wo, wo.isSummon()), (L2Npc) object);
 			}
 		});
-	}
-	
-	/**
-	 * Adds the player to the world.
-	 * @param player the player to add
-	 */
-	public void addPlayerToWorld(L2PcInstance player)
-	{
-		_allPlayers.put(player.getObjectId(), player);
-		
-		if (Config.FACTION_SYSTEM_ENABLED)
-		{
-			addFactionPlayerToWorld(player);
-		}
-	}
-	
-	/**
-	 * Remove the player from the world.
-	 * @param player the player to remove
-	 */
-	public void removeFromAllPlayers(L2PcInstance player)
-	{
-		_allPlayers.remove(player.getObjectId());
-		
-		if (Config.FACTION_SYSTEM_ENABLED)
-		{
-			if (player.isGood())
-			{
-				_allGoodPlayers.remove(player.getObjectId());
-			}
-			else if (player.isEvil())
-			{
-				_allEvilPlayers.remove(player.getObjectId());
-			}
-		}
 	}
 	
 	public static void addFactionPlayerToWorld(L2PcInstance player)
@@ -476,15 +446,6 @@ public final class L2World
 				}
 				return true;
 			});
-			
-			if (object.isPlayer())
-			{
-				final L2PcInstance player = object.getActingPlayer();
-				if (!player.isTeleporting())
-				{
-					removeFromAllPlayers(player);
-				}
-			}
 		}
 	}
 	
@@ -804,7 +765,7 @@ public final class L2World
 	 */
 	public void deleteVisibleNpcSpawns()
 	{
-		_log.info(getClass().getSimpleName() + ": Deleting all visible NPC's.");
+		LOGGER.info(getClass().getSimpleName() + ": Deleting all visible NPCs.");
 		for (int x = 0; x <= REGIONS_X; x++)
 		{
 			for (int y = 0; y <= REGIONS_Y; y++)
@@ -815,7 +776,7 @@ public final class L2World
 				}
 			}
 		}
-		_log.info(getClass().getSimpleName() + ": All visible NPC's deleted.");
+		LOGGER.info(getClass().getSimpleName() + ": All visible NPCs deleted.");
 	}
 	
 	public void incrementParty()

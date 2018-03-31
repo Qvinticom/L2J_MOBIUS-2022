@@ -128,8 +128,6 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.setInvisible(true);
 				activeChar.broadcastUserInfo();
 				activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
-				activeChar.decayMe();
-				activeChar.spawnMe();
 				activeChar.sendMessage("You are now invisible.");
 			}
 			else
@@ -149,8 +147,6 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.setInvisible(true);
 			activeChar.broadcastUserInfo();
 			activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
-			activeChar.decayMe();
-			activeChar.spawnMe();
 			activeChar.sendMessage("You are now invisible.");
 		}
 		else if (command.startsWith("admin_vis"))
@@ -401,8 +397,6 @@ public class AdminEffects implements IAdminCommandHandler
 		else if (command.startsWith("admin_unpolyself"))
 		{
 			activeChar.getPoly().setPolyInfo(null, "1");
-			activeChar.decayMe();
-			activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 			activeChar.broadcastUserInfo();
 		}
 		else if (command.equals("admin_clearteams"))

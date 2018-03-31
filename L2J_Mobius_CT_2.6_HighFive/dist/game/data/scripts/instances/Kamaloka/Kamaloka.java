@@ -361,7 +361,7 @@ public final class Kamaloka extends AbstractInstance
 	 */
 	private static final int TELEPORTER = 32496;
 	
-	/** Kamaloka captains (start npc's) npcIds. */
+	/** Kamaloka captains (start NPCs) npcIds. */
 	private static final int[] CAPTAINS =
 	{
 		30332,

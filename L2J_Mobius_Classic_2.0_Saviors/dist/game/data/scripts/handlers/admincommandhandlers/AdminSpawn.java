@@ -504,7 +504,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		final List<L2NpcTemplate> mobs = NpcData.getInstance().getAllMonstersOfLevel(level);
 		final int mobsCount = mobs.size();
 		final StringBuilder tb = new StringBuilder(500 + (mobsCount * 80));
-		tb.append("<html><title>Spawn Monster:</title><body><p> Level : " + level + "<br>Total Npc's : " + mobsCount + "<br>");
+		tb.append("<html><title>Spawn Monster:</title><body><p> Level : " + level + "<br>Total NPCs : " + mobsCount + "<br>");
 		
 		// Loop
 		int i = from;

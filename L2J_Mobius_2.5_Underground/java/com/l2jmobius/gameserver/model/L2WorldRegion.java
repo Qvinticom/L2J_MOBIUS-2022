@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -33,7 +32,7 @@ import com.l2jmobius.gameserver.model.actor.L2Vehicle;
 
 public final class L2WorldRegion
 {
-	private static final Logger _log = Logger.getLogger(L2WorldRegion.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2WorldRegion.class.getName());
 	
 	/** Map containing visible objects in this world region. */
 	private volatile Map<Integer, L2Object> _visibleObjects;
@@ -66,33 +65,14 @@ public final class L2WorldRegion
 		@Override
 		public void run()
 		{
-			if (_isActivating)
+			forEachSurroundingRegion(w ->
 			{
-				// for each neighbor, if it's not active, activate.
-				forEachSurroundingRegion(w ->
+				if (_isActivating || w.areNeighborsEmpty())
 				{
-					w.setActive(true);
-					return true;
-				});
-			}
-			else
-			{
-				if (areNeighborsEmpty())
-				{
-					setActive(false);
+					w.setActive(_isActivating);
 				}
-				
-				// check and deactivate
-				forEachSurroundingRegion(w ->
-				{
-					if (w.areNeighborsEmpty())
-					{
-						w.setActive(false);
-					}
-					return true;
-				});
-				
-			}
+				return true;
+			});
 		}
 	}
 	
@@ -106,8 +86,7 @@ public final class L2WorldRegion
 		int c = 0;
 		if (!isOn)
 		{
-			final Collection<L2Object> vObj = _visibleObjects.values();
-			for (L2Object o : vObj)
+			for (L2Object o : _visibleObjects.values())
 			{
 				if (o instanceof L2Attackable)
 				{
@@ -138,14 +117,11 @@ public final class L2WorldRegion
 					c++;
 				}
 			}
-			
-			_log.finer(c + " mobs were turned off");
+			LOGGER.finer(c + " mobs were turned off");
 		}
 		else
 		{
-			final Collection<L2Object> vObj = _visibleObjects.values();
-			
-			for (L2Object o : vObj)
+			for (L2Object o : _visibleObjects.values())
 			{
 				if (o instanceof L2Attackable)
 				{
@@ -158,9 +134,7 @@ public final class L2WorldRegion
 					((L2Npc) o).startRandomAnimationTask();
 				}
 			}
-			
-			_log.finer(c + " mobs were turned on");
-			
+			LOGGER.finer(c + " mobs were turned on");
 		}
 		
 	}
@@ -172,10 +146,7 @@ public final class L2WorldRegion
 	
 	public boolean areNeighborsEmpty()
 	{
-		return forEachSurroundingRegion(w ->
-		{
-			return !(w.isActive() && w.getVisibleObjects().values().stream().anyMatch(L2Object::isPlayable));
-		});
+		return forEachSurroundingRegion(w -> !(w.isActive() && w.getVisibleObjects().values().stream().anyMatch(L2Object::isPlayable)));
 	}
 	
 	/**
@@ -194,7 +165,7 @@ public final class L2WorldRegion
 		// turn the AI on or off to match the region's activation.
 		switchAI(value);
 		
-		_log.finer((value ? "Starting" : "Stoping") + " Grid " + getName());
+		LOGGER.finer((value ? "Starting" : "Stopping") + " Grid " + this);
 	}
 	
 	/**
@@ -308,11 +279,6 @@ public final class L2WorldRegion
 		return _visibleObjects != null ? _visibleObjects : Collections.emptyMap();
 	}
 	
-	public String getName()
-	{
-		return "(" + _regionX + ", " + _regionY + ", " + _regionZ + ")";
-	}
-	
 	/**
 	 * Deleted all spawns in the world.
 	 */
@@ -323,10 +289,8 @@ public final class L2WorldRegion
 			return;
 		}
 		
-		_log.finer("Deleting all visible NPC's in Region: " + getName());
-		
-		final Collection<L2Object> vNPC = _visibleObjects.values();
-		for (L2Object obj : vNPC)
+		LOGGER.info("Deleting all visible NPCs in Region: " + this);
+		for (L2Object obj : _visibleObjects.values())
 		{
 			if (obj instanceof L2Npc)
 			{
@@ -338,10 +302,10 @@ public final class L2WorldRegion
 					spawn.stopRespawn();
 					SpawnTable.getInstance().deleteSpawn(spawn, false);
 				}
-				_log.finest("Removed NPC " + target.getObjectId());
+				LOGGER.finest("Removed NPC " + target.getObjectId());
 			}
 		}
-		_log.info("All visible NPC's deleted in Region: " + getName());
+		LOGGER.info("All visible NPCs deleted in Region: " + this);
 	}
 	
 	public boolean forEachSurroundingRegion(Predicate<L2WorldRegion> p)
@@ -384,5 +348,11 @@ public final class L2WorldRegion
 	public boolean isSurroundingRegion(L2WorldRegion region)
 	{
 		return (region != null) && (getRegionX() >= (region.getRegionX() - 1)) && (getRegionX() <= (region.getRegionX() + 1)) && (getRegionY() >= (region.getRegionY() - 1)) && (getRegionY() <= (region.getRegionY() + 1)) && (getRegionZ() >= (region.getRegionZ() - 1)) && (getRegionZ() <= (region.getRegionZ() + 1));
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "(" + _regionX + ", " + _regionY + ", " + _regionZ + ")";
 	}
 }

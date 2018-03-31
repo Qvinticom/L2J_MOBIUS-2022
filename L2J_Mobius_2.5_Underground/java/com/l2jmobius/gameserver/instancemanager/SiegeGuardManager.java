@@ -80,7 +80,7 @@ public final class SiegeGuardManager
 					final L2ItemInstance dropticket = new L2ItemInstance(holder.getItemId());
 					dropticket.setItemLocation(ItemLocation.VOID);
 					dropticket.dropMe(null, x, y, z);
-					L2World.getInstance().storeObject(dropticket);
+					L2World.getInstance().addObject(dropticket);
 					_droppedTickets.add(dropticket);
 				}
 			}
@@ -180,7 +180,7 @@ public final class SiegeGuardManager
 			final L2ItemInstance dropticket = new L2ItemInstance(itemId);
 			dropticket.setItemLocation(ItemLocation.VOID);
 			dropticket.dropMe(null, player.getX(), player.getY(), player.getZ());
-			L2World.getInstance().storeObject(dropticket);
+			L2World.getInstance().addObject(dropticket);
 			_droppedTickets.add(dropticket);
 		}
 	}

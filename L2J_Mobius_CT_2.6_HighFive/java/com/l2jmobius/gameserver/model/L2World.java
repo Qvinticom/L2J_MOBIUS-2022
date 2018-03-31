@@ -566,7 +566,7 @@ public final class L2World
 	 */
 	public void deleteVisibleNpcSpawns()
 	{
-		_log.info("Deleting all visible NPC's.");
+		_log.info("Deleting all visible NPCs.");
 		for (int i = 0; i <= REGIONS_X; i++)
 		{
 			for (int j = 0; j <= REGIONS_Y; j++)
@@ -574,7 +574,7 @@ public final class L2World
 				_worldRegions[i][j].deleteVisibleNpcSpawns();
 			}
 		}
-		_log.info("All visible NPC's deleted.");
+		_log.info("All visible NPCs deleted.");
 	}
 	
 	/**

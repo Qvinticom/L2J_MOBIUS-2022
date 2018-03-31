@@ -235,7 +235,7 @@ public class ItemTable
 		}
 		
 		// Add the L2ItemInstance object to _allObjects of L2world
-		L2World.getInstance().storeObject(item);
+		L2World.getInstance().addObject(item);
 		
 		// Set Item parameters
 		if (item.isStackable() && (count > 1))

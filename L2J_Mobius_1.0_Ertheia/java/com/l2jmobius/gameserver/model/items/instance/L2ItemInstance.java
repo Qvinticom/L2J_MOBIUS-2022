@@ -1419,9 +1419,6 @@ public final class L2ItemInstance extends L2Object
 				{
 					player.getWarehouse().destroyItem("L2ItemInstance", this, player, null);
 				}
-				
-				// delete from world
-				L2World.getInstance().removeObject(this);
 			}
 			else
 			{
@@ -1846,8 +1843,6 @@ public final class L2ItemInstance extends L2Object
 				player.getWarehouse().destroyItem("L2ItemInstance", this, player, null);
 			}
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(getId()));
-			// delete from world
-			L2World.getInstance().removeObject(this);
 		}
 	}
 	

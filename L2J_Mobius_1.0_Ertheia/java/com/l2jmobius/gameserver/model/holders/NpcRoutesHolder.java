@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 
 /**
- * Holds depending between NPC's spawn point and route
+ * Holds depending between NPCs spawn point and route
  * @author GKR
  */
 public final class NpcRoutesHolder

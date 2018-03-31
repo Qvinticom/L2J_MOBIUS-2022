@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.interfaces.INamable;
@@ -81,11 +80,8 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	/** The task launching the function doSpawn() */
 	class SpawnTask implements Runnable
 	{
-		private final L2Npc _oldNpc;
-		
-		public SpawnTask(L2Npc pOldNpc)
+		public SpawnTask()
 		{
-			_oldNpc = pOldNpc;
 		}
 		
 		@Override
@@ -93,8 +89,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		{
 			try
 			{
-				// doSpawn();
-				respawnNpc(_oldNpc);
+				doSpawn();
 			}
 			catch (Exception e)
 			{
@@ -401,8 +396,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			_scheduledCount++;
 			
 			// Create a new SpawnTask to launch after the respawn Delay
-			// ClientScheduler.getInstance().scheduleLow(new SpawnTask(npcId), _respawnDelay);
-			ThreadPoolManager.schedule(new SpawnTask(oldNpc), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
+			ThreadPoolManager.schedule(new SpawnTask(), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
 		}
 	}
 	
@@ -489,7 +483,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			if (_template.isType("L2Pet") || _template.isType("L2Decoy") || _template.isType("L2Trap"))
 			{
 				_currentCount++;
-				
 				return null;
 			}
 			
@@ -558,7 +551,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		}
 		
 		// DO NOT CORRECT SPAWN Z IN GENERAL - Prevent NPC spawns on top of buildings
-		// don't correct z of flying npc's
+		// don't correct z of flying NPCs
 		// if (!npc.isFlying())
 		// {
 		// newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
@@ -667,25 +660,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	public final Deque<L2Npc> getSpawnedNpcs()
 	{
 		return _spawnedNpcs;
-	}
-	
-	/**
-	 * @param oldNpc
-	 */
-	public void respawnNpc(L2Npc oldNpc)
-	{
-		if (_doRespawn)
-		{
-			oldNpc.refreshID();
-			initializeNpcInstance(oldNpc);
-			
-			// Register NPC back to instance world
-			final Instance instance = oldNpc.getInstanceWorld();
-			if (instance != null)
-			{
-				instance.addNpc(oldNpc);
-			}
-		}
 	}
 	
 	public L2NpcTemplate getTemplate()

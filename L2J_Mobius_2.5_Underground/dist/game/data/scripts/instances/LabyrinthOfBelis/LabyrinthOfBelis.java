@@ -47,7 +47,7 @@ import quests.Q10331_StartOfFate.Q10331_StartOfFate;
  */
 public final class LabyrinthOfBelis extends AbstractInstance
 {
-	// NPC's
+	// NPCs
 	private static final int SEBION = 32972;
 	private static final int INFILTRATION_OFFICER = 19155;
 	private static final int BELIS_VERITIFICATION_SYSTEM = 33215;

@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 /**
- * Olympiad Npc's Instance
+ * Olympiad NPCs Instance
  * @author godson
  */
 

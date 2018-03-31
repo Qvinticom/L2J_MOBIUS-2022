@@ -30,7 +30,7 @@ import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
  */
 public final class Q00185_NikolasCooperation extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int MAESTRO_NIKOLA = 30621;
 	private static final int RESEARCHER_LORAIN = 30673;
 	private static final int DESTROYED_DEVICE = 32366;

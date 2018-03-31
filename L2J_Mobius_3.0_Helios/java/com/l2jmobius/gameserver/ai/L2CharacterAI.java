@@ -761,9 +761,11 @@ public class L2CharacterAI extends AbstractAI
 				// Stop an AI Follow Task
 				stopFollow();
 			}
-			
 			// Stop any intention that has target we want to forget.
-			setIntention(AI_INTENTION_ACTIVE);
+			if (getIntention() != AI_INTENTION_MOVE_TO)
+			{
+				setIntention(AI_INTENTION_ACTIVE);
+			}
 		}
 		
 		// Check if the targeted object was the actor

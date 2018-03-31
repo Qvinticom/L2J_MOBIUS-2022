@@ -30,7 +30,7 @@ import quests.Q10732_AForeignLand.Q10732_AForeignLand;
  */
 public final class Q10733_TheTestForSurvival extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int GERETH = 33932;
 	private static final int DIA = 34005;
 	private static final int KATALIN = 33943;

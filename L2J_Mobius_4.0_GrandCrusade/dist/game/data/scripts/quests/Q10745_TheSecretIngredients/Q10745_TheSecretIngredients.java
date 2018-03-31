@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
  */
 public final class Q10745_TheSecretIngredients extends Quest
 {
-	// Npc's
+	// NPCs
 	private static final int DOLKIN = 33954;
 	private static final int KARLA = 33933;
 	private static final int DOLKIN_INSTANCE = 34002;

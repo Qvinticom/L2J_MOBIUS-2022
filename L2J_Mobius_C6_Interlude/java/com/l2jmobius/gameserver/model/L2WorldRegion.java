@@ -470,7 +470,7 @@ public final class L2WorldRegion
 	 */
 	public synchronized void deleteVisibleNpcSpawns()
 	{
-		LOGGER.info("Deleting all visible NPC's in Region: " + getName());
+		LOGGER.info("Deleting all visible NPCs in Region: " + getName());
 		for (L2Object obj : _visibleObjects)
 		{
 			if (obj instanceof L2NpcInstance)
@@ -490,7 +490,7 @@ public final class L2WorldRegion
 		}
 		if (Config.DEBUG)
 		{
-			LOGGER.info("All visible NPC's deleted in Region: " + getName());
+			LOGGER.info("All visible NPCs deleted in Region: " + getName());
 		}
 	}
 	

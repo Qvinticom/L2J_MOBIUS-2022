@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
 
 public final class TurekOrcs extends AbstractNpcAI
 {
-	// NPC's
+	// NPCs
 	private static final int[] MOBS =
 	{
 		20494, // Turek War Hound

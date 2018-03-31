@@ -443,7 +443,7 @@ public final class L2WorldRegion
 	 */
 	public void deleteVisibleNpcSpawns()
 	{
-		_log.fine("Deleting all visible NPC's in Region: " + getName());
+		_log.fine("Deleting all visible NPCs in Region: " + getName());
 		for (L2Object obj : _visibleObjects.values())
 		{
 			if (obj instanceof L2Npc)
@@ -459,6 +459,6 @@ public final class L2WorldRegion
 				_log.finest("Removed NPC " + target.getObjectId());
 			}
 		}
-		_log.info("All visible NPC's deleted in Region: " + getName());
+		_log.info("All visible NPCs deleted in Region: " + getName());
 	}
 }

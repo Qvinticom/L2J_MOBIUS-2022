@@ -780,8 +780,6 @@ public class L2PetInstance extends L2Summon
 				
 				owner.sendInventoryUpdate(iu);
 				owner.broadcastUserInfo();
-				
-				L2World.getInstance().removeObject(removedItem);
 			}
 		}
 		catch (Exception e)

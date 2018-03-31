@@ -100,14 +100,8 @@ public class L2Spawn
 	/** The task launching the function doSpawn() */
 	class SpawnTask implements Runnable
 	{
-		// L2NpcInstance _instance;
-		// int _objId;
-		private final L2NpcInstance _oldNpc;
-		
-		public SpawnTask(/* int objid */final L2NpcInstance pOldNpc)
+		public SpawnTask()
 		{
-			// _objId= objid;
-			_oldNpc = pOldNpc;
 		}
 		
 		@Override
@@ -115,8 +109,7 @@ public class L2Spawn
 		{
 			try
 			{
-				// doSpawn();
-				respawnNpc(_oldNpc);
+				doSpawn();
 			}
 			catch (Exception e)
 			{
@@ -429,8 +422,7 @@ public class L2Spawn
 			_scheduledCount++;
 			
 			// Create a new SpawnTask to launch after the respawn Delay
-			// ClientScheduler.getInstance().scheduleLow(new SpawnTask(npcId), _respawnDelay);
-			ThreadPoolManager.schedule(new SpawnTask(oldNpc), _respawnDelay);
+			ThreadPoolManager.schedule(new SpawnTask(), _respawnDelay);
 		}
 	}
 	
@@ -671,15 +663,6 @@ public class L2Spawn
 		return _lastSpawn;
 	}
 	
-	/**
-	 * @param oldNpc
-	 */
-	public void respawnNpc(L2NpcInstance oldNpc)
-	{
-		oldNpc.refreshID();
-		/* L2NpcInstance instance = */initializeNpcInstance(oldNpc);
-	}
-	
 	public L2NpcTemplate getTemplate()
 	{
 		return _template;
@@ -694,5 +677,4 @@ public class L2Spawn
 	{
 		_instanceId = instanceId;
 	}
-	
 }

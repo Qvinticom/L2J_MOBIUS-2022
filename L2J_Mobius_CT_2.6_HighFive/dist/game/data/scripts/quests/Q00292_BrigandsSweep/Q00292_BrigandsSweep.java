@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Q00292_BrigandsSweep extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int SPIRON = 30532;
 	private static final int BALANKI = 30533;
 	// Items

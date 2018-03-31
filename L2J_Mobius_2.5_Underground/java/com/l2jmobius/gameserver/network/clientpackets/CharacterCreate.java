@@ -261,7 +261,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 	
 	private void initNewChar(L2GameClient client, L2PcInstance newChar)
 	{
-		L2World.getInstance().storeObject(newChar);
+		L2World.getInstance().addObject(newChar);
 		
 		if (Config.STARTING_ADENA > 0)
 		{

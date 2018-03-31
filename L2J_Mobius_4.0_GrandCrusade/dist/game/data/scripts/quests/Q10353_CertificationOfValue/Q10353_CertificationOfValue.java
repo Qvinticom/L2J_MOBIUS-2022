@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.quest.State;
  */
 public final class Q10353_CertificationOfValue extends Quest
 {
-	// Npc's
+	// NPCs
 	public static final int RIEYI = 33155;
 	public static final int KYUORI = 33358;
 	private static final int DUMMY_MONSTER = 33349;

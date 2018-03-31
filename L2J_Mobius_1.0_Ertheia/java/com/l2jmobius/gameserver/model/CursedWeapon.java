@@ -196,7 +196,6 @@ public class CursedWeapon implements INamable
 			else if (_item != null)
 			{
 				_item.decayMe();
-				L2World.getInstance().removeObject(_item);
 				_log.info(_name + " item has been removed from World.");
 			}
 		}

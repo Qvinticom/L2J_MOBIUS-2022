@@ -1199,8 +1199,6 @@ public class L2Npc extends L2Character
 		
 		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 		
-		// Remove L2Object object from _allObjects of L2World
-		L2World.getInstance().removeObject(this);
 		return super.deleteMe();
 	}
 	
@@ -1497,7 +1495,7 @@ public class L2Npc extends L2Character
 	}
 	
 	/**
-	 * Send an "event" to all NPC's within given radius
+	 * Send an "event" to all NPCs within given radius
 	 * @param eventName - name of event
 	 * @param radius - radius to send event
 	 * @param reference - L2Object to pass, if needed

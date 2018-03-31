@@ -167,8 +167,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 				Char.sendPacket(sg);
 			}
 			// end of animation
-			obj.decayMe();
-			obj.spawnMe(obj.getX(), obj.getY(), obj.getZ());
+			obj.broadcastInfo();
 			activeChar.sendMessage("Polymorph succeed");
 		}
 		else
@@ -187,8 +186,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		if (target != null)
 		{
 			target.getPoly().setPolyInfo(null, "1");
-			target.decayMe();
-			target.spawnMe(target.getX(), target.getY(), target.getZ());
+			target.broadcastInfo();
 			activeChar.sendMessage("Unpolymorph succeed");
 		}
 		else

@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public final class Race extends Event
 {
-	// Event NPC's list
+	// Event NPCs list
 	private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet();
 	// Npc
 	private L2Npc _npc;
@@ -55,7 +55,7 @@ public final class Race extends Event
 	private static final int _time_register = 5;
 	// 5 min for race
 	private static final int _time_race = 10;
-	// NPC's
+	// NPCs
 	private static final int _start_npc = 900103;
 	private static final int _stop_npc = 900104;
 	// Skills (Frog by default)
@@ -119,7 +119,7 @@ public final class Race extends Event
 			return false;
 		}
 		
-		// Check Custom Table - we use custom NPC's
+		// Check Custom Table - we use custom NPCs
 		if (!Config.CUSTOM_NPC_DATA)
 		{
 			_log.info(getName() + ": Event can't be started, because custom npc table is disabled!");

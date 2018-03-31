@@ -525,8 +525,9 @@ public abstract class ItemContainer
 				
 				item.updateDatabase();
 				refreshWeight();
+				
+				item.deleteMe();
 			}
-			item.deleteMe();
 		}
 		return item;
 	}
@@ -682,7 +683,7 @@ public abstract class ItemContainer
 				while (rs.next())
 				{
 					final L2ItemInstance item = new L2ItemInstance(rs);
-					L2World.getInstance().storeObject(item);
+					L2World.getInstance().addObject(item);
 					
 					final L2PcInstance owner = getOwner() != null ? getOwner().getActingPlayer() : null;
 					

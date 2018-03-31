@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.quest.State;
  */
 public class Q00776_SlayDarkLordEkimus extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int TEPIOS = 32603;
 	// Boss
 	private static final int EKIMUS = 29150;

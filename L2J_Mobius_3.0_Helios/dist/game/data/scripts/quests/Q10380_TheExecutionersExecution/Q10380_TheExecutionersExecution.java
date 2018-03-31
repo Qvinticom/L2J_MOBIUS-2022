@@ -36,7 +36,7 @@ import quests.Q10379_AnUninvitedGuest.Q10379_AnUninvitedGuest;
  */
 public final class Q10380_TheExecutionersExecution extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int ENDRIGO = 30632;
 	private static final int GUILLOTINE_OF_DEATH = 25892;
 	private static final int NAGDU_THE_DEFORMED = 23201;

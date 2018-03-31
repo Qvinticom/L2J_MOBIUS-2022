@@ -44,7 +44,7 @@ public final class NonTalkingNpcs extends AbstractNpcAI
 		32031, // Ice Fairy Sculpture 
 		32032, // Strange Machine
 		32306, // Native's Corpse
-		32619, 32620, 32621, // NPC's without name
+		32619, 32620, 32621, // NPCs without name
 		32715, 32716, 32717, // Lilith's group
 		32718, 32719, 32720, 32721, // Anakim's group
 		18839, // Wild Maguen

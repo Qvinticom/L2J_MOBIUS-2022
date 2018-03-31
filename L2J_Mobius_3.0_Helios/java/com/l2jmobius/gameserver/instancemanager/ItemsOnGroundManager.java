@@ -103,7 +103,7 @@ public final class ItemsOnGroundManager implements Runnable
 				while (rs.next())
 				{
 					item = new L2ItemInstance(rs.getInt(1), rs.getInt(2));
-					L2World.getInstance().storeObject(item);
+					L2World.getInstance().addObject(item);
 					// this check and..
 					if (item.isStackable() && (rs.getInt(3) > 1))
 					{

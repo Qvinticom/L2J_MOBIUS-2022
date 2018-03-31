@@ -570,7 +570,7 @@ public class SagasSuperClass extends QuestJython
 	@Override
 	public String onTalk(L2NpcInstance npc, L2PcInstance talker)
 	{
-		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
+		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPCs minimum quest requirements.</body></html>";
 		QuestState st = talker.getQuestState(qn);
 		if (st != null)
 		{

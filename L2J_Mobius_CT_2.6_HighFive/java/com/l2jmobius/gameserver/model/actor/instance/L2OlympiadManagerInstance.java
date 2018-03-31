@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 
 /**
- * Olympiad Npc's Instance
+ * Olympiad NPCs Instance
  * @author godson
  */
 public class L2OlympiadManagerInstance extends L2Npc

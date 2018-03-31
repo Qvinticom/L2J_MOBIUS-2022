@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
  */
 public final class Q10452_IsItEdible extends Quest
 {
-	// Npc's
+	// NPCs
 	private static final int SALLY = 32743;
 	// Monster's
 	private static final int FANTASY_MUSHROM = 18864;

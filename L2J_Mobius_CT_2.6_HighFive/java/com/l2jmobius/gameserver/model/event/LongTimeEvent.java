@@ -44,7 +44,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Parent class for long time events.<br>
- * Maintains config reading, spawn of NPC's, adding of event's drop.
+ * Maintains config reading, spawn of NPCs, adding of event's drop.
  * @author GKR
  */
 public class LongTimeEvent extends Quest
@@ -252,7 +252,7 @@ public class LongTimeEvent extends Quest
 	}
 	
 	/**
-	 * Maintenance event start - adds global drop, spawns event NPC's, shows start announcement.
+	 * Maintenance event start - adds global drop, spawns event NPCs, shows start announcement.
 	 */
 	protected void startEvent()
 	{

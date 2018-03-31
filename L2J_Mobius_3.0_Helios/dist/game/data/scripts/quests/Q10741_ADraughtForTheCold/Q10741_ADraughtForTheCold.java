@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.model.quest.State;
  */
 public final class Q10741_ADraughtForTheCold extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int SIVANTHE = 33951;
 	private static final int LEIRA = 33952;
 	// Items

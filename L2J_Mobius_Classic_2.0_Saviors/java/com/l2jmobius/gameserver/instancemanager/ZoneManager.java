@@ -760,7 +760,15 @@ public final class ZoneManager implements IGameXmlReader
 	
 	public ZoneRegion getRegion(int x, int y)
 	{
-		return _zoneRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
+		try
+		{
+			return _zoneRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
+		}
+		catch (ArrayIndexOutOfBoundsException e)
+		{
+			// LOGGER.warning(getClass().getSimpleName() + ": Incorrect zone region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y) + " for coordinates x: " + x + " y: " + y);
+			return null;
+		}
 	}
 	
 	public ZoneRegion getRegion(ILocational point)

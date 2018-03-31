@@ -35,7 +35,7 @@ import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
  */
 public final class Q10734_DoOrDie extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int KATALIN = 33943;
 	private static final int AYANTHE = 33942;
 	private static final int ADVENTURER_S_GUIDE_APPRENTICE = 33950;

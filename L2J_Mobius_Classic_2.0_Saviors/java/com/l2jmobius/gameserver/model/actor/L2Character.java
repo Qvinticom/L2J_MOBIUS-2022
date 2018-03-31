@@ -5110,19 +5110,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	@Override
 	public final void setXYZ(int newX, int newY, int newZ)
 	{
-		try
+		final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
+		final ZoneRegion newZoneRegion = ZoneManager.getInstance().getRegion(newX, newY);
+		if (oldZoneRegion != newZoneRegion)
 		{
-			final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
-			final ZoneRegion newZoneRegion = ZoneManager.getInstance().getRegion(newX, newY);
-			if (oldZoneRegion != newZoneRegion)
-			{
-				oldZoneRegion.removeFromZones(this);
-				newZoneRegion.revalidateZones(this);
-			}
-		}
-		catch (Exception e)
-		{
-			badCoords();
+			oldZoneRegion.removeFromZones(this);
+			newZoneRegion.revalidateZones(this);
 		}
 		
 		super.setXYZ(newX, newY, newZ);

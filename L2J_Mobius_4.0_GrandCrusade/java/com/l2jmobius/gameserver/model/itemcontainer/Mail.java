@@ -123,7 +123,7 @@ public class Mail extends ItemContainer
 				while (inv.next())
 				{
 					final L2ItemInstance item = new L2ItemInstance(inv);
-					L2World.getInstance().storeObject(item);
+					L2World.getInstance().addObject(item);
 					
 					// If stackable item is found just add to current quantity
 					if (item.isStackable() && (getItemByItemId(item.getId()) != null))

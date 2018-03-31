@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.model.L2PetData;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -139,7 +138,6 @@ public final class Evolve
 		
 		player.sendPacket(new MagicSkillUse(npc, 2046, 1, 1000, 600000));
 		player.sendPacket(SystemMessageId.SUMMONING_YOUR_PET);
-		// L2World.getInstance().storeObject(petSummon);
 		petSummon.spawnMe(oldX, oldY, oldZ);
 		petSummon.startFeed();
 		item.setEnchantLevel(petSummon.getLevel());
@@ -227,7 +225,6 @@ public final class Evolve
 		
 		player.sendPacket(new MagicSkillUse(npc, 2046, 1, 1000, 600000));
 		player.sendPacket(SystemMessageId.SUMMONING_YOUR_PET);
-		// L2World.getInstance().storeObject(petSummon);
 		petSummon.spawnMe(player.getX(), player.getY(), player.getZ());
 		petSummon.startFeed();
 		addedItem.setEnchantLevel(petSummon.getLevel());
@@ -238,9 +235,6 @@ public final class Evolve
 		player.sendInventoryUpdate(iu);
 		
 		player.broadcastUserInfo();
-		
-		final L2World world = L2World.getInstance();
-		world.removeObject(removedItem);
 		
 		ThreadPoolManager.schedule(new EvolveFinalizer(player, petSummon), 900);
 		

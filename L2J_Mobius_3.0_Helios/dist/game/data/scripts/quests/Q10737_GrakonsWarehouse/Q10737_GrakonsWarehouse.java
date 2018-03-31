@@ -35,7 +35,7 @@ import quests.Q10736_ASpecialPower.Q10736_ASpecialPower;
  */
 public final class Q10737_GrakonsWarehouse extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int KATALIN = 33943;
 	private static final int AYANTHE = 33942;
 	private static final int GRAKON = 33947;
