@@ -42,7 +42,7 @@ public final class QueenShyeed extends AbstractNpcAI
 	private static final int RANDOM_RESPAWN = 43200000; // 12 h
 	
 	// Zones
-	private static final L2EffectZone MOB_BUFF_ZONE = ZoneManager.getInstance().getZoneById(200103, L2EffectZone.class);
+	// private static final L2EffectZone MOB_BUFF_ZONE = ZoneManager.getInstance().getZoneById(200103, L2EffectZone.class);
 	private static final L2EffectZone MOB_BUFF_DISPLAY_ZONE = ZoneManager.getInstance().getZoneById(200104, L2EffectZone.class);
 	private static final L2EffectZone PC_BUFF_ZONE = ZoneManager.getInstance().getZoneById(200105, L2EffectZone.class);
 	
@@ -96,7 +96,7 @@ public final class QueenShyeed extends AbstractNpcAI
 		final L2Npc npc = addSpawn(SHYEED, SHYEED_LOC, false, 0);
 		startQuestTimer("despawn", 10800000, npc, null);
 		PC_BUFF_ZONE.setEnabled(false);
-		MOB_BUFF_ZONE.setEnabled(true);
+		// MOB_BUFF_ZONE.setEnabled(true);
 		MOB_BUFF_DISPLAY_ZONE.setEnabled(true);
 	}
 	
@@ -105,7 +105,7 @@ public final class QueenShyeed extends AbstractNpcAI
 		final int respawnTime = RESPAWN - getRandom(RANDOM_RESPAWN);
 		GlobalVariablesManager.getInstance().set("QueenShyeedRespawn", Long.toString(System.currentTimeMillis() + respawnTime));
 		startQuestTimer("respawn", respawnTime, null, null);
-		MOB_BUFF_ZONE.setEnabled(false);
+		// MOB_BUFF_ZONE.setEnabled(false);
 		MOB_BUFF_DISPLAY_ZONE.setEnabled(false);
 	}
 	

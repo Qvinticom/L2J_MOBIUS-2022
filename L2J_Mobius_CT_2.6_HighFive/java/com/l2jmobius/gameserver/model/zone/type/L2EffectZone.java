@@ -51,7 +51,7 @@ public class L2EffectZone extends L2ZoneType
 		_chance = 100;
 		_initialDelay = 0;
 		_reuse = 30000;
-		setTargetType(InstanceType.L2Playable); // default only playabale
+		setTargetType(InstanceType.L2Playable); // default only playable
 		_bypassConditions = false;
 		_isShowDangerIcon = true;
 		setSettings(ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName()));
