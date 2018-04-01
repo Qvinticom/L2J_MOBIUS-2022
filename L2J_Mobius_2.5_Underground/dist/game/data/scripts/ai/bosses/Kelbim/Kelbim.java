@@ -192,7 +192,7 @@ public class Kelbim extends AbstractNpcAI
 			{
 				_kelbimBoss = addSpawn(KELBIM, -56340, 60801, -269, 54262, false, 0);
 				_lastAction = System.currentTimeMillis();
-				startQuestTimer("check_activity_task", 60000, null, null, true);
+				startQuestTimer("check_activity_task", 60000, null, null);
 				startQuestTimer("stage_all_random_area_attack", Rnd.get(2, 3) * 60000, null, null);
 				break;
 			}
