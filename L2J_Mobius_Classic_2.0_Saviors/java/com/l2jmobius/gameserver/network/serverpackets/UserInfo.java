@@ -354,7 +354,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeC(0);
 		}
 		
-		if (containsMask(UserInfoType.UNK_3))
+		if (containsMask(UserInfoType.TRUE_HERO))
 		{
 			packet.writeH(9);
 			packet.writeD(0x00);

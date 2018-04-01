@@ -109,6 +109,7 @@ import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
@@ -6566,7 +6567,7 @@ public final class L2PcInstance extends L2Playable
 					player.setPledgeType(rset.getInt("subpledge"));
 					// player.setApprentice(rset.getInt("apprentice"));
 					
-					// Set Hero status if it applies
+					// Set Hero status if it applies.
 					player.setHero(Hero.getInstance().isHero(objectId));
 					
 					if (clanId > 0)
@@ -6755,6 +6756,21 @@ public final class L2PcInstance extends L2Playable
 				{
 					summon.setOwner(player);
 				}
+			}
+			
+			// CoC Monthly winner. (True Hero)
+			final int trueHeroId = GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TRUE_HERO, 0);
+			if (trueHeroId == player.getObjectId())
+			{
+				if (!GlobalVariablesManager.getInstance().getBoolean(GlobalVariablesManager.COC_TRUE_HERO_REWARDED, true))
+				{
+					GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TRUE_HERO_REWARDED, true);
+					player.addItem("CoC-Hero", 35565, 1, player, true); // Mysterious Belt
+					player.addItem("CoC-Hero", 35564, 1, player, true); // Ruler's Authority
+					player.setFame(player.getFame() + 5000);
+					player.sendMessage("You have been rewarded with 5.000 fame points.");
+				}
+				player.setTrueHero(true);
 			}
 			
 			// Recalculate all stats

@@ -248,7 +248,7 @@ public class CharInfo implements IClientOutgoingPacket
 		{
 			packet.writeH(AbnormalVisualEffect.STEALTH.getClientId());
 		}
-		packet.writeC(cocPlayer != null ? cocPlayer.getPosition() : 0);
+		packet.writeC(cocPlayer != null ? cocPlayer.getPosition() : _activeChar.isTrueHero() ? 100 : 0);
 		packet.writeC(_activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00); // Hair accessory
 		packet.writeC(_activeChar.getAbilityPointsUsed()); // Used Ability Points
 		return true;

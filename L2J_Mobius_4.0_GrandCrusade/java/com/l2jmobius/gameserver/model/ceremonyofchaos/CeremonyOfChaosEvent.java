@@ -29,6 +29,7 @@ import java.util.stream.Collectors;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import com.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2Party.MessageType;
@@ -51,6 +52,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
@@ -292,7 +294,8 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			msg.addString(winner.getName());
 			
 			// Rewards according to https://l2wiki.com/Ceremony_of_Chaos
-			winner.addItem("CoC-Winner", 34900, Rnd.get(2, 4), winner, true); // Mysterious Marks
+			final int marksRewarded = Rnd.get(2, 4);
+			winner.addItem("CoC-Winner", 34900, marksRewarded, winner, true); // Mysterious Marks
 			
 			// Possible additional rewards
 			
@@ -364,6 +367,15 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			else if (Rnd.get(10) < 1) // Chance to get reward (10%)
 			{
 				winner.addItem("CoC-Winner", 35565, 1, winner, true); // Mysterious Belt
+			}
+			
+			// Save monthly progress.
+			final int totalMarks = winner.getVariables().getInt(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, 0) + marksRewarded;
+			winner.getVariables().set(PlayerVariables.CEREMONY_OF_CHAOS_MARKS, totalMarks);
+			if (totalMarks > GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TOP_MARKS, 0))
+			{
+				GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MARKS, totalMarks);
+				GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MEMBER, winner.getObjectId());
 			}
 		}
 		

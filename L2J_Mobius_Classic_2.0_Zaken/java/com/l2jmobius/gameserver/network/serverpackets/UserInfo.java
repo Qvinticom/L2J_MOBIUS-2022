@@ -46,8 +46,8 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	private final int _flyRunSpd;
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
-	private int _enchantLevel = 0;
-	private int _armorEnchant = 0;
+	private final int _enchantLevel;
+	private final int _armorEnchant;
 	private String _title;
 	
 	private final byte[] _masks = new byte[]
@@ -355,7 +355,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeC(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
 		}
 		
-		if (containsMask(UserInfoType.UNK_3))
+		if (containsMask(UserInfoType.TRUE_HERO))
 		{
 			packet.writeH(9);
 			packet.writeD(0x00);

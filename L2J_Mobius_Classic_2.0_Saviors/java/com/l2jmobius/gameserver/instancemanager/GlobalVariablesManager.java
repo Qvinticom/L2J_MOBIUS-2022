@@ -41,6 +41,12 @@ public final class GlobalVariablesManager extends AbstractVariables
 	private static final String DELETE_QUERY = "DELETE FROM global_variables";
 	private static final String INSERT_QUERY = "INSERT INTO global_variables (var, value) VALUES (?, ?)";
 	
+	// Public variable names
+	public static final String COC_TOP_MARKS = "COC_TOP_MARKS";
+	public static final String COC_TOP_MEMBER = "COC_TOP_MEMBER";
+	public static final String COC_TRUE_HERO = "COC_TOP_MARKS";
+	public static final String COC_TRUE_HERO_REWARDED = "COC_TOP_MARKS";
+	
 	protected GlobalVariablesManager()
 	{
 		restoreMe();

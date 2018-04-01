@@ -84,6 +84,24 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	@ScheduleTarget
 	private void onPeriodEnd(String text)
 	{
+		// Set monthly true hero.
+		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TRUE_HERO, GlobalVariablesManager.getInstance().getInt(GlobalVariablesManager.COC_TOP_MEMBER, 0));
+		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TRUE_HERO_REWARDED, false);
+		// Reset monthly winner.
+		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MARKS, 0);
+		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MEMBER, 0);
+		
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
+		{
+			ps.setString(1, PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
+			ps.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.severe(getClass().getSimpleName() + ": Could not reset Ceremony Of Chaos victories: " + e);
+		}
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
 		{
@@ -99,10 +117,11 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		L2World.getInstance().getPlayers().stream().forEach(player ->
 		{
 			player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES);
+			player.getVariables().remove(PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
 			player.getVariables().storeMe();
 		});
 		
-		LOGGER.info(getClass().getSimpleName() + ": Ceremony of Chaos penalties have been reset.");
+		LOGGER.info(getClass().getSimpleName() + ": Ceremony of Chaos variables have been reset.");
 		LOGGER.info(getClass().getSimpleName() + ": Ceremony of Chaos period has ended!");
 	}
 	
