@@ -55,10 +55,9 @@ public final class GateOfUnlimitedSummoning extends AbstractNpcAI
 		final L2Character summoner = npc.getSummoner();
 		if ((summoner != null) && summoner.isPlayer())
 		{
-			final L2PcInstance player = summoner.getActingPlayer();
-			getTimers().addTimer("SKILL_CAST_SLOW", 1000, npc, player);
-			getTimers().addTimer("SKILL_CAST_DAMAGE", 2000, npc, player);
-			getTimers().addTimer("END_OF_LIFE", 30000, npc, player);
+			getTimers().addTimer("SKILL_CAST_SLOW", 1000, npc, null);
+			getTimers().addTimer("SKILL_CAST_DAMAGE", 2000, npc, null);
+			getTimers().addTimer("END_OF_LIFE", 30000, npc, null);
 		}
 		return super.onSpawn(npc);
 	}
@@ -79,7 +78,7 @@ public final class GateOfUnlimitedSummoning extends AbstractNpcAI
 						npc.doCast(skill);
 					}
 				}
-				getTimers().addTimer("SKILL_CAST_SLOW", 3000, npc, player);
+				getTimers().addTimer("SKILL_CAST_SLOW", 3000, npc, null);
 				break;
 			}
 			case "SKILL_CAST_DAMAGE":
@@ -90,13 +89,13 @@ public final class GateOfUnlimitedSummoning extends AbstractNpcAI
 					npc.doCast(skill);
 				}
 				
-				getTimers().addTimer("SKILL_CAST_DAMAGE", 2000, npc, player);
+				getTimers().addTimer("SKILL_CAST_DAMAGE", 2000, npc, null);
 				break;
 			}
 			case "END_OF_LIFE":
 			{
-				getTimers().cancelTimer("SKILL_CAST_SLOW", npc, player);
-				getTimers().cancelTimer("SKILL_CAST_DAMAGE", npc, player);
+				getTimers().cancelTimer("SKILL_CAST_SLOW", npc, null);
+				getTimers().cancelTimer("SKILL_CAST_DAMAGE", npc, null);
 				npc.deleteMe();
 				break;
 			}
