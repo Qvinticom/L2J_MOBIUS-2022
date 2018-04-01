@@ -54,7 +54,7 @@ public final class AuthLogin implements IClientIncomingPacket
 	{
 		if (_loginName.isEmpty() || !client.isProtocolOk())
 		{
-			client.close(null);
+			client.closeNow();
 			return;
 		}
 		

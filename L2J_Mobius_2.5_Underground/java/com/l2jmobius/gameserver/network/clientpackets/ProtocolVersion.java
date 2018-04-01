@@ -47,7 +47,7 @@ public final class ProtocolVersion implements IClientIncomingPacket
 		if (_version == -2)
 		{
 			// this is just a ping attempt from the new C2 client
-			client.close(null);
+			client.closeNow();
 		}
 		else if (!Config.PROTOCOL_LIST.contains(_version))
 		{

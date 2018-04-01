@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
+import com.l2jmobius.gameserver.network.Disconnection;
 
 /**
  * Task that handles illegal player actions.
@@ -86,7 +87,7 @@ public final class IllegalPlayerActionTask implements Runnable
 				}
 				case KICK:
 				{
-					_actor.logout(false);
+					Disconnection.of(_actor).defaultSequence(false);
 					break;
 				}
 				case KICKBAN:

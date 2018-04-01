@@ -38,6 +38,8 @@ public class AttackStanceTaskManager
 	
 	protected static final Map<L2Character, Long> _attackStanceTasks = new ConcurrentHashMap<>();
 	
+	public static final long COMBAT_TIME = 15_000;
+	
 	/**
 	 * Instantiates a new attack stance task manager.
 	 */
@@ -106,7 +108,7 @@ public class AttackStanceTaskManager
 				while (iter.hasNext())
 				{
 					e = iter.next();
-					if ((current - e.getValue()) > 15000)
+					if ((current - e.getValue()) > COMBAT_TIME)
 					{
 						actor = e.getKey();
 						if (actor != null)

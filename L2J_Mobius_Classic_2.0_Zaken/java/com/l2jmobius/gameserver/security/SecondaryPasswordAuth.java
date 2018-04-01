@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordCheck;
@@ -104,7 +105,7 @@ public class SecondaryPasswordAuth
 		if (passwordExist())
 		{
 			_log.warning("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced savePassword");
-			_activeClient.closeNow();
+			Disconnection.of(_activeClient).defaultSequence(false);
 			return false;
 		}
 		
@@ -157,7 +158,7 @@ public class SecondaryPasswordAuth
 		if (!passwordExist())
 		{
 			_log.warning("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced changePassword");
-			_activeClient.closeNow();
+			Disconnection.of(_activeClient).defaultSequence(false);
 			return false;
 		}
 		

@@ -72,6 +72,12 @@ public final class AntiFeedManager
 			return false;
 		}
 		
+		// Players in offline mode should't be valid targets.
+		if (targetPlayer.getClient().isDetached())
+		{
+			return false;
+		}
+		
 		if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()))
 		{
 			if ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL)
@@ -211,7 +217,7 @@ public final class AntiFeedManager
 	 */
 	public final void onDisconnect(L2GameClient client)
 	{
-		if ((client == null) || client.isDetached())
+		if ((client == null) || (client.getConnectionAddress() == null))
 		{
 			return;
 		}

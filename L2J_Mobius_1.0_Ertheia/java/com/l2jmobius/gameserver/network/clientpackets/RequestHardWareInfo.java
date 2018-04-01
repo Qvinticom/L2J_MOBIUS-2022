@@ -21,6 +21,7 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
@@ -93,7 +94,7 @@ public final class RequestHardWareInfo implements IClientIncomingPacket
 			}
 			if (count >= Config.MAX_PLAYERS_PER_HWID)
 			{
-				client.closeNow();
+				Disconnection.of(client).defaultSequence(false);
 				return;
 			}
 		}

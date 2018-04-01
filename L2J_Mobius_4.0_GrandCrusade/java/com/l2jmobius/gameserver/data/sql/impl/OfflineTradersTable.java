@@ -35,6 +35,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 public class OfflineTradersTable
@@ -50,6 +51,10 @@ public class OfflineTradersTable
 	private static final String CLEAR_OFFLINE_TABLE_ITEMS_PLAYER = "DELETE FROM character_offline_trade_items WHERE `charId`=?";
 	private static final String LOAD_OFFLINE_STATUS = "SELECT * FROM character_offline_trade";
 	private static final String LOAD_OFFLINE_ITEMS = "SELECT * FROM character_offline_trade_items WHERE `charId`=?";
+	
+	protected OfflineTradersTable()
+	{
+	}
 	
 	public void storeOffliners()
 	{
@@ -304,7 +309,7 @@ public class OfflineTradersTable
 					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading trader: " + player, e);
 					if (player != null)
 					{
-						player.deleteMe();
+						Disconnection.of(player).defaultSequence(false);
 					}
 				}
 			}
@@ -474,11 +479,11 @@ public class OfflineTradersTable
 	 */
 	public static OfflineTradersTable getInstance()
 	{
-		return SingletonHolder._instance;
+		return SingletonHolder.INSTANCE;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final OfflineTradersTable _instance = new OfflineTradersTable();
+		protected static final OfflineTradersTable INSTANCE = new OfflineTradersTable();
 	}
 }

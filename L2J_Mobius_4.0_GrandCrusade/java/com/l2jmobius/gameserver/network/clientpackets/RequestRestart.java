@@ -18,16 +18,15 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import com.l2jmobius.gameserver.network.serverpackets.RestartResponse;
-import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import com.l2jmobius.gameserver.util.OfflineTradeUtil;
 
 /**
  * This class ...
@@ -35,7 +34,7 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public final class RequestRestart implements IClientIncomingPacket
 {
-	protected static final Logger _logAccounting = Logger.getLogger("accounting");
+	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
@@ -52,42 +51,19 @@ public final class RequestRestart implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.hasItemRequest())
+		if (!player.canLogout())
 		{
 			client.sendPacket(RestartResponse.FALSE);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (player.isLocked())
+		LOG_ACCOUNTING.info("Logged out, " + client);
+		
+		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{
-			_log.warning("Player " + player.getName() + " tried to restart during class change.");
-			client.sendPacket(RestartResponse.FALSE);
-			return;
+			Disconnection.of(client, player).storeMe().deleteMe();
 		}
-		
-		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && !(player.isGM() && Config.GM_RESTART_FIGHTING))
-		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
-			client.sendPacket(RestartResponse.FALSE);
-			return;
-		}
-		
-		if (player.isBlockedFromExit())
-		{
-			client.sendPacket(RestartResponse.FALSE);
-			return;
-		}
-		
-		_logAccounting.info("Logged out, " + client);
-		
-		player.deleteMe();
-		
-		client.setActiveChar(null);
-		
-		// detach the client from the char so that the connection isnt closed in the deleteMe
-		player.setClient(null);
-		
-		AntiFeedManager.getInstance().onDisconnect(client);
 		
 		// return the client to the authed status
 		client.setConnectionState(ConnectionState.AUTHENTICATED);

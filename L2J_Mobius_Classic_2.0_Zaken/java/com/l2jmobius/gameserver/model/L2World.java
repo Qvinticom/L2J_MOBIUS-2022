@@ -39,6 +39,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -143,8 +144,8 @@ public final class L2World
 			final L2PcInstance existingPlayer = _allPlayers.putIfAbsent(object.getObjectId(), newPlayer);
 			if (existingPlayer != null)
 			{
-				existingPlayer.logout();
-				newPlayer.logout();
+				Disconnection.of(existingPlayer).defaultSequence(false);
+				Disconnection.of(newPlayer).defaultSequence(false);
 				LOGGER.warning(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
 			}
 			else if (Config.FACTION_SYSTEM_ENABLED)

@@ -131,6 +131,7 @@ import com.l2jmobius.gameserver.model.stats.MoveType;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.ZoneRegion;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.Attack;
@@ -3287,7 +3288,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 					if (isPlayer())
 					{
-						getActingPlayer().logout();
+						Disconnection.of(getActingPlayer()).defaultSequence(false);
 					}
 					else if (isSummon())
 					{

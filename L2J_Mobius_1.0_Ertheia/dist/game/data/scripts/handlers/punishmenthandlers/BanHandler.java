@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
@@ -58,7 +59,7 @@ public class BanHandler implements IPunishmentHandler
 					}
 					else
 					{
-						client.closeNow();
+						Disconnection.of(client).defaultSequence(false);
 					}
 				}
 				break;
@@ -90,7 +91,7 @@ public class BanHandler implements IPunishmentHandler
 	 */
 	private static void applyToPlayer(L2PcInstance player)
 	{
-		player.logout();
+		Disconnection.of(player).defaultSequence(false);
 	}
 	
 	@Override

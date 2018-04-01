@@ -58,6 +58,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -141,7 +142,7 @@ public class EnterWorld implements IClientIncomingPacket
 		if (activeChar == null)
 		{
 			_log.warning("EnterWorld failed! activeChar returned 'null'.");
-			client.closeNow();
+			Disconnection.of(client).defaultSequence(false);
 			return;
 		}
 		
@@ -679,7 +680,7 @@ public class EnterWorld implements IClientIncomingPacket
 			{
 				if (client.getHardwareInfo() == null)
 				{
-					client.closeNow();
+					Disconnection.of(client).defaultSequence(false);
 					return;
 				}
 			}, 5000);

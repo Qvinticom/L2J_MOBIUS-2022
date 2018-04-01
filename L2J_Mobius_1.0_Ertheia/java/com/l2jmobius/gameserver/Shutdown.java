@@ -38,11 +38,10 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.ClientNetworkManager;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.EventLoopGroupManager;
-import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
-import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.util.Broadcast;
@@ -610,27 +609,7 @@ public class Shutdown extends Thread
 	{
 		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
-			// Logout Character
-			try
-			{
-				final L2GameClient client = player.getClient();
-				if ((client != null) && !client.isDetached())
-				{
-					client.close(ServerClose.STATIC_PACKET);
-					client.setActiveChar(null);
-					player.setClient(null);
-				}
-				else if ((client == null) || client.isDetached())
-				// player is probably a bot - force logout
-				{
-					player.logout();
-				}
-				player.deleteMe();
-			}
-			catch (Throwable t)
-			{
-				LOGGER.log(Level.WARNING, "Failed logour char " + player, t);
-			}
+			Disconnection.of(player).defaultSequence(true);
 		}
 	}
 	

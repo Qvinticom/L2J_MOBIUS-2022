@@ -41,6 +41,7 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import com.l2jmobius.gameserver.model.items.PcItemTemplate;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
@@ -333,7 +334,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		{
 			newChar.getVariables().set("intro_god_video", true);
 		}
-		newChar.deleteMe();
+		Disconnection.of(client, newChar).storeMe().deleteMe();
 		
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
 		client.setCharSelection(cl.getCharInfo());

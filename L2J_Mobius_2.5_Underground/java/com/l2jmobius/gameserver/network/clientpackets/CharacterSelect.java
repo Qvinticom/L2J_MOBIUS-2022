@@ -34,6 +34,7 @@ import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelected;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -146,7 +147,7 @@ public class CharacterSelect implements IClientIncomingPacket
 					}
 					
 					// load up character from disk
-					final L2PcInstance cha = client.loadCharFromDisk(_charSlot);
+					final L2PcInstance cha = client.load(_charSlot);
 					if (cha == null)
 					{
 						return; // handled in L2GameClient
@@ -161,7 +162,7 @@ public class CharacterSelect implements IClientIncomingPacket
 					final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
 					if ((terminate != null) && terminate.terminate())
 					{
-						cha.deleteMe();
+						Disconnection.of(cha).defaultSequence(false);
 						return;
 					}
 					
