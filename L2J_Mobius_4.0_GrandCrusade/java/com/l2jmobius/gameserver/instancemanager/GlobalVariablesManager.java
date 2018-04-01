@@ -44,8 +44,8 @@ public final class GlobalVariablesManager extends AbstractVariables
 	// Public variable names
 	public static final String COC_TOP_MARKS = "COC_TOP_MARKS";
 	public static final String COC_TOP_MEMBER = "COC_TOP_MEMBER";
-	public static final String COC_TRUE_HERO = "COC_TOP_MARKS";
-	public static final String COC_TRUE_HERO_REWARDED = "COC_TOP_MARKS";
+	public static final String COC_TRUE_HERO = "COC_TRUE_HERO";
+	public static final String COC_TRUE_HERO_REWARDED = "COC_TRUE_HERO_REWARDED";
 	
 	protected GlobalVariablesManager()
 	{
