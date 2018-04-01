@@ -263,6 +263,10 @@ public class OfflineTradersTable
 					if (player != null)
 					{
 						player.deleteMe();
+						if (player.getClient() != null)
+						{
+							player.getClient().closeNow();
+						}
 					}
 				}
 			}
