@@ -682,7 +682,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		{
 			final L2WorldRegion oldRegion = getWorldRegion();
 			final L2WorldRegion newRegion = L2World.getInstance().getRegion(this);
-			if (newRegion != oldRegion)
+			if ((newRegion != null) && (newRegion != oldRegion))
 			{
 				if (oldRegion != null)
 				{
