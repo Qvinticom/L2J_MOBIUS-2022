@@ -150,6 +150,7 @@ import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringThe
 import quests.Q10995_MutualBenefit.Q10995_MutualBenefit;
 import quests.Q11000_MoonKnight.Q11000_MoonKnight;
 import quests.Q11001_TombsOfAncestors.Q11001_TombsOfAncestors;
+import quests.Q11002_HelpWithTempleRestoration.Q11002_HelpWithTempleRestoration;
 import quests.Q11007_NoiseInWoods.Q11007_NoiseInWoods;
 import quests.Q11013_ShilensHunt.Q11013_ShilensHunt;
 import quests.Q11019_TribalBenefit.Q11019_TribalBenefit;
@@ -294,6 +295,7 @@ public class QuestMasterHandler
 		Q10995_MutualBenefit.class,
 		Q11000_MoonKnight.class,
 		Q11001_TombsOfAncestors.class,
+		Q11002_HelpWithTempleRestoration.class,
 		Q11007_NoiseInWoods.class,
 		Q11013_ShilensHunt.class,
 		Q11019_TribalBenefit.class,

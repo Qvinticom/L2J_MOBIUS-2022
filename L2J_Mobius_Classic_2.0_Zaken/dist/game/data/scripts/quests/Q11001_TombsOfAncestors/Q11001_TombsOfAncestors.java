@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Tombs of Ancestors (11001)
@@ -65,8 +64,8 @@ public class Q11001_TombsOfAncestors extends Quest
 		addStartNpc(NEWBIE_GUIDE);
 		addTalkId(NEWBIE_GUIDE, ALTRAN);
 		addKillId(WOLF, ELDER_WOLF, ORC, ORC_SOLDIER, ORC_ARCHER, ORC_WARRIOR, WEREWOLVES);
-		addCondLevel(MIN_LVL, MAX_LVL, "");
-		addCondRace(Race.HUMAN, "");
+		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
+		addCondRace(Race.HUMAN, "no-race.html");
 		registerQuestItems(HUNTERS_MEMO, WOLF_PELT, ORC_AMULET, WEREWOLFS_FANG, BROKEN_SWORD);
 	}
 	
@@ -182,7 +181,7 @@ public class Q11001_TombsOfAncestors extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, killer, true))
+		if (qs != null)
 		{
 			switch (npc.getId())
 			{
