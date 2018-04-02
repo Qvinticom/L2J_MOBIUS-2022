@@ -16,8 +16,9 @@
  */
 package com.l2jmobius.gameserver.instancemanager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -29,29 +30,52 @@ import com.l2jmobius.gameserver.model.events.timers.TimerHolder;
  */
 public class TimersManager
 {
-	private final Map<Integer, Set<TimerHolder<?>>> _timers = new ConcurrentHashMap<>();
+	private final Map<Integer, List<TimerHolder<?>>> _timers = new ConcurrentHashMap<>();
 	
 	public void registerTimer(TimerHolder<?> timer)
 	{
 		final L2Npc npc = timer.getNpc();
 		if (npc != null)
 		{
-			_timers.computeIfAbsent(npc.getObjectId(), key -> ConcurrentHashMap.newKeySet()).add(timer);
+			final List<TimerHolder<?>> npcTimers = _timers.computeIfAbsent(npc.getObjectId(), key -> new ArrayList<>());
+			synchronized (npcTimers)
+			{
+				npcTimers.add(timer);
+			}
 		}
 		
 		final L2PcInstance player = timer.getPlayer();
 		if (player != null)
 		{
-			_timers.computeIfAbsent(player.getObjectId(), key -> ConcurrentHashMap.newKeySet()).add(timer);
+			final List<TimerHolder<?>> playerTimers = _timers.computeIfAbsent(player.getObjectId(), key -> new ArrayList<>());
+			synchronized (playerTimers)
+			{
+				playerTimers.add(timer);
+			}
 		}
 	}
 	
 	public void cancelTimers(int objectId)
 	{
-		final Set<TimerHolder<?>> timers = _timers.remove(objectId);
+		final List<TimerHolder<?>> timers = _timers.remove(objectId);
 		if (timers != null)
 		{
-			timers.forEach(TimerHolder::cancelTimer);
+			synchronized (timers)
+			{
+				timers.forEach(TimerHolder::cancelTimer);
+			}
+		}
+	}
+	
+	public void unregisterTimer(int objectId, TimerHolder<?> timer)
+	{
+		final List<TimerHolder<?>> timers = _timers.get(objectId);
+		if (timers != null)
+		{
+			synchronized (timers)
+			{
+				timers.remove(timer);
+			}
 		}
 	}
 	

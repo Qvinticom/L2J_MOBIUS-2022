@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.model.events;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Predicate;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -52,13 +55,7 @@ public final class TimerExecutor<T>
 	public boolean addTimer(TimerHolder<T> holder)
 	{
 		final Set<TimerHolder<T>> timers = _timers.computeIfAbsent(holder.getEvent(), key -> ConcurrentHashMap.newKeySet());
-		for (TimerHolder<T> timer : timers)
-		{
-			if (timer.equals(holder))
-			{
-				timer.cancelTimer();
-			}
-		}
+		removeAndCancelTimers(timers, holder::isEqual);
 		return timers.add(holder);
 	}
 	
@@ -174,7 +171,7 @@ public final class TimerExecutor<T>
 			}
 			
 			// Remove the timer
-			timers.removeIf(holder::equals);
+			removeAndCancelTimers(timers, holder::isEqual);
 			
 			// If there's no events inside that set remove it
 			if (timers.isEmpty())
@@ -265,16 +262,7 @@ public final class TimerExecutor<T>
 			return false;
 		}
 		
-		final Iterator<TimerHolder<T>> holders = timers.iterator();
-		while (holders.hasNext())
-		{
-			final TimerHolder<T> holder = holders.next();
-			if (holder.isEqual(event, npc, player))
-			{
-				holders.remove();
-				return holder.cancelTimer();
-			}
-		}
+		removeAndCancelTimers(timers, timer -> timer.isEqual(event, npc, player));
 		return false;
 	}
 	
@@ -284,7 +272,38 @@ public final class TimerExecutor<T>
 	 */
 	public void cancelTimersOf(L2Npc npc)
 	{
-		_timers.values().forEach(timers -> timers.stream().filter(holder -> holder.getNpc() == npc).forEach(TimerHolder::cancelTimer));
+		removeAndCancelTimers(timer -> timer.getNpc() == npc);
+	}
+	
+	/**
+	 * Removes and Cancels all timers matching the condition
+	 * @param condition
+	 */
+	private void removeAndCancelTimers(Predicate<TimerHolder<T>> condition)
+	{
+		Objects.requireNonNull(condition);
+		final Collection<Set<TimerHolder<T>>> allTimers = _timers.values();
+		for (Set<TimerHolder<T>> timers : allTimers)
+		{
+			removeAndCancelTimers(timers, condition);
+		}
+	}
+	
+	private void removeAndCancelTimers(Set<TimerHolder<T>> timers, Predicate<TimerHolder<T>> condition)
+	{
+		Objects.requireNonNull(timers);
+		Objects.requireNonNull(condition);
+		
+		final Iterator<TimerHolder<T>> it = timers.iterator();
+		while (it.hasNext())
+		{
+			final TimerHolder<T> timer = it.next();
+			if (condition.test(timer))
+			{
+				it.remove();
+				timer.cancelTimer();
+			}
+		}
 	}
 	
 	/**

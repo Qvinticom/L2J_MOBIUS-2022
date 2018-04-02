@@ -107,6 +107,16 @@ public class TimerHolder<T> implements Runnable
 	 */
 	public boolean cancelTimer()
 	{
+		// Make sure to unregister this timer even if the task is already completed (TimerExecutor#onTimerPostExecute calls this method).
+		if (_npc != null)
+		{
+			TimersManager.getInstance().unregisterTimer(_npc.getObjectId(), this);
+		}
+		if (_player != null)
+		{
+			TimersManager.getInstance().unregisterTimer(_player.getObjectId(), this);
+		}
+		
 		if (_task.isCancelled() || _task.isDone())
 		{
 			return false;
@@ -145,6 +155,15 @@ public class TimerHolder<T> implements Runnable
 		return _event.equals(event) && (_npc == npc) && (_player == player);
 	}
 	
+	/**
+	 * @param timer the other timer to be compared with.
+	 * @return {@code true} of both of timers' npc, event and player match, {@code false} otherwise.
+	 */
+	public boolean isEqual(TimerHolder<T> timer)
+	{
+		return _event.equals(timer._event) && (_npc == timer._npc) && (_player == timer._player);
+	}
+	
 	@Override
 	public void run()
 	{
@@ -153,24 +172,6 @@ public class TimerHolder<T> implements Runnable
 		
 		// Notify the script that the event has been fired.
 		_eventScript.onTimerEvent(this);
-	}
-	
-	@Override
-	public boolean equals(Object obj)
-	{
-		if (this == obj)
-		{
-			return true;
-		}
-		
-		if (!(obj instanceof TimerHolder))
-		{
-			return false;
-		}
-		
-		@SuppressWarnings("unchecked")
-		final TimerHolder<T> holder = (TimerHolder<T>) obj;
-		return isEqual(holder._event, holder._npc, holder._player);
 	}
 	
 	@Override
