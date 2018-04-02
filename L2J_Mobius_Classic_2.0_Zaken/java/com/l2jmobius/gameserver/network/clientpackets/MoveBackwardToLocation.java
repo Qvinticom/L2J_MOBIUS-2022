@@ -157,5 +157,11 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 				break;
 			}
 		}
+		
+		// Mobius: Check spawn protections.
+		if (activeChar.isSpawnProtected() || activeChar.isTeleportProtected())
+		{
+			activeChar.onActionRequest();
+		}
 	}
 }

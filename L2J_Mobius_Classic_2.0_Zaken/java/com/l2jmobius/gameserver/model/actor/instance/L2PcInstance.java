@@ -677,7 +677,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean isSpawnProtected()
 	{
-		return false; // TODO this is bugged. _protectEndTime > GameTimeController.getInstance().getGameTicks();
+		return _protectEndTime > GameTimeController.getInstance().getGameTicks();
 	}
 	
 	private long _teleportProtectEndTime = 0;
@@ -3849,10 +3849,6 @@ public final class L2PcInstance extends L2Playable
 		return item;
 	}
 	
-	/**
-	 * Set _protectEndTime according settings.
-	 * @param protect
-	 */
 	public void setProtection(boolean protect)
 	{
 		if (Config.DEVELOPER && (protect || (_protectEndTime > 0)))
@@ -3874,7 +3870,7 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * Set protection from agro mobs when getting up from fake death, according settings.
+	 * Set protection from aggro mobs when getting up from fake death, according settings.
 	 * @param protect
 	 */
 	public void setRecentFakeDeath(boolean protect)
@@ -6155,7 +6151,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public boolean isInvul()
 	{
-		return super.isInvul() || (_teleportProtectEndTime > GameTimeController.getInstance().getGameTicks());
+		return super.isInvul() || isTeleportProtected();
 	}
 	
 	/**
@@ -10214,8 +10210,8 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (isSpawnProtected())
 		{
+			setProtection(false);
 			sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
-			
 			if (Config.RESTORE_SERVITOR_ON_RECONNECT && !hasSummon() && CharSummonTable.getInstance().getServitors().containsKey(getObjectId()))
 			{
 				CharSummonTable.getInstance().restoreServitor(this);
@@ -10227,10 +10223,9 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (isTeleportProtected())
 		{
+			setTeleportProtection(false);
 			sendMessage("Teleport spawn protection ended.");
 		}
-		setProtection(false);
-		setTeleportProtection(false);
 	}
 	
 	/**
