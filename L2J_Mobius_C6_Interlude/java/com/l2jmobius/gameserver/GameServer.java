@@ -181,7 +181,7 @@ public class GameServer
 		DatabaseFactory.getInstance();
 		
 		Util.printSection("ThreadPool");
-		ThreadPool.initThreadPools(new GameThreadPools());
+		ThreadPool.init();
 		if (Config.DEADLOCKCHECK_INTIAL_TIME > 0)
 		{
 			ThreadPool.scheduleAtFixedRate(DeadlockDetector.getInstance(), Config.DEADLOCKCHECK_INTIAL_TIME, Config.DEADLOCKCHECK_DELAY_TIME);

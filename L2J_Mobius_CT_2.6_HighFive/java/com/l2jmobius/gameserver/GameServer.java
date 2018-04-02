@@ -162,7 +162,7 @@ public final class GameServer
 		final long serverLoadStart = System.currentTimeMillis();
 		
 		printSection("ThreadPool");
-		ThreadPool.initThreadPools(new GameThreadPools());
+		ThreadPool.init();
 		
 		printSection("IdFactory");
 		if (!IdFactory.getInstance().isInitialized())

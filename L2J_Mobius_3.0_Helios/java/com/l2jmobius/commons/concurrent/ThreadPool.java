@@ -29,6 +29,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
+import com.l2jmobius.Config;
+
 /**
  * @author _dev_ (savormix)
  * @author NB4L1
@@ -40,15 +42,16 @@ public final class ThreadPool
 	private static ScheduledThreadPoolExecutor SCHEDULED_THREAD_POOL_EXECUTOR;
 	private static ThreadPoolExecutor THREAD_POOL_EXECUTOR;
 	
-	public static void initThreadPools(IThreadPoolInitializer initializer) throws Exception
+	public static void init() throws Exception
 	{
 		if ((SCHEDULED_THREAD_POOL_EXECUTOR != null) || (THREAD_POOL_EXECUTOR != null))
 		{
 			throw new Exception("The thread pool has been already initialized!");
 		}
 		
-		SCHEDULED_THREAD_POOL_EXECUTOR = new ScheduledThreadPoolExecutor(initializer.getScheduledThreadPoolSize(), new PoolThreadFactory("L2JU-SP-", Thread.NORM_PRIORITY));
-		THREAD_POOL_EXECUTOR = new ThreadPoolExecutor(initializer.getThreadPoolSize(), initializer.getThreadPoolSize(), 1, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PoolThreadFactory("L2JU-IT-", Thread.NORM_PRIORITY));
+		SCHEDULED_THREAD_POOL_EXECUTOR = new ScheduledThreadPoolExecutor(Config.SCHEDULED_THREAD_POOL_COUNT != -1 ? Config.SCHEDULED_THREAD_POOL_COUNT : Runtime.getRuntime().availableProcessors() * Config.THREADS_PER_SCHEDULED_THREAD_POOL, new PoolThreadFactory("L2JM-S-", Thread.NORM_PRIORITY));
+		final int poolCount = Config.INSTANT_THREAD_POOL_COUNT != -1 ? Config.INSTANT_THREAD_POOL_COUNT : Runtime.getRuntime().availableProcessors() * Config.THREADS_PER_INSTANT_THREAD_POOL;
+		THREAD_POOL_EXECUTOR = new ThreadPoolExecutor(poolCount, poolCount, 1, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PoolThreadFactory("L2JM-I-", Thread.NORM_PRIORITY));
 		
 		getThreadPools().forEach(tp ->
 		{
