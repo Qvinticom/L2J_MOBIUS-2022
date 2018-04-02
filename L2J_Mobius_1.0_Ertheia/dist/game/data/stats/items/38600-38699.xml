@@ -1989,6 +1989,9 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="weight" val="660" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
 		<stats>
 			<stat type="pAtk">116</stat>
 			<stat type="mAtk">61</stat>
